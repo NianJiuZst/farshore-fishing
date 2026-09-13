@@ -1,0 +1,819 @@
+{
+  "schema_version": 1,
+  "group": "B: Norway and Mediterranean fish",
+  "count": 16,
+  "verification_note": "所有16幅分别生成、目視審核并核对实际保存路径；无占位图片。主绘图保留在game之外，运行纹理最长宽边1024，列表图256。",
+  "assets": [
+    {
+      "asset_id": "atlantic_cod",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/atlantic_cod.png",
+      "runtime_path": "game/assets/fish/atlantic_cod.png",
+      "thumbnail_path": "game/assets/fish/atlantic_cod_thumb.png",
+      "master_dimensions": [
+        1774,
+        887
+      ],
+      "runtime_dimensions": [
+        1024,
+        512
+      ],
+      "thumbnail_dimensions": [
+        256,
+        128
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.59467,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. A final production fish portrait for a realistic calming hand-drawn fishing-game field guide. Exactly ONE Atlantic cod, Gadus morhua, full body and all fins, head to LEFT, level natural lateral profile, isolated on genuinely transparent background. Natural adult proportions, elongated stout body tapering to a gently squared tail; exactly three distinct dorsal fins and two anal fins; small chin barbel; pale curved lateral line; olive-grey mottled back and pale cream belly, normal small eye. Delicate realistic watercolor and fine colored-pencil natural-history illustration, very restrained paper texture within fish only, crisp readable silhouette, soft upper-left light. Fish centered filling about 88% of a wide canvas with generous safe margin for every fin. No backdrop, no floor or cast shadow, no water, no lettering, no border, no fishing hook, no extra fish. Do not stylize its anatomy or add fins.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2095",
+          "title": "MarLIN: Atlantic cod",
+          "supports": "形态、岸边至600米冷水生境、体长"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "三背鳍、双臀鳍、颏须、弯曲浅侧线、斑驳体色已目视确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "91df707cf16350b0ee571cf1d32497abd0d4a10c6813d3beed217e50183b693e",
+      "used_by": [
+        "res://assets/fish/atlantic_cod.png",
+        "res://assets/fish/atlantic_cod_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "pollack",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/pollack.png",
+      "runtime_path": "game/assets/fish/pollack.png",
+      "thumbnail_path": "game/assets/fish/pollack_thumb.png",
+      "master_dimensions": [
+        1983,
+        793
+      ],
+      "runtime_dimensions": [
+        1024,
+        409
+      ],
+      "thumbnail_dimensions": [
+        256,
+        102
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.56017,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Pollack (Pollachius pollachius). Real natural streamlined elongated cod-family silhouette, large slightly projecting lower jaw, no chin barbel at all, normal yellow eye. Three separate dorsal fins (front short triangular, two rear elongated) and two anal fins. Dark brown olive-green back, warm golden-silver sides and cream belly, dark green lateral line dramatically arches over pectoral fin then straightens toward tail, broad slightly forked dark tail. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and all fins inside frame. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/9",
+          "title": "MarLIN: Pollack",
+          "supports": "形态、岩礁与海藻沿岸生境、尺寸；明确记载垂钓"
+        },
+        {
+          "url": "https://www.hi.no/radgivning/bestandsoversikt/en/",
+          "title": "IMR: Stock overview",
+          "supports": "Pollack Norwegian coast地区条目"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "三背鳍、双臀鳍、弯曲深侧线、前突下颌和黄眼已确认；无长须。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "29e0e92d6059fbaebf5e70d995e8bc0716f515d23b7287f45cac5d706b703d98",
+      "used_by": [
+        "res://assets/fish/pollack.png",
+        "res://assets/fish/pollack_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "saithe",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/saithe.png",
+      "runtime_path": "game/assets/fish/saithe.png",
+      "thumbnail_path": "game/assets/fish/saithe_thumb.png",
+      "master_dimensions": [
+        1881,
+        836
+      ],
+      "runtime_dimensions": [
+        1024,
+        455
+      ],
+      "thumbnail_dimensions": [
+        256,
+        114
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.61245,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Saithe (Pollachius virens), also called coalfish. Elongated muscular streamlined cod-family silhouette, grey-green charcoal back, silver sides and pale belly. Unmistakable thin STRAIGHT pale white lateral line along body. Exactly three separate dorsal fins, two anal fins, moderately forked tail. No chin barbel, normal small eye, restrained adult jaw proportions. Distinct from pollack: lateral line is straight and pale, not arched. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and all fins inside frame. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.hi.no/en/hi/temasider/species/northeast-arctic-saithe",
+          "title": "IMR: Northeast Arctic saithe",
+          "supports": "挪威沿岸分布、25–400米及幼鱼浅水群聚、形态、尺寸"
+        },
+        {
+          "url": "https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-en-2023-17",
+          "title": "IMR: North Sea ecosystem condition",
+          "supports": "年轻绿青鳕在挪威西海岸岛礁和峡湾浅水区"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "三背鳍、双臀鳍、接近笔直的浅色侧线、深灰背和叉尾已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "afba5b506dd993a214258007772acaaa2252cbdae12e21d8a0fb2ba48fa2a658",
+      "used_by": [
+        "res://assets/fish/saithe.png",
+        "res://assets/fish/saithe_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "haddock",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/haddock.png",
+      "runtime_path": "game/assets/fish/haddock.png",
+      "thumbnail_path": "game/assets/fish/haddock_thumb.png",
+      "master_dimensions": [
+        1850,
+        850
+      ],
+      "runtime_dimensions": [
+        1024,
+        470
+      ],
+      "thumbnail_dimensions": [
+        256,
+        118
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.58213,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Haddock (Melanogrammus aeglefinus). Elongated cod-family fish with three separate dorsal fins, especially high pointed first dorsal; two anal fins, forked tail. Silvery grey side, dusky grey-violet back, white belly. Distinct black lateral line and black oval thumbprint spot on shoulder above pectoral fin. Small mouth with upper jaw over lower jaw, tiny short chin barbel, normal eye. Natural real adult proportions. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and all fins inside frame. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/79",
+          "title": "MarLIN: Haddock",
+          "supports": "40–300米底层、形态、尺寸"
+        },
+        {
+          "url": "https://www.hi.no/en/hi/temasider/species/haddock/haddock-in-the-north-sea%2C-skagerrak-and-west-of-scottland",
+          "title": "IMR: North Sea haddock",
+          "supports": "挪威陆架与Skagerrak；约60厘米最大尺寸和底栖食性"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "肩部黑拇指斑、黑侧线、尖高第一背鳍和三背双臀鳍已确认；短须可见。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "d79a045833de486235f0bb86ce80106b09024b7561f340ccc2bea976cac94595",
+      "used_by": [
+        "res://assets/fish/haddock.png",
+        "res://assets/fish/haddock_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "atlantic_mackerel",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/atlantic_mackerel.png",
+      "runtime_path": "game/assets/fish/atlantic_mackerel.png",
+      "thumbnail_path": "game/assets/fish/atlantic_mackerel_thumb.png",
+      "master_dimensions": [
+        1983,
+        793
+      ],
+      "runtime_dimensions": [
+        1024,
+        409
+      ],
+      "thumbnail_dimensions": [
+        256,
+        102
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.63636,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Atlantic mackerel (Scomber scombrus). Slender torpedo-shaped fast-swimming body with pointed snout, normal eye. Blue-green back carrying numerous dark wavy oblique transverse bars, brilliant silvery sides, entirely unspotted clean pale silver belly. Two separated main dorsal fins, second small; five tiny dorsal finlets behind second dorsal, five ventral finlets behind anal fin before narrow tail base; deeply forked tail. Accurate real mackerel, not tuna or herring. Full body natural lateral profile, head LEFT, tail RIGHT, fish level, every fin within canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/44",
+          "title": "MarLIN: Atlantic mackerel",
+          "supports": "形态、表层群游和尺寸；垂钓对象"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15189203/",
+          "title": "Zardoya et al. 2004, Molecular Ecology: Mediterranean mackerel populations",
+          "supports": "地中海Scomber scombrus种群原始研究；已读搜索索引返回的完整摘要，采样含希腊、意大利及西班牙"
+        },
+        {
+          "url": "https://www.fao.org/4/ac478e/ac478e08.pdf",
+          "title": "FAO: Scombrids of the world, genus Scomber",
+          "supports": "形态：两主背鳍和背腹尾前小鳍列，近岸中上层水域"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "蓝绿条纹背、无斑银腹、两主背鳍及尾前小鳍列、深叉尾已确认。小鳍为绘画概括，不用它作精确鳍条计数参考。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "0dc5a38c35bc596e8a1eca6bf5442c4b03e6a259cc98e58e4f19be3a645e4c65",
+      "used_by": [
+        "res://assets/fish/atlantic_mackerel.png",
+        "res://assets/fish/atlantic_mackerel_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "atlantic_herring",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/atlantic_herring.png",
+      "runtime_path": "game/assets/fish/atlantic_herring.png",
+      "thumbnail_path": "game/assets/fish/atlantic_herring_thumb.png",
+      "master_dimensions": [
+        1971,
+        798
+      ],
+      "runtime_dimensions": [
+        1024,
+        415
+      ],
+      "thumbnail_dimensions": [
+        256,
+        104
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.62717,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Atlantic herring (Clupea harengus). Slender streamlined laterally compressed body, shimmering bright SILVER sides and belly, darker steel-blue upper back with NO spots or stripes. Exactly one soft-rayed triangular dorsal fin near mid-body, deeply forked grey tail, small pelvic fin beneath the midbody and a single short anal fin near tail. Moderately large normal eye, small slightly upturned terminal mouth. No barbels, no adipose fin, no finlets. Full body natural lateral profile, head LEFT, tail RIGHT, fish level, every fin within canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/45",
+          "title": "MarLIN: Atlantic herring",
+          "supports": "体长、单背鳍形态；水面至200米，非繁殖季远离直接岸边"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "单背鳍、深叉尾、平滑银身与蓝背已确认，无脂鳍或须。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "ef9585cb4147a2cea90be40cfe949df8912f62d6b242f8e29c78f822168907d4",
+      "used_by": [
+        "res://assets/fish/atlantic_herring.png",
+        "res://assets/fish/atlantic_herring_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "european_plaice",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/european_plaice.png",
+      "runtime_path": "game/assets/fish/european_plaice.png",
+      "thumbnail_path": "game/assets/fish/european_plaice_thumb.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1024,
+        683
+      ],
+      "thumbnail_dimensions": [
+        256,
+        171
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.53391,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. One European plaice (Pleuronectes platessa). Its REAL FLATFISH anatomy: flattened asymmetrical oval diamond-like body shown on its eyed upper RIGHT SIDE, both small normal eyes visible close together on the head, head oriented LEFT, rounded small mouth, tail right. Olive-brown top scattered with unmistakable separate bright orange-red spots, a few subtle bony knobs behind eyes, long continuous low dorsal and anal fin fringes along upper and lower edges, distinct broad tail. Do not make it a symmetrical upright round fish. Exactly ONE fish, entire body and every fin inside frame, natural proportions, profile. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp silhouette, soft upper-left light. Centered, fish fills about 88% of a wide canvas with generous clear margins. Genuinely transparent background, preserve alpha. No backdrop, water, lettering, border, ground shadow, hook, labels or extra fish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2172",
+          "title": "MarLIN: Plaice",
+          "supports": "扁平形态、右眼、橙红点、浅水幼鱼和垂钓"
+        },
+        {
+          "url": "https://biotic.marlin.ac.uk/data/species/6202",
+          "title": "MarLIN BIOTIC: Pleuronectes platessa",
+          "supports": "5–200米栖息区间"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "扁平体形、同面两眼、橙红斑、连续长背臀缘和完整尾鳍已确认。外部RGB可含模糊颜色，但实际alpha为0，不是画出的背景。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "4d60d4a63573bfc419c0c25f9aadd168df585f092ea06d9284724d4ef43337eb",
+      "used_by": [
+        "res://assets/fish/european_plaice.png",
+        "res://assets/fish/european_plaice_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "atlantic_wolffish",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/atlantic_wolffish.png",
+      "runtime_path": "game/assets/fish/atlantic_wolffish.png",
+      "thumbnail_path": "game/assets/fish/atlantic_wolffish_thumb.png",
+      "master_dimensions": [
+        1942,
+        809
+      ],
+      "runtime_dimensions": [
+        1024,
+        427
+      ],
+      "thumbnail_dimensions": [
+        256,
+        107
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.46541,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. One Atlantic wolffish (Anarhichas lupus). Elongated tapering body, huge broad blunt head nearly one-quarter of body length, strong normal jaws with a few visible natural canine-like front teeth, dark slate blue-grey coloration, 9–13 broad charcoal vertical bars. Very long continuous low dorsal fin, long anal fin ending just before its separate rounded caudal fin, broad rounded pectoral fin and NO pelvic fins. Gently tapering natural eel-like profile but not a snake; level head facing LEFT. Exactly ONE fish, entire body and every fin inside frame, natural proportions, profile. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp silhouette, soft upper-left light. Centered, fish fills about 88% of a wide canvas with generous clear margins. Genuinely transparent background, preserve alpha. No backdrop, water, lettering, border, ground shadow, hook, labels or extra fish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/1747",
+          "title": "MarLIN: Atlantic wolffish",
+          "supports": "斯堪的纳维亚分布；成鱼通常100–300米；形态与食物"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "宽大头、显露犬齿、长连续背臀鳍、深竖带与圆尾已确认；无腹鳍。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "ed61082ea52fd820398e5e28cade5c0bcca4295d98894ca1835a179b2e12273f",
+      "used_by": [
+        "res://assets/fish/atlantic_wolffish.png",
+        "res://assets/fish/atlantic_wolffish_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "european_seabass",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/european_seabass.png",
+      "runtime_path": "game/assets/fish/european_seabass.png",
+      "thumbnail_path": "game/assets/fish/european_seabass_thumb.png",
+      "master_dimensions": [
+        1774,
+        887
+      ],
+      "runtime_dimensions": [
+        1024,
+        512
+      ],
+      "thumbnail_dimensions": [
+        256,
+        128
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.61376,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE European seabass (Dicentrarchus labrax). Natural elongated silver-grey predatory fish, slate bluish back, silver sides and white belly, entirely plain unspotted adult sides. Two separate dorsal fins: first spiny triangular, second rounded soft rays. Moderately forked grey tail. Large terminal mouth with slight projecting lower jaw, normal small eye, subtle dark mark at rear gill cover and two small opercular spines. No chin barbels and no extra dorsal fins. Full body natural lateral profile, head LEFT, tail RIGHT, fish level, every fin within canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_europeanseabass.htm",
+          "title": "FAO: Dicentrarchus labrax cultured species fact sheet",
+          "supports": "形态、地中海及河口近岸生境与食性"
+        },
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2127",
+          "title": "MarLIN: Bass",
+          "supports": "体长可至100厘米、通常浅于10米但有70米捕获；本作1–50米"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "双背鳍、较大口、成鱼无斑银体、灰背与叉尾已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "1cd41d72d3768d5e54e754e3b7c66a7546d399a8f0af28fb9f9de21f677c5e8d",
+      "used_by": [
+        "res://assets/fish/european_seabass.png",
+        "res://assets/fish/european_seabass_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "gilthead_seabream",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/gilthead_seabream.png",
+      "runtime_path": "game/assets/fish/gilthead_seabream.png",
+      "thumbnail_path": "game/assets/fish/gilthead_seabream_thumb.png",
+      "master_dimensions": [
+        1717,
+        916
+      ],
+      "runtime_dimensions": [
+        1024,
+        546
+      ],
+      "thumbnail_dimensions": [
+        256,
+        137
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.51579,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. One gilthead seabream (Sparus aurata). Deep oval laterally compressed silver body, smoothly arched head profile, small thick-lipped mouth, normal dark eye. Distinct golden band across forehead between eyes visible near brow, dark blotch on upper gill cover with a small reddish lower edge. One continuous dorsal fin with spiny forepart and soft rear, long pointed pectoral fin, forked grey tail, pale belly. Natural large adult proportions, head to LEFT. Exactly ONE fish, entire body and every fin inside frame, natural proportions, profile. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp silhouette, soft upper-left light. Centered, fish fills about 88% of a wide canvas with generous clear margins. Genuinely transparent background, preserve alpha. No backdrop, water, lettering, border, ground shadow, hook, labels or extra fish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_giltheadseabr.htm",
+          "title": "FAO: Sparus aurata cultured species fact sheet",
+          "supports": "地中海、近岸与50米内生境、完整鉴别形态"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "金色额带、鳃盖黑斑及下缘红色、深椭圆体与单连续背鳍已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "5e59cc35f911f5975bc5e78b9d2c3005fc1f9d3fc5ccd444c134200e2fbc8f7b",
+      "used_by": [
+        "res://assets/fish/gilthead_seabream.png",
+        "res://assets/fish/gilthead_seabream_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "saddled_seabream",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/saddled_seabream.png",
+      "runtime_path": "game/assets/fish/saddled_seabream.png",
+      "thumbnail_path": "game/assets/fish/saddled_seabream_thumb.png",
+      "master_dimensions": [
+        1774,
+        887
+      ],
+      "runtime_dimensions": [
+        1024,
+        512
+      ],
+      "thumbnail_dimensions": [
+        256,
+        128
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.51995,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Saddled seabream (Oblada melanura). Natural moderately elongated oval silver body, thinner and less deep than most seabream; normal fairly large eye; small oblique upturned mouth. Fine faint DARK HORIZONTAL lengthwise lines along silvery sides. Clear BLACK SADDLE mark on caudal peduncle immediately before tail, bordered in WHITE; does not form multiple stripes on body. Single long continuous dorsal fin with a spiny front and softer rear, slightly forked pale grey tail, clear grey fins. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and every fin inside canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Oblada-melanura-Oblade-720",
+          "title": "DORIS: Oblada melanura",
+          "supports": "地中海岸边表层至30米、形态与尺寸；休闲渔获"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "白边黑尾鞍、银体细纵线、偏上翘小口和单连续背鳍已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "bbdaf04ef6b45718d9637fa5d724d49ed08a2ee95bcbdab59a3dec6fcc37a1fa",
+      "used_by": [
+        "res://assets/fish/saddled_seabream.png",
+        "res://assets/fish/saddled_seabream_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "white_seabream",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/white_seabream.png",
+      "runtime_path": "game/assets/fish/white_seabream.png",
+      "thumbnail_path": "game/assets/fish/white_seabream_thumb.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1024,
+        683
+      ],
+      "thumbnail_dimensions": [
+        256,
+        171
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.56371,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE White seabream (Diplodus sargus), Mediterranean species. Deep oval laterally compressed silver-grey body, darker grey-brown back, small normal eye, small slightly thick-lipped mouth. Upper caudal peduncle has a bold BLACK SADDLE that does NOT extend completely around underside. Gill-cover rim dark, pelvic fin dark with pale leading edge, tail edge dark. Single continuous dorsal fin spiny then soft, forked grey tail. Typical medium adult with very faint residual vertical bars only, not strong juvenile zebra stripes, NOT yellow fins. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and every fin inside canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-sargus-Sar-commun-de-Mediterranee-463",
+          "title": "DORIS: Diplodus sargus",
+          "supports": "地中海分布、港口与浅岩岸、形态和尺寸"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "尾柄上黑鞍未包住底部、深色鳃盖边、深腹鳍与浅前缘已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "d6b5db2f01150e81b7747bfb67568b1284b0db27855a77cece99aa350a08c9ae",
+      "used_by": [
+        "res://assets/fish/white_seabream.png",
+        "res://assets/fish/white_seabream_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "annular_seabream",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/annular_seabream.png",
+      "runtime_path": "game/assets/fish/annular_seabream.png",
+      "thumbnail_path": "game/assets/fish/annular_seabream_thumb.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1024,
+        683
+      ],
+      "thumbnail_dimensions": [
+        256,
+        171
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_fraction": 0.55949,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Annular seabream (Diplodus annularis). Compact high oval compressed silver body with subtle yellow sheen on upper head. Distinct near-complete BLACK RING around narrow caudal peduncle before forked tail. Yellow pelvic fins and yellow FRONT of anal fin, slight yellow at front dorsal fin, otherwise grey translucent fins. One continuous dorsal fin spiny at front. Plain adult silver sides without vertical stripes, small dark normal eye and small mouth. NOT white seabream: yellow pelvic fin and full caudal ring are essential. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and every fin inside canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-annularis-Sparaillon-487",
+          "title": "DORIS: Diplodus annularis",
+          "supports": "主要0–15米、安静港口和海草；黄色腹臀鳍和尾环"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "近闭合尾黑环、黄腹鳍及臀鳍前部、无竖纹银身已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "e399d7364d9b37bb0c71c48c01097d2b1b9b1af257653019c20a434d704d5e82",
+      "used_by": [
+        "res://assets/fish/annular_seabream.png",
+        "res://assets/fish/annular_seabream_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "red_mullet",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/red_mullet.png",
+      "runtime_path": "game/assets/fish/red_mullet.png",
+      "thumbnail_path": "game/assets/fish/red_mullet_thumb.png",
+      "master_dimensions": [
+        1983,
+        793
+      ],
+      "runtime_dimensions": [
+        1024,
+        409
+      ],
+      "thumbnail_dimensions": [
+        256,
+        102
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.55122,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Red mullet (Mullus barbatus). Elongated adult with relatively flat belly and steep blunt forehead profile above eyes. Two thin WHITE chin barbels clearly visible beneath jaw, each about pectoral fin length or shorter. Soft dusky rose-pink back and silver-pink sides, cream belly, NO strong yellow side stripe. Exactly two clearly separated dorsal fins; first dorsal almost colorless with NO dark stripes; second soft-rayed; unstriped forked pink tail. Normal small eye, mouth low, large delicate scales. Real Mullus barbatus, not striped red mullet Mullus surmuletus. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and all fins inside canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Mullus-barbatus-Rouget-de-vase-579",
+          "title": "DORIS: Mullus barbatus",
+          "supports": "地中海泥沙底、表层至300米；形态与体长"
+        },
+        {
+          "url": "https://www.fao.org/4/x0170f/x0170f55.pdf",
+          "title": "FAO: Mullus barbatus identification sheet",
+          "supports": "物种识别及地中海分布"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "双颏须、陡额、两分离背鳍、无纹第一背鳍、无粗黄侧条已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "6c0e9a6e84f013f91a76e75784f3df1b1edd16cfc9ef9aea43c649086afb3301",
+      "used_by": [
+        "res://assets/fish/red_mullet.png",
+        "res://assets/fish/red_mullet_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "painted_comber",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/painted_comber.png",
+      "runtime_path": "game/assets/fish/painted_comber.png",
+      "thumbnail_path": "game/assets/fish/painted_comber_thumb.png",
+      "master_dimensions": [
+        1774,
+        887
+      ],
+      "runtime_dimensions": [
+        1024,
+        512
+      ],
+      "thumbnail_dimensions": [
+        256,
+        128
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.48601,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Painted comber (Serranus scriba), Mediterranean fish. Natural elongated yet slightly deep-bellied compact grouper-like profile, pointed head and moderately large terminal mouth. FIVE TO SEVEN brown vertical bands on warm beige olive sides. Distinct PALE LAVENDER BLUE patch on abdomen. Intricate thin reddish-brown and blue winding squiggles on head and gill cover, naturally like calligraphy but NO actual letters. Yellowish tail and caudal peduncle. Single long continuous dorsal fin with 8–9 short anterior spines merging into soft back section; broad rounded to near-straight tail. Real fish normal eye, not ornate fantasy. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and all fins inside canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Serranus-scriba-Serran-ecriture-144",
+          "title": "DORIS: Serranus scriba",
+          "supports": "地中海岩岸0–30米；形态；明确易以钩线钓获"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "头部红蓝曲线、腹部蓝斑、深竖带、黄尾、单连续背鳍已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "f4455195d5ec1ec3f7002af7f7a5e75706f52504b728e5e5a29c1638120798b7",
+      "used_by": [
+        "res://assets/fish/painted_comber.png",
+        "res://assets/fish/painted_comber_thumb.png"
+      ]
+    },
+    {
+      "asset_id": "common_pandora",
+      "purpose": "鱼类图鉴详情、钓获展示及列表缩略图",
+      "master_path": "art_masters/b/common_pandora.png",
+      "runtime_path": "game/assets/fish/common_pandora.png",
+      "thumbnail_path": "game/assets/fish/common_pandora_thumb.png",
+      "master_dimensions": [
+        1774,
+        887
+      ],
+      "runtime_dimensions": [
+        1024,
+        512
+      ],
+      "thumbnail_dimensions": [
+        256,
+        128
+      ],
+      "alpha_mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_fraction": 0.53017,
+      "source": "OpenAI built-in image_gen; one independent generation call per species",
+      "generation_date": "2026-10-02",
+      "prompt": "Use case: scientific-educational. Final production portrait for a calming realistic fishing-game natural-history field guide. Exactly ONE Common pandora (Pagellus erythrinus). Natural moderately deep oval laterally compressed seabream body, beautifully subdued SILVERY PINK with tiny sparse blue dots on upper half, rosy back and pale belly. Nearly straight head slope, pointed long snout at least twice normal eye diameter. Small mouth. Upper back edge of gill cover red and reddish patch at pectoral fin base. One continuous dorsal fin with spiny front and soft rear; long pointed pink pectoral fin and forked pink tail. No chin barbels, no black saddle tail mark. Full body natural lateral profile, head LEFT, tail RIGHT, fish level and all fins inside canvas. Delicate highly realistic watercolor and fine colored-pencil handdrawn natural-history illustration, muted lifelike colors, very restrained paper texture inside fish only, crisp readable silhouette, soft upper-left light. Centered on wide canvas, fish fills about 88% with clear safety margins. Genuine transparent background with alpha. No backdrop, water, text, border, ground shadow, labels, hook or extra fish. Anatomically credible, not cartoonish.",
+      "reference_image_inputs": [],
+      "research_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Pagellus-erythrinus-Pageot-commun-2771",
+          "title": "DORIS: Pagellus erythrinus",
+          "supports": "地中海5–200米、通常20–100米，偏好软底；形态"
+        },
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/ARTFIMED/ArtFiWeb/descript/Species/SPAPAERY.HTML",
+          "title": "FAO: Pagellus erythrinus identification sheet",
+          "supports": "体长最大60厘米、常见10–30厘米；本作样本16–45厘米"
+        },
+        {
+          "url": "https://fishdb.sinica.edu.tw/eng/chinesequer2.php?R1=&T1=&cn=&dere=asc&fm=&gc=&orderby=is_accepted_name&page=776&pz=30&vn=",
+          "title": "Academia Sinica Taiwan Fish Database: Chinese names",
+          "supports": "Pagellus erythrinus中文名为绯小鲷"
+        }
+      ],
+      "license_status": "项目独立AI生成素材；未复制网页照片或第三方插画。工具使用条款适用，未声称生成自动解决全部商业权利问题。来源网页文本与照片仍归各权利人，未获照片复用授权。",
+      "review_status": "完成制作级形态与透明通道审核；非科研鉴定图版",
+      "anatomy_review": "粉银体、上半身细蓝点、较长吻、红鳃盖上缘、单背鳍与叉尾已确认。",
+      "orientation": "head left, full fish",
+      "alpha_review": "真RGBA，图外有完整透明像素；未使用程序抠图或替换绘画；仅等比Lanczos缩放",
+      "runtime_sha256": "8a955fa39b0164a63d1133513a12768ec23109e82a2ab3bbdd1f0ed4c9b60c80",
+      "used_by": [
+        "res://assets/fish/common_pandora.png",
+        "res://assets/fish/common_pandora_thumb.png"
+      ]
+    }
+  ]
+}

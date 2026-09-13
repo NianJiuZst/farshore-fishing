@@ -1,0 +1,45 @@
+{
+  "verified_at_utc": "2026-10-02T07:53:06.343612+00:00",
+  "files": [
+    {
+      "path": "tools/downloads/Godot_v4.6.3-stable_export_templates.tpz",
+      "bytes": 1255918323,
+      "sha256": "3fbe2c0e2dec9d537ab9ec97bcf8da91dcf23357fc51f67092dd068d839290a8"
+    },
+    {
+      "path": "tools/godot-templates/4.6.3.stable/android_source.zip",
+      "bytes": 210059811,
+      "sha256": "c260fe8ab52ee0627d4d27a07117f7a7f04ce2a73cef7356a032fac0e1998009"
+    },
+    {
+      "path": "tools/godot-templates/4.6.3.stable/android_release.apk",
+      "bytes": 102855501,
+      "sha256": "e91ef7e517e73aec1ddcc4c455c5fd53de1837c240a7c520ac438b73874b54c1"
+    },
+    {
+      "path": "tools/downloads/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "bytes": 207473347,
+      "sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94"
+    }
+  ],
+  "godot_version": "4.6.3.stable.official.7d41c59c4",
+  "jdk": "Temurin21.0.12.1+1",
+  "gradle": "8.11.1",
+  "android_gradle_plugin": "8.6.1",
+  "kotlin": "2.1.21",
+  "compile_sdk": 36,
+  "build_tools": "36.1.0",
+  "min_sdk": 29,
+  "target_sdk": 36,
+  "android_sdk_packages": {
+    "cmdline-tools": "22.0 / build15859902",
+    "platform-tools": "37.0.1",
+    "build-tools": "36.1.0",
+    "platforms;android-36": "revision2",
+    "ndk": "29.0.14206865",
+    "emulator": "37.2.12 / build16428233",
+    "system-images;android-36;default;x86_64": "revision2"
+  },
+  "sdk_license_accepted_utc": "2026-10-02T08:16:00Z",
+  "emulator_acceleration": "KVM unavailable; software TCG"
+}

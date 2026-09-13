@@ -1,0 +1,216 @@
+{
+  "baits": [
+    {
+      "bait_id": "worm",
+      "hint": "湖泊鱼与近底觅食鱼的温和选择",
+      "name": "蚯蚓",
+      "price": 0.0
+    },
+    {
+      "bait_id": "grain",
+      "hint": "鲤、鲫、丁鱥等淡水鱼更感兴趣",
+      "name": "谷物",
+      "price": 0.0
+    },
+    {
+      "bait_id": "shrimp",
+      "hint": "海底鱼与鲷科鱼的旅行常备",
+      "name": "虾饵",
+      "price": 0.0
+    },
+    {
+      "bait_id": "lure",
+      "hint": "掠食鱼和水层巡游鱼更易追逐",
+      "name": "拟饵",
+      "price": 0.0
+    }
+  ],
+  "gear": [
+    {
+      "description": "宽容的初次相遇，适合湖岸与小港",
+      "id": 0.0,
+      "max_depth_m": 10.0,
+      "name": "溪风 · 入门竿",
+      "power": 1.0,
+      "price": 0.0,
+      "reach": 0.75,
+      "tolerance": 1.0
+    },
+    {
+      "description": "更远的落点、更稳的控鱼，开启礁岸",
+      "id": 1.0,
+      "max_depth_m": 60.0,
+      "name": "海旅 · 旅行竿",
+      "power": 1.18,
+      "price": 180.0,
+      "reach": 1.0,
+      "tolerance": 1.25
+    },
+    {
+      "description": "前往峡湾深水，面对更大的身影",
+      "id": 2.0,
+      "max_depth_m": 180.0,
+      "name": "远岸 · 探深竿",
+      "power": 1.35,
+      "price": 480.0,
+      "reach": 1.0,
+      "tolerance": 1.5
+    }
+  ],
+  "regions": [
+    {
+      "color": "#81aa9a",
+      "description": "晨雾散开，芦苇轻响。第一段旅程，从一枚小小的浮漂开始。",
+      "name": "雾林湖",
+      "region_id": "lake",
+      "scene": "res://assets/scenery/lake.png",
+      "spots": [
+        "lake_shore",
+        "lake_bay"
+      ],
+      "subtitle": "欧洲 · 林间淡水",
+      "unlock_cost": 0.0,
+      "unlock_count": 0.0
+    },
+    {
+      "color": "#72a4b6",
+      "description": "沿着防波堤听海风，远处的灯塔亮起。礁石与沙底之间藏着新的相遇。",
+      "name": "汐见港",
+      "region_id": "japan",
+      "scene": "res://assets/scenery/japan.png",
+      "spots": [
+        "japan_harbor",
+        "japan_reef"
+      ],
+      "subtitle": "日本 · 西北太平洋",
+      "unlock_cost": 140.0,
+      "unlock_count": 3.0
+    },
+    {
+      "color": "#6e8eaa",
+      "description": "山影落入深蓝色的海。登上小船，探访峡湾更深的水层。",
+      "name": "松湾峡湾",
+      "region_id": "norway",
+      "scene": "res://assets/scenery/norway.png",
+      "spots": [
+        "norway_harbor",
+        "norway_boat"
+      ],
+      "subtitle": "挪威 · 东北大西洋",
+      "unlock_cost": 300.0,
+      "unlock_count": 8.0
+    },
+    {
+      "color": "#81bdbe",
+      "description": "石墙、橄榄树与透亮的海水。把一段慢下来的午后，收藏进旅行手册。",
+      "name": "琥珀海岸",
+      "region_id": "med",
+      "scene": "res://assets/scenery/med.png",
+      "spots": [
+        "med_pier",
+        "med_boat"
+      ],
+      "subtitle": "地中海 · 岩岸与小港",
+      "unlock_cost": 500.0,
+      "unlock_count": 14.0
+    }
+  ],
+  "spots": [
+    {
+      "cast_hint": "短抛贴近芦苇，长抛探向草床边缘",
+      "depth_max_m": 5.0,
+      "depth_min_m": 0.5,
+      "foreground": "reeds",
+      "habitat": "芦苇、草床与软底浅水",
+      "min_gear": 0.0,
+      "name": "芦苇浅岸",
+      "region_id": "lake",
+      "salinity": "fresh",
+      "spot_id": "lake_shore"
+    },
+    {
+      "cast_hint": "中远距离覆盖湖湾，也有巡游的掠食鱼",
+      "depth_max_m": 12.0,
+      "depth_min_m": 2.0,
+      "foreground": "pier",
+      "habitat": "湖湾、开阔水面与较深软底",
+      "min_gear": 0.0,
+      "name": "林影湖湾",
+      "region_id": "lake",
+      "salinity": "fresh",
+      "spot_id": "lake_bay"
+    },
+    {
+      "cast_hint": "短抛寻沙底鱼，远抛试港池中的鱼群",
+      "depth_max_m": 12.0,
+      "depth_min_m": 1.0,
+      "foreground": "pier",
+      "habitat": "防波堤内侧、浅沙底与港池",
+      "min_gear": 0.0,
+      "name": "港内木栈桥",
+      "region_id": "japan",
+      "salinity": "salt",
+      "spot_id": "japan_harbor"
+    },
+    {
+      "cast_hint": "中远抛可达礁边沙底，需旅行装备",
+      "depth_max_m": 40.0,
+      "depth_min_m": 5.0,
+      "foreground": "rocks",
+      "habitat": "礁岸外缘、岩缝与邻近沙底",
+      "min_gear": 1.0,
+      "name": "灯塔礁岸",
+      "region_id": "japan",
+      "salinity": "salt",
+      "spot_id": "japan_reef"
+    },
+    {
+      "cast_hint": "留意近岸水层中的巡游鱼群",
+      "depth_max_m": 25.0,
+      "depth_min_m": 3.0,
+      "foreground": "pier",
+      "habitat": "峡湾港口、岩沙混合底与上层水",
+      "min_gear": 1.0,
+      "name": "红屋港湾",
+      "region_id": "norway",
+      "salinity": "salt",
+      "spot_id": "norway_harbor"
+    },
+    {
+      "cast_hint": "探深装备覆盖深水，狼鱼与黑线鳕藏在这里",
+      "depth_max_m": 180.0,
+      "depth_min_m": 10.0,
+      "foreground": "boat",
+      "habitat": "峡湾船钓、深水岩底与沙泥底",
+      "min_gear": 2.0,
+      "name": "深蓝船钓",
+      "region_id": "norway",
+      "salinity": "salt",
+      "spot_id": "norway_boat"
+    },
+    {
+      "cast_hint": "虾饵适合石堤附近的鲷科鱼",
+      "depth_max_m": 15.0,
+      "depth_min_m": 1.0,
+      "foreground": "rocks",
+      "habitat": "石质港堤、海草边缘和沙底",
+      "min_gear": 1.0,
+      "name": "石港小码头",
+      "region_id": "med",
+      "salinity": "salt",
+      "spot_id": "med_pier"
+    },
+    {
+      "cast_hint": "在浅底与水层之间寻找更多物种",
+      "depth_max_m": 60.0,
+      "depth_min_m": 5.0,
+      "foreground": "boat",
+      "habitat": "近岸船钓、海草床边缘与沙泥底",
+      "min_gear": 1.0,
+      "name": "碧水近岸船",
+      "region_id": "med",
+      "salinity": "salt",
+      "spot_id": "med_boat"
+    }
+  ]
+}

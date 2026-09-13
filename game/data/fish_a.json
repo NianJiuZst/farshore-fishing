@@ -1,0 +1,913 @@
+[
+  {
+    "species_id": "common_carp",
+    "name": "鲤鱼",
+    "scientific_name": "Cyprinus carpio",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_shore",
+      "lake_bay"
+    ],
+    "art": "res://assets/fish/common_carp.png",
+    "thumb": "res://assets/fish/common_carp_thumb.png",
+    "description": "常见于欧洲低地缓流与湖泊的底层，在软底寻找食物。这里表现的是普通有鳞湖鲤；各地种群也可能来自历史引入。",
+    "morphology": "粗壮体形，黄褐色大鳞；口角有须，背鳍基部长，尾鳍分叉。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Cyprinus-carpio.html",
+        "title": "Cyprinus carpio — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 900,
+    "anchor_mm": 450,
+    "anchor_g": 1500,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "steady",
+    "difficulty": 0.45,
+    "weight": 12,
+    "bait_weights": {
+      "worm": 1.2,
+      "grain": 2.0,
+      "shrimp": 0.3,
+      "lure": 0.15
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 12,
+    "salinity": "fresh",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "欧洲低地静水，天然分布与历史引入均有记录；不声称教学湖是原生鲤保护点。"
+  },
+  {
+    "species_id": "crucian_carp",
+    "name": "欧洲鲫",
+    "scientific_name": "Carassius carassius",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_shore"
+    ],
+    "art": "res://assets/fish/crucian_carp.png",
+    "thumb": "res://assets/fish/crucian_carp_thumb.png",
+    "description": "喜欢植被丰富的浅水静水区。与鲤鱼不同，口角没有须。",
+    "morphology": "短而高的金铜色侧扁身体，小口无须，背鳍外缘微凸，尾鳍浅叉。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/270",
+        "title": "Carassius carassius — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 120,
+    "max_mm": 400,
+    "anchor_mm": 230,
+    "anchor_g": 280,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "rest",
+    "difficulty": 0.18,
+    "weight": 15,
+    "bait_weights": {
+      "worm": 1.5,
+      "grain": 1.8,
+      "shrimp": 0.3,
+      "lure": 0.1
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.1
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 5,
+    "salinity": "fresh",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "草多的浅塘与湖岸为选择依据；来源深度表的不完整下限不当作浅水禁区。"
+  },
+  {
+    "species_id": "roach",
+    "name": "拟鲤",
+    "scientific_name": "Rutilus rutilus",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_shore",
+      "lake_bay"
+    ],
+    "art": "res://assets/fish/roach.png",
+    "thumb": "res://assets/fish/roach_thumb.png",
+    "description": "广布于欧洲低地湖泊与缓流，既能在岸边水草间活动，也会结群进入开阔水面。",
+    "morphology": "银色侧扁身体，成鱼红色虹膜，腹鳍和臀鳍橙红，端位小口；背鳍起点约在腹鳍上方。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/Summary/Rutilus-rutilus",
+        "title": "Rutilus rutilus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 100,
+    "max_mm": 380,
+    "anchor_mm": 220,
+    "anchor_g": 160,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "rest",
+    "difficulty": 0.15,
+    "weight": 16,
+    "bait_weights": {
+      "worm": 1.5,
+      "grain": 1.6,
+      "shrimp": 0.3,
+      "lure": 0.2
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.1
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 10,
+    "salinity": "fresh",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "文献正文记录滨岸和开阔湖水利用；数据库15–?m不是唯一可栖深度，不直接当硬下限。"
+  },
+  {
+    "species_id": "rudd",
+    "name": "红眼鱼",
+    "scientific_name": "Scardinius erythrophthalmus",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_shore"
+    ],
+    "art": "res://assets/fish/rudd.png",
+    "thumb": "res://assets/fish/rudd_thumb.png",
+    "description": "欧洲低地水域的水草居民，取食植物、昆虫和浮游生物。金色体侧与鲜红下鳍很醒目。",
+    "morphology": "略高的金银色身体，向上翘的小口，鲜红腹鳍与臀鳍，背鳍起点明显位于腹鳍之后。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/2951",
+        "title": "Scardinius erythrophthalmus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 100,
+    "max_mm": 400,
+    "anchor_mm": 240,
+    "anchor_g": 240,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "burst",
+    "difficulty": 0.24,
+    "weight": 12,
+    "bait_weights": {
+      "worm": 1.5,
+      "grain": 1.7,
+      "shrimp": 0.2,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 5,
+    "salinity": "fresh",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "富营养且水草繁茂的静水与湖岸；具体1–5m为游戏子生境。"
+  },
+  {
+    "species_id": "european_perch",
+    "name": "河鲈",
+    "scientific_name": "Perca fluviatilis",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_shore",
+      "lake_bay"
+    ],
+    "art": "res://assets/fish/european_perch.png",
+    "thumb": "res://assets/fish/european_perch_thumb.png",
+    "description": "欧洲湖泊常见的掠食性鱼，幼鱼多结群。它的竖带和橙红色下鳍是很好的辨认线索。",
+    "morphology": "黄绿色体侧有5至8道深色竖带，两个分开的背鳍，前背鳍末部有黑斑，下鳍橙红。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/358",
+        "title": "Perca fluviatilis — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 120,
+    "max_mm": 480,
+    "anchor_mm": 280,
+    "anchor_g": 330,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "burst",
+    "difficulty": 0.42,
+    "weight": 11,
+    "bait_weights": {
+      "worm": 1.3,
+      "grain": 0.15,
+      "shrimp": 1.0,
+      "lure": 1.8
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 15,
+    "salinity": "fresh",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源1–30m、常见3–4m；湖岸和湖湾均适合。"
+  },
+  {
+    "species_id": "northern_pike",
+    "name": "白斑狗鱼",
+    "scientific_name": "Esox lucius",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_bay"
+    ],
+    "art": "res://assets/fish/northern_pike.png",
+    "thumb": "res://assets/fish/northern_pike_thumb.png",
+    "description": "常在有植被的静水中伏击猎物。细长身体、扁平吻部和靠后的背鳍适合突然加速。",
+    "morphology": "长鱼雷形身体，扁鸭嘴状吻，大口；背鳍和臀鳍靠近尾部，橄榄绿色体侧有浅色斑。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/258",
+        "title": "Esox lucius — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 300,
+    "max_mm": 1100,
+    "anchor_mm": 600,
+    "anchor_g": 1600,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "burst",
+    "difficulty": 0.72,
+    "weight": 4,
+    "bait_weights": {
+      "worm": 0.3,
+      "grain": 0.05,
+      "shrimp": 0.6,
+      "lure": 2.5
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.35,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 15,
+    "salinity": "fresh",
+    "rarity": "少见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源0–30m、通常1–5m；湖湾植被边缘可岸钓。一级装备是挑战调校，并非生态学限制。"
+  },
+  {
+    "species_id": "common_bream",
+    "name": "欧鳊",
+    "scientific_name": "Abramis brama",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_bay"
+    ],
+    "art": "res://assets/fish/common_bream.png",
+    "thumb": "res://assets/fish/common_bream_thumb.png",
+    "description": "常在湖泊和缓流水域结群活动，在底部寻找昆虫幼虫、小型甲壳类和软体动物。",
+    "morphology": "高而侧扁的铜银色身体，小头与下位可伸缩口；臀鳍基部长，鳍呈灰黑色，深叉尾。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Abramis-brama",
+        "title": "Abramis brama — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 700,
+    "anchor_mm": 420,
+    "anchor_g": 1000,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "steady",
+    "difficulty": 0.38,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 1.8,
+      "grain": 1.6,
+      "shrimp": 0.5,
+      "lure": 0.1
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.15,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 15,
+    "salinity": "fresh",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源记载暖浅湖和缓流，可在较深湖湾的软底觅食区出现。"
+  },
+  {
+    "species_id": "tench",
+    "name": "丁鱥",
+    "scientific_name": "Tinca tinca",
+    "region_ids": [
+      "lake"
+    ],
+    "spot_ids": [
+      "lake_shore",
+      "lake_bay"
+    ],
+    "art": "res://assets/fish/tench.png",
+    "thumb": "res://assets/fish/tench_thumb.png",
+    "description": "偏爱温暖、泥底且水草丰富的静水。细鳞藏在厚皮下，身体呈柔和的橄榄绿色。",
+    "morphology": "厚实橄榄绿身体，细小嵌入鳞，小红眼，厚唇与一对短须；各鳍圆钝，尾柄粗短。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/tinca-tinca.html",
+        "title": "Tinca tinca — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 600,
+    "anchor_mm": 360,
+    "anchor_g": 750,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "steady",
+    "difficulty": 0.44,
+    "weight": 7,
+    "bait_weights": {
+      "worm": 2.0,
+      "grain": 1.5,
+      "shrimp": 0.4,
+      "lure": 0.1
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.05,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 8,
+    "salinity": "fresh",
+    "rarity": "少见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "浅水、密草、泥底湖泊；1–8m是有限游戏水域。"
+  },
+  {
+    "species_id": "japanese_horse_mackerel",
+    "name": "日本竹荚鱼",
+    "scientific_name": "Trachurus japonicus",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_harbor",
+      "japan_reef"
+    ],
+    "art": "res://assets/fish/japanese_horse_mackerel.png",
+    "thumb": "res://assets/fish/japanese_horse_mackerel_thumb.png",
+    "description": "西北太平洋的群游鱼。近岸小型个体可在港湾与沿岸活动；随年龄增长可转向更深水。",
+    "morphology": "银白色纺锤形身体，青绿背，鳃盖上后缘黑斑；侧线弯曲并具明显棱鳞，尾深叉，无小离鳍。",
+    "sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/taxon/381555-fishdb",
+        "title": "Trachurus japonicus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fog.70035",
+        "title": "Vertical Habitat Use by Japanese Jack Mackerel in Tokyo Bay (2026)",
+        "supports": "东京湾个体的体型与游泳深度关系，近岸生境交叉核查。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 120,
+    "max_mm": 380,
+    "anchor_mm": 240,
+    "anchor_g": 150,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "burst",
+    "difficulty": 0.35,
+    "weight": 14,
+    "bait_weights": {
+      "worm": 0.5,
+      "grain": 0.1,
+      "shrimp": 1.8,
+      "lure": 1.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 30,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源广深度0–275m；只配置港湾/近岸的小中型群体，不能把岸钓理解为到达275m。"
+  },
+  {
+    "species_id": "chub_mackerel",
+    "name": "日本鲭",
+    "scientific_name": "Scomber japonicus",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_reef"
+    ],
+    "art": "res://assets/fish/chub_mackerel.png",
+    "thumb": "res://assets/fish/chub_mackerel_thumb.png",
+    "description": "在西北太平洋沿岸与陆架水域结群游动。游戏只配置外侧礁岸可遇到的近岸群体。",
+    "morphology": "流线型青蓝背，背部有曲折深条纹，银白腹无斑点；背鳍后和臀鳍后各列小离鳍，尾深叉。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Scomber_japonicus.html",
+        "title": "Scomber japonicus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 500,
+    "anchor_mm": 320,
+    "anchor_g": 350,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "burst",
+    "difficulty": 0.5,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 0.2,
+      "grain": 0.05,
+      "shrimp": 1.4,
+      "lure": 2.0
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.3,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 40,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源0–300m，常在更深陆架；外侧礁岸配置近岸上层群体，未配置300m底钓。"
+  },
+  {
+    "species_id": "red_seabream",
+    "name": "真鲷",
+    "scientific_name": "Pagrus major",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_reef"
+    ],
+    "art": "res://assets/fish/red_seabream.png",
+    "thumb": "res://assets/fish/red_seabream_thumb.png",
+    "description": "日本近海的底栖鲷科鱼，可生活在礁石和砂底。外礁较深处是本游戏的寻找线索。",
+    "morphology": "粉红至赤铜色的高侧扁身体，细小蓝色斑点，连续棘状背鳍，叉形尾，尾后缘较暗。",
+    "sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/chi/species.php?science=Pagrus+major",
+        "title": "Pagrus major — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://ciesm.org/atlas_preview/Pagrusmajor.php",
+        "title": "CIESM Pagrus major species profile",
+        "supports": "连续背鳍、叉尾、体形与蓝色斑点。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 700,
+    "anchor_mm": 380,
+    "anchor_g": 900,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "steady",
+    "difficulty": 0.58,
+    "weight": 6,
+    "bait_weights": {
+      "worm": 0.8,
+      "grain": 0.1,
+      "shrimp": 2.3,
+      "lure": 0.9
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.35,
+    "max_cast": 1.0,
+    "depth_min_m": 10,
+    "depth_max_m": 40,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源10–200m；限定外礁10–40m底部，兼有岩/砂底，未放入浅港。"
+  },
+  {
+    "species_id": "black_seabream",
+    "name": "黑鲷",
+    "scientific_name": "Acanthopagrus schlegelii",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_harbor",
+      "japan_reef"
+    ],
+    "art": "res://assets/fish/black_seabream.png",
+    "thumb": "res://assets/fish/black_seabream_thumb.png",
+    "description": "分布于西北太平洋的近岸鱼，能利用河口、港湾及礁沙混合生境。强壮的颌部可处理硬壳食物。",
+    "morphology": "深灰银色的高侧扁身体，略高凸的额头，小而结实的口，连续背鳍有硬棘，尾鳍分叉。",
+    "sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/mobi/species.php?science=Acanthopagrus+schlegelii",
+        "title": "Acanthopagrus schlegelii — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Acanthopagrus&tbl=species",
+        "title": "Eschmeyer’s Catalog of Fishes: Acanthopagrus",
+        "supports": "有效学名及分布北达日本。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 480,
+    "anchor_mm": 330,
+    "anchor_g": 600,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "steady",
+    "difficulty": 0.52,
+    "weight": 8,
+    "bait_weights": {
+      "worm": 1.2,
+      "grain": 0.2,
+      "shrimp": 2.0,
+      "lure": 0.6
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.15,
+    "max_cast": 1.0,
+    "depth_min_m": 3,
+    "depth_max_m": 40,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源3–50m，正文常见1–15m；港湾、堤防、礁沙混合区适配。"
+  },
+  {
+    "species_id": "japanese_seabass",
+    "name": "日本花鲈",
+    "scientific_name": "Lateolabrax japonicus",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_harbor",
+      "japan_reef"
+    ],
+    "art": "res://assets/fish/japanese_seabass.png",
+    "thumb": "res://assets/fish/japanese_seabass_thumb.png",
+    "description": "日本沿岸与河口的掠食鱼，常取食小鱼和虾。这里使用日本花鲈，未把斑点花鲈混作同一种。",
+    "morphology": "修长银色身体、灰绿背部，成鱼侧面通常无明显密集黑斑；大斜口下颌略突出，背鳍棘部和软条部有凹口。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Lateolabrax_japonicus.html",
+        "title": "Lateolabrax japonicus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.godac.jamstec.go.jp/bismal/e/view/9005278",
+        "title": "JAMSTEC BISMaL Lateolabrax japonicus",
+        "supports": "日本物种记录，独立区分 Lateolabrax maculatus。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 250,
+    "max_mm": 900,
+    "anchor_mm": 520,
+    "anchor_g": 1500,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "burst",
+    "difficulty": 0.68,
+    "weight": 5,
+    "bait_weights": {
+      "worm": 0.3,
+      "grain": 0.05,
+      "shrimp": 1.1,
+      "lure": 2.5
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.25,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 40,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "资料指近岸礁石与河口活动，JAMSTEC日本标本记录0–61m；未混入斑点花鲈。"
+  },
+  {
+    "species_id": "japanese_whiting",
+    "name": "日本沙鮻",
+    "scientific_name": "Sillago japonica",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_harbor"
+    ],
+    "art": "res://assets/fish/japanese_whiting.png",
+    "thumb": "res://assets/fish/japanese_whiting_thumb.png",
+    "description": "活动于浅海湾的沙质底，吃沙泥中的小型无脊椎动物。港内沙底是容易尝试的钓点。",
+    "morphology": "细长近圆筒形银米色身体，尖吻小口，两个背鳍，后背鳍和臀鳍长而低，鳍透明，尾浅凹。",
+    "sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/taxon/382628-fishdb",
+        "title": "Sillago japonica — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 100,
+    "max_mm": 290,
+    "anchor_mm": 200,
+    "anchor_g": 70,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "rest",
+    "difficulty": 0.2,
+    "weight": 15,
+    "bait_weights": {
+      "worm": 2.2,
+      "grain": 0.1,
+      "shrimp": 1.7,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.1
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 20,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源0–30m、浅海湾沙底；必须出现在港内沙区而不是纯岩礁。"
+  },
+  {
+    "species_id": "marbled_rockfish",
+    "name": "褐菖鲉",
+    "scientific_name": "Sebastiscus marmoratus",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_reef"
+    ],
+    "art": "res://assets/fish/marbled_rockfish.png",
+    "thumb": "res://assets/fish/marbled_rockfish_thumb.png",
+    "description": "日本沿岸岩底居民，常借斑驳体色隐蔽。背鳍棘具有毒腺，现实中观察时不要徒手抓握。",
+    "morphology": "粗壮大头，宽大口，褐红色不规则大理石斑；连续背鳍前部硬棘，宽扇状胸鳍，圆尾。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/Summary/SpeciesSummary.php?id=4597&lang=spanish",
+        "title": "Sebastiscus marmoratus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 120,
+    "max_mm": 330,
+    "anchor_mm": 230,
+    "anchor_g": 250,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "rest",
+    "difficulty": 0.42,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 1.0,
+      "grain": 0.05,
+      "shrimp": 2.0,
+      "lure": 1.2
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.1
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 30,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "来源明确日本沿岸岩底；1–30m是游戏设定，未把未知自然深度极限写成事实。"
+  },
+  {
+    "species_id": "olive_flounder",
+    "name": "牙鲆",
+    "scientific_name": "Paralichthys olivaceus",
+    "region_ids": [
+      "japan"
+    ],
+    "spot_ids": [
+      "japan_reef"
+    ],
+    "art": "res://assets/fish/olive_flounder.png",
+    "thumb": "res://assets/fish/olive_flounder_thumb.png",
+    "description": "栖息于西北太平洋沿岸沙底的扁平掠食鱼。成年个体双眼同在左侧，常伏在底部等候猎物。",
+    "morphology": "长椭圆扁平身体，左眼侧朝向观察者，双眼可见；橄榄褐斑驳体色，大口，长背鳍和臀鳍沿体缘伸展。",
+    "sources": [
+      {
+        "url": "https://swfsc-publications.fisheries.noaa.gov/publications/CR/2025/2025Purcell2.pdf",
+        "title": "Paralichthys olivaceus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 220,
+    "max_mm": 850,
+    "anchor_mm": 480,
+    "anchor_g": 1100,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "behavior": "rest",
+    "difficulty": 0.61,
+    "weight": 4,
+    "bait_weights": {
+      "worm": 0.6,
+      "grain": 0.05,
+      "shrimp": 1.6,
+      "lure": 2.0
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.1
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.35,
+    "max_cast": 1.0,
+    "depth_min_m": 10,
+    "depth_max_m": 40,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
+    "research_status": "reviewed_2026-10-02",
+    "reachability_note": "NOAA报告西北太平洋沿岸、偏好10–100m；外礁沙区取10–40m可达部分。"
+  }
+]

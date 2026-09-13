@@ -1,0 +1,266 @@
+[
+  {
+    "species": "common_carp",
+    "routes": [
+      {
+        "spot": "lake_shore",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          1,
+          5
+        ]
+      },
+      {
+        "spot": "lake_bay",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          2,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "species": "crucian_carp",
+    "routes": [
+      {
+        "spot": "lake_shore",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          1,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "species": "roach",
+    "routes": [
+      {
+        "spot": "lake_shore",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          1,
+          5
+        ]
+      },
+      {
+        "spot": "lake_bay",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          2,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "species": "rudd",
+    "routes": [
+      {
+        "spot": "lake_shore",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          1,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "species": "european_perch",
+    "routes": [
+      {
+        "spot": "lake_shore",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          1,
+          5
+        ]
+      },
+      {
+        "spot": "lake_bay",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          2,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "species": "northern_pike",
+    "routes": [
+      {
+        "spot": "lake_bay",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          2,
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "species": "common_bream",
+    "routes": [
+      {
+        "spot": "lake_bay",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          2,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "species": "tench",
+    "routes": [
+      {
+        "spot": "lake_shore",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          1,
+          5
+        ]
+      },
+      {
+        "spot": "lake_bay",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          2,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "species": "japanese_horse_mackerel",
+    "routes": [
+      {
+        "spot": "japan_harbor",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          2,
+          10
+        ]
+      },
+      {
+        "spot": "japan_reef",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          5,
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "species": "chub_mackerel",
+    "routes": [
+      {
+        "spot": "japan_reef",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          5,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "species": "red_seabream",
+    "routes": [
+      {
+        "spot": "japan_reef",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          10,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "species": "black_seabream",
+    "routes": [
+      {
+        "spot": "japan_harbor",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          3,
+          12
+        ]
+      },
+      {
+        "spot": "japan_reef",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          5,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "species": "japanese_seabass",
+    "routes": [
+      {
+        "spot": "japan_harbor",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          5,
+          12
+        ]
+      },
+      {
+        "spot": "japan_reef",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          5,
+          40
+        ]
+      }
+    ]
+  },
+  {
+    "species": "japanese_whiting",
+    "routes": [
+      {
+        "spot": "japan_harbor",
+        "minimum_valid_gear": 0,
+        "reachable_depth": [
+          1,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "species": "marbled_rockfish",
+    "routes": [
+      {
+        "spot": "japan_reef",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          5,
+          30
+        ]
+      }
+    ]
+  },
+  {
+    "species": "olive_flounder",
+    "routes": [
+      {
+        "spot": "japan_reef",
+        "minimum_valid_gear": 1,
+        "reachable_depth": [
+          10,
+          40
+        ]
+      }
+    ]
+  }
+]

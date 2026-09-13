@@ -1,0 +1,696 @@
+[
+  {
+    "asset_id": "common_carp",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/common_carp.png",
+    "thumbnail_path": "game/assets/fish/common_carp_thumb.png",
+    "master_path": "art_masters/a/common_carp.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6280523935953776,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset type: standalone 2D fishing-game field-guide fish painting. Subject: exactly one entire COMMON CARP, Cyprinus carpio, normal wild fully-scaled European adult. Anatomy: robust elongated moderately deep bronze-gold body with large regular dark-edged cycloid scales, olive-brown back and creamy golden belly; small protrusible fleshy mouth with TWO PAIRS of small barbels (near-side pair visible); ONE long low dorsal fin starting near midbody, gently concave upper edge, complete translucent amber fins, deeply forked tail, natural small amber eye. Strict left-facing lateral scientific side view, nose LEFT and tail RIGHT, natural straight relaxed posture. High-quality delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil line details, soft upper-left light, restrained natural hues, clear biological silhouette, no caricature. Fill landscape composition but leave 7% transparent padding around complete nose, dorsal fin, belly fins and tail. Genuine transparent alpha background, only one fish, no water, no plants, no floor, no cast shadow, no paper rectangle, no checkerboard, no text, no labels, no hooks. Near-real morphology and natural proportions, all fins and tail fully intact.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Cyprinus-carpio.html",
+        "title": "Cyprinus carpio — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "完整大鳞、长背鳍、近侧可见口须和叉尾；粗壮有鳞湖鲤形态。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/common_carp.png",
+    "sha256": "e9b76eb124fc85cd4b812a805e7108d37bbae1fce82101d2a082f73bc0e0b8f1"
+  },
+  {
+    "asset_id": "northern_pike",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/northern_pike.png",
+    "thumbnail_path": "game/assets/fish/northern_pike_thumb.png",
+    "master_path": "art_masters/a/northern_pike.png",
+    "master_dimensions": [
+      2048,
+      768
+    ],
+    "runtime_dimensions": [
+      1024,
+      384
+    ],
+    "thumbnail_dimensions": [
+      256,
+      96
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6694348653157552,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, left-facing true lateral view, nose LEFT tail RIGHT, relaxed straight natural posture, all fins fully in frame with generous transparent padding. Delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil detail, soft upper-left lighting, restrained natural colors, detailed anatomically credible fins, normal small eyes, near-real proportions. Genuine transparent alpha background; no water, plants, shadow, paper rectangle, checkerboard, text, labels, hook or scenery. Subject: NORTHERN PIKE Esox lucius. VERY ELONGATED slender olive-green torpedo body, long flattened duckbill snout and large closed mouth with lower jaw slightly forward. Scales small. Many pale yellow oval/bean-shaped spots against dark green flanks, creamy belly. SINGLE dorsal fin set FAR BACK near the tail directly above rear anal fin, no dorsal fin at midbody. Low rounded paired fins, forked reddish-brown tail with dark streaks. Do not shorten its characteristic long body or turn into a perch.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/258",
+        "title": "Esox lucius — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "长鸭嘴与细长身、后移背鳍/臀鳍、浅色斑点和叉尾均已检查。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/northern_pike.png",
+    "sha256": "b352fa74ef5958b78872ae8b27a4a2dd7605d3cbf1b38334626a7e3fdb8168ff"
+  },
+  {
+    "asset_id": "european_perch",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/european_perch.png",
+    "thumbnail_path": "game/assets/fish/european_perch_thumb.png",
+    "master_path": "art_masters/a/european_perch.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6229108174641927,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, left-facing true lateral view, nose LEFT tail RIGHT, relaxed straight natural posture, all fins fully in frame with generous transparent padding. Delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil detail, soft upper-left lighting, restrained natural colors, detailed anatomically credible fins, normal small eyes, near-real proportions. Genuine transparent alpha background; no water, plants, shadow, paper rectangle, checkerboard, text, labels, hook or scenery. Subject: EUROPEAN PERCH Perca fluviatilis. Moderately deep green-gold laterally compressed body, SIX bold dark vertical bars down the flanks, creamy belly, small natural yellow-orange iris. TWO clearly separate dorsal fins, tall spiny front dorsal with black blotch near its rear, lower soft rear dorsal. Orange-red pelvic and anal fins and lower tail, pale amber pectoral. Tail shallowly forked. Mouth moderate, body not hugely deep, no barbels.",
+    "generation_edits": [
+      {
+        "prompt": "Use case: precise-object-edit. This is an existing original field-guide painting of Perca fluviatilis. Make ONLY one localized anatomical correction: remove the large isolated BLACK CIRCULAR BLOTCH in the MIDDLE of the FIRST spiny dorsal fin; reconstruct the pale translucent gray fin membrane and golden fin rays beneath it. Retain a single natural dark patch at the far REAR end of that same first spiny dorsal fin (the side nearest the tail/right). Keep the body, six flank bars, fins, scale pattern, pose, silhouette, head, eye, orange-red lower fins, watercolor/pencil style and composition exactly unchanged. Preserve true alpha transparency, no new background, no text.",
+        "result": "Removed misplaced central dorsal blotch; retained correct posterior dorsal dark patch."
+      }
+    ],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/358",
+        "title": "Perca fluviatilis — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "两片背鳍、深竖带、橙红下鳍；已用局部编辑移除错误中央背鳍斑，保留后端暗斑。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/european_perch.png",
+    "sha256": "1b9968904562d4c630d98ffcbcec1b41b3c445b346376627e3f7fa3b18e3af63"
+  },
+  {
+    "asset_id": "olive_flounder",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/olive_flounder.png",
+    "thumbnail_path": "game/assets/fish/olive_flounder_thumb.png",
+    "master_path": "art_masters/a/olive_flounder.png",
+    "master_dimensions": [
+      1774,
+      887
+    ],
+    "runtime_dimensions": [
+      1024,
+      512
+    ],
+    "thumbnail_dimensions": [
+      256,
+      128
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.438954763088022,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, left-facing true lateral view, nose LEFT tail RIGHT, relaxed straight natural posture, all fins fully in frame with generous transparent padding. Delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil detail, soft upper-left lighting, restrained natural colors, detailed anatomically credible fins, normal small eyes, near-real proportions. Genuine transparent alpha background; no water, plants, shadow, paper rectangle, checkerboard, text, labels, hook or scenery. Subject: OLIVE FLOUNDER Paralichthys olivaceus. Show the entire pigmented LEFT OCULAR SIDE squarely to viewer, head at LEFT, tail at RIGHT. This is a flattened LEFT-EYED flatfish, both small anatomically correct eyes on this same visible upper/left side near head, large slanting toothed mouth. Long oval asymmetric flattened body, olive-brown mottled marbled skin with darker and paler irregular fine patches, no bright orange spots, no large fake scales. Long low dorsal fin runs along nearly entire upper outline from above eyes toward tail; matching long low anal fin along lower edge starting behind head; one small pectoral near gill cover. Broad rounded/truncate caudal fin clearly separate at right, no forked tail. Preserve flatfish anatomy, not a generic upright fish.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://swfsc-publications.fisheries.noaa.gov/publications/CR/2025/2025Purcell2.pdf",
+        "title": "Paralichthys olivaceus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "左眼侧正对观察者，双眼同侧、大口、扁椭圆体、连续体缘背臀鳍和非叉尾。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/olive_flounder.png",
+    "sha256": "d26265de8bd62f7fc373e21be32443029371defa28bfce45cef6eb6009c8f684"
+  },
+  {
+    "asset_id": "crucian_carp",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/crucian_carp.png",
+    "thumbnail_path": "game/assets/fish/crucian_carp_thumb.png",
+    "master_path": "art_masters/a/crucian_carp.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.524316151936849,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, left-facing true lateral view, nose LEFT tail RIGHT, relaxed straight posture, all fins fully visible with 7% transparent padding. Delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil detail, soft upper-left lighting, muted natural colors, near-real anatomy and proportions. Genuine transparent alpha background; no water, plants, cast shadow, paper rectangle, checkerboard, text, labels, hook or scenery. NORMAL small eye, no cartoon. Subject: CRUCIAN CARP Carassius carassius, European species, not common carp or Asian goldfish. Deep short laterally compressed body, bronze golden flanks with regular medium scales and olive back, pale golden belly. Small terminal mouth with absolutely NO BARBELS. ONE long dorsal fin with distinctly smooth convex upper outline, not concave; amber-brown fins, broad shallowly forked tail with rounded lobes, small bronze eye. Robust oval shape characteristic of crucian, body depth about 40% of body length.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/270",
+        "title": "Carassius carassius — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "无须、深体、微凸长背鳍、浅叉圆尾；与普通鲤的口须及体高明显不同。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/crucian_carp.png",
+    "sha256": "0372a61c401ec6be1fd05e191053707edf4ca79d27cccc21c84e7a548f945cdf"
+  },
+  {
+    "asset_id": "roach",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/roach.png",
+    "thumbnail_path": "game/assets/fish/roach_thumb.png",
+    "master_path": "art_masters/a/roach.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6949227650960287,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, left-facing true lateral view, nose LEFT tail RIGHT, relaxed straight posture, all fins fully visible with 7% transparent padding. Delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil detail, soft upper-left lighting, muted natural colors, near-real anatomy and proportions. Genuine transparent alpha background; no water, plants, cast shadow, paper rectangle, checkerboard, text, labels, hook or scenery. NORMAL small eye, no cartoon. Subject: COMMON ROACH Rutilus rutilus. Moderately slender laterally compressed silver body, slate olive-gray back, clean silvery flanks with dark-edged medium regular scales, white belly. Small straight TERMINAL mouth, pointed short snout, natural RED iris, no barbels. Single short triangular gray dorsal fin starts DIRECTLY ABOVE pelvic fin origin, not behind it. Pectoral pale orange, pelvic and anal fins orange-red, forked gray-red tail. True roach modest body depth; NOT golden rudd and NOT steeply upturned mouth.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/Summary/Rutilus-rutilus",
+        "title": "Rutilus rutilus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "银色体侧、红虹膜和橙红下鳍；端位口，背鳍与腹鳍起点接近。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/roach.png",
+    "sha256": "155c42562dbfb46c2171fd2e67c606ea1b3f62f3d4842562dfe7bb0c9de20477"
+  },
+  {
+    "asset_id": "rudd",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/rudd.png",
+    "thumbnail_path": "game/assets/fish/rudd_thumb.png",
+    "master_path": "art_masters/a/rudd.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6408576965332031,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, left-facing true lateral view, nose LEFT tail RIGHT, relaxed straight posture, all fins fully visible with 7% transparent padding. Delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil detail, soft upper-left lighting, muted natural colors, near-real anatomy and proportions. Genuine transparent alpha background; no water, plants, cast shadow, paper rectangle, checkerboard, text, labels, hook or scenery. NORMAL small eye, no cartoon. Subject: COMMON RUDD Scardinius erythrophthalmus. Moderately deep and laterally compressed GOLDEN-BRASS shiny scaled body, dark olive back, pale golden belly. Small slightly UPTURNED mouth with lower lip projecting upward, normal small yellow-gold iris with reddish tone. Vivid coral-red pelvic and anal fins, red-tinged tail, amber pectoral. Single short dorsal fin is distinctly BEHIND the origin of pelvic fins. Deeply forked tail. No barbels, no stripe, no giant eye. Clearly golden rudd, not silver roach.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/2951",
+        "title": "Scardinius erythrophthalmus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "金色体侧、向上小口、鲜红下鳍；背鳍明显在腹鳍起点之后。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/rudd.png",
+    "sha256": "b5b957b629038b020c66c37ebe4fdeee32636842530575ede51ac55d520dd36b"
+  },
+  {
+    "asset_id": "common_bream",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/common_bream.png",
+    "thumbnail_path": "game/assets/fish/common_bream_thumb.png",
+    "master_path": "art_masters/a/common_bream.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6253935496012369,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, left-facing true lateral view, nose LEFT tail RIGHT, relaxed straight posture, all fins fully visible with 7% transparent padding. Delicate realistic hand-painted watercolor and gouache natural-history illustration, subtle pencil detail, soft upper-left lighting, muted natural colors, near-real anatomy and proportions. Genuine transparent alpha background; no water, plants, cast shadow, paper rectangle, checkerboard, text, labels, hook or scenery. NORMAL small eye, no cartoon. Subject: COMMON FRESHWATER BREAM Abramis brama. Very HIGH deep laterally compressed body, arched back, small head relative to high body, small downward subterminal protrusible mouth, no barbels, small normal eye. Warm bronze-gray scales, olive-bronze back, silvery cream belly. Tall narrow triangular dorsal fin midbody; the ANAL FIN has an exceptionally LONG BASE with many soft rays, running most of lower rear body, about twice dorsal base length. All fins smoky dark gray, not red. Deeply forked smoky gray tail with slightly longer lower lobe. Body depth distinctly greater than roach.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Abramis-brama",
+        "title": "Abramis brama — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "高而扁的体形、小头、灰鳍、显著长臀鳍和深叉尾；无鲤鱼须。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/common_bream.png",
+    "sha256": "1677dd89d78756f2ece9ebc461c74d935ee7154c1baa8037eb5017505f173be6"
+  },
+  {
+    "asset_id": "tench",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/tench.png",
+    "thumbnail_path": "game/assets/fish/tench_thumb.png",
+    "master_path": "art_masters/a/tench.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6008065541585287,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for 2D fishing-game field guide. Exactly ONE complete fish in true LEFT-facing lateral view, nose LEFT and tail RIGHT, straight relaxed natural posture, fully visible fins and tail, 7% clear transparent padding. Delicate near-real watercolor and gouache natural-history illustration with subtle pencil texture, detailed credible anatomy, soft upper-left light, restrained natural palette. Normal small fish eye, not cartoon. Genuine transparent alpha background; no background, water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: TENCH Tinca tinca. Stocky thick olive-green body with very tiny embedded scales giving a smooth leathery appearance, dark green back and golden belly. Small orange-red iris, rounded triangular head and thick small lips with ONE short barbel at each mouth corner, near barbel visible. ONE rounded short dorsal fin, all pectoral pelvic anal fins softly rounded not pointy. Deep short thick caudal peduncle, broad tail with barely concave edge, not deeply forked. Anatomically natural, no giant obvious carp scales, no red fins.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/tinca-tinca.html",
+        "title": "Tinca tinca — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "厚实绿体、细鳞、小红眼、短口须、圆钝鳍和粗尾柄。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/tench.png",
+    "sha256": "9afe4e24af7def5dedb0c18995d88c5bda2b5518ed8cc11dcb8fe75537fe31e1"
+  },
+  {
+    "asset_id": "japanese_horse_mackerel",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/japanese_horse_mackerel.png",
+    "thumbnail_path": "game/assets/fish/japanese_horse_mackerel_thumb.png",
+    "master_path": "art_masters/a/japanese_horse_mackerel.png",
+    "master_dimensions": [
+      1774,
+      887
+    ],
+    "runtime_dimensions": [
+      1024,
+      512
+    ],
+    "thumbnail_dimensions": [
+      256,
+      128
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.6526725125163803,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for 2D fishing-game field guide. Exactly ONE complete fish in true LEFT-facing lateral view, nose LEFT and tail RIGHT, straight relaxed natural posture, fully visible fins and tail, 7% clear transparent padding. Delicate near-real watercolor and gouache natural-history illustration with subtle pencil texture, detailed credible anatomy, soft upper-left light, restrained natural palette. Normal small fish eye, not cartoon. Genuine transparent alpha background; no background, water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: JAPANESE HORSE MACKEREL Trachurus japonicus. Slender spindle-shaped silver-white body, blue-green back, very subtle warm gold midflank, pearly belly. Distinct small BLACK spot at upper rear gill cover, curved lateral line arches above pectoral fin then straightens into visibly hard bony scutes along rear flank/tail peduncle. Two distinct dorsal fins: small spiny first and long low second; long low anal fin; long narrow pointed pectoral. Thin caudal peduncle and deeply FORKED yellow-gray tail. Natural moderately large but not exaggerated eye. Absolutely NO separate mackerel finlets; belongs to carangids, not Scomber.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/taxon/381555-fishdb",
+        "title": "Trachurus japonicus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fog.70035",
+        "title": "Vertical Habitat Use by Japanese Jack Mackerel in Tokyo Bay (2026)",
+        "supports": "东京湾个体的体型与游泳深度关系，近岸生境交叉核查。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "鳃盖后黑斑、弧形侧线及后段棱鳞、深叉尾；明确无鲭类小离鳍。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/japanese_horse_mackerel.png",
+    "sha256": "860af0f77bfd51cea26c9f2a421b0395dacbebda61cf2fff0ec13d4e60481e34"
+  },
+  {
+    "asset_id": "chub_mackerel",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/chub_mackerel.png",
+    "thumbnail_path": "game/assets/fish/chub_mackerel_thumb.png",
+    "master_path": "art_masters/a/chub_mackerel.png",
+    "master_dimensions": [
+      1945,
+      808
+    ],
+    "runtime_dimensions": [
+      1024,
+      425
+    ],
+    "thumbnail_dimensions": [
+      256,
+      106
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.6614631321744,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for 2D fishing-game field guide. Exactly ONE complete fish in true LEFT-facing lateral view, nose LEFT and tail RIGHT, straight relaxed natural posture, fully visible fins and tail, 7% clear transparent padding. Delicate near-real watercolor and gouache natural-history illustration with subtle pencil texture, detailed credible anatomy, soft upper-left light, restrained natural palette. Normal small fish eye, not cartoon. Genuine transparent alpha background; no background, water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: PACIFIC CHUB MACKEREL Scomber japonicus, Japanese coastal population. Slim athletic fusiform torpedo fish, vivid but restrained blue-green back with numerous narrow dark wavy zigzag transverse markings confined to dorsal half; smooth SILVER WHITE unmarked flanks and belly, no spots on belly. Two separated dorsal fins: small triangular first, low second; FIVE tiny detached FINLETS in a row behind second dorsal and five behind anal fin, thin tail peduncle, deeply forked charcoal tail. Short narrow pectoral, pointed snout, normal natural eye. Do not draw horse-mackerel scutes or gill-cover black spot.",
+    "generation_edits": [
+      {
+        "prompt": "Use case: precise-object-edit. This is an existing original field-guide painting of Pacific chub mackerel, Scomber japonicus. Make ONLY the following precise anatomical correction: between the second main dorsal fin and the tail there must be exactly FIVE detached tiny triangular finlets along the TOP edge; between the main anal fin and the tail there must be exactly FIVE detached tiny triangular finlets along the BOTTOM edge. Currently there are six: remove the final tiniest finlet nearest the tail on each edge and smoothly restore the thin tail peduncle contour there. Do not remove or change either main dorsal or main anal fin. Preserve everything else exactly: long streamlined body, blue-green wavy striped back, pure silver unspotted belly, scales, face, normal eye, full tail, left-facing pose, watercolor-pencil style, and true transparent alpha background. No cropping or additional background.",
+        "result": "First correction overremoved finlets; intermediate preserved but not used."
+      },
+      {
+        "prompt": "Precise local anatomical correction to this existing chub mackerel painting. Currently FOUR tiny detached triangular finlets are clearly visible behind the second main dorsal fin, and FOUR below behind the main anal fin. Preserve those eight existing tiny finlets exactly. ADD ONE SINGLE small triangular finlet on the upper tail peduncle in the empty gap between the rightmost existing finlet and the tail, around 83% of image width. ADD ONE SINGLE matching small triangular finlet below that position on the lower tail peduncle. This produces FIVE upper and FIVE lower tiny finlets. Only add those two small fins, do not delete or redraw any existing finlet, do not change anything else in this fish illustration. Preserve true transparency, body, tail, eye, markings, pose, color and watercolor style. No text.",
+        "result": "Selected correction: five visible upper and five lower finlets, inspected at full size."
+      }
+    ],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Scomber_japonicus.html",
+        "title": "Scomber japonicus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "背部波状条纹、洁白无斑腹、两背鳍、细尾柄；两次局部编辑后上/下各五个离鳍，已检查。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/chub_mackerel.png",
+    "sha256": "9c098fa78910532b00d3153c92d8284cd8c058e15b37ccc3864232d37c0fc9d0"
+  },
+  {
+    "asset_id": "red_seabream",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/red_seabream.png",
+    "thumbnail_path": "game/assets/fish/red_seabream_thumb.png",
+    "master_path": "art_masters/a/red_seabream.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.6070340474446615,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for 2D fishing-game field guide. Exactly ONE complete fish in true LEFT-facing lateral view, nose LEFT and tail RIGHT, straight relaxed natural posture, fully visible fins and tail, 7% clear transparent padding. Delicate near-real watercolor and gouache natural-history illustration with subtle pencil texture, detailed credible anatomy, soft upper-left light, restrained natural palette. Normal small fish eye, not cartoon. Genuine transparent alpha background; no background, water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: RED SEABREAM Pagrus major, Japanese madai. Moderately high deep laterally flattened oval body, convex forehead, short small strong terminal mouth, small normal golden eye, pink-red scales over upper body fading to silvery blush belly, numerous tiny discreet brilliant BLUE dots across upper flanks. One continuous dorsal fin with normal erect evenly developed sharp spines in first half and low soft rear half, no giant filament. Pointed narrow pectoral fin, pink pelvic and anal fins, red forked tail with dark trailing edge and NO white tail tips. Realistic natural proportions, not ornamental koi.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/chi/species.php?science=Pagrus+major",
+        "title": "Pagrus major — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://ciesm.org/atlas_preview/Pagrusmajor.php",
+        "title": "CIESM Pagrus major species profile",
+        "supports": "连续背鳍、叉尾、体形与蓝色斑点。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "粉红体、蓝色细斑、连续棘背鳍、叉尾暗边；无夸张长丝背鳍。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/red_seabream.png",
+    "sha256": "4eac02084e8f37eec249dd8e523e458a88d89410a25b618fcc4d4678a0c51622"
+  },
+  {
+    "asset_id": "black_seabream",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/black_seabream.png",
+    "thumbnail_path": "game/assets/fish/black_seabream_thumb.png",
+    "master_path": "art_masters/a/black_seabream.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.5767472585042318,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, true LEFT-facing lateral view with nose LEFT and tail RIGHT, relaxed straight natural posture, complete intact fins and tail within generous 7% transparent padding. Delicate near-real hand-painted watercolor and gouache natural-history illustration, subtle pencil texture, biological credibility, soft upper-left light, restrained natural palette. Normal small fish eyes, no cartoon. Genuine transparent alpha background; no water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: BLACK SEABREAM Acanthopagrus schlegelii. Deep compressed oval charcoal-SILVER body, dark slate-gray back and forehead, silvery lower sides and pale belly, visible regular dark-edged scales and faint narrow dusky vertical bands. High convex forehead, small strong fleshy terminal mouth, normal modest bronze eye, no barbels. ONE continuous dorsal fin with about eleven pronounced spines on front and short soft rear part, dark gray fins, long pointed pectoral fin, dark gray forked tail. Not black disk, not tropical angelfish; realistic Japanese black porgy anatomy.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/mobi/species.php?science=Acanthopagrus+schlegelii",
+        "title": "Acanthopagrus schlegelii — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Acanthopagrus&tbl=species",
+        "title": "Eschmeyer’s Catalog of Fishes: Acanthopagrus",
+        "supports": "有效学名及分布北达日本。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "灰银深体、凸额、小强口、连续硬棘背鳍和叉尾；体侧暗带较淡。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/black_seabream.png",
+    "sha256": "a41f0bee902d486187cd0f7f5a4417844422bff09bfecb0617ecfe14dd6f24b3"
+  },
+  {
+    "asset_id": "japanese_seabass",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/japanese_seabass.png",
+    "thumbnail_path": "game/assets/fish/japanese_seabass_thumb.png",
+    "master_path": "art_masters/a/japanese_seabass.png",
+    "master_dimensions": [
+      1774,
+      887
+    ],
+    "runtime_dimensions": [
+      1024,
+      512
+    ],
+    "thumbnail_dimensions": [
+      256,
+      128
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.6179297862523816,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, true LEFT-facing lateral view with nose LEFT and tail RIGHT, relaxed straight natural posture, complete intact fins and tail within generous 7% transparent padding. Delicate near-real hand-painted watercolor and gouache natural-history illustration, subtle pencil texture, biological credibility, soft upper-left light, restrained natural palette. Normal small fish eyes, no cartoon. Genuine transparent alpha background; no water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: mature JAPANESE SEABASS Lateolabrax japonicus, adult unspotted Japanese suzuki, NOT spotted seabass. Elongated athletic laterally compressed SILVER body, gray-olive back, white belly, fine scales, no dense black spots. Large oblique mouth with lower jaw projecting, eye naturally moderate. Dorsal with tall spiny anterior portion and lower rounded soft posterior portion separated by deep notch/small gap, rear anal fin. Moderate gray pectoral and pelvic fins, broad shallow-forked dark gray tail, clear silvery gill cover. Natural adult elongated bass silhouette.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Lateolabrax_japonicus.html",
+        "title": "Lateolabrax japonicus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.godac.jamstec.go.jp/bismal/e/view/9005278",
+        "title": "JAMSTEC BISMaL Lateolabrax japonicus",
+        "supports": "日本物种记录，独立区分 Lateolabrax maculatus。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "银色修长成鱼、大斜口和略突出下颌；无密集黑斑、背鳍有凹口。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/japanese_seabass.png",
+    "sha256": "bb2fad39b681e74417528c2a676a710484720dd3c480e9d2dcd5cfd68735fa03"
+  },
+  {
+    "asset_id": "japanese_whiting",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/japanese_whiting.png",
+    "thumbnail_path": "game/assets/fish/japanese_whiting_thumb.png",
+    "master_path": "art_masters/a/japanese_whiting.png",
+    "master_dimensions": [
+      2172,
+      724
+    ],
+    "runtime_dimensions": [
+      1024,
+      341
+    ],
+    "thumbnail_dimensions": [
+      256,
+      85
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.6228397840928747,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, true LEFT-facing lateral view with nose LEFT and tail RIGHT, relaxed straight natural posture, complete intact fins and tail within generous 7% transparent padding. Delicate near-real hand-painted watercolor and gouache natural-history illustration, subtle pencil texture, biological credibility, soft upper-left light, restrained natural palette. Normal small fish eyes, no cartoon. Genuine transparent alpha background; no water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: JAPANESE WHITING Sillago japonica. Very SLENDER elongated almost cylindrical pearly silver-beige body, sandy greenish-gray back, pale belly, fine tiny scales, sharply tapering pointed snout and small terminal mouth, modest dark eye with pale gold iris. TWO dorsal fins: short upright triangular first dorsal and very long low second dorsal along rear back, matched by long low anal fin. Fins almost transparent pale straw, sparse tiny dark dots on first dorsal; tail shallowly concave with dark thin margins, not strongly forked. Small pectoral, no barbels, no broad stripes or spots on body. Preserve delicate pencil-thin whiting build.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://fishdb.sinica.edu.tw/taxon/382628-fishdb",
+        "title": "Sillago japonica — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "细长浅色身、尖吻小口、两个背鳍及很长的低后背鳍/臀鳍、浅凹尾。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/japanese_whiting.png",
+    "sha256": "45686260424d7ea8f89833804a939ef4b5ca934360f72fcf966ec9e5fdaa82dc"
+  },
+  {
+    "asset_id": "marbled_rockfish",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/marbled_rockfish.png",
+    "thumbnail_path": "game/assets/fish/marbled_rockfish_thumb.png",
+    "master_path": "art_masters/a/marbled_rockfish.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_fraction": 0.5706609090169271,
+    "generation_method": "OpenAI built-in image_gen; one species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, true LEFT-facing lateral view with nose LEFT and tail RIGHT, relaxed straight natural posture, complete intact fins and tail within generous 7% transparent padding. Delicate near-real hand-painted watercolor and gouache natural-history illustration, subtle pencil texture, biological credibility, soft upper-left light, restrained natural palette. Normal small fish eyes, no cartoon. Genuine transparent alpha background; no water, plants, floor, cast shadow, paper rectangle, checkerboard, labels, text, hooks or scenery. Subject: MARBLED ROCKFISH Sebastiscus marmoratus, Japanese kasago. Stocky compact fish with LARGE broad bony head, wide slightly upturned mouth, modest normal round reddish brown eye, short stout mottled body tapering to a rounded tail. Dense mottled reddish chestnut and brown marbling interspersed irregular cream patches, subtle irregular dark vertical blotches. ONE continuous dorsal with pronounced sharp front spines and rounded rear soft rays. Very BROAD fan-shaped pectoral fin with distinct rays, rounded pelvic and anal fins, broad convex rounded tail with mottled bands, never forked. Small spines on cheek/gill cover, no grotesque extra horns, no fancy lionfish appendages.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fishbase.se/Summary/SpeciesSummary.php?id=4597&lang=spanish",
+        "title": "Sebastiscus marmoratus — species account",
+        "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Source webpages referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "大头大口、褐红斑驳纹、宽扇胸鳍和圆尾、背鳍棘；钓获介绍提醒现实勿徒手抓。 绘画逐条视觉复核，不是鳍条/鳞片计数的分类学检索图。",
+    "used_by": "res://assets/fish/marbled_rockfish.png",
+    "sha256": "cb2784b4bb0155da3c1ff820b25486f244b43937f5a42e760396bf8cd58fd27f"
+  }
+]

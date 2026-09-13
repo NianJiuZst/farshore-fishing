@@ -1,0 +1,15 @@
+build/
+tools/android-sdk/
+tools/jdk/
+tools/gradle/
+tools/downloads/
+tools/xvfb/
+game/.godot/
+game/android/build/
+*.keystore
+*.jks
+*.p12
+*password*
+tools/android-gradle/
+tools/__pycache__/
+game/exported/

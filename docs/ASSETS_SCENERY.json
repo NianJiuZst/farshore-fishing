@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-02",
+  "generator": "OpenAI built-in image_gen.imagegen",
+  "backgrounds": [
+    {
+      "asset_id": "scenery_lake",
+      "region_id": "lake",
+      "purpose": "Static watercolor destination background",
+      "master_path": "art_masters/scenery/lake.png",
+      "runtime_path": "game/assets/scenery/lake.png",
+      "engine_uri": "res://assets/scenery/lake.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGB",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-863e12cc-d7bf-4d69-8f4f-9249f54f1562.png",
+      "prompt": "Use case: stylized-concept. Asset type: FINAL landscape background painting for Farshore, a therapeutic 2D portrait fishing game. Generate one wide landscape illustration, aspect ratio 3:2, intended master 1536x1024. Scene: a tranquil temperate European freshwater lake on a clear soft morning, gentle tree-lined banks, distant blue-green woodland, a small wooden jetty at one lower edge and elegant reeds near another edge. Main composition: lake eye level from near shore; shore and woodland horizon lies about 40 percent down the image; lots of lovely open quiet water in the center and lower half, small shoreline details confined to edges; the central vertical third remains beautiful and playable when cropped to portrait. Style: refined warm hand-painted watercolor travel illustration with subtle gouache accents, fine soft brushwork, delicate paper grain, convincing natural depth, cinematic but restful, art-book quality, not cartoon. Pale blue sky, sage and olive greens, misty blue distance, subdued teal lake, warm weathered wood, dappled soft warm morning light. Restrained contrast on water so a small fishing bobber will read well. Water is a calm painted base, no large wave streaks. Full bleed finished artwork, no borders. No people, fish, rods, hooks, boats, interface, text, logos, labels, lettering, or watermarks. No photographic look, no chunky vector forms, no cartoon eyes.",
+      "reference_images": [],
+      "license_status": "AI-generated original illustration commissioned for this project. No third-party source artwork copied or embedded. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full generated output. Distinct regional landforms and architecture, calm composition, no UI/text/people/fish. Horizon roughly 33–45% depending shoreline elevation. Non-transparent background is intentional.",
+        "runtime_export": "ImageMagick proportional Lanczos resize to 1440x960; metadata removed from runtime only; source master retained.",
+        "integration_notes": "Keep background static. Draw water ripples, bobber, weather, rod and interactive foreground separately. Central portrait cropping retains open water; use framing choice to preserve identifying shoreline."
+      },
+      "runtime_bytes": 2292916,
+      "runtime_sha256": "b93b46402d276bb7d8f473c2744e09d078327fd8f24a894eb6c931a8d611962c"
+    },
+    {
+      "asset_id": "scenery_japan",
+      "region_id": "japan",
+      "purpose": "Static watercolor destination background",
+      "master_path": "art_masters/scenery/japan.png",
+      "runtime_path": "game/assets/scenery/japan.png",
+      "engine_uri": "res://assets/scenery/japan.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGB",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-0257b4cc-6bf2-4516-a3a9-74b3aa618da1.png",
+      "prompt": "Use case: stylized-concept. Asset type: FINAL landscape background painting for Farshore, a therapeutic 2D portrait fishing game. Generate ONE wide landscape illustration, aspect ratio 3:2, intended master 1536x1024. Scene: a small Japanese coastal fishing harbor in soft clear morning light. Distinctive low wooden and plaster harbor buildings with restrained Japanese roof forms cluster along one shore, a grey concrete breakwater curves towards a simple small white lighthouse near the middle distance, rounded green coastal headlands and faint blue islands behind. Main composition: from a waterfront viewpoint just above calm water; main waterline and harbor horizon about 40 percent down; plenty of lovely open quiet blue-green harbor water in the center and lower half, some close weathered concrete waterfront at a lower corner; the central vertical third retains lighthouse, distant shore and water when cropped to portrait. Style: refined warm hand-painted watercolor travel illustration with subtle gouache accents, fine soft brushwork and subtle paper grain, convincing natural depth, restful art-book quality, not cartoon. Pale airy blue sky, sea-glass teal and indigo water, warm grey stone, muted terracotta and cream buildings, jade green hills. Restrained contrast on water so a small fishing bobber reads clearly; calm painted water base without large wave streaks. Full bleed finished artwork, no borders. No people, fish, fishing rods, hooks, boats, interface, text, logos, signs, lettering or watermarks. No photographic look or chunky vector forms.",
+      "reference_images": [],
+      "license_status": "AI-generated original illustration commissioned for this project. No third-party source artwork copied or embedded. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full generated output. Distinct regional landforms and architecture, calm composition, no UI/text/people/fish. Horizon roughly 33–45% depending shoreline elevation. Non-transparent background is intentional.",
+        "runtime_export": "ImageMagick proportional Lanczos resize to 1440x960; metadata removed from runtime only; source master retained.",
+        "integration_notes": "Keep background static. Draw water ripples, bobber, weather, rod and interactive foreground separately. Central portrait cropping retains open water; use framing choice to preserve identifying shoreline."
+      },
+      "runtime_bytes": 2268244,
+      "runtime_sha256": "59fcc4d095c9c95ffa04ee8d177b89fbf6f0b0a3a63426ae9be72843d4a4aede"
+    },
+    {
+      "asset_id": "scenery_norway",
+      "region_id": "norway",
+      "purpose": "Static watercolor destination background",
+      "master_path": "art_masters/scenery/norway.png",
+      "runtime_path": "game/assets/scenery/norway.png",
+      "engine_uri": "res://assets/scenery/norway.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGB",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-15d99932-c2f5-4102-8606-e57c271028a4.png",
+      "prompt": "Use case: stylized-concept. Asset type: FINAL landscape background painting for Farshore, a therapeutic 2D portrait fishing game. Generate ONE wide landscape illustration, aspect ratio 3:2, intended master 1536x1024. Scene: a serene Norwegian fjord in bright gentle early-summer morning. Tall steep mountains rise on both sides, granite crags with dark fir and birch woodland below, a little snow on the most distant peaks, small traditional red-painted wooden boathouses gathered on a rocky shore in the middle distance. The broad fjord recedes between layered mountains toward the center. Main composition: waterfront eye-level viewpoint; main waterline about 40 percent down; ample open tranquil deep blue-green water occupies center and lower half; quiet rock detail only at a lower corner. Keep a few red boathouses visible near the central third so portrait cropping preserves the place. Style: refined hand-painted watercolor travel illustration with subtle gouache accents, fine soft brushwork and delicate paper grain, convincing natural depth, restful art-book quality, never cartoon. Norwegian slate-blue mountain shadows, pine and moss greens, soft crimson ochre reds on timber buildings, luminous ivory highlights, deep clean indigo-blue water. Warm soft sunlight with a fresh cool atmosphere. Restrained contrast on central water so a tiny bobber reads clearly; water stays a calm painted base with no dramatic wave streaks. Full bleed finished artwork, no borders. No people, fish, fishing rods, hooks, boats, interface, text, logos, signs, lettering or watermarks. No photographic look, no chunky vector forms.",
+      "reference_images": [],
+      "license_status": "AI-generated original illustration commissioned for this project. No third-party source artwork copied or embedded. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full generated output. Distinct regional landforms and architecture, calm composition, no UI/text/people/fish. Horizon roughly 33–45% depending shoreline elevation. Non-transparent background is intentional.",
+        "runtime_export": "ImageMagick proportional Lanczos resize to 1440x960; metadata removed from runtime only; source master retained.",
+        "integration_notes": "Keep background static. Draw water ripples, bobber, weather, rod and interactive foreground separately. Central portrait cropping retains open water; use framing choice to preserve identifying shoreline."
+      },
+      "runtime_bytes": 2454511,
+      "runtime_sha256": "096a0468afa04e090ab1a55294e8447e9d6d9d49dbc07eb9c07d953731c4ceaa"
+    },
+    {
+      "asset_id": "scenery_med",
+      "region_id": "med",
+      "purpose": "Static watercolor destination background",
+      "master_path": "art_masters/scenery/med.png",
+      "runtime_path": "game/assets/scenery/med.png",
+      "engine_uri": "res://assets/scenery/med.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGB",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-5b2c3445-4cc5-46a3-b40f-40bea335ab58.png",
+      "prompt": "Use case: stylized-concept. Asset type: FINAL landscape background painting for Farshore, a therapeutic 2D portrait fishing game. Generate ONE wide landscape illustration, aspect ratio 3:2, intended master 1536x1024. Scene: a peaceful Mediterranean rocky coastal fishing village under gentle clear sun. Ochre, pale terracotta and warm cream pastel houses with shuttered windows and clay-tile roofs step down a low hill on the left shore toward a small stone quay. Silvery olive vegetation, a few slender cypresses, rounded sunlit limestone rocks and bright turquoise water make the region immediately distinctive. Main composition: waterfront eye-level view; far waterline and small harbor around 40 percent down; open luminous turquoise sea across center and lower half, distant pale blue headland, warm stone quay at a lower corner. The central vertical third retains pastel village and water when cropped to portrait. Style: refined warm hand-painted watercolor travel illustration, fine soft brushwork, subtle gouache accents and delicate paper grain, convincing natural depth and restful art-book quality, not cartoon. Pale bright sky, turquoise and teal sea, soft ochre and coral architecture, creamy stone, dusty olive green, soft golden sunlight. Restrained water contrast so a tiny bobber reads well; water is a calm painted base with small delicate ripples, no dramatic wave streaks. Full bleed finished artwork, no borders. No people, fish, fishing rods, hooks, boats, interface, text, logos, signs, lettering or watermarks. No photographic look and no chunky vector forms.",
+      "reference_images": [],
+      "license_status": "AI-generated original illustration commissioned for this project. No third-party source artwork copied or embedded. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full generated output. Distinct regional landforms and architecture, calm composition, no UI/text/people/fish. Horizon roughly 33–45% depending shoreline elevation. Non-transparent background is intentional.",
+        "runtime_export": "ImageMagick proportional Lanczos resize to 1440x960; metadata removed from runtime only; source master retained.",
+        "integration_notes": "Keep background static. Draw water ripples, bobber, weather, rod and interactive foreground separately. Central portrait cropping retains open water; use framing choice to preserve identifying shoreline."
+      },
+      "runtime_bytes": 2652404,
+      "runtime_sha256": "730546bdbaf55820c53d5f59c18449b70ccdfac5b4fc8aeeb889765b885b7d91"
+    }
+  ],
+  "foregrounds": [
+    {
+      "asset_id": "scenery_lake_foreground",
+      "region_id": "lake",
+      "purpose": "Optional separate static shoreline foreground alpha layer",
+      "master_path": "art_masters/scenery/lake_foreground.png",
+      "runtime_path": "game/assets/scenery/lake_foreground.png",
+      "engine_uri": "res://assets/scenery/lake_foreground.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGBA",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-d87bf1ee-dbbf-4b60-9f05-4b7e9f8ecff3.png",
+      "prompt": "Use case: background-extraction. Asset type: matching transparent foreground layer for the supplied lake painting in a 2D fishing game. Input image is a STYLE AND PERSPECTIVE REFERENCE, not an image to reproduce with a full backdrop. Generate a wide 3:2 PNG with TRUE transparent background. Only paint a low cluster of natural lakeshore reeds and a few tiny wildflowers rising from mossy rocks at the lower right corner, plus a short old wooden jetty corner entering from the extreme lower left edge, matching the source watercolor brushwork, natural proportions, warm morning illumination and eye-level perspective. Keep all elements within the lowest 35 percent of the canvas except several reeds rising to 55 percent at the extreme right edge. The middle 55 percent horizontally must remain fully transparent, all sky and water fully transparent, no opaque background, no shadow plane, no fake checkerboard. Foreground objects should reach and be naturally cut off by lower corners, no isolated floating island. No text, people, fish, rods, hooks, interface, logos or watermarks. Finished fine travel watercolor game art.",
+      "reference_images": [
+        {
+          "path": "art_masters/scenery/lake.png",
+          "role": "Style, perspective and illumination reference; project-generated original"
+        }
+      ],
+      "license_status": "AI-generated original illustration commissioned for this project using only this project's generated reference art. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full output and composited onto contrasting blue matte. Real alpha channel confirmed, minimum 0, maximum 254/255 preserved. No painted checkerboard; clear center; natural clean edges; no people, text, fish or interface.",
+        "runtime_export": "ImageMagick proportional resize to 1440x960, alpha preserved; metadata removed from runtime only.",
+        "integration_notes": "Anchor lower corners at the near water/shore boundary, allowing safe center opening for bobber. Use this layer especially when background is center-cropped and loses its edge foreground. These are matching new foreground compositions, not exact masks of the background. Do not animate the full background to simulate flow.",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_center_pixel": 0
+      },
+      "runtime_bytes": 890774,
+      "runtime_sha256": "02c617a372edffcefdca2773bcbf5afdc6c95ec4acfb0256b784a848dbc1fa12"
+    },
+    {
+      "asset_id": "scenery_japan_foreground",
+      "region_id": "japan",
+      "purpose": "Optional separate static shoreline foreground alpha layer",
+      "master_path": "art_masters/scenery/japan_foreground.png",
+      "runtime_path": "game/assets/scenery/japan_foreground.png",
+      "engine_uri": "res://assets/scenery/japan_foreground.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGBA",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-eb9ee3e0-6aa7-4d4b-9012-69ef92e6d931.png",
+      "prompt": "Use case: background-extraction. Asset type: transparent foreground shoreline layer for a 2D fishing game. Input Japanese harbor painting is a STYLE AND PERSPECTIVE REFERENCE only. Generate one wide 3:2 PNG with TRUE transparent background. Only paint the near corner of a small weathered grey concrete breakwater platform entering the extreme lower left edge, a rusty mooring ring and loose coil of tan rope on it; a few stacked smooth grey coastal rocks entering extreme lower right. Match the supplied painting's fine watercolor and subtle gouache brushwork, natural proportions, warm gentle morning sunlight, eye-level waterfront perspective. All elements should be low and confined to the bottom 25 percent of canvas, with their masses at outer corners; the middle 60 percent horizontally is entirely transparent. All sky and water is transparent, no opaque background, no shadow plane, no fake checkerboard. Concrete and rocks extend off lower image edges naturally. No people, fish, rods, hooks, boats, text, interface, logos or watermarks. A refined finished game illustration layer with clean natural alpha contours.",
+      "reference_images": [
+        {
+          "path": "art_masters/scenery/japan.png",
+          "role": "Style, perspective and illumination reference; project-generated original"
+        }
+      ],
+      "license_status": "AI-generated original illustration commissioned for this project using only this project's generated reference art. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full output and composited onto contrasting blue matte. Real alpha channel confirmed, minimum 0, maximum 254/255 preserved. No painted checkerboard; clear center; natural clean edges; no people, text, fish or interface.",
+        "runtime_export": "ImageMagick proportional resize to 1440x960, alpha preserved; metadata removed from runtime only.",
+        "integration_notes": "Anchor lower corners at the near water/shore boundary, allowing safe center opening for bobber. Use this layer especially when background is center-cropped and loses its edge foreground. These are matching new foreground compositions, not exact masks of the background. Do not animate the full background to simulate flow.",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_center_pixel": 0
+      },
+      "runtime_bytes": 594583,
+      "runtime_sha256": "bf3b0525803d372bbfae76d79d3044f1068bc5c5eef742c7770f792a468a6e62"
+    },
+    {
+      "asset_id": "scenery_norway_foreground",
+      "region_id": "norway",
+      "purpose": "Optional separate static shoreline foreground alpha layer",
+      "master_path": "art_masters/scenery/norway_foreground.png",
+      "runtime_path": "game/assets/scenery/norway_foreground.png",
+      "engine_uri": "res://assets/scenery/norway_foreground.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGBA",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-1545a5a3-fc2d-4f8c-a545-d0487890a539.png",
+      "prompt": "Use case: background-extraction. Asset type: transparent foreground shoreline layer for a 2D fishing game. Input Norwegian fjord painting is a STYLE AND PERSPECTIVE REFERENCE only. Generate one wide 3:2 PNG with TRUE transparent background. Only paint close Norwegian granite shoreline rocks with subtle yellow-green lichen and a few small pale birch twigs entering the bottom left corner, and the very small corner of a weathered pale timber pier with a single short mooring post entering extreme bottom right. Match source refined watercolor, subtle gouache, fine texture, natural proportions, cool mountain morning atmosphere with soft warm sun and eye-level waterfront perspective. All elements form a low framing edge and are confined to lowest 30 percent of canvas, except a few birch leaves at far left rising slightly higher. Middle 60 percent horizontally stays entirely transparent. All sky and water transparent, no opaque backdrop, no shadow plane and no fake checkerboard. Objects extend off bottom corners, never a floating island. No people, fish, fishing rods, hooks, boats, text, interface, logos or watermarks. Finished original travel-game art with clean natural alpha.",
+      "reference_images": [
+        {
+          "path": "art_masters/scenery/norway.png",
+          "role": "Style, perspective and illumination reference; project-generated original"
+        }
+      ],
+      "license_status": "AI-generated original illustration commissioned for this project using only this project's generated reference art. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full output and composited onto contrasting blue matte. Real alpha channel confirmed, minimum 0, maximum 254/255 preserved. No painted checkerboard; clear center; natural clean edges; no people, text, fish or interface.",
+        "runtime_export": "ImageMagick proportional resize to 1440x960, alpha preserved; metadata removed from runtime only.",
+        "integration_notes": "Anchor lower corners at the near water/shore boundary, allowing safe center opening for bobber. Use this layer especially when background is center-cropped and loses its edge foreground. These are matching new foreground compositions, not exact masks of the background. Do not animate the full background to simulate flow.",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_center_pixel": 0
+      },
+      "runtime_bytes": 1022990,
+      "runtime_sha256": "ddd52f247d9facc6df0ffc7e414112c38863ed496e4c4f7059640649b3fa3ec4"
+    },
+    {
+      "asset_id": "scenery_med_foreground",
+      "region_id": "med",
+      "purpose": "Optional separate static shoreline foreground alpha layer",
+      "master_path": "art_masters/scenery/med_foreground.png",
+      "runtime_path": "game/assets/scenery/med_foreground.png",
+      "engine_uri": "res://assets/scenery/med_foreground.png",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "runtime_dimensions": [
+        1440,
+        960
+      ],
+      "format": "PNG RGBA",
+      "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-12ca7e7a-35d8-4e7b-b11d-fe298a0ce094.png",
+      "prompt": "Use case: background-extraction. Asset type: transparent foreground shoreline layer for a 2D fishing game. Input Mediterranean village painting is a STYLE AND PERSPECTIVE REFERENCE only. Generate one wide 3:2 PNG with TRUE transparent background. Only paint the near corner of warm cream sun-worn limestone steps and quay entering from the extreme bottom left, with delicate silver-green olive foliage along its far-left edge; a few sunlit creamy natural rocks entering from extreme bottom right. Match source refined watercolor, fine gouache details, natural proportions, warm soft Mediterranean daylight and eye-level waterfront perspective. Keep shore masses low, within the lowest 30 percent of canvas, olive leaves may rise to halfway up only along extreme left. Preserve a wide transparent central opening for fishing. All sky and water fully transparent, no opaque backdrop, no shadow plane, no fake checkerboard. Foreground rocks and steps extend off bottom corners. No people, fish, rods, hooks, boats, interface, text, logos or watermarks. Finished original travel-game art with clean natural alpha contours.",
+      "reference_images": [
+        {
+          "path": "art_masters/scenery/med.png",
+          "role": "Style, perspective and illumination reference; project-generated original"
+        }
+      ],
+      "license_status": "AI-generated original illustration commissioned for this project using only this project's generated reference art. Use remains subject to applicable OpenAI service terms; no independent copyright exclusivity determination is claimed.",
+      "audit": {
+        "status": "pass",
+        "inspection": "Viewed full output and composited onto contrasting blue matte. Real alpha channel confirmed, minimum 0, maximum 254/255 preserved. No painted checkerboard; clear center; natural clean edges; no people, text, fish or interface.",
+        "runtime_export": "ImageMagick proportional resize to 1440x960, alpha preserved; metadata removed from runtime only.",
+        "integration_notes": "Anchor lower corners at the near water/shore boundary, allowing safe center opening for bobber. Use this layer especially when background is center-cropped and loses its edge foreground. These are matching new foreground compositions, not exact masks of the background. Do not animate the full background to simulate flow.",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_center_pixel": 0
+      },
+      "runtime_bytes": 997686,
+      "runtime_sha256": "caa45c2b9b3f46a9cc45376c4743631c6859e23b572151531f84c735dac3c6f4"
+    }
+  ],
+  "audit_sheets": {
+    "backgrounds": "docs/scenery_background_audit.png",
+    "foregrounds_over_blue_matte": "docs/scenery_foreground_audit.png"
+  }
+}

@@ -1,0 +1,734 @@
+{
+  "checked_on": "2026-10-02",
+  "unique_species": 16,
+  "runtime_pngs": 32,
+  "unique_main_images": 16,
+  "true_alpha_all": true,
+  "all_visible_silhouettes_inside_frame": true,
+  "low_alpha_note": "Some generated exports contain invisible alpha=1 edge specks; substantive alpha>16 bounds are inside every frame. No blanket color-keying or procedural painting used.",
+  "world_catalog_routes": "16/16 pass; see reachability_a.json",
+  "visual_review": "All images reviewed individually plus light 1024px and dark 256px contact sheets",
+  "android_device_review": "Not performed by this content worker",
+  "records": [
+    {
+      "species_id": "common_carp",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/common_carp.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            18,
+            86,
+            1010,
+            573
+          ],
+          "sha256": "e9b76eb124fc85cd4b812a805e7108d37bbae1fce82101d2a082f73bc0e0b8f1"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/common_carp_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            4,
+            21,
+            253,
+            144
+          ],
+          "sha256": "eb98c2be17f57cdf45fbe58c7629068532e7b465a09c6bbaec6239b136228c86"
+        }
+      ]
+    },
+    {
+      "species_id": "crucian_carp",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/crucian_carp.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            24,
+            33,
+            1014,
+            656
+          ],
+          "sha256": "0372a61c401ec6be1fd05e191053707edf4ca79d27cccc21c84e7a548f945cdf"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/crucian_carp_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            6,
+            8,
+            254,
+            165
+          ],
+          "sha256": "9eb2706511dd3072b112a52df8f2bce1657be666c0a9851144a878f2ea74d747"
+        }
+      ]
+    },
+    {
+      "species_id": "roach",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/roach.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            26,
+            109,
+            1010,
+            568
+          ],
+          "sha256": "155c42562dbfb46c2171fd2e67c606ea1b3f62f3d4842562dfe7bb0c9de20477"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/roach_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            6,
+            27,
+            253,
+            143
+          ],
+          "sha256": "6d2ff81d48ce1ead72d70c76cdc66b23dd491a6907546ac3f12ab291262ebfb1"
+        }
+      ]
+    },
+    {
+      "species_id": "rudd",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/rudd.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            21,
+            78,
+            1006,
+            582
+          ],
+          "sha256": "b5b957b629038b020c66c37ebe4fdeee32636842530575ede51ac55d520dd36b"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/rudd_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            5,
+            19,
+            252,
+            146
+          ],
+          "sha256": "8c78f774c0c2b0018f08c95bca8bb5790db24e5763d4677cb8741e18a1a804e7"
+        }
+      ]
+    },
+    {
+      "species_id": "european_perch",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/european_perch.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            14,
+            69,
+            1012,
+            601
+          ],
+          "sha256": "1b9968904562d4c630d98ffcbcec1b41b3c445b346376627e3f7fa3b18e3af63"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/european_perch_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            3,
+            17,
+            253,
+            151
+          ],
+          "sha256": "2ccc33dc70902700b0ce69ca9d59836eb3be3b9a543d5701a7b17e2b99997b56"
+        }
+      ]
+    },
+    {
+      "species_id": "northern_pike",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/northern_pike.png",
+          "dimensions": [
+            1024,
+            384
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            12,
+            83,
+            1013,
+            318
+          ],
+          "sha256": "b352fa74ef5958b78872ae8b27a4a2dd7605d3cbf1b38334626a7e3fdb8168ff"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/northern_pike_thumb.png",
+          "dimensions": [
+            256,
+            96
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            3,
+            21,
+            253,
+            80
+          ],
+          "sha256": "bfd6120491bdf432843f26f1a276493cfa572e5e2eee0e4630d90817afd954f5"
+        }
+      ]
+    },
+    {
+      "species_id": "common_bream",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/common_bream.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            27,
+            47,
+            1006,
+            624
+          ],
+          "sha256": "1677dd89d78756f2ece9ebc461c74d935ee7154c1baa8037eb5017505f173be6"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/common_bream_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            6,
+            12,
+            252,
+            156
+          ],
+          "sha256": "8dfa0b1f3bc3e10db2cc98f35a8d52ccfa25eab9eed0f30e670ed150699fc06f"
+        }
+      ]
+    },
+    {
+      "species_id": "tench",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/tench.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            16,
+            90,
+            1013,
+            593
+          ],
+          "sha256": "9afe4e24af7def5dedb0c18995d88c5bda2b5518ed8cc11dcb8fe75537fe31e1"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/tench_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            4,
+            22,
+            254,
+            149
+          ],
+          "sha256": "919c4aa2619cfd4cf49ee29facaa29197cb3a1447916b58825dbea6810dec03c"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_horse_mackerel",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/japanese_horse_mackerel.png",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            12,
+            42,
+            1015,
+            466
+          ],
+          "sha256": "860af0f77bfd51cea26c9f2a421b0395dacbebda61cf2fff0ec13d4e60481e34"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/japanese_horse_mackerel_thumb.png",
+          "dimensions": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            3,
+            11,
+            254,
+            117
+          ],
+          "sha256": "fe91494f6d036922f999983f8a492ef0724b8cc5cd86931e1ee7fe78a120b573"
+        }
+      ]
+    },
+    {
+      "species_id": "chub_mackerel",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/chub_mackerel.png",
+          "dimensions": [
+            1024,
+            425
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            21,
+            34,
+            1010,
+            358
+          ],
+          "sha256": "9c098fa78910532b00d3153c92d8284cd8c058e15b37ccc3864232d37c0fc9d0"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/chub_mackerel_thumb.png",
+          "dimensions": [
+            256,
+            106
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            5,
+            8,
+            253,
+            90
+          ],
+          "sha256": "8a0fc2335f1b0d3512fad58552f9628bdf58b466cec4549fbd218ad4d00d7c61"
+        }
+      ]
+    },
+    {
+      "species_id": "red_seabream",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/red_seabream.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            26,
+            66,
+            1006,
+            614
+          ],
+          "sha256": "4eac02084e8f37eec249dd8e523e458a88d89410a25b618fcc4d4678a0c51622"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/red_seabream_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            6,
+            16,
+            252,
+            154
+          ],
+          "sha256": "2f213f9614c0ba81aa72694e0fff013d2426457bdca0b0baf79148420fa4f213"
+        }
+      ]
+    },
+    {
+      "species_id": "black_seabream",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/black_seabream.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            20,
+            56,
+            1007,
+            621
+          ],
+          "sha256": "a41f0bee902d486187cd0f7f5a4417844422bff09bfecb0617ecfe14dd6f24b3"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/black_seabream_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            5,
+            14,
+            252,
+            156
+          ],
+          "sha256": "134d4c3895da49c1ab83e3a6525fcc7cf8d6edcf22e5309a52145e109364f963"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_seabass",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/japanese_seabass.png",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            12,
+            57,
+            1006,
+            450
+          ],
+          "sha256": "bb2fad39b681e74417528c2a676a710484720dd3c480e9d2dcd5cfd68735fa03"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/japanese_seabass_thumb.png",
+          "dimensions": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            3,
+            14,
+            252,
+            113
+          ],
+          "sha256": "04a49cafd8703e7949d52ec5fbd4421544fee52b40e8ce679d2f0f3969ea90cd"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_whiting",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/japanese_whiting.png",
+          "dimensions": [
+            1024,
+            341
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            16,
+            27,
+            1010,
+            302
+          ],
+          "sha256": "45686260424d7ea8f89833804a939ef4b5ca934360f72fcf966ec9e5fdaa82dc"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/japanese_whiting_thumb.png",
+          "dimensions": [
+            256,
+            85
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            4,
+            7,
+            253,
+            76
+          ],
+          "sha256": "2d653820db6cfd24912caad44a7b4b8d7e2f61bd9b33e2d2868dede01283cf95"
+        }
+      ]
+    },
+    {
+      "species_id": "marbled_rockfish",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/marbled_rockfish.png",
+          "dimensions": [
+            1024,
+            683
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            7,
+            65,
+            1013,
+            607
+          ],
+          "sha256": "cb2784b4bb0155da3c1ff820b25486f244b43937f5a42e760396bf8cd58fd27f"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/marbled_rockfish_thumb.png",
+          "dimensions": [
+            256,
+            171
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            1,
+            16,
+            253,
+            152
+          ],
+          "sha256": "9bed2bf5b80e34f20d044c9c9bb04f3ae4baf146ea205761690e98f5bcff8cb8"
+        }
+      ]
+    },
+    {
+      "species_id": "olive_flounder",
+      "resources": [
+        {
+          "kind": "art",
+          "path": "game/assets/fish/olive_flounder.png",
+          "dimensions": [
+            1024,
+            512
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            9,
+            20,
+            1017,
+            487
+          ],
+          "sha256": "d26265de8bd62f7fc373e21be32443029371defa28bfce45cef6eb6009c8f684"
+        },
+        {
+          "kind": "thumb",
+          "path": "game/assets/fish/olive_flounder_thumb.png",
+          "dimensions": [
+            256,
+            128
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "visible_bbox_alpha_over_16": [
+            2,
+            5,
+            255,
+            122
+          ],
+          "sha256": "85b4b83d4858126fcbfcdce70e7b272d6c0591a79f42d467de632159baff68d1"
+        }
+      ]
+    }
+  ]
+}

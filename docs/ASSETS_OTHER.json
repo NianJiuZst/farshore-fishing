@@ -1,0 +1,64 @@
+{
+  "audio": [
+    {
+      "path": "game/assets/audio/nibble.wav",
+      "method": "Original deterministic PCM synthesis: filtered noise for waves, sine chimes and envelopes for cues",
+      "license": "Original project synthesis, no third-party samples",
+      "used_by": "FishingAudio",
+      "audit": "PCM16 mono22050Hz; ambience12seconds blended seam"
+    },
+    {
+      "path": "game/assets/audio/water.wav",
+      "method": "Original deterministic PCM synthesis: filtered noise for waves, sine chimes and envelopes for cues",
+      "license": "Original project synthesis, no third-party samples",
+      "used_by": "FishingAudio",
+      "audit": "PCM16 mono22050Hz; ambience12seconds blended seam"
+    },
+    {
+      "path": "game/assets/audio/bite.wav",
+      "method": "Original deterministic PCM synthesis: filtered noise for waves, sine chimes and envelopes for cues",
+      "license": "Original project synthesis, no third-party samples",
+      "used_by": "FishingAudio",
+      "audit": "PCM16 mono22050Hz; ambience12seconds blended seam"
+    },
+    {
+      "path": "game/assets/audio/cast.wav",
+      "method": "Original deterministic PCM synthesis: filtered noise for waves, sine chimes and envelopes for cues",
+      "license": "Original project synthesis, no third-party samples",
+      "used_by": "FishingAudio",
+      "audit": "PCM16 mono22050Hz; ambience12seconds blended seam"
+    },
+    {
+      "path": "game/assets/audio/escape.wav",
+      "method": "Original deterministic PCM synthesis: filtered noise for waves, sine chimes and envelopes for cues",
+      "license": "Original project synthesis, no third-party samples",
+      "used_by": "FishingAudio",
+      "audit": "PCM16 mono22050Hz; ambience12seconds blended seam"
+    },
+    {
+      "path": "game/assets/audio/catch.wav",
+      "method": "Original deterministic PCM synthesis: filtered noise for waves, sine chimes and envelopes for cues",
+      "license": "Original project synthesis, no third-party samples",
+      "used_by": "FishingAudio",
+      "audit": "PCM16 mono22050Hz; ambience12seconds blended seam"
+    },
+    {
+      "path": "game/assets/audio/hook.wav",
+      "method": "Original deterministic PCM synthesis: filtered noise for waves, sine chimes and envelopes for cues",
+      "license": "Original project synthesis, no third-party samples",
+      "used_by": "FishingAudio",
+      "audit": "PCM16 mono22050Hz; ambience12seconds blended seam"
+    }
+  ],
+  "font": {
+    "path": "game/assets/fonts/NotoSansCJK-Regular.ttc",
+    "source": "Debian fonts-noto-cjk package / Noto project",
+    "license": "SIL Open Font License 1.1",
+    "face": "Simplified Chinese index 2"
+  },
+  "icon": {
+    "path": "game/assets/icon.svg",
+    "source": "Project-authored vector",
+    "license": "Original project asset"
+  }
+}

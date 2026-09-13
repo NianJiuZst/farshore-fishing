@@ -1,0 +1,922 @@
+[
+  {
+    "species_id": "atlantic_cod",
+    "name": "大西洋鳕",
+    "scientific_name": "Gadus morhua",
+    "region_ids": [
+      "norway"
+    ],
+    "spot_ids": [
+      "norway_harbor",
+      "norway_boat"
+    ],
+    "art": "res://assets/fish/atlantic_cod.png",
+    "thumb": "res://assets/fish/atlantic_cod_thumb.png",
+    "description": "冷水近岸和峡湾底层的捕食者。下颌的一根须，像探寻海底的小触角。",
+    "morphology": "三枚背鳍、两枚臀鳍；下颌须；浅色弯曲侧线；背部斑驳。",
+    "sources": [
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/2095",
+        "title": "MarLIN: Atlantic cod",
+        "supports": "形态、岸边至600米冷水生境、体长"
+      },
+      {
+        "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+        "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+        "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+      }
+    ],
+    "min_mm": 250,
+    "max_mm": 1050,
+    "anchor_mm": 650,
+    "anchor_g": 2600,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "steady",
+    "difficulty": 0.67,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 0.9,
+      "grain": 0.05,
+      "shrimp": 1.5,
+      "lure": 1.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.15,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 160,
+    "salinity": "salt",
+    "rarity": "少见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "pollack",
+    "name": "青鳕",
+    "scientific_name": "Pollachius pollachius",
+    "region_ids": [
+      "norway"
+    ],
+    "spot_ids": [
+      "norway_harbor",
+      "norway_boat"
+    ],
+    "art": "res://assets/fish/pollack.png",
+    "thumb": "res://assets/fish/pollack_thumb.png",
+    "description": "常在岩礁和海藻丛附近守候小鱼。侧线在胸鳍上方拱起，嘴部下颌略突出。",
+    "morphology": "三枚背鳍、两枚臀鳍；无颏须；下颌突出；深色侧线明显弯曲。",
+    "sources": [
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/9",
+        "title": "MarLIN: Pollack",
+        "supports": "形态、岩礁与海藻沿岸生境、尺寸；明确记载垂钓"
+      },
+      {
+        "url": "https://www.hi.no/radgivning/bestandsoversikt/en/",
+        "title": "IMR: Stock overview",
+        "supports": "Pollack Norwegian coast地区条目"
+      }
+    ],
+    "min_mm": 220,
+    "max_mm": 900,
+    "anchor_mm": 550,
+    "anchor_g": 1700,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "burst",
+    "difficulty": 0.58,
+    "weight": 11,
+    "bait_weights": {
+      "worm": 0.6,
+      "grain": 0.05,
+      "shrimp": 1.2,
+      "lure": 2.0
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.1,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 100,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "saithe",
+    "name": "绿青鳕",
+    "scientific_name": "Pollachius virens",
+    "region_ids": [
+      "norway"
+    ],
+    "spot_ids": [
+      "norway_harbor",
+      "norway_boat"
+    ],
+    "art": "res://assets/fish/saithe.png",
+    "thumb": "res://assets/fish/saithe_thumb.png",
+    "description": "成群追逐小鱼的峡湾游泳健将。年轻个体常在挪威浅海岩岸附近聚集。",
+    "morphology": "灰绿背、银白腹；笔直浅色侧线；三枚背鳍、两枚臀鳍；尾鳍分叉。",
+    "sources": [
+      {
+        "url": "https://www.hi.no/en/hi/temasider/species/northeast-arctic-saithe",
+        "title": "IMR: Northeast Arctic saithe",
+        "supports": "挪威沿岸分布、25–400米及幼鱼浅水群聚、形态、尺寸"
+      },
+      {
+        "url": "https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-en-2023-17",
+        "title": "IMR: North Sea ecosystem condition",
+        "supports": "年轻绿青鳕在挪威西海岸岛礁和峡湾浅水区"
+      }
+    ],
+    "min_mm": 200,
+    "max_mm": 1000,
+    "anchor_mm": 600,
+    "anchor_g": 2200,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "burst",
+    "difficulty": 0.63,
+    "weight": 12,
+    "bait_weights": {
+      "worm": 0.5,
+      "grain": 0.05,
+      "shrimp": 1.3,
+      "lure": 2.1
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.15,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 160,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "haddock",
+    "name": "黑线鳕",
+    "scientific_name": "Melanogrammus aeglefinus",
+    "region_ids": [
+      "norway"
+    ],
+    "spot_ids": [
+      "norway_boat"
+    ],
+    "art": "res://assets/fish/haddock.png",
+    "thumb": "res://assets/fish/haddock_thumb.png",
+    "description": "在冷水底层寻找蠕虫与小型无脊椎动物。胸鳍上方的黑斑是它醒目的记号。",
+    "morphology": "黑色侧线与肩部黑斑；三枚背鳍、两枚臀鳍；第一背鳍高尖，颏须短。",
+    "sources": [
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/79",
+        "title": "MarLIN: Haddock",
+        "supports": "40–300米底层、形态、尺寸"
+      },
+      {
+        "url": "https://www.hi.no/en/hi/temasider/species/haddock/haddock-in-the-north-sea%2C-skagerrak-and-west-of-scottland",
+        "title": "IMR: North Sea haddock",
+        "supports": "挪威陆架与Skagerrak；约60厘米最大尺寸和底栖食性"
+      }
+    ],
+    "min_mm": 280,
+    "max_mm": 600,
+    "anchor_mm": 420,
+    "anchor_g": 900,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "rest",
+    "difficulty": 0.52,
+    "weight": 8,
+    "bait_weights": {
+      "worm": 1.5,
+      "grain": 0.05,
+      "shrimp": 1.6,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 0.95
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.25,
+    "max_cast": 1.0,
+    "depth_min_m": 40,
+    "depth_max_m": 160,
+    "salinity": "salt",
+    "rarity": "少见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "atlantic_mackerel",
+    "name": "大西洋鲭",
+    "scientific_name": "Scomber scombrus",
+    "region_ids": [
+      "norway",
+      "med"
+    ],
+    "spot_ids": [
+      "norway_harbor",
+      "norway_boat",
+      "med_boat"
+    ],
+    "art": "res://assets/fish/atlantic_mackerel.png",
+    "thumb": "res://assets/fish/atlantic_mackerel_thumb.png",
+    "description": "沿着水层成群游动，流线型身体适合快速追逐。挪威与地中海都能遇见这个物种。",
+    "morphology": "蓝绿背上深色波状斜纹；银腹无斑；两枚主背鳍后有小鳍；深叉尾。",
+    "sources": [
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/44",
+        "title": "MarLIN: Atlantic mackerel",
+        "supports": "形态、表层群游和尺寸；垂钓对象"
+      },
+      {
+        "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+        "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+        "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15189203/",
+        "title": "Zardoya et al. 2004, Molecular Ecology: Mediterranean mackerel populations",
+        "supports": "地中海Scomber scombrus种群原始研究；已读搜索索引返回的完整摘要，采样含希腊、意大利及西班牙"
+      },
+      {
+        "url": "https://www.fao.org/4/ac478e/ac478e08.pdf",
+        "title": "FAO: Scombrids of the world, genus Scomber",
+        "supports": "形态：两主背鳍和背腹尾前小鳍列，近岸中上层水域"
+      }
+    ],
+    "min_mm": 200,
+    "max_mm": 500,
+    "anchor_mm": 350,
+    "anchor_g": 500,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "burst",
+    "difficulty": 0.42,
+    "weight": 16,
+    "bait_weights": {
+      "worm": 0.3,
+      "grain": 0.05,
+      "shrimp": 0.8,
+      "lure": 2.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 60,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "atlantic_herring",
+    "name": "大西洋鲱",
+    "scientific_name": "Clupea harengus",
+    "region_ids": [
+      "norway"
+    ],
+    "spot_ids": [
+      "norway_boat"
+    ],
+    "art": "res://assets/fish/atlantic_herring.png",
+    "thumb": "res://assets/fish/atlantic_herring_thumb.png",
+    "description": "银色鱼群在海面下闪动。船钓水层中的小型目标，深叉尾和单枚背鳍很容易辨认。",
+    "morphology": "修长侧扁银身、暗蓝背；一枚背鳍；尾深叉，嘴略上翘。",
+    "sources": [
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/45",
+        "title": "MarLIN: Atlantic herring",
+        "supports": "体长、单背鳍形态；水面至200米，非繁殖季远离直接岸边"
+      },
+      {
+        "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+        "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+        "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+      }
+    ],
+    "min_mm": 170,
+    "max_mm": 380,
+    "anchor_mm": 270,
+    "anchor_g": 230,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "burst",
+    "difficulty": 0.3,
+    "weight": 15,
+    "bait_weights": {
+      "worm": 0.15,
+      "grain": 0.05,
+      "shrimp": 1.1,
+      "lure": 1.8
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 60,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "european_plaice",
+    "name": "欧洲鲽",
+    "scientific_name": "Pleuronectes platessa",
+    "region_ids": [
+      "norway"
+    ],
+    "spot_ids": [
+      "norway_harbor",
+      "norway_boat"
+    ],
+    "art": "res://assets/fish/european_plaice.png",
+    "thumb": "res://assets/fish/european_plaice_thumb.png",
+    "description": "沙底上安静伏着的扁平鱼。两只眼睛都在同一侧，橙红色斑点点缀着褐色背面。",
+    "morphology": "右眼侧扁平椭圆体；双眼在同一面；鲜明橙红斑点；长背臀鳍缘。",
+    "sources": [
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/2172",
+        "title": "MarLIN: Plaice",
+        "supports": "扁平形态、右眼、橙红点、浅水幼鱼和垂钓"
+      },
+      {
+        "url": "https://biotic.marlin.ac.uk/data/species/6202",
+        "title": "MarLIN BIOTIC: Pleuronectes platessa",
+        "supports": "5–200米栖息区间"
+      },
+      {
+        "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+        "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+        "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 550,
+    "anchor_mm": 350,
+    "anchor_g": 650,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "rest",
+    "difficulty": 0.37,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 2.2,
+      "grain": 0.05,
+      "shrimp": 1.5,
+      "lure": 0.2
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 0.95
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0.05,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 80,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "atlantic_wolffish",
+    "name": "大西洋狼鱼",
+    "scientific_name": "Anarhichas lupus",
+    "region_ids": [
+      "norway"
+    ],
+    "spot_ids": [
+      "norway_boat"
+    ],
+    "art": "res://assets/fish/atlantic_wolffish.png",
+    "thumb": "res://assets/fish/atlantic_wolffish_thumb.png",
+    "description": "深水岩缝中的强壮居民，粗壮牙齿可以压碎硬壳食物。本作需要船钓深水和进阶装备。",
+    "morphology": "宽大头部、犬齿状前牙；蓝灰体色与深竖带；连续长背鳍，无腹鳍，圆尾。",
+    "sources": [
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/1747",
+        "title": "MarLIN: Atlantic wolffish",
+        "supports": "斯堪的纳维亚分布；成鱼通常100–300米；形态与食物"
+      },
+      {
+        "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+        "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+        "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+      }
+    ],
+    "min_mm": 400,
+    "max_mm": 1100,
+    "anchor_mm": 750,
+    "anchor_g": 4000,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "steady",
+    "difficulty": 0.86,
+    "weight": 5,
+    "bait_weights": {
+      "worm": 0.4,
+      "grain": 0.05,
+      "shrimp": 2.4,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.45,
+    "max_cast": 1.0,
+    "depth_min_m": 100,
+    "depth_max_m": 160,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "european_seabass",
+    "name": "欧洲海鲈",
+    "scientific_name": "Dicentrarchus labrax",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_pier",
+      "med_boat"
+    ],
+    "art": "res://assets/fish/european_seabass.png",
+    "thumb": "res://assets/fish/european_seabass_thumb.png",
+    "description": "巡游于海岸与河口的银色猎手。会捕食小鱼和甲壳动物，码头外侧也是相遇的地方。",
+    "morphology": "银色修长身体，灰蓝背；两枚分离背鳍，第一背鳍带硬棘；成鱼无体侧斑点。",
+    "sources": [
+      {
+        "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_europeanseabass.htm",
+        "title": "FAO: Dicentrarchus labrax cultured species fact sheet",
+        "supports": "形态、地中海及河口近岸生境与食性"
+      },
+      {
+        "url": "https://www.marlin.ac.uk/species/detail/2127",
+        "title": "MarLIN: Bass",
+        "supports": "体长可至100厘米、通常浅于10米但有70米捕获；本作1–50米"
+      }
+    ],
+    "min_mm": 250,
+    "max_mm": 800,
+    "anchor_mm": 450,
+    "anchor_g": 1100,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "burst",
+    "difficulty": 0.65,
+    "weight": 9,
+    "bait_weights": {
+      "worm": 0.5,
+      "grain": 0.05,
+      "shrimp": 1.4,
+      "lure": 2.2
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.15,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 50,
+    "salinity": "salt",
+    "rarity": "少见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "gilthead_seabream",
+    "name": "金头鲷",
+    "scientific_name": "Sparus aurata",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_pier",
+      "med_boat"
+    ],
+    "art": "res://assets/fish/gilthead_seabream.png",
+    "thumb": "res://assets/fish/gilthead_seabream_thumb.png",
+    "description": "眼间像戴着一道金色发带。常在地中海海草、岩石和沙地附近寻找贝类等食物。",
+    "morphology": "高而侧扁的银色椭圆体；金色额带；鳃盖上方黑斑，下缘略红；单枚连续背鳍。",
+    "sources": [
+      {
+        "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_giltheadseabr.htm",
+        "title": "FAO: Sparus aurata cultured species fact sheet",
+        "supports": "地中海、近岸与50米内生境、完整鉴别形态"
+      }
+    ],
+    "min_mm": 220,
+    "max_mm": 650,
+    "anchor_mm": 380,
+    "anchor_g": 1100,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "steady",
+    "difficulty": 0.64,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 1.3,
+      "grain": 0.1,
+      "shrimp": 2.4,
+      "lure": 0.2
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.1,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 50,
+    "salinity": "salt",
+    "rarity": "少见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "saddled_seabream",
+    "name": "黑尾海鲷",
+    "scientific_name": "Oblada melanura",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_pier",
+      "med_boat"
+    ],
+    "art": "res://assets/fish/saddled_seabream.png",
+    "thumb": "res://assets/fish/saddled_seabream_thumb.png",
+    "description": "沿着岩岸上方结伴游动。尾柄有一道白边黑鞍斑，小嘴微微上翘。",
+    "morphology": "银灰略长的椭圆体；尾柄白边黑鞍斑；细纵线、略上翘的嘴；单背鳍和叉尾。",
+    "sources": [
+      {
+        "url": "https://doris.ffessm.fr/Especes/Oblada-melanura-Oblade-720",
+        "title": "DORIS: Oblada melanura",
+        "supports": "地中海岸边表层至30米、形态与尺寸；休闲渔获"
+      }
+    ],
+    "min_mm": 120,
+    "max_mm": 300,
+    "anchor_mm": 220,
+    "anchor_g": 210,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "burst",
+    "difficulty": 0.35,
+    "weight": 15,
+    "bait_weights": {
+      "worm": 1.0,
+      "grain": 0.25,
+      "shrimp": 1.8,
+      "lure": 0.8
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 30,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "white_seabream",
+    "name": "白海鲷",
+    "scientific_name": "Diplodus sargus",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_pier",
+      "med_boat"
+    ],
+    "art": "res://assets/fish/white_seabream.png",
+    "thumb": "res://assets/fish/white_seabream_thumb.png",
+    "description": "海岸礁石与港口附近常见的小型鲷鱼。尾柄黑鞍斑和深色腹鳍帮助它与近亲区别。",
+    "morphology": "高而侧扁的银灰身体；尾柄黑鞍斑未绕到底部；鳃盖黑边；腹鳍深色，幼鱼竖纹较明显。",
+    "sources": [
+      {
+        "url": "https://doris.ffessm.fr/Especes/Diplodus-sargus-Sar-commun-de-Mediterranee-463",
+        "title": "DORIS: Diplodus sargus",
+        "supports": "地中海分布、港口与浅岩岸、形态和尺寸"
+      }
+    ],
+    "min_mm": 150,
+    "max_mm": 420,
+    "anchor_mm": 270,
+    "anchor_g": 450,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "steady",
+    "difficulty": 0.48,
+    "weight": 13,
+    "bait_weights": {
+      "worm": 1.8,
+      "grain": 0.1,
+      "shrimp": 2.0,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0.05,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 35,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "annular_seabream",
+    "name": "环尾海鲷",
+    "scientific_name": "Diplodus annularis",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_pier",
+      "med_boat"
+    ],
+    "art": "res://assets/fish/annular_seabream.png",
+    "thumb": "res://assets/fish/annular_seabream_thumb.png",
+    "description": "体型不大，喜欢浅水海草和安静的港湾。尾柄近乎完整的黑环与黄色腹鳍很醒目。",
+    "morphology": "银体略泛黄；尾柄近乎闭合黑环；腹鳍及臀鳍前部黄色；体侧不画白海鲷幼鱼的竖纹。",
+    "sources": [
+      {
+        "url": "https://doris.ffessm.fr/Especes/Diplodus-annularis-Sparaillon-487",
+        "title": "DORIS: Diplodus annularis",
+        "supports": "主要0–15米、安静港口和海草；黄色腹臀鳍和尾环"
+      }
+    ],
+    "min_mm": 100,
+    "max_mm": 250,
+    "anchor_mm": 160,
+    "anchor_g": 110,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "rest",
+    "difficulty": 0.24,
+    "weight": 18,
+    "bait_weights": {
+      "worm": 1.8,
+      "grain": 0.15,
+      "shrimp": 1.5,
+      "lure": 0.2
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 0.95
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 15,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "red_mullet",
+    "name": "红须鲷",
+    "scientific_name": "Mullus barbatus",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_boat"
+    ],
+    "art": "res://assets/fish/red_mullet.png",
+    "thumb": "res://assets/fish/red_mullet_thumb.png",
+    "description": "用下巴的两条触须在泥沙中寻找食物。浅粉与银色鳞片，在光下显出温柔的红晕。",
+    "morphology": "长体、额头陡；下颌两根白须；两枚分离背鳍，第一背鳍不带条纹；浅粉银身。",
+    "sources": [
+      {
+        "url": "https://doris.ffessm.fr/Especes/Mullus-barbatus-Rouget-de-vase-579",
+        "title": "DORIS: Mullus barbatus",
+        "supports": "地中海泥沙底、表层至300米；形态与体长"
+      },
+      {
+        "url": "https://www.fao.org/4/x0170f/x0170f55.pdf",
+        "title": "FAO: Mullus barbatus identification sheet",
+        "supports": "物种识别及地中海分布"
+      }
+    ],
+    "min_mm": 120,
+    "max_mm": 300,
+    "anchor_mm": 210,
+    "anchor_g": 160,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "rest",
+    "difficulty": 0.32,
+    "weight": 12,
+    "bait_weights": {
+      "worm": 2.0,
+      "grain": 0.05,
+      "shrimp": 1.8,
+      "lure": 0.15
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 0.95
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 1.0,
+    "depth_min_m": 10,
+    "depth_max_m": 60,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "painted_comber",
+    "name": "字纹鮨",
+    "scientific_name": "Serranus scriba",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_pier",
+      "med_boat"
+    ],
+    "art": "res://assets/fish/painted_comber.png",
+    "thumb": "res://assets/fish/painted_comber_thumb.png",
+    "description": "岩礁旁的小型伏击者，头部细纹像书写的笔迹，腹部有一片淡蓝色。",
+    "morphology": "头部红蓝细纹；体侧5–7条深竖带；腹部蓝斑；尾柄与尾发黄；连续棘软背鳍。",
+    "sources": [
+      {
+        "url": "https://doris.ffessm.fr/Especes/Serranus-scriba-Serran-ecriture-144",
+        "title": "DORIS: Serranus scriba",
+        "supports": "地中海岩岸0–30米；形态；明确易以钩线钓获"
+      }
+    ],
+    "min_mm": 100,
+    "max_mm": 280,
+    "anchor_mm": 180,
+    "anchor_g": 130,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "burst",
+    "difficulty": 0.43,
+    "weight": 11,
+    "bait_weights": {
+      "worm": 0.7,
+      "grain": 0.05,
+      "shrimp": 1.8,
+      "lure": 1.5
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 0,
+    "min_cast": 0.05,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 30,
+    "salinity": "salt",
+    "rarity": "常见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  },
+  {
+    "species_id": "common_pandora",
+    "name": "绯小鲷",
+    "scientific_name": "Pagellus erythrinus",
+    "region_ids": [
+      "med"
+    ],
+    "spot_ids": [
+      "med_boat"
+    ],
+    "art": "res://assets/fish/common_pandora.png",
+    "thumb": "res://assets/fish/common_pandora_thumb.png",
+    "description": "在近岸较深的沙泥底寻找食物。银粉色身体和细小蓝点，像一页明亮的旅行纪念。",
+    "morphology": "粉红银色侧扁体；头部近直线轮廓、吻较长；上身细蓝点；鳃盖上缘红；尾分叉。",
+    "sources": [
+      {
+        "url": "https://doris.ffessm.fr/Especes/Pagellus-erythrinus-Pageot-commun-2771",
+        "title": "DORIS: Pagellus erythrinus",
+        "supports": "地中海5–200米、通常20–100米，偏好软底；形态"
+      },
+      {
+        "url": "https://www.fao.org/fishery/docs/CDrom/ARTFIMED/ArtFiWeb/descript/Species/SPAPAERY.HTML",
+        "title": "FAO: Pagellus erythrinus identification sheet",
+        "supports": "体长最大60厘米、常见10–30厘米；本作样本16–45厘米"
+      },
+      {
+        "url": "https://fishdb.sinica.edu.tw/eng/chinesequer2.php?R1=&T1=&cn=&dere=asc&fm=&gc=&orderby=is_accepted_name&page=776&pz=30&vn=",
+        "title": "Academia Sinica Taiwan Fish Database: Chinese names",
+        "supports": "Pagellus erythrinus中文名为绯小鲷"
+      }
+    ],
+    "min_mm": 160,
+    "max_mm": 450,
+    "anchor_mm": 280,
+    "anchor_g": 450,
+    "weight_model_note": "游戏调校：尺寸范围为合理垂钓个体范围，按尺寸锚点立方缩放并加入温和体况变化，非科研系数或世界纪录",
+    "behavior": "steady",
+    "difficulty": 0.51,
+    "weight": 8,
+    "bait_weights": {
+      "worm": 1.6,
+      "grain": 0.05,
+      "shrimp": 2.0,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.2,
+    "max_cast": 1.0,
+    "depth_min_m": 20,
+    "depth_max_m": 60,
+    "salinity": "salt",
+    "rarity": "少见",
+    "gameplay_note": "遭遇、鱼饵倍率、时段、天气、稀有度、战斗行为与重量锚点均为游戏调校；不能据此推断现实捕捞法规。"
+  }
+]
