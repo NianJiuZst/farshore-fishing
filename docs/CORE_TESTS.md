@@ -20,7 +20,7 @@ An imported Godot project is required for texture/font loading; open the project
 
 Every SaveStore fixture uses a newly created `/tmp/farshore-core-*` directory. The separate HOME and XDG directories isolate the Main startup path from a player's real save. Tests print the fixture path. Failures produce `FAIL:` lines and a nonzero process exit. The numeric assertion count includes repeated candidate/sample checks and is not a count of independent scenarios.
 
-**Recovery verification pending:** the pre-recovery run passed **42,012 / 42,012 assertions**, art checks enabled, exit code **0**, with no warnings or errors on **2026-10-02**. The test has been reconstructed after an export-directory deletion; current restored production files must pass a new run before this result is considered current. Raw output is written locally to `build/core-tests.log` during development.
+**Post-recovery verification: 42,012 / 42,012 assertions passed**, art checks enabled, exit code **0**, with no warnings or errors. A fresh Godot process and new isolated HOME/XDG directories tested the restored production project on **2026-10-02 at 08:35 UTC**, after checkpoint `31fdf64c64f665508533f04c707abafe1a329b06`. The complete test was reconstructed after an export-directory deletion and independently backed up; this rerun reconfirmed the same coverage, timings, and progression. Current raw output: `build/core-tests-recovered.log`; earlier output: `build/core-tests.log`.
 
 ## What runs against production code
 

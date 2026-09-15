@@ -21,8 +21,8 @@ func _ready() -> void:
 		var sid: String = str(species.spots()[0])
 		var rid: String = str(app.catalog.spots[sid].region_id)
 		var record: Dictionary = app.encounter.make_individual(species,sid,rid,"shrimp",2,"day","clear")
-		record.session_id="visual_%d"%index
-		record.catch_id="visual_%d_catch"%index
+		record["session_id"]="visual_%d"%index
+		record["catch_id"]="visual_%d_catch"%index
 		isolated.begin_session(record.session_id)
 		var settled: Dictionary = isolated.settle_catch(record)
 		if not settled.ok:
@@ -30,10 +30,10 @@ func _ready() -> void:
 			return
 		assert(isolated.dispose_catch(record.catch_id,"released").ok)
 	var state: Dictionary=isolated.state
-	state.gear=2
-	state.owned_gear=[0,1,2]
-	state.unlocked_regions=["lake","japan","norway","med"]
-	state.favorites=["common_carp","olive_flounder","atlantic_cod","atlantic_wolffish","painted_comber","gilthead_seabream"]
+	state["gear"]=2
+	state["owned_gear"]=[0,1,2]
+	state["unlocked_regions"]=["lake","japan","norway","med"]
+	state["favorites"]=["common_carp","olive_flounder","atlantic_cod","atlantic_wolffish","painted_comber","gilthead_seabream"]
 	assert(isolated.commit_state(state),isolated.error_message)
 	for pair: Array in [["lake","lake_shore"],["lake","lake_bay"],["japan","japan_harbor"],["japan","japan_reef"],["norway","norway_harbor"],["norway","norway_boat"],["med","med_pier"],["med","med_boat"]]:
 		app.region_id=pair[0]

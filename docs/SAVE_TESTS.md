@@ -106,3 +106,11 @@ godot --headless --path game --script res://tests/save_tests.gd --check-only
 2026-10-02 08:33 UTC，在构建目录配置事故清除了 `game/` 后，从本任务保留的完整源文本恢复本模块与测试，未更改接口。恢复文件分别为 560 行 / 25,152 字节和 318 行 / 20,955 字节，与事故前记录一致。独立备份位于工程目录以外的 `/workspace/shared/farshore-recovery-backup`，正式文件与备份的 SHA-256 一致。
 
 恢复后重新运行 `--check-only` 成功；完整测试再次 `201/201 passed; failures=0`，退出码 0。10,000 次压力循环 22,647 ms，最终状态仍为 5,395 字节，真实磁盘保存和重启读回通过。
+
+### 可视化夹具问题定位与真实界面成功写入验证
+
+2026-10-02 08:44 UTC：生产 SaveStore 保持冻结、未修改。逐行复现可视化夹具时发现，向 Dictionary 新增 `record.session_id` / `record.catch_id` 会生成 StringName 键，触发只允许 JSON String 键的输入验证；这是夹具新字段赋值方式，与 FishingSession 的显式字符串下标不同。临时复现仅改为 `record["session_id"]` / `record["catch_id"]` 后，32 个真实生成鱼种的钓获、放生、装备 2、所有地区与收藏写入全部通过。可视化夹具的正式修复由界面集成者负责。
+
+另做实际 `Main` 成功流程检查，直接调用生产页面处理函数及真实音量滑块 `drag_ended` 回调，不替换写入器：22/22 通过，退出码 0。以 32 次真实钓获及出售获得 1882 旅币，成功购买两档装备、免费切换已拥有装备、付费解锁日本/挪威/地中海、选择船钓点与鱼饵、保存游戏时钟、切换声音/震动、设置音量、收藏，并重启比对全部状态。递归校验确认这些对既有字段的点号赋值保持 String 键，不产生夹具新增字段的问题。
+
+诊断脚本副本：`/workspace/shared/farshore-recovery-backup/diagnostics/main_write_diagnose.gd`，通过 `godot --headless --path game --script <脚本绝对路径>` 运行，并为 `XDG_DATA_HOME` 指定隔离目录。此前旧的原生可视化进程中的另一条“数值字段无效”报错在当前恢复代码中未能复现；没有为未证实的猜测放松存档校验。上述新增证据为 headless 实际界面逻辑与磁盘操作检查，不宣称原生渲染或安卓触控验证。
