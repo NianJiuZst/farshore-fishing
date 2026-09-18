@@ -4,15 +4,17 @@
     "name": "鲤鱼",
     "scientific_name": "Cyprinus carpio",
     "region_ids": [
-      "lake"
+      "lake",
+      "yangtze"
     ],
     "spot_ids": [
       "lake_shore",
-      "lake_bay"
+      "lake_bay",
+      "yangtze_river"
     ],
     "art": "res://assets/fish/common_carp.png",
     "thumb": "res://assets/fish/common_carp_thumb.png",
-    "description": "常见于欧洲低地缓流与湖泊的底层，在软底寻找食物。这里表现的是普通有鳞湖鲤；各地种群也可能来自历史引入。",
+    "description": "欧亚淡水鱼，常在缓流、湖泊与河湾底层觅食。游戏中的欧洲湖泊与长江洲滩都能遇见它。",
     "morphology": "粗壮体形，黄褐色大鳞；口角有须，背鳍基部长，尾鳍分叉。",
     "sources": [
       {
@@ -20,6 +22,11 @@
         "title": "Cyprinus carpio — species account",
         "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
         "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23079816/",
+        "title": "Genetic analysis of common carp populations sampled from Yangtze locations",
+        "supports": "长江流域石首、扬州野生群体采样支持地域分布；不是具体钓点保证"
       }
     ],
     "min_mm": 180,
@@ -626,11 +633,13 @@
     "name": "黑鲷",
     "scientific_name": "Acanthopagrus schlegelii",
     "region_ids": [
-      "japan"
+      "japan",
+      "yangtze"
     ],
     "spot_ids": [
       "japan_harbor",
-      "japan_reef"
+      "japan_reef",
+      "yangtze_estuary"
     ],
     "art": "res://assets/fish/black_seabream.png",
     "thumb": "res://assets/fish/black_seabream_thumb.png",
@@ -648,6 +657,11 @@
         "title": "Eschmeyer’s Catalog of Fishes: Acanthopagrus",
         "supports": "有效学名及分布北达日本。",
         "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.848950/full",
+        "title": "East China Sea environmental DNA fish distribution study",
+        "supports": "长江口外东海区域出现记录；20–40m信号热点，不等同于必然垂钓可获"
       }
     ],
     "min_mm": 180,

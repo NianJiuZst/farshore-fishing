@@ -11,7 +11,7 @@ var errors: Array[String] = []
 func load_all(check_art: bool = true) -> bool:
 	fish.clear()
 	errors.clear()
-	for file_name: String in ["fish_a.json", "fish_b.json"]:
+	for file_name: String in ["fish_a.json", "fish_b.json", "fish_c.json", "fish_d.json"]:
 		var entries: Variant = _json("res://data/" + file_name)
 		if entries is not Array:
 			continue

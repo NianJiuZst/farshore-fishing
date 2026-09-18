@@ -113,6 +113,34 @@
       "subtitle": "地中海 · 岩岸与小港",
       "unlock_cost": 500.0,
       "unlock_count": 14.0
+    },
+    {
+      "region_id": "bayou",
+      "name": "密西西比",
+      "subtitle": "美国 · 河流与湿地",
+      "description": "从柏树低垂的温暖湿地，到上游开阔河湾。长吻与巨影，在芦苇边缓缓游过。",
+      "scene": "res://assets/scenery/bayou.png",
+      "color": "#56867b",
+      "unlock_count": 20,
+      "unlock_cost": 450,
+      "spots": [
+        "bayou_backwater",
+        "bayou_channel"
+      ]
+    },
+    {
+      "region_id": "yangtze",
+      "name": "长江流域",
+      "subtitle": "中国 · 江河与入海口",
+      "description": "顺着江流探访水下的生命。猛鱼藏在洲滩边，中华鲟的相遇留作保护观察。",
+      "scene": "res://assets/scenery/yangtze.png",
+      "color": "#5e9d9e",
+      "unlock_count": 28,
+      "unlock_cost": 600,
+      "spots": [
+        "yangtze_river",
+        "yangtze_estuary"
+      ]
     }
   ],
   "spots": [
@@ -211,6 +239,54 @@
       "region_id": "med",
       "salinity": "salt",
       "spot_id": "med_boat"
+    },
+    {
+      "spot_id": "bayou_backwater",
+      "region_id": "bayou",
+      "name": "柏影湿地",
+      "habitat": "美国路易斯安那下游温暖水草回水区",
+      "salinity": "fresh",
+      "depth_min_m": 1,
+      "depth_max_m": 8,
+      "min_gear": 1,
+      "cast_hint": "拟饵探水草边，鳄雀鳝只出现在温暖的下游湿地",
+      "foreground": "reeds"
+    },
+    {
+      "spot_id": "bayou_channel",
+      "region_id": "bayou",
+      "name": "上游河湾",
+      "habitat": "上密西西比流域有草带的河湾与较深河槽",
+      "salinity": "fresh",
+      "depth_min_m": 2,
+      "depth_max_m": 20,
+      "min_gear": 2,
+      "cast_hint": "近草带可遇狗鱼，河槽是大型鲶鱼的舞台",
+      "foreground": "boat"
+    },
+    {
+      "spot_id": "yangtze_river",
+      "region_id": "yangtze",
+      "name": "洲滩江湾",
+      "habitat": "长江中游洲滩、通江湖泊与河槽",
+      "salinity": "fresh",
+      "depth_min_m": 1,
+      "depth_max_m": 35,
+      "min_gear": 1,
+      "cast_hint": "拟饵寻找掠食鱼；虾饵也适合近底觅食者",
+      "foreground": "rocks"
+    },
+    {
+      "spot_id": "yangtze_estuary",
+      "region_id": "yangtze",
+      "name": "江海观察站",
+      "habitat": "长江口外侧近岸海域与沙泥底",
+      "salinity": "salt",
+      "depth_min_m": 5,
+      "depth_max_m": 40,
+      "min_gear": 2,
+      "cast_hint": "中华鲟为虚拟保护观察对象，相遇后必须放归",
+      "foreground": "boat"
     }
   ]
 }

@@ -13,6 +13,8 @@ var max_mm: int
 var anchor_mm: int
 var anchor_g: int
 var behavior: String
+var release_only: bool
+var conservation_note: String
 var difficulty: float
 var raw: Dictionary
 
@@ -31,6 +33,8 @@ func _init(value: Dictionary = {}) -> void:
 	anchor_g = int(value.get("anchor_g", 400))
 	behavior = str(value.get("behavior", "steady"))
 	difficulty = float(value.get("difficulty", 0.4))
+	release_only = bool(value.get("release_only", false))
+	conservation_note = str(value.get("conservation_note", ""))
 
 func regions() -> Array:
 	return raw.get("region_ids", [])
