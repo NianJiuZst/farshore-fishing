@@ -15,6 +15,13 @@ const CAST_DURATION: float = 2.20
 const RELEASE_TIME: float = 1.20
 const LANDING_DURATION: float = 3.35
 const Session = preload("res://scripts/fishing_session.gd")
+const GEAR_VISUALS: Array[Dictionary] = [
+	{"rod_length":2.04, "rod_radius":0.013, "rod_color":"273b36", "reel_color":"aeb5a0", "grip_color":"a68950", "flex_scale":1.0},
+	{"rod_length":2.22, "rod_radius":0.014, "rod_color":"315875", "reel_color":"c0a566", "grip_color":"876a3e", "flex_scale":0.95},
+	{"rod_length":2.42, "rod_radius":0.016, "rod_color":"273744", "reel_color":"96b8be", "grip_color":"66513c", "flex_scale":0.85},
+	{"rod_length":1.86, "rod_radius":0.0105, "rod_color":"315b83", "reel_color":"c5cdd0", "grip_color":"c2a77a", "flex_scale":1.13},
+	{"rod_length":2.58, "rod_radius":0.018, "rod_color":"632b38", "reel_color":"bb9452", "grip_color":"362c29", "flex_scale":0.72},
+]
 
 var session: FishingSession
 var camera: Camera3D
@@ -23,6 +30,8 @@ var cast_in_progress: bool = false
 var weather: String = "clear"
 var time_of_day: String = "day"
 var mode: String = "lobby"
+var gear_id: int = 0
+var gear_profile: Dictionary = {}
 var _built: bool = false
 var _suspended: bool = false
 var _character_was_playing: bool = false
@@ -48,6 +57,13 @@ var _animator: AnimationPlayer
 var _rod_socket: Node3D
 var _rod: Node3D
 var _rod_mesh: MeshInstance3D
+var _rod_grip: MeshInstance3D
+var _rod_reel: MeshInstance3D
+var _rod_accents: Array[MeshInstance3D] = []
+var _rod_length: float = 2.04
+var _rod_radius: float = 0.013
+var _rod_tip_radius: float = 0.004
+var _rod_flex_scale: float = 1.0
 var _rod_tip: Vector3 = Vector3.ZERO
 var _line: MeshInstance3D
 var _line_material: StandardMaterial3D
@@ -102,6 +118,33 @@ func bind_session(value: FishingSession) -> void:
 func set_region(_region: Variant, _spot: Variant = null) -> void:
 	# A single authored managed habitat is intentional for this vertical slice.
 	pass
+
+func set_gear_profile(gear: Dictionary) -> void:
+	# Presentation only: power, tolerance, reach, prices and save values are untouched.
+	# Every profile preserves the same right-hand socket, rear grip and reel centers.
+	gear_id = clampi(int(gear.get("id", 0)), 0, GEAR_VISUALS.size() - 1)
+	var defaults: Dictionary = GEAR_VISUALS[gear_id]
+	gear_profile = defaults.duplicate(true)
+	for key: String in ["rod_length", "rod_radius", "rod_color", "reel_color", "grip_color"]:
+		if gear.has(key): gear_profile[key] = gear[key]
+	gear_profile["id"] = gear_id
+	_rod_length = clampf(float(gear_profile.rod_length), 1.60, 2.85)
+	_rod_radius = clampf(float(gear_profile.rod_radius), 0.009, 0.020)
+	_rod_tip_radius = _rod_radius * (0.004 / 0.013)
+	_rod_flex_scale = float(defaults.flex_scale)
+	gear_profile.rod_length = _rod_length
+	gear_profile.rod_radius = _rod_radius
+	if _rod_mesh == null: return
+	(_rod_mesh.material_override as StandardMaterial3D).albedo_color = Color.from_string(str(gear_profile.rod_color), Color(str(defaults.rod_color)))
+	(_rod_grip.material_override as StandardMaterial3D).albedo_color = Color.from_string(str(gear_profile.grip_color), Color(str(defaults.grip_color)))
+	var reel_color: Color = Color.from_string(str(gear_profile.reel_color), Color(str(defaults.reel_color)))
+	(_rod_reel.material_override as StandardMaterial3D).albedo_color = reel_color
+	for index: int in _rod_accents.size():
+		var accent: MeshInstance3D = _rod_accents[index]
+		accent.visible = gear_id != 0 or index < 2
+		(accent.material_override as StandardMaterial3D).albedo_color = reel_color
+	_update_rod()
+	if _line != null and _bobber != null and _line.visible and _bobber.visible: _update_line()
 
 func set_mode(value: String) -> void:
 	mode = value
@@ -592,6 +635,8 @@ func _build_rod() -> void:
 	_rod_mesh.material_override = _material(Color("273b36"), 0.3, 0.2)
 	_rod.add_child(_rod_mesh)
 	var grip := MeshInstance3D.new()
+	_rod_grip = grip
+	grip.name = "FixedRearHandGrip"
 	var cylinder := CylinderMesh.new()
 	cylinder.top_radius = 0.024
 	cylinder.bottom_radius = 0.025
@@ -603,6 +648,8 @@ func _build_rod() -> void:
 	grip.material_override = _material(Color("a68950"), 0.85)
 	_rod.add_child(grip)
 	var reel := MeshInstance3D.new()
+	_rod_reel = reel
+	reel.name = "FixedReelSeat"
 	var reel_mesh := CylinderMesh.new()
 	reel_mesh.top_radius = 0.065
 	reel_mesh.bottom_radius = 0.065
@@ -613,20 +660,41 @@ func _build_rod() -> void:
 	reel.rotation.z = PI * 0.5
 	reel.material_override = _material(Color("aeb5a0"), 0.3, 0.75)
 	_rod.add_child(reel)
+	for i in range(4):
+		var band := MeshInstance3D.new()
+		band.name = "BlankBinding_%d" % i
+		var wrap := CylinderMesh.new()
+		wrap.top_radius = 1.0
+		wrap.bottom_radius = 1.0
+		wrap.height = 1.0
+		wrap.radial_segments = 8
+		band.mesh = wrap
+		band.material_override = _material(Color("aeb5a0"), 0.34, 0.55)
+		_rod.add_child(band)
+		_rod_accents.append(band)
+	set_gear_profile(gear_profile)
 
 func _update_rod() -> void:
 	var flex: float = 0.025
 	if presentation_state == "fight" and session: flex = 0.14 + session.tension * 0.55
 	elif cast_in_progress: flex = sin(clampf(_cast_time / CAST_DURATION, 0, 1) * PI) * 0.23
 	elif presentation_state == "landing": flex = 0.30
+	flex *= _rod_flex_scale
 	var points := PackedVector3Array()
 	var radii := PackedFloat32Array()
 	for i in range(19):
 		var u: float = float(i) / 18.0
-		points.append(Vector3(0, -flex * pow(u, 2.4), -u * 2.04))
-		radii.append(lerpf(0.013, 0.004, u))
+		points.append(Vector3(0, -flex * pow(u, 2.4), -u * _rod_length))
+		radii.append(lerpf(_rod_radius, _rod_tip_radius, u))
 	_rod_mesh.mesh = _tube_mesh(points, radii, 6)
 	_rod_tip = _rod.to_global(points[18])
+	for index: int in _rod_accents.size():
+		var u: float = [0.055, 0.19, 0.47, 0.74][index]
+		var band: MeshInstance3D = _rod_accents[index]
+		var radius: float = lerpf(_rod_radius, _rod_tip_radius, u) * 1.12
+		band.position = Vector3(0, -flex * pow(u, 2.4), -u * _rod_length)
+		var tangent: Vector3 = Vector3(0, -flex * 2.4 * pow(u, 1.4), -_rod_length).normalized()
+		band.basis = Basis(Quaternion(Vector3.UP, tangent)).scaled(Vector3(radius, 0.048 if index < 2 else 0.028, radius))
 
 func _build_line() -> void:
 	_line = MeshInstance3D.new()
@@ -908,4 +976,4 @@ func _tube_mesh(points: PackedVector3Array, radii: PackedFloat32Array, sides: in
 	return result
 
 func debug_snapshot() -> Dictionary:
-	return {"state": presentation_state, "mode": mode, "suspended": _suspended, "cast_in_progress": cast_in_progress, "landing_time": _landing_time, "camera_position": camera.position if camera else Vector3.ZERO, "angler_loaded": _animator != null, "fish_loaded": _fish != null, "fish_id": _fish_id, "renderer": RenderingServer.get_current_rendering_method(), "draw_calls": Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME), "rendered_primitives": Performance.get_monitor(Performance.RENDER_TOTAL_PRIMITIVES_IN_FRAME)}
+	return {"state": presentation_state, "mode": mode, "suspended": _suspended, "cast_in_progress": cast_in_progress, "landing_time": _landing_time, "camera_position": camera.position if camera else Vector3.ZERO, "angler_loaded": _animator != null, "fish_loaded": _fish != null, "fish_id": _fish_id, "gear_id": gear_id, "rod_length": _rod_length, "rod_radius": _rod_radius, "renderer": RenderingServer.get_current_rendering_method(), "draw_calls": Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME), "rendered_primitives": Performance.get_monitor(Performance.RENDER_TOTAL_PRIMITIVES_IN_FRAME)}

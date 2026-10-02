@@ -62,3 +62,11 @@ Final visual captures use only the sky hemisphere of the 2K CC0 HDR panorama for
 ## Frozen visual evidence
 
 The final stage-only 720×1280 Mobile/Vulkan frames are in `build/stage3d/release_candidate_01_lobby.png` through `release_candidate_10_rain.png` (cast, shoulder wait/reel, underwater approach, full-size gar breach/lift, rain). These are actual native renders, not painted mockups. The dedicated release-candidate log is `build/stage3d/approved_capture.log`; that diagnostic filename is not a claim of user acceptance. Native Main UI captures and the independent six-suite gate are coordinated separately before packaging.
+
+## Five equipment visuals
+
+`set_gear_profile(gear: Dictionary)` accepts the selected catalog gear row, including optional `rod_length` (forward blank meters), `rod_radius` (base radius meters), `rod_color`, `reel_color`, and `grip_color` (HTML colors). It also works before the stage enters the tree. The stable ID supplies a default for every omitted visual field. Power, tolerance, reach, price, and saved gear IDs are never changed by this presentation API.
+
+IDs0–4 are individually recognizable: original forest/silver, travel blue/brass, deep-water graphite/ice, light-spinning blue/silver/cork, and heavy-casting burgundy/brass/dark grip. The last two colors follow the actual generated equipment icons and catalog overrides. Forward lengths are2.04,2.22,2.42,1.86,2.58m; base radii are13,14,16,10.5,18mm. Tapers and trim bindings follow each blank's bend. Right-hand socket, rear grip center `(0,0,0.08)`, rear grip length0.34m, and reel center `(0,-0.075,0.05)` stay fixed for all five.
+
+The native Mobile/Vulkan gear gate in `build/stage3d/gear/render_gear_profiles.gd` checks actual mesh lengths, five colors/profile IDs, invariant grips, both hands at cast/reel/lift poses, and frame-post-draw line/tip coincidence. The first geometry gate passed68/68 with maximum line endpoint error below0.000001m. Updated character and catalog-color captures are required again after the adult character asset changes.
