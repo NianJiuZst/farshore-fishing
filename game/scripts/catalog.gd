@@ -37,6 +37,25 @@ func load_all(check_art: bool = true) -> bool:
 			if spots.has(id):
 				errors.append("重复钓点: " + id)
 			spots[id] = spot
+	# Gear IDs are stable numeric positions; append new options, never reorder old ones.
+	for index: int in range(gear.size()):
+		var item: Dictionary = gear[index]
+		if float(item.get("id",-1)) != float(index) or str(item.get("name","")).is_empty(): errors.append("钓竿标识无效或顺序改变：" + str(index))
+		for key: String in ["power","tolerance","max_depth_m"]:
+			var value: float = float(item.get(key,0.0))
+			if not is_finite(value) or value <= 0.0: errors.append("钓竿参数无效：" + str(index) + "/" + key)
+		var reach: float = float(item.get("reach",0.0))
+		if not is_finite(reach) or reach < 0.05 or reach > 1.0: errors.append("钓竿抛投范围无效：" + str(index))
+		var price: float = float(item.get("price",-1.0))
+		if not is_finite(price) or price < 0.0: errors.append("钓竿价格无效：" + str(index))
+	var bait_ids: Array[String] = []
+	for bait: Dictionary in baits:
+		var id: String = str(bait.get("bait_id",""))
+		if id.is_empty() or id in bait_ids: errors.append("鱼饵标识无效或重复：" + id)
+		bait_ids.append(id)
+		if str(bait.get("legacy_category",id)) not in ["worm","grain","shrimp","lure"]: errors.append("鱼饵兼容分类无效：" + id)
+		var price: float = float(bait.get("price",-1.0))
+		if not is_finite(price) or price < 0.0: errors.append("鱼饵价格无效：" + id)
 	var region_ids: Array[String] = []
 	for region_value: Dictionary in regions:
 		var region_key: String = str(region_value.get("region_id", ""))
@@ -101,3 +120,17 @@ func bait_name(id: String) -> String:
 		if value.get("bait_id") == id:
 			return str(value.get("name"))
 	return id
+
+func bait_definition(id: String) -> Dictionary:
+	for bait: Dictionary in baits:
+		if str(bait.get("bait_id","")) == id: return bait
+	return {}
+
+func bait_category(id: String) -> String:
+	var bait: Dictionary = bait_definition(id)
+	return str(bait.get("legacy_category",id))
+
+func bait_weight(species: FishDefinition, id: String) -> float:
+	# Compatibility only: no edits to the 44 archival species definitions. Trial
+	# fishery balance may explicitly override these historical-category weights.
+	return species.weight_for("bait_weights",bait_category(id))

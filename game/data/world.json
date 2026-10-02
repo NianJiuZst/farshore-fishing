@@ -23,6 +23,34 @@
       "hint": "掠食鱼和水层巡游鱼更易追逐",
       "name": "拟饵",
       "price": 0.0
+    },
+    {
+      "bait_id": "sweetcorn",
+      "hint": "河湾混合试钓偏向鲤鱼，甜香颗粒饵",
+      "legacy_category": "grain",
+      "name": "甜玉米",
+      "price": 0
+    },
+    {
+      "bait_id": "dough",
+      "hint": "河湾混合试钓偏向鲤鱼，柔软慢散饵",
+      "legacy_category": "grain",
+      "name": "面团饵",
+      "price": 0
+    },
+    {
+      "bait_id": "cut_fish",
+      "hint": "河湾混合试钓偏向鳄雀鳝，切块荤饵",
+      "legacy_category": "shrimp",
+      "name": "鱼肉块",
+      "price": 0
+    },
+    {
+      "bait_id": "spinner",
+      "hint": "河湾混合试钓偏向鳄雀鳝，旋转反光拟饵",
+      "legacy_category": "lure",
+      "name": "旋转亮片",
+      "price": 0
     }
   ],
   "gear": [
@@ -55,6 +83,38 @@
       "price": 480.0,
       "reach": 1.0,
       "tolerance": 1.5
+    },
+    {
+      "description": "轻量快收，控线更灵敏；张力高时需及时卸力",
+      "grip_color": "c2a77a",
+      "icon": "rod_spinning",
+      "id": 3,
+      "max_depth_m": 25,
+      "name": "轻岚 · 灵敏纺车竿",
+      "power": 1.24,
+      "price": 100,
+      "reach": 0.9,
+      "reel_color": "c5cdd0",
+      "rod_color": "315b83",
+      "rod_length": 1.86,
+      "rod_radius": 0.0105,
+      "tolerance": 1.08
+    },
+    {
+      "description": "强力稳控大鱼；抛投距离和探深仍有取舍",
+      "grip_color": "362c29",
+      "icon": "rod_heavy",
+      "id": 4,
+      "max_depth_m": 90,
+      "name": "重潮 · 巨物枪柄竿",
+      "power": 1.58,
+      "price": 320,
+      "reach": 0.92,
+      "reel_color": "bb9452",
+      "rod_color": "632b38",
+      "rod_length": 2.58,
+      "rod_radius": 0.018,
+      "tolerance": 1.75
     }
   ],
   "regions": [

@@ -194,8 +194,8 @@ func _test_main_pages() -> void:
 	app._show_gear()
 	await _layout_frames()
 	var bag: ScrollContainer = _find_type(app._overlay,"ScrollContainer") as ScrollContainer
-	var bait: Button = _find_button(app._overlay,"谷物")
-	if bait == null: bait = _find_button(app._overlay,"已选 · 谷物")
+	var bait: Button = _find_button(app._overlay,"旋转亮片")
+	if bait == null: bait = _find_button(app._overlay,"已选 · 旋转亮片")
 	_check(bait != null,"production bait button exists")
 	if bait != null:
 		await _drag_to_bottom(bag)
@@ -215,7 +215,10 @@ func _test_main_pages() -> void:
 		_touch(origin,true)
 		_touch(origin,false)
 		await _layout_frames()
-		_check(app.bait_id == "grain" and app.store.state.selection.bait_id == "grain" and int(app.store.state.save_revision) == revision_before+1,"real bait ScreenTouch tap updates persisted choice exactly once")
+		_check(app.bait_id == "spinner" and app.store.state.selection.bait_id == "spinner" and int(app.store.state.save_revision) == revision_before+1,"real bait ScreenTouch tap updates persisted choice exactly once")
+	await _test_expanded_tackle_controls(app)
+	app._show_prepare()
+	app._show_gear()
 	app._close_page()
 	await _layout_frames()
 	_check(app._screen == "prepare","bag Back returns to prepare context")
@@ -377,3 +380,58 @@ func _test_native_controls(app: Control) -> void:
 	_touch(center,false)
 	await _layout_frames()
 	_check(search.has_focus(),"native search field touch still receives keyboard focus")
+
+func _swipe_to_control(scroll: ScrollContainer, control: Control) -> void:
+	var area: Rect2 = scroll.get_global_rect()
+	var limit: int = ceili(scroll.get_v_scroll_bar().max_value/250.0)+4
+	for repeat: int in range(limit):
+		var bounds: Rect2 = control.get_global_rect()
+		if bounds.position.y >= area.position.y+6 and bounds.end.y <= area.end.y-6: return
+		var movement: float = -250.0 if bounds.end.y > area.end.y-6 else 250.0
+		var point: Vector2 = area.get_center()
+		_touch(point,true)
+		_drag(point+Vector2(0,movement),Vector2(0,movement))
+		_touch(point+Vector2(0,movement),false)
+		scroll.stop_gesture()
+		await process_frame
+
+func _test_expanded_tackle_controls(app: Control) -> void:
+	var starting_currency: int = int(app.store.state.currency)
+	for bait: Dictionary in app.catalog.baits:
+		app._show_gear()
+		await _layout_frames()
+		var id: String = str(bait.bait_id)
+		var label: String = ("已选 · " if app.bait_id == id else "")+str(bait.name)
+		var button: Button = _find_button(app._page,label)
+		_check(button!=null,"all8 bait controls exist: "+id)
+		if button==null: continue
+		var bag: ScrollContainer = app._page.get_parent()
+		await _swipe_to_control(bag,button)
+		_check(bag.get_global_rect().encloses(button.get_global_rect()),"actual repeated touch swipes reveal bait control: "+id)
+		var revision: int = int(app.store.state.save_revision)
+		var point: Vector2 = button.get_global_rect().get_center()
+		_touch(point,true)
+		_emulated_button(point,true)
+		_touch(point,false)
+		_emulated_button(point,false)
+		await _layout_frames()
+		_check(app.bait_id==id and app.store.state.selection.bait_id==id and int(app.store.state.save_revision)==revision+1,"actual touch selects and persists bait exactly once: "+id)
+		_check(app._bait_control.icon_kind==id,"HUD reflects actual selected bait bitmap: "+id)
+	_check(int(app.store.state.currency)==starting_currency,"all8 unlimited baits cost no currency")
+	var snapshot: Dictionary = app.store.state.duplicate(true)
+	for id: int in range(5):
+		app._borrow_gear(id)
+		await _layout_frames()
+		_check(app._effective_gear_id()==id and app.store.state==snapshot,"temporary rod selection leaves save/ownership/currency untouched: "+str(id))
+		_check(app.scenery.gear_id==id,"3D rod receives selected geometry/material profile: "+str(id))
+		app._show_prepare()
+		app._enter_fishery()
+		app._action_down()
+		app.session.charge=1.0
+		app._action_up()
+		_check(app.session.state==FishingSession.State.CASTING and int(app.session.individual.equipment)==id and is_equal_approx(app.session.gear_power,float(app.catalog.gear[id].power)) and is_equal_approx(app.session.charge,float(app.catalog.gear[id].reach)),"borrowed rod drives actual encounter/fight stats and cast reach: "+str(id))
+		app._abandon_round()
+		app._return_to_lobby()
+	app._clear_trial_gear()
+	_check(app._trial_gear_id==-1 and app._effective_gear_id()==int(snapshot.gear) and app.store.state==snapshot,"ending trial borrowing restores saved rod without fake unlocks")
+	app._page_context="prepare"

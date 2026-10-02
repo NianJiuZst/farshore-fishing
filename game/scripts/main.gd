@@ -24,6 +24,7 @@ var session: FishingSession = Session.new()
 var scenery: Node3D
 var _mode: String = "lobby"
 var _trial_target: String = "mixed"
+var _trial_gear_id: int = -1
 var _page_context: String = "home"
 var _landing_pending: bool = false
 var _result_waiting: bool = false
@@ -430,7 +431,7 @@ func _process(delta: float) -> void:
 		_hint.text="张力过高，松手卸力" if session.tension>0.82 else "按住收线，松手卸力"
 		_action.text = "卸力" if session.reeling else "收线"
 	elif session.state == Session.State.CHARGING:
-		_hint.text = "落点距离 %d%% · 松手投出" % roundi(session.charge*100)
+		_hint.text = "落点距离 %d%% · 松手投出" % roundi(minf(session.charge,float(catalog.gear[_effective_gear_id()].reach))*100)
 
 func _update_conditions() -> void:
 	time_of_day = "day" if int(game_clock/150.0)%2 == 0 else "dusk"
@@ -445,6 +446,8 @@ func _refresh_location() -> void:
 	_place.text = Trial.NAME
 	_spot_label.text = Trial.SPOT_NAME + " · 3D 试钓"
 	_bait_control.icon_kind=bait_id
+	if scenery.has_method("set_gear_profile"): scenery.set_gear_profile(catalog.gear[_effective_gear_id()])
+	if session.state not in [Session.State.FIGHT,Session.State.BITE]: _action.icon_kind = _current_rod_icon()
 	_update_wallet()
 
 func _update_wallet() -> void:
@@ -460,8 +463,9 @@ func _action_down() -> void:
 
 func _action_up() -> void:
 	if session.state == Session.State.CHARGING:
-		var gear_id: int = int(store.state.get("gear",0))
+		var gear_id: int = _effective_gear_id()
 		var cast_power: float = clampf(session.charge,0.05,float(catalog.gear[gear_id].reach))
+		session.charge = cast_power
 		var fish: Dictionary = Trial.generate(catalog,encounter,bait_id,gear_id,cast_power,time_of_day,weather,_trial_target)
 		if not fish.is_empty(): fish["game_time"] = game_clock
 		if session.cast(fish,catalog.gear[gear_id]):
@@ -475,7 +479,7 @@ func _action_cancel() -> void:
 	session.cancel_input()
 
 func _session_changed(value: int) -> void:
-	_action.icon_kind="reel" if value==Session.State.FIGHT else ("hook" if value==Session.State.BITE else "rod")
+	_action.icon_kind="reel" if value==Session.State.FIGHT else ("hook" if value==Session.State.BITE else _current_rod_icon())
 	_nav_rail.visible=value not in [Session.State.FIGHT,Session.State.CAUGHT]
 	_bait_control.disabled=value==Session.State.CAUGHT
 	_charge.visible = value == Session.State.CHARGING
@@ -741,7 +745,10 @@ func _show_prepare() -> void:
 		choice.add_theme_font_size_override("font_size",22)
 		targets.add_child(choice)
 	_section("本次装备")
-	_page.add_child(_text(str(catalog.gear[int(store.state.gear)].name) + "  /  " + catalog.bait_name(bait_id),27))
+	_page.add_child(_text(str(catalog.gear[_effective_gear_id()].name) + "  /  " + catalog.bait_name(bait_id),27))
+	if _trial_gear_id >= 0:
+		_page.add_child(_text("试钓借用 · 不改变已装备钓竿",21,TEAL))
+		_page.add_child(_button("使用已装备钓竿",_clear_trial_gear))
 	_page.add_child(_button("调整钓竿与鱼饵",_show_gear))
 	_page.add_child(_text("长按蓄力 → 松手抛竿\n浮漂下沉时提竿 → 按住收线，张力高时松手",23,MUTED))
 	_page_footer.add_child(_button("进入钓点",_enter_fishery,true))
@@ -857,18 +864,20 @@ func _active_round() -> bool:
 
 func _show_gear() -> void:
 	_open_page("gear","行囊")
-	_page.add_child(_text("旅币 %d  ·  每一种鱼饵，都可以无限补给" % int(store.state.currency),22,MUTED))
+	_page.add_child(_text("旅币 %d  ·  %d 种鱼饵无限补给" % [int(store.state.currency),catalog.baits.size()],22,MUTED))
+	_page.add_child(_text("借用仅对本次游戏有效，购买才会加入行囊",21,MUTED))
 	_section("我的钓竿","")
 	for item: Dictionary in catalog.gear:
 		var id: int=int(item.id)
-		var current: bool=int(store.state.gear)==id
+		var current: bool=_effective_gear_id()==id
+		var saved_equipped: bool=int(store.state.gear)==id and _trial_gear_id < 0
 		var card: PanelContainer=_card(Color("28535a") if current else Color("193d49"))
 		_page.add_child(card)
 		var box: VBoxContainer=VBoxContainer.new()
 		card.add_child(box)
 		var row: HBoxContainer=HBoxContainer.new()
 		box.add_child(row)
-		var icon: Control=_icon("rod",104)
+		var icon: Control=_icon(str(item.get("icon","rod")),104)
 
 		row.add_child(icon)
 		var info: VBoxContainer=VBoxContainer.new()
@@ -876,12 +885,17 @@ func _show_gear() -> void:
 		row.add_child(info)
 		info.add_child(_text(str(item.name),28,GOLD if current else INK))
 		info.add_child(_text(str(item.description),21,MUTED))
-		info.add_child(_text("探深 %d m   /   控线容错 ×%.2f" % [int(item.max_depth_m),float(item.tolerance)],20,TEAL))
+		info.add_child(_text("收线 ×%.2f  /  容错 ×%.2f\n抛投 %d%%  /  探深 %d m" % [float(item.power),float(item.tolerance),roundi(float(item.reach)*100),int(item.max_depth_m)],20,TEAL))
 		var owned: bool=id in store.state.owned_gear
-		var label: String="已装备" if current else ("装备" if owned else "购买  ·  %d 旅币" % int(item.price))
+		var label: String="已装备" if saved_equipped else ("装备" if owned else "购买  ·  %d 旅币" % int(item.price))
 		var action: Button=_button(label,_equip.bind(id),not owned)
-		action.disabled=current or (not owned and int(store.state.currency)<int(item.price))
+		action.disabled=saved_equipped or (not owned and int(store.state.currency)<int(item.price))
 		box.add_child(action)
+		if not owned:
+			var borrow: Button = _button("试钓借用中" if _trial_gear_id == id else "试钓借用",_borrow_gear.bind(id))
+			borrow.icon_kind = str(item.get("icon","rod"))
+			borrow.disabled = _trial_gear_id == id
+			box.add_child(borrow)
 	_section("鱼饵","无限补给")
 	var grid: GridContainer=GridContainer.new()
 	grid.columns=2
@@ -898,7 +912,26 @@ func _show_gear() -> void:
 		box.add_child(_button(("已选 · " if bait.bait_id==bait_id else "")+str(bait.name),_set_bait.bind(str(bait.bait_id)),bait.bait_id==bait_id))
 		box.add_child(_text(str(bait.hint),20,MUTED))
 
+func _effective_gear_id() -> int:
+	return _trial_gear_id if _trial_gear_id >= 0 and _trial_gear_id < catalog.gear.size() else int(store.state.get("gear",0))
+
+func _current_rod_icon() -> String:
+	return str(catalog.gear[_effective_gear_id()].get("icon","rod"))
+
+func _borrow_gear(id: int) -> void:
+	if id < 0 or id >= catalog.gear.size() or _active_round(): return
+	_trial_gear_id = id
+	_refresh_location()
+	_show_gear()
+
+func _clear_trial_gear() -> void:
+	if _active_round(): return
+	_trial_gear_id = -1
+	_refresh_location()
+	_show_prepare()
+
 func _equip(id: int) -> void:
+	if id < 0 or id >= catalog.gear.size(): return
 	if _active_round():
 		_toast_message("请在这一竿结束后更换装备")
 		return
@@ -909,9 +942,13 @@ func _equip(id: int) -> void:
 		candidate.currency = int(candidate.currency)-cost
 		candidate.owned_gear.append(id)
 	candidate.gear = id
-	if _commit(candidate): _show_gear()
+	if _commit(candidate):
+		_trial_gear_id = -1
+		_refresh_location()
+		_show_gear()
 
 func _set_bait(id: String) -> void:
+	if catalog.bait_definition(id).is_empty(): return
 	if _active_round():
 		_toast_message("这一竿的鱼饵与鱼已经确定，下次抛竿前再换")
 		return
@@ -1043,7 +1080,7 @@ func _show_species(id: String) -> void:
 	var preferred: String="worm"
 	var best: float=-1
 	for bait: Dictionary in catalog.baits:
-		var weight: float=fish.weight_for("bait_weights",str(bait.bait_id))
+		var weight: float=catalog.bait_weight(fish,str(bait.bait_id))
 		if weight>best: preferred=str(bait.bait_id); best=weight
 	_page.add_child(_text("鱼饵线索  /  "+catalog.bait_name(preferred)+"\n尺寸、行为与出现倍率含游戏调校",21,MUTED))
 	_section("钓获纪录","累计 %d 条" % _count(id))

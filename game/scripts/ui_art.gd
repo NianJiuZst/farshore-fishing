@@ -6,7 +6,8 @@ const ICON_ROOT: String="res://assets/ui/icons/"
 const REQUIRED_ICONS: Array[String]=[
 	"rod","reel","hook","bag","compass","book","heart","coin","badge",
 	"pause","settings","sound","back","arrow","sort","search","release",
-	"worm","grain","shrimp","lure","sun","dusk","rain","ruler"
+	"worm","grain","shrimp","lure","sun","dusk","rain","ruler",
+	"sweetcorn","dough","cut_fish","spinner","rod_spinning","rod_heavy"
 ]
 static var _textures: Dictionary={}
 static var _reported: Dictionary={}

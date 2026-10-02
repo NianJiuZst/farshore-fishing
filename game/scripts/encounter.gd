@@ -24,7 +24,7 @@ func candidates(catalog: ContentCatalog, spot_id: String, bait: String, gear_id:
 			continue
 		if cast_power < float(data.get("min_cast", 0.0)) or cast_power > float(data.get("max_cast", 1.0)):
 			continue
-		var weight: float = float(data.get("weight", 1.0)) * fish.weight_for("bait_weights", bait) * fish.weight_for("time_weights", time) * fish.weight_for("weather_weights", weather)
+		var weight: float = float(data.get("weight", 1.0)) * catalog.bait_weight(fish, bait) * fish.weight_for("time_weights", time) * fish.weight_for("weather_weights", weather)
 		if weight > 0.0:
 			result.append({"fish":fish,"weight":weight})
 	return result
