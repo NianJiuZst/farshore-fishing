@@ -12,7 +12,8 @@ import zipfile
 from godot_binary_settings import scalar_settings
 
 apk, abi, out, bt = Path(sys.argv[1]), sys.argv[2], Path(sys.argv[3]), Path(sys.argv[4])
-expected_content = json.loads(Path(sys.argv[5]).read_text()).get('content') if len(sys.argv) > 5 else None
+expected_snapshot = json.loads(Path(sys.argv[5]).read_text()) if len(sys.argv) > 5 else {}
+expected_content = expected_snapshot.get('content')
 out.mkdir(parents=True, exist_ok=True)
 
 def run(args, filename):
@@ -81,14 +82,20 @@ with zipfile.ZipFile(apk) as z:
     for filename in catalog_files:
         name = 'assets/data/'+filename
         assert name in names, f'Missing authoritative fish catalog: {filename}'
+        if expected_snapshot.get('sha256'):
+            assert hashlib.sha256(z.read(name)).hexdigest() == expected_snapshot['sha256']['data/'+filename], f'Catalog bytes differ from frozen source: {filename}'
         fish.extend(json.loads(z.read(name)))
     fish_ids = sorted(f['species_id'] for f in fish)
     assert len(set(fish_ids)) == len(fish_ids) and fish_ids, 'Empty or duplicated fish catalog'
     world = json.loads(z.read('assets/data/world.json'))
+    if expected_snapshot.get('sha256'):
+        assert hashlib.sha256(z.read('assets/data/world.json')).hexdigest() == expected_snapshot['sha256']['data/world.json'], 'World/gear/bait data differs from frozen source'
     if expected_content:
         assert fish_ids == expected_content['species_ids'], 'APK fish inventory differs from frozen source'
         assert sorted(r['region_id'] for r in world['regions']) == expected_content['region_ids'], 'APK regions differ from frozen source'
         assert len(world['spots']) == expected_content['spot_count'], 'APK spot count differs from frozen source'
+        assert len(world['gear']) == expected_content['gear_count'], 'APK gear count differs from frozen source'
+        assert len(world['baits']) == expected_content['bait_count'], 'APK bait count differs from frozen source'
     for f in fish:
         for field in ['art', 'thumb']:
             mapped = 'assets/' + f[field].removeprefix('res://') + '.import'
@@ -168,6 +175,7 @@ result = {
     'certificate_sha256': cert_sha256,
     'native_libraries': libs, 'fish_species': len(fish),
     'fish_catalog_files':catalog_files, 'regions':len(world['regions']), 'fishing_spots':len(world['spots']),
+    'gear_options':len(world['gear']), 'bait_options':len(world['baits']),
     'generated_ui_icons':len(ui_icons),
     'three_d':three_d_audit,
     'extract_native_libraries': extract_native,
