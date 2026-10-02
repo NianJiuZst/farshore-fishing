@@ -49,3 +49,11 @@ Final companion gates remain unskipped core, production touch with `--require-fu
 - Raw development logs: `build/full-catalog-checkpoint/slice3d_full_gate.log`, `full44_recipe_planning.log`, `main_travel.log`, `main_travel_vulkan.log`
 
 Final all44 result counts and limitations must replace this pending status only after actual completion.
+
+## Coordinated aggregate runner
+
+After the producers declare stable raw assets, run:
+
+    python3 tools/run_full_catalog_qa.py --output build/full-catalog-development-RUN_ID --render
+
+The output directory must be new. The runner imports with isolated user directories, runs twelve suites plus the independent binary gate, and optionally reruns slice3d/UI/touch through the actual Mobile/Vulkan private software display. It stores separate logs and JSON hashes before import, before testing and after testing. Any runtime input changes during testing fail the stability gate. Importer metadata/extracted-texture regeneration is reported separately; raw GLB/script/scene/data changes during import fail stability. `--skip-import` is available when the coordinated import already completed. This runner never exports or reads signing files.
