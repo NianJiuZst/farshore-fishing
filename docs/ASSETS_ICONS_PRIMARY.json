@@ -21,7 +21,9 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible."
+        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
       },
       "master_audit": {
         "dimensions": [
@@ -85,7 +87,9 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible."
+        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
       },
       "master_audit": {
         "dimensions": [
@@ -149,7 +153,9 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible."
+        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
       },
       "master_audit": {
         "dimensions": [
@@ -213,7 +219,9 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping."
+        "note": "Generator used tighter margins than requested; no edge cropping.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
       },
       "master_audit": {
         "dimensions": [
@@ -277,7 +285,9 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping."
+        "note": "Generator used tighter margins than requested; no edge cropping.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
       },
       "master_audit": {
         "dimensions": [
@@ -341,7 +351,9 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping."
+        "note": "Generator used tighter margins than requested; no edge cropping.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
       },
       "master_audit": {
         "dimensions": [
@@ -387,6 +399,240 @@
         ],
         "transparent_fraction": 0.4100990295410156
       }
+    },
+    {
+      "kind": "heart",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one freestanding softly sculpted coral-red heart keepsake with a subtle narrow warm brass metal edge directly following its heart silhouette. The heart is the complete physical object alone. Rich coral enamel and painterly warm highlights. No loop, no circle, no ribbon, no badge.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-a2ffc2cc-2dff-4288-abd4-b7f676bfe4b7.png",
+      "master_path": "art_masters/ui_icons/heart.png",
+      "runtime_path": "game/assets/ui/icons/heart.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping. Physical metal edging follows the object's own shape, not a UI frame.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "4dc6fcb10f387794c9d48724ed1439dd15a072137c6aed2e4a61d314e979cbbf",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          32,
+          1176,
+          1254
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          97,
+          110,
+          1169,
+          1142
+        ],
+        "transparent_fraction": 0.5138574106718151
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "c3e0c1572ee841e1fc6fd62c356b1ae153fd9d9987bb29825e219428c574987b",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          37,
+          15,
+          480,
+          476
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          39,
+          45,
+          477,
+          467
+        ],
+        "transparent_fraction": 0.5120925903320312
+      }
+    },
+    {
+      "kind": "coin",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one single warm gold travel coin viewed in slight three-quarter perspective, thick finely ridged physical edge, engraved fish and simple wave relief on its face. The engraving is made of gold within the coin, not colored painted objects. No letters, no numerals and no surrounding frame or backplate.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-c4369d65-d700-4aec-8d9f-5e95ecfb4612.png",
+      "master_path": "art_masters/ui_icons/coin.png",
+      "runtime_path": "game/assets/ui/icons/coin.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping. Physical metal edging follows the object's own shape, not a UI frame.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "25beb751607c3ee168c81c5e3ac56e3ef57e28d68a1fb52298c6809abf0e7ee6",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          77,
+          1175,
+          1191
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          110,
+          81,
+          1173,
+          1181
+        ],
+        "transparent_fraction": 0.41884852046020515
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "a4789fc891a2a678402db6128ff51758534d2da203703f427ef3ef0e2e46a5ec",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          42,
+          31,
+          481,
+          486
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          45,
+          33,
+          479,
+          483
+        ],
+        "transparent_fraction": 0.4165916442871094
+      }
+    },
+    {
+      "kind": "badge",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one original freestanding game brand emblem formed only by a graceful warm gold carp leaping over a curling teal wave. The carp and wave together form a lively compact sculptural silhouette. Warm brass/gold fish scales, fluid teal wave with cream highlights. No enclosing circle, no badge plate, no shield, no frame, no text.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-8a6f1bc7-423f-4c65-8b3a-ecd5d64ee5a9.png",
+      "master_path": "art_masters/ui_icons/badge.png",
+      "runtime_path": "game/assets/ui/icons/badge.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping. Physical metal edging follows the object's own shape, not a UI frame.",
+        "viewed_at_60px_and_128px": true,
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "c473015429f228713d65278cd407f17e2d3c4e8e1c1c6e918d2e0e650a5c39bb",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          43,
+          57,
+          1227,
+          1238
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          84,
+          62,
+          1223,
+          1200
+        ],
+        "transparent_fraction": 0.46851796738475154
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "a0a40f3963ddde43e6b01af90b55ba1149d1e60d697459a37d6f45607191bb6e",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          32,
+          23,
+          502,
+          506
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          34,
+          25,
+          500,
+          490
+        ],
+        "transparent_fraction": 0.4727783203125
+      }
     }
-  ]
+  ],
+  "audit_summary": {
+    "total_distinct_icons": 9,
+    "built_in_generation_calls": 9,
+    "all_runtime_dimensions": [
+      512,
+      512
+    ],
+    "all_master_dimensions": [
+      1254,
+      1254
+    ],
+    "all_true_alpha": true,
+    "all_originals_preserved": true,
+    "external_photo_sources": 0,
+    "all_visually_reviewed": true,
+    "no_code_or_apk_changes": true,
+    "margin_note": "Prompt requested around 10% clear margin. Generator returned varied tighter margins, especially for the rod and book; complete silhouettes were confirmed visually. Runtime files are direct downscales of untouched masters."
+  }
 }
