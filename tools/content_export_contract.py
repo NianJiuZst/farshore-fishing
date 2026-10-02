@@ -5,6 +5,12 @@ import re
 from content_3d_contract import three_d_contract
 
 def content_contract(project: Path, check_art: bool = True):
+    settings = (project/'project.godot').read_text()
+    version = re.search(r'^config/version="([^"]+)"', settings, re.M).group(1)
+    presets = (project/'export_presets.cfg').read_text()
+    codes = {int(v) for v in re.findall(r'^version/code=(\d+)', presets, re.M)}
+    names = set(re.findall(r'^version/name="([^"]+)"', presets, re.M))
+    assert len(codes) == 1 and names == {version}, 'Android presets must match the frozen application version'
     loader = (project/'scripts/catalog.gd').read_text()
     files = list(dict.fromkeys(re.findall(r'"(fish_[a-z0-9_]+\.json)"', loader)))
     assert files, 'No authoritative fish catalog files found in ContentCatalog'
@@ -25,6 +31,7 @@ def content_contract(project: Path, check_art: bool = True):
                 assert path.is_file() and path.stat().st_size > 0, f'Missing artwork: {resource}'
     world = json.loads((project/'data/world.json').read_text())
     return {
+        'application_version':version, 'android_version_code':codes.pop(),
         'catalog_files': files,
         'species_ids': sorted(ids), 'species_count':len(ids),
         'region_ids': sorted(r['region_id'] for r in world['regions']),

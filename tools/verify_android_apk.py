@@ -43,6 +43,9 @@ cert_sha256 = re.search(r'Signer #1 certificate SHA-256 digest: ([0-9a-f]+)', si
 assert cert_sha256 == '1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeedb2e5281', 'Unexpected release signing identity'
 version_code = int(re.search(r"versionCode='(\d+)'", badging).group(1))
 version_name = re.search(r"versionName='([^']+)'", badging).group(1)
+if expected_content and 'application_version' in expected_content:
+    assert version_name == expected_content['application_version'], 'APK version name differs from frozen source'
+    assert version_code == expected_content['android_version_code'], 'APK version code differs from frozen source'
 libs = []
 three_d_audit = None
 extract_native = bool(re.search(r'android:extractNativeLibs[^\n]*0xffffffff', manifest))
