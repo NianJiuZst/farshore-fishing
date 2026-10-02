@@ -15,7 +15,11 @@ def anatomy(f):
     crest(f,'DorsalSpiny',.238,-.097,[.014,.031,.054,.069,.072,.067,.060,.052,.046,.040,.033],notch=.016)
     median(f,'DorsalSoft',-.099,-.283,[(-.099,0,.164),(-.135,0,.180),(-.228,0,.122),(-.284,0,.055)],'spine_rear',24)
     yellow=f.material('YellowLowerFins',(.80,.66,.12),.48)
-    median(f,'Anal',-.091,-.272,[(-.091,0,-.122),(-.131,0,-.177),(-.212,0,-.139),(-.273,0,-.052)],'spine_rear',22,material=yellow,upper=False)
+    anal=median(f,'Anal',-.091,-.272,[(-.091,0,-.122),(-.131,0,-.177),(-.212,0,-.139),(-.273,0,-.052)],'spine_rear',22,material=yellow,upper=False)
+    # Diagnostic yellow is confined to the anterior anal membrane.
+    anal.data.materials.append(f.mats['fin'])
+    for poly in anal.data.polygons:
+        if sum(anal.data.vertices[i].co.x for i in poly.vertices)/len(poly.vertices)<-.173:poly.material_index=1
     caudal(f,[(-.386,.062),(-.509,.143),(-.485,.068),(-.419,0),(-.486,-.070),(-.507,-.138),(-.386,-.058)],27)
     paired(f,'Pectoral',.277,.223,1.98,.056,.158,-.065,rays=20)
     paired(f,'Pelvic',.184,.136,2.58,.042,.079,-.065,rays=15,material=yellow)

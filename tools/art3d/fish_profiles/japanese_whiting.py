@@ -12,7 +12,7 @@ def paired(f,name,front,rear,theta,reach,sweep,drop,parent='spine_front',rays=18
 
 def median(f,name,front,rear,edge,parent='spine_mid',rays=23,material=None,upper=True):
     roots=[f.surface(float(x),0 if upper else math.pi,-.0012) for x in np.linspace(front,rear,31)]
-    f.fin(name,roots,edge,parent=parent,rays=rays,material=material)
+    return f.fin(name,roots,edge,parent=parent,rays=rays,material=material)
 
 def caudal(f,outline,rays=27):
     x,w,h,d,z=f.sections[0]

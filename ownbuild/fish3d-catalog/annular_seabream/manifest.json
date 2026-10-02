@@ -1,6 +1,6 @@
 {
   "species": "annular_seabream",
-  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "pipeline_sha256": "fc44cc066c7598baba861ed6381bf11aa247c2577675545924fa12d43ab5039c",
   "triangles": 31942,
   "vertices": 16621,
   "bones": [
@@ -36,8 +36,8 @@
   "sources": [
     "https://doris.ffessm.fr/Especes/Diplodus-annularis-Sparaillon-487"
   ],
-  "glb_bytes": 4918176,
-  "glb_sha256": "57916d199f5386553e66cb0d6e559e1386e80e8c6397da95b9b0e0112a14ddb5",
+  "glb_bytes": 4919968,
+  "glb_sha256": "f7ac5d17797e045a0cd5d9e68d9ff1e2996e6802d8eec7c81c4031ffdc1f2e34",
   "flatfish": false,
   "ocular_side": "bilateral"
 }

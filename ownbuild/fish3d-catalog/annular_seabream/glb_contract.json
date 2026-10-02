@@ -1,7 +1,7 @@
 {
   "species": "annular_seabream",
-  "glb_sha256": "57916d199f5386553e66cb0d6e559e1386e80e8c6397da95b9b0e0112a14ddb5",
-  "weighted_primitives": 12,
+  "glb_sha256": "f7ac5d17797e045a0cd5d9e68d9ff1e2996e6802d8eec7c81c4031ffdc1f2e34",
+  "weighted_primitives": 13,
   "skin_nodes": 12,
   "four_clips": [
     "breach",
@@ -37,6 +37,7 @@
     ]
   },
   "normalized_x_length_m": 1.0,
+  "unique_geometry_position_sha256": "743fd0125d0677888f7f8fe91adc031826cb13bfc074833c2ebc51ef268e2f92",
   "unique_outline_sha256": "443f6bc8e7ec3a9b6fa098be317c030cbfc6ce95ea209dbe01aee3ca2b986cdb",
   "passed": true
 }
