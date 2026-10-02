@@ -1,0 +1,24 @@
+{
+  "asset": "region_bayou.glb",
+  "region": "bayou",
+  "station": null,
+  "authoring": "Original deterministic parametric Blender geometry; no third-party mesh",
+  "triangles": 1353458,
+  "mesh_nodes": 12,
+  "unit": "meter",
+  "up": "+Y",
+  "view_direction": "-Z",
+  "runtime_surface_textures": "Separately credited CC0 HDRI, timber and rock PBR maps",
+  "profile": {
+    "width": 9.8,
+    "height": 0.95,
+    "widen": 0,
+    "coast": false,
+    "style": "broad",
+    "trees": 14,
+    "reeds": 45,
+    "rocks": 36,
+    "leaf_density": 1.0
+  },
+  "build": "blender -b -t 4 --python tools/art3d/build_environment.py -- --region bayou"
+}

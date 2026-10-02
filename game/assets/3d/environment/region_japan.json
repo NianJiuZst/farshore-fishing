@@ -1,0 +1,24 @@
+{
+  "asset": "region_japan.glb",
+  "region": "japan",
+  "station": null,
+  "authoring": "Original deterministic parametric Blender geometry; no third-party mesh",
+  "triangles": 959342,
+  "mesh_nodes": 13,
+  "unit": "meter",
+  "up": "+Y",
+  "view_direction": "-Z",
+  "runtime_surface_textures": "Separately credited CC0 HDRI, timber and rock PBR maps",
+  "profile": {
+    "width": 11.5,
+    "height": 7.0,
+    "widen": 0.24,
+    "coast": true,
+    "style": "pine",
+    "trees": 10,
+    "reeds": 0,
+    "rocks": 95,
+    "leaf_density": 0.98
+  },
+  "build": "blender -b -t 4 --python tools/art3d/build_environment.py -- --region japan"
+}

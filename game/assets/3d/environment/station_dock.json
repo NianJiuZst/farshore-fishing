@@ -1,0 +1,14 @@
+{
+  "asset": "station_dock.glb",
+  "region": null,
+  "station": "dock",
+  "authoring": "Original deterministic parametric Blender geometry; no third-party mesh",
+  "triangles": 14302,
+  "mesh_nodes": 8,
+  "unit": "meter",
+  "up": "+Y",
+  "view_direction": "-Z",
+  "runtime_surface_textures": "Separately credited CC0 HDRI, timber and rock PBR maps",
+  "profile": {},
+  "build": "blender -b -t 4 --python tools/art3d/build_environment.py -- --station dock"
+}

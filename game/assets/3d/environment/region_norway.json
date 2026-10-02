@@ -1,0 +1,24 @@
+{
+  "asset": "region_norway.glb",
+  "region": "norway",
+  "station": null,
+  "authoring": "Original deterministic parametric Blender geometry; no third-party mesh",
+  "triangles": 1084196,
+  "mesh_nodes": 13,
+  "unit": "meter",
+  "up": "+Y",
+  "view_direction": "-Z",
+  "runtime_surface_textures": "Separately credited CC0 HDRI, timber and rock PBR maps",
+  "profile": {
+    "width": 13,
+    "height": 55,
+    "widen": 0.035,
+    "coast": true,
+    "style": "pine",
+    "trees": 12,
+    "reeds": 0,
+    "rocks": 62,
+    "leaf_density": 1.0
+  },
+  "build": "blender -b -t 4 --python tools/art3d/build_environment.py -- --region norway"
+}

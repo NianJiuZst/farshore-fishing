@@ -1,0 +1,24 @@
+{
+  "asset": "region_lake.glb",
+  "region": "lake",
+  "station": null,
+  "authoring": "Original deterministic parametric Blender geometry; no third-party mesh",
+  "triangles": 1016781,
+  "mesh_nodes": 12,
+  "unit": "meter",
+  "up": "+Y",
+  "view_direction": "-Z",
+  "runtime_surface_textures": "Separately credited CC0 HDRI, timber and rock PBR maps",
+  "profile": {
+    "width": 17,
+    "height": 1.8,
+    "widen": 0.005,
+    "coast": false,
+    "style": "broad",
+    "trees": 13,
+    "reeds": 52,
+    "rocks": 48,
+    "leaf_density": 0.98
+  },
+  "build": "blender -b -t 4 --python tools/art3d/build_environment.py -- --region lake"
+}

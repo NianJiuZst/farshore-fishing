@@ -1,0 +1,24 @@
+{
+  "asset": "region_med.glb",
+  "region": "med",
+  "station": null,
+  "authoring": "Original deterministic parametric Blender geometry; no third-party mesh",
+  "triangles": 685762,
+  "mesh_nodes": 9,
+  "unit": "meter",
+  "up": "+Y",
+  "view_direction": "-Z",
+  "runtime_surface_textures": "Separately credited CC0 HDRI, timber and rock PBR maps",
+  "profile": {
+    "width": 15,
+    "height": 7.5,
+    "widen": 0.26,
+    "coast": true,
+    "style": "olive",
+    "trees": 10,
+    "reeds": 0,
+    "rocks": 75,
+    "leaf_density": 0.94
+  },
+  "build": "blender -b -t 4 --python tools/art3d/build_environment.py -- --region med"
+}

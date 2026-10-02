@@ -3,10 +3,15 @@ extends Node3D
 ## Presentation-only 3D fishery. Never changes inventory, rewards, or session outcomes.
 signal cast_presentation_finished
 signal landing_finished(record: Dictionary)
+signal model_error(species_id: String, message: String)
+signal location_changed(region_id: String, spot_id: String)
+signal location_error(region_id: String, spot_id: String, message: String)
 
 const WATER_SHADER = preload("res://assets/shaders3d/river_water.gdshader")
 const FOLIAGE_SHADER = preload("res://assets/shaders3d/foliage.gdshader")
 const RIPPLE_SHADER = preload("res://assets/shaders3d/ripple.gdshader")
+const REED_SHADER = preload("res://assets/shaders3d/shore_reeds.gdshader")
+const ROCK_SHADER = preload("res://assets/shaders3d/rock_surface.gdshader")
 const HDR_SKY_SHADER = preload("res://assets/shaders3d/hdr_sky.gdshader")
 const WOOD_SHADER = preload("res://assets/shaders3d/weathered_wood.gdshader")
 const GROUND_SHADER = preload("res://assets/shaders3d/riverbank.gdshader")
@@ -14,6 +19,7 @@ const ANGLER_POS := Vector3(-0.92, 0.584, 0.77)
 const CAST_DURATION: float = 2.20
 const RELEASE_TIME: float = 1.20
 const LANDING_DURATION: float = 3.35
+const FishModels = preload("res://scripts/fish_3d_registry.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const GEAR_VISUALS: Array[Dictionary] = [
 	{"rod_length":2.04, "rod_radius":0.013, "rod_color":"273b36", "reel_color":"aeb5a0", "grip_color":"a68950", "flex_scale":1.0},
@@ -22,6 +28,23 @@ const GEAR_VISUALS: Array[Dictionary] = [
 	{"rod_length":1.86, "rod_radius":0.0105, "rod_color":"315b83", "reel_color":"c5cdd0", "grip_color":"c2a77a", "flex_scale":1.13},
 	{"rod_length":2.58, "rod_radius":0.018, "rod_color":"632b38", "reel_color":"bb9452", "grip_color":"362c29", "flex_scale":0.72},
 ]
+
+# Rest-pose mouth landmarks measured from final normalized rigs. Godot +X
+# faces the snout, +Y is dorsal. Most fish use the terminal-mouth default.
+const FISH_MOUTH_OFFSETS: Dictionary = {
+	"chinese_sturgeon":Vector3(0.321118, -0.025555, 0.0),
+	"olive_flounder":Vector3(0.495556, -0.001024, -0.001024),
+	"european_plaice":Vector3(0.496836, -0.001030, 0.003089),
+}
+
+const BIOME_VISUALS: Dictionary = {
+	"lake":{"deep":"123f49","shallow":"3a7061","bed":"263d2e","leaf":"426a39","gold":"75834a","rock":"c2c7bd","ground":"617345","width":17.0,"widen":0.005,"fog":0.0018},
+	"japan":{"deep":"123647","shallow":"397277","bed":"3a453c","leaf":"254c3c","gold":"4d7050","rock":"bdc1be","ground":"696b58","width":11.5,"widen":0.24,"fog":0.0011},
+	"norway":{"deep":"0d293d","shallow":"315665","bed":"202d30","leaf":"274b40","gold":"57735c","rock":"a6b6c8","ground":"4c6153","width":13.0,"widen":0.035,"fog":0.0017},
+	"med":{"deep":"0d4c61","shallow":"4ba298","bed":"797557","leaf":"516951","gold":"829071","rock":"f1d6a6","ground":"9a9365","width":15.0,"widen":0.26,"fog":0.0009},
+	"bayou":{"deep":"163e35","shallow":"4a7350","bed":"233a32","leaf":"355c37","gold":"637b42","rock":"b7bea6","ground":"617345","width":9.8,"widen":0.0,"fog":0.0020},
+	"yangtze":{"deep":"3d5448","shallow":"76846a","bed":"4b4b32","leaf":"496f40","gold":"84925b","rock":"cac5ac","ground":"79825a","width":26.0,"widen":0.12,"fog":0.0019},
+}
 
 var session: FishingSession
 var camera: Camera3D
@@ -32,6 +55,17 @@ var time_of_day: String = "day"
 var mode: String = "lobby"
 var gear_id: int = 0
 var gear_profile: Dictionary = {}
+var asset_error: String = ""
+var region_id: String = "bayou"
+var spot_id: String = "bayou_backwater"
+var location_rebuild_count: int = 0
+var _location_built_key: String = ""
+var _initial_location_error: String = ""
+var _world_locations: Dictionary = {}
+var _region_definition: Dictionary = {}
+var _spot_definition: Dictionary = {}
+var _station_root: Node3D
+var _riverbed: MeshInstance3D
 var _built: bool = false
 var _suspended: bool = false
 var _character_was_playing: bool = false
@@ -64,6 +98,7 @@ var _rod_length: float = 2.04
 var _rod_radius: float = 0.013
 var _rod_tip_radius: float = 0.004
 var _rod_flex_scale: float = 1.0
+var _rod_visual_reach: float = 1.0
 var _rod_tip: Vector3 = Vector3.ZERO
 var _line: MeshInstance3D
 var _line_material: StandardMaterial3D
@@ -74,6 +109,8 @@ var _fish_root: Node3D
 var _fish: Node3D
 var _fish_animator: AnimationPlayer
 var _fish_id: String = ""
+var _fish_info: Dictionary = {}
+var _asset_error_label: Label3D
 var _fish_length: float = 0.72
 var _ripple_pool: Array[Dictionary] = []
 var _spray_pool: Array[Dictionary] = []
@@ -115,9 +152,182 @@ func bind_session(value: FishingSession) -> void:
 		session.changed.connect(_session_changed)
 		if _built: _session_changed(session.state)
 
-func set_region(_region: Variant, _spot: Variant = null) -> void:
-	# A single authored managed habitat is intentional for this vertical slice.
-	pass
+func _read_locations() -> void:
+	if not _world_locations.is_empty(): return
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/world.json"))
+	if parsed is Dictionary: _world_locations = parsed
+
+func _location_definitions(region_value: String, spot_value: String) -> Dictionary:
+	_read_locations()
+	var region: Dictionary = {}
+	var spot: Dictionary = {}
+	for candidate: Dictionary in _world_locations.get("regions", []):
+		if str(candidate.get("region_id", "")) == region_value: region = candidate
+	for candidate: Dictionary in _world_locations.get("spots", []):
+		if str(candidate.get("spot_id", "")) == spot_value and str(candidate.get("region_id", "")) == region_value: spot = candidate
+	if region.is_empty() or spot.is_empty() or not BIOME_VISUALS.has(region_value): return {}
+	return {"region":region, "spot":spot}
+
+func _travel_is_safe() -> bool:
+	if cast_in_progress or _landing_time >= 0.0: return false
+	if session == null: return true
+	var actual_state: int = session.before_pause if session.state == Session.State.PAUSED else session.state
+	return actual_state in [Session.State.IDLE, Session.State.ESCAPED]
+
+func set_location(region_value: String, spot_value: String) -> bool:
+	var definitions: Dictionary = _location_definitions(region_value, spot_value)
+	if definitions.is_empty(): return false
+	var key: String = region_value + ":" + spot_value
+	if _built and key == _location_built_key: return true
+	if _built and not _travel_is_safe(): return false
+	var wanted_station: String = _station_kind(str(definitions.spot.get("foreground", "pier")))
+	if not ResourceLoader.exists(_region_scene_path(region_value), "PackedScene") or not ResourceLoader.exists("res://assets/3d/environment/station_" + wanted_station + ".glb", "PackedScene"):
+		if not _built: _initial_location_error = "3D location is not ready: " + key
+		_report_location_error("3D location is not ready: " + key)
+		return false
+	if not _built:
+		region_id = region_value
+		spot_id = spot_value
+		_region_definition = definitions.region
+		_spot_definition = definitions.spot
+		_initial_location_error = ""
+		return true
+	if not _replace_location_geometry(region_value, spot_value): return false
+	cancel_landing()
+	_bobber.visible = false
+	_line.visible = false
+	presentation_state = "lobby" if mode == "lobby" else "ready"
+	_play_character("idle")
+	_configure_location_surfaces()
+	_last_lighting_key = ""
+	set_time_of_day(time_of_day)
+	if _asset_error_label: _asset_error_label.visible = false
+	asset_error = ""
+	location_changed.emit(region_id, spot_id)
+	return true
+
+func set_region(region: Variant, spot: Variant = null) -> void:
+	var region_value: String = str(region.get("region_id", region_id)) if region is Dictionary else str(region)
+	var spot_value: String = str(spot.get("spot_id", spot_id)) if spot is Dictionary else (str(spot) if spot != null else spot_id)
+	set_location(region_value, spot_value)
+
+func _station_kind(foreground: String) -> String:
+	return "boat" if foreground == "boat" else ("rock" if foreground == "rocks" else "dock")
+
+func _region_scene_path(value: String) -> String:
+	return "res://assets/3d/environment/region_" + value + ".glb"
+
+func _station_frame() -> Transform3D:
+	var anchor := Vector3.ZERO
+	var angle: float = 0.0
+	match spot_id:
+		"lake_bay": anchor = Vector3(2, 0, -22)
+		"norway_boat": anchor = Vector3(0, 0, -33)
+		"med_boat": anchor = Vector3(3, 0, -31)
+		"bayou_channel": anchor = Vector3(0, 0, -34)
+		"yangtze_estuary": anchor = Vector3(0, 0, -40)
+		"japan_reef", "yangtze_river":
+			var z: float = -42.0 if region_id == "japan" else -12.0
+			var biome: Dictionary = BIOME_VISUALS[region_id]
+			var edge: float = float(biome.width) + 1.9 * sin(z * 0.065) + 1.4 * cos(z * 0.14) + maxf(0, -z) * float(biome.widen)
+			anchor = Vector3(-edge + (3.0 if region_id == "japan" else 1.1), 0, z)
+			angle = -PI * 0.5
+	return Transform3D(Basis(Vector3.UP, angle), anchor)
+
+func _replace_location_geometry(region_value: String = "", spot_value: String = "") -> bool:
+	if region_value.is_empty(): region_value = region_id
+	if spot_value.is_empty(): spot_value = spot_id
+	var definitions: Dictionary = _location_definitions(region_value, spot_value)
+	if definitions.is_empty():
+		_report_location_error("Invalid 3D location: " + region_value + ":" + spot_value)
+		return false
+	var region_path: String = _region_scene_path(region_value)
+	var station_path: String = "res://assets/3d/environment/station_" + _station_kind(str(definitions.spot.get("foreground", "pier"))) + ".glb"
+	if not ResourceLoader.exists(region_path, "PackedScene") or not ResourceLoader.exists(station_path, "PackedScene"):
+		_report_location_error("3D location assets are not ready: " + region_value + ":" + spot_value)
+		return false
+	var region_pack := load(region_path) as PackedScene
+	var station_pack := load(station_path) as PackedScene
+	if region_pack == null or station_pack == null or not region_pack.can_instantiate() or not station_pack.can_instantiate():
+		_report_location_error("Unable to load 3D location: " + region_value + ":" + spot_value)
+		return false
+	# Validate both candidates while off-tree. Rejected loads leave the previous
+	# IDs, definitions and live roots untouched; no partial travel can be shown.
+	var region_candidate: Node = region_pack.instantiate()
+	var station_candidate: Node = station_pack.instantiate()
+	if not region_candidate is Node3D or not station_candidate is Node3D:
+		if region_candidate: region_candidate.free()
+		if station_candidate: station_candidate.free()
+		_report_location_error("Invalid 3D root in location: " + region_value + ":" + spot_value)
+		return false
+	region_id = region_value
+	spot_id = spot_value
+	_region_definition = definitions.region
+	_spot_definition = definitions.spot
+	# Commit only after both nodes have been validated. Old roots leave the
+	# viewport before the selected replacements enter it.
+	if _environment_root:
+		remove_child(_environment_root)
+		_environment_root.queue_free()
+	if _station_root:
+		remove_child(_station_root)
+		_station_root.queue_free()
+	_foliage_materials.clear()
+	_environment_root = region_candidate as Node3D
+	_environment_root.name = "ActiveBiome_" + region_id
+	_environment_root.transform = _station_frame().affine_inverse()
+	add_child(_environment_root)
+	_apply_foliage(_environment_root)
+	_station_root = station_candidate as Node3D
+	_station_root.name = "ActiveStation_" + _station_kind(str(_spot_definition.get("foreground", "pier")))
+	add_child(_station_root)
+	_apply_foliage(_station_root)
+	_location_built_key = region_id + ":" + spot_id
+	location_rebuild_count += 1
+	return true
+
+func _hide_legacy_station(node: Node) -> void:
+	if node is MeshInstance3D and str(node.name) in ["DockHoney", "DockPale", "DockWeathered", "WoodEndgrain", "Iron", "Rope", "Enamel", "Canvas", "Paper"]:
+		(node as MeshInstance3D).visible = false
+	for child: Node in node.get_children(): _hide_legacy_station(child)
+
+func _configure_location_surfaces() -> void:
+	if _water_material == null: return
+	var biome: Dictionary = BIOME_VISUALS[region_id]
+	_water_material.set_shader_parameter("deep_color", Color(str(biome.deep)))
+	_water_material.set_shader_parameter("shallow_color", Color(str(biome.shallow)))
+	_water_material.set_shader_parameter("shore_width", float(biome.width))
+	_water_material.set_shader_parameter("shore_widen", float(biome.widen))
+	var station: Transform3D = _station_frame()
+	var angle: float = station.basis.get_euler().y
+	_water_material.set_shader_parameter("shore_transform", Vector4(cos(angle), sin(angle), station.origin.x, station.origin.z))
+	if _riverbed:
+		_riverbed.position.y = -minf(12.0, maxf(2.8, float(_spot_definition.get("depth_max_m", 8.0)) * 0.3))
+		(_riverbed.material_override as ShaderMaterial).set_shader_parameter("ground_color", Color(str(biome.bed)))
+	if _reflection_probe:
+		_reflection_probe.size = Vector3(180, 150 if region_id == "norway" else 60, 220)
+		_reflection_probe.max_distance = 190.0
+		_reflection_probe.position.x = 0.002 if _reflection_probe.position.x < 0.001 else 0.0
+	if _sun: _sun.directional_shadow_max_distance = 90.0 if region_id == "norway" else 65.0
+	if _fishery_label:
+		_fishery_label.visible = _station_kind(str(_spot_definition.get("foreground", "pier"))) == "dock"
+		_fishery_label.text = str(_region_definition.get("name", region_id)) + "\n" + str(_spot_definition.get("name", spot_id))
+	if _built:
+		for effect: Dictionary in _ripple_pool:
+			effect.age = 99.0
+			(effect.node as Node3D).visible = false
+		for effect: Dictionary in _spray_pool:
+			effect.age = 99.0
+			(effect.node as Node3D).visible = false
+
+func _report_location_error(message: String) -> void:
+	asset_error = message
+	if _asset_error_label:
+		_asset_error_label.text = "3D LOCATION NOT READY\n" + message.trim_prefix("3D location is not ready: ")
+		_asset_error_label.visible = true
+	push_warning(message)
+	location_error.emit(region_id, spot_id, message)
+
 
 func set_gear_profile(gear: Dictionary) -> void:
 	# Presentation only: power, tolerance, reach, prices and save values are untouched.
@@ -128,6 +338,8 @@ func set_gear_profile(gear: Dictionary) -> void:
 	for key: String in ["rod_length", "rod_radius", "rod_color", "reel_color", "grip_color"]:
 		if gear.has(key): gear_profile[key] = gear[key]
 	gear_profile["id"] = gear_id
+	_rod_visual_reach = clampf(float(gear.get("reach", 1.0)), 0.05, 1.0)
+	gear_profile["reach"] = _rod_visual_reach
 	_rod_length = clampf(float(gear_profile.rod_length), 1.60, 2.85)
 	_rod_radius = clampf(float(gear_profile.rod_radius), 0.009, 0.020)
 	_rod_tip_radius = _rod_radius * (0.004 / 0.013)
@@ -150,6 +362,9 @@ func set_mode(value: String) -> void:
 	mode = value
 	if not _built: return
 	if value == "lobby":
+		if not _location_built_key.is_empty() and _asset_error_label:
+			_asset_error_label.visible = false
+			asset_error = ""
 		cancel_landing()
 		presentation_state = "lobby"
 		cast_in_progress = false
@@ -176,7 +391,7 @@ func set_weather(value: String) -> void:
 func set_time_of_day(value: String) -> void:
 	time_of_day = value
 	if not _built: return
-	var lighting_key: String = value + ":" + weather
+	var lighting_key: String = value + ":" + weather + ":" + region_id
 	if lighting_key == _last_lighting_key: return
 	_last_lighting_key = lighting_key
 	var night: bool = value in ["night", "夜晚"]
@@ -195,7 +410,7 @@ func set_time_of_day(value: String) -> void:
 		_world.environment.sky.sky_material = _sky if night else _panorama
 		_panorama.set_shader_parameter("energy", 0.82 if dusk else (0.72 if overcast else 1.0))
 	_world.environment.fog_light_color = Color("8faeae") if not night else Color("3a5b63")
-	_world.environment.fog_density = 0.0012 if not overcast else 0.0045
+	_world.environment.fog_density = float(BIOME_VISUALS[region_id].fog) if not overcast else 0.0045
 	if _reflection_probe:
 		# UPDATE_ONCE recaptures on transform change after sky/light changes.
 		_reflection_probe.position.x = 0.002 if _reflection_probe.position.x < 0.001 else 0.0
@@ -227,7 +442,7 @@ func play_landing(record: Dictionary) -> void:
 	cast_in_progress = false
 	presentation_state = "landing"
 	_ensure_fish(record)
-	_fish_root.visible = true
+	_fish_root.visible = _fish != null
 	_fish_root.position = Vector3(-0.15, -0.28, -3.15)
 	_play_character("lift", false)
 	_play_fish("breach")
@@ -271,13 +486,13 @@ func _session_changed(value: int) -> void:
 		Session.State.NIBBLE, Session.State.BITE:
 			if session: _ensure_fish(session.individual)
 			presentation_state = "bite" if value == Session.State.BITE else "nibble"
-			_fish_root.visible = true
+			_fish_root.visible = _fish != null
 			_play_fish("swim")
 			_splash(_bobber_target, 0.36 if value == Session.State.BITE else 0.15)
 		Session.State.FIGHT:
 			presentation_state = "fight"
 			if session: _ensure_fish(session.individual)
-			_fish_root.visible = true
+			_fish_root.visible = _fish != null
 			_play_character("reel")
 			_play_fish("struggle")
 		Session.State.ESCAPED:
@@ -294,7 +509,7 @@ func _begin_cast() -> void:
 	_cast_time = 0.0
 	_cast_finished_emitted = false
 	presentation_state = "casting"
-	var charge: float = clampf(session.charge, 0.0, 1.0) if session else 0.5
+	var charge: float = clampf(session.charge, 0.0, _rod_visual_reach) if session else 0.5
 	_bobber_target = Vector3(-0.72 + charge * 0.5, 0.035, -7.0 - charge * 5.0)
 	_bobber.visible = false
 	_line.visible = false
@@ -387,10 +602,17 @@ func _update_landing(delta: float) -> void:
 		_fish_root.position = Vector3(-0.05, 0.9, -1.75).lerp(Vector3(-0.3, 1.28, -0.58), p)
 		_fish_root.position.y += sin(_time * 8) * 0.025 * (1.0 - p * 0.7)
 		_fish_root.rotation = Vector3(0, lerpf(1.18, -0.20, p), 0.10 + sin(_time * 5) * 0.04)
+	if bool(_fish_info.get("asymmetric_flatfish", false)):
+		_fish_root.rotation.x += 0.52
 	_bobber.visible = true
 	_line.visible = true
-	_bobber.position = _fish_root.position + _fish_root.basis * Vector3(_fish_length * 0.49, 0.03, 0.0)
-	_bobber.scale = Vector3.ONE * 0.55
+	_bobber.rotation = Vector3.ZERO
+	_bobber.scale = Vector3.ONE
+	_bobber.position = _fish_mouth_world() + Vector3.UP * 0.085
+	if _fish_id == "chinese_sturgeon":
+		# Route around the rostrum rather than passing through the head on the
+		# way to its ventral mouth. Guide scales with the actual specimen.
+		_bobber.position = _sturgeon_leader_guide_world() + Vector3.UP * (0.085 + _fish_length * 0.11)
 	if t >= LANDING_DURATION:
 		var result: Dictionary = _landing_record.duplicate(true)
 		_landing_time = -1.0
@@ -426,11 +648,23 @@ func _update_camera(delta: float) -> void:
 		position_goal = Vector3(0.15, 2.13, 4.7 + maxf(0.0, _fish_length - 1.1) * 1.45)
 		target_goal = Vector3(-0.30, 0.95 + p * 0.25, -0.25)
 		fov_goal = 46.0
+		# Small individuals keep exact physical scale. A late optical push-in makes
+		# them legible without turning every catch into a physically identical fish.
+		var small_factor: float = clampf((0.45 - _fish_length) / 0.40, 0.0, 1.0)
+		var landing_age: float = _landing_time if _landing_time >= 0.0 else LANDING_DURATION
+		var close_mix: float = small_factor * smoothstep(0.9, 2.2, landing_age)
+		if close_mix > 0.0 and _fish_root:
+			var close_position: Vector3 = _fish_root.position + Vector3(0.12, 0.11, maxf(0.72, _fish_length * 10.0))
+			position_goal = position_goal.lerp(close_position, close_mix)
+			target_goal = target_goal.lerp(_fish_root.position, close_mix)
+			fov_goal = lerpf(fov_goal, 36.0, close_mix)
 	var blend: float = 1.0 - exp(-delta * (2.3 if presentation_state in ["landing", "bite"] else 1.5))
 	camera.position = camera.position.lerp(position_goal, blend)
 	_camera_target = _camera_target.lerp(target_goal, blend)
 	camera.fov = lerpf(camera.fov, fov_goal, blend)
 	camera.look_at(_camera_target)
+	if _asset_error_label and _asset_error_label.visible:
+		_asset_error_label.position = camera.position - camera.basis.z * 3.2
 
 func _build_world() -> void:
 	_world = WorldEnvironment.new()
@@ -477,21 +711,16 @@ func _build_world() -> void:
 	_sun.shadow_normal_bias = 1.2
 	add_child(_sun)
 	var bounce := OmniLight3D.new()
-	bounce.name = "SoftDockBounce"
-	bounce.position = Vector3(0.0, 3.1, 3.6)
-	bounce.light_color = Color("f1dfc5")
-	bounce.light_energy = 0.32
-	bounce.omni_range = 6.5
-	bounce.omni_attenuation = 1.2
+	bounce.name = "AnglerPortraitFill"
+	bounce.position = Vector3(0.0, 2.5, 3.2)
+	bounce.light_color = Color("dce9e8")
+	bounce.light_energy = 0.58
+	bounce.omni_range = 5.5
+	bounce.omni_attenuation = 1.0
+	bounce.light_cull_mask = 4
 	bounce.shadow_enabled = false
 	add_child(bounce)
-	var packed: PackedScene = load("res://assets/3d/environment/managed_oxbow.glb") as PackedScene
-	if packed:
-		_environment_root = packed.instantiate() as Node3D
-		_environment_root.name = "AuthoredOxbow"
-		add_child(_environment_root)
-		_apply_foliage(_environment_root)
-	else: push_error("Missing authored 3D environment. This is not a release-ready stage.")
+	if _initial_location_error.is_empty(): _replace_location_geometry()
 	_build_water()
 	var probe := ReflectionProbe.new()
 	_reflection_probe = probe
@@ -521,10 +750,21 @@ func _build_world() -> void:
 	_fish_root = Node3D.new()
 	_fish_root.name = "LiveFishPresentation"
 	add_child(_fish_root)
+	_asset_error_label = Label3D.new()
+	_asset_error_label.name = "MissingModelNotice"
+	_asset_error_label.position = Vector3(-0.2, 1.7, -2.6)
+	_asset_error_label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	_asset_error_label.font_size = 36
+	_asset_error_label.pixel_size = 0.007
+	_asset_error_label.modulate = Color("ffbc70")
+	_asset_error_label.outline_size = 5
+	_asset_error_label.visible = false
+	add_child(_asset_error_label)
 	_build_effects()
 	_build_weather()
 	_fishery_label = Label3D.new()
-	_fishery_label.text = "RIVERBEND\nMANAGED FISHERY"
+	_fishery_label.text = ""
+	_fishery_label.font = load("res://assets/fonts/NotoSansCJK-Regular.ttc") as Font
 	_fishery_label.font_size = 48
 	_fishery_label.pixel_size = 0.0017
 	_fishery_label.position = Vector3(3.55, 1.56, 5.652)
@@ -532,30 +772,58 @@ func _build_world() -> void:
 	_fishery_label.modulate = Color("e4dfb2")
 	_fishery_label.outline_size = 0
 	add_child(_fishery_label)
+	_configure_location_surfaces()
+	if _location_built_key.is_empty(): _report_location_error(_initial_location_error if not _initial_location_error.is_empty() else "3D location assets are not ready: " + region_id + ":" + spot_id)
 
 func _apply_foliage(node: Node) -> void:
 	if node is MeshInstance3D and str(node.name).begins_with("Foliage"):
 		var mesh_node := node as MeshInstance3D
-		var color := Color("406639")
+		var biome: Dictionary = BIOME_VISUALS[region_id]
+		var color := Color(str(biome.leaf))
 		if str(node.name).contains("Deep"): color = Color("203f32")
-		elif str(node.name).contains("Green"): color = Color("355c37")
-		elif str(node.name).contains("Gold"): color = Color("637b42")
+		elif str(node.name).contains("Green"): color = Color(str(biome.leaf))
+		elif str(node.name).contains("Gold"): color = Color(str(biome.gold))
 		var shader := ShaderMaterial.new()
 		shader.shader = FOLIAGE_SHADER
 		shader.set_shader_parameter("leaf_color", color)
 		mesh_node.material_override = shader
 		_foliage_materials.append(shader)
-	elif node is MeshInstance3D and str(node.name) in ["DockHoney", "DockPale", "DockWeathered", "WoodEndgrain", "Bark", "BarkLight", "Grass", "Mud", "Soil", "Sand"]:
+	elif node is MeshInstance3D and str(node.name) in ["Reed", "Cattail"]:
+		var plant := ShaderMaterial.new()
+		plant.shader = REED_SHADER
+		var original := (node as MeshInstance3D).get_active_material(0) as StandardMaterial3D
+		if original: plant.set_shader_parameter("reed_color", original.albedo_color)
+		plant.set_shader_parameter("clear_rock_station", _station_kind(str(_spot_definition.get("foreground", "pier"))) == "rock")
+		(node as MeshInstance3D).material_override = plant
+		_foliage_materials.append(plant)
+	elif node is MeshInstance3D and str(node.name) == "NavyHull":
+		var hull := _material(Color("193e51"), 0.34, 0.16)
+		hull.cull_mode = BaseMaterial3D.CULL_DISABLED
+		(node as MeshInstance3D).material_override = hull
+	elif node is MeshInstance3D and str(node.name) in ["Cliff", "Stone", "StoneWarm", "WarmStone", "Roof"]:
+		var stone := ShaderMaterial.new()
+		stone.shader = ROCK_SHADER
+		stone.set_shader_parameter("rock_tint", Color("52656c") if str(node.name) == "Roof" else Color(str(BIOME_VISUALS[region_id].rock)))
+		stone.set_shader_parameter("meters_per_tile", 0.9 if str(node.name) == "Roof" else (2.1 if str(node.name) == "Cliff" else 2.7))
+		var rock_base: String = "res://assets/3d/environment/cc0/rock_face_03_"
+		stone.set_shader_parameter("rock_albedo", load(rock_base + "diff_2k.png"))
+		stone.set_shader_parameter("rock_normal", load(rock_base + "nor_gl_2k.png"))
+		stone.set_shader_parameter("rock_roughness", load(rock_base + "rough_2k.png"))
+		(node as MeshInstance3D).material_override = stone
+	elif node is MeshInstance3D and str(node.name) in ["DockHoney", "DockPale", "DockWeathered", "WoodEndgrain", "Bark", "BarkLight", "Grass", "Mud", "Soil", "Sand", "HarborRed"]:
 		var mesh_node := node as MeshInstance3D
 		var is_ground: bool = str(node.name) in ["Grass", "Mud", "Soil", "Sand"]
-		var colors: Dictionary = {"DockHoney": Color("786044"), "DockPale": Color("977b52"), "DockWeathered": Color("685541"), "WoodEndgrain": Color("493d2c"), "Bark": Color("544b34"), "BarkLight": Color("695a3c"), "Grass": Color("617345"), "Mud": Color("414e3b"), "Soil": Color("716146"), "Sand": Color("9b8b61")}
+		var colors: Dictionary = {"DockHoney": Color("786044"), "DockPale": Color("977b52"), "DockWeathered": Color("685541"), "WoodEndgrain": Color("493d2c"), "Bark": Color("544b34"), "BarkLight": Color("695a3c"), "Grass": Color(str(BIOME_VISUALS[region_id].ground)), "Mud": Color("414e3b"), "Soil": Color("716146"), "Sand": Color("9b8b61"), "HarborRed": Color("aa4030")}
 		var shader := ShaderMaterial.new()
 		shader.shader = GROUND_SHADER if is_ground else WOOD_SHADER
 		shader.set_shader_parameter("ground_color" if is_ground else "wood_color", colors[str(node.name)])
-		if str(node.name) in ["DockHoney", "DockPale", "DockWeathered", "WoodEndgrain"]:
+		if str(node.name) in ["DockHoney", "DockPale", "DockWeathered", "WoodEndgrain", "HarborRed"]:
 			var pbr_base: String = "res://assets/3d/environment/cc0/brown_planks_03_"
 			if ResourceLoader.exists(pbr_base + "diff_2k.png"):
 				shader.set_shader_parameter("use_pbr", true)
+				if str(node.name) == "HarborRed":
+					shader.set_shader_parameter("vertical_timber", true)
+					shader.set_shader_parameter("paint_strength", 0.85)
 				shader.set_shader_parameter("timber_albedo", load(pbr_base + "diff_2k.png"))
 				shader.set_shader_parameter("timber_normal", load(pbr_base + "nor_gl_2k.png"))
 				shader.set_shader_parameter("timber_roughness", load(pbr_base + "rough_2k.png"))
@@ -565,6 +833,7 @@ func _apply_foliage(node: Node) -> void:
 func _build_water() -> void:
 	# Transparent water sees a modeled bed rather than the HDR panorama's ground.
 	var bed := MeshInstance3D.new()
+	_riverbed = bed
 	bed.name = "SubmergedRiverbed"
 	var bed_mesh := PlaneMesh.new()
 	bed_mesh.size = Vector2(155, 180)
@@ -611,6 +880,7 @@ func _load_character() -> void:
 		_angler.name = "RiggedAngler"
 		_angler.position = ANGLER_POS
 		add_child(_angler)
+		_mark_character_light_layer(_angler)
 		_animator = _find_animator(_angler)
 		_rod_socket = _find_named(_angler, "RodSocket") as Node3D
 	else:
@@ -625,6 +895,10 @@ func _load_character() -> void:
 		_rod_socket.position = Vector3(0.32, 1.04, -0.40)
 		_rod_socket.rotation.x = -0.32
 		_angler.add_child(_rod_socket)
+
+func _mark_character_light_layer(node: Node) -> void:
+	if node is MeshInstance3D: (node as MeshInstance3D).layers |= 4
+	for child: Node in node.get_children(): _mark_character_light_layer(child)
 
 func _build_rod() -> void:
 	_rod = Node3D.new()
@@ -694,7 +968,11 @@ func _update_rod() -> void:
 		var radius: float = lerpf(_rod_radius, _rod_tip_radius, u) * 1.12
 		band.position = Vector3(0, -flex * pow(u, 2.4), -u * _rod_length)
 		var tangent: Vector3 = Vector3(0, -flex * 2.4 * pow(u, 1.4), -_rod_length).normalized()
-		band.basis = Basis(Quaternion(Vector3.UP, tangent)).scaled(Vector3(radius, 0.048 if index < 2 else 0.028, radius))
+		var frame := Basis(Quaternion(Vector3.UP, tangent))
+		frame.x *= radius
+		frame.y *= 0.048 if index < 2 else 0.028
+		frame.z *= radius
+		band.basis = frame
 
 func _build_line() -> void:
 	_line = MeshInstance3D.new()
@@ -707,8 +985,17 @@ func _build_line() -> void:
 	_line.visible = false
 	add_child(_line)
 
+func _fish_mouth_world() -> Vector3:
+	# The 1 m normalized model has its mouth near +X. Scale the attachment
+	# offset with the actual specimen, rather than leaving a 3 cm gap on fry.
+	var normalized: Vector3 = FISH_MOUTH_OFFSETS.get(_fish_id, Vector3(0.49, 0.008, 0.0))
+	return _fish_root.position + _fish_root.basis * (normalized * _fish_length)
+
+func _sturgeon_leader_guide_world() -> Vector3:
+	return _fish_root.position + _fish_root.basis * (Vector3(0.53, -0.050, 0.0) * _fish_length)
+
 func _update_line() -> void:
-	var end: Vector3 = _bobber.position + Vector3.UP * 0.11
+	var end: Vector3 = _bobber.to_global(Vector3(0, 0.057, 0))
 	var sag: float = 0.11 if presentation_state in ["fight", "landing", "landed"] else 0.35
 	if cast_in_progress: sag = 0.30 + sin(_cast_time * 3.5) * 0.12
 	var points := PackedVector3Array()
@@ -716,7 +1003,23 @@ func _update_line() -> void:
 	for i in range(33):
 		var p: float = float(i) / 32.0
 		points.append(_rod_tip.lerp(end, p) + Vector3.DOWN * sin(p * PI) * sag)
-		radii.append(0.0025 if camera.position.distance_to(end) > 8 else 0.0017)
+		radii.append(0.0025 if camera.position.distance_to(end) > 8 else (0.00045 if camera.position.distance_to(end) < 2.0 else 0.0017))
+	if presentation_state in ["landing", "landed"] and _fish != null:
+		# One continuous line through the float eye, then a short leader to the
+		# real mouth attachment. The float no longer masquerades as the hook.
+		points.append(_bobber.to_global(Vector3(0, -0.015, 0)))
+		radii.append(radii[-1])
+		if _fish_id == "chinese_sturgeon":
+			var leader_start: Vector3 = points[-1]
+			var guide: Vector3 = _sturgeon_leader_guide_world()
+			var mouth: Vector3 = _fish_mouth_world()
+			for step: int in range(1, 13):
+				var u: float = float(step) / 12.0
+				points.append(leader_start.lerp(guide, u).lerp(guide.lerp(mouth, u), u))
+				radii.append(radii[-1])
+		else:
+			points.append(_fish_mouth_world())
+			radii.append(radii[-1])
 	_line.mesh = _tube_mesh(points, radii, 4)
 
 func _build_bobber() -> void:
@@ -726,34 +1029,54 @@ func _build_bobber() -> void:
 	for i in range(3):
 		var part := MeshInstance3D.new()
 		var shape := SphereMesh.new()
-		shape.radius = 0.055 if i < 2 else 0.019
-		shape.height = 0.10 if i < 2 else 0.15
-		shape.radial_segments = 10
-		shape.rings = 6
+		shape.radius = [0.010, 0.010, 0.0025][i]
+		shape.height = [0.030, 0.025, 0.032][i]
+		shape.radial_segments = 16
+		shape.rings = 10
 		part.mesh = shape
-		part.position.y = 0.02 + i * 0.066
+		part.position.y = [0.0, 0.014, 0.041][i]
 		part.material_override = _material(Color("c45436") if i != 1 else Color("fff1c4"), 0.4)
 		_bobber.add_child(part)
 	_bobber.visible = false
 
-func _ensure_fish(record: Dictionary) -> void:
-	var id: String = str(record.get("species_id", record.get("id", "common_carp")))
-	if id not in ["common_carp", "alligator_gar"]: id = "common_carp"
+func _ensure_fish(record: Dictionary) -> bool:
+	var id: String = str(record.get("species_id", record.get("id", "")))
 	var millimeters: float = float(record.get("length_mm", float(record.get("length_cm", record.get("length", 72.0))) * 10.0))
-	_fish_length = clampf(millimeters / 1000.0, 0.10, 3.50)
+	_fish_length = clampf(millimeters / 1000.0, 0.04, 5.50)
 	if id != _fish_id or _fish == null:
-		if _fish: _fish.queue_free()
+		if _fish:
+			_fish.visible = false
+			_fish.queue_free()
+		_fish = null
+		_fish_animator = null
 		_fish_id = id
-		var path: String = "res://assets/3d/" + id + ".glb"
-		if not ResourceLoader.exists(path):
-			push_warning("Requested final fish model is not imported yet: " + path)
-			return
-		_fish = (load(path) as PackedScene).instantiate() as Node3D
+		_fish_info = FishModels.model_info(id)
+		if _fish_info.is_empty() or not FishModels.is_available(id):
+			_show_model_error(id, "Species-specific 3D model is not ready: " + id)
+			return false
+		_fish = FishModels.instantiate_fish(id)
+		if _fish == null:
+			_show_model_error(id, "Unable to load species-specific 3D model: " + id)
+			return false
 		_fish.name = "Fish_" + id
 		_fish_root.add_child(_fish)
 		_fish_animator = _find_animator(_fish)
-	# Authored fish use +X nose, +Y dorsal, 1m rest length.
-	if _fish: _fish.scale = Vector3.ONE * _fish_length
+	asset_error = ""
+	if _asset_error_label: _asset_error_label.visible = false
+	# Registry models use +X nose, +Y dorsal and their declared physical rest length.
+	var rest_length: float = maxf(0.01, float(_fish_info.get("rest_length_m", 1.0)))
+	_fish.scale = Vector3.ONE * (_fish_length / rest_length)
+	return true
+
+func _show_model_error(id: String, message: String) -> void:
+	_fish_root.visible = false
+	if _asset_error_label:
+		_asset_error_label.text = "3D MODEL NOT READY\n" + id
+		_asset_error_label.visible = true
+	if asset_error != message:
+		asset_error = message
+		push_warning(message)
+		model_error.emit(id, message)
 
 func _play_character(clip: String, loop: bool = true) -> void:
 	if not _animator: return
@@ -976,4 +1299,4 @@ func _tube_mesh(points: PackedVector3Array, radii: PackedFloat32Array, sides: in
 	return result
 
 func debug_snapshot() -> Dictionary:
-	return {"state": presentation_state, "mode": mode, "suspended": _suspended, "cast_in_progress": cast_in_progress, "landing_time": _landing_time, "camera_position": camera.position if camera else Vector3.ZERO, "angler_loaded": _animator != null, "fish_loaded": _fish != null, "fish_id": _fish_id, "gear_id": gear_id, "rod_length": _rod_length, "rod_radius": _rod_radius, "renderer": RenderingServer.get_current_rendering_method(), "draw_calls": Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME), "rendered_primitives": Performance.get_monitor(Performance.RENDER_TOTAL_PRIMITIVES_IN_FRAME)}
+	return {"state": presentation_state, "mode": mode, "suspended": _suspended, "cast_in_progress": cast_in_progress, "landing_time": _landing_time, "camera_position": camera.position if camera else Vector3.ZERO, "angler_loaded": _animator != null, "fish_loaded": _fish != null, "fish_id": _fish_id, "asset_error": asset_error, "region_id": region_id, "spot_id": spot_id, "location_rebuild_count": location_rebuild_count, "gear_id": gear_id, "rod_length": _rod_length, "rod_radius": _rod_radius, "renderer": RenderingServer.get_current_rendering_method(), "draw_calls": Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME), "rendered_primitives": Performance.get_monitor(Performance.RENDER_TOTAL_PRIMITIVES_IN_FRAME)}
