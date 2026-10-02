@@ -30,7 +30,7 @@ Never export the primary `game/` tree. `tools/android_build.sh` first creates ex
 
 The default backup location is the sibling `farshore-fishing-checkpoints/`, configurable through `FARSHORE_BACKUP_DIR`; it must resolve outside the project tree. All45 editable Blender masters and current shared/profile generators are included in the authoring backup. Mutable source is never hardlinked into an export workspace. The original out-of-project Gradle cleanup incident and source recovery are documented in `EXPORT_SAFETY.md`.
 
-The wrapper requires4GiB free before starting and stops only its owned build process group if available space falls below768MiB. After unsigned-export CRC and source checks, completed Gradle/asset copies are cleared before alignment/signing. Final audits must pass before removing the remaining disposable workspace. Finish and clean one ABI's verified workspace before preparing the next; do not run the emulator alongside Gradle. The final source ZIP is created separately after build/runtime documentation freezes and enough disk space is available.
+The wrapper requires4GiB free for an ordinary cold build, or3.5GiB for the measured retry with fully reverified existing backups and scoped tmpfs caches and stops only its owned build process group if available space falls below768MiB. After unsigned-export CRC and source checks, completed Gradle/asset copies are cleared before alignment/signing. Final audits must pass before removing the remaining disposable workspace. Finish and clean one ABI's verified workspace before preparing the next; do not run the emulator alongside Gradle. The final source ZIP is created separately after build/runtime documentation freezes and enough disk space is available.
 
 ## Rebuild and install
 
@@ -72,3 +72,7 @@ The runner refuses to start until both restore manifests confirm verification. T
 - [Android16KiB support](https://developer.android.com/guide/practices/page-sizes)
 - [Android ZIP alignment](https://developer.android.com/tools/zipalign)
 - [Temurin JDK21](https://adoptium.net/temurin/releases?version=21)
+
+Existing game/authoring archives are reused only when the complete current member/hash inventories match and the archives are fully reread and verified again. A changed inventory creates a new archive in ordinary mode; constrained-space retries refuse to proceed without an exact verified reusable backup. Historical archives are never renamed/deleted on a failed copy. The archive regression probes cover reuse, changed/added members, corruption, duplicate entries, and source drift.
+
+The current retry keeps only regenerable Gradle caches and unsigned/aligned APK intermediates in task-scoped `/tmp` directories. The isolated source tree and final signed APK remain on the workspace filesystem. The guard preserves a768MiB root-disk floor,1GiB available-memory floor and512MiB tmpfs floor. APK configuration auditing additionally requires portrait `expand` and4×MSAA.

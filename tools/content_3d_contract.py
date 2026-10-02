@@ -93,6 +93,8 @@ def three_d_contract(project, catalog_ids):
     assert 'renderer/rendering_method.mobile="mobile"' in settings
     assert 'rendering_device/driver.android="vulkan"' in settings, 'Vulkan must be explicit for this trial'
     assert 'rendering_device/fallback_to_opengl3=false' in settings, 'Silent OpenGL fallback is not allowed for this trial'
+    assert 'window/stretch/aspect="expand"' in settings
+    assert 'anti_aliasing/quality/msaa_3d=2' in settings
     fish_models = {entry['scene'].removeprefix('res://'):fish_clips for entry in registry['models'].values()}
     regions = [f'assets/3d/environment/region_{name}.glb' for name in region_ids]
     stations = [f'assets/3d/environment/station_{name}.glb' for name in station_kinds]
@@ -141,6 +143,7 @@ def three_d_contract(project, catalog_ids):
             'required_scene_count':len(models), 'rigged_model_count':1+len(playable),
             'configured_rendering_method': 'mobile',
             'configured_android_driver': 'vulkan',
+            'configured_stretch_aspect':'expand', 'configured_msaa_3d':2,
             'opengl_fallback_disabled': 'rendering_device/fallback_to_opengl3=false' in settings,
             'glb_models': glbs, 'texture_files': textures, 'shader_sha256': shader_hashes,
             'third_party_textures':third_party, 'notice_sha256':notices,

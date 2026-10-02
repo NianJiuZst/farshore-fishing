@@ -55,8 +55,16 @@ PROJECT="$(python3 "$ROOT/tools/stage_android_project.py" "$ARCH")"
 echo "Protected source snapshot created; exporting isolated project: $PROJECT"
 # No --export-debug: the user has authorized one dedicated release identity only.
 # Built-in signing is disabled in export_presets.cfg; signing occurs after final alignment.
-UNSIGNED="$ROOT/build/farshore-$ARCH-unsigned.apk"
-ALIGNED="$ROOT/build/farshore-$ARCH-aligned.apk"
+INTERMEDIATE_DIR="${FARSHORE_APK_INTERMEDIATE_DIR:-$ROOT/build}"
+python3 - "$INTERMEDIATE_DIR" "$ROOT" <<'PY'
+from pathlib import Path
+import sys
+path,root=map(Path,sys.argv[1:])
+assert path.resolve()==(root/'build').resolve() or (path.resolve().is_relative_to(Path('/tmp')) and path.name.startswith('farshore-apk-'))
+path.mkdir(parents=True,exist_ok=True)
+PY
+UNSIGNED="$INTERMEDIATE_DIR/farshore-$ARCH-unsigned.apk"
+ALIGNED="$INTERMEDIATE_DIR/farshore-$ARCH-aligned.apk"
 "$GODOT" --headless --path "$PROJECT" --import >"$ROOT/build/logs/import-$ARCH.log" 2>&1
 if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script' "$ROOT/build/logs/import-$ARCH.log"; then
   echo "Godot import failed; inspect build/logs/import-$ARCH.log" >&2; exit 4

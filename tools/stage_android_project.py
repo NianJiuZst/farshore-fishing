@@ -14,6 +14,7 @@ import tarfile
 import zipfile
 import re
 from content_export_contract import content_contract
+from verified_source_backup import verified_backup, prior_proofs
 
 root = Path(__file__).resolve().parent.parent
 source = root/'game'
@@ -43,38 +44,16 @@ def digest_files(base):
 before = digest_files(source)
 assert len(before) > 75, 'Incomplete project: refusing export'
 content = content_contract(source)
+prior_game, prior_authoring = prior_proofs(root/'build/android-workspaces')
+require_reuse = os.environ.get('FARSHORE_REQUIRE_BACKUP_REUSE') == '1'
 authoring_proof = None
 if content.get('three_d'):
     authoring_hashes = content['three_d']['authoring_files_sha256']
-    authoring_archive = snapshot_dir/f'authoring-{stamp}.tar.gz'
-    with tarfile.open(authoring_archive, 'w:gz') as tar:
-        for relative in authoring_hashes:
-            tar.add(root/relative, arcname=relative, recursive=False)
-    with tarfile.open(authoring_archive, 'r:gz') as tar:
-        actual = {}
-        for member in tar:
-            assert member.isfile()
-            with tar.extractfile(member) as stream:
-                actual[member.name] = hashlib.file_digest(stream, 'sha256').hexdigest()
-        assert actual == authoring_hashes, 'Authoring backup does not match source hashes'
-    with authoring_archive.open('rb') as stream:
-        authoring_proof = {'archive':str(authoring_archive), 'archive_sha256':hashlib.file_digest(stream,'sha256').hexdigest(), 'sha256':authoring_hashes}
+    authoring_proof = verified_backup(root,authoring_hashes,snapshot_dir,'authoring',stamp,candidates=prior_authoring,require_reuse=require_reuse)
 assert not any(Path(p).suffix in {'.p12', '.jks', '.keystore'} for p in before), 'Signing material must never be inside game/'
-archive = snapshot_dir/f'game-{stamp}.tar.gz'
-with tarfile.open(archive, 'w:gz') as tar:
-    for relative in before:
-        tar.add(source/relative, arcname='game/'+relative, recursive=False)
-with tarfile.open(archive, 'r:gz') as tar:
-    archived = {}
-    for member in tar:
-        assert member.isfile(), 'Unexpected non-file entry in source backup'
-        stream = tar.extractfile(member)
-        assert stream is not None
-        with stream:
-            archived[member.name.removeprefix('game/')] = hashlib.file_digest(stream, 'sha256').hexdigest()
-    assert archived == before, 'Source backup bytes do not match the source inventory'
-with archive.open('rb') as stream:
-    archive_sha256 = hashlib.file_digest(stream, 'sha256').hexdigest()
+game_proof = verified_backup(source,before,snapshot_dir,'game',stamp,prefix='game/',candidates=prior_game,require_reuse=require_reuse)
+archive = Path(game_proof['archive'])
+archive_sha256 = game_proof['archive_sha256']
 shutil.copytree(source, stage, dirs_exist_ok=True,
                 ignore=shutil.ignore_patterns('.godot', 'android', 'exported'))
 after = digest_files(source)
@@ -86,9 +65,7 @@ if authoring_proof:
 if before != after or before != copied:
     changed = sorted(k for k in set(before)|set(after)|set(copied)
                      if before.get(k) != after.get(k) or before.get(k) != copied.get(k))
-    invalid = archive.with_name(archive.name.removesuffix('.tar.gz')+'.unverified.tar.gz')
-    archive.rename(invalid)
-    invalid.with_suffix('.INVALID.txt').write_text('Concurrent source changes; not a verified restore checkpoint.\n'+'\n'.join(changed)+'\n')
+    (stage.parent/(stage.name+'.INVALID.txt')).write_text('Concurrent source changes; no export performed. Existing verified archives remain untouched.\n'+'\n'.join(changed)+'\n')
     raise RuntimeError('Source changed during snapshot; no export performed. Changed: '+', '.join(changed))
 (snapshot_dir/f'game-{stamp}.sha256.json').write_text(json.dumps(before, indent=2)+'\n')
 # Physically omit development tests from the exported copy; never remove source tests.
@@ -131,5 +108,5 @@ for target in cleanup_targets:
         if parent == stage.parent:
             break
         assert not parent.is_symlink(), f'Symlink in Gradle cleanup target: {parent}'
-(stage.parent/(stage.name+'.snapshot.json')).write_text(json.dumps({'archive':str(archive),'archive_sha256':archive_sha256,'authoring_backup':authoring_proof,'sha256':before,'content':content},indent=2)+'\n')
+(stage.parent/(stage.name+'.snapshot.json')).write_text(json.dumps({'archive':str(archive),'archive_sha256':archive_sha256,'archive_reused':game_proof['reused'],'backup_rejected_candidates':game_proof['rejected_candidates'],'authoring_backup':authoring_proof,'sha256':before,'content':content},indent=2)+'\n')
 print(stage)

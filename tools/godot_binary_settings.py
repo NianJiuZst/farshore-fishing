@@ -20,6 +20,9 @@ def scalar_settings(raw):
         kind = struct.unpack_from('<I', value)[0] & 0xffff
         if kind == 1:
             result[key] = bool(struct.unpack_from('<I', value, 4)[0])
+        elif kind == 2:
+            wide = bool(struct.unpack_from('<I', value)[0] & (1 << 16))
+            result[key] = struct.unpack_from('<q' if wide else '<i', value, 4)[0]
         elif kind == 4:
             length = struct.unpack_from('<I', value, 4)[0]
             result[key] = value[8:8+length].decode('utf-8')
