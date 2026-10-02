@@ -115,6 +115,8 @@ if os.environ.get('FARSHORE_TEST_VERSION_CODE'):
     version = int(os.environ['FARSHORE_TEST_VERSION_CODE'])
     assert version > 1
     text = re.sub(r'version/code=\d+', f'version/code={version}', text)
+    content['android_version_code'] = version
+    content['staged_test_version_code_override'] = version
 presets.write_text(text)
 assert 'res://../' not in text
 assert all(value == 'res://android' for value in re.findall(r'gradle_build/gradle_build_directory="([^"]*)"', text))
