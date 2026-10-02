@@ -24,3 +24,7 @@ spec/1000049861.jpg
 **/adbkey*
 *.key
 *.pem
+# Reproducible 3D review renders and automatic Blender backup copies
+ownbuild/
+*.blend1
+*.blend2
