@@ -24,9 +24,9 @@ PROFILE={
  'sources':['https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm','https://www.mdwfp.com/fishing-boating/fish-id-guide/flathead-catfish']}
 
 def anatomy(f):
- f.fin('Dorsal',[(.19,0,.095),(.12,0,.109),(.03,0,.109)],[(.19,0,.096),(.166,0,.203),(.085,0,.173),(.03,0,.11)],parent='spine_front',rays=13)
+ f.fin('Dorsal',[f.surface(float(x),0,-.0015) for x in np.linspace(.19,.03,14)],[(.19,0,.096),(.166,0,.203),(.085,0,.173),(.03,0,.11)],parent='spine_front',rays=13)
  adipose_lobe(f,'Adipose',-.217,-.349,.034,.007,(.36,.32,.17))
- f.fin('Anal',[(-.12,0,-.067),(-.22,0,-.056),(-.31,0,-.041)],[(-.12,0,-.068),(-.15,0,-.125),(-.251,0,-.118),(-.31,0,-.066)],parent='spine_rear',rays=18)
+ f.fin('Anal',[f.surface(float(x),math.pi,-.0015) for x in np.linspace(-.12,-.31,16)],[(-.12,0,-.068),(-.15,0,-.125),(-.251,0,-.118),(-.31,0,-.066)],parent='spine_rear',rays=18)
  f.fin('Caudal',[(-.378,0,-.036),(-.38,0,0),(-.378,0,.037)],[(-.505,0,-.105),(-.529,0,-.073),(-.524,0,0),(-.529,0,.081),(-.505,0,.116)],bone='caudal',parent='tail',rays=25)
  jawmat=f.material('FlatheadJawSkin',(.61,.52,.31),.49)
  f.ellipsoid('BroadProtrudingJaw',(.478,0,-.025),(.037,.071,.016),jawmat,'jaw')

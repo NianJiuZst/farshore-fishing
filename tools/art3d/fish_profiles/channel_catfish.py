@@ -39,10 +39,10 @@ PROFILE = {
  'sources':['https://www.fws.gov/media/channel-catfish','https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/channel-catfish/','https://myfwc.com/wildlifehabitats/profiles/freshwater/channel-catfish/']}
 
 def anatomy(f):
- f.fin('Dorsal',[(.21,0,.087),(.15,0,.097),(.06,0,.096)],[(.21,0,.089),(.18,0,.205),(.075,0,.142),(.06,0,.096)],parent='spine_front',rays=14)
- f.tube('DorsalLeadingSpine',[(.207,0,.088),(.19,0,.151),(.18,0,.203)],.0015,f.mats['ray'],weight='dorsal')
+ f.fin('Dorsal',[f.surface(float(x),0,-.0015) for x in np.linspace(.21,.06,14)],[(.21,0,.089),(.18,0,.205),(.075,0,.142),(.06,0,.096)],parent='spine_front',rays=14)
+ f.tube('DorsalLeadingSpine',[f.surface(.207,0,-.0015),(.19,0,.151),(.18,0,.203)],.0015,f.mats['ray'],weight='dorsal')
  adipose_lobe(f,'Adipose',-.206,-.329,.036,.006,(.27,.30,.24))
- f.fin('Anal',[(-.075,0,-.066),(-.18,0,-.06),(-.31,0,-.040)],[(-.075,0,-.067),(-.13,0,-.143),(-.23,0,-.128),(-.31,0,-.055)],parent='spine_rear',rays=28)
+ f.fin('Anal',[f.surface(float(x),math.pi,-.0015) for x in np.linspace(-.075,-.31,18)],[(-.075,0,-.067),(-.13,0,-.143),(-.23,0,-.128),(-.31,0,-.055)],parent='spine_rear',rays=28)
  f.fin('Caudal',[(-.378,0,-.031),(-.38,0,0),(-.378,0,.032)],[(-.535,0,-.128),(-.507,0,-.059),(-.445,0,0),(-.51,0,.073),(-.535,0,.142)],bone='caudal',parent='tail',rays=30)
  for s in (-1,1):
   tag='L' if s<0 else 'R'
