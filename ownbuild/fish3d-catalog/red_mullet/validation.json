@@ -122,10 +122,37 @@
         "rest_distance_m": 0.00172419473528862,
         "worst_clip": "struggle",
         "worst_frame": 19
+      },
+      "9": {
+        "name": "ChinBarbel_R",
+        "bone": "jaw",
+        "membrane_roots": 0,
+        "ray_roots": 8,
+        "membrane_max_distance_m": 0,
+        "ray_max_distance_m": 0.0025051976554095745,
+        "max_distance_m": 0.0025051976554095745,
+        "rest_distance_m": 0.0025051808916032314,
+        "worst_clip": "landed",
+        "worst_frame": 24
+      },
+      "10": {
+        "name": "ChinBarbel_L",
+        "bone": "jaw",
+        "membrane_roots": 0,
+        "ray_roots": 8,
+        "membrane_max_distance_m": 0,
+        "ray_max_distance_m": 0.002508625853806734,
+        "max_distance_m": 0.002508625853806734,
+        "rest_distance_m": 0.0025086079258471727,
+        "worst_clip": "breach",
+        "worst_frame": 6
       }
     }
   },
   "weight_sum_min": 0.9999018609523773,
   "weight_sum_max": 1.0000000298023224,
-  "max_influences": 3
+  "max_influences": 3,
+  "attachment_tag_version": 1,
+  "glb_sha256": "58fc14f9cde61ba440b22f899880a17edd98a11d0dfb6220130dc2c6296a516b",
+  "master_sha256": "b315c142fefe200dcc92629396ed6bf674f95b56fce89b8f42beddaaab76a0cd"
 }
