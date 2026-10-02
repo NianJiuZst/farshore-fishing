@@ -308,7 +308,7 @@ func _build_fishing_screen() -> void:
 	bait.custom_minimum_size=Vector2(112,118)
 	bait.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
 	action_row.add_child(bait)
-	_action=_button("长按  ·  抛竿",func() -> void: pass,true)
+	_action=_button("抛竿",func() -> void: pass,true)
 	_action.custom_minimum_size.y=166
 	_action.stacked=true
 	_action.icon_extent=112
@@ -364,7 +364,7 @@ func _process(delta: float) -> void:
 	if session.state == Session.State.FIGHT:
 		_status.text = "张力 %d%%  ·  收线 %d%%" % [roundi(session.tension*100),roundi(session.progress*100)]
 		_hint.text = session.behavior_phase + ("  ⚠ 卸力！" if session.tension > 0.82 else "")
-		_action.text = "松手 · 卸力" if session.reeling else "按住 · 收线"
+		_action.text = "卸力" if session.reeling else "收线"
 	elif session.state == Session.State.CHARGING:
 		_hint.text = "落点距离 %d%% · 松手投出" % roundi(session.charge*100)
 
@@ -416,28 +416,28 @@ func _session_changed(value: int) -> void:
 		Session.State.IDLE:
 			_status.text = "这一竿，会遇见谁？"
 			_hint.text = "长按蓄力，松手抛竿 · " + catalog.bait_name(bait_id)
-			_action.text = "长按 · 抛竿"
+			_action.text = "抛竿"
 		Session.State.CHARGING:
 			_status.text = "选择这一竿的距离"
-			_action.text = "松手 · 投出"
+			_action.text = "投出"
 		Session.State.CASTING:
 			_status.text = "鱼线划过水面"
 			_hint.text = "落点会影响能遇见的鱼群"
-			_action.text = "正在抛竿…"
+			_action.text = "抛竿中"
 		Session.State.WAITING:
 			_status.text = "听水，等一个小小的信号"
 			_hint.text = "浮漂轻动是试探，明显下沉后再提竿"
-			_action.text = "等待咬钩…"
+			_action.text = "静候咬钩"
 		Session.State.NIBBLE:
 			_status.text = "有鱼在试探"
 			_hint.text = "再耐心一点，准备提竿"
-			_action.text = "轻微试探…"
+			_action.text = "试探"
 		Session.State.BITE:
 			_status.text = "咬钩了！"
 			_hint.text = "现在点击，提起鱼竿"
-			_action.text = "点击 · 提竿！"
+			_action.text = "提竿！"
 		Session.State.FIGHT:
-			_action.text = "按住 · 收线"
+			_action.text = "收线"
 		Session.State.PAUSED:
 			_status.text = "旅程已暂停"
 			_hint.text = "鱼、张力与计时保持原位"
@@ -771,7 +771,11 @@ func _show_catalog() -> void:
 	search.text=_search
 	search.custom_minimum_size.y=96
 	search.text_changed.connect(func(value: String) -> void: _search=value; _fill_catalog())
-	_page.add_child(search)
+	var search_row: HBoxContainer=HBoxContainer.new()
+	search_row.add_child(_icon("search",52))
+	search.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	search_row.add_child(search)
+	_page.add_child(search_row)
 	var filters: HBoxContainer=HBoxContainer.new()
 	_page.add_child(filters)
 	var region_choice: OptionButton=OptionButton.new()
@@ -790,7 +794,9 @@ func _show_catalog() -> void:
 	discovery.item_selected.connect(func(index: int) -> void: _discovery_filter=index; _fill_catalog())
 	filters.add_child(discovery)
 	var sort_button: Button=_button("数量↓" if _sort_count else "名称↓",func() -> void: _sort_count=not _sort_count; _show_catalog())
-	sort_button.custom_minimum_size=Vector2(110,96)
+	sort_button.custom_minimum_size=Vector2(130,96)
+	sort_button.icon_kind="none"
+	sort_button.icon_extent=0
 	sort_button.size_flags_horizontal=Control.SIZE_SHRINK_END
 	filters.add_child(sort_button)
 	_list=GridContainer.new()

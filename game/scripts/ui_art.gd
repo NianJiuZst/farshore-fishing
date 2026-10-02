@@ -13,6 +13,9 @@ func _draw() -> void:
 	var c: Vector2 = size*0.5
 	draw_set_transform(c,0,Vector2(s/100.0,s/100.0))
 	match kind:
+		"search":
+			draw_arc(Vector2(-5,-6),21,0,TAU,40,ink,5,true)
+			draw_line(Vector2(11,10),Vector2(30,29),ink,6,true)
 		"back":
 			draw_polyline(PackedVector2Array([Vector2(15,-25),Vector2(-12,0),Vector2(15,25)]),ink,6,true)
 		"arrow":

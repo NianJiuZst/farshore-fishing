@@ -1,7 +1,7 @@
 {
   "version": "1.1.0",
   "created_at": "2026-10-02",
-  "art_direction": "Original Farshore Fishing expedition adventure; navy sea-glass, seafoam and warm sun-gold. Scenic gameplay is the primary canvas. User reference informed mobile hierarchy and edge navigation only; no reference IP, characters or icons were reused.",
+  "art_direction": "User-revised 2026-10-02 09:24: transparent freestanding original icons plus labels throughout. No HUD, button or content-card backplates. Scenic gameplay and pale watercolor journal pages. Mobile reference informed hierarchy only; no reference IP was reused.",
   "assets": [
     {
       "path": "game/assets/ui/expedition_angler.png",
@@ -25,7 +25,15 @@
         "sun",
         "fishing rod",
         "four bait categories",
-        "fish badge"
+        "fish badge",
+        "back arrow",
+        "search",
+        "pause",
+        "release fish",
+        "hook",
+        "reel",
+        "settings",
+        "sound"
       ],
       "verified": "Rendered in Godot runtime screenshots, no external icon font or borrowed graphical assets"
     },
