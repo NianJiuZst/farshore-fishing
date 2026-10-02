@@ -5,7 +5,7 @@ const Store = preload("res://scripts/save_store.gd")
 const IconActionScript = preload("res://scripts/icon_action.gd")
 const ArtScript = preload("res://scripts/ui_art.gd")
 const Registry = preload("res://scripts/fish_3d_registry.gd")
-const Preview = preload("res://scripts/fish_preview_3d.gd")
+const Preview = preload("res://scripts/fish_art_view.gd")
 const EXPECTED_ICONS: Array[String] = ["rod", "reel", "hook", "bag", "compass", "book", "heart", "coin", "badge", "pause", "settings", "sound", "back", "arrow", "sort", "search", "release", "worm", "grain", "shrimp", "lure", "sun", "dusk", "rain", "ruler", "sweetcorn", "dough", "cut_fish", "spinner", "rod_spinning", "rod_heavy"]
 const RETIRED_COPY: Array[String] = ["F A R S H O R E", "NATURAL HISTORY", "沿着水声，去往远岸", "把世界，钓成一本旅行手册", "风从远岸来", "停一会儿，风景还在", "把下一站，交给海风", "真实的相遇，是最好的旅行纪念", "水下还有一个未曾见过的身影"]
 const STATES: Array[String] = ["normal", "hover", "pressed", "hover_pressed", "focus", "disabled"]
@@ -93,10 +93,10 @@ func _run() -> void:
 		await _audit("discovered/" + method.trim_prefix("_show_"), app._overlay)
 	app._show_species("common_carp")
 	await _audit("discovered_species", app._overlay)
-	_check_live_preview("common_carp","discovered species detail")
+	_check_photo_preview("common_carp","discovered species detail")
 	app._show_zoom("common_carp")
 	await _audit("specimen_zoom", app._overlay)
-	_check_live_preview("common_carp","enlarged specimen")
+	_check_photo_preview("common_carp","enlarged specimen")
 	app._enter_fishery()
 	await _test_active_feedback()
 	await _test_catalog_controls()
@@ -274,8 +274,9 @@ func _transparent_style(style: StyleBox) -> bool:
 
 func _has_specimen_sibling(button: Button) -> bool:
 	for sibling: Node in button.get_parent().get_children():
-		if sibling is TextureRect and (sibling as TextureRect).texture != null and (sibling as TextureRect).texture.resource_path.begins_with("res://assets/fish/"):
-			return true
+		if sibling is TextureRect and sibling.get_script() == Preview and sibling.texture is AtlasTexture:
+			var source: Texture2D = (sibling.texture as AtlasTexture).atlas
+			if source != null and source.resource_path.begins_with("res://assets/fish/"): return true
 	return false
 
 func _find_button(node: Node, text: String) -> Button:
@@ -323,7 +324,7 @@ func _audit_catch(species_id: String) -> void:
 	for tick: int in 90: app.scenery._process(0.05)
 	_check(app._save_ok and app._screen == "result", species_id + " actual catch settles into result page")
 	await _audit("catch/" + species_id, app._overlay)
-	_check_live_preview(species_id,"result " + species_id)
+	_check_photo_preview(species_id,"result " + species_id)
 	if species_id == "chinese_sturgeon":
 		_check(not "出售" in _all_label_text(app._overlay), "protected result contains no misleading sale instructions")
 		_check("放归后保留图鉴与纪录" in _all_label_text(app._page_footer), "protected footer explicitly explains release-only record preservation")
@@ -593,15 +594,17 @@ func _all_label_text(node: Node) -> String:
 	for child: Node in node.get_children(): combined += "\n" + _all_label_text(child)
 	return combined
 
-func _check_live_preview(species: String, label: String) -> void:
+func _check_photo_preview(species: String, label: String) -> void:
 	var previews: Array[Node] = []
-	for node: Node in app._overlay.find_children("FishModelPreview","SubViewportContainer",true,false):
+	for node: Node in app._overlay.find_children("FishArtPreview","TextureRect",true,false):
 		if node.get_script() == Preview: previews.append(node)
-	_check(previews.size() == 1,label + " has exactly one real3D preview")
+	_check(previews.size() == 1,label + " has exactly one genuine high-resolution fish illustration")
 	if previews.size() != 1: return
-	var preview: Node = previews[0]
-	_check(preview.species_id == species and preview.model is Node3D and preview.animator is AnimationPlayer,label + " uses the exact species model and skeleton animation")
-	_check(preview.mouse_filter == Control.MOUSE_FILTER_IGNORE and preview._viewport.gui_disable_input,label + " transparent3D specimen does not steal scroll or action taps")
+	var preview: TextureRect = previews[0]
+	_check(preview.species_id == species and preview.has_art_landmarks and preview.texture is AtlasTexture,label + " uses exact species art and reviewed body landmarks")
+	_check(preview.mouse_filter == Control.MOUSE_FILTER_IGNORE and preview.material == null and not preview.silhouette,label + " static revealed specimen cannot steal scroll or apply fake motion")
+	_check((preview.texture as AtlasTexture).atlas.resource_path == "res://assets/fish/"+species+".png",label + " binds the full-resolution canonical PNG")
+	_check(app._overlay.find_children("*","SubViewportContainer",true,false).is_empty(),label + " contains no coarse 3D substitute in the static card")
 
 func _test_retained_3d_scenery() -> void:
 	_check(app.scenery is Node3D, "production scenery is a real Node3D world")

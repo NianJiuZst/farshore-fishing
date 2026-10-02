@@ -468,13 +468,14 @@ func _test_expanded_tackle_controls(app: Control) -> void:
 
 func _test_preview_factory() -> void:
 	var factory: Control = load("res://scripts/main.gd").new()
-	var preview: Control = factory._fish_model("common_carp",300)
+	_check(factory.catalog.load_all(true) and factory.fish_art.load_all(factory.catalog),"preview factory requires all44 canonical photos")
+	var preview: TextureRect = factory._fish_image(factory.catalog.fish["common_carp"],false,false,300)
 	preview.position=Vector2(60,140)
 	preview.size=Vector2(600,300)
 	root.add_child(preview)
 	await _layout_frames()
-	_check(preview is SubViewportContainer and preview.model is Node3D,"Main detail/result factory creates a real species-specific3D preview")
-	_check(preview.mouse_filter==Control.MOUSE_FILTER_IGNORE,"Main3D preview never captures page swipe input")
+	_check(preview.get_script()==load("res://scripts/fish_art_view.gd") and preview.texture is AtlasTexture and preview.has_art_landmarks,"Main detail/result factory creates a genuine species-specific photo")
+	_check(preview.mouse_filter==Control.MOUSE_FILTER_IGNORE,"Main photo never captures page swipe input")
 	var ruler: Control = load("res://scripts/measure_ruler.gd").new()
 	ruler.length_mm=640
 	ruler.specimen=preview
@@ -483,27 +484,29 @@ func _test_preview_factory() -> void:
 	root.add_child(ruler)
 	await _layout_frames()
 	var endpoints: Array[Vector2]=preview.measurement_endpoints()
-	_check(endpoints.size()==2 and absf(endpoints[1].x-endpoints[0].x)>100 and absf(endpoints[1].x-endpoints[0].x)<preview.size.x,"3D ruler uses projected specimen length endpoints rather than viewport width")
-	_check(ruler.specimen==preview,"ruler accepts3D Control without a TextureRect substitution")
-	var missing: Control=factory._fish_model("no_such_species",300)
-	_check(missing is Label and "尚未准备" in missing.text,"missing Main preview is an explicit label, never another fish model")
+	_check(endpoints.size()==2 and absf(endpoints[1].x-endpoints[0].x)>100 and absf(endpoints[1].x-endpoints[0].x)<=preview.size.x,"ruler follows actual nose/tail landmarks inside the cropped photo")
+	_check(ruler.specimen==preview,"ruler consumes the same actual photo displayed above it")
+	var absent = load("res://scripts/fish_definition.gd").new({"species_id":"no_such_species","art":"res://assets/fish/no_such_species.png"})
+	var missing: TextureRect=factory._fish_image(absent,false,false,300)
+	_check(missing.texture==null and not missing.has_art_landmarks,"missing photo does not substitute another species")
 	missing.free()
 	ruler.queue_free()
 	preview.queue_free()
 	factory.free()
 	await process_frame
-	print("PREVIEW_SCOPE: actual Main preview factory and projected3D ruler; no gameplay readiness override")
+	print("PREVIEW_SCOPE: actual Main photo factory and body-landmark ruler; no gameplay readiness override")
 
 func _test_production_preview_page(app: Control) -> void:
 	app._show_species("common_carp")
 	await _layout_frames()
-	var preview: SubViewportContainer=_find_type(app._overlay,"SubViewportContainer") as SubViewportContainer
-	_check(preview!=null and preview.model is Node3D,"actual production detail page mounts the registered3D fish")
+	var nodes: Array[Node]=app._overlay.find_children("FishArtPreview","TextureRect",true,false)
+	var preview: TextureRect=nodes[0] as TextureRect if nodes.size()==1 else null
+	_check(preview!=null and preview.texture is AtlasTexture and preview.has_art_landmarks,"actual production detail page mounts the registered photoreal fish")
 	if preview!=null:
 		var page_scroll: ScrollContainer=app._page.get_parent()
 		var maximum: int=maxi(0,floori(page_scroll.get_v_scroll_bar().max_value-page_scroll.get_v_scroll_bar().page))
 		var prior_drags: int=page_scroll.completed_drags
-		_check(maximum>=170 or "--tall" in OS.get_cmdline_user_args(),"baseline3D detail retains its original overflowing drag fixture")
+		_check(maximum>0 or page_scroll.get_global_rect().grow(1.0).encloses(app._page.get_global_rect()),"photo detail is scrollable or completely fits without clipping")
 		if maximum==0:
 			_check(page_scroll.get_global_rect().grow(1.0).encloses(app._page.get_global_rect()),"nonoverflowing tall detail keeps all page content visible")
 		var start: Vector2=preview.get_global_rect().get_center()
@@ -515,8 +518,8 @@ func _test_production_preview_page(app: Control) -> void:
 		_emulated_button(start-Vector2(0,180),false)
 		await process_frame
 		print("PREVIEW_TOUCH_RANGE maximum=",page_scroll.get_v_scroll_bar().max_value-page_scroll.get_v_scroll_bar().page," offset=",page_scroll.scroll_vertical," completed_drags=",page_scroll.completed_drags)
-		_check(page_scroll.scroll_vertical>=mini(170,maximum) and page_scroll.completed_drags==prior_drags+1 and app._screen=="species","real drag starting on3D fish is owned by page and reaches its available scroll range without input capture")
+		_check(page_scroll.scroll_vertical>=mini(170,maximum) and page_scroll.completed_drags==prior_drags+1 and app._screen=="species","real drag starting on the static fish photo is owned by page and reaches its available scroll range without input capture")
 		page_scroll.stop_gesture()
 	app._show_prepare()
 	await _layout_frames()
-	_check(_find_type(app,"SubViewportContainer")==null,"closing detail removes its sole active3D preview viewport")
+	_check(app.find_children("FishArtPreview","TextureRect",true,false).is_empty(),"closing detail removes its photo view")
