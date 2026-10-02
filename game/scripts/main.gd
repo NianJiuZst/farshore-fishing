@@ -3,7 +3,9 @@ const Catalog = preload("res://scripts/catalog.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
-const Scenery = preload("res://scripts/scenery_view.gd")
+const Stage = preload("res://scripts/fishing_stage_3d.gd")
+const Trial = preload("res://scripts/trial_fishery.gd")
+const TouchScrollScript = preload("res://scripts/touch_scroll.gd")
 const Audio = preload("res://scripts/audio_manager.gd")
 const INK: Color = Color("244449")
 const NAVY: Color = Color("102f3b")
@@ -19,7 +21,12 @@ var catalog: ContentCatalog = Catalog.new()
 var store: SaveStore = Store.new()
 var encounter: EncounterGenerator = Encounter.new()
 var session: FishingSession = Session.new()
-var scenery: SceneryView
+var scenery: Node3D
+var _mode: String = "lobby"
+var _trial_target: String = "mixed"
+var _page_context: String = "home"
+var _landing_pending: bool = false
+var _result_waiting: bool = false
 var sound: FishingAudio
 var region_id: String = "lake"
 var spot_id: String = "lake_shore"
@@ -91,8 +98,8 @@ func _ready() -> void:
 	session.ended.connect(_fishing_ended)
 	session.cue.connect(sound.cue)
 	_refresh_location()
-	if store.read_only or not _content_ok: _show_home()
-	else: _session_changed(Session.State.IDLE)
+	_session_changed(Session.State.IDLE)
+	_show_home()
 	get_viewport().size_changed.connect(_safe_area)
 	_safe_area()
 
@@ -209,10 +216,12 @@ func _navigation(label: String, kind: String, callback: Callable) -> Button:
 	return button
 
 func _build_fishing_screen() -> void:
-	scenery = Scenery.new()
-	scenery.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	scenery.session = session
+	scenery = Stage.new()
+	scenery.name = "FishingWorld3D"
 	add_child(scenery)
+	scenery.bind_session(session)
+	scenery.cast_presentation_finished.connect(_cast_presentation_finished)
+	scenery.landing_finished.connect(_landing_presentation_finished)
 	_safe = MarginContainer.new()
 	_safe.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_safe.mouse_filter = Control.MOUSE_FILTER_PASS
@@ -395,8 +404,9 @@ func _safe_area() -> void:
 
 func _process(delta: float) -> void:
 	if not is_node_ready(): return
-	session.step(delta)
-	if session.state != Session.State.PAUSED:
+	if _mode == "fishing" and not scenery.cast_in_progress and not _landing_pending:
+		session.step(delta)
+	if _mode == "fishing" and session.state != Session.State.PAUSED:
 		game_clock += delta
 	_update_conditions()
 	if _toast_seconds > 0:
@@ -419,15 +429,15 @@ func _process(delta: float) -> void:
 func _update_conditions() -> void:
 	time_of_day = "day" if int(game_clock/150.0)%2 == 0 else "dusk"
 	weather = "clear" if int(game_clock/240.0)%2 == 0 else "rain"
-	scenery.time_of_day = time_of_day
-	scenery.weather = weather
+	scenery.set_time_of_day(time_of_day)
+	scenery.set_weather(weather)
 	_weather_icon.kind="rain" if weather=="rain" else ("dusk" if time_of_day=="dusk" else "sun")
 	_condition.text = "%s  ·  %s" % ["晴" if weather == "clear" else "微雨","日间" if time_of_day == "day" else "黄昏"]
 
 func _refresh_location() -> void:
-	scenery.set_region(catalog.region(region_id),catalog.spots.get(spot_id,{}))
-	_place.text = str(catalog.region(region_id).get("name",""))
-	_spot_label.text=str(catalog.spots.get(spot_id,{}).get("name",""))
+	scenery.set_region(Trial.region(),Trial.spot())
+	_place.text = Trial.NAME
+	_spot_label.text = Trial.SPOT_NAME + " · 3D 试钓"
 	_bait_control.icon_kind=bait_id
 	_update_wallet()
 
@@ -436,7 +446,7 @@ func _update_wallet() -> void:
 	if _collection: _collection.text="图鉴 %d / %d" % [store.discovered_count(),catalog.fish.size()]
 
 func _action_down() -> void:
-	if _overlay != null or store.read_only or not _content_ok: return
+	if _mode != "fishing" or _overlay != null or _landing_pending or store.read_only or not _content_ok: return
 	if session.state == Session.State.IDLE and store.state.get("pending_catches",{}).size() >= Store.MAX_PENDING:
 		_show_pending()
 		return
@@ -446,7 +456,7 @@ func _action_up() -> void:
 	if session.state == Session.State.CHARGING:
 		var gear_id: int = int(store.state.get("gear",0))
 		var cast_power: float = clampf(session.charge,0.05,float(catalog.gear[gear_id].reach))
-		var fish: Dictionary = encounter.generate(catalog,spot_id,bait_id,gear_id,cast_power,time_of_day,weather)
+		var fish: Dictionary = Trial.generate(catalog,encounter,bait_id,gear_id,cast_power,time_of_day,weather,_trial_target)
 		if not fish.is_empty(): fish["game_time"] = game_clock
 		if session.cast(fish,catalog.gear[gear_id]):
 			store.begin_session(session.session_id)
@@ -460,7 +470,8 @@ func _action_cancel() -> void:
 
 func _session_changed(value: int) -> void:
 	_action.icon_kind="reel" if value==Session.State.FIGHT else ("hook" if value==Session.State.BITE else "rod")
-	_nav_rail.visible=value!=Session.State.FIGHT
+	_nav_rail.visible=value not in [Session.State.FIGHT,Session.State.CAUGHT]
+	_bait_control.disabled=value==Session.State.CAUGHT
 	_charge.visible = value == Session.State.CHARGING
 	_bars.visible = value == Session.State.FIGHT
 	_action.disabled = value in [Session.State.CASTING,Session.State.WAITING,Session.State.NIBBLE,Session.State.CAUGHT,Session.State.ESCAPED,Session.State.PAUSED]
@@ -500,9 +511,18 @@ func _fishing_ended(success: bool, record: Dictionary) -> void:
 	if success and active_state != Session.State.CAUGHT: return
 	if not success and active_state != Session.State.ESCAPED: return
 	if success:
-		_last_record = record
+		_last_record = record.duplicate(true)
 		_save_ok = false
-		_settle()
+		_landing_pending = true
+		_result_waiting = false
+		_settle(false)
+		if _save_ok:
+			_status.text = "正在起鱼"
+			_hint.text = "稳住鱼竿，把鱼带向岸边"
+			scenery.play_landing(_last_record)
+		else:
+			_landing_pending = false
+			_show_result()
 	else:
 		store.abandon_session(session.session_id)
 		sound.cue("escape")
@@ -511,11 +531,11 @@ func _fishing_ended(success: bool, record: Dictionary) -> void:
 		_page.add_child(_text("逃脱不会增加钓获数，也不会消耗鱼饵。下一竿随时可以开始。",22,MUTED))
 		_page.add_child(_button("再试一竿",_finish_result,true))
 
-func _settle() -> void:
+func _settle(present_result: bool = true) -> void:
 	if _last_record.is_empty(): return
 	if str(_last_record.get("catch_id", "")) == _last_committed_id:
 		_save_ok = true
-		_show_result()
+		if present_result: _show_result()
 		return
 	_last_settlement = store.settle_catch(_last_record)
 	_save_ok = bool(_last_settlement.get("ok",false))
@@ -523,7 +543,18 @@ func _settle() -> void:
 		_last_committed_id = str(_last_record.catch_id)
 		sound.cue("catch")
 		_update_wallet()
-	_show_result()
+	if present_result: _show_result()
+
+func _cast_presentation_finished() -> void:
+	# Keep the Session state machine authoritative; only its presentation clock
+	# was held. Its normal CASTING → WAITING transition resumes next frame.
+	pass
+
+func _landing_presentation_finished(record: Dictionary) -> void:
+	if not _landing_pending or str(record.get("catch_id","")) != str(_last_record.get("catch_id","")): return
+	_landing_pending = false
+	_result_waiting = true
+	if _overlay == null: _show_result()
 
 func _open_page(id: String, heading: String, back: Callable = Callable()) -> void:
 	if _overlay != null:
@@ -532,6 +563,8 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	session.cancel_input()
 	if session.state != Session.State.PAUSED: session.pause()
 	sound.suspend(true)
+	scenery.suspend(true)
+	_safe.visible = false
 	_screen=id
 	_overlay=Control.new()
 	_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -540,11 +573,6 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	dim.color=Color("edf2e5")
 	dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_overlay.add_child(dim)
-	var atmospheric: TextureRect=_scene_picture(str(catalog.spots.get(spot_id,{}).get("scene",catalog.region(region_id).get("scene",""))),0)
-	atmospheric.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	atmospheric.modulate=Color(1,1,1,0.14)
-	atmospheric.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	_overlay.add_child(atmospheric)
 	var margin: MarginContainer=MarginContainer.new()
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	margin.add_theme_constant_override("margin_left",28)
@@ -577,7 +605,8 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	_page_notice.visible=false
 
 	outer.add_child(_page_notice)
-	var scroll: ScrollContainer=ScrollContainer.new()
+	var scroll: ScrollContainer=TouchScrollScript.new()
+	scroll.name="PageScroll"
 	scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.size_flags_vertical=Control.SIZE_EXPAND_FILL
 	outer.add_child(scroll)
@@ -589,36 +618,157 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	_page_footer.visible=false
 	outer.add_child(_page_footer)
 
+func _remove_overlay() -> void:
+	if is_instance_valid(_overlay):
+		remove_child(_overlay)
+		_overlay.queue_free()
+	_overlay = null
+	_screen = ""
+
 func _close_page() -> void:
 	if _screen == "result" and (not _save_ok or store.state.get("pending_catches",{}).has(str(_last_record.get("catch_id","")))):
 		_toast_message("请先出售、放生，或保存失败时重试")
 		return
-	if _overlay:
-		_overlay.queue_free()
-		_overlay = null
-	_screen = ""
+	if _mode == "lobby":
+		if _page_context == "prepare" and _screen != "prepare": _show_prepare()
+		else: _show_home()
+		return
+	_remove_overlay()
+	_safe.visible = true
 	session.resume()
+	scenery.suspend(false)
 	sound.suspend(false)
 	_update_wallet()
+	if _result_waiting and not _last_record.is_empty(): _show_result()
 
 func _show_home() -> void:
-	_open_page("home","玩法说明")
-	_page.add_child(_text("%d 处水域 · %d 种真实鱼 · 完全离线" % [catalog.regions.size(),catalog.fish.size()]+"",24,MUTED))
-	_page.add_child(_scene_picture("res://assets/scenery/lake.png",320))
-	_page.add_child(_button("开始钓鱼",_close_page,true))
-	_page.add_child(_text("第一竿\n1  长按蓄力，松手抛竿\n2  浮漂明显下沉时，点击提竿\n3  按住收线，张力太高就松手\n4  成功后出售或放生，历史纪录一直保留",24))
-	_page.add_child(_button("声音、震动与存档说明",_show_settings))
-	if not store.status_message.is_empty(): _page.add_child(_text(store.status_message,23,CORAL))
-	if not _content_ok:
-		_page.add_child(_text("内容校验失败，已暂停游戏以保护纪录：\n"+"\n".join(catalog.errors),23,CORAL))
-	if store.read_only:
-		_page.add_child(_text("存档受到保护：" + store.error_message + "\n当前不能钓鱼或覆盖存档，请先保留文件并联系开发者。",24,CORAL))
+	if not _last_record.is_empty() and not _save_ok:
+		_show_result()
+		return
+	_remove_overlay()
+	_mode = "lobby"
+	_page_context = "home"
+	_screen = "home"
+	_safe.visible = false
+	session.pause()
+	scenery.set_mode("lobby")
+	scenery.suspend(false)
+	sound.suspend(false)
+	_overlay = Control.new()
+	_overlay.name = "Lobby"
+	_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_overlay.mouse_filter = Control.MOUSE_FILTER_PASS
+	add_child(_overlay)
+	var margin: MarginContainer = MarginContainer.new()
+	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	for side: String in ["left","right"]: margin.add_theme_constant_override("margin_"+side,32)
+	margin.add_theme_constant_override("margin_top",maxi(32,_safe.get_theme_constant("margin_top")))
+	margin.add_theme_constant_override("margin_bottom",maxi(28,_safe.get_theme_constant("margin_bottom")))
+	margin.mouse_filter = Control.MOUSE_FILTER_PASS
+	_overlay.add_child(margin)
+	var column: VBoxContainer = VBoxContainer.new()
+	column.mouse_filter = Control.MOUSE_FILTER_PASS
+	margin.add_child(column)
+	column.add_child(_text("远岸钓记",40,Color.WHITE))
+	column.add_child(_text(Trial.NAME + "  ·  鲤鱼 / 鳄雀鳝",22,Color("dce9d7")))
+	var room: Control = Control.new()
+	room.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	room.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	column.add_child(room)
+	_page = VBoxContainer.new()
+	_page.add_theme_constant_override("separation",12)
+	column.add_child(_page)
+	var start: Button = _navigation("开始钓鱼","rod",_show_prepare)
+	start.custom_minimum_size.y = 156
+	start.icon_extent = 104
+	start.add_theme_font_size_override("font_size",32)
+	start.disabled = store.read_only or not _content_ok
+	_page.add_child(start)
+	var actions: HBoxContainer = HBoxContainer.new()
+	_page.add_child(actions)
+	for entry: Array in [["行囊","bag",_show_gear],["图鉴","book",_show_catalog],["设置","settings",_show_settings]]:
+		actions.add_child(_navigation(str(entry[0]),str(entry[1]),entry[2]))
 	if not store.state.get("pending_catches",{}).is_empty():
-		_page.add_child(_button("处理上次已保存的钓获",_show_pending))
+		var pending: Button = _navigation("处理已保存的钓获","book",_show_pending)
+		pending.stacked = false
+		pending.icon_extent = 50
+		pending.custom_minimum_size.y = 96
+		_page.add_child(pending)
+	if store.read_only or not _content_ok:
+		_page.add_child(_text("暂不能开始：" + (store.error_message if store.read_only else "内容校验失败"),22,Color("ffbfa0")))
+
+func _show_prepare() -> void:
+	_page_context = "prepare"
+	_open_page("prepare","准备出发",_show_home)
+	_section("河湾试钓场","河岸木台")
+	_page.add_child(_text("虚构的封闭管理试钓水域",22,MUTED))
+	var fish_row: HBoxContainer = HBoxContainer.new()
+	_page.add_child(fish_row)
+	for id: String in Trial.PLAYABLE_SPECIES:
+		var item: VBoxContainer = VBoxContainer.new()
+		item.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		fish_row.add_child(item)
+		item.add_child(_fish_image(catalog.fish[id],true,false,150))
+		var caption: Label = _text(catalog.fish[id].name + " · 3D 可体验",22,TEAL)
+		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		item.add_child(caption)
+	_section("试钓目标","管理水域")
+	var targets: HBoxContainer = HBoxContainer.new()
+	_page.add_child(targets)
+	for option: Array in [["mixed","混合"],["common_carp","鲤鱼"],["alligator_gar","鳄雀鳝"]]:
+		var choice: Button = _button(("已选 · " if _trial_target == option[0] else "") + str(option[1]),_set_trial_target.bind(str(option[0])))
+		choice.icon_extent = 38
+		choice.icon_kind = "compass" if option[0] == "mixed" else "hook"
+		choice.add_theme_font_size_override("font_size",22)
+		targets.add_child(choice)
+	_section("本次装备")
+	_page.add_child(_text(str(catalog.gear[int(store.state.gear)].name) + "  /  " + catalog.bait_name(bait_id),27))
+	_page.add_child(_button("调整钓竿与鱼饵",_show_gear))
+	_page.add_child(_text("长按蓄力 → 松手抛竿\n浮漂下沉时提竿 → 按住收线，张力高时松手",23,MUTED))
+	_page_footer.add_child(_button("进入钓点",_enter_fishery,true))
+	_page_footer.visible = true
+
+func _set_trial_target(value: String) -> void:
+	if value != "mixed" and value not in Trial.PLAYABLE_SPECIES: return
+	_trial_target = value
+	_show_prepare()
+
+func _enter_fishery() -> void:
+	if store.read_only or not _content_ok: return
+	if not _last_record.is_empty():
+		_show_result()
+		return
+	if _active_round():
+		_toast_message("请先结束这一竿，再重新进入钓点")
+		_show_pause()
+		return
+	_remove_overlay()
+	_mode = "fishing"
+	_page_context = "fishing"
+	_landing_pending = false
+	_result_waiting = false
+	_safe.visible = true
+	scenery.cancel_landing()
+	scenery.set_mode("fishing")
+	scenery.suspend(false)
+	session.reset()
+	sound.suspend(false)
+	_refresh_location()
+
+func _return_to_lobby() -> void:
+	if not _last_record.is_empty():
+		_landing_pending = false
+		scenery.cancel_landing()
+		_show_result()
+		return
+	store.abandon_session(session.session_id)
+	session.reset()
+	scenery.cancel_landing()
+	_show_home()
 
 func _show_pause() -> void:
 	var active_state: int = session.before_pause if session.state == Session.State.PAUSED else session.state
-	if active_state == Session.State.CAUGHT and not _last_record.is_empty():
+	if active_state == Session.State.CAUGHT and not _last_record.is_empty() and not _landing_pending:
 		_show_result()
 		return
 	if active_state == Session.State.ESCAPED:
@@ -628,11 +778,14 @@ func _show_pause() -> void:
 	_page.add_child(_button("继续钓鱼",_close_page,true))
 	_page.add_child(_button("设置",_show_settings))
 	_page.add_child(_button("旅行手册",_show_catalog))
-	_page.add_child(_button("结束这一竿，回到钓点",_abandon_round))
+	if not _landing_pending: _page.add_child(_button("结束这一竿，回到钓点",_abandon_round))
+	if not _landing_pending: _page.add_child(_button("返回大厅",_return_to_lobby))
 	_page.add_child(_button("退出游戏",_exit_game))
 
 func _abandon_round() -> void:
-	if not _last_record.is_empty() and not _save_ok:
+	if not _last_record.is_empty():
+		_landing_pending = false
+		scenery.cancel_landing()
 		_show_result()
 		return
 	store.abandon_session(session.session_id)
@@ -647,71 +800,12 @@ func _exit_game() -> void:
 	get_tree().quit()
 
 func _show_travel() -> void:
-	_open_page("travel","旅行")
-	_page.add_child(_text("%d 处水域  /  %d 个钓点  ·  选择水域与钓点" % [catalog.regions.size(),catalog.spots.size()],21,MUTED))
-	for region: Dictionary in catalog.regions:
-		var rid: String=str(region.region_id)
-		var unlocked: bool=rid in store.state.get("unlocked_regions",[])
-		var card: PanelContainer=_card(Color("1b4550"),0)
-		card.clip_contents=true
-		_page.add_child(card)
-		var contents: VBoxContainer=VBoxContainer.new()
-		contents.add_theme_constant_override("separation",0)
-		card.add_child(contents)
-		var hero: Control=Control.new()
-		hero.custom_minimum_size.y=285
-		contents.add_child(hero)
-		var scene: TextureRect=_scene_picture(str(region.scene),0)
-		scene.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-		hero.add_child(scene)
-		var shade: ColorRect=ColorRect.new()
-		shade.color=Color.TRANSPARENT
-		shade.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
-		shade.offset_top=-108
-		hero.add_child(shade)
-		var title: Label=_text(str(region.name),34,Color.WHITE)
-		title.position=Vector2(24,180)
-		title.size=Vector2(390,54)
-		hero.add_child(title)
-		var subtitle: Label=_text(str(region.subtitle),20,Color("d2e7dd"))
-		subtitle.position=Vector2(24,238)
-		subtitle.size=Vector2(580,35)
-		hero.add_child(subtitle)
-		var stamp: Label=_text("当前水域" if rid==region_id else ("已解锁" if unlocked else "未解锁"),20,GOLD)
-		stamp.position=Vector2(24,18)
-		stamp.size=Vector2(190,50)
-		stamp.autowrap_mode=TextServer.AUTOWRAP_OFF
-		stamp.add_theme_color_override("font_color",PAPER)
-		stamp.add_theme_color_override("font_outline_color",NAVY)
-		stamp.add_theme_constant_override("outline_size",4)
-		hero.add_child(stamp)
-		var inner: VBoxContainer=VBoxContainer.new()
-		var padding: MarginContainer=MarginContainer.new()
-		for side: String in ["left","right","top","bottom"]: padding.add_theme_constant_override("margin_"+side,18)
-		contents.add_child(padding)
-		padding.add_child(inner)
-		var regional_total: int=0
-		var regional_known: int=0
-		for species: FishDefinition in catalog.fish.values():
-			if rid in species.regions():
-				regional_total+=1
-				if _count(species.species_id)>0: regional_known+=1
-		inner.add_child(_text("当地鱼种 %d  ·  已发现 %d" % [regional_total,regional_known],22,MUTED))
-		if not unlocked:
-			var need: int=int(region.unlock_count)
-			var cost: int=int(region.unlock_cost)
-			var unlock: Button=_button("启程  ·  %d 种发现  +  %d 旅币" % [need,cost],_unlock_region.bind(rid),true)
-			unlock.disabled=store.discovered_count()<need or int(store.state.currency)<cost
-			inner.add_child(unlock)
-		else:
-			for sid: String in region.spots:
-				var spot: Dictionary=catalog.spots[sid]
-				var min_gear: int=int(spot.min_gear)
-				var label: String=("当前 · " if sid==spot_id else "")+str(spot.name)+"   %s–%s m" % [str(spot.depth_min_m),str(spot.depth_max_m)]
-				if int(store.state.gear)<min_gear: label+="  ·  需升级装备"
-				var go: Button=_button(label,_choose_spot.bind(rid,sid),sid==spot_id)
-				go.disabled=int(store.state.gear)<min_gear
-				inner.add_child(go)
+	_open_page("travel","选择钓点")
+	_page.add_child(_icon("compass",120))
+	_section(Trial.NAME,"3D 可进入")
+	_page.add_child(_text("河岸木台  ·  鲤鱼 / 鳄雀鳝",27))
+	_page.add_child(_text("本次 3D 试钓仅开放这一处虚构管理水域。旧版水域的解锁、44 种图鉴和全部钓获纪录均保留。",23,MUTED))
+	_page.add_child(_button("进入钓点",_enter_fishery,true))
 
 func _unlock_region(id: String) -> void:
 	var region: Dictionary = catalog.region(id)
@@ -786,9 +880,6 @@ func _show_gear() -> void:
 		box.add_child(_text(str(bait.hint),20,MUTED))
 
 func _equip(id: int) -> void:
-	if id < int(catalog.spots[spot_id].min_gear):
-		_toast_message("这处钓点需要更高阶装备，先旅行到较浅的钓点")
-		return
 	if _active_round():
 		_toast_message("请在这一竿结束后更换装备")
 		return
@@ -815,6 +906,7 @@ func _show_catalog() -> void:
 	_open_page("catalog","图鉴")
 	_page.add_theme_constant_override("separation",10)
 	_page.add_child(_text("已发现 %d / %d 种   ·   累计 %d 条" % [store.discovered_count(),catalog.fish.size(),store.total_count()],23,INK))
+	_page.add_child(_text("本次 3D 可体验：鲤鱼、鳄雀鳝 · 其余条目保留历史资料与纪录",20,MUTED))
 	var filters: HBoxContainer=HBoxContainer.new()
 	filters.add_theme_constant_override("separation",8)
 	_page.add_child(filters)
@@ -896,6 +988,9 @@ func _fill_catalog() -> void:
 		var description: Label=_text("累计 %d 条" % _count(fish.species_id) if known else "待发现 · "+str(catalog.region(str(fish.regions()[0])).get("name","")),18,Color("355a58"))
 		description.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		box.add_child(description)
+		var availability: Label = _text("3D 可体验" if fish.species_id in Trial.PLAYABLE_SPECIES else "历史图鉴",18,TEAL if fish.species_id in Trial.PLAYABLE_SPECIES else MUTED)
+		availability.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		box.add_child(availability)
 	if shown==0: _list.add_child(_text("没有符合条件的鱼，试试换个筛选",23,MUTED))
 
 func _count(id: String) -> int:
@@ -985,9 +1080,7 @@ func _scene_picture(path: String,height: float) -> TextureRect:
 
 func _record_text(record: Dictionary) -> String:
 	if record.is_empty(): return "尚无纪录"
-	var sid: String = str(record.get("spot_id",""))
-	var rid: String = str(record.get("region_id",""))
-	return "%s · %s\n%s / %s\n%s" % [_length(int(record.get("length_mm",0))),_weight(int(record.get("weight_g",0))),str(catalog.region(rid).get("name",rid)),str(catalog.spots.get(sid,{}).get("name",sid)),str(record.get("caught_at",""))]
+	return "%s · %s\n%s\n%s" % [_length(int(record.get("length_mm",0))),_weight(int(record.get("weight_g",0))),Trial.record_location(record,catalog),str(record.get("caught_at",""))]
 
 func _length(mm: int) -> String:
 	return "%.1f cm" % (mm/10.0)
@@ -1039,6 +1132,11 @@ func _show_favorites() -> void:
 		box.add_child(detail)
 
 func _show_result() -> void:
+	if _last_record.is_empty(): return
+	if _landing_pending:
+		_show_pause()
+		return
+	_result_waiting = false
 	var id: String=str(_last_record.get("species_id",""))
 	if not catalog.fish.has(id): return
 	var fish: FishDefinition=catalog.fish[id]
@@ -1090,7 +1188,7 @@ func _show_result() -> void:
 		var title: Label=_text(str(pair[0]),18,MUTED)
 		title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 		box.add_child(title)
-	var place: Label=_text(str(_last_record.get("size_class","标准"))+"个体  /  "+str(catalog.spots.get(str(_last_record.get("spot_id",spot_id)),{}).get("name","")),21,MUTED)
+	var place: Label=_text(str(_last_record.get("size_class","标准"))+"个体  /  "+Trial.record_location(_last_record,catalog),21,MUTED)
 	place.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(place)
 	if not _save_ok:
@@ -1124,6 +1222,9 @@ func _dispose_result(action: String) -> void:
 		_page.add_child(_text("保存处理结果失败："+str(result.get("error",store.error_message))+"。请再次点击重试。",23,CORAL))
 
 func _finish_result() -> void:
+	_landing_pending = false
+	_result_waiting = false
+	scenery.cancel_landing()
 	_screen = ""
 	_last_record = {}
 	_save_ok = true
@@ -1179,7 +1280,7 @@ func _show_settings() -> void:
 	_page.add_child(_text("离线存档",28))
 	_page.add_child(_text("所有纪录只属于这份本地存档。卸载、清除应用数据会丢失进度。正常覆盖更新请保持相同包名与签名。每次钓获、出售/放生、购买、解锁与收藏都会立即保存。",23,MUTED))
 	_page.add_child(_button("处理已保存但未出售/放生的鱼",_show_pending))
-	_page.add_child(_text("远岸钓记 "+str(ProjectSettings.get_setting("application/config/version","1.1.0"))+"\nGodot 4.6.3 · 离线单机 · 自然图鉴\n鱼类与场景插画：AI 辅助生成并开发校对\n字体：Noto Sans CJK（SIL Open Font License）\n音效：本项目程序合成原创\nGodot Engine：MIT License",21,MUTED))
+	_page.add_child(_text("远岸钓记 "+str(ProjectSettings.get_setting("application/config/version","1.2.0"))+"\nGodot 4.6.3 · 离线单机 · 3D 试钓\n3D 体验：1 位钓手 / 2 种鱼 / 1 处钓点\n鱼类与场景插画：AI 辅助生成并开发校对\n字体：Noto Sans CJK（SIL Open Font License）\n音效：本项目程序合成原创\nGodot Engine：MIT License",21,MUTED))
 	_page.add_child(_button("查看引擎与字体许可",_show_licenses))
 
 func _show_licenses() -> void:
@@ -1222,8 +1323,13 @@ func _notification(what: int) -> void:
 		session.cancel_input()
 		session.pause()
 		sound.suspend(true)
+		scenery.suspend(true)
 		_save_selection()
 		if _overlay==null: call_deferred("_show_pause")
+	elif what in [NOTIFICATION_APPLICATION_FOCUS_IN,NOTIFICATION_APPLICATION_RESUMED]:
+		if _mode == "lobby" and _screen == "home":
+			scenery.suspend(false)
+			sound.suspend(false)
 	elif what == NOTIFICATION_WM_GO_BACK_REQUEST:
 		_handle_back()
 	elif what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -1241,4 +1347,6 @@ func _handle_back() -> void:
 		"species","zoom": _show_catalog()
 		"result": _show_result()
 		"escape": _finish_result()
+		"home": _show_settings()
+		"prepare": _show_home()
 		_: _close_page()
