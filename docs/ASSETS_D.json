@@ -363,5 +363,33 @@
     "anatomy_review": "Not applicable: landscape.",
     "scene_review": "Broad river and reed-shoal corridor, low wooded hills and mist, open portrait-friendly center. No people, fish, UI or text. A fictional regional composite, not a surveyed map or a claim of an exact geographic viewpoint.",
     "runtime_export": "Proportional Lanczos resize from 1536×1024 to 1440×960, runtime metadata stripped; original master preserved."
+  },
+  {
+    "asset_id": "scenery_yangtze_estuary",
+    "region_id": "yangtze",
+    "spot_id": "yangtze_estuary",
+    "usage": "Dedicated outer-Yangtze-estuary saltwater spot background",
+    "runtime_path": "game/assets/scenery/yangtze_estuary.png",
+    "master_path": "art_masters/d/yangtze_estuary.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1440,
+      960
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: stylized-concept. Asset type: FINAL complete scenic background stage for Farshore, a therapeutic Chinese 2D fishing travel game. One finished wide 3:2 landscape, intended 1536x1024, matching refined softly realistic hand-painted watercolor and gouache travel-book style: delicate convincing brushwork, subtle paper grain, quiet warm morning light, natural depth, muted sage teal and pale blue palette. Scene: OUTER YANGTZE RIVER ESTUARY NEARSHORE SEA, China, at the broad open mouth where river plume meets the East China Sea. Geographically coherent very low flat distant coast fading into mist, no high mountains, no steep gorge, no river valley. An expansive muddy-turquoise and soft jade-grey sea transitioning into muted blue-green farther offshore, atmospheric soft ivory-blue sky and broken pale morning clouds. Horizon at 38–42 percent down, overwhelmingly spacious open water central and lower image, unobstructed central vertical third for portrait crop and game bobber. Restrained low offshore swells and light reflected sky, not stormy. Very faint low pale sand shoal near extreme distant side, a tiny sparse low reed patch only on far flat shore, nothing enclosing the open sea. Foreground is water, with only a subtle small weathered coastal rock edge at extreme lower-right corner; lower center and left-center remain clear for a separately rendered angler. No city skyline, no tall structures, no boat, no buoy, no person, no fisherman, no fish, no fishing rod or hook, no UI, no text, no border, no logos or labels. Full-bleed finished painting, not photo, not cartoon, not diagram. This is an outer estuarine sea environment distinct from an inland freshwater river, serene and airy.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-bad343cb-f2e0-4fae-9706-20117d83ece3.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/scenery/yangtze.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability.",
+    "review_status": "visual_review_completed",
+    "scene_review": "Reviewed full image: expansive offshore water and very low distant coastal plain, restrained turquoise sediment tint, gentle coastal swells, no high mountains, no people or UI/text. Distinct from the inland river scene. Fictional regional composite, not a surveyed location.",
+    "runtime_export": "Proportional Lanczos resize from 1536×1024 to 1440×960, runtime metadata stripped; original master preserved.",
+    "sha256": "224827d5a10fc35dc68a07ff006212714bdb6484f27e0f4c28826edac7be5f93",
+    "used_by": "res://assets/scenery/yangtze_estuary.png"
   }
 ]
