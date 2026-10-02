@@ -1,0 +1,5 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/tackle_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+TACKLE_REAL_FIGHT_SECONDS [37.1583333333319, 35.2499999999986, 28.549999999999, 34.9999999999987, 27.0333333333324]
+TACKLE_TESTS: 557/557 passed; failures=0

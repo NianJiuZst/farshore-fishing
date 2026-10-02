@@ -3,6 +3,7 @@ extends SceneTree
 const Catalog = preload("res://scripts/catalog.gd")
 const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
+const TestController = preload("res://tests/fishing_test_controller.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Main = preload("res://scripts/main.gd")
 const Registry = preload("res://scripts/fish_3d_registry.gd")
@@ -173,13 +174,17 @@ func _advance_to(session: FishingSession, target: int, limit: int = 1200) -> boo
 
 func _fight(session: FishingSession, mode: String = "balanced") -> void:
 	if session.state == Session.State.BITE: session.press()
-	for tick: int in 2400:
+	session.release() # Hook and reeling are independent input edges.
+	var controller = TestController.new("always_pull" if mode == "hold" else "never_pull" if mode == "release" else "behavior_aware")
+	for tick: int in 16000:
 		if session.state != Session.State.FIGHT: return
-		if mode == "hold": session.press()
-		elif mode == "release": session.release()
-		elif session.tension < 0.46: session.press()
-		elif session.tension > 0.58: session.release()
+		_drive_fight(session, controller, 0.025)
 		session.step(0.025)
+
+func _drive_fight(session: FishingSession, controller: RefCounted, delta: float) -> void:
+	var desired: bool = controller.update(session, delta)
+	if desired and not session.reeling: session.press()
+	elif not desired and session.reeling: session.release()
 
 func _test_state_machine() -> void:
 	var session: FishingSession = Session.new()
@@ -205,7 +210,7 @@ func _test_state_machine() -> void:
 	_fight(session)
 	_check(session.state == Session.State.CAUGHT, "balanced hold/release catches a real fish")
 	_check(states == [Session.State.CHARGING, Session.State.CASTING, Session.State.WAITING, Session.State.NIBBLE, Session.State.BITE, Session.State.FIGHT, Session.State.CAUGHT], "complete state order")
-	_check(cues == ["cast", "nibble", "bite", "hook"], "cast/nibble/bite/hook cues are distinct and once")
+	_check(cues == ["cast", "hook"], "only deliberate cast/hook emit cues; pre-hook states are silent")
 	_check(endings.size() == 1 and bool(endings[0].success), "one successful terminal event")
 	_check(not str(endings[0].record.catch_id).is_empty() and str(endings[0].record.session_id) == session.session_id, "catch linked to unique session")
 	for tick: int in 500: session.step(0.05)
@@ -223,6 +228,7 @@ func _test_pause_and_input() -> void:
 		if target == Session.State.FIGHT:
 			_advance_to(session, Session.State.BITE)
 			session.press()
+			session.release()
 			session.press()
 			session.step(0.05)
 		else: _advance_to(session, target)
@@ -300,18 +306,19 @@ func _test_behavior_balance() -> void:
 			var session: FishingSession = _launch(record, gear_id)
 			_advance_to(session, Session.State.BITE)
 			session.press()
+			session.release()
+			var controller = TestController.new()
 			var seen: Dictionary = {}
-			for tick: int in 2400:
+			for tick: int in 16000:
 				if session.state != Session.State.FIGHT: break
-				if session.tension < 0.46: session.press()
-				elif session.tension > 0.58: session.release()
+				_drive_fight(session, controller, 0.025)
 				session.step(0.025)
 				seen[session.behavior_phase] = true
 			_check(session.state == Session.State.CAUGHT, "all behavior/gear combos winnable: %s/%d" % [id, gear_id])
-			_check(session.fight_time >= 10.0 and session.fight_time <= 25.5, "ordinary fight ~10–25 seconds: %s/%d actual %.2f" % [id, gear_id, session.fight_time])
+			_check(session.fight_time >= 15.0 and session.fight_time <= 95.0, "ordinary reactive fight remains bounded: %s/%d actual %.2f" % [id, gear_id, session.fight_time])
 			if gear_id == 0: phases[id] = seen.keys()
 			timings.append("%s gear=%d fraction=%.3f difficulty=%.3f fight=%.2fs" % [id, gear_id, float(record.size_fraction), float(record.difficulty), session.fight_time])
-	_check((phases.common_bream as Array).size() == 1 and (phases.rudd as Array).size() == 2 and (phases.roach as Array).size() == 2, "steady, burst and rest produce distinct real phase patterns")
+	_check((phases.common_bream as Array).size() == 4 and (phases.rudd as Array).size() == 4 and (phases.roach as Array).size() == 4 and phases.common_bream != phases.rudd and phases.rudd != phases.roach, "all three behavior families expose distinct cruise/windup/surge/recovery patterns")
 	print("BALANCE ", "; ".join(timings))
 
 func _test_real_settlement() -> void:

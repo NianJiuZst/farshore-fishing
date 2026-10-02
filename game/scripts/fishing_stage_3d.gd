@@ -20,6 +20,8 @@ const CAST_DURATION: float = 2.20
 const RELEASE_TIME: float = 1.20
 const LANDING_DURATION: float = 3.35
 const REFERENCE_CAMERA_ASPECT: float = 720.0 / 1280.0
+const FLOAT_VIEW_OFFSET := Vector3(0.34, 1.16, 3.05)
+const FLOAT_VIEW_FOV: float = 43.0
 const FishModels = preload("res://scripts/fish_3d_registry.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const GEAR_VISUALS: Array[Dictionary] = [
@@ -106,6 +108,9 @@ var _line_material: StandardMaterial3D
 var _bobber: Node3D
 var _bobber_target: Vector3 = Vector3(-0.9, 0.04, -9.0)
 var _cast_origin: Vector3
+var _cast_camera_origin: Vector3
+var _cast_camera_target_origin: Vector3
+var _cast_camera_fov_origin: float = 51.0
 var _fish_root: Node3D
 var _fish: Node3D
 var _fish_animator: AnimationPlayer
@@ -122,6 +127,7 @@ var _camera_base_vertical_fov: float = 54.0
 var _last_anim: String = ""
 var _last_loop: bool = true
 var _cast_finished_emitted: bool = false
+var _cast_impact_emitted: bool = false
 var _fishery_label: Label3D
 var _rain: GPUParticles3D
 
@@ -445,6 +451,7 @@ func play_landing(record: Dictionary) -> void:
 	presentation_state = "landing"
 	_ensure_fish(record)
 	_fish_root.visible = _fish != null
+	if _fish_animator: _fish_animator.speed_scale = 1.0
 	_fish_root.position = Vector3(-0.15, -0.28, -3.15)
 	_play_character("lift", false)
 	_play_fish("breach")
@@ -486,11 +493,10 @@ func _session_changed(value: int) -> void:
 				presentation_state = "waiting"
 				_play_character("wait")
 		Session.State.NIBBLE, Session.State.BITE:
-			if session: _ensure_fish(session.individual)
+			# No reveal, camera cut, animation change or splash announces a hook.
+			# Only the continuous, species-dependent float motion gives evidence.
 			presentation_state = "bite" if value == Session.State.BITE else "nibble"
-			_fish_root.visible = _fish != null
-			_play_fish("swim")
-			_splash(_bobber_target, 0.36 if value == Session.State.BITE else 0.15)
+			_fish_root.visible = false
 		Session.State.FIGHT:
 			presentation_state = "fight"
 			if session: _ensure_fish(session.individual)
@@ -510,7 +516,13 @@ func _begin_cast() -> void:
 	cast_in_progress = true
 	_cast_time = 0.0
 	_cast_finished_emitted = false
+	_cast_impact_emitted = false
 	presentation_state = "casting"
+	_cast_camera_origin = camera.position
+	_cast_camera_target_origin = _camera_target
+	_cast_camera_fov_origin = _camera_base_vertical_fov
+	_bobber.scale = Vector3.ONE
+	_bobber.rotation = Vector3.ZERO
 	var charge: float = clampf(session.charge, 0.0, _rod_visual_reach) if session else 0.5
 	_bobber_target = Vector3(-0.72 + charge * 0.5, 0.035, -7.0 - charge * 5.0)
 	_bobber.visible = false
@@ -547,7 +559,11 @@ func _update_cast(delta: float) -> void:
 		var p: float = clampf((_cast_time - RELEASE_TIME) / (CAST_DURATION - RELEASE_TIME - 0.17), 0.0, 1.0)
 		_bobber.position = _cast_origin.lerp(_bobber_target, p) + Vector3.UP * sin(p * PI) * 2.6
 		_bobber.rotation.z = sin(p * PI) * -0.55
-		if p >= 1.0 and _last_ripple < _time - 0.25: _splash(_bobber_target, 0.55)
+		if p >= 1.0 and not _cast_impact_emitted:
+			# The 7cm float makes a small surface ring, not fish-sized spray.
+			# This remains separate from the unchanged breach/surge splashes.
+			_cast_impact_emitted = true
+			_spawn_ripple(_bobber_target, 0.10, 1.0, 0.28)
 	if _cast_time >= CAST_DURATION:
 		cast_in_progress = false
 		presentation_state = "waiting"
@@ -560,34 +576,39 @@ func _update_fishing(_delta: float) -> void:
 	if _state in [Session.State.WAITING, Session.State.NIBBLE, Session.State.BITE, Session.State.CASTING]:
 		_bobber.visible = true
 		_line.visible = true
-		_bobber.position = _bobber_target + Vector3(sin(_time * 1.0) * 0.04, sin(_time * 2.3) * 0.02, 0)
-		_bobber.rotation.z = sin(_time * 2.2) * 0.07
-		if _state == Session.State.NIBBLE:
-			_bobber.position.y -= absf(sin(_time * 5.7)) * 0.11
-			_bobber.rotation.z += sin(_time * 5.7) * 0.24
-		elif _state == Session.State.BITE:
-			_bobber.position.y -= 0.11 + sin(_time * 8) * 0.025
-			_bobber.rotation.z = 0.75
-		if _state in [Session.State.NIBBLE, Session.State.BITE]:
-			var a: float = _time * 1.35
-			_fish_root.position = _bobber_target + Vector3(sin(a) * 0.9, -0.33, cos(a) * 0.42)
-			_fish_root.rotation = Vector3(0, -a, 0)
-			if _time - _last_ripple > 0.58: _spawn_ripple(_bobber_target, 0.36, 1.25)
+		_fish_root.visible = false
+		# A small, physically sized float remains readable in the same water view.
+		# Its motion is simulation-driven, not a looping state-specific animation.
+		var dip: float = session.float_dip if session else 0.0
+		var lift: float = session.float_lift if session else 0.0
+		var drag: Vector2 = session.float_drag if session else Vector2.ZERO
+		var tilt: float = session.float_tilt if session else 0.0
+		var water_drift := Vector3(sin(_time * 0.77) * 0.018, sin(_time * 1.37) * 0.004, cos(_time * 0.59) * 0.012)
+		_bobber.position = _bobber_target + water_drift + Vector3(drag.x, lift * 0.035 - dip * 0.105, drag.y)
+		_bobber.rotation = Vector3(tilt * 0.24, 0, tilt + sin(_time * 1.91) * 0.045)
 	elif _state == Session.State.FIGHT and session:
 		var p: float = clampf(session.progress, 0.0, 1.0)
-		var burst: float = 1.2 if str(session.individual.get("behavior", "")) == "burst" else 0.7
-		var swing: float = sin(session.fight_time * 2.25) * (0.35 + session.tension * burst)
+		var warning: float = session.surge_warning
+		var surge: float = session.surge_strength if session.fight_phase == "surge" else 0.0
+		var stamina: float = session.fish_stamina
+		var behavior: String = str(session.individual.get("behavior", ""))
+		var sweep: float = 0.72 if behavior in ["burst", "runner"] else 0.42
+		# Windup loads the rod and turns the fish before the scheduled surge.
+		# The phase is supplied by the encounter, never a repeating visual timer.
+		var swing: float = sin(session.fight_time * 1.07) * (0.22 + stamina * sweep)
+		swing += sin(session.phase_progress * PI) * (warning * 0.28 + surge * 0.86)
 		var target: Vector3 = _bobber_target.lerp(Vector3(-0.1, 0.035, -2.7), p)
-		_bobber.position = target + Vector3(swing, sin(_time * 8) * 0.035 - 0.05, cos(_time * 2) * 0.25)
-		_bobber.rotation.z = swing * 0.55
-		_fish_root.position = _bobber.position + Vector3(0, -0.27, 0.1)
-		_fish_root.rotation = Vector3(sin(_time * 4) * 0.07, PI * 0.5 + swing * 0.55, 0.02)
-		if _time - _last_ripple > 0.30 + (1.0 - session.tension) * 0.5:
-			_spawn_ripple(_bobber.position, 0.4 + session.tension * 0.45, 1.2)
-		# Brief, physically continuous surfacing on high-tension surges.
-		if session.tension > 0.75 and fmod(session.fight_time, 5.4) < 0.45:
-			_fish_root.position.y += sin(fmod(session.fight_time, 5.4) / 0.45 * PI) * 0.35
-			if _time - _last_ripple > 0.25: _splash(_fish_root.position, 0.35)
+		_bobber.position = target + Vector3(swing, sin(_time * 5.0) * 0.012 - 0.05, -warning * 0.18 - surge * 0.42)
+		_bobber.rotation.z = swing * 0.40 + warning * 0.28
+		_fish_root.position = _bobber.position + Vector3(0, -0.24 - warning * 0.07, 0.1)
+		_fish_root.rotation = Vector3(sin(_time * 3.0) * 0.04, PI * 0.5 + swing * 0.46 + warning * 0.55, -warning * 0.18)
+		if _fish_animator: _fish_animator.speed_scale = lerpf(0.55, 1.25, stamina) + surge * 0.7
+		if _time - _last_ripple > 0.75 - surge * 0.40:
+			_spawn_ripple(_bobber.position, 0.26 + surge * 0.45, 1.15)
+		# Surface once near the beginning of a real surge, after hooking only.
+		if surge > 0.0 and session.phase_progress < 0.42:
+			_fish_root.position.y += sin(session.phase_progress / 0.42 * PI) * (0.16 + surge * 0.18)
+			if _fish_root.position.y > -0.03 and _time - _last_ripple > 0.25: _splash(_fish_root.position, 0.32)
 
 func _update_landing(delta: float) -> void:
 	_landing_time += delta
@@ -631,15 +652,18 @@ func _update_camera(delta: float) -> void:
 		position_goal = Vector3(1.1, 3.7, 6.2)
 		target_goal = Vector3(-1.3, 0.55, -4.5)
 		fov_goal = 51.0
-	if presentation_state == "waiting":
-		position_goal = Vector3(-0.54, 2.10, 1.55)
-		target_goal = _bobber_target + Vector3(0, 0.10, 0)
-		fov_goal = 59.0
-	if presentation_state in ["nibble", "bite"]:
-		# Camera approaches the actual surface, revealing real underwater fish geometry.
-		position_goal = Vector3(_bobber_target.x + 1.0, 1.85, _bobber_target.z + 4.1)
-		target_goal = _bobber_target + Vector3(0, -0.10, 0)
-		fov_goal = 42.0
+	var observe_float: bool = presentation_state in ["waiting", "nibble", "bite"]
+	if observe_float:
+		position_goal = _bobber_target + FLOAT_VIEW_OFFSET
+		target_goal = _bobber_target + Vector3(0, 0.018, 0)
+		fov_goal = FLOAT_VIEW_FOV
+	elif cast_in_progress:
+		# Move once while the cast travels, and finish before the float lands.
+		# WAIT / exploratory taps / committed bite cannot change this framing.
+		var settle: float = smoothstep(RELEASE_TIME, CAST_DURATION - 0.17, _cast_time)
+		position_goal = _cast_camera_origin.lerp(_bobber_target + FLOAT_VIEW_OFFSET, settle)
+		target_goal = _cast_camera_target_origin.lerp(_bobber_target + Vector3(0, 0.018, 0), settle)
+		fov_goal = lerpf(_cast_camera_fov_origin, FLOAT_VIEW_FOV, settle)
 	elif presentation_state == "fight" and session:
 		var p: float = clampf(session.progress, 0.0, 1.0)
 		position_goal = Vector3(-0.48, 2.12, 1.48)
@@ -660,7 +684,7 @@ func _update_camera(delta: float) -> void:
 			position_goal = position_goal.lerp(close_position, close_mix)
 			target_goal = target_goal.lerp(_fish_root.position, close_mix)
 			fov_goal = lerpf(fov_goal, 36.0, close_mix)
-	var blend: float = 1.0 - exp(-delta * (2.3 if presentation_state in ["landing", "bite"] else 1.5))
+	var blend: float = 1.0 if observe_float or cast_in_progress else 1.0 - exp(-delta * (2.3 if presentation_state == "landing" else 1.5))
 	camera.position = camera.position.lerp(position_goal, blend)
 	_camera_target = _camera_target.lerp(target_goal, blend)
 	# Blend the authored16:9 vertical angle exactly as before, then express it
@@ -960,7 +984,10 @@ func _build_rod() -> void:
 
 func _update_rod() -> void:
 	var flex: float = 0.025
-	if presentation_state == "fight" and session: flex = 0.14 + session.tension * 0.55
+	var warning: float = session.surge_warning if presentation_state == "fight" and session else 0.0
+	var danger: float = _line_danger()
+	var lateral_flex: float = sin(_time * 31.0) * danger * 0.038
+	if presentation_state == "fight" and session: flex = 0.14 + session.tension * 0.50 + warning * 0.22
 	elif cast_in_progress: flex = sin(clampf(_cast_time / CAST_DURATION, 0, 1) * PI) * 0.23
 	elif presentation_state == "landing": flex = 0.30
 	flex *= _rod_flex_scale
@@ -968,7 +995,7 @@ func _update_rod() -> void:
 	var radii := PackedFloat32Array()
 	for i in range(19):
 		var u: float = float(i) / 18.0
-		points.append(Vector3(0, -flex * pow(u, 2.4), -u * _rod_length))
+		points.append(Vector3(lateral_flex * pow(u, 3.0), -flex * pow(u, 2.4), -u * _rod_length))
 		radii.append(lerpf(_rod_radius, _rod_tip_radius, u))
 	_rod_mesh.mesh = _tube_mesh(points, radii, 6)
 	_rod_tip = _rod.to_global(points[18])
@@ -976,8 +1003,8 @@ func _update_rod() -> void:
 		var u: float = [0.055, 0.19, 0.47, 0.74][index]
 		var band: MeshInstance3D = _rod_accents[index]
 		var radius: float = lerpf(_rod_radius, _rod_tip_radius, u) * 1.12
-		band.position = Vector3(0, -flex * pow(u, 2.4), -u * _rod_length)
-		var tangent: Vector3 = Vector3(0, -flex * 2.4 * pow(u, 1.4), -_rod_length).normalized()
+		band.position = Vector3(lateral_flex * pow(u, 3.0), -flex * pow(u, 2.4), -u * _rod_length)
+		var tangent: Vector3 = Vector3(lateral_flex * 3.0 * pow(u, 2.0), -flex * 2.4 * pow(u, 1.4), -_rod_length).normalized()
 		var frame := Basis(Quaternion(Vector3.UP, tangent))
 		frame.x *= radius
 		frame.y *= 0.048 if index < 2 else 0.028
@@ -1004,15 +1031,24 @@ func _fish_mouth_world() -> Vector3:
 func _sturgeon_leader_guide_world() -> Vector3:
 	return _fish_root.position + _fish_root.basis * (Vector3(0.53, -0.050, 0.0) * _fish_length)
 
+func _line_danger() -> float:
+	if presentation_state != "fight" or session == null: return 0.0
+	return maxf(smoothstep(0.70, 0.98, session.tension), smoothstep(0.48, 0.90, session.line_wear))
+
 func _update_line() -> void:
 	var end: Vector3 = _bobber.to_global(Vector3(0, 0.057, 0))
 	var sag: float = 0.11 if presentation_state in ["fight", "landing", "landed"] else 0.35
+	var danger: float = _line_danger()
+	if presentation_state == "fight" and session:
+		sag = lerpf(0.20, 0.018, clampf(session.tension + session.surge_warning * 0.18, 0, 1))
+	_line_material.albedo_color = Color(0.57, 0.66, 0.62, 0.80).lerp(Color(0.86, 0.82, 0.66, 0.92), danger * 0.65)
 	if cast_in_progress: sag = 0.30 + sin(_cast_time * 3.5) * 0.12
 	var points := PackedVector3Array()
 	var radii := PackedFloat32Array()
 	for i in range(33):
 		var p: float = float(i) / 32.0
-		points.append(_rod_tip.lerp(end, p) + Vector3.DOWN * sin(p * PI) * sag)
+		var tremor := Vector3(sin(_time * 39.0 + p * 24.0), 0.0, cos(_time * 33.0 + p * 19.0)) * sin(p * PI) * danger * 0.014
+		points.append(_rod_tip.lerp(end, p) + Vector3.DOWN * sin(p * PI) * sag + tremor)
 		radii.append(0.0025 if camera.position.distance_to(end) > 8 else (0.00045 if camera.position.distance_to(end) < 2.0 else 0.0017))
 	if presentation_state in ["landing", "landed"] and _fish != null:
 		# One continuous line through the float eye, then a short leader to the
@@ -1218,7 +1254,7 @@ func _ripple_mesh() -> ArrayMesh:
 	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
 	return mesh
 
-func _spawn_ripple(at: Vector3, power: float, duration: float) -> void:
+func _spawn_ripple(at: Vector3, power: float, duration: float, radius_scale: float = 1.0) -> void:
 	_last_ripple = _time
 	for effect: Dictionary in _ripple_pool:
 		if float(effect.age) < float(effect.duration): continue
@@ -1228,6 +1264,7 @@ func _spawn_ripple(at: Vector3, power: float, duration: float) -> void:
 		effect.age = 0.0
 		effect.duration = duration
 		effect.power = power
+		effect.radius_scale = radius_scale
 		break
 
 func _splash(at: Vector3, power: float) -> void:
@@ -1256,7 +1293,7 @@ func _update_effects(delta: float) -> void:
 		if ratio >= 1.0:
 			ring.visible = false
 			continue
-		var radius: float = 0.2 + ratio * (1.6 + float(effect.power))
+		var radius: float = (0.2 + ratio * (1.6 + float(effect.power))) * float(effect.get("radius_scale", 1.0))
 		ring.scale = Vector3(radius, 0.10, radius)
 		(effect.material as ShaderMaterial).set_shader_parameter("ripple_color", Color(0.57, 0.71, 0.61, pow(1.0 - ratio, 1.2) * 0.35))
 		(effect.material as ShaderMaterial).set_shader_parameter("progress", ratio)

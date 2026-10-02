@@ -21,6 +21,8 @@ SUITES = [
     ("camera_aspect", "camera_aspect_tests.gd", []),
     ("save", "save_tests.gd", []),
     ("core", "core_tests.gd", []),
+    ("session_observation", "session_observation_tests.gd", []),
+    ("float_observation", "float_observation_tests.gd", []),
     ("tackle", "tackle_tests.gd", []),
     ("bait_balance", "bait_balance_tests.gd", []),
     ("registry", "fish_3d_registry_tests.gd", ["--require-all"]),

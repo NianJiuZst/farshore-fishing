@@ -17,3 +17,5 @@
 显示服务只用本次进程私有临时目录中的一次性IPC认证文件，权限0600，退出随目录移除，不保存或输出其中的随机值。音频使用Dummy测试驱动以免无声卡环境产生误报；发行APK的音频驱动和设置不受影响。
 
 2026-10-02，独立空工程实际启动日志确认：`Vulkan 1.4.305 - Forward Mobile - llvmpipe (LLVM 19.1.7, 256 bits)`。游戏截图另行逐场景审核，环境探针成功本身不代表游戏画面通过。
+
+2026-10-02 19:04 UTC，执行环境重置后从上述Debian官方包目录重新取得相同三个版本，逐包SHA256与本表完全一致后解包，未改变固定版本或系统驱动。使用现有启动器在隔离HOME/XDG、一次性认证显示服务中运行320×180立方体场景，进程退出码0；日志确认 `PROBE_RENDERING_METHOD=mobile`、`PROBE_RENDERING_DRIVER=vulkan`、`PROBE_ADAPTER=llvmpipe (LLVM 19.1.7, 256 bits)`、`PROBE_CAPTURE=320x180 save_status=0`，并目视确认生成图像。临时显示服务已退出。忽略目录中的复验日志/图像为 `tools/xvfb/probe/probe.log` 与 `tools/xvfb/probe/probe.png`；图像SHA256为 `ec605a050db5935f8f6124f98350d5c54b81aa8f9519669e1c6d40af4ab86a43`。此结果仅证明桌面软件渲染工具恢复，不代表游戏场景或Android设备测试通过。

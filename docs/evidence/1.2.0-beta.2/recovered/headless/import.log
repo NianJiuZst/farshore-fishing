@@ -1,0 +1,1819 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --import
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+Unable to open Android 'build-tools' directory.
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (35 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | FishingAudio[39m[0m
+[   2% ] [90m[1mupdate_scripts_classes[22m | ContentCatalog[39m[0m
+[   5% ] [90m[1mupdate_scripts_classes[22m | EncounterGenerator[39m[0m
+[   8% ] [90m[1mupdate_scripts_classes[22m | FishingSession[39m[0m
+[  11% ] [90m[1mupdate_scripts_classes[22m | FishingStage3D[39m[0m
+[  13% ] [90m[1mupdate_scripts_classes[22m | Fish3DRegistry[39m[0m
+[  16% ] [90m[1mupdate_scripts_classes[22m | FishDefinition[39m[0m
+[  19% ] [90m[1mupdate_scripts_classes[22m | FishModelPreview[39m[0m
+[  22% ] [90m[1mupdate_scripts_classes[22m | IconAction[39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  27% ] [90m[1mupdate_scripts_classes[22m | CatchRuler[39m[0m
+[  30% ] [90m[1mupdate_scripts_classes[22m | SaveStore[39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | SceneryView[39m[0m
+[  36% ] [90m[1mupdate_scripts_classes[22m | TouchScroll[39m[0m
+[  38% ] [90m[1mupdate_scripts_classes[22m | TrialFishery[39m[0m
+[  41% ] [90m[1mupdate_scripts_classes[22m | ExpeditionArt[39m[0m
+[  44% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  47% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  52% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  55% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  58% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  61% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  63% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  66% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  69% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  72% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  75% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  77% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  80% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  83% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  86% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  88% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  91% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  94% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (470 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | brown_planks_03_diff_2k.png[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | brown_planks_03_nor_gl_2k.png[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | brown_planks_03_rough_2k.png[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | cloud_layers_2k.hdr[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | rock_face_03_diff_2k.png[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | rock_face_03_nor_gl_2k.png[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | rock_face_03_rough_2k.png[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | managed_oxbow.glb[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | region_bayou.glb[39m[0m
+[   1% ] [90m[1m_update_scan_actions[22m | region_japan.glb[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | region_lake.glb[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | region_med.glb[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | region_norway.glb[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | region_yangtze.glb[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | station_boat.glb[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | station_dock.glb[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | station_rock.glb[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | alligator_gar.glb[39m[0m
+[   3% ] [90m[1m_update_scan_actions[22m | alligator_gar_alligator_gar_fin_basecolor.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | alligator_gar_alligator_gar_fin_normal.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | alligator_gar_alligator_gar_fin_roughness.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | alligator_gar_alligator_gar_skin_basecolor.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | alligator_gar_alligator_gar_skin_normal.png[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | alligator_gar_alligator_gar_skin_roughness.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | angler.glb[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | annular_seabream.glb[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | annular_seabream_annular_seabream_Fin_BaseColor.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | annular_seabream_annular_seabream_Fin_Normal.png[39m[0m
+[   5% ] [90m[1m_update_scan_actions[22m | annular_seabream_annular_seabream_Fin_Roughness.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | annular_seabream_annular_seabream_Skin_BaseColor.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | annular_seabream_annular_seabream_Skin_Normal.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | annular_seabream_annular_seabream_Skin_Roughness.png[39m[0m
+[   6% ] [90m[1m_update_scan_actions[22m | atlantic_cod.glb[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | atlantic_cod_atlantic_cod_Fin_BaseColor.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | atlantic_cod_atlantic_cod_Fin_Normal.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | atlantic_cod_atlantic_cod_Fin_Roughness.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | atlantic_cod_atlantic_cod_Skin_BaseColor.png[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | atlantic_cod_atlantic_cod_Skin_Normal.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | atlantic_cod_atlantic_cod_Skin_Roughness.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | atlantic_herring.glb[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | atlantic_herring_atlantic_herring_Fin_BaseColor.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | atlantic_herring_atlantic_herring_Fin_Normal.png[39m[0m
+[   8% ] [90m[1m_update_scan_actions[22m | atlantic_herring_atlantic_herring_Fin_Roughness.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | atlantic_herring_atlantic_herring_Skin_BaseColor.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | atlantic_herring_atlantic_herring_Skin_Normal.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | atlantic_herring_atlantic_herring_Skin_Roughness.png[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel.glb[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel_atlantic_mackerel_Fin_BaseColor.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel_atlantic_mackerel_Fin_Normal.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel_atlantic_mackerel_Fin_Roughness.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel_atlantic_mackerel_Skin_BaseColor.png[39m[0m
+[  10% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel_atlantic_mackerel_Skin_Normal.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel_atlantic_mackerel_Skin_Roughness.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish.glb[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish_atlantic_wolffish_Fin_BaseColor.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish_atlantic_wolffish_Fin_Normal.png[39m[0m
+[  11% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish_atlantic_wolffish_Fin_Roughness.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish_atlantic_wolffish_Skin_BaseColor.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish_atlantic_wolffish_Skin_Normal.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish_atlantic_wolffish_Skin_Roughness.png[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | black_seabream.glb[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | black_seabream_black_seabream_Fin_BaseColor.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | black_seabream_black_seabream_Fin_Normal.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | black_seabream_black_seabream_Fin_Roughness.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | black_seabream_black_seabream_Skin_BaseColor.png[39m[0m
+[  13% ] [90m[1m_update_scan_actions[22m | black_seabream_black_seabream_Skin_Normal.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | black_seabream_black_seabream_Skin_Roughness.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | bowfin.glb[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | bowfin_bowfin_Fin_BaseColor.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | bowfin_bowfin_Fin_Normal.png[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | bowfin_bowfin_Fin_Roughness.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | bowfin_bowfin_Skin_BaseColor.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | bowfin_bowfin_Skin_Normal.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | bowfin_bowfin_Skin_Roughness.png[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | channel_catfish.glb[39m[0m
+[  15% ] [90m[1m_update_scan_actions[22m | channel_catfish_channel_catfish_Fin_BaseColor.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | channel_catfish_channel_catfish_Fin_Normal.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | channel_catfish_channel_catfish_Fin_Roughness.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | channel_catfish_channel_catfish_Skin_BaseColor.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | channel_catfish_channel_catfish_Skin_Normal.png[39m[0m
+[  16% ] [90m[1m_update_scan_actions[22m | channel_catfish_channel_catfish_Skin_Roughness.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon.glb[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon_chinese_sturgeon_Fin_BaseColor.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon_chinese_sturgeon_Fin_Normal.png[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon_chinese_sturgeon_Fin_Roughness.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon_chinese_sturgeon_Skin_BaseColor.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon_chinese_sturgeon_Skin_Normal.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon_chinese_sturgeon_Skin_Roughness.png[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | chub_mackerel.glb[39m[0m
+[  18% ] [90m[1m_update_scan_actions[22m | chub_mackerel_chub_mackerel_Fin_BaseColor.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | chub_mackerel_chub_mackerel_Fin_Normal.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | chub_mackerel_chub_mackerel_Fin_Roughness.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | chub_mackerel_chub_mackerel_Skin_BaseColor.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | chub_mackerel_chub_mackerel_Skin_Normal.png[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | chub_mackerel_chub_mackerel_Skin_Roughness.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | common_bream.glb[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | common_bream_common_bream_Fin_BaseColor.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | common_bream_common_bream_Fin_Normal.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | common_bream_common_bream_Fin_Roughness.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | common_bream_common_bream_Skin_BaseColor.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | common_bream_common_bream_Skin_Normal.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | common_bream_common_bream_Skin_Roughness.png[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | common_carp.glb[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | common_carp_common_carp_fin_basecolor.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | common_carp_common_carp_fin_normal.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | common_carp_common_carp_fin_roughness.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | common_carp_common_carp_skin_basecolor.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | common_carp_common_carp_skin_normal.png[39m[0m
+[  22% ] [90m[1m_update_scan_actions[22m | common_carp_common_carp_skin_roughness.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | common_pandora.glb[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | common_pandora_common_pandora_Fin_BaseColor.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | common_pandora_common_pandora_Fin_Normal.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | common_pandora_common_pandora_Fin_Roughness.png[39m[0m
+[  23% ] [90m[1m_update_scan_actions[22m | common_pandora_common_pandora_Skin_BaseColor.png[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | common_pandora_common_pandora_Skin_Normal.png[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | common_pandora_common_pandora_Skin_Roughness.png[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | crucian_carp.glb[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | crucian_carp_crucian_carp_Fin_BaseColor.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | crucian_carp_crucian_carp_Fin_Normal.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | crucian_carp_crucian_carp_Fin_Roughness.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | crucian_carp_crucian_carp_Skin_BaseColor.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | crucian_carp_crucian_carp_Skin_Normal.png[39m[0m
+[  25% ] [90m[1m_update_scan_actions[22m | crucian_carp_crucian_carp_Skin_Roughness.png[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | european_perch.glb[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | european_perch_european_perch_Fin_BaseColor.png[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | european_perch_european_perch_Fin_Normal.png[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | european_perch_european_perch_Fin_Roughness.png[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | european_perch_european_perch_Skin_BaseColor.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | european_perch_european_perch_Skin_Normal.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | european_perch_european_perch_Skin_Roughness.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | european_perch_PerchDorsalPosteriorMark.png[39m[0m
+[  27% ] [90m[1m_update_scan_actions[22m | european_plaice.glb[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | european_plaice_european_plaice_Fin_BaseColor.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | european_plaice_european_plaice_Fin_Normal.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | european_plaice_european_plaice_Fin_Roughness.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | european_plaice_european_plaice_Skin_BaseColor.png[39m[0m
+[  28% ] [90m[1m_update_scan_actions[22m | european_plaice_european_plaice_Skin_Normal.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | european_plaice_european_plaice_Skin_Roughness.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | european_seabass.glb[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | european_seabass_european_seabass_Fin_BaseColor.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | european_seabass_european_seabass_Fin_Normal.png[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | european_seabass_european_seabass_Fin_Roughness.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | european_seabass_european_seabass_Skin_BaseColor.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | european_seabass_european_seabass_Skin_Normal.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | european_seabass_european_seabass_Skin_Roughness.png[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | flathead_catfish.glb[39m[0m
+[  30% ] [90m[1m_update_scan_actions[22m | flathead_catfish_flathead_catfish_Fin_BaseColor.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | flathead_catfish_flathead_catfish_Fin_Normal.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | flathead_catfish_flathead_catfish_Fin_Roughness.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | flathead_catfish_flathead_catfish_Skin_BaseColor.png[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | flathead_catfish_flathead_catfish_Skin_Normal.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | flathead_catfish_flathead_catfish_Skin_Roughness.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | gilthead_seabream.glb[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | gilthead_seabream_gilthead_seabream_Fin_BaseColor.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | gilthead_seabream_gilthead_seabream_Fin_Normal.png[39m[0m
+[  32% ] [90m[1m_update_scan_actions[22m | gilthead_seabream_gilthead_seabream_Fin_Roughness.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | gilthead_seabream_gilthead_seabream_Skin_BaseColor.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | gilthead_seabream_gilthead_seabream_Skin_Normal.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | gilthead_seabream_gilthead_seabream_Skin_Roughness.png[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | haddock.glb[39m[0m
+[  33% ] [90m[1m_update_scan_actions[22m | haddock_haddock_Fin_BaseColor.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | haddock_haddock_Fin_Normal.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | haddock_haddock_Fin_Roughness.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | haddock_haddock_Skin_BaseColor.png[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | haddock_haddock_Skin_Normal.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | haddock_haddock_Skin_Roughness.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel.glb[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel_japanese_horse_mackerel_Fin_BaseColor.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel_japanese_horse_mackerel_Fin_Normal.png[39m[0m
+[  35% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel_japanese_horse_mackerel_Fin_Roughness.png[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel_japanese_horse_mackerel_Skin_BaseColor.png[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel_japanese_horse_mackerel_Skin_Normal.png[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel_japanese_horse_mackerel_Skin_Roughness.png[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | japanese_seabass.glb[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | japanese_seabass_japanese_seabass_Fin_BaseColor.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | japanese_seabass_japanese_seabass_Fin_Normal.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | japanese_seabass_japanese_seabass_Fin_Roughness.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | japanese_seabass_japanese_seabass_Skin_BaseColor.png[39m[0m
+[  37% ] [90m[1m_update_scan_actions[22m | japanese_seabass_japanese_seabass_Skin_Normal.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | japanese_seabass_japanese_seabass_Skin_Roughness.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | japanese_whiting.glb[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | japanese_whiting_japanese_whiting_Fin_BaseColor.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | japanese_whiting_japanese_whiting_Fin_Normal.png[39m[0m
+[  38% ] [90m[1m_update_scan_actions[22m | japanese_whiting_japanese_whiting_Fin_Roughness.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | japanese_whiting_japanese_whiting_Skin_BaseColor.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | japanese_whiting_japanese_whiting_Skin_Normal.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | japanese_whiting_japanese_whiting_Skin_Roughness.png[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | largemouth_bass.glb[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | largemouth_bass_largemouth_bass_Fin_BaseColor.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | largemouth_bass_largemouth_bass_Fin_Normal.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | largemouth_bass_largemouth_bass_Fin_Roughness.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | largemouth_bass_largemouth_bass_Skin_BaseColor.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | largemouth_bass_largemouth_bass_Skin_Normal.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | largemouth_bass_largemouth_bass_Skin_Roughness.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | longnose_gar.glb[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | longnose_gar_longnose_gar_Fin_BaseColor.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | longnose_gar_longnose_gar_Fin_Normal.png[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | longnose_gar_longnose_gar_Fin_Roughness.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | longnose_gar_longnose_gar_Skin_BaseColor.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | longnose_gar_longnose_gar_Skin_Normal.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | longnose_gar_longnose_gar_Skin_Roughness.png[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | longsnout_catfish.glb[39m[0m
+[  42% ] [90m[1m_update_scan_actions[22m | longsnout_catfish_longsnout_catfish_Fin_BaseColor.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | longsnout_catfish_longsnout_catfish_Fin_Normal.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | longsnout_catfish_longsnout_catfish_Fin_Roughness.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | longsnout_catfish_longsnout_catfish_Skin_BaseColor.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | longsnout_catfish_longsnout_catfish_Skin_Normal.png[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | longsnout_catfish_longsnout_catfish_Skin_Roughness.png[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | mandarin_fish.glb[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | mandarin_fish_mandarin_fish_Fin_BaseColor.png[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | mandarin_fish_mandarin_fish_Fin_Normal.png[39m[0m
+[  44% ] [90m[1m_update_scan_actions[22m | mandarin_fish_mandarin_fish_Fin_Roughness.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | mandarin_fish_mandarin_fish_Skin_BaseColor.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | mandarin_fish_mandarin_fish_Skin_Normal.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | mandarin_fish_mandarin_fish_Skin_Roughness.png[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | marbled_rockfish.glb[39m[0m
+[  45% ] [90m[1m_update_scan_actions[22m | marbled_rockfish_marbled_rockfish_Fin_BaseColor.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | marbled_rockfish_marbled_rockfish_Fin_Normal.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | marbled_rockfish_marbled_rockfish_Fin_Roughness.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | marbled_rockfish_marbled_rockfish_Skin_BaseColor.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | marbled_rockfish_marbled_rockfish_Skin_Normal.png[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | marbled_rockfish_marbled_rockfish_Skin_Roughness.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | northern_pike.glb[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | northern_pike_northern_pike_Fin_BaseColor.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | northern_pike_northern_pike_Fin_Normal.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | northern_pike_northern_pike_Fin_Roughness.png[39m[0m
+[  47% ] [90m[1m_update_scan_actions[22m | northern_pike_northern_pike_Skin_BaseColor.png[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | northern_pike_northern_pike_Skin_Normal.png[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | northern_pike_northern_pike_Skin_Roughness.png[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | northern_snakehead.glb[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | northern_snakehead_northern_snakehead_Fin_BaseColor.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | northern_snakehead_northern_snakehead_Fin_Normal.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | northern_snakehead_northern_snakehead_Fin_Roughness.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | northern_snakehead_northern_snakehead_Skin_BaseColor.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | northern_snakehead_northern_snakehead_Skin_Normal.png[39m[0m
+[  49% ] [90m[1m_update_scan_actions[22m | northern_snakehead_northern_snakehead_Skin_Roughness.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | olive_flounder.glb[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | olive_flounder_olive_flounder_Fin_BaseColor.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | olive_flounder_olive_flounder_Fin_Normal.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | olive_flounder_olive_flounder_Fin_Roughness.png[39m[0m
+[  50% ] [90m[1m_update_scan_actions[22m | olive_flounder_olive_flounder_Skin_BaseColor.png[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | olive_flounder_olive_flounder_Skin_Normal.png[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | olive_flounder_olive_flounder_Skin_Roughness.png[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | painted_comber.glb[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | painted_comber_painted_comber_Fin_BaseColor.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | painted_comber_painted_comber_Fin_Normal.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | painted_comber_painted_comber_Fin_Roughness.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | painted_comber_painted_comber_Skin_BaseColor.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | painted_comber_painted_comber_Skin_Normal.png[39m[0m
+[  52% ] [90m[1m_update_scan_actions[22m | painted_comber_painted_comber_Skin_Roughness.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | pollack.glb[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | pollack_pollack_Fin_BaseColor.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | pollack_pollack_Fin_Normal.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | pollack_pollack_Fin_Roughness.png[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | pollack_pollack_Skin_BaseColor.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | pollack_pollack_Skin_Normal.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | pollack_pollack_Skin_Roughness.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | red_mullet.glb[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | red_mullet_red_mullet_Fin_BaseColor.png[39m[0m
+[  54% ] [90m[1m_update_scan_actions[22m | red_mullet_red_mullet_Fin_Normal.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | red_mullet_red_mullet_Fin_Roughness.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | red_mullet_red_mullet_Skin_BaseColor.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | red_mullet_red_mullet_Skin_Normal.png[39m[0m
+[  55% ] [90m[1m_update_scan_actions[22m | red_mullet_red_mullet_Skin_Roughness.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | red_seabream.glb[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | red_seabream_red_seabream_Fin_BaseColor.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | red_seabream_red_seabream_Fin_Normal.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | red_seabream_red_seabream_Fin_Roughness.png[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | red_seabream_red_seabream_Skin_BaseColor.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | red_seabream_red_seabream_Skin_Normal.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | red_seabream_red_seabream_Skin_Roughness.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | roach.glb[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | roach_roach_Fin_BaseColor.png[39m[0m
+[  57% ] [90m[1m_update_scan_actions[22m | roach_roach_Fin_Normal.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | roach_roach_Fin_Roughness.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | roach_roach_Skin_BaseColor.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | roach_roach_Skin_Normal.png[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | roach_roach_Skin_Roughness.png[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | rudd.glb[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | rudd_rudd_Fin_BaseColor.png[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | rudd_rudd_Fin_Normal.png[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | rudd_rudd_Fin_Roughness.png[39m[0m
+[  59% ] [90m[1m_update_scan_actions[22m | rudd_rudd_Skin_BaseColor.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | rudd_rudd_Skin_Normal.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | rudd_rudd_Skin_Roughness.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | saddled_seabream.glb[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | saddled_seabream_saddled_seabream_Fin_BaseColor.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | saddled_seabream_saddled_seabream_Fin_Normal.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | saddled_seabream_saddled_seabream_Fin_Roughness.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | saddled_seabream_saddled_seabream_Skin_BaseColor.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | saddled_seabream_saddled_seabream_Skin_Normal.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | saddled_seabream_saddled_seabream_Skin_Roughness.png[39m[0m
+[  61% ] [90m[1m_update_scan_actions[22m | saithe.glb[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | saithe_saithe_Fin_BaseColor.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | saithe_saithe_Fin_Normal.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | saithe_saithe_Fin_Roughness.png[39m[0m
+[  62% ] [90m[1m_update_scan_actions[22m | saithe_saithe_Skin_BaseColor.png[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | saithe_saithe_Skin_Normal.png[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | saithe_saithe_Skin_Roughness.png[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | southern_catfish.glb[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | southern_catfish_southern_catfish_Fin_BaseColor.png[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | southern_catfish_southern_catfish_Fin_Normal.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | southern_catfish_southern_catfish_Fin_Roughness.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | southern_catfish_southern_catfish_Skin_BaseColor.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | southern_catfish_southern_catfish_Skin_Normal.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | southern_catfish_southern_catfish_Skin_Roughness.png[39m[0m
+[  64% ] [90m[1m_update_scan_actions[22m | tench.glb[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | tench_tench_Fin_BaseColor.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | tench_tench_Fin_Normal.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | tench_tench_Fin_Roughness.png[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | tench_tench_Skin_BaseColor.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | tench_tench_Skin_Normal.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | tench_tench_Skin_Roughness.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | white_seabream.glb[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | white_seabream_white_seabream_Fin_BaseColor.png[39m[0m
+[  66% ] [90m[1m_update_scan_actions[22m | white_seabream_white_seabream_Fin_Normal.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | white_seabream_white_seabream_Fin_Roughness.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | white_seabream_white_seabream_Skin_BaseColor.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | white_seabream_white_seabream_Skin_Normal.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | white_seabream_white_seabream_Skin_Roughness.png[39m[0m
+[  67% ] [90m[1m_update_scan_actions[22m | yellowcheek.glb[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | yellowcheek_yellowcheek_Fin_BaseColor.png[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | yellowcheek_yellowcheek_Fin_Normal.png[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | yellowcheek_yellowcheek_Fin_Roughness.png[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | yellowcheek_yellowcheek_Skin_BaseColor.png[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | yellowcheek_yellowcheek_Skin_Normal.png[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | yellowcheek_yellowcheek_Skin_Roughness.png[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | bite.wav[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | cast.wav[39m[0m
+[  69% ] [90m[1m_update_scan_actions[22m | catch.wav[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | escape.wav[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | hook.wav[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | nibble.wav[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | water.wav[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | alligator_gar.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | alligator_gar_thumb.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | annular_seabream.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | annular_seabream_thumb.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | atlantic_cod.png[39m[0m
+[  71% ] [90m[1m_update_scan_actions[22m | atlantic_cod_thumb.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | atlantic_herring.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | atlantic_herring_thumb.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel.png[39m[0m
+[  72% ] [90m[1m_update_scan_actions[22m | atlantic_mackerel_thumb.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | atlantic_wolffish_thumb.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | black_seabream.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | black_seabream_thumb.png[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | bowfin.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | bowfin_thumb.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | channel_catfish.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | channel_catfish_thumb.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon.png[39m[0m
+[  74% ] [90m[1m_update_scan_actions[22m | chinese_sturgeon_thumb.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | chub_mackerel.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | chub_mackerel_thumb.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | common_bream.png[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | common_bream_thumb.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | common_carp.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | common_carp_thumb.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | common_pandora.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | common_pandora_thumb.png[39m[0m
+[  76% ] [90m[1m_update_scan_actions[22m | crucian_carp.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | crucian_carp_thumb.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | european_perch.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | european_perch_thumb.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | european_plaice.png[39m[0m
+[  77% ] [90m[1m_update_scan_actions[22m | european_plaice_thumb.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | european_seabass.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | european_seabass_thumb.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | flathead_catfish.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | flathead_catfish_thumb.png[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | gilthead_seabream.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | gilthead_seabream_thumb.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | haddock.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | haddock_thumb.png[39m[0m
+[  79% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | japanese_horse_mackerel_thumb.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | japanese_seabass.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | japanese_seabass_thumb.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | japanese_whiting.png[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | japanese_whiting_thumb.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | largemouth_bass.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | largemouth_bass_thumb.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | longnose_gar.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | longnose_gar_thumb.png[39m[0m
+[  81% ] [90m[1m_update_scan_actions[22m | longsnout_catfish.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | longsnout_catfish_thumb.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | mandarin_fish.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | mandarin_fish_thumb.png[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | marbled_rockfish.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | marbled_rockfish_thumb.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | northern_pike.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | northern_pike_thumb.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | northern_snakehead.png[39m[0m
+[  83% ] [90m[1m_update_scan_actions[22m | northern_snakehead_thumb.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | olive_flounder.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | olive_flounder_thumb.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | painted_comber.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | painted_comber_thumb.png[39m[0m
+[  84% ] [90m[1m_update_scan_actions[22m | pollack.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | pollack_thumb.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | red_mullet.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | red_mullet_thumb.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | red_seabream.png[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | red_seabream_thumb.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | roach.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | roach_thumb.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | rudd.png[39m[0m
+[  86% ] [90m[1m_update_scan_actions[22m | rudd_thumb.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | saddled_seabream.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | saddled_seabream_thumb.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | saithe.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | saithe_thumb.png[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | southern_catfish.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | southern_catfish_thumb.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | tench.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | tench_thumb.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | white_seabream.png[39m[0m
+[  88% ] [90m[1m_update_scan_actions[22m | white_seabream_thumb.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | yellowcheek.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | yellowcheek_thumb.png[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | NotoSansCJK-Regular.ttc[39m[0m
+[  89% ] [90m[1m_update_scan_actions[22m | bayou.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | bayou_channel.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | bayou_foreground.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | japan.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | japan_foreground.png[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | lake.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | lake_foreground.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | med.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | med_foreground.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | norway.png[39m[0m
+[  91% ] [90m[1m_update_scan_actions[22m | norway_foreground.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | yangtze.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | yangtze_estuary.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | arrow.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | back.png[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | badge.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | bag.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | book.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | coin.png[39m[0m
+[  93% ] [90m[1m_update_scan_actions[22m | compass.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | cut_fish.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | dough.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | dusk.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | grain.png[39m[0m
+[  94% ] [90m[1m_update_scan_actions[22m | heart.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | hook.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | lure.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | pause.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | rain.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | reel.png[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | release.png[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | rod.png[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | rod_heavy.png[39m[0m
+[  96% ] [90m[1m_update_scan_actions[22m | rod_spinning.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | ruler.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | search.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | settings.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | shrimp.png[39m[0m
+[  97% ] [90m[1m_update_scan_actions[22m | sort.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | sound.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | spinner.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | sun.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | sweetcorn.png[39m[0m
+[  98% ] [90m[1m_update_scan_actions[22m | worm.png[39m[0m
+[  99% ] [90m[1m_update_scan_actions[22m | expedition_angler.png[39m[0m
+[  99% ] [90m[1m_update_scan_actions[22m | expedition_rowboat.png[39m[0m
+[  99% ] [90m[1m_update_scan_actions[22m | icon.svg[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (470 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   1% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   2% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   3% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   4% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   5% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   6% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   7% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   8% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   9% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  10% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  11% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  12% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  13% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  14% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  15% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  16% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  17% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  18% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  19% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  21% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  22% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  23% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  24% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  25% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  26% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  27% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  28% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  29% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  30% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  31% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  32% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  33% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  34% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  35% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  36% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  37% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  38% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  39% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  41% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  42% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  43% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  44% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  45% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  46% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  47% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  48% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  49% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  49% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  49% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  49% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  49% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  50% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  51% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  52% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  53% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  54% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  55% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  56% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  57% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  58% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  59% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  61% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  62% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  63% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  64% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  65% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  66% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  67% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  68% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  69% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  70% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  71% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  72% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  73% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  74% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  75% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  76% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  77% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  78% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  79% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  80% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  81% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  82% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  83% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  84% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  85% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  86% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  87% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  88% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  89% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  90% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  91% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  92% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  93% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  94% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  95% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  96% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  96% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  96% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  96% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  97% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  98% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  99% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  99% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  99% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mpreload_reimporting_scene[22m | Started Preparing scenes for reload (1 steps)[39m[0m
+[   0% ] [90m[1mpreload_reimporting_scene[22m | Analyzing scene [empty][39m[0m
+[  50% ] [90m[1mpreload_reimporting_scene[22m | Preparation done.[39m[0m
+[92m[ DONE ][39m [1mpreload_reimporting_scene[22m
+[0m
+[   0% ] [90m[1mreimport[22m | NotoSansCJK-Regular.ttc[39m[0m
+[   0% ] [90m[1mreimport[22m | NotoSansCJK-Regular.ttc[39m[0m
+[   0% ] [90m[1mreimport[22m | yellowcheek_yellowcheek_Fin_BaseColor.png[39m[0m
+[   0% ] [90m[1mreimport[22m | white_seabream_white_seabream_Skin_Roughness.png[39m[0m
+[   0% ] [90m[1mreimport[22m | white_seabream_white_seabream_Skin_Normal.png[39m[0m
+[   1% ] [90m[1mreimport[22m | white_seabream_white_seabream_Skin_BaseColor.png[39m[0m
+[   1% ] [90m[1mreimport[22m | white_seabream_white_seabream_Fin_Roughness.png[39m[0m
+[   1% ] [90m[1mreimport[22m | white_seabream_white_seabream_Fin_Normal.png[39m[0m
+[   1% ] [90m[1mreimport[22m | white_seabream_white_seabream_Fin_BaseColor.png[39m[0m
+[   1% ] [90m[1mreimport[22m | tench_tench_Skin_Roughness.png[39m[0m
+[   2% ] [90m[1mreimport[22m | tench_tench_Skin_Normal.png[39m[0m
+[   2% ] [90m[1mreimport[22m | tench_tench_Skin_BaseColor.png[39m[0m
+[   2% ] [90m[1mreimport[22m | tench_tench_Fin_Roughness.png[39m[0m
+[   2% ] [90m[1mreimport[22m | tench_tench_Fin_Normal.png[39m[0m
+[   2% ] [90m[1mreimport[22m | tench_tench_Fin_BaseColor.png[39m[0m
+[   3% ] [90m[1mreimport[22m | southern_catfish_southern_catfish_Skin_Roughness.png[39m[0m
+[   3% ] [90m[1mreimport[22m | southern_catfish_southern_catfish_Skin_Normal.png[39m[0m
+[   3% ] [90m[1mreimport[22m | southern_catfish_southern_catfish_Skin_BaseColor.png[39m[0m
+[   3% ] [90m[1mreimport[22m | southern_catfish_southern_catfish_Fin_Roughness.png[39m[0m
+[   4% ] [90m[1mreimport[22m | southern_catfish_southern_catfish_Fin_Normal.png[39m[0m
+[   4% ] [90m[1mreimport[22m | southern_catfish_southern_catfish_Fin_BaseColor.png[39m[0m
+[   4% ] [90m[1mreimport[22m | saithe_saithe_Skin_Roughness.png[39m[0m
+[   4% ] [90m[1mreimport[22m | saithe_saithe_Skin_Normal.png[39m[0m
+[   4% ] [90m[1mreimport[22m | saithe_saithe_Skin_BaseColor.png[39m[0m
+[   5% ] [90m[1mreimport[22m | saithe_saithe_Fin_Roughness.png[39m[0m
+[   5% ] [90m[1mreimport[22m | saithe_saithe_Fin_Normal.png[39m[0m
+[   5% ] [90m[1mreimport[22m | saithe_saithe_Fin_BaseColor.png[39m[0m
+[   5% ] [90m[1mreimport[22m | saddled_seabream_saddled_seabream_Skin_Roughness.png[39m[0m
+[   5% ] [90m[1mreimport[22m | saddled_seabream_saddled_seabream_Skin_Normal.png[39m[0m
+[   6% ] [90m[1mreimport[22m | common_bream.png[39m[0m
+[   6% ] [90m[1mreimport[22m | chub_mackerel_thumb.png[39m[0m
+[   6% ] [90m[1mreimport[22m | chub_mackerel.png[39m[0m
+[   6% ] [90m[1mreimport[22m | chinese_sturgeon_thumb.png[39m[0m
+[   7% ] [90m[1mreimport[22m | chinese_sturgeon.png[39m[0m
+[   7% ] [90m[1mreimport[22m | channel_catfish_thumb.png[39m[0m
+[   7% ] [90m[1mreimport[22m | channel_catfish.png[39m[0m
+[   7% ] [90m[1mreimport[22m | bowfin_thumb.png[39m[0m
+[   7% ] [90m[1mreimport[22m | bowfin.png[39m[0m
+[   8% ] [90m[1mreimport[22m | black_seabream_thumb.png[39m[0m
+[   8% ] [90m[1mreimport[22m | black_seabream.png[39m[0m
+[   8% ] [90m[1mreimport[22m | atlantic_wolffish_thumb.png[39m[0m
+[   8% ] [90m[1mreimport[22m | atlantic_wolffish.png[39m[0m
+[   8% ] [90m[1mreimport[22m | atlantic_mackerel_thumb.png[39m[0m
+[   9% ] [90m[1mreimport[22m | atlantic_mackerel.png[39m[0m
+[   9% ] [90m[1mreimport[22m | atlantic_herring_thumb.png[39m[0m
+[   9% ] [90m[1mreimport[22m | atlantic_herring.png[39m[0m
+[   9% ] [90m[1mreimport[22m | atlantic_cod_thumb.png[39m[0m
+[   9% ] [90m[1mreimport[22m | atlantic_cod.png[39m[0m
+[  10% ] [90m[1mreimport[22m | annular_seabream_thumb.png[39m[0m
+[  10% ] [90m[1mreimport[22m | annular_seabream.png[39m[0m
+[  10% ] [90m[1mreimport[22m | alligator_gar_thumb.png[39m[0m
+[  10% ] [90m[1mreimport[22m | alligator_gar.png[39m[0m
+[  11% ] [90m[1mreimport[22m | yellowcheek_yellowcheek_Skin_Roughness.png[39m[0m
+[  11% ] [90m[1mreimport[22m | yellowcheek_yellowcheek_Skin_Normal.png[39m[0m
+[  11% ] [90m[1mreimport[22m | yellowcheek_yellowcheek_Skin_BaseColor.png[39m[0m
+[  11% ] [90m[1mreimport[22m | yellowcheek_yellowcheek_Fin_Roughness.png[39m[0m
+[  11% ] [90m[1mreimport[22m | yellowcheek_yellowcheek_Fin_Normal.png[39m[0m
+[  12% ] [90m[1mreimport[22m | pollack_pollack_Skin_Roughness.png[39m[0m
+[  12% ] [90m[1mreimport[22m | pollack_pollack_Skin_Normal.png[39m[0m
+[  12% ] [90m[1mreimport[22m | pollack_pollack_Skin_BaseColor.png[39m[0m
+[  12% ] [90m[1mreimport[22m | pollack_pollack_Fin_Roughness.png[39m[0m
+[  12% ] [90m[1mreimport[22m | pollack_pollack_Fin_Normal.png[39m[0m
+[  13% ] [90m[1mreimport[22m | pollack_pollack_Fin_BaseColor.png[39m[0m
+[  13% ] [90m[1mreimport[22m | painted_comber_painted_comber_Skin_Roughness.png[39m[0m
+[  13% ] [90m[1mreimport[22m | painted_comber_painted_comber_Skin_Normal.png[39m[0m
+[  13% ] [90m[1mreimport[22m | painted_comber_painted_comber_Skin_BaseColor.png[39m[0m
+[  14% ] [90m[1mreimport[22m | painted_comber_painted_comber_Fin_Roughness.png[39m[0m
+[  14% ] [90m[1mreimport[22m | painted_comber_painted_comber_Fin_Normal.png[39m[0m
+[  14% ] [90m[1mreimport[22m | painted_comber_painted_comber_Fin_BaseColor.png[39m[0m
+[  14% ] [90m[1mreimport[22m | olive_flounder_olive_flounder_Skin_Roughness.png[39m[0m
+[  14% ] [90m[1mreimport[22m | olive_flounder_olive_flounder_Skin_Normal.png[39m[0m
+[  15% ] [90m[1mreimport[22m | olive_flounder_olive_flounder_Skin_BaseColor.png[39m[0m
+[  15% ] [90m[1mreimport[22m | olive_flounder_olive_flounder_Fin_Roughness.png[39m[0m
+[  15% ] [90m[1mreimport[22m | olive_flounder_olive_flounder_Fin_Normal.png[39m[0m
+[  15% ] [90m[1mreimport[22m | olive_flounder_olive_flounder_Fin_BaseColor.png[39m[0m
+[  15% ] [90m[1mreimport[22m | northern_snakehead_northern_snakehead_Skin_Roughness.png[39m[0m
+[  16% ] [90m[1mreimport[22m | northern_snakehead_northern_snakehead_Skin_Normal.png[39m[0m
+[  16% ] [90m[1mreimport[22m | northern_snakehead_northern_snakehead_Skin_BaseColor.png[39m[0m
+[  16% ] [90m[1mreimport[22m | northern_snakehead_northern_snakehead_Fin_Roughness.png[39m[0m
+[  16% ] [90m[1mreimport[22m | northern_snakehead_northern_snakehead_Fin_Normal.png[39m[0m
+[  16% ] [90m[1mreimport[22m | northern_snakehead_northern_snakehead_Fin_BaseColor.png[39m[0m
+[  17% ] [90m[1mreimport[22m | northern_pike_northern_pike_Skin_Roughness.png[39m[0m
+[  17% ] [90m[1mreimport[22m | northern_pike_northern_pike_Skin_Normal.png[39m[0m
+[  17% ] [90m[1mreimport[22m | northern_pike_northern_pike_Skin_BaseColor.png[39m[0m
+[  17% ] [90m[1mreimport[22m | northern_pike_northern_pike_Fin_Roughness.png[39m[0m
+[  18% ] [90m[1mreimport[22m | saddled_seabream_saddled_seabream_Skin_BaseColor.png[39m[0m
+[  18% ] [90m[1mreimport[22m | saddled_seabream_saddled_seabream_Fin_Roughness.png[39m[0m
+[  18% ] [90m[1mreimport[22m | saddled_seabream_saddled_seabream_Fin_Normal.png[39m[0m
+[  18% ] [90m[1mreimport[22m | saddled_seabream_saddled_seabream_Fin_BaseColor.png[39m[0m
+[  18% ] [90m[1mreimport[22m | rudd_rudd_Skin_Roughness.png[39m[0m
+[  19% ] [90m[1mreimport[22m | rudd_rudd_Skin_Normal.png[39m[0m
+[  19% ] [90m[1mreimport[22m | rudd_rudd_Skin_BaseColor.png[39m[0m
+[  19% ] [90m[1mreimport[22m | rudd_rudd_Fin_Roughness.png[39m[0m
+[  19% ] [90m[1mreimport[22m | rudd_rudd_Fin_Normal.png[39m[0m
+[  19% ] [90m[1mreimport[22m | rudd_rudd_Fin_BaseColor.png[39m[0m
+[  20% ] [90m[1mreimport[22m | roach_roach_Skin_Roughness.png[39m[0m
+[  20% ] [90m[1mreimport[22m | roach_roach_Skin_Normal.png[39m[0m
+[  20% ] [90m[1mreimport[22m | roach_roach_Skin_BaseColor.png[39m[0m
+[  20% ] [90m[1mreimport[22m | roach_roach_Fin_Roughness.png[39m[0m
+[  21% ] [90m[1mreimport[22m | roach_roach_Fin_Normal.png[39m[0m
+[  21% ] [90m[1mreimport[22m | roach_roach_Fin_BaseColor.png[39m[0m
+[  21% ] [90m[1mreimport[22m | red_seabream_red_seabream_Skin_Roughness.png[39m[0m
+[  21% ] [90m[1mreimport[22m | red_seabream_red_seabream_Skin_Normal.png[39m[0m
+[  21% ] [90m[1mreimport[22m | red_seabream_red_seabream_Skin_BaseColor.png[39m[0m
+[  22% ] [90m[1mreimport[22m | red_seabream_red_seabream_Fin_Roughness.png[39m[0m
+[  22% ] [90m[1mreimport[22m | red_seabream_red_seabream_Fin_Normal.png[39m[0m
+[  22% ] [90m[1mreimport[22m | red_seabream_red_seabream_Fin_BaseColor.png[39m[0m
+[  22% ] [90m[1mreimport[22m | red_mullet_red_mullet_Skin_Roughness.png[39m[0m
+[  22% ] [90m[1mreimport[22m | red_mullet_red_mullet_Skin_Normal.png[39m[0m
+[  23% ] [90m[1mreimport[22m | red_mullet_red_mullet_Skin_BaseColor.png[39m[0m
+[  23% ] [90m[1mreimport[22m | red_mullet_red_mullet_Fin_Roughness.png[39m[0m
+[  23% ] [90m[1mreimport[22m | red_mullet_red_mullet_Fin_Normal.png[39m[0m
+[  23% ] [90m[1mreimport[22m | red_mullet_red_mullet_Fin_BaseColor.png[39m[0m
+[  23% ] [90m[1mreimport[22m | coin.png[39m[0m
+[  24% ] [90m[1mreimport[22m | book.png[39m[0m
+[  24% ] [90m[1mreimport[22m | bag.png[39m[0m
+[  24% ] [90m[1mreimport[22m | badge.png[39m[0m
+[  24% ] [90m[1mreimport[22m | back.png[39m[0m
+[  25% ] [90m[1mreimport[22m | arrow.png[39m[0m
+[  25% ] [90m[1mreimport[22m | yangtze_estuary.png[39m[0m
+[  25% ] [90m[1mreimport[22m | yangtze.png[39m[0m
+[  25% ] [90m[1mreimport[22m | norway_foreground.png[39m[0m
+[  25% ] [90m[1mreimport[22m | norway.png[39m[0m
+[  26% ] [90m[1mreimport[22m | med_foreground.png[39m[0m
+[  26% ] [90m[1mreimport[22m | med.png[39m[0m
+[  26% ] [90m[1mreimport[22m | lake_foreground.png[39m[0m
+[  26% ] [90m[1mreimport[22m | lake.png[39m[0m
+[  26% ] [90m[1mreimport[22m | japan_foreground.png[39m[0m
+[  27% ] [90m[1mreimport[22m | japan.png[39m[0m
+[  27% ] [90m[1mreimport[22m | bayou_foreground.png[39m[0m
+[  27% ] [90m[1mreimport[22m | bayou_channel.png[39m[0m
+[  27% ] [90m[1mreimport[22m | bayou.png[39m[0m
+[  28% ] [90m[1mreimport[22m | yellowcheek_thumb.png[39m[0m
+[  28% ] [90m[1mreimport[22m | yellowcheek.png[39m[0m
+[  28% ] [90m[1mreimport[22m | white_seabream_thumb.png[39m[0m
+[  28% ] [90m[1mreimport[22m | white_seabream.png[39m[0m
+[  28% ] [90m[1mreimport[22m | tench_thumb.png[39m[0m
+[  29% ] [90m[1mreimport[22m | tench.png[39m[0m
+[  29% ] [90m[1mreimport[22m | southern_catfish_thumb.png[39m[0m
+[  29% ] [90m[1mreimport[22m | southern_catfish.png[39m[0m
+[  29% ] [90m[1mreimport[22m | saithe_thumb.png[39m[0m
+[  29% ] [90m[1mreimport[22m | icon.svg[39m[0m
+[  30% ] [90m[1mreimport[22m | expedition_rowboat.png[39m[0m
+[  30% ] [90m[1mreimport[22m | expedition_angler.png[39m[0m
+[  30% ] [90m[1mreimport[22m | worm.png[39m[0m
+[  30% ] [90m[1mreimport[22m | sweetcorn.png[39m[0m
+[  30% ] [90m[1mreimport[22m | sun.png[39m[0m
+[  31% ] [90m[1mreimport[22m | spinner.png[39m[0m
+[  31% ] [90m[1mreimport[22m | sound.png[39m[0m
+[  31% ] [90m[1mreimport[22m | sort.png[39m[0m
+[  31% ] [90m[1mreimport[22m | shrimp.png[39m[0m
+[  32% ] [90m[1mreimport[22m | settings.png[39m[0m
+[  32% ] [90m[1mreimport[22m | search.png[39m[0m
+[  32% ] [90m[1mreimport[22m | ruler.png[39m[0m
+[  32% ] [90m[1mreimport[22m | rod_spinning.png[39m[0m
+[  32% ] [90m[1mreimport[22m | rod_heavy.png[39m[0m
+[  33% ] [90m[1mreimport[22m | rod.png[39m[0m
+[  33% ] [90m[1mreimport[22m | release.png[39m[0m
+[  33% ] [90m[1mreimport[22m | reel.png[39m[0m
+[  33% ] [90m[1mreimport[22m | rain.png[39m[0m
+[  33% ] [90m[1mreimport[22m | pause.png[39m[0m
+[  34% ] [90m[1mreimport[22m | lure.png[39m[0m
+[  34% ] [90m[1mreimport[22m | hook.png[39m[0m
+[  34% ] [90m[1mreimport[22m | heart.png[39m[0m
+[  34% ] [90m[1mreimport[22m | grain.png[39m[0m
+[  35% ] [90m[1mreimport[22m | dusk.png[39m[0m
+[  35% ] [90m[1mreimport[22m | dough.png[39m[0m
+[  35% ] [90m[1mreimport[22m | cut_fish.png[39m[0m
+[  35% ] [90m[1mreimport[22m | compass.png[39m[0m
+[  35% ] [90m[1mreimport[22m | longnose_gar.png[39m[0m
+[  36% ] [90m[1mreimport[22m | largemouth_bass_thumb.png[39m[0m
+[  36% ] [90m[1mreimport[22m | largemouth_bass.png[39m[0m
+[  36% ] [90m[1mreimport[22m | japanese_whiting_thumb.png[39m[0m
+[  36% ] [90m[1mreimport[22m | japanese_whiting.png[39m[0m
+[  36% ] [90m[1mreimport[22m | japanese_seabass_thumb.png[39m[0m
+[  37% ] [90m[1mreimport[22m | japanese_seabass.png[39m[0m
+[  37% ] [90m[1mreimport[22m | japanese_horse_mackerel_thumb.png[39m[0m
+[  37% ] [90m[1mreimport[22m | japanese_horse_mackerel.png[39m[0m
+[  37% ] [90m[1mreimport[22m | haddock_thumb.png[39m[0m
+[  38% ] [90m[1mreimport[22m | haddock.png[39m[0m
+[  38% ] [90m[1mreimport[22m | gilthead_seabream_thumb.png[39m[0m
+[  38% ] [90m[1mreimport[22m | gilthead_seabream.png[39m[0m
+[  38% ] [90m[1mreimport[22m | flathead_catfish_thumb.png[39m[0m
+[  38% ] [90m[1mreimport[22m | flathead_catfish.png[39m[0m
+[  39% ] [90m[1mreimport[22m | european_seabass_thumb.png[39m[0m
+[  39% ] [90m[1mreimport[22m | european_seabass.png[39m[0m
+[  39% ] [90m[1mreimport[22m | european_plaice_thumb.png[39m[0m
+[  39% ] [90m[1mreimport[22m | european_plaice.png[39m[0m
+[  39% ] [90m[1mreimport[22m | european_perch_thumb.png[39m[0m
+[  40% ] [90m[1mreimport[22m | european_perch.png[39m[0m
+[  40% ] [90m[1mreimport[22m | crucian_carp_thumb.png[39m[0m
+[  40% ] [90m[1mreimport[22m | crucian_carp.png[39m[0m
+[  40% ] [90m[1mreimport[22m | common_pandora_thumb.png[39m[0m
+[  40% ] [90m[1mreimport[22m | common_pandora.png[39m[0m
+[  41% ] [90m[1mreimport[22m | common_carp_thumb.png[39m[0m
+[  41% ] [90m[1mreimport[22m | common_carp.png[39m[0m
+[  41% ] [90m[1mreimport[22m | common_bream_thumb.png[39m[0m
+[  41% ] [90m[1mreimport[22m | saithe.png[39m[0m
+[  42% ] [90m[1mreimport[22m | saddled_seabream_thumb.png[39m[0m
+[  42% ] [90m[1mreimport[22m | saddled_seabream.png[39m[0m
+[  42% ] [90m[1mreimport[22m | rudd_thumb.png[39m[0m
+[  42% ] [90m[1mreimport[22m | rudd.png[39m[0m
+[  42% ] [90m[1mreimport[22m | roach_thumb.png[39m[0m
+[  43% ] [90m[1mreimport[22m | roach.png[39m[0m
+[  43% ] [90m[1mreimport[22m | red_seabream_thumb.png[39m[0m
+[  43% ] [90m[1mreimport[22m | red_seabream.png[39m[0m
+[  43% ] [90m[1mreimport[22m | red_mullet_thumb.png[39m[0m
+[  43% ] [90m[1mreimport[22m | red_mullet.png[39m[0m
+[  44% ] [90m[1mreimport[22m | pollack_thumb.png[39m[0m
+[  44% ] [90m[1mreimport[22m | pollack.png[39m[0m
+[  44% ] [90m[1mreimport[22m | painted_comber_thumb.png[39m[0m
+[  44% ] [90m[1mreimport[22m | painted_comber.png[39m[0m
+[  45% ] [90m[1mreimport[22m | olive_flounder_thumb.png[39m[0m
+[  45% ] [90m[1mreimport[22m | olive_flounder.png[39m[0m
+[  45% ] [90m[1mreimport[22m | northern_snakehead_thumb.png[39m[0m
+[  45% ] [90m[1mreimport[22m | northern_snakehead.png[39m[0m
+[  45% ] [90m[1mreimport[22m | northern_pike_thumb.png[39m[0m
+[  46% ] [90m[1mreimport[22m | northern_pike.png[39m[0m
+[  46% ] [90m[1mreimport[22m | marbled_rockfish_thumb.png[39m[0m
+[  46% ] [90m[1mreimport[22m | marbled_rockfish.png[39m[0m
+[  46% ] [90m[1mreimport[22m | mandarin_fish_thumb.png[39m[0m
+[  46% ] [90m[1mreimport[22m | mandarin_fish.png[39m[0m
+[  47% ] [90m[1mreimport[22m | longsnout_catfish_thumb.png[39m[0m
+[  47% ] [90m[1mreimport[22m | longsnout_catfish.png[39m[0m
+[  47% ] [90m[1mreimport[22m | longnose_gar_thumb.png[39m[0m
+[  47% ] [90m[1mreimport[22m | common_carp_common_carp_fin_normal.png[39m[0m
+[  47% ] [90m[1mreimport[22m | common_carp_common_carp_fin_basecolor.png[39m[0m
+[  48% ] [90m[1mreimport[22m | common_bream_common_bream_Skin_Roughness.png[39m[0m
+[  48% ] [90m[1mreimport[22m | common_bream_common_bream_Skin_Normal.png[39m[0m
+[  48% ] [90m[1mreimport[22m | common_bream_common_bream_Skin_BaseColor.png[39m[0m
+[  48% ] [90m[1mreimport[22m | common_bream_common_bream_Fin_Roughness.png[39m[0m
+[  49% ] [90m[1mreimport[22m | common_bream_common_bream_Fin_Normal.png[39m[0m
+[  49% ] [90m[1mreimport[22m | common_bream_common_bream_Fin_BaseColor.png[39m[0m
+[  49% ] [90m[1mreimport[22m | chub_mackerel_chub_mackerel_Skin_Roughness.png[39m[0m
+[  49% ] [90m[1mreimport[22m | chub_mackerel_chub_mackerel_Skin_Normal.png[39m[0m
+[  49% ] [90m[1mreimport[22m | chub_mackerel_chub_mackerel_Skin_BaseColor.png[39m[0m
+[  50% ] [90m[1mreimport[22m | chub_mackerel_chub_mackerel_Fin_Roughness.png[39m[0m
+[  50% ] [90m[1mreimport[22m | chub_mackerel_chub_mackerel_Fin_Normal.png[39m[0m
+[  50% ] [90m[1mreimport[22m | chub_mackerel_chub_mackerel_Fin_BaseColor.png[39m[0m
+[  50% ] [90m[1mreimport[22m | chinese_sturgeon_chinese_sturgeon_Skin_Roughness.png[39m[0m
+[  50% ] [90m[1mreimport[22m | chinese_sturgeon_chinese_sturgeon_Skin_Normal.png[39m[0m
+[  51% ] [90m[1mreimport[22m | chinese_sturgeon_chinese_sturgeon_Skin_BaseColor.png[39m[0m
+[  51% ] [90m[1mreimport[22m | chinese_sturgeon_chinese_sturgeon_Fin_Roughness.png[39m[0m
+[  51% ] [90m[1mreimport[22m | chinese_sturgeon_chinese_sturgeon_Fin_Normal.png[39m[0m
+[  51% ] [90m[1mreimport[22m | chinese_sturgeon_chinese_sturgeon_Fin_BaseColor.png[39m[0m
+[  52% ] [90m[1mreimport[22m | channel_catfish_channel_catfish_Skin_Roughness.png[39m[0m
+[  52% ] [90m[1mreimport[22m | channel_catfish_channel_catfish_Skin_Normal.png[39m[0m
+[  52% ] [90m[1mreimport[22m | channel_catfish_channel_catfish_Skin_BaseColor.png[39m[0m
+[  52% ] [90m[1mreimport[22m | channel_catfish_channel_catfish_Fin_Roughness.png[39m[0m
+[  52% ] [90m[1mreimport[22m | channel_catfish_channel_catfish_Fin_Normal.png[39m[0m
+[  53% ] [90m[1mreimport[22m | channel_catfish_channel_catfish_Fin_BaseColor.png[39m[0m
+[  53% ] [90m[1mreimport[22m | bowfin_bowfin_Skin_Roughness.png[39m[0m
+[  53% ] [90m[1mreimport[22m | european_plaice_european_plaice_Skin_BaseColor.png[39m[0m
+[  53% ] [90m[1mreimport[22m | european_plaice_european_plaice_Fin_Roughness.png[39m[0m
+[  53% ] [90m[1mreimport[22m | european_plaice_european_plaice_Fin_Normal.png[39m[0m
+[  54% ] [90m[1mreimport[22m | european_plaice_european_plaice_Fin_BaseColor.png[39m[0m
+[  54% ] [90m[1mreimport[22m | european_perch_PerchDorsalPosteriorMark.png[39m[0m
+[  54% ] [90m[1mreimport[22m | european_perch_european_perch_Skin_Roughness.png[39m[0m
+[  54% ] [90m[1mreimport[22m | european_perch_european_perch_Skin_Normal.png[39m[0m
+[  54% ] [90m[1mreimport[22m | european_perch_european_perch_Skin_BaseColor.png[39m[0m
+[  55% ] [90m[1mreimport[22m | european_perch_european_perch_Fin_Roughness.png[39m[0m
+[  55% ] [90m[1mreimport[22m | european_perch_european_perch_Fin_Normal.png[39m[0m
+[  55% ] [90m[1mreimport[22m | european_perch_european_perch_Fin_BaseColor.png[39m[0m
+[  55% ] [90m[1mreimport[22m | crucian_carp_crucian_carp_Skin_Roughness.png[39m[0m
+[  56% ] [90m[1mreimport[22m | crucian_carp_crucian_carp_Skin_Normal.png[39m[0m
+[  56% ] [90m[1mreimport[22m | crucian_carp_crucian_carp_Skin_BaseColor.png[39m[0m
+[  56% ] [90m[1mreimport[22m | crucian_carp_crucian_carp_Fin_Roughness.png[39m[0m
+[  56% ] [90m[1mreimport[22m | crucian_carp_crucian_carp_Fin_Normal.png[39m[0m
+[  56% ] [90m[1mreimport[22m | crucian_carp_crucian_carp_Fin_BaseColor.png[39m[0m
+[  57% ] [90m[1mreimport[22m | common_pandora_common_pandora_Skin_Roughness.png[39m[0m
+[  57% ] [90m[1mreimport[22m | common_pandora_common_pandora_Skin_Normal.png[39m[0m
+[  57% ] [90m[1mreimport[22m | common_pandora_common_pandora_Skin_BaseColor.png[39m[0m
+[  57% ] [90m[1mreimport[22m | common_pandora_common_pandora_Fin_Roughness.png[39m[0m
+[  57% ] [90m[1mreimport[22m | common_pandora_common_pandora_Fin_Normal.png[39m[0m
+[  58% ] [90m[1mreimport[22m | common_pandora_common_pandora_Fin_BaseColor.png[39m[0m
+[  58% ] [90m[1mreimport[22m | common_carp_common_carp_skin_roughness.png[39m[0m
+[  58% ] [90m[1mreimport[22m | common_carp_common_carp_skin_normal.png[39m[0m
+[  58% ] [90m[1mreimport[22m | common_carp_common_carp_skin_basecolor.png[39m[0m
+[  59% ] [90m[1mreimport[22m | common_carp_common_carp_fin_roughness.png[39m[0m
+[  59% ] [90m[1mreimport[22m | atlantic_herring_atlantic_herring_Fin_Normal.png[39m[0m
+[  59% ] [90m[1mreimport[22m | atlantic_herring_atlantic_herring_Fin_BaseColor.png[39m[0m
+[  59% ] [90m[1mreimport[22m | atlantic_cod_atlantic_cod_Skin_Roughness.png[39m[0m
+[  59% ] [90m[1mreimport[22m | atlantic_cod_atlantic_cod_Skin_Normal.png[39m[0m
+[  60% ] [90m[1mreimport[22m | atlantic_cod_atlantic_cod_Skin_BaseColor.png[39m[0m
+[  60% ] [90m[1mreimport[22m | atlantic_cod_atlantic_cod_Fin_Roughness.png[39m[0m
+[  60% ] [90m[1mreimport[22m | atlantic_cod_atlantic_cod_Fin_Normal.png[39m[0m
+[  60% ] [90m[1mreimport[22m | atlantic_cod_atlantic_cod_Fin_BaseColor.png[39m[0m
+[  60% ] [90m[1mreimport[22m | annular_seabream_annular_seabream_Skin_Roughness.png[39m[0m
+[  61% ] [90m[1mreimport[22m | annular_seabream_annular_seabream_Skin_Normal.png[39m[0m
+[  61% ] [90m[1mreimport[22m | annular_seabream_annular_seabream_Skin_BaseColor.png[39m[0m
+[  61% ] [90m[1mreimport[22m | annular_seabream_annular_seabream_Fin_Roughness.png[39m[0m
+[  61% ] [90m[1mreimport[22m | annular_seabream_annular_seabream_Fin_Normal.png[39m[0m
+[  61% ] [90m[1mreimport[22m | annular_seabream_annular_seabream_Fin_BaseColor.png[39m[0m
+[  62% ] [90m[1mreimport[22m | alligator_gar_alligator_gar_skin_roughness.png[39m[0m
+[  62% ] [90m[1mreimport[22m | alligator_gar_alligator_gar_skin_normal.png[39m[0m
+[  62% ] [90m[1mreimport[22m | alligator_gar_alligator_gar_skin_basecolor.png[39m[0m
+[  62% ] [90m[1mreimport[22m | alligator_gar_alligator_gar_fin_roughness.png[39m[0m
+WARNING: Ignoring unsupported header information in HDR: EXPOSURE=1.
+     at: load_image (modules/hdr/image_loader_hdr.cpp:47)
+WARNING: Ignoring unsupported header information in HDR: GAMMA=1.
+     at: load_image (modules/hdr/image_loader_hdr.cpp:47)
+WARNING: Ignoring unsupported header information in HDR: PRIMARIES=0 0 0 0 0 0 0 0.
+     at: load_image (modules/hdr/image_loader_hdr.cpp:47)
+[  63% ] [90m[1mreimport[22m | alligator_gar_alligator_gar_fin_normal.png[39m[0m
+[  63% ] [90m[1mreimport[22m | alligator_gar_alligator_gar_fin_basecolor.png[39m[0m
+[  63% ] [90m[1mreimport[22m | rock_face_03_rough_2k.png[39m[0m
+[  63% ] [90m[1mreimport[22m | rock_face_03_nor_gl_2k.png[39m[0m
+[  63% ] [90m[1mreimport[22m | rock_face_03_diff_2k.png[39m[0m
+[  64% ] [90m[1mreimport[22m | cloud_layers_2k.hdr[39m[0m
+[  64% ] [90m[1mreimport[22m | brown_planks_03_rough_2k.png[39m[0m
+[  64% ] [90m[1mreimport[22m | brown_planks_03_nor_gl_2k.png[39m[0m
+[  64% ] [90m[1mreimport[22m | brown_planks_03_diff_2k.png[39m[0m
+[  64% ] [90m[1mreimport[22m | bowfin_bowfin_Skin_Normal.png[39m[0m
+[  65% ] [90m[1mreimport[22m | bowfin_bowfin_Skin_BaseColor.png[39m[0m
+[  65% ] [90m[1mreimport[22m | bowfin_bowfin_Fin_Roughness.png[39m[0m
+[  65% ] [90m[1mreimport[22m | bowfin_bowfin_Fin_Normal.png[39m[0m
+[  65% ] [90m[1mreimport[22m | bowfin_bowfin_Fin_BaseColor.png[39m[0m
+[  66% ] [90m[1mreimport[22m | black_seabream_black_seabream_Skin_Roughness.png[39m[0m
+[  66% ] [90m[1mreimport[22m | black_seabream_black_seabream_Skin_Normal.png[39m[0m
+[  66% ] [90m[1mreimport[22m | black_seabream_black_seabream_Skin_BaseColor.png[39m[0m
+[  66% ] [90m[1mreimport[22m | black_seabream_black_seabream_Fin_Roughness.png[39m[0m
+[  66% ] [90m[1mreimport[22m | black_seabream_black_seabream_Fin_Normal.png[39m[0m
+[  67% ] [90m[1mreimport[22m | black_seabream_black_seabream_Fin_BaseColor.png[39m[0m
+[  67% ] [90m[1mreimport[22m | atlantic_wolffish_atlantic_wolffish_Skin_Roughness.png[39m[0m
+[  67% ] [90m[1mreimport[22m | atlantic_wolffish_atlantic_wolffish_Skin_Normal.png[39m[0m
+[  67% ] [90m[1mreimport[22m | atlantic_wolffish_atlantic_wolffish_Skin_BaseColor.png[39m[0m
+[  67% ] [90m[1mreimport[22m | atlantic_wolffish_atlantic_wolffish_Fin_Roughness.png[39m[0m
+[  68% ] [90m[1mreimport[22m | atlantic_wolffish_atlantic_wolffish_Fin_Normal.png[39m[0m
+[  68% ] [90m[1mreimport[22m | atlantic_wolffish_atlantic_wolffish_Fin_BaseColor.png[39m[0m
+[  68% ] [90m[1mreimport[22m | atlantic_mackerel_atlantic_mackerel_Skin_Roughness.png[39m[0m
+[  68% ] [90m[1mreimport[22m | atlantic_mackerel_atlantic_mackerel_Skin_Normal.png[39m[0m
+[  69% ] [90m[1mreimport[22m | atlantic_mackerel_atlantic_mackerel_Skin_BaseColor.png[39m[0m
+[  69% ] [90m[1mreimport[22m | atlantic_mackerel_atlantic_mackerel_Fin_Roughness.png[39m[0m
+[  69% ] [90m[1mreimport[22m | atlantic_mackerel_atlantic_mackerel_Fin_Normal.png[39m[0m
+[  69% ] [90m[1mreimport[22m | atlantic_mackerel_atlantic_mackerel_Fin_BaseColor.png[39m[0m
+[  69% ] [90m[1mreimport[22m | atlantic_herring_atlantic_herring_Skin_Roughness.png[39m[0m
+[  70% ] [90m[1mreimport[22m | atlantic_herring_atlantic_herring_Skin_Normal.png[39m[0m
+[  70% ] [90m[1mreimport[22m | atlantic_herring_atlantic_herring_Skin_BaseColor.png[39m[0m
+[  70% ] [90m[1mreimport[22m | atlantic_herring_atlantic_herring_Fin_Roughness.png[39m[0m
+[  70% ] [90m[1mreimport[22m | longnose_gar_longnose_gar_Fin_BaseColor.png[39m[0m
+[  70% ] [90m[1mreimport[22m | largemouth_bass_largemouth_bass_Skin_Roughness.png[39m[0m
+[  71% ] [90m[1mreimport[22m | largemouth_bass_largemouth_bass_Skin_Normal.png[39m[0m
+[  71% ] [90m[1mreimport[22m | largemouth_bass_largemouth_bass_Skin_BaseColor.png[39m[0m
+[  71% ] [90m[1mreimport[22m | largemouth_bass_largemouth_bass_Fin_Roughness.png[39m[0m
+[  71% ] [90m[1mreimport[22m | largemouth_bass_largemouth_bass_Fin_Normal.png[39m[0m
+[  71% ] [90m[1mreimport[22m | largemouth_bass_largemouth_bass_Fin_BaseColor.png[39m[0m
+[  72% ] [90m[1mreimport[22m | japanese_whiting_japanese_whiting_Skin_Roughness.png[39m[0m
+[  72% ] [90m[1mreimport[22m | japanese_whiting_japanese_whiting_Skin_Normal.png[39m[0m
+[  72% ] [90m[1mreimport[22m | japanese_whiting_japanese_whiting_Skin_BaseColor.png[39m[0m
+[  72% ] [90m[1mreimport[22m | japanese_whiting_japanese_whiting_Fin_Roughness.png[39m[0m
+[  73% ] [90m[1mreimport[22m | japanese_whiting_japanese_whiting_Fin_Normal.png[39m[0m
+[  73% ] [90m[1mreimport[22m | japanese_whiting_japanese_whiting_Fin_BaseColor.png[39m[0m
+[  73% ] [90m[1mreimport[22m | japanese_seabass_japanese_seabass_Skin_Roughness.png[39m[0m
+[  73% ] [90m[1mreimport[22m | japanese_seabass_japanese_seabass_Skin_Normal.png[39m[0m
+[  73% ] [90m[1mreimport[22m | japanese_seabass_japanese_seabass_Skin_BaseColor.png[39m[0m
+[  74% ] [90m[1mreimport[22m | japanese_seabass_japanese_seabass_Fin_Roughness.png[39m[0m
+[  74% ] [90m[1mreimport[22m | japanese_seabass_japanese_seabass_Fin_Normal.png[39m[0m
+[  74% ] [90m[1mreimport[22m | japanese_seabass_japanese_seabass_Fin_BaseColor.png[39m[0m
+[  74% ] [90m[1mreimport[22m | japanese_horse_mackerel_japanese_horse_mackerel_Skin_Roughness.png[39m[0m
+[  74% ] [90m[1mreimport[22m | japanese_horse_mackerel_japanese_horse_mackerel_Skin_Normal.png[39m[0m
+[  75% ] [90m[1mreimport[22m | japanese_horse_mackerel_japanese_horse_mackerel_Skin_BaseColor.png[39m[0m
+[  75% ] [90m[1mreimport[22m | japanese_horse_mackerel_japanese_horse_mackerel_Fin_Roughness.png[39m[0m
+[  75% ] [90m[1mreimport[22m | japanese_horse_mackerel_japanese_horse_mackerel_Fin_Normal.png[39m[0m
+[  75% ] [90m[1mreimport[22m | japanese_horse_mackerel_japanese_horse_mackerel_Fin_BaseColor.png[39m[0m
+[  76% ] [90m[1mreimport[22m | northern_pike_northern_pike_Fin_Normal.png[39m[0m
+[  76% ] [90m[1mreimport[22m | northern_pike_northern_pike_Fin_BaseColor.png[39m[0m
+[  76% ] [90m[1mreimport[22m | marbled_rockfish_marbled_rockfish_Skin_Roughness.png[39m[0m
+[  76% ] [90m[1mreimport[22m | marbled_rockfish_marbled_rockfish_Skin_Normal.png[39m[0m
+[  76% ] [90m[1mreimport[22m | marbled_rockfish_marbled_rockfish_Skin_BaseColor.png[39m[0m
+[  77% ] [90m[1mreimport[22m | marbled_rockfish_marbled_rockfish_Fin_Roughness.png[39m[0m
+[  77% ] [90m[1mreimport[22m | marbled_rockfish_marbled_rockfish_Fin_Normal.png[39m[0m
+[  77% ] [90m[1mreimport[22m | marbled_rockfish_marbled_rockfish_Fin_BaseColor.png[39m[0m
+[  77% ] [90m[1mreimport[22m | mandarin_fish_mandarin_fish_Skin_Roughness.png[39m[0m
+[  77% ] [90m[1mreimport[22m | mandarin_fish_mandarin_fish_Skin_Normal.png[39m[0m
+[  78% ] [90m[1mreimport[22m | mandarin_fish_mandarin_fish_Skin_BaseColor.png[39m[0m
+[  78% ] [90m[1mreimport[22m | mandarin_fish_mandarin_fish_Fin_Roughness.png[39m[0m
+[  78% ] [90m[1mreimport[22m | mandarin_fish_mandarin_fish_Fin_Normal.png[39m[0m
+[  78% ] [90m[1mreimport[22m | mandarin_fish_mandarin_fish_Fin_BaseColor.png[39m[0m
+[  78% ] [90m[1mreimport[22m | longsnout_catfish_longsnout_catfish_Skin_Roughness.png[39m[0m
+[  79% ] [90m[1mreimport[22m | longsnout_catfish_longsnout_catfish_Skin_Normal.png[39m[0m
+[  79% ] [90m[1mreimport[22m | longsnout_catfish_longsnout_catfish_Skin_BaseColor.png[39m[0m
+[  79% ] [90m[1mreimport[22m | longsnout_catfish_longsnout_catfish_Fin_Roughness.png[39m[0m
+[  79% ] [90m[1mreimport[22m | longsnout_catfish_longsnout_catfish_Fin_Normal.png[39m[0m
+[  80% ] [90m[1mreimport[22m | longsnout_catfish_longsnout_catfish_Fin_BaseColor.png[39m[0m
+[  80% ] [90m[1mreimport[22m | longnose_gar_longnose_gar_Skin_Roughness.png[39m[0m
+[  80% ] [90m[1mreimport[22m | longnose_gar_longnose_gar_Skin_Normal.png[39m[0m
+[  80% ] [90m[1mreimport[22m | longnose_gar_longnose_gar_Skin_BaseColor.png[39m[0m
+[  80% ] [90m[1mreimport[22m | longnose_gar_longnose_gar_Fin_Roughness.png[39m[0m
+[  81% ] [90m[1mreimport[22m | longnose_gar_longnose_gar_Fin_Normal.png[39m[0m
+[  81% ] [90m[1mreimport[22m | flathead_catfish_flathead_catfish_Skin_Roughness.png[39m[0m
+[  81% ] [90m[1mreimport[22m | flathead_catfish_flathead_catfish_Skin_Normal.png[39m[0m
+[  81% ] [90m[1mreimport[22m | flathead_catfish_flathead_catfish_Skin_BaseColor.png[39m[0m
+[  81% ] [90m[1mreimport[22m | gilthead_seabream_gilthead_seabream_Fin_BaseColor.png[39m[0m
+[  82% ] [90m[1mreimport[22m | flathead_catfish_flathead_catfish_Fin_Roughness.png[39m[0m
+[  82% ] [90m[1mreimport[22m | flathead_catfish_flathead_catfish_Fin_Normal.png[39m[0m
+[  82% ] [90m[1mreimport[22m | flathead_catfish_flathead_catfish_Fin_BaseColor.png[39m[0m
+[  82% ] [90m[1mreimport[22m | gilthead_seabream_gilthead_seabream_Fin_Normal.png[39m[0m
+[  83% ] [90m[1mreimport[22m | gilthead_seabream_gilthead_seabream_Fin_Roughness.png[39m[0m
+[  83% ] [90m[1mreimport[22m | gilthead_seabream_gilthead_seabream_Skin_BaseColor.png[39m[0m
+[  83% ] [90m[1mreimport[22m | european_seabass_european_seabass_Skin_Roughness.png[39m[0m
+[  83% ] [90m[1mreimport[22m | european_seabass_european_seabass_Skin_Normal.png[39m[0m
+[  83% ] [90m[1mreimport[22m | european_seabass_european_seabass_Skin_BaseColor.png[39m[0m
+[  84% ] [90m[1mreimport[22m | gilthead_seabream_gilthead_seabream_Skin_Normal.png[39m[0m
+[  84% ] [90m[1mreimport[22m | gilthead_seabream_gilthead_seabream_Skin_Roughness.png[39m[0m
+[  84% ] [90m[1mreimport[22m | european_seabass_european_seabass_Fin_Roughness.png[39m[0m
+[  84% ] [90m[1mreimport[22m | european_seabass_european_seabass_Fin_Normal.png[39m[0m
+[  84% ] [90m[1mreimport[22m | european_seabass_european_seabass_Fin_BaseColor.png[39m[0m
+[  85% ] [90m[1mreimport[22m | european_plaice_european_plaice_Skin_Roughness.png[39m[0m
+[  85% ] [90m[1mreimport[22m | european_plaice_european_plaice_Skin_Normal.png[39m[0m
+[  85% ] [90m[1mreimport[22m | haddock_haddock_Fin_BaseColor.png[39m[0m
+[  85% ] [90m[1mreimport[22m | haddock_haddock_Fin_Normal.png[39m[0m
+[  85% ] [90m[1mreimport[22m | haddock_haddock_Fin_Roughness.png[39m[0m
+[  86% ] [90m[1mreimport[22m | haddock_haddock_Skin_BaseColor.png[39m[0m
+[  86% ] [90m[1mreimport[22m | haddock_haddock_Skin_Roughness.png[39m[0m
+[  86% ] [90m[1mreimport[22m | NotoSansCJK-Regular.ttc[39m[0m
+[  86% ] [90m[1mreimport[22m | yellowcheek_yellowcheek_Fin_BaseColor.png[39m[0m
+[  87% ] [90m[1mreimport[22m | white_seabream_white_seabream_Skin_Roughness.png[39m[0m
+[  87% ] [90m[1mreimport[22m | white_seabream_white_seabream_Skin_Normal.png[39m[0m
+[  87% ] [90m[1mreimport[22m | white_seabream_white_seabream_Skin_BaseColor.png[39m[0m
+[  87% ] [90m[1mreimport[22m | white_seabream_white_seabream_Fin_Roughness.png[39m[0m
+[  87% ] [90m[1mreimport[22m | white_seabream_white_seabream_Fin_Normal.png[39m[0m
+[  88% ] [90m[1mreimport[22m | rudd.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  88% ] [90m[1mreimport[22m | annular_seabream.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  88% ] [90m[1mreimport[22m | angler.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  88% ] [90m[1mreimport[22m | olive_flounder.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  88% ] [90m[1mreimport[22m | channel_catfish.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  89% ] [90m[1mreimport[22m | marbled_rockfish.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  89% ] [90m[1mreimport[22m | common_bream.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  89% ] [90m[1mreimport[22m | european_plaice.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  89% ] [90m[1mreimport[22m | japanese_seabass.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  90% ] [90m[1mreimport[22m | alligator_gar.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  90% ] [90m[1mreimport[22m | station_rock.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  90% ] [90m[1mreimport[22m | station_dock.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  90% ] [90m[1mreimport[22m | station_boat.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  90% ] [90m[1mreimport[22m | region_yangtze.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  91% ] [90m[1mreimport[22m | region_norway.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  91% ] [90m[1mreimport[22m | region_med.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  91% ] [90m[1mreimport[22m | region_lake.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  91% ] [90m[1mreimport[22m | region_japan.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  91% ] [90m[1mreimport[22m | region_bayou.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  92% ] [90m[1mreimport[22m | managed_oxbow.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  92% ] [90m[1mreimport[22m | chinese_sturgeon.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  92% ] [90m[1mreimport[22m | northern_snakehead.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  92% ] [90m[1mreimport[22m | saddled_seabream.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  92% ] [90m[1mreimport[22m | saithe.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  93% ] [90m[1mreimport[22m | northern_pike.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  93% ] [90m[1mreimport[22m | japanese_horse_mackerel.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  93% ] [90m[1mreimport[22m | chub_mackerel.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  93% ] [90m[1mreimport[22m | common_pandora.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  94% ] [90m[1mreimport[22m | atlantic_wolffish.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  94% ] [90m[1mreimport[22m | gilthead_seabream.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  94% ] [90m[1mreimport[22m | longnose_gar.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  94% ] [90m[1mreimport[22m | red_seabream.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  94% ] [90m[1mreimport[22m | red_mullet.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  95% ] [90m[1mreimport[22m | tench.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  95% ] [90m[1mreimport[22m | white_seabream.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  95% ] [90m[1mreimport[22m | atlantic_mackerel.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  95% ] [90m[1mreimport[22m | black_seabream.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  95% ] [90m[1mreimport[22m | crucian_carp.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  96% ] [90m[1mreimport[22m | largemouth_bass.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  96% ] [90m[1mreimport[22m | longsnout_catfish.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  96% ] [90m[1mreimport[22m | pollack.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  96% ] [90m[1mreimport[22m | flathead_catfish.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  97% ] [90m[1mreimport[22m | atlantic_herring.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  97% ] [90m[1mreimport[22m | roach.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  97% ] [90m[1mreimport[22m | common_carp.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  97% ] [90m[1mreimport[22m | bowfin.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  97% ] [90m[1mreimport[22m | yellowcheek.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  98% ] [90m[1mreimport[22m | european_perch.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  98% ] [90m[1mreimport[22m | painted_comber.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  98% ] [90m[1mreimport[22m | atlantic_cod.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  98% ] [90m[1mreimport[22m | mandarin_fish.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  98% ] [90m[1mreimport[22m | japanese_whiting.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  99% ] [90m[1mreimport[22m | haddock.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  99% ] [90m[1mreimport[22m | southern_catfish.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  99% ] [90m[1mreimport[22m | european_seabass.glb[39m[0m
+[   0% ] [90m[1mimport[22m | Started Import Scene (104 steps)[39m[0m
+[   0% ] [90m[1mimport[22m | Importing Scene...[39m[0m
+[   1% ] [90m[1mimport[22m | Running Custom Script...[39m[0m
+[  99% ] [90m[1mimport[22m | Saving...[39m[0m
+[92m[ DONE ][39m [1mimport[22m
+[0m
+[  99% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (470 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m

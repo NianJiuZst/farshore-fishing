@@ -4,6 +4,7 @@ extends SceneTree
 const MainScene = preload("res://scenes/main.tscn")
 const Main = preload("res://scripts/main.gd")
 const Session = preload("res://scripts/fishing_session.gd")
+const TestController = preload("res://tests/fishing_test_controller.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Stage = preload("res://scripts/fishing_stage_3d.gd")
 const Registry = preload("res://scripts/fish_3d_registry.gd")
@@ -67,6 +68,7 @@ func _run() -> void:
 	_test_weather_presentation()
 	await _test_lobby_and_prepare()
 	_test_input_cancel()
+	await _test_empty_strikes()
 	for species: String in app.catalog.fish:
 		await _test_species_flow(species, species in ["common_carp","chinese_sturgeon"])
 	for spot: String in app.catalog.spots:
@@ -257,6 +259,34 @@ func _test_input_cancel() -> void:
 	app._action_up()
 	_check(app.session.state == Session.State.IDLE and not app.scenery.cast_in_progress and app.session.individual.is_empty(), "cancelled hold cannot release into an unintended cast")
 
+func _test_empty_strikes() -> void:
+	var previous_id: String = ""
+	for phase: int in [Session.State.WAITING, Session.State.NIBBLE]:
+		var before_count: int = app.store.total_count()
+		var before_currency: int = int(app.store.state.currency)
+		var before_selection: Dictionary = app.store.state.selection.duplicate(true)
+		app._action_down()
+		_tick(0.8)
+		app._action_up()
+		_check(app.session.state == Session.State.CASTING, "early-strike fixture uses real generated encounter and cast")
+		var id: String = app.session.session_id
+		_check(not id.is_empty() and id != previous_id, "successive empty casts retain distinct session IDs")
+		previous_id = id
+		_tick(2.25)
+		for step: int in 800:
+			if app.session.state == phase: break
+			_tick(0.025)
+		_check(app.session.state == phase and not app._action.disabled, "real observation phase allows deliberate early reel %d" % phase)
+		app._action_down()
+		app._action_up()
+		await _layout()
+		_check(app._screen == "escape" and app._title.text == "空竿收回", "early strike opens truthful empty-cast result %d" % phase)
+		_check(app.session.state == Session.State.PAUSED and app.session.before_pause == Session.State.ESCAPED and not app.session.reeling, "empty result cancels input and safely pauses terminal round")
+		_check(app.store.total_count() == before_count and int(app.store.state.currency) == before_currency and app.store.state.pending_catches.is_empty(), "empty cast awards no catch, currency or pending result")
+		_check(app.store.state.selection == before_selection, "empty cast preserves bait and location")
+		app._finish_result()
+		_check(app.session.state == Session.State.IDLE and app._overlay == null and app.session.individual.is_empty(), "empty-cast return permits a fresh round without stale fish")
+
 func _find_recipe(species: String, required_spot: String = "") -> Dictionary:
 	var spots: Array[String] = []
 	if not required_spot.is_empty(): spots.append(required_spot)
@@ -331,10 +361,14 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 	_check(app.scenery.cast_in_progress and app.session.state == Session.State.CASTING and cast_events.size() == before_cast_events, species + " full cast clip is not cut short by the legacy cast timer")
 	_tick(0.15)
 	_check(not app.scenery.cast_in_progress and cast_events.size() == before_cast_events+1, species + " cast completion fires exactly once after the clip")
+	_check(app.session.state == Session.State.WAITING and not app._action.disabled and app._action.text == "收线", species + " landed float immediately enables reel without a second cast delay")
+	var landed_elapsed: float = app.session.elapsed
+	app._cast_presentation_finished()
+	_check(app.session.state == Session.State.WAITING and is_equal_approx(app.session.elapsed, landed_elapsed), species + " duplicate cast presentation callback cannot reset the bite clock")
 	for tick: int in 800:
 		if app.session.state == Session.State.BITE: break
 		_tick(0.025)
-	_check(app.session.state == Session.State.BITE and app.scenery._fish_root.visible, species + " actual wait and nibble reach a visible fish bite")
+	_check(app.session.state == Session.State.BITE and not app.scenery._fish_root.visible, species + " actual wait and nibble preserve hidden fish; only float movement exposes bite")
 	_check(app.scenery.camera.global_transform != camera_before and app.scenery.camera.position.distance_to(camera_before.origin) > 0.25, species + " camera transition moves the actual 3D view")
 	_check(app.session.session_id == identity and app.session.individual == individual, species + " cast/wait/pause preserve the exact encounter")
 	app._action_down()
@@ -344,10 +378,12 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 	_tick(0.2)
 	app._action_cancel()
 	_check(not app.session.reeling, species + " pointer cancel releases active reel input")
-	for tick: int in 3000:
+	var controller = TestController.new()
+	for tick: int in 16000:
 		if app.session.state != Session.State.FIGHT: break
-		if app.session.tension < 0.46: app._action_down()
-		elif app.session.tension > 0.58: app._action_up()
+		var desired: bool = controller.update(app.session, 0.025)
+		if desired and not app.session.reeling: app._action_down()
+		elif not desired and app.session.reeling: app._action_up()
 		_tick(0.025)
 	_check(app.session.state == Session.State.CAUGHT and app._landing_pending and app._save_ok, species + " balanced production fight catches and begins landing")
 	_check(app._screen != "result" and app.store.total_count() == before_count+1, species + " save is immediate while results wait for the 3D landing")

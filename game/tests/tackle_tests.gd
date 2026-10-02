@@ -3,6 +3,7 @@ const Catalog = preload("res://scripts/catalog.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
+const TestController = preload("res://tests/fishing_test_controller.gd")
 const NEW_BAITS: Array[String] = ["sweetcorn","dough","cut_fish","spinner"]
 const BASE_CATEGORIES: Array[String] = ["grain","grain","shrimp","lure"]
 const OLD_GEAR: Array[Dictionary] = [
@@ -59,22 +60,24 @@ func _test_actual_gear_mechanics() -> void:
 	base_record.behavior="steady"
 	var times: Array[float] = []
 	for id: int in range(5):
-		var session: FishingSession = Session.new()
+		var session: FishingSession = Session.new(2468)
 		session.start_charge()
 		_check(session.cast(base_record,catalog.gear[id]),"real Session accepts rod "+str(id))
 		_check(is_equal_approx(session.gear_power,float(catalog.gear[id].power)) and is_equal_approx(session.tolerance,float(catalog.gear[id].tolerance)),"real fighting mechanics consume rod stats "+str(id))
 		session.set_state(Session.State.FIGHT)
-		for tick: int in range(2400):
+		var controller = TestController.new()
+		for tick: int in range(18000):
 			if session.state!=Session.State.FIGHT: break
-			if session.tension<0.61: session.press()
-			else: session.release()
+			var desired: bool = controller.update(session, 1.0/60.0)
+			if desired and not session.reeling: session.press()
+			elif not desired and session.reeling: session.release()
 			session.step(1.0/60.0)
-		_check(session.state==Session.State.CAUGHT,"controlled real fight is winnable with rod "+str(id))
+		_check(session.state==Session.State.CAUGHT,"delayed visible-cue real fight is winnable with rod "+str(id))
 		times.append(session.fight_time)
 	_check(times[4]<times[2] and not is_equal_approx(times[3],times[1]),"new rods change actual controlled fight outcomes rather than labels only")
 	var held: Array[Vector2] = []
 	for id: int in [1,3]:
-		var session: FishingSession = Session.new()
+		var session: FishingSession = Session.new(2468)
 		session.start_charge()
 		session.cast(base_record,catalog.gear[id])
 		session.set_state(Session.State.FIGHT)

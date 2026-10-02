@@ -1,0 +1,240 @@
+{
+  "passed": true,
+  "selected_suites": [
+    "camera_aspect",
+    "save",
+    "core",
+    "session_observation",
+    "float_observation",
+    "tackle",
+    "bait_balance",
+    "registry",
+    "fish_preview",
+    "main_travel",
+    "slice3d",
+    "ui_style",
+    "touch",
+    "historical_trial",
+    "angler_anatomy"
+  ],
+  "representative_tall_layout": false,
+  "runtime_files": 1052,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "import",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 46.27,
+      "log": "build/recovered-beta2-headless/import.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: Ignoring unsupported header information in HDR: EXPOSURE=1.",
+        "WARNING: Ignoring unsupported header information in HDR: GAMMA=1.",
+        "WARNING: Ignoring unsupported header information in HDR: PRIMARIES=0 0 0 0 0 0 0 0."
+      ],
+      "summary_lines": []
+    },
+    {
+      "name": "camera_aspect",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.57,
+      "log": "build/recovered-beta2-headless/camera_aspect.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CAMERA_ASPECT_TESTS: 531/531 passed; failures=0; mathematical desktop projection, not device certification"
+      ]
+    },
+    {
+      "name": "save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 21.82,
+      "log": "build/recovered-beta2-headless/save.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "SAVE_TESTS: 314/314 passed; failures=0"
+      ]
+    },
+    {
+      "name": "core",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 18.97,
+      "log": "build/recovered-beta2-headless/core.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CORE_TESTS: 182417/182417 passed; failures=0"
+      ]
+    },
+    {
+      "name": "session_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.57,
+      "log": "build/recovered-beta2-headless/session_observation.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "SESSION_OBSERVATION_TESTS: 121/121 passed; failures=0"
+      ]
+    },
+    {
+      "name": "float_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.42,
+      "log": "build/recovered-beta2-headless/float_observation.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_OBSERVATION_TESTS: 46/46 passed; failures=0; presentation fixtures, not phone performance"
+      ]
+    },
+    {
+      "name": "tackle",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.68,
+      "log": "build/recovered-beta2-headless/tackle.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TACKLE_TESTS: 557/557 passed; failures=0"
+      ]
+    },
+    {
+      "name": "bait_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.87,
+      "log": "build/recovered-beta2-headless/bait_balance.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "BAIT_BALANCE_TESTS: 33091/33091; reachable_species=44/44"
+      ]
+    },
+    {
+      "name": "registry",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.52,
+      "log": "build/recovered-beta2-headless/registry.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_3D_REGISTRY_TESTS: 98/98; imported models=44/44; release_gate=true"
+      ]
+    },
+    {
+      "name": "fish_preview",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.92,
+      "log": "build/recovered-beta2-headless/fish_preview.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_PREVIEW_TESTS: 25/25 passed"
+      ]
+    },
+    {
+      "name": "main_travel",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.37,
+      "log": "build/recovered-beta2-headless/main_travel.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "MAIN_TRAVEL_TESTS: 24/24 passed; failures=0; boundary tests only, no readiness override"
+      ]
+    },
+    {
+      "name": "slice3d",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 65.48,
+      "log": "build/recovered-beta2-headless/slice3d.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4511/4511 passed; failures=0; cast events=47; landing events=45; species=44; spots=12"
+      ]
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 20.48,
+      "log": "build/recovered-beta2-headless/ui_style.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 12567/12567 passed; failures=0; button visits=267; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ]
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 11.1,
+      "log": "build/recovered-beta2-headless/touch.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 132/132 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ]
+    },
+    {
+      "name": "historical_trial",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.77,
+      "log": "build/recovered-beta2-headless/historical_trial.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TRIAL_FISHERY_TESTS: 38082/38082 passed; failures=0"
+      ]
+    },
+    {
+      "name": "angler_anatomy",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.52,
+      "log": "build/recovered-beta2-headless/angler_anatomy.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "ANGLER_ANATOMY_TESTS: 3705/3705 passed; failures=0"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.72,
+      "log": "build/recovered-beta2-headless/binary_catalog.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 44, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    }
+  ],
+  "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."
+}
