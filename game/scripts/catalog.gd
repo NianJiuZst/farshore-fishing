@@ -56,6 +56,15 @@ func load_all(check_art: bool = true) -> bool:
 		if str(bait.get("legacy_category",id)) not in ["worm","grain","shrimp","lure"]: errors.append("鱼饵兼容分类无效：" + id)
 		var price: float = float(bait.get("price",-1.0))
 		if not is_finite(price) or price < 0.0: errors.append("鱼饵价格无效：" + id)
+		var overrides: Variant = bait.get("species_weights",{})
+		if not overrides is Dictionary:
+			errors.append("鱼饵偏好映射无效：" + id)
+		else:
+			for species_id: Variant in overrides:
+				if not species_id is String or not fish.has(str(species_id)): errors.append("鱼饵偏好引用未知鱼种：" + id)
+				var modifier: Variant = overrides[species_id]
+				if (not modifier is float and not modifier is int) or not is_finite(float(modifier)) or float(modifier) < 0.0: errors.append("鱼饵偏好权重无效：" + id)
+
 	var region_ids: Array[String] = []
 	for region_value: Dictionary in regions:
 		var region_key: String = str(region_value.get("region_id", ""))
@@ -131,6 +140,9 @@ func bait_category(id: String) -> String:
 	return str(bait.get("legacy_category",id))
 
 func bait_weight(species: FishDefinition, id: String) -> float:
-	# Compatibility only: no edits to the 44 archival species definitions. Trial
-	# fishery balance may explicitly override these historical-category weights.
+	# Explicit additions are game balance, not feeding measurements. Old four
+	# definitions have no overrides and preserve all original species weights.
+	var bait: Dictionary = bait_definition(id)
+	var overrides: Dictionary = bait.get("species_weights",{})
+	if overrides.has(species.species_id): return maxf(0.0,float(overrides[species.species_id]))
 	return species.weight_for("bait_weights",bait_category(id))

@@ -4,7 +4,7 @@ This checkpoint expands loadout choices without resetting the existing game data
 
 ## Appended options
 
-The original gear IDs 0/1/2 and their entire dictionaries, including prices 0/180/480, remain unchanged. Gear 3 is 轻岚 · 灵敏纺车竿: price 100 existing travel coins, retrieve power 1.24, tension tolerance 1.08, reach 90%, depth 25 m. Gear 4 is 重潮 · 巨物枪柄竿: price 320 existing travel coins, power 1.58, tolerance 1.75, reach 92%, depth 90 m. The original deep rod retains its greater 100% reach and 180 m depth.
+The original gear IDs 0/1/2 and their entire dictionaries, including prices 0/180/480, remain unchanged. Gear 3 is 轻岚 · 灵敏纺车竿: price 100 existing travel coins, retrieve power 1.24, tension tolerance 1.08, reach 90%, depth 25 m. Gear 4 is 重潮 · 巨物枪柄竿: price 320 existing travel coins, power 1.52, tolerance 1.75, reach 92%, depth 90 m. The original deep rod retains its greater 100% reach and 180 m depth.
 
 These are tradeoffs, not five labels for identical stats. Session uses the selected rod's power/tolerance; Main clamps actual casting charge and the stage's cast trajectory to its reach. With the same controlled test fish and reeling policy, simulation fight times differ. The light rod retrieves faster while held but raises tension faster; it is not promised to finish every fight faster than the more forgiving travel rod.
 
@@ -36,3 +36,11 @@ The focused save test seeds and releases all 44 species, sets old gear/selection
 - Existing native slider/dropdown gesture cancellation, landing settlement idempotency and menu navigation assertions remain included
 
 Run under isolated `/tmp/farshore-*` HOME/XDG paths. Logs are `build/tackle_expansion/tackle_tests.log` and `touch_expanded.log`. These are logic/input checks, not Android device or frame-rate claims. Release remains held for the separately authorized character and full-44-species work.
+
+## Full-world balance follow-up
+
+The later restored six-region/twelve-spot game now uses explicit `species_weights` on the four new bait definitions, then the original category as fallback. The original four bait definitions and all 44 fish JSON files remain unchanged. Sweetcorn and dough have distinct cyprinid preferences; cut fish favors the specified gar/pike/bass/bowfin/yellowcheek/catfish group; spinner favors the specified gar/perch/pike/bass/mandarin group. The exact numbers are in `world.json` and are deliberate game balance, not measured feeding probabilities. This ensures the additions have real effects after normal play stops using the two-species trial adapter.
+
+The expanded focused suite passes 557/557, including 176 explicit checks that the four original baits still return their original weights for all 44 species. The prior 120/120 gameplay result above is the bounded checkpoint; full-catalog startup now intentionally remains disabled until all 44 model resources are available. Current partial-build UI tests explicitly check that gate rather than bypassing it.
+
+Heavy rod retrieve power was subsequently reduced from 1.58 to 1.52 after the expanded core benchmark found a 9.83-second ordinary roach fight. Tolerance 1.75, price 320 and visual profile remain unchanged; the original 10–25-second timing assertion was retained.

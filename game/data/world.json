@@ -26,31 +26,69 @@
     },
     {
       "bait_id": "sweetcorn",
-      "hint": "河湾混合试钓偏向鲤鱼，甜香颗粒饵",
+      "hint": "甜香颗粒，更吸引鲤鱼、鲫鱼与丁鱥",
       "legacy_category": "grain",
       "name": "甜玉米",
-      "price": 0
+      "price": 0,
+      "species_weights": {
+        "common_carp": 2.4,
+        "alligator_gar": 0.05,
+        "crucian_carp": 2.5,
+        "common_bream": 2.1,
+        "tench": 2.4,
+        "roach": 1.8,
+        "rudd": 2.0
+      }
     },
     {
       "bait_id": "dough",
-      "hint": "河湾混合试钓偏向鲤鱼，柔软慢散饵",
+      "hint": "柔软慢散，更适合鳊鱼、鲫鱼与鲤鱼",
       "legacy_category": "grain",
       "name": "面团饵",
-      "price": 0
+      "price": 0,
+      "species_weights": {
+        "common_carp": 2.1,
+        "alligator_gar": 0.06,
+        "crucian_carp": 2.0,
+        "common_bream": 2.4,
+        "tench": 2.0,
+        "roach": 2.1,
+        "rudd": 1.7
+      }
     },
     {
       "bait_id": "cut_fish",
-      "hint": "河湾混合试钓偏向鳄雀鳝，切块荤饵",
+      "hint": "切块荤饵，更吸引雀鳝、鲶鱼与大型掠食鱼",
       "legacy_category": "shrimp",
       "name": "鱼肉块",
-      "price": 0
+      "price": 0,
+      "species_weights": {
+        "common_carp": 0.06,
+        "alligator_gar": 2.6,
+        "northern_pike": 2.2,
+        "largemouth_bass": 2.1,
+        "bowfin": 2.25,
+        "yellowcheek": 2.5,
+        "channel_catfish": 2.3,
+        "flathead_catfish": 2.3,
+        "southern_catfish": 2.3,
+        "longsnout_catfish": 2.3
+      }
     },
     {
       "bait_id": "spinner",
-      "hint": "河湾混合试钓偏向鳄雀鳝，旋转反光拟饵",
+      "hint": "旋转反光，更吸引河鲈、狗鱼与鲈鱼",
       "legacy_category": "lure",
       "name": "旋转亮片",
-      "price": 0
+      "price": 0,
+      "species_weights": {
+        "common_carp": 0.09,
+        "alligator_gar": 2.05,
+        "european_perch": 2.2,
+        "northern_pike": 2.35,
+        "largemouth_bass": 2.2,
+        "mandarin_fish": 2.1
+      }
     }
   ],
   "gear": [
@@ -107,7 +145,7 @@
       "id": 4,
       "max_depth_m": 90,
       "name": "重潮 · 巨物枪柄竿",
-      "power": 1.58,
+      "power": 1.52,
       "price": 320,
       "reach": 0.92,
       "reel_color": "bb9452",

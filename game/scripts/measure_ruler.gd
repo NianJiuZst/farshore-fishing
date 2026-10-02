@@ -1,28 +1,42 @@
 class_name CatchRuler
 extends Control
-# Metric endpoints follow the painted snout/tail alpha bounds, not the surrounding specimen card.
+## Length endpoints follow a projected 3D specimen when available; historical
+## TextureRect callers retain their original painted-alpha-bound measurement.
 var length_mm: int=1000
-var specimen: TextureRect
+var specimen: Control
 var _used: Rect2i
 var _texture_size: Vector2=Vector2.ONE
 func _ready() -> void:
 	mouse_filter=Control.MOUSE_FILTER_IGNORE
 	custom_minimum_size.y=50
 	resized.connect(queue_redraw)
-	if is_instance_valid(specimen) and specimen.texture:
+	if not is_instance_valid(specimen): return
+	specimen.resized.connect(queue_redraw)
+	if specimen is TextureRect and specimen.texture:
 		var source: Image=specimen.texture.get_image()
 		if source==null: return
 		if source.is_compressed(): source.decompress()
 		_used=source.get_used_rect()
 		_texture_size=Vector2(source.get_width(),source.get_height())
-		specimen.resized.connect(queue_redraw)
-		call_deferred("queue_redraw")
+	call_deferred("queue_redraw")
+func _process(_delta: float) -> void:
+	if is_visible_in_tree() and is_instance_valid(specimen) and specimen.has_method("measurement_endpoints"): queue_redraw()
 func _draw() -> void:
-	if not is_instance_valid(specimen) or _used.size.x<=0: return
-	var fit: float=minf(specimen.size.x/_texture_size.x,specimen.size.y/_texture_size.y)
-	var texture_origin: Vector2=specimen.global_position+(specimen.size-_texture_size*fit)*0.5
-	var start: float=texture_origin.x+_used.position.x*fit-global_position.x
-	var width: float=_used.size.x*fit
+	if not is_instance_valid(specimen): return
+	var start: float
+	var width: float
+	if specimen.has_method("measurement_endpoints"):
+		var endpoints: Array[Vector2]=specimen.measurement_endpoints()
+		if endpoints.size()!=2: return
+		start=minf(endpoints[0].x,endpoints[1].x)-global_position.x
+		width=absf(endpoints[1].x-endpoints[0].x)
+	elif specimen is TextureRect and _used.size.x>0:
+		var fit: float=minf(specimen.size.x/_texture_size.x,specimen.size.y/_texture_size.y)
+		var texture_origin: Vector2=specimen.global_position+(specimen.size-_texture_size*fit)*0.5
+		start=texture_origin.x+_used.position.x*fit-global_position.x
+		width=_used.size.x*fit
+	else: return
+	if width<=0.0: return
 	var col: Color=Color("829887")
 	draw_line(Vector2(start,8),Vector2(start+width,8),col,1.5,true)
 	for i: int in range(41):

@@ -88,6 +88,11 @@ func _run() -> void:
 	root.push_input(cancel,true)
 	await process_frame
 	_check(taps == 1, "Android cancellation does not activate button")
+	if "--preview-only" in OS.get_cmdline_user_args():
+		root.remove_child(host)
+		host.queue_free()
+		await process_frame
+		await _test_preview_factory()
 	if "--production" in OS.get_cmdline_user_args():
 		root.remove_child(host)
 		host.queue_free()
@@ -153,10 +158,9 @@ func _test_main_pages() -> void:
 	var old_selection: Dictionary = app.store.state.selection.duplicate(true)
 	await _test_native_controls(app)
 	app._show_prepare()
-	app._set_trial_target("alligator_gar")
 	await _layout_frames()
-	_check(app._trial_target == "alligator_gar" and app.store.state.selection == old_selection,"trial target is explicit and never overwrites legacy selection")
-	for method: String in ["_show_gear","_show_catalog","_show_settings","_show_licenses"]:
+	_check(app.region_id == str(old_selection.region_id) and app.spot_id == str(old_selection.spot_id) and app.store.state.selection == old_selection,"preparation preserves the actual saved region/spot/loadout")
+	for method: String in ["_show_gear","_show_travel","_show_catalog","_show_settings","_show_licenses"]:
 		app.call(method)
 		await _layout_frames()
 		var page_scroll: ScrollContainer = _find_type(app._overlay,"ScrollContainer") as ScrollContainer
@@ -217,11 +221,25 @@ func _test_main_pages() -> void:
 		await _layout_frames()
 		_check(app.bait_id == "spinner" and app.store.state.selection.bait_id == "spinner" and int(app.store.state.save_revision) == revision_before+1,"real bait ScreenTouch tap updates persisted choice exactly once")
 	await _test_expanded_tackle_controls(app)
+	await _test_production_preview_page(app)
 	app._show_prepare()
 	app._show_gear()
 	app._close_page()
 	await _layout_frames()
 	_check(app._screen == "prepare","bag Back returns to prepare context")
+	if not app._models_complete:
+		_check(not app._content_ok and not app._model_errors.is_empty(),"incomplete44 registry blocks gameplay without substitution")
+		var entry: Button = _find_button(app._overlay,"进入钓点")
+		_check(entry!=null and entry.disabled,"partial-development preparation explicitly disables entry")
+		app._enter_fishery()
+		_check(app._mode=="lobby" and app._overlay!=null,"direct entry callback cannot bypass strict44 gate")
+		if "--require-full" in OS.get_cmdline_user_args(): _check(false,"release run requires all44 real models; gameplay assertions not run")
+		print("TOUCH_SCOPE: partial development; full gameplay assertions deferred, no readiness override")
+		app.queue_free()
+		await process_frame
+		production_completed=true
+		return
+	print("TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled")
 	app._enter_fishery()
 	await _layout_frames()
 	_check(app._overlay == null and app._action.is_visible_in_tree() and app._mode == "fishing","enter location reveals casting HUD")
@@ -229,6 +247,9 @@ func _test_main_pages() -> void:
 	app.session.charge = 0.65
 	app._action_up()
 	_check(app.session.state == FishingSession.State.CASTING and app.scenery.cast_in_progress,"real cast starts stage presentation")
+	_check(str(app.session.individual.region_id)==app.region_id and str(app.session.individual.spot_id)==app.spot_id,"real Encounter records the selected historical region and spot")
+	var encounter_species: FishDefinition = app.catalog.fish[str(app.session.individual.species_id)]
+	_check(app.spot_id in encounter_species.spots(),"real Encounter honors full-catalog species location eligibility")
 	var elapsed: float = app.session.elapsed
 	for iteration: int in range(20): app._process(0.05)
 	_check(app.session.elapsed == elapsed,"Session clock cannot overtake 3D cast presentation")
@@ -426,12 +447,64 @@ func _test_expanded_tackle_controls(app: Control) -> void:
 		_check(app.scenery.gear_id==id,"3D rod receives selected geometry/material profile: "+str(id))
 		app._show_prepare()
 		app._enter_fishery()
-		app._action_down()
-		app.session.charge=1.0
-		app._action_up()
-		_check(app.session.state==FishingSession.State.CASTING and int(app.session.individual.equipment)==id and is_equal_approx(app.session.gear_power,float(app.catalog.gear[id].power)) and is_equal_approx(app.session.charge,float(app.catalog.gear[id].reach)),"borrowed rod drives actual encounter/fight stats and cast reach: "+str(id))
-		app._abandon_round()
-		app._return_to_lobby()
+		if app._models_complete:
+			app._action_down()
+			app.session.charge=1.0
+			app._action_up()
+			_check(app.session.state==FishingSession.State.CASTING and int(app.session.individual.equipment)==id and is_equal_approx(app.session.gear_power,float(app.catalog.gear[id].power)) and is_equal_approx(app.session.charge,float(app.catalog.gear[id].reach)),"borrowed rod drives actual encounter/fight stats and cast reach: "+str(id))
+			app._abandon_round()
+			app._return_to_lobby()
+		else:
+			_check(app._mode=="lobby" and app._overlay!=null and not app._content_ok,"borrowed rod cannot bypass incomplete44-model gate: "+str(id))
 	app._clear_trial_gear()
 	_check(app._trial_gear_id==-1 and app._effective_gear_id()==int(snapshot.gear) and app.store.state==snapshot,"ending trial borrowing restores saved rod without fake unlocks")
 	app._page_context="prepare"
+
+func _test_preview_factory() -> void:
+	var factory: Control = load("res://scripts/main.gd").new()
+	var preview: Control = factory._fish_model("common_carp",300)
+	preview.position=Vector2(60,140)
+	preview.size=Vector2(600,300)
+	root.add_child(preview)
+	await _layout_frames()
+	_check(preview is SubViewportContainer and preview.model is Node3D,"Main detail/result factory creates a real species-specific3D preview")
+	_check(preview.mouse_filter==Control.MOUSE_FILTER_IGNORE,"Main3D preview never captures page swipe input")
+	var ruler: Control = load("res://scripts/measure_ruler.gd").new()
+	ruler.length_mm=640
+	ruler.specimen=preview
+	ruler.position=Vector2(60,450)
+	ruler.size=Vector2(600,50)
+	root.add_child(ruler)
+	await _layout_frames()
+	var endpoints: Array[Vector2]=preview.measurement_endpoints()
+	_check(endpoints.size()==2 and absf(endpoints[1].x-endpoints[0].x)>100 and absf(endpoints[1].x-endpoints[0].x)<preview.size.x,"3D ruler uses projected specimen length endpoints rather than viewport width")
+	_check(ruler.specimen==preview,"ruler accepts3D Control without a TextureRect substitution")
+	var missing: Control=factory._fish_model("no_such_species",300)
+	_check(missing is Label and "尚未准备" in missing.text,"missing Main preview is an explicit label, never another fish model")
+	missing.free()
+	ruler.queue_free()
+	preview.queue_free()
+	factory.free()
+	await process_frame
+	print("PREVIEW_SCOPE: actual Main preview factory and projected3D ruler; no gameplay readiness override")
+
+func _test_production_preview_page(app: Control) -> void:
+	app._show_species("common_carp")
+	await _layout_frames()
+	var preview: SubViewportContainer=_find_type(app._overlay,"SubViewportContainer") as SubViewportContainer
+	_check(preview!=null and preview.model is Node3D,"actual production detail page mounts the registered3D fish")
+	if preview!=null:
+		var page_scroll: ScrollContainer=app._page.get_parent()
+		var start: Vector2=preview.get_global_rect().get_center()
+		_touch(start,true)
+		_emulated_button(start,true)
+		_drag(start-Vector2(0,180),Vector2(0,-180))
+		_emulated_motion(start-Vector2(0,180),Vector2(0,-180))
+		_touch(start-Vector2(0,180),false)
+		_emulated_button(start-Vector2(0,180),false)
+		await process_frame
+		_check(page_scroll.scroll_vertical>=170 and app._screen=="species","actual screen drag beginning on3D fish scrolls the detail page without input capture")
+		page_scroll.stop_gesture()
+	app._show_prepare()
+	await _layout_frames()
+	_check(_find_type(app,"SubViewportContainer")==null,"closing detail removes its sole active3D preview viewport")

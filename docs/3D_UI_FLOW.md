@@ -1,48 +1,57 @@
-# 1.2.0 native 3D controller and touch navigation
+# 1.2.0 full-world 3D controller and touchscreen navigation
 
-## Scope and actual scene
+This document describes the full-catalog integration in progress. Release remains blocked until all 44 species-specific models and the complete acceptance checks are ready. The earlier playable two-fish checkpoint is preserved in commit history; it is not the full-catalog release.
 
-The production `main.tscn` controller creates a `FishingStage3D` (`Node3D`) directly in the root viewport before its transparent 2D HUD. The stage owns a real `Camera3D`, rigged angler/fish assets, environment, line, float, and presentation animation. Main does not use `SceneryView` or a painted background as the fishing scene. The project selects Godot Mobile/Vulkan rendering for the high-end Android target, explicitly chooses Vulkan on Android, and disables fallback to OpenGL3. This slice requires a Vulkan-capable device; there is no silent quality downgrade. A headless test is logic coverage, not proof of Vulkan image quality or device frame rate.
+## Native scene and flow
 
-The launch screen is an actual lobby over the 3D world, with four clear routes: 开始钓鱼、行囊、图鉴、设置. The cast button is hidden there. Start opens the preparation page; that page contains a single managed fictional river location, current equipment/bait, and an explicit temporary trial target (mixed, common carp, or alligator gar). Entering the location reveals the fishing HUD. The original 25 raster icons, their transparent presentation, and minimum 96-logical-pixel controls remain in use.
+Main creates a real `FishingStage3D` / `Camera3D` behind a transparent 2D icon HUD. It passes the saved region/spot to `set_location` before the stage enters the tree, avoiding a redundant initial world load. Later location refreshes are idempotent. Stage owns the regional environment, authored station, angler, rod, line, float, fish animation and camera.
 
-Settings distinguish project-authored 3D geometry, rigs, and animation from Poly Haven CC0 sky/wood textures and AI-assisted UI icons/historical fish illustrations. The license page displays `THIRD_PARTY_ART.txt` alongside the unchanged Godot and font licenses.
+The real lobby has 开始钓鱼、行囊、图鉴、设置 and no visible cast action. Start leads to preparation, selected location, and five-rod/eight-bait loadout. Travel restores all six original regions and twelve original spots, with the existing discovery/currency unlock requirements. Optional temporary rod borrowing does not change ownership or the saved equipped rod.
 
-The playable scope is two 3D fish and one location. The original 44-species catalog remains readable, with clear “3D 可体验” indicators on the two playable entries and “历史图鉴” on other entries. Existing region unlocks, old location selection, records, and favorites remain untouched. The pure TrialFishery adapter is the only trial content source. Its virtual location is stored on new catch records, never written over the player's old selected region/spot. The target selector is ephemeral, not an unlock or migration.
+Fishing now uses the ordinary `Encounter.generate` path with the actual selected spot, bait and effective gear. The temporary two-species target picker is removed. Old `river_trial` catch locations remain readable through the historical location formatter; new normal-world catches use the original catalog region/spot IDs. Unsupported saved location/gear IDs are preserved and block play instead of being silently rewritten.
 
-## State and presentation boundaries
+The project explicitly uses Android Mobile/Vulkan, with OpenGL fallback disabled. Desktop llvmpipe images are software-render evidence, not Android hardware or frame-rate evidence.
 
-1. Lobby → preparation/loadout → enter location
-2. Press and hold charges the real FishingSession; release creates a real TrialFishery encounter and begins a save session
-3. FishingStage3D starts its casting presentation. Main holds `Session.step` while `cast_in_progress` is true; the existing session state machine advances normally after the stage signals completion
-4. Waiting/nibble/bite/fight remain authoritative FishingSession states; the 3D stage changes cameras and animations from those states
-5. On CAUGHT, Main immediately calls the unchanged transactional SaveStore settlement. This records the catch, statistics/reward, and durable pending disposition before animation starts
-6. Only successful settlement starts the landing presentation. The result overlay waits for the matching `landing_finished(record)` catch ID
-7. Back/background pauses the session and stage, preserving the pending presentation. Resume continues it. Exit after a successful settlement leaves the catch in the existing recoverable pending-catches page
-8. Failed saving opens the retry path immediately; no catch is silently dropped. Duplicate settlement is guarded both by Main's committed ID and the unchanged store's idempotency
-9. Sell/release resolves the existing pending catch transaction before resetting the round
+## Complete-model readiness and truthful presentation
 
-Navigation cannot start another encounter while an existing round or catch is unresolved. Landing hides incidental travel/bait controls; Back opens a pause page rather than skipping to a result. Native focus loss suspends the stage as well as session/audio. The page router preserves lobby/prepare/fishing return context.
+`Fish3DRegistry.validate_catalog(catalog, true)` must report zero errors before Main enables Start or the preparation entry action. Direct entry callbacks also enforce this gate. During partial development, saved statistics, settings, bag and the archive remain readable. Tests may inspect this disabled state; they must not set the readiness flag to pretend all 44 models exist.
 
-## Actual touchscreen fix
+The catalog loses the old two-only/historical distinction. While incomplete, entries accurately distinguish an available model from a model still being prepared. When all models exist, the temporary availability labels disappear. Normal cast eligibility still follows the original species/spot/salinity/depth/gear/time/weather logic and the documented bait balance.
 
-All production page ScrollContainers are `TouchScroll`, not only the bag. It observes `InputEventScreenTouch` and `InputEventScreenDrag` in `_input` before descendant `PanelContainer` and `Button` STOP filtering can prevent a drag. A 14-logical-pixel directional threshold distinguishes taps from scrolling. A completed drag moves the scroll position directly, coasts with bounded exponentially decaying velocity, and never dispatches the captured button's action. A tap is dispatched once after the input event finishes, allowing callbacks to rebuild a page safely. Emulated mouse events are suppressed for owned gestures to avoid a second click. Focus loss/page destruction clears held gestures and inertia. Native text fields and option controls receive a balanced native GUI click only after a tap is recognized. Horizontal slider gestures receive a balanced native press/motion/release after horizontal intent is clear. Vertical swipes never send a native press, preventing the observed premature dropdown opening and slider grab. Wheel and scrollbar interaction remain supported.
+Species detail, enlarged view and the primary catch showcase use one active `FishModelPreview` for the open page: a real species-specific model, weighted animation, transparent private SubViewport3D and its own lights/world. It captures no touch input and uses no ReflectionProbe. Missing models produce an explicit unavailable label, never another species or a flat image pretending to be a model. Atlas/favorites/pending-list thumbnails remain lightweight raster indexes.
 
-This fixes gesture ownership, not just scrollbar width or viewport size. Hardware-specific Android touch behavior still requires device validation; synthesized viewport events alone are not labeled a real-device result.
+The result ruler now accepts a general Control. Real previews provide projected normalized-rest-length endpoints through their current model transform and camera, scaled into global canvas coordinates. The drawn ruler follows those endpoints rather than measuring viewport width. They are rest-length landmarks, not instantaneous skinned-vertex extrema; the saved millimeter measurement remains the physical record. Historical TextureRect callers retain their original alpha-bound implementation.
 
-## Verification
+## Transaction and presentation boundaries
 
-Run with isolated HOME, XDG_DATA_HOME, XDG_CACHE_HOME, and XDG_CONFIG_HOME under `/tmp/farshore-*`:
+1. Hold charges the authoritative FishingSession; release creates a real encounter and begins a save session. Effective rod reach clamps the charge used by the stage trajectory
+2. Main holds Session stepping while the stage's full casting presentation is active, then resumes the existing state machine normally
+3. Waiting, nibble, bite and fight remain Session states; stage visuals follow them
+4. CAUGHT immediately enters the unchanged transactional settlement, recording the catch/reward/statistics and durable pending disposition before landing animation
+5. Only the matching landing completion reveals the result; its disabled action says 起鱼中 during presentation
+6. Back/background pauses session, stage and audio. A completed result cannot be re-armed by a duplicate terminal callback
+7. Save failures expose the retry path. Exiting after a successful settlement leaves the existing recoverable pending catch. Sell/release commits before resetting the round
 
-```
-godot --headless --path game --script res://tests/touch_scroll_tests.gd
-godot --headless --path game --script res://tests/touch_scroll_tests.gd -- --production
-```
+## Touch gesture ownership
 
-The standalone suite injects ScreenTouch/ScreenDrag through the actual Viewport, with overflowing nested STOP panels and buttons: threshold, scroll distance, button-tap activation, post-drag cancellation, horizontal-swipe tap cancellation, emulated-mouse duplicate suppression, inertia, reverse direction, and Android canceled touch. The production extension drives actual Main page trees and the real session/store pipeline: lobby, prepare, temporary target, bag/catalog/settings/licenses drags, real bait drag/tap, cast gate, landing pause/resume, immediate durable catch, result gate, idempotent settlement, and preserved legacy selection.
+Every page uses TouchScroll. It sees ScreenTouch/ScreenDrag before nested STOP-filter panels/buttons, uses a 14-logical-pixel directional threshold, directly advances scroll position, provides bounded inertia, and cancels taps after a swipe. Android-emulated mouse events are suppressed for owned gestures.
 
-2026-10-02 verification: standalone 12/12 and production-inclusive 71/71 passed on Godot 4.6.3, headless. Repeated actual production ScreenTouch/ScreenDrag gestures reached the true bottom: bag 504/504 px, catalog 7335/7335 px, settings 161/161 px, licenses 101536/101536 px. Final buttons were visible, no child control was accidentally activated, and reverse swipes moved back up. The bait choice was reached through real touch drags rather than a programmatic scroll-to shortcut. The production suite also passed Android-style emulated MouseButton/MouseMotion after touch/drag, vertical gestures over actual Main HSlider and OptionButton controls, preserved horizontal slider editing, exactly balanced slider drag signals, native dropdown tap, search-field focus, and the real bait tap/drag plus session/store lifecycle assertions described above. Duplicate terminal callbacks cannot re-arm a completed landing. The native-control reproducer first failed 2 of 65 checks before the arbitration fix; the expanded final suite passes 71 of 71. Actual production Main screenshots `build/ui3d/screenshots/01_lobby.png` and `02_prepare.png` were captured and visually inspected at 720×1280 using Mobile/Vulkan 1.4.305 on desktop llvmpipe. The lobby shows the rigged angler/world and four routes with no cast button or filled backplates; the preparation page fits its labels, icons, target choices, and entry action. A shorter real Mobile/Vulkan run also captured and visually checked `03_bag_top.png`, `04_bag_touch_scrolled.png`, `12_atlas_touch_bottom.png`, and `05_fishing_ready.png`; bag/atlas bottom images follow actual ScreenTouch/ScreenDrag events (504/504 and 7335/7335 px). The fishing HUD capture snaps the diagnostic camera to the production ready pose, without changing the app camera code or quality. These layout screenshots predate the final environment art upgrade and are not final-world-art evidence. Headless success is not rendered-image evidence. No desktop/software renderer FPS is a Snapdragon 8 Elite performance claim.
+Native text/dropdown taps receive balanced GUI events only after a tap is recognized. Horizontal HSlider gestures receive balanced native press/motion/release; vertical swipes never press the slider or open a dropdown. Focus loss/page destruction clears a held gesture. The 31 actual generated raster icons retain transparent presentation and minimum 96-logical-pixel action targets.
 
-### Third-party provenance follow-up
+## Verification state
 
-After adding accurate 3D/CC0/raster provenance and the third-party art notice to Settings/Licenses, the full touch suite was rerun: 71/71 passed. The expanded Settings and Licenses pages still reached their actual bottoms through touch events (161/161 and 101536/101536 px). Raw run: `build/ui3d/touch_provenance.log`.
+- The bounded five-rod/eight-bait checkpoint passed 381/381 focused data/save/mechanics tests and 120/120 production touch/controller checks, including actual casts
+- Full-world bait overrides subsequently pass 557/557 focused data/save/mechanics checks. Original four bait weights remain unchanged across all 44 definitions
+- The restored full-world Main currently passes 120/120 **partial-development** UI/touch checks, including disabled entry, no gate override, and archive/bag/travel browsing. Full gameplay assertions are intentionally deferred until all 44 resources exist
+- Main's actual 3D preview factory plus the projected ruler passes 17/17 component/touch assertions
+- Logs are under `build/qa3d/full_catalog_touch_partial.log`, `preview_ruler_integration.log`, and `build/tackle_expansion/full_world_tackle_tests.log`
+
+Final release testing must run the production touch suite with `--require-full`; that mode fails while any model is missing. A partial check is not a full gameplay pass. Rendered production UI evidence uses an isolated, explicitly seeded historical save and does not override the Start gate; the seed and actual renderer are printed in its log.
+
+### Production partial-build image review
+
+`build/qa3d/full_catalog_preview/` contains three actual 720×1280 Mobile/Vulkan 1.4.305 desktop llvmpipe images: the revised-angler lobby with disabled Start, a reviewed olive-flounder detail page, and its 3D catch-result/ruler page. The latter two use an explicitly seeded isolated historical test record (718 mm / 3621 g, Japan reef); they are not a claim that a user caught that fish or that full44 gameplay is ready. The readiness gate stayed false with 33 missing models, and disposition cleared the seeded pending record normally. Detail/result fit and the ruler follows projected specimen endpoints.
+
+The review identified dark face/front lighting in the lake lobby; this was sent to the stage owner for a bounded lighting pass. It also caught the pre-existing doubled “大个体个体” result caption, corrected in Main by removing an existing suffix before appending it. The image predates that text-only correction. The capture completed without script/ReflectionProbe errors but emitted seven Texture RID warnings at process exit; retain this explicit cleanup caveat for final QA rather than calling the run warning-free.
+
+The parent review subsequently found animated fin/body gaps in the seeded olive-flounder detail/result (dorsal and tail seams), despite the static hero having passed. Those exact fish screenshots are withheld from user delivery and are **layout/ruler evidence only**, not approved final fish-art evidence. The model pipeline owner is correcting attachment weights. Keep `build/qa3d/capture_partial_catalog_ui.gd` unchanged for a like-for-like rerender after the corrected GLB is imported; no UI mask or PNG fallback was added.

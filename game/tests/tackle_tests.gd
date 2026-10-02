@@ -35,12 +35,21 @@ func _test_data_and_legacy_weights() -> void:
 		var id: String = NEW_BAITS[index]
 		_check(str(catalog.baits[index+4].bait_id)==id and int(catalog.baits[index+4].price)==0,"new unlimited bait appended: "+id)
 		_check(catalog.bait_category(id)==BASE_CATEGORIES[index],"explicit legacy bait category: "+id)
+		var overrides: Dictionary=catalog.bait_definition(id).get("species_weights",{})
 		for fish: FishDefinition in catalog.fish.values():
-			_check(is_equal_approx(catalog.bait_weight(fish,id),fish.weight_for("bait_weights",BASE_CATEGORIES[index])),"legacy44 bait behavior preserved by category: "+fish.species_id+"/"+id)
+			var expected_weight: float=float(overrides.get(fish.species_id,fish.weight_for("bait_weights",BASE_CATEGORIES[index])))
+			_check(is_equal_approx(catalog.bait_weight(fish,id),expected_weight),"new bait uses explicit species weight or unchanged category fallback: "+fish.species_id+"/"+id)
 		for spot: String in catalog.spots:
 			var a: Array[Dictionary] = encounter.candidates(catalog,spot,id,4,0.6,"day","clear")
-			var b: Array[Dictionary] = encounter.candidates(catalog,spot,BASE_CATEGORIES[index],4,0.6,"day","clear")
-			_check(a==b,"real encounter candidates use mapped category: "+spot+"/"+id)
+			var correct: bool=true
+			for entry: Dictionary in a:
+				var fish: FishDefinition=entry.fish
+				var expected_weight: float=float(fish.raw.get("weight",1.0))*catalog.bait_weight(fish,id)*fish.weight_for("time_weights","day")*fish.weight_for("weather_weights","clear")
+				if not is_equal_approx(float(entry.weight),expected_weight): correct=false
+			_check(correct,"real encounter consumes exact new bait weighting: "+spot+"/"+id)
+	for bait_id: String in ["worm","grain","shrimp","lure"]:
+		for fish: FishDefinition in catalog.fish.values():
+			_check(is_equal_approx(catalog.bait_weight(fish,bait_id),fish.weight_for("bait_weights",bait_id)),"original four bait weights unchanged across44: "+bait_id+"/"+fish.species_id)
 	_check(float(catalog.gear[3].power)>float(catalog.gear[1].power) and float(catalog.gear[3].tolerance)<float(catalog.gear[1].tolerance),"light spinning has genuine speed/control tradeoff")
 	_check(float(catalog.gear[4].power)>float(catalog.gear[2].power) and float(catalog.gear[4].reach)<float(catalog.gear[2].reach) and float(catalog.gear[4].max_depth_m)<float(catalog.gear[2].max_depth_m),"heavy casting does not invalidate old deep rod's reach/depth")
 	_check(float(catalog.gear[3].rod_length)<float(catalog.gear[4].rod_length) and float(catalog.gear[3].rod_radius)<float(catalog.gear[4].rod_radius),"new rods carry distinct real geometry profiles")
