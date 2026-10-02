@@ -1,6 +1,6 @@
 # Android build: 远岸钓记
 
-Evidence snapshot:2026-10-02 10:20 UTC. Final generated-icon1.1.0/code2 ARM64 and x86_64 builds have passed binary audits. API36 runtime testing is in progress on a separate software emulator. Physical Android16 ARM64 testing has not been performed.
+Evidence snapshot:2026-10-02 10:24 UTC. Final generated-icon1.1.0/code2 ARM64 and x86_64 builds have passed binary audits. API36 final-edition runtime testing is pending a software-emulator retry after disk preflight. Physical Android16 ARM64 testing has not been performed.
 
 ## Locked toolchain
 
@@ -94,4 +94,4 @@ Separate emulator package: `build/farshore-fishing-1.1.0-x86_64-test.apk`,140692
 
 The public `APK_BUILD_MANIFEST.json` and `SOURCE_BUILD_MANIFEST.json` record the exact phone binary, frozen source inventory, and read-back-verified external source archive. Raw binary audits are under `build/audit/1.1.0/arm64/` and `build/audit/1.1.0/x86_64/`.
 
-The earlier1.0.0 baseline installed and rendered real Chinese home/scenery on an API36 x86_64 software emulator using ANGLE/swangle. System ANRs prevented reliable gameplay, and that emulator later exited with signal9; the exact cause is unconfirmed. After both final exports completed, Gradle reported no running daemons and a smaller persistent API36/swangle test device was started independently. Final Android gameplay/pause/update-retention and physical-phone checks remain unverified at this snapshot. See `ANDROID_TESTS.md` for the matrix and `ANDROID_BASELINE_RUNTIME.md` for the earlier attempt.
+The earlier1.0.0 baseline installed and rendered real Chinese home/scenery on an API36 x86_64 software emulator using ANGLE/swangle. System ANRs prevented reliable gameplay, and that emulator later exited with signal9; the exact cause is unconfirmed. After both final exports completed, Gradle reported no running daemons and a smaller-screen persistent API36/swangle test device was prepared independently. Initial launch failed at the official emulator disk preflight; the helper parser was corrected, reproducible export caches were cleared, and the required space was verified for a retry. Final Android gameplay/pause/update-retention and physical-phone checks remain unverified at this snapshot. See `ANDROID_TESTS.md` for the matrix and `ANDROID_BASELINE_RUNTIME.md` for the earlier attempt.

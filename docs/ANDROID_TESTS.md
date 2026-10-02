@@ -1,6 +1,6 @@
 # Android verification record
 
-Evidence snapshot:2026-10-02 10:20 UTC. This record distinguishes final1.1.0 binary audits, earlier1.0.0 runtime evidence, and physical-phone verification.
+Evidence snapshot:2026-10-02 10:24 UTC. This record distinguishes final1.1.0 binary audits, earlier1.0.0 runtime evidence, and physical-phone verification.
 
 ## Final signed APKs
 
@@ -36,11 +36,11 @@ No physical phone is attached. The cloud host has no `/dev/kvm` or usable VMX/SV
 
 Earlier1.0.0 baseline: the API36 guest booted, installed the signed APK, started its activity, and rendered the Chinese home/scenery plus local-save-created message on ANGLE/swangle. The initial legacy SwiftShader GLES backend had a261-uniform shader-link failure; ANGLE/swangle removed that failure without changing the APK. Android SystemUI/launcher ANRs prevented reliable gameplay, and the emulator later exited with signal9 during a memory-pressure period. The exit is verified; its exact cause is unconfirmed. Details and screenshot/log paths are in `ANDROID_BASELINE_RUNTIME.md`.
 
-After both final1.1.0 exports completed, Gradle confirmed no running daemons. A separate smaller persistent writable test device was started:480×854,213dpi,1536MiB,2 cores, official `-gpu swangle`, no hardware acceleration. Its boot/install/gameplay/update checks are in progress. This new attempt has no completed final-edition runtime pass at this snapshot.
+After both final1.1.0 exports completed, Gradle confirmed no running daemons. A separate smaller-screen persistent writable test device is prepared:480×854,213dpi,2560MiB,2 cores,6GiB data partition, official `-gpu swangle`, no hardware acceleration. Initial launch stopped at disk preflight before boot. The helper now handles spaced avdmanager config keys correctly; the installed emulator enforces minimum2560MiB RAM and6GiB data despite smaller requests. Completed-stage Android/import/Gradle caches were removed within the generated build tree after rechecking both APK and source-backup hashes, leaving7.7GiB for retry. Boot/install/gameplay/update checks remain pending; this edition has no runtime pass at this snapshot.
 
 | Runtime check | Final1.1.0 status |
 |---|---|
-| API36 emulator setup | Prepared; software boot in progress |
+| API36 emulator setup | Prepared; disk preflight failed, retry prepared |
 | Final APK installation/activity/rendering | Not yet verified |
 | Full fishing loop/atlas/result disposition on Android | Not verified |
 | Android touch/cancel/systemBack/safe area/Chinese layout | Not verified |

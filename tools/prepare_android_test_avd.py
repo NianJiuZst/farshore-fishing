@@ -29,7 +29,7 @@ if not config.exists():
     assert result.returncode == 0 and config.is_file(), 'AVD creation failed; inspect build/logs/persistent-avd-create.txt'
 changes = {
     'hw.lcd.width':'480','hw.lcd.height':'854','hw.lcd.density':'213',
-    'hw.ramSize':'1536','hw.cpu.ncore':'2','disk.dataPartition.size':'2G',
+    'hw.ramSize':'2560','hw.cpu.ncore':'2','disk.dataPartition.size':'6G',
     'hw.camera.back':'none','hw.camera.front':'none','hw.gpu.enabled':'yes',
     'hw.gpu.mode':'swangle','hw.audioInput':'no','hw.gps':'no','hw.sdCard':'no',
     'showDeviceFrame':'no','firstboot.saveToLocalSnapshot':'no',
@@ -37,8 +37,8 @@ changes = {
 }
 lines = []
 for line in config.read_text().splitlines():
-    key=line.split('=',1)[0]
+    key=line.split('=',1)[0].strip()
     lines.append(key+'='+changes.pop(key) if key in changes else line)
 lines.extend(k+'='+v for k,v in changes.items())
 config.write_text('\n'.join(lines)+'\n')
-print('Writable API36 test AVD prepared:480x854,213dpi,1536MiB RAM,swangle; emulator not started')
+print('Writable API36 test AVD prepared:480x854,213dpi,2560MiB RAM,6GiB data,swangle; emulator not started')

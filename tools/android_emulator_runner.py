@@ -35,7 +35,7 @@ log = (root/'build/logs/emulator-run.log').open('wb')
 emulator = subprocess.Popen([
     str(root/'tools/android-sdk/emulator/emulator'), '-avd', os.environ.get('FARSHORE_EMULATOR_AVD','farshore_api36_persistent'),
     '-no-window', '-no-snapshot', '-no-audio', '-no-boot-anim',
-    '-no-metrics', '-accel', 'off', '-gpu', os.environ.get('FARSHORE_EMULATOR_GPU', 'swangle'), '-memory', os.environ.get('FARSHORE_EMULATOR_MEMORY','1536'),
+    '-no-metrics', '-accel', 'off', '-gpu', os.environ.get('FARSHORE_EMULATOR_GPU', 'swangle'), '-memory', os.environ.get('FARSHORE_EMULATOR_MEMORY','2560'),
     '-cores', '2', '-camera-back', 'none', '-camera-front', 'none',
 ], env=env, stdout=log, stderr=subprocess.STDOUT)
 print('Android16 emulator session started', flush=True)
@@ -84,6 +84,12 @@ try:
         time.sleep(1)
     print('Emulator exited with code', emulator.returncode, flush=True)
 finally:
+    terminal = {'emulator_running':False, 'exit_code':emulator.poll(),
+                'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+    if (control/'state.json').exists():
+        previous = json.loads((control/'state.json').read_text())
+        terminal['last_boot_query'] = previous
+    (control/'state.json').write_text(json.dumps(terminal, indent=2)+'\n')
     emulator.terminate()
     try: emulator.wait(timeout=20)
     except subprocess.TimeoutExpired: emulator.kill(); emulator.wait()
