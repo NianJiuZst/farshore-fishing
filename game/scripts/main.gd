@@ -55,7 +55,6 @@ var _content_ok: bool = false
 var _safe: MarginContainer
 var _collection: Label
 var _bait_label: Label
-var _hud: Control
 var _page_notice: Label
 
 func _ready() -> void:
@@ -351,7 +350,7 @@ func _process(delta: float) -> void:
 	if _toast_seconds > 0:
 		_toast_seconds -= delta
 		_toast.visible = _toast_seconds > 0
-		if is_instance_valid(_page_notice): _page_notice.visible=_toast_seconds>0
+		if is_instance_valid(_page_notice): _page_notice.visible=_toast_seconds>0 and not _page_notice.text.is_empty()
 	_charge.value = session.charge
 	_tension.value = session.tension
 	_progress.value = session.progress
@@ -481,7 +480,7 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	dim.color=Color("102f3b")
 	dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_overlay.add_child(dim)
-	var atmospheric: TextureRect=_scene_picture(str(catalog.region(region_id).get("scene","")),0)
+	var atmospheric: TextureRect=_scene_picture(str(catalog.spots.get(spot_id,{}).get("scene",catalog.region(region_id).get("scene",""))),0)
 	atmospheric.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
 	atmospheric.offset_bottom=420
 	atmospheric.modulate=Color(0.5,0.8,0.8,0.18)
@@ -1000,8 +999,9 @@ func _show_result() -> void:
 	center.add_child(image)
 	var ruler: Control=Ruler.new()
 	ruler.length_mm=int(_last_record.get("length_mm",0))
+	ruler.specimen=image
 	specimen.add_child(ruler)
-	var note: Label=_text("个体比例展示  ·  厘米 cm",16,Color("678275"))
+	var note: Label=_text("吻端至尾端  ·  厘米 cm",16,Color("678275"))
 	note.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	specimen.add_child(note)
 	var measurements: HBoxContainer=HBoxContainer.new()

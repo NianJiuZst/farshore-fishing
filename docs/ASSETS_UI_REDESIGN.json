@@ -33,7 +33,7 @@
       "path": "game/scripts/measure_ruler.gd",
       "type": "native metric reference ruler",
       "source": "Project-authored Godot CanvasItem drawing",
-      "verified": "Ticks scale to the shown individual length; numeric length/weight remain authoritative"
+      "verified": "Ruler endpoint positions derive from the fish texture alpha used-rect, transformed by the actual TextureRect aspect-fit scale into ruler-local coordinates. Numeric endpoints span this individual’s total length. Reviewed in actual gar and sturgeon result captures."
     },
     {
       "path": "game/assets/ui/expedition_rowboat.png",
