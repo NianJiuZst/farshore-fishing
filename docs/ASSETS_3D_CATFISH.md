@@ -34,3 +34,9 @@ MDC and NPS/C. Iverson copyrighted reference pictures are only temporary visual 
 First channel catfish and northern snakehead exports were rendered from hero, top, side, underside and animated poses. That inspection caught angular barbel curves and a floating snakehead lip; profile geometry was corrected before the remaining species were authored. Current build and approval status is recorded in each species' review directory and the completion section below. Validation JSON is evidence of actual weighted mesh deformation and matching loop endpoints, not merely action names.
 
 All final assets must retain +X nose, Godot +Y up, normalized 1 m X extent, fixed root, and four clips: swim 2 s, struggle 1.2 s, breach 1.4 s, landed 3 s. No texture resampling or lossy texture-compression pass was performed.
+
+## Export and binary audit checkpoint
+
+All six native masters and exported GLBs were built and independently audited on 2026-10-02. Every GLB has a weighted skeleton, 16 bones, six embedded full-resolution material images, exactly 1 m rest X extent, and four clips with the specified durations. Every root translation track is constant. All shared weighted-deformation tests pass, including loop-seam errors below `8e-18 m`; maximum skin influences are three. Model triangle counts range from 28,986 to 33,928.
+
+Final all-view visual inspection remains a separate gate. Hero previews caught and corrected ray-bearing adipose anatomy, regular scale-like flathead pigment, exposed pelvic roots, an unseated longsnout mouth, a floating bowfin throat plate, and an overly deep southern-catfish tail notch. Adipose lobes are now closed, rayless flesh meshes; paired roots use body-surface sampling; flathead pigment is stochastic and scale-free. No source texture was reduced or recompressed for APK size.

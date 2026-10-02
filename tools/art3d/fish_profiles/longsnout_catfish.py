@@ -17,14 +17,14 @@ def anatomy(f):
  f.fin('Anal',[(-.151,0,-.052),(-.213,0,-.046),(-.286,0,-.033)],[(-.151,0,-.054),(-.186,0,-.106),(-.265,0,-.099),(-.30,0,-.046)],parent='spine_rear',rays=17)
  f.fin('Caudal',[(-.37,0,-.028),(-.373,0,0),(-.37,0,.028)],[(-.506,0,-.113),(-.50,0,-.084),(-.421,0,0),(-.495,0,.089),(-.511,0,.123)],bone='caudal',parent='tail',rays=26)
  lipmat=f.material('LongsnoutThickLip',(.57,.49,.43),.48)
- mouth=[(.421,-.035,-.021),(.445,-.027,-.026),(.459,0,-.022),(.445,.027,-.026),(.421,.035,-.021)]
+ mouth=[f.surface(float(.425+.020*(1-t*t)),float(math.pi+t*.93),.0008) for t in np.linspace(-1,1,31)]
  f.tube('InferiorCrescentMouth',mouth,.0022,f.mats['dark'],'head',9)
- f.tube('ThickLowerLip',[(x-.003,y,z-.002) for x,y,z in mouth],.003,lipmat,'jaw',9)
+ f.tube('ThickLowerLip',[(x,y,z-.0016) for x,y,z in mouth],.003,lipmat,'jaw',9)
  for s in (-1,1):
   tag='L' if s<0 else 'R'
-  f.fin('Pectoral'+tag,[(.272,s*.056,-.025),(.238,s*.061,-.034),(.205,s*.06,-.039)],[(.272,s*.059,-.026),(.199,s*.143,-.058),(.078,s*.13,-.077),(.205,s*.06,-.039)],parent='spine_front',rays=14)
+  f.fin('Pectoral'+tag,[f.surface(float(x),s*1.95,-.0015) for x in np.linspace(0.272,0.205,14)],[(.272,s*.059,-.026),(.199,s*.143,-.058),(.078,s*.13,-.077),(.205,s*.06,-.039)],parent='spine_front',rays=14)
   f.tube('PectoralSpine'+tag,[(.272,s*.059,-.026),(.232,s*.102,-.046),(.199,s*.143,-.058)],[.0021,.0014,.0004],f.mats['ray'],'pectoral'+tag.lower())
-  f.fin('Pelvic'+tag,[(.005,s*.047,-.06),(-.037,s*.043,-.061)],[(.005,s*.047,-.06),(-.065,s*.099,-.105),(-.112,s*.067,-.095),(-.037,s*.043,-.061)],parent='spine_mid',rays=12)
+  f.fin('Pelvic'+tag,[f.surface(float(x),s*2.45,-.0015) for x in np.linspace(0.005,-0.037,14)],[(.005,s*.047,-.06),(-.065,s*.099,-.105),(-.112,s*.067,-.095),(-.037,s*.043,-.061)],parent='spine_mid',rays=12)
   f.eye('SmallEye'+tag,f.surface(.354,s*1.15,.001),(0,s*.94,.34),.0067,iris=(.54,.47,.34))
   f.gill(tag,[f.surface(.25+.018*((t-1.0)/1.1)**2,s*t,.001) for t in np.linspace(.37,2.3,28)],.0011)
   whisker(f,'MaxillaryBarbel'+tag,[(.428,s*.034,-.022),(.405,s*.052,-.033),(.371,s*.073,-.046),(.348,s*.074,-.051)],[.0018,.0014,.0007,.00014],f.mats['edge'],'head')

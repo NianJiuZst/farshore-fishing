@@ -2,11 +2,24 @@
 import math
 import numpy as np
 from fish_profiles.channel_catfish import whisker, adipose_lobe
+def fine_mottling(u,v,upper,color,height,rough):
+ # Smooth stochastic pigment fields avoid a regular scale-like or tiled pattern.
+ rng=np.random.default_rng(72951)
+ def noise(nx,ny):
+  grid=rng.uniform(0,1,(ny+1,nx+1));gx=u*nx;gy=v*ny
+  ix=np.minimum(gx.astype(int),nx-1);iy=np.minimum(gy.astype(int),ny-1)
+  tx=gx-ix;ty=gy-iy;tx=tx*tx*(3-2*tx);ty=ty*ty*(3-2*ty)
+  return (grid[iy,ix]*(1-tx)+grid[iy,ix+1]*tx)*(1-ty)+(grid[iy+1,ix]*(1-tx)+grid[iy+1,ix+1]*tx)*ty
+ n=.60*noise(35,18)+.30*noise(71,36)+.10*noise(137,69)
+ blotch=np.clip((n-.40)*4,0,1)*np.clip((upper-.14)/.36,0,1)
+ color*=1-blotch[:,:,None]*.55
+ return color,height,rough
+
 PROFILE={
  'id':'flathead_catfish',
  'sections':[(-.38,.022,.038,.035,0),(-.28,.036,.051,.046,.002),(-.16,.057,.078,.067,.004),(0,.081,.103,.084,.006),(.15,.103,.103,.082,.006),(.28,.115,.066,.067,0),(.37,.109,.043,.047,-.002),(.448,.086,.027,.032,-.005),(.490,.061,.015,.024,-.007),(.506,.010,.005,.010,-.013)],
- 'skin':{'back':(.22,.20,.095),'side':(.55,.45,.22),'belly':(.79,.70,.44),'pattern':'mottle','mottle_amount':.67,'variation':.08},
- 'roughness':.48,'fin_color':(.40,.36,.19),'swim_amplitude':.82,
+ 'skin':{'back':(.22,.20,.095),'side':(.55,.45,.22),'belly':(.79,.70,.44),'pattern':'mottle','mottle_amount':.24,'variation':.08},
+ 'custom_skin':fine_mottling,'roughness':.48,'fin_color':(.40,.36,.19),'swim_amplitude':.82,
  'morphology':['Exceptionally broad flattened head with small dorsolateral eyes','Protruding lower jaw, large mouth and eight barbels','Mottled ochre-brown scaleless skin','Nearly square caudal fin, small separate adipose and rounded anal'],
  'sources':['https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm','https://www.mdwfp.com/fishing-boating/fish-id-guide/flathead-catfish']}
 
@@ -22,8 +35,8 @@ def anatomy(f):
  f.tube('LowerJawRim',[(x+.003,y,z-.004) for x,y,z in mouth],.003,jawmat,'jaw',9)
  for s in (-1,1):
   tag='L' if s<0 else 'R'
-  f.fin('Pectoral'+tag,[(.255,s*.097,-.031),(.216,s*.099,-.044),(.183,s*.092,-.049)],[(.255,s*.099,-.031),(.165,s*.192,-.076),(.067,s*.162,-.097),(.095,s*.119,-.096),(.183,s*.092,-.049)],parent='spine_front',rays=17)
-  f.fin('Pelvic'+tag,[(-.014,s*.056,-.065),(-.052,s*.058,-.065)],[(-.014,s*.056,-.065),(-.09,s*.125,-.12),(-.15,s*.089,-.12),(-.052,s*.058,-.065)],parent='spine_mid',rays=13)
+  f.fin('Pectoral'+tag,[f.surface(float(x),s*2.03,-.0015) for x in np.linspace(0.255,0.183,14)],[(.255,s*.099,-.031),(.165,s*.192,-.076),(.067,s*.162,-.097),(.095,s*.119,-.096),(.183,s*.092,-.049)],parent='spine_front',rays=17)
+  f.fin('Pelvic'+tag,[f.surface(float(x),s*2.47,-.0015) for x in np.linspace(-0.014,-0.052,14)],[(-.014,s*.056,-.065),(-.09,s*.125,-.12),(-.15,s*.089,-.12),(-.052,s*.058,-.065)],parent='spine_mid',rays=13)
   f.eye('SmallEye'+tag,f.surface(.396,s*1.10,.001),(0,s*.91,.40),.0078,iris=(.57,.43,.19))
   f.gill(tag,[f.surface(.259+.025*((t-1.15)/1.04)**2,s*t,.001) for t in np.linspace(.3,2.3,30)],.0014)
   whisker(f,'MaxillaryBarbel'+tag,[(.473,s*.062,-.012),(.428,s*.111,-.018),(.341,s*.154,-.051),(.246,s*.159,-.084),(.19,s*.14,-.102)],[.004,.0033,.0022,.0011,.0002],f.mats['edge'],'head')

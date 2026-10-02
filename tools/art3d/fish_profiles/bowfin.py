@@ -27,11 +27,27 @@ def anatomy(f):
  f.fin('ShortAnal',[f.surface(float(x),math.pi,-.001) for x in np.linspace(-.19,-.29,14)],[(-.19,0,-.058),(-.22,0,-.112),(-.284,0,-.117),(-.325,0,-.089),(-.29,0,-.042)],parent='spine_rear',rays=12)
  f.fin('Caudal',[(-.385,0,-.035),(-.389,0,.006),(-.386,0,.052)],[(-.432,0,-.091),(-.499,0,-.092),(-.537,0,-.053),(-.545,0,.011),(-.527,0,.076),(-.478,0,.11),(-.413,0,.101)],bone='caudal',parent='tail',rays=27)
  plate=f.material('GularPlate',(.54,.58,.31),.56)
- f.ellipsoid('BonyGularPlate',(.349,0,-.052),(.088,.038,.009),plate,'jaw')
+ verts=[];faces=[];n=7;m=32
+ for layer in (-.0015,.002):
+  verts.append(f.surface(.352,math.pi,layer+.0015))
+  for i in range(1,n+1):
+   r=i/n
+   for j in range(m):
+    a=2*math.pi*j/m;verts.append(f.surface(.352+.072*r*math.cos(a),math.pi+.39*r*math.sin(a),layer+.0015*(1-r*r)))
+ block=1+n*m
+ for layer in range(2):
+  off=layer*block
+  for j in range(m):faces.append((off,off+1+j,off+1+(j+1)%m))
+  for i in range(n-1):
+   for j in range(m):
+    a=off+1+i*m+j;b=off+1+i*m+(j+1)%m;faces.append((a,b,b+m,a+m))
+ for j in range(m):
+  a=1+(n-1)*m+j;b=1+(n-1)*m+(j+1)%m;faces.append((a,a+block,b+block,b))
+ f.mesh('BonyGularPlate',verts,faces,plate,weight='head')
  for s in (-1,1):
   tag='L' if s<0 else 'R'
-  f.fin('Pectoral'+tag,[(.255,s*.071,-.023),(.232,s*.075,-.035),(.209,s*.068,-.043)],[(.255,s*.071,-.023),(.19,s*.146,-.033),(.11,s*.151,-.067),(.091,s*.116,-.083),(.156,s*.080,-.078),(.209,s*.068,-.043)],parent='spine_front',rays=18)
-  f.fin('Pelvic'+tag,[(-.02,s*.05,-.064),(-.06,s*.05,-.064)],[(-.02,s*.05,-.064),(-.089,s*.116,-.101),(-.15,s*.082,-.104),(-.06,s*.05,-.064)],parent='spine_mid',rays=13)
+  f.fin('Pectoral'+tag,[f.surface(float(x),s*1.95,-.0015) for x in np.linspace(0.255,0.209,14)],[(.255,s*.071,-.023),(.19,s*.146,-.033),(.11,s*.151,-.067),(.091,s*.116,-.083),(.156,s*.080,-.078),(.209,s*.068,-.043)],parent='spine_front',rays=18)
+  f.fin('Pelvic'+tag,[f.surface(float(x),s*2.48,-.0015) for x in np.linspace(-0.02,-0.06,14)],[(-.02,s*.05,-.064),(-.089,s*.116,-.101),(-.15,s*.082,-.104),(-.06,s*.05,-.064)],parent='spine_mid',rays=13)
   f.eye('Eye'+tag,f.surface(.397,s*1.14,.001),(0,s*.94,.34),.009,iris=(.55,.44,.16))
   f.gill(tag,[f.surface(.255+.030*((t-1.10)/1.03)**2,s*t,.001) for t in np.linspace(.35,2.33,30)],.0014)
   pts=[f.surface(float(x),s*(1.64+(.482-x)*2.6),.0008) for x in np.linspace(.482,.34,29)]
