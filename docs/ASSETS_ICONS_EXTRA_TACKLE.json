@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "asset_set": "Farshore expansion baits and tackle icons",
+  "status": "complete",
+  "generation_mode": "Built-in image_gen; one independent call per asset, six assets, no API key or CLI fallback",
+  "license_caveat": "AI-generated assets. No third-party stock artwork is incorporated. This provenance record is not a legal opinion, copyright registration, or warranty of exclusivity; usage is subject to applicable OpenAI terms and local law.",
+  "runtime_processing": "Original generated 1254×1254 RGBA masters preserved byte-for-byte. Pillow LANCZOS downsamples each complete source to 816×816, centered at (104,104) in a transparent 1024×1024 RGBA canvas. No painting, recoloring, masking, thresholding, alpha replacement or cropping. Full generated alpha is retained with normal resampling. Runtime dimensions intentionally exceed the 512px minimum.",
+  "external_backup_directory": "/workspace/shared/farshore-extra-tackle-backup",
+  "visual_audit_sheets": [
+    "docs/extra_tackle_icons_dark_audit.png",
+    "docs/extra_tackle_icons_light_audit.png"
+  ],
+  "assets": [
+    {
+      "kind": "sweetcorn",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted collectible inventory icon for a cozy fishing adventure game. Create ONE premium detailed raster illustration, square 1024 by 1024 pixels or larger, genuinely transparent alpha background. Subject: a compact cluster of exactly five plump sweetcorn kernels used as fishing bait, purely rounded golden corn kernels with creamy yellow highlights and amber creases, two kernels in front and three behind; no wheat, cob, foliage or container. Refined hand-painted naturalist adventure illustration with tactile gouache brush shading and nearly three-dimensional material volume, attractive bold silhouette clearly recognizable at 60 pixels. Palette warm sunny gold, honey amber and pale cream. Soft light from upper left, self-shading only. Centered full silhouette, at least 10 percent transparent exterior margin. No background, tile, button, frame, border, ground, cast shadow, vignette, halo, writing, letters, numbers, logo, watermark or checkerboard. Preserve true alpha transparency.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-918c47cd-5646-44f1-bd7b-bf35bef78e20.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/sweetcorn.png",
+      "runtime_path": "game/assets/ui/icons/sweetcorn.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "e56d7b882e3a3573662d19d69ab91cc5ebefa83de8c77602358393e5d2c26866",
+        "bytes": 1267058,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 825046,
+        "alpha_partial_pixels": 746846,
+        "alpha_opaque_pixels": 624,
+        "alpha_nonzero_bbox": [
+          0,
+          21,
+          1218,
+          1254
+        ],
+        "alpha_at_least_8_bbox": [
+          59,
+          162,
+          1210,
+          1065
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "19bb0cb91c0dc15807c806895d753efa6c5aa50004710486bbe8927d54a4ea3c",
+        "bytes": 584908,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 731803,
+        "alpha_partial_pixels": 315606,
+        "alpha_opaque_pixels": 1167,
+        "alpha_nonzero_bbox": [
+          104,
+          119,
+          897,
+          920
+        ],
+        "alpha_at_least_8_bbox": [
+          142,
+          209,
+          892,
+          797
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "external_master_backup": "/workspace/shared/farshore-extra-tackle-backup/sweetcorn.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Each full generated master inspected visually; runtime images composited at 60, 128 and 320 pixels on deep-teal and cream backgrounds in the two retained audit sheets.",
+        "subject": "Exactly five plump golden sweetcorn kernels, no wheat or container. Distinct compact bright cluster reads at 60 pixels.",
+        "edges": "Full object contours retained. No square background, button, frame, text, checkerboard, cast shadow or visible matte. Generated variable alpha is retained; extremely faint alpha-1 specks in some original masters are kept unchanged and invisible at runtime. All runtime outermost borders are alpha zero.",
+        "style": "Detailed hand-painted naturalist collectible inventory rendering with soft upper-left lighting, warm/cool material highlights, tactile surfaces and dimensional shading. Matches existing detailed PNG asset family."
+      }
+    },
+    {
+      "kind": "dough",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted collectible inventory icon for a cozy fishing adventure game. Create ONE premium detailed raster illustration, square 1024 by 1024 pixels or larger, genuinely transparent alpha background. Subject: exactly three round kneaded dough fishing-bait balls, a larger pale wheat-cream ball at front and two smaller behind, compact triangular cluster, slightly irregular hand-rolled forms, tiny golden grain flecks, shallow kneading impressions and soft floury matte texture; clearly uncooked dough, no crust or baking, no container, hook, leaves or accessories. Refined hand-painted naturalist adventure illustration with tactile gouache brush shading and nearly three-dimensional material volume, attractive bold silhouette clearly recognizable at 60 pixels. Palette warm ivory, oatmeal beige and gentle golden ochre. Soft light from upper left, self-shading only. Centered full silhouette, at least 10 percent transparent exterior margin. No background, tile, button, frame, border, ground, cast shadow, vignette, halo, writing, letters, numbers, logo, watermark or checkerboard. Preserve true alpha transparency.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-13c3ffef-6241-489d-8dc1-1141f30f6127.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/dough.png",
+      "runtime_path": "game/assets/ui/icons/dough.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "913bc599d4cff86c0c56b6f4896ba03a4617cccd1f22c2162da66fcd9ac5581b",
+        "bytes": 1598854,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 820455,
+        "alpha_partial_pixels": 751497,
+        "alpha_opaque_pixels": 564,
+        "alpha_nonzero_bbox": [
+          37,
+          0,
+          1202,
+          1254
+        ],
+        "alpha_at_least_8_bbox": [
+          106,
+          141,
+          1164,
+          1130
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "45e22c347492f95bb297bd593ab3dc97ea64a89109b68b777da4ac042e471ae4",
+        "bytes": 731159,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 730188,
+        "alpha_partial_pixels": 317409,
+        "alpha_opaque_pixels": 979,
+        "alpha_nonzero_bbox": [
+          128,
+          104,
+          886,
+          920
+        ],
+        "alpha_at_least_8_bbox": [
+          173,
+          196,
+          862,
+          839
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "external_master_backup": "/workspace/shared/farshore-extra-tackle-backup/dough.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Each full generated master inspected visually; runtime images composited at 60, 128 and 320 pixels on deep-teal and cream backgrounds in the two retained audit sheets.",
+        "subject": "Three hand-rolled uncooked beige dough balls with shallow kneading texture and grain flecks. Rounded matte cluster reads at 60 pixels.",
+        "edges": "Full object contours retained. No square background, button, frame, text, checkerboard, cast shadow or visible matte. Generated variable alpha is retained; extremely faint alpha-1 specks in some original masters are kept unchanged and invisible at runtime. All runtime outermost borders are alpha zero.",
+        "style": "Detailed hand-painted naturalist collectible inventory rendering with soft upper-left lighting, warm/cool material highlights, tactile surfaces and dimensional shading. Matches existing detailed PNG asset family."
+      }
+    },
+    {
+      "kind": "cut_fish",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted collectible inventory icon for a cozy fishing adventure game. Create ONE premium detailed raster illustration, square 1024 by 1024 pixels or larger, genuinely transparent alpha background. Subject: two clean overlapping skin-on bait-fish portions, short chunky tapered silver-blue pieces with shimmering silvery scales on top and clean pale ivory lightly peach flesh visible only at the neat cross section; simple recognizable bait cuts, non-gory, no blood, organs, bones, fish head or eyes, no whole fish, no knife, board, container or hook. Refined hand-painted naturalist adventure illustration with tactile gouache brush shading and nearly three-dimensional material volume, attractive compact silhouette clearly recognizable at 60 pixels. Palette silvery pearl, muted teal-blue skin, warm ivory flesh, tiny cool steel-blue details. Soft light from upper left, self-shading only. Centered full silhouette, three-quarter view of a coherent compact overlapping pair, at least 10 percent transparent exterior margin. No background, tile, button, frame, border, ground, cast shadow, vignette, halo, writing, letters, numbers, logo, watermark or checkerboard. Preserve true alpha transparency.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-d5872265-64aa-4b36-a4d0-2f7b40151e22.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/cut_fish.png",
+      "runtime_path": "game/assets/ui/icons/cut_fish.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "7bb4f8781f83f7cb0ec5bb37f1b76ebe47cda550e27829e1b6d3a854f8933c9c",
+        "bytes": 1674029,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 884235,
+        "alpha_partial_pixels": 687851,
+        "alpha_opaque_pixels": 430,
+        "alpha_nonzero_bbox": [
+          25,
+          8,
+          1210,
+          1254
+        ],
+        "alpha_at_least_8_bbox": [
+          52,
+          179,
+          1206,
+          1093
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "de4a4b39d5a52f73f803cc0ae48a5b3206ba0f9126e5d47b10b6247bf2861924",
+        "bytes": 747129,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 757217,
+        "alpha_partial_pixels": 290579,
+        "alpha_opaque_pixels": 780,
+        "alpha_nonzero_bbox": [
+          120,
+          109,
+          891,
+          920
+        ],
+        "alpha_at_least_8_bbox": [
+          139,
+          221,
+          889,
+          815
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "external_master_backup": "/workspace/shared/farshore-extra-tackle-backup/cut_fish.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Each full generated master inspected visually; runtime images composited at 60, 128 and 320 pixels on deep-teal and cream backgrounds in the two retained audit sheets.",
+        "subject": "Two clean silvery skin-on bait portions with pale peach-ivory cross sections. No blood, organs, exposed bones or gore. Reads at 60 pixels.",
+        "edges": "Full object contours retained. No square background, button, frame, text, checkerboard, cast shadow or visible matte. Generated variable alpha is retained; extremely faint alpha-1 specks in some original masters are kept unchanged and invisible at runtime. All runtime outermost borders are alpha zero.",
+        "style": "Detailed hand-painted naturalist collectible inventory rendering with soft upper-left lighting, warm/cool material highlights, tactile surfaces and dimensional shading. Matches existing detailed PNG asset family."
+      }
+    },
+    {
+      "kind": "spinner",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted collectible inventory icon for a cozy fishing adventure game. Create ONE premium detailed raster illustration, square 1024 by 1024 pixels or larger, genuinely transparent alpha background. Subject: a single classic inline spinning fishing lure, diagonally composed from lower left to upper right. One broad convex oval hammered brass spoon blade swings beside a short central steel shaft, two small muted coral-red beads and a brass cylindrical weight on the shaft, one dark silver treble hook at lower left, small top line eye at upper right. Broad spoon blade is the recognizable primary silhouette; no fish-shaped body, no bait fish, no rod, line, package or extra object. Refined hand-painted adventure illustration with tactile gouache brush shading and nearly three-dimensional convincing metallic material volume, attractive clear silhouette legible at 60 pixels. Palette warm polished gold and brass with cool steel highlights, subtle muted teal reflection and tiny coral beads. Soft light from upper left, self-shading only. Centered entire object, hooks fully visible, at least 10 percent transparent exterior margin. No background, tile, button, frame, border, ground, cast shadow, vignette, halo, writing, letters, numbers, logo, watermark or checkerboard. Preserve true alpha transparency.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-adb07bb5-63ed-4fb8-9ec4-ef4ef717c110.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/spinner.png",
+      "runtime_path": "game/assets/ui/icons/spinner.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "4b4de1249908723644900ec96889cb8381ec8e3dd123e57d9ed11ffe4f1f6b9a",
+        "bytes": 898275,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 1229764,
+        "alpha_partial_pixels": 341893,
+        "alpha_opaque_pixels": 859,
+        "alpha_nonzero_bbox": [
+          39,
+          23,
+          1208,
+          1254
+        ],
+        "alpha_at_least_8_bbox": [
+          58,
+          82,
+          1203,
+          1182
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "200d957786a80a487258988d8cb04a789b029037e30d43120e39fe995db179f5",
+        "bytes": 400883,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 903501,
+        "alpha_partial_pixels": 143482,
+        "alpha_opaque_pixels": 1593,
+        "alpha_nonzero_bbox": [
+          129,
+          119,
+          890,
+          920
+        ],
+        "alpha_at_least_8_bbox": [
+          142,
+          157,
+          886,
+          873
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "external_master_backup": "/workspace/shared/farshore-extra-tackle-backup/spinner.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Each full generated master inspected visually; runtime images composited at 60, 128 and 320 pixels on deep-teal and cream backgrounds in the two retained audit sheets.",
+        "subject": "Brass spoon blade, two coral beads, central weight and silver treble hook; distinct from existing fish-shaped lure. Blade and lure silhouette read at 60 pixels.",
+        "edges": "Full object contours retained. No square background, button, frame, text, checkerboard, cast shadow or visible matte. Generated variable alpha is retained; extremely faint alpha-1 specks in some original masters are kept unchanged and invisible at runtime. All runtime outermost borders are alpha zero.",
+        "style": "Detailed hand-painted naturalist collectible inventory rendering with soft upper-left lighting, warm/cool material highlights, tactile surfaces and dimensional shading. Matches existing detailed PNG asset family."
+      }
+    },
+    {
+      "kind": "rod_spinning",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted collectible equipment inventory icon for a cozy fishing adventure game. Create ONE premium detailed raster illustration, square 1024 by 1024 pixels or larger, genuinely transparent alpha background. Subject: a lightweight modern spinning fishing rod with a small elegant open-face spinning reel hanging UNDER the rod, slender navy-teal rod blank, pale cork split grip, bright polished silver reel and very small warm brass trim. Compact foreshortened full-length rod illustrated diagonally from butt at lower left to gently curving fine tip at upper right, no pieces cut off. Give the delicate open silver bail and blue spool a clear silhouette, visibly light and responsive equipment, not a heavy rod or round casting reel. Keep reel and grip large enough to read in a small inventory icon, rod guides and thin pale line complete, no bobber, lure or dangling hook. Refined hand-painted adventure illustration with tactile gouache brush shading and nearly three-dimensional convincing cork, graphite and metal material volume, clearly recognizable at 60 pixels. Palette cool teal, midnight blue, cream cork and bright steel silver, small brass fittings. Soft light from upper left, self-shading only. Centered entire rod and reel, at least 10 percent transparent exterior margin. No background, tile, button, frame, border, ground, cast shadow, vignette, halo, writing, letters, numbers, logo, watermark or checkerboard. Preserve true alpha transparency.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-762cfcfd-a02d-43b5-902f-1e2d3dd0b2c2.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/rod_spinning.png",
+      "runtime_path": "game/assets/ui/icons/rod_spinning.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "f8e57a7117a329d4a24c640b811e11c3c94a595f85589881aad24754a81cd167",
+        "bytes": 501209,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 1415197,
+        "alpha_partial_pixels": 156856,
+        "alpha_opaque_pixels": 463,
+        "alpha_nonzero_bbox": [
+          47,
+          34,
+          1230,
+          1234
+        ],
+        "alpha_at_least_8_bbox": [
+          57,
+          44,
+          1226,
+          1182
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "runtime": {
+        "dimensions_px": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "260302eb136afe33bcdd41e855ceb7da3129f1cb1fe61d90f888e7d3662b2255",
+        "bytes": 226073,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 982280,
+        "alpha_partial_pixels": 65269,
+        "alpha_opaque_pixels": 1027,
+        "alpha_nonzero_bbox": [
+          136,
+          126,
+          904,
+          907
+        ],
+        "alpha_at_least_8_bbox": [
+          141,
+          134,
+          902,
+          873
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "external_master_backup": "/workspace/shared/farshore-extra-tackle-backup/rod_spinning.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Each full generated master inspected visually; runtime images composited at 60, 128 and 320 pixels on deep-teal and cream backgrounds in the two retained audit sheets.",
+        "subject": "Blue-teal slender spinning rod, pale cork grip, small silver underslung open-face reel. Distinct from heavy rod by grip, reel type and cool palette. Fine tip/line detail is necessarily subtle at 60 pixels; gear inspection should use at least 96–128 pixels.",
+        "edges": "Full object contours retained. No square background, button, frame, text, checkerboard, cast shadow or visible matte. Generated variable alpha is retained; extremely faint alpha-1 specks in some original masters are kept unchanged and invisible at runtime. All runtime outermost borders are alpha zero.",
+        "style": "Detailed hand-painted naturalist collectible inventory rendering with soft upper-left lighting, warm/cool material highlights, tactile surfaces and dimensional shading. Matches existing detailed PNG asset family."
+      }
+    },
+    {
+      "kind": "rod_heavy",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted collectible equipment inventory icon for a cozy fishing adventure game. Create ONE premium detailed raster illustration, square 1024 by 1024 pixels or larger, genuinely transparent alpha background. Subject: a powerful heavy-duty casting fishing rod with a large round conventional casting reel mounted on TOP of the rod. The reel is a broad sturdy round warm brass-gold drum with dark red line visible between its side plates and a strong offset two-knob crank. Thick dark graphite rod blank, burgundy binding wraps, large reinforced guides, chunky dark brown textured grip and robust butt cap. Compact foreshortened full-length rod illustrated diagonally from butt at lower left to thick tapering tip at upper right; entire silhouette visible, nothing cut off. Exaggerate sturdy diameter and generous round reel just enough for strong 60-pixel inventory legibility. Visibly substantial heavy casting equipment, no spinning-reel bail and no reel hanging below. No bobber, lure, dangling hook, fish, extra tackle or separate object. Refined hand-painted adventure illustration with tactile gouache brush shading and nearly three-dimensional convincing graphite, leather and brass material volume. Palette warm brass, charcoal graphite, rich brown and muted burgundy red; clear light edge highlights. Soft light from upper left, self-shading only. Centered entire rod and reel, at least 10 percent transparent exterior margin. No background, tile, button, frame, border, ground, cast shadow, vignette, halo, writing, letters, numbers, logo, watermark or checkerboard. Preserve true alpha transparency.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-1a23f109-86f2-4336-9f0a-8c3a9e5ca5c6.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/rod_heavy.png",
+      "runtime_path": "game/assets/ui/icons/rod_heavy.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "8f408d476e59ccd82f99b81089658bb4e47f7f883822cbe6fc68429ea358b6a8",
+        "bytes": 607405,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 1364540,
+        "alpha_partial_pixels": 207395,
+        "alpha_opaque_pixels": 581,
+        "alpha_nonzero_bbox": [
+          19,
+          23,
+          1225,
+          1230
+        ],
+        "alpha_at_least_8_bbox": [
+          54,
+          43,
+          1222,
+          1214
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "runtime": {
+        "dimensions_px": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA",
+        "sha256": "db1c7ed9406eb8480ed07ec3ec5aa0a968db340726064fd6ad3e96e39896d64d",
+        "bytes": 269800,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 960462,
+        "alpha_partial_pixels": 86969,
+        "alpha_opaque_pixels": 1145,
+        "alpha_nonzero_bbox": [
+          116,
+          119,
+          902,
+          904
+        ],
+        "alpha_at_least_8_bbox": [
+          140,
+          132,
+          900,
+          894
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "external_master_backup": "/workspace/shared/farshore-extra-tackle-backup/rod_heavy.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Each full generated master inspected visually; runtime images composited at 60, 128 and 320 pixels on deep-teal and cream backgrounds in the two retained audit sheets.",
+        "subject": "Charcoal/burgundy heavy rod, dark textured grip, large warm brass top-mounted round casting reel with two-knob crank. Stronger grip/reel silhouette contrasts with light spinning rod at 60 pixels. Full reel detail reads best at 96–128 pixels.",
+        "edges": "Full object contours retained. No square background, button, frame, text, checkerboard, cast shadow or visible matte. Generated variable alpha is retained; extremely faint alpha-1 specks in some original masters are kept unchanged and invisible at runtime. All runtime outermost borders are alpha zero.",
+        "style": "Detailed hand-painted naturalist collectible inventory rendering with soft upper-left lighting, warm/cool material highlights, tactile surfaces and dimensional shading. Matches existing detailed PNG asset family."
+      }
+    }
+  ]
+}
