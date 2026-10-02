@@ -1,0 +1,22 @@
+{
+  "side": {
+    "samples": 16,
+    "resolution_percentage": 100,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/japanese_whiting.blend"
+  },
+  "underside": {
+    "samples": 16,
+    "resolution_percentage": 100,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/japanese_whiting.blend"
+  },
+  "hero": {
+    "samples": 24,
+    "resolution_percentage": 100,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/japanese_whiting.blend"
+  },
+  "top": {
+    "samples": 16,
+    "resolution_percentage": 100,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/japanese_whiting.blend"
+  }
+}

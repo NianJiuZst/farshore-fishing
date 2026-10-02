@@ -1,0 +1,33 @@
+{
+  "species": "marbled_rockfish",
+  "glb_sha256": "78c5fd2e2e99d4f7d04867f5361461537dd5383eb7c59fe77cbb42d74317a9ad",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Distinct stout thick-bodied rockfish with broad head and round caudal",
+    "Twelve-spined anterior crest remains coherent through all four rendered poses",
+    "Top and underside prove broad paired fan pectorals and physical torso thickness",
+    "Continuous attached fin bases in every pose, matching sampled root-contact audit",
+    "Mottled saddle pigment is angular-periodic after top-view correction; dorsal fin casts a real midline shadow",
+    "No suborbital horn or ridge was added; only low supraorbital rims"
+  ],
+  "view_hashes": {
+    "hero": "834bd096351905a80d6ea05ed6062b77b98b3f0c5b63d1775915606067fd1ff8",
+    "side": "46f112d0d90a847b5a38b6c7e25370e1e87cc2a8ebd9fc964d719b48bd8e1d3a",
+    "top": "c24542ad000c47088a0177abc9e046c7cb8a06fc04b924719e0e3e9de7815408",
+    "underside": "ef0677473dd70eab550916c9e62ba0dbd9dae4afbc861b871d1070f777382a60",
+    "pose_swim": "6af5f75a980751f6b196557e66b8f8059261c4eb1a92c5dbf7498bd4927dc970",
+    "pose_struggle": "de37ef2657bb04081fe354829cb05069923103979eb9992c9a58218016af7637",
+    "pose_breach": "c6ea4c52bfe1738920edb1b0c3ee5cb1d11f338d8b0365c1316d009acdc2136d",
+    "pose_landed": "2b569a7bdc50d9035ff78b254414a9109f15b40f5cc828f15f8d77b431f79dca"
+  }
+}

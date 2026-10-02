@@ -1,0 +1,41 @@
+{
+  "species": "japanese_whiting",
+  "glb_sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Slender cylindrical body and pointed snout remain legible in hero and side",
+    "Refined tiny oblique mouth crease/opening is visible at full-resolution side and underside tip",
+    "Two separate dorsal fins and long opposed second dorsal/anal stay attached in all four posed captures",
+    "Paired eyes and paired pectoral/pelvic fins remain embedded and anatomically bilateral",
+    "Shallow emarginate caudal attaches continuously to body cap; no root separation in swim, struggle, breach or landed",
+    "No flat cutout geometry or species-only recolor substitution"
+  ],
+  "external_stage_proof": {
+    "image": "build/stage3d/whiting_100mm/japanese_whiting_100mm_minimum.png",
+    "source_glb_sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+    "reported_gate": "6/6 pass",
+    "physical_length_m": 0.1,
+    "portrait_bounds_width_px": 113,
+    "reviewer": "3D stage worker; actual scene pixels inspected"
+  },
+  "view_hashes": {
+    "hero": "9c5de6678ef03474ea5093701dda83841ecc3b4dabe99ffcdb7b010cb568e4c5",
+    "side": "61a46e5525b6dabb5b0e32ee4964deff5de9a6359f094a23c207a4d7d71c99ac",
+    "top": "c606aaba4aae4552d3c54048caf3456e58928c3854d40efe77dd57ce524ff020",
+    "underside": "edf8a123dfc9b270c7b0eaf851049538026b944afa2fb5e300b151d23e802792",
+    "pose_swim": "d6927e31a063180a92a2eb1ee9c8626af09ad6b272b8049a7692d6efa926bbae",
+    "pose_struggle": "9d17eafceb1d37231693a965fdae90fd77ae0fe95981796f57b3a3b713c05e4d",
+    "pose_breach": "648fc63e3f3c3704fd1e54de7d76a4a3e85eddcf7b4c5bc66a49da72cf462628",
+    "pose_landed": "dc5697910c8f22c02da4bb9598f73e1ca5a404804032191770ff7a45877f0449"
+  }
+}
