@@ -1,0 +1,13 @@
+{
+  "asset": "managed_oxbow.glb",
+  "authoring": "Original deterministic parametric Blender mesh construction; no third-party model or texture input",
+  "seed": 81207,
+  "triangles": 97680,
+  "mesh_nodes": 22,
+  "unit": "meter",
+  "up": "+Y",
+  "view_direction": "-Z",
+  "location": "Managed Mississippi oxbow test fishery; intentionally low alluvial banks",
+  "water": "Separate real-time stage surface",
+  "build": "blender -b --python tools/art3d/build_environment.py"
+}
