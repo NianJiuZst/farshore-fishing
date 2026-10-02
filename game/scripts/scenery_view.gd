@@ -76,7 +76,7 @@ func _draw() -> void:
 		draw_texture_rect_region(front_art,Rect2(w*0.5,h*0.39,w*0.5,h*0.39),Rect2(front_art.get_width()*0.5,0,front_art.get_width()*0.5,front_art.get_height()))
 	_draw_angler(w,h)
 	# A transparent dusk vignette keeps controls legible while the painting stays edge-to-edge.
-	if _bottom_shade: draw_texture_rect(_bottom_shade,Rect2(0,h*0.70,w,h*0.30),false)
+
 	if session == null: return
 	var active: int = session.before_pause if session.state == FishingSession.State.PAUSED else session.state
 	if active in [FishingSession.State.CASTING,FishingSession.State.WAITING,FishingSession.State.NIBBLE,FishingSession.State.BITE,FishingSession.State.FIGHT]:

@@ -5,14 +5,15 @@ const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const Scenery = preload("res://scripts/scenery_view.gd")
 const Audio = preload("res://scripts/audio_manager.gd")
-const INK: Color = Color("edf4e9")
+const INK: Color = Color("244449")
 const NAVY: Color = Color("102f3b")
-const GOLD: Color = Color("f1ca69")
+const GOLD: Color = Color("ab742b")
 const Art = preload("res://scripts/ui_art.gd")
+const IconButton=preload("res://scripts/icon_action.gd")
 const Ruler = preload("res://scripts/measure_ruler.gd")
-const MUTED: Color = Color("a8c6c3")
+const MUTED: Color = Color("587872")
 const PAPER: Color = Color("f5f0e3")
-const TEAL: Color = Color("83cbb9")
+const TEAL: Color = Color("327d76")
 const CORAL: Color = Color("edb078")
 var catalog: ContentCatalog = Catalog.new()
 var store: SaveStore = Store.new()
@@ -85,32 +86,26 @@ func _ready() -> void:
 	_safe_area()
 
 func _apply_theme() -> void:
-	var style: Theme = Theme.new()
-	var chinese_font: FontFile = load("res://assets/fonts/NotoSansCJK-Regular.ttc")
-	chinese_font.set_face_index(0, 2)
-	style.default_font = chinese_font
-	style.default_font_size = 24
-	style.set_color("font_color", "Label", INK)
-	for type_name: String in ["Button","OptionButton"]:
-		style.set_color("font_color", type_name, INK)
-		style.set_color("font_hover_color", type_name, Color.WHITE)
-		style.set_color("font_pressed_color", type_name, NAVY)
-		style.set_color("font_disabled_color", type_name, Color("74958e"))
-		style.set_stylebox("normal", type_name, _box(Color("244c56"),18,Color("527473"),1))
-		style.set_stylebox("hover", type_name, _box(Color("32616a"),18,GOLD,2))
-		style.set_stylebox("pressed", type_name, _box(TEAL,18))
-		style.set_stylebox("disabled", type_name, _box(Color("1d424b"),18,Color("365c61"),1))
-		style.set_stylebox("focus", type_name, _box(Color(0,0,0,0),18,GOLD,2))
-	style.set_stylebox("normal", "LineEdit", _box(Color("173c47"),18,Color("50706e"),1))
-	style.set_color("font_color", "LineEdit", INK)
-	style.set_color("font_placeholder_color", "LineEdit", MUTED)
-	style.set_color("caret_color", "LineEdit", GOLD)
-	style.set_constant("separation", "VBoxContainer", 14)
-	style.set_constant("separation", "HBoxContainer", 12)
-	style.set_stylebox("panel","PopupMenu",_box(NAVY,12,GOLD,1))
+	var style: Theme=Theme.new()
+	var chinese_font: FontFile=load("res://assets/fonts/NotoSansCJK-Regular.ttc")
+	chinese_font.set_face_index(0,2)
+	style.default_font=chinese_font
+	style.default_font_size=24
+	style.set_color("font_color","Label",INK)
+	for type_name: String in ["Button","OptionButton","LineEdit"]:
+		for state: String in ["normal","hover","pressed","disabled","focus"]: style.set_stylebox(state,type_name,StyleBoxEmpty.new())
+		style.set_color("font_color",type_name,INK)
+		style.set_color("font_hover_color",type_name,TEAL)
+		style.set_color("font_pressed_color",type_name,GOLD)
+		style.set_color("font_disabled_color",type_name,Color("8c9e95"))
+	style.set_color("font_placeholder_color","LineEdit",MUTED)
+	style.set_color("caret_color","LineEdit",TEAL)
+	style.set_constant("separation","VBoxContainer",14)
+	style.set_constant("separation","HBoxContainer",12)
+	style.set_stylebox("panel","PopupMenu",_box(Color("edf1e5"),0))
 	style.set_color("font_color","PopupMenu",INK)
 	style.set_constant("v_separation","PopupMenu",30)
-	theme = style
+	theme=style
 
 func _box(color: Color, radius: int = 16, border: Color = Color(0,0,0,0), width: int = 0) -> StyleBoxFlat:
 	var b: StyleBoxFlat = StyleBoxFlat.new()
@@ -134,27 +129,33 @@ func _text(value: String, size_px: int = 24, color: Color = INK) -> Label:
 	label.add_theme_color_override("font_color", color)
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	label.add_theme_color_override("font_outline_color",Color("21454b") if color.get_luminance()>0.55 else Color(0.96,0.98,0.91,0.82))
+	label.add_theme_constant_override("outline_size",3 if color.get_luminance()>0.55 else 1)
 	return label
 
 func _button(value: String, callback: Callable, primary: bool = false) -> Button:
-	var button: Button = Button.new()
-	button.text = value
-	button.custom_minimum_size.y = 96
-	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	if primary:
-		var style: StyleBoxFlat = _box(GOLD,22,Color("fff0b5"),2)
-		style.shadow_color=Color(0.02,0.10,0.13,0.55)
-		style.shadow_size=6
-		style.shadow_offset=Vector2(0,5)
-		button.add_theme_stylebox_override("normal",style)
-		button.add_theme_color_override("font_color",NAVY)
-		button.add_theme_color_override("font_hover_color",NAVY)
-		button.add_theme_color_override("font_pressed_color",NAVY)
-		button.add_theme_stylebox_override("hover",_box(GOLD.lightened(0.12),22))
-		button.add_theme_stylebox_override("pressed",_box(Color("daa64e"),22))
+	var button: Button=IconButton.new()
+	button.text=value
+	button.custom_minimum_size.y=96
+	button.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	button.icon_kind=_action_symbol(value)
+	button.label_color=GOLD if primary else INK
+	button.add_theme_font_size_override("font_size",26 if primary else 24)
 	button.pressed.connect(callback)
 	return button
+
+func _action_symbol(value: String) -> String:
+	if "返回" in value: return "back"
+	if "放" in value: return "release"
+	if "出售" in value or "购买" in value or "带上" in value: return "coin"
+	if "收藏" in value: return "heart"
+	if "图鉴" in value or "记录" in value or "保存" in value or "插画" in value or "欣赏" in value: return "book"
+	if "竿" in value or "装备" in value: return "rod"
+	if "鱼饵" in value: return "lure"
+	if "声音" in value or "音量" in value: return "sound"
+	if "设置" in value or "震动" in value or "许可" in value: return "settings"
+	if "旅" in value or "启程" in value: return "compass"
+	return "arrow"
 
 func _icon(kind: String, extent: float = 72) -> Control:
 	var icon: Control = Art.new()
@@ -163,9 +164,9 @@ func _icon(kind: String, extent: float = 72) -> Control:
 	icon.size_flags_horizontal=Control.SIZE_SHRINK_CENTER
 	return icon
 
-func _card(color: Color = Color("1d4550"), margin_px: int = 18) -> PanelContainer:
+func _card(_color: Color = Color.TRANSPARENT, margin_px: int = 18) -> PanelContainer:
 	var card: PanelContainer=PanelContainer.new()
-	var style: StyleBoxFlat=_box(color,22,Color("476970"),1)
+	var style: StyleBoxEmpty=StyleBoxEmpty.new()
 	style.content_margin_left=margin_px
 	style.content_margin_right=margin_px
 	style.content_margin_top=margin_px
@@ -184,19 +185,14 @@ func _section(value: String, detail: String = "") -> void:
 	_page.add_child(row)
 
 func _navigation(label: String, kind: String, callback: Callable) -> Button:
-	var button: Button=_button("",callback)
+	var button: Button=_button(label,callback)
 	button.custom_minimum_size=Vector2(110,120)
-	button.add_theme_stylebox_override("normal",_box(Color(0.05,0.17,0.21,0.84),22,Color(0.75,0.85,0.74,0.48),1))
-	var box: VBoxContainer=VBoxContainer.new()
-	box.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	box.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	box.add_theme_constant_override("separation",-3)
-	button.add_child(box)
-	box.add_child(_icon(kind,76))
-	var caption: Label=_text(label,21,PAPER)
-	caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	caption.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	box.add_child(caption)
+	button.icon_kind=kind
+	button.stacked=true
+	button.icon_extent=80
+	button.label_color=PAPER
+	button.light_label=true
+	button.add_theme_font_size_override("font_size",22)
 	return button
 
 func _build_fishing_screen() -> void:
@@ -236,14 +232,20 @@ func _build_fishing_screen() -> void:
 	money_row.add_theme_constant_override("separation",0)
 	money.add_child(money_row)
 	money_row.add_child(_icon("coin",40))
-	_wallet=_text("120",25,GOLD)
+	_wallet=_text("120",25,PAPER)
 	_wallet.custom_minimum_size.x=60
 	money_row.add_child(_wallet)
 	top.add_child(money)
 	var pause_button: Button=_button("Ⅱ",_show_pause)
 	pause_button.custom_minimum_size=Vector2(96,96)
 	pause_button.size_flags_horizontal=Control.SIZE_SHRINK_END
-	pause_button.add_theme_font_size_override("font_size",32)
+	pause_button.add_theme_font_size_override("font_size",23)
+	pause_button.text="暂停"
+	pause_button.icon_kind="pause"
+	pause_button.stacked=true
+	pause_button.icon_extent=53
+	pause_button.label_color=PAPER
+	pause_button.light_label=true
 	top.add_child(pause_button)
 	var facts: HBoxContainer=HBoxContainer.new()
 	layout.add_child(facts)
@@ -255,14 +257,14 @@ func _build_fishing_screen() -> void:
 	fact_style.content_margin_right=10
 	fact_style.content_margin_top=4
 	fact_style.content_margin_bottom=4
-	_condition.add_theme_stylebox_override("normal",fact_style)
+
 	facts.add_child(_condition)
 	_collection=_text("",20,Color("fff1bb"))
 	_collection.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
 	_collection.size_flags_horizontal=Control.SIZE_SHRINK_END
 	_collection.custom_minimum_size.x=150
 	_collection.autowrap_mode=TextServer.AUTOWRAP_OFF
-	_collection.add_theme_stylebox_override("normal",fact_style)
+
 	_collection.add_theme_color_override("font_shadow_color",NAVY)
 	_collection.add_theme_constant_override("shadow_offset_y",2)
 	facts.add_child(_collection)
@@ -280,7 +282,7 @@ func _build_fishing_screen() -> void:
 		edge.add_child(_navigation(str(item[0]),str(item[1]),item[2]))
 	_toast=_text("",23,PAPER)
 	_toast.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	_toast.add_theme_stylebox_override("normal",_box(Color(0.04,0.16,0.20,0.95),16,GOLD,1))
+
 	_toast.visible=false
 	layout.add_child(_toast)
 	_status=_text("这一竿，会遇见谁？",30,PAPER)
@@ -307,7 +309,12 @@ func _build_fishing_screen() -> void:
 	bait.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
 	action_row.add_child(bait)
 	_action=_button("长按  ·  抛竿",func() -> void: pass,true)
-	_action.custom_minimum_size.y=118
+	_action.custom_minimum_size.y=166
+	_action.stacked=true
+	_action.icon_extent=112
+	_action.icon_kind="rod"
+	_action.label_color=PAPER
+	_action.light_label=true
 	_action.add_theme_font_size_override("font_size",34)
 	_action.button_down.connect(_action_down)
 	_action.button_up.connect(_action_up)
@@ -401,6 +408,7 @@ func _action_cancel() -> void:
 	session.cancel_input()
 
 func _session_changed(value: int) -> void:
+	_action.icon_kind="reel" if value==Session.State.FIGHT else ("hook" if value==Session.State.BITE else "rod")
 	_charge.visible = value == Session.State.CHARGING
 	_bars.visible = value == Session.State.FIGHT
 	_action.disabled = value in [Session.State.CASTING,Session.State.WAITING,Session.State.NIBBLE,Session.State.CAUGHT,Session.State.ESCAPED,Session.State.PAUSED]
@@ -477,13 +485,12 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(_overlay)
 	var dim: ColorRect=ColorRect.new()
-	dim.color=Color("102f3b")
+	dim.color=Color("edf2e5")
 	dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_overlay.add_child(dim)
 	var atmospheric: TextureRect=_scene_picture(str(catalog.spots.get(spot_id,{}).get("scene",catalog.region(region_id).get("scene",""))),0)
-	atmospheric.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
-	atmospheric.offset_bottom=420
-	atmospheric.modulate=Color(0.5,0.8,0.8,0.18)
+	atmospheric.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	atmospheric.modulate=Color(1,1,1,0.14)
 	atmospheric.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	_overlay.add_child(atmospheric)
 	var margin: MarginContainer=MarginContainer.new()
@@ -506,16 +513,18 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	_title=_text(heading,37,INK)
 	title_box.add_child(_title)
 	var close: Button=_button("返回",back if back.is_valid() else _close_page)
-	close.custom_minimum_size=Vector2(100,96)
+	close.custom_minimum_size=Vector2(108,96)
+	close.stacked=true
+	close.icon_extent=50
 	close.size_flags_horizontal=Control.SIZE_SHRINK_END
 	head.add_child(close)
 	var line: ColorRect=ColorRect.new()
-	line.color=Color("567576")
+	line.color=Color(0.30,0.47,0.44,0.30)
 	line.custom_minimum_size.y=1
 	outer.add_child(line)
 	_page_notice=_text("",21,GOLD)
 	_page_notice.visible=false
-	_page_notice.add_theme_stylebox_override("normal",_box(Color("275059"),14,GOLD,1))
+
 	outer.add_child(_page_notice)
 	var scroll: ScrollContainer=ScrollContainer.new()
 	scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
@@ -603,7 +612,7 @@ func _show_travel() -> void:
 		scene.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		hero.add_child(scene)
 		var shade: ColorRect=ColorRect.new()
-		shade.color=Color(0.025,0.10,0.14,0.60)
+		shade.color=Color.TRANSPARENT
 		shade.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
 		shade.offset_top=-108
 		hero.add_child(shade)
@@ -619,7 +628,9 @@ func _show_travel() -> void:
 		stamp.position=Vector2(24,18)
 		stamp.size=Vector2(190,50)
 		stamp.autowrap_mode=TextServer.AUTOWRAP_OFF
-		stamp.add_theme_stylebox_override("normal",_box(Color(0.03,0.16,0.20,0.86),14))
+		stamp.add_theme_color_override("font_color",PAPER)
+		stamp.add_theme_color_override("font_outline_color",NAVY)
+		stamp.add_theme_constant_override("outline_size",4)
 		hero.add_child(stamp)
 		var inner: VBoxContainer=VBoxContainer.new()
 		var padding: MarginContainer=MarginContainer.new()
@@ -819,6 +830,8 @@ func _fill_catalog() -> void:
 		box.add_child(image)
 		var title: Button=_button(fish.name,_show_species.bind(fish.species_id))
 		title.custom_minimum_size.y=96
+		title.icon_kind="none"
+		title.icon_extent=0
 		title.add_theme_font_size_override("font_size",24)
 		box.add_child(title)
 		var description: Label=_text("累计 %d 条" % _count(fish.species_id) if known else "待发现 · "+str(catalog.region(str(fish.regions()[0])).get("name","")),18,Color("355a58"))

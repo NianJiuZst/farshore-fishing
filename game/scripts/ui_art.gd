@@ -13,6 +13,36 @@ func _draw() -> void:
 	var c: Vector2 = size*0.5
 	draw_set_transform(c,0,Vector2(s/100.0,s/100.0))
 	match kind:
+		"back":
+			draw_polyline(PackedVector2Array([Vector2(15,-25),Vector2(-12,0),Vector2(15,25)]),ink,6,true)
+		"arrow":
+			draw_line(Vector2(-24,0),Vector2(24,0),ink,5,true)
+			draw_polyline(PackedVector2Array([Vector2(5,-17),Vector2(25,0),Vector2(5,17)]),ink,5,true)
+		"pause":
+			draw_line(Vector2(-11,-24),Vector2(-11,24),Color("f1d17a"),10,true)
+			draw_line(Vector2(11,-24),Vector2(11,24),Color("f1d17a"),10,true)
+		"release":
+			draw_ellipse_fish(Vector2(0,-7),Color("489d91"))
+			for i: int in range(2): draw_arc(Vector2(0,14+i*14),28,0.15,PI-0.15,24,Color("559d9e"),3,true)
+		"reel":
+			draw_circle(Vector2.ZERO,29,Color("ba8742"))
+			draw_circle(Vector2.ZERO,22,Color("f4d78b"))
+			draw_arc(Vector2.ZERO,13,0,TAU,30,ink,5,true)
+			draw_line(Vector2(0,0),Vector2(27,25),ink,5,true)
+			draw_circle(Vector2(27,25),7,Color("e4ad67"))
+		"hook":
+			draw_line(Vector2(8,-35),Vector2(8,10),accent,6,true)
+			draw_arc(Vector2(-6,10),14,0,PI,24,accent,6,true)
+			draw_line(Vector2(-20,10),Vector2(-20,-2),accent,6,true)
+		"settings":
+			draw_arc(Vector2.ZERO,27,0,TAU,30,ink,9,true)
+			for i: int in range(8):
+				var a: float=i*TAU/8.0
+				draw_line(Vector2.from_angle(a)*25,Vector2.from_angle(a)*36,ink,9,true)
+			draw_circle(Vector2.ZERO,10,accent)
+		"sound":
+			draw_colored_polygon(PackedVector2Array([Vector2(-26,-10),Vector2(-13,-10),Vector2(8,-27),Vector2(8,27),Vector2(-13,10),Vector2(-26,10)]),ink)
+			draw_arc(Vector2(10,0),25,-0.8,0.8,24,accent,5,true)
 		"compass":
 			draw_circle(Vector2.ZERO,34,Color("c39242"))
 			draw_circle(Vector2.ZERO,29,Color("f5dfa4"))
