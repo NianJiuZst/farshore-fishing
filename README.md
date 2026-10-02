@@ -1,19 +1,20 @@
-# 远岸钓记 1.2.0 · 两鱼真3D验收版
+# 远岸钓记 1.2.0-beta.1 · 全鱼种3D版
 
-一个简体中文、竖屏、完全离线的 Godot 3D 钓鱼体验。本轮按用户确认限定为一个固定骨骼角色、鲤鱼与鳄雀鳝两种真实3D鱼、一处虚构管理型河湾试钓场，先验收动作、镜头、水面、起鱼与手机交互，再决定是否扩展。
+简体中文、竖屏、完全离线的 Godot 原生3D钓鱼游戏。当前实现44种独立骨骼鱼模型、一个固定钓手、六地区十二钓点、五款鱼竿、八类无限补给鱼饵，以及图鉴、收藏、成长与持久化个人纪录。
 
-既有44物种资料、6水域/12钓点数据和旧存档纪录保留；本版不是44鱼/12钓点全部3D化，也不把这些历史水域列为当前可玩的3D地点。三档装备、四种无限鱼饵、图鉴和收藏沿用原系统。
+本版从大厅进入准备和钓鱼模式，包含人物抛竿、过肩/水面镜头、咬钩、控线搏鱼、鱼出水及起鱼展示。全部既有鱼种、地区和旧存档继续使用，不清空旧记录。源代码的实际验证范围与未完成设备验证必须以本次验收记录为准，不能把旧版结果或静态模型预览当作安卓实机通过。
 
 ## 游玩
 
-1. 从主页点击“开始钓鱼”，进入准备页，选择鲤鱼、鳄雀鳝或混合试钓目标，调整装备与鱼饵
+1. 从大厅点击“开始钓鱼”，进入准备页，选择已解锁的水域/钓点，调整鱼竿与鱼饵
 2. 点击“进入钓点”后，才出现抛竿操作；长按右下角鱼竿蓄力，松手后播放完整骨骼抛竿动作
 3. 观察浮漂；明显咬钩后提竿，按住收线，张力高时松手卸力
 4. 成功后先播放鱼出水与起鱼镜头，再显示结算。钓获会先安全落盘，过场、暂停或返回不会重复计数
 5. 出售或放生都保留历史数量，以及分别对应真实个体的最大长度/重量纪录
-6. 行囊、鱼饵、图鉴和说明页支持手指上下滑动；拖动取消点击，轻点才执行操作
+6. 行囊、鱼饵、旅行、图鉴和说明页支持手指上下滑动；拖动取消点击，轻点才执行操作
+7. 未购买的鱼竿可临时试钓借用，实际控鱼参数和3D外观都会变化；借用不会扣钱或改写已拥有装备，重启后恢复已装备鱼竿
 
-普通尺寸鱼的自动化控线验证约 12.6–24.5 秒；较大个体更难。鱼种稀有度与个体罕见大尺寸是不同维度。
+五款鱼竿的普通尺寸鱼自动化控线样本约10–25秒；较大个体更难。鱼种稀有度与个体罕见大尺寸是不同维度。
 
 中华鲟作为虚拟保护观察条目，只能放归，不提供出售。观察与放归同样保留累计数量和真实个体纪录；游戏互动不对应现实捕捞。
 
@@ -26,7 +27,7 @@
 - 覆盖更新必须保持相同包名、签名身份，并提升 versionCode；不要先卸载旧版本
 - 本地存档在应用私有数据目录的 Godot user:// 下。系统普通文件浏览器通常不能直接访问
 - 卸载、清除应用数据会丢失进度。本版没有云同步，不承诺跨安装保留
-- 构建、静态检查、桌面、模拟器与真机验证严格分开，详见 docs/ACCEPTANCE.md 和 docs/ANDROID_TESTS.md
+- 构建、静态检查、桌面、模拟器与真机验证严格分开，以本版 docs/3D_ACCEPTANCE.md、docs/ANDROID_3D_BUILD.md 及最终发布说明为准；docs/ACCEPTANCE.md 的旧版历史结果不替代本版验证
 
 ## 打开工程
 
@@ -34,9 +35,9 @@
 
 ## 3D与交互实现
 
-角色、两种鱼和河湾环境均有原创可编辑Blender资产及GLB。抛竿、收线、起鱼和鱼体游动/挣扎使用骨骼动画，鱼线、水花、涟漪、材质和镜头使用Godot原生能力与项目代码；没有引入第三方绳索、水体或动画插件。开源方案的取舍记录在docs/OPEN_SOURCE_3D_EVALUATION.md。
+角色、44种鱼和六种地区环境使用原创可编辑Blender资产与真实GLB。抛竿、收线、起鱼和鱼体游动/挣扎使用骨骼动画，鱼线、水花、涟漪、材质和镜头使用Godot原生能力与项目代码；没有引入第三方绳索、水体或动画插件。开源方案的取舍记录在docs/OPEN_SOURCE_3D_EVALUATION.md。
 
-主页、准备与钓鱼模式分开。既有25枚高清绘制图标继续用于透明图标加文字的界面；图鉴历史插画不冒充3D模型。详见docs/3D_UI_FLOW.md、docs/STAGE_3D.md和docs/TRIAL_SCOPE.md。
+主页、准备与钓鱼模式分开。31枚实际生成的高清透明图标用于图标加文字的界面。鱼种详情和钓获页是独立3D视窗与骨骼动画；图鉴列表可使用原插画缩略图以便浏览。详见docs/3D_UI_FLOW.md、docs/STAGE_3D.md、docs/FISH_3D_PREVIEW.md和docs/3D_CATALOG_SCOPE.md。docs/TRIAL_SCOPE.md仅为早期两鱼里程碑的历史说明。
 
 ## 构建 Android
 
@@ -49,7 +50,7 @@
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/save_tests.gd
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-core-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/core_tests.gd
 
-先创建上述临时目录。另有trial_fishery_tests.gd、touch_scroll_tests.gd、slice3d_tests.gd与ui_style_tests.gd；每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。最终视觉、源代码和设备证据见docs/3D_ACCEPTANCE.md，不能以旧版计数替代本次复验。
+先创建上述临时目录。可用 `python3 tools/run_full_catalog_qa.py --output build/full-catalog-qa --render` 协调导入、12项逻辑/界面/3D测试、独立44模型二进制审计与可用的桌面Vulkan测试。源码测试包括真实全目录出鱼、动画连接、最小/最大鱼镜头、触控冲突、存档故障与重启；历史trial_fishery测试只验证旧适配器/记录兼容。每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。最终视觉、源代码和设备证据见docs/3D_ACCEPTANCE.md，不能以旧版计数替代本次复验。
 
 ## 文件结构
 
@@ -57,6 +58,7 @@
 - game/scenes/main.tscn：原生 Control 场景入口
 - game/data/fish_a.json 至 fish_d.json：44 物种的单一来源分片
 - game/data/world.json：水域、钓点、装备与鱼饵
+- game/data/fish_3d.json：44种独立3D资源的严格清单，缺失资源会阻止进入钓鱼而不是替换成另一种鱼
 - game/assets/3d/：实际运行的角色、鱼、环境GLB及材质纹理
 - game/assets/shaders3d/：水体、植被与环境材质
 - game/assets/：图标、历史图鉴插画、音效与字体
@@ -71,8 +73,8 @@
 
 鱼类分布和形态参考鱼类数据库与海洋研究机构，逐物种链接见 docs/FISH_A_SOURCES.md、FISH_B_SOURCES.md、FISH_C_SOURCES.md、FISH_D_SOURCES.md。出现倍率、尺寸锚点、重量立方缩放、时间/天气、难度与稀有度是游戏调校，不冒充实测科研关系，也不提供现实垂钓法规建议。
 
-1.2.0的三维几何、角色/鱼材质、骨骼、动画和环境构建为本项目原创Blender/Godot制作；天空光照与码头木材使用Poly Haven的CC0素材（Greg Zaal、Rob Tuytel），并非本项目原创照片。来源、作者、原文件哈希与许可见docs/ASSETS_3D_ENVIRONMENT_CC0.json和game/data/THIRD_PARTY_ART.txt，原创模型记录见docs/ASSETS_3D_*.md。既有二维鱼类/场景插画及界面图标为内置图像生成工具逐资产生成，经开发者形态与透明边缘检查；完整提示词、资料、生成方式与审核记录见 docs/ASSETS_*.json。没有复用未获授权的外部照片。生成来源不构成独占权利或专业物种鉴定保证。中文字体使用 Noto Sans CJK（SIL OFL），详见 docs/FONT_LICENSE.txt。Godot 及第三方库许可在 game/data/GODOT_LICENSE.txt，游戏设置页可查看。音效由本项目程序合成，不包含采样自他人的音轨。
+1.2.0-beta.1的三维几何、角色/鱼材质、骨骼、动画和环境构建为本项目原创Blender/Godot制作；天空光照、码头木材与岩石表面使用Poly Haven的CC0素材（Greg Zaal、Rob Tuytel、Dario Barresi、Rico Cilliers），并非本项目原创照片。来源、作者、原文件哈希与许可见docs/ASSETS_3D_ENVIRONMENT_CC0.json和game/data/THIRD_PARTY_ART.txt，原创模型记录见docs/ASSETS_3D_*.md。既有二维鱼类/场景插画及界面图标为内置图像生成工具逐资产生成，经开发者形态与透明边缘检查；完整提示词、资料、生成方式与审核记录见 docs/ASSETS_*.json。没有复用未获授权的外部照片。生成来源不构成独占权利或专业物种鉴定保证。中文字体使用 Noto Sans CJK（SIL OFL），详见 docs/FONT_LICENSE.txt。Godot 及第三方库许可在 game/data/GODOT_LICENSE.txt，游戏设置页可查看。音效由本项目程序合成，不包含采样自他人的音轨。
 
 ## 版本边界
 
-本次严格止于两鱼3D验收，不未经用户确认继续扩展；账号、云存档、联网排行、商店发布、广告与内购均不是 V1 功能。详见 docs/KNOWN_ISSUES.md 区分未验证的目标设备体验与未来扩展。
+本次范围为现有44鱼、六地区十二钓点的3D改造，不新增额外地区/鱼种或联网系统。账号、云存档、联网排行、商店发布、广告与内购均不在本版范围内。详见 docs/KNOWN_ISSUES.md 区分未验证的目标设备体验与未来扩展。
