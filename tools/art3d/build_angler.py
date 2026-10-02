@@ -172,17 +172,11 @@ shirt=mesh('Continuous anatomically tailored shirt',verts,faces,'Shirt · warm s
 # Make the branched surface winding consistent, including the mirrored left sleeve.
 import bmesh
 bm=bmesh.new();bm.from_mesh(shirt.data);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(shirt.data);bm.free()
-# The outerwear is one sewn, color-blocked utility jacket. Shared shoulder vertices
-# carry teal torso panels and sandstone sleeve panels, so the garment has neither floating
-# armhole plates nor independently intersecting clothing surfaces.
+# The outerwear is one sewn utility jacket with a single continuous teal fabric.
+# Material boundaries cannot break into color islands as the shared shoulders bend.
 shirt.name='Continuous tailored fishing jacket'
-shirt.data.materials.append(M['Jacket · glacial teal'])
-torso_face=0
-for j in range(len(shirt_rings)-1):
- for i in range(N):
-  if j in (3,4) and i in list(range(28,32))+list(range(0,4))+list(range(12,20)):continue
-  shirt.data.polygons[torso_face].material_index=0 if i in (7,8) else 1
-  torso_face+=1
+shirt.data.materials.clear();shirt.data.materials.append(M['Jacket · glacial teal'])
+for polygon in shirt.data.polygons:polygon.material_index=0
 # Inner zipper, piping and gathered lower welt.
 line('Zipper center',[(0,.113,1.014),(0,.132,1.16),(0,.115,1.32),(0,.078,1.396)],.004,'Metal · antique brass','chest')
 for sign,s in [(1,'R'),(-1,'L')]:
@@ -253,7 +247,7 @@ for sign,side in [(1,'R'),(-1,'L')]:
 # Tailored cuffs and exposed wrists finish the continuous shirt sleeves.
 for sign,s in [(1,'R'),(-1,'L')]:
  sh,el=bone_spec['upper_arm.'+s][:2];wr=bone_spec['hand.'+s][0]
- sweep('Shirt cuff '+s,[el.lerp(wr,.875),el.lerp(wr,.895),el.lerp(wr,.935),el.lerp(wr,.945)],[(.034,.032),(.036,.034),(.035,.033),(.032,.030)],'Shirt · seam','forearm.'+s,20,1)
+ sweep('Shirt cuff '+s,[el.lerp(wr,.875),el.lerp(wr,.895),el.lerp(wr,.935),el.lerp(wr,.945)],[(.034,.032),(.036,.034),(.035,.033),(.032,.030)],'Jacket · seam binding','forearm.'+s,20,1)
  sweep('Exposed wrist '+s,[el.lerp(wr,.925),el.lerp(wr,.97),wr,wr+rod_dir*.027],[.027,.027,.028,.028],'Skin · warm tan','hand.'+s,20,1)
  # Palm local geometry follows grip direction, each fingertip wraps around the invisible handle.
  d=rod_dir; side=Vector((1,0,0)); toward=-side.cross(d).normalized()

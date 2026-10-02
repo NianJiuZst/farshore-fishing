@@ -6,7 +6,8 @@
 - Editable source: `art_masters/3d/angler.blend`
 - Generator: `tools/art3d/build_angler.py`
 - Durable Godot tests: `game/tests/angler_anatomy_tests.gd`
-- Revised model renders and logs: `build/angler-review/anatomy-approved/`
+- Revised model renders and logs: `build/angler-review/teal-final/`
+- Front/side/cast contact sheet: `build/angler-review/teal-final/character-contact-sheet.png`
 
 Rebuild using official Blender 4.3.2:
 
@@ -31,7 +32,7 @@ The review prioritized normal human limb proportions and normal clothing fit, no
 
 - The former asymmetric, overlong forearms were rebuilt with equal bilateral segment lengths. Arm placement and animation are solved from those lengths.
 - The torso, shoulder saddle, armpits, deltoid area, elbows and forearms now belong to one connected, branching quad garment surface. There are no separate capped sleeve cylinders or overlapping shoulder balls.
-- The teal torso and sandstone sleeves share vertices as a sewn utility jacket. This eliminates floating armhole plates and surface intersection at the shoulder boundaries.
+- The entire connected jacket and sleeves use one consistent teal textile material, with restrained dark cuffs and a zipper. Shared shoulder vertices eliminate floating armhole plates; uniform fabric avoids irregular two-tone color islands during windup.
 - The pelvis and trouser legs use one shared crotch saddle and connected quad topology. The old box-like seat/leg assembly and voxel-union construction were removed.
 - Thigh, knee, calf and hem profiles are continuous. Separate oval knee pads and superficial crease/seam rods were removed.
 - Boots have narrower, normal-width soles and shafts; trouser hems overlap the boot shafts naturally. Hands, faces, cap and individual fingers remain dimensional.
@@ -77,18 +78,18 @@ Run with isolated user data:
 
 For candidates, append `-- --model=/absolute/path/angler.glb`.
 
-The revised GLB passed 3,723/3,723 checks in official Godot 4.6.3. These checks import the actual GLB using `GLTFDocument`, verify one real skinned mesh and skeleton, check all five exact clip lengths, evaluate both arms and hand contacts on every one of the 67 cast frames, and calculate actual skinned vertex positions.
+The revised GLB passed 3,705/3,705 checks in official Godot 4.6.3. These checks import the actual GLB using `GLTFDocument`, verify one real skinned mesh and skeleton, check all five exact clip lengths, evaluate both arms and hand contacts on every one of the 67 cast frames, and calculate actual skinned vertex positions.
 
-- Runtime: 1,475,728 bytes (about 1.41 MiB)
-- Geometry: 43,912 triangles; 23,043 weighted export vertices
-- Batching: one mesh; 17 material surfaces; one skin; 30 bones
+- Runtime: 1,469,952 bytes (about 1.40 MiB)
+- Geometry: 43,912 triangles; 22,937 weighted export vertices
+- Batching: one mesh; 16 material surfaces; one skin; 30 bones
 - Maximum arm-segment length error over the full cast: 0.000000112 m
 - Maximum both-hand grip alignment error: 0.000000571 m
 - Foot motion during cast: 0 m
 - Maximum sampled vertex deformation between ready and backswing: 0.63968 m
 - Original GLB skin-weight sum error: at most 5.96 × 10⁻⁸; all weights finite and nonnegative
-- Godot's normalized 16-bit imported weights show at most 0.00003053 quantization error; tests account for that representation
-- GLB SHA-256: `f4de4c8a8ee0d002b5691e93c1f5f933b963ae90f287501a2ff47311edf735a7`
+- Godot's normalized 16-bit imported weights show at most 0.00003052 quantization error; tests account for that representation
+- GLB SHA-256: `93444c28ff3b0650661bb571de752fe323e64f717b0d9f2ef692ba5913bc06ec`
 
 `BoneAttachment3D` needs normal process-frame updates after an animation seek. Immediate queries before processing can return the preceding socket transform.
 
