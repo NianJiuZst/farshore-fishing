@@ -1,0 +1,46 @@
+{
+  "species": "olive_flounder",
+  "pipeline_sha256": "1daac6e2fd064944f97cf81f6443cd2ca91e9b497a7ede8d7443edf505a2a6b1",
+  "triangles": 52374,
+  "vertices": 26867,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal_0",
+    "dorsal_1",
+    "dorsal_2",
+    "anal_0",
+    "anal_1",
+    "anal_2",
+    "pectoral_ocular",
+    "pectoral_blind",
+    "gill_ocular",
+    "gill_blind"
+  ],
+  "skinned_meshes": 10,
+  "materials": 10,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Adult left-eyed flatfish, both eyes on pigmented upper ocular side",
+    "Volumetric flattened asymmetric head and white blind underside",
+    "Long continuous dorsal and anal margins, dorsal beginning beside head",
+    "Large oblique mouth, nonforked caudal fin",
+    "Olive marbling and small dark spots rather than orange plaice spots"
+  ],
+  "sources": [
+    "https://www.fishbase.se/summary/Paralichthys-olivaceus.html",
+    "https://swfsc-publications.fisheries.noaa.gov/publications/CR/2025/2025Purcell2.pdf"
+  ],
+  "glb_bytes": 4697896,
+  "glb_sha256": "f6e87648ac49667aed3223a5385c239240bf641d91c5d4c473b08a2a489cdc06",
+  "flatfish": true,
+  "ocular_side": "left"
+}

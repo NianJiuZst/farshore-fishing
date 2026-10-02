@@ -1,0 +1,110 @@
+{
+  "aabb_size": [
+    1.0,
+    0.0854400396347046,
+    0.487076282501221
+  ],
+  "animation_players": 1,
+  "bone_count": 18,
+  "clips": {
+    "breach": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_ocular",
+        "gill_blind",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal_2",
+        "anal_2",
+        "dorsal_1",
+        "anal_1",
+        "dorsal_0",
+        "anal_0",
+        "pectoral_ocular",
+        "pectoral_blind"
+      ],
+      "seconds": 1.39999997615814,
+      "tracks": 17
+    },
+    "landed": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_ocular",
+        "gill_blind",
+        "spine_front",
+        "spine_mid",
+        "tail",
+        "caudal",
+        "dorsal_2",
+        "anal_2",
+        "dorsal_1",
+        "anal_1",
+        "dorsal_0",
+        "anal_0",
+        "pectoral_ocular",
+        "pectoral_blind",
+        "spine_rear"
+      ],
+      "seconds": 3.0,
+      "tracks": 17
+    },
+    "struggle": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_ocular",
+        "gill_blind",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal_2",
+        "anal_2",
+        "dorsal_1",
+        "anal_1",
+        "dorsal_0",
+        "anal_0",
+        "pectoral_ocular",
+        "pectoral_blind"
+      ],
+      "seconds": 1.20000004768372,
+      "tracks": 17
+    },
+    "swim": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_ocular",
+        "gill_blind",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal_2",
+        "anal_2",
+        "dorsal_1",
+        "anal_1",
+        "dorsal_0",
+        "anal_0",
+        "pectoral_ocular",
+        "pectoral_blind"
+      ],
+      "seconds": 2.0,
+      "tracks": 17
+    }
+  },
+  "failures": [],
+  "godot_version": "4.6.3-stable (official)",
+  "material_surfaces": 10,
+  "meshes": 10,
+  "skeletons": 1,
+  "skinned_meshes": 10,
+  "species": "olive_flounder"
+}

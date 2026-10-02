@@ -1,0 +1,29 @@
+{
+  "species": "olive_flounder",
+  "clips": {
+    "swim": {
+      "seconds": 2.0,
+      "max_skin_displacement_m": 0.06135200477201234,
+      "loop_seam_m": 0.0
+    },
+    "struggle": {
+      "seconds": 1.2,
+      "max_skin_displacement_m": 0.23653427011803516,
+      "loop_seam_m": 6.2982920850455795e-18
+    },
+    "breach": {
+      "seconds": 1.4,
+      "max_skin_displacement_m": 0.16297713339131917,
+      "loop_seam_m": 4.373813392806486e-18
+    },
+    "landed": {
+      "seconds": 3.0,
+      "max_skin_displacement_m": 0.010819570603270793,
+      "loop_seam_m": 0.0
+    }
+  },
+  "failures": [],
+  "weight_sum_min": 0.9999006390571594,
+  "weight_sum_max": 1.0000000298023224,
+  "max_influences": 3
+}

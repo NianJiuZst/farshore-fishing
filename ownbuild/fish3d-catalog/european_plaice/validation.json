@@ -1,0 +1,29 @@
+{
+  "species": "european_plaice",
+  "clips": {
+    "swim": {
+      "seconds": 2.0,
+      "max_skin_displacement_m": 0.06378199963132962,
+      "loop_seam_m": 5.854156704936825e-19
+    },
+    "struggle": {
+      "seconds": 1.2,
+      "max_skin_displacement_m": 0.23492176805770654,
+      "loop_seam_m": 6.043000186447439e-18
+    },
+    "breach": {
+      "seconds": 1.4,
+      "max_skin_displacement_m": 0.16224985748343512,
+      "loop_seam_m": 4.196527608064145e-18
+    },
+    "landed": {
+      "seconds": 3.0,
+      "max_skin_displacement_m": 0.01532817451880839,
+      "loop_seam_m": 1.0732621861727352e-19
+    }
+  },
+  "failures": [],
+  "weight_sum_min": 0.999901294708252,
+  "weight_sum_max": 1.0000000298023224,
+  "max_influences": 3
+}

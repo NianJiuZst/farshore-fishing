@@ -1,0 +1,47 @@
+{
+  "species": "european_plaice",
+  "pipeline_sha256": "1daac6e2fd064944f97cf81f6443cd2ca91e9b497a7ede8d7443edf505a2a6b1",
+  "triangles": 57268,
+  "vertices": 29312,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal_0",
+    "dorsal_1",
+    "dorsal_2",
+    "anal_0",
+    "anal_1",
+    "anal_2",
+    "pectoral_ocular",
+    "pectoral_blind",
+    "gill_ocular",
+    "gill_blind"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Adult right-eyed flatfish: both eyes on upper right ocular side, dorsal margin +Y",
+    "Deep oval body broader than olive flounder, with white eyeless underside",
+    "Bright orange-red spots across brown upper side",
+    "Small terminal mouth, six low bony knobs from eye region toward gill opening",
+    "Continuous long dorsal/anal margins, rounded caudal fin"
+  ],
+  "sources": [
+    "https://www.marlin.ac.uk/species/detail/2172",
+    "https://biotic.marlin.ac.uk/data/species/6202",
+    "https://fish-commercial-names.ec.europa.eu/fish-names/species/pleuronectes-platessa_en"
+  ],
+  "glb_bytes": 4796572,
+  "glb_sha256": "ee99665b007e2f023332cf33d29ed77d152f2492c4a5edd5315b9555fcfe0b41",
+  "flatfish": true,
+  "ocular_side": "right"
+}

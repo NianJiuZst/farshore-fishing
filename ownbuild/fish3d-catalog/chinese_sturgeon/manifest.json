@@ -1,0 +1,44 @@
+{
+  "species": "chinese_sturgeon",
+  "pipeline_sha256": "722f359a315e92ff570f001cd4705d03b3c3b2d3752c75245c0674ce94ac5b65",
+  "triangles": 31910,
+  "vertices": 16749,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pelvic_r",
+    "gill_R",
+    "pectoral_l",
+    "pelvic_l",
+    "gill_L"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Five longitudinal rows of actual bony scutes",
+    "Flattened pointed rostrum, mouth strictly on underside",
+    "Exactly four short underside barbels anterior to ventral mouth",
+    "Posterior dorsal and anal fins, upper caudal lobe conspicuously longer",
+    "Gray dorsum and light underside, no dense cycloid scales"
+  ],
+  "sources": [
+    "https://www.fisheries.noaa.gov/species/chinese-sturgeon",
+    "https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf"
+  ],
+  "glb_bytes": 2641012,
+  "glb_sha256": "92bc79775f65b8140e3f5eaebaa8b769663576788fd92a4adc9e054e792a7e12",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}
