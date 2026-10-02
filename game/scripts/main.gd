@@ -213,7 +213,9 @@ func _build_fishing_screen() -> void:
 	_safe.add_child(layout)
 	var top: HBoxContainer=HBoxContainer.new()
 	top.add_theme_constant_override("separation",10)
-	layout.add_child(top)
+	var top_glass: PanelContainer=_card(Color(0.035,0.13,0.17,0.88),10)
+	layout.add_child(top_glass)
+	top_glass.add_child(top)
 	var emblem: PanelContainer=_card(Color(0.05,0.17,0.21,0.9),4)
 	emblem.custom_minimum_size=Vector2(90,96)
 	emblem.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
@@ -223,7 +225,7 @@ func _build_fishing_screen() -> void:
 	heading.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	heading.add_theme_constant_override("separation",0)
 	top.add_child(heading)
-	heading.add_child(_text("远 岸 钓 记",19,Color("fff1bb")))
+	heading.add_child(_text("远 岸 钓 记",17,Color("fff1bb")))
 	_place=_text("雾林湖",31,Color.WHITE)
 	_place.add_theme_color_override("font_shadow_color",NAVY)
 	_place.add_theme_constant_override("shadow_offset_y",2)
@@ -248,9 +250,17 @@ func _build_fishing_screen() -> void:
 	_condition=_text("",20,Color("f7f6dd"))
 	_condition.add_theme_color_override("font_shadow_color",NAVY)
 	_condition.add_theme_constant_override("shadow_offset_y",2)
+	var fact_style: StyleBoxFlat=_box(Color(0.04,0.16,0.20,0.80),12)
+	fact_style.content_margin_left=10
+	fact_style.content_margin_right=10
+	fact_style.content_margin_top=4
+	fact_style.content_margin_bottom=4
+	_condition.add_theme_stylebox_override("normal",fact_style)
 	facts.add_child(_condition)
 	_collection=_text("",20,Color("fff1bb"))
 	_collection.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
+	_collection.size_flags_horizontal=Control.SIZE_SHRINK_END
+	_collection.add_theme_stylebox_override("normal",fact_style)
 	_collection.add_theme_color_override("font_shadow_color",NAVY)
 	_collection.add_theme_constant_override("shadow_offset_y",2)
 	facts.add_child(_collection)
@@ -292,6 +302,7 @@ func _build_fishing_screen() -> void:
 	layout.add_child(action_row)
 	var bait: Button=_navigation("鱼饵","lure",_show_gear)
 	bait.custom_minimum_size=Vector2(112,118)
+	bait.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
 	action_row.add_child(bait)
 	_action=_button("长按  ·  抛竿",func() -> void: pass,true)
 	_action.custom_minimum_size.y=118
@@ -599,6 +610,8 @@ func _show_travel() -> void:
 		hero.add_child(subtitle)
 		var stamp: Label=_text("此刻在这里" if rid==region_id else ("旅程已开启" if unlocked else "等待启程"),20,GOLD)
 		stamp.position=Vector2(24,18)
+		stamp.size=Vector2(190,50)
+		stamp.autowrap_mode=TextServer.AUTOWRAP_OFF
 		stamp.add_theme_stylebox_override("normal",_box(Color(0.03,0.16,0.20,0.86),14))
 		hero.add_child(stamp)
 		var inner: VBoxContainer=VBoxContainer.new()
@@ -666,6 +679,7 @@ func _show_gear() -> void:
 		var row: HBoxContainer=HBoxContainer.new()
 		box.add_child(row)
 		var icon: Control=_icon("rod",104)
+		icon.accent=[Color("f2c864"),Color("8bd3b5"),Color("efa57e")][id]
 		row.add_child(icon)
 		var info: VBoxContainer=VBoxContainer.new()
 		info.size_flags_horizontal=Control.SIZE_EXPAND_FILL

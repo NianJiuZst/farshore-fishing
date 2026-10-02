@@ -14,6 +14,6 @@ func _draw() -> void:
 		draw_line(Vector2(x,8),Vector2(x,27 if i%10==0 else (20 if i%5==0 else 14)),col,1.5,true)
 	var font: Font=ThemeDB.fallback_font
 	for i: int in range(5):
-		var text: String="%g" % (length_mm/10.0*i/4.0)
-		var x: float=12+width*i/4.0-8
+		var text: String="%.1f" % (length_mm/10.0*i/4.0)
+		var x: float=clampf(12+width*i/4.0-8,12,size.x-43)
 		draw_string(font,Vector2(x,47),text,HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("567563"))

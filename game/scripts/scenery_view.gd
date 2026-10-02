@@ -68,8 +68,8 @@ func _draw() -> void:
 	_draw_angler(w,h)
 	# A transparent dusk vignette keeps controls legible while the painting stays edge-to-edge.
 	for shade: int in range(40):
-		var alpha: float = float(shade)/40.0*0.72
-		draw_rect(Rect2(0,h*0.76+shade*h*0.006,w,h*0.006+1),Color(0.025,0.10,0.14,alpha))
+		var alpha: float = 0.10+float(shade)/40.0*0.80
+		draw_rect(Rect2(0,h*0.70+shade*h*0.0075,w,h*0.0075+1),Color(0.025,0.10,0.14,alpha))
 	if session == null: return
 	var active: int = session.before_pause if session.state == FishingSession.State.PAUSED else session.state
 	if active in [FishingSession.State.CASTING,FishingSession.State.WAITING,FishingSession.State.NIBBLE,FishingSession.State.BITE,FishingSession.State.FIGHT]:

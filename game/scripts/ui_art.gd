@@ -47,8 +47,8 @@ func _draw() -> void:
 				var a: float = i*TAU/8.0
 				draw_line(Vector2.from_angle(a)*23,Vector2.from_angle(a)*32,accent,4,true)
 		"rod":
-			draw_line(Vector2(-30,30),Vector2(22,-32),Color("c3935b"),7,true)
-			draw_line(Vector2(-9,4),Vector2(24,-35),Color("f4d78b"),3,true)
+			draw_line(Vector2(-30,30),Vector2(22,-32),accent,7,true)
+			draw_line(Vector2(-9,4),Vector2(24,-35),accent.lightened(0.3),3,true)
 			draw_circle(Vector2(-12,16),11,ink)
 			draw_arc(Vector2(-12,16),8,0,TAU,20,accent,3,true)
 			draw_line(Vector2(24,-35),Vector2(32,20),Color("d6e6df"),1.5,true)
