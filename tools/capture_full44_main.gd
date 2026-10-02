@@ -132,3 +132,5 @@ func _capture_frame(label: String, description: String) -> void:
 	_check(picture.save_png(path)==OK,"actual framebuffer saved: "+label)
 	capture_rows.append({"file":label+".png","description":description,"width":picture.get_width(),"height":picture.get_height(),"mode":app._mode,"screen":app._screen,"region":app.region_id,"spot":app.spot_id,"session_state":app.session.state})
 	print("CAPTURE ",label," ",picture.get_width(),"x",picture.get_height()," scene=",app.scenery.region_id,"/",app.scenery.spot_id)
+	# Drop the framebuffer Image before returning from this draw-signal coroutine.
+	picture = null

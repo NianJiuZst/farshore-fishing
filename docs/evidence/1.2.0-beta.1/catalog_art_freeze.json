@@ -1,0 +1,405 @@
+{
+  "status": "all_44_source_art_frozen",
+  "scope": "Canonical geometry/material/animation masters and GLBs with all 352 hash-bound reviewed studio images; Android/runtime acceptance separate",
+  "artifact_count": 44,
+  "reviewed_images": 352,
+  "canonical_set_sha256": "bd84d91b7ba2fad848954d1add805a7140eb8acb86c8365292c4a211dc86545c",
+  "artifacts": [
+    {
+      "species": "alligator_gar",
+      "master_path": "art_masters/3d/alligator_gar.blend",
+      "master_sha256": "638d3595eae741b4bbc41cf1e6fbb8981a08f42021c857879b89502ecf9b9122",
+      "glb_path": "game/assets/3d/alligator_gar.glb",
+      "glb_sha256": "ab4820619fe604d2e174c2e8b1439da69a58cc0576cd38c4ea21e4c279431ce3",
+      "review_record": "review_signoff.json",
+      "review_sha256": "d7e302c5b002c9505ded76bce9f18146b61c21c14e955bee55800a346cadb45e"
+    },
+    {
+      "species": "annular_seabream",
+      "master_path": "art_masters/3d/annular_seabream.blend",
+      "master_sha256": "dd1ac5a1b69d6a28fc82d232d4b7122978ca3f688eb5cff24a4f431dec735e16",
+      "glb_path": "game/assets/3d/annular_seabream.glb",
+      "glb_sha256": "f7ac5d17797e045a0cd5d9e68d9ff1e2996e6802d8eec7c81c4031ffdc1f2e34",
+      "review_record": "visual_review.json",
+      "review_sha256": "7fe9e4bb966ed9291900407a5883b8272404f8f6fac5c9f4c38c0d57ef496c21"
+    },
+    {
+      "species": "atlantic_cod",
+      "master_path": "art_masters/3d/atlantic_cod.blend",
+      "master_sha256": "e91b01015c7e52d7da82a88e7d9497ff5d5d7e777b0ac05c50f3d32e6bdb56e8",
+      "glb_path": "game/assets/3d/atlantic_cod.glb",
+      "glb_sha256": "3fb0c50281d344fa97484cac7ffa48de7508fa344d19a3840e94e1cfd6dd4218",
+      "review_record": "review_signoff.json",
+      "review_sha256": "52303f61e8047c49738b7ce5dc9bff682b63b724aa81883991745bda18f581c5"
+    },
+    {
+      "species": "atlantic_herring",
+      "master_path": "art_masters/3d/atlantic_herring.blend",
+      "master_sha256": "ae01f79c8734b75790fbe36cd80f480d7220bd2d6279b9e7b9e4487273d01527",
+      "glb_path": "game/assets/3d/atlantic_herring.glb",
+      "glb_sha256": "b2d04d4912f51343aef712894c35b46a334d23c0887a238d9f0350f81923f742",
+      "review_record": "review_signoff.json",
+      "review_sha256": "1b2d2f0459798dd5b00b3aed7ad228348ae1d2708d5eaf690d9ab6f9b5b196b2"
+    },
+    {
+      "species": "atlantic_mackerel",
+      "master_path": "art_masters/3d/atlantic_mackerel.blend",
+      "master_sha256": "fdeeddfe2e2d534191bc0d5760cd6bb53c86ce1020913a991f93e339ca30945b",
+      "glb_path": "game/assets/3d/atlantic_mackerel.glb",
+      "glb_sha256": "12394131cb93c1b0816a76771a9492fcbf1d6227308b9a4150cc9455b6815ef4",
+      "review_record": "review_signoff.json",
+      "review_sha256": "c6e9540ea948b1a70e265cadf42d1a9d237e08e8162b5114d1e6811467b17312"
+    },
+    {
+      "species": "atlantic_wolffish",
+      "master_path": "art_masters/3d/atlantic_wolffish.blend",
+      "master_sha256": "455b68480f101f99e1239b972ad4413f2fe7438c766b92f713340ecdfd8775f3",
+      "glb_path": "game/assets/3d/atlantic_wolffish.glb",
+      "glb_sha256": "c92007119d8b31de66ee9e896a162fa44309bdeb21163ab6e2ced51a2575658e",
+      "review_record": "review_signoff.json",
+      "review_sha256": "edd092fd8fe330d0c8d40f24ea34d1887875321aa951fe71281c90510e41e3e8"
+    },
+    {
+      "species": "black_seabream",
+      "master_path": "art_masters/3d/black_seabream.blend",
+      "master_sha256": "35a6ed776f9ebf8f951a539b73bd22a0378d6d7d0110cf773f420033ac7f2d4d",
+      "glb_path": "game/assets/3d/black_seabream.glb",
+      "glb_sha256": "670c3d601e73454092a3e83f90e694f73c657eecd5afb9f27621e5bbf1b54954",
+      "review_record": "visual_review.json",
+      "review_sha256": "835f2f2362ba2520c950e70cd1f66a242997a0b9fd1dacd7a0be4da582719074"
+    },
+    {
+      "species": "bowfin",
+      "master_path": "art_masters/3d/bowfin.blend",
+      "master_sha256": "115c86c7cebdfe32145d5341e493878652b7296d844dcb1826a2c159d5562852",
+      "glb_path": "game/assets/3d/bowfin.glb",
+      "glb_sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+      "review_record": "visual_review.json",
+      "review_sha256": "0f45fc6668e3f6c9800e0d067c68a46f87b451b5a0f56064399620420d4681df"
+    },
+    {
+      "species": "channel_catfish",
+      "master_path": "art_masters/3d/channel_catfish.blend",
+      "master_sha256": "182d0099cdf8b0dad6dddeb53f5db4559c225761405a7277446303bebd1f477a",
+      "glb_path": "game/assets/3d/channel_catfish.glb",
+      "glb_sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+      "review_record": "visual_review.json",
+      "review_sha256": "855fc1aec7813ade8ce513e73946f929b091bcb96afe07b59b93f444483917ef"
+    },
+    {
+      "species": "chinese_sturgeon",
+      "master_path": "art_masters/3d/chinese_sturgeon.blend",
+      "master_sha256": "a2bf7e9579b899e4cfa2b8cd86e393df131bc33fdce2ac8bbb4ebd8e93e3e2dc",
+      "glb_path": "game/assets/3d/chinese_sturgeon.glb",
+      "glb_sha256": "d5b845fa76371a215ec3ec9eb54a1f65b56d68eddb96ca1174d136d2898aa8af",
+      "review_record": "review_signoff.json",
+      "review_sha256": "5b9c1c430a2b0ab677d4276838c91182498f1baec423d96e6de364f6e296e067"
+    },
+    {
+      "species": "chub_mackerel",
+      "master_path": "art_masters/3d/chub_mackerel.blend",
+      "master_sha256": "f682a403377b549519fb71bfcc3408ea2fea16c20355eb313566bd28f3e522bb",
+      "glb_path": "game/assets/3d/chub_mackerel.glb",
+      "glb_sha256": "ec51f5841816054213c2dc06a15ca494563dcdcf024ad410e6e5e6cfac5b5aa8",
+      "review_record": "review_signoff.json",
+      "review_sha256": "c79706ce2b46d6b440e0f1070d414064eb1d9043fb7482a3065ce610679ab6ea"
+    },
+    {
+      "species": "common_bream",
+      "master_path": "art_masters/3d/common_bream.blend",
+      "master_sha256": "9063482fd7fc5548f1d6cc1dff56c89c6cf0e2759fb9e03c8f7bda067b0626d3",
+      "glb_path": "game/assets/3d/common_bream.glb",
+      "glb_sha256": "53253642e824a76c216055c7d9cbeb8bc88cf75343fd59b2be94c74feb8b911d",
+      "review_record": "review_signoff.json",
+      "review_sha256": "7e3d8f915411e6a61108a0a8194cb3bf7594870124f776eff120cc52243531f1"
+    },
+    {
+      "species": "common_carp",
+      "master_path": "art_masters/3d/common_carp.blend",
+      "master_sha256": "1892ae9cbec633aaef437ba891fee85381e2f329f488fb3ad36e34588bc7a427",
+      "glb_path": "game/assets/3d/common_carp.glb",
+      "glb_sha256": "80f3037eb7ecafcaafb57461ab6b505e9102c7822b60311d326a431a49217cc8",
+      "review_record": "review_signoff.json",
+      "review_sha256": "d49f8818855adf1dcc4b27126781813a814060d073b328d893bd44369e7e3bfa"
+    },
+    {
+      "species": "common_pandora",
+      "master_path": "art_masters/3d/common_pandora.blend",
+      "master_sha256": "be1ff9ba8dc1de127246db12076fc5a8f1d06f360c58c20e9c109d6f70309782",
+      "glb_path": "game/assets/3d/common_pandora.glb",
+      "glb_sha256": "0798ae024f2c79889c832459a1626be6ab9d0776eb469fd37d25b388fec9fa6f",
+      "review_record": "visual_review.json",
+      "review_sha256": "b6a0eb5bb650fd52b76086928abf6760c0d6cc727065073eddb13d05b55ab4b5"
+    },
+    {
+      "species": "crucian_carp",
+      "master_path": "art_masters/3d/crucian_carp.blend",
+      "master_sha256": "bc66abd4211e66baef51e00f33a09c6c8516ffe06df240b7fb45fd167912b264",
+      "glb_path": "game/assets/3d/crucian_carp.glb",
+      "glb_sha256": "43d0d850ca96f78ab22b374a3964caca155b2e56a11eb7f551598c69a3c5a8c8",
+      "review_record": "review_signoff.json",
+      "review_sha256": "6430f536ac8abb2ec331988411c3945f0f320c7b94eca39a136d62324f030f55"
+    },
+    {
+      "species": "european_perch",
+      "master_path": "art_masters/3d/european_perch.blend",
+      "master_sha256": "732dd87c543844289b6af086b28e04a37cabce83adbdea5250e770c8673073af",
+      "glb_path": "game/assets/3d/european_perch.glb",
+      "glb_sha256": "f48906c003e6e6b9febe78e769ac8640720183e81451037fc64f88ff5195e3a3",
+      "review_record": "review_signoff.json",
+      "review_sha256": "afd6a627d39b9e5f1e0101a5ffd4dc2f595f8a3be7931073f9b8ef8467b5777a"
+    },
+    {
+      "species": "european_plaice",
+      "master_path": "art_masters/3d/european_plaice.blend",
+      "master_sha256": "8a4c6e9fadb1aa77834f9a0cfda504289aabff306447d2e53734926a4404c28c",
+      "glb_path": "game/assets/3d/european_plaice.glb",
+      "glb_sha256": "e44d5f7db964357bfa4e7bef31d6fa4740387198ce0f44401fecdcd2035c33e1",
+      "review_record": "review_signoff.json",
+      "review_sha256": "1757f08f9fe1c71453f1e599542da7e5e37feff11c51fc050909b8b1470a01f3"
+    },
+    {
+      "species": "european_seabass",
+      "master_path": "art_masters/3d/european_seabass.blend",
+      "master_sha256": "314b6325ecbca93d6241327a9931e78307a642818ee50591a522c9eb25eb2127",
+      "glb_path": "game/assets/3d/european_seabass.glb",
+      "glb_sha256": "26e456afcc5563888a34628facbad226bb0c0588c38824b88e177afd4d86407f",
+      "review_record": "visual_review.json",
+      "review_sha256": "b2a58f7f0e41295df1c473ac36b275094108448d8c5bc6c3a766acfc66bc7324"
+    },
+    {
+      "species": "flathead_catfish",
+      "master_path": "art_masters/3d/flathead_catfish.blend",
+      "master_sha256": "9139492b3143a0439b335b2cb9289c795466dd97242652752920cd2b50109c86",
+      "glb_path": "game/assets/3d/flathead_catfish.glb",
+      "glb_sha256": "c34087572690a8e8203d22a859e8d565c5c1693f175240013dd110ff696c850b",
+      "review_record": "visual_review.json",
+      "review_sha256": "17cf5f316a7916e940604c9ef25505d450590146ca4881a91cd211400a446ea3"
+    },
+    {
+      "species": "gilthead_seabream",
+      "master_path": "art_masters/3d/gilthead_seabream.blend",
+      "master_sha256": "8ca51ed3ad0215a6354921700805dfddcf5a52f47f4ba0bc0a0325515f67ef16",
+      "glb_path": "game/assets/3d/gilthead_seabream.glb",
+      "glb_sha256": "910f3207d9ec2fe0aab28632ef245ba9b7612ae48a7e2b7c357724057c50e812",
+      "review_record": "visual_review.json",
+      "review_sha256": "fe5550214a6ecaf17205a99d4ae05cce9f91bfad85bdbb7cf91f80316176ae52"
+    },
+    {
+      "species": "haddock",
+      "master_path": "art_masters/3d/haddock.blend",
+      "master_sha256": "69a487c8deb7ebe9d44588f9b4d18430d7b100156c1a76d2f88337f2a7426719",
+      "glb_path": "game/assets/3d/haddock.glb",
+      "glb_sha256": "8a036c1b8417f3cc70a0381684d18713af1b96613de93b46a52fc6c2427ab56e",
+      "review_record": "review_signoff.json",
+      "review_sha256": "0930f8c551eefe19b198d78922041f069a9b9b316bc987075f928e67d3df1ede"
+    },
+    {
+      "species": "japanese_horse_mackerel",
+      "master_path": "art_masters/3d/japanese_horse_mackerel.blend",
+      "master_sha256": "d6ad96e0147abadd2409209279b464763d78a5ed89d3008e369caad0e04350fa",
+      "glb_path": "game/assets/3d/japanese_horse_mackerel.glb",
+      "glb_sha256": "ad20a543999aa0e050041920a57d00ea6609f6148117de5c5d9137150268162f",
+      "review_record": "review_signoff.json",
+      "review_sha256": "fcec73b45943c69be5298058f9d85c55da8a4be92edc6a03a5891aa6aa077bef"
+    },
+    {
+      "species": "japanese_seabass",
+      "master_path": "art_masters/3d/japanese_seabass.blend",
+      "master_sha256": "473ab5de94500d20ea7d29f6c4e4711d9a7fe6f6b5af0f397563c46d9d60be6c",
+      "glb_path": "game/assets/3d/japanese_seabass.glb",
+      "glb_sha256": "79c588c5e6c8a4eee9298f69a94703f3bb4b28ec5aac5f55eb475bb2cf528c1d",
+      "review_record": "visual_review.json",
+      "review_sha256": "926d6c16b9c8de7b6d23642e5e915652bdbfafcf3e32e975170e57a6924c1344"
+    },
+    {
+      "species": "japanese_whiting",
+      "master_path": "art_masters/3d/japanese_whiting.blend",
+      "master_sha256": "c6573e2dad16440505ab62621eb558af86f6b23b80dea4a42b4d53c00ec2ead7",
+      "glb_path": "game/assets/3d/japanese_whiting.glb",
+      "glb_sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+      "review_record": "visual_review.json",
+      "review_sha256": "38a78a66d4a0612b44e4706865084d7c5d68818cd1b897514a540bb7bdc6cf07"
+    },
+    {
+      "species": "largemouth_bass",
+      "master_path": "art_masters/3d/largemouth_bass.blend",
+      "master_sha256": "ac63a57f425e8816df5dbe51abfe71e39455c40c4ac79c1e89e229616bbe3a8c",
+      "glb_path": "game/assets/3d/largemouth_bass.glb",
+      "glb_sha256": "890aa67eb870b4a5d5ddb3496cdde6ad722bb912c281e1c5bb554e913c223611",
+      "review_record": "visual_review.json",
+      "review_sha256": "bf9db0ac3f938775897bfca842f1d4aef264b9aef9d055db7e47b321396e1392"
+    },
+    {
+      "species": "longnose_gar",
+      "master_path": "art_masters/3d/longnose_gar.blend",
+      "master_sha256": "a985afc1a9bbd9c1c81a5b488d75259783a2f66a9e765e131c835f19bb65c349",
+      "glb_path": "game/assets/3d/longnose_gar.glb",
+      "glb_sha256": "9fb9123f0e2c35c0373abe3f077ebac44a9cbbd11770da701ee286027af88b9d",
+      "review_record": "review_signoff.json",
+      "review_sha256": "3b87920b8c49b3573aa0c067cbc696ffdfc8da281640c6cdc0cbf10756b6a0f0"
+    },
+    {
+      "species": "longsnout_catfish",
+      "master_path": "art_masters/3d/longsnout_catfish.blend",
+      "master_sha256": "6ccf4074c28a4b75274d2b3687f28d029db11786cbffa3ff2a96412be3c7b229",
+      "glb_path": "game/assets/3d/longsnout_catfish.glb",
+      "glb_sha256": "6cc5c4479b8770ea793ee695bfd54d2ef4d6de91d5d63253425308bc5ff62dfe",
+      "review_record": "visual_review.json",
+      "review_sha256": "6eb505a013306c775e010f53b8bfcf9e82460a0109aa7dcc8a0c265632a51e78"
+    },
+    {
+      "species": "mandarin_fish",
+      "master_path": "art_masters/3d/mandarin_fish.blend",
+      "master_sha256": "bd974bcf1191d4a209e9a85d7d01238cb65c85d9f45ce899161e5f2134b95242",
+      "glb_path": "game/assets/3d/mandarin_fish.glb",
+      "glb_sha256": "f96526ef4c84e015f1e60aceaa92ca4ae12368c9895de5e10163358e66186207",
+      "review_record": "visual_review.json",
+      "review_sha256": "a8feea5fc9a96d7476215cd8306028e9c57e31ccf9e461fe131dc0a29154515e"
+    },
+    {
+      "species": "marbled_rockfish",
+      "master_path": "art_masters/3d/marbled_rockfish.blend",
+      "master_sha256": "a67f96d6ccb982308c0bd8dd9f8d1d2e47937792821af4092cd7ee4c531aa4d2",
+      "glb_path": "game/assets/3d/marbled_rockfish.glb",
+      "glb_sha256": "78c5fd2e2e99d4f7d04867f5361461537dd5383eb7c59fe77cbb42d74317a9ad",
+      "review_record": "visual_review.json",
+      "review_sha256": "0460b8cdda41592ee5c23229d19cd5e890c94fc88f882c25cf54556c8bcf3102"
+    },
+    {
+      "species": "northern_pike",
+      "master_path": "art_masters/3d/northern_pike.blend",
+      "master_sha256": "25c8f02578b988b2bb63788489f863616a1467d4bf0ae09b51480e520af789e5",
+      "glb_path": "game/assets/3d/northern_pike.glb",
+      "glb_sha256": "7087f34e042b5a1041f622275f3137865d7ddf4f20e4ff82a876a4bac36f17c1",
+      "review_record": "review_signoff.json",
+      "review_sha256": "b8fece51180d7e81a2a3a13feb336ee2f8cfe2a3be4863dc33cc913dd8343a39"
+    },
+    {
+      "species": "northern_snakehead",
+      "master_path": "art_masters/3d/northern_snakehead.blend",
+      "master_sha256": "c7fba23f9b5ce772c6698e3506aa888707710a6e3183c66a9eb5398f7de4a101",
+      "glb_path": "game/assets/3d/northern_snakehead.glb",
+      "glb_sha256": "fdceece8f75f0f3921c956c3a05dc902ed5d245cb58b4f068f8b84a49b2589f0",
+      "review_record": "visual_review.json",
+      "review_sha256": "746d667d702b8d6a970034ccf5ae520e43dbf51dad596ef2c4a184cb81cba01c"
+    },
+    {
+      "species": "olive_flounder",
+      "master_path": "art_masters/3d/olive_flounder.blend",
+      "master_sha256": "a5ff7e00bf66e845663a56dfcba93859550b71c4b1d600d7bb45f21359746ae3",
+      "glb_path": "game/assets/3d/olive_flounder.glb",
+      "glb_sha256": "9b23be7408e9c4c52d851129b492680f2fb834b13ccba5af3a736c284f3130c5",
+      "review_record": "review_signoff.json",
+      "review_sha256": "3d5467ed5e4647da03b1ddf35c86b904bab3d275dfe742883473d32188d140f3"
+    },
+    {
+      "species": "painted_comber",
+      "master_path": "art_masters/3d/painted_comber.blend",
+      "master_sha256": "405fe7152ee6aae02982b75fc5b1056d0da52e172234fbd251e595e18fe8706f",
+      "glb_path": "game/assets/3d/painted_comber.glb",
+      "glb_sha256": "2b2f3cc10ba1df65120bc3e7b9d3ae3badeaebd2f0d105fda21abd3c581a817f",
+      "review_record": "visual_review.json",
+      "review_sha256": "90675c3ff22414be58cfafa3802421e02898e754195bc74cbf26c298a398e37d"
+    },
+    {
+      "species": "pollack",
+      "master_path": "art_masters/3d/pollack.blend",
+      "master_sha256": "6f2d082db0a8d2256f0c140a6926d5ac4373602a5f573d9d08434995ec288ced",
+      "glb_path": "game/assets/3d/pollack.glb",
+      "glb_sha256": "634d7c68da5e738653e9b9ed29e816c676db0f4f1f2f22d76939c1ff63fee53c",
+      "review_record": "review_signoff.json",
+      "review_sha256": "db80c35981e9bf4030faa69f39b567fa2aca33c7911ee961fbfb480ecdf46490"
+    },
+    {
+      "species": "red_mullet",
+      "master_path": "art_masters/3d/red_mullet.blend",
+      "master_sha256": "b315c142fefe200dcc92629396ed6bf674f95b56fce89b8f42beddaaab76a0cd",
+      "glb_path": "game/assets/3d/red_mullet.glb",
+      "glb_sha256": "58fc14f9cde61ba440b22f899880a17edd98a11d0dfb6220130dc2c6296a516b",
+      "review_record": "visual_review.json",
+      "review_sha256": "df2637fbc0c6006762f379e31bc4532d59d8267cdc6a7cf81b8568de7681707f"
+    },
+    {
+      "species": "red_seabream",
+      "master_path": "art_masters/3d/red_seabream.blend",
+      "master_sha256": "d5bdf40e1ae92304a17f9e404ba00912959e10fd9661d40527d9dbcfeede95e0",
+      "glb_path": "game/assets/3d/red_seabream.glb",
+      "glb_sha256": "2db9214a767231be58b76adf0704678fa483f10cd1c4690e5bb20e80a7b9c45e",
+      "review_record": "visual_review.json",
+      "review_sha256": "160be1ab2e877569c81543151bedf978d6f26fddf727d44886bd6d48068dcd7f"
+    },
+    {
+      "species": "roach",
+      "master_path": "art_masters/3d/roach.blend",
+      "master_sha256": "ce8a26bee55b13c6720e9c24c6988ce88c05275c0ec34e7e63736ea9d842aab8",
+      "glb_path": "game/assets/3d/roach.glb",
+      "glb_sha256": "1af810758d6e674467d700ca554a2214beba1dfc434f7ec2568f87db81c40ccf",
+      "review_record": "review_signoff.json",
+      "review_sha256": "1bcda1440160291d0670a28f2145ca279f6ca65f3c1654b4df764bebd902d33f"
+    },
+    {
+      "species": "rudd",
+      "master_path": "art_masters/3d/rudd.blend",
+      "master_sha256": "4b470f1428835245409bb6c9fad932e0a1d3087cc5a738392d828042887c7893",
+      "glb_path": "game/assets/3d/rudd.glb",
+      "glb_sha256": "9eda48cfc864a7423083981ae9faca93080f43e895d2bcddf2691436442d6f47",
+      "review_record": "review_signoff.json",
+      "review_sha256": "92a22579a98c69ca93d7bd55ccc4d2e016de6bb0e2e92a55f7333037c3f3dd79"
+    },
+    {
+      "species": "saddled_seabream",
+      "master_path": "art_masters/3d/saddled_seabream.blend",
+      "master_sha256": "af3be62d1655e69793ffa161aec9ef3d6d1411ec388905b47c9b6ddbb253e612",
+      "glb_path": "game/assets/3d/saddled_seabream.glb",
+      "glb_sha256": "592c088c8d25b7de57c18a8b85ab4534dbb98b9420cbd45ee07402439a4ee017",
+      "review_record": "visual_review.json",
+      "review_sha256": "2dbb011bf8176574369228d3e75ddacf39f7b577d45c6a53cbeab79f96e0b137"
+    },
+    {
+      "species": "saithe",
+      "master_path": "art_masters/3d/saithe.blend",
+      "master_sha256": "493d683eaa3d69df56a0c09826d13a36bbae623615882f86aa0cfa8e663be226",
+      "glb_path": "game/assets/3d/saithe.glb",
+      "glb_sha256": "50eb1ba6e45900ff6695f2aec9f0f6a5319f86bdbc16a1f825a5d336f703b573",
+      "review_record": "review_signoff.json",
+      "review_sha256": "4385fbcd48b46da80b1dcdc8f9250fba146ea180bb899677dbcc44864632cf0f"
+    },
+    {
+      "species": "southern_catfish",
+      "master_path": "art_masters/3d/southern_catfish.blend",
+      "master_sha256": "3909c973d888a1a2ddb03e219bdc2bebb34cd9f58073c4a281cf7d6b68fb8d53",
+      "glb_path": "game/assets/3d/southern_catfish.glb",
+      "glb_sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+      "review_record": "visual_review.json",
+      "review_sha256": "5f6e1b04bd03b410ea319eaa1acd014e08391bb7206fe412c7e1adeb45895bf8"
+    },
+    {
+      "species": "tench",
+      "master_path": "art_masters/3d/tench.blend",
+      "master_sha256": "c5f1d1853edd32bc4b3c45fb615e94e6b73d4ac691cab4388903e7edf0c08a2c",
+      "glb_path": "game/assets/3d/tench.glb",
+      "glb_sha256": "2e4143cb0aee94e636bec2872e75e884753770394ba98d7ecade25da451ac55e",
+      "review_record": "review_signoff.json",
+      "review_sha256": "fd194e3a6a6177be87901dcb0cce136737c3d888c09d5f084e260152958a2057"
+    },
+    {
+      "species": "white_seabream",
+      "master_path": "art_masters/3d/white_seabream.blend",
+      "master_sha256": "ac0114db1c78f0dbccc6004101a7fbff3f0359fc38b7358de0101838688e9436",
+      "glb_path": "game/assets/3d/white_seabream.glb",
+      "glb_sha256": "fcf0ddec5bf285c73f47727c50b61e831d3d6c7c4a0da6944d60b22733fc5982",
+      "review_record": "visual_review.json",
+      "review_sha256": "e8d011f100d9a2ef99b74789d4c84a0444040ebb208a19d5c22194dcd26a3a94"
+    },
+    {
+      "species": "yellowcheek",
+      "master_path": "art_masters/3d/yellowcheek.blend",
+      "master_sha256": "ec0116e9636d6c0683a4f39e9fddee75d3cb8c1ac35d6fb37055a48a5fdcda5c",
+      "glb_path": "game/assets/3d/yellowcheek.glb",
+      "glb_sha256": "fdbff99da77369235c21f66ebe8a31432cfb7aca01182a0b849e23d5e1a80d03",
+      "review_record": "review_signoff.json",
+      "review_sha256": "1f79f309f25d09e29ea0c081b8b82b1696823208d74d77dea499c4a3a50324ec"
+    }
+  ]
+}

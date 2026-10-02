@@ -1,0 +1,40 @@
+{
+	"adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"api": "1.4.305",
+	"aspect": "expand",
+	"catch": {
+
+	},
+	"checks": 5,
+	"failures": 0,
+	"frames": [
+		{
+			"description": "Genuine first-run lake lobby, empty isolated save, no unlock or gear fixture",
+			"file": "01_first_run_lake_lobby.png",
+			"height": 1584,
+			"mode": "lobby",
+			"region": "lake",
+			"screen": "home",
+			"session_state": 9,
+			"spot": "lake_shore",
+			"width": 720
+		}
+	],
+	"hardware_scope": "Desktop Mobile/Vulkan only, no Android/device identity or FPS certification",
+	"logical_viewport": "(720.0, 1584.0)",
+	"main_msaa": 2,
+	"models_complete": true,
+	"physical_window": "(720, 1584)",
+	"recipe": {
+
+	},
+	"renderer": "mobile",
+	"runtime_hashes": {
+		"res://assets/3d/atlantic_cod.glb": "3fb0c50281d344fa97484cac7ffa48de7508fa344d19a3840e94e1cfd6dd4218",
+		"res://project.godot": "1f39c3c1de9312e5e0454160285d566a25dc03b76aad54167ba53fe1e65d0c73",
+		"res://scripts/fishing_stage_3d.gd": "bec25c940ec5f28647f733811565456693b2100145071662049b780290aa265e",
+		"res://scripts/main.gd": "4d3a635b8350cab87493ec3a77457b43e6145edcdc9cf6c7b151af147ec39ebe"
+	},
+	"scope": "Genuine empty first-run save",
+	"version": "1.2.0-beta.1"
+}

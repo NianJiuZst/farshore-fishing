@@ -1,10 +1,12 @@
 # Native-3D lobby and borderless UI integration gate
 
-## Full-catalog status
+## Full-catalog frozen result
 
-The current suite requires all44 imported species-specific models and Main's real content gate before testing playable pages; it never overrides readiness. It has been adapted to31 generated icons, eight baits, exactly one active biome/station after actual travel, and real species-specific detail/zoom/result previews. Borderless styles,96-unit minimum targets, caption containment, all page controls and interruption checks remain mandatory.
+On2026-10-02, the frozen full44 source passes11,950/11,950 style/layout assertions and253 button visits across29 routes at both720×1280 and720×1584. Headless and actual Mobile/Vulkan runs pass; rendered runs retain the separately documented upstream seven-Texture-RID shutdown warning. Both dimensions use edge-to-edge expand and native4x MSAA.
 
-During development, the31-icon source/alpha/binding checks passed, but the production-page run correctly failed at the missing imported-model dependency (`509/510`; full pages **NOT RUN**). Log: `build/full-catalog-checkpoint/ui_style_full_gate.log`. This is not a full pass. Rerun the entire suite after final44 imports and freeze.
+All31 generated icons, eight baits, one active biome/station after travel, real species-specific detail/zoom/result previews,96-unit targets and synthetic safe-inset stress remain checked. Static geometry retains its resource; intentionally rebuilt rod/line curves retain live nodes with valid current resources.
+
+The complete shipped logs, unchanged1044-file inventory, scope limits and reproducible commands are in [3D_ACCEPTANCE.md](3D_ACCEPTANCE.md) and [evidence/1.2.0-beta.1/index.json](evidence/1.2.0-beta.1/index.json). Earlier incomplete-asset development runs are historical diagnostics, not the current result.
 
 ## Historical two-fish verified result
 

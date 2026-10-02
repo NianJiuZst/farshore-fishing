@@ -1,0 +1,13 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+CYCLE_AFTER_FREE 0 texture_bytes=262867200.0 video_bytes=279686032.0 resources=1.0 nodes=1.0 orphans=0.0
+CYCLE_AFTER_FREE 1 texture_bytes=262867200.0 video_bytes=279686032.0 resources=1.0 nodes=1.0 orphans=0.0
+CYCLE_AFTER_FREE 2 texture_bytes=262867200.0 video_bytes=279686032.0 resources=1.0 nodes=1.0 orphans=0.0
+CYCLE_AFTER_FREE 3 texture_bytes=262867200.0 video_bytes=279686032.0 resources=1.0 nodes=1.0 orphans=0.0
+CYCLE_AFTER_FREE 4 texture_bytes=262867200.0 video_bytes=279686032.0 resources=1.0 nodes=1.0 orphans=0.0
+CYCLE_AFTER_FREE 5 texture_bytes=262867200.0 video_bytes=279686032.0 resources=1.0 nodes=1.0 orphans=0.0
+MINIMAL_REFLECTION_SHUTDOWN with_probe
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

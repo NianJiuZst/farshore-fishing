@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "selected_suites": [
+    "camera_aspect",
+    "slice3d",
+    "ui_style",
+    "touch"
+  ],
+  "representative_tall_layout": true,
+  "runtime_files": 1044,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "camera_aspect",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.62,
+      "log": "logs/tall/camera_aspect.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CAMERA_ASPECT_TESTS: 531/531 passed; failures=0; mathematical desktop projection, not device certification"
+      ],
+      "original_log": "build/final-f722b8f-tall/camera_aspect.log",
+      "log_sha256": "89f957cfd66bd9ed5feefc5f6abda9b368d5fa2f2fb76938025f17b6e799ac21"
+    },
+    {
+      "name": "slice3d",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 54.05,
+      "log": "logs/tall/slice3d.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4405/4405 passed; failures=0; cast events=45; landing events=45; species=44; spots=12"
+      ],
+      "original_log": "build/final-f722b8f-tall/slice3d.log",
+      "log_sha256": "6d430b620ab3c15dd3e7f8c2e14c40f9636edfeef120d013c007fa12f39e39f9"
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 19.78,
+      "log": "logs/tall/ui_style.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 11950/11950 passed; failures=0; button visits=253; physical viewport=(720, 1584); logical viewport=(720.0, 1584.0)"
+      ],
+      "original_log": "build/final-f722b8f-tall/ui_style.log",
+      "log_sha256": "6874ab24fbb40a04ad76b84ae179cfad10509e3bbe213b9a81d4044f9f5516fe"
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 10.75,
+      "log": "logs/tall/touch.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 130/130 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ],
+      "original_log": "build/final-f722b8f-tall/touch.log",
+      "log_sha256": "ced0b6b4f90a1096d2e09798bc0619a4cc5cd01f94130141417e71af94bc6cd0"
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.82,
+      "log": "logs/tall/binary_catalog.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 44, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ],
+      "original_log": "build/final-f722b8f-tall/binary_catalog.log",
+      "log_sha256": "73f59ccb977c1a784796e133138192104169f181fbb150f5ff9c96d0cd5027f6"
+    },
+    {
+      "name": "slice3d_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 239.86,
+      "log": "logs/tall/slice3d_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4405/4405 passed; failures=0; cast events=45; landing events=45; species=44; spots=12"
+      ],
+      "original_log": "build/final-f722b8f-tall/slice3d_vulkan.log",
+      "log_sha256": "47d967973ec00161273e3fe2058e8f83235e9a6b5938f8242cc8ced3de21c83d"
+    },
+    {
+      "name": "ui_style_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 405.72,
+      "log": "logs/tall/ui_style_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 11950/11950 passed; failures=0; button visits=253; physical viewport=(720, 1584); logical viewport=(720.0, 1584.0)"
+      ],
+      "original_log": "build/final-f722b8f-tall/ui_style_vulkan.log",
+      "log_sha256": "ea7aa55a25969bfc34e1f658b6257226fce0ff003eede6b966f4925c036c121f"
+    },
+    {
+      "name": "touch_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 355.52,
+      "log": "logs/tall/touch_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 130/130 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ],
+      "original_log": "build/final-f722b8f-tall/touch_vulkan.log",
+      "log_sha256": "d6fe84ebc2ed82ee171cb7e782dc74a1917d6ec2bef8bab8593a12b2aa0d3967"
+    }
+  ],
+  "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization.",
+  "source_freeze": "f722b8f1c7446a6af209c8a5b4b67ad0ff74af26",
+  "source_summary_sha256": "72a14f1045a06bb5c65a9a6d37e5e41724a05584ca3295f1122ec29f2da4652b",
+  "input_manifest": "runtime_inputs_sha256.json",
+  "before_manifest_sha256": "5ba36f3c68e4299a188cede2ed8d47c87c682cb6cbd06eb4a2d440c0e037cd53",
+  "after_manifest_sha256": "5ba36f3c68e4299a188cede2ed8d47c87c682cb6cbd06eb4a2d440c0e037cd53"
+}

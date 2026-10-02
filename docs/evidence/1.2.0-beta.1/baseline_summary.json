@@ -1,0 +1,286 @@
+{
+  "passed": true,
+  "selected_suites": [
+    "camera_aspect",
+    "save",
+    "core",
+    "tackle",
+    "bait_balance",
+    "registry",
+    "fish_preview",
+    "main_travel",
+    "slice3d",
+    "ui_style",
+    "touch",
+    "historical_trial",
+    "angler_anatomy"
+  ],
+  "representative_tall_layout": false,
+  "runtime_files": 1044,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "camera_aspect",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.62,
+      "log": "logs/baseline/camera_aspect.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CAMERA_ASPECT_TESTS: 531/531 passed; failures=0; mathematical desktop projection, not device certification"
+      ],
+      "original_log": "build/final-f722b8f-baseline/camera_aspect.log",
+      "log_sha256": "89f957cfd66bd9ed5feefc5f6abda9b368d5fa2f2fb76938025f17b6e799ac21"
+    },
+    {
+      "name": "save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 23.13,
+      "log": "logs/baseline/save.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "SAVE_TESTS: 314/314 passed; failures=0"
+      ],
+      "original_log": "build/final-f722b8f-baseline/save.log",
+      "log_sha256": "db70b3a2b61cb07358357c4239824d8a2c8ab22205f702d07d5e4339c930c986"
+    },
+    {
+      "name": "core",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 19.33,
+      "log": "logs/baseline/core.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CORE_TESTS: 182417/182417 passed; failures=0"
+      ],
+      "original_log": "build/final-f722b8f-baseline/core.log",
+      "log_sha256": "a81be64f35df0fb29e8ea50db98365534caae7d410c54d224a592b5b5b459473"
+    },
+    {
+      "name": "tackle",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 5.7,
+      "log": "logs/baseline/tackle.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TACKLE_TESTS: 557/557 passed; failures=0"
+      ],
+      "original_log": "build/final-f722b8f-baseline/tackle.log",
+      "log_sha256": "2a5670b2c2702f39a22681e1681b4acad078a82831963210dad745b0b172d1d7"
+    },
+    {
+      "name": "bait_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.87,
+      "log": "logs/baseline/bait_balance.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "BAIT_BALANCE_TESTS: 33091/33091; reachable_species=44/44"
+      ],
+      "original_log": "build/final-f722b8f-baseline/bait_balance.log",
+      "log_sha256": "323551a349b170c4263c08c36a1136fb6e4716984c8529690a85087f5fbd9761"
+    },
+    {
+      "name": "registry",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.62,
+      "log": "logs/baseline/registry.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_3D_REGISTRY_TESTS: 98/98; imported models=44/44; release_gate=true"
+      ],
+      "original_log": "build/final-f722b8f-baseline/registry.log",
+      "log_sha256": "99c52926fb21d1c09c4cc2d24bf243f89e4b7638d558982f4cbb241c688a6394"
+    },
+    {
+      "name": "fish_preview",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.97,
+      "log": "logs/baseline/fish_preview.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_PREVIEW_TESTS: 25/25 passed"
+      ],
+      "original_log": "build/final-f722b8f-baseline/fish_preview.log",
+      "log_sha256": "9dfc4d7e481e3d8d8fdc16f7635be372dd9e47579914447547a2c2f235e6e30e"
+    },
+    {
+      "name": "main_travel",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.62,
+      "log": "logs/baseline/main_travel.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "MAIN_TRAVEL_TESTS: 24/24 passed; failures=0; boundary tests only, no readiness override"
+      ],
+      "original_log": "build/final-f722b8f-baseline/main_travel.log",
+      "log_sha256": "e2a5cd47871cf30adba2912562f05ab8aaa2cca725f7c5b8ccb16893e8b89cc7"
+    },
+    {
+      "name": "slice3d",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 55.3,
+      "log": "logs/baseline/slice3d.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4405/4405 passed; failures=0; cast events=45; landing events=45; species=44; spots=12"
+      ],
+      "original_log": "build/final-f722b8f-baseline/slice3d.log",
+      "log_sha256": "b6ac7aac19a1e6dfbe64e424fc717818ea8e264bf1353990d0f574b0de3f013d"
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 19.22,
+      "log": "logs/baseline/ui_style.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 11950/11950 passed; failures=0; button visits=253; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ],
+      "original_log": "build/final-f722b8f-baseline/ui_style.log",
+      "log_sha256": "2d9cd5e143a5e0f719db1d9c9b3a3951f32318a4cb9a6da738533823a7e37e87"
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 10.29,
+      "log": "logs/baseline/touch.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 132/132 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ],
+      "original_log": "build/final-f722b8f-baseline/touch.log",
+      "log_sha256": "92a421a73790e9fbfe0f00bdcdb7c48e951b4ea8dc5c384e76341a58a2d058a6"
+    },
+    {
+      "name": "historical_trial",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.77,
+      "log": "logs/baseline/historical_trial.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TRIAL_FISHERY_TESTS: 38082/38082 passed; failures=0"
+      ],
+      "original_log": "build/final-f722b8f-baseline/historical_trial.log",
+      "log_sha256": "854fc971bedcad016223c77da215b5e1b8dba525ecf1f5f2e25dc615dd79788b"
+    },
+    {
+      "name": "angler_anatomy",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.52,
+      "log": "logs/baseline/angler_anatomy.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "ANGLER_ANATOMY_TESTS: 3705/3705 passed; failures=0"
+      ],
+      "original_log": "build/final-f722b8f-baseline/angler_anatomy.log",
+      "log_sha256": "ae7687dd3be1cd2c814e4078f2dae61d40cc42554eead35a4890d749f4003eed"
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.72,
+      "log": "logs/baseline/binary_catalog.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 44, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ],
+      "original_log": "build/final-f722b8f-baseline/binary_catalog.log",
+      "log_sha256": "4f777974b9fa87d686a6d80bb2c718de23dea93540bcf0d710d3607a2f06d727"
+    },
+    {
+      "name": "slice3d_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 238.92,
+      "log": "logs/baseline/slice3d_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4405/4405 passed; failures=0; cast events=45; landing events=45; species=44; spots=12"
+      ],
+      "original_log": "build/final-f722b8f-baseline/slice3d_vulkan.log",
+      "log_sha256": "177ad6b81541b9ba031761c73d6b27f4ca4f244a3e672a3787b53b5aeeafba96"
+    },
+    {
+      "name": "ui_style_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 411.98,
+      "log": "logs/baseline/ui_style_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 11950/11950 passed; failures=0; button visits=253; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ],
+      "original_log": "build/final-f722b8f-baseline/ui_style_vulkan.log",
+      "log_sha256": "79f9076836ffe5c9255de4cbe16ccfd4fe87300305c42af9262e4963c0fdd7e6"
+    },
+    {
+      "name": "touch_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 377.05,
+      "log": "logs/baseline/touch_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 132/132 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ],
+      "original_log": "build/final-f722b8f-baseline/touch_vulkan.log",
+      "log_sha256": "171a6cc6fad95856a023e98875e86db677c87fad1248ebd5d9684cb0cb749ae7"
+    }
+  ],
+  "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization.",
+  "source_freeze": "f722b8f1c7446a6af209c8a5b4b67ad0ff74af26",
+  "source_summary_sha256": "ae8fa18cb577f1dbfbfc153c7d8e3d401615992e0336705d21b1aa061a19f40e",
+  "input_manifest": "runtime_inputs_sha256.json",
+  "before_manifest_sha256": "5ba36f3c68e4299a188cede2ed8d47c87c682cb6cbd06eb4a2d440c0e037cd53",
+  "after_manifest_sha256": "5ba36f3c68e4299a188cede2ed8d47c87c682cb6cbd06eb4a2d440c0e037cd53"
+}

@@ -1,0 +1,11 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+EVIDENCE_SCOPE: genuine first-run empty isolated save; default lake/starter rod; no seeded unlocks or catches
+ACTUAL_RENDERER mobile | llvmpipe (LLVM 19.1.7, 256 bits) | 1.4.305
+VERSION 1.2.0-beta.1 MODEL_READINESS complete=true errors=0 ROOT_MSAA=2 physical=(720, 1584) logical=(720.0, 1584.0)
+CAPTURE 01_first_run_lake_lobby 720x1584 scene=lake/lake_shore
+FULL44_MAIN_CAPTURE: 5/5 passed; failures=0; frames=1; output=/workspace/scratch/c16084497664/farshore-fishing/build/qa3d/final_first_run_lake_tall
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

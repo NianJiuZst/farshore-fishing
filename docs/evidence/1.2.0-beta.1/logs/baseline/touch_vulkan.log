@@ -1,0 +1,23 @@
+COMMAND: python3 tools/render_godot.py --timeout 1200 -- --path game --rendering-method mobile --rendering-driver vulkan --script res://tests/touch_scroll_tests.gd -- --production --require-full
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only
+PRODUCTION_TOUCH _show_gear offset=315 maximum=2393.0
+PRODUCTION_TOUCH_BOTTOM offset=2393 maximum=2393
+PRODUCTION_TOUCH _show_travel offset=315 maximum=1923.0
+PRODUCTION_TOUCH_BOTTOM offset=1923 maximum=1923
+PRODUCTION_TOUCH _show_catalog offset=315 maximum=6591.0
+PRODUCTION_TOUCH_BOTTOM offset=6591 maximum=6591
+PRODUCTION_TOUCH _show_settings offset=161 maximum=161.0
+PRODUCTION_TOUCH_BOTTOM offset=161 maximum=161
+PRODUCTION_TOUCH _show_licenses offset=315 maximum=101676.0
+PRODUCTION_TOUCH_BOTTOM offset=101676 maximum=101676
+PRODUCTION_TOUCH_BOTTOM offset=2393 maximum=2393
+PRODUCTION_TOUCH_BOTTOM offset=2393 maximum=2393
+PREVIEW_TOUCH_RANGE maximum=196.0 offset=196 completed_drags=1
+TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled
+TOUCH_SCROLL_TESTS: 132/132 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

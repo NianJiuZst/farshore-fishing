@@ -1,4 +1,6 @@
-# Full-catalog development logic checkpoint
+# Historical full-catalog development logic checkpoint
+
+The final unskipped full-catalog core now passes182,417/182,417 against the frozen runtime. Current source/art/render/aspect results and shipped evidence are in [3D_ACCEPTANCE.md](3D_ACCEPTANCE.md). The incomplete-asset run below is retained as development history.
 
 2026-10-02: `core_tests.gd -- --skip-ui` passed182,334/182,334 checks after extending the ordinary-fight benchmark to all five rods. The added heavy rod was adjusted from power1.58 to1.52 when the expanded test found a standard roach fight at9.83s; all five rods now satisfy the existing ordinary10–25.5s timing bounds without weakening that assertion.
 

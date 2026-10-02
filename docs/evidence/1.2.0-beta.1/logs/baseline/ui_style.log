@@ -1,0 +1,38 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/ui_style_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+UI_BITMAP_ASSETS: 31/31 distinct HD RGBA PNGs checked
+LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification
+UI_STYLE_ROUTE lobby buttons=4
+UI_STYLE_ROUTE prepare buttons=4
+UI_STYLE_ROUTE fishing buttons=7
+UI_STYLE_ROUTE synthetic_insets/settings buttons=5
+SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing
+UI_STYLE_ROUTE starter/home buttons=4
+UI_STYLE_ROUTE starter/pause buttons=7
+UI_STYLE_ROUTE starter/travel buttons=8
+UI_STYLE_ROUTE starter/gear buttons=18
+UI_STYLE_ROUTE starter/catalog buttons=48
+UI_STYLE_ROUTE starter/favorites buttons=7
+UI_STYLE_ROUTE starter/settings buttons=5
+UI_STYLE_ROUTE starter/licenses buttons=1
+UI_STYLE_ROUTE starter/pending buttons=1
+UI_STYLE_ROUTE undiscovered_species buttons=1
+UI_STYLE_ROUTE discovered/travel buttons=13
+UI_STYLE_ROUTE discovered/gear buttons=16
+UI_STYLE_ROUTE discovered/catalog buttons=48
+UI_STYLE_ROUTE discovered/favorites buttons=7
+UI_STYLE_ROUTE discovered_species buttons=3
+UI_STYLE_ROUTE specimen_zoom buttons=1
+UI_STYLE_ROUTE catalog_active_filters buttons=12
+UI_STYLE_ROUTE catch/common_carp buttons=3
+UI_STYLE_ROUTE pending/common_carp buttons=3
+UI_STYLE_ROUTE catch/chinese_sturgeon buttons=2
+UI_STYLE_ROUTE pending/chinese_sturgeon buttons=2
+UI_STYLE_ROUTE charging buttons=7
+UI_STYLE_ROUTE bite buttons=7
+UI_STYLE_ROUTE fight buttons=7
+UI_STYLE_ROUTE escape buttons=2
+UI_BITMAP_BINDINGS: ["rod", "bag", "book", "settings", "back", "arrow", "coin", "pause", "sun", "compass", "heart", "worm", "sound", "release", "dusk", "rain", "rod_spinning", "rod_heavy", "grain", "shrimp", "lure", "sweetcorn", "dough", "cut_fish", "spinner", "search", "sort", "hook", "reel"]
+UI_STYLE_ROUTES: lobby, prepare, fishing, synthetic_insets/settings, starter/home, starter/pause, starter/travel, starter/gear, starter/catalog, starter/favorites, starter/settings, starter/licenses, starter/pending, undiscovered_species, discovered/travel, discovered/gear, discovered/catalog, discovered/favorites, discovered_species, specimen_zoom, catalog_active_filters, catch/common_carp, pending/common_carp, catch/chinese_sturgeon, pending/chinese_sturgeon, charging, bite, fight, escape
+UI_STYLE_TESTS: 11950/11950 passed; failures=0; button visits=253; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)

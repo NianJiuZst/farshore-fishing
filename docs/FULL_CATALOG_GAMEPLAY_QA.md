@@ -1,5 +1,7 @@
 # Full44 native3D gameplay verification
 
+Final frozen native-scene and actual Mobile/Vulkan results pass4,405/4,405 at both720×1280 and720×1584, with all44 species and all12 spots reached. Current complete evidence and retained renderer caveats are in [3D_ACCEPTANCE.md](3D_ACCEPTANCE.md). Development status below is historical.
+
 This supersedes the **test fixture assumptions** of the earlier two-fish slice. The original historical trial data remains readable. The file name `slice3d_tests.gd` is retained so existing QA commands use the extended suite.
 
 ## Strict dependencies and test honesty
@@ -35,7 +37,7 @@ Headless logic/native-scene integration (not visual or phone evidence): create f
 
 Actual desktop software rendering through the private-display harness:
 
-    python3 tools/render_godot.py --timeout 600 -- --path game --rendering-method mobile --rendering-driver vulkan --script res://tests/slice3d_tests.gd
+    python3 tools/render_godot.py --timeout 1200 -- --path game --rendering-method mobile --rendering-driver vulkan --script res://tests/slice3d_tests.gd
 
 The harness supplies isolated HOME/XDG directories and prints the actual renderer. llvmpipe/lavapipe evidence is not Android16 Snapdragon8Elite hardware certification or a frame-rate guarantee.
 
@@ -58,4 +60,4 @@ After the producers declare stable raw assets, run:
 
 The output directory must be new. The runner imports with isolated user directories, runs twelve suites plus the independent binary gate, and optionally reruns slice3d/UI/touch through the actual Mobile/Vulkan private software display. It stores separate logs and JSON hashes before import, before testing and after testing. Any runtime input changes during testing fail the stability gate. Importer metadata/extracted-texture regeneration is reported separately; raw GLB/script/scene/data changes during import fail stability. `--skip-import` is available when the coordinated import already completed. This runner never exports or reads signing files.
 
-The full45-catch actual software-render integration and repeated real scrolling of the101k-pixel license page exceed the earlier two-fish180-second harness budget. The aggregate runner therefore allows600 seconds per rendered suite, configurable with `--render-timeout`. No assertion or scenario is dropped. A timeout remains an incomplete failed run.
+The full45-catch actual software-render integration and repeated real scrolling of the101k-pixel license page exceed the earlier two-fish180-second harness budget. The aggregate runner now allows1200 seconds per rendered suite for4x MSAA and both display aspects, configurable with `--render-timeout`. No assertion or scenario is dropped. A timeout remains an incomplete failed run.

@@ -1,0 +1,1966 @@
+{
+  "required_species": 44,
+  "full_release_gate": true,
+  "models": {
+    "common_carp": {
+      "sha256": "80f3037eb7ecafcaafb57461ab6b505e9102c7822b60311d326a431a49217cc8",
+      "bytes": 12589628,
+      "meshes": 9,
+      "geometry_sha256": "83d7c8f323437408f260149dd0984a00aaf2b0daee1a7be9e44539aa92dacca1",
+      "primitive_vertex_counts": [
+        646,
+        740,
+        1834,
+        4459,
+        646,
+        3930,
+        696,
+        1571,
+        646
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 9,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 28334,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "crucian_carp": {
+      "sha256": "43d0d850ca96f78ab22b374a3964caca155b2e56a11eb7f551598c69a3c5a8c8",
+      "bytes": 4271164,
+      "meshes": 11,
+      "geometry_sha256": "13feebedd45fe0ab22ff04075a6473dec40d20ee595adaabb1a96b1f0c2a9ca7",
+      "primitive_vertex_counts": [
+        384,
+        2128,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        1339,
+        384,
+        396,
+        4560
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 29406,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "roach": {
+      "sha256": "1af810758d6e674467d700ca554a2214beba1dfc434f7ec2568f87db81c40ccf",
+      "bytes": 4449248,
+      "meshes": 12,
+      "geometry_sha256": "4556a287f91c9ed640717ebcdabc8acb6bd6436e0fe1a7ed5f6d888b22d44bee",
+      "primitive_vertex_counts": [
+        384,
+        435,
+        435,
+        435,
+        435,
+        1339,
+        384,
+        396,
+        1190,
+        672,
+        4459,
+        3990
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 27810,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "rudd": {
+      "sha256": "9eda48cfc864a7423083981ae9faca93080f43e895d2bcddf2691436442d6f47",
+      "bytes": 4418272,
+      "meshes": 12,
+      "geometry_sha256": "13acbd49650c68f197d4813585f84fbccac2d3efd12d72b47df44287b0133d5c",
+      "primitive_vertex_counts": [
+        384,
+        435,
+        435,
+        435,
+        435,
+        1339,
+        384,
+        396,
+        1624,
+        4459,
+        266,
+        4050
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 27978,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "european_perch": {
+      "sha256": "f48906c003e6e6b9febe78e769ac8640720183e81451037fc64f88ff5195e3a3",
+      "bytes": 5283560,
+      "meshes": 13,
+      "geometry_sha256": "847ad5c14046096deba927003968dafc479a21b164469b93f5f6294477daa4d0",
+      "primitive_vertex_counts": [
+        384,
+        1764,
+        5590,
+        435,
+        435,
+        435,
+        435,
+        1360,
+        396,
+        1875,
+        434,
+        294,
+        3780
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 13,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 7,
+      "triangles": 33616,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "northern_pike": {
+      "sha256": "7087f34e042b5a1041f622275f3137865d7ddf4f20e4ff82a876a4bac36f17c1",
+      "bytes": 4924548,
+      "meshes": 10,
+      "geometry_sha256": "1b5493101138aac8a66eaeafc411cbf7e0dc61fbd48b54f23491b9ca5909a983",
+      "primitive_vertex_counts": [
+        384,
+        435,
+        435,
+        435,
+        435,
+        2492,
+        396,
+        2002,
+        5590,
+        4290
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 10,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32058,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "common_bream": {
+      "sha256": "53253642e824a76c216055c7d9cbeb8bc88cf75343fd59b2be94c74feb8b911d",
+      "bytes": 4092852,
+      "meshes": 11,
+      "geometry_sha256": "f27114ae1efc746d1a8d55bd8f96d647c9296a19f03b65e5c3b18230bb5f648a",
+      "primitive_vertex_counts": [
+        384,
+        2156,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        1339,
+        384,
+        396,
+        4620
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 29574,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "tench": {
+      "sha256": "2e4143cb0aee94e636bec2872e75e884753770394ba98d7ecade25da451ac55e",
+      "bytes": 5034736,
+      "meshes": 11,
+      "geometry_sha256": "4139aaf8c8f2f5def89fa52a7b3bb256ce01e370393d2d9324b63640f74dd888",
+      "primitive_vertex_counts": [
+        384,
+        435,
+        435,
+        435,
+        435,
+        1339,
+        720,
+        396,
+        4590,
+        2142,
+        4459
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 30154,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "japanese_horse_mackerel": {
+      "sha256": "ad20a543999aa0e050041920a57d00ea6609f6148117de5c5d9137150268162f",
+      "bytes": 4725936,
+      "meshes": 13,
+      "geometry_sha256": "4c035f5308d041bffb83dc9157775ce7e7f8f93e53277b7d279694051861ee03",
+      "primitive_vertex_counts": [
+        340,
+        435,
+        435,
+        435,
+        435,
+        369,
+        2254,
+        4459,
+        2688,
+        294,
+        396,
+        710,
+        4866
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 13,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33910,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "chub_mackerel": {
+      "sha256": "ec51f5841816054213c2dc06a15ca494563dcdcf024ad410e6e5e6cfac5b5aa8",
+      "bytes": 5331640,
+      "meshes": 12,
+      "geometry_sha256": "ef3463d335ba0baca9892bd57e70a4c668c9e84b6f5064a2b0a287706141e5fa",
+      "primitive_vertex_counts": [
+        435,
+        435,
+        435,
+        435,
+        369,
+        2338,
+        4459,
+        240,
+        2702,
+        308,
+        396,
+        5010
+      ],
+      "skins": 1,
+      "bones": 27,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33306,
+      "weight_sum_min": 0.9999999552965164,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "red_seabream": {
+      "sha256": "2db9214a767231be58b76adf0704678fa483f10cd1c4690e5bb20e80a7b9c45e",
+      "bytes": 4205712,
+      "meshes": 11,
+      "geometry_sha256": "bbe45db62902a1287f299ac4db46654233f81fc0139affe50487168972174c35",
+      "primitive_vertex_counts": [
+        444,
+        435,
+        435,
+        435,
+        435,
+        1409,
+        432,
+        396,
+        2520,
+        4459,
+        5400
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32110,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "black_seabream": {
+      "sha256": "670c3d601e73454092a3e83f90e694f73c657eecd5afb9f27621e5bbf1b54954",
+      "bytes": 4913484,
+      "meshes": 11,
+      "geometry_sha256": "0cb0ed7cdb772dbd6a50384291c8692face3acf7b33e1c78f88e77027df4a1d6",
+      "primitive_vertex_counts": [
+        444,
+        2548,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        1409,
+        432,
+        396,
+        5460
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32278,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "japanese_seabass": {
+      "sha256": "79c588c5e6c8a4eee9298f69a94703f3bb4b28ec5aac5f55eb475bb2cf528c1d",
+      "bytes": 4588452,
+      "meshes": 11,
+      "geometry_sha256": "d761facc91b2b0c1025460dcd63a90273ec464129ae6d03c3521817d79d91bae",
+      "primitive_vertex_counts": [
+        472,
+        435,
+        435,
+        435,
+        435,
+        2548,
+        5018,
+        2011,
+        64,
+        396,
+        5460
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33592,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "japanese_whiting": {
+      "sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+      "bytes": 5026920,
+      "meshes": 11,
+      "geometry_sha256": "71ebcb52c4687c914a4eb6ce89bd9a8510a6a41a27815cca296f62e1bda73615",
+      "primitive_vertex_counts": [
+        472,
+        435,
+        435,
+        435,
+        435,
+        2212,
+        4459,
+        2010,
+        432,
+        396,
+        4740
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 31346,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "marbled_rockfish": {
+      "sha256": "78c5fd2e2e99d4f7d04867f5361461537dd5383eb7c59fe77cbb42d74317a9ad",
+      "bytes": 5913992,
+      "meshes": 11,
+      "geometry_sha256": "7d988740098f51a88c8fc761766bde0e7fa5fe7e6edbd220daf07943323f02b2",
+      "primitive_vertex_counts": [
+        508,
+        435,
+        435,
+        435,
+        435,
+        2674,
+        5018,
+        2011,
+        396,
+        128,
+        5730
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 34540,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "olive_flounder": {
+      "sha256": "9b23be7408e9c4c52d851129b492680f2fb834b13ccba5af3a736c284f3130c5",
+      "bytes": 4698588,
+      "meshes": 10,
+      "geometry_sha256": "c4dc31aa96b88ef06a6134043bf643a3ccbe6da48e17d716685f47bd5408e8cd",
+      "primitive_vertex_counts": [
+        328,
+        435,
+        435,
+        435,
+        435,
+        1252,
+        396,
+        2478,
+        15476,
+        5310
+      ],
+      "skins": 1,
+      "bones": 18,
+      "weighted_primitives": 10,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 52374,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "atlantic_cod": {
+      "sha256": "3fb0c50281d344fa97484cac7ffa48de7508fa344d19a3840e94e1cfd6dd4218",
+      "bytes": 3511496,
+      "meshes": 12,
+      "geometry_sha256": "810834db651b63b0a7143860f2fb0ad0a7529a78a1742dcf4ac4882bf84cdca1",
+      "primitive_vertex_counts": [
+        408,
+        2800,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        2884,
+        484,
+        396,
+        960,
+        6000
+      ],
+      "skins": 1,
+      "bones": 19,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 38348,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "pollack": {
+      "sha256": "634d7c68da5e738653e9b9ed29e816c676db0f4f1f2f22d76939c1ff63fee53c",
+      "bytes": 5361456,
+      "meshes": 13,
+      "geometry_sha256": "368b721e775894b86d549a97cf188149d62551ed3de927a7cd41b0d9e02d562c",
+      "primitive_vertex_counts": [
+        336,
+        1260,
+        435,
+        435,
+        435,
+        435,
+        2828,
+        475,
+        396,
+        308,
+        2506,
+        4459,
+        6030
+      ],
+      "skins": 1,
+      "bones": 19,
+      "weighted_primitives": 13,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 38762,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "saithe": {
+      "sha256": "50eb1ba6e45900ff6695f2aec9f0f6a5319f86bdbc16a1f825a5d336f703b573",
+      "bytes": 5404468,
+      "meshes": 12,
+      "geometry_sha256": "296cbc174ed018c6dc28101a65426a716236d6271f2abb147b928ec5b185c58d",
+      "primitive_vertex_counts": [
+        384,
+        435,
+        435,
+        435,
+        435,
+        2840,
+        432,
+        396,
+        2842,
+        4459,
+        6090,
+        1020
+      ],
+      "skins": 1,
+      "bones": 19,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 38484,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "haddock": {
+      "sha256": "8a036c1b8417f3cc70a0381684d18713af1b96613de93b46a52fc6c2427ab56e",
+      "bytes": 5333836,
+      "meshes": 12,
+      "geometry_sha256": "328e7e811d5b770dcf5506d589b5dc90d2ce9b9af021d55006bbcd7820c7ce2e",
+      "primitive_vertex_counts": [
+        348,
+        1232,
+        2786,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        2714,
+        344,
+        396,
+        5970
+      ],
+      "skins": 1,
+      "bones": 19,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 38072,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "atlantic_mackerel": {
+      "sha256": "12394131cb93c1b0816a76771a9492fcbf1d6227308b9a4150cc9455b6815ef4",
+      "bytes": 5331848,
+      "meshes": 12,
+      "geometry_sha256": "32f5bb5a742c29207fe4d7e8a56f0332545e65c97559ef6e820bf7d2d7f5f946",
+      "primitive_vertex_counts": [
+        435,
+        435,
+        435,
+        435,
+        369,
+        2366,
+        4459,
+        240,
+        2702,
+        308,
+        396,
+        5070
+      ],
+      "skins": 1,
+      "bones": 27,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33474,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "atlantic_herring": {
+      "sha256": "b2d04d4912f51343aef712894c35b46a334d23c0887a238d9f0350f81923f742",
+      "bytes": 4810980,
+      "meshes": 12,
+      "geometry_sha256": "6392de8e2fb75b97c95663e7e9e29d4972b033390d0c8d5174d298772ae8e799",
+      "primitive_vertex_counts": [
+        360,
+        1736,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        2730,
+        346,
+        396,
+        3720,
+        165
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 29586,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "european_plaice": {
+      "sha256": "e44d5f7db964357bfa4e7bef31d6fa4740387198ce0f44401fecdcd2035c33e1",
+      "bytes": 4797160,
+      "meshes": 12,
+      "geometry_sha256": "90b818e738e0705b04fd19f19a9088f84e561569f9216efa1dc9fac873c2d87c",
+      "primitive_vertex_counts": [
+        324,
+        2604,
+        14577,
+        3354,
+        435,
+        435,
+        435,
+        435,
+        1280,
+        396,
+        32,
+        5580
+      ],
+      "skins": 1,
+      "bones": 18,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 57268,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "atlantic_wolffish": {
+      "sha256": "c92007119d8b31de66ee9e896a162fa44309bdeb21163ab6e2ced51a2575658e",
+      "bytes": 4252192,
+      "meshes": 13,
+      "geometry_sha256": "31b06c681d319a3d3cffb8df857fccda2861d3741cadf5c78c12984484fa1531",
+      "primitive_vertex_counts": [
+        324,
+        2408,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        2366,
+        396,
+        4688,
+        320,
+        5160,
+        1099
+      ],
+      "skins": 1,
+      "bones": 14,
+      "weighted_primitives": 13,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 42628,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "european_seabass": {
+      "sha256": "26e456afcc5563888a34628facbad226bb0c0588c38824b88e177afd4d86407f",
+      "bytes": 4866736,
+      "meshes": 11,
+      "geometry_sha256": "cdc8ef48519be36a92bd4cb2a378b225e3ff8b2f9a51e0a9bf010099390965b5",
+      "primitive_vertex_counts": [
+        500,
+        2394,
+        5018,
+        435,
+        435,
+        435,
+        435,
+        1995,
+        64,
+        396,
+        5130
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32684,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "gilthead_seabream": {
+      "sha256": "910f3207d9ec2fe0aab28632ef245ba9b7612ae48a7e2b7c357724057c50e812",
+      "bytes": 5123776,
+      "meshes": 11,
+      "geometry_sha256": "5e15373e2a5d3c00926d52d578a9d280a95f3583f6dc97ed9145c0e659522051",
+      "primitive_vertex_counts": [
+        444,
+        435,
+        435,
+        435,
+        435,
+        2660,
+        4459,
+        1409,
+        432,
+        396,
+        5700
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32950,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "saddled_seabream": {
+      "sha256": "592c088c8d25b7de57c18a8b85ab4534dbb98b9420cbd45ee07402439a4ee017",
+      "bytes": 5036240,
+      "meshes": 11,
+      "geometry_sha256": "38a79bf70ec106f132491eacc056cc7f77c8b92a6ee1c9a4f1de20f27e7e7eab",
+      "primitive_vertex_counts": [
+        444,
+        435,
+        435,
+        435,
+        435,
+        1409,
+        432,
+        396,
+        2562,
+        5018,
+        5490
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33322,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "white_seabream": {
+      "sha256": "fcf0ddec5bf285c73f47727c50b61e831d3d6c7c4a0da6944d60b22733fc5982",
+      "bytes": 5165668,
+      "meshes": 12,
+      "geometry_sha256": "7a377bdea04943d8510e17231cfb464d9f249ab8ecaa69cef058b0337a77dfe4",
+      "primitive_vertex_counts": [
+        444,
+        420,
+        435,
+        435,
+        435,
+        435,
+        1409,
+        432,
+        396,
+        5520,
+        2156,
+        4459
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32446,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "annular_seabream": {
+      "sha256": "f7ac5d17797e045a0cd5d9e68d9ff1e2996e6802d8eec7c81c4031ffdc1f2e34",
+      "bytes": 4919968,
+      "meshes": 12,
+      "geometry_sha256": "3237ec4d83b3b447e39fd4e34abe6b43e86cef5d12b3e79b2978365600faf1f7",
+      "primitive_vertex_counts": [
+        444,
+        1764,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        1409,
+        432,
+        396,
+        5340,
+        560,
+        182
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 13,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 31942,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "red_mullet": {
+      "sha256": "58fc14f9cde61ba440b22f899880a17edd98a11d0dfb6220130dc2c6296a516b",
+      "bytes": 4602276,
+      "meshes": 12,
+      "geometry_sha256": "888bac26bf8152d733436ef7fe302ee1229fe9367ebaee5b6ca137e835d3a973",
+      "primitive_vertex_counts": [
+        444,
+        435,
+        435,
+        435,
+        435,
+        368,
+        1409,
+        432,
+        396,
+        2114,
+        4459,
+        4530
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 30402,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "painted_comber": {
+      "sha256": "2b2f3cc10ba1df65120bc3e7b9d3ae3badeaebd2f0d105fda21abd3c581a817f",
+      "bytes": 5846284,
+      "meshes": 12,
+      "geometry_sha256": "f0c393e9cc637b266633dcbdc091158da7d71684ec81d8a545c6783707c8da21",
+      "primitive_vertex_counts": [
+        528,
+        350,
+        435,
+        435,
+        435,
+        435,
+        1995,
+        64,
+        396,
+        2030,
+        5018,
+        5100
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32648,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "common_pandora": {
+      "sha256": "0798ae024f2c79889c832459a1626be6ab9d0776eb469fd37d25b388fec9fa6f",
+      "bytes": 4699912,
+      "meshes": 11,
+      "geometry_sha256": "cc974a10ce97663c819feeb414b31257b5b5dc2c94aebd754a23591b3d677f04",
+      "primitive_vertex_counts": [
+        444,
+        2576,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        1409,
+        432,
+        396,
+        5520
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32446,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "alligator_gar": {
+      "sha256": "ab4820619fe604d2e174c2e8b1439da69a58cc0576cd38c4ea21e4c279431ce3",
+      "bytes": 12842108,
+      "meshes": 9,
+      "geometry_sha256": "7d6b4eb06d8debca5ba498cbd5005104d7b089e40bb0e8694793ea9d2c19a321",
+      "primitive_vertex_counts": [
+        1680,
+        5284,
+        646,
+        646,
+        3600,
+        1116,
+        1296,
+        1668,
+        646
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 9,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 29408,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "longnose_gar": {
+      "sha256": "9fb9123f0e2c35c0373abe3f077ebac44a9cbbd11770da701ee286027af88b9d",
+      "bytes": 5294380,
+      "meshes": 10,
+      "geometry_sha256": "bd458a0001faf2e9ebfdfedad6492e8b2df2fa19eca24796945cf7d32c3f9061",
+      "primitive_vertex_counts": [
+        384,
+        435,
+        435,
+        435,
+        435,
+        1750,
+        5590,
+        1366,
+        396,
+        3750
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 10,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 28610,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "bowfin": {
+      "sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+      "bytes": 5303068,
+      "meshes": 11,
+      "geometry_sha256": "bec58361f2daea4826fe893de7b581330a6114069fa2980dfff2bbcc52e71116",
+      "primitive_vertex_counts": [
+        890,
+        2100,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        450,
+        2872,
+        396,
+        4500
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33112,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "largemouth_bass": {
+      "sha256": "890aa67eb870b4a5d5ddb3496cdde6ad722bb912c281e1c5bb554e913c223611",
+      "bytes": 4906752,
+      "meshes": 11,
+      "geometry_sha256": "45e493e56f2a9e38e85d8bfe265b89ebbf3c80a8355718dfcbb910292c80e964",
+      "primitive_vertex_counts": [
+        444,
+        435,
+        435,
+        435,
+        435,
+        2478,
+        5018,
+        2011,
+        128,
+        396,
+        5310
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33244,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "channel_catfish": {
+      "sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+      "bytes": 2473920,
+      "meshes": 12,
+      "geometry_sha256": "2f81211efd83fc691c0b1f0e3a7a2cec412f425415cc2dc97054902fee4f1170",
+      "primitive_vertex_counts": [
+        350,
+        1108,
+        1848,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        2420,
+        656,
+        396,
+        3981
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 32270,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "flathead_catfish": {
+      "sha256": "c34087572690a8e8203d22a859e8d565c5c1693f175240013dd110ff696c850b",
+      "bytes": 3280752,
+      "meshes": 13,
+      "geometry_sha256": "3d9c8a5efbf7250e38a453eaf7a84f7875307a062ed70c7d39d5336d1149c200",
+      "primitive_vertex_counts": [
+        350,
+        1176,
+        1624,
+        4459,
+        604,
+        1335,
+        704,
+        396,
+        435,
+        435,
+        435,
+        435,
+        3480
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 13,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 30316,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "chinese_sturgeon": {
+      "sha256": "d5b845fa76371a215ec3ec9eb54a1f65b56d68eddb96ca1174d136d2898aa8af",
+      "bytes": 2641428,
+      "meshes": 12,
+      "geometry_sha256": "b0b67cae1556206a1a2fe5edee4cffc2b801fa06306f064e807b233af36fe134",
+      "primitive_vertex_counts": [
+        300,
+        1648,
+        2002,
+        4459,
+        435,
+        435,
+        435,
+        435,
+        2897,
+        472,
+        396,
+        4290
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 31910,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "mandarin_fish": {
+      "sha256": "f96526ef4c84e015f1e60aceaa92ca4ae12368c9895de5e10163358e66186207",
+      "bytes": 5013976,
+      "meshes": 11,
+      "geometry_sha256": "97b4068955334361d0e6f52c1db50ba4a2bf4c02cf3579bafa4c6d87d769c4d8",
+      "primitive_vertex_counts": [
+        500,
+        435,
+        435,
+        435,
+        435,
+        2604,
+        5018,
+        2011,
+        64,
+        396,
+        5580
+      ],
+      "skins": 1,
+      "bones": 17,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33976,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "northern_snakehead": {
+      "sha256": "fdceece8f75f0f3921c956c3a05dc902ed5d245cb58b4f068f8b84a49b2589f0",
+      "bytes": 5353596,
+      "meshes": 10,
+      "geometry_sha256": "85ec2c5b8c1c379c2883a2ff67b40e4acb29e398c92cf5700d95f9c3626a652d",
+      "primitive_vertex_counts": [
+        808,
+        435,
+        435,
+        435,
+        435,
+        2828,
+        396,
+        2366,
+        4459,
+        5070
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 10,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33568,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "yellowcheek": {
+      "sha256": "fdbff99da77369235c21f66ebe8a31432cfb7aca01182a0b849e23d5e1a80d03",
+      "bytes": 5060744,
+      "meshes": 11,
+      "geometry_sha256": "ed1886ae71c5257613ab67a148a973075c97509fc8c2863b9f5fcb79227cdfdf",
+      "primitive_vertex_counts": [
+        384,
+        435,
+        435,
+        435,
+        435,
+        1374,
+        396,
+        4080,
+        658,
+        5590,
+        1246
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 11,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 29550,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "southern_catfish": {
+      "sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+      "bytes": 2804568,
+      "meshes": 12,
+      "geometry_sha256": "8040d4431707f0773d94bd81a5c77bc2f048d0ecf7ccc2a5464b26218590c944",
+      "primitive_vertex_counts": [
+        824,
+        2453,
+        352,
+        396,
+        4830,
+        2254,
+        4459,
+        604,
+        435,
+        435,
+        435,
+        435
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 33928,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    },
+    "longsnout_catfish": {
+      "sha256": "6cc5c4479b8770ea793ee695bfd54d2ef4d6de91d5d63253425308bc5ff62dfe",
+      "bytes": 2236288,
+      "meshes": 12,
+      "geometry_sha256": "99dfcf8519c529d2fa69f3d61931b420269da831ba1f61d6c43e78b85e79ce43",
+      "primitive_vertex_counts": [
+        1040,
+        1442,
+        4459,
+        983,
+        1541,
+        396,
+        435,
+        435,
+        435,
+        435,
+        3153,
+        350
+      ],
+      "skins": 1,
+      "bones": 16,
+      "weighted_primitives": 12,
+      "required_clips": [
+        "swim",
+        "struggle",
+        "breach",
+        "landed"
+      ],
+      "animations": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "embedded_images": 6,
+      "triangles": 28986,
+      "weight_sum_min": 0.9999999403953552,
+      "weight_sum_max": 1.0000000894069672,
+      "clip_seconds": {
+        "breach": 1.399999976158142,
+        "landed": 3.0,
+        "struggle": 1.2000000476837158,
+        "swim": 2.0
+      }
+    }
+  },
+  "missing": [],
+  "failures": [],
+  "scope": "Independent binary geometry, weighted skin, animation sampling and duplicate-geometry audit; anatomy and rendered appearance require separate visual review.",
+  "full_catalog_complete": true
+}

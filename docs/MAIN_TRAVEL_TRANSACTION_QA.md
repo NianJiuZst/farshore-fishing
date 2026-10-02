@@ -1,6 +1,6 @@
 # Full-world Main travel transaction checkpoint
 
-2026-10-02. This checkpoint addresses stale travel and save/scene agreement; it is not full44 release acceptance.
+2026-10-02. This checkpoint addresses stale travel and save/scene agreement. Its24/24 boundary assertions also pass in the final full-catalog matrix; current frozen results are in [3D_ACCEPTANCE.md](3D_ACCEPTANCE.md). The partial-asset aggregate run below remains historical development evidence.
 
 ## Controller guarantees
 

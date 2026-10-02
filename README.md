@@ -50,7 +50,7 @@
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/save_tests.gd
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-core-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/core_tests.gd
 
-先创建上述临时目录。可用 `python3 tools/run_full_catalog_qa.py --output build/full-catalog-qa --render` 协调导入、12项逻辑/界面/3D测试、独立44模型二进制审计与可用的桌面Vulkan测试。源码测试包括真实全目录出鱼、动画连接、最小/最大鱼镜头、触控冲突、存档故障与重启；历史trial_fishery测试只验证旧适配器/记录兼容。每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。最终视觉、源代码和设备证据见docs/3D_ACCEPTANCE.md，不能以旧版计数替代本次复验。
+先创建上述临时目录。可用 `python3 tools/run_full_catalog_qa.py --output build/full-catalog-qa --render` 协调导入、逻辑/界面/3D测试、独立44模型二进制审计与可用的桌面Vulkan测试。源码测试包括真实全目录出鱼、动画连接、最小/最大鱼镜头、触控冲突、存档故障与重启；历史trial_fishery测试只验证旧适配器/记录兼容。每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。最终视觉、源代码和设备证据见docs/3D_ACCEPTANCE.md，不能以旧版计数替代本次复验。
 
 ## 文件结构
 
