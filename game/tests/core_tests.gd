@@ -56,7 +56,7 @@ func _test_catalog_and_reachability() -> void:
 	var art_check: bool = "--check-art" in OS.get_cmdline_user_args()
 	_check(catalog.load_all(art_check), "catalog load: " + str(catalog.errors))
 	_check(catalog.fish.size() == EXPECTED_SPECIES and catalog.spots.size() == EXPECTED_SPOTS, "44 unique fish and twelve spots")
-	_check(catalog.regions.size() == EXPECTED_REGIONS and catalog.gear.size() == 3 and catalog.baits.size() == 4, "six regions, three gear tiers, four baits")
+	_check(catalog.regions.size() == EXPECTED_REGIONS and catalog.gear.size() == 5 and catalog.baits.size() == 8, "six regions, five rods, eight baits")
 	var scientific_names: Dictionary = {}
 	var region_counts: Dictionary = {}
 	var protected_ids: Array[String] = []
@@ -288,7 +288,7 @@ func _test_failures_and_terminal() -> void:
 func _test_behavior_balance() -> void:
 	var phases: Dictionary = {}
 	for id: String in ["common_bream", "rudd", "roach"]:
-		for gear_id: int in 3:
+		for gear_id: int in catalog.gear.size():
 			var record: Dictionary = {}
 			for fixed_seed: int in 100:
 				record = _individual(id, fixed_seed)
@@ -436,8 +436,8 @@ func _test_growth() -> void:
 				unlock_history.append("%s discoveries=%d cost=%d" % [region.region_id, store.discovered_count(), region.unlock_cost])
 		_check(int(store.state.currency) == catches * 33 - spent and int(store.state.currency) >= 0, "growth never spends unearned currency or creates a negative balance")
 		if store.discovered_count() == EXPECTED_SPECIES: break
-	_check(store.discovered_count() == EXPECTED_SPECIES and (store.state.unlocked_regions as Array).size() == EXPECTED_REGIONS and int(store.state.gear) == 2, "zero-currency release-only route reaches all 44 species/six regions/gear without resource cycle")
-	_check(spent == 2650 and (store.state.owned_gear as Array).size() == 3, "full collection pays exact seven configured purchases totaling 2650")
+	_check(store.discovered_count() == EXPECTED_SPECIES and (store.state.unlocked_regions as Array).size() == EXPECTED_REGIONS and int(store.state.gear) == 4, "zero-currency release-only route reaches all 44 species/six regions/gear without resource cycle")
+	_check(spent == 3070 and (store.state.owned_gear as Array).size() == 5, "full collection pays exact nine configured purchases totaling 3070")
 	var restart: Store = Store.new()
 	_check(restart.initialize(test_root.path_join("growth")) and _same_json(restart.state, store.state) and restart.discovered_count() == EXPECTED_SPECIES, "expanded collection, all unlocks and exact economy survive restart")
 	print("PASS GROUP zero-start release-only growth: ", catches, " real encounters, discovered=", store.discovered_count(), ", balance=", store.state.currency, "; purchases=", spent, "; unlocks=", unlock_history)
