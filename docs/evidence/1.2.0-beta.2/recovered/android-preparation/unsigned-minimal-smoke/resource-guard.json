@@ -1,0 +1,33 @@
+{
+  "command": [
+    "python3",
+    "tools/smoke_android_prebuilt.py",
+    "--template",
+    "build/recovered-derived-android-release-arm64.apk",
+    "--evidence",
+    "build/recovered-template-smoke-verified"
+  ],
+  "utc": "2026-10-02T19:27:30.926545+00:00",
+  "initial_root_tmp_memory_bytes": [
+    24191832064,
+    5002084352,
+    8380325888
+  ],
+  "minimum_root_tmp_memory_bytes": [
+    24191741952,
+    4812054528,
+    7083610112
+  ],
+  "final_root_tmp_memory_bytes": [
+    24191733760,
+    5001797632,
+    8188223488
+  ],
+  "floors_root_tmp_memory_bytes": [
+    805306368,
+    536870912,
+    1073741824
+  ],
+  "stopped_by_guard": false,
+  "returncode": 0
+}

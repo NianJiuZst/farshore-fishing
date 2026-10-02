@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-10-02T19:20:56.933995+00:00",
+  "source": "Fresh post-reset installation and live checks, not recovered historical proof",
+  "godot_version": "4.6.3.stable.official.7d41c59c4",
+  "archives": [
+    {
+      "file": "Godot_v4.6.3-stable_export_templates.tpz",
+      "bytes": 1255918323,
+      "sha512": "da606b61c10157844f8300172df374472665f95015495cb1a7cd132c40ede404faa96cc1016a4b9662db9909ddea69632c4948b2cd11163438dad4808881fb68"
+    },
+    {
+      "file": "commandlinetools-linux-15859902_latest.zip",
+      "bytes": 181833628,
+      "sha256": "4e4c464f145a7512b57d088ac6c278c03c9eea610886b35a5e0804e74eedf583"
+    },
+    {
+      "file": "OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "bytes": 207473347,
+      "sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94"
+    }
+  ],
+  "official_template_source": "https://github.com/godotengine/godot-builds/releases/tag/4.6.3-stable",
+  "sdk_catalog_source": "https://dl.google.com/android/repository/repository2-3.xml",
+  "jdk_source": "https://github.com/adoptium/temurin21-binaries/releases/tag/jdk-21.0.12.1%2B1",
+  "exporter_source": "https://github.com/godotengine/godot/blob/4.6.3-stable/platform/android/export/export_plugin.cpp",
+  "signing_credentials_created": false,
+  "sdk_components_not_installed": [
+    "NDK",
+    "emulator",
+    "system images",
+    "Gradle"
+  ]
+}

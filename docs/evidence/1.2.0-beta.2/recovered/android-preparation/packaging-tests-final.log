@@ -1,0 +1,10 @@
+test_official_template_manifest_fail_closed (__main__.PackagingTests.test_official_template_manifest_fail_closed) ... ok
+test_raw_payload_copy_with_git_timestamp_and_utf8 (__main__.PackagingTests.test_raw_payload_copy_with_git_timestamp_and_utf8) ... ok
+test_sdk_symlink_mode_hash_roundtrip (__main__.PackagingTests.test_sdk_symlink_mode_hash_roundtrip) ... ok
+test_source_roundtrip_reuse_changed_added_and_corruption (__main__.PackagingTests.test_source_roundtrip_reuse_changed_added_and_corruption) ... ok
+test_vulkan_types_exact_reversal_and_rejection (__main__.PackagingTests.test_vulkan_types_exact_reversal_and_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.111s
+
+OK

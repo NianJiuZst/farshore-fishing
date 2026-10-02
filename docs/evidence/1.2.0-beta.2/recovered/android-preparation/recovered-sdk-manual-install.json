@@ -1,0 +1,30 @@
+{
+  "method": "Official repository catalog size/SHA1, full ZIP CRC and path validation; curl used after sdkmanager manifest IO failure",
+  "sdk_terms": "User-approved existing Android SDK agreement; no new terms or credentials",
+  "packages": [
+    {
+      "package": "build-tools;36.1.0",
+      "url": "https://dl.google.com/android/repository/build-tools_r36.1_linux.zip",
+      "archive_bytes": 64195204,
+      "catalog_sha1": "936a0d6bd5ae3e2118a7567dddbc95ff67ed46e9",
+      "archive_sha256": "a7b5889e4a79fcf3b0976bef40d401f4240fb1eed891d9d91169da1111e11d78",
+      "installed_path": "tools/android-sdk/build-tools/36.1.0"
+    },
+    {
+      "package": "platforms;android-36",
+      "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+      "archive_bytes": 65878410,
+      "catalog_sha1": "2c1a80dd4d9f7d0e6dd336ec603d9b5c55a6f576",
+      "archive_sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+      "installed_path": "tools/android-sdk/platforms/android-36"
+    },
+    {
+      "package": "platform-tools",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+      "archive_bytes": 9054187,
+      "catalog_sha1": "477254aa5f903c15cf51001717bdf347fb6b53e0",
+      "archive_sha256": "d230f13842f60f782a8645f9c813f8f845bf36089ea7289f28c48f17979313f1",
+      "installed_path": "tools/android-sdk/platform-tools"
+    }
+  ]
+}

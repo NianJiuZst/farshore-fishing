@@ -72,8 +72,8 @@ with zipfile.ZipFile(apk) as z:
                 aligns.append(align)
         assert aligns, 'Missing ELF LOAD segments'
         compressed = z.getinfo(name).compress_type != zipfile.ZIP_STORED
-        if compressed:
-            assert extract_native, 'Compressed native libraries require manifest extractNativeLibs=true'
+        assert not compressed, 'Native libraries must remain uncompressed'
+        assert not extract_native, 'Uncompressed native libraries require extractNativeLibs=false'
         libs.append({'path': name, 'uncompressed_bytes': len(raw), 'compressed': compressed, 'elf_load_alignment': aligns})
     (out/'apk-file-list.txt').write_text('\n'.join(names)+'\n')
     catalog_files = expected_content['catalog_files'] if expected_content else [Path(n).name for n in names if re.fullmatch(r'assets/data/fish_[a-z0-9_]+\.json', n)]

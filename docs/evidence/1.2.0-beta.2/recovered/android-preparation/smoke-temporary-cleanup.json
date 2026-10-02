@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-02T19:28:26.959244+00:00",
+  "removed": [
+    {
+      "directory": "farshore-template-smoke-5ttfkbga",
+      "unsigned_smoke_apks": {
+        "smoke-unsigned.apk": {
+          "bytes": 73701554,
+          "sha256": "7c29deb22d21350107044bf191a30db764bf55a67b346ce35c456545301fd6ce"
+        }
+      },
+      "reason": "Own bounded smoke attempts completed; all meaningful logs and actual defect fixture retained"
+    },
+    {
+      "directory": "farshore-template-smoke-fe607tjw",
+      "unsigned_smoke_apks": {},
+      "reason": "Own bounded smoke attempts completed; all meaningful logs and actual defect fixture retained"
+    },
+    {
+      "directory": "farshore-template-smoke-rlbbne56",
+      "unsigned_smoke_apks": {
+        "smoke-unsigned.apk": {
+          "bytes": 75032043,
+          "sha256": "544c7262d6ed591173a099d7ed172bf3ac7c0a62618ac3790778ec5781e0f3e9"
+        }
+      },
+      "reason": "Own bounded smoke attempts completed; all meaningful logs and actual defect fixture retained"
+    }
+  ]
+}

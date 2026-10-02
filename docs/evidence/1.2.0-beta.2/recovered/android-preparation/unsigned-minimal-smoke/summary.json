@@ -1,0 +1,43 @@
+{
+  "result": "PASS",
+  "scope": "Unsigned minimal-project packaging smoke only; no gameplay or device-runtime claim",
+  "unsigned_apk_bytes": 75018447,
+  "unsigned_apk_sha256": "b3f8b260d8975dcca729a50b13591bd84f4de0db6005324b032710e6cab5a50e",
+  "package": "org.farshore.fishing",
+  "version": "1.2.0-beta.2",
+  "version_code": 4,
+  "min_sdk": 29,
+  "target_sdk": 36,
+  "extract_native_libraries": false,
+  "allow_backup": false,
+  "vulkan_required": true,
+  "renderer": "mobile",
+  "opengl_fallback_disabled": true,
+  "permissions": [
+    "android.permission.VIBRATE"
+  ],
+  "native_libraries": {
+    "lib/arm64-v8a/libc++_shared.so": {
+      "sha256": "c4c2fe5cbcb1fba0003a31fc7ab29a9bb12df6cc187ec45a806462540e83d93b",
+      "compression": 0,
+      "elf_load_alignment": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    "lib/arm64-v8a/libgodot_android.so": {
+      "sha256": "b4085c7f15575246530474b1fa4291c70e4a8177173d2d6fc597300208cac282",
+      "compression": 0,
+      "elf_load_alignment": [
+        16384,
+        16384,
+        16384
+      ]
+    }
+  },
+  "zip_alignment_kib": 16,
+  "primary_game_not_exported": true,
+  "credentials_created": false,
+  "disposable_workspace_removed": true
+}

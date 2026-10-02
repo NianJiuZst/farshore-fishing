@@ -1,0 +1,9 @@
+{
+  "purpose": "Actual unsigned minimal-project Godot4.6.3 prebuilt exporter output used only as a regression fixture",
+  "contains_gameplay": false,
+  "contains_credentials": false,
+  "sha256": "c1a00d460e5f7b806d2e2c6440d60a8b918c9884beb7c9366a656eaf7a0f77ba",
+  "bytes": 8252,
+  "source_exporter": "https://github.com/godotengine/godot/blob/4.6.3-stable/platform/android/export/export_plugin.cpp",
+  "expected_defect": "Four required/version attributes emitted as TYPE_STRING, independently rejected by aapt before normalization"
+}
