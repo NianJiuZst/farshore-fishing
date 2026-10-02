@@ -1,0 +1,16 @@
+{
+  "api36-image-storage.json": {
+    "files": 21,
+    "source_allocated_bytes": 2049785856,
+    "archive_sha256": "866e6d796c7dabe6128f4c4d1b6beb1107accb7e3551cfa3967d50a12793e8db",
+    "archive_bytes": 880322718,
+    "all_restored_files_hash_verified": true
+  },
+  "emulator-binaries-storage.json": {
+    "files": 399,
+    "source_allocated_bytes": 904183808,
+    "archive_sha256": "0b6a2f62175bd657cb5f3434c7b8a484db3538ee72da4faae29eb6feecc6f3d1",
+    "archive_bytes": 381253233,
+    "all_restored_files_hash_verified": true
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "returncode": 1,
+  "stderr": "cmd: Can't find service: window\ncmd: Can't find service: window\nCan't find service: package\n",
+  "stdout": "\n16\n36\nx86_64\n4096\n"
+}

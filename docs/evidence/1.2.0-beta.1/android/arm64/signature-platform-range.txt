@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Farshore Fishing Release, OU=Independent Game, O=Farshore Fishing, C=ZZ
+Signer #1 certificate SHA-256 digest: 1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeedb2e5281
+Signer #1 certificate SHA-1 digest: 7a94c40fd8967f5a6492a15210e6e997e9ef5c8e
+Signer #1 certificate MD5 digest: 31e106e69d8939ce9f9b8555477cb6f9
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 4096
+Signer #1 public key SHA-256 digest: 78a59cad36de4d2ea70f96f43bdb9c9a63cd2197283ce4172311bdeb4fe0ef05
+Signer #1 public key SHA-1 digest: e951c420a3fc76801a52ed6a1a831f5dbb871b73
+Signer #1 public key MD5 digest: 68fa252db1783b64037fb25b4952f063

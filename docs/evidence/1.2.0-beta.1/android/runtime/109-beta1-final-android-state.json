@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "1\n16\n36\nx86_64\n4096\nPhysical size: 480x854\nPhysical density: 213\n    versionCode=2 minSdk=29 targetSdk=36\n    versionName=1.1.0\n"
+}

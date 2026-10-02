@@ -1,0 +1,48 @@
+{
+  "command": [
+    "bash",
+    "gradlew",
+    "--offline",
+    "--no-daemon",
+    "--max-workers=2",
+    "-Dorg.gradle.jvmargs=-Xmx1536m",
+    "copyAndRenameBinary",
+    "-Pexport_package_name=org.farshore.fishing",
+    "-Pexport_version_name=1.2.0-beta.1",
+    "-Pexport_version_code=3",
+    "-Pexport_version_min_sdk=29",
+    "-Pexport_version_target_sdk=36",
+    "-Pexport_enabled_abis=arm64-v8a",
+    "-Pexport_edition=standard",
+    "-Pexport_build_type=release",
+    "-Pexport_format=apk",
+    "-Pperform_signing=false",
+    "-Pperform_zipalign=false",
+    "-Pcompress_native_libraries=false",
+    "-Pexport_path=<project-root>/build",
+    "-Pexport_filename=farshore-arm64-retained-unsigned.apk",
+    "-Paddons_directory=<project-root>/build/android-workspaces/20261002T162847813527Z-arm64/addons"
+  ],
+  "initial_root_tmp_memory_bytes": [
+    1928265728,
+    625389568,
+    3600859136
+  ],
+  "minimum_root_tmp_memory_bytes": [
+    1357754368,
+    625258496,
+    3012321280
+  ],
+  "final_root_tmp_memory_bytes": [
+    1357754368,
+    625348608,
+    3494162432
+  ],
+  "floors_root_tmp_memory_bytes": [
+    805306368,
+    536870912,
+    1073741824
+  ],
+  "stopped_by_guard": false,
+  "returncode": 0
+}

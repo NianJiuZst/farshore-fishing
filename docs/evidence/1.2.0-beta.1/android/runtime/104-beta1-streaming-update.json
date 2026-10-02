@@ -1,0 +1,5 @@
+{
+  "returncode": 1,
+  "stderr": "adb: failed to install <test-artifact-directory>/farshore-fishing-1.2.0-beta.1-x86_64-test.apk: Error: device is still booting.\n\n",
+  "stdout": "Performing Streamed Install\n"
+}

@@ -1,7 +1,185 @@
 {
-  "artifact_status": "awaiting_frozen_1.2.0-beta.1_build",
-  "planned_version_name": "1.2.0-beta.1",
-  "planned_version_code": 3,
-  "historical_verified_record": "history/1.1.0/APK_EMULATOR_BUILD_MANIFEST.json",
-  "note": "No beta APK/source-export verification has occurred at this preparation checkpoint."
+  "verified_at_utc": "2026-10-02T17:02:46.173624+00:00",
+  "apk": "farshore-fishing-1.2.0-beta.1-x86_64-test.apk",
+  "bytes": 573412957,
+  "sha256": "7142db0cf68ebdf56caa8b7c77ad6203ff8ed9b25d7d7b13cd84b3a0aa48be2a",
+  "package": "org.farshore.fishing",
+  "min_sdk": 29,
+  "target_sdk": 36,
+  "compile_sdk": 36,
+  "version_code": 3,
+  "version_name": "1.2.0-beta.1",
+  "abi": "x86_64",
+  "debuggable": false,
+  "permissions": [
+    "android.permission.VIBRATE"
+  ],
+  "signature_v2": true,
+  "signature_v3": true,
+  "zip_alignment_kib": 16,
+  "certificate_sha256": "1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeedb2e5281",
+  "native_libraries": [
+    {
+      "path": "lib/x86_64/libc++_shared.so",
+      "uncompressed_bytes": 1337488,
+      "compressed": false,
+      "elf_load_alignment": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/x86_64/libgodot_android.so",
+      "uncompressed_bytes": 73254912,
+      "compressed": false,
+      "elf_load_alignment": [
+        16384,
+        16384,
+        16384
+      ]
+    }
+  ],
+  "fish_species": 44,
+  "fish_catalog_files": [
+    "fish_a.json",
+    "fish_b.json",
+    "fish_c.json",
+    "fish_d.json"
+  ],
+  "regions": 6,
+  "fishing_spots": 12,
+  "gear_options": 5,
+  "bait_options": 8,
+  "generated_ui_icons": 31,
+  "three_d": {
+    "playable_species": [
+      "alligator_gar",
+      "annular_seabream",
+      "atlantic_cod",
+      "atlantic_herring",
+      "atlantic_mackerel",
+      "atlantic_wolffish",
+      "black_seabream",
+      "bowfin",
+      "channel_catfish",
+      "chinese_sturgeon",
+      "chub_mackerel",
+      "common_bream",
+      "common_carp",
+      "common_pandora",
+      "crucian_carp",
+      "european_perch",
+      "european_plaice",
+      "european_seabass",
+      "flathead_catfish",
+      "gilthead_seabream",
+      "haddock",
+      "japanese_horse_mackerel",
+      "japanese_seabass",
+      "japanese_whiting",
+      "largemouth_bass",
+      "longnose_gar",
+      "longsnout_catfish",
+      "mandarin_fish",
+      "marbled_rockfish",
+      "northern_pike",
+      "northern_snakehead",
+      "olive_flounder",
+      "painted_comber",
+      "pollack",
+      "red_mullet",
+      "red_seabream",
+      "roach",
+      "rudd",
+      "saddled_seabream",
+      "saithe",
+      "southern_catfish",
+      "tench",
+      "white_seabream",
+      "yellowcheek"
+    ],
+    "playable_species_count": 44,
+    "playable_regions": 6,
+    "playable_locations": 12,
+    "all_catalog_species_have_3d_models": true,
+    "runtime_registry_sha256": "7ea8a81d1f9a25c8da2b5c538b6db5d9ae5f5cab81bb31474a2950e3cdbb6b6f",
+    "configured_renderer": "mobile",
+    "configured_android_driver": "vulkan",
+    "opengl_fallback_disabled": true,
+    "stretch_aspect": "expand",
+    "msaa_3d": 2,
+    "requested_msaa_samples": 4,
+    "vulkan_manifest_features": [
+      "uses-feature-not-required: name='android.hardware.vulkan.level' version='1'",
+      "uses-feature: name='android.hardware.vulkan.version' version='4194307'"
+    ],
+    "imported_glb_scenes": 54,
+    "rigged_models": 45,
+    "region_scenes": 6,
+    "station_scenes": 3,
+    "texture_imports": 272,
+    "shader_payloads": {
+      "assets/shaders3d/foliage.gdshader": "assets/assets/shaders3d/foliage.gdshader",
+      "assets/shaders3d/hdr_sky.gdshader": "assets/assets/shaders3d/hdr_sky.gdshader",
+      "assets/shaders3d/ripple.gdshader": "assets/assets/shaders3d/ripple.gdshader",
+      "assets/shaders3d/river_water.gdshader": "assets/assets/shaders3d/river_water.gdshader",
+      "assets/shaders3d/riverbank.gdshader": "assets/assets/shaders3d/riverbank.gdshader",
+      "assets/shaders3d/rock_surface.gdshader": "assets/assets/shaders3d/rock_surface.gdshader",
+      "assets/shaders3d/shore_reeds.gdshader": "assets/assets/shaders3d/shore_reeds.gdshader",
+      "assets/shaders3d/weathered_wood.gdshader": "assets/assets/shaders3d/weathered_wood.gdshader"
+    },
+    "third_party_texture_sources": [
+      {
+        "path": "assets/3d/environment/cc0/cloud_layers_2k.hdr",
+        "sha256": "66f8fbaf7452c332d05ce607e2c785a2f99578e2b3a095a11cfe9fde7e82c275",
+        "license": "CC0 1.0",
+        "source_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/cloud_layers_2k.hdr"
+      },
+      {
+        "path": "assets/3d/environment/cc0/brown_planks_03_diff_2k.png",
+        "sha256": "0a4e8ab75e73f937686548b5f0588a91a906c7dfd5a3bde0b89b0449f33051f1",
+        "license": "CC0 1.0",
+        "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/brown_planks_03/brown_planks_03_diff_2k.png"
+      },
+      {
+        "path": "assets/3d/environment/cc0/brown_planks_03_nor_gl_2k.png",
+        "sha256": "7eaa5d09a58fb2d4b1bb2320a173977758d728f2d1c3dc5122993a910ba95a8c",
+        "license": "CC0 1.0",
+        "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/brown_planks_03/brown_planks_03_nor_gl_2k.png"
+      },
+      {
+        "path": "assets/3d/environment/cc0/brown_planks_03_rough_2k.png",
+        "sha256": "6ad47668bdbf39fb3121d0df71e881c652c8f57289b427998157b92ba716b110",
+        "license": "CC0 1.0",
+        "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/brown_planks_03/brown_planks_03_rough_2k.png"
+      },
+      {
+        "path": "assets/3d/environment/cc0/rock_face_03_diff_2k.png",
+        "sha256": "09c30549220c8297c06eabcb25d272fcc1b514548be712221bd9d47f010def8b",
+        "license": "CC0 1.0",
+        "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rock_face_03/rock_face_03_diff_2k.png"
+      },
+      {
+        "path": "assets/3d/environment/cc0/rock_face_03_nor_gl_2k.png",
+        "sha256": "53044f276b4f1c3041b91c7d4767bda0d75cb4b2d237f08b64eb4e95ee456a93",
+        "license": "CC0 1.0",
+        "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rock_face_03/rock_face_03_nor_gl_2k.png"
+      },
+      {
+        "path": "assets/3d/environment/cc0/rock_face_03_rough_2k.png",
+        "sha256": "9ba99f1441a94235f729d24ddaabd4dd4b978a460bd71b593dc6275b745044f6",
+        "license": "CC0 1.0",
+        "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rock_face_03/rock_face_03_rough_2k.png"
+      }
+    ],
+    "bundled_notices": [
+      "data/THIRD_PARTY_ART.txt"
+    ],
+    "scope": "Exact exported imported-scene bytes matched pre-export Skeleton3D/AnimationPlayer/skin audit; runtime rendering requires separate evidence"
+  },
+  "extract_native_libraries": false,
+  "runtime_test": "Android16 software-emulator beta installation timed out; previous1.1.0 remained installed. Beta Android launch/render/gameplay and physical ARM64 acceptance remain unverified. See ANDROID_TESTS.md.",
+  "artifact_status": "signed_static_audit_passed",
+  "historical_verified_record": "history/1.1.0/APK_EMULATOR_BUILD_MANIFEST.json"
 }

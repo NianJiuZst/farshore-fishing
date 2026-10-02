@@ -1,0 +1,9 @@
+{
+  "official_sdk_components_reparked_without_new_archives": true,
+  "both_original_archives_restored_hash_verified": true,
+  "ndk_binaries_restored_hash_verified": true,
+  "signed_test_apk_restored_hash_verified": true,
+  "avd_userdata_and_auth_retained": true,
+  "root_free": 2359349248,
+  "tmp_free": 4322942976
+}

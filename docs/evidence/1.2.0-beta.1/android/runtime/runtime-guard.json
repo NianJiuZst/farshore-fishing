@@ -1,0 +1,25 @@
+{
+  "started_utc": "2026-10-02T17:07:13.117271+00:00",
+  "initial_root_tmp_memory_bytes": [
+    2341466112,
+    1810636800,
+    4711739392
+  ],
+  "minimum_root_tmp_memory_bytes": [
+    1239994368,
+    1810587648,
+    1418706944
+  ],
+  "final_root_tmp_memory_bytes": [
+    1240141824,
+    2487947264,
+    5461934080
+  ],
+  "floors": [
+    805306368,
+    536870912,
+    1073741824
+  ],
+  "stopped_by_guard": false,
+  "returncode": 0
+}

@@ -1,0 +1,9 @@
+INFO         | Android emulator version 37.2.12.0 (build_id 16428233) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+INFO         | emuglConfig_init: vulkan_mode_selected:swiftshader gles_mode_selected:swangle
+INFO         |      Ok: Disk space requirements to run avd: `farshore_api36_persistent` are met
+TCG doesn't support requested feature: CPUID.01H:ECX.avx [bit 28]
+TCG doesn't support requested feature: CPUID.01H:ECX.f16c [bit 29]
+TCG doesn't support requested feature: CPUID.01H:ECX.avx [bit 28]
+TCG doesn't support requested feature: CPUID.01H:ECX.f16c [bit 29]
+INFO         | Boot completed in 272281 ms

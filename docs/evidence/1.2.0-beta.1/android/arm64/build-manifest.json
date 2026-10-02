@@ -179,7 +179,5 @@
     "scope": "Exact exported imported-scene bytes matched pre-export Skeleton3D/AnimationPlayer/skin audit; runtime rendering requires separate evidence"
   },
   "extract_native_libraries": false,
-  "runtime_test": "Android16 software-emulator beta installation timed out; previous1.1.0 remained installed. Beta Android launch/render/gameplay and physical ARM64 acceptance remain unverified. See ANDROID_TESTS.md.",
-  "artifact_status": "signed_static_audit_passed",
-  "historical_verified_record": "history/1.1.0/APK_BUILD_MANIFEST.json"
+  "runtime_test": "Separate evidence required; binary inspection is not an installation test"
 }

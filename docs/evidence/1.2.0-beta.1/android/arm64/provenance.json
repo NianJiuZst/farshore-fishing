@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-02T16:59:02.263893+00:00",
+  "apk": "farshore-fishing-1.2.0-beta.1-arm64.apk",
+  "bytes": 570512995,
+  "sha256": "a1c3896e07fa0367957137c2df75b04232dab922fe5890e641d764852c0911bb",
+  "source_and_authoring_hashes_unchanged": true,
+  "archives_fully_reverified": true,
+  "unsigned_crc_verified": true,
+  "generated_build_outputs_removed": true,
+  "root_free": 1858150400,
+  "tmp_free": 2929831936
+}

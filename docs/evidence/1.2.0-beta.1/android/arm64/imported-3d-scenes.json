@@ -1,0 +1,1735 @@
+{
+  "failures": [],
+  "models": {
+    "assets/3d/alligator_gar.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 9,
+      "resource_dependencies": [
+        "uid://dv8cq2al8cjn1::::res://assets/3d/alligator_gar_alligator_gar_fin_basecolor.png",
+        "uid://bang8c2f77t54::::res://assets/3d/alligator_gar_alligator_gar_fin_roughness.png",
+        "uid://b5u4t6pbvtxhv::::res://assets/3d/alligator_gar_alligator_gar_fin_normal.png",
+        "uid://baqaxelu65rye::::res://assets/3d/alligator_gar_alligator_gar_skin_basecolor.png",
+        "uid://54qnyl7crhs6::::res://assets/3d/alligator_gar_alligator_gar_skin_roughness.png",
+        "uid://ds03twglpxuy::::res://assets/3d/alligator_gar_alligator_gar_skin_normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 9
+    },
+    "assets/3d/angler.glb": {
+      "animation_players": 1,
+      "animations": {
+        "cast": {
+          "length": 2.20000004768372,
+          "tracks": 21
+        },
+        "idle": {
+          "length": 3.20000004768372,
+          "tracks": 21
+        },
+        "lift": {
+          "length": 2.0,
+          "tracks": 21
+        },
+        "reel": {
+          "length": 2.0,
+          "tracks": 21
+        },
+        "wait": {
+          "length": 4.0,
+          "tracks": 21
+        }
+      },
+      "bone_attached_rod_sockets": 1,
+      "bones": 30,
+      "meshes": 1,
+      "resource_dependencies": [],
+      "rod_sockets": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "assets/3d/annular_seabream.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://yojdfd4watlt::::res://assets/3d/annular_seabream_annular_seabream_Fin_BaseColor.png",
+        "uid://bt71a638s5uy::::res://assets/3d/annular_seabream_annular_seabream_Fin_Roughness.png",
+        "uid://cri7a3ysxf5p0::::res://assets/3d/annular_seabream_annular_seabream_Fin_Normal.png",
+        "uid://biplg72xmi6f3::::res://assets/3d/annular_seabream_annular_seabream_Skin_BaseColor.png",
+        "uid://b3msrvqoj7upt::::res://assets/3d/annular_seabream_annular_seabream_Skin_Roughness.png",
+        "uid://ctp8vk36mqxts::::res://assets/3d/annular_seabream_annular_seabream_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/atlantic_cod.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 18
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 19,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://brvrdprrw0afc::::res://assets/3d/atlantic_cod_atlantic_cod_Fin_BaseColor.png",
+        "uid://dk741tw7vpk1o::::res://assets/3d/atlantic_cod_atlantic_cod_Fin_Roughness.png",
+        "uid://cawwf57usxim::::res://assets/3d/atlantic_cod_atlantic_cod_Fin_Normal.png",
+        "uid://7xt4abwjj4ev::::res://assets/3d/atlantic_cod_atlantic_cod_Skin_BaseColor.png",
+        "uid://bq4b2yv6nqtbs::::res://assets/3d/atlantic_cod_atlantic_cod_Skin_Roughness.png",
+        "uid://sj567rs6elgy::::res://assets/3d/atlantic_cod_atlantic_cod_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/atlantic_herring.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://bp4toytu4sqyo::::res://assets/3d/atlantic_herring_atlantic_herring_Fin_BaseColor.png",
+        "uid://cl47d0new2sxv::::res://assets/3d/atlantic_herring_atlantic_herring_Fin_Roughness.png",
+        "uid://cwmbx2042nsej::::res://assets/3d/atlantic_herring_atlantic_herring_Fin_Normal.png",
+        "uid://ckc0alu5u7h81::::res://assets/3d/atlantic_herring_atlantic_herring_Skin_BaseColor.png",
+        "uid://dtbtau4y026gl::::res://assets/3d/atlantic_herring_atlantic_herring_Skin_Roughness.png",
+        "uid://bggytkt7va881::::res://assets/3d/atlantic_herring_atlantic_herring_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/atlantic_mackerel.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 26
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 26
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 26
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 26
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 27,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://cou1l7k61dcl2::::res://assets/3d/atlantic_mackerel_atlantic_mackerel_Fin_BaseColor.png",
+        "uid://160bvvdqv5x5::::res://assets/3d/atlantic_mackerel_atlantic_mackerel_Fin_Roughness.png",
+        "uid://d0x1elg3mybsq::::res://assets/3d/atlantic_mackerel_atlantic_mackerel_Fin_Normal.png",
+        "uid://cldj87njxbl7g::::res://assets/3d/atlantic_mackerel_atlantic_mackerel_Skin_BaseColor.png",
+        "uid://do1wjaysttvh1::::res://assets/3d/atlantic_mackerel_atlantic_mackerel_Skin_Roughness.png",
+        "uid://coseetg4tmcch::::res://assets/3d/atlantic_mackerel_atlantic_mackerel_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/atlantic_wolffish.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 13
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 13
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 13
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 13
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 14,
+      "meshes": 13,
+      "resource_dependencies": [
+        "uid://drmuoc75vtb8q::::res://assets/3d/atlantic_wolffish_atlantic_wolffish_Fin_BaseColor.png",
+        "uid://yfapcuymaw5n::::res://assets/3d/atlantic_wolffish_atlantic_wolffish_Fin_Roughness.png",
+        "uid://nvx087igk0r7::::res://assets/3d/atlantic_wolffish_atlantic_wolffish_Fin_Normal.png",
+        "uid://bdyuufagdpgec::::res://assets/3d/atlantic_wolffish_atlantic_wolffish_Skin_BaseColor.png",
+        "uid://dg7rcbatrqyhc::::res://assets/3d/atlantic_wolffish_atlantic_wolffish_Skin_Roughness.png",
+        "uid://dwlqlf1h8dylb::::res://assets/3d/atlantic_wolffish_atlantic_wolffish_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 13
+    },
+    "assets/3d/black_seabream.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://7k7ajjf2ws1b::::res://assets/3d/black_seabream_black_seabream_Fin_BaseColor.png",
+        "uid://dedv0f35tcja3::::res://assets/3d/black_seabream_black_seabream_Fin_Roughness.png",
+        "uid://crtnntplqjgsb::::res://assets/3d/black_seabream_black_seabream_Fin_Normal.png",
+        "uid://q2dfq35pclwf::::res://assets/3d/black_seabream_black_seabream_Skin_BaseColor.png",
+        "uid://b1d3v4lrnckbx::::res://assets/3d/black_seabream_black_seabream_Skin_Roughness.png",
+        "uid://chpbkttu26h6w::::res://assets/3d/black_seabream_black_seabream_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/bowfin.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://0tofwktskiyy::::res://assets/3d/bowfin_bowfin_Fin_BaseColor.png",
+        "uid://dmlah86r6oij7::::res://assets/3d/bowfin_bowfin_Fin_Roughness.png",
+        "uid://tu2pok8ak1lm::::res://assets/3d/bowfin_bowfin_Fin_Normal.png",
+        "uid://brreewfsb3ct2::::res://assets/3d/bowfin_bowfin_Skin_BaseColor.png",
+        "uid://cklm5bmb0m41l::::res://assets/3d/bowfin_bowfin_Skin_Roughness.png",
+        "uid://be2olfmf8k0q1::::res://assets/3d/bowfin_bowfin_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/channel_catfish.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://dmnlj6iq5ndhe::::res://assets/3d/channel_catfish_channel_catfish_Fin_BaseColor.png",
+        "uid://chw5qhj6s4vxy::::res://assets/3d/channel_catfish_channel_catfish_Fin_Roughness.png",
+        "uid://c162xk5qscydg::::res://assets/3d/channel_catfish_channel_catfish_Fin_Normal.png",
+        "uid://d3wdehfbc1bbp::::res://assets/3d/channel_catfish_channel_catfish_Skin_BaseColor.png",
+        "uid://dmka3g5c7bpa8::::res://assets/3d/channel_catfish_channel_catfish_Skin_Roughness.png",
+        "uid://dtl3ys845p0mn::::res://assets/3d/channel_catfish_channel_catfish_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/chinese_sturgeon.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://dvlou4arsjbgb::::res://assets/3d/chinese_sturgeon_chinese_sturgeon_Fin_BaseColor.png",
+        "uid://d1r7q17hbtxqn::::res://assets/3d/chinese_sturgeon_chinese_sturgeon_Fin_Roughness.png",
+        "uid://crlpvipdi223c::::res://assets/3d/chinese_sturgeon_chinese_sturgeon_Fin_Normal.png",
+        "uid://bb3wwtx5lt4sw::::res://assets/3d/chinese_sturgeon_chinese_sturgeon_Skin_BaseColor.png",
+        "uid://dm52ejqyal30p::::res://assets/3d/chinese_sturgeon_chinese_sturgeon_Skin_Roughness.png",
+        "uid://ca5euelufr8sr::::res://assets/3d/chinese_sturgeon_chinese_sturgeon_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/chub_mackerel.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 26
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 26
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 26
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 26
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 27,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://bdfekex72il0a::::res://assets/3d/chub_mackerel_chub_mackerel_Fin_BaseColor.png",
+        "uid://gxg1muwbcrdw::::res://assets/3d/chub_mackerel_chub_mackerel_Fin_Roughness.png",
+        "uid://dh0824x287cya::::res://assets/3d/chub_mackerel_chub_mackerel_Fin_Normal.png",
+        "uid://b0swtlej6gpc0::::res://assets/3d/chub_mackerel_chub_mackerel_Skin_BaseColor.png",
+        "uid://dqgm8awgn4ipu::::res://assets/3d/chub_mackerel_chub_mackerel_Skin_Roughness.png",
+        "uid://dd45qqjxoj1yo::::res://assets/3d/chub_mackerel_chub_mackerel_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/common_bream.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://0rsak7jxyxrw::::res://assets/3d/common_bream_common_bream_Fin_BaseColor.png",
+        "uid://c5u74k6248yiu::::res://assets/3d/common_bream_common_bream_Fin_Roughness.png",
+        "uid://duxeauydx36yw::::res://assets/3d/common_bream_common_bream_Fin_Normal.png",
+        "uid://cmaul44blcomt::::res://assets/3d/common_bream_common_bream_Skin_BaseColor.png",
+        "uid://2vdnvxgcbiqx::::res://assets/3d/common_bream_common_bream_Skin_Roughness.png",
+        "uid://cgvj14lttakha::::res://assets/3d/common_bream_common_bream_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/common_carp.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 9,
+      "resource_dependencies": [
+        "uid://bpupr175tkrkm::::res://assets/3d/common_carp_common_carp_fin_basecolor.png",
+        "uid://c6atxib40o4uj::::res://assets/3d/common_carp_common_carp_fin_roughness.png",
+        "uid://dqbsrsrtqas6i::::res://assets/3d/common_carp_common_carp_fin_normal.png",
+        "uid://db28kn0ll52k::::res://assets/3d/common_carp_common_carp_skin_basecolor.png",
+        "uid://be74fk7uilq6x::::res://assets/3d/common_carp_common_carp_skin_roughness.png",
+        "uid://b54oye6nh24at::::res://assets/3d/common_carp_common_carp_skin_normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 9
+    },
+    "assets/3d/common_pandora.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://bn5bashosqa3c::::res://assets/3d/common_pandora_common_pandora_Fin_BaseColor.png",
+        "uid://bksbynqxsnypd::::res://assets/3d/common_pandora_common_pandora_Fin_Roughness.png",
+        "uid://bve6af5aco84i::::res://assets/3d/common_pandora_common_pandora_Fin_Normal.png",
+        "uid://c14njpoi3sax0::::res://assets/3d/common_pandora_common_pandora_Skin_BaseColor.png",
+        "uid://c85be0lqqrowv::::res://assets/3d/common_pandora_common_pandora_Skin_Roughness.png",
+        "uid://bt86t0ogsnm14::::res://assets/3d/common_pandora_common_pandora_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/crucian_carp.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://dd7bt2orw6uwl::::res://assets/3d/crucian_carp_crucian_carp_Fin_BaseColor.png",
+        "uid://7isu1j23fkh4::::res://assets/3d/crucian_carp_crucian_carp_Fin_Roughness.png",
+        "uid://lp0e5hxgepjd::::res://assets/3d/crucian_carp_crucian_carp_Fin_Normal.png",
+        "uid://bcs03jprpy6jh::::res://assets/3d/crucian_carp_crucian_carp_Skin_BaseColor.png",
+        "uid://idfyhrv7oxlg::::res://assets/3d/crucian_carp_crucian_carp_Skin_Roughness.png",
+        "uid://b3dlw4kkq5yih::::res://assets/3d/crucian_carp_crucian_carp_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/environment/region_bayou.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 12,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/region_japan.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 13,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/region_lake.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 12,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/region_med.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 9,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/region_norway.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 13,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/region_yangtze.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 13,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/station_boat.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 7,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/station_dock.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 8,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/environment/station_rock.glb": {
+      "animation_players": 0,
+      "animations": {},
+      "bone_attached_rod_sockets": 0,
+      "bones": 0,
+      "meshes": 1,
+      "resource_dependencies": [],
+      "rod_sockets": 0,
+      "skeletons": 0,
+      "skinned_meshes": 0
+    },
+    "assets/3d/european_perch.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 13,
+      "resource_dependencies": [
+        "uid://df2hh323kfyx1::::res://assets/3d/european_perch_european_perch_Fin_BaseColor.png",
+        "uid://pn0uli4ly1e3::::res://assets/3d/european_perch_european_perch_Fin_Roughness.png",
+        "uid://embwh6pusbio::::res://assets/3d/european_perch_european_perch_Fin_Normal.png",
+        "uid://dr0h10nn5mytt::::res://assets/3d/european_perch_european_perch_Skin_BaseColor.png",
+        "uid://bl463j0bl06av::::res://assets/3d/european_perch_european_perch_Skin_Roughness.png",
+        "uid://dpiu1dt2iqd1n::::res://assets/3d/european_perch_european_perch_Skin_Normal.png",
+        "uid://0e3yinsa7t8w::::res://assets/3d/european_perch_PerchDorsalPosteriorMark.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 13
+    },
+    "assets/3d/european_plaice.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 17
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 17
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 17
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 17
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 18,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://dsovrp8s8jqd::::res://assets/3d/european_plaice_european_plaice_Fin_BaseColor.png",
+        "uid://irp77nhcyah::::res://assets/3d/european_plaice_european_plaice_Fin_Roughness.png",
+        "uid://d1r7si68ytaqm::::res://assets/3d/european_plaice_european_plaice_Fin_Normal.png",
+        "uid://grsqkq3npd21::::res://assets/3d/european_plaice_european_plaice_Skin_BaseColor.png",
+        "uid://clyhvhuaxs4c2::::res://assets/3d/european_plaice_european_plaice_Skin_Roughness.png",
+        "uid://2bqka54oymvp::::res://assets/3d/european_plaice_european_plaice_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/european_seabass.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://cyj17gqq462mh::::res://assets/3d/european_seabass_european_seabass_Fin_BaseColor.png",
+        "uid://daie8lh5mrt8e::::res://assets/3d/european_seabass_european_seabass_Fin_Roughness.png",
+        "uid://clfdgubq66s3c::::res://assets/3d/european_seabass_european_seabass_Fin_Normal.png",
+        "uid://b7ylr8f2pwtx2::::res://assets/3d/european_seabass_european_seabass_Skin_BaseColor.png",
+        "uid://dr3t6xqh46ag::::res://assets/3d/european_seabass_european_seabass_Skin_Roughness.png",
+        "uid://dluh0rr0ggwba::::res://assets/3d/european_seabass_european_seabass_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/flathead_catfish.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 13,
+      "resource_dependencies": [
+        "uid://5e8ruf1keqql::::res://assets/3d/flathead_catfish_flathead_catfish_Fin_BaseColor.png",
+        "uid://budwlo7asvswy::::res://assets/3d/flathead_catfish_flathead_catfish_Fin_Roughness.png",
+        "uid://mnieurgihbh0::::res://assets/3d/flathead_catfish_flathead_catfish_Fin_Normal.png",
+        "uid://cxt7lbgvx1sul::::res://assets/3d/flathead_catfish_flathead_catfish_Skin_BaseColor.png",
+        "uid://54n0dl3onpjh::::res://assets/3d/flathead_catfish_flathead_catfish_Skin_Roughness.png",
+        "uid://ba1w0wpey6ms1::::res://assets/3d/flathead_catfish_flathead_catfish_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 13
+    },
+    "assets/3d/gilthead_seabream.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://dp26qk50h36il::::res://assets/3d/gilthead_seabream_gilthead_seabream_Fin_BaseColor.png",
+        "uid://c68t7mlucya7e::::res://assets/3d/gilthead_seabream_gilthead_seabream_Fin_Roughness.png",
+        "uid://bfs8dhwwootrk::::res://assets/3d/gilthead_seabream_gilthead_seabream_Fin_Normal.png",
+        "uid://m4w26i038pe5::::res://assets/3d/gilthead_seabream_gilthead_seabream_Skin_BaseColor.png",
+        "uid://6klfv6gbrgks::::res://assets/3d/gilthead_seabream_gilthead_seabream_Skin_Roughness.png",
+        "uid://db0xhooplkcai::::res://assets/3d/gilthead_seabream_gilthead_seabream_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/haddock.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 18
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 19,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://bqke62yql581x::::res://assets/3d/haddock_haddock_Fin_BaseColor.png",
+        "uid://dlj0a3m4stky3::::res://assets/3d/haddock_haddock_Fin_Roughness.png",
+        "uid://bvmoqgrralaeb::::res://assets/3d/haddock_haddock_Fin_Normal.png",
+        "uid://bxithtgqvo7hu::::res://assets/3d/haddock_haddock_Skin_BaseColor.png",
+        "uid://b22tp8mkavuky::::res://assets/3d/haddock_haddock_Skin_Roughness.png",
+        "uid://3bdsp02esvk::::res://assets/3d/haddock_haddock_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/japanese_horse_mackerel.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 13,
+      "resource_dependencies": [
+        "uid://bnipbex7o5hwh::::res://assets/3d/japanese_horse_mackerel_japanese_horse_mackerel_Fin_BaseColor.png",
+        "uid://b5sf2lwkq80pu::::res://assets/3d/japanese_horse_mackerel_japanese_horse_mackerel_Fin_Roughness.png",
+        "uid://lejvpfq0fvj3::::res://assets/3d/japanese_horse_mackerel_japanese_horse_mackerel_Fin_Normal.png",
+        "uid://dp6dopxld6m33::::res://assets/3d/japanese_horse_mackerel_japanese_horse_mackerel_Skin_BaseColor.png",
+        "uid://cv8fm8uxhnmmj::::res://assets/3d/japanese_horse_mackerel_japanese_horse_mackerel_Skin_Roughness.png",
+        "uid://bblkb87nqrsl4::::res://assets/3d/japanese_horse_mackerel_japanese_horse_mackerel_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 13
+    },
+    "assets/3d/japanese_seabass.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://befvl0tvvbys5::::res://assets/3d/japanese_seabass_japanese_seabass_Fin_BaseColor.png",
+        "uid://detjjba4hnpuh::::res://assets/3d/japanese_seabass_japanese_seabass_Fin_Roughness.png",
+        "uid://l6s5wrh7fk6h::::res://assets/3d/japanese_seabass_japanese_seabass_Fin_Normal.png",
+        "uid://bgqu3pdedpdwa::::res://assets/3d/japanese_seabass_japanese_seabass_Skin_BaseColor.png",
+        "uid://dwvtgcfc685vy::::res://assets/3d/japanese_seabass_japanese_seabass_Skin_Roughness.png",
+        "uid://du6w86fnggp11::::res://assets/3d/japanese_seabass_japanese_seabass_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/japanese_whiting.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://bysy1ndm8niqj::::res://assets/3d/japanese_whiting_japanese_whiting_Fin_BaseColor.png",
+        "uid://o3yao3wmhqos::::res://assets/3d/japanese_whiting_japanese_whiting_Fin_Roughness.png",
+        "uid://b07n2sajwuu5o::::res://assets/3d/japanese_whiting_japanese_whiting_Fin_Normal.png",
+        "uid://bxuv5uix5c57d::::res://assets/3d/japanese_whiting_japanese_whiting_Skin_BaseColor.png",
+        "uid://dmodjkjfry6qg::::res://assets/3d/japanese_whiting_japanese_whiting_Skin_Roughness.png",
+        "uid://c22frukawqrvi::::res://assets/3d/japanese_whiting_japanese_whiting_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/largemouth_bass.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://bocn31gkcudv5::::res://assets/3d/largemouth_bass_largemouth_bass_Fin_BaseColor.png",
+        "uid://dclibgdggls2j::::res://assets/3d/largemouth_bass_largemouth_bass_Fin_Roughness.png",
+        "uid://bh7l61mectr74::::res://assets/3d/largemouth_bass_largemouth_bass_Fin_Normal.png",
+        "uid://bq86i8hotig73::::res://assets/3d/largemouth_bass_largemouth_bass_Skin_BaseColor.png",
+        "uid://d0gaspvqa4wxg::::res://assets/3d/largemouth_bass_largemouth_bass_Skin_Roughness.png",
+        "uid://7fc8cu4bspdc::::res://assets/3d/largemouth_bass_largemouth_bass_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/longnose_gar.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 10,
+      "resource_dependencies": [
+        "uid://ymiqwjc5l2nt::::res://assets/3d/longnose_gar_longnose_gar_Fin_BaseColor.png",
+        "uid://bea1cimhjvlet::::res://assets/3d/longnose_gar_longnose_gar_Fin_Roughness.png",
+        "uid://bdlhy7qsg0a8k::::res://assets/3d/longnose_gar_longnose_gar_Fin_Normal.png",
+        "uid://cn4btp8x5r4nr::::res://assets/3d/longnose_gar_longnose_gar_Skin_BaseColor.png",
+        "uid://bmgqwilpvdeto::::res://assets/3d/longnose_gar_longnose_gar_Skin_Roughness.png",
+        "uid://b3o2fqtu21q77::::res://assets/3d/longnose_gar_longnose_gar_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 10
+    },
+    "assets/3d/longsnout_catfish.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://bg1bijw0rqyy7::::res://assets/3d/longsnout_catfish_longsnout_catfish_Fin_BaseColor.png",
+        "uid://dvctul0dtne1u::::res://assets/3d/longsnout_catfish_longsnout_catfish_Fin_Roughness.png",
+        "uid://b6su626e7ixd5::::res://assets/3d/longsnout_catfish_longsnout_catfish_Fin_Normal.png",
+        "uid://dd7183iexhaxv::::res://assets/3d/longsnout_catfish_longsnout_catfish_Skin_BaseColor.png",
+        "uid://d3qfk5h5g3bvc::::res://assets/3d/longsnout_catfish_longsnout_catfish_Skin_Roughness.png",
+        "uid://oabmojxeqf0w::::res://assets/3d/longsnout_catfish_longsnout_catfish_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/mandarin_fish.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://cnhsaelbge7u7::::res://assets/3d/mandarin_fish_mandarin_fish_Fin_BaseColor.png",
+        "uid://bhqxfn5j5j5iq::::res://assets/3d/mandarin_fish_mandarin_fish_Fin_Roughness.png",
+        "uid://bhdjprn33bnkh::::res://assets/3d/mandarin_fish_mandarin_fish_Fin_Normal.png",
+        "uid://ywwfkiiqodc6::::res://assets/3d/mandarin_fish_mandarin_fish_Skin_BaseColor.png",
+        "uid://c0ppas3eajale::::res://assets/3d/mandarin_fish_mandarin_fish_Skin_Roughness.png",
+        "uid://uniqml5uw86b::::res://assets/3d/mandarin_fish_mandarin_fish_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/marbled_rockfish.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://cov6qex8vc704::::res://assets/3d/marbled_rockfish_marbled_rockfish_Fin_BaseColor.png",
+        "uid://b5ik6xhqluvq::::res://assets/3d/marbled_rockfish_marbled_rockfish_Fin_Roughness.png",
+        "uid://h5cy55mk2qfu::::res://assets/3d/marbled_rockfish_marbled_rockfish_Fin_Normal.png",
+        "uid://cuf0w11hoe5w7::::res://assets/3d/marbled_rockfish_marbled_rockfish_Skin_BaseColor.png",
+        "uid://msecqxir1bhf::::res://assets/3d/marbled_rockfish_marbled_rockfish_Skin_Roughness.png",
+        "uid://bvht3h7g6gx7q::::res://assets/3d/marbled_rockfish_marbled_rockfish_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/northern_pike.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 10,
+      "resource_dependencies": [
+        "uid://dvjvmtfu1jqdu::::res://assets/3d/northern_pike_northern_pike_Fin_BaseColor.png",
+        "uid://diuefjt5nt3v6::::res://assets/3d/northern_pike_northern_pike_Fin_Roughness.png",
+        "uid://cambj5sr7r8n1::::res://assets/3d/northern_pike_northern_pike_Fin_Normal.png",
+        "uid://dv1w06ll3xv7w::::res://assets/3d/northern_pike_northern_pike_Skin_BaseColor.png",
+        "uid://c6056yv8bopmu::::res://assets/3d/northern_pike_northern_pike_Skin_Roughness.png",
+        "uid://cbqkbkli0ml24::::res://assets/3d/northern_pike_northern_pike_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 10
+    },
+    "assets/3d/northern_snakehead.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 10,
+      "resource_dependencies": [
+        "uid://4yq53su22nx3::::res://assets/3d/northern_snakehead_northern_snakehead_Fin_BaseColor.png",
+        "uid://mst1afu6sawr::::res://assets/3d/northern_snakehead_northern_snakehead_Fin_Roughness.png",
+        "uid://cj7t26cf5ncm8::::res://assets/3d/northern_snakehead_northern_snakehead_Fin_Normal.png",
+        "uid://dwetmb3nf576s::::res://assets/3d/northern_snakehead_northern_snakehead_Skin_BaseColor.png",
+        "uid://c8jcyak625vu4::::res://assets/3d/northern_snakehead_northern_snakehead_Skin_Roughness.png",
+        "uid://dugt23soo6v42::::res://assets/3d/northern_snakehead_northern_snakehead_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 10
+    },
+    "assets/3d/olive_flounder.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 17
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 17
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 17
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 17
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 18,
+      "meshes": 10,
+      "resource_dependencies": [
+        "uid://c0b6aqdufl1iw::::res://assets/3d/olive_flounder_olive_flounder_Fin_BaseColor.png",
+        "uid://qqthjoqg11e::::res://assets/3d/olive_flounder_olive_flounder_Fin_Roughness.png",
+        "uid://bteqibgwuq40p::::res://assets/3d/olive_flounder_olive_flounder_Fin_Normal.png",
+        "uid://c28r8s6rbrjuf::::res://assets/3d/olive_flounder_olive_flounder_Skin_BaseColor.png",
+        "uid://nmovcqmacs10::::res://assets/3d/olive_flounder_olive_flounder_Skin_Roughness.png",
+        "uid://4i2fcbo3kv2q::::res://assets/3d/olive_flounder_olive_flounder_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 10
+    },
+    "assets/3d/painted_comber.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://cfrpyk2wmit72::::res://assets/3d/painted_comber_painted_comber_Fin_BaseColor.png",
+        "uid://dccy4q1yrkgch::::res://assets/3d/painted_comber_painted_comber_Fin_Roughness.png",
+        "uid://c63naenl33q00::::res://assets/3d/painted_comber_painted_comber_Fin_Normal.png",
+        "uid://b8lkdndte0ii6::::res://assets/3d/painted_comber_painted_comber_Skin_BaseColor.png",
+        "uid://163kr2rghwlb::::res://assets/3d/painted_comber_painted_comber_Skin_Roughness.png",
+        "uid://dqpojeccu0cq2::::res://assets/3d/painted_comber_painted_comber_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/pollack.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 18
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 19,
+      "meshes": 13,
+      "resource_dependencies": [
+        "uid://ct2l8qb3e3yng::::res://assets/3d/pollack_pollack_Fin_BaseColor.png",
+        "uid://c4mjts2oyo8bb::::res://assets/3d/pollack_pollack_Fin_Roughness.png",
+        "uid://cmgarl40w1t5::::res://assets/3d/pollack_pollack_Fin_Normal.png",
+        "uid://dqhlro33stps5::::res://assets/3d/pollack_pollack_Skin_BaseColor.png",
+        "uid://cmmpywxhcq8g::::res://assets/3d/pollack_pollack_Skin_Roughness.png",
+        "uid://cq8q5ckbttc2i::::res://assets/3d/pollack_pollack_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 13
+    },
+    "assets/3d/red_mullet.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://dx25frwpvtsp2::::res://assets/3d/red_mullet_red_mullet_Fin_BaseColor.png",
+        "uid://bnyrc4yvgk6io::::res://assets/3d/red_mullet_red_mullet_Fin_Roughness.png",
+        "uid://cex2vs3yl08dy::::res://assets/3d/red_mullet_red_mullet_Fin_Normal.png",
+        "uid://cpk1g2q36rduc::::res://assets/3d/red_mullet_red_mullet_Skin_BaseColor.png",
+        "uid://upfsj7chxfvi::::res://assets/3d/red_mullet_red_mullet_Skin_Roughness.png",
+        "uid://5wxu23xhmo74::::res://assets/3d/red_mullet_red_mullet_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/red_seabream.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://i2r7d3dys6s5::::res://assets/3d/red_seabream_red_seabream_Fin_BaseColor.png",
+        "uid://b1ob3nxxujud3::::res://assets/3d/red_seabream_red_seabream_Fin_Roughness.png",
+        "uid://cwywjobs41es6::::res://assets/3d/red_seabream_red_seabream_Fin_Normal.png",
+        "uid://bs0jj0uogbrj5::::res://assets/3d/red_seabream_red_seabream_Skin_BaseColor.png",
+        "uid://be1wjvsu1vboo::::res://assets/3d/red_seabream_red_seabream_Skin_Roughness.png",
+        "uid://up7mn806bj0u::::res://assets/3d/red_seabream_red_seabream_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/roach.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://bi1soti6gn555::::res://assets/3d/roach_roach_Fin_BaseColor.png",
+        "uid://ba6yk5uvnixk0::::res://assets/3d/roach_roach_Fin_Roughness.png",
+        "uid://byo0vdh5qt5ww::::res://assets/3d/roach_roach_Fin_Normal.png",
+        "uid://wwbuica3iya1::::res://assets/3d/roach_roach_Skin_BaseColor.png",
+        "uid://d0s3of177pi6n::::res://assets/3d/roach_roach_Skin_Roughness.png",
+        "uid://dkhv07s1ae44e::::res://assets/3d/roach_roach_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/rudd.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://da0kag4d8oe32::::res://assets/3d/rudd_rudd_Fin_BaseColor.png",
+        "uid://c41v432jcywwe::::res://assets/3d/rudd_rudd_Fin_Roughness.png",
+        "uid://c6bss0h2jvjf::::res://assets/3d/rudd_rudd_Fin_Normal.png",
+        "uid://bwn8suj6jm407::::res://assets/3d/rudd_rudd_Skin_BaseColor.png",
+        "uid://cnij0t74teqx3::::res://assets/3d/rudd_rudd_Skin_Roughness.png",
+        "uid://b4gdgsqgoh5xx::::res://assets/3d/rudd_rudd_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/saddled_seabream.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://bl41re4pljxy0::::res://assets/3d/saddled_seabream_saddled_seabream_Fin_BaseColor.png",
+        "uid://bku1lui6w6dyf::::res://assets/3d/saddled_seabream_saddled_seabream_Fin_Roughness.png",
+        "uid://c25hh3knbywds::::res://assets/3d/saddled_seabream_saddled_seabream_Fin_Normal.png",
+        "uid://cs2itx6xnec4e::::res://assets/3d/saddled_seabream_saddled_seabream_Skin_BaseColor.png",
+        "uid://cd1vcruevn10y::::res://assets/3d/saddled_seabream_saddled_seabream_Skin_Roughness.png",
+        "uid://h2tswpqjluer::::res://assets/3d/saddled_seabream_saddled_seabream_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/saithe.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 18
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 19,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://b86g2tot3brbb::::res://assets/3d/saithe_saithe_Fin_BaseColor.png",
+        "uid://crpkoemcychyl::::res://assets/3d/saithe_saithe_Fin_Roughness.png",
+        "uid://hnys3yv11j4o::::res://assets/3d/saithe_saithe_Fin_Normal.png",
+        "uid://bb1qs4nb2xgya::::res://assets/3d/saithe_saithe_Skin_BaseColor.png",
+        "uid://b0jiaoh2ehc4f::::res://assets/3d/saithe_saithe_Skin_Roughness.png",
+        "uid://ckibuwrnqnbfs::::res://assets/3d/saithe_saithe_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/southern_catfish.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://d2i3sqjpp8by4::::res://assets/3d/southern_catfish_southern_catfish_Fin_BaseColor.png",
+        "uid://46uhgm8q7fmn::::res://assets/3d/southern_catfish_southern_catfish_Fin_Roughness.png",
+        "uid://cpcye2h3pn3cs::::res://assets/3d/southern_catfish_southern_catfish_Fin_Normal.png",
+        "uid://wnekhf8svmhp::::res://assets/3d/southern_catfish_southern_catfish_Skin_BaseColor.png",
+        "uid://3trmb4gs0h42::::res://assets/3d/southern_catfish_southern_catfish_Skin_Roughness.png",
+        "uid://d4b04b81wtpkj::::res://assets/3d/southern_catfish_southern_catfish_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/tench.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://c01nm7xb6x427::::res://assets/3d/tench_tench_Fin_BaseColor.png",
+        "uid://bgpqq8h6210na::::res://assets/3d/tench_tench_Fin_Roughness.png",
+        "uid://crryyjj410bnr::::res://assets/3d/tench_tench_Fin_Normal.png",
+        "uid://c2lsq6ygwsc5u::::res://assets/3d/tench_tench_Skin_BaseColor.png",
+        "uid://dgyvanqsc8dbl::::res://assets/3d/tench_tench_Skin_Roughness.png",
+        "uid://d3ic8ldalw023::::res://assets/3d/tench_tench_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    },
+    "assets/3d/white_seabream.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 16
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 17,
+      "meshes": 12,
+      "resource_dependencies": [
+        "uid://yv41ei2q7l67::::res://assets/3d/white_seabream_white_seabream_Fin_BaseColor.png",
+        "uid://dgovksphlns4x::::res://assets/3d/white_seabream_white_seabream_Fin_Roughness.png",
+        "uid://dxnacpu6tqytq::::res://assets/3d/white_seabream_white_seabream_Fin_Normal.png",
+        "uid://duhmq8m6eucpl::::res://assets/3d/white_seabream_white_seabream_Skin_BaseColor.png",
+        "uid://br5t0v4k0x5p4::::res://assets/3d/white_seabream_white_seabream_Skin_Roughness.png",
+        "uid://cct3odefx1vj3::::res://assets/3d/white_seabream_white_seabream_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 12
+    },
+    "assets/3d/yellowcheek.glb": {
+      "animation_players": 1,
+      "animations": {
+        "breach": {
+          "length": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "length": 2.0,
+          "tracks": 15
+        }
+      },
+      "bone_attached_rod_sockets": 0,
+      "bones": 16,
+      "meshes": 11,
+      "resource_dependencies": [
+        "uid://bfs28wo0wlmhc::::res://assets/3d/yellowcheek_yellowcheek_Fin_BaseColor.png",
+        "uid://b8xjce2n70yh4::::res://assets/3d/yellowcheek_yellowcheek_Fin_Roughness.png",
+        "uid://vr7qwpvujb1::::res://assets/3d/yellowcheek_yellowcheek_Fin_Normal.png",
+        "uid://bfc77xxwufeck::::res://assets/3d/yellowcheek_yellowcheek_Skin_BaseColor.png",
+        "uid://d1cfya5acl58e::::res://assets/3d/yellowcheek_yellowcheek_Skin_Roughness.png",
+        "uid://bg73tbthlp5wu::::res://assets/3d/yellowcheek_yellowcheek_Skin_Normal.png"
+      ],
+      "rod_sockets": 0,
+      "skeletons": 1,
+      "skinned_meshes": 11
+    }
+  },
+  "required_scene_count": 54,
+  "scope": "Imported scene structure only; no GPU/device claim",
+  "imported_scene_sha256": {
+    ".godot/imported/alligator_gar.glb-85dc9952e1bf6a168ee8959851478bdc.scn": "afbbd0a60db0d5724373ebe777b8424da2c7d6e51ec0f478c467a7c8b0953dba",
+    ".godot/imported/angler.glb-c3ba982495f53e445bc4412698d257bb.scn": "210cf4e5b860e8e99f7b5b51174d1c3d5be7f43fd8b17c2261b20f395b006d12",
+    ".godot/imported/annular_seabream.glb-707db8aad42886ad8b6fda17a9768727.scn": "94b8237c787e970636a0be13646b1cf929c2c767cf4b5470240f9267e18024c2",
+    ".godot/imported/atlantic_cod.glb-099800d0b06312a9d30cf0395e188ffa.scn": "22aae45dd9f93db16134b95294111265b555b4d417af826ac4f5d0c47e025e87",
+    ".godot/imported/atlantic_herring.glb-980321c2105e8df80aa114a4084fd8f5.scn": "2334b9f0704f7241060c0849522f2e2d342f02e358b7dfb8f6443cdf2a398372",
+    ".godot/imported/atlantic_mackerel.glb-5bbd6f9c369ee9332395d8f834115c98.scn": "358930bcb10015bfed6370eb7a84356ba5abd2082a74a361cc80a2f827bebb0a",
+    ".godot/imported/atlantic_wolffish.glb-bc2d911ffb5f81ffbb4ae175ac8f562e.scn": "db52c3da464b1b4d9036b326bc29a72016437f22bb3ab70c4ca6b0afc27728e5",
+    ".godot/imported/black_seabream.glb-44ed876e4c8eb1c3240d3f8fbff4bc8a.scn": "11bb7b77a83836e5c8881530ca89ae8cd0f85df7fd9afde8732ff31ed8545fe0",
+    ".godot/imported/bowfin.glb-463ddcd2724ff16e99e87029b5f3478f.scn": "2604df34fe3ff823f0571d56dc27126a182d500f01f93fea4fe0ef1fae31a527",
+    ".godot/imported/channel_catfish.glb-086bbac0a03f0a4cfe0e36bfca84b5fd.scn": "dcc81b9b58d5e4d1c11878e59b0e784dcc2fa3ab34ad3fd9a98668e5ebab9007",
+    ".godot/imported/chinese_sturgeon.glb-f45e4327fcbe2a1a246ae5c86f903b8b.scn": "472ace9682169eabb29c777027067ba7ce8d82e90cfcb812d228d760093be1f7",
+    ".godot/imported/chub_mackerel.glb-00d861135c454fc407342f337d263383.scn": "4a655f15b1df7c77ceb9684d781cc69b76e357761c149171c922455b8d9b9225",
+    ".godot/imported/common_bream.glb-f64beb18442d8a16da2fcca81cd2cfbb.scn": "0e4ab7510452df25bf6e9c7aba119f511d50b3dd52946b20c115e960b9bf705b",
+    ".godot/imported/common_carp.glb-362300d771f871a318984cc80e270ecf.scn": "740a9787259ac4ab407f33a86c2dc335b99f8c8a4e3ec3a2fddb8e1a5ac7440e",
+    ".godot/imported/common_pandora.glb-f25bdab52f13b510fbee0180928a4eb2.scn": "d95d129b2271846a44c6191604f56e7dcdafbb23f3c0fabdd8fd889a8093a90d",
+    ".godot/imported/crucian_carp.glb-2f3cb4ff96b2794f9930b1d5c3889634.scn": "af1776631679774bd9961251fb346839623e16c23401dc65dd3d4aee96d28d83",
+    ".godot/imported/region_bayou.glb-53b4e81d8e951511ed4232e644fb3aa9.scn": "887dcf2f7777ef2ddd0c33ba0eeb357e85eebe0e65844776c9495c6b09f88710",
+    ".godot/imported/region_japan.glb-224d573c903a6f9b82a8fd1e1c4d9566.scn": "5bc604c241553bfc700db489154957061e2e00aca23fb72f99e727a8055e7424",
+    ".godot/imported/region_lake.glb-0664f6f07bf414bdf4801c42e0579d01.scn": "d671733574f104ed93259c46b9783be57e9d2dee63094b274894a7b081af5247",
+    ".godot/imported/region_med.glb-6c891f74ffb76280a1c3cff8028f9349.scn": "92436cbe4723d124094abab16cd53ac7b40a495172ccea96ca81f42f4c4edb74",
+    ".godot/imported/region_norway.glb-afde41a6ba7a0f42cd1355ca8bf41952.scn": "4d08bbb78e601f86998aefa0c5ec00fea3af741f427b9a84a38f250968ab772c",
+    ".godot/imported/region_yangtze.glb-0accff8f12424d583d9ea453b34a6a60.scn": "743e3c1f413eeee0dda4069720978ecfad96498d6a6ba0bcfb3da20dddf92be7",
+    ".godot/imported/station_boat.glb-ebf45f2dfdd84e4bfce7f12b55a18f95.scn": "c9ebb57d3766afb2940e7aa0c6c6b378895615ce0d6e8333fc47629f20877a41",
+    ".godot/imported/station_dock.glb-fab578a453875aa480353c490354e63c.scn": "57976d6424af0bd6bb0c2a47d7bb8acd41f73aaf2bdba3e5df9ffdae6f30897f",
+    ".godot/imported/station_rock.glb-a2a4bf18a0a6eb9e1104849e166610ec.scn": "fbd3c8d9813c6408108f6e5917687060e924d0be4381bf59c6758c5b9aeeccfe",
+    ".godot/imported/european_perch.glb-cc6cc5799625e53541cf458ebe3b6a80.scn": "356ddf2112ea31dd1b62eba3cff91e21e887de2325a6b5561788be67661b7262",
+    ".godot/imported/european_plaice.glb-a2562ea83e2bcf30b7404e0bd2aaa26b.scn": "7047e34be13de51f571554d1ad6102d5dd8544edee867e27d1b781f6271cb5f9",
+    ".godot/imported/european_seabass.glb-00b81d5a82b4447231ee989dac6c0ae3.scn": "68732e5715fe08d06f844377aa84719818ba7011b676a1dbc5e88dd739387833",
+    ".godot/imported/flathead_catfish.glb-990c5e7500f8b3e2a7838eabcb51cdfd.scn": "115e79027ba10abad67087ea3a59efb0a618a42b87d47043fd92ba1f1a0f40d1",
+    ".godot/imported/gilthead_seabream.glb-66ef4ff035b3f6d0a4793c1834beecf8.scn": "3707e15fefd932beaa73602779938c57a70f247c2d5d89a7dda3748d2ee753df",
+    ".godot/imported/haddock.glb-215a522c9e622b7be6ea80df8fb1d355.scn": "b7b95099ff167b091218b99320c70d39d6a1b6affb67327750ae9d52778ea91f",
+    ".godot/imported/japanese_horse_mackerel.glb-645cf0da2f6ff7fa91b294e7aeb56042.scn": "e2f3b40e21e57cff1841fe53a1eea831a25a31088fbe8a38791603e8824723bf",
+    ".godot/imported/japanese_seabass.glb-7d4a747a701fdd6a9beffa894d20c43d.scn": "e4ceff7e3c049e9bca69fdde861b853d618a8dc7a6c3594b7c2fed6385ad1f45",
+    ".godot/imported/japanese_whiting.glb-31b3f82f654610567ddb5dcb771c3bcb.scn": "268a90d00676e6f79d45421b31827fc38f7e1d394c35bba6b6086a585467a987",
+    ".godot/imported/largemouth_bass.glb-6819171b547346fefbdde133db24d828.scn": "f57d939ee262c0acb90bfa2e8ecee15a54e5ae4fee0fbd7435ff32a29f7fc099",
+    ".godot/imported/longnose_gar.glb-47fa7cfa76a20b37d0b4cc20ad3bd69e.scn": "d788f4573a804eee6ebad2a7f7c245856198842cf91d589c099e9f20bd92b354",
+    ".godot/imported/longsnout_catfish.glb-0fd2e6fe6f8543f0417bf1216210cede.scn": "15f0d12cdcbae753ddd40698d9b70a21817e5d58b475f888956419c68b6f8792",
+    ".godot/imported/mandarin_fish.glb-03500984ecf9c05f851c0c65db82ec16.scn": "0975d6ee0b1bba69ebfb0a555dc260aba1b26a290d2b37155bd61460b881c778",
+    ".godot/imported/marbled_rockfish.glb-c8dadd06b6b639569b191a56ce86e82a.scn": "af23a9a32fb9971775eb87b5e390ac0fee886a50f7b675ba6da5400cc74a3234",
+    ".godot/imported/northern_pike.glb-1d7a36b7ee5524080a4ce2ff37989a1c.scn": "5fac2d8f5f0f7b000198ddb74b95d589578bd0bf041226529d4b8700e843b605",
+    ".godot/imported/northern_snakehead.glb-75403188564d6b1878bba7ad735f34e2.scn": "4ae255df74aa2493302d8929fce9dad5bc4bca84d1aaef2afe191741cf604297",
+    ".godot/imported/olive_flounder.glb-cdcbcd9d8f27af7e26029b0116f99c89.scn": "35218e3f6d6fe659dc5e315859f3e5ac8218ce48e5960648fb035743304c46cc",
+    ".godot/imported/painted_comber.glb-652705314ba5c761f368acbedc1547a0.scn": "40ac404a8ce062f99255d4639bbeafbab2b1fe39bc59d46a18dc6f817c7048eb",
+    ".godot/imported/pollack.glb-f6fce6873cb779796388111d2307043f.scn": "d4436116c9347ce5e052c1b1602ba22ed54e1cbdf4032bbb22136fbe9520fb40",
+    ".godot/imported/red_mullet.glb-f4cfe8111029f7cc248b90099af90997.scn": "8ec70d8f748c1ba6bd47d6745e17539d283cf6e9528e82dc1b63811e15bf5505",
+    ".godot/imported/red_seabream.glb-a1592cf4dd8dc8d9def7c945d556dbc6.scn": "6ca6b859c3de626c19eb2fa38dce470d01bfe6253641ed1f38ea46836540eac0",
+    ".godot/imported/roach.glb-8ecff5639f567bfeeb0e9010c110e65b.scn": "414d32be3f1460ed5930645f3fc7b47575cd1c55b14578197af351298239ef39",
+    ".godot/imported/rudd.glb-f1e52fd79bc6adcb19859637a212d10f.scn": "3f3e0018a7a820f0e57f7a823ac6ed85a0f86593858baa5f253b0068bfb0c3f7",
+    ".godot/imported/saddled_seabream.glb-17771f500e2cb8fbbb56cf274a13f32d.scn": "834301ed15b06040527bb0e60d2f5be89b835f5ef612934e96caff7ec40ca1e5",
+    ".godot/imported/saithe.glb-b65336ddb90dd817253cb94859b347ae.scn": "8c36f35d025879ac0ca5f0d656951392bd7489aa8a6e0431a8d56720b32b3643",
+    ".godot/imported/southern_catfish.glb-40784711b0e7a109bb41b3200011fbb7.scn": "71e822c7940dd20c1706ca7cb46b59c9df4cb8cfbd0ea1220330ca5b67822258",
+    ".godot/imported/tench.glb-dff207f9affe05f4505a7ebe29908cb2.scn": "98a2ee767050a147cfe37a3f8f26aa14ef749f34633edfdda50b74a85fbd0022",
+    ".godot/imported/white_seabream.glb-3a23b90c179abaec6c6ab42b37bca1c9.scn": "fade0eadc3a9be30f2395f6552e1be3371f7ded9aae633153ebd43c152010aa8",
+    ".godot/imported/yellowcheek.glb-0d7598272384b9c43b48d3134dd511ca.scn": "9a102e557cc1f0edcca43eb06294c573117b74c438f23b50be1d880c9be4c379"
+  }
+}

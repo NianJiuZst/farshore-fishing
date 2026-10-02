@@ -1,0 +1,2 @@
+package: org.farshore.fishing
+uses-permission: name='android.permission.VIBRATE'

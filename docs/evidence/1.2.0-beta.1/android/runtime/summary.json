@@ -1,0 +1,37 @@
+{
+  "observed_at_utc": "2026-10-02T17:21:10.479690+00:00",
+  "terminal_status": "host_limited_before_beta_installation",
+  "android_release": "16",
+  "api": 36,
+  "abi": "x86_64",
+  "guest_page_bytes": 4096,
+  "display_pixels": [
+    480,
+    854
+  ],
+  "density_dpi": 213,
+  "acceleration": "software TCG; KVM unavailable",
+  "emulator_gpu": "ANGLE/SwiftShader (swangle), unchanged phone APK graphics",
+  "boot_completed": true,
+  "boot_time_ms": 272281,
+  "prior_installed_version": "1.1.0",
+  "prior_installed_code": 2,
+  "beta_streaming_install": "timed out after 240 seconds",
+  "version_after_attempt": "1.1.0",
+  "code_after_attempt": 2,
+  "beta_installed": false,
+  "beta_launched": false,
+  "beta_frame_established": false,
+  "beta_runtime_driver_observed": false,
+  "input_gameplay_pause_back_offline_save_retention_verified": false,
+  "observed_android_system_issues": [
+    "com.android.phone ANR with 99 percent guest CPU usage",
+    "System UI is not responding dialog visible on final frame"
+  ],
+  "nonstreaming_fallback": "Not attempted: remaining root disk/RAM headroom did not safely cover the additional APK staging copy",
+  "phone_graphics_reduced": false,
+  "emulator_stopped_without_snapshot": true,
+  "physical_arm64_device_tested": false,
+  "game_crash_evidence": false,
+  "interpretation": "A software-emulator installation/resource limit, not evidence of beta gameplay correctness or a beta application crash"
+}

@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "1\n    codePath=/data/app/~~qBbuco29AhwAYnDtC6uoYQ==/org.farshore.fishing-fkYtZ9l0cNSwdtCf-x4Nug==\n    versionCode=2 minSdk=29 targetSdk=36\n    versionName=1.1.0\n      dataDir=/data/user/0/org.farshore.fishing\nFilesystem       Size Used Avail Use% Mounted on\n/dev/block/dm-53 5.8G 581M  5.0G  11% /data/user/0\n"
+}

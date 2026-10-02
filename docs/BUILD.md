@@ -1,6 +1,6 @@
 # Android build: 远岸钓记
 
-Preparation snapshot:2026-10-02 15:41 UTC. The current target is **1.2.0-beta.1 / versionCode3**. Its final source/config freeze and APK export are pending. Verified1.1.0 artifacts and their original records are preserved under `history/1.1.0/`; they do not validate this beta.
+Build snapshot:2026-10-02 17:03 UTC. **1.2.0-beta.1 / versionCode3** is signed and statically verified for ARM64 and the separate x86_64 test ABI. The final frozen game and all 54 imported 3D scene payloads match the audited snapshots. Android runtime evidence is tracked separately in `ANDROID_TESTS.md`. Verified 1.1.0 artifacts and their original records remain under `history/1.1.0/`.
 
 ## Locked toolchain and package
 
@@ -76,3 +76,22 @@ The runner refuses to start until both restore manifests confirm verification. T
 Existing game/authoring archives are reused only when the complete current member/hash inventories match and the archives are fully reread and verified again. A changed inventory creates a new archive in ordinary mode; constrained-space retries refuse to proceed without an exact verified reusable backup. Historical archives are never renamed/deleted on a failed copy. The archive regression probes cover reuse, changed/added members, corruption, duplicate entries, and source drift.
 
 The current retry keeps only regenerable Gradle caches and unsigned/aligned APK intermediates in task-scoped `/tmp` directories. The isolated source tree and final signed APK remain on the workspace filesystem. The guard preserves a768MiB root-disk floor,1GiB available-memory floor and512MiB tmpfs floor. APK configuration auditing additionally requires portrait `expand` and4×MSAA.
+
+## Completed beta artifacts
+
+| Artifact | Bytes | SHA256 |
+|---|---:|---|
+| ARM64 player APK | 570512995 | `a1c3896e07fa0367957137c2df75b04232dab922fe5890e641d764852c0911bb` |
+| x86_64 test APK | 573412957 | `7142db0cf68ebdf56caa8b7c77ad6203ff8ed9b25d7d7b13cd84b3a0aa48be2a` |
+
+Both packages use the existing release certificate, v2/v3 signatures, 16 KiB ZIP/ELF alignment, API29 minimum/API36 target, release/non-debuggable mode, and VIBRATE as the only permission. The ARM64 APK is the downloadable phone artifact. The x86_64 APK is validation-only. See `APK_BUILD_MANIFEST.json`, `APK_EMULATOR_BUILD_MANIFEST.json`, and `evidence/1.2.0-beta.1/android/`.
+
+### Retained-stage low-space recovery
+
+The initial full-stage export hit its resource guard before producing an APK. Recovery reused that exact source snapshot and imported scene audit rather than copying/importing again. All 2,553 generated Gradle-output files (1,427,554,304 allocated bytes) were hash-verified while moving to a unique scoped tmpfs directory. Only the disposable copy's `build.gradle` generated `buildDir` was overridden, before task configuration; Godot's source directory remained the normal in-project `res://android`. No symlink or source-cleanup-root change was used.
+
+The official `assembleStandardRelease` and then `copyAndRenameBinary` tasks ran with explicit package, version, API, ABI, unsigned release, and uncompressed-native-library properties. The copy task must be a separate invocation, as in Godot's exporter, because it has no assemble dependency. Offline cached Gradle dependencies and at most two workers were used. Root/tmpfs/available-memory floors stayed 768 MiB/512 MiB/1 GiB. ARM64 assembly completed in 28 seconds.
+
+After unsigned CRC and source/authoring checks, both external archives were fully reread and their exact members/hashes revalidated. Generated Gradle/asset copies were cleared before alignment and signing. x86_64 reused the identical 1,012 Godot asset files from the signed ARM64 package, excluding only Gradle-generated dexopt baseline profiles; those profiles were regenerated for the second ABI. Its initial duplicate-profile packaging failure was fixed only in that disposable input, then packaging succeeded. Both signed APK audits passed before the remaining disposable workspace and finished regenerable Gradle cache were removed. No primary game or authoring files were deleted or modified.
+
+The static verifier trims aapt's indented feature lines before requiring the Vulkan feature. The packaged binary manifest independently confirms `android.hardware.vulkan.version` is required with version 0x400003. This parser correction changed no APK bytes.

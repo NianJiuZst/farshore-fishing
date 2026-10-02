@@ -129,7 +129,7 @@ with zipfile.ZipFile(apk) as z:
         assert settings.get('rendering/rendering_device/fallback_to_opengl3') is False, 'APK must disable silent OpenGL fallback'
         assert settings.get('display/window/stretch/aspect') == 'expand', 'APK must preserve expanded portrait layout'
         assert settings.get('rendering/anti_aliasing/quality/msaa_3d') == 2, 'APK must request4x MSAA'
-        vulkan_features = [line for line in badging.splitlines() if line.startswith('uses-feature') and 'android.hardware.vulkan.' in line]
+        vulkan_features = [line.strip() for line in badging.splitlines() if line.strip().startswith('uses-feature') and 'android.hardware.vulkan.' in line]
         assert any(line.startswith('uses-feature:') and "name='android.hardware.vulkan.version'" in line for line in vulkan_features), 'APK must declare required Vulkan support'
         imported = json.loads((out/'imported-3d-scenes.json').read_text())
         assert not imported['failures'] and set(imported['models']) == set(contract['glb_models'])

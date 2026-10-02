@@ -1,8 +1,8 @@
 # Android 1.2.0-beta.1 full-catalog 3D build
 
-Preparation snapshot:2026-10-02 14:58 UTC. No1.2.0-beta.1 APK has been exported at this checkpoint. Final native-render review and an explicit source freeze are still required. The released1.1.0 APK and its evidence remain preserved.
+Verified build snapshot:2026-10-02 17:03 UTC. Both ABI packages for 1.2.0-beta.1 are signed and statically audited against the frozen game and exact imported scene payloads. The ARM64 APK is the phone release; x86_64 is test-only. Desktop baseline/tall-frame acceptance is recorded in the release evidence; Android runtime status remains separate in `ANDROID_TESTS.md`. The released 1.1.0 APK and its evidence remain preserved.
 
-## Intended package and scope
+## Verified package and scope
 
 - Version1.2.0-beta.1, versionCode3; same `org.farshore.fishing` package and dedicated release signing identity
 - ARM64 phone build and separate x86_64 emulator build; minimumAPI29, targetAPI36, VIBRATE-only permission list
@@ -55,8 +55,14 @@ The chosen GLB import contract extracts embedded images (`embedded_image_handlin
 
 The eventual source bundle must include the complete game/runtime assets,45 editable Blender masters, current shared/profile generators, tests, licenses/provenance and compact review reports/contact sheets. Raw studio review PNG sequences may stay in the preserved local review folders; temporary downloaded reference photographs, SDK/cache files and credentials must not enter the source deliverable. The publisher's final file manifest should state the actual selected archive contents.
 
-Current preparation probes found44 distinct fish geometry fingerprints,54 required scenes,45 rigged models,271 texture sources,45 editable masters, and48 authoring Python files. These are source/structure checks, not final APK or phone-rendering results.
+Current preparation probes found44 distinct fish geometry fingerprints,54 required scenes,45 rigged models,272 texture sources,45 editable masters, and48 authoring Python files. These are source/structure checks, not final APK or phone-rendering results.
 
 Existing game/authoring archives are reused only when the complete current member/hash inventories match and the archives are fully reread and verified again. A changed inventory creates a new archive in ordinary mode; constrained-space retries refuse to proceed without an exact verified reusable backup. Historical archives are never renamed/deleted on a failed copy. The archive regression probes cover reuse, changed/added members, corruption, duplicate entries, and source drift.
 
 The current retry keeps only regenerable Gradle caches and unsigned/aligned APK intermediates in task-scoped `/tmp` directories. The isolated source tree and final signed APK remain on the workspace filesystem. The guard preserves a768MiB root-disk floor,1GiB available-memory floor and512MiB tmpfs floor. APK configuration auditing additionally requires portrait `expand` and4×MSAA.
+
+## Completed static verification
+
+All 44 fish, 54 required imported scenes, 45 rigs, 6 regional assets, 3 station assets, 272 texture imports, 31 generated UI icons, 5 rods, and 8 baits passed the final APK checks. Mobile/Vulkan, disabled OpenGL fallback, expanded portrait layout, and requested 4×MSAA were decoded from packaged settings and checked alongside the required Vulkan manifest feature. The two ABIs contain 1,012 byte-identical Godot asset files. See `evidence/1.2.0-beta.1/android/identical-godot-assets.json` and each ABI’s manifest/signature/alignment/imported-scene evidence.
+
+The resource-constrained retained-stage recovery, its explicit Gradle properties, failed-then-corrected x86 packaging attempt, and post-export source/archive proof are documented in `BUILD.md`. These static results do not establish rendered Android gameplay or Snapdragon performance.
