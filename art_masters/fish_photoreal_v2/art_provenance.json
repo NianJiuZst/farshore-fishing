@@ -1,0 +1,1009 @@
+{
+  "generator": "OpenAI built-in imagegen",
+  "generated_date": "2026-10-02",
+  "generation_type": "44 separate species-specific generations, plus targeted anatomical revisions. Not recolors or procedural vector substitutes.",
+  "originals_preserved": true,
+  "copyright_provenance": "New AI-generated artwork created for this game. No third-party fish photograph was downloaded or embedded. Listed biological sources informed species morphology; they are not image-licence claims. No Creative Commons/public-domain status is asserted for generated artwork.",
+  "image_source_note": "The 44 accepted final image-generation outputs are preserved as repository-relative master PNGs. File-byte SHA256 values identify the authoritative artwork. Temporary provider output hints, private preview identifiers, transfer metadata and machine-specific paths are intentionally excluded.",
+  "preview_note": "The initial Chinese sturgeon preview predates the final four-visible-barbel revision. The current master, identified by its manifest SHA256, is authoritative. This package contains accepted final artwork, not discarded intermediate image generations.",
+  "assets": [
+    {
+      "species_id": "alligator_gar",
+      "master_sha256": "26d0ba87b60f884195cff782e159f546cf8ac84da3ca8e0b288de4954d13f449",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: ALLIGATOR GAR, Atractosteus spatula. Heavy thick cylindrical torpedo-shaped olive-brown body with authentic large interlocking diamond-shaped armored ganoid scales and pale cream belly. Distinctively broad, relatively short alligator-like flattened snout, much shorter and broader than a longnose gar; small eye, mouth closed but its jawline clearly resolved. Single short dorsal and single short anal fin positioned far back close to the tail, small paired pectoral and pelvic fins in natural positions. Rounded heterocercal tail with subtle upper elongation, never forked. Subtle dark round spots on the posterior body and amber-brown rear fins. Slight 5-degree elevated side angle so the width of the broad snout reads; predominantly a lateral scientific view.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fws.gov/species/alligator-gar-atractosteus-spatula",
+          "title": "USFWS: Alligator Gar",
+          "supports": "学名、密西西比流域南部范围、菱形硬鳞和大型体形",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/alligator-gar",
+          "title": "MDWFP: Alligator Gar",
+          "supports": "南密西西比、河汊与牛轭湖、宽吻和鳍部斑点；有真实大型个体记录",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://myfwc.com/wildlifehabitats/profiles/freshwater/alligator-gar/",
+          "title": "FWC: Alligator Gar",
+          "supports": "约2.44米大型尺寸背景及后移鱼鳍；不是体重科研回归来源",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/alligator_gar.png"
+    },
+    {
+      "species_id": "annular_seabream",
+      "master_sha256": "a3db99baaa2464ab7a9c9e18ba6c0f974b9c236295cd4d0843caccc59ef685e3",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: ANNULAR SEABREAM, Diplodus annularis. Small adult deep laterally compressed oval SILVERY bream with a subtle yellowish golden sheen on flanks, darker gray-green back, clean pale belly. Short pointed head, small dark eye and small terminal mouth. Essential diagnostic thick BLACK RING around the caudal peduncle immediately before tail, nearly completely encircling it and reaching both dorsal and ventral edges. Pelvic fins distinctly YELLOW, leading/anterior anal fin YELLOW with pale translucent rear; tail faint yellow-gray and forked. ONE continuous spiny-front, soft-rear dorsal fin. Small pointed pectoral fin. Flanks clean without vertical body bars; no gold forehead blaze and no black gill-cover patch. Natural pale yellow coloring, not saturated cartoon yellow.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Clear glossy dark pupil and bronze/silver iris.",
+        "fins": "Continuous spiny/soft dorsal, distinctly yellow pelvic and anterior anal fins, pale yellow-gray forked tail.",
+        "marks": "Near-complete black caudal-peduncle ring reaches dorsal and ventral edges; silver-yellow body with no vertical bars.",
+        "anatomy": "Pass: deep small bream proportions, pointed head and full intact anatomy."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-annularis-Sparaillon-487",
+          "title": "DORIS: Diplodus annularis",
+          "supports": "主要0–15米、安静港口和海草；黄色腹臀鳍和尾环"
+        }
+      ],
+      "master_path": "masters/annular_seabream.png"
+    },
+    {
+      "species_id": "atlantic_cod",
+      "master_sha256": "fce033271b914e6ac42287067520413b62041b2183f023ee81d10fd05edb6487",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: ATLANTIC COD, Gadus morhua. Strong elongated tapering adult with large head, blunt rounded snout, upper jaw slightly projecting, distinct single long chin BARBEL. Olive-brown back and upper flanks with fine irregular dark brown spotting and mottling, pale silver cream belly, small realistic scales. Prominent PALE curved lateral line arches gently above pectoral fin and straightens on tail. EXACTLY THREE separate dorsal fins in sequence along back with small clear gaps, first two moderately high and third lower; EXACTLY TWO separate anal fins below rear body. Paired pectoral behind gill and small pelvic fins below forward chest. Rounded or near-square caudal tail edge, not deeply forked. Anatomically exact cod-family topology, not generic one-dorsal fish.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: exactly three dorsal and two anal fins, distinct chin barbel, pale curved lateral line, brown-spotted mottled back, blunt cod head and near-square tail. Wet eye and crisp rays. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2095",
+          "title": "MarLIN: Atlantic cod",
+          "supports": "形态、岸边至600米冷水生境、体长"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "master_path": "masters/atlantic_cod.png"
+    },
+    {
+      "species_id": "atlantic_herring",
+      "master_sha256": "6b5b63a09652478c77f3c67281c2c265456ac890604c300363a4849270b79b27",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: ATLANTIC HERRING, Clupea harengus. Slender laterally compressed adult with brilliant SILVER sides, dark steel-blue back, white silver belly, delicate reflective cycloid scales with subtle iridescence, no dark spots. Small upward-tilted mouth with lower jaw slightly projecting, large realistic silver-gold iris. EXACTLY ONE short triangular dorsal fin near body midpoint. Small translucent pectoral behind gill and pelvic fins beneath/just behind dorsal; ONE short low anal fin far back before tail. Deeply forked narrow gray caudal fin and slender caudal peduncle. No adipose fin, no barbels, no long spiny dorsal. Anatomically ordinary Atlantic herring.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: blue-silver slender compressed body, one midpoint dorsal, one short posterior anal, deeply forked tail, slightly upturned mouth and large wet eye, realistic iridescent fine scales. No adipose fin or spots. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/45",
+          "title": "MarLIN: Atlantic herring",
+          "supports": "体长、单背鳍形态；水面至200米，非繁殖季远离直接岸边"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "master_path": "masters/atlantic_herring.png"
+    },
+    {
+      "species_id": "atlantic_mackerel",
+      "master_sha256": "40af0d053938433865aabd2eee54f0612d8221e93161edb87f7268d301de224c",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: ATLANTIC MACKEREL, Scomber scombrus. Exceptionally sleek slender elongated spindle/torpedo-shaped body, iridescent blue-green back with many crisp dark wavy oblique vertical zigzag bars, smooth bright silver flanks and spotless silver-white belly. Pattern stops above lower flanks. Relatively small pointed head with smooth large eye; mouth closed. TWO widely separated main dorsal fins, triangular first spiny dorsal and small soft second dorsal toward rear. FIVE separate tiny dorsal finlets behind second dorsal and FIVE tiny ventral finlets behind anal fin. Very narrow caudal peduncle and deeply forked stiff gray tail, short pointed pectoral and pelvic fins. No bony scute line, no yellow tail. True Atlantic mackerel with slender proportions, not robust tuna.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Smaller natural dark eye with wet reflective rim.",
+        "fins": "Two separated dorsal fins with visible dorsal/ventral finlet rows and deeply forked stiff tail.",
+        "marks": "Numerous dark oblique wavy dorsal bars, iridescent blue-green back and spotless silver belly.",
+        "anatomy": "Pass: slim long torpedo body and pointed head; no scutes. Individual fine-ray or finlet counts are not a taxonomic guarantee."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/44",
+          "title": "MarLIN: Atlantic mackerel",
+          "supports": "形态、表层群游和尺寸；垂钓对象"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15189203/",
+          "title": "Zardoya et al. 2004, Molecular Ecology: Mediterranean mackerel populations",
+          "supports": "地中海Scomber scombrus种群原始研究；已读搜索索引返回的完整摘要，采样含希腊、意大利及西班牙"
+        },
+        {
+          "url": "https://www.fao.org/4/ac478e/ac478e08.pdf",
+          "title": "FAO: Scombrids of the world, genus Scomber",
+          "supports": "形态：两主背鳍和背腹尾前小鳍列，近岸中上层水域"
+        }
+      ],
+      "master_path": "masters/atlantic_mackerel.png"
+    },
+    {
+      "species_id": "atlantic_wolffish",
+      "master_sha256": "2f68748edcdb0721ed6e79b50e34e6183deee58b950ee919881d9ca083e163a4",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: ATLANTIC WOLFFISH, Anarhichas lupus. Long thick eel-like tapered blue-gray adult with broad massive blunt head, small eye, very large jaw and a few natural blunt CONICAL CANINE FRONT TEETH visible in slightly parted lips; teeth modest in size, not monster fangs. Smooth finely textured scaleless-looking moist skin, approximately NINE broad irregular dark charcoal VERTICAL BANDS down flanks. ONE very long continuous low dorsal fin beginning immediately behind head and extending almost to caudal peduncle, with individually resolved rays. One long low anal fin on underside of rear half, large rounded fanlike pectoral fin behind gill. NO PELVIC FINS. Small separate rounded caudal tail, never forked, not merged eel fin. Natural relaxed body straight lateral profile, not serpentine coil.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: broad blunt head with modest front canine teeth, small eye, blue-gray skin with nine irregular dark vertical bands, single long continuous dorsal and posterior anal, large rounded pectoral, NO pelvic fins, separate rounded caudal tail. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/1747",
+          "title": "MarLIN: Atlantic wolffish",
+          "supports": "斯堪的纳维亚分布；成鱼通常100–300米；形态与食物"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "master_path": "masters/atlantic_wolffish.png"
+    },
+    {
+      "species_id": "black_seabream",
+      "master_sha256": "72b789e4e0d2fe3701e8333a0f2a673d60361830ac8172fbf20970fed73c2b2c",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: BLACK SEABREAM, Acanthopagrus schlegelii. Deep laterally compressed muscular silver-charcoal bream body, dark gray-olive back, bright silvery sides with large sharply edged scales, paler belly. Steep slightly convex forehead, robust small thick-lipped mouth, dark round eye. Very faint subdued dusky vertical bands may barely show, no gold forehead band and no isolated black tail-ring. ONE continuous dorsal fin with strong individual erect anterior spines and softer rear section. Long pointed pectoral fin, darker pelvic and anal fins in anatomically plausible positions. Dark gray deeply forked broad caudal fin. Restrained gray metallic healthy coloration, not solid jet black.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Clean bronze-gray iris, dark pupil and natural tiny highlight.",
+        "fins": "Continuous spiny/soft dorsal; pointed pectoral; darker paired pelvic/anal fins and forked gray tail.",
+        "marks": "Charcoal-silver scales with pale belly; no false gold forehead or tail ring.",
+        "anatomy": "Pass: deep bream body, convex forehead and sturdy small mouth."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/mobi/species.php?science=Acanthopagrus+schlegelii",
+          "title": "Acanthopagrus schlegelii — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Acanthopagrus&tbl=species",
+          "title": "Eschmeyer’s Catalog of Fishes: Acanthopagrus",
+          "supports": "有效学名及分布北达日本。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.848950/full",
+          "title": "East China Sea environmental DNA fish distribution study",
+          "supports": "长江口外东海区域出现记录；20–40m信号热点，不等同于必然垂钓可获"
+        }
+      ],
+      "master_path": "masters/black_seabream.png"
+    },
+    {
+      "species_id": "bowfin",
+      "master_sha256": "19227a7242b7b0891566f91ae31192de52f2c330f7a73e9bcc6811f66d258c11",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: BOWFIN, Amia ocellicauda. Adult male freshwater bowfin. Elongate thick olive-brown cylindrical body with subtle irregular darker mottling, minute smooth scales, rounded blunt bony head and moderate mouth, cream lower body. ONE exceptionally LONG low soft-rayed dorsal fin running across most of back; in contrast one SHORT small anal fin near tail. Rounded separate caudal fin, distinct dark round eyespot with muted cream-gold outline near upper tail base. Soft natural olive fins and broad rounded pectorals. No spiny bass-like dorsal, no barbels.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://mdc.mo.gov/discover-nature/field-guide/emerald-bowfin",
+          "title": "Missouri Department of Conservation: Emerald Bowfin",
+          "supports": "当前学名 Amia ocellicauda；密西西比低地、回水/牛轭湖生境、形态",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9709656/",
+          "title": "Brownstein et al. 2022: Hidden species diversity in an iconic living fossil vertebrate",
+          "supports": "2022物种界定；Amia ocellicauda 覆盖密西西比流域，Amia calva 为更东侧沿海支系",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/bowfin.png"
+    },
+    {
+      "species_id": "channel_catfish",
+      "master_sha256": "16eaf522029950d48f862cdbd3057a820f8bf3dbb0a491e09933eb8806ce3456",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: CHANNEL CATFISH, Ictalurus punctatus. Adult moderate-size channel catfish, smooth SCALeless olive blue-gray skin with scattered small distinct dark round flank spots, pale creamy belly. Four pairs of realistic barbels around nose and mouth; longer fine lateral maxillary barbels, small chin barbels. Single triangular rayed dorsal fin followed well behind by a small fleshy ADIPOSE fin. One moderately long gently curved-edged anal fin. Sharply DEEPLY FORKED tail, never rounded. Smooth broad moderately rounded head, small natural eye, delicate skin pores and wet highlights, anatomically paired pectorals and pelvic fins. No scales.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.mdwfp.com/sites/default/files/2024-12/Fish%20ID%20Guide_0.pdf",
+          "title": "MDWFP Fish ID Guide: Channel Catfish, p.21",
+          "supports": "物种身份、河流牛轭湖生境、黑斑、深叉尾和圆臀鳍；成年大鱼斑点可消退",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+          "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+          "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/channel_catfish.png"
+    },
+    {
+      "species_id": "chinese_sturgeon",
+      "master_sha256": "2186c112bb2430f2e643dcc2c988d011d8f38a03ae01ac63a28ba5fcb27a5988",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: CHINESE STURGEON, Sinosturio sinensis, formerly Acipenser sinensis. Adult streamlined gray-olive sturgeon with pointed flattened elongated snout, small dark eye, distinctly ventral toothless sucker mouth, EXACTLY FOUR short delicate barbels beneath the snout just before the mouth (near-side barbels distinguishable, naturally occlude the far pair if needed). Five longitudinal rows of actual separate pale bony scutes, not overlapping carp scales: one dorsal ridge, paired lateral rows and paired ventrolateral rows; rough minute denticles between rows. Light cream belly. One small triangular dorsal fin far toward rear, opposing posterior anal fin, strong broad paired pectoral fins and smaller pelvic fins. Strongly heterocercal tail with substantially elongated upper lobe, shark-like tail but NOT shark gills; bony gill cover. Anatomically faithful sturgeon, not a gar, not a shark. Three-quarter variation limited to 5 degrees to show underside barbels while preserving side-on catalog presentation.",
+      "revision_prompt": "Precise anatomical improvement to this Chinese sturgeon (Sinosturio sinensis) photoreal cutout. Show exactly FOUR short thin barbels hanging from underside of its long snout BEFORE the ventral mouth. Current three visible strands need a fourth naturally placed; use slight separation so four delicate barbels can be counted in this view. These are slender tactile whiskers, not tusks, not teeth. Preserve every other feature including long heterocercal tail, five scute rows, headlefttailright, whole fish proportions, excellent gray moist skin and translucent fins, original framing/light and true transparent alpha background. No new fins or text.",
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/chinese-sturgeon",
+          "title": "NOAA Fisheries: Chinese Sturgeon",
+          "supports": "中华鲟身份、江海洄游、长江与中国沿海分布、下位口四须及歪尾形态；保护说明。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf",
+          "title": "NOAA: Status Review Report of Five Foreign Sturgeon",
+          "supports": "中华鲟背、侧及腹骨板，底栖取食和海洋阶段；非伏击型猛鱼。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=9762",
+          "title": "Eschmeyer’s Catalog of Fishes: Acipenser sinensis",
+          "supports": "2026年目录接受 Sinosturio sinensis；保留 Acipenser sinensis 同物异名。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/chinese_sturgeon.png"
+    },
+    {
+      "species_id": "chub_mackerel",
+      "master_sha256": "ef196ac31e4c5431d0cd7d3182b0ba7ee3046184b1cfa057608a12c679b39604",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: CHUB MACKEREL, Scomber japonicus. Sleek moderately robust torpedo-shaped body, rich iridescent blue-green back with many irregular dark wavy zigzag vertical bars confined to the back ABOVE the silvery midline. Clean bright silver belly completely WITHOUT dark spots or marks. Relatively large eye with natural translucent eyelid rim; slightly pointed snout. TWO distinctly separated main dorsal fins: triangular first spiny dorsal near the front, smaller soft second dorsal far back; matching small anal fin below. FIVE separate tiny individual finlets in a neat row behind second dorsal, and FIVE tiny individual finlets behind anal fin, leading to a narrow caudal peduncle and deeply forked stiff tail. Small pointed pectoral and pelvic fins. Not a horse mackerel, no bony lateral scutes.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Large natural dark eye with reflective silver-gold rim.",
+        "fins": "Separated main dorsals and clear dorsal/ventral finlet rows; narrow peduncle and deeply forked tail.",
+        "marks": "Dark wavy dorsal bars and clean spotless silver lower flank; no horse-mackerel scute ridge.",
+        "anatomy": "Pass: moderately robust torpedo shape, full fins and tail. Individual fine-ray or finlet counts are not a taxonomic guarantee."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Scomber_japonicus.html",
+          "title": "Scomber japonicus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/chub_mackerel.png"
+    },
+    {
+      "species_id": "common_bream",
+      "master_sha256": "cf7753d0e88e2fe43ffd4e279d8c829edbd642fe94421e37dcd2e9d30ede1d3b",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: COMMON BREAM, Abramis brama. Very DEEP, strongly laterally flattened tall adult body, thin narrow caudal peduncle, small distinct head with downward pointing small protrusible mouth, no barbels. Adult bronze-silver to warm copper flanks, dark olive gray arched back, pale belly, real overlapping scales. ONE short high triangular gray dorsal fin toward mid-body. A characteristically LONG-BASED gray-black ANAL FIN extending far along lower rear body from below dorsal region nearly to tail, with crisp soft rays. All fins gray smoke or charcoal, not red. Deeply forked gray caudal fin, lower lobe a little longer. Essential bream silhouette: extremely tall compressed body, small head, long anal fin.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: high compressed bronze-silver body, small inferior mouth, short triangular dorsal, diagnostic long anal fin, dark gray fins and deeply forked tail. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Abramis-brama",
+          "title": "Abramis brama — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/common_bream.png"
+    },
+    {
+      "species_id": "common_carp",
+      "master_sha256": "4fe3609cc3fc3575550856ff16805ecb24b25eda9aa544da7f613411670ab386",
+      "prompt": "Use case: scientific-educational. Production encyclopedia fish asset for a refined fishing game. Generate ONE exceptionally detailed photorealistic adult COMMON CARP (Cyprinus carpio), an ordinary wild fully scaled bronze-brown common carp, not koi or mirror carp. Entire fish in exact side profile, head LEFT, straight relaxed body horizontal, tail RIGHT. All fins, lips, barbels, and tail completely within frame with generous 7% clear margins. Healthy living fish, natural proportions, substantial muscular gently arched body, overlapping large bronze-gold cycloid scales with dark edges and subtle irregular microtexture; olive-brown back, warm cream belly. Small protrusible thick lips, TWO pairs of short mouth barbels (near-side pair clearly discernible), bronze iris and black pupil with minute wet highlight. ONE long-based continuous dorsal fin, shorter anterior raised section gently lowering rearwards, anatomically plausible pectoral and pelvic pairs, one short anal fin, broad forked caudal tail. Real fine translucent fin membranes and individually resolved soft rays. Premium macro wildlife specimen photography aesthetic, natural moist skin and minute irregularities, soft broad neutral daylight from upper left, gentle dimensional shading within fish, sharp focus throughout, natural restrained colors. TRUE transparent RGBA background; no scenery, ground, water, bubbles, hook, hand, plank, diagram marks, text, label, border, shadow underneath, or watermark. This is a lifelike fish photograph-like cutout, not 3D lowpoly, not painted, not plastic, not a vector icon. Output one image only at highest practical resolution in landscape format, no panels.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Cyprinus-carpio.html",
+          "title": "Cyprinus carpio — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23079816/",
+          "title": "Genetic analysis of common carp populations sampled from Yangtze locations",
+          "supports": "长江流域石首、扬州野生群体采样支持地域分布；不是具体钓点保证"
+        },
+        {
+          "url": "https://home.nps.gov/miss/learn/nature/ascarp_common.htm",
+          "title": "National Park Service: Common carp in Mississippi River",
+          "supports": "美国引入史与密西西比河1883年记录，明确为引入种"
+        }
+      ],
+      "master_path": "masters/common_carp.png"
+    },
+    {
+      "species_id": "common_pandora",
+      "master_sha256": "cb49b926c89dd54a785a5c58e94ed8142ae3b94c2bc0bbda40da812baaa4663d",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: COMMON PANDORA, Pagellus erythrinus. Delicate rosy-silver moderately deep oval compressed sea bream, elongate tapered snout, near-straight sloping forehead rather than domed forehead, small mouth, visible normal black pupil and golden iris. Pink back, silvery pale belly, minute iridescent blue speckles scattered on upper flanks, small red upper gill-cover patch. Single continuous fin with anterior sharp spines and softer rear rays, pale translucent rose pectoral and pelvic fins, sharply forked pink tail. Clearly distinguish from red seabream Pagrus major by more slender profile and longer snout.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Pagellus-erythrinus-Pageot-commun-2771",
+          "title": "DORIS: Pagellus erythrinus",
+          "supports": "地中海5–200米、通常20–100米，偏好软底；形态"
+        },
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/ARTFIMED/ArtFiWeb/descript/Species/SPAPAERY.HTML",
+          "title": "FAO: Pagellus erythrinus identification sheet",
+          "supports": "体长最大60厘米、常见10–30厘米；本作样本16–45厘米"
+        },
+        {
+          "url": "https://fishdb.sinica.edu.tw/eng/chinesequer2.php?R1=&T1=&cn=&dere=asc&fm=&gc=&orderby=is_accepted_name&page=776&pz=30&vn=",
+          "title": "Academia Sinica Taiwan Fish Database: Chinese names",
+          "supports": "Pagellus erythrinus中文名为绯小鲷"
+        }
+      ],
+      "master_path": "masters/common_pandora.png"
+    },
+    {
+      "species_id": "crucian_carp",
+      "master_sha256": "983838e0eda784e0f8c79a8826e3209c54fbc0c99c3a2dfad5fad276cdde1cd1",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: CRUCIAN CARP, Carassius carassius. A naturally short, deep-bodied laterally compressed adult with rounded high back, bronze-gold flanks and olive brown back, cream belly. Large overlapping finely textured gold-bronze cycloid scales with darker edges. Small terminal mouth with NO barbels whatsoever. One long-based dorsal fin with distinctly gently CONVEX upper edge rather than a concave common-carp dorsal; rays delicate and naturally spread. Pectoral and pelvic fins in natural positions, short anal fin. Tail is shallowly forked, much less deeply forked than a roach. Warm gray-brown translucent fins with slight amber tint. Ordinary wild adult, not goldfish, not common carp.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: complete left-facing adult, deep bronze body, no barbels, long convex dorsal, short anal, shallowly forked rounded tail. Crisp real scales and moist eye. Composite on #edf0e4 visually checked; no painted background.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/270",
+          "title": "Carassius carassius — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/crucian_carp.png"
+    },
+    {
+      "species_id": "european_perch",
+      "master_sha256": "efadccd6f27ece289fabbbbff7607f9f951ff5428d2dcf913e8a3e60110328b4",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: EUROPEAN PERCH, Perca fluviatilis. Robust laterally compressed yellow-green olive adult, silver cream belly. SIX clearly separated irregular dark vertical bars across flanks. TWO SEPARATE dorsal fins: front high spiny fin with detailed rigid spines and distinct BLACK BLOTCH at its rear, a clear small gap, then rear lower soft-rayed dorsal. Bright orange-red pelvic and anal fins, orange reddish caudal margins, gray-brown pectoral fin. Small rough ctenoid scales distinct in true macro texture. Moderate terminal predatory mouth, no barbels, realistic golden eye. Forked tail. Every fin distinct with biologically coherent attachments; not yellow perch illustration.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: six dark flank bars, two distinct dorsal fins, first spiny with rear black blotch, orange lower fins, realistic ctenoid scales and eye. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/358",
+          "title": "Perca fluviatilis — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/european_perch.png"
+    },
+    {
+      "species_id": "european_plaice",
+      "master_sha256": "4cb8103bdc3d1ff8a7a0a962999b7a5dd8aea9152040c098c5d946b2fdef46be",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head RIGHT tail LEFT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: EUROPEAN PLAICE, Pleuronectes platessa. Flatfish, RIGHT-eyed ocular side, BOTH raised eyes clearly on the same visible right face. Head RIGHT and tail LEFT, dorsal fin along TOP EDGE, ventral/anal edge along BOTTOM, both eyes on the visible right ocular side. This exception to the collection facing direction is essential to anatomical correctness. Broad flattened oval body, smooth dark sandy brown upper skin carrying DISTINCT widely scattered circular ORANGE-RED spots of varied size (including fin margins), NOT olive flounder leopard mottling. Small mouth, ridge of bony bumps behind eyes, long low dorsal and anal fringe fins, small pectoral behind gill, separate broad rounded tail. Face viewed perpendicular to ocular surface.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2172",
+          "title": "MarLIN: Plaice",
+          "supports": "扁平形态、右眼、橙红点、浅水幼鱼和垂钓"
+        },
+        {
+          "url": "https://biotic.marlin.ac.uk/data/species/6202",
+          "title": "MarLIN BIOTIC: Pleuronectes platessa",
+          "supports": "5–200米栖息区间"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ],
+      "master_path": "masters/european_plaice.png"
+    },
+    {
+      "species_id": "european_seabass",
+      "master_sha256": "a43255f3c19700df3bd5a95bab7828e3cc3d9533f83fabdec48001feceb8a438",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: EUROPEAN SEABASS, Dicentrarchus labrax. Sleek elongated silvery moderately laterally compressed adult body, gray-blue back, shiny silver flanks, pale silver belly and fine real scales. Adult body is clean without spots. Moderately large terminal mouth, slightly projecting lower jaw and smooth gently sloping forehead; bony gill cover with subtle dark upper rear patch. TWO clearly SEPARATE dorsal fins with a visible gap: triangular erect spiny first dorsal and lower soft second dorsal. Gray nearly clear pointed pectoral fin, small pelvic fins, short anal fin. Broad caudal tail shallowly forked/emarginate. Natural European sea bass proportions, no gold forehead band, no exaggerated spiny rockfish head.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Natural round dark pupil with silver/bronze iris.",
+        "fins": "Two separate dorsals with gap, visible spiny first and softer second; complete paired/anal fins and shallow forked tail.",
+        "marks": "Spotless silver adult flank with blue-gray back and modest dark upper opercular patch.",
+        "anatomy": "Pass: elongated seabass shape, moderate terminal mouth and slightly protruding lower jaw."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_europeanseabass.htm",
+          "title": "FAO: Dicentrarchus labrax cultured species fact sheet",
+          "supports": "形态、地中海及河口近岸生境与食性"
+        },
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2127",
+          "title": "MarLIN: Bass",
+          "supports": "体长可至100厘米、通常浅于10米但有70米捕获；本作1–50米"
+        }
+      ],
+      "master_path": "masters/european_seabass.png"
+    },
+    {
+      "species_id": "flathead_catfish",
+      "master_sha256": "95d0872b31bc90b070cced510c40d200aa63b8c25aa430fbe45cd56dce1408d2",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: FLATHEAD CATFISH, Pylodictis olivaris. Very broad strongly flattened head, wide mouth, protruding lower jaw and small high-set eyes. Thick scaleless yellow-olive ochre body mottled irregular dark brown; pale yellow cream belly, never silver blue. Four pairs of natural barbels including long dark lateral maxillary whiskers. Single triangular rayed dorsal plus small fleshy adipose fin on rear back. Relatively short anal fin, broad tail with nearly square/slightly indented edge, absolutely NOT deep fork. Smooth real wet skin microtexture, stocky muscular body tapering behind head, complete long whiskers insideframe.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/flathead-catfish",
+          "title": "MDWFP: Flathead Catfish",
+          "supports": "大型体形、宽扁头和突下颌；河流深潭、水下掩体及牛轭湖生境",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+          "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+          "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/flathead_catfish.png"
+    },
+    {
+      "species_id": "gilthead_seabream",
+      "master_sha256": "af56f3fbb76ea0c728334676b37bdec6b782e1f9e6315e73501088cbcf952ce9",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: GILTHEAD SEABREAM, Sparus aurata. Deep laterally compressed high-backed oval SILVER bream, gray-blue dark back and fine narrow golden longitudinal scale lines on flanks. Steep smoothly rounded convex forehead and small thick-lipped mouth. Essential diagnostic GOLDEN YELLOW BAND runs across forehead BETWEEN the eyes, its near-side golden portion clear immediately above/in front of the visible eye. Large distinct BLACK PATCH at upper rear gill cover, with a small rusty RED tinge just beneath lower edge of that patch. ONE continuous dorsal fin with strong spiny anterior section and soft rear. Long narrow pointed silvery pectoral fin, gray pelvic/anal fins, forked dusky tail. No black band on caudal peduncle. Metallic natural fish skin, avoid cartoon gold paint.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Dark eye below the gold brow mark; natural glossy iris detail.",
+        "fins": "One continuous spiny/soft dorsal, pointed pectoral, gray pelvic/anal fins and forked tail.",
+        "marks": "Golden forehead marking, large black upper opercular patch with reddish lower tinge and fine golden scale lines; no black caudal ring.",
+        "anatomy": "Pass: deep silver oval bream and small thick-lipped mouth."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_giltheadseabr.htm",
+          "title": "FAO: Sparus aurata cultured species fact sheet",
+          "supports": "地中海、近岸与50米内生境、完整鉴别形态"
+        }
+      ],
+      "master_path": "masters/gilthead_seabream.png"
+    },
+    {
+      "species_id": "haddock",
+      "master_sha256": "7ce1d25df84a05d5c9ed573a99c7b3b0a018a3c9a49ac41c655a95f43ef0dc61",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: HADDOCK, Melanogrammus aeglefinus. Adult dark gray-purple back fading to bright silvery gray sides and white belly, small scales. A prominent BLACK lateral line and a separate obvious BLACK THUMBPRINT-SHAPED OVAL BLOTCH on upper flank behind gill above pectoral fin are essential. EXACTLY THREE separate dorsal fins: FIRST DORSAL HIGH, POINTED and triangular, second and third much lower and long-based; EXACTLY TWO separate anal fins. Small SHORT chin barbel, shorter than cod's, slightly projecting upper jaw. Gray subtly forked tail. Translucent gray fins, natural realistic fine fin rays. No cod-like mottled brown camouflage.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: exactly three dorsal and two anal fins, high pointed first dorsal, short chin barbel, dark lateral line and prominent separate shoulder thumbprint, purple-gray silver body. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/79",
+          "title": "MarLIN: Haddock",
+          "supports": "40–300米底层、形态、尺寸"
+        },
+        {
+          "url": "https://www.hi.no/en/hi/temasider/species/haddock/haddock-in-the-north-sea%2C-skagerrak-and-west-of-scottland",
+          "title": "IMR: North Sea haddock",
+          "supports": "挪威陆架与Skagerrak；约60厘米最大尺寸和底栖食性"
+        }
+      ],
+      "master_path": "masters/haddock.png"
+    },
+    {
+      "species_id": "japanese_horse_mackerel",
+      "master_sha256": "8397c5e31b4c35327c18acca3955d49774c072dbb8d469597aba911510dfd311",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: JAPANESE HORSE MACKEREL, Trachurus japonicus. Streamlined spindle-shaped silver body, blue-green olive back and bright silver belly, large round eye, slightly pointed head and small terminal mouth. Small distinct black spot at the upper rear of the gill cover. Two separated dorsal fins: short spiny first dorsal and longer lower soft second dorsal. Thin distinctly ARCHED anterior lateral line, then straight posterior lateral line bearing prominent raised individual hard bony SCUTES toward the narrow caudal peduncle. Long pointed swept-back pectoral fin; paired small pelvic fins, long anal fin, deep-forked yellowish gray caudal fin. Absolutely NO dorsal or ventral finlets behind the principal fins. A real carangid horse mackerel, not a true striped mackerel. Plain silvery sides without bars.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Large glossy near-side eye with dark pupil and restrained catchlight.",
+        "fins": "Two separated dorsal sections, pointed pectoral fin, forked tail; no finlets.",
+        "marks": "Arched anterior lateral line becomes prominent posterior scute ridge; black opercular spot and silver/blue-green body distinguish horse mackerel.",
+        "anatomy": "Pass: natural side profile, full mouth and tail, no hooks or props."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/taxon/381555-fishdb",
+          "title": "Trachurus japonicus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fog.70035",
+          "title": "Vertical Habitat Use by Japanese Jack Mackerel in Tokyo Bay (2026)",
+          "supports": "东京湾个体的体型与游泳深度关系，近岸生境交叉核查。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/japanese_horse_mackerel.png"
+    },
+    {
+      "species_id": "japanese_seabass",
+      "master_sha256": "2167c6b26f026c0e9f1f1c659d69d1271a2836a37cb128f3b39eb629fb7b8d27",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: JAPANESE SEABASS, Lateolabrax japonicus. Adult elongated muscular laterally compressed silver body with gray-green back and creamy-silver underside, fine closely overlapping scales, subdued visible curved lateral line. Head moderately large with LARGE oblique mouth and slightly protruding lower jaw; true adult without conspicuous dense black body spots. Dorsal apparatus has an erect anterior spiny portion and a long soft posterior portion separated by a conspicuous deep notch, low connecting membrane; dorsal portions close but anatomically distinct. Broad subtly emarginate caudal tail, not deep forked like a mackerel. Pale translucent gray pectoral, pelvic and anal fins. Authentic large silver sea bass head and proportions; no gold stripe or ornamental markings.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Clearly resolved natural dark eye and bronze rim.",
+        "fins": "Closely adjacent spiny and soft dorsal portions with deep notch; full pectoral/pelvic/anal fins and shallowly emarginate tail.",
+        "marks": "Unspotted silvery adult sides, gray-green dorsal surface and subdued lateral line.",
+        "anatomy": "Pass: elongate seabass shape with large oblique mouth and protruding lower jaw."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Lateolabrax_japonicus.html",
+          "title": "Lateolabrax japonicus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.godac.jamstec.go.jp/bismal/e/view/9005278",
+          "title": "JAMSTEC BISMaL Lateolabrax japonicus",
+          "supports": "日本物种记录，独立区分 Lateolabrax maculatus。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/japanese_seabass.png"
+    },
+    {
+      "species_id": "japanese_whiting",
+      "master_sha256": "539b73cf2fe9df8d74a4f08d1a33e25decf28b7cec062b770570ae9b3eea2aff",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: JAPANESE WHITING, Sillago japonica. Slender nearly cylindrical elongated silver-beige fish, pale sandy taupe back and narrow subtle golden-silver longitudinal sheen, clean white belly. Small pointed conical snout and SMALL terminal to slightly inferior mouth, relatively large eye. TWO dorsal fins: first short triangular spiny fin, second much LONGER and LOW soft dorsal fin, separated by a small gap. Long low anal fin mirrors the second dorsal below. Small pectoral and pelvic fins; all fins very pale translucent with fine thin rays. Shallowly forked/emarginate caudal fin. No barbels, no finlets, no strong spots or stripes. Graceful smooth narrow sand-whiting anatomy, not a deep-bodied bream.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Natural relatively large black eye with silver-gold rim.",
+        "fins": "Separated short first dorsal and long low second dorsal; long low anal, pale fins and shallow-forked tail.",
+        "marks": "Clean silver-beige flank, sandy back, no bars or finlets.",
+        "anatomy": "Pass: slender near-cylindrical body, pointed snout and small mouth."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/taxon/382628-fishdb",
+          "title": "Sillago japonica — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/japanese_whiting.png"
+    },
+    {
+      "species_id": "largemouth_bass",
+      "master_sha256": "88aaa9fecb334a9d8e50d36479e9311ca269b192790ad68b666acaacfc99719d",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: LARGEMOUTH BASS, Micropterus nigricans. Adult natural green bass. Thick muscular elongated olive-green body fading silver-cream below, authentic irregular broken dark horizontal band extending midflank from gill toward tail. Very large oblique terminal mouth, rear edge of upper jaw extends PAST rear eye margin. Mouth only slightly parted, no exaggerated tooth display. Anterior low spiny dorsal deeply notched before higher rounded soft-rayed dorsal section, no extra dorsal fins. Fine scales and delicate dark vermiculation, broad slightly emarginate nearly squared tail, paired pale green fins. Not perch vertical bars, not trout.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/largemouth-bass",
+          "title": "MDWFP: Largemouth Bass",
+          "supports": "密西西比本地大口黑鲈形态、缓流与掩体生境；该页沿用旧学名",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.dnr.state.mn.us/minnaqua/speciesprofile/largemouthbass.html",
+          "title": "Minnesota DNR: Largemouth Bass profile",
+          "supports": "上游水草丰富的河流回水和湖湾；该页沿用旧学名",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9170712/",
+          "title": "Kim et al. 2022: Phylogenomics and species delimitation of Black Basses",
+          "supports": "当前种界与命名：大口黑鲈 Micropterus nigricans，佛罗里达黑鲈 M. salmoides",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://dnr.maryland.gov/fisheries/Documents/Reg_Changes/LargemouthBass_ScientificRenaming.pdf",
+          "title": "Maryland DNR: Largemouth Bass Scientific Renaming",
+          "supports": "核实AFS 2023对大口黑鲈学名变更的采用",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/largemouth_bass.png"
+    },
+    {
+      "species_id": "longnose_gar",
+      "master_sha256": "4941911a3006417e437ff013e2b45d4bb987baec28cbf8403f1925d0268787fc",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: LONGNOSE GAR, Lepisosteus osseus. Very slender cylindrical olive-brown body, large hard interlocking rhomboid scales, pale cream belly, distinct dark rounded spots on rear body and all posterior fins. Extraordinarily elongated needle-slender pointed forceps snout, much longer than the remainder of the head, very narrow mouth closed and natural small eye; NOT broad alligator snout. One small dorsal fin and one small anal fin at far rear, small pectoral and pelvic pairs, broad rounded tail (not forked). Natural relaxed elongated full fish occupying a wide3:1composition, complete needle tip and tail uncropped.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.nps.gov/miss/learn/nature/long-nosed-gar-lepisosteus-osseus.htm",
+          "title": "NPS: Long-nosed Gar",
+          "supports": "上密西西比泛洪湖与大河回水栖境、细长吻和分布",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://dnr.sc.gov/fish/species/longnosegar.html",
+          "title": "SCDNR: Longnose Gar",
+          "supports": "吻长超过其余头部两倍、体色黑斑、缓流水域与鱼食",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/longnose-gar/",
+          "title": "Florida Museum: Longnose Gar",
+          "supports": "北美分布、菱形硬鳞、体长可超过游戏上限",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/longnose_gar.png"
+    },
+    {
+      "species_id": "longsnout_catfish",
+      "master_sha256": "e8fcebe5eb2dd3d2bdb407022a09081bcadaa432e5ae661d27f06028842c2200",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: LONGSNOUT CATFISH, Rhinobagrus dumerili (formerly Leiocassis longirostris). Smooth SCALELESS gray-brown Chinese bagrid fish with unusually forward-projecting tapered conical snout, small ventral/inferior mouth with thick lips, small eye, FOUR PAIRS of relatively SHORT fine barbels close to mouth (not huge sprawling Silurus whiskers). Rayed triangular dorsal fin with hard leading spine, strong pectoral leading spines, distinct substantial fleshy adipose fin behind dorsal. Pale cream underbelly, subtle olive brown back, long streamlined body, DEEPLY FORKED gray caudal tail. Anatomically accurate protruding conical nose and short-barbel combination, not generic channelcatfish.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5698",
+          "title": "Eschmeyer’s Catalog of Fishes: Rhinobagrus dumerili",
+          "supports": "2026年目录接受现名 Rhinobagrus dumerili；长江流域淡水分布。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5910",
+          "title": "Eschmeyer’s Catalog of Fishes: Liocassis longirostris",
+          "supports": "Leiocassis longirostris 与 Tachysurus dumerili 等名称关联到同一物种。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://nyncw.sh.gov.cn/bwbdscl/20190103/0009-109878.html",
+          "title": "上海市农业农村委员会：如何饲养长吻鮠",
+          "supports": "一般个体质量背景，游戏数值未当作实测长度重量系数。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://doi.org/10.5657/FAS.2012.0299",
+          "title": "Park, Kim & Choi (2012): Histological Observations and Regeneration of Barbels in Juveniles of the Chinese Longsnout Catfish",
+          "supports": "原始研究明确四对须，并提供外形与口须照片；与国内标准外形相互核对。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://wyxy.shou.edu.cn/_upload/article/files/e1/64/0e9f65ac480f81b7d1dda7b3721e/cd94ead1-0a57-40f8-ba32-2f526a8a5efd.pdf",
+          "title": "上海海洋大学：水产养殖种质资源基本情况普查培训材料",
+          "supports": "长吻鮠外观及脂鳍、吻部、叉尾识别参考。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/longsnout_catfish.png"
+    },
+    {
+      "species_id": "mandarin_fish",
+      "master_sha256": "f34705d6bd7929c11c96c6a7909481552b381ba3ad202657f152186df25c3286",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: MANDARIN FISH, Siniperca chuatsi, freshwater Chinese mandarin perch (NOT tropical marine mandarin dragonet). Deep compressed robust yellow-tan body with irregular dark chocolate blotches, speckles and oblique patches. Large upward-oblique mouth, strong protruding lower jaw and realistic small teeth mostly hidden. Single continuous high pointed spiny front dorsal transitioning through slight notch to rounded soft rear, robust anal fin and wide rounded caudal tail (not forked). Amber translucent finely spotted fins. Strong gill-cover relief, warm gold iris. Authentic camouflage pattern, not neon tropical colors.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_mandarinfish.htm",
+          "title": "FAO: Siniperca chuatsi cultured species fact sheet",
+          "supports": "体形、大口、下颌、斑纹和鳍型；淡水河湖及养殖体重背景。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://ssswxb.ihb.ac.cn/article/doi/10.7541/2018.136",
+          "title": "水生生物学报：浅水湖泊四种渔具捕捞选择性及对鱼类群落影响比较研究",
+          "supports": "长江中游牛山湖的鳜实测样本与分布；不把研究捕捞当作游玩许可。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/mandarin_fish.png"
+    },
+    {
+      "species_id": "marbled_rockfish",
+      "master_sha256": "2c58133fef58679481f0e5de7d49460c678698b667c89f2e2ef5e4e97bbbccdb",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: MARBLED ROCKFISH, Sebastiscus marmoratus. Robust stocky body with very large broad knobbly bony head and generous oblique mouth, lower jaw slightly protruding. Healthy natural marbled reddish-brown, chestnut and cream irregular camouflage blotches, not regular stripes. Large real textured scales and bony ridges/spines on head and gill cover, big dark copper-rimmed eye. ONE continuous dorsal fin, anterior half high sharply distinct strong spines and posterior soft rounded membrane section separated by a notch. Very broad fan-shaped rounded pectoral fin with clear individually resolved rays and subtle bars, normal smaller paired pelvic fins; short rounded anal fin. Broad rounded-to-truncate caudal fin, absolutely not forked. Natural compact rockfish, no extravagant lionfish streamers.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Copper-rimmed glossy large dark eye.",
+        "fins": "Continuous spiny/soft dorsal, broad fanlike pectoral, rounded anal and non-forked broad tail.",
+        "marks": "Reddish/chestnut/cream marbled camouflage across body and fins.",
+        "anatomy": "Pass: stocky large-headed rockfish with broad mouth and bony opercular ridges; no lionfish streamers. Full dorsal tips inside canvas."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/Summary/SpeciesSummary.php?id=4597&lang=spanish",
+          "title": "Sebastiscus marmoratus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/marbled_rockfish.png"
+    },
+    {
+      "species_id": "northern_pike",
+      "master_sha256": "a2f3fc04093b1c0d200830cb80ee7a90d852c4721b2dc8476825c7364947c4c5",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: NORTHERN PIKE, Esox lucius. Long slender torpedo-shaped olive-green body with irregular rows of pale cream oval spots, pale belly, tiny scales. Broad FLATTENED DUCKBILL snout, long large closed mouth with lower jaw slightly projecting, small golden eye. Body visibly elongated, approximately six times deeper-body height in total length. ONE dorsal fin set far back near the tail; opposing posterior anal fin equally far back. No dorsal fin on front or middle back. Short paired pectoral fins behind gills and paired pelvic fins about mid-body. Forked broad tail, amber and gray translucent fins with fine darker striping and speckles. Exact living-pike anatomy, not barracuda or muskellunge.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: elongated body, flattened duckbill snout, pale oval spots, single posterior dorsal opposing anal, natural paired fins and forked caudal. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/258",
+          "title": "Esox lucius — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://home.nps.gov/miss/learn/nature/northern-pike.htm",
+          "title": "National Park Service: Northern pike",
+          "supports": "上密西西比河公园河道及漫滩湖泊、草带和凉爽深水，仅增加上游河湾"
+        }
+      ],
+      "master_path": "masters/northern_pike.png"
+    },
+    {
+      "species_id": "northern_snakehead",
+      "master_sha256": "01a5b63a7ae3b8f14df2a7b124e9e1317a1ec3e16f4934ade3d7598fe820602d",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: NORTHERN SNAKEHEAD, Channa argus. Adult long cylindrical snakehead fish with large flattened broad head, long oblique mouth and visible large cranial scales, small lateral eyes, olive-brown ground carrying dark saddle-like irregular blotches along flanks with pale outlines, cream belly. ONE very long low soft-ray dorsal fin, ONE long anal fin along posterior underside, rounded separate caudal fin, fan-shaped pectorals, small pelvic fins just behind pectorals. NO barbels, no adipose fin, no forked tail. Very fine real body scales, clearly snakehead anatomy rather than eel or bowfin.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=2265",
+          "title": "USGS: Northern Snakehead species profile",
+          "supports": "物种身份、深色斑块、长背鳍与臀鳍及扁头；中国至长江支流原生分布。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pubs.usgs.gov/circ/2004/1251/report.pdf",
+          "title": "USGS Circular 1251: Snakeheads, a biological synopsis and risk assessment",
+          "supports": "Channa argus 中国原生分布及淡水生境；不同于斑鳢或弓鳍鱼。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/northern_snakehead.png"
+    },
+    {
+      "species_id": "olive_flounder",
+      "master_sha256": "0575f6826de111061260fd4e0d7ff04cc47201a9692dd6534c5b6223c1e058ee",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: OLIVE FLOUNDER, Paralichthys olivaceus. Natural LEFT-eyed adult flatfish seen on its pigmented ocular LEFT side, head LEFT tail RIGHT, showing BOTH eyes on the same upper pigmented side. Whole flattened elongated-oval broad body with dark olive brown finely speckled and irregular pale camouflage mottling, subtly curved lateral line behind head, large oblique terminal mouth reaching under the eye. Fin fringe consists of one very long low dorsal fin along the upper outline from near head almost to tail and one long low anal fin along lower outline, an actual small side pectoral fin immediately behind gill opening. Separate broad subtly rounded/truncate tail, not forked. No orange plaice dots. Both eyes together on the same visible face, natural asymmetrical head, not a bilateral ordinary fish. View nearly perpendicular to broad flat ocular surface to show true anatomy, delicate radial fin ray details.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://swfsc-publications.fisheries.noaa.gov/publications/CR/2025/2025Purcell2.pdf",
+          "title": "Paralichthys olivaceus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/olive_flounder.png"
+    },
+    {
+      "species_id": "painted_comber",
+      "master_sha256": "b299999069108793dd1c0c42b0f8aee8103a61705113473b1fe155de9a96d420",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: PAINTED COMBER, Serranus scriba. An elongated, moderately deep small grouper-like Mediterranean fish, tan and reddish brown body with 5-7 broad irregular dark vertical bars, one prominent soft-edged VIOLET-BLUE patch on lower mid flank/belly, exquisite thin wavy blue and reddish calligraphic markings around cheek and gill cover. Yellowish caudal peduncle and tail. Large mouth, ONE continuous spiny-to-soft dorsal fin, broad pectorals, modest anal fin, rounded/truncate tail. Sharp close-range natural fish photograph, anatomically correct mark placements.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Serranus-scriba-Serran-ecriture-144",
+          "title": "DORIS: Serranus scriba",
+          "supports": "地中海岩岸0–30米；形态；明确易以钩线钓获"
+        }
+      ],
+      "master_path": "masters/painted_comber.png"
+    },
+    {
+      "species_id": "pollack",
+      "master_sha256": "1fd14b22a31171b11e27dbd4c3f84c4c95a993066b855428fed1f11bf9b47a13",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: POLLACK, Pollachius pollachius. Long sleek adult with dark olive-brown back, bronze-gold silvery flanks and pale silver belly. Large eye and clearly PROTRUDING LOWER JAW. Absolutely NO CHIN BARBEL. A prominent DARK lateral line curves strongly downward from high shoulder above pectoral fin to mid-flank and becomes straight toward tail. EXACTLY THREE separate dorsal fins with small gaps, and EXACTLY TWO separate anal fins: first anal fin long-based, second shorter. Modestly forked gray-brown caudal tail. Real minute scales, gray translucent fins. Do not substitute saithe with straight white lateral line.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: exactly three dorsal and two anal fins, no chin barbel, protruding lower jaw, dark curved shoulder lateral line, bronze-silver flanks and forked tail. Wet eye and crisp rays. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/9",
+          "title": "MarLIN: Pollack",
+          "supports": "形态、岩礁与海藻沿岸生境、尺寸；明确记载垂钓"
+        },
+        {
+          "url": "https://www.hi.no/radgivning/bestandsoversikt/en/",
+          "title": "IMR: Stock overview",
+          "supports": "Pollack Norwegian coast地区条目"
+        }
+      ],
+      "master_path": "masters/pollack.png"
+    },
+    {
+      "species_id": "red_mullet",
+      "master_sha256": "dd5d7e3eeb01994472427eb0612aab991c8e7d7e6a05175596bbb9cad9da017d",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: RED MULLET, Mullus barbatus. Elongate light rose pink and silver fish, steep nearly vertical forehead into a blunt short snout, small terminal mouth, TWO long white chin barbels extending down and forward, no additional catfish whiskers. Large silvery pink scales, clean pale blush belly. Two well separated triangular dorsal fins; FIRST dorsal is plain translucent pale rose without dark stripes, pale anal fin, deeply forked pinkish tail. Realistic restrained light coral blush, no bright tropical saturated red, no long yellow body stripe.",
+      "revision_prompt": null,
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Mullus-barbatus-Rouget-de-vase-579",
+          "title": "DORIS: Mullus barbatus",
+          "supports": "地中海泥沙底、表层至300米；形态与体长"
+        },
+        {
+          "url": "https://www.fao.org/4/x0170f/x0170f55.pdf",
+          "title": "FAO: Mullus barbatus identification sheet",
+          "supports": "物种识别及地中海分布"
+        }
+      ],
+      "master_path": "masters/red_mullet.png"
+    },
+    {
+      "species_id": "red_seabream",
+      "master_sha256": "e645c15c1d3fe0c366250903120cff49e6dfbed213a65993ee2fa539b60a7b08",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: RED SEABREAM, Pagrus major. Beautiful robust deep laterally compressed oval body, steep gently arched forehead, short strong small mouth. Natural pink to copper-red back and upper body, silvery rosy flanks fading into a pale silver-pink belly. Numerous tiny distinct iridescent BLUE DOTS scattered mostly across upper flanks, not huge round spots. Large overlapping sharply resolved real scales. ONE continuous dorsal fin with a distinct erect spiny front and softer rounded rear joined by membrane. Long pointed pink translucent pectoral fin, appropriate paired pelvic fins and one short anal fin. Strongly forked reddish tail with darker distal rear edge. Realistic red-black iris and black pupil. Not a snapper with long fanglike teeth, no exaggerated mouth.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Natural bronze-red iris and sharply resolved wet pupil.",
+        "fins": "Continuous spiny/soft dorsal, long pointed pectoral, pink paired pelvic and anal fins, forked red tail with dark edge.",
+        "marks": "Pink/copper back and silver-pink flanks with distinct small iridescent blue spots.",
+        "anatomy": "Pass: deep bream body and small thick-lipped mouth; full fish intact. Dorsal tip sits close to canvas top but high-alpha anatomy remains inside."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/chi/species.php?science=Pagrus+major",
+          "title": "Pagrus major — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://ciesm.org/atlas_preview/Pagrusmajor.php",
+          "title": "CIESM Pagrus major species profile",
+          "supports": "连续背鳍、叉尾、体形与蓝色斑点。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/red_seabream.png"
+    },
+    {
+      "species_id": "roach",
+      "master_sha256": "605f6f121da3915875f223a50e800f6da0c62ed311f12e393be2cc92ce2f4758",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: ROACH, Rutilus rutilus. Slim-to-moderately-deep laterally compressed SILVER adult with blue-green gray back and bright silver flanks of fine distinct overlapping cycloid scales. Small TERMINAL horizontal mouth, not upturned, no barbels. Clearly reddish-orange iris with black pupil. One short triangular dorsal fin whose leading base starts directly ABOVE THE PELVIC FIN insertion. Gray translucent dorsal and pectoral fins; warm orange-red pelvic and anal fins, forked dark gray tail with subtly reddish lower lobe. Moderate body depth, keep a clean normal roach profile and silver coloration, not golden rudd.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: silver flanks, red-orange iris, terminal mouth, dorsal origin above pelvic insertion, orange-red pelvic and anal fins, forked tail. Full anatomy and pale composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/Summary/Rutilus-rutilus",
+          "title": "Rutilus rutilus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/roach.png"
+    },
+    {
+      "species_id": "rudd",
+      "master_sha256": "2261f108e092dd905aed96d11eafb40c35d322db4645715b3e8e30075a3f9841",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: RUDD, Scardinius erythrophthalmus. An adult with relatively DEEP laterally compressed, warm golden-bronze silvery body, olive back, luminous restrained golden flanks, pale underside and large distinct cycloid scales. A visibly UPWARD-TILTED small mouth with slightly protruding lower jaw, no barbels. One short triangular dorsal fin whose leading base begins CLEARLY BEHIND the pelvic fin insertion, toward tail; this relative position is essential. Bright vermilion-red pelvic and anal fins and red-tinged strongly forked tail, reddish translucent pectoral fin, olive-gold dorsal fin. Warm gold iris with black pupil and orange accent. Natural adult rudd, not silver roach.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: gold-bronze deeper body, upturned mouth, dorsal origin posterior to pelvic insertion, red pelvic/anal/tail fins. Full cutout and pale composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/2951",
+          "title": "Scardinius erythrophthalmus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/rudd.png"
+    },
+    {
+      "species_id": "saddled_seabream",
+      "master_sha256": "9c9a14ff35a0347385409d6a163772b7a33be06e3d897d711b278cd30fd37ac9",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: SADDLED SEABREAM, Oblada melanura. Somewhat elongated laterally compressed oval SILVER-GRAY body, more slender than white seabream; gently sloping forehead, short small slightly upturned mouth, large dark round eye. Many subtle fine horizontal longitudinal gray lines following scale rows on sides. Essential diagnostic conspicuous BLACK SADDLE blotch with crisp pale WHITE BORDER at caudal peduncle just before tail, occupying upper and lateral peduncle, not an all-around ring. ONE continuous spiny-plus-soft dorsal fin. Long slender pointed pectoral fin; gray translucent pelvic/anal fins; strongly forked silver-gray tail. No gold forehead band, no yellow ventral fins, no vertical body bars.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Large natural eye and dark pupil.",
+        "fins": "Continuous dorsal, pointed pectoral, gray paired/anal fins and strongly forked tail.",
+        "marks": "Longitudinal fine flank lines and black upper/lateral caudal saddle with clear pale border; ventral edge remains pale, no yellow pelvic fins.",
+        "anatomy": "Pass: slightly elongated oval bream, small mouth and intact full-body profile."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Oblada-melanura-Oblade-720",
+          "title": "DORIS: Oblada melanura",
+          "supports": "地中海岸边表层至30米、形态与尺寸；休闲渔获"
+        }
+      ],
+      "master_path": "masters/saddled_seabream.png"
+    },
+    {
+      "species_id": "saithe",
+      "master_sha256": "0a388637203cfa1f7db2333f31d4684f0f11dd5b0cd6357e5283c023fe4a4652",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: SAITHE or COALFISH, Pollachius virens. Long streamlined muscular adult with dark charcoal-green back, steel silver flanks and white silver belly. Very distinct THIN PALE near-straight lateral line from behind gill to tail, almost no shoulder arch. Lower jaw slightly projecting, NO visible adult chin barbel. EXACTLY THREE separate dorsal fins with small gaps and EXACTLY TWO separate anal fins, dark gray translucent fins and deeply forked caudal fin. Tiny natural overlapping scales, pectoral fin behind gill and small forward pelvic pair. Anatomically faithful adult saithe, not pollack with a dark curved lateral line.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: exactly three dorsal and two anal fins, no adult chin barbel, near-straight pale lateral line, charcoal-green back and silvery body, forked tail. Wet eye and crisp rays. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.hi.no/en/hi/temasider/species/northeast-arctic-saithe",
+          "title": "IMR: Northeast Arctic saithe",
+          "supports": "挪威沿岸分布、25–400米及幼鱼浅水群聚、形态、尺寸"
+        },
+        {
+          "url": "https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-en-2023-17",
+          "title": "IMR: North Sea ecosystem condition",
+          "supports": "年轻绿青鳕在挪威西海岸岛礁和峡湾浅水区"
+        }
+      ],
+      "master_path": "masters/saithe.png"
+    },
+    {
+      "species_id": "southern_catfish",
+      "master_sha256": "b22dc45203df03e9a58e987f64f8de6b4d4a64f9a6a52c634c39821836d0fe94",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: SOUTHERN CATFISH, Silurus meridionalis. Long large smooth SCALELESS charcoal-gray catfish, broad flattened head, huge wide closed mouth, small eyes, pale cream belly. EXACTLY TWO PAIRS of barbels total: one very long upper-jaw pair extending backwards and one shorter lower-jaw pair; no nasal whiskers. Tiny low soft triangular dorsal fin well forward, NO adipose fin anywhere. Exceptionally LONG continuous anal fin running along most posterior underside almost to separate slightly emarginate tail; not forked deeply. Body rounder in front, laterally compressed aft. Real slimy skin texture and restrained mottling.",
+      "revision_prompt": "Precise anatomical correction to this photorealistic SOUTHERN CATFISH Silurus meridionalis cutout. The long upper whisker incorrectly appears to emerge from the eye. Fix this anatomy: the eye must be fully unobstructed; one long MAXILLARY barbel emerges from the corner of the UPPER LIP near the mouth (well forward and below eye) and sweeps gently backward BELOW the eye along lower flank, never across the eye. The far-side maxillary barbel can be mostly naturally hidden. Keep just one pair of shorter mandibular chin barbels. Exactly two pairs of barbels total, no nasal barbels. Preserve the healthy smooth scaleless gray fish, long anal fin, small single anterior dorsal, absent adipose fin, natural mouth, complete fullbody, headlefttailright, photoreal detail, lighting and true transparent alpha. Correct only whisker attachment/course; no added objects.",
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.yueyang.gov.cn/uploadfiles/202302/20230223161357669.pdf",
+          "title": "岳阳市公开环境资料：南方鲇物种条目",
+          "supports": "洞庭湖及湘资沅澧四水分布；两对须、小背鳍、长臀鳍、微凹尾等形态。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S004484861932705X",
+          "title": "Screening and characterization of sex-linked DNA markers in Southern catfish",
+          "supports": "长江支流嘉陵江重庆北碚段真实亲鱼取样，明确 Silurus meridionalis 身份。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/southern_catfish.png"
+    },
+    {
+      "species_id": "tench",
+      "master_sha256": "3747a89c50c76f147c35727c36443fb03c7e4c03a5013fcc8ccd1a321df38e86",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for a refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; exact side profile, head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy, generous 7% clear margin. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, approximately 2000 pixels wide. Subject and non-negotiable morphology: TENCH, Tinca tinca. Thick solid muscular adult with rounded olive-green dark body, warm olive bronze flanks and cream belly, TINY embedded scales subtly apparent under moist smooth mucus sheen. Small red-orange eye, thick fleshy lips, ONE PAIR of very short delicate corner-of-mouth barbels with near-side barbel visible. Sturdy short thick tail stalk. One rounded dorsal fin, broad rounded pectoral and pelvic fins and rounded anal fin, all olive smoke translucent with delicate rays; tail broad with nearly square to gently concave outer margin and rounded tips, NOT deep forked. No big carp scales or long barbels.",
+      "revision_prompt": null,
+      "anatomy_review": "PASS: thick olive body with fine embedded scales, small red eye, fleshy lips and visible short near-side mouth-corner barbel, rounded fins and near-square shallowly concave tail. Full cutout and #edf0e4 composite visually checked.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/tinca-tinca.html",
+          "title": "Tinca tinca — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/tench.png"
+    },
+    {
+      "species_id": "white_seabream",
+      "master_sha256": "8eed207fc1940bae2d5c235ba3ab445cd1c3ae69e3d18a4d61f791e8100596ef",
+      "prompt": "Use case: scientific-educational. Production encyclopedia cutout for a refined fishing game. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish, genuine macro wildlife specimen photography appearance, never illustration, painting, plastic model, 3D render or vector. Exact lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped with 7% clear margins. One animal only. Strong natural anatomical accuracy and species-specific proportions. Authentic crisp scales and natural irregular skin microtexture, realistic glossy wet eye with tiny highlight, subtle moist iridescent highlights, delicate translucent fin membranes with individually resolved rays. Soft broad neutral daylight from upper LEFT, gentle dimensional shading within body, restrained natural colors, sharp focus throughout. A TRUE TRANSPARENT RGBA background, NO checkerboard rendered into pixels, no background of any kind. No water, scenery, hands, hooks, text, labels, border, floor, cast shadow, props, or panels. Highest practical resolution landscape, approximately 2000 pixels wide or larger. Subject and essential diagnostic anatomy: WHITE SEABREAM, Diplodus sargus. Deep tall laterally compressed oval SILVER-GRAY adult body, dark gray back, pale belly, steep convex forehead, short sturdy small mouth with slightly thick lips. Large crisp scales, subtle faint vertical gray bars (an adult, bars subdued rather than zebra-bold). Diagnostic black SADDLE patch at upper caudal peduncle just before tail, extending down sides but NOT enclosing the white ventral underside as a complete ring. Gill-cover rear margin edged subtly BLACK. Dark gray-black pelvic fins, gray anal fin. ONE continuous dorsal fin with erect spiny front and soft rear, pointed pectoral fin and gray forked tail. No yellow pelvic fins, no gold forehead band, no white-bordered enormous ocellus.",
+      "revision_prompt": null,
+      "anatomy_review": {
+        "eye": "Natural bronze iris and crisp dark pupil.",
+        "fins": "Continuous spiny/soft dorsal, pointed pectoral, dark pelvic fins, gray anal and forked tail.",
+        "marks": "Subdued adult vertical flank bars, black gill-cover edge and black caudal saddle leaving pale ventral underside; no yellow pelvic fins.",
+        "anatomy": "Pass: high oval bream body, steep forehead and small mouth. Raw transparent preview appears haloed because of hidden low-alpha RGB; #edf0e4 compositing confirms clean transparency."
+      },
+      "biological_reference_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-sargus-Sar-commun-de-Mediterranee-463",
+          "title": "DORIS: Diplodus sargus",
+          "supports": "地中海分布、港口与浅岩岸、形态和尺寸"
+        }
+      ],
+      "master_path": "masters/white_seabream.png"
+    },
+    {
+      "species_id": "yellowcheek",
+      "master_sha256": "7d28156c8c62000345ced88e44f3c44fae2fb298e65fe2b557822231e9a44fd1",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: YELLOWCHEEK, Elopichthys bambusa. Very elongated streamlined cylindrical Chinese predatory cyprinid, small fine silvery scales, dark gray-green back, clean silvery flank and cream belly, subtly golden yellow cheeks. Long sharp pointed snout with large terminal oblique mouth and protruding lower jaw, mouth closed, NO barbels. Relatively small triangular single dorsal fin located noticeably behind pelvic-fin origin, modest short anal fin, long pointed pectorals, deeply forked gray-yellow tail. Sleek muscular long body, not thick bass, not broad scaled carp.",
+      "revision_prompt": "Precise anatomical correction to this photorealistic yellowcheek fish cutout (Elopichthys bambusa). Remove ONLY the tiny extra fleshy adipose-like fin on the rear upper back between the main triangular dorsal fin and the tail. This cyprinid must have exactly ONE dorsal fin and NO adipose fin. Reconstruct a clean uninterrupted natural dorsal body contour through that small removed fin area. Preserve all other anatomy, proportions, scales, colors, composition, lighting, fins, details and true transparent alpha background. No new fins or text.",
+      "anatomy_review": "Full-resolution generated output and #edf0e4 composite; anatomy, characteristic fins, mouth, eyes, tail, species marks checked. Illustrative rather than diagnostic scientific accuracy.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305197810001481",
+          "title": "Abbas et al.: Yellowcheek population structure in the Yangtze River",
+          "supports": "长江中下游洞庭湖、鄱阳湖、东湖等真实取样及大型中上层掠食鱼生态。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://dfz.jl.gov.cn/jltc/201805/t20180502_5217576.html",
+          "title": "吉林省地方志编纂委员会：鳡",
+          "supports": "长吻大口、无须、小背鳍、深叉尾及颊部淡黄色的外部特征。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3216",
+          "title": "Eschmeyer’s Catalog of Fishes: Elopichthys bambusa",
+          "supports": "物种身份和现行名称；不与鯮 Luciobrama macrocephalus 混淆。",
+          "checked_on": "2026-10-02"
+        }
+      ],
+      "master_path": "masters/yellowcheek.png"
+    }
+  ]
+}

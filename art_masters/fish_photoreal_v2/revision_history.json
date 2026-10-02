@@ -1,0 +1,76 @@
+{
+  "status": "historical_generation_evidence_only",
+  "not_runtime": true,
+  "note": "These rejected or superseded generated images document anatomy corrections. Only the 44 images referenced by asset_manifest.json are approved for runtime use. No user-uploaded reference or QA composite is included.",
+  "asset_count": 4,
+  "assets": [
+    {
+      "species_id": "european_plaice",
+      "status": "superseded_not_for_runtime",
+      "superseded_artwork": "revision_history/european_plaice_wrong_orientation.png",
+      "superseded_sha256": "1710b15bcca916b7df6dac453c0146f959b4ec79ec21db9f17bb61cf201daf11",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "reason": "Wrong ocular-side orientation; regenerated head-right rather than mirrored.",
+      "original_generation_prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: EUROPEAN PLAICE, Pleuronectes platessa. Flatfish, RIGHT-eyed ocular side, BOTH raised eyes clearly on the same visible right face. Head LEFT and tail RIGHT for this game plate, do not mistake orientation for eye-sidedness. Broad flattened oval body, smooth dark sandy brown upper skin carrying DISTINCT widely scattered circular ORANGE-RED spots of varied size (including fin margins), NOT olive flounder leopard mottling. Small mouth, ridge of bony bumps behind eyes, long low dorsal and anal fringe fins, small pectoral behind gill, separate broad rounded tail. Face viewed perpendicular to ocular surface.",
+      "revision_prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head RIGHT tail LEFT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: EUROPEAN PLAICE, Pleuronectes platessa. Flatfish, RIGHT-eyed ocular side, BOTH raised eyes clearly on the same visible right face. Head RIGHT and tail LEFT, dorsal fin along TOP EDGE, ventral/anal edge along BOTTOM, both eyes on the visible right ocular side. This exception to the collection facing direction is essential to anatomical correctness. Broad flattened oval body, smooth dark sandy brown upper skin carrying DISTINCT widely scattered circular ORANGE-RED spots of varied size (including fin margins), NOT olive flounder leopard mottling. Small mouth, ridge of bony bumps behind eyes, long low dorsal and anal fringe fins, small pectoral behind gill, separate broad rounded tail. Face viewed perpendicular to ocular surface.",
+      "revision_method": "fresh regeneration, no pixel mirroring",
+      "final_master": "masters/european_plaice.png",
+      "final_master_sha256": "4cb8103bdc3d1ff8a7a0a962999b7a5dd8aea9152040c098c5d946b2fdef46be",
+      "source_record": "Retained rejected generation from the art working archive."
+    },
+    {
+      "species_id": "southern_catfish",
+      "status": "superseded_not_for_runtime",
+      "superseded_artwork": "revision_history/southern_catfish_barbel_attachment.png",
+      "superseded_sha256": "66ac740625669fdf313c87d043250dfa4dd0807dcea9052b4e3bae6c2a4abc31",
+      "dimensions": [
+        1942,
+        809
+      ],
+      "reason": "Maxillary barbel appeared attached at the eye; corrected to upper lip.",
+      "original_generation_prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: SOUTHERN CATFISH, Silurus meridionalis. Long large smooth SCALELESS charcoal-gray catfish, broad flattened head, huge wide closed mouth, small eyes, pale cream belly. EXACTLY TWO PAIRS of barbels total: one very long upper-jaw pair extending backwards and one shorter lower-jaw pair; no nasal whiskers. Tiny low soft triangular dorsal fin well forward, NO adipose fin anywhere. Exceptionally LONG continuous anal fin running along most posterior underside almost to separate slightly emarginate tail; not forked deeply. Body rounder in front, laterally compressed aft. Real slimy skin texture and restrained mottling.",
+      "revision_prompt": "Precise anatomical correction to this photorealistic SOUTHERN CATFISH Silurus meridionalis cutout. The long upper whisker incorrectly appears to emerge from the eye. Fix this anatomy: the eye must be fully unobstructed; one long MAXILLARY barbel emerges from the corner of the UPPER LIP near the mouth (well forward and below eye) and sweeps gently backward BELOW the eye along lower flank, never across the eye. The far-side maxillary barbel can be mostly naturally hidden. Keep just one pair of shorter mandibular chin barbels. Exactly two pairs of barbels total, no nasal barbels. Preserve the healthy smooth scaleless gray fish, long anal fin, small single anterior dorsal, absent adipose fin, natural mouth, complete fullbody, headlefttailright, photoreal detail, lighting and true transparent alpha. Correct only whisker attachment/course; no added objects.",
+      "revision_method": "targeted image-generation edit",
+      "final_master": "masters/southern_catfish.png",
+      "final_master_sha256": "b22dc45203df03e9a58e987f64f8de6b4d4a64f9a6a52c634c39821836d0fe94",
+      "source_record": "Retained rejected generation from the art working archive."
+    },
+    {
+      "species_id": "yellowcheek",
+      "status": "superseded_not_for_runtime",
+      "superseded_artwork": "revision_history/yellowcheek_extra_fin.png",
+      "superseded_sha256": "2a358ceed596cee06b7e6e63f30100ace92cfd1cbea95d7be4b8e2c19aad5539",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "reason": "Spurious adipose-like fin removed through a targeted generation edit.",
+      "original_generation_prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: YELLOWCHEEK, Elopichthys bambusa. Very elongated streamlined cylindrical Chinese predatory cyprinid, small fine silvery scales, dark gray-green back, clean silvery flank and cream belly, subtly golden yellow cheeks. Long sharp pointed snout with large terminal oblique mouth and protruding lower jaw, mouth closed, NO barbels. Relatively small triangular single dorsal fin located noticeably behind pelvic-fin origin, modest short anal fin, long pointed pectorals, deeply forked gray-yellow tail. Sleek muscular long body, not thick bass, not broad scaled carp.",
+      "revision_prompt": "Precise anatomical correction to this photorealistic yellowcheek fish cutout (Elopichthys bambusa). Remove ONLY the tiny extra fleshy adipose-like fin on the rear upper back between the main triangular dorsal fin and the tail. This cyprinid must have exactly ONE dorsal fin and NO adipose fin. Reconstruct a clean uninterrupted natural dorsal body contour through that small removed fin area. Preserve all other anatomy, proportions, scales, colors, composition, lighting, fins, details and true transparent alpha background. No new fins or text.",
+      "revision_method": "targeted image-generation edit",
+      "final_master": "masters/yellowcheek.png",
+      "final_master_sha256": "7d28156c8c62000345ced88e44f3c44fae2fb298e65fe2b557822231e9a44fd1",
+      "source_record": "Retained rejected generation from the art working archive."
+    },
+    {
+      "species_id": "chinese_sturgeon",
+      "status": "superseded_not_for_runtime",
+      "superseded_artwork": "revision_history/chinese_sturgeon_before_four_barbels.png",
+      "superseded_sha256": "47075e323643b30fccb2dd2a3897b8a0c9b267ce53704276cfab26c03da942ca",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "reason": "Three visibly separated barbels; revised to show four short barbels before the mouth.",
+      "original_generation_prompt": "Use case: scientific-educational. Production fish encyclopedia cutout for the same refined fishing game collection. ONE exceptionally detailed photorealistic living adult fish; head LEFT tail RIGHT, straight horizontal body, full body and every fin visible, no cropped anatomy. Exact natural proportions, high-resolution wildlife specimen macro photography aesthetic, authentic minute skin/scale irregularities, realistic glossy eye and delicate wet highlights, translucent fin membranes with crisp individual rays, subtle natural pigmentation, soft broad neutral daylight from upper left. Sharp focus throughout. A TRUE transparent RGBA background, no scenery or water, no hook, human, ground, cast shadow, text, border, labels, multiple views or panels. Neutral relaxed healthy fish, not stylized, not low-poly, not plastic, not painterly. Highest practical resolution landscape, generous clear space around the complete animal. Subject and non-negotiable morphology: CHINESE STURGEON, Sinosturio sinensis, formerly Acipenser sinensis. Adult streamlined gray-olive sturgeon with pointed flattened elongated snout, small dark eye, distinctly ventral toothless sucker mouth, EXACTLY FOUR short delicate barbels beneath the snout just before the mouth (near-side barbels distinguishable, naturally occlude the far pair if needed). Five longitudinal rows of actual separate pale bony scutes, not overlapping carp scales: one dorsal ridge, paired lateral rows and paired ventrolateral rows; rough minute denticles between rows. Light cream belly. One small triangular dorsal fin far toward rear, opposing posterior anal fin, strong broad paired pectoral fins and smaller pelvic fins. Strongly heterocercal tail with substantially elongated upper lobe, shark-like tail but NOT shark gills; bony gill cover. Anatomically faithful sturgeon, not a gar, not a shark. Three-quarter variation limited to 5 degrees to show underside barbels while preserving side-on catalog presentation.",
+      "revision_prompt": "Precise anatomical improvement to this Chinese sturgeon (Sinosturio sinensis) photoreal cutout. Show exactly FOUR short thin barbels hanging from underside of its long snout BEFORE the ventral mouth. Current three visible strands need a fourth naturally placed; use slight separation so four delicate barbels can be counted in this view. These are slender tactile whiskers, not tusks, not teeth. Preserve every other feature including long heterocercal tail, five scute rows, headlefttailright, whole fish proportions, excellent gray moist skin and translucent fins, original framing/light and true transparent alpha background. No new fins or text.",
+      "revision_method": "targeted image-generation edit",
+      "final_master": "masters/chinese_sturgeon.png",
+      "final_master_sha256": "2186c112bb2430f2e643dcc2c988d011d8f38a03ae01ac63a28ba5fcb27a5988",
+      "source_record": "Earlier four-species source-control checkpoint, verified against its manifest SHA256."
+    }
+  ]
+}

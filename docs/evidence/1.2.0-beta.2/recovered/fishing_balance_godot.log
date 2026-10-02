@@ -1,4 +1,4 @@
-COMMAND: godot --headless --audio-driver Dummy --path /workspace/scratch/c16084497664/farshore-fishing-restored/game --script res://tests/fishing_balance_tests.gd -- --output=/tmp/fishing-balance-recovered-final-guard/raw.json
+COMMAND: godot --headless --audio-driver Dummy --path /workspace/scratch/c16084497664/farshore-fishing-restored/game --script res://tests/fishing_balance_tests.gd -- --output=/workspace/scratch/c16084497664/farshore-fishing-restored/build/final-held-hook-balance/raw.json
 Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
 
 BALANCE PROGRESS routes=1/176 runs=90

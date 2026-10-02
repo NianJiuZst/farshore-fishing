@@ -1,0 +1,91 @@
+{
+	"cases": [
+		{
+			"actual_break": false,
+			"break_hazard": 0.0,
+			"break_threshold": 0.0,
+			"case": "fresh_zero_threshold",
+			"escape_reason": "",
+			"expected_break": false,
+			"fight_seconds": 0.00833333333333333,
+			"line_warning": false,
+			"line_wear": 0.00000666666666666667,
+			"warning_seconds": 0.0
+		},
+		{
+			"actual_break": false,
+			"break_hazard": 1.0,
+			"break_threshold": 0.0,
+			"case": "insufficient_wear",
+			"escape_reason": "",
+			"expected_break": false,
+			"fight_seconds": 0.00833333333333333,
+			"line_warning": true,
+			"line_wear": 0.770006666666667,
+			"warning_seconds": 20.0083333333333
+		},
+		{
+			"actual_break": false,
+			"break_hazard": 1.0,
+			"break_threshold": 0.0,
+			"case": "unwarned_severe_wear",
+			"escape_reason": "",
+			"expected_break": false,
+			"fight_seconds": 0.00833333333333333,
+			"line_warning": true,
+			"line_wear": 0.900006666666667,
+			"warning_seconds": 0.00833333333333333
+		},
+		{
+			"actual_break": false,
+			"break_hazard": 1.0,
+			"break_threshold": 0.0,
+			"case": "warning_grace_not_finished",
+			"escape_reason": "",
+			"expected_break": false,
+			"fight_seconds": 0.00833333333333333,
+			"line_warning": true,
+			"line_wear": 0.900006666666667,
+			"warning_seconds": 7.98833333333333
+		},
+		{
+			"actual_break": true,
+			"break_hazard": 0.0000545484848484849,
+			"break_threshold": 0.0,
+			"case": "warned_eligible_zero_threshold",
+			"escape_reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"expected_break": true,
+			"fight_seconds": 0.00833333333333333,
+			"line_warning": true,
+			"line_wear": 0.900006666666667,
+			"warning_seconds": 8.00833333333333
+		},
+		{
+			"actual_break": false,
+			"break_hazard": 0.0000545484848484849,
+			"break_threshold": 0.5,
+			"case": "warned_hazard_below_positive_threshold",
+			"escape_reason": "",
+			"expected_break": false,
+			"fight_seconds": 0.00833333333333333,
+			"line_warning": true,
+			"line_wear": 0.900006666666667,
+			"warning_seconds": 8.00833333333333
+		},
+		{
+			"actual_break": true,
+			"break_hazard": 0.500054548484849,
+			"break_threshold": 0.5,
+			"case": "warned_hazard_reaches_positive_threshold",
+			"escape_reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"expected_break": true,
+			"fight_seconds": 0.00833333333333333,
+			"line_warning": true,
+			"line_wear": 0.900006666666667,
+			"warning_seconds": 8.00833333333333
+		}
+	],
+	"checks": 28,
+	"failed": [],
+	"scope": "Focused injected boundary values; organic probability is tested separately"
+}

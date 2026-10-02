@@ -1,0 +1,807 @@
+{
+  "asset_count": 44,
+  "expected_asset_count": 44,
+  "complete": true,
+  "checks_passed": 572,
+  "checks_total": 572,
+  "errors": [],
+  "technical_checks": [
+    {
+      "species_id": "alligator_gar",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "annular_seabream",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "atlantic_cod",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "atlantic_herring",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "atlantic_mackerel",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "atlantic_wolffish",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "black_seabream",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "bowfin",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "channel_catfish",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "chinese_sturgeon",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "chub_mackerel",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "common_bream",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "common_carp",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "common_pandora",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "crucian_carp",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "european_perch",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "european_plaice",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "european_seabass",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "flathead_catfish",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "gilthead_seabream",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "haddock",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "japanese_horse_mackerel",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "japanese_seabass",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "japanese_whiting",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "largemouth_bass",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "longnose_gar",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "longsnout_catfish",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "mandarin_fish",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "marbled_rockfish",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "northern_pike",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "northern_snakehead",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "olive_flounder",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "painted_comber",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "pollack",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "red_mullet",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "red_seabream",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "roach",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "rudd",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "saddled_seabream",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "saithe",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "southern_catfish",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "tench",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "white_seabream",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    },
+    {
+      "species_id": "yellowcheek",
+      "checks": {
+        "rgba": true,
+        "high_resolution": true,
+        "true_transparency": true,
+        "uncropped_strong_alpha": true,
+        "runtime_identical_master": true,
+        "sha256_matches": true,
+        "unique_generated_pixels": true,
+        "thumb_512_max": true,
+        "thumb_hash": true,
+        "ruler_endpoints_present": true,
+        "ruler_points_in_canvas": true,
+        "ruler_large_body_span": true,
+        "eye_side_direction": true
+      }
+    }
+  ],
+  "visual_review": "Each generated asset individually reviewed by its author at original resolution and composited on game paper color #edf0e4; all44 additionally cross-checked in four comparative contact sheets by lead art agent. Fin/body/mouth/tail/species-mark errors were corrected through imagegen. This is illustrative species art, not a verified anatomical scientific dataset.",
+  "master_total_bytes": 79853989,
+  "thumb_total_bytes": 6803359,
+  "minimum_width": 1536,
+  "maximum_width": 2172
+}

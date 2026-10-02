@@ -1,6 +1,6 @@
-# 1.2.0-beta.1 full-world 3D controller and touchscreen navigation
+# 1.2.0-beta.2 full-world 3D controller and native static-fish navigation
 
-This document describes the full-catalog controller. All 44 species-specific models have passed the frozen artifact/contact and eight-view visual gates. Final source, render, Android build and device acceptance are recorded separately in `3D_ACCEPTANCE.md` and `ANDROID_3D_BUILD.md`; a model pass alone is not a release pass. The earlier playable two-fish checkpoint is preserved in commit history.
+This document describes the combined full-catalog controller and photoreal static UI. The retained 44 species-specific inworld models have their frozen artifact/contact and eight-view evidence; the new static pages use separately generated illustrative artwork. Model and focused UI checks are not a combined release pass. Final aggregate source, render, Android build and device acceptance are recorded separately in `3D_ACCEPTANCE.md` and `ANDROID_3D_BUILD.md`. Earlier two-fish and static-3D-preview checkpoints are historical.
 
 ## Native scene and flow
 
@@ -14,19 +14,21 @@ The project explicitly uses Android Mobile/Vulkan, with OpenGL fallback disabled
 
 ## Complete-model readiness and truthful presentation
 
-`Fish3DRegistry.validate_catalog(catalog, true)` must report zero errors before Main enables Start or the preparation entry action. Direct entry callbacks also enforce this gate. During partial development, saved statistics, settings, bag and the archive remain readable. Tests may inspect this disabled state; they must not set the readiness flag to pretend all 44 models exist.
+`Fish3DRegistry.validate_catalog(catalog, true)` and `FishArtCatalog.load_all(catalog)` must both report success before Main enables Start or the preparation entry action. Direct entry callbacks also enforce content readiness. The final photoreal manifest is required: partial, missing, unknown, duplicate, invalid or hash-mismatched art blocks play. Tests must not set readiness flags or disable the final art requirement to pretend content is complete. The validation contract is documented in `FISH_PHOTO_UI.md`.
 
-The catalog loses the old two-only/historical distinction. While incomplete, entries accurately distinguish an available model from a model still being prepared. When all models exist, the temporary availability labels disappear. Normal cast eligibility still follows the original species/spot/salinity/depth/gear/time/weather logic and the documented bait balance.
+All 44 catalog species retain their original IDs and cast eligibility through the original species/spot/salinity/depth/gear/time/weather logic and documented bait balance. The six regions, twelve spots, five rods and eight baits are unchanged. This art update does not add catchable species or migrate data between Android package identities.
 
-Species detail, enlarged view and the primary catch showcase use one active `FishModelPreview` for the open page: a real species-specific model, weighted animation, transparent private SubViewport3D and its own lights/world. It captures no touch input and uses no ReflectionProbe. Missing models produce an explicit unavailable label, never another species or a flat image pretending to be a model. Atlas/favorites/pending-list thumbnails remain lightweight raster indexes.
+Catalog, favorites, species detail, enlarged view, pending-catch thumbnails and the primary catch settlement use `FishArtView`, a native static `TextureRect`/`AtlasTexture`. All 44 images are high-resolution generated photoreal illustrations, not wildlife photographs. Full PNGs remain byte-identical to the approved masters; artist-reviewed alpha bounds plus two pixels of padding crop the display without altering source pixels or body proportions. Views ignore touch input; page scrolling retains ownership. Undiscovered catalog thumbnails use a static silhouette. There is no active `FishModelPreview` on these static pages, no fake swim deformation, and no pinch gesture.
 
-The result ruler now accepts a general Control. Real previews provide projected normalized-rest-length endpoints through their current model transform and camera, scaled into global canvas coordinates. The drawn ruler follows those endpoints rather than measuring viewport width. They are rest-length landmarks, not instantaneous skinned-vertex extrema; the saved millimeter measurement remains the physical record. Historical TextureRect callers retain their original alpha-bound implementation.
+Actual inworld swimming, fighting, breach and lifting continue to use the existing species-specific 3D models and skeletal animation. The retained standalone `fish_preview_3d.gd` component is a historical test/preview utility, documented separately in `FISH_3D_PREVIEW.md`.
+
+The result ruler accepts a general Control. Current `FishArtView.measurement_endpoints()` maps the manifest's reviewed anatomical nose and tail coordinates through the displayed cropped image into global canvas coordinates. Whisker extensions do not inflate length. Right-facing European plaice retains its orientation, with zero at the nose on the right. Image height follows the cropped aspect ratio so the ruler stays close to the fish. The illustration represents the species; the authoritative caught millimeter value remains the unchanged physical game record. Historical 3D-preview tests retain their projected-rest-landmark contract but do not describe the current static settlement.
 
 ## Transaction and presentation boundaries
 
 1. Hold charges the authoritative FishingSession; release creates a real encounter and begins a save session. Effective rod reach clamps the charge used by the stage trajectory
 2. Main holds Session stepping while the stage's full casting presentation is active, then resumes the existing state machine normally
-3. Waiting, nibble, bite and fight remain Session states; stage visuals follow them
+3. Waiting, nibble, bite and fight remain Session states; stage visuals follow them. A genuine fresh BITE press may continue as held reeling; an input held before BITE cannot auto-hook. Pause during the hook transition clears held input and requires a new press after resume
 4. CAUGHT immediately enters the unchanged transactional settlement, recording the catch/reward/statistics and durable pending disposition before landing animation
 5. Only the matching landing completion reveals the result; its disabled action says 起鱼中 during presentation
 6. Back/background pauses session, stage and audio. A completed result cannot be re-armed by a duplicate terminal callback
@@ -43,15 +45,17 @@ Native text/dropdown taps receive balanced GUI events only after a tap is recogn
 - Data/save/mechanics tests cover all five rods and eight baits; the original four bait weights remain unchanged across all 44 definitions
 - Production touch tests inject real Viewport ScreenTouch/ScreenDrag events, including emulated-mouse duplicate suppression, native slider/dropdown conflicts and swiping through the real eight-bait list
 - Full-world tests must use `--require-full`: no readiness override or partial-development skip can satisfy the release gate
-- Preview/ruler tests check the actual 3D model factory and projected measurement endpoints, rather than inferring length from the viewport rectangle
+- Current static-fish tests check all 44 catalog/detail/enlarged/catch paths, source/imported-image integrity, proportional crop geometry, anatomical ruler endpoints, right-facing anatomy, barbel exclusion and touch ownership
+- The focused all 44 static UI suite passed 1182/1182 at each of 720×1280 and 720×1584; geometry/integrity passed 34/34. Selected seven-species desktop Mobile Vulkan capture passed 280/280 with a clean final exit. These preserved results are in `evidence/1.2.0-beta.2/fish-photoreal/` and do not replace combined regression or phone acceptance
+- Retained historical preview/ruler tests still check the standalone 3D model factory and projected endpoints; they are not evidence that current static pages render 3D fish
 - The exact final assertion counts, source hashes, aspect ratios and rendered diagnostics belong to `3D_ACCEPTANCE.md`, avoiding stale checkpoint totals here
 
 Rendered production evidence labels its save recipe and renderer. Some captures use an isolated unlocked travel fixture; ordinary catches still come from Encounter and complete FishingSession/SaveStore. Historical seeded catch-detail captures verify presentation only. Neither kind is a user's real catch or Android hardware evidence.
 
 ### Historical partial-build review and resolved findings
 
-The early `build/qa3d/full_catalog_preview/` captures were taken while 33 models were missing. They deliberately showed disabled Start and seeded a 718 mm / 3621 g flounder only for detail/result inspection. Those images are historical layout/ruler evidence, not final art or all44 gameplay proof.
+The early `build/qa3d/full_catalog_preview/` captures were taken while 33 models were missing. They deliberately showed disabled Start and seeded a 718 mm / 3621 g flounder only for detail/result inspection. Those images are historical layout/ruler evidence, not final art or all 44 gameplay proof.
 
-Review caught and fixed dark angler front lighting and a doubled “大个体个体” caption. Actual software Vulkan retains the independently reproduced upstream seven-Texture-RID shutdown diagnostic documented in `3D_ACCEPTANCE.md`; it is not described as a warning-free exit.
+Review caught and fixed dark angler front lighting and a doubled “大个体个体” caption. Those historical software Vulkan inworld captures recorded the independently reproduced upstream seven-Texture-RID shutdown diagnostic documented in `3D_ACCEPTANCE.md`; those exits are not described as warning-free. The later selected-seven static-fish capture has a separate clean final log, with the hidden 3D background disabled during that focused render.
 
-The early animated flounder views exposed a real tail/root attachment defect missed by the static hero. The model was corrected, reimported, and rerendered through the same actual Main path at `build/qa3d/full_catalog_preview_corrected/`. Six transparent swim frames were also checked for disconnected opaque components. No UI mask or PNG substitution was used. All44 current models now have separate membrane/ray contact checks across36 sampled poses and hash-bound eight-view visual signoffs; `catalog_art_freeze.json` identifies the exact canonical art set.
+The early animated flounder views exposed a real tail/root attachment defect missed by the static hero. The model was corrected, reimported, and rerendered through the same actual Main path at `build/qa3d/full_catalog_preview_corrected/`. Six transparent swim frames were also checked for disconnected opaque components. No UI mask or PNG substitution was used. The retained inworld model set has separate membrane/ray contact checks across 36 sampled poses and hash-bound eight-view visual signoffs; `catalog_art_freeze.json` identifies that canonical 3D art set. These historical static-preview repairs and evidence remain valid within their original scope. The beta.2 static pages intentionally use the new all 44 generated illustrations, with their own manifest and evidence.

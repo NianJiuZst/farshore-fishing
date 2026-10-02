@@ -1,0 +1,71 @@
+{
+  "kind": "Fresh final guarded balance evidence after recovery",
+  "date_utc": "2026-10-02",
+  "passed": true,
+  "simulations": 18040,
+  "matrix_regressions": 341,
+  "hazard_boundary_assertions": 28,
+  "focused_session_assertions": 121,
+  "files": {
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_hazard_boundary.json": {
+      "bytes": 2527,
+      "sha256": "f8fcd97eebea41ab10920d6e4def288e22af3b8633042c49cf4a3fff3e30d72c"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_raw.json.gz": {
+      "bytes": 216378,
+      "sha256": "49ed7751e812f1cf8aef3f809a3d467a561c5fad839aef183bd3e6795409e863"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_session_observation.log": {
+      "bytes": 127,
+      "sha256": "f3840b0deebd1f6dd8a4aebe1a7a401037cefad4707b4bd4044a9e5981b458be"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_guard_trace.json": {
+      "bytes": 92573,
+      "sha256": "909a96684899cd5f87e112cec0bbf726ed93785e94a2826266e690b41ee39935"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_summary.json": {
+      "bytes": 261236,
+      "sha256": "3d87afddfa740e66223af913f28676581686fe498935bc549f1ec863930aa84c"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_observation_capture.json": {
+      "bytes": 133184,
+      "sha256": "3bf57db822dc8893aaa5bd19ffe6387bd7953d3ef0744929b5d758b69fb2fd87"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_godot.log": {
+      "bytes": 741,
+      "sha256": "20e6bcacded2b9f3c16f5eaebf6a48b14f101f8b75e33416ac65716cbaf436d2"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_hazard_boundary.log": {
+      "bytes": 119,
+      "sha256": "e27a33a95e436f7460729de6a3504526ef3c4466e054a9b04dd0e2a4b5e58ded"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_guard_trace.log": {
+      "bytes": 193,
+      "sha256": "8fc3d0228a3de29a6e7d3ac939a809385ddae8435ada0f80480b9c261853bba8"
+    },
+    "docs/FISHING_SKILL_BALANCE.md": {
+      "bytes": 11348,
+      "sha256": "d904d0dc4bb63672a5726c1552ff484c05e7e5640340f30dac6d83ef9ed307d0"
+    },
+    "game/tests/fishing_hazard_boundary_tests.gd": {
+      "bytes": 3753,
+      "sha256": "6cb5a6ac8845ec6d462f4efd0faedc17fb96d2e30cf79a260d0bac928a44423e"
+    },
+    "game/tests/fishing_hazard_boundary_tests.gd.uid": {
+      "bytes": 20,
+      "sha256": "ae039c4d7463d5f4d3a965f89263b0ffcee3540dd94a88262f704dfd8f6132c6"
+    },
+    "game/tests/fishing_guard_trace_tests.gd": {
+      "bytes": 6349,
+      "sha256": "a36af5f93ea4a2d4bda6b3ecd39a63b053bd3c092ac919f7ff58ec064e642495"
+    },
+    "game/tests/fishing_guard_trace_tests.gd.uid": {
+      "bytes": 19,
+      "sha256": "5e310371062505f081292a51dcfe4e50af3b540f122e4fd444c3af589e30bd00"
+    },
+    "tools/run_fishing_balance.py": {
+      "bytes": 13482,
+      "sha256": "6c1d9e7cb048691a1831b69ce8f027e2ad98ffdf47da538d22977a04742644f4"
+    }
+  }
+}

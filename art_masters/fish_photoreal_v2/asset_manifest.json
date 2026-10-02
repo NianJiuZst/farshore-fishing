@@ -6,8 +6,8 @@
   "orientation": "Head left, tail right except right-eyed European plaice; flatfish shown natural ocular side",
   "variants": "Runtime PNG retains all master pixels and alpha. Thumbnails are Lanczos downscaled by ImageMagick to max512px. No generated imagery is replaced by procedural drawing.",
   "coordinate_system": "All normalized values are relative to full original/runtime canvas, not subject bounding box. Bboxes are [left,top,right,bottom] with right/bottom exclusive. Ruler uses nose/tail x coordinates, excludes whisker extension.",
-  "complete": false,
-  "asset_count": 4,
+  "complete": true,
+  "asset_count": 44,
   "assets": [
     {
       "species_id": "alligator_gar",
@@ -26,7 +26,7 @@
         506,
         163
       ],
-      "thumb_sha256": "17cc4a8dc96d794f1f0aa3ab9eb655b82020a3995906066387b42c00effe343c",
+      "thumb_sha256": "1c42285f3a68948e98ef00c5260bb298f7649c1631363cb469532bf680f3bb14",
       "subject_bbox_px": [
         26,
         145,
@@ -77,6 +77,494 @@
       ]
     },
     {
+      "species_id": "annular_seabream",
+      "name": "环尾海鲷",
+      "scientific_name": "Diplodus annularis",
+      "master": "masters/annular_seabream.png",
+      "runtime": "runtime/annular_seabream.png",
+      "thumb": "thumbs/annular_seabream_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        6,
+        2,
+        506,
+        253
+      ],
+      "thumb_sha256": "5954696f60218a34aca08e6d270fd7b3990a6eae47d1dc3d3ca9c4dda9c19592",
+      "subject_bbox_px": [
+        23,
+        8,
+        1753,
+        877
+      ],
+      "subject_bbox_normalized": [
+        0.012965050732807215,
+        0.009019165727170236,
+        0.9881623449830891,
+        0.9887260428410372
+      ],
+      "nose_normalized": [
+        0.012965050732807215,
+        0.5377677564825254
+      ],
+      "tail_normalized": [
+        0.9870349492671928,
+        0.7801578354002254
+      ],
+      "ruler_extent_normalized": [
+        0.012965050732807215,
+        0.9870349492671928
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "a3db99baaa2464ab7a9c9e18ba6c0f974b9c236295cd4d0843caccc59ef685e3",
+      "transparent_fraction": 0.4737635824492322,
+      "morphology_reference": "银体略泛黄；尾柄近乎闭合黑环；腹鳍及臀鳍前部黄色；体侧不画白海鲷幼鱼的竖纹。",
+      "fact_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-annularis-Sparaillon-487",
+          "title": "DORIS: Diplodus annularis",
+          "supports": "主要0–15米、安静港口和海草；黄色腹臀鳍和尾环"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_cod",
+      "name": "大西洋鳕",
+      "scientific_name": "Gadus morhua",
+      "master": "masters/atlantic_cod.png",
+      "runtime": "runtime/atlantic_cod.png",
+      "thumb": "thumbs/atlantic_cod_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        7,
+        31,
+        506,
+        225
+      ],
+      "thumb_sha256": "e169a433f50bf6f87b4dcaa25081fa40d1b0dcd89d2f6abc689f62fa28b3c31f",
+      "subject_bbox_px": [
+        25,
+        106,
+        1753,
+        779
+      ],
+      "subject_bbox_normalized": [
+        0.014092446448703494,
+        0.11950394588500564,
+        0.9881623449830891,
+        0.8782412626832018
+      ],
+      "nose_normalized": [
+        0.014092446448703494,
+        0.5186020293122886
+      ],
+      "tail_normalized": [
+        0.9870349492671928,
+        0.46786922209695603
+      ],
+      "ruler_extent_normalized": [
+        0.014092446448703494,
+        0.9870349492671928
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "fce033271b914e6ac42287067520413b62041b2183f023ee81d10fd05edb6487",
+      "transparent_fraction": 0.6057813665764665,
+      "morphology_reference": "三枚背鳍、两枚臀鳍；下颌须；浅色弯曲侧线；背部斑驳。",
+      "fact_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2095",
+          "title": "MarLIN: Atlantic cod",
+          "supports": "形态、岸边至600米冷水生境、体长"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_herring",
+      "name": "大西洋鲱",
+      "scientific_name": "Clupea harengus",
+      "master": "masters/atlantic_herring.png",
+      "runtime": "runtime/atlantic_herring.png",
+      "thumb": "thumbs/atlantic_herring_thumb.png",
+      "width": 1752,
+      "height": 897,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        6,
+        43,
+        507,
+        219
+      ],
+      "thumb_sha256": "2f7a2d7380c1ec5ad746caffefaf64655074abdfe83b5e3f65b9ed6d6cc0e370",
+      "subject_bbox_px": [
+        21,
+        149,
+        1733,
+        747
+      ],
+      "subject_bbox_normalized": [
+        0.011986301369863013,
+        0.16610925306577481,
+        0.9891552511415526,
+        0.8327759197324415
+      ],
+      "nose_normalized": [
+        0.012557077625570776,
+        0.5128205128205128
+      ],
+      "tail_normalized": [
+        0.988013698630137,
+        0.7324414715719063
+      ],
+      "ruler_extent_normalized": [
+        0.012557077625570776,
+        0.988013698630137
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "6b5b63a09652478c77f3c67281c2c265456ac890604c300363a4849270b79b27",
+      "transparent_fraction": 0.6918743605015195,
+      "morphology_reference": "修长侧扁银身、暗蓝背；一枚背鳍；尾深叉，嘴略上翘。",
+      "fact_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/45",
+          "title": "MarLIN: Atlantic herring",
+          "supports": "体长、单背鳍形态；水面至200米，非繁殖季远离直接岸边"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_mackerel",
+      "name": "大西洋鲭",
+      "scientific_name": "Scomber scombrus",
+      "master": "masters/atlantic_mackerel.png",
+      "runtime": "runtime/atlantic_mackerel.png",
+      "thumb": "thumbs/atlantic_mackerel_thumb.png",
+      "width": 1918,
+      "height": 820,
+      "thumb_width": 512,
+      "thumb_height": 219,
+      "thumb_subject_bbox_px": [
+        6,
+        23,
+        505,
+        185
+      ],
+      "thumb_sha256": "c49d15b5f327e334806cb2084819a139fc78b5ee01c41e8f89cb125e2e8fb266",
+      "subject_bbox_px": [
+        24,
+        87,
+        1892,
+        691
+      ],
+      "subject_bbox_normalized": [
+        0.01251303441084463,
+        0.10609756097560975,
+        0.986444212721585,
+        0.8426829268292683
+      ],
+      "nose_normalized": [
+        0.013034410844629822,
+        0.5146341463414634
+      ],
+      "tail_normalized": [
+        0.9854014598540146,
+        0.7317073170731707
+      ],
+      "ruler_extent_normalized": [
+        0.013034410844629822,
+        0.9854014598540146
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "40af0d053938433865aabd2eee54f0612d8221e93161edb87f7268d301de224c",
+      "transparent_fraction": 0.6822127978839747,
+      "morphology_reference": "蓝绿背上深色波状斜纹；银腹无斑；两枚主背鳍后有小鳍；深叉尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/44",
+          "title": "MarLIN: Atlantic mackerel",
+          "supports": "形态、表层群游和尺寸；垂钓对象"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15189203/",
+          "title": "Zardoya et al. 2004, Molecular Ecology: Mediterranean mackerel populations",
+          "supports": "地中海Scomber scombrus种群原始研究；已读搜索索引返回的完整摘要，采样含希腊、意大利及西班牙"
+        },
+        {
+          "url": "https://www.fao.org/4/ac478e/ac478e08.pdf",
+          "title": "FAO: Scombrids of the world, genus Scomber",
+          "supports": "形态：两主背鳍和背腹尾前小鳍列，近岸中上层水域"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_wolffish",
+      "name": "大西洋狼鱼",
+      "scientific_name": "Anarhichas lupus",
+      "master": "masters/atlantic_wolffish.png",
+      "runtime": "runtime/atlantic_wolffish.png",
+      "thumb": "thumbs/atlantic_wolffish_thumb.png",
+      "width": 2057,
+      "height": 765,
+      "thumb_width": 512,
+      "thumb_height": 190,
+      "thumb_subject_bbox_px": [
+        5,
+        23,
+        507,
+        161
+      ],
+      "thumb_sha256": "641975339dfb7dda99e296e5f2ae5df3133ee6ce1dafcddf03a81d6de1344bfc",
+      "subject_bbox_px": [
+        23,
+        92,
+        2036,
+        647
+      ],
+      "subject_bbox_normalized": [
+        0.01118133203694701,
+        0.12026143790849673,
+        0.9897909577053962,
+        0.8457516339869281
+      ],
+      "nose_normalized": [
+        0.01118133203694701,
+        0.5882352941176471
+      ],
+      "tail_normalized": [
+        0.988818667963053,
+        0.5189542483660131
+      ],
+      "ruler_extent_normalized": [
+        0.01118133203694701,
+        0.988818667963053
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "2f68748edcdb0721ed6e79b50e34e6183deee58b950ee919881d9ca083e163a4",
+      "transparent_fraction": 0.48028825531184766,
+      "morphology_reference": "宽大头部、犬齿状前牙；蓝灰体色与深竖带；连续长背鳍，无腹鳍，圆尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/1747",
+          "title": "MarLIN: Atlantic wolffish",
+          "supports": "斯堪的纳维亚分布；成鱼通常100–300米；形态与食物"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ]
+    },
+    {
+      "species_id": "black_seabream",
+      "name": "黑鲷",
+      "scientific_name": "Acanthopagrus schlegelii",
+      "master": "masters/black_seabream.png",
+      "runtime": "runtime/black_seabream.png",
+      "thumb": "thumbs/black_seabream_thumb.png",
+      "width": 1586,
+      "height": 992,
+      "thumb_width": 512,
+      "thumb_height": 320,
+      "thumb_subject_bbox_px": [
+        5,
+        6,
+        508,
+        310
+      ],
+      "thumb_sha256": "041e2d6d548cc22fd18ffd12ccf132ba4e747dfaeda0e0a4083739004782f468",
+      "subject_bbox_px": [
+        17,
+        19,
+        1573,
+        960
+      ],
+      "subject_bbox_normalized": [
+        0.010718789407313998,
+        0.019153225806451613,
+        0.9918032786885246,
+        0.967741935483871
+      ],
+      "nose_normalized": [
+        0.011349306431273645,
+        0.5201612903225806
+      ],
+      "tail_normalized": [
+        0.9905422446406053,
+        0.7832661290322581
+      ],
+      "ruler_extent_normalized": [
+        0.011349306431273645,
+        0.9905422446406053
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "72b789e4e0d2fe3701e8333a0f2a673d60361830ac8172fbf20970fed73c2b2c",
+      "transparent_fraction": 0.5228422588780864,
+      "morphology_reference": "深灰银色的高侧扁身体，略高凸的额头，小而结实的口，连续背鳍有硬棘，尾鳍分叉。",
+      "fact_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/mobi/species.php?science=Acanthopagrus+schlegelii",
+          "title": "Acanthopagrus schlegelii — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Acanthopagrus&tbl=species",
+          "title": "Eschmeyer’s Catalog of Fishes: Acanthopagrus",
+          "supports": "有效学名及分布北达日本。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.848950/full",
+          "title": "East China Sea environmental DNA fish distribution study",
+          "supports": "长江口外东海区域出现记录；20–40m信号热点，不等同于必然垂钓可获"
+        }
+      ]
+    },
+    {
+      "species_id": "bowfin",
+      "name": "弓鳍鱼",
+      "scientific_name": "Amia ocellicauda",
+      "master": "masters/bowfin.png",
+      "runtime": "runtime/bowfin.png",
+      "thumb": "thumbs/bowfin_thumb.png",
+      "width": 2172,
+      "height": 724,
+      "thumb_width": 512,
+      "thumb_height": 171,
+      "thumb_subject_bbox_px": [
+        6,
+        16,
+        506,
+        158
+      ],
+      "thumb_sha256": "ccdd355490e2923f387a4d7ede6b489bc778082bfe9485508e31e597eeda476b",
+      "subject_bbox_px": [
+        26,
+        69,
+        2143,
+        666
+      ],
+      "subject_bbox_normalized": [
+        0.011970534069981584,
+        0.09530386740331492,
+        0.9866482504604052,
+        0.919889502762431
+      ],
+      "nose_normalized": [
+        0.011970534069981584,
+        0.5207182320441989
+      ],
+      "tail_normalized": [
+        0.9861878453038674,
+        0.48342541436464087
+      ],
+      "ruler_extent_normalized": [
+        0.011970534069981584,
+        0.9861878453038674
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "19227a7242b7b0891566f91ae31192de52f2c330f7a73e9bcc6811f66d258c11",
+      "transparent_fraction": 0.45943092905181976,
+      "morphology_reference": "橄榄色细长身体带深色斑驳，长软条背鳍与短臀鳍形成对比；圆尾，雄鱼尾基有浅色环绕的黑色眼斑。",
+      "fact_sources": [
+        {
+          "url": "https://mdc.mo.gov/discover-nature/field-guide/emerald-bowfin",
+          "title": "Missouri Department of Conservation: Emerald Bowfin",
+          "supports": "当前学名 Amia ocellicauda；密西西比低地、回水/牛轭湖生境、形态",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9709656/",
+          "title": "Brownstein et al. 2022: Hidden species diversity in an iconic living fossil vertebrate",
+          "supports": "2022物种界定；Amia ocellicauda 覆盖密西西比流域，Amia calva 为更东侧沿海支系",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "channel_catfish",
+      "name": "斑点叉尾鮰",
+      "scientific_name": "Ictalurus punctatus",
+      "master": "masters/channel_catfish.png",
+      "runtime": "runtime/channel_catfish.png",
+      "thumb": "thumbs/channel_catfish_thumb.png",
+      "width": 1947,
+      "height": 808,
+      "thumb_width": 512,
+      "thumb_height": 212,
+      "thumb_subject_bbox_px": [
+        3,
+        2,
+        509,
+        198
+      ],
+      "thumb_sha256": "22b5e8cb585d5935fdbb20ab91e51268aee70b89ea7915b7bf4e3e26c1072d98",
+      "subject_bbox_px": [
+        12,
+        6,
+        1934,
+        754
+      ],
+      "subject_bbox_normalized": [
+        0.0061633281972265025,
+        0.007425742574257425,
+        0.9933230611196713,
+        0.9331683168316832
+      ],
+      "nose_normalized": [
+        0.034411915767847974,
+        0.4752475247524752
+      ],
+      "tail_normalized": [
+        0.9928094504365691,
+        0.21534653465346534
+      ],
+      "ruler_extent_normalized": [
+        0.034411915767847974,
+        0.9928094504365691
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "16eaf522029950d48f862cdbd3057a820f8bf3dbb0a491e09933eb8806ce3456",
+      "transparent_fraction": 0.5993391712052561,
+      "morphology_reference": "无鳞的灰橄榄色身体，浅腹与分散黑斑；口边有须，尾鳍深叉，臀鳍后缘圆弧，背后有小脂鳍。",
+      "fact_sources": [
+        {
+          "url": "https://www.mdwfp.com/sites/default/files/2024-12/Fish%20ID%20Guide_0.pdf",
+          "title": "MDWFP Fish ID Guide: Channel Catfish, p.21",
+          "supports": "物种身份、河流牛轭湖生境、黑斑、深叉尾和圆臀鳍；成年大鱼斑点可消退",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+          "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+          "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
       "species_id": "chinese_sturgeon",
       "name": "中华鲟",
       "scientific_name": "Sinosturio sinensis",
@@ -90,37 +578,37 @@
       "thumb_subject_bbox_px": [
         2,
         12,
-        509,
+        507,
         160
       ],
-      "thumb_sha256": "2c8811c7675ea5fecb9b5dad15080093a8744c9ab5d17a0d2d3b56bae08b6659",
+      "thumb_sha256": "885a78885b3ce19bbce1f7aaa5205aef62c408835db99cca9f75f32565c2f685",
       "subject_bbox_px": [
         12,
-        55,
-        2159,
-        675
+        52,
+        2149,
+        677
       ],
       "subject_bbox_normalized": [
         0.0055248618784530384,
-        0.07596685082872928,
-        0.9940147329650092,
-        0.9323204419889503
+        0.0718232044198895,
+        0.9894106813996317,
+        0.9350828729281768
       ],
       "nose_normalized": [
         0.005985267034990792,
         0.5704419889502762
       ],
       "tail_normalized": [
-        0.9935543278084714,
-        0.0787292817679558
+        0.988950276243094,
+        0.07320441988950276
       ],
       "ruler_extent_normalized": [
         0.005985267034990792,
-        0.9935543278084714
+        0.988950276243094
       ],
       "alpha_threshold_for_bbox": 24,
-      "sha256": "47075e323643b30fccb2dd2a3897b8a0c9b267ce53704276cfab26c03da942ca",
-      "transparent_fraction": 0.6472412573893755,
+      "sha256": "2186c112bb2430f2e643dcc2c988d011d8f38a03ae01ac63a28ba5fcb27a5988",
+      "transparent_fraction": 0.6482237518187276,
       "morphology_reference": "灰黑背与浅色腹；全身五列骨板，吻长而扁，口位于腹面，吻下四根短须；背鳍靠后，尾鳍上叶明显长于下叶。",
       "fact_sources": [
         {
@@ -144,6 +632,116 @@
       ]
     },
     {
+      "species_id": "chub_mackerel",
+      "name": "日本鲭",
+      "scientific_name": "Scomber japonicus",
+      "master": "masters/chub_mackerel.png",
+      "runtime": "runtime/chub_mackerel.png",
+      "thumb": "thumbs/chub_mackerel_thumb.png",
+      "width": 1883,
+      "height": 835,
+      "thumb_width": 512,
+      "thumb_height": 227,
+      "thumb_subject_bbox_px": [
+        7,
+        22,
+        507,
+        205
+      ],
+      "thumb_sha256": "6af1c67f0094c858ef7ac2bfce67815627591244488a15237eccbb188fd2b151",
+      "subject_bbox_px": [
+        26,
+        79,
+        1864,
+        752
+      ],
+      "subject_bbox_normalized": [
+        0.013807753584705257,
+        0.09461077844311377,
+        0.9899097185342538,
+        0.9005988023952096
+      ],
+      "nose_normalized": [
+        0.014338821030270845,
+        0.548502994011976
+      ],
+      "tail_normalized": [
+        0.9888475836431226,
+        0.3017964071856287
+      ],
+      "ruler_extent_normalized": [
+        0.014338821030270845,
+        0.9888475836431226
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "ef196ac31e4c5431d0cd7d3182b0ba7ee3046184b1cfa057608a12c679b39604",
+      "transparent_fraction": 0.646843328743469,
+      "morphology_reference": "流线型青蓝背，背部有曲折深条纹，银白腹无斑点；背鳍后和臀鳍后各列小离鳍，尾深叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Scomber_japonicus.html",
+          "title": "Scomber japonicus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "common_bream",
+      "name": "欧鳊",
+      "scientific_name": "Abramis brama",
+      "master": "masters/common_bream.png",
+      "runtime": "runtime/common_bream.png",
+      "thumb": "thumbs/common_bream_thumb.png",
+      "width": 1753,
+      "height": 897,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        6,
+        4,
+        507,
+        258
+      ],
+      "thumb_sha256": "1909f4386c7c37ad93952d7b562559424511071c8de6ab31c7c1f90211d604bb",
+      "subject_bbox_px": [
+        23,
+        16,
+        1734,
+        882
+      ],
+      "subject_bbox_normalized": [
+        0.013120365088419851,
+        0.017837235228539576,
+        0.9891614375356532,
+        0.9832775919732442
+      ],
+      "nose_normalized": [
+        0.013120365088419851,
+        0.5562987736900781
+      ],
+      "tail_normalized": [
+        0.9880205362236166,
+        0.24526198439241917
+      ],
+      "ruler_extent_normalized": [
+        0.013120365088419851,
+        0.9880205362236166
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "cf7753d0e88e2fe43ffd4e279d8c829edbd642fe94421e37dcd2e9d30ede1d3b",
+      "transparent_fraction": 0.5065544589590325,
+      "morphology_reference": "高而侧扁的铜银色身体，小头与下位可伸缩口；臀鳍基部长，鳍呈灰黑色，深叉尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Abramis-brama",
+          "title": "Abramis brama — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
       "species_id": "common_carp",
       "name": "鲤鱼",
       "scientific_name": "Cyprinus carpio",
@@ -160,7 +758,7 @@
         506,
         242
       ],
-      "thumb_sha256": "52203b94e6009e65de6095111f653c508eba11f489e7ff81c2710dc11e559625",
+      "thumb_sha256": "0c0938c537e6ed92c9beb292728c10a4c76f926d193af96419185b126c3f24cb",
       "subject_bbox_px": [
         22,
         50,
@@ -209,6 +807,1110 @@
       ]
     },
     {
+      "species_id": "common_pandora",
+      "name": "绯小鲷",
+      "scientific_name": "Pagellus erythrinus",
+      "master": "masters/common_pandora.png",
+      "runtime": "runtime/common_pandora.png",
+      "thumb": "thumbs/common_pandora_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        3,
+        3,
+        509,
+        254
+      ],
+      "thumb_sha256": "b6b89b72233b7d6d77f45aeb3d56071a33d3fd96b4e33be1fd8b660ef5ee9675",
+      "subject_bbox_px": [
+        11,
+        9,
+        1765,
+        878
+      ],
+      "subject_bbox_normalized": [
+        0.0062006764374295375,
+        0.010146561443066516,
+        0.9949267192784668,
+        0.9898534385569335
+      ],
+      "nose_normalized": [
+        0.0062006764374295375,
+        0.532130777903044
+      ],
+      "tail_normalized": [
+        0.9943630214205186,
+        0.2762119503945885
+      ],
+      "ruler_extent_normalized": [
+        0.0062006764374295375,
+        0.9943630214205186
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "cb49b926c89dd54a785a5c58e94ed8142ae3b94c2bc0bbda40da812baaa4663d",
+      "transparent_fraction": 0.5397499138883205,
+      "morphology_reference": "粉红银色侧扁体；头部近直线轮廓、吻较长；上身细蓝点；鳃盖上缘红；尾分叉。",
+      "fact_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Pagellus-erythrinus-Pageot-commun-2771",
+          "title": "DORIS: Pagellus erythrinus",
+          "supports": "地中海5–200米、通常20–100米，偏好软底；形态"
+        },
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/ARTFIMED/ArtFiWeb/descript/Species/SPAPAERY.HTML",
+          "title": "FAO: Pagellus erythrinus identification sheet",
+          "supports": "体长最大60厘米、常见10–30厘米；本作样本16–45厘米"
+        },
+        {
+          "url": "https://fishdb.sinica.edu.tw/eng/chinesequer2.php?R1=&T1=&cn=&dere=asc&fm=&gc=&orderby=is_accepted_name&page=776&pz=30&vn=",
+          "title": "Academia Sinica Taiwan Fish Database: Chinese names",
+          "supports": "Pagellus erythrinus中文名为绯小鲷"
+        }
+      ]
+    },
+    {
+      "species_id": "crucian_carp",
+      "name": "欧洲鲫",
+      "scientific_name": "Carassius carassius",
+      "master": "masters/crucian_carp.png",
+      "runtime": "runtime/crucian_carp.png",
+      "thumb": "thumbs/crucian_carp_thumb.png",
+      "width": 1752,
+      "height": 897,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        5,
+        5,
+        507,
+        257
+      ],
+      "thumb_sha256": "8c984e146c5ad2013a89a821de55df9f791cdf59430399429360c9d3d57e76e8",
+      "subject_bbox_px": [
+        20,
+        17,
+        1733,
+        880
+      ],
+      "subject_bbox_normalized": [
+        0.01141552511415525,
+        0.0189520624303233,
+        0.9891552511415526,
+        0.9810479375696767
+      ],
+      "nose_normalized": [
+        0.01141552511415525,
+        0.5585284280936454
+      ],
+      "tail_normalized": [
+        0.988013698630137,
+        0.29208472686733555
+      ],
+      "ruler_extent_normalized": [
+        0.01141552511415525,
+        0.988013698630137
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "983838e0eda784e0f8c79a8826e3209c54fbc0c99c3a2dfad5fad276cdde1cd1",
+      "transparent_fraction": 0.4978957000249436,
+      "morphology_reference": "短而高的金铜色侧扁身体，小口无须，背鳍外缘微凸，尾鳍浅叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/270",
+          "title": "Carassius carassius — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "european_perch",
+      "name": "河鲈",
+      "scientific_name": "Perca fluviatilis",
+      "master": "masters/european_perch.png",
+      "runtime": "runtime/european_perch.png",
+      "thumb": "thumbs/european_perch_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        7,
+        505,
+        247
+      ],
+      "thumb_sha256": "de4f01c6747a8d7206b8fb3369e9a944a38f7c70982ec692bdb08cb77157b425",
+      "subject_bbox_px": [
+        19,
+        26,
+        1748,
+        854
+      ],
+      "subject_bbox_normalized": [
+        0.010710259301014656,
+        0.029312288613303268,
+        0.9853438556933484,
+        0.9627959413754228
+      ],
+      "nose_normalized": [
+        0.011273957158962795,
+        0.560315670800451
+      ],
+      "tail_normalized": [
+        0.9842164599774521,
+        0.3438556933483653
+      ],
+      "ruler_extent_normalized": [
+        0.011273957158962795,
+        0.9842164599774521
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "efadccd6f27ece289fabbbbff7607f9f951ff5428d2dcf913e8a3e60110328b4",
+      "transparent_fraction": 0.5279891556479729,
+      "morphology_reference": "黄绿色体侧有5至8道深色竖带，两个分开的背鳍，前背鳍末部有黑斑，下鳍橙红。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/358",
+          "title": "Perca fluviatilis — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "european_plaice",
+      "name": "欧洲鲽",
+      "scientific_name": "Pleuronectes platessa",
+      "master": "masters/european_plaice.png",
+      "runtime": "runtime/european_plaice.png",
+      "thumb": "thumbs/european_plaice_thumb.png",
+      "width": 1536,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 341,
+      "thumb_subject_bbox_px": [
+        7,
+        19,
+        506,
+        318
+      ],
+      "thumb_sha256": "9287fefeda795feb2a9db141018a95e2b10e71e5f7428af90b712af6b631f91a",
+      "subject_bbox_px": [
+        23,
+        59,
+        1516,
+        953
+      ],
+      "subject_bbox_normalized": [
+        0.014973958333333334,
+        0.0576171875,
+        0.9869791666666666,
+        0.9306640625
+      ],
+      "nose_normalized": [
+        0.986328125,
+        0.5302734375
+      ],
+      "tail_normalized": [
+        0.015625,
+        0.48828125
+      ],
+      "ruler_extent_normalized": [
+        0.986328125,
+        0.015625
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "4cb8103bdc3d1ff8a7a0a962999b7a5dd8aea9152040c098c5d946b2fdef46be",
+      "transparent_fraction": 0.5141290028889974,
+      "morphology_reference": "右眼侧扁平椭圆体；双眼在同一面；鲜明橙红斑点；长背臀鳍缘。",
+      "fact_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2172",
+          "title": "MarLIN: Plaice",
+          "supports": "扁平形态、右眼、橙红点、浅水幼鱼和垂钓"
+        },
+        {
+          "url": "https://biotic.marlin.ac.uk/data/species/6202",
+          "title": "MarLIN BIOTIC: Pleuronectes platessa",
+          "supports": "5–200米栖息区间"
+        },
+        {
+          "url": "https://www.hi.no/templates/reporteditor/report-pdf?id=31549&nc=5179357982",
+          "title": "IMR: Monitoring bycatches in Norwegian fisheries",
+          "supports": "挪威渔业调查中的物种记录；地区存在证据，不将渔具调查直接等同于岸钓"
+        }
+      ]
+    },
+    {
+      "species_id": "european_seabass",
+      "name": "欧洲海鲈",
+      "scientific_name": "Dicentrarchus labrax",
+      "master": "masters/european_seabass.png",
+      "runtime": "runtime/european_seabass.png",
+      "thumb": "thumbs/european_seabass_thumb.png",
+      "width": 1890,
+      "height": 832,
+      "thumb_width": 512,
+      "thumb_height": 225,
+      "thumb_subject_bbox_px": [
+        6,
+        11,
+        505,
+        215
+      ],
+      "thumb_sha256": "ebcf58d523d943e60a30fb43a73911cc5d6a37051e1ef5b7f0f5406fd00aef37",
+      "subject_bbox_px": [
+        25,
+        40,
+        1863,
+        793
+      ],
+      "subject_bbox_normalized": [
+        0.013227513227513227,
+        0.04807692307692308,
+        0.9857142857142858,
+        0.953125
+      ],
+      "nose_normalized": [
+        0.013756613756613757,
+        0.5769230769230769
+      ],
+      "tail_normalized": [
+        0.9841269841269841,
+        0.2956730769230769
+      ],
+      "ruler_extent_normalized": [
+        0.013756613756613757,
+        0.9841269841269841
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "a43255f3c19700df3bd5a95bab7828e3cc3d9533f83fabdec48001feceb8a438",
+      "transparent_fraction": 0.5687474562474563,
+      "morphology_reference": "银色修长身体，灰蓝背；两枚分离背鳍，第一背鳍带硬棘；成鱼无体侧斑点。",
+      "fact_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_europeanseabass.htm",
+          "title": "FAO: Dicentrarchus labrax cultured species fact sheet",
+          "supports": "形态、地中海及河口近岸生境与食性"
+        },
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/2127",
+          "title": "MarLIN: Bass",
+          "supports": "体长可至100厘米、通常浅于10米但有70米捕获；本作1–50米"
+        }
+      ]
+    },
+    {
+      "species_id": "flathead_catfish",
+      "name": "扁头鲶",
+      "scientific_name": "Pylodictis olivaris",
+      "master": "masters/flathead_catfish.png",
+      "runtime": "runtime/flathead_catfish.png",
+      "thumb": "thumbs/flathead_catfish_thumb.png",
+      "width": 1902,
+      "height": 827,
+      "thumb_width": 512,
+      "thumb_height": 223,
+      "thumb_subject_bbox_px": [
+        7,
+        12,
+        505,
+        197
+      ],
+      "thumb_sha256": "247654a211f75b4e2696e1bbba4d0b6aaf86e55c82dfc6be997fe8640cb93bac",
+      "subject_bbox_px": [
+        27,
+        43,
+        1877,
+        733
+      ],
+      "subject_bbox_normalized": [
+        0.014195583596214511,
+        0.05199516324062878,
+        0.9868559411146162,
+        0.8863361547762999
+      ],
+      "nose_normalized": [
+        0.0473186119873817,
+        0.4752116082224909
+      ],
+      "tail_normalized": [
+        0.9863301787592008,
+        0.5598548972188634
+      ],
+      "ruler_extent_normalized": [
+        0.0473186119873817,
+        0.9863301787592008
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "95d0872b31bc90b070cced510c40d200aa63b8c25aa430fbe45cd56dce1408d2",
+      "transparent_fraction": 0.5940911177313514,
+      "morphology_reference": "宽扁头、突出的下颌和小眼；黄褐色无鳞身体带不规则斑驳，长口须，小脂鳍；尾缘近方或微圆，不深叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/flathead-catfish",
+          "title": "MDWFP: Flathead Catfish",
+          "supports": "大型体形、宽扁头和突下颌；河流深潭、水下掩体及牛轭湖生境",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+          "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+          "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "gilthead_seabream",
+      "name": "金头鲷",
+      "scientific_name": "Sparus aurata",
+      "master": "masters/gilthead_seabream.png",
+      "runtime": "runtime/gilthead_seabream.png",
+      "thumb": "thumbs/gilthead_seabream_thumb.png",
+      "width": 1752,
+      "height": 898,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        7,
+        5,
+        505,
+        256
+      ],
+      "thumb_sha256": "39df1d20a62781fb6f9d29763926ee29d094536b76a7878210405c4b2d0fef4e",
+      "subject_bbox_px": [
+        27,
+        17,
+        1726,
+        875
+      ],
+      "subject_bbox_normalized": [
+        0.015410958904109588,
+        0.01893095768374165,
+        0.9851598173515982,
+        0.9743875278396437
+      ],
+      "nose_normalized": [
+        0.015410958904109588,
+        0.5467706013363028
+      ],
+      "tail_normalized": [
+        0.9840182648401826,
+        0.26057906458797325
+      ],
+      "ruler_extent_normalized": [
+        0.015410958904109588,
+        0.9840182648401826
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "af56f3fbb76ea0c728334676b37bdec6b782e1f9e6315e73501088cbcf952ce9",
+      "transparent_fraction": 0.513000096612462,
+      "morphology_reference": "高而侧扁的银色椭圆体；金色额带；鳃盖上方黑斑，下缘略红；单枚连续背鳍。",
+      "fact_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_giltheadseabr.htm",
+          "title": "FAO: Sparus aurata cultured species fact sheet",
+          "supports": "地中海、近岸与50米内生境、完整鉴别形态"
+        }
+      ]
+    },
+    {
+      "species_id": "haddock",
+      "name": "黑线鳕",
+      "scientific_name": "Melanogrammus aeglefinus",
+      "master": "masters/haddock.png",
+      "runtime": "runtime/haddock.png",
+      "thumb": "thumbs/haddock_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        8,
+        19,
+        505,
+        222
+      ],
+      "thumb_sha256": "d3a3c0574f86e8d3e03e8b542f1717844225ed0d0c6dd620f7aba214c86c6b36",
+      "subject_bbox_px": [
+        29,
+        66,
+        1748,
+        770
+      ],
+      "subject_bbox_normalized": [
+        0.016347237880496055,
+        0.07440811724915446,
+        0.9853438556933484,
+        0.8680947012401353
+      ],
+      "nose_normalized": [
+        0.016347237880496055,
+        0.6099210822998873
+      ],
+      "tail_normalized": [
+        0.9842164599774521,
+        0.32807215332581735
+      ],
+      "ruler_extent_normalized": [
+        0.016347237880496055,
+        0.9842164599774521
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "7ce1d25df84a05d5c9ed573a99c7b3b0a018a3c9a49ac41c655a95f43ef0dc61",
+      "transparent_fraction": 0.6331394602481796,
+      "morphology_reference": "黑色侧线与肩部黑斑；三枚背鳍、两枚臀鳍；第一背鳍高尖，颏须短。",
+      "fact_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/79",
+          "title": "MarLIN: Haddock",
+          "supports": "40–300米底层、形态、尺寸"
+        },
+        {
+          "url": "https://www.hi.no/en/hi/temasider/species/haddock/haddock-in-the-north-sea%2C-skagerrak-and-west-of-scottland",
+          "title": "IMR: North Sea haddock",
+          "supports": "挪威陆架与Skagerrak；约60厘米最大尺寸和底栖食性"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_horse_mackerel",
+      "name": "日本竹荚鱼",
+      "scientific_name": "Trachurus japonicus",
+      "master": "masters/japanese_horse_mackerel.png",
+      "runtime": "runtime/japanese_horse_mackerel.png",
+      "thumb": "thumbs/japanese_horse_mackerel_thumb.png",
+      "width": 1752,
+      "height": 897,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        5,
+        27,
+        506,
+        230
+      ],
+      "thumb_sha256": "e5c305ac7281d8f6ba4518befe260cb872cbc847351e10babedf2f2007be456d",
+      "subject_bbox_px": [
+        18,
+        92,
+        1732,
+        787
+      ],
+      "subject_bbox_normalized": [
+        0.010273972602739725,
+        0.10256410256410256,
+        0.9885844748858448,
+        0.8773690078037905
+      ],
+      "nose_normalized": [
+        0.010844748858447488,
+        0.5228539576365663
+      ],
+      "tail_normalized": [
+        0.9868721461187214,
+        0.2508361204013378
+      ],
+      "ruler_extent_normalized": [
+        0.010844748858447488,
+        0.9868721461187214
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "8397c5e31b4c35327c18acca3955d49774c072dbb8d469597aba911510dfd311",
+      "transparent_fraction": 0.6481263012680523,
+      "morphology_reference": "银白色纺锤形身体，青绿背，鳃盖上后缘黑斑；侧线弯曲并具明显棱鳞，尾深叉，无小离鳍。",
+      "fact_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/taxon/381555-fishdb",
+          "title": "Trachurus japonicus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fog.70035",
+          "title": "Vertical Habitat Use by Japanese Jack Mackerel in Tokyo Bay (2026)",
+          "supports": "东京湾个体的体型与游泳深度关系，近岸生境交叉核查。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_seabass",
+      "name": "日本花鲈",
+      "scientific_name": "Lateolabrax japonicus",
+      "master": "masters/japanese_seabass.png",
+      "runtime": "runtime/japanese_seabass.png",
+      "thumb": "thumbs/japanese_seabass_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        3,
+        20,
+        508,
+        230
+      ],
+      "thumb_sha256": "c92caca40abc65df50b688fb79b19dfb525684e9e93c294f692daf4cc948eab5",
+      "subject_bbox_px": [
+        12,
+        70,
+        1761,
+        795
+      ],
+      "subject_bbox_normalized": [
+        0.006764374295377677,
+        0.07891770011273957,
+        0.9926719278466741,
+        0.8962795941375423
+      ],
+      "nose_normalized": [
+        0.007328072153325817,
+        0.5670800450958287
+      ],
+      "tail_normalized": [
+        0.9915445321307779,
+        0.314543404735062
+      ],
+      "ruler_extent_normalized": [
+        0.007328072153325817,
+        0.9915445321307779
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "2167c6b26f026c0e9f1f1c659d69d1271a2836a37cb128f3b39eb629fb7b8d27",
+      "transparent_fraction": 0.5843239883625309,
+      "morphology_reference": "修长银色身体、灰绿背部，成鱼侧面通常无明显密集黑斑；大斜口下颌略突出，背鳍棘部和软条部有凹口。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Lateolabrax_japonicus.html",
+          "title": "Lateolabrax japonicus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.godac.jamstec.go.jp/bismal/e/view/9005278",
+          "title": "JAMSTEC BISMaL Lateolabrax japonicus",
+          "supports": "日本物种记录，独立区分 Lateolabrax maculatus。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_whiting",
+      "name": "日本沙鮻",
+      "scientific_name": "Sillago japonica",
+      "master": "masters/japanese_whiting.png",
+      "runtime": "runtime/japanese_whiting.png",
+      "thumb": "thumbs/japanese_whiting_thumb.png",
+      "width": 1983,
+      "height": 793,
+      "thumb_width": 512,
+      "thumb_height": 205,
+      "thumb_subject_bbox_px": [
+        7,
+        24,
+        504,
+        177
+      ],
+      "thumb_sha256": "536ade2bd08d9bb798a3db0bdaeb4dfd0d122bd228a812be4f0cfc796fbceab5",
+      "subject_bbox_px": [
+        29,
+        92,
+        1953,
+        682
+      ],
+      "subject_bbox_normalized": [
+        0.014624306606152295,
+        0.11601513240857503,
+        0.9848714069591528,
+        0.8600252206809584
+      ],
+      "nose_normalized": [
+        0.015128593040847202,
+        0.5485498108448928
+      ],
+      "tail_normalized": [
+        0.9838628340897629,
+        0.2837326607818411
+      ],
+      "ruler_extent_normalized": [
+        0.015128593040847202,
+        0.9838628340897629
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "539b73cf2fe9df8d74a4f08d1a33e25decf28b7cec062b770570ae9b3eea2aff",
+      "transparent_fraction": 0.6406428157624805,
+      "morphology_reference": "细长近圆筒形银米色身体，尖吻小口，两个背鳍，后背鳍和臀鳍长而低，鳍透明，尾浅凹。",
+      "fact_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/taxon/382628-fishdb",
+          "title": "Sillago japonica — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "largemouth_bass",
+      "name": "大口黑鲈",
+      "scientific_name": "Micropterus nigricans",
+      "master": "masters/largemouth_bass.png",
+      "runtime": "runtime/largemouth_bass.png",
+      "thumb": "thumbs/largemouth_bass_thumb.png",
+      "width": 1900,
+      "height": 828,
+      "thumb_width": 512,
+      "thumb_height": 223,
+      "thumb_subject_bbox_px": [
+        5,
+        7,
+        505,
+        216
+      ],
+      "thumb_sha256": "b8d5ad6d1877e2cf2e2cf2bb3d05cdf7bfc99199b3654a7390290a467c2a5ad4",
+      "subject_bbox_px": [
+        21,
+        25,
+        1874,
+        800
+      ],
+      "subject_bbox_normalized": [
+        0.011052631578947368,
+        0.030193236714975844,
+        0.9863157894736843,
+        0.966183574879227
+      ],
+      "nose_normalized": [
+        0.011052631578947368,
+        0.5169082125603864
+      ],
+      "tail_normalized": [
+        0.9857894736842105,
+        0.3309178743961353
+      ],
+      "ruler_extent_normalized": [
+        0.011052631578947368,
+        0.9857894736842105
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "88aaa9fecb334a9d8e50d36479e9311ca269b192790ad68b666acaacfc99719d",
+      "transparent_fraction": 0.46813056191202645,
+      "morphology_reference": "绿色体侧有断续黑色横带，上颌后缘超过眼睛；背鳍硬棘部与软条部之间凹缺明显，尾鳍较宽。",
+      "fact_sources": [
+        {
+          "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/largemouth-bass",
+          "title": "MDWFP: Largemouth Bass",
+          "supports": "密西西比本地大口黑鲈形态、缓流与掩体生境；该页沿用旧学名",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.dnr.state.mn.us/minnaqua/speciesprofile/largemouthbass.html",
+          "title": "Minnesota DNR: Largemouth Bass profile",
+          "supports": "上游水草丰富的河流回水和湖湾；该页沿用旧学名",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9170712/",
+          "title": "Kim et al. 2022: Phylogenomics and species delimitation of Black Basses",
+          "supports": "当前种界与命名：大口黑鲈 Micropterus nigricans，佛罗里达黑鲈 M. salmoides",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://dnr.maryland.gov/fisheries/Documents/Reg_Changes/LargemouthBass_ScientificRenaming.pdf",
+          "title": "Maryland DNR: Largemouth Bass Scientific Renaming",
+          "supports": "核实AFS 2023对大口黑鲈学名变更的采用",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "longnose_gar",
+      "name": "长吻雀鳝",
+      "scientific_name": "Lepisosteus osseus",
+      "master": "masters/longnose_gar.png",
+      "runtime": "runtime/longnose_gar.png",
+      "thumb": "thumbs/longnose_gar_thumb.png",
+      "width": 2172,
+      "height": 724,
+      "thumb_width": 512,
+      "thumb_height": 171,
+      "thumb_subject_bbox_px": [
+        7,
+        37,
+        508,
+        136
+      ],
+      "thumb_sha256": "576b790b3f99b00cb55ef025e294f9dc5b6f432d4d9ea1714d809ed040e7498c",
+      "subject_bbox_px": [
+        32,
+        159,
+        2155,
+        574
+      ],
+      "subject_bbox_normalized": [
+        0.014732965009208104,
+        0.21961325966850828,
+        0.9921731123388582,
+        0.7928176795580111
+      ],
+      "nose_normalized": [
+        0.014732965009208104,
+        0.43370165745856354
+      ],
+      "tail_normalized": [
+        0.9917127071823204,
+        0.46408839779005523
+      ],
+      "ruler_extent_normalized": [
+        0.014732965009208104,
+        0.9917127071823204
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "4941911a3006417e437ff013e2b45d4bb987baec28cbf8403f1925d0268787fc",
+      "transparent_fraction": 0.7509017327513405,
+      "morphology_reference": "吻极细长，长度超过其余头部；细长橄榄褐色身体，体侧和后方鱼鳍散布黑斑，圆尾，背鳍明显后移。",
+      "fact_sources": [
+        {
+          "url": "https://www.nps.gov/miss/learn/nature/long-nosed-gar-lepisosteus-osseus.htm",
+          "title": "NPS: Long-nosed Gar",
+          "supports": "上密西西比泛洪湖与大河回水栖境、细长吻和分布",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://dnr.sc.gov/fish/species/longnosegar.html",
+          "title": "SCDNR: Longnose Gar",
+          "supports": "吻长超过其余头部两倍、体色黑斑、缓流水域与鱼食",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/longnose-gar/",
+          "title": "Florida Museum: Longnose Gar",
+          "supports": "北美分布、菱形硬鳞、体长可超过游戏上限",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "longsnout_catfish",
+      "name": "长吻鮠",
+      "scientific_name": "Rhinobagrus dumerili",
+      "master": "masters/longsnout_catfish.png",
+      "runtime": "runtime/longsnout_catfish.png",
+      "thumb": "thumbs/longsnout_catfish_thumb.png",
+      "width": 1918,
+      "height": 820,
+      "thumb_width": 512,
+      "thumb_height": 219,
+      "thumb_subject_bbox_px": [
+        5,
+        17,
+        507,
+        191
+      ],
+      "thumb_sha256": "a45243f551bd0ee94f10df72b1aae61aa1eebf2f6745a5b287e8a6466acd1383",
+      "subject_bbox_px": [
+        19,
+        66,
+        1899,
+        715
+      ],
+      "subject_bbox_normalized": [
+        0.009906152241918665,
+        0.08048780487804878,
+        0.9900938477580813,
+        0.8719512195121951
+      ],
+      "nose_normalized": [
+        0.01824817518248175,
+        0.5219512195121951
+      ],
+      "tail_normalized": [
+        0.9895724713242962,
+        0.23170731707317074
+      ],
+      "ruler_extent_normalized": [
+        0.01824817518248175,
+        0.9895724713242962
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "e8fcebe5eb2dd3d2bdb407022a09081bcadaa432e5ae661d27f06028842c2200",
+      "transparent_fraction": 0.6472036420051375,
+      "morphology_reference": "身体无鳞，吻呈前突锥形，口下位、唇厚，四对短须；背鳍与胸鳍具硬刺，另有肥厚脂鳍，尾鳍深叉。",
+      "fact_sources": [
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5698",
+          "title": "Eschmeyer’s Catalog of Fishes: Rhinobagrus dumerili",
+          "supports": "2026年目录接受现名 Rhinobagrus dumerili；长江流域淡水分布。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5910",
+          "title": "Eschmeyer’s Catalog of Fishes: Liocassis longirostris",
+          "supports": "Leiocassis longirostris 与 Tachysurus dumerili 等名称关联到同一物种。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://nyncw.sh.gov.cn/bwbdscl/20190103/0009-109878.html",
+          "title": "上海市农业农村委员会：如何饲养长吻鮠",
+          "supports": "一般个体质量背景，游戏数值未当作实测长度重量系数。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://doi.org/10.5657/FAS.2012.0299",
+          "title": "Park, Kim & Choi (2012): Histological Observations and Regeneration of Barbels in Juveniles of the Chinese Longsnout Catfish",
+          "supports": "原始研究明确四对须，并提供外形与口须照片；与国内标准外形相互核对。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://wyxy.shou.edu.cn/_upload/article/files/e1/64/0e9f65ac480f81b7d1dda7b3721e/cd94ead1-0a57-40f8-ba32-2f526a8a5efd.pdf",
+          "title": "上海海洋大学：水产养殖种质资源基本情况普查培训材料",
+          "supports": "长吻鮠外观及脂鳍、吻部、叉尾识别参考。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "mandarin_fish",
+      "name": "鳜",
+      "scientific_name": "Siniperca chuatsi",
+      "master": "masters/mandarin_fish.png",
+      "runtime": "runtime/mandarin_fish.png",
+      "thumb": "thumbs/mandarin_fish_thumb.png",
+      "width": 1754,
+      "height": 896,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        3,
+        7,
+        509,
+        255
+      ],
+      "thumb_sha256": "bb79055ccc0aeb495d86766d01660d474885757fcd19cf43d6d6855a9e468209",
+      "subject_bbox_px": [
+        12,
+        24,
+        1741,
+        871
+      ],
+      "subject_bbox_normalized": [
+        0.0068415051311288486,
+        0.026785714285714284,
+        0.992588369441277,
+        0.9720982142857143
+      ],
+      "nose_normalized": [
+        0.0068415051311288486,
+        0.5613839285714286
+      ],
+      "tail_normalized": [
+        0.992018244013683,
+        0.5424107142857143
+      ],
+      "ruler_extent_normalized": [
+        0.0068415051311288486,
+        0.992018244013683
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "f34705d6bd7929c11c96c6a7909481552b381ba3ad202657f152186df25c3286",
+      "transparent_fraction": 0.4633942570043981,
+      "morphology_reference": "体侧扁，黄褐底色有不规则深色斑块；大口、下颌前突，背鳍前段硬棘明显、后段圆，尾鳍圆而不深叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_mandarinfish.htm",
+          "title": "FAO: Siniperca chuatsi cultured species fact sheet",
+          "supports": "体形、大口、下颌、斑纹和鳍型；淡水河湖及养殖体重背景。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://ssswxb.ihb.ac.cn/article/doi/10.7541/2018.136",
+          "title": "水生生物学报：浅水湖泊四种渔具捕捞选择性及对鱼类群落影响比较研究",
+          "supports": "长江中游牛山湖的鳜实测样本与分布；不把研究捕捞当作游玩许可。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "marbled_rockfish",
+      "name": "褐菖鲉",
+      "scientific_name": "Sebastiscus marmoratus",
+      "master": "masters/marbled_rockfish.png",
+      "runtime": "runtime/marbled_rockfish.png",
+      "thumb": "thumbs/marbled_rockfish_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        2,
+        2,
+        510,
+        252
+      ],
+      "thumb_sha256": "e4856c4854e3fa47dd49cea516d37c028b44fda337c9265340b4fe83dabfc1c5",
+      "subject_bbox_px": [
+        7,
+        6,
+        1767,
+        874
+      ],
+      "subject_bbox_normalized": [
+        0.003945885005636978,
+        0.006764374295377677,
+        0.996054114994363,
+        0.9853438556933484
+      ],
+      "nose_normalized": [
+        0.003945885005636978,
+        0.5343855693348365
+      ],
+      "tail_normalized": [
+        0.9954904171364148,
+        0.4701240135287486
+      ],
+      "ruler_extent_normalized": [
+        0.003945885005636978,
+        0.9954904171364148
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "2c58133fef58679481f0e5de7d49460c678698b667c89f2e2ef5e4e97bbbccdb",
+      "transparent_fraction": 0.4213663731031599,
+      "morphology_reference": "粗壮大头，宽大口，褐红色不规则大理石斑；连续背鳍前部硬棘，宽扇状胸鳍，圆尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/Summary/SpeciesSummary.php?id=4597&lang=spanish",
+          "title": "Sebastiscus marmoratus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "northern_pike",
+      "name": "白斑狗鱼",
+      "scientific_name": "Esox lucius",
+      "master": "masters/northern_pike.png",
+      "runtime": "runtime/northern_pike.png",
+      "thumb": "thumbs/northern_pike_thumb.png",
+      "width": 1918,
+      "height": 820,
+      "thumb_width": 512,
+      "thumb_height": 219,
+      "thumb_subject_bbox_px": [
+        6,
+        44,
+        506,
+        185
+      ],
+      "thumb_sha256": "f6b5299af68bdfae4be3bbb41b06439c579ddeea8ddc50487027cad94f3b3ea0",
+      "subject_bbox_px": [
+        22,
+        165,
+        1895,
+        692
+      ],
+      "subject_bbox_normalized": [
+        0.011470281543274244,
+        0.20121951219512196,
+        0.9880083420229405,
+        0.8439024390243902
+      ],
+      "nose_normalized": [
+        0.011991657977059436,
+        0.474390243902439
+      ],
+      "tail_normalized": [
+        0.9869655891553701,
+        0.6926829268292682
+      ],
+      "ruler_extent_normalized": [
+        0.011991657977059436,
+        0.9869655891553701
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "a2f3fc04093b1c0d200830cb80ee7a90d852c4721b2dc8476825c7364947c4c5",
+      "transparent_fraction": 0.6660310536890561,
+      "morphology_reference": "长鱼雷形身体，扁鸭嘴状吻，大口；背鳍和臀鳍靠近尾部，橄榄绿色体侧有浅色斑。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/258",
+          "title": "Esox lucius — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://home.nps.gov/miss/learn/nature/northern-pike.htm",
+          "title": "National Park Service: Northern pike",
+          "supports": "上密西西比河公园河道及漫滩湖泊、草带和凉爽深水，仅增加上游河湾"
+        }
+      ]
+    },
+    {
+      "species_id": "northern_snakehead",
+      "name": "乌鳢",
+      "scientific_name": "Channa argus",
+      "master": "masters/northern_snakehead.png",
+      "runtime": "runtime/northern_snakehead.png",
+      "thumb": "thumbs/northern_snakehead_thumb.png",
+      "width": 2172,
+      "height": 724,
+      "thumb_width": 512,
+      "thumb_height": 171,
+      "thumb_subject_bbox_px": [
+        5,
+        17,
+        508,
+        151
+      ],
+      "thumb_sha256": "6cb47631eb0fe2107546e43e770a988b88d44b731d71b61f45ce0e36d42c2487",
+      "subject_bbox_px": [
+        22,
+        74,
+        2153,
+        636
+      ],
+      "subject_bbox_normalized": [
+        0.010128913443830571,
+        0.10220994475138122,
+        0.9912523020257827,
+        0.8784530386740331
+      ],
+      "nose_normalized": [
+        0.010128913443830571,
+        0.48342541436464087
+      ],
+      "tail_normalized": [
+        0.990791896869245,
+        0.494475138121547
+      ],
+      "ruler_extent_normalized": [
+        0.010128913443830571,
+        0.990791896869245
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "01a5b63a7ae3b8f14df2a7b124e9e1317a1ec3e16f4934ade3d7598fe820602d",
+      "transparent_fraction": 0.4653583274828811,
+      "morphology_reference": "长筒形身体与扁宽头；褐色底上有深色斑块；背鳍和臀鳍很长，尾鳍圆，胸鳍后方有小腹鳍，无须。",
+      "fact_sources": [
+        {
+          "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=2265",
+          "title": "USGS: Northern Snakehead species profile",
+          "supports": "物种身份、深色斑块、长背鳍与臀鳍及扁头；中国至长江支流原生分布。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pubs.usgs.gov/circ/2004/1251/report.pdf",
+          "title": "USGS Circular 1251: Snakeheads, a biological synopsis and risk assessment",
+          "supports": "Channa argus 中国原生分布及淡水生境；不同于斑鳢或弓鳍鱼。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
       "species_id": "olive_flounder",
       "name": "牙鲆",
       "scientific_name": "Paralichthys olivaceus",
@@ -225,7 +1927,7 @@
         505,
         247
       ],
-      "thumb_sha256": "416094b1ebc69e7c7a84d369f414822021d5063a9e9bb83018ae3026c26ad985",
+      "thumb_sha256": "99018b7ca2e85cb83e3281e08148a3f500e33f9cb6734246b3cff72bbcef1466",
       "subject_bbox_px": [
         24,
         34,
@@ -259,6 +1961,699 @@
           "url": "https://swfsc-publications.fisheries.noaa.gov/publications/CR/2025/2025Purcell2.pdf",
           "title": "Paralichthys olivaceus — species account",
           "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "painted_comber",
+      "name": "字纹鮨",
+      "scientific_name": "Serranus scriba",
+      "master": "masters/painted_comber.png",
+      "runtime": "runtime/painted_comber.png",
+      "thumb": "thumbs/painted_comber_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        11,
+        507,
+        245
+      ],
+      "thumb_sha256": "a7dc5f8875699ff215481eea64c3160faddec5af43fccfb0fe9edecb7809dbbf",
+      "subject_bbox_px": [
+        19,
+        38,
+        1755,
+        847
+      ],
+      "subject_bbox_normalized": [
+        0.010710259301014656,
+        0.04284103720405862,
+        0.9892897406989853,
+        0.9549041713641488
+      ],
+      "nose_normalized": [
+        0.010710259301014656,
+        0.5501691093573844
+      ],
+      "tail_normalized": [
+        0.9887260428410372,
+        0.5186020293122886
+      ],
+      "ruler_extent_normalized": [
+        0.010710259301014656,
+        0.9887260428410372
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "b299999069108793dd1c0c42b0f8aee8103a61705113473b1fe155de9a96d420",
+      "transparent_fraction": 0.4763558299831335,
+      "morphology_reference": "头部红蓝细纹；体侧5–7条深竖带；腹部蓝斑；尾柄与尾发黄；连续棘软背鳍。",
+      "fact_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Serranus-scriba-Serran-ecriture-144",
+          "title": "DORIS: Serranus scriba",
+          "supports": "地中海岩岸0–30米；形态；明确易以钩线钓获"
+        }
+      ]
+    },
+    {
+      "species_id": "pollack",
+      "name": "青鳕",
+      "scientific_name": "Pollachius pollachius",
+      "master": "masters/pollack.png",
+      "runtime": "runtime/pollack.png",
+      "thumb": "thumbs/pollack_thumb.png",
+      "width": 1752,
+      "height": 897,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        6,
+        36,
+        506,
+        227
+      ],
+      "thumb_sha256": "1374135dadeb98a2d5cca376863568ed520a6c1b0771596ec93bd2f3948f5f3c",
+      "subject_bbox_px": [
+        21,
+        122,
+        1731,
+        776
+      ],
+      "subject_bbox_normalized": [
+        0.011986301369863013,
+        0.13600891861761427,
+        0.988013698630137,
+        0.8651059085841695
+      ],
+      "nose_normalized": [
+        0.012557077625570776,
+        0.5128205128205128
+      ],
+      "tail_normalized": [
+        0.9868721461187214,
+        0.3255295429208473
+      ],
+      "ruler_extent_normalized": [
+        0.012557077625570776,
+        0.9868721461187214
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "1fd14b22a31171b11e27dbd4c3f84c4c95a993066b855428fed1f11bf9b47a13",
+      "transparent_fraction": 0.6448880845843323,
+      "morphology_reference": "三枚背鳍、两枚臀鳍；无颏须；下颌突出；深色侧线明显弯曲。",
+      "fact_sources": [
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/9",
+          "title": "MarLIN: Pollack",
+          "supports": "形态、岩礁与海藻沿岸生境、尺寸；明确记载垂钓"
+        },
+        {
+          "url": "https://www.hi.no/radgivning/bestandsoversikt/en/",
+          "title": "IMR: Stock overview",
+          "supports": "Pollack Norwegian coast地区条目"
+        }
+      ]
+    },
+    {
+      "species_id": "red_mullet",
+      "name": "红须鲷",
+      "scientific_name": "Mullus barbatus",
+      "master": "masters/red_mullet.png",
+      "runtime": "runtime/red_mullet.png",
+      "thumb": "thumbs/red_mullet_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        6,
+        509,
+        241
+      ],
+      "thumb_sha256": "7fa10608d5a618a923a714d5da26b3d665c851452f46abd89ad7032b1a089965",
+      "subject_bbox_px": [
+        19,
+        22,
+        1762,
+        836
+      ],
+      "subject_bbox_normalized": [
+        0.010710259301014656,
+        0.02480270574971815,
+        0.9932356257046223,
+        0.9425028184892897
+      ],
+      "nose_normalized": [
+        0.02818489289740699,
+        0.5817361894024803
+      ],
+      "tail_normalized": [
+        0.9926719278466741,
+        0.2750845546786922
+      ],
+      "ruler_extent_normalized": [
+        0.02818489289740699,
+        0.9926719278466741
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "dd5d7e3eeb01994472427eb0612aab991c8e7d7e6a05175596bbb9cad9da017d",
+      "transparent_fraction": 0.6102909494400517,
+      "morphology_reference": "长体、额头陡；下颌两根白须；两枚分离背鳍，第一背鳍不带条纹；浅粉银身。",
+      "fact_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Mullus-barbatus-Rouget-de-vase-579",
+          "title": "DORIS: Mullus barbatus",
+          "supports": "地中海泥沙底、表层至300米；形态与体长"
+        },
+        {
+          "url": "https://www.fao.org/4/x0170f/x0170f55.pdf",
+          "title": "FAO: Mullus barbatus identification sheet",
+          "supports": "物种识别及地中海分布"
+        }
+      ]
+    },
+    {
+      "species_id": "red_seabream",
+      "name": "真鲷",
+      "scientific_name": "Pagrus major",
+      "master": "masters/red_seabream.png",
+      "runtime": "runtime/red_seabream.png",
+      "thumb": "thumbs/red_seabream_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        4,
+        1,
+        509,
+        253
+      ],
+      "thumb_sha256": "feb2b8dc6e8a2091181ac9d4386511b29bbc178ece41a1ea488f2a30ac35699f",
+      "subject_bbox_px": [
+        14,
+        2,
+        1763,
+        877
+      ],
+      "subject_bbox_normalized": [
+        0.007891770011273957,
+        0.002254791431792559,
+        0.9937993235625705,
+        0.9887260428410372
+      ],
+      "nose_normalized": [
+        0.007891770011273957,
+        0.6234498308906427
+      ],
+      "tail_normalized": [
+        0.9926719278466741,
+        0.25591882750845546
+      ],
+      "ruler_extent_normalized": [
+        0.007891770011273957,
+        0.9926719278466741
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "e645c15c1d3fe0c366250903120cff49e6dfbed213a65993ee2fa539b60a7b08",
+      "transparent_fraction": 0.48962020618504287,
+      "morphology_reference": "粉红至赤铜色的高侧扁身体，细小蓝色斑点，连续棘状背鳍，叉形尾，尾后缘较暗。",
+      "fact_sources": [
+        {
+          "url": "https://fishdb.sinica.edu.tw/chi/species.php?science=Pagrus+major",
+          "title": "Pagrus major — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://ciesm.org/atlas_preview/Pagrusmajor.php",
+          "title": "CIESM Pagrus major species profile",
+          "supports": "连续背鳍、叉尾、体形与蓝色斑点。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "roach",
+      "name": "拟鲤",
+      "scientific_name": "Rutilus rutilus",
+      "master": "masters/roach.png",
+      "runtime": "runtime/roach.png",
+      "thumb": "thumbs/roach_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        9,
+        20,
+        503,
+        236
+      ],
+      "thumb_sha256": "33094075a52999a609a726cb6a820e05d4d94c6137dd513f72c20f6c4dfc03b2",
+      "subject_bbox_px": [
+        32,
+        71,
+        1743,
+        817
+      ],
+      "subject_bbox_normalized": [
+        0.018038331454340473,
+        0.08004509582863585,
+        0.9825253664036077,
+        0.9210822998872604
+      ],
+      "nose_normalized": [
+        0.018038331454340473,
+        0.5366403607666291
+      ],
+      "tail_normalized": [
+        0.9819616685456595,
+        0.28410372040586246
+      ],
+      "ruler_extent_normalized": [
+        0.018038331454340473,
+        0.9819616685456595
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "605f6f121da3915875f223a50e800f6da0c62ed311f12e393be2cc92ce2f4758",
+      "transparent_fraction": 0.6130884668816386,
+      "morphology_reference": "银色侧扁身体，成鱼红色虹膜，腹鳍和臀鳍橙红，端位小口；背鳍起点约在腹鳍上方。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/Summary/Rutilus-rutilus",
+          "title": "Rutilus rutilus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "rudd",
+      "name": "红眼鱼",
+      "scientific_name": "Scardinius erythrophthalmus",
+      "master": "masters/rudd.png",
+      "runtime": "runtime/rudd.png",
+      "thumb": "thumbs/rudd_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        13,
+        7,
+        504,
+        249
+      ],
+      "thumb_sha256": "c0a26006d076d357c57af7c481440b0bbd19cdfbd89ef580a70f6e7a5e68ef8c",
+      "subject_bbox_px": [
+        47,
+        26,
+        1745,
+        861
+      ],
+      "subject_bbox_normalized": [
+        0.02649379932356257,
+        0.029312288613303268,
+        0.9836527621195039,
+        0.9706877113866967
+      ],
+      "nose_normalized": [
+        0.02705749718151071,
+        0.4983089064261556
+      ],
+      "tail_normalized": [
+        0.9825253664036077,
+        0.7812852311161218
+      ],
+      "ruler_extent_normalized": [
+        0.02705749718151071,
+        0.9825253664036077
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "2261f108e092dd905aed96d11eafb40c35d322db4645715b3e8e30075a3f9841",
+      "transparent_fraction": 0.5323983278446406,
+      "morphology_reference": "略高的金银色身体，向上翘的小口，鲜红腹鳍与臀鳍，背鳍起点明显位于腹鳍之后。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/2951",
+          "title": "Scardinius erythrophthalmus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "saddled_seabream",
+      "name": "黑尾海鲷",
+      "scientific_name": "Oblada melanura",
+      "master": "masters/saddled_seabream.png",
+      "runtime": "runtime/saddled_seabream.png",
+      "thumb": "thumbs/saddled_seabream_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        4,
+        507,
+        252
+      ],
+      "thumb_sha256": "4454f36602cf075d01051056386fab0d07d32e3c783c4e4c608e309ecf565a06",
+      "subject_bbox_px": [
+        17,
+        14,
+        1758,
+        872
+      ],
+      "subject_bbox_normalized": [
+        0.009582863585118376,
+        0.015783540022547914,
+        0.9909808342728298,
+        0.9830890642615558
+      ],
+      "nose_normalized": [
+        0.010146561443066516,
+        0.5197294250281849
+      ],
+      "tail_normalized": [
+        0.9898534385569335,
+        0.2502818489289741
+      ],
+      "ruler_extent_normalized": [
+        0.010146561443066516,
+        0.9898534385569335
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "9c9a14ff35a0347385409d6a163772b7a33be06e3d897d711b278cd30fd37ac9",
+      "transparent_fraction": 0.5051114113545399,
+      "morphology_reference": "银灰略长的椭圆体；尾柄白边黑鞍斑；细纵线、略上翘的嘴；单背鳍和叉尾。",
+      "fact_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Oblada-melanura-Oblade-720",
+          "title": "DORIS: Oblada melanura",
+          "supports": "地中海岸边表层至30米、形态与尺寸；休闲渔获"
+        }
+      ]
+    },
+    {
+      "species_id": "saithe",
+      "name": "绿青鳕",
+      "scientific_name": "Pollachius virens",
+      "master": "masters/saithe.png",
+      "runtime": "runtime/saithe.png",
+      "thumb": "thumbs/saithe_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        39,
+        507,
+        214
+      ],
+      "thumb_sha256": "7224115a363ec7f42ee79a46d18230d04f3ec15d90b5ff6e0c53407e7ae73560",
+      "subject_bbox_px": [
+        17,
+        136,
+        1757,
+        741
+      ],
+      "subject_bbox_normalized": [
+        0.009582863585118376,
+        0.15332581736189402,
+        0.9904171364148816,
+        0.8354002254791432
+      ],
+      "nose_normalized": [
+        0.010146561443066516,
+        0.5343855693348365
+      ],
+      "tail_normalized": [
+        0.9898534385569335,
+        0.3111612175873732
+      ],
+      "ruler_extent_normalized": [
+        0.010146561443066516,
+        0.9898534385569335
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "0a388637203cfa1f7db2333f31d4684f0f11dd5b0cd6357e5283c023fe4a4652",
+      "transparent_fraction": 0.6620564612993141,
+      "morphology_reference": "灰绿背、银白腹；笔直浅色侧线；三枚背鳍、两枚臀鳍；尾鳍分叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.hi.no/en/hi/temasider/species/northeast-arctic-saithe",
+          "title": "IMR: Northeast Arctic saithe",
+          "supports": "挪威沿岸分布、25–400米及幼鱼浅水群聚、形态、尺寸"
+        },
+        {
+          "url": "https://www.hi.no/hi/nettrapporter/rapport-fra-havforskningen-en-2023-17",
+          "title": "IMR: North Sea ecosystem condition",
+          "supports": "年轻绿青鳕在挪威西海岸岛礁和峡湾浅水区"
+        }
+      ]
+    },
+    {
+      "species_id": "southern_catfish",
+      "name": "南方鲇",
+      "scientific_name": "Silurus meridionalis",
+      "master": "masters/southern_catfish.png",
+      "runtime": "runtime/southern_catfish.png",
+      "thumb": "thumbs/southern_catfish_thumb.png",
+      "width": 1944,
+      "height": 809,
+      "thumb_width": 512,
+      "thumb_height": 213,
+      "thumb_subject_bbox_px": [
+        5,
+        27,
+        508,
+        177
+      ],
+      "thumb_sha256": "367fada4ee81bdcbb4d1188baeeb0edd9b1e2ce285483439f9cf86449c9a0317",
+      "subject_bbox_px": [
+        21,
+        105,
+        1928,
+        673
+      ],
+      "subject_bbox_normalized": [
+        0.010802469135802469,
+        0.12978986402966625,
+        0.9917695473251029,
+        0.8318912237330037
+      ],
+      "nose_normalized": [
+        0.010802469135802469,
+        0.5006180469715699
+      ],
+      "tail_normalized": [
+        0.9912551440329218,
+        0.3473423980222497
+      ],
+      "ruler_extent_normalized": [
+        0.010802469135802469,
+        0.9912551440329218
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "b22dc45203df03e9a58e987f64f8de6b4d4a64f9a6a52c634c39821836d0fe94",
+      "transparent_fraction": 0.6321005458143214,
+      "morphology_reference": "身体无鳞，前部粗、后部侧扁，头扁宽、口大；两对须，背鳍短小且无硬刺，无脂鳍；臀鳍很长，尾缘微凹。",
+      "fact_sources": [
+        {
+          "url": "https://www.yueyang.gov.cn/uploadfiles/202302/20230223161357669.pdf",
+          "title": "岳阳市公开环境资料：南方鲇物种条目",
+          "supports": "洞庭湖及湘资沅澧四水分布；两对须、小背鳍、长臀鳍、微凹尾等形态。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S004484861932705X",
+          "title": "Screening and characterization of sex-linked DNA markers in Southern catfish",
+          "supports": "长江支流嘉陵江重庆北碚段真实亲鱼取样，明确 Silurus meridionalis 身份。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "tench",
+      "name": "丁鱥",
+      "scientific_name": "Tinca tinca",
+      "master": "masters/tench.png",
+      "runtime": "runtime/tench.png",
+      "thumb": "thumbs/tench_thumb.png",
+      "width": 1752,
+      "height": 897,
+      "thumb_width": 512,
+      "thumb_height": 262,
+      "thumb_subject_bbox_px": [
+        6,
+        4,
+        507,
+        257
+      ],
+      "thumb_sha256": "bc546312669fe1081c454ab4cdb8c48b453af1db13fdff04eb6054c326a81c56",
+      "subject_bbox_px": [
+        21,
+        15,
+        1733,
+        879
+      ],
+      "subject_bbox_normalized": [
+        0.011986301369863013,
+        0.016722408026755852,
+        0.9891552511415526,
+        0.979933110367893
+      ],
+      "nose_normalized": [
+        0.011986301369863013,
+        0.5529542920847269
+      ],
+      "tail_normalized": [
+        0.988013698630137,
+        0.3979933110367893
+      ],
+      "ruler_extent_normalized": [
+        0.011986301369863013,
+        0.988013698630137
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "3747a89c50c76f147c35727c36443fb03c7e4c03a5013fcc8ccd1a321df38e86",
+      "transparent_fraction": 0.48500073812759936,
+      "morphology_reference": "厚实橄榄绿身体，细小嵌入鳞，小红眼，厚唇与一对短须；各鳍圆钝，尾柄粗短。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/tinca-tinca.html",
+          "title": "Tinca tinca — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "white_seabream",
+      "name": "白海鲷",
+      "scientific_name": "Diplodus sargus",
+      "master": "masters/white_seabream.png",
+      "runtime": "runtime/white_seabream.png",
+      "thumb": "thumbs/white_seabream_thumb.png",
+      "width": 1536,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 341,
+      "thumb_subject_bbox_px": [
+        8,
+        25,
+        505,
+        317
+      ],
+      "thumb_sha256": "3568806d2ffde9a0a10da3396abcc7d7bfbfb9e1d99ed301bb20b2787a3f9e34",
+      "subject_bbox_px": [
+        25,
+        76,
+        1514,
+        952
+      ],
+      "subject_bbox_normalized": [
+        0.016276041666666668,
+        0.07421875,
+        0.9856770833333334,
+        0.9296875
+      ],
+      "nose_normalized": [
+        0.016927083333333332,
+        0.5654296875
+      ],
+      "tail_normalized": [
+        0.984375,
+        0.3134765625
+      ],
+      "ruler_extent_normalized": [
+        0.016927083333333332,
+        0.984375
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "8eed207fc1940bae2d5c235ba3ab445cd1c3ae69e3d18a4d61f791e8100596ef",
+      "transparent_fraction": 0.5668036142985026,
+      "morphology_reference": "高而侧扁的银灰身体；尾柄黑鞍斑未绕到底部；鳃盖黑边；腹鳍深色，幼鱼竖纹较明显。",
+      "fact_sources": [
+        {
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-sargus-Sar-commun-de-Mediterranee-463",
+          "title": "DORIS: Diplodus sargus",
+          "supports": "地中海分布、港口与浅岩岸、形态和尺寸"
+        }
+      ]
+    },
+    {
+      "species_id": "yellowcheek",
+      "name": "鳡",
+      "scientific_name": "Elopichthys bambusa",
+      "master": "masters/yellowcheek.png",
+      "runtime": "runtime/yellowcheek.png",
+      "thumb": "thumbs/yellowcheek_thumb.png",
+      "width": 2172,
+      "height": 724,
+      "thumb_width": 512,
+      "thumb_height": 171,
+      "thumb_subject_bbox_px": [
+        9,
+        20,
+        507,
+        151
+      ],
+      "thumb_sha256": "ffaf6a8ddd980002dd8cb3e4bff69a0dac87c9a83920b33ab45c8393c5cabaa7",
+      "subject_bbox_px": [
+        38,
+        85,
+        2149,
+        640
+      ],
+      "subject_bbox_normalized": [
+        0.017495395948434623,
+        0.11740331491712708,
+        0.9894106813996317,
+        0.8839779005524862
+      ],
+      "nose_normalized": [
+        0.017495395948434623,
+        0.44060773480662985
+      ],
+      "tail_normalized": [
+        0.988950276243094,
+        0.1574585635359116
+      ],
+      "ruler_extent_normalized": [
+        0.017495395948434623,
+        0.988950276243094
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "7d28156c8c62000345ced88e44f3c44fae2fb298e65fe2b557822231e9a44fd1",
+      "transparent_fraction": 0.6476577841539228,
+      "morphology_reference": "体长而近圆筒形，吻尖、口大，无须；鳞细，颊部淡黄，背鳍较小且起点在腹鳍之后，尾鳍深叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305197810001481",
+          "title": "Abbas et al.: Yellowcheek population structure in the Yangtze River",
+          "supports": "长江中下游洞庭湖、鄱阳湖、东湖等真实取样及大型中上层掠食鱼生态。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://dfz.jl.gov.cn/jltc/201805/t20180502_5217576.html",
+          "title": "吉林省地方志编纂委员会：鳡",
+          "supports": "长吻大口、无须、小背鳍、深叉尾及颊部淡黄色的外部特征。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3216",
+          "title": "Eschmeyer’s Catalog of Fishes: Elopichthys bambusa",
+          "supports": "物种身份和现行名称；不与鯮 Luciobrama macrocephalus 混淆。",
           "checked_on": "2026-10-02"
         }
       ]

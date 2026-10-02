@@ -1,51 +1,136 @@
 {
-  "kind": "Fresh final guarded balance evidence after recovery",
+  "kind": "Final held-hook and hazard-guard balance evidence after recovery",
   "date_utc": "2026-10-02",
   "passed": true,
+  "scope": "Production fishing-session mechanics and fixed captured trajectory; no combined-UI render, Android package or phone acceptance claim",
   "simulations": 18040,
   "matrix_regressions": 341,
+  "balance_gates": 9,
+  "matrix_seconds": 190.59,
   "hazard_boundary_assertions": 28,
-  "focused_session_assertions": 121,
+  "focused_session_assertions": 124,
+  "run_provenance": {
+    "engine": "Godot 4.6.3 stable official 7d41c59c4",
+    "session_sha256": "3957e67e25bf8fed7eeebc1bbe9e7055dd016ba4fd9fca406c4a3141a39da87a",
+    "matrix_source_directory": "build/final-held-hook-balance",
+    "matrix_summary_and_log_preserved_verbatim": true,
+    "focused_source_directory": "build/beta2-doc-final-verification",
+    "focused_evidence_freshly_rerun_for_this_collection": true,
+    "source_changes_during_matrix_run": [],
+    "all_matrix_source_hashes_rechecked_at_collection": true,
+    "raw_json_bytes": 8099174,
+    "raw_json_sha256": "c355ca28cbc708c656e61f90f6f36cd87688aa289dfab51601c5d308eb649f9a",
+    "raw_compression": "gzip, lossless, mtime=0",
+    "previous_guarded_only_raw_byte_identical": true,
+    "reconstructed_pre_guard_raw_byte_identical": true,
+    "original_pre_reset_raw_status": "Lost; no byte-comparison claim against lost files"
+  },
+  "capture_continuity": {
+    "frames": 382,
+    "substeps": 764,
+    "old_new_session_differences": 0,
+    "capture_observation_mismatches": 0,
+    "old_session_sha256": "130fd17c3a86b058da18a98f8b2e5c95599b7cbacd040ad14a381298175493cb",
+    "new_session_sha256": "3957e67e25bf8fed7eeebc1bbe9e7055dd016ba4fd9fca406c4a3141a39da87a",
+    "stage_source_sha256": "4a47bff79b5fd174a98d4dedf66434ded625c107f5b92c41905a6451e6582ccf",
+    "stage_matches_capture": true,
+    "main_matches_capture": false,
+    "main_change_reason": "Photoreal static UI integration after the existing capture",
+    "main_at_capture_sha256": "65791996de4e3e7e176bca59bde9758a42038fc6f84e02920f1bfc6a1acb3e00",
+    "main_at_collection_sha256": "ee2a7498ccec1890ba7934f008a97ddf13dc3089522fa07e46d5948ebb558f46",
+    "portable_without_git_or_recovery_capsule": true,
+    "scope": "Recorded seed and input trajectory only; not a new rendering run or proof of all held-input policies"
+  },
+  "historical_evidence": {
+    "guarded_only_archive": "docs/evidence/1.2.0-beta.2/recovered/historical_guard_only",
+    "guarded_only_session_sha256": "8fe6815725f3e94843c80b9440c6b3063b70cfbcf227e8d779f61b34987f5d7f",
+    "historical_files_preserved_verbatim": true,
+    "paths_in_archived_manifest_are_original_capture_locations": true
+  },
   "files": {
-    "docs/evidence/1.2.0-beta.2/recovered/fishing_hazard_boundary.json": {
-      "bytes": 2527,
-      "sha256": "f8fcd97eebea41ab10920d6e4def288e22af3b8633042c49cf4a3fff3e30d72c"
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_godot.log": {
+      "bytes": 786,
+      "sha256": "986702cea46d8f6968dce6c437c062e58b531d6c6b3eb6e7503fad59a2356de7"
     },
     "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_raw.json.gz": {
       "bytes": 216378,
       "sha256": "49ed7751e812f1cf8aef3f809a3d467a561c5fad839aef183bd3e6795409e863"
     },
-    "docs/evidence/1.2.0-beta.2/recovered/fishing_session_observation.log": {
-      "bytes": 127,
-      "sha256": "f3840b0deebd1f6dd8a4aebe1a7a401037cefad4707b4bd4044a9e5981b458be"
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_summary.json": {
+      "bytes": 259769,
+      "sha256": "fb7404a653c8f4ddf789434ffd5ed8ad8938efb4cbe00049cbe5a00b6c9c588d"
     },
     "docs/evidence/1.2.0-beta.2/recovered/fishing_guard_trace.json": {
       "bytes": 92573,
-      "sha256": "909a96684899cd5f87e112cec0bbf726ed93785e94a2826266e690b41ee39935"
-    },
-    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_summary.json": {
-      "bytes": 261236,
-      "sha256": "3d87afddfa740e66223af913f28676581686fe498935bc549f1ec863930aa84c"
-    },
-    "docs/evidence/1.2.0-beta.2/recovered/fishing_observation_capture.json": {
-      "bytes": 133184,
-      "sha256": "3bf57db822dc8893aaa5bd19ffe6387bd7953d3ef0744929b5d758b69fb2fd87"
-    },
-    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_godot.log": {
-      "bytes": 741,
-      "sha256": "20e6bcacded2b9f3c16f5eaebf6a48b14f101f8b75e33416ac65716cbaf436d2"
-    },
-    "docs/evidence/1.2.0-beta.2/recovered/fishing_hazard_boundary.log": {
-      "bytes": 119,
-      "sha256": "e27a33a95e436f7460729de6a3504526ef3c4466e054a9b04dd0e2a4b5e58ded"
+      "sha256": "c03b5efcb2fd2c4291e29e22efee26882479ef406cfce7256e252734cc90da1c"
     },
     "docs/evidence/1.2.0-beta.2/recovered/fishing_guard_trace.log": {
       "bytes": 193,
       "sha256": "8fc3d0228a3de29a6e7d3ac939a809385ddae8435ada0f80480b9c261853bba8"
     },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_hazard_boundary.json": {
+      "bytes": 2527,
+      "sha256": "f8fcd97eebea41ab10920d6e4def288e22af3b8633042c49cf4a3fff3e30d72c"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_hazard_boundary.log": {
+      "bytes": 119,
+      "sha256": "e27a33a95e436f7460729de6a3504526ef3c4466e054a9b04dd0e2a4b5e58ded"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_observation_capture.json": {
+      "bytes": 133184,
+      "sha256": "3bf57db822dc8893aaa5bd19ffe6387bd7953d3ef0744929b5d758b69fb2fd87"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_session_observation.log": {
+      "bytes": 127,
+      "sha256": "a97ea1a1f18681cef4db444fdf6be5bf35ee8233fe6f7807bc1d1b674d130503"
+    },
     "docs/FISHING_SKILL_BALANCE.md": {
-      "bytes": 11348,
-      "sha256": "d904d0dc4bb63672a5726c1552ff484c05e7e5640340f30dac6d83ef9ed307d0"
+      "bytes": 12489,
+      "sha256": "1117df52a0bf0598a448774834e14f46722e9bce34a95da2de857193ac31b4e7"
+    },
+    "game/scripts/fishing_session.gd": {
+      "bytes": 15875,
+      "sha256": "3957e67e25bf8fed7eeebc1bbe9e7055dd016ba4fd9fca406c4a3141a39da87a"
+    },
+    "game/scripts/encounter.gd": {
+      "bytes": 3342,
+      "sha256": "5ac713402f46202cddc7dc50b8afa4817281d3bde6c4e8dda1acf98e8ac6ba79"
+    },
+    "game/scripts/fish_definition.gd": {
+      "bytes": 1407,
+      "sha256": "c609ebcc0e58a1d60e74ba70e2a955cb5a4efc04ffd4bfd90898c2f6349ed0ce"
+    },
+    "game/scripts/catalog.gd": {
+      "bytes": 7206,
+      "sha256": "ad632ffa73a3feee9a61e38f1f9d5071a03fd9acb1277602f05dec3324e4e204"
+    },
+    "game/data/fish_a.json": {
+      "bytes": 33649,
+      "sha256": "480f44129173d82f7853aed9d6494f64290c6d07fca5d97ee48f7f388901b125"
+    },
+    "game/data/fish_b.json": {
+      "bytes": 31123,
+      "sha256": "8ff294d9e1dbca1391dd6b3d787f253cf223e2c07a1845e4d1c7b84ee23b9856"
+    },
+    "game/data/fish_c.json": {
+      "bytes": 16141,
+      "sha256": "03cbffe5b65981a514a0a5aa6058b2240347d6c5f0f2a0ff6b89052b8912a768"
+    },
+    "game/data/fish_d.json": {
+      "bytes": 16184,
+      "sha256": "cd2861bf83a13313f07dc89f9be16e30882ea9c0cbf88bc18eda3be0e70a485f"
+    },
+    "game/data/world.json": {
+      "bytes": 11167,
+      "sha256": "8d97464d380accb5c6ca02951798df356f8b7a3e9939fd3df25ec7ca6db3528a"
+    },
+    "game/tests/fishing_balance_tests.gd": {
+      "bytes": 20166,
+      "sha256": "31b48499d1060c442a2b215ed10d8a80f023b764adba6fc67bd927cfdc99bd2f"
+    },
+    "game/tests/fishing_test_controller.gd": {
+      "bytes": 1553,
+      "sha256": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc"
     },
     "game/tests/fishing_hazard_boundary_tests.gd": {
       "bytes": 3753,
@@ -56,16 +141,28 @@
       "sha256": "ae039c4d7463d5f4d3a965f89263b0ffcee3540dd94a88262f704dfd8f6132c6"
     },
     "game/tests/fishing_guard_trace_tests.gd": {
-      "bytes": 6349,
-      "sha256": "a36af5f93ea4a2d4bda6b3ecd39a63b053bd3c092ac919f7ff58ec064e642495"
+      "bytes": 6834,
+      "sha256": "1690ad11916f3034cabf916fa35159eca9cac44fb73823e6c5e000521fab6946"
     },
     "game/tests/fishing_guard_trace_tests.gd.uid": {
       "bytes": 19,
       "sha256": "5e310371062505f081292a51dcfe4e50af3b540f122e4fd444c3af589e30bd00"
     },
+    "game/tests/session_observation_tests.gd": {
+      "bytes": 7781,
+      "sha256": "a9a8a02e9ef144b840a9f50c454c9c1eb5c5c7a3a0c91f354773a88e4fe2adc0"
+    },
+    "game/tests/session_observation_tests.gd.uid": {
+      "bytes": 20,
+      "sha256": "fb40a52831f888b5c8d52936f79407e6f48331bf42865337a3f5242d8fd24bc5"
+    },
     "tools/run_fishing_balance.py": {
       "bytes": 13482,
       "sha256": "6c1d9e7cb048691a1831b69ce8f027e2ad98ffdf47da538d22977a04742644f4"
+    },
+    "game/scripts/fishing_stage_3d.gd": {
+      "bytes": 60811,
+      "sha256": "4a47bff79b5fd174a98d4dedf66434ded625c107f5b92c41905a6451e6582ccf"
     }
   }
 }

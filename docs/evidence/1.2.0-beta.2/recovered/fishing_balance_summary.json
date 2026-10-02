@@ -10421,9 +10421,9 @@
   "passed": true,
   "exit_code": 0,
   "engine_errors": [],
-  "seconds": 191.65,
+  "seconds": 190.59,
   "source_sha256": {
-    "game/scripts/fishing_session.gd": "8fe6815725f3e94843c80b9440c6b3063b70cfbcf227e8d779f61b34987f5d7f",
+    "game/scripts/fishing_session.gd": "3957e67e25bf8fed7eeebc1bbe9e7055dd016ba4fd9fca406c4a3141a39da87a",
     "game/scripts/encounter.gd": "5ac713402f46202cddc7dc50b8afa4817281d3bde6c4e8dda1acf98e8ac6ba79",
     "game/scripts/fish_definition.gd": "c609ebcc0e58a1d60e74ba70e2a955cb5a4efc04ffd4bfd90898c2f6349ed0ce",
     "game/scripts/catalog.gd": "ad632ffa73a3feee9a61e38f1f9d5071a03fd9acb1277602f05dec3324e4e204",
@@ -10435,35 +10435,5 @@
     "game/tests/fishing_balance_tests.gd": "31b48499d1060c442a2b215ed10d8a80f023b764adba6fc67bd927cfdc99bd2f",
     "game/tests/fishing_test_controller.gd": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc"
   },
-  "source_changes_during_run": [],
-  "run_provenance": {
-    "kind": "Fresh complete rerun after zero-threshold hazard guard",
-    "date_utc": "2026-10-02",
-    "engine": "Godot 4.6.3 stable official 7d41c59c4",
-    "git_head_at_evidence_collection": "9cfcea47b76207a92efd003c6647651c4168ae92",
-    "session_sha256": "8fe6815725f3e94843c80b9440c6b3063b70cfbcf227e8d779f61b34987f5d7f",
-    "runner_sha256": "6c1d9e7cb048691a1831b69ce8f027e2ad98ffdf47da538d22977a04742644f4",
-    "pre_guard_full_matrix_raw_byte_identical": true,
-    "original_pre_reset_raw_status": "Lost; no byte-comparison claim against lost files"
-  },
-  "frame_outcome_disagreements_by_strategy": {
-    "metronome": 18,
-    "tension_only": 34
-  },
-  "additional_validation": {
-    "hazard_boundary_checks": 28,
-    "hazard_boundary_failures": 0,
-    "focused_session_checks": 121,
-    "focused_session_failures": 0,
-    "guard_trace_frames": 382,
-    "guard_trace_substeps": 764,
-    "guard_trace_session_differences": 0,
-    "guard_trace_capture_mismatches": 0,
-    "unchanged_visual_sources_from_capture": {
-      "res://scripts/fishing_stage_3d.gd": "4a47bff79b5fd174a98d4dedf66434ded625c107f5b92c41905a6451e6582ccf",
-      "res://scripts/main.gd": "65791996de4e3e7e176bca59bde9758a42038fc6f84e02920f1bfc6a1acb3e00"
-    },
-    "scope": "Focused boundary injection tests complement organic wear probability tests; trace comparison is not a new rendering run",
-    "guard_trace_portable_without_git_or_recovery_capsule": true
-  }
+  "source_changes_during_run": []
 }

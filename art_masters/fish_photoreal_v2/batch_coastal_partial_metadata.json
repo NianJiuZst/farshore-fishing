@@ -1,0 +1,58 @@
+{
+  "record_type": "sanitized_coastal_output_index",
+  "note": "Stable accepted-artwork references replace temporary provider output hints and machine paths. Complete prompts, generation details, biological sources and visual review remain in batch_coastal_manifest.json.",
+  "assets": {
+    "japanese_horse_mackerel": {
+      "master_path": "masters/japanese_horse_mackerel.png",
+      "master_sha256": "8397c5e31b4c35327c18acca3955d49774c072dbb8d469597aba911510dfd311"
+    },
+    "chub_mackerel": {
+      "master_path": "masters/chub_mackerel.png",
+      "master_sha256": "ef196ac31e4c5431d0cd7d3182b0ba7ee3046184b1cfa057608a12c679b39604"
+    },
+    "red_seabream": {
+      "master_path": "masters/red_seabream.png",
+      "master_sha256": "e645c15c1d3fe0c366250903120cff49e6dfbed213a65993ee2fa539b60a7b08"
+    },
+    "japanese_seabass": {
+      "master_path": "masters/japanese_seabass.png",
+      "master_sha256": "2167c6b26f026c0e9f1f1c659d69d1271a2836a37cb128f3b39eb629fb7b8d27"
+    },
+    "black_seabream": {
+      "master_path": "masters/black_seabream.png",
+      "master_sha256": "72b789e4e0d2fe3701e8333a0f2a673d60361830ac8172fbf20970fed73c2b2c"
+    },
+    "japanese_whiting": {
+      "master_path": "masters/japanese_whiting.png",
+      "master_sha256": "539b73cf2fe9df8d74a4f08d1a33e25decf28b7cec062b770570ae9b3eea2aff"
+    },
+    "atlantic_mackerel": {
+      "master_path": "masters/atlantic_mackerel.png",
+      "master_sha256": "40af0d053938433865aabd2eee54f0612d8221e93161edb87f7268d301de224c"
+    },
+    "european_seabass": {
+      "master_path": "masters/european_seabass.png",
+      "master_sha256": "a43255f3c19700df3bd5a95bab7828e3cc3d9533f83fabdec48001feceb8a438"
+    },
+    "marbled_rockfish": {
+      "master_path": "masters/marbled_rockfish.png",
+      "master_sha256": "2c58133fef58679481f0e5de7d49460c678698b667c89f2e2ef5e4e97bbbccdb"
+    },
+    "gilthead_seabream": {
+      "master_path": "masters/gilthead_seabream.png",
+      "master_sha256": "af56f3fbb76ea0c728334676b37bdec6b782e1f9e6315e73501088cbcf952ce9"
+    },
+    "white_seabream": {
+      "master_path": "masters/white_seabream.png",
+      "master_sha256": "8eed207fc1940bae2d5c235ba3ab445cd1c3ae69e3d18a4d61f791e8100596ef"
+    },
+    "saddled_seabream": {
+      "master_path": "masters/saddled_seabream.png",
+      "master_sha256": "9c9a14ff35a0347385409d6a163772b7a33be06e3d897d711b278cd30fd37ac9"
+    },
+    "annular_seabream": {
+      "master_path": "masters/annular_seabream.png",
+      "master_sha256": "a3db99baaa2464ab7a9c9e18ba6c0f974b9c236295cd4d0843caccc59ef685e3"
+    }
+  }
+}

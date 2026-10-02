@@ -1,0 +1,182 @@
+{
+  "alligator_gar": {
+    "nose": [
+      27,
+      348
+    ],
+    "tail": [
+      2023,
+      155
+    ]
+  },
+  "bowfin": {
+    "nose": [
+      26,
+      377
+    ],
+    "tail": [
+      2142,
+      350
+    ]
+  },
+  "channel_catfish": {
+    "nose": [
+      67,
+      384
+    ],
+    "tail": [
+      1933,
+      174
+    ]
+  },
+  "chinese_sturgeon": {
+    "nose": [
+      13,
+      413
+    ],
+    "tail": [
+      2148,
+      53
+    ]
+  },
+  "common_carp": {
+    "nose": [
+      23,
+      509
+    ],
+    "tail": [
+      1752,
+      229
+    ]
+  },
+  "common_pandora": {
+    "nose": [
+      11,
+      472
+    ],
+    "tail": [
+      1764,
+      245
+    ]
+  },
+  "european_plaice": {
+    "nose": [
+      1515,
+      543
+    ],
+    "tail": [
+      24,
+      500
+    ]
+  },
+  "flathead_catfish": {
+    "nose": [
+      90,
+      393
+    ],
+    "tail": [
+      1876,
+      463
+    ]
+  },
+  "largemouth_bass": {
+    "nose": [
+      21,
+      428
+    ],
+    "tail": [
+      1873,
+      274
+    ]
+  },
+  "longnose_gar": {
+    "nose": [
+      32,
+      314
+    ],
+    "tail": [
+      2154,
+      336
+    ]
+  },
+  "longsnout_catfish": {
+    "nose": [
+      35,
+      428
+    ],
+    "tail": [
+      1898,
+      190
+    ]
+  },
+  "mandarin_fish": {
+    "nose": [
+      12,
+      503
+    ],
+    "tail": [
+      1740,
+      486
+    ]
+  },
+  "northern_snakehead": {
+    "nose": [
+      22,
+      350
+    ],
+    "tail": [
+      2152,
+      358
+    ]
+  },
+  "olive_flounder": {
+    "nose": [
+      25,
+      458
+    ],
+    "tail": [
+      1750,
+      464
+    ]
+  },
+  "painted_comber": {
+    "nose": [
+      19,
+      488
+    ],
+    "tail": [
+      1754,
+      460
+    ]
+  },
+  "red_mullet": {
+    "nose": [
+      50,
+      516
+    ],
+    "tail": [
+      1761,
+      244
+    ]
+  },
+  "southern_catfish": {
+    "nose": [
+      21,
+      405
+    ],
+    "tail": [
+      1927,
+      281
+    ]
+  },
+  "yellowcheek": {
+    "nose": [
+      38,
+      319
+    ],
+    "tail": [
+      2148,
+      114
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "japanese_horse_mackerel": {
+    "nose": [
+      19,
+      469
+    ],
+    "tail": [
+      1729,
+      225
+    ]
+  },
+  "chub_mackerel": {
+    "nose": [
+      27,
+      458
+    ],
+    "tail": [
+      1862,
+      252
+    ]
+  },
+  "red_seabream": {
+    "nose": [
+      14,
+      553
+    ],
+    "tail": [
+      1761,
+      227
+    ]
+  },
+  "black_seabream": {
+    "nose": [
+      18,
+      516
+    ],
+    "tail": [
+      1571,
+      777
+    ]
+  },
+  "japanese_seabass": {
+    "nose": [
+      13,
+      503
+    ],
+    "tail": [
+      1759,
+      279
+    ]
+  },
+  "japanese_whiting": {
+    "nose": [
+      30,
+      435
+    ],
+    "tail": [
+      1951,
+      225
+    ]
+  },
+  "marbled_rockfish": {
+    "nose": [
+      7,
+      474
+    ],
+    "tail": [
+      1766,
+      417
+    ]
+  },
+  "atlantic_mackerel": {
+    "nose": [
+      25,
+      422
+    ],
+    "tail": [
+      1890,
+      600
+    ]
+  },
+  "european_seabass": {
+    "nose": [
+      26,
+      480
+    ],
+    "tail": [
+      1860,
+      246
+    ]
+  },
+  "gilthead_seabream": {
+    "nose": [
+      27,
+      491
+    ],
+    "tail": [
+      1724,
+      234
+    ]
+  },
+  "saddled_seabream": {
+    "nose": [
+      18,
+      461
+    ],
+    "tail": [
+      1756,
+      222
+    ]
+  },
+  "white_seabream": {
+    "nose": [
+      26,
+      579
+    ],
+    "tail": [
+      1512,
+      321
+    ]
+  },
+  "annular_seabream": {
+    "nose": [
+      23,
+      477
+    ],
+    "tail": [
+      1751,
+      692
+    ]
+  }
+}
