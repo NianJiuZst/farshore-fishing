@@ -186,8 +186,11 @@ func _dispose_locked(catch_id: String, action: String) -> Dictionary:
 	if not pending.has(catch_id):
 		failure["duplicate"] = true
 		return _result_error(failure, "该鱼已处理或不存在，不会重复发放收益。")
-	var candidate: Dictionary = _state.duplicate(true)
 	var record: Dictionary = pending[catch_id]
+	# Enforce conservation in the transaction layer, even for stale/forged UI calls.
+	if action == "sold" and bool(record.get("release_only", false)):
+		return _result_error(failure, "保护观察物种不可出售，请放归；图鉴与历史纪录会保留。")
+	var candidate: Dictionary = _state.duplicate(true)
 	var value: int = int(record.get("sale_value", 20)) if action == "sold" else 8
 	candidate["currency"] = int(candidate["currency"]) + value
 	(candidate["pending_catches"] as Dictionary).erase(catch_id)

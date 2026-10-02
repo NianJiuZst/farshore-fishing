@@ -48,6 +48,7 @@ func _initialize() -> void:
 	_test_stats_transactions_restart()
 	_test_duplicate_and_stale()
 	_test_write_failure_and_retry()
+	_test_release_only_protection()
 	_test_corruption_recovery()
 	_test_future_schema_protection()
 	_test_migration_and_validation()
@@ -180,6 +181,74 @@ func _test_write_failure_and_retry() -> void:
 	_check(bool(store.dispose_catch("catch_20", "sold")["ok"]), "sale can be retried")
 	_check(int(store.state["currency"]) == 240 and store.total_count() == 4, "sale retry grants only once")
 	print("PASS GROUP real I/O error injection and transactional retries")
+
+func _test_release_only_protection() -> void:
+	_check(Store.SCHEMA_VERSION == 2, "optional protection metadata stays backward-compatible with schema 2")
+	for failure: String in ["write", "validation", "backup_replace", "primary_replace"]:
+		var root_path: String = test_root.path_join("protected_" + failure)
+		var store: FailingStore = FailingStore.new()
+		_check(store.initialize(root_path), failure + " protected fixture initializes")
+		var record: Dictionary = _record(2000, 1250, 12000, "yangtze", "chinese_sturgeon")
+		record["spot_id"] = "yangtze_estuary"
+		record["release_only"] = true
+		record["conservation_note"] = "虚拟保护观察：中华鲟必须放归，不可出售。"
+		# A nonzero value must never bypass the protected-disposition rule.
+		record["sale_value"] = 999999
+		var before: Dictionary = store.state
+		var primary_before: String = FileAccess.get_file_as_string(root_path.path_join(Store.PRIMARY_NAME))
+		store.fail_once = failure
+		_check(not bool(_catch(store, record)["ok"]), failure + " protected settlement failure is visible")
+		_check(store.state == before and FileAccess.get_file_as_string(root_path.path_join(Store.PRIMARY_NAME)) == primary_before, failure + " protected settlement failure publishes no state or reward")
+		var changed: Dictionary = record.duplicate(true)
+		changed["release_only"] = false
+		_check(not bool(store.settle_catch(changed)["ok"]), failure + " retry cannot remove protection metadata")
+		_check(bool(store.settle_catch(record)["ok"]), failure + " original protected settlement retries successfully")
+		_check(store.total_count() == 1 and store.discovered_count() == 1 and int(store.state["currency"]) == 145, failure + " protected observation counts and rewards exactly once")
+		_check(_same(store.state["pending_catches"][record["catch_id"]], record), failure + " full pending protection snapshot preserved")
+		for key: String in ["first", "last", "max_length", "max_weight"]:
+			_check(_same(store.state["species_stats"]["chinese_sturgeon"][key], record), failure + " full protected historical snapshot: " + key)
+		before = store.state
+		primary_before = FileAccess.get_file_as_string(root_path.path_join(Store.PRIMARY_NAME))
+		var backup_before: String = FileAccess.get_file_as_string(root_path.path_join(Store.BACKUP_NAME))
+		store.fail_once = failure
+		var sale: Dictionary = store.dispose_catch(str(record["catch_id"]), "sold")
+		_check(not bool(sale["ok"]) and not bool(sale["duplicate"]) and not str(sale["error"]).is_empty(), failure + " direct protected sale returns an explicit rejection")
+		_check(store.fail_once == failure, failure + " rejected protected sale never enters the disk writer")
+		_check(store.state == before and FileAccess.get_file_as_string(root_path.path_join(Store.PRIMARY_NAME)) == primary_before and FileAccess.get_file_as_string(root_path.path_join(Store.BACKUP_NAME)) == backup_before, failure + " rejected protected sale leaves all memory and disk bytes unchanged")
+		var reload: FailingStore = FailingStore.new()
+		_check(reload.initialize(root_path) and _same(reload.state, before), failure + " protected pending record survives reload")
+		_check(not bool(reload.dispose_catch(str(record["catch_id"]), "sold")["ok"]) and _same(reload.state, before), failure + " protected sale still rejected after reload")
+		reload.fail_once = failure
+		_check(not bool(reload.dispose_catch(str(record["catch_id"]), "released")["ok"]), failure + " protected release write failure is visible")
+		_check(_same(reload.state, before) and FileAccess.get_file_as_string(root_path.path_join(Store.PRIMARY_NAME)) == primary_before, failure + " failed protected release keeps pending fish and balance")
+		var failed_reload: Store = Store.new()
+		_check(failed_reload.initialize(root_path) and _same(failed_reload.state, before), failure + " failed protected release reloads unchanged primary")
+		_check(not bool(reload.dispose_catch(str(record["catch_id"]), "sold")["ok"]), failure + " failed release cannot be retried as a sale")
+		_check(bool(reload.dispose_catch(str(record["catch_id"]), "released")["ok"]), failure + " protected release retries successfully")
+		_check(int(reload.state["currency"]) == 153 and reload.total_count() == 1 and reload.discovered_count() == 1, failure + " protected release grants only ordinary release bonus and retains history")
+		_check(_same(reload.state["species_stats"], before["species_stats"]) and (reload.state["pending_catches"] as Dictionary).is_empty(), failure + " protected release removes only pending entry and preserves all historical snapshots")
+		before = reload.state
+		for action: String in ["released", "sold"]:
+			var duplicate: Dictionary = reload.dispose_catch(str(record["catch_id"]), action)
+			_check(not bool(duplicate["ok"]) and bool(duplicate["duplicate"]) and reload.state == before, failure + " protected post-release " + action + " is idempotent")
+		var final_reload: Store = Store.new()
+		_check(final_reload.initialize(root_path) and _same(final_reload.state, before), failure + " completed protected release persists without replay")
+	var legacy: Store = Store.new()
+	var legacy_root: String = test_root.path_join("protection_optional")
+	_check(legacy.initialize(legacy_root), "legacy optional-metadata fixture initializes")
+	var legacy_record: Dictionary = _record(2100)
+	_check(not legacy_record.has("release_only") and bool(_catch(legacy, legacy_record)["ok"]), "legacy schema 2 record without protection metadata still settles")
+	var ordinary_record: Dictionary = _record(2101)
+	ordinary_record["release_only"] = false
+	ordinary_record["conservation_note"] = ""
+	_check(bool(_catch(legacy, ordinary_record)["ok"]), "explicit false protection flag still settles")
+	var legacy_reload: Store = Store.new()
+	_check(legacy_reload.initialize(legacy_root), "mixed old/new metadata reloads")
+	_check(not (legacy_reload.state["pending_catches"]["catch_2100"] as Dictionary).has("release_only"), "missing optional field remains absent without destructive migration")
+	_check(legacy_reload.state["pending_catches"]["catch_2101"]["release_only"] is bool and not bool(legacy_reload.state["pending_catches"]["catch_2101"]["release_only"]), "false protection flag preserves its JSON boolean type")
+	_check(bool(legacy_reload.dispose_catch("catch_2100", "sold")["ok"]) and bool(legacy_reload.dispose_catch("catch_2101", "sold")["ok"]), "legacy and explicitly ordinary catches both remain sellable")
+	_check(int(legacy_reload.state["currency"]) == 210 and legacy_reload.total_count() == 2, "ordinary sales preserve exact legacy economics and historical count")
+	print("PASS GROUP protected observation sale guard, four settlement/release I/O failures, exact retries, restart and schema 2 compatibility")
 
 func _test_corruption_recovery() -> void:
 	var root_path: String = test_root.path_join("recover")

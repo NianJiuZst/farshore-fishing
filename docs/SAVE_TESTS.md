@@ -12,6 +12,7 @@
 - `begin_session(session_id)`、`abandon_session(session_id)`：当前只允许一个活动会话；逃脱、放弃时结束会话。进程重启后没有活动会话
 - `settle_catch(record) -> Dictionary`：返回 `{ok,error,new_species,new_length,new_weight,duplicate}`。重复成功回调返回 `ok=false, duplicate=true`，不给第二次奖励。过期会话返回失败。成功才清除活动会话
 - `dispose_catch(catch_id, "sold" | "released") -> Dictionary`：返回 `{ok,error,duplicate}`；出售增加该记录的 `sale_value`，放生增加 8；成功后移除待处理项。不存在的项目和重复处理没有货币或统计副作用
+- 保护观察记录的 `release_only=true` 由事务层强制执行：任何 `sold` 调用均返回明确错误，不进入磁盘写入，不改变待处理鱼、统计、货币或 revision；即使该记录带有伪造的非零售价也不能出售。放归仍为一次性的普通 8 旅币奖励，保留发现与历史纪录，不产生出售收益
 - `commit_state(candidate) -> bool`：购买、旅行解锁、收藏和设置等唯一写入口；先验证与写入，成功后才发布内部状态
 - `total_count() -> int`：由各物种 `catch_count` 求和；没有维护另一份总数
 - `discovered_count() -> int`：统计 `catch_count > 0` 的唯一物种
@@ -48,6 +49,8 @@
 
 Schema 1 到 2：补充缺失的默认设置、选择、待处理、去重、装备等字段；物种 `count` 迁移为 `catch_count`，`region_counts` 迁移为 `regions`；保留已有完整纪录、收藏与货币。迁移首先在内存进行，下一次正常事务才写入 schema 2，并把原 schema 1 主文件保留为备份。已有物种不依赖当前内容目录重建，因此新增物种不会抹除旧统计。
 
+扩展内容继续使用 schema 2。钓获快照可选字段 `release_only`（JSON boolean）与 `conservation_note` 原样保留到待处理项、首条、末条、最长和最重纪录；缺少该字段的旧记录不被改写为新格式，原有出售行为不变。中华鲟相遇属于游戏内虚拟保护观察，不构成现实捕捞或垂钓许可。
+
 ## 运行测试
 
 从工程根目录运行（使用隔离的 Godot 数据与缓存目录，避免依赖用户目录权限）：
@@ -82,6 +85,7 @@ godot --headless --path game --script res://tests/save_tests.gd --check-only
 - 状态读取隔离；过时 `save_revision` 拒绝覆盖
 - 临时文件写入失败、写入后截断导致校验失败、备份重命名失败、正式文件重命名失败；每项检查内存与主存档未发布候选、错误可见、原样重试恰好计数奖励一次
 - 出售写入失败保留鱼，重试恰好收益一次
+- 保护观察记录在结算和放归各自的四项真实 I/O 故障边界下均可原样重试；改掉保护标记的重试被拒绝。直接出售、重启后出售、放归失败改售、已放归后再处理均不会产生出售收益或重复奖励；历史完整快照和 optional boolean 类型经读回验证
 - 主文件损坏从备份恢复；损坏文件字节保留；两份损坏都保护
 - 超大未来版本号出现在主文件或备份均保护；游戏运行中外部文件升级也阻止写入
 - Schema 1 迁移、缺字段默认、保留原版备份、追加新物种与重启
@@ -100,6 +104,10 @@ godot --headless --path game --script res://tests/save_tests.gd --check-only
 - `--check-only` 解析/类型检查退出码 0，无脚本警告或错误
 - 初次运行未设置 `XDG_DATA_HOME` 时，引擎因沙盒用户目录不可写而启动失败；改为以上隔离命令后正常。此问题发生于 Godot 建立日志目录阶段，不是玩家存档覆盖或迁移行为
 - 未验证：Android 真机突然断电、强杀落在任意文件系统指令之间、设备存储损坏、多个进程共用一个目录。桌面 headless 测试不能替代这些平台验证
+
+### 六水域内容扩展：保护观察事务回归
+
+2026-10-02 09:00 UTC，Godot `4.6.3.stable.official.7d41c59c4`，全新隔离 HOME/XDG 目录：`--check-only` 通过，完整测试 `SAVE_TESTS: 314/314 passed; failures=0`，退出码 0。在原有 201 项断言基础上新增 113 项保护观察、失败重试和 schema 2 向后兼容断言，未移除旧回归。10,000 次压力循环 25,052 ms，最终 JSON 5,395 字节，真实磁盘提交和重启读回再次通过。原始输出：`build/save-tests-expanded.log`。
 
 ### 源文件恢复后再次回归
 
