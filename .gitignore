@@ -28,3 +28,4 @@ spec/1000049861.jpg
 ownbuild/
 *.blend1
 *.blend2
+tools/art3d/__pycache__/
