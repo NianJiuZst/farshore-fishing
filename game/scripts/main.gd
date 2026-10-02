@@ -6,7 +6,8 @@ const Session = preload("res://scripts/fishing_session.gd")
 const Stage = preload("res://scripts/fishing_stage_3d.gd")
 const Trial = preload("res://scripts/trial_fishery.gd") # Read historical trial catch locations only.
 const Registry = preload("res://scripts/fish_3d_registry.gd")
-const FishPreview = preload("res://scripts/fish_preview_3d.gd")
+const FishArt = preload("res://scripts/fish_art_catalog.gd")
+const FishArtViewScript = preload("res://scripts/fish_art_view.gd")
 const TouchScrollScript = preload("res://scripts/touch_scroll.gd")
 const Audio = preload("res://scripts/audio_manager.gd")
 const INK: Color = Color("244449")
@@ -20,6 +21,7 @@ const PAPER: Color = Color("f5f0e3")
 const TEAL: Color = Color("327d76")
 const CORAL: Color = Color("edb078")
 var catalog: ContentCatalog = Catalog.new()
+var fish_art: FishArtCatalog = FishArt.new()
 var store: SaveStore = Store.new()
 var encounter: EncounterGenerator = Encounter.new()
 var session: FishingSession = Session.new()
@@ -79,6 +81,9 @@ var _page_notice: Label
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
 	_content_ok = catalog.load_all(true)
+	if not fish_art.load_all(catalog):
+		catalog.errors.append_array(fish_art.errors)
+		_content_ok = false
 	var icon_errors: Array[String]=Art.validate_assets()
 	if not icon_errors.is_empty():
 		catalog.errors.append_array(icon_errors)
@@ -1159,7 +1164,7 @@ func _show_species(id: String) -> void:
 	_page.add_child(plate)
 	var art_box: VBoxContainer=VBoxContainer.new()
 	plate.add_child(art_box)
-	art_box.add_child(_fish_model(fish.species_id,285))
+	art_box.add_child(_fish_image(fish,false,false,285))
 	var caption: Label=_text(str(fish.raw.get("rarity","")) if known else "尚未发现",17,Color("56776d"))
 	caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	art_box.add_child(caption)
@@ -1202,38 +1207,15 @@ func _show_zoom(id: String) -> void:
 	_open_page("zoom",fish.name+" · 细看",_show_species.bind(id))
 	var plate: PanelContainer=_card(Color("e8ecd9"),18)
 	_page.add_child(plate)
-	plate.add_child(_fish_model(fish.species_id,590))
+	plate.add_child(_fish_image(fish,false,false,590))
 	_page.add_child(_text(fish.scientific_name,23,TEAL))
 	_page.add_child(_text(fish.morphology,26))
 
-func _fish_model(id: String, height: float) -> Control:
-	if not Registry.is_available(id):
-		var missing: Label = _text("此鱼的3D模型尚未准备完成",22,MUTED)
-		missing.custom_minimum_size.y = height
-		missing.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-		missing.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		return missing
-	var preview: Control = FishPreview.new()
-	preview.name = "FishModelPreview"
-	preview.custom_minimum_size.y = height
-	preview.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	preview.set_species(id)
-	return preview
-
 func _fish_image(fish: FishDefinition, thumbnail: bool, silhouette: bool, height: float) -> TextureRect:
-	var rect: TextureRect = TextureRect.new()
-	var path: String = fish.thumb if thumbnail else fish.art
-	if ResourceLoader.exists(path): rect.texture=load(path)
-	rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	var rect: FishArtView = FishArtViewScript.new()
+	rect.configure(fish.species_id,fish_art.texture_for(fish,thumbnail),fish_art.info_for(fish.species_id),silhouette)
 	rect.custom_minimum_size.y = height
-	rect.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	if silhouette or not thumbnail:
-		var material: ShaderMaterial = ShaderMaterial.new()
-		material.shader = load("res://assets/fish_motion.gdshader")
-		material.set_shader_parameter("silhouette", silhouette)
-		rect.material = material
+	if not thumbnail: rect.fit_width(height,600.0)
 	return rect
 
 func _scene_picture(path: String,height: float) -> TextureRect:
@@ -1329,11 +1311,12 @@ func _show_result() -> void:
 	specimen.add_theme_constant_override("separation",4)
 	plate.add_child(specimen)
 	var size_fraction: float=clampf(float(_last_record.get("size_fraction",0.3)),0,1)
-	var image: Control=_fish_model(id,235+size_fraction*90)
+	var image: FishArtView=_fish_image(fish,false,false,325) as FishArtView
 	var center: CenterContainer=CenterContainer.new()
 	center.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	specimen.add_child(center)
 	image.custom_minimum_size.x=lerpf(355.0,595.0,size_fraction)
+	image.fit_width(325,image.custom_minimum_size.x)
 	center.add_child(image)
 	var ruler: Control=Ruler.new()
 	ruler.length_mm=int(_last_record.get("length_mm",0))

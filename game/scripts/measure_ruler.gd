@@ -1,7 +1,7 @@
 class_name CatchRuler
 extends Control
-## Length endpoints follow a projected 3D specimen when available; historical
-## TextureRect callers retain their original painted-alpha-bound measurement.
+## Photoreal specimens supply anatomical nose/tail landmarks in canvas space.
+## The adapter also supports historical projected-3D and plain TextureRect callers.
 var length_mm: int=1000
 var specimen: Control
 var _used: Rect2i
@@ -12,7 +12,10 @@ func _ready() -> void:
 	resized.connect(queue_redraw)
 	if not is_instance_valid(specimen): return
 	specimen.resized.connect(queue_redraw)
-	if specimen is TextureRect and specimen.texture:
+	specimen.item_rect_changed.connect(queue_redraw)
+	# Static photos do not need a per-frame projection/redraw loop.
+	set_process(not specimen is TextureRect)
+	if specimen is TextureRect and specimen.texture and not specimen.has_method("measurement_endpoints"):
 		var source: Image=specimen.texture.get_image()
 		if source==null: return
 		if source.is_compressed(): source.decompress()
@@ -25,9 +28,11 @@ func _draw() -> void:
 	if not is_instance_valid(specimen): return
 	var start: float
 	var width: float
+	var nose_on_left: bool = true
 	if specimen.has_method("measurement_endpoints"):
 		var endpoints: Array[Vector2]=specimen.measurement_endpoints()
 		if endpoints.size()!=2: return
+		nose_on_left = endpoints[0].x <= endpoints[1].x
 		start=minf(endpoints[0].x,endpoints[1].x)-global_position.x
 		width=absf(endpoints[1].x-endpoints[0].x)
 	elif specimen is TextureRect and _used.size.x>0:
@@ -44,7 +49,8 @@ func _draw() -> void:
 		draw_line(Vector2(x,8),Vector2(x,27 if i%10==0 else (20 if i%5==0 else 14)),col,1.5,true)
 	var font: Font=ThemeDB.fallback_font
 	for i: int in range(5):
-		var text: String="%.1f" % (length_mm/10.0*i/4.0)
+		var fraction: float = i/4.0 if nose_on_left else (1.0-i/4.0)
+		var text: String="%.1f" % (length_mm/10.0*fraction)
 		var text_width: float=font.get_string_size(text,HORIZONTAL_ALIGNMENT_LEFT,-1,16).x
 		var x: float=clampf(start+width*i/4.0-text_width*0.5,0,size.x-text_width)
 		draw_string(font,Vector2(x,47),text,HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("567563"))
