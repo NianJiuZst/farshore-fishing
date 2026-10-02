@@ -14,6 +14,7 @@ var fixture_ids: Array[String] = []
 var capture_dir: String = ""
 var manifest_path: String = ""
 var tall: bool = false
+var reference_perch: bool = false
 var selected_ids: Array[String] = []
 
 func _initialize() -> void: call_deferred("_run")
@@ -33,6 +34,7 @@ func _run() -> void:
 		if arg.begins_with("--photo-fixtures="): manifest_path=arg.trim_prefix("--photo-fixtures=")
 		if arg.begins_with("--output="): capture_dir=arg.trim_prefix("--output=")
 		if arg == "--tall": tall=true
+		if arg == "--reference-perch": reference_perch=true
 		if arg.begins_with("--species="):
 			selected_ids.assign(arg.trim_prefix("--species=").split(",",false))
 	root.size = Vector2i(720,1584 if tall else 1280)
@@ -46,6 +48,7 @@ func _run() -> void:
 	app.sound.apply({"sound":false,"vibration":false,"volume":0.0})
 	app.sound.suspend(true)
 	_check(app._content_ok and app._models_complete,"production catalog and real3D assets remain valid")
+	_check(ArtCatalog.REQUIRE_PHOTOREAL and app.fish_art.complete,"production final gate requires all44 validated photo masters and thumbnails")
 	var save: SaveStore = Store.new()
 	_check(save.initialize(isolated.path_join("photo-ui-%s" % Time.get_ticks_usec())),"isolated legitimate save fixture")
 	app.store=save
@@ -79,6 +82,14 @@ func _run() -> void:
 		var sid: String=str(fish.spots()[0])
 		var rid: String=str(app.catalog.spots[sid].region_id)
 		var record: Dictionary=app.encounter.make_individual(fish,sid,rid,"worm",2,"day","clear")
+		if reference_perch and id=="european_perch":
+			# Explicit review-only specimen reproduces the user's original
+			# reference measurements. It never touches a player save or fish data.
+			record["length_mm"]=331
+			record["weight_g"]=585
+			record["size_fraction"]=0.3
+			record["size_class"]="标准"
+			record["sale_value"]=34
 		record["session_id"]="photo_ui_"+id
 		record["catch_id"]="photo_ui_catch_"+id
 		save.begin_session(record.session_id)
@@ -145,7 +156,8 @@ func _run() -> void:
 	app=null
 	for frame: int in range(4): await process_frame
 	print("FISH_ART_UI_TESTS: ",checks-failures,"/",checks," passed; ",scope,"; ",root.size," desktop layout")
-	quit(0 if failures==0 else 1)
+	# Let the coroutine release its last Image/RefCounted locals before exit.
+	call_deferred("quit",0 if failures==0 else 1)
 
 func _load_photo_fixtures() -> void:
 	var data: Variant=JSON.parse_string(FileAccess.get_file_as_string(manifest_path))
@@ -209,3 +221,4 @@ func _capture(label: String) -> void:
 	await RenderingServer.frame_post_draw
 	var picture: Image=root.get_texture().get_image()
 	_check(picture.save_png(capture_dir.path_join(label+("_tall" if tall else "")+".png"))==OK,"real rendered capture saved: "+label)
+	picture=null

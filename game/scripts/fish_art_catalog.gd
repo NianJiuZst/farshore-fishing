@@ -1,10 +1,10 @@
 class_name FishArtCatalog
 extends RefCounted
-## Partial source work may preview historical art. Flip this final gate only
-## when all 44 generated masters, derivatives and imported hashes are verified.
+## Final source requires all44 generated masters, derivatives and imported
+## image hashes. Explicit false arguments are reserved for isolated tests.
 ## A missing/incomplete/mismatched final manifest blocks play rather than
 ## silently showing another species or falling back to a coarse 3D preview.
-const REQUIRE_PHOTOREAL: bool = false
+const REQUIRE_PHOTOREAL: bool = true
 const MANIFEST_PATH: String = "res://data/fish_art.json"
 const EXPECTED_COUNT: int = 44
 var errors: Array[String] = []

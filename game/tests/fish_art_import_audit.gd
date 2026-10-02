@@ -28,7 +28,11 @@ func _run() -> void:
 		quit(1)
 		return
 	var errors: Array[String]=[]
-	for entry: Dictionary in data.assets:
+	for value: Variant in data.assets:
+		if not value is Dictionary:
+			errors.append("Malformed asset entry")
+			continue
+		var entry: Dictionary=value
 		var id: String=str(entry.get("species_id",""))
 		if not catalog.fish.has(id):
 			errors.append("Unknown species: "+id)
