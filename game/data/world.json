@@ -262,7 +262,9 @@
       "depth_max_m": 20,
       "min_gear": 2,
       "cast_hint": "近草带可遇狗鱼，河槽是大型鲶鱼的舞台",
-      "foreground": "boat"
+      "foreground": "boat",
+      "scene": "res://assets/scenery/bayou_channel.png",
+      "hide_region_foreground": true
     },
     {
       "spot_id": "yangtze_river",
@@ -286,7 +288,9 @@
       "depth_max_m": 40,
       "min_gear": 2,
       "cast_hint": "中华鲟为虚拟保护观察对象，相遇后必须放归",
-      "foreground": "boat"
+      "foreground": "boat",
+      "scene": "res://assets/scenery/yangtze_estuary.png",
+      "hide_region_foreground": true
     }
   ]
 }

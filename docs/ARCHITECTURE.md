@@ -1,7 +1,7 @@
 # 架构与数据说明
 
 ## 模块
-- ContentCatalog：从两份按制作分工分片的 JSON 加载32个唯一物种，将每条转为 FishDefinition；静态内容单一来源，不维护重复鱼表
+- ContentCatalog：从四份按制作分工分片的 JSON 加载44个唯一物种，将每条转为 FishDefinition；静态内容单一来源，不维护重复鱼表
 - FishDefinition：类型化身份、形态、插画、尺寸与行为字段
 - EncounterGenerator：先按地点/盐度/深度/装备/落点筛选，再乘鱼饵、时段、天气权重；空候选返回空并明确提示；可注入固定种子
 - FishingSession：明确状态机；用统一 step 推进，不使用异步延迟回调；每竿唯一 session_id/catch_id；暂停不推进随机序列或物理状态
@@ -14,7 +14,7 @@
 选点→蓄力→抛竿→等待→试探→咬钩→提竿→溜鱼→成功/逃脱。任一活动状态可显式暂停，恢复必须由玩家确认。触控松开、移出、失焦清理持续输入。进程终止不恢复未完成物理战斗；已保存钓获在 pending_catches 中可继续处理。
 
 ## 如何增加鱼种
-1. 在 fish_a.json 或 fish_b.json 添加唯一稳定ASCII species_id；不能重用旧ID表示另一物种
+1. 在 fish_a.json 至 fish_d.json 中任一分片 添加唯一稳定ASCII species_id；不能重用旧ID表示另一物种
 2. 先核实学名、识别特征和水域/钓法；填 sources 与研究状态
 3. 填 min/max/anchor 毫米和克、behavior、difficulty、权重与实际可达 spot_ids、min_gear、深度和落点范围
 4. 为该物种制作独立 RGBA 插画和256px缩略图，并更新素材清单
@@ -28,3 +28,7 @@
 
 ## 尺寸与资源预算
 长度整数毫米、重量整数克。体重按物种锚点的立方比例并加入±9%体况变化；明确为游戏数值。大尺寸右偏罕见，并影响拉力与耐力；钓获图片横向可见尺度随个体变化。图鉴列表只读取256px缩略图；完整1024px鱼图仅详情/结果读取。场景1440×960按当前地区加载，切换释放旧引用；同时仅32条水面纹和48条雨线，无无限粒子堆积。
+
+## 1.1保护观察兼容字段
+
+FishDefinition可带release_only与conservation_note，Encounter复制到CatchRecord。SaveStore拒绝保护条目的出售请求，即使传入非零卖价；正常放归只处理一次且保留历史。旧schema2记录缺少该字段时按普通鱼处理，既有存档无需清空。鱼类独立ID保持稳定，即使学名依据分类修订更新。
