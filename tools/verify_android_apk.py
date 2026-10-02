@@ -113,6 +113,8 @@ with zipfile.ZipFile(apk) as z:
         # ProjectSettings when equal to its initial value. Source explicitly pins it.
         assert settings.get('rendering/rendering_device/driver.android', 'vulkan') == 'vulkan'
         assert settings.get('rendering/rendering_device/fallback_to_opengl3') is False, 'APK must disable silent OpenGL fallback'
+        vulkan_features = [line for line in badging.splitlines() if line.startswith('uses-feature') and 'android.hardware.vulkan.' in line]
+        assert any(line.startswith('uses-feature:') and "name='android.hardware.vulkan.version'" in line for line in vulkan_features), 'APK must declare required Vulkan support'
         imported = json.loads((out/'imported-3d-scenes.json').read_text())
         assert not imported['failures'] and set(imported['models']) == set(contract['glb_models'])
         for model in contract['glb_models']:
@@ -143,6 +145,7 @@ with zipfile.ZipFile(apk) as z:
                         'playable_locations':1, 'legacy_catalog_is_not_all_3d':True,
                         'configured_renderer':'mobile', 'configured_android_driver':'vulkan',
                         'opengl_fallback_disabled':True,
+                        'vulkan_manifest_features':vulkan_features,
                         'imported_glb_scenes':len(imported['models']), 'rigged_models':3,
                         'texture_imports':len(contract['texture_files']), 'shader_payloads':shader_payloads,
                         'scope':'Exact exported imported-scene bytes matched pre-export Skeleton3D/AnimationPlayer/skin audit; runtime rendering requires separate evidence'}
