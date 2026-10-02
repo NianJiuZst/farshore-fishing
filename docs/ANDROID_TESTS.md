@@ -1,62 +1,58 @@
 # Android verification record
 
-Evidence snapshot:2026-10-02 10:03 UTC (baseline1.0.0; redesigned edition requires new verification). Build success, emulator success, and physical-phone success are separate results.
+Evidence snapshot:2026-10-02 10:20 UTC. This record distinguishes final1.1.0 binary audits, earlier1.0.0 runtime evidence, and physical-phone verification.
 
-## Signed APKs
+## Final signed APKs
 
 | Artifact | ABI | Bytes | SHA256 |
 |---|---|---:|---|
-| farshore-fishing-1.0.0-arm64.apk | arm64-v8a |119737722|dc415e4c78d4c291f94dd6b412588bdbbef11db3cf42a6bac502e812d703b337|
-| farshore-fishing-1.0.0-x86_64-test.apk | x86_64 |122637684|b3b17b4e2369dce06ef628db45f494563812c7f6cfb9109edcec4e1aadfe766a|
+| farshore-fishing-1.1.0-arm64.apk | arm64-v8a |137793032|cc0a6e02885b8b0aedb0afa2e112638073109bba44c88e5d614ce72a44ac43f7|
+| farshore-fishing-1.1.0-x86_64-test.apk | x86_64 |140692994|7a744da256808274d3ba71b6e50c926cec193162e5c686a2da134045f7f34a6f|
 
-The ARM64 file is the preserved baseline phone package; the redesigned1.1.0 release is awaiting its final build. The separate x86_64 file is only for emulator testing. Both use the same production code and dedicated release signing identity, with no debug flag or development harness.
+The ARM64 file is the phone package. The x86_64 file is only for emulator testing. Both use the frozen final generated-icon project, release mode, and the same dedicated release signing identity. Native libraries remain uncompressed.
 
 ## Completed binary checks
 
 | Check | Result | Evidence |
 |---|---|---|
 | Official engine/templates | Passed | Godot4.6.3.stable.official.7d41c59c4; matching published template SHA512 verified |
-| Application identity | Passed | org.farshore.fishing; version1.0.0, code1; label远岸钓记 |
+| Application identity | Passed | org.farshore.fishing; version1.1.0, code2; label远岸钓记 |
 | Android versions | Passed | Actual APK manifests: minimum29/Android10, target36/Android16, compile36 |
 | ABI separation | Passed | ARM64 only in phone APK; x86_64 only in emulator APK |
 | Release mode | Passed | Manifest is not debuggable; release native engine libraries; test harness absent |
 | Permissions | Passed | VIBRATE only; no INTERNET/storage/camera/microphone/location/notification permission |
-| APK signing | Passed | apksigner verifies; both v2/v3 blocks checked; expected RSA4096 identity matched |
-|16KiB compatibility, static | Passed | zipalign-P16 validation and all ELF LOAD segments in libc++/Godot libraries aligned16384 |
-| Offline resources | Passed, static |32 unique fish JSON entries; all64 art/thumbnail mappings and texture payloads; bundled Chinese font |
-| Original source preservation | Passed after replacement workflow | Source SHA256 inventory unchanged after staged full-game exports |
+| APK signing | Passed | apksigner verifies; both v2/v3 blocks checked; same expected RSA4096 identity as1.0.0 |
+|16KiB compatibility, static | Passed | zipalign-P16 validation and all ELF LOAD segments aligned16384 |
+| Offline resources | Passed, static |44 unique fish across4 catalogs,6 regions/12 spots,88 fish art/thumbnail mappings,25 generated PNG UI-icon texture mappings, bundled Chinese font |
+| Source preservation | Passed | External source archive read back and hash verified; original production hashes unchanged after both isolated exports |
 
 `apksigner verify` normally validates v3 for this minSDK29 app and can report v2=false without evaluating the older scheme. The audit additionally verifies with a minimum verifier range of24 to check both signature blocks. This does not alter the manifest or claim the app installs belowAPI29.
 
-Machine-readable proof and raw tool output are under `build/audit/arm64/` and `build/audit/x86_64/`.
+Public machine-readable evidence: `APK_BUILD_MANIFEST.json`, `APK_EMULATOR_BUILD_MANIFEST.json`, and `SOURCE_BUILD_MANIFEST.json`. Raw reports: `build/audit/1.1.0/arm64/` and `build/audit/1.1.0/x86_64/`.
 
-## Android runtime attempt and current limitation
+## Runtime evidence and current attempt
 
-The cloud host has no `/dev/kvm` or usable VMX/SVM acceleration. Official emulator37.2.12/build16428233 with the official API36 default x86_64 image revision2 was launched using software TCG and SwiftShader,720×1280,320dpi,2GiB RAM. The guest reports Android16/API36 and4096-byte runtime pages. adb and Android package/activity services respond. The current software-emulator run reached `sys.boot_completed=1` at2026-10-02 08:48:37 UTC. Earlier screenshots during boot were black.
+No physical phone is attached. The cloud host has no `/dev/kvm` or usable VMX/SVM acceleration, so testing uses official emulator37.2.12/build16428233 and official API36 default x86_64 image revision2 through software TCG.
 
-After the guest booted, the signed baseline x86_64 APK installed successfully. Package manager confirmed versionCode1/min29/target36, and Android cold-started its activity with Status:ok. However, the legacy SwiftShader GLES backend failed Godot Canvas/Scene shader linking at261 active fragment uniforms, so a usable game frame and gameplay are not yet proven. Android launcher/system ANR dialogs were also observed separately from the game.
+Earlier1.0.0 baseline: the API36 guest booted, installed the signed APK, started its activity, and rendered the Chinese home/scenery plus local-save-created message on ANGLE/swangle. The initial legacy SwiftShader GLES backend had a261-uniform shader-link failure; ANGLE/swangle removed that failure without changing the APK. Android SystemUI/launcher ANRs prevented reliable gameplay, and the emulator later exited with signal9 during a memory-pressure period. The exit is verified; its exact cause is unconfirmed. Details and screenshot/log paths are in `ANDROID_BASELINE_RUNTIME.md`.
 
-The unchanged APK also installed on the official emulator's `swangle` backend (ANGLE over SwiftShader Vulkan). It rendered real Chinese UI/scenery and the initial local-save message without the previous shader errors. System/launcher ANR overlays prevented reliable gameplay checks, and the emulator later terminated with signal9 during a memory-pressure period. Testing will resume separately from builds. See `ANDROID_BASELINE_RUNTIME.md` for logs, screenshots, exact error, and source diagnosis. This is baseline evidence, not validation of the upcoming redesigned edition.
+After both final1.1.0 exports completed, Gradle confirmed no running daemons. A separate smaller persistent writable test device was started:480×854,213dpi,1536MiB,2 cores, official `-gpu swangle`, no hardware acceleration. Its boot/install/gameplay/update checks are in progress. This new attempt has no completed final-edition runtime pass at this snapshot.
 
-| Runtime check | Status |
+| Runtime check | Final1.1.0 status |
 |---|---|
-| API36 emulator installed and adb accessible | Passed |
-| Android guest fully booted | Passed; sys.boot_completed=1,2026-10-02 08:48:37UTC |
-| Baseline APK installation | Passed on API36 x86_64 |
-| Baseline activity and rendering | Installed and activity started; real home/Chinese/scenery rendered on swangle; system ANRs prevented reliable interaction |
+| API36 emulator setup | Prepared; software boot in progress |
+| Final APK installation/activity/rendering | Not yet verified |
 | Full fishing loop/atlas/result disposition on Android | Not verified |
 | Android touch/cancel/systemBack/safe area/Chinese layout | Not verified |
 | Background pause and explicit resume | Not verified |
 | Actual offline gameplay and save/restart on Android | Not verified; static package has no INTERNET permission |
 | Same-signature version upgrade preserves actual Android save | Not verified |
-|16KiB-page runtime device | Not verified; static alignment passed, guest uses4KiB |
+|16KiB-page runtime device | Not verified; static alignment passed, earlier guest uses4KiB |
 | Physical Android16 ARM64 installation | Not verified; no phone attached |
 | Phone frame rate/heat/battery/memory | Not verified |
 
-Desktop/core/save tests are documented separately. Desktop mouse tests are not substituted for Android touch/device evidence. No physical-device or universal performance claim is made.
+Desktop/core/save/UI tests are documented separately. Desktop mouse tests and x86_64 emulator results do not establish ARM64 phone performance or driver compatibility.
 
 ## Build recovery
 
-An initial out-of-project Gradle path caused the exporter cleanup to affect the source tree. That attempt was rejected. Production modules were recovered from live Godot memory, fish/scenery art restored with matching hashes, other resources restored, and automated tests rerun. Subsequent successful builds used protected source archives plus isolated project copies and standard in-project Gradle paths. See `EXPORT_SAFETY.md` for the official source-level diagnosis and enforced assertions.
-
-Signing material remained outside the project and was unaffected; it is not part of either APK or the source archive.
+An initial out-of-project Gradle path caused exporter cleanup to affect the source tree. That attempt was rejected. Production modules were recovered, artwork restored with matching hashes, other resources restored, and automated tests rerun. Every subsequent export uses an external, read-back-verified source archive plus a disposable project copy and standard in-project Gradle paths. See `EXPORT_SAFETY.md` for the source-level diagnosis and enforced assertions. Signing material remained outside the project and is excluded from source delivery.

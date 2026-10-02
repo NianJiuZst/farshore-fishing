@@ -1,6 +1,6 @@
 # Android build: 远岸钓记
 
-Evidence snapshot:2026-10-02 10:03 UTC. Baseline build evidence only. Final1.1.0/code2 export is on hold for the requested generated painted-icon revision; the superseded internal1.1.0 build is not for release.
+Evidence snapshot:2026-10-02 10:20 UTC. Final generated-icon1.1.0/code2 ARM64 and x86_64 builds have passed binary audits. API36 runtime testing is in progress on a separate software emulator. Physical Android16 ARM64 testing has not been performed.
 
 ## Locked toolchain
 
@@ -17,7 +17,7 @@ The exact 4.6.3 downloaded source template is authoritative for build dependenci
 
 - Display name: 远岸钓记
 - Package: `org.farshore.fishing`
-- Next release: `1.1.0`, versionCode `2`; preserved audited baseline: `1.0.0`, versionCode `1`
+- Current release: `1.1.0`, versionCode `2`; preserved audited baseline: `1.0.0`, versionCode `1`
 - Minimum Android: **10 / API29**
 - Target Android: **16 / API36**
 - Player APK: **arm64-v8a only**
@@ -86,8 +86,12 @@ Alternatively, copy the ARM64 APK to the phone and open it in the phone's file m
 
 ## Current verification status
 
-Both full-game release-mode APKs were built and signed successfully. Actual manifests, ABI, permission allowlist, signing identity, v2/v3 signatures,16KiB ZIP/ELF alignment,32 fish and their64 texture mappings, Chinese font, and absence of development tests passed the audit. The original production-source SHA256 inventory was unchanged after staged export.
+Both final generated-icon release-mode APKs were built from frozen source commit `366790826b98fb79c2e1764c47087ce4062e5a8d` and signed successfully. Actual manifests, ABI, VIBRATE-only permission list, signing identity, v2/v3 signatures,16KiB ZIP/ELF alignment,44 fish and their88 texture mappings,25 generated UI-icon textures, Chinese font, and absence of development tests passed the audit. Native libraries remain uncompressed. The original production-source SHA256 inventory was unchanged after both staged exports.
 
-Phone deliverable: `build/farshore-fishing-1.0.0-arm64.apk`,119737722 bytes, SHA256`dc415e4c78d4c291f94dd6b412588bdbbef11db3cf42a6bac502e812d703b337`.
+Phone deliverable: `build/farshore-fishing-1.1.0-arm64.apk`,137793032 bytes, SHA256 `cc0a6e02885b8b0aedb0afa2e112638073109bba44c88e5d614ce72a44ac43f7`.
 
-The official API36 software emulator completed boot, installed the baseline x86_64 APK, and cold-started its activity. Usable rendering is blocked on the initial legacy SwiftShader GLES backend by a261-fragment-uniform shader-link error. The unchanged APK rendered real Chinese home/scenery on ANGLE/swangle without those shader errors. System ANR overlays prevented reliable gameplay, and the emulator later exited with signal9 during concurrent-build memory pressure; the exact kill cause is unconfirmed. Android gameplay/pause/update-retention and physical-phone checks remain unverified; this baseline result does not validate the redesigned edition. See `ANDROID_TESTS.md` for the full matrix and raw-evidence locations.
+Separate emulator package: `build/farshore-fishing-1.1.0-x86_64-test.apk`,140692994 bytes, SHA256 `7a744da256808274d3ba71b6e50c926cec193162e5c686a2da134045f7f34a6f`.
+
+The public `APK_BUILD_MANIFEST.json` and `SOURCE_BUILD_MANIFEST.json` record the exact phone binary, frozen source inventory, and read-back-verified external source archive. Raw binary audits are under `build/audit/1.1.0/arm64/` and `build/audit/1.1.0/x86_64/`.
+
+The earlier1.0.0 baseline installed and rendered real Chinese home/scenery on an API36 x86_64 software emulator using ANGLE/swangle. System ANRs prevented reliable gameplay, and that emulator later exited with signal9; the exact cause is unconfirmed. After both final exports completed, Gradle reported no running daemons and a smaller persistent API36/swangle test device was started independently. Final Android gameplay/pause/update-retention and physical-phone checks remain unverified at this snapshot. See `ANDROID_TESTS.md` for the matrix and `ANDROID_BASELINE_RUNTIME.md` for the earlier attempt.
