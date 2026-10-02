@@ -1,0 +1,236 @@
+{
+  "failures": [],
+  "godot_version": "4.6.3-stable (official)",
+  "models": {
+    "alligator_gar": {
+      "aabb_size": [
+        1.0,
+        0.249064102768898,
+        0.227921217679977
+      ],
+      "bone_count": 16,
+      "bones": [
+        "root",
+        "head",
+        "gill_R",
+        "gill_L",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal",
+        "anal",
+        "pelvic_R",
+        "pelvic_L",
+        "pectoral_R",
+        "pectoral_L"
+      ],
+      "clips": {
+        "breach": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "dorsal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "dorsal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "dorsal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "dorsal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 2.0,
+          "tracks": 15
+        }
+      },
+      "material_surfaces": 9,
+      "mesh_count": 9,
+      "skinned_mesh_count": 9
+    },
+    "common_carp": {
+      "aabb_size": [
+        1.0,
+        0.524059176445007,
+        0.333474516868591
+      ],
+      "bone_count": 16,
+      "bones": [
+        "root",
+        "head",
+        "gill_R",
+        "gill_L",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "pelvic_R",
+        "pelvic_L",
+        "dorsal",
+        "pectoral_R",
+        "pectoral_L"
+      ],
+      "clips": {
+        "breach": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "dorsal",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 1.39999997615814,
+          "tracks": 15
+        },
+        "landed": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "dorsal",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 3.0,
+          "tracks": 15
+        },
+        "struggle": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "dorsal",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 1.20000004768372,
+          "tracks": 15
+        },
+        "swim": {
+          "changing_bones": [
+            "head",
+            "gill_R",
+            "gill_L",
+            "jaw",
+            "spine_front",
+            "spine_mid",
+            "spine_rear",
+            "tail",
+            "caudal",
+            "anal",
+            "pelvic_R",
+            "pelvic_L",
+            "dorsal",
+            "pectoral_R",
+            "pectoral_L"
+          ],
+          "seconds": 2.0,
+          "tracks": 15
+        }
+      },
+      "material_surfaces": 9,
+      "mesh_count": 9,
+      "skinned_mesh_count": 9
+    }
+  }
+}

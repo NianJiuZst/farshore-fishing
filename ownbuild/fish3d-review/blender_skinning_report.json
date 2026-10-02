@@ -1,0 +1,82 @@
+{
+  "common_carp": {
+    "skin_vertices": 14581,
+    "weight_sum_min": 0.9999025464057922,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "clips": {
+      "swim": {
+        "start": 1,
+        "end": 61,
+        "seconds": 2.0,
+        "maximum_skin_displacement_m": 0.09379067208485764,
+        "rms_skin_displacement_m": 0.032562124295946376,
+        "loop_seam_m": 1.2086148809904197e-18
+      },
+      "struggle": {
+        "start": 1,
+        "end": 37,
+        "seconds": 1.2,
+        "maximum_skin_displacement_m": 0.33904733673715975,
+        "rms_skin_displacement_m": 0.11054633237375498,
+        "loop_seam_m": 3.927997825245567e-18
+      },
+      "breach": {
+        "start": 1,
+        "end": 43,
+        "seconds": 1.4,
+        "maximum_skin_displacement_m": 0.2961840846181516,
+        "rms_skin_displacement_m": 0.0932289277823311,
+        "loop_seam_m": 2.719383809959261e-18
+      },
+      "landed": {
+        "start": 1,
+        "end": 91,
+        "seconds": 3.0,
+        "maximum_skin_displacement_m": 0.023157859033598443,
+        "rms_skin_displacement_m": 0.006879751980112534,
+        "loop_seam_m": 2.517947575976029e-19
+      }
+    }
+  },
+  "alligator_gar": {
+    "skin_vertices": 15188,
+    "weight_sum_min": 0.999902680516243,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "clips": {
+      "swim": {
+        "start": 1,
+        "end": 61,
+        "seconds": 2.0,
+        "maximum_skin_displacement_m": 0.09331115904949827,
+        "rms_skin_displacement_m": 0.03731288962210388,
+        "loop_seam_m": 1.2764319289492877e-18
+      },
+      "struggle": {
+        "start": 1,
+        "end": 37,
+        "seconds": 1.2,
+        "maximum_skin_displacement_m": 0.3271312395955863,
+        "rms_skin_displacement_m": 0.12625547075216603,
+        "loop_seam_m": 4.1484033326576304e-18
+      },
+      "breach": {
+        "start": 1,
+        "end": 43,
+        "seconds": 1.4,
+        "maximum_skin_displacement_m": 0.2802586860785069,
+        "rms_skin_displacement_m": 0.10429787683317324,
+        "loop_seam_m": 2.8719720997104303e-18
+      },
+      "landed": {
+        "start": 1,
+        "end": 91,
+        "seconds": 3.0,
+        "maximum_skin_displacement_m": 0.019939781770288153,
+        "rms_skin_displacement_m": 0.00771714151664507,
+        "loop_seam_m": 2.6592347369027673e-19
+      }
+    }
+  }
+}

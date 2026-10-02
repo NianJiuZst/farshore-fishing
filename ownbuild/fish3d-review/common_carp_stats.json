@@ -1,0 +1,85 @@
+{
+  "species": "common_carp",
+  "native_blender_axes": {
+    "forward": "+X",
+    "up": "+Z"
+  },
+  "glb_godot_axes": {
+    "forward": "+X",
+    "up": "+Y"
+  },
+  "length_m": 1.0,
+  "vertices": 14581,
+  "triangles": 28334,
+  "meshes": 9,
+  "materials": 9,
+  "bones": [
+    "root",
+    "head",
+    "gill_R",
+    "gill_L",
+    "jaw",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "anal",
+    "pelvic_R",
+    "pelvic_L",
+    "dorsal",
+    "pectoral_R",
+    "pectoral_L"
+  ],
+  "clips": {
+    "breach": 1.4,
+    "landed": 3.0,
+    "struggle": 1.2,
+    "swim": 2.0
+  },
+  "texture_images": [
+    {
+      "name": "common_carp_fin_basecolor",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "name": "common_carp_fin_normal",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "name": "common_carp_fin_roughness",
+      "dimensions": [
+        1024,
+        512
+      ]
+    },
+    {
+      "name": "common_carp_skin_basecolor",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "name": "common_carp_skin_normal",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "name": "common_carp_skin_roughness",
+      "dimensions": [
+        2048,
+        1024
+      ]
+    }
+  ],
+  "glb_bytes": 12589088
+}

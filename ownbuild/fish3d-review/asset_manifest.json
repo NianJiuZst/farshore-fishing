@@ -1,0 +1,192 @@
+[
+  {
+    "species": "common_carp",
+    "native_blender_axes": {
+      "forward": "+X",
+      "up": "+Z"
+    },
+    "glb_godot_axes": {
+      "forward": "+X",
+      "up": "+Y"
+    },
+    "length_m": 1.0,
+    "vertices": 14581,
+    "triangles": 28334,
+    "meshes": 9,
+    "materials": 9,
+    "bones": [
+      "root",
+      "head",
+      "gill_R",
+      "gill_L",
+      "jaw",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "anal",
+      "pelvic_R",
+      "pelvic_L",
+      "dorsal",
+      "pectoral_R",
+      "pectoral_L"
+    ],
+    "clips": {
+      "breach": 1.4,
+      "landed": 3.0,
+      "struggle": 1.2,
+      "swim": 2.0
+    },
+    "texture_images": [
+      {
+        "name": "common_carp_fin_basecolor",
+        "dimensions": [
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "common_carp_fin_normal",
+        "dimensions": [
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "common_carp_fin_roughness",
+        "dimensions": [
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "common_carp_skin_basecolor",
+        "dimensions": [
+          2048,
+          1024
+        ]
+      },
+      {
+        "name": "common_carp_skin_normal",
+        "dimensions": [
+          2048,
+          1024
+        ]
+      },
+      {
+        "name": "common_carp_skin_roughness",
+        "dimensions": [
+          2048,
+          1024
+        ]
+      }
+    ],
+    "glb_bytes": 12589088,
+    "files": {
+      "art_masters/3d/common_carp.blend": {
+        "bytes": 15500580,
+        "sha256": "f3de54502dbde972415db9660d2c950897186a2ca3579521a474d30266168972"
+      },
+      "game/assets/3d/common_carp.glb": {
+        "bytes": 12589088,
+        "sha256": "53fdbc1ed1408060887dd44f627afea136cad8bdb9e22c25770a33230dc095e1"
+      }
+    }
+  },
+  {
+    "species": "alligator_gar",
+    "native_blender_axes": {
+      "forward": "+X",
+      "up": "+Z"
+    },
+    "glb_godot_axes": {
+      "forward": "+X",
+      "up": "+Y"
+    },
+    "length_m": 1.0,
+    "vertices": 15188,
+    "triangles": 29408,
+    "meshes": 9,
+    "materials": 9,
+    "bones": [
+      "root",
+      "head",
+      "gill_R",
+      "gill_L",
+      "jaw",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "dorsal",
+      "anal",
+      "pelvic_R",
+      "pelvic_L",
+      "pectoral_R",
+      "pectoral_L"
+    ],
+    "clips": {
+      "breach": 1.4,
+      "landed": 3.0,
+      "struggle": 1.2,
+      "swim": 2.0
+    },
+    "texture_images": [
+      {
+        "name": "alligator_gar_fin_basecolor",
+        "dimensions": [
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "alligator_gar_fin_normal",
+        "dimensions": [
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "alligator_gar_fin_roughness",
+        "dimensions": [
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "alligator_gar_skin_basecolor",
+        "dimensions": [
+          2048,
+          1024
+        ]
+      },
+      {
+        "name": "alligator_gar_skin_normal",
+        "dimensions": [
+          2048,
+          1024
+        ]
+      },
+      {
+        "name": "alligator_gar_skin_roughness",
+        "dimensions": [
+          2048,
+          1024
+        ]
+      }
+    ],
+    "glb_bytes": 12841448,
+    "files": {
+      "art_masters/3d/alligator_gar.blend": {
+        "bytes": 15743288,
+        "sha256": "731184ff8d3cac43c3f07aae37336de02dddebdb16d145b47a2455a35bfe11bd"
+      },
+      "game/assets/3d/alligator_gar.glb": {
+        "bytes": 12841448,
+        "sha256": "61869dfa36436d9695c3246a95b73f3365e2279c0033ebbdc9a126e50a233d64"
+      }
+    }
+  }
+]
