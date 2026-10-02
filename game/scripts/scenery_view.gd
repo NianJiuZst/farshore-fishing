@@ -4,6 +4,7 @@ var region_id: String = "lake"
 var foreground: String = "reeds"
 var weather: String = "clear"
 var time_of_day: String = "day"
+var angler: Texture2D = preload("res://assets/ui/expedition_angler.png")
 var art: Texture2D
 var front_art: Texture2D
 var session: FishingSession
@@ -37,7 +38,7 @@ func _draw() -> void:
 	var water_top: float = h * 0.43
 	draw_rect(Rect2(Vector2.ZERO, size), Color("d2e1d8"))
 	if art:
-		draw_texture_rect(art, Rect2(0, 0, w, h * 0.83), false)
+		draw_texture_rect(art, Rect2(0, 0, w, h), false)
 	var water: Color = tint.darkened(0.20)
 	water.a = 0.16 if art else 1.0
 	draw_rect(Rect2(0, water_top, w, h-water_top), water)
@@ -64,7 +65,11 @@ func _draw() -> void:
 			draw_line(Vector2(x,y),Vector2(x-7,y+19),Color(0.9,0.95,1,0.24),1.5,true)
 	if front_art:
 		draw_texture_rect_region(front_art,Rect2(w*0.5,h*0.39,w*0.5,h*0.39),Rect2(front_art.get_width()*0.5,0,front_art.get_width()*0.5,front_art.get_height()))
-	_draw_foreground(w, h*0.78)
+	_draw_angler(w,h)
+	# A transparent dusk vignette keeps controls legible while the painting stays edge-to-edge.
+	for shade: int in range(40):
+		var alpha: float = float(shade)/40.0*0.72
+		draw_rect(Rect2(0,h*0.76+shade*h*0.006,w,h*0.006+1),Color(0.025,0.10,0.14,alpha))
 	if session == null: return
 	var active: int = session.before_pause if session.state == FishingSession.State.PAUSED else session.state
 	if active in [FishingSession.State.CASTING,FishingSession.State.WAITING,FishingSession.State.NIBBLE,FishingSession.State.BITE,FishingSession.State.FIGHT]:
@@ -79,9 +84,9 @@ func _draw() -> void:
 			bx += sin(clock_time*1.8)*w*0.16*(1-session.progress)
 			by += sin(clock_time*2.2)*12
 		var bob: Vector2 = Vector2(bx,by)
-		var base: Vector2 = Vector2(w*0.83,h*0.78)
-		var tip: Vector2 = Vector2(w*0.64,h*0.66 + session.tension*25)
-		draw_polyline(PackedVector2Array([base,Vector2(w*0.72,h*0.72),tip]),Color("463f34"),7.0,true)
+		var base: Vector2 = Vector2(w*0.263,h*0.663)
+		var tip: Vector2 = Vector2(w*0.23,h*0.42 + session.tension*25)
+		
 		draw_line(tip,bob,Color(0.93,0.95,0.85,0.7),1.3,true)
 		for ring: int in range(3):
 			var radius: float = fposmod(clock_time*14+ring*17,52)
@@ -115,3 +120,27 @@ func _draw_foreground(w: float, h: float) -> void:
 			var sway: float = sin(clock_time+i)*4
 			draw_line(Vector2(x,h),Vector2(x+12+sway,low-60-(i%3)*20),Color("4e6f4b"),3,true)
 			draw_line(Vector2(x+12+sway,low-65-(i%3)*20),Vector2(x+12+sway,low-85-(i%3)*20),Color("705c40"),7,true)
+
+func _draw_angler(w: float,h: float) -> void:
+	var wood: Color=Color("856e50")
+	var deck: PackedVector2Array=PackedVector2Array([Vector2(0,h*0.764),Vector2(w*0.61,h*0.754),Vector2(w*0.74,h*0.88),Vector2(0,h*0.92)])
+	if foreground=="boat":
+		draw_colored_polygon(PackedVector2Array([Vector2(w*0.05,h*0.79),Vector2(w*0.62,h*0.74),Vector2(w*0.72,h*0.84),Vector2(w*0.23,h*0.90)]),Color("aa8560"))
+		draw_polyline(PackedVector2Array([Vector2(w*0.05,h*0.79),Vector2(w*0.62,h*0.74),Vector2(w*0.72,h*0.84)]),Color("e4c994"),12,true)
+	else:
+		draw_colored_polygon(deck,wood)
+		for i: int in range(7):
+			var k: float=i/7.0
+			draw_line(Vector2(0,lerpf(h*0.764,h*0.92,k)),Vector2(lerpf(w*0.61,w*0.74,k),lerpf(h*0.754,h*0.88,k)),Color("b79c72"),3,true)
+		draw_line(Vector2(0,h*0.764),Vector2(w*0.61,h*0.754),Color("d7c394"),8,true)
+	var sway: float=sin(clock_time*1.4)*1.8
+	var bend: float=session.tension*25 if session else 0.0
+	var base: Vector2=Vector2(w*0.263,h*0.663)
+	var tip: Vector2=Vector2(w*0.23,h*0.42+bend)
+	var points: PackedVector2Array=[]
+	for i: int in range(17):
+		var k: float=i/16.0
+		points.append(base.lerp(tip,k)+Vector2(-sin(k*PI)*18,0))
+	draw_polyline(points,Color("274844"),6,true)
+	draw_polyline(points,Color("d4b477"),2,true)
+	draw_texture_rect(angler,Rect2(w*0.12,h*0.49+sway,w*0.54,w*0.568),false)

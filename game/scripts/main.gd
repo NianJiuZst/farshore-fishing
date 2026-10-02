@@ -5,11 +5,15 @@ const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const Scenery = preload("res://scripts/scenery_view.gd")
 const Audio = preload("res://scripts/audio_manager.gd")
-const INK: Color = Color("244449")
-const MUTED: Color = Color("6c827e")
+const INK: Color = Color("edf4e9")
+const NAVY: Color = Color("102f3b")
+const GOLD: Color = Color("f1ca69")
+const Art = preload("res://scripts/ui_art.gd")
+const Ruler = preload("res://scripts/measure_ruler.gd")
+const MUTED: Color = Color("a8c6c3")
 const PAPER: Color = Color("f5f0e3")
-const TEAL: Color = Color("266b70")
-const CORAL: Color = Color("be6850")
+const TEAL: Color = Color("83cbb9")
+const CORAL: Color = Color("edb078")
 var catalog: ContentCatalog = Catalog.new()
 var store: SaveStore = Store.new()
 var encounter: EncounterGenerator = Encounter.new()
@@ -38,7 +42,7 @@ var _bars: VBoxContainer
 var _charge: ProgressBar
 var _toast: Label
 var _toast_seconds: float = 0.0
-var _list: VBoxContainer
+var _list: GridContainer
 var _search: String = ""
 var _region_filter: String = "all"
 var _discovery_filter: int = 0
@@ -49,6 +53,9 @@ var _last_committed_id: String = ""
 var _save_ok: bool = false
 var _content_ok: bool = false
 var _safe: MarginContainer
+var _collection: Label
+var _bait_label: Label
+var _hud: Control
 
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
@@ -72,7 +79,8 @@ func _ready() -> void:
 	session.ended.connect(_fishing_ended)
 	session.cue.connect(sound.cue)
 	_refresh_location()
-	_show_home()
+	if store.read_only or not _content_ok: _show_home()
+	else: _session_changed(Session.State.IDLE)
 	get_viewport().size_changed.connect(_safe_area)
 	_safe_area()
 
@@ -83,21 +91,25 @@ func _apply_theme() -> void:
 	style.default_font = chinese_font
 	style.default_font_size = 24
 	style.set_color("font_color", "Label", INK)
-	style.set_color("font_color", "Button", INK)
-	style.set_color("font_hover_color", "Button", TEAL)
-	style.set_color("font_pressed_color", "Button", PAPER)
-	style.set_color("font_disabled_color", "Button", Color("97a5a0"))
-	style.set_stylebox("normal", "Button", _box(Color("e7e6d8"), 15))
-	style.set_stylebox("hover", "Button", _box(Color("dde8dc"), 15))
-	style.set_stylebox("pressed", "Button", _box(TEAL, 15))
-	style.set_stylebox("disabled", "Button", _box(Color("ede9de"), 15))
-	style.set_stylebox("focus", "Button", _box(Color(0,0,0,0),15,TEAL,2))
-	style.set_stylebox("normal", "LineEdit", _box(Color("e6e7dc"),12))
+	for type_name: String in ["Button","OptionButton"]:
+		style.set_color("font_color", type_name, INK)
+		style.set_color("font_hover_color", type_name, Color.WHITE)
+		style.set_color("font_pressed_color", type_name, NAVY)
+		style.set_color("font_disabled_color", type_name, Color("74958e"))
+		style.set_stylebox("normal", type_name, _box(Color("244c56"),18,Color("527473"),1))
+		style.set_stylebox("hover", type_name, _box(Color("32616a"),18,GOLD,2))
+		style.set_stylebox("pressed", type_name, _box(TEAL,18))
+		style.set_stylebox("disabled", type_name, _box(Color("1d424b"),18,Color("365c61"),1))
+		style.set_stylebox("focus", type_name, _box(Color(0,0,0,0),18,GOLD,2))
+	style.set_stylebox("normal", "LineEdit", _box(Color("173c47"),18,Color("50706e"),1))
 	style.set_color("font_color", "LineEdit", INK)
 	style.set_color("font_placeholder_color", "LineEdit", MUTED)
-	style.set_color("caret_color", "LineEdit", TEAL)
+	style.set_color("caret_color", "LineEdit", GOLD)
 	style.set_constant("separation", "VBoxContainer", 14)
 	style.set_constant("separation", "HBoxContainer", 12)
+	style.set_stylebox("panel","PopupMenu",_box(NAVY,12,GOLD,1))
+	style.set_color("font_color","PopupMenu",INK)
+	style.set_constant("v_separation","PopupMenu",30)
 	theme = style
 
 func _box(color: Color, radius: int = 16, border: Color = Color(0,0,0,0), width: int = 0) -> StyleBoxFlat:
@@ -131,11 +143,60 @@ func _button(value: String, callback: Callable, primary: bool = false) -> Button
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	if primary:
-		button.add_theme_stylebox_override("normal", _box(TEAL, 16))
-		button.add_theme_color_override("font_color", PAPER)
-		button.add_theme_color_override("font_hover_color", PAPER)
-		button.add_theme_stylebox_override("hover", _box(TEAL.lightened(0.1),16))
+		var style: StyleBoxFlat = _box(GOLD,22,Color("fff0b5"),2)
+		style.shadow_color=Color(0.02,0.10,0.13,0.55)
+		style.shadow_size=6
+		style.shadow_offset=Vector2(0,5)
+		button.add_theme_stylebox_override("normal",style)
+		button.add_theme_color_override("font_color",NAVY)
+		button.add_theme_color_override("font_hover_color",NAVY)
+		button.add_theme_color_override("font_pressed_color",NAVY)
+		button.add_theme_stylebox_override("hover",_box(GOLD.lightened(0.12),22))
+		button.add_theme_stylebox_override("pressed",_box(Color("daa64e"),22))
 	button.pressed.connect(callback)
+	return button
+
+func _icon(kind: String, extent: float = 72) -> Control:
+	var icon: Control = Art.new()
+	icon.kind=kind
+	icon.custom_minimum_size=Vector2(extent,extent)
+	icon.size_flags_horizontal=Control.SIZE_SHRINK_CENTER
+	return icon
+
+func _card(color: Color = Color("1d4550"), margin_px: int = 18) -> PanelContainer:
+	var card: PanelContainer=PanelContainer.new()
+	var style: StyleBoxFlat=_box(color,22,Color("476970"),1)
+	style.content_margin_left=margin_px
+	style.content_margin_right=margin_px
+	style.content_margin_top=margin_px
+	style.content_margin_bottom=margin_px
+	card.add_theme_stylebox_override("panel",style)
+	card.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	return card
+
+func _section(value: String, detail: String = "") -> void:
+	var row: HBoxContainer=HBoxContainer.new()
+	row.add_child(_text(value,27,GOLD))
+	if not detail.is_empty():
+		var right: Label=_text(detail,20,MUTED)
+		right.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
+		row.add_child(right)
+	_page.add_child(row)
+
+func _navigation(label: String, kind: String, callback: Callable) -> Button:
+	var button: Button=_button("",callback)
+	button.custom_minimum_size=Vector2(110,120)
+	button.add_theme_stylebox_override("normal",_box(Color(0.05,0.17,0.21,0.84),22,Color(0.75,0.85,0.74,0.48),1))
+	var box: VBoxContainer=VBoxContainer.new()
+	box.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	box.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	box.add_theme_constant_override("separation",-3)
+	button.add_child(box)
+	box.add_child(_icon(kind,76))
+	var caption: Label=_text(label,21,PAPER)
+	caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	caption.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	box.add_child(caption)
 	return button
 
 func _build_fishing_screen() -> void:
@@ -150,69 +211,98 @@ func _build_fishing_screen() -> void:
 	var layout: VBoxContainer = VBoxContainer.new()
 	layout.mouse_filter = Control.MOUSE_FILTER_PASS
 	_safe.add_child(layout)
-	var top_panel: PanelContainer = PanelContainer.new()
-	top_panel.add_theme_stylebox_override("panel", _box(Color(0.96,0.95,0.89,0.93),20))
-	layout.add_child(top_panel)
-	var top: VBoxContainer = VBoxContainer.new()
-	top.add_theme_constant_override("separation", 2)
-	top_panel.add_child(top)
-	var heading: HBoxContainer = HBoxContainer.new()
+	var top: HBoxContainer=HBoxContainer.new()
+	top.add_theme_constant_override("separation",10)
+	layout.add_child(top)
+	var emblem: PanelContainer=_card(Color(0.05,0.17,0.21,0.9),4)
+	emblem.custom_minimum_size=Vector2(90,96)
+	emblem.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
+	emblem.add_child(_icon("badge",82))
+	top.add_child(emblem)
+	var heading: VBoxContainer=VBoxContainer.new()
+	heading.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	heading.add_theme_constant_override("separation",0)
 	top.add_child(heading)
-	_place = _text("雾林湖",32)
+	heading.add_child(_text("远 岸 钓 记",19,Color("fff1bb")))
+	_place=_text("雾林湖",31,Color.WHITE)
+	_place.add_theme_color_override("font_shadow_color",NAVY)
+	_place.add_theme_constant_override("shadow_offset_y",2)
 	heading.add_child(_place)
-	var pause_button: Button = _button("暂停",_show_pause)
-	pause_button.custom_minimum_size = Vector2(112,96)
-	pause_button.size_flags_horizontal = Control.SIZE_SHRINK_END
-	heading.add_child(pause_button)
-	_condition = _text("",21,MUTED)
-	top.add_child(_condition)
-	var fill: Control = Control.new()
-	fill.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	fill.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	layout.add_child(fill)
-	_toast = _text("",23,PAPER)
-	_toast.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_toast.add_theme_stylebox_override("normal",_box(Color(0.05,0.18,0.20,0.85),16))
-	_toast.visible = false
+	var money: PanelContainer=_card(Color(0.05,0.17,0.21,0.9),8)
+	money.size_flags_horizontal=Control.SIZE_SHRINK_END
+	var money_row: HBoxContainer=HBoxContainer.new()
+	money_row.add_theme_constant_override("separation",0)
+	money.add_child(money_row)
+	money_row.add_child(_icon("coin",40))
+	_wallet=_text("120",25,GOLD)
+	_wallet.custom_minimum_size.x=60
+	money_row.add_child(_wallet)
+	top.add_child(money)
+	var pause_button: Button=_button("Ⅱ",_show_pause)
+	pause_button.custom_minimum_size=Vector2(96,96)
+	pause_button.size_flags_horizontal=Control.SIZE_SHRINK_END
+	pause_button.add_theme_font_size_override("font_size",32)
+	top.add_child(pause_button)
+	var facts: HBoxContainer=HBoxContainer.new()
+	layout.add_child(facts)
+	_condition=_text("",20,Color("f7f6dd"))
+	_condition.add_theme_color_override("font_shadow_color",NAVY)
+	_condition.add_theme_constant_override("shadow_offset_y",2)
+	facts.add_child(_condition)
+	_collection=_text("",20,Color("fff1bb"))
+	_collection.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
+	_collection.add_theme_color_override("font_shadow_color",NAVY)
+	_collection.add_theme_constant_override("shadow_offset_y",2)
+	facts.add_child(_collection)
+	var field: Control=Control.new()
+	field.size_flags_vertical=Control.SIZE_EXPAND_FILL
+	field.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	layout.add_child(field)
+	var edge: VBoxContainer=VBoxContainer.new()
+	edge.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	edge.offset_left=-110
+	edge.offset_top=66
+	edge.add_theme_constant_override("separation",16)
+	field.add_child(edge)
+	for item: Array in [["旅行","compass",_show_travel],["图鉴","book",_show_catalog],["收藏","heart",_show_favorites],["行囊","bag",_show_gear]]:
+		edge.add_child(_navigation(str(item[0]),str(item[1]),item[2]))
+	_toast=_text("",23,PAPER)
+	_toast.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_toast.add_theme_stylebox_override("normal",_box(Color(0.04,0.16,0.20,0.95),16,GOLD,1))
+	_toast.visible=false
 	layout.add_child(_toast)
-	var bottom: PanelContainer = PanelContainer.new()
-	bottom.add_theme_stylebox_override("panel",_box(Color(0.96,0.94,0.88,0.97),22))
-	layout.add_child(bottom)
-	var controls: VBoxContainer = VBoxContainer.new()
-	controls.add_theme_constant_override("separation",8)
-	bottom.add_child(controls)
-	_status = _text("沿着水声，慢慢开始",28)
-	controls.add_child(_status)
-	_hint = _text("长按蓄力，松手抛竿",20,MUTED)
-	controls.add_child(_hint)
-	_charge = _bar(Color("d4a266"))
-	_charge.visible = false
-	controls.add_child(_charge)
-	_bars = VBoxContainer.new()
-	_bars.add_theme_constant_override("separation",5)
-	controls.add_child(_bars)
-	_tension = _bar(CORAL)
-	_progress = _bar(TEAL)
+	_status=_text("这一竿，会遇见谁？",30,PAPER)
+	_status.add_theme_color_override("font_shadow_color",NAVY)
+	_status.add_theme_constant_override("shadow_offset_y",2)
+	layout.add_child(_status)
+	_hint=_text("长按蓄力，松手抛竿",21,Color("cbe4d9"))
+	layout.add_child(_hint)
+	_charge=_bar(GOLD)
+	_charge.visible=false
+	layout.add_child(_charge)
+	_bars=VBoxContainer.new()
+	_bars.add_theme_constant_override("separation",8)
+	layout.add_child(_bars)
+	_tension=_bar(CORAL)
+	_progress=_bar(TEAL)
 	_bars.add_child(_tension)
 	_bars.add_child(_progress)
-	_bars.visible = false
-	_action = _button("长按 · 抛竿",func() -> void: pass,true)
-	_action.custom_minimum_size.y = 102
-	_action.add_theme_font_size_override("font_size",29)
+	_bars.visible=false
+	var action_row: HBoxContainer=HBoxContainer.new()
+	layout.add_child(action_row)
+	var bait: Button=_navigation("鱼饵","lure",_show_gear)
+	bait.custom_minimum_size=Vector2(112,118)
+	action_row.add_child(bait)
+	_action=_button("长按  ·  抛竿",func() -> void: pass,true)
+	_action.custom_minimum_size.y=118
+	_action.add_theme_font_size_override("font_size",34)
 	_action.button_down.connect(_action_down)
 	_action.button_up.connect(_action_up)
 	_action.mouse_exited.connect(_action_cancel)
-	controls.add_child(_action)
-	var nav: HBoxContainer = HBoxContainer.new()
-	controls.add_child(nav)
-	for item: Array in [["旅行",_show_travel],["图鉴",_show_catalog],["收藏",_show_favorites],["行囊",_show_gear]]:
-		var b: Button = _button(str(item[0]),item[1])
-		b.custom_minimum_size.y = 96
-		b.add_theme_font_size_override("font_size",23)
-		nav.add_child(b)
-	_wallet = _text("",19,MUTED)
-	_wallet.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	controls.add_child(_wallet)
+	action_row.add_child(_action)
+	var trail: Label=_text("沿着水声，去往远岸",17,Color("a9c5bc"))
+	trail.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	layout.add_child(trail)
 
 func _bar(color: Color) -> ProgressBar:
 	var bar: ProgressBar = ProgressBar.new()
@@ -262,15 +352,16 @@ func _update_conditions() -> void:
 	weather = "clear" if int(game_clock/240.0)%2 == 0 else "rain"
 	scenery.time_of_day = time_of_day
 	scenery.weather = weather
-	_condition.text = "%s · %s · %s" % ["日间" if time_of_day == "day" else "黄昏","晴" if weather == "clear" else "微雨",catalog.bait_name(bait_id)]
+	_condition.text = "%s  ·  %s  /  %s" % [str(catalog.spots.get(spot_id,{}).get("name","")),"晴日" if weather == "clear" else "微雨","日间" if time_of_day == "day" else "黄昏"]
 
 func _refresh_location() -> void:
 	scenery.set_region(catalog.region(region_id),catalog.spots.get(spot_id,{}))
-	_place.text = str(catalog.region(region_id).get("name","")) + " / " + str(catalog.spots.get(spot_id,{}).get("name",""))
+	_place.text = str(catalog.region(region_id).get("name",""))
 	_update_wallet()
 
 func _update_wallet() -> void:
-	_wallet.text = "旅币 %d  ·  发现 %d / %d  ·  累计钓获 %d" % [int(store.state.get("currency",0)),store.discovered_count(),catalog.fish.size(),store.total_count()]
+	_wallet.text = str(int(store.state.get("currency",0)))
+	if _collection: _collection.text="图鉴 %d / %d" % [store.discovered_count(),catalog.fish.size()]
 
 func _action_down() -> void:
 	if _overlay != null or store.read_only or not _content_ok: return
@@ -301,7 +392,7 @@ func _session_changed(value: int) -> void:
 	_action.disabled = value in [Session.State.CASTING,Session.State.WAITING,Session.State.NIBBLE,Session.State.CAUGHT,Session.State.ESCAPED,Session.State.PAUSED]
 	match value:
 		Session.State.IDLE:
-			_status.text = "沿着水声，慢慢开始"
+			_status.text = "这一竿，会遇见谁？"
 			_hint.text = "长按蓄力，松手抛竿 · " + catalog.bait_name(bait_id)
 			_action.text = "长按 · 抛竿"
 		Session.State.CHARGING:
@@ -362,45 +453,58 @@ func _settle() -> void:
 
 func _open_page(id: String, heading: String, back: Callable = Callable()) -> void:
 	if _overlay != null:
+		remove_child(_overlay)
 		_overlay.queue_free()
-		session.cancel_input()
-	if session.state != Session.State.PAUSED:
-		session.pause()
+	session.cancel_input()
+	if session.state != Session.State.PAUSED: session.pause()
 	sound.suspend(true)
-	_screen = id
-	_overlay = Control.new()
+	_screen=id
+	_overlay=Control.new()
 	_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(_overlay)
-	var dim: ColorRect = ColorRect.new()
-	dim.color = Color(0.02,0.09,0.11,0.65)
+	var dim: ColorRect=ColorRect.new()
+	dim.color=Color("102f3b")
 	dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_overlay.add_child(dim)
-	var margin: MarginContainer = MarginContainer.new()
+	var atmospheric: TextureRect=_scene_picture(str(catalog.region(region_id).get("scene","")),0)
+	atmospheric.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	atmospheric.offset_bottom=420
+	atmospheric.modulate=Color(0.5,0.8,0.8,0.18)
+	atmospheric.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	_overlay.add_child(atmospheric)
+	var margin: MarginContainer=MarginContainer.new()
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	margin.add_theme_constant_override("margin_left",20)
-	margin.add_theme_constant_override("margin_right",20)
-	margin.add_theme_constant_override("margin_top",maxi(30,_safe.get_theme_constant("margin_top")))
-	margin.add_theme_constant_override("margin_bottom",maxi(28,_safe.get_theme_constant("margin_bottom")))
+	margin.add_theme_constant_override("margin_left",28)
+	margin.add_theme_constant_override("margin_right",28)
+	margin.add_theme_constant_override("margin_top",maxi(24,_safe.get_theme_constant("margin_top")))
+	margin.add_theme_constant_override("margin_bottom",maxi(24,_safe.get_theme_constant("margin_bottom")))
 	_overlay.add_child(margin)
-	var panel: PanelContainer = PanelContainer.new()
-	panel.add_theme_stylebox_override("panel",_box(PAPER,23))
-	margin.add_child(panel)
-	var outer: VBoxContainer = VBoxContainer.new()
-	panel.add_child(outer)
-	var head: HBoxContainer = HBoxContainer.new()
+	var outer: VBoxContainer=VBoxContainer.new()
+	outer.add_theme_constant_override("separation",18)
+	margin.add_child(outer)
+	var head: HBoxContainer=HBoxContainer.new()
 	outer.add_child(head)
-	_title = _text(heading,31)
-	head.add_child(_title)
-	var close: Button = _button("返回",back if back.is_valid() else _close_page)
-	close.custom_minimum_size = Vector2(98,96)
-	close.size_flags_horizontal = Control.SIZE_SHRINK_END
+	var title_box: VBoxContainer=VBoxContainer.new()
+	title_box.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	title_box.add_theme_constant_override("separation",0)
+	head.add_child(title_box)
+	title_box.add_child(_text("F A R S H O R E   /   远岸",16,GOLD))
+	_title=_text(heading,37,INK)
+	title_box.add_child(_title)
+	var close: Button=_button("返回",back if back.is_valid() else _close_page)
+	close.custom_minimum_size=Vector2(100,96)
+	close.size_flags_horizontal=Control.SIZE_SHRINK_END
 	head.add_child(close)
-	var scroll: ScrollContainer = ScrollContainer.new()
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	var line: ColorRect=ColorRect.new()
+	line.color=Color("567576")
+	line.custom_minimum_size.y=1
+	outer.add_child(line)
+	var scroll: ScrollContainer=ScrollContainer.new()
+	scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.size_flags_vertical=Control.SIZE_EXPAND_FILL
 	outer.add_child(scroll)
-	_page = VBoxContainer.new()
-	_page.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_page=VBoxContainer.new()
+	_page.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	_page.add_theme_constant_override("separation",18)
 	scroll.add_child(_page)
 
@@ -419,7 +523,7 @@ func _close_page() -> void:
 func _show_home() -> void:
 	_open_page("home","远岸钓记")
 	_page.add_child(_text("把世界，钓成一本旅行手册",36))
-	_page.add_child(_text("风从远岸来，水里藏着新的相遇。\n4 处水域 · 32 种真实鱼 · 完全离线",24,MUTED))
+	_page.add_child(_text("风从远岸来，水里藏着新的相遇。\n%d 处水域 · %d 种真实鱼 · 完全离线" % [catalog.regions.size(),catalog.fish.size()]+"",24,MUTED))
 	_page.add_child(_scene_picture("res://assets/scenery/lake.png",320))
 	_page.add_child(_button("继续我的旅程",_close_page,true))
 	_page.add_child(_text("第一竿\n1  长按蓄力，松手抛竿\n2  浮漂明显下沉时，点击提竿\n3  按住收线，张力太高就松手\n4  成功后出售或放生，历史纪录一直保留",24))
@@ -463,30 +567,61 @@ func _exit_game() -> void:
 	get_tree().quit()
 
 func _show_travel() -> void:
-	_open_page("travel","下一段旅程")
-	_page.add_child(_text("发现新物种，攒下一段路费。所有时间与天气都会在游戏里流转。",22,MUTED))
+	_open_page("travel","把下一站，交给海风")
+	_page.add_child(_text("%d 处水域  /  %d 个钓点  ·  从湖畔走向更远的海" % [catalog.regions.size(),catalog.spots.size()],21,MUTED))
 	for region: Dictionary in catalog.regions:
-		var rid: String = str(region.region_id)
-		_page.add_child(_scene_picture(str(region.scene),220))
-		_page.add_child(_text(str(region.name) + "  " + str(region.subtitle),28))
-		_page.add_child(_text(str(region.description),22,MUTED))
-		var unlocked: bool = rid in store.state.get("unlocked_regions",[])
+		var rid: String=str(region.region_id)
+		var unlocked: bool=rid in store.state.get("unlocked_regions",[])
+		var card: PanelContainer=_card(Color("1b4550"),0)
+		card.clip_contents=true
+		_page.add_child(card)
+		var contents: VBoxContainer=VBoxContainer.new()
+		contents.add_theme_constant_override("separation",0)
+		card.add_child(contents)
+		var hero: Control=Control.new()
+		hero.custom_minimum_size.y=285
+		contents.add_child(hero)
+		var scene: TextureRect=_scene_picture(str(region.scene),0)
+		scene.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		hero.add_child(scene)
+		var shade: ColorRect=ColorRect.new()
+		shade.color=Color(0.025,0.10,0.14,0.60)
+		shade.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+		shade.offset_top=-108
+		hero.add_child(shade)
+		var title: Label=_text(str(region.name),34,Color.WHITE)
+		title.position=Vector2(24,180)
+		title.size=Vector2(390,54)
+		hero.add_child(title)
+		var subtitle: Label=_text(str(region.subtitle),20,Color("d2e7dd"))
+		subtitle.position=Vector2(24,238)
+		subtitle.size=Vector2(580,35)
+		hero.add_child(subtitle)
+		var stamp: Label=_text("此刻在这里" if rid==region_id else ("旅程已开启" if unlocked else "等待启程"),20,GOLD)
+		stamp.position=Vector2(24,18)
+		stamp.add_theme_stylebox_override("normal",_box(Color(0.03,0.16,0.20,0.86),14))
+		hero.add_child(stamp)
+		var inner: VBoxContainer=VBoxContainer.new()
+		var padding: MarginContainer=MarginContainer.new()
+		for side: String in ["left","right","top","bottom"]: padding.add_theme_constant_override("margin_"+side,18)
+		contents.add_child(padding)
+		padding.add_child(inner)
+		inner.add_child(_text(str(region.description),22,MUTED))
 		if not unlocked:
-			var need: int = int(region.unlock_count)
-			var cost: int = int(region.unlock_cost)
-			var unlock: Button = _button("解锁旅程 · %d 种发现 + %d 旅币" % [need,cost],_unlock_region.bind(rid))
-			unlock.disabled = store.discovered_count()<need or int(store.state.currency)<cost
-			_page.add_child(unlock)
+			var need: int=int(region.unlock_count)
+			var cost: int=int(region.unlock_cost)
+			var unlock: Button=_button("启程  ·  %d 种发现  +  %d 旅币" % [need,cost],_unlock_region.bind(rid),true)
+			unlock.disabled=store.discovered_count()<need or int(store.state.currency)<cost
+			inner.add_child(unlock)
 		else:
 			for sid: String in region.spots:
-				var spot: Dictionary = catalog.spots[sid]
-				var min_gear: int = int(spot.min_gear)
-				var label: String = str(spot.name) + "  ·  " + str(spot.depth_min_m) + "–" + str(spot.depth_max_m) + " m"
-				if int(store.state.gear)<min_gear: label += "  需" + str(catalog.gear[min_gear].name)
-				var go: Button = _button(label,_choose_spot.bind(rid,sid))
-				go.disabled = int(store.state.gear)<min_gear
-				_page.add_child(go)
-				_page.add_child(_text(str(spot.habitat),20,MUTED))
+				var spot: Dictionary=catalog.spots[sid]
+				var min_gear: int=int(spot.min_gear)
+				var label: String=("● " if sid==spot_id else "")+str(spot.name)+"   %s–%s m" % [str(spot.depth_min_m),str(spot.depth_max_m)]
+				if int(store.state.gear)<min_gear: label+="  ·  需升级装备"
+				var go: Button=_button(label,_choose_spot.bind(rid,sid),sid==spot_id)
+				go.disabled=int(store.state.gear)<min_gear
+				inner.add_child(go)
 
 func _unlock_region(id: String) -> void:
 	var region: Dictionary = catalog.region(id)
@@ -518,21 +653,46 @@ func _active_round() -> bool:
 	return value not in [Session.State.IDLE,Session.State.CAUGHT,Session.State.ESCAPED]
 
 func _show_gear() -> void:
-	_open_page("gear","行囊与鱼饵")
-	_page.add_child(_text("旅币 %d · 基础鱼饵无限补给" % int(store.state.currency),25))
+	_open_page("gear","装好行囊，再出发")
+	_page.add_child(_text("旅币 %d  ·  每一种鱼饵，都可以无限补给" % int(store.state.currency),22,MUTED))
+	_section("我的钓竿","一份可靠的陪伴")
 	for item: Dictionary in catalog.gear:
-		var id: int = int(item.id)
-		_page.add_child(_text(str(item.name),28))
-		_page.add_child(_text(str(item.description)+"\n可探水深：%d m" % int(item.max_depth_m),22,MUTED))
-		var owned: bool = id in store.state.owned_gear
-		var label: String = "已装备" if int(store.state.gear)==id else ("换上这套装备" if owned else "购买 · %d 旅币" % int(item.price))
-		var action: Button = _button(label,_equip.bind(id))
-		action.disabled = int(store.state.gear)==id or (not owned and int(store.state.currency)<int(item.price))
-		_page.add_child(action)
-	_page.add_child(_text("为下一次相遇挑选鱼饵",29))
+		var id: int=int(item.id)
+		var current: bool=int(store.state.gear)==id
+		var card: PanelContainer=_card(Color("28535a") if current else Color("193d49"))
+		_page.add_child(card)
+		var box: VBoxContainer=VBoxContainer.new()
+		card.add_child(box)
+		var row: HBoxContainer=HBoxContainer.new()
+		box.add_child(row)
+		var icon: Control=_icon("rod",104)
+		row.add_child(icon)
+		var info: VBoxContainer=VBoxContainer.new()
+		info.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+		row.add_child(info)
+		info.add_child(_text(str(item.name),28,GOLD if current else INK))
+		info.add_child(_text(str(item.description),21,MUTED))
+		info.add_child(_text("探深 %d m   /   控线容错 ×%.2f" % [int(item.max_depth_m),float(item.tolerance)],20,TEAL))
+		var owned: bool=id in store.state.owned_gear
+		var label: String="正在使用" if current else ("换上这支竿" if owned else "带上它  ·  %d 旅币" % int(item.price))
+		var action: Button=_button(label,_equip.bind(id),not owned)
+		action.disabled=current or (not owned and int(store.state.currency)<int(item.price))
+		box.add_child(action)
+	_section("为相遇挑选鱼饵","无限补给")
+	var grid: GridContainer=GridContainer.new()
+	grid.columns=2
+	grid.add_theme_constant_override("h_separation",16)
+	grid.add_theme_constant_override("v_separation",16)
+	_page.add_child(grid)
 	for bait: Dictionary in catalog.baits:
-		_page.add_child(_button(("✓ " if bait.bait_id==bait_id else "")+str(bait.name)+" · 无限补给",_set_bait.bind(str(bait.bait_id))))
-		_page.add_child(_text(str(bait.hint),22,MUTED))
+		var card: PanelContainer=_card()
+		card.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+		grid.add_child(card)
+		var box: VBoxContainer=VBoxContainer.new()
+		card.add_child(box)
+		box.add_child(_icon(str(bait.bait_id),82))
+		box.add_child(_button(("✓ " if bait.bait_id==bait_id else "")+str(bait.name),_set_bait.bind(str(bait.bait_id)),bait.bait_id==bait_id))
+		box.add_child(_text(str(bait.hint),20,MUTED))
 
 func _equip(id: int) -> void:
 	if id < int(catalog.spots[spot_id].min_gear):
@@ -560,33 +720,51 @@ func _set_bait(id: String) -> void:
 	else: bait_id = previous_bait
 
 func _show_catalog() -> void:
-	_open_page("catalog","自然图鉴")
-	_page.add_child(_text("已发现 %d / %d 种  ·  累计钓获 %d 条" % [store.discovered_count(),catalog.fish.size(),store.total_count()],24))
-	var search: LineEdit = LineEdit.new()
-	search.placeholder_text = "搜索中文名或学名"
-	search.text = _search
-	search.custom_minimum_size.y = 96
+	_open_page("catalog","水下的万千模样")
+	var progress: HBoxContainer=HBoxContainer.new()
+	_page.add_child(progress)
+	progress.add_child(_icon("book",72))
+	var overview: VBoxContainer=VBoxContainer.new()
+	overview.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	overview.add_theme_constant_override("separation",4)
+	progress.add_child(overview)
+	overview.add_child(_text("已发现 %d / %d 种" % [store.discovered_count(),catalog.fish.size()],30,GOLD))
+	overview.add_child(_text("每一次相遇，都有迹可循  ·  累计 %d 条" % store.total_count(),20,MUTED))
+	var meter: ProgressBar=_bar(TEAL)
+	meter.value=float(store.discovered_count())/maxi(1,catalog.fish.size())
+	meter.custom_minimum_size.y=8
+	overview.add_child(meter)
+	var search: LineEdit=LineEdit.new()
+	search.placeholder_text="搜索鱼名 / 学名"
+	search.text=_search
+	search.custom_minimum_size.y=96
 	search.text_changed.connect(func(value: String) -> void: _search=value; _fill_catalog())
 	_page.add_child(search)
-	var filters: HBoxContainer = HBoxContainer.new()
+	var filters: HBoxContainer=HBoxContainer.new()
 	_page.add_child(filters)
-	var region_choice: OptionButton = OptionButton.new()
-	region_choice.custom_minimum_size.y = 96
-	region_choice.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var region_choice: OptionButton=OptionButton.new()
+	region_choice.custom_minimum_size.y=96
+	region_choice.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	region_choice.add_item("全部水域")
 	for region: Dictionary in catalog.regions: region_choice.add_item(str(region.name))
 	for i: int in range(catalog.regions.size()):
 		if str(catalog.regions[i].region_id)==_region_filter: region_choice.select(i+1)
 	region_choice.item_selected.connect(func(index: int) -> void: _region_filter="all" if index==0 else str(catalog.regions[index-1].region_id); _fill_catalog())
 	filters.add_child(region_choice)
-	var discovery: OptionButton = OptionButton.new()
-	discovery.custom_minimum_size.y = 96
+	var discovery: OptionButton=OptionButton.new()
+	discovery.custom_minimum_size.y=96
 	for value: String in ["全部","已发现","待发现"]: discovery.add_item(value)
 	discovery.select(_discovery_filter)
 	discovery.item_selected.connect(func(index: int) -> void: _discovery_filter=index; _fill_catalog())
 	filters.add_child(discovery)
-	_page.add_child(_button("排序："+("累计数量" if _sort_count else "名称")+" · 点击切换",func() -> void: _sort_count=not _sort_count; _show_catalog()))
-	_list = VBoxContainer.new()
+	var sort_button: Button=_button("数量↓" if _sort_count else "名称↓",func() -> void: _sort_count=not _sort_count; _show_catalog())
+	sort_button.custom_minimum_size=Vector2(110,96)
+	sort_button.size_flags_horizontal=Control.SIZE_SHRINK_END
+	filters.add_child(sort_button)
+	_list=GridContainer.new()
+	_list.columns=2
+	_list.add_theme_constant_override("h_separation",16)
+	_list.add_theme_constant_override("v_separation",16)
 	_page.add_child(_list)
 	_fill_catalog()
 
@@ -595,29 +773,36 @@ func _fill_catalog() -> void:
 	for child: Node in _list.get_children():
 		_list.remove_child(child)
 		child.queue_free()
-	var values: Array = catalog.fish.values()
+	var values: Array=catalog.fish.values()
 	values.sort_custom(func(a: FishDefinition,b: FishDefinition) -> bool:
 		if _sort_count:
-			var ac: int = _count(a.species_id)
-			var bc: int = _count(b.species_id)
-			if ac != bc: return ac>bc
+			var ac: int=_count(a.species_id)
+			var bc: int=_count(b.species_id)
+			if ac!=bc: return ac>bc
 		return a.name.naturalnocasecmp_to(b.name)<0)
-	var shown: int = 0
+	var shown: int=0
 	for fish: FishDefinition in values:
-		var known: bool = _count(fish.species_id)>0
+		var known: bool=_count(fish.species_id)>0
 		if _region_filter!="all" and _region_filter not in fish.regions(): continue
 		if _discovery_filter==1 and not known: continue
 		if _discovery_filter==2 and known: continue
 		if not _search.is_empty() and not (_search in fish.name or _search.to_lower() in fish.scientific_name.to_lower()): continue
-		shown += 1
-		var row: HBoxContainer = HBoxContainer.new()
-		_list.add_child(row)
-		var image: TextureRect = _fish_image(fish, true, not known, 100)
-		image.custom_minimum_size.x = 180
-		image.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-		row.add_child(image)
-		var text: String = fish.name + ("\n累计 %d 条" % _count(fish.species_id) if known else "\n待发现 · "+str(catalog.region(str(fish.regions()[0])).get("name","")))
-		row.add_child(_button(text,_show_species.bind(fish.species_id)))
+		shown+=1
+		var card: PanelContainer=_card(Color("dce5d4") if known else Color("a7bbb1"),10)
+		card.custom_minimum_size.x=305
+		_list.add_child(card)
+		var box: VBoxContainer=VBoxContainer.new()
+		box.add_theme_constant_override("separation",5)
+		card.add_child(box)
+		var image: TextureRect=_fish_image(fish,true,not known,132)
+		box.add_child(image)
+		var title: Button=_button(fish.name,_show_species.bind(fish.species_id))
+		title.custom_minimum_size.y=96
+		title.add_theme_font_size_override("font_size",24)
+		box.add_child(title)
+		var description: Label=_text("累计 %d 条" % _count(fish.species_id) if known else "待发现 · "+str(catalog.region(str(fish.regions()[0])).get("name","")),18,Color("355a58"))
+		description.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		box.add_child(description)
 	if shown==0: _list.add_child(_text("没有符合条件的鱼，试试换个筛选",23,MUTED))
 
 func _count(id: String) -> int:
@@ -625,45 +810,61 @@ func _count(id: String) -> int:
 	return int(stats.get("catch_count",0))
 
 func _show_species(id: String) -> void:
-	var fish: FishDefinition = catalog.fish[id]
+	var fish: FishDefinition=catalog.fish[id]
 	_open_page("species",fish.name,_show_catalog)
-	var known: bool = _count(id)>0
-	var art: TextureRect = _fish_image(fish,false,not known,330)
-	_page.add_child(art)
-	if known: _page.add_child(_button("放大查看插画",_show_zoom.bind(id)))
-	_page.add_child(_text(fish.scientific_name,23,MUTED))
+	var known: bool=_count(id)>0
+	_page.add_child(_text(fish.scientific_name,22,MUTED))
+	var plate: PanelContainer=_card(Color("e8ecd9"),20)
+	_page.add_child(plate)
+	var art_box: VBoxContainer=VBoxContainer.new()
+	plate.add_child(art_box)
+	art_box.add_child(_fish_image(fish,false,not known,285))
+	var caption: Label=_text("NATURAL HISTORY  /  自然手记" if known else "水下还有一个未曾见过的身影",17,Color("56776d"))
+	caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	art_box.add_child(caption)
+	if known: _page.add_child(_button("放大欣赏  ↗",_show_zoom.bind(id)))
 	_page.add_child(_text(fish.description,25))
-	_page.add_child(_text("辨认线索："+fish.morphology,22,MUTED))
-	var where: Array[String] = []
+	if bool(fish.raw.get("release_only",false)):
+		_page.add_child(_text("保护观察 · 仅在游戏中虚拟相遇，记录后即刻放归水中",22,GOLD))
+	_section("辨认它","观察笔记")
+	_page.add_child(_text(fish.morphology,23,MUTED))
+	_section("在哪里相遇")
+	var where: Array[String]=[]
 	for sid: String in fish.spots():
 		where.append(str(catalog.region(str(catalog.spots[sid].region_id)).name)+" · "+str(catalog.spots[sid].name))
-	_page.add_child(_text("去哪里寻找\n"+"\n".join(where),24))
-	var preferred: String = "worm"
-	var best: float = -1
+	_page.add_child(_text("\n".join(where),23))
+	var preferred: String="worm"
+	var best: float=-1
 	for bait: Dictionary in catalog.baits:
-		var weight: float = fish.weight_for("bait_weights",str(bait.bait_id))
-		if weight>best:
-			preferred=str(bait.bait_id)
-			best=weight
-	_page.add_child(_text("鱼饵提示："+catalog.bait_name(preferred)+"\n体型、行为与出现倍率含游戏调校。",22,MUTED))
-	_page.add_child(_text("累计成功钓获：%d 条" % _count(id),29))
+		var weight: float=fish.weight_for("bait_weights",str(bait.bait_id))
+		if weight>best: preferred=str(bait.bait_id); best=weight
+	_page.add_child(_text("鱼饵线索  /  "+catalog.bait_name(preferred)+"\n尺寸、行为与出现倍率含游戏调校",21,MUTED))
+	_section("我的相遇","累计 %d 条" % _count(id))
 	if known:
-		var stats: Dictionary = store.state.species_stats[id]
-		for pair: Array in [["首次钓获","first"],["最近钓获","last"],["最长个体","max_length"],["最重个体","max_weight"]]:
-			_page.add_child(_text(str(pair[0])+"\n"+_record_text(stats.get(pair[1],{})),23))
-		var favorite: bool = id in store.state.favorites
-		_page.add_child(_button("移出我的收藏" if favorite else "收藏这个鱼种（最多 6 种）",_favorite.bind(id)))
-	_page.add_child(_text("资料参考",24))
+		var stats: Dictionary=store.state.species_stats[id]
+		for pair: Array in [["最长个体","max_length"],["最重个体","max_weight"],["首次钓获","first"],["最近钓获","last"]]:
+			var card: PanelContainer=_card()
+			_page.add_child(card)
+			var box: VBoxContainer=VBoxContainer.new()
+			card.add_child(box)
+			box.add_child(_text(str(pair[0]),25,GOLD))
+			box.add_child(_text(_record_text(stats.get(pair[1],{})),21,MUTED))
+		var favorite: bool=id in store.state.favorites
+		_page.add_child(_button("移出收藏" if favorite else "收藏这一种相遇  ♡",_favorite.bind(id),not favorite))
+	else: _page.add_child(_text("这一页，等你亲手写下第一笔",23,MUTED))
+	_section("资料参考")
 	for source: Dictionary in fish.raw.get("sources",[]):
 		_page.add_child(_text(str(source.get("title",""))+"\n"+str(source.get("url","")),17,MUTED))
 
 func _show_zoom(id: String) -> void:
-	var fish: FishDefinition = catalog.fish[id]
-	_open_page("zoom",fish.name+" · 插画",_show_species.bind(id))
-	var art: TextureRect = _fish_image(fish,false,false,520)
-	_page.add_child(art)
-	_page.add_child(_text("完整轮廓与识别特征\n"+fish.morphology,25))
-	_page.add_child(_text("插画为 AI 辅助生成并经开发校对的自然题材游戏美术，不能替代野外物种鉴定。",21,MUTED))
+	var fish: FishDefinition=catalog.fish[id]
+	_open_page("zoom",fish.name+" · 细看",_show_species.bind(id))
+	var plate: PanelContainer=_card(Color("e8ecd9"),18)
+	_page.add_child(plate)
+	plate.add_child(_fish_image(fish,false,false,590))
+	_page.add_child(_text(fish.scientific_name,23,TEAL))
+	_page.add_child(_text(fish.morphology,26))
+	_page.add_child(_text("轻柔摆动的高清自然插画。AI 辅助生成并经开发校对，不替代野外物种鉴定。",20,MUTED))
 
 func _fish_image(fish: FishDefinition, thumbnail: bool, silhouette: bool, height: float) -> TextureRect:
 	var rect: TextureRect = TextureRect.new()
@@ -711,57 +912,110 @@ func _favorite(id: String) -> void:
 	if _commit(candidate): _show_species(id)
 
 func _show_favorites() -> void:
-	_open_page("favorites","我的收藏")
-	_page.add_child(_text("把喜欢的相遇，留在这一页。\n收藏只引用真实纪录，不会增加钓获数量。",24,MUTED))
-	var favorites: Array = store.state.get("favorites",[])
-	if favorites.is_empty():
-		_page.add_child(_text("还没有收藏。钓获新鱼后，在图鉴详情中点“收藏”。",27))
-		_page.add_child(_button("打开图鉴",_show_catalog,true))
-	for id: String in favorites:
-		if not catalog.fish.has(id): continue
-		var fish: FishDefinition = catalog.fish[id]
-		_page.add_child(_fish_image(fish,true,false,180))
-		_page.add_child(_button(fish.name+" · 累计 %d 条" % _count(id),_show_species.bind(id)))
-		var stats: Dictionary = store.state.species_stats.get(id,{})
-		_page.add_child(_text("最长纪录\n"+_record_text(stats.get("max_length",{})),22,MUTED))
+	_open_page("favorites","把喜欢的相遇，珍藏")
+	var favorites: Array=store.state.get("favorites",[])
+	_page.add_child(_text("我的六格收藏  /  %d · 6\n真实的相遇，是最好的旅行纪念" % favorites.size(),23,MUTED))
+	var grid: GridContainer=GridContainer.new()
+	grid.columns=2
+	grid.add_theme_constant_override("h_separation",16)
+	grid.add_theme_constant_override("v_separation",16)
+	_page.add_child(grid)
+	for slot: int in range(6):
+		var card: PanelContainer=_card(Color("1d4852"),14)
+		card.custom_minimum_size=Vector2(302,290)
+		grid.add_child(card)
+		var box: VBoxContainer=VBoxContainer.new()
+		card.add_child(box)
+		if slot>=favorites.size() or not catalog.fish.has(str(favorites[slot])):
+			box.add_child(_icon("heart",112))
+			box.add_child(_button("留给下一次相遇",_show_catalog))
+			var empty: Label=_text("在图鉴中收藏喜欢的鱼",18,MUTED)
+			empty.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+			box.add_child(empty)
+			continue
+		var id: String=str(favorites[slot])
+		var fish: FishDefinition=catalog.fish[id]
+		var plate: PanelContainer=_card(Color("dce5d4"),6)
+		box.add_child(plate)
+		plate.add_child(_fish_image(fish,true,false,122))
+		box.add_child(_button(fish.name,_show_species.bind(id)))
+		var stats: Dictionary=store.state.species_stats.get(id,{})
+		var record: Dictionary=stats.get("max_length",{})
+		var detail: Label=_text("最长 "+_length(int(record.get("length_mm",0)))+" · %d 条" % _count(id),18,GOLD)
+		detail.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		box.add_child(detail)
 
 func _show_result() -> void:
-	var id: String = str(_last_record.get("species_id",""))
+	var id: String=str(_last_record.get("species_id",""))
 	if not catalog.fish.has(id): return
-	var fish: FishDefinition = catalog.fish[id]
-	_open_page("result","一段新的相遇")
-	var flags: Array[String] = []
+	var fish: FishDefinition=catalog.fish[id]
+	var protected: bool=bool(_last_record.get("release_only",fish.raw.get("release_only",false)))
+	_open_page("result","一次珍贵的观察" if protected else "上岸的惊喜")
+	var flags: Array[String]=[]
 	if bool(_last_settlement.get("new_species",false)): flags.append("首次发现")
 	if bool(_last_settlement.get("new_length",false)): flags.append("长度新纪录")
 	if bool(_last_settlement.get("new_weight",false)): flags.append("重量新纪录")
-	_page.add_child(_text(" · ".join(flags) if not flags.is_empty() else "又见到你了",25,CORAL))
-	_page.add_child(_text(fish.name,38))
-	_page.add_child(_text(fish.scientific_name,22,MUTED))
-	var image: TextureRect = _fish_image(fish,false,false,220+float(_last_record.get("size_fraction",0.3))*180)
-	var displayed_fraction: float = float(_last_record.get("size_fraction",0.3))
-	image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	var sized_row: HBoxContainer = HBoxContainer.new()
-	var spacer_left: Control = Control.new()
-	var spacer_right: Control = Control.new()
-	spacer_left.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	spacer_right.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	image.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	image.custom_minimum_size.x = lerpf(330.0,590.0,displayed_fraction)
-	sized_row.add_child(spacer_left)
-	sized_row.add_child(image)
-	sized_row.add_child(spacer_right)
-	_page.add_child(sized_row)
-	_page.add_child(_text(_length(int(_last_record.length_mm))+"   /   "+_weight(int(_last_record.weight_g)),35))
-	_page.add_child(_text(str(_last_record.get("size_class","标准"))+"个体 · "+str(catalog.spots[spot_id].name),24,MUTED))
-	_page.add_child(_text("同种鱼按个体大小缩放展示 · 尺寸以数字为准",18,MUTED))
+	var ribbon: Label=_text("✦  "+("  ·  ".join(flags) if not flags.is_empty() else "又见到你了"),22,GOLD)
+	ribbon.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_page.add_child(ribbon)
+	var fish_name: Label=_text(fish.name,43,INK)
+	fish_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_page.add_child(fish_name)
+	var latin: Label=_text(fish.scientific_name,21,MUTED)
+	latin.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_page.add_child(latin)
+	var plate: PanelContainer=_card(Color("e8ecd9"),20)
+	_page.add_child(plate)
+	var specimen: VBoxContainer=VBoxContainer.new()
+	specimen.add_theme_constant_override("separation",4)
+	plate.add_child(specimen)
+	var size_fraction: float=clampf(float(_last_record.get("size_fraction",0.3)),0,1)
+	var image: TextureRect=_fish_image(fish,false,false,235+size_fraction*90)
+	var center: CenterContainer=CenterContainer.new()
+	center.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	specimen.add_child(center)
+	image.custom_minimum_size.x=lerpf(355.0,595.0,size_fraction)
+	center.add_child(image)
+	var ruler: Control=Ruler.new()
+	ruler.length_mm=int(_last_record.get("length_mm",0))
+	specimen.add_child(ruler)
+	var note: Label=_text("个体比例展示  ·  厘米 cm",16,Color("678275"))
+	note.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	specimen.add_child(note)
+	var measurements: HBoxContainer=HBoxContainer.new()
+	_page.add_child(measurements)
+	for pair: Array in [["体长",_length(int(_last_record.length_mm))],["体重",_weight(int(_last_record.weight_g))]]:
+		var box: VBoxContainer=VBoxContainer.new()
+		box.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+		box.add_theme_constant_override("separation",0)
+		measurements.add_child(box)
+		var value: Label=_text(str(pair[1]),35,GOLD)
+		value.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		box.add_child(value)
+		var title: Label=_text(str(pair[0]),18,MUTED)
+		title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		box.add_child(title)
+	var place: Label=_text(str(_last_record.get("size_class","标准"))+"个体  /  "+str(catalog.spots.get(str(_last_record.get("spot_id",spot_id)),{}).get("name","")),21,MUTED)
+	place.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_page.add_child(place)
 	if not _save_ok:
-		_page.add_child(_text("保存未成功："+str(_last_settlement.get("error",store.error_message))+"\n本次钓获暂存于内存，还没有重复发放奖励。请重试保存，不要退出。",24,CORAL))
+		_page.add_child(_text("保存未成功："+str(_last_settlement.get("error",store.error_message))+"\n相遇还保留在这里。请重试保存，不要退出。",23,CORAL))
 		_page.add_child(_button("重试保存",_settle,true))
 		return
-	_page.add_child(_text("已保存 · 累计 %d 条 · 钓获奖励 +%d 旅币" % [_count(id),int(_last_record.reward)],23,TEAL))
-	_page.add_child(_button("出售 · +%d 旅币" % int(_last_record.sale_value),_dispose_result.bind("sold"),true))
-	_page.add_child(_button("放生 · +8 旅币",_dispose_result.bind("released")))
-	_page.add_child(_text("出售和放生都保留图鉴、累计数量与个人纪录",21,MUTED))
+	var saved: Label=_text("已记入图鉴  ·  累计 %d 条  ·  +%d 旅币" % [_count(id),int(_last_record.get("reward",0))],21,TEAL)
+	saved.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_page.add_child(saved)
+	if protected:
+		_page.add_child(_text("保护观察 · 本次为虚拟相遇，记录后即刻放归。"+str(_last_record.get("conservation_note","")),21,GOLD))
+		_page.add_child(_button("放归自然  ·  +8 旅币",_dispose_result.bind("released"),true))
+	else:
+		var actions: HBoxContainer=HBoxContainer.new()
+		_page.add_child(actions)
+		actions.add_child(_button("出售  +%d" % int(_last_record.get("sale_value",0)),_dispose_result.bind("sold"),true))
+		actions.add_child(_button("放生  +8",_dispose_result.bind("released")))
+	var kept: Label=_text("每次相遇与个人纪录，都会好好留下",18,MUTED)
+	kept.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	_page.add_child(kept)
 
 func _dispose_result(action: String) -> void:
 	if _last_record.is_empty() or not _save_ok: return
@@ -781,16 +1035,22 @@ func _finish_result() -> void:
 	_save_selection()
 
 func _show_pending() -> void:
-	_open_page("pending","尚未处理的钓获")
-	var pending: Dictionary = store.state.get("pending_catches",{})
-	if pending.is_empty():
-		_page.add_child(_text("所有钓获都已妥善处理",26))
+	_open_page("pending","尚未告别的相遇")
+	var pending: Dictionary=store.state.get("pending_catches",{})
+	if pending.is_empty(): _page.add_child(_text("所有钓获都已妥善处理",26))
 	for id: String in pending:
-		var record: Dictionary = pending[id]
-		var fish: FishDefinition = catalog.fish.get(str(record.species_id))
-		_page.add_child(_text((fish.name if fish else str(record.species_id))+"\n"+_record_text(record),25))
-		_page.add_child(_button("出售 · +%d 旅币" % int(record.get("sale_value",0)),_dispose_pending.bind(id,"sold")))
-		_page.add_child(_button("放生 · +8 旅币",_dispose_pending.bind(id,"released")))
+		var record: Dictionary=pending[id]
+		var fish: FishDefinition=catalog.fish.get(str(record.species_id))
+		var protected: bool=bool(record.get("release_only",fish.raw.get("release_only",false) if fish else false))
+		var card: PanelContainer=_card()
+		_page.add_child(card)
+		var box: VBoxContainer=VBoxContainer.new()
+		card.add_child(box)
+		if fish: box.add_child(_fish_image(fish,true,false,150))
+		box.add_child(_text((fish.name if fish else str(record.species_id))+"\n"+_record_text(record),24))
+		if not protected: box.add_child(_button("出售 · +%d 旅币" % int(record.get("sale_value",0)),_dispose_pending.bind(id,"sold")))
+		else: box.add_child(_text("保护观察 · 记录后即刻放归",21,GOLD))
+		box.add_child(_button("放归自然 · +8 旅币",_dispose_pending.bind(id,"released"),true))
 
 func _dispose_pending(id: String,action: String) -> void:
 	var result: Dictionary = store.dispose_catch(id,action)
@@ -822,7 +1082,7 @@ func _show_settings() -> void:
 	_page.add_child(_text("离线存档",28))
 	_page.add_child(_text("所有纪录只属于这份本地存档。卸载、清除应用数据会丢失进度。正常覆盖更新请保持相同包名与签名。每次钓获、出售/放生、购买、解锁与收藏都会立即保存。",23,MUTED))
 	_page.add_child(_button("处理已保存但未出售/放生的鱼",_show_pending))
-	_page.add_child(_text("远岸钓记 1.0.0\nGodot 4.6.3 · 离线单机 · 32 种自然图鉴\n鱼类与场景插画：AI 辅助生成并开发校对\n字体：Noto Sans CJK（SIL Open Font License）\n音效：本项目程序合成原创\nGodot Engine：MIT License",21,MUTED))
+	_page.add_child(_text("远岸钓记 "+str(ProjectSettings.get_setting("application/config/version","1.1.0"))+"\nGodot 4.6.3 · 离线单机 · 自然图鉴\n鱼类与场景插画：AI 辅助生成并开发校对\n字体：Noto Sans CJK（SIL Open Font License）\n音效：本项目程序合成原创\nGodot Engine：MIT License",21,MUTED))
 	_page.add_child(_button("查看引擎与字体许可",_show_licenses))
 
 func _show_licenses() -> void:
