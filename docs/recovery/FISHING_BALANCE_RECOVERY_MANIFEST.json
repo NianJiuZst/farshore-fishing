@@ -1,0 +1,46 @@
+{
+  "recovered_at_utc": "2026-10-02T19:04:00Z",
+  "status": "Recovered source, fresh runtime validation pending",
+  "source": "Retained working context from the balance task; no denied session stores read",
+  "original_local_commit": "c3f6377",
+  "original_session_checkpoint": "7ffb85a",
+  "external_baseline": "c7b2b0b",
+  "exact_original_controller_sha256": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc",
+  "original_raw_evidence_status": "Lost during environment reset; not fabricated or regenerated yet",
+  "files": {
+    "game/tests/fishing_test_controller.gd": {
+      "bytes": 1553,
+      "sha256": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc"
+    },
+    "game/tests/fishing_balance_tests.gd": {
+      "bytes": 20166,
+      "sha256": "31b48499d1060c442a2b215ed10d8a80f023b764adba6fc67bd927cfdc99bd2f"
+    },
+    "tools/run_fishing_balance.py": {
+      "bytes": 13482,
+      "sha256": "6c1d9e7cb048691a1831b69ce8f027e2ad98ffdf47da538d22977a04742644f4"
+    },
+    "docs/FISHING_SKILL_BALANCE.md": {
+      "bytes": 7955,
+      "sha256": "ba501774cebd2934d88802fa31616f642a7568c2738320cf01e9519f50df720d"
+    }
+  },
+  "previously_observed_only": {
+    "simulations": 18040,
+    "regressions_passed": 341,
+    "regressions_total": 341,
+    "balance_gates_passed": 9,
+    "behavior_aware_caught": 3608,
+    "behavior_aware_runs": 3608,
+    "max_size_behavior_aware_caught": 1056,
+    "max_size_behavior_aware_runs": 1056,
+    "max_size_tension_only_caught": 529,
+    "max_size_tension_only_runs": 1056,
+    "max_size_behavior_aware_median_seconds": 104.329,
+    "frame_outcome_disagreements": {
+      "tension_only": 34,
+      "metronome": 18,
+      "behavior_aware": 0
+    }
+  }
+}

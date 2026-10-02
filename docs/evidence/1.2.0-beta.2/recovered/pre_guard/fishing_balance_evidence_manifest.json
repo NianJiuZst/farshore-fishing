@@ -1,0 +1,25 @@
+{
+  "kind": "Fresh balance evidence after recovery",
+  "date_utc": "2026-10-02",
+  "passed": true,
+  "simulations": 18040,
+  "regressions": 341,
+  "files": {
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_summary.json": {
+      "bytes": 260458,
+      "sha256": "b6121e45fcde3a3028f90d383251deb7874ea8a1a6e88c30f48b5e8945e26edb"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_raw.json.gz": {
+      "bytes": 216378,
+      "sha256": "49ed7751e812f1cf8aef3f809a3d467a561c5fad839aef183bd3e6795409e863"
+    },
+    "docs/evidence/1.2.0-beta.2/recovered/fishing_balance_godot.log": {
+      "bytes": 737,
+      "sha256": "bbeb90e2bbe4e3335ba0c0299e2306b20af23ec9774ab76db7ce7d837da1b063"
+    },
+    "docs/FISHING_SKILL_BALANCE.md": {
+      "bytes": 8709,
+      "sha256": "2462d43366ee025b7e0fde16b812d0a03cf03a86a77819cb0864fb93077a3a87"
+    }
+  }
+}

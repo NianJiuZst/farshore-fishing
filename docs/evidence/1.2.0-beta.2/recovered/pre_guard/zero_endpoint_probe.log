@@ -1,0 +1,4 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+{"break_hazard":0.0,"break_threshold":0.0,"check":"zero-threshold fresh fight must remain active until severe wear and warning grace","escape_reason":"僵持后的鱼线磨损越来越重，终于断开了","fight_seconds":0.00833333333333333,"line_warning":false,"line_wear":0.00000666666666666667,"passed":false,"state":8,"warning_seconds":0.0}
+FAIL: zero-threshold fresh fight broke before severe wear or warning grace

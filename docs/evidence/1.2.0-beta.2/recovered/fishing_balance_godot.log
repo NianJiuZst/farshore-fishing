@@ -1,0 +1,13 @@
+COMMAND: godot --headless --audio-driver Dummy --path /workspace/scratch/c16084497664/farshore-fishing-restored/game --script res://tests/fishing_balance_tests.gd -- --output=/tmp/fishing-balance-recovered-final-guard/raw.json
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+BALANCE PROGRESS routes=1/176 runs=90
+BALANCE PROGRESS routes=21/176 runs=1890
+BALANCE PROGRESS routes=41/176 runs=3690
+BALANCE PROGRESS routes=61/176 runs=5490
+BALANCE PROGRESS routes=81/176 runs=7290
+BALANCE PROGRESS routes=101/176 runs=9090
+BALANCE PROGRESS routes=121/176 runs=10890
+BALANCE PROGRESS routes=141/176 runs=12690
+BALANCE PROGRESS routes=161/176 runs=14490
+FISHING_BALANCE_TESTS: 341/341; simulations=18040; legal_routes=176
