@@ -19,3 +19,11 @@ This family owns nine original species, with head +X, Blender +Z / glTF +Y up, a
 Representative cod and wolffish are built and visually checked before expanding the other seven. Every species has independent cross-sections, mouth geometry, fin position/shape, eye proportions and anatomy, with species-specific pigment. Shared rig/tooling is used only for export and deformation.
 
 Evidence lives under `ownbuild/fish3d-catalog/<id>/`. Current completion status and measured counts will be appended after actual rendering and review, not inferred from registry entries.
+
+## Review corrections and structural checks
+
+- Cod and wolffish hero, side, top and underside were inspected before the seven additional profiles were expanded. The wolffish's first preview used a convex dark mouth filler; review replaced this with a real concave oral cavity so the mouth reads as a recess. Its eight thick tapered front canines and smaller posterior teeth are original meshes.
+- Wolffish dorsal attachment was additionally inspected in a magnified side crop. Rest fin roots lie 1.264–1.311 mm inside the authored body (pre-normalization). The visible narrow light line in the hero is a highlight, not visible background. This static result is explicitly separate from the dynamic gate.
+- The shared animated-root checker added during production caught undersupported manually positioned pelvic/pectoral roots and caudal roots in provisional haddock/herring/chub exports. All nine profiles were then revised to seat paired-fin roots on their own body surface and give the caudal rootline 0.7 mm longitudinal overlap into the body cap. No tolerance overrides were introduced.
+- Per-species `anatomy_contract.json` records independently executed profile calls. Gadoids have 3 dorsal / 2 anal fins; wolffish has no pelvic fins; each Scomber has 5 dorsal / 5 anal finlets; horse mackerel has 71 lateral scutes per flank and no finlets; herring has one dorsal and 33 low ventral scutes.
+- `glb_file_audit.json` independently parses binary GLB chunks and accessor data, checking actual embedded images, skin joint/weight buffers, all four clip durations, zero exported root translation drift, centered one-metre rest length, and distinct position buffers. This does not substitute for rendered deformation or Android runtime QA.

@@ -45,17 +45,32 @@ PROFILE={'id': 'chub_mackerel',
  'sources': ['https://www.fao.org/4/ac478e/ac478e08.pdf', 'https://www.fishbase.se/summary/Scomber_japonicus.html']}
 PROFILE['custom_skin']=dorsal_pigment
 
+def _attach(f,name,roots,edge,**kwargs):
+ """Seat fin roots on this species' actual body, including a closed tail-cap overlap."""
+ if 'caudal' in name.lower():
+  x=f.sections[0][0]+.0007;top=f.surface(x,0,-.0005).z;bottom=f.surface(x,math.pi,-.0005).z;cz=f.surface(x,math.pi/2).z
+  roots=[(x,0,bottom),(x,0,cz),(x,0,top)]
+ elif 'pectoral' in name.lower() or 'pelvic' in name.lower():
+  anchored=[]
+  for p in roots:
+   x,y,z=map(float,p);w=abs(f.surface(x,math.pi/2).y);cz=f.surface(x,math.pi/2).z
+   extent=f.surface(x,0).z-cz if z>=cz else cz-f.surface(x,math.pi).z
+   theta=math.atan2(y/max(w,.001),(z-cz)/max(extent,.001))
+   anchored.append(f.surface(x,theta,-.0007))
+  roots=anchored
+ return f.fin(name,roots,edge,**kwargs)
+
 def anatomy(f):
- f.fin('FirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(0.243,0.02,18)],[(0.243, 0, 0.077), (0.216, 0, 0.178), (0.18, 0, 0.16), (0.129, 0, 0.121), (0.07, 0, 0.094), (0.02, 0, 0.084)],parent='spine_front',rays=14)
- f.fin('SecondDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(-0.104,-0.207,18)],[(-0.104, 0, 0.071), (-0.128, 0, 0.111), (-0.163, 0, 0.092), (-0.207, 0, 0.048)],parent='spine_rear',rays=15)
- f.fin('MainAnal',[f.surface(float(x),math.pi,-.001) for x in np.linspace(-0.112,-0.211,18)],[(-0.112, 0, -0.053), (-0.142, 0, -0.092), (-0.178, 0, -0.072), (-0.211, 0, -0.041)],parent='spine_rear',rays=15)
+ _attach(f,'FirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(0.243,0.02,18)],[(0.243, 0, 0.077), (0.216, 0, 0.178), (0.18, 0, 0.16), (0.129, 0, 0.121), (0.07, 0, 0.094), (0.02, 0, 0.084)],parent='spine_front',rays=14)
+ _attach(f,'SecondDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(-0.104,-0.207,18)],[(-0.104, 0, 0.071), (-0.128, 0, 0.111), (-0.163, 0, 0.092), (-0.207, 0, 0.048)],parent='spine_rear',rays=15)
+ _attach(f,'MainAnal',[f.surface(float(x),math.pi,-.001) for x in np.linspace(-0.112,-0.211,18)],[(-0.112, 0, -0.053), (-0.142, 0, -0.092), (-0.178, 0, -0.072), (-0.211, 0, -0.041)],parent='spine_rear',rays=15)
  # Exactly five anatomically separated finlets above and below the peduncle.
  for idx,x in enumerate(np.linspace(-.233,-.371,5)):
   x=float(x)
   for sign,name,theta in [(1,'DorsalFinlet',0),(-1,'AnalFinlet',math.pi)]:
    a=f.surface(x,theta,-.0007);b=f.surface(x-.024,theta,-.0007)
-   f.fin(name+str(idx+1),[a,b],[(a.x,a.y,a.z),(x-.011,0,a.z+sign*(.019-idx*.0015)),(b.x,b.y,b.z)],parent='tail' if x<-.30 else 'spine_rear',rays=5)
- f.fin('DeepForkedCaudal',[(-.403,0,-.012),(-.408,0,0),(-.403,0,.013)],[(-.440,0,-.040),(-.539,0,-.116),(-.516,0,-.061),(-.450,0,0),(-.516,0,.061),(-.539,0,.116),(-.440,0,.040)],bone='caudal',parent='tail',rays=27)
+   _attach(f,name+str(idx+1),[a,b],[(a.x,a.y,a.z),(x-.011,0,a.z+sign*(.019-idx*.0015)),(b.x,b.y,b.z)],parent='tail' if x<-.30 else 'spine_rear',rays=5)
+ _attach(f,'DeepForkedCaudal',[(-.403,0,-.012),(-.408,0,0),(-.403,0,.013)],[(-.440,0,-.040),(-.539,0,-.116),(-.516,0,-.061),(-.450,0,0),(-.516,0,.061),(-.539,0,.116),(-.440,0,.040)],bone='caudal',parent='tail',rays=27)
  keel=f.material('MinorCaudalKeels',(.40,.49,.49),.43)
  for s in (-1,1):
   tag='L' if s<0 else 'R'
@@ -63,8 +78,8 @@ def anatomy(f):
    pts=[f.surface(float(x),s*theta,.0007) for x in np.linspace(-.302,-.404,12)]
    # Low paired ridges, never the prominent tuna central keel.
    f.tube('MinorKeel'+tag+str(j),pts,[.0008+.0013*math.sin(i/11*math.pi) for i in range(12)],keel,'spine',5)
-  f.fin('ShortPectoral'+tag,[f.surface(0.289,s*1.52,-.0006),f.surface(0.254,s*1.89,-.0006)],[( 0.289,s*.041,-.002),(0.2,s*.083,-.022),(0.15,s*.094,-.040),(0.2,s*.063,-.052),(0.254,s*.044,-.027)],parent='spine_front',rays=16)
-  f.fin('Pelvic'+tag,[f.surface(0.183,s*2.77,-.0005),f.surface(0.153,s*2.75,-.0005)],[f.surface(0.183,s*2.77,-.0005),(0.143,s*.042,-.107),(0.103,s*.033,-.105),f.surface(0.153,s*2.75,-.0005)],parent='spine_front',rays=9)
+  _attach(f,'ShortPectoral'+tag,[f.surface(0.289,s*1.52,-.0006),f.surface(0.254,s*1.89,-.0006)],[( 0.289,s*.041,-.002),(0.2,s*.083,-.022),(0.15,s*.094,-.040),(0.2,s*.063,-.052),(0.254,s*.044,-.027)],parent='spine_front',rays=16)
+  _attach(f,'Pelvic'+tag,[f.surface(0.183,s*2.77,-.0005),f.surface(0.153,s*2.75,-.0005)],[f.surface(0.183,s*2.77,-.0005),(0.143,s*.042,-.107),(0.103,s*.033,-.105),f.surface(0.153,s*2.75,-.0005)],parent='spine_front',rays=9)
   f.eye('AdiposeRimEye'+tag,f.surface(0.415,s*1.16,.0008),(0,s*.96,.28),0.0146,iris=(.58,.59,.43))
   f.gill(tag,[f.surface(0.3+.022*((t-1.38)/1.1)**2,s*t,.0008) for t in np.linspace(.39,2.68,29)],.001)
   mouth=[f.surface(float(x),s*(1.59+(.484-x)*4.4),.0006) for x in np.linspace(.484,.407,22)]

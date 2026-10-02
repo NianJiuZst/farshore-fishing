@@ -19,14 +19,29 @@ PROFILE={
  'morphology':['Large rounded muscular head tapering to a long eel-like trunk','Long continuous soft-spined dorsal and long anal fin; rounded caudal separated by small gap','Broad rounded paired pectorals; pelvic fins entirely absent','Canine-like front teeth and smaller crushing teeth in a strong lower jaw','Blue-grey body with dark irregular vertical bands'],
  'sources':['https://www.fisheries.noaa.gov/species/atlantic-wolffish','https://www.greateratlantic.fisheries.noaa.gov/public/public/web/NEROINET/prot_res/CandidateSpeciesProgram/atlanticwolffish_detailed.pdf','https://www.marlin.ac.uk/species/detail/1747']}
 
+def _attach(f,name,roots,edge,**kwargs):
+ """Seat fin roots on this species' actual body, including a closed tail-cap overlap."""
+ if 'caudal' in name.lower():
+  x=f.sections[0][0]+.0007;top=f.surface(x,0,-.0005).z;bottom=f.surface(x,math.pi,-.0005).z;cz=f.surface(x,math.pi/2).z
+  roots=[(x,0,bottom),(x,0,cz),(x,0,top)]
+ elif 'pectoral' in name.lower() or 'pelvic' in name.lower():
+  anchored=[]
+  for p in roots:
+   x,y,z=map(float,p);w=abs(f.surface(x,math.pi/2).y);cz=f.surface(x,math.pi/2).z
+   extent=f.surface(x,0).z-cz if z>=cz else cz-f.surface(x,math.pi).z
+   theta=math.atan2(y/max(w,.001),(z-cz)/max(extent,.001))
+   anchored.append(f.surface(x,theta,-.0007))
+  roots=anchored
+ return f.fin(name,roots,edge,**kwargs)
+
 def anatomy(f):
- f.fin('ContinuousDorsal',[f.surface(float(x),0,-.0013) for x in np.linspace(.30,-.397,55)],[(.30,0,.109),(.239,0,.151),(.125,0,.144),(-.019,0,.128),(-.171,0,.106),(-.295,0,.087),(-.372,0,.064),(-.399,0,.026)],parent='spine_mid',rays=61)
- f.fin('LongAnal',[f.surface(float(x),math.pi,-.0013) for x in np.linspace(.029,-.394,35)],[(.029,0,-.047),(-.01,0,-.085),(-.153,0,-.085),(-.294,0,-.071),(-.371,0,-.052),(-.394,0,-.025)],parent='spine_rear',rays=42)
- f.fin('RoundedCaudal',[(-.400,0,-.023),(-.405,0,0),(-.400,0,.025)],[(-.429,0,-.047),(-.488,0,-.046),(-.513,0,-.024),(-.519,0,.004),(-.503,0,.033),(-.471,0,.053),(-.428,0,.050)],bone='caudal',parent='tail',rays=23)
+ _attach(f,'ContinuousDorsal',[f.surface(float(x),0,-.0013) for x in np.linspace(.30,-.397,55)],[(.30,0,.109),(.239,0,.151),(.125,0,.144),(-.019,0,.128),(-.171,0,.106),(-.295,0,.087),(-.372,0,.064),(-.399,0,.026)],parent='spine_mid',rays=61)
+ _attach(f,'LongAnal',[f.surface(float(x),math.pi,-.0013) for x in np.linspace(.029,-.394,35)],[(.029,0,-.047),(-.01,0,-.085),(-.153,0,-.085),(-.294,0,-.071),(-.371,0,-.052),(-.394,0,-.025)],parent='spine_rear',rays=42)
+ _attach(f,'RoundedCaudal',[(-.400,0,-.023),(-.405,0,0),(-.400,0,.025)],[(-.429,0,-.047),(-.488,0,-.046),(-.513,0,-.024),(-.519,0,.004),(-.503,0,.033),(-.471,0,.053),(-.428,0,.050)],bone='caudal',parent='tail',rays=23)
  lip=f.material('WolfJawGrey',(.44,.46,.43),.49)
  for s in (-1,1):
   tag='L' if s<0 else 'R'
-  f.fin('BroadPectoral'+tag,[(.256,s*.077,.016),(.245,s*.080,-.019),(.239,s*.065,-.045)],[(.256,s*.077,.016),(.207,s*.164,.011),(.160,s*.192,-.011),(.136,s*.181,-.044),(.157,s*.145,-.086),(.205,s*.095,-.081),(.239,s*.065,-.045)],parent='spine_front',rays=23)
+  _attach(f,'BroadPectoral'+tag,[(.256,s*.077,.016),(.245,s*.080,-.019),(.239,s*.065,-.045)],[(.256,s*.077,.016),(.207,s*.164,.011),(.160,s*.192,-.011),(.136,s*.181,-.044),(.157,s*.145,-.086),(.205,s*.095,-.081),(.239,s*.065,-.045)],parent='spine_front',rays=23)
   f.eye('Eye'+tag,f.surface(.410,s*.94,.001),(0,s*.79,.62),.0102,iris=(.38,.35,.24))
   f.gill(tag,[f.surface(.247+.036*((t-1.4)/.95)**2,s*t,.0011) for t in np.linspace(.43,2.5,27)],.0018)
   f.ellipsoid('Nostril'+tag,f.surface(.472,s*.79,.001),(.0035,.0025,.0018),f.mats['dark'])

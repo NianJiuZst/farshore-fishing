@@ -18,19 +18,34 @@ PROFILE={
  'morphology':['Moderately compressed spindle body with pointed snout and relatively large eye','Two dorsal fins, long second dorsal and anal fin; no detached finlets','Seventy-one strong lateral scutes following high anterior line and descended straight posterior line','Accessory lateral line below dorsal base, dark upper opercular spot and long sickle pectorals','Deeply forked yellow-grey tail; low narrow peduncle and two small isolated anal spines'],
  'sources':['https://fishdb.sinica.edu.tw/taxon/381555-fishdb']}
 
+def _attach(f,name,roots,edge,**kwargs):
+ """Seat fin roots on this species' actual body, including a closed tail-cap overlap."""
+ if 'caudal' in name.lower():
+  x=f.sections[0][0]+.0007;top=f.surface(x,0,-.0005).z;bottom=f.surface(x,math.pi,-.0005).z;cz=f.surface(x,math.pi/2).z
+  roots=[(x,0,bottom),(x,0,cz),(x,0,top)]
+ elif 'pectoral' in name.lower() or 'pelvic' in name.lower():
+  anchored=[]
+  for p in roots:
+   x,y,z=map(float,p);w=abs(f.surface(x,math.pi/2).y);cz=f.surface(x,math.pi/2).z
+   extent=f.surface(x,0).z-cz if z>=cz else cz-f.surface(x,math.pi).z
+   theta=math.atan2(y/max(w,.001),(z-cz)/max(extent,.001))
+   anchored.append(f.surface(x,theta,-.0007))
+  roots=anchored
+ return f.fin(name,roots,edge,**kwargs)
+
 def anatomy(f):
- f.fin('SpinyFirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(.229,.069,18)],[(.229,0,.092),(.212,0,.171),(.175,0,.157),(.127,0,.113),(.069,0,.094)],parent='spine_front',rays=10)
- f.fin('LongSecondDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(.040,-.333,35)],[(.040,0,.096),(.009,0,.144),(-.042,0,.113),(-.169,0,.089),(-.273,0,.071),(-.333,0,.032)],parent='spine_mid',rays=32)
- f.fin('LongAnal',[f.surface(float(x),math.pi,-.001) for x in np.linspace(.003,-.329,32)],[(.003,0,-.062),(-.030,0,-.103),(-.094,0,-.089),(-.223,0,-.067),(-.298,0,-.049),(-.329,0,-.027)],parent='spine_rear',rays=28)
+ _attach(f,'SpinyFirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(.229,.069,18)],[(.229,0,.092),(.212,0,.171),(.175,0,.157),(.127,0,.113),(.069,0,.094)],parent='spine_front',rays=10)
+ _attach(f,'LongSecondDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(.040,-.333,35)],[(.040,0,.096),(.009,0,.144),(-.042,0,.113),(-.169,0,.089),(-.273,0,.071),(-.333,0,.032)],parent='spine_mid',rays=32)
+ _attach(f,'LongAnal',[f.surface(float(x),math.pi,-.001) for x in np.linspace(.003,-.329,32)],[(.003,0,-.062),(-.030,0,-.103),(-.094,0,-.089),(-.223,0,-.067),(-.298,0,-.049),(-.329,0,-.027)],parent='spine_rear',rays=28)
  for i,x in enumerate((.052,.032)):
   p=f.surface(x,math.pi,.0004);f.tube('DetachedAnalSpine'+str(i),[p,(x-.007,0,p.z-.023),(x-.010,0,p.z-.027)],[.0013,.0008,.00012],f.mats['ray'],'spine',6)
- f.fin('DeepForkedCaudal',[(-.393,0,-.016),(-.399,0,0),(-.393,0,.017)],[(-.429,0,-.042),(-.537,0,-.124),(-.517,0,-.071),(-.449,0,0),(-.517,0,.074),(-.537,0,.128),(-.429,0,.043)],bone='caudal',parent='tail',rays=29)
+ _attach(f,'DeepForkedCaudal',[(-.393,0,-.016),(-.399,0,0),(-.393,0,.017)],[(-.429,0,-.042),(-.537,0,-.124),(-.517,0,-.071),(-.449,0,0),(-.517,0,.074),(-.537,0,.128),(-.429,0,.043)],bone='caudal',parent='tail',rays=29)
  armor=f.material('SilverScuteArmor',(.54,.63,.58),.47)
  accessory=f.material('AccessoryLateralLine',(.29,.40,.33),.48)
  for s in (-1,1):
   tag='L' if s<0 else 'R'
-  f.fin('SicklePectoral'+tag,[(.274,s*.043,.003),(.260,s*.047,-.012),(.246,s*.043,-.026)],[(.274,s*.043,.003),(.158,s*.102,-.001),(.011,s*.162,-.044),(-.037,s*.159,-.061),(.097,s*.105,-.062),(.246,s*.043,-.026)],parent='spine_front',rays=22)
-  f.fin('Pelvic'+tag,[(.209,s*.019,-.062),(.182,s*.022,-.067)],[(.209,s*.019,-.062),(.161,s*.048,-.114),(.114,s*.038,-.127),(.148,s*.028,-.093),(.182,s*.022,-.067)],parent='spine_front',rays=10)
+  _attach(f,'SicklePectoral'+tag,[(.274,s*.043,.003),(.260,s*.047,-.012),(.246,s*.043,-.026)],[(.274,s*.043,.003),(.158,s*.102,-.001),(.011,s*.162,-.044),(-.037,s*.159,-.061),(.097,s*.105,-.062),(.246,s*.043,-.026)],parent='spine_front',rays=22)
+  _attach(f,'Pelvic'+tag,[(.209,s*.019,-.062),(.182,s*.022,-.067)],[(.209,s*.019,-.062),(.161,s*.048,-.114),(.114,s*.038,-.127),(.148,s*.028,-.093),(.182,s*.022,-.067)],parent='spine_front',rays=10)
   f.eye('AdiposeMarginEye'+tag,f.surface(.404,s*1.11,.0007),(0,s*.94,.33),.0141,iris=(.68,.65,.38))
   f.gill(tag,[f.surface(.287+.021*((t-1.42)/1.1)**2,s*t,.0008) for t in np.linspace(.36,2.61,29)],.0011)
   for i,x in enumerate(np.linspace(.268,-.378,71)):

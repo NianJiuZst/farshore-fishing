@@ -9,22 +9,37 @@ PROFILE={
  'morphology':['Three separate rounded dorsal fins and two separate anal fins','Full-bellied elongated body; stout caudal peduncle and near-truncate tail','Single tapered chin barbel and upper jaw longer than lower','Pale lateral line arches over pectoral fin; olive-brown mottling and fine dark flecks'],
  'sources':['https://www.marlin.ac.uk/species/detail/2095','https://www.vims.edu/research/units/programs/multispecies_fisheries_research/speciesofinterest/atlantic-cod.php','https://www.marinespecies.org/photogallery.php?album=745&pic=40141']}
 
+def _attach(f,name,roots,edge,**kwargs):
+ """Seat fin roots on this species' actual body, including a closed tail-cap overlap."""
+ if 'caudal' in name.lower():
+  x=f.sections[0][0]+.0007;top=f.surface(x,0,-.0005).z;bottom=f.surface(x,math.pi,-.0005).z;cz=f.surface(x,math.pi/2).z
+  roots=[(x,0,bottom),(x,0,cz),(x,0,top)]
+ elif 'pectoral' in name.lower() or 'pelvic' in name.lower():
+  anchored=[]
+  for p in roots:
+   x,y,z=map(float,p);w=abs(f.surface(x,math.pi/2).y);cz=f.surface(x,math.pi/2).z
+   extent=f.surface(x,0).z-cz if z>=cz else cz-f.surface(x,math.pi).z
+   theta=math.atan2(y/max(w,.001),(z-cz)/max(extent,.001))
+   anchored.append(f.surface(x,theta,-.0007))
+  roots=anchored
+ return f.fin(name,roots,edge,**kwargs)
+
 def anatomy(f):
  for name,a,b,edge,rays,parent in [
   ('FirstDorsal',.205,.045,[(.205,0,.101),(.180,0,.151),(.145,0,.166),(.103,0,.155),(.045,0,.089)],20,'spine_front'),
   ('SecondDorsal',.018,-.188,[(.018,0,.085),(-.023,0,.132),(-.071,0,.134),(-.139,0,.110),(-.188,0,.057)],24,'spine_mid'),
   ('ThirdDorsal',-.216,-.354,[(-.216,0,.054),(-.250,0,.096),(-.293,0,.090),(-.331,0,.067),(-.354,0,.032)],18,'spine_rear')]:
-  f.fin(name,[f.surface(float(x),0,-.001) for x in np.linspace(a,b,20)],edge,parent=parent,rays=rays)
+  _attach(f,name,[f.surface(float(x),0,-.001) for x in np.linspace(a,b,20)],edge,parent=parent,rays=rays)
  for name,a,b,edge in [
   ('FirstAnal',.034,-.180,[(.034,0,-.059),(-.006,0,-.099),(-.075,0,-.103),(-.139,0,-.082),(-.180,0,-.042)]),
   ('SecondAnal',-.206,-.346,[(-.206,0,-.037),(-.235,0,-.075),(-.291,0,-.074),(-.329,0,-.052),(-.346,0,-.025)])]:
-  f.fin(name,[f.surface(float(x),math.pi,-.001) for x in np.linspace(a,b,22)],edge,parent='spine_rear',rays=22)
- f.fin('Caudal',[(-.39,0,-.022),(-.394,0,0),(-.39,0,.026)],[(-.418,0,-.054),(-.490,0,-.083),(-.514,0,-.052),(-.505,0,0),(-.514,0,.055),(-.492,0,.088),(-.418,0,.057)],bone='caudal',parent='tail',rays=30)
+  _attach(f,name,[f.surface(float(x),math.pi,-.001) for x in np.linspace(a,b,22)],edge,parent='spine_rear',rays=22)
+ _attach(f,'Caudal',[(-.39,0,-.022),(-.394,0,0),(-.39,0,.026)],[(-.418,0,-.054),(-.490,0,-.083),(-.514,0,-.052),(-.505,0,0),(-.514,0,.055),(-.492,0,.088),(-.418,0,.057)],bone='caudal',parent='tail',rays=30)
  pale=f.material('PaleCurvedLateralLine',(.71,.72,.54),.51)
  for s in (-1,1):
   tag='L' if s<0 else 'R'
-  f.fin('Pectoral'+tag,[(.247,s*.066,-.005),(.232,s*.068,-.024),(.217,s*.065,-.034)],[(.247,s*.066,-.005),(.157,s*.113,-.021),(.076,s*.139,-.050),(.131,s*.101,-.075),(.217,s*.065,-.034)],parent='spine_front',rays=19)
-  f.fin('Pelvic'+tag,[(.277,s*.024,-.066),(.249,s*.031,-.072)],[(.277,s*.024,-.066),(.221,s*.056,-.111),(.155,s*.045,-.128),(.179,s*.034,-.100),(.249,s*.031,-.072)],parent='spine_front',rays=13)
+  _attach(f,'Pectoral'+tag,[(.247,s*.066,-.005),(.232,s*.068,-.024),(.217,s*.065,-.034)],[(.247,s*.066,-.005),(.157,s*.113,-.021),(.076,s*.139,-.050),(.131,s*.101,-.075),(.217,s*.065,-.034)],parent='spine_front',rays=19)
+  _attach(f,'Pelvic'+tag,[(.277,s*.024,-.066),(.249,s*.031,-.072)],[(.277,s*.024,-.066),(.221,s*.056,-.111),(.155,s*.045,-.128),(.179,s*.034,-.100),(.249,s*.031,-.072)],parent='spine_front',rays=13)
   f.eye('Eye'+tag,f.surface(.399,s*1.11,.001),(0,s*.93,.36),.0105,iris=(.45,.45,.25))
   f.gill(tag,[f.surface(.262+.030*((t-1.3)/1.15)**2,s*t,.001) for t in np.linspace(.36,2.62,32)],.0013)
   line=[]
