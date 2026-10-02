@@ -1,0 +1,125 @@
+{
+  "species": "channel_catfish",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "glb_sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+  "view_hashes": {
+    "hero": "7f12f5ae7d678055aec805afbeb3496fd752a23e33ea2495c7b94d44ce0565cb",
+    "side": "983936ef2921b4924a5156df37c2303abce098069ec21b790f8f76115f0105d9",
+    "top": "a55ebf9dbb3dec7b8977a12a804d075450cea16afc806cef598f2e34085506bc",
+    "underside": "576d7c14d686f7c6c290797ef5d96f83b043e10ee77ab700ca8edba72954bbd9",
+    "pose_swim": "7a453513fc2731e0d3f753ba1ade16555dd57091d7b546486574312dc5356b52",
+    "pose_struggle": "610a0150018907900739c0d5549bcc162cf950fffdb4b3f41976e77179f6b0a1",
+    "pose_breach": "ce46e1cf934c74beaaaceebe7ca49afc43eba91c2865a8b9e8e6011c165c852a",
+    "pose_landed": "525eb4954d7fb2bbfb71ebd0503b2b8d79c0f646d979e54f1577318cdbbcea98"
+  },
+  "status": "passed_asset_visual_and_contact_gates",
+  "reviewed_at_utc": "2026-10-02T15:15:10.381755+00:00",
+  "canonical_glb_sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+  "canonical_blend_sha256": "182d0099cdf8b0dad6dddeb53f5db4559c225761405a7277446303bebd1f477a",
+  "profile_sha256": "b5dee5603752872df859bde6bb08a303daeab01564b75b7d2cb6d8250cc14467",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "manifest_sha256": "cc6bfe106ea6719b4705e5fdc11199a38920a2c331e54246e8475c444c39beee",
+  "validation_sha256": "9b7582b80594f43746cf866a9d923901111fbae3d8d2da1f5347d8555f98547d",
+  "glb_audit_sha256": "4ee104033aa27c9360694f91d90f10efcbce407688f89e84d4f66decac7d114d",
+  "contact_gate": {
+    "poses": 36,
+    "samples_per_clip": 9,
+    "tolerance_m": 0.004,
+    "worst_distance_m": 0.0021227889228612185,
+    "membrane_and_ray_roots": true
+  },
+  "views": {
+    "hero": {
+      "sha256": "7f12f5ae7d678055aec805afbeb3496fd752a23e33ea2495c7b94d44ce0565cb",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "c1f3cbc4316288dc1c21f15f5a4d28535077166c6e201fdb8bec82d041cec6cf"
+    },
+    "side": {
+      "sha256": "983936ef2921b4924a5156df37c2303abce098069ec21b790f8f76115f0105d9",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "5101eea4d02899b98c11163f69afd101c2f32bf6af8df31778e718bf7c509d97"
+    },
+    "top": {
+      "sha256": "a55ebf9dbb3dec7b8977a12a804d075450cea16afc806cef598f2e34085506bc",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "99449dafe9baabcbe9bf5435a53c06aa4cde3b65987f7cf60b8ab1083751a450"
+    },
+    "underside": {
+      "sha256": "576d7c14d686f7c6c290797ef5d96f83b043e10ee77ab700ca8edba72954bbd9",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "5f0d84431ae4f2dad138329c4168812dc9dcedcfd948d0439a120ee59cf88c4f"
+    },
+    "pose_swim": {
+      "sha256": "7a453513fc2731e0d3f753ba1ade16555dd57091d7b546486574312dc5356b52",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "0bf66efa0dc7bc3172ca6d420543999b4e56645ed3da36f9cfe4236de7d6a78e"
+    },
+    "pose_struggle": {
+      "sha256": "610a0150018907900739c0d5549bcc162cf950fffdb4b3f41976e77179f6b0a1",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "334ce2018ad9feac5b82038c7e655d85eb635bc397189d672e59f5affd745b28"
+    },
+    "pose_breach": {
+      "sha256": "ce46e1cf934c74beaaaceebe7ca49afc43eba91c2865a8b9e8e6011c165c852a",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "9fd1380517f2c8716b190266b0918be68dda37e3b9f272bbe6295ff955cb1203"
+    },
+    "pose_landed": {
+      "sha256": "525eb4954d7fb2bbfb71ebd0503b2b8d79c0f646d979e54f1577318cdbbcea98",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "117b85b84b2a43ddc2c50f9fd15b64a6463912195f15102a6c49462784dd77bf"
+    }
+  },
+  "contact_sheet_sha256": "404065b9dc35915db585d68839135e254439958f736816df971edb7f8f4ae0d0",
+  "findings": [
+    "Smooth naked spotted skin; eight tapered nasal/maxillary/chin barbels",
+    "Rayless closed adipose, arched anal and deeply forked caudal",
+    "Updated dorsal/anal roots and paired fins remain seated in all inspected poses",
+    "Actual hero/top/side/underside and four pose images visually inspected; no detached fin/ray geometry, mouth, eye or throat plate found"
+  ],
+  "scope": "Blender source-asset visual acceptance plus shared numeric attachment gate. Does not claim Android package or device-runtime acceptance.",
+  "reference_photos_included": false,
+  "canonical_art_changed_during_review": false
+}

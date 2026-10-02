@@ -1,0 +1,125 @@
+{
+  "species": "bowfin",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "glb_sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+  "view_hashes": {
+    "hero": "40d2cfebd380231e3ccd517afea095577825976a239b6ab9dd1e2cf6270dd066",
+    "side": "683aa7911fb8bf71573b085c60eb2999d7fcbc7ff0a8be65a7a0af19d697f9b3",
+    "top": "4d5ef3e7f73b8a161d632dc57c3c715a95e0bf7dfe409471521810f25f80d845",
+    "underside": "d3da513763661abb8c96f3fc2627ba0c68fae6d3e37b229f65d94ab3eee923a7",
+    "pose_swim": "a5ca7aa1962af93a5e547f24784c856117679beb49f1b4381f725498625a69d5",
+    "pose_struggle": "8ec47def93f8de1dba693693dce43c45703b3b67fd17f4772cb6d420fa528f1d",
+    "pose_breach": "73687bd0720a1031aa78635d5cb6aaf1527f5d91f13c1b262801a5987cb324c6",
+    "pose_landed": "0b09e1a356c1fdc24c1f74d9261d44830c926ec73b424e0d4d1e675c5d036095"
+  },
+  "status": "passed_asset_visual_and_contact_gates",
+  "reviewed_at_utc": "2026-10-02T15:19:59.547123+00:00",
+  "canonical_glb_sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+  "canonical_blend_sha256": "115c86c7cebdfe32145d5341e493878652b7296d844dcb1826a2c159d5562852",
+  "profile_sha256": "11410a3db0e89b7f5812f2275688da6ce70dece3662219c94bd16fe4e49223b2",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "manifest_sha256": "3c95c5eda90c36e482c2abaf3987e042afbc17838f9821cdf315b42353378f28",
+  "validation_sha256": "12c7cf2dbdb5251a7f998437f75846d5eaf5c04d4e8fe86f687aca0f490f6f39",
+  "glb_audit_sha256": "47fb65b78617c82e9e9e97b95f4791f12e168bab6874420375ae5a3ded4bd0ed",
+  "contact_gate": {
+    "poses": 36,
+    "samples_per_clip": 9,
+    "tolerance_m": 0.004,
+    "worst_distance_m": 0.002103338483721018,
+    "membrane_and_ray_roots": true
+  },
+  "views": {
+    "hero": {
+      "sha256": "40d2cfebd380231e3ccd517afea095577825976a239b6ab9dd1e2cf6270dd066",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "ddeaeddbac3f0326a70f534528e1bc5ecf7e37a829ca393d3155a33cc98195e1"
+    },
+    "side": {
+      "sha256": "683aa7911fb8bf71573b085c60eb2999d7fcbc7ff0a8be65a7a0af19d697f9b3",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "71e229d8d3d0cce9637d39fa5bf69ba593671a94cb109a0677e0a7df245f0fed"
+    },
+    "top": {
+      "sha256": "4d5ef3e7f73b8a161d632dc57c3c715a95e0bf7dfe409471521810f25f80d845",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "69b75fbbb64698bf625e92828ab42691f3e095b0e15f68ce720352e502e771a7"
+    },
+    "underside": {
+      "sha256": "d3da513763661abb8c96f3fc2627ba0c68fae6d3e37b229f65d94ab3eee923a7",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "dc87f3b21f17c1e454ac688998271b19a94d802a08394c9888e0ac92175a8242"
+    },
+    "pose_swim": {
+      "sha256": "a5ca7aa1962af93a5e547f24784c856117679beb49f1b4381f725498625a69d5",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "fa743ca4b326a5cf537e97dbf15e9f4716ab10c5845eaca7032f4eca154ba7d3"
+    },
+    "pose_struggle": {
+      "sha256": "8ec47def93f8de1dba693693dce43c45703b3b67fd17f4772cb6d420fa528f1d",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "cf5bf70b939d18b21a025dca93a79003c556a6e62d22f07341ea6c643a9e9ff6"
+    },
+    "pose_breach": {
+      "sha256": "73687bd0720a1031aa78635d5cb6aaf1527f5d91f13c1b262801a5987cb324c6",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "37f2889efe1f1b60bfbaa94c635a60eaa233af781069da9ec663e8577e19dae5"
+    },
+    "pose_landed": {
+      "sha256": "0b09e1a356c1fdc24c1f74d9261d44830c926ec73b424e0d4d1e675c5d036095",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "06ee3cf10561b0e878d349eacad01712e725950b72648fc48605b0c4f417ce62"
+    }
+  },
+  "contact_sheet_sha256": "281a42562b25d9ecaeb7be44013fe5b1573151af0b3e5c91b784def01762e4a0",
+  "findings": [
+    "Robust cylindrical olive body, rounded scaleless head and tiny nasal flaps",
+    "Long dorsal contrasted with short anal; posterior pelvic placement and rounded tail",
+    "Male tail-base eyespot and surface-conforming gular plate remain distinct from snakehead",
+    "Actual hero/top/side/underside and four pose images visually inspected; no detached fin/ray geometry, mouth, eye or throat plate found"
+  ],
+  "scope": "Blender source-asset visual acceptance plus shared numeric attachment gate. Does not claim Android package or device-runtime acceptance.",
+  "reference_photos_included": false,
+  "canonical_art_changed_during_review": false
+}

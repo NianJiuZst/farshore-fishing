@@ -1,0 +1,43 @@
+{
+  "species": "flathead_catfish",
+  "pipeline_sha256": "c799a7c7106af70b2ff17a9f307bad85df287957e8d345d90ae5abc25fc82d3a",
+  "triangles": 30316,
+  "vertices": 15700,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectorall",
+    "pelvicl",
+    "gill_L",
+    "pectoralr",
+    "pelvicr",
+    "gill_R"
+  ],
+  "skinned_meshes": 13,
+  "materials": 13,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Exceptionally broad flattened head with small dorsolateral eyes",
+    "Protruding lower jaw, large mouth and eight barbels",
+    "Mottled ochre-brown scaleless skin",
+    "Nearly square caudal fin, small separate adipose and rounded anal"
+  ],
+  "sources": [
+    "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+    "https://www.mdwfp.com/fishing-boating/fish-id-guide/flathead-catfish"
+  ],
+  "glb_bytes": 3280752,
+  "glb_sha256": "c34087572690a8e8203d22a859e8d565c5c1693f175240013dd110ff696c850b",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

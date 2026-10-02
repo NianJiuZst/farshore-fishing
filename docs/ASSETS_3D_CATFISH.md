@@ -39,10 +39,33 @@ All final assets must retain +X nose, Godot +Y up, normalized 1 m X extent, fixe
 
 All six native masters and exported GLBs were built and independently audited on 2026-10-02. Every GLB has a weighted skeleton, 16 bones, six embedded full-resolution material images, exactly 1 m rest X extent, and four clips with the specified durations. Every root translation track is constant. All shared weighted-deformation tests pass, including loop-seam errors below `8e-18 m`; maximum skin influences are three. Model triangle counts range from 28,986 to 33,928.
 
-Final all-view visual inspection remains a separate gate. Hero previews caught and corrected ray-bearing adipose anatomy, regular scale-like flathead pigment, exposed pelvic roots, an unseated longsnout mouth, a floating bowfin throat plate, and an overly deep southern-catfish tail notch. Adipose lobes are now closed, rayless flesh meshes; paired roots use body-surface sampling; flathead pigment is stochastic and scale-free. No source texture was reduced or recompressed for APK size.
+At this export checkpoint, final all-view visual inspection was still pending; completed acceptance is recorded below. Hero previews caught and corrected ray-bearing adipose anatomy, regular scale-like flathead pigment, exposed pelvic roots, an unseated longsnout mouth, a floating bowfin throat plate, and an overly deep southern-catfish tail notch. Adipose lobes are now closed, rayless flesh meshes; paired roots use body-surface sampling; flathead pigment is stochastic and scale-free. No source texture was reduced or recompressed for APK size.
 
 ## Dynamic contact correction checkpoint
 
-The strengthened membrane-and-ray attachment audit samples nine frames of each of four clips. It found small, real dorsal-root placement gaps in channel catfish and flathead catfish. Their manually entered dorsal/anal root coordinates were replaced with dense samples of the actual body surface and1.5mm authored underlap; no body outline, fin outer edge, species marking, or audit tolerance was relaxed. All six now pass the unchanged4mm normalized-rest-length limit (worst distances2.123,2.122,3.456,3.670,2.103,2.077mm respectively for channel,flathead,southern,longsnout,bowfin,snakehead). Invalid candidates were blocked from promotion with Blender `--python-exit-code 1`.
+The strengthened membrane-and-ray attachment audit samples nine frames of each of four clips. It found small, real dorsal-root placement gaps in channel catfish and flathead catfish. Their manually entered dorsal/anal root coordinates were replaced with dense samples of the actual body surface and 1.5 mm authored underlap; no body outline, fin outer edge, species marking, or audit tolerance was relaxed. All six now pass the unchanged 4 mm normalized-rest-length limit (worst distances 2.123, 2.122, 3.456, 3.670, 2.103, 2.077 mm respectively for channel, flathead, southern, longsnout, bowfin, snakehead). Invalid candidates were blocked from promotion with Blender `--python-exit-code 1`.
 
-The current canonical models and masters have been regenerated atomically. Their final updated all-angle/pose review is still a separate gate; do not treat this numeric checkpoint as a complete rendered/Android acceptance result.
+The canonical models and masters were regenerated atomically for this numeric checkpoint. Updated all-angle/pose review followed as a separate gate; its completed outcome is recorded below. Android package/device acceptance remains separate.
+
+
+## Final visual acceptance — passed
+
+Completed 2026-10-02 on the contact-corrected frozen masters. All **48 actual 1200 × 800 renders at 32 samples** were inspected: hero, side, top, underside, swim, struggle, breach and landed for each species. No detached membrane/ray geometry or unseated eyes, mouths, barbels or throat plate was found in these inspected views. The species-specific anatomy and silhouettes remain distinct. No canonical model, source profile or texture was changed during this final review.
+
+Every species also retains its passing **36-pose** membrane-and-ray contact audit, with the unchanged **4 mm** normalized-length limit. Hash-bound visual records tie the exact GLB, native master, source profile, builder manifest, attachment validation, independent binary audit and every rendered image together. These results close the source-asset visual/contact gates; they do not claim Android package or device-runtime acceptance.
+
+| Species | Views inspected | Worst contact, mm | Accepted GLB SHA-256 prefix |
+|---|---:|---:|---|
+| `channel_catfish` | 8/8 | 2.123 | `79eadc9f2e788e9c` |
+| `flathead_catfish` | 8/8 | 2.122 | `c34087572690a8e8` |
+| `southern_catfish` | 8/8 | 3.456 | `198e629f0409a34e` |
+| `longsnout_catfish` | 8/8 | 3.670 | `6cc5c4479b8770ea` |
+| `bowfin` | 8/8 | 2.103 | `b41e73e0603fc5da` |
+| `northern_snakehead` | 8/8 | 2.077 | `fdceece8f75f0f39` |
+
+Evidence lives in `ownbuild/fish3d-catalog/<species>/visual_review.json`, `contact_sheet.png`, `validation.json`, `manifest.json` and `glb_audit.json`. The contact sheets are labeled QA previews assembled from the inspected originals; game textures and native geometry retain their original quality. `channel_catfish/certify_views.py` checks render completion, freshness and all hash bindings before recording an explicitly inspected review.
+
+### Verified durable evidence
+
+- Contact-corrected source/master/GLB backup: `/workspace/shared/farshore-catfish-3d-backup/family-contact-20261002T1424Z.tar.gz`; SHA-256 `bf1dbc67b5f2f68c7219572e8e52a63a8833fb04e57edecdc4e3fc1ff1236652`. All 18 current canonical profiles, masters and GLBs were independently byte-compared against this archive during final review.
+- Compact final visual-evidence backup: `/workspace/shared/farshore-catfish-3d-backup/family-visual-final-20261002T1528Z.tar.gz`, with an adjacent `.verified.json` file containing the archive/member hashes. This bounded pack contains review metadata, six contact sheets, this document and the audit helpers. Native asset payloads remain in the already-verified contact backup. External reference photographs are not included.

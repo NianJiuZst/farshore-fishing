@@ -1,0 +1,35 @@
+{
+  "species": "northern_snakehead",
+  "glb_sha256": "fdceece8f75f0f3921c956c3a05dc902ed5d245cb58b4f068f8b84a49b2589f0",
+  "glb_bytes": 5353596,
+  "glb_version": 2,
+  "animations": {
+    "breach": 1.399999976158142,
+    "landed": 3.0,
+    "struggle": 1.2000000476837158,
+    "swim": 2.0
+  },
+  "root_motion_tests": [
+    {
+      "clip": "breach",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "landed",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "struggle",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "swim",
+      "root_translation_range_m": 0.0
+    }
+  ],
+  "skinned_primitives": 10,
+  "rest_x_extent_m": 1.0,
+  "triangles": 33568,
+  "embedded_images": 6,
+  "failures": []
+}

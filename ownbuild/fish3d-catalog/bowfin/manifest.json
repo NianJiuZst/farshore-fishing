@@ -1,0 +1,44 @@
+{
+  "species": "bowfin",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "triangles": 33112,
+  "vertices": 17162,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "longdorsal",
+    "shortanal",
+    "pectorall",
+    "pelvicl",
+    "gill_L",
+    "pectoralr",
+    "pelvicr",
+    "gill_R"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Robust cylindrical body and rounded scaleless head",
+    "Long soft dorsal but distinctly short anal fin; rounded caudal",
+    "Pelvic fins well behind pectorals, unlike snakehead",
+    "Paired nasal flaps, underside bony gular plate and pale-rimmed male tail-base eyespot"
+  ],
+  "sources": [
+    "https://mdc.mo.gov/discover-nature/field-guide/emerald-bowfin",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9709656/",
+    "https://www.fws.gov/species/snakehead-channa-argus"
+  ],
+  "glb_bytes": 5303068,
+  "glb_sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

@@ -1,0 +1,35 @@
+{
+  "species": "southern_catfish",
+  "glb_sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+  "glb_bytes": 2804568,
+  "glb_version": 2,
+  "animations": {
+    "breach": 1.399999976158142,
+    "landed": 3.0,
+    "struggle": 1.2000000476837158,
+    "swim": 2.0
+  },
+  "root_motion_tests": [
+    {
+      "clip": "breach",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "landed",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "struggle",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "swim",
+      "root_translation_range_m": 0.0
+    }
+  ],
+  "skinned_primitives": 12,
+  "rest_x_extent_m": 1.0,
+  "triangles": 33928,
+  "embedded_images": 6,
+  "failures": []
+}

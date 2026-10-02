@@ -1,0 +1,44 @@
+{
+  "species": "northern_snakehead",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "triangles": 33568,
+  "vertices": 17422,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "longdorsal",
+    "longanal",
+    "pectorall",
+    "pelvicl",
+    "gill_L",
+    "pectoralr",
+    "pelvicr",
+    "gill_R"
+  ],
+  "skinned_meshes": 10,
+  "materials": 10,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Long cylindrical body, flattened broad scaled snake-like head",
+    "Large terminal mouth extending behind the eye; no sensory barbels",
+    "Long dorsal AND long anal fins; small pelvic fins close behind pectorals",
+    "Rounded caudal fin and paired rows of irregular python-like dark blotches"
+  ],
+  "sources": [
+    "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=2265",
+    "https://www.fws.gov/species/snakehead-channa-argus",
+    "https://www.fws.gov/media/invasive-snakehead-1"
+  ],
+  "glb_bytes": 5353596,
+  "glb_sha256": "fdceece8f75f0f3921c956c3a05dc902ed5d245cb58b4f068f8b84a49b2589f0",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

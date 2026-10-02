@@ -1,0 +1,35 @@
+{
+  "species": "bowfin",
+  "glb_sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+  "glb_bytes": 5303068,
+  "glb_version": 2,
+  "animations": {
+    "breach": 1.399999976158142,
+    "landed": 3.0,
+    "struggle": 1.2000000476837158,
+    "swim": 2.0
+  },
+  "root_motion_tests": [
+    {
+      "clip": "breach",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "landed",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "struggle",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "swim",
+      "root_translation_range_m": 0.0
+    }
+  ],
+  "skinned_primitives": 11,
+  "rest_x_extent_m": 1.0,
+  "triangles": 33112,
+  "embedded_images": 6,
+  "failures": []
+}

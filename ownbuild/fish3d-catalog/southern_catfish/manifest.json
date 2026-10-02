@@ -1,0 +1,43 @@
+{
+  "species": "southern_catfish",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "triangles": 33928,
+  "vertices": 17590,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "tinysoftdorsal",
+    "longanal",
+    "pectorall",
+    "pelvicl",
+    "gill_L",
+    "pectoralr",
+    "pelvicr",
+    "gill_R"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Scaleless body thick in front and laterally compressed behind",
+    "Broad flattened head, large upturned mouth and exactly four barbels",
+    "Tiny soft dorsal, no adipose fin",
+    "Very long anal fin reaches shallow-notched short caudal fin"
+  ],
+  "sources": [
+    "https://www.yueyang.gov.cn/uploadfiles/202302/20230223161357669.pdf",
+    "https://www.fishbase.se/summary/25308"
+  ],
+  "glb_bytes": 2804568,
+  "glb_sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

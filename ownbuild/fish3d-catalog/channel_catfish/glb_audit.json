@@ -1,0 +1,35 @@
+{
+  "species": "channel_catfish",
+  "glb_sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+  "glb_bytes": 2473920,
+  "glb_version": 2,
+  "animations": {
+    "breach": 1.399999976158142,
+    "landed": 3.0,
+    "struggle": 1.2000000476837158,
+    "swim": 2.0
+  },
+  "root_motion_tests": [
+    {
+      "clip": "breach",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "landed",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "struggle",
+      "root_translation_range_m": 0.0
+    },
+    {
+      "clip": "swim",
+      "root_translation_range_m": 0.0
+    }
+  ],
+  "skinned_primitives": 12,
+  "rest_x_extent_m": 1.0,
+  "triangles": 32270,
+  "embedded_images": 6,
+  "failures": []
+}

@@ -1,0 +1,44 @@
+{
+  "species": "channel_catfish",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "triangles": 32270,
+  "vertices": 16713,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectorall",
+    "pelvicl",
+    "gill_L",
+    "pectoralr",
+    "pelvicr",
+    "gill_R"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Scaleless smooth slate-olive body with sparse black spots",
+    "Eight tapered barbels: nasal, maxillary and two mandibular pairs",
+    "Deeply forked tail, arched anal fin, separate small adipose fin",
+    "Narrow sloping head, subterminal mouth, spine-bearing dorsal and pectorals"
+  ],
+  "sources": [
+    "https://www.fws.gov/media/channel-catfish",
+    "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/channel-catfish/",
+    "https://myfwc.com/wildlifehabitats/profiles/freshwater/channel-catfish/"
+  ],
+  "glb_bytes": 2473920,
+  "glb_sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

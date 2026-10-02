@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "reviewed_utc": "2026-10-02T15:28:17.131420+00:00",
+  "species_count": 6,
+  "actual_images_inspected": 48,
+  "contact_pose_samples_per_species": 36,
+  "max_contact_distance_m": 0.003669856349006295,
+  "canonical_art_changed_during_final_review": false,
+  "records": [
+    {
+      "species": "channel_catfish",
+      "glb_sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+      "blend_sha256": "182d0099cdf8b0dad6dddeb53f5db4559c225761405a7277446303bebd1f477a",
+      "visual_review_sha256": "855fc1aec7813ade8ce513e73946f929b091bcb96afe07b59b93f444483917ef",
+      "contact_sheet_sha256": "404065b9dc35915db585d68839135e254439958f736816df971edb7f8f4ae0d0",
+      "contact_worst_distance_m": 0.0021227889228612185
+    },
+    {
+      "species": "flathead_catfish",
+      "glb_sha256": "c34087572690a8e8203d22a859e8d565c5c1693f175240013dd110ff696c850b",
+      "blend_sha256": "9139492b3143a0439b335b2cb9289c795466dd97242652752920cd2b50109c86",
+      "visual_review_sha256": "17cf5f316a7916e940604c9ef25505d450590146ca4881a91cd211400a446ea3",
+      "contact_sheet_sha256": "989c64d245416c61d6f1e94aaca91186f2c2146e73e47209590d8e8ec38b7105",
+      "contact_worst_distance_m": 0.0021221721544861794
+    },
+    {
+      "species": "southern_catfish",
+      "glb_sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+      "blend_sha256": "3909c973d888a1a2ddb03e219bdc2bebb34cd9f58073c4a281cf7d6b68fb8d53",
+      "visual_review_sha256": "5f6e1b04bd03b410ea319eaa1acd014e08391bb7206fe412c7e1adeb45895bf8",
+      "contact_sheet_sha256": "90241dcb568cb702c139f52e1b65f3f9d58f4389a78960c9a7c50b317fa7b3c6",
+      "contact_worst_distance_m": 0.003456374164670706
+    },
+    {
+      "species": "longsnout_catfish",
+      "glb_sha256": "6cc5c4479b8770ea793ee695bfd54d2ef4d6de91d5d63253425308bc5ff62dfe",
+      "blend_sha256": "6ccf4074c28a4b75274d2b3687f28d029db11786cbffa3ff2a96412be3c7b229",
+      "visual_review_sha256": "6eb505a013306c775e010f53b8bfcf9e82460a0109aa7dcc8a0c265632a51e78",
+      "contact_sheet_sha256": "988796198633bd8d26413c39d7d76dd0dea9055e5e91a610aee0f8a85eb74b22",
+      "contact_worst_distance_m": 0.003669856349006295
+    },
+    {
+      "species": "bowfin",
+      "glb_sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+      "blend_sha256": "115c86c7cebdfe32145d5341e493878652b7296d844dcb1826a2c159d5562852",
+      "visual_review_sha256": "0f45fc6668e3f6c9800e0d067c68a46f87b451b5a0f56064399620420d4681df",
+      "contact_sheet_sha256": "281a42562b25d9ecaeb7be44013fe5b1573151af0b3e5c91b784def01762e4a0",
+      "contact_worst_distance_m": 0.002103338483721018
+    },
+    {
+      "species": "northern_snakehead",
+      "glb_sha256": "fdceece8f75f0f3921c956c3a05dc902ed5d245cb58b4f068f8b84a49b2589f0",
+      "blend_sha256": "c7fba23f9b5ce772c6698e3506aa888707710a6e3183c66a9eb5398f7de4a101",
+      "visual_review_sha256": "746d667d702b8d6a970034ccf5ae520e43dbf51dad596ef2c4a184cb81cba01c",
+      "contact_sheet_sha256": "f3c5731344978252a08025bc4046d8a74b1d6de597cb4c336951b1f2b49946fc",
+      "contact_worst_distance_m": 0.0020766202360391617
+    }
+  ],
+  "scope": "Source-asset visual/contact acceptance; Android integration acceptance separate",
+  "asset_backup": "family-contact-20261002T1424Z.tar.gz",
+  "visual_backup": "/workspace/shared/farshore-catfish-3d-backup/family-visual-final-20261002T1528Z.tar.gz"
+}

@@ -1,0 +1,125 @@
+{
+  "species": "southern_catfish",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "glb_sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+  "view_hashes": {
+    "hero": "c81e5a6961d6516f2bc9586ef447920b90a8564a9f39d7ca9aee6d4ad0079da5",
+    "side": "663ae3effa240b4756289b90479dea2a9431fe1c2a6a7e4f744c592beaccbe44",
+    "top": "8173a72702b04bd2d4ff73f558f5e76bcec92e8a11d0a3ba8648d8de8b52d822",
+    "underside": "b17c95c358880b4f596ad22746dfa1f18cc51615265daa148f24a58e2bb70dcc",
+    "pose_swim": "c8481899a765a71b2a8d1c125bccee6e1e78f6b67a7fd7fbd6cc778ce2c7933f",
+    "pose_struggle": "8673aea962abb5753fc70236e84c7df4f720ec9bd4b8108301573adb3b61a5b5",
+    "pose_breach": "f1f791182b847f24458b8be609db6350d326d27b085d68612cda75ff362e6928",
+    "pose_landed": "23fbda913f2a1d39025fb2447fb8de717d4f11b4cddf7dabf8996ed7814d77a9"
+  },
+  "status": "passed_asset_visual_and_contact_gates",
+  "reviewed_at_utc": "2026-10-02T15:15:12.575989+00:00",
+  "canonical_glb_sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+  "canonical_blend_sha256": "3909c973d888a1a2ddb03e219bdc2bebb34cd9f58073c4a281cf7d6b68fb8d53",
+  "profile_sha256": "bba193ecf6f999877f06ae918251bcb4185228c081903417ef3a1d3509a3ff60",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "manifest_sha256": "2f7d26b654d363a242c455ac15bdd17b41cf74b40e8593f5b3ba721f6eb00f1e",
+  "validation_sha256": "c73c039819e0161f42a3e7183b04b2a6ef44b7547abc99e370bbdee3b04f1de2",
+  "glb_audit_sha256": "a4f8e160ce31358ddaddc2181a2ce8badc4303a5ebd7da7c431dc354db3f154e",
+  "contact_gate": {
+    "poses": 36,
+    "samples_per_clip": 9,
+    "tolerance_m": 0.004,
+    "worst_distance_m": 0.003456374164670706,
+    "membrane_and_ray_roots": true
+  },
+  "views": {
+    "hero": {
+      "sha256": "c81e5a6961d6516f2bc9586ef447920b90a8564a9f39d7ca9aee6d4ad0079da5",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "c7f9620ec841c4426b4492f8db1652f322eb5a138390838ef611fb2455d68fe3"
+    },
+    "side": {
+      "sha256": "663ae3effa240b4756289b90479dea2a9431fe1c2a6a7e4f744c592beaccbe44",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "4f885eecd4366ceef1e6fecab215e0c88c5d44a8726e9e7e651d04a7acd05240"
+    },
+    "top": {
+      "sha256": "8173a72702b04bd2d4ff73f558f5e76bcec92e8a11d0a3ba8648d8de8b52d822",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "51000e0a6a7edeac296ac2e12818d5a62b8e935c38f8d7ef31ca0ca665a671b5"
+    },
+    "underside": {
+      "sha256": "b17c95c358880b4f596ad22746dfa1f18cc51615265daa148f24a58e2bb70dcc",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "81277deb54883592d82659d302acc243ae62649ad14f8648f599d39e8b8e53a0"
+    },
+    "pose_swim": {
+      "sha256": "c8481899a765a71b2a8d1c125bccee6e1e78f6b67a7fd7fbd6cc778ce2c7933f",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "7ddd8b171f0fc5505be9018431a7ba80346ae01e9506c97c71feb9958a2eb5d2"
+    },
+    "pose_struggle": {
+      "sha256": "8673aea962abb5753fc70236e84c7df4f720ec9bd4b8108301573adb3b61a5b5",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "e964337e82201e77b50d62d22394e8de46387771b42e394661e8a9c9817ec78e"
+    },
+    "pose_breach": {
+      "sha256": "f1f791182b847f24458b8be609db6350d326d27b085d68612cda75ff362e6928",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "a28abb9aa8db975460670eab9a2d56838a4a10bf18c3cf06a0ed6a2a270d97be"
+    },
+    "pose_landed": {
+      "sha256": "23fbda913f2a1d39025fb2447fb8de717d4f11b4cddf7dabf8996ed7814d77a9",
+      "pixels": [
+        1200,
+        800
+      ],
+      "render_samples": 32,
+      "render_log_sha256": "2fce0ea07e81ac3d430b8a51a9cc855c32e51e6930baac215f1bfd274d5cf4a9"
+    }
+  },
+  "contact_sheet_sha256": "90241dcb568cb702c139f52e1b65f3f9d58f4389a78960c9a7c50b317fa7b3c6",
+  "findings": [
+    "Broad depressed head and exactly two pairs of barbels",
+    "Tiny soft dorsal, absent adipose, very long anal and shallow-notched tail",
+    "Smooth scaleless body and uninterrupted anal/body contact in inspected poses",
+    "Actual hero/top/side/underside and four pose images visually inspected; no detached fin/ray geometry, mouth, eye or throat plate found"
+  ],
+  "scope": "Blender source-asset visual acceptance plus shared numeric attachment gate. Does not claim Android package or device-runtime acceptance.",
+  "reference_photos_included": false,
+  "canonical_art_changed_during_review": false
+}
