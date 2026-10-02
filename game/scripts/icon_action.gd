@@ -11,9 +11,9 @@ var _art: Control
 var _caption: Label
 var _last_text: String="\u0001"
 func _ready() -> void:
-	for state: String in ["normal","hover","pressed","disabled","focus"]:
+	for state: String in ["normal","hover","pressed","hover_pressed","disabled","focus"]:
 		add_theme_stylebox_override(state,StyleBoxEmpty.new())
-	for state: String in ["font_color","font_hover_color","font_pressed_color","font_disabled_color","font_focus_color","font_outline_color"]:
+	for state: String in ["font_color","font_hover_color","font_pressed_color","font_hover_pressed_color","font_disabled_color","font_focus_color","font_outline_color"]:
 		add_theme_color_override(state,Color.TRANSPARENT)
 	_art=Art.new()
 	_art.mouse_filter=Control.MOUSE_FILTER_IGNORE

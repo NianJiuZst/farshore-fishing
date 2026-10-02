@@ -93,7 +93,7 @@ func _apply_theme() -> void:
 	style.default_font_size=24
 	style.set_color("font_color","Label",INK)
 	for type_name: String in ["Button","OptionButton","LineEdit"]:
-		for state: String in ["normal","hover","pressed","disabled","focus"]: style.set_stylebox(state,type_name,StyleBoxEmpty.new())
+		for state: String in ["normal","hover","pressed","hover_pressed","disabled","focus"]: style.set_stylebox(state,type_name,StyleBoxEmpty.new())
 		style.set_color("font_color",type_name,INK)
 		style.set_color("font_hover_color",type_name,TEAL)
 		style.set_color("font_pressed_color",type_name,GOLD)
@@ -309,7 +309,7 @@ func _build_fishing_screen() -> void:
 	bait.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
 	action_row.add_child(bait)
 	_action=_button("抛竿",func() -> void: pass,true)
-	_action.custom_minimum_size.y=166
+	_action.custom_minimum_size.y=180
 	_action.stacked=true
 	_action.icon_extent=120
 	_action.icon_kind="rod"
@@ -788,7 +788,7 @@ func _show_catalog() -> void:
 	region_choice.item_selected.connect(func(index: int) -> void: _region_filter="all" if index==0 else str(catalog.regions[index-1].region_id); _fill_catalog())
 	filters.add_child(region_choice)
 	var discovery: OptionButton=OptionButton.new()
-	discovery.custom_minimum_size.y=96
+	discovery.custom_minimum_size=Vector2(96,96)
 	for value: String in ["全部","已发现","待发现"]: discovery.add_item(value)
 	discovery.select(_discovery_filter)
 	discovery.item_selected.connect(func(index: int) -> void: _discovery_filter=index; _fill_catalog())
