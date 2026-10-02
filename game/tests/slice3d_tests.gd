@@ -34,6 +34,7 @@ func _run() -> void:
 	root.add_child(app)
 	app.set_process(false)
 	app.scenery.set_process(false)
+	app.scenery._animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 	app.sound.apply({"sound":false,"vibration":false,"volume":0.0})
 	app.sound.suspend(true)
 	var fixture: SaveStore = Store.new()
@@ -46,6 +47,7 @@ func _run() -> void:
 	await _layout()
 	_test_configuration()
 	_test_world_and_rigs()
+	_test_weather_presentation()
 	await _test_lobby_and_prepare()
 	_test_input_cancel()
 	await _test_species_flow("common_carp", true)
@@ -70,7 +72,9 @@ func _tick(seconds: float) -> void:
 		var delta: float = minf(remaining, 0.025)
 		if not app.scenery._suspended:
 			if app.scenery._animator: app.scenery._animator.advance(delta)
-			if app.scenery._fish_animator: app.scenery._fish_animator.advance(delta)
+			if app.scenery._fish_animator:
+				app.scenery._fish_animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
+				app.scenery._fish_animator.advance(delta)
 		app.scenery._process(delta)
 		app._process(delta)
 		remaining -= delta
@@ -155,6 +159,7 @@ func _audit_rig(actor: Node3D, label: String, clips: Array, minimum_bones: int) 
 	_check(skinned >= 1 and weighted_vertices >= 250, label + " renders substantial weighted geometry, not a rig with an unbound prop")
 	if players.is_empty(): return
 	var player: AnimationPlayer = players[0] as AnimationPlayer
+	player.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 	for clip_name: String in clips:
 		var animation: Animation = _clip(player,clip_name)
 		_check(animation != null and animation.length >= 1.0 and animation.get_track_count() >= 3, label + " imported animated clip exists: " + clip_name)
@@ -276,6 +281,11 @@ func _test_species_flow(species: String, interruptions: bool) -> void:
 	_tick(2.5)
 	_check(app._landing_pending and app._screen != "result", species + " result does not truncate the breach/lift presentation")
 	_check_landing_framing(species)
+	# BoneAttachment3D updates on the scene frame; allow it to settle before
+	# checking the line and rod meshes against the current imported hand pose.
+	await process_frame
+	app.scenery._process(0.0)
+	_check_line_connected(species)
 	_tick(0.5)
 	_check(not app._landing_pending and app._screen == "result" and landing_events.size() == before_land_events+1, species + " finished landing exposes result exactly once")
 	_check(app.scenery._fish_root.position.y > 0.9, species + " landed fish is lifted to the character's presentation plane")
@@ -349,3 +359,36 @@ func _test_extreme_landing_framing() -> void:
 		_check_landing_framing(species + " " + str(length_mm) + "mm")
 	app.scenery.cancel_landing()
 	_check(app.store.state == saved, "presentation-only framing checks cannot change saved catches or selection")
+
+func _check_line_connected(species: String) -> void:
+	var rod: MeshInstance3D = app.scenery._rod_mesh
+	var line: MeshInstance3D = app.scenery._line
+	_check(rod.mesh != null and line.mesh != null, species + " visible landing rod and line have actual meshes")
+	if rod.mesh == null or line.mesh == null: return
+	var rod_vertices: PackedVector3Array = rod.mesh.surface_get_arrays(0)[Mesh.ARRAY_VERTEX]
+	var line_vertices: PackedVector3Array = line.mesh.surface_get_arrays(0)[Mesh.ARRAY_VERTEX]
+	var tip: Vector3 = Vector3.ZERO
+	var start: Vector3 = Vector3.ZERO
+	for index: int in range(rod_vertices.size()-6,rod_vertices.size()): tip += rod.global_transform * rod_vertices[index] / 6.0
+	for index: int in 4: start += line.global_transform * line_vertices[index] / 4.0
+	_check(tip.distance_to(start) < 0.01, species + " actual line geometry meets the animated rod tip within one centimeter")
+
+func _test_weather_presentation() -> void:
+	var rain: GPUParticles3D = app.scenery._rain
+	_check(rain != null and rain.amount > 0 and rain.amount <= 256, "weather has a bounded actual 3D precipitation system")
+	if rain == null: return
+	app.game_clock = 0.0
+	app._update_conditions()
+	_check(app.weather == "clear" and not rain.visible and not rain.emitting, "clear production weather hides and stops rain")
+	app.game_clock = 240.0
+	app._update_conditions()
+	_check(app.weather == "rain" and rain.visible and rain.emitting, "production rainy clock state enables actual precipitation")
+	app.scenery.suspend(true)
+	var frozen: float = app.scenery._time
+	app.scenery._process(1.0)
+	_check(rain.speed_scale == 0.0 and app.scenery._time == frozen, "paused rain and its world animation clock stay frozen")
+	app.scenery.suspend(false)
+	_check(rain.speed_scale == 1.0 and rain.emitting, "resuming preserves the current rain without restarting the encounter")
+	app.game_clock = 0.0
+	app._update_conditions()
+	_check(not rain.visible and not rain.emitting, "returning to clear weather removes precipitation")

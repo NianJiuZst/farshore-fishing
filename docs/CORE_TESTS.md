@@ -2,7 +2,7 @@
 
 ## Current native-3D slice checkpoint
 
-On **2026-10-02 at 11:33 UTC**, the real current Main and all legacy production classes passed **69,160 / 69,160 assertions**, `--check-art` enabled, exit 0, with no ERROR/WARNING output. Log: `build/qa3d/core.log`. This supersedes the historical UI baselines below; the numeric total is unchanged because the same four retired-destination assertions were replaced one-for-one with explicit archived-destination assertions.
+On **2026-10-02 at 12:34 UTC**, the real current Main and all legacy production classes passed **69,160 / 69,160 assertions**, `--check-art` enabled, exit 0, with no ERROR/WARNING output. Log: `build/qa3d/core.log`. Frozen production commit `c931215`; all 387 recorded game source/content/art files stayed unchanged through the six-suite run. This supersedes the historical UI baselines below; the numeric total is unchanged because the same four retired-destination assertions were replaced one-for-one with explicit archived-destination assertions.
 
 The Main fixture now enters through `_show_prepare()` → `_enter_fishery()` rather than trying to close the startup lobby into fishing. Successful protected-observation fixtures advance the actual stage's landing clock before expecting a result overlay. Legacy travel destinations remain in the catalog/save, but are not advertised as playable 3D locations. Starter gear is valid in the managed trial while the archived deep-water selection remains unchanged. Pure encounter reachability, all 44 species, progression, conservation and transactional persistence assertions remain intact; the old 44-species progression is a retained-data compatibility test, not a claim that 44 native 3D fish are playable.
 

@@ -2,7 +2,7 @@
 
 ## Current verified result
 
-On **2026-10-02 at 11:40 UTC**, the actual production `res://scenes/main.tscn` passed **10,830 / 10,830 assertions**, **28 routes**, **215 button visits**, exit 0, with no ERROR/WARNING output. The logical viewport is **720 × 1280**. Log: `build/qa3d/ui_style.log`.
+On **2026-10-02 at 12:34 UTC**, the actual production `res://scenes/main.tscn` passed **10,839 / 10,839 assertions**, **28 routes**, **215 button visits**, exit 0, with no ERROR/WARNING output. The logical viewport is **720 × 1280**. Log: `build/qa3d/ui_style.log`. This final pass used frozen production commit `c931215`; all 387 recorded game source/content/art files were unchanged during the six-suite run.
 
 This is production source/control integration, not a replica screen. It is headless and does not certify Android, Vulkan rendering, actual screenshot appearance, device performance, physical target size or accessibility. Rendered evidence belongs in `3D_ACCEPTANCE.md`; real synthesized touchscreen gestures belong in `touch_scroll_tests.gd`.
 
