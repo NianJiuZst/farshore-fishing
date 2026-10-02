@@ -35,7 +35,7 @@
 
 ## 3D与交互实现
 
-角色、44种鱼和六种地区环境使用原创可编辑Blender资产与真实GLB。抛竿、收线、起鱼和鱼体游动/挣扎使用骨骼动画，鱼线、水花、涟漪、材质和镜头使用Godot原生能力与项目代码；没有引入第三方绳索、水体或动画插件。开源方案的取舍记录在docs/OPEN_SOURCE_3D_EVALUATION.md。
+角色与44种鱼提供原创可编辑Blender资产；六地区环境由项目几何生成代码构建，均以真实GLB运行。抛竿、收线、起鱼和鱼体游动/挣扎使用骨骼动画，鱼线、水花、涟漪、材质和镜头使用Godot原生能力与项目代码；没有引入第三方绳索、水体或动画插件。开源方案的取舍记录在docs/OPEN_SOURCE_3D_EVALUATION.md。
 
 主页、准备与钓鱼模式分开。31枚实际生成的高清透明图标用于图标加文字的界面。鱼种详情和钓获页是独立3D视窗与骨骼动画；图鉴列表可使用原插画缩略图以便浏览。详见docs/3D_UI_FLOW.md、docs/STAGE_3D.md、docs/FISH_3D_PREVIEW.md和docs/3D_CATALOG_SCOPE.md。docs/TRIAL_SCOPE.md仅为早期两鱼里程碑的历史说明。
 
@@ -73,7 +73,7 @@
 
 鱼类分布和形态参考鱼类数据库与海洋研究机构，逐物种链接见 docs/FISH_A_SOURCES.md、FISH_B_SOURCES.md、FISH_C_SOURCES.md、FISH_D_SOURCES.md。出现倍率、尺寸锚点、重量立方缩放、时间/天气、难度与稀有度是游戏调校，不冒充实测科研关系，也不提供现实垂钓法规建议。
 
-1.2.0-beta.1的三维几何、角色/鱼材质、骨骼、动画和环境构建为本项目原创Blender/Godot制作；天空光照、码头木材与岩石表面使用Poly Haven的CC0素材（Greg Zaal、Rob Tuytel、Dario Barresi、Rico Cilliers），并非本项目原创照片。来源、作者、原文件哈希与许可见docs/ASSETS_3D_ENVIRONMENT_CC0.json和game/data/THIRD_PARTY_ART.txt，原创模型记录见docs/ASSETS_3D_*.md。既有二维鱼类/场景插画及界面图标为内置图像生成工具逐资产生成，经开发者形态与透明边缘检查；完整提示词、资料、生成方式与审核记录见 docs/ASSETS_*.json。没有复用未获授权的外部照片。生成来源不构成独占权利或专业物种鉴定保证。中文字体使用 Noto Sans CJK（SIL OFL），详见 docs/FONT_LICENSE.txt。Godot 及第三方库许可在 game/data/GODOT_LICENSE.txt，游戏设置页可查看。音效由本项目程序合成，不包含采样自他人的音轨。
+1.2.0-beta.1的角色/鱼网格、材质、骨骼与动画为本项目原创Blender制作，环境由原创几何生成代码与Godot原生渲染组成；天空光照、码头木材与岩石表面使用Poly Haven的CC0素材（Greg Zaal、Rob Tuytel、Dario Barresi、Rico Cilliers），并非本项目原创照片。来源、作者、原文件哈希与许可见docs/ASSETS_3D_ENVIRONMENT_CC0.json和game/data/THIRD_PARTY_ART.txt，原创模型记录见docs/ASSETS_3D_*.md。既有二维鱼类/场景插画及界面图标为内置图像生成工具逐资产生成，经开发者形态与透明边缘检查；完整提示词、资料、生成方式与审核记录见 docs/ASSETS_*.json。没有复用未获授权的外部照片。生成来源不构成独占权利或专业物种鉴定保证。中文字体使用 Noto Sans CJK（SIL OFL），详见 docs/FONT_LICENSE.txt。Godot 及第三方库许可在 game/data/GODOT_LICENSE.txt，游戏设置页可查看。音效由本项目程序合成，不包含采样自他人的音轨。
 
 ## 版本边界
 
