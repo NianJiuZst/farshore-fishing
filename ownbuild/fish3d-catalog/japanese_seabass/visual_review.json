@@ -1,0 +1,32 @@
+{
+  "species": "japanese_seabass",
+  "glb_sha256": "79c588c5e6c8a4eee9298f69a94703f3bb4b28ec5aac5f55eb475bb2cf528c1d",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Slender adult body lacks dense flank spots; narrow projecting lower jaw is visible",
+    "Long hard-spined dorsal and short notched connection distinguish it from the separate-dorsal European seabass",
+    "Forked tail, short anal and paired fins stay integrated in every pose",
+    "Top and underside confirm thick body and bilateral fin/eye placement",
+    "Numeric fin contact, loop, weighted skin and independent GLB audits pass"
+  ],
+  "view_hashes": {
+    "hero": "51518dca67ba8775e84f1902e1d9e7e144c1acd213c70fbd3589023af0610a8f",
+    "side": "d15acf97e56a7ec0b28591f053f61219333cf39a8e2159a9ba97ddcd789cff24",
+    "top": "777e2c31c42b2994c8f1b68b4a10a4a64ed34e7f6a32b9a5fb674b5fe6437b14",
+    "underside": "5a1a846edaf5cf3e9619bc64c4bd170344979f37c119fa5a9094b90dd943c704",
+    "pose_swim": "fa3db3c0f8f9cc3409c71e2bb80078ffb3599946870b679ecc65af1fe0288bf7",
+    "pose_struggle": "d6f05bc5ac848751f3bda65acb45640ab009330af65cb3613d67b5e79e434c83",
+    "pose_breach": "a0ec226613b91c14736da6f721a20b481703f63051c17c265adcbaffcfb174b5",
+    "pose_landed": "91ec118ccaa07651b4926dd63c426f03e655ffce2320e51de69aa31219d6980b"
+  }
+}

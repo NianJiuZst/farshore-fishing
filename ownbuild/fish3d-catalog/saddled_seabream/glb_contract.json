@@ -37,6 +37,7 @@
     ]
   },
   "normalized_x_length_m": 1.0,
+  "unique_geometry_position_sha256": "126510d2975e003679a48bc5dae0608552eb78c5e40ce9176250eaee8010ea7b",
   "unique_outline_sha256": "4fbfe010038f1b809a890a8284cb978b90b659e7cfa97809c38c910686ef7850",
   "passed": true
 }

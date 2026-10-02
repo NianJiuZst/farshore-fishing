@@ -1,0 +1,32 @@
+{
+  "species": "saddled_seabream",
+  "glb_sha256": "592c088c8d25b7de57c18a8b85ab4534dbb98b9420cbd45ee07402439a4ee017",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Lower oblong outline, comparatively large eyes and slightly upturned mouth distinguish this sparid",
+    "White-edged black saddle stays on the upper tail peduncle; underside remains open",
+    "Subtle longitudinal flank lines and pale fins remain coherent across deformed poses",
+    "Top/underside and all poses show attached paired fins and caudal roots",
+    "All four pose captures retain coherent fin membranes/rays with no detached appendage; numeric contact, loop, weighted skin and GLB audits also pass"
+  ],
+  "view_hashes": {
+    "hero": "ef8864ff1bfd6863aa505bf10aec6c4439d0fec9ce5f8eac0376ecce14ee7f15",
+    "side": "4b1c6c4e8bad1e9ba45b86c55c12cea7d5a81e5c53dba4799631c8ece450f903",
+    "top": "0d2cc26088c67b707714e82fef8aa5a175d16f5c00482380f1c510163b2b573e",
+    "underside": "ad335cddf76ac44a94cc7f6b2626944ecca42d38554b5e243ceb9741f17fd13c",
+    "pose_swim": "5b0ba2a3c2e76863af6e34b000012ce0f875bac49ca1f1b23139b537336fbfcb",
+    "pose_struggle": "92d7a475590e98b4e997bfa95e1c65308145b5c809206594d70fab84d56720c5",
+    "pose_breach": "c9167ef561176c1c6a8a8cca63e933f53598ec77b4e6176c835ece8d4dea056a",
+    "pose_landed": "8b2d25afc747039e6dfa1807c3bcaaac6d139ed33c837632ecb5a68f1ec6d7b4"
+  }
+}

@@ -1,10 +1,11 @@
 """Read-only saved-master review runner, locking one view at a time. No canonical exports."""
-import bpy,fcntl,importlib.util,json,sys,time
+import bpy,fcntl,importlib.util,json,os,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
 sys.path.insert(0,str(ROOT/'tools/art3d'))
 import fish_pipeline as pipeline
 IDS='mandarin_fish largemouth_bass japanese_seabass european_seabass red_seabream black_seabream gilthead_seabream saddled_seabream white_seabream annular_seabream common_pandora red_mullet painted_comber'.split()
+if os.environ.get('COASTAL_IDS'):IDS=os.environ['COASTAL_IDS'].split()
 VIEWS=['hero','side','top','underside','pose_swim','pose_struggle','pose_breach','pose_landed']
 def load(s):
     module=pipeline.load_profile(s);bpy.ops.wm.open_mainfile(filepath=str(ROOT/'art_masters/3d'/f'{s}.blend'))
@@ -12,7 +13,7 @@ def load(s):
     return fish
 
 def render(fish,view):
-    if (fish.review/'review_render_settings.json').exists() and view in json.loads((fish.review/'review_render_settings.json').read_text()) and (fish.review/(view+'.png')).exists():return
+    if (fish.review/'review_render_settings.json').exists() and view in json.loads((fish.review/'review_render_settings.json').read_text()) and (fish.review/(view+'.png')).exists() and (fish.review/(view+'.png')).stat().st_mtime>(ROOT/'art_masters/3d'/f'{fish.species}.blend').stat().st_mtime:return
     percentage=100 if view=='hero' or fish.species=='japanese_whiting' else 80
     samples=24 if view=='hero' else 16
     lock=None

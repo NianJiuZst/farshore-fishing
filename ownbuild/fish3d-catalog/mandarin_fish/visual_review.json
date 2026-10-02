@@ -1,0 +1,32 @@
+{
+  "species": "mandarin_fish",
+  "glb_sha256": "f96526ef4c84e015f1e60aceaa92ca4ae12368c9895de5e10163358e66186207",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Deep compressed yellow-brown body and large projecting lower jaw remain distinct from the broader red-brown rockfish",
+    "Dark irregular flank marks and eye-to-mouth stripe are continuous around the body",
+    "Tall rounded soft dorsal and shorter spiny front retain shape through each pose",
+    "Both pectorals/pelvics and bilateral eyes are correctly seated in top and underside",
+    "All four pose captures retain coherent fin membranes/rays with no detached appendage; numeric contact, loop, weighted skin and GLB audits also pass"
+  ],
+  "view_hashes": {
+    "hero": "ccdf8953ade9e79f06ecebcc0d8b59c8730db3a3102ab1fd41b05e809ffa94ef",
+    "side": "9019ea21b5269b83095464e3dd8cbfe67cd71a7e3c66441658d238d0466af574",
+    "top": "16d6c88bff8028bbe0588fe196b89749a2409c936adb09fc227e7e7385b00266",
+    "underside": "645f193ab0bc0c42bcba5803168e09a56e2f1eff2604ad72d6f1a7d950afb51a",
+    "pose_swim": "fc345cf713aaf0d0a31b47bc5bceb2d6148475b84c1af6c5c1c6dfd1cfa85b33",
+    "pose_struggle": "9776386d637a921433ba341d770f9bfbd15891702afc3f14b23ab41feb1dfe1a",
+    "pose_breach": "53265f0030ff5884ee6f61b0e532e029c8de4f58a6b17d6d9cee83336d2b4103",
+    "pose_landed": "577284b78866fcf4586700dca69f013f67728127b667861c10a8e2456d4d4ba5"
+  }
+}

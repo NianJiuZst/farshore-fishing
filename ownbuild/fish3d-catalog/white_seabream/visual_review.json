@@ -1,0 +1,32 @@
+{
+  "species": "white_seabream",
+  "glb_sha256": "fcf0ddec5bf285c73f47727c50b61e831d3d6c7c4a0da6944d60b22733fc5982",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "High compressed silver body and stout short snout remain distinct from lower saddled seabream",
+    "Black upper caudal saddle remains visibly open on underside; opercular edge and pelvics are dark",
+    "Subtle vertical adult bars do not obscure individual scale relief",
+    "Median and paired fin roots remain attached through all four poses",
+    "Numeric fin contact, loop, weighted skin and independent GLB audits pass"
+  ],
+  "view_hashes": {
+    "hero": "cfbc560039723f37a7417b7a4b01dff066cac60fd3606dacc70cb046b63949f3",
+    "side": "b87f8b6eba93fc9a898af5fa0990be4af2dc3ecc9cba1a125b021b118e8e61c7",
+    "top": "bce50f200523f01ec5354092d6c367b5cea1037030e038fd432ce5e6ba919835",
+    "underside": "b9bf45c722bfb81845d243248fb8d4f3feb91d870e5992f3e3a8aea530632043",
+    "pose_swim": "527061dea628e52505dc7ad1fb546de6c1c3f14c6104fc5cecdb693f697c8f35",
+    "pose_struggle": "43806183f7603ad422eafbc6f7fde547442756fd487eefe530a004e64ca5807f",
+    "pose_breach": "d731e02e70043cf3b546e114063d5aff9e5dbe7dea9129900a92e8c4b40aadb3",
+    "pose_landed": "5d25c10b6860ea2e55f7593e9daf1ccdaa1c90c0f8baa6e26e76c80bab2a610e"
+  }
+}

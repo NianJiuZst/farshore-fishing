@@ -1,7 +1,7 @@
 # Original coastal and reef fish, full catalog conversion
 
 ## Status
-All 15 original species are authored and exported. Structural, weighted-skin, four-clip, loop, normalization and fin-root-contact audits pass. Whiting and marbled rockfish representative heroes have passed visual inspection. Remaining angle and pose review is in progress; this document does not yet certify full visual completion.
+All 15 original species are authored and exported. Structural, weighted-skin, four-clip, loop, normalization and fin-root-contact audits pass. Whiting, marbled rockfish, mandarin fish, largemouth bass, Japanese seabass, saddled seabream and white seabream have passed complete eight-view inspection. All fifteen heroes have been inspected. Remaining angle and pose review is in progress; this document does not yet certify full visual completion.
 
 ## Authorship and provenance
 All meshes and surface maps were generated from original hand-authored anatomy and pigment algorithms in Blender 4.3.2. No source photograph, external fish mesh, purchased model, unlicensed texture or add-on is included. Sources below are factual morphology references only, checked 2026-10-02. Proportions are an artistic game reconstruction, not scan metrology.
@@ -147,7 +147,7 @@ References:
 
 Elongated relatively flat-bellied body and abrupt blunt forehead above small low mouth; Exactly two white sensory chin barbels, no longer than pectoral fins; Two clearly separated dorsals, unstriped pale first dorsal and unstriped forked caudal; Large easily shed-looking scales, pink-silver sides; no opercular spine.
 
-Geometry: 30,402 triangles; 15,801 authored vertices; 12 skinned material groups; max sampled attachment distance 1.835 mm.
+Geometry: 30,402 triangles; 15,801 authored vertices; 12 skinned material groups; max sampled attachment distance 2.509 mm (including both chin-barbel base rings).
 
 References:
 - https://doris.ffessm.fr/Especes/Mullus-barbatus-Rouget-de-vase-579

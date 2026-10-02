@@ -1,0 +1,32 @@
+{
+  "species": "largemouth_bass",
+  "glb_sha256": "890aa67eb870b4a5d5ddb3496cdde6ad722bb912c281e1c5bb554e913c223611",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Large maxillary crease reaches behind the eye; lower jaw remains embedded at its hinge",
+    "Broken horizontal lateral stripe on olive body is distinct from perch-like vertical bars",
+    "Deeply notched spiny/soft dorsals and broad emarginate caudal are correctly proportioned",
+    "Top and underside prove a genuinely thick head/body and bilateral attached fins",
+    "All four pose captures retain coherent fin membranes/rays with no detached appendage; numeric contact, loop, weighted skin and GLB audits also pass"
+  ],
+  "view_hashes": {
+    "hero": "baf5e17de94564bd572ef1886ab9889b0ffad4d8c41b926771fe797d54da709a",
+    "side": "5825178944cf578722f55136976c58cd63790acc9f9f266ee44d89daac6b65e2",
+    "top": "6773d3e90830cf24baa566c54df59663f1c214c17e0360cc2e2c2e975d26f832",
+    "underside": "76a4701692c2f605e0c7922471e17beb1983a66ad8ea0dde945c78001aa8b491",
+    "pose_swim": "1aa572f44751c2a2169163b65c54decd1f289e6849c99495637732e6ced97fbe",
+    "pose_struggle": "bfabe96d3dae8ee09a9fb76acfffa68c6bf3c21333f94857c694318bf3fe386b",
+    "pose_breach": "1e82955e269233ab6f00dd6f62af637ce034a214770788bf5b20bf8ae8b60e9c",
+    "pose_landed": "ad1cc54d2e3edf75eac4618455a2cdee5150cca043f08474c0b2887d4416bd3b"
+  }
+}
