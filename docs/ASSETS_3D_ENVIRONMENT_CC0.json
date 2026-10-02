@@ -1,0 +1,70 @@
+{
+  "scope": "Third-party art textures only, no addon/plugin/software library. All character, fish and environment geometry remains original. Native Godot rendering.",
+  "attribution_note": "Attribution is not required by CC0, but retained for provenance. No exclusive copyright in these third-party assets is claimed.",
+  "files": [
+    {
+      "asset": "cloud_layers",
+      "author": "Greg Zaal",
+      "role": "HDR environment",
+      "asset_page": "https://polyhaven.com/a/cloud_layers",
+      "license": "CC0 1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/cloud_layers_2k.hdr",
+      "path": "game/assets/3d/environment/cc0/cloud_layers_2k.hdr",
+      "bytes": 6985914,
+      "provider_md5": "4f0d6e3d46dd31e8bff222ba3b9c9eed",
+      "sha256": "66f8fbaf7452c332d05ce607e2c785a2f99578e2b3a095a11cfe9fde7e82c275",
+      "processing": "Unmodified provider 2K file; no recompression or downsampling",
+      "downloaded_utc": "2026-10-02"
+    },
+    {
+      "asset": "brown_planks_03",
+      "author": "Rob Tuytel",
+      "role": "Diffuse",
+      "asset_page": "https://polyhaven.com/a/brown_planks_03",
+      "license": "CC0 1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/brown_planks_03/brown_planks_03_diff_2k.png",
+      "path": "game/assets/3d/environment/cc0/brown_planks_03_diff_2k.png",
+      "bytes": 8002844,
+      "provider_md5": "3dd1ee7a28aeb0a8c7071de3d91f43cd",
+      "sha256": "0a4e8ab75e73f937686548b5f0588a91a906c7dfd5a3bde0b89b0449f33051f1",
+      "processing": "Unmodified provider 2K file; no recompression or downsampling",
+      "downloaded_utc": "2026-10-02"
+    },
+    {
+      "asset": "brown_planks_03",
+      "author": "Rob Tuytel",
+      "role": "Normal GL",
+      "asset_page": "https://polyhaven.com/a/brown_planks_03",
+      "license": "CC0 1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/brown_planks_03/brown_planks_03_nor_gl_2k.png",
+      "path": "game/assets/3d/environment/cc0/brown_planks_03_nor_gl_2k.png",
+      "bytes": 6710258,
+      "provider_md5": "63a01acd63a5bbc299cdb151f3e2e2b9",
+      "sha256": "7eaa5d09a58fb2d4b1bb2320a173977758d728f2d1c3dc5122993a910ba95a8c",
+      "processing": "Unmodified provider 2K file; no recompression or downsampling",
+      "downloaded_utc": "2026-10-02"
+    },
+    {
+      "asset": "brown_planks_03",
+      "author": "Rob Tuytel",
+      "role": "Roughness",
+      "asset_page": "https://polyhaven.com/a/brown_planks_03",
+      "license": "CC0 1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/brown_planks_03/brown_planks_03_rough_2k.png",
+      "path": "game/assets/3d/environment/cc0/brown_planks_03_rough_2k.png",
+      "bytes": 7481836,
+      "provider_md5": "c7c6d0a396a550d705a4f1ecb276f65d",
+      "sha256": "6ad47668bdbf39fb3121d0df71e881c652c8f57289b427998157b92ba716b110",
+      "processing": "Unmodified provider 2K file; no recompression or downsampling",
+      "downloaded_utc": "2026-10-02"
+    }
+  ]
+}

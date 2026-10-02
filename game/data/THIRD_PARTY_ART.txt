@@ -1,0 +1,21 @@
+第三方美术素材 · 1.2.0
+
+Cloud Layers HDRI
+作者：Greg Zaal / Poly Haven
+用途：原生Godot天空、环境光和反射
+https://polyhaven.com/a/cloud_layers
+
+Brown Planks 03
+作者：Rob Tuytel / Poly Haven
+用途：码头木板的颜色、法线与粗糙度贴图
+https://polyhaven.com/a/brown_planks_03
+
+上述素材许可：CC0 1.0 Public Domain Dedication
+许可来源：https://polyhaven.com/license
+许可声明：https://creativecommons.org/publicdomain/zero/1.0/
+
+保留作者信息以便追溯；不把这些第三方素材声明为本项目独占原创。
+没有安装或运行Poly Haven插件。人物、鱼、环境几何、骨骼与动画由本项目制作。
+模型与贴图构成真实3D场景；PNG历史插画和界面图标不冒充3D模型。
+
+其余软件与字体许可见对应Godot、Noto文件。
