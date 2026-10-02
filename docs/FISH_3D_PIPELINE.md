@@ -4,7 +4,7 @@ Owner of shared code: fish-pipeline lead. Other workers own only assigned `tools
 
 ## Output and CLI
 
-`blender -b --python tools/art3d/fish_pipeline.py -- --species olive_flounder`
+`blender -b --python-exit-code 1 --python tools/art3d/fish_pipeline.py -- --species olive_flounder`
 
 Preview only: append `--views hero,top,underside`. Render a saved master without rebuilding: `--review-existing --views hero,pose_struggle --samples 48`. `--no-render` exports and validates without any rendering. Default produces all eight views.
 
@@ -56,3 +56,11 @@ All profile palette values and f.material RGB triples are ordinary sRGB values. 
 
 ## Atomic promotion
 The runner exports to `ownbuild/fish3d-catalog/<id>/staging/<id>.glb`, verifies the complete GLB header, all four animations and weighted mesh skin bindings, and saves the packed editable master beside it. Only complete candidates are promoted with same-filesystem `os.replace` into canonical master and runtime paths. Concurrent Godot readers see either the previous complete model or the next complete model, never a partially written stream.
+
+## Animated attachment gate
+Every f.fin membrane and raised ray receives persistent root-vertex tags before material consolidation. The editable master retains `fs_attachment`, `fs_attachment_kind` and body-surface markers. Validation samples rest plus 9 phases each of swim/struggle/breach/landed and finds the nearest point on the evaluated, deformed body BVH. Both membrane and ray root distances are reported per anatomical fin. Default tolerance is 0.004m at normalized 1m length, covering mesh-density interpolation and modest intentional underlap; do not increase it to hide incorrect roots. Any violation blocks canonical promotion and saves only a diagnostic staging master. Jaws/gills/eyes are excluded. Use `--python-exit-code 1` in Blender batch commands: Blender otherwise can return exit0 after a Python assertion, even though promotion was blocked.
+
+### Existing-master audit and bounded review rendering
+`--validate-existing` reopens a tagged master and reruns the full contact/loop gate without rebuilding geometry or saving over the master. It records current master/GLB SHA-256 values. The same flag audits preserved legacy fish with in-memory derived contact tags. New exports bind successful reports to the atomically promoted master/GLB hashes.
+
+Use `tools/art3d/render_fish_view.sh <species> <view> [samples]` for view jobs: two bounded slots, two threads each; slot A remains compatible with the first `/tmp/farshore-fish3d-render.lock`. Views retain quality. The floor automatically sits below the lowest rest fin so deep-bodied bream and long anal fins are not clipped by the review backdrop.

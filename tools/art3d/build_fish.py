@@ -3,7 +3,7 @@
 Run: blender -b --python tools/art3d/build_fish.py -- [--species all|common_carp|alligator_gar]
 Output only in declared fish asset and review paths. No external artwork is sampled.
 """
-import bpy, bmesh, math, sys, os, json, argparse, random
+import bpy, bmesh, math, sys, os, json, argparse, random, struct, hashlib
 import numpy as np
 from mathutils import Vector
 from pathlib import Path
@@ -355,25 +355,28 @@ def mouth(spec,mats):
 
 def fins(spec,m):
     F,R=m['fin'],m['ray']
+    def rootline(a,b,theta):return [surface(float(x),theta,-.0012) for x in np.linspace(a,b,18)]
+    cap=PROFILES[0][0]+.0015
+    caudal_roots=[surface(cap,0,-.0006),(cap,0,surface(cap,math.pi/2).z),surface(cap,math.pi,-.0006)]
     if spec=='common_carp':
         # Dorsal long base, rising front ray followed by gently scalloped trailing sail.
-        fin('Dorsal',[(.17,0,.166),(.05,0,.173),(-.10,0,.128),(-.23,0,.071)],[(.18,0,.17),(.11,0,.284),(.038,0,.249),(-.06,0,.210),(-.17,0,.161),(-.251,0,.094)],'dorsal',F,R,27)
-        fin('Anal',[(-.14,0,-.120),(-.23,0,-.085)], [(-.145,0,-.123),(-.207,0,-.207),(-.285,0,-.174),(-.266,0,-.095)],'anal',F,R,14)
+        fin('Dorsal',rootline(.17,-.23,0),[(.18,0,.17),(.11,0,.284),(.038,0,.249),(-.06,0,.210),(-.17,0,.161),(-.251,0,.094)],'dorsal',F,R,27)
+        fin('Anal',rootline(-.14,-.23,math.pi), [(-.145,0,-.123),(-.207,0,-.207),(-.285,0,-.174),(-.266,0,-.095)],'anal',F,R,14)
         # Deep fork, two balanced lobes; cross-sectional thickness is real geometry.
-        fin('Caudal',[(-.324,0,.045),(-.35,0,0),(-.324,0,-.045)],[(-.405,0,.128),(-.500,0,.174),(-.490,0,.116),(-.420,0,.008),(-.468,0,-.105),(-.490,0,-.164),(-.408,0,-.119)],'caudal',F,R,28)
+        fin('Caudal',caudal_roots,[(-.405,0,.128),(-.500,0,.174),(-.490,0,.116),(-.420,0,.008),(-.468,0,-.105),(-.490,0,-.164),(-.408,0,-.119)],'caudal',F,R,28)
         for side in (-1,1):
             s='L' if side==1 else 'R'
-            fin('Pectoral_'+s,[(.267,side*.058,-.067),(.233,side*.067,-.088)],[(.264,side*.065,-.072),(.219,side*.142,-.133),(.147,side*.165,-.180),(.119,side*.12,-.182),(.200,side*.078,-.107)],'pectoral_'+s,F,R,17,True)
-            fin('Pelvic_'+s,[(.034,side*.043,-.133),(-.009,side*.048,-.139)],[(.035,side*.046,-.135),(-.024,side*.093,-.221),(-.092,side*.107,-.232),(-.110,side*.064,-.194),(-.038,side*.051,-.143)],'pelvic_'+s,F,R,14,True)
+            fin('Pectoral_'+s,rootline(.267,.233,side*2.12),[(.264,side*.065,-.072),(.219,side*.142,-.133),(.147,side*.165,-.180),(.119,side*.12,-.182),(.200,side*.078,-.107)],'pectoral_'+s,F,R,17,True)
+            fin('Pelvic_'+s,rootline(.034,-.009,side*2.49),[(.035,side*.046,-.135),(-.024,side*.093,-.221),(-.092,side*.107,-.232),(-.110,side*.064,-.194),(-.038,side*.051,-.143)],'pelvic_'+s,F,R,14,True)
     else:
-        fin('Dorsal',[(-.215,0,.052),(-.327,0,.024)],[(-.212,0,.052),(-.253,0,.123),(-.294,0,.134),(-.333,0,.098),(-.363,0,.029)],'dorsal',F,R,18)
-        fin('Anal',[(-.245,0,-.048),(-.333,0,-.024)],[(-.246,0,-.047),(-.289,0,-.108),(-.334,0,-.101),(-.363,0,-.046)],'anal',F,R,16)
+        fin('Dorsal',rootline(-.215,-.327,0),[(-.212,0,.052),(-.253,0,.123),(-.294,0,.134),(-.333,0,.098),(-.363,0,.029)],'dorsal',F,R,18)
+        fin('Anal',rootline(-.245,-.333,math.pi),[(-.246,0,-.047),(-.289,0,-.108),(-.334,0,-.101),(-.363,0,-.046)],'anal',F,R,16)
         # Abbreviate heterocercal gar caudal: slightly extended upper axial lobe, rounded posterior edge.
-        fin('Caudal',[(-.371,0,.026),(-.394,0,.005),(-.371,0,-.024)],[(-.427,0,.072),(-.475,0,.101),(-.497,0,.071),(-.500,0,.022),(-.495,0,-.029),(-.475,0,-.079),(-.448,0,-.083),(-.407,0,-.048)],'caudal',F,R,26)
+        fin('Caudal',caudal_roots,[(-.427,0,.072),(-.475,0,.101),(-.497,0,.071),(-.500,0,.022),(-.495,0,-.029),(-.475,0,-.079),(-.448,0,-.083),(-.407,0,-.048)],'caudal',F,R,26)
         for side in (-1,1):
             s='L' if side==1 else 'R'
-            fin('Pectoral_'+s,[(.177,side*.041,-.029),(.141,side*.048,-.039)],[(.177,side*.043,-.028),(.137,side*.105,-.091),(.090,side*.11,-.099),(.086,side*.075,-.087),(.133,side*.048,-.041)],'pectoral_'+s,F,R,16,True)
-            fin('Pelvic_'+s,[(-.053,side*.041,-.047),(-.092,side*.041,-.049)],[(-.053,side*.042,-.048),(-.102,side*.090,-.101),(-.158,side*.080,-.109),(-.147,side*.045,-.070),(-.103,side*.041,-.05)],'pelvic_'+s,F,R,14,True)
+            fin('Pectoral_'+s,rootline(.177,.141,side*2.10),[(.177,side*.043,-.028),(.137,side*.105,-.091),(.090,side*.11,-.099),(.086,side*.075,-.087),(.133,side*.048,-.041)],'pectoral_'+s,F,R,16,True)
+            fin('Pelvic_'+s,rootline(-.053,-.092,side*2.43),[(-.053,side*.042,-.048),(-.102,side*.090,-.101),(-.158,side*.080,-.109),(-.147,side*.045,-.070),(-.103,side*.041,-.05)],'pelvic_'+s,F,R,14,True)
 
 def animate(rig):
     rig.animation_data_create();fps=30
@@ -487,6 +490,12 @@ def build(spec,render=True):
         bpy.context.view_layer.objects.active=group[0];bpy.ops.object.join();o=bpy.context.object;o.name=material.name+'_Geometry';merged.append(o)
     MESHES=merged
     animate(rig)
+    # Preserve approved appearance while subjecting repaired roots to the shared contact gate.
+    sys.path.insert(0,str(Path(__file__).parent))
+    import fish_pipeline as pipeline
+    pipeline.core.MESHES=MESHES
+    audit=pipeline.Fish.__new__(pipeline.Fish);audit.profile={'id':spec};audit.species=spec;audit.rig_object=rig;audit.review=ROOT/'ownbuild/fish3d-catalog'/spec;audit.review.mkdir(parents=True,exist_ok=True)
+    pipeline.tag_legacy_contacts(audit);rig['attachment_groups']=json.dumps(audit.attachment_groups);audit.validate()
     for o in MESHES:
         o.data.calc_loop_triangles()
     stats={'species':spec,'native_blender_axes':{'forward':'+X','up':'+Z'},'glb_godot_axes':{'forward':'+X','up':'+Y'},'length_m':1.0,'vertices':sum(len(o.data.vertices) for o in MESHES),'triangles':sum(len(o.data.loop_triangles) for o in MESHES),'meshes':len(MESHES),'materials':len(set(o.data.materials[0].name for o in MESHES)),'bones':[b.name for b in rig.data.bones],'clips':{a.name:float((a.frame_range.y-a.frame_range.x)/30) for a in bpy.data.actions},'texture_images':[{'name':im.name,'dimensions':list(im.size)} for im in bpy.data.images]}
@@ -495,10 +504,15 @@ def build(spec,render=True):
     for o in MESHES:o.select_set(True)
     bpy.context.view_layer.objects.active=rig
     filepath=ROOT/'game/assets/3d'/f'{spec}.glb'
-    bpy.ops.export_scene.gltf(filepath=str(filepath),export_format='GLB',use_selection=True,export_yup=True,export_animations=True,export_animation_mode='ACTIONS',export_force_sampling=True,export_frame_range=False,export_anim_slide_to_zero=True,export_nla_strips=True,export_skins=True,export_all_influences=False,export_def_bones=True,export_extras=True,export_materials='EXPORT',export_cameras=False,export_lights=False)
-    stats['glb_bytes']=filepath.stat().st_size
+    staging=REV/'staging'/spec;staging.mkdir(parents=True,exist_ok=True);candidate=staging/filepath.name
+    bpy.ops.export_scene.gltf(filepath=str(candidate),export_format='GLB',use_selection=True,export_yup=True,export_animations=True,export_animation_mode='ACTIONS',export_force_sampling=True,export_frame_range=False,export_anim_slide_to_zero=True,export_nla_strips=True,export_skins=True,export_all_influences=False,export_def_bones=True,export_extras=True,export_materials='EXPORT',export_cameras=False,export_lights=False)
+    raw=candidate.read_bytes();assert raw[:4]==b'glTF' and struct.unpack_from('<I',raw,8)[0]==len(raw)
+    stats['glb_bytes']=candidate.stat().st_size
     (REV/(spec+'_stats.json')).write_text(json.dumps(stats,indent=2))
-    cam=setup_scene();point_cam(cam,(.62,-1.8,.45));bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'art_masters/3d'/f'{spec}.blend'))
+    cam=setup_scene();point_cam(cam,(.62,-1.8,.45));master=ROOT/'art_masters/3d'/f'{spec}.blend';master_candidate=staging/master.name
+    bpy.ops.wm.save_as_mainfile(filepath=str(master_candidate),copy=True);assert master_candidate.stat().st_size>10000
+    os.replace(master_candidate,master);os.replace(candidate,filepath)
+    report_path=audit.review/'validation.json';report=json.loads(report_path.read_text());report['glb_sha256']=hashlib.sha256(filepath.read_bytes()).hexdigest();report['master_sha256']=hashlib.sha256(master.read_bytes()).hexdigest();report_path.write_text(json.dumps(report,indent=2))
     print('FISH_READY '+json.dumps(stats),flush=True)
     if render:render_views(rig,cam,spec)
 

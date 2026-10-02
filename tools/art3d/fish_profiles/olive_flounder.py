@@ -22,10 +22,10 @@ def anatomy(f):
                 extent=.014+.036*max(0,1-(x/.45)**2)
                 edge.append((x-.01,p.y+side*extent,.002+math.sin(j/9*math.pi)*.002))
             f.fin(label+'_%d'%index,roots,edge,parent='spine_front' if index==0 else ('spine_mid' if index==1 else 'spine_rear'),rays=20)
-    f.fin('Caudal',[(-.335,.028,0),(-.354,0,0),(-.335,-.028,0)],[(-.444,.074,.001),(-.486,.077,0),(-.502,.045,0),(-.506,0,0),(-.496,-.045,0),(-.475,-.075,0),(-.432,-.070,0)],bone='caudal',parent='tail',rays=27)
+    f.fin('Caudal',[(-.338,.022,0),(-.338,0,0),(-.338,-.022,0)],[(-.444,.074,.001),(-.486,.077,0),(-.502,.045,0),(-.506,0,0),(-.496,-.045,0),(-.475,-.075,0),(-.432,-.070,0)],bone='caudal',parent='tail',rays=27)
     # Upper visible pectoral and a smaller blind-side fin, not two identical raised shoulders.
-    f.fin('Pectoral_ocular',[(.218,-.013,.029),(.184,-.03,.030)],[(.216,-.012,.031),(.167,-.001,.056),(.107,-.024,.052),(.132,-.055,.032),(.182,-.034,.028)],parent='spine_front',rays=17)
-    f.fin('Pectoral_blind',[(.217,.004,-.016),(.179,.018,-.017)],[(.216,.004,-.017),(.145,.028,-.025),(.122,.058,-.024),(.183,.027,-.016)],parent='spine_front',rays=13)
+    f.fin('Pectoral_ocular',[f.surface(x,math.asin(y/f.surface(x,math.pi/2).y),-.0008) for x,y in [(.218,-.013),(.184,-.030)]],[(.216,-.012,.031),(.167,-.001,.056),(.107,-.024,.052),(.132,-.055,.032),(.182,-.034,.028)],parent='spine_front',rays=17)
+    f.fin('Pectoral_blind',[f.surface(x,math.pi-math.asin(y/f.surface(x,math.pi/2).y),-.0008) for x,y in [(.217,.004),(.179,.018)]],[(.216,.004,-.017),(.145,.028,-.025),(.122,.058,-.024),(.183,.027,-.016)],parent='spine_front',rays=13)
     # Both eye sockets on upper surface; different X/Y positions preserve adult asymmetry.
     f.eye('MigratedEye',(.352,.043,.018),(0,.12,.993),radius=.011,iris=(.52,.405,.17))
     f.eye('LowerOcularEye',(.322,-.004,.026),(0,-.10,.995),radius=.012,iris=(.52,.405,.17))

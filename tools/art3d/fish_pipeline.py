@@ -6,6 +6,7 @@ import bpy,bmesh,math,json,sys,importlib.util,argparse,hashlib,os,struct
 import numpy as np
 from pathlib import Path
 from mathutils import Vector,Quaternion
+from mathutils.bvhtree import BVHTree
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(Path(__file__).parent))
 import build_fish as core
@@ -118,7 +119,7 @@ def material_map(profile,fin=False):
 
 class Fish:
     def __init__(self,profile):
-        self.profile=profile;self.species=profile['id'];self.sections=profile['sections'];self.bones={};self.fin_bones=[]
+        self.profile=profile;self.species=profile['id'];self.sections=profile['sections'];self.bones={};self.fin_bones=[];self.attachment_groups={}
         self.review=ROOT/'ownbuild/fish3d-catalog'/self.species;self.review.mkdir(parents=True,exist_ok=True)
         bpy.ops.wm.read_factory_settings(use_empty=True);bpy.context.preferences.filepaths.save_version=0
         core.SPEC=self.species;core.PROFILES=self.sections;core.MESHES=[];core.WEIGHTS={}
@@ -132,6 +133,7 @@ class Fish:
             faces.extend((tuple(range(na,-1,-1)),tuple(nx*(na+1)+j for j in range(na+1))))
             core.mesh('FlattenedVolumetricBody',verts,faces,self.mats['skin'],uv,'spine')
         else:core.body(self.mats['skin'])
+        body=core.MESHES[-1];marker=body.data.attributes.new('fs_body_surface','INT','POINT');marker.data.foreach_set('value',[1]*len(body.data.vertices))
         self.bone('root',(0,0,0),(0,0,.06),None)
         self.bone('head',(.25,0,0),(.46,0,0),'root')
         for name,head,tail,parent in [('spine_front',(.25,0,0),(.045,0,0),'root'),('spine_mid',(.045,0,0),(-.145,0,0),'spine_front'),('spine_rear',(-.145,0,0),(-.30,0,0),'spine_mid'),('tail',(-.30,0,0),(-.40,0,0),'spine_rear'),('caudal',(-.38,0,0),(-.49,0,0),'tail'),('jaw',(.32,0,-.025),(.48,0,-.025),'head')]:self.bone(name,head,tail,parent)
@@ -155,7 +157,16 @@ class Fish:
         if (e-r).length<.01:e=r+Vector((-.03,0,.03))
         self.bone(bn,r,e,parent)
         if bn not in self.fin_bones and bn!='caudal':self.fin_bones.append(bn)
-        return core.fin(name,roots,edge,bn,material or self.mats['fin'],self.mats['ray'],rays)
+        before=len(core.MESHES);membrane=core.fin(name,roots,edge,bn,material or self.mats['fin'],self.mats['ray'],rays)
+        aid=len(self.attachment_groups)+1;self.attachment_groups[aid]={'name':name,'bone':bn}
+        for ob in core.MESHES[before:]:
+            uv=ob.data.uv_layers.active.data;root_ids=set()
+            for poly in ob.data.polygons:
+                for li,vi in zip(poly.loop_indices,poly.vertices):
+                    if uv[li].uv.y<1e-6:root_ids.add(vi)
+            marker=ob.data.attributes.new('fs_attachment','INT','POINT');kind=ob.data.attributes.new('fs_attachment_kind','INT','POINT')
+            for vi in root_ids:marker.data[vi].value=aid;kind.data[vi].value=1 if ob==membrane else 2
+        return membrane
     def eye(self,name,center,normal,radius=.01,iris=(.45,.32,.12)):
         n=Vector(normal).normalized();c=Vector(center);u=n.cross(Vector((1,0,0)))
         if u.length<.1:u=n.cross(Vector((0,0,1)))
@@ -221,7 +232,7 @@ class Fish:
             bpy.ops.object.select_all(action='DESELECT')
             for o in objects:o.select_set(True)
             bpy.context.view_layer.objects.active=objects[0];bpy.ops.object.join();ob=bpy.context.object;ob.name=material.name+'_Geometry';merged.append(ob)
-        core.MESHES=merged;self.rig_object=rig;self.animate();return rig
+        core.MESHES=merged;self.rig_object=rig;rig['attachment_groups']=json.dumps(self.attachment_groups);self.animate();return rig
     def animate(self):
         rig=self.rig_object;rig.animation_data_create();vertical=self.profile.get('bend_axis')=='vertical'
         for name,(duration,amp) in {'swim':(60,.12),'struggle':(36,.36),'breach':(42,.25),'landed':(90,.022)}.items():
@@ -257,13 +268,53 @@ class Fish:
             a=bpy.data.actions[name];rig.animation_data.action=a;start,end=map(int,a.frame_range);p=verts(start);q=verts(start+(end-start)//4);r=verts(end)
             delta=max((x-y).length for x,y in zip(p,q));seam=max((x-y).length for x,y in zip(p,r));report['clips'][name]={'seconds':(end-start)/30,'max_skin_displacement_m':delta,'loop_seam_m':seam}
             if delta<.0005 or seam>1e-5:report['failures'].append(name+' deformation/loop error')
+        # Persistent root tags survive material consolidation; closest deformed body check.
+        tolerance=self.profile.get('attachment_tolerance_m',.004)
+        contacts={str(i):{'name':v['name'],'bone':v['bone'],'membrane_roots':0,'ray_roots':0,'membrane_max_distance_m':0,'ray_max_distance_m':0,'max_distance_m':0,'rest_distance_m':0,'worst_clip':'','worst_frame':0} for i,v in self.attachment_groups.items()}
+        roots={};body_objects=[]
+        for ob in core.MESHES:
+            tags=ob.data.attributes.get('fs_attachment');kinds=ob.data.attributes.get('fs_attachment_kind');body=ob.data.attributes.get('fs_body_surface')
+            if body:body_objects.append((ob,[list(p.vertices) for p in ob.data.polygons if all(body.data[i].value==1 for i in p.vertices)]))
+            if tags:
+                roots[ob]=[(i,str(t.value),kinds.data[i].value) for i,t in enumerate(tags.data) if t.value>0]
+                for _,aid,kind in roots[ob]:contacts[aid]['membrane_roots' if kind==1 else 'ray_roots']+=1
+        def contact_sample(clip,frame):
+            scene.frame_set(frame);bpy.context.view_layer.update();dg=bpy.context.evaluated_depsgraph_get();verts=[];faces=[]
+            for ob,polys in body_objects:
+                ev=ob.evaluated_get(dg);me=ev.to_mesh();offset=len(verts);verts.extend(v.co.copy() for v in me.vertices);faces.extend([[i+offset for i in p] for p in polys]);ev.to_mesh_clear()
+            bvh=BVHTree.FromPolygons(verts,faces)
+            for ob,items in roots.items():
+                ev=ob.evaluated_get(dg);me=ev.to_mesh()
+                for vi,aid,kind in items:
+                    near=bvh.find_nearest(me.vertices[vi].co);distance=near[3] if near[0] is not None else 1e9;r=contacts[aid]
+                    kind_key='membrane_max_distance_m' if kind==1 else 'ray_max_distance_m';r[kind_key]=max(r[kind_key],distance)
+                    if clip=='rest':r['rest_distance_m']=max(r['rest_distance_m'],distance)
+                    if distance>r['max_distance_m']:r.update(max_distance_m=distance,worst_clip=clip,worst_frame=frame)
+                ev.to_mesh_clear()
+        rig.animation_data.action=None
+        for b in rig.pose.bones:b.rotation_euler=(0,0,0)
+        contact_sample('rest',1)
+        for clip in ('swim','struggle','breach','landed'):
+            action=bpy.data.actions[clip];rig.animation_data.action=action;start,end=map(int,action.frame_range)
+            for phase in range(9):contact_sample(clip,round(start+(end-start)*phase/8))
+        report['attachments']={'tolerance_m':tolerance,'samples_per_clip':9,'groups':contacts}
+        for r in contacts.values():
+            if r['max_distance_m']>tolerance:report['failures'].append('Detached '+r['name']+': %.5fm in %s frame%d'%(r['max_distance_m'],r['worst_clip'],r['worst_frame']))
         rig.animation_data.action=None
         for b in rig.pose.bones:b.rotation_euler=(0,0,0)
         scene.frame_set(1);bpy.context.view_layer.update()
         weights=[sum(g.weight for g in v.groups) for o in core.MESHES for v in o.data.vertices];report['weight_sum_min']=min(weights);report['weight_sum_max']=max(weights)
         if min(weights)<.999 or max(weights)>1.001:report['failures'].append('skin weight sum')
         report['max_influences']=max(len(v.groups) for o in core.MESHES for v in o.data.vertices)
-        (self.review/'validation.json').write_text(json.dumps(report,indent=2));assert not report['failures'],report
+        if getattr(self,'audit_existing',False):
+            master=ROOT/'art_masters/3d'/f'{self.species}.blend';runtime=ROOT/'game/assets/3d'/f'{self.species}.glb'
+            report['master_sha256']=hashlib.sha256(master.read_bytes()).hexdigest()
+            if runtime.exists():report['glb_sha256']=hashlib.sha256(runtime.read_bytes()).hexdigest()
+        report['attachment_tag_version']=1
+        (self.review/'validation.json').write_text(json.dumps(report,indent=2))
+        if report['failures']:
+            staging=self.review/'staging';staging.mkdir(exist_ok=True);bpy.ops.wm.save_as_mainfile(filepath=str(staging/'attachment_failure.blend'),copy=True)
+        assert not report['failures'],report
     def export(self):
         self.rig();self.validate();rig=self.rig_object;s=bpy.context.scene;s.render.fps=30;s.frame_start=1;s.frame_end=91
         for o in core.MESHES:o.data.calc_loop_triangles()
@@ -289,9 +340,15 @@ class Fish:
         assert master_candidate.stat().st_size>10000,'Incomplete master candidate'
         os.replace(master_candidate,master);os.replace(candidate,glb)
         manifest={'species':self.species,'pipeline_sha256':PIPELINE_SHA256,'triangles':sum(len(o.data.loop_triangles) for o in core.MESHES),'vertices':sum(len(o.data.vertices) for o in core.MESHES),'bones':list(self.bones),'skinned_meshes':len(core.MESHES),'materials':len(set(o.data.materials[0].name for o in core.MESHES)),'forward':'+X','godot_up':'+Y','rest_length_m':1,'morphology':self.profile['morphology'],'sources':self.profile['sources'],'glb_bytes':glb.stat().st_size,'glb_sha256':hashlib.sha256(glb.read_bytes()).hexdigest(),'flatfish':bool(self.profile.get('flatfish')),'ocular_side':self.profile.get('ocular_side','bilateral')}
-        (self.review/'manifest.json').write_text(json.dumps(manifest,indent=2));print('FISH_PROFILE_READY '+json.dumps(manifest),flush=True)
+        (self.review/'manifest.json').write_text(json.dumps(manifest,indent=2))
+        validation_path=self.review/'validation.json';report=json.loads(validation_path.read_text());report['glb_sha256']=manifest['glb_sha256'];report['master_sha256']=hashlib.sha256(master.read_bytes()).hexdigest();validation_path.write_text(json.dumps(report,indent=2))
+        print('FISH_PROFILE_READY '+json.dumps(manifest),flush=True)
     def render(self,quality=32,requested_views=None):
         s=bpy.context.scene;s.cycles.samples=quality;rig=self.rig_object
+        model_meshes=[ob for ob in bpy.data.objects if ob.type=='MESH' and ob.parent==rig]
+        bpy.data.objects['REVIEW_Backdrop'].location.z=min(v.co.z for ob in model_meshes for v in ob.data.vertices)-.06
+        if 'REVIEW_UndersideFill' not in bpy.data.objects:
+            bpy.ops.object.light_add(type='AREA',location=(.10,-.25,-1.2));light=bpy.context.object;light.name='REVIEW_UndersideFill';light.data.energy=42;light.data.size=1.3;light.rotation_euler=(Vector((0,0,0))-light.location).to_track_quat('-Z','Y').to_euler();light.hide_render=True
         views=[('hero',(.60,-1.8,.55) if not self.profile.get('flatfish') else (.58,-.8,1.8)),('side',(0,-2,.04)),('top',(0,0,2)),('underside',(0,0,-2))]
         for name,pos in views:
             if requested_views and name not in requested_views:continue
@@ -307,15 +364,60 @@ class Fish:
             rig.animation_data.action=bpy.data.actions[clip];s.frame_set(frame);core.point_cam(self.camera,(.40,-1.6,.65) if not self.profile.get('flatfish') else (.45,-.7,1.8));s.render.filepath=str(self.review/('pose_'+clip+'.png'));bpy.ops.render.render(write_still=True)
         rig.animation_data.action=None
 
+def tag_legacy_contacts(fish):
+    """Audit-only tags derived from approved master UV roots, without saving or modifying art."""
+    fish.attachment_groups={};bone_ids={};rig=fish.rig_object
+    fin_names={b.name for b in rig.data.bones if b.name in ('dorsal','anal','caudal') or b.name.startswith(('pectoral_','pelvic_'))}
+    for ob in core.MESHES:
+        mats=[m.name for m in ob.data.materials]
+        if any('ScaledSkin' in name for name in mats):
+            marker=ob.data.attributes.get('fs_body_surface') or ob.data.attributes.new('fs_body_surface','INT','POINT');marker.data.foreach_set('value',[1]*len(ob.data.vertices))
+        kind=1 if any('FinMembrane' in name for name in mats) else (2 if any(name=='FinRays' for name in mats) else 0)
+        if not kind:continue
+        uv=ob.data.uv_layers.active.data;root=set()
+        for poly in ob.data.polygons:
+            for li,vi in zip(poly.loop_indices,poly.vertices):
+                if uv[li].uv.y<1e-6:root.add(vi)
+        adjacency=[[] for _ in ob.data.vertices]
+        for edge in ob.data.edges:
+            a,b=edge.vertices;adjacency[a].append(b);adjacency[b].append(a)
+        visited=set();tag=ob.data.attributes.get('fs_attachment') or ob.data.attributes.new('fs_attachment','INT','POINT');type_tag=ob.data.attributes.get('fs_attachment_kind') or ob.data.attributes.new('fs_attachment_kind','INT','POINT')
+        for start in range(len(adjacency)):
+            if start in visited:continue
+            stack=[start];visited.add(start);component=[]
+            while stack:
+                vi=stack.pop();component.append(vi)
+                for other in adjacency[vi]:
+                    if other not in visited:visited.add(other);stack.append(other)
+            sampled=set(component)&root
+            if not sampled:continue
+            influences={name:0 for name in fin_names}
+            for vi in component:
+                for group in ob.data.vertices[vi].groups:
+                    name=ob.vertex_groups[group.group].name
+                    if name in influences:influences[name]+=group.weight
+            name=max(influences,key=influences.get)
+            if name not in bone_ids:
+                aid=len(bone_ids)+1;bone_ids[name]=aid;fish.attachment_groups[aid]={'name':name,'bone':name}
+            aid=bone_ids[name]
+            for vi in sampled:tag.data[vi].value=aid;type_tag.data[vi].value=kind
+
 def run(species,no_render=False,views=None,samples=32):
     if species in PROTECTED:raise ValueError('Approved legacy fish are protected from catalog runner')
     module=load_profile(species);fish=Fish(module.PROFILE);module.anatomy(fish);fish.export()
     if not no_render:fish.render(samples,views)
     return fish
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--species',required=True);p.add_argument('--no-render',action='store_true');p.add_argument('--review-existing',action='store_true');p.add_argument('--views',default='');p.add_argument('--samples',type=int,default=32);args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+    p=argparse.ArgumentParser();p.add_argument('--species',required=True);p.add_argument('--no-render',action='store_true');p.add_argument('--review-existing',action='store_true');p.add_argument('--validate-existing',action='store_true');p.add_argument('--views',default='');p.add_argument('--samples',type=int,default=32);args=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     views=set(args.views.split(',')) if args.views else None
-    if args.review_existing:
-        module=load_profile(args.species);bpy.ops.wm.open_mainfile(filepath=str(ROOT/'art_masters/3d'/f'{args.species}.blend'))
-        fish=Fish.__new__(Fish);fish.profile=module.PROFILE;fish.species=args.species;fish.review=ROOT/'ownbuild/fish3d-catalog'/args.species;fish.rig_object=bpy.data.objects['FishRig'];fish.camera=bpy.data.objects['REVIEW_Camera'];fish.render(args.samples,views)
+    if args.review_existing or args.validate_existing:
+        module=load_profile(args.species) if args.species not in PROTECTED else None;bpy.ops.wm.open_mainfile(filepath=str(ROOT/'art_masters/3d'/f'{args.species}.blend'))
+        fish=Fish.__new__(Fish);fish.profile=module.PROFILE if module else {'id':args.species};fish.species=args.species;fish.review=ROOT/'ownbuild/fish3d-catalog'/args.species;fish.review.mkdir(parents=True,exist_ok=True);fish.rig_object=bpy.data.objects['FishRig'];fish.camera=bpy.data.objects['REVIEW_Camera']
+        if args.validate_existing:
+            fish.audit_existing=True
+            core.MESHES=[ob for ob in bpy.data.objects if ob.type=='MESH' and ob.parent==fish.rig_object]
+            if args.species in PROTECTED:tag_legacy_contacts(fish)
+            else:fish.attachment_groups=json.loads(fish.rig_object['attachment_groups'])
+            fish.validate()
+        else:fish.render(args.samples,views)
     else:run(args.species,args.no_render,views,args.samples)

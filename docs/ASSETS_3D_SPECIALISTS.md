@@ -39,3 +39,8 @@ godot --headless --path ownbuild/fish3d-catalog --script validate_profiles.gd --
 ```
 
 Final anatomy references are the original catalog source records plus [NOAA Chinese sturgeon](https://www.fisheries.noaa.gov/species/chinese-sturgeon), [MarLIN plaice](https://www.marlin.ac.uk/species/detail/2172), [original olive-flounder eye-migration research](https://doi.org/10.1002/ar.a.10074), and the linked source URLs in each manifest. Existing PNGs were visually inspected for species grounding, never used as cutout planes or projected fish-image textures. Geometry, material maps and animation are original procedural authorship.
+
+## Animated attachment regression and repair
+Actual Main preview identified a caudal attachment gap that studio hero renders did not reliably expose. The new persistent-root BVH audit measured14.4mm at the old flounder tail root, while dorsal/anal root groups stayed at1–1.5mm. The caudal rootline was moved onto the actual posterior body cap and paired roots were surface-derived. Flounder now passes at2.41mm; plaice at2.46mm; sturgeon at2.68mm over rest plus36 animated samples. The production Main transparent SubViewport was recaptured across six swim phases by the runtime owner, showing one connected fish silhouette and a closed tail seam.
+
+The same audit exposed root-placement errors in the two initial legacy models. Their exact originals were verified against retained backups before repair. Their body geometry, original palette/material identity, four clips and triangle counts remain unchanged; fin roots now follow the actual body surfaces/cap. Repaired carp/gar pass at2.14/2.19mm.

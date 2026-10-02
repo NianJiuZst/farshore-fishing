@@ -1,6 +1,6 @@
 # 44-species full 3D production plan
 
-The catalog contains exactly 44 unique stable species IDs. The full-catalog request supersedes the two-species release scope, but the approved common-carp/alligator-gar assets remain unchanged. A reusable authoring/rig/export library is shared; silhouettes, mouths, fins, eyes, armor, barbels and pigment are authored per species. A family relationship never permits palette-only duplicates.
+The catalog contains exactly 44 unique stable species IDs. The full-catalog request supersedes the two-species release scope, but the approved common-carp/alligator-gar body and material identities are preserved; original files are retained in verified backups before animated-contact repairs. A reusable authoring/rig/export library is shared; silhouettes, mouths, fins, eyes, armor, barbels and pigment are authored per species. A family relationship never permits palette-only duplicates.
 
 ## Batches and review gates
 

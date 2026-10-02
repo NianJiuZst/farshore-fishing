@@ -17,9 +17,9 @@ def anatomy(f):
                 x=a+(b-a)*j/10;p=f.surface(x,side*math.pi/2,-.001);roots.append(p)
                 extent=.012+.032*max(0,1-(x/.43)**2);edges.append((x-.008,p.y+side*extent,.002))
             f.fin(label+'_%d'%index,roots,edges,parent='spine_front' if index==0 else ('spine_mid' if index==1 else 'spine_rear'),rays=21)
-    f.fin('Caudal',[(-.342,.027,0),(-.355,0,0),(-.342,-.027,0)],[(-.445,.077,0),(-.485,.074,0),(-.507,.038,0),(-.511,-.008,0),(-.491,-.056,0),(-.458,-.077,0),(-.425,-.064,0)],bone='caudal',parent='tail',rays=28)
-    f.fin('Pectoral_ocular',[(.220,-.012,.032),(.183,-.031,.035)],[(.219,-.012,.034),(.163,.011,.056),(.104,-.009,.054),(.126,-.049,.035),(.181,-.035,.031)],parent='spine_front',rays=18)
-    f.fin('Pectoral_blind',[(.221,.009,-.018),(.181,.029,-.017)],[(.218,.01,-.019),(.162,.057,-.031),(.12,.053,-.025),(.181,.030,-.018)],parent='spine_front',rays=14)
+    f.fin('Caudal',[(-.343,.020,0),(-.343,0,0),(-.343,-.020,0)],[(-.445,.077,0),(-.485,.074,0),(-.507,.038,0),(-.511,-.008,0),(-.491,-.056,0),(-.458,-.077,0),(-.425,-.064,0)],bone='caudal',parent='tail',rays=28)
+    f.fin('Pectoral_ocular',[f.surface(x,math.asin(y/f.surface(x,math.pi/2).y),-.0008) for x,y in [(.220,-.012),(.183,-.031)]],[(.219,-.012,.034),(.163,.011,.056),(.104,-.009,.054),(.126,-.049,.035),(.181,-.035,.031)],parent='spine_front',rays=18)
+    f.fin('Pectoral_blind',[f.surface(x,math.pi-math.asin(y/f.surface(x,math.pi/2).y),-.0008) for x,y in [(.221,.009),(.181,.029)]],[(.218,.01,-.019),(.162,.057,-.031),(.12,.053,-.025),(.181,.030,-.018)],parent='spine_front',rays=14)
     f.eye('MigratedEye',(.337,.042,.024),(0,.12,.993),radius=.0103,iris=(.47,.34,.12))
     f.eye('LowerOcularEye',(.309,-.006,.029),(0,-.10,.995),radius=.0110,iris=(.47,.34,.12))
     pts=[(.249-.028*math.sin(t),-.014+.074*math.cos(t),.029-.004*math.cos(t)) for t in [math.pi*i/30 for i in range(31)]]

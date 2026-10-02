@@ -1,5 +1,6 @@
 """Original five-scute-row Chinese sturgeon, ventral mouth and four barbels."""
 import math
+import numpy as np
 from mathutils import Vector
 PROFILE={
 'id':'chinese_sturgeon',
@@ -10,14 +11,14 @@ PROFILE={
 'sources':['https://www.fisheries.noaa.gov/species/chinese-sturgeon','https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf']}
 
 def anatomy(f):
-    f.fin('Dorsal',[(-.205,0,.052),(-.29,0,.034)],[(-.198,0,.052),(-.24,0,.125),(-.271,0,.121),(-.316,0,.042)],bone='dorsal',parent='spine_rear',rays=21)
-    f.fin('Anal',[(-.254,0,-.028),(-.32,0,-.022)],[(-.251,0,-.03),(-.289,0,-.083),(-.34,0,-.072),(-.346,0,-.023)],bone='anal',parent='spine_rear',rays=17)
+    f.fin('Dorsal',[f.surface(float(x),0,-.0012) for x in np.linspace(-.205,-.29,18)],[(-.198,0,.052),(-.24,0,.125),(-.271,0,.121),(-.316,0,.042)],bone='dorsal',parent='spine_rear',rays=21)
+    f.fin('Anal',[f.surface(float(x),math.pi,-.0012) for x in np.linspace(-.254,-.32,18)],[(-.251,0,-.03),(-.289,0,-.083),(-.34,0,-.072),(-.346,0,-.023)],bone='anal',parent='spine_rear',rays=17)
     # Strongly heterocercal: axial upper lobe is substantially longer than lower.
-    f.fin('Caudal',[(-.358,0,.021),(-.383,0,.011),(-.355,0,-.016)],[(-.418,0,.068),(-.501,0,.192),(-.486,0,.091),(-.443,0,.021),(-.480,0,-.058),(-.418,0,-.038)],bone='caudal',parent='tail',rays=27)
+    f.fin('Caudal',[(-.363,0,.017),(-.363,0,.001),(-.363,0,-.011)],[(-.418,0,.068),(-.501,0,.192),(-.486,0,.091),(-.443,0,.021),(-.480,0,-.058),(-.418,0,-.038)],bone='caudal',parent='tail',rays=27)
     for side in (-1,1):
         sn='L' if side>0 else 'R'
-        f.fin('Pectoral_'+sn,[(.21,side*.043,-.023),(.16,side*.049,-.035)],[(.211,side*.045,-.022),(.13,side*.124,-.068),(.067,side*.13,-.084),(.083,side*.085,-.064),(.153,side*.050,-.035)],parent='spine_front',rays=22)
-        f.fin('Pelvic_'+sn,[(-.115,side*.030,-.034),(-.16,side*.029,-.033)],[(-.11,side*.032,-.035),(-.17,side*.081,-.071),(-.229,side*.070,-.072),(-.205,side*.033,-.032)],parent='spine_rear',rays=17)
+        f.fin('Pectoral_'+sn,[f.surface(float(x),side*2.20,-.0012) for x in np.linspace(.21,.16,16)],[(.211,side*.045,-.022),(.13,side*.124,-.068),(.067,side*.13,-.084),(.083,side*.085,-.064),(.153,side*.050,-.035)],parent='spine_front',rays=22)
+        f.fin('Pelvic_'+sn,[f.surface(float(x),side*2.42,-.0012) for x in np.linspace(-.115,-.16,16)],[(-.11,side*.032,-.035),(-.17,side*.081,-.071),(-.229,side*.070,-.072),(-.205,side*.033,-.032)],parent='spine_rear',rays=17)
         x=.292;theta=side*1.03;p=f.surface(x,theta,.0008);f.eye('Eye_'+sn,p,(0,side*.83,.55),radius=.009,iris=(.44,.35,.16))
         pts=[f.surface(.244-.026*math.sin(t),side*(.35+2.10*t/math.pi),.0006) for t in [math.pi*i/24 for i in range(25)]]
         f.gill(sn,pts,width=.0009)
