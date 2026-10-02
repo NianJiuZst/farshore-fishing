@@ -1,6 +1,6 @@
-# 1.2.0 full-world 3D controller and touchscreen navigation
+# 1.2.0-beta.1 full-world 3D controller and touchscreen navigation
 
-This document describes the full-catalog integration in progress. Release remains blocked until all 44 species-specific models and the complete acceptance checks are ready. The earlier playable two-fish checkpoint is preserved in commit history; it is not the full-catalog release.
+This document describes the full-catalog controller. All 44 species-specific models have passed the frozen artifact/contact and eight-view visual gates. Final source, render, Android build and device acceptance are recorded separately in `3D_ACCEPTANCE.md` and `ANDROID_3D_BUILD.md`; a model pass alone is not a release pass. The earlier playable two-fish checkpoint is preserved in commit history.
 
 ## Native scene and flow
 
@@ -38,20 +38,20 @@ Every page uses TouchScroll. It sees ScreenTouch/ScreenDrag before nested STOP-f
 
 Native text/dropdown taps receive balanced GUI events only after a tap is recognized. Horizontal HSlider gestures receive balanced native press/motion/release; vertical swipes never press the slider or open a dropdown. Focus loss/page destruction clears a held gesture. The 31 actual generated raster icons retain transparent presentation and minimum 96-logical-pixel action targets.
 
-## Verification state
+## Verification layers
 
-- The bounded five-rod/eight-bait checkpoint passed 381/381 focused data/save/mechanics tests and 120/120 production touch/controller checks, including actual casts
-- Full-world bait overrides subsequently pass 557/557 focused data/save/mechanics checks. Original four bait weights remain unchanged across all 44 definitions
-- The restored full-world Main currently passes 120/120 **partial-development** UI/touch checks, including disabled entry, no gate override, and archive/bag/travel browsing. Full gameplay assertions are intentionally deferred until all 44 resources exist
-- Main's actual 3D preview factory plus the projected ruler passes 17/17 component/touch assertions
-- Logs are under `build/qa3d/full_catalog_touch_partial.log`, `preview_ruler_integration.log`, and `build/tackle_expansion/full_world_tackle_tests.log`
+- Data/save/mechanics tests cover all five rods and eight baits; the original four bait weights remain unchanged across all 44 definitions
+- Production touch tests inject real Viewport ScreenTouch/ScreenDrag events, including emulated-mouse duplicate suppression, native slider/dropdown conflicts and swiping through the real eight-bait list
+- Full-world tests must use `--require-full`: no readiness override or partial-development skip can satisfy the release gate
+- Preview/ruler tests check the actual 3D model factory and projected measurement endpoints, rather than inferring length from the viewport rectangle
+- The exact final assertion counts, source hashes, aspect ratios and rendered diagnostics belong to `3D_ACCEPTANCE.md`, avoiding stale checkpoint totals here
 
-Final release testing must run the production touch suite with `--require-full`; that mode fails while any model is missing. A partial check is not a full gameplay pass. Rendered production UI evidence uses an isolated, explicitly seeded historical save and does not override the Start gate; the seed and actual renderer are printed in its log.
+Rendered production evidence labels its save recipe and renderer. Some captures use an isolated unlocked travel fixture; ordinary catches still come from Encounter and complete FishingSession/SaveStore. Historical seeded catch-detail captures verify presentation only. Neither kind is a user's real catch or Android hardware evidence.
 
-### Production partial-build image review
+### Historical partial-build review and resolved findings
 
-`build/qa3d/full_catalog_preview/` contains three actual 720×1280 Mobile/Vulkan 1.4.305 desktop llvmpipe images: the revised-angler lobby with disabled Start, a reviewed olive-flounder detail page, and its 3D catch-result/ruler page. The latter two use an explicitly seeded isolated historical test record (718 mm / 3621 g, Japan reef); they are not a claim that a user caught that fish or that full44 gameplay is ready. The readiness gate stayed false with 33 missing models, and disposition cleared the seeded pending record normally. Detail/result fit and the ruler follows projected specimen endpoints.
+The early `build/qa3d/full_catalog_preview/` captures were taken while 33 models were missing. They deliberately showed disabled Start and seeded a 718 mm / 3621 g flounder only for detail/result inspection. Those images are historical layout/ruler evidence, not final art or all44 gameplay proof.
 
-The review identified dark face/front lighting in the lake lobby; this was sent to the stage owner for a bounded lighting pass. It also caught the pre-existing doubled “大个体个体” result caption, corrected in Main by removing an existing suffix before appending it. The image predates that text-only correction. The capture completed without script/ReflectionProbe errors but emitted seven Texture RID warnings at process exit; retain this explicit cleanup caveat for final QA rather than calling the run warning-free.
+Review caught and fixed dark angler front lighting and a doubled “大个体个体” caption. Actual software Vulkan retains the independently reproduced upstream seven-Texture-RID shutdown diagnostic documented in `3D_ACCEPTANCE.md`; it is not described as a warning-free exit.
 
-The parent review subsequently found animated fin/body gaps in the seeded olive-flounder detail/result (dorsal and tail seams), despite the static hero having passed. Those exact fish screenshots are withheld from user delivery and are **layout/ruler evidence only**, not approved final fish-art evidence. The model pipeline owner is correcting attachment weights. Keep `build/qa3d/capture_partial_catalog_ui.gd` unchanged for a like-for-like rerender after the corrected GLB is imported; no UI mask or PNG fallback was added.
+The early animated flounder views exposed a real tail/root attachment defect missed by the static hero. The model was corrected, reimported, and rerendered through the same actual Main path at `build/qa3d/full_catalog_preview_corrected/`. Six transparent swim frames were also checked for disconnected opaque components. No UI mask or PNG substitution was used. All44 current models now have separate membrane/ray contact checks across36 sampled poses and hash-bound eight-view visual signoffs; `catalog_art_freeze.json` identifies the exact canonical art set.
