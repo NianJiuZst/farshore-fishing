@@ -4,7 +4,9 @@ const MainScene = preload("res://scenes/main.tscn")
 const Store = preload("res://scripts/save_store.gd")
 const IconActionScript = preload("res://scripts/icon_action.gd")
 const ArtScript = preload("res://scripts/ui_art.gd")
-const EXPECTED_ICONS: Array[String] = ["rod", "reel", "hook", "bag", "compass", "book", "heart", "coin", "badge", "pause", "settings", "sound", "back", "arrow", "sort", "search", "release", "worm", "grain", "shrimp", "lure", "sun", "dusk", "rain", "ruler"]
+const Registry = preload("res://scripts/fish_3d_registry.gd")
+const Preview = preload("res://scripts/fish_preview_3d.gd")
+const EXPECTED_ICONS: Array[String] = ["rod", "reel", "hook", "bag", "compass", "book", "heart", "coin", "badge", "pause", "settings", "sound", "back", "arrow", "sort", "search", "release", "worm", "grain", "shrimp", "lure", "sun", "dusk", "rain", "ruler", "sweetcorn", "dough", "cut_fish", "spinner", "rod_spinning", "rod_heavy"]
 const RETIRED_COPY: Array[String] = ["F A R S H O R E", "NATURAL HISTORY", "沿着水声，去往远岸", "把世界，钓成一本旅行手册", "风从远岸来", "停一会儿，风景还在", "把下一站，交给海风", "真实的相遇，是最好的旅行纪念", "水下还有一个未曾见过的身影"]
 const STATES: Array[String] = ["normal", "hover", "pressed", "hover_pressed", "focus", "disabled"]
 const MIN_TARGET: float = 96.0
@@ -24,11 +26,11 @@ func _run() -> void:
 	# Main._ready initializes user:// before the fixture is installed. Refuse to
 	# construct it unless both the engine's data directory and HOME are isolated.
 	var isolated_data: String = OS.get_environment("XDG_DATA_HOME")
-	if not isolated_data.begins_with("/tmp/farshore-ui-style-") or not OS.get_environment("HOME").begins_with("/tmp/farshore-ui-style-") or not OS.get_user_data_dir().begins_with(isolated_data + "/"):
+	if not isolated_data.begins_with("/tmp/farshore-") or not OS.get_environment("HOME").begins_with("/tmp/farshore-") or not OS.get_user_data_dir().begins_with(isolated_data + "/"):
 		printerr("UI_STYLE_TESTS: refusing non-isolated HOME/XDG_DATA_HOME; see docs/UI_STYLE_TESTS.md")
 		quit(2)
 		return
-	test_root = isolated_data.path_join("fixtures")
+	test_root = isolated_data.path_join("fixtures-%s-%s" % [OS.get_process_id(),Time.get_ticks_usec()])
 	_test_raster_assets()
 	root.size = Vector2i(720, 1280)
 	app = MainScene.instantiate()
@@ -38,7 +40,15 @@ func _run() -> void:
 	app.scenery._process(0.025)
 	app.sound.apply({"sound": false, "vibration": false, "volume": 0.0})
 	app.sound.suspend(true)
-	_check(app._content_ok, "actual Main loaded its production catalog and textures")
+	var errors: Array[String] = Registry.validate_catalog(app.catalog,true)
+	_check(app._content_ok and app._models_complete and errors.is_empty(), "actual Main requires all44 models, catalog and textures: " + str(errors))
+	if not app._content_ok or not app._models_complete:
+		print("UI_STYLE_SCOPE: full production pages NOT RUN; actual44 dependency failed, no readiness override")
+		app.queue_free()
+		await process_frame
+		print("UI_STYLE_TESTS: ",checks-failures,"/",checks," passed; failures=",failures,"; incomplete dependency, not acceptance")
+		quit(1)
+		return
 	_check(not app.store.read_only, "isolated startup save is writable")
 	_check(app.size.is_equal_approx(Vector2(720, 1280)), "actual Main layout uses the 720x1280 design viewport")
 	var fixture: SaveStore = Store.new()
@@ -77,8 +87,10 @@ func _run() -> void:
 		await _audit("discovered/" + method.trim_prefix("_show_"), app._overlay)
 	app._show_species("common_carp")
 	await _audit("discovered_species", app._overlay)
+	_check_live_preview("common_carp","discovered species detail")
 	app._show_zoom("common_carp")
 	await _audit("specimen_zoom", app._overlay)
+	_check_live_preview("common_carp","enlarged specimen")
 	app._enter_fishery()
 	await _test_active_feedback()
 	await _test_catalog_controls()
@@ -299,6 +311,7 @@ func _audit_catch(species_id: String) -> void:
 	for tick: int in 90: app.scenery._process(0.05)
 	_check(app._save_ok and app._screen == "result", species_id + " actual catch settles into result page")
 	await _audit("catch/" + species_id, app._overlay)
+	_check_live_preview(species_id,"result " + species_id)
 	if species_id == "chinese_sturgeon":
 		_check(not "出售" in _all_label_text(app._overlay), "protected result contains no misleading sale instructions")
 		_check("放归后保留图鉴与纪录" in _all_label_text(app._page_footer), "protected footer explicitly explains release-only record preservation")
@@ -323,7 +336,7 @@ func _audit_catch(species_id: String) -> void:
 	_check(app._overlay == null and app._last_record.is_empty(), species_id + " real release clears result")
 
 func _test_raster_assets() -> void:
-	_check(ArtScript.REQUIRED_ICONS.size() == 25, "production declares exactly 25 required raster icons")
+	_check(ArtScript.REQUIRED_ICONS.size() == 31, "production declares exactly31 required generated raster icons")
 	var hashes: Dictionary = {}
 	for kind: String in EXPECTED_ICONS:
 		_check(kind in ArtScript.REQUIRED_ICONS, "production manifest contains " + kind)
@@ -364,7 +377,7 @@ func _test_raster_assets() -> void:
 	_check("draw_texture_rect(" in renderer_source, "runtime art renderer actually paints its loaded texture")
 	for forbidden: String in ["draw_line(", "draw_polyline(", "draw_polygon(", "draw_colored_polygon(", "draw_circle(", "draw_arc(", "draw_rect(", ".svg", "GradientTexture", "load_svg"]:
 		_check(not forbidden in renderer_source, "icon renderer has no primitive/vector fallback: " + forbidden)
-	print("UI_BITMAP_ASSETS: ", hashes.size(), "/25 distinct HD RGBA PNGs checked")
+	print("UI_BITMAP_ASSETS: ", hashes.size(), "/31 distinct HD RGBA PNGs checked")
 
 func _check_action_position(state_name: String, expected_icon: String) -> void:
 	_check(app._action.get_global_rect().is_equal_approx(idle_action_rect), state_name + ": primary action does not move between fishing states")
@@ -550,6 +563,16 @@ func _all_label_text(node: Node) -> String:
 	for child: Node in node.get_children(): combined += "\n" + _all_label_text(child)
 	return combined
 
+func _check_live_preview(species: String, label: String) -> void:
+	var previews: Array[Node] = []
+	for node: Node in app._overlay.find_children("FishModelPreview","SubViewportContainer",true,false):
+		if node.get_script() == Preview: previews.append(node)
+	_check(previews.size() == 1,label + " has exactly one real3D preview")
+	if previews.size() != 1: return
+	var preview: Node = previews[0]
+	_check(preview.species_id == species and preview.model is Node3D and preview.animator is AnimationPlayer,label + " uses the exact species model and skeleton animation")
+	_check(preview.mouse_filter == Control.MOUSE_FILTER_IGNORE and preview._viewport.gui_disable_input,label + " transparent3D specimen does not steal scroll or action taps")
+
 func _test_retained_3d_scenery() -> void:
 	_check(app.scenery is Node3D, "production scenery is a real Node3D world")
 	_check(app.scenery.camera is Camera3D and app.scenery.camera.current, "production world has an active perspective camera")
@@ -563,13 +586,24 @@ func _test_retained_3d_scenery() -> void:
 			continue
 		_check(mesh.mesh.get_rid().is_valid(), "3D scenery mesh retains a valid rendering resource: " + str(mesh.name))
 		retained.append(weakref(mesh.mesh))
+	await _settle_layout()
+	for resource: WeakRef in retained:
+		_check(resource.get_ref() != null, "active3D mesh survives subsequent frames without a draw-local lifetime")
 	var selection: Dictionary = app.store.state.selection.duplicate(true)
 	for sid: String in app.catalog.spots:
 		var spot: Dictionary = app.catalog.spots[sid]
-		app.scenery.set_region(app.catalog.region(str(spot.region_id)), spot)
-		_check(app.store.state.selection == selection, sid + ": presentation cannot overwrite an archived selection")
-	await _settle_layout()
-	for resource: WeakRef in retained:
-		_check(resource.get_ref() != null, "real 3D mesh survives subsequent frames without a draw-local lifetime")
+		var previous_root: WeakRef = weakref(app.scenery._environment_root)
+		_check(app.scenery.set_location(str(spot.region_id),sid),sid + ": actual regional scene and station load")
+		_check(app.scenery.region_id == str(spot.region_id) and app.scenery.spot_id == sid,sid + ": stage reports the actual selected region and spot")
+		_check(app.store.state.selection == selection, sid + ": presentation-only travel cannot overwrite saved selection")
+		await _settle_layout()
+		var active_biomes: int = 0
+		var active_stations: int = 0
+		for child: Node in app.scenery.get_children():
+			if str(child.name).begins_with("ActiveBiome_"): active_biomes += 1
+			if str(child.name).begins_with("ActiveStation_"): active_stations += 1
+		_check(active_biomes == 1 and active_stations == 1,sid + ": only one active biome and station remain in the live tree")
+		var previous: Node = previous_root.get_ref()
+		_check(previous == null or previous == app.scenery._environment_root or not previous.is_inside_tree(),sid + ": replaced scene is released instead of retained invisibly")
 	_check(_find_type(app.scenery, "Sprite3D") == null and _find_type(app.scenery, "AnimatedSprite3D") == null, "3D environment and actors are not billboard sprite substitutes")
-	app._refresh_location()
+	_check(app._refresh_location(),"Main restores its actual saved scene after presentation-only resource checks")
