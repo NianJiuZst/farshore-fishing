@@ -4,7 +4,7 @@
 
 ## 交付范围
 
-本轮只有两种完整三维鱼：`common_carp`（鲤鱼 / Cyprinus carpio）与 `alligator_gar`（鳄雀鳝 / Atractosteus spatula）。先验收其体积、物种识别与动作，再讨论扩展。既有二维鱼图及其他物种没有被覆盖，也不将两个模型宣称为44种完成。
+本文件记录首轮两种已完成的三维鱼：`common_carp`（鲤鱼 / Cyprinus carpio）与 `alligator_gar`（鳄雀鳝 / Atractosteus spatula）。用户随后明确要求扩展全部44种，当前计划见 `FISH_3D_FAMILY_PLAN.md`，首批特型鱼见 `ASSETS_3D_SPECIALISTS.md`。这两个已验收资产保留，既有二维鱼图不被覆盖；首轮完成不代表44种完成。
 
 - 母稿：`art_masters/3d/common_carp.blend`、`art_masters/3d/alligator_gar.blend`
 - 运行模型：`game/assets/3d/common_carp.glb`、`game/assets/3d/alligator_gar.glb`
