@@ -1,0 +1,811 @@
+{
+  "schema_version": 1,
+  "collection": "Farshore navigation and utility icons",
+  "generated_utc_date": "2026-10-02",
+  "generator": "OpenAI built-in image_gen.imagegen",
+  "generation_mode": "one built-in generation call per icon; eight calls total; no API key or fallback CLI",
+  "license_caveat": "AI-generated project artwork, not a third-party stock asset or a claim of exclusive rights. Use is subject to the applicable OpenAI service terms; copyright eligibility and exclusivity can vary by jurisdiction. No separate stock-license clearance is claimed.",
+  "style_reference_inspected": [
+    "game/assets/ui/expedition_angler.png",
+    "docs/screenshots/lake_playable.png"
+  ],
+  "packing_recipe": {
+    "runtime_canvas": [
+      512,
+      512
+    ],
+    "background": "RGBA (0,0,0,0)",
+    "visible_alpha_threshold_for_measurement_only": 8,
+    "target_longest_visible_axis": 410,
+    "scale_formula": "min(410/max(visible_bbox_width, visible_bbox_height), 512/source_width, 512/source_height)",
+    "resize": "Pillow RGBA LANCZOS on the complete original image; no crop, paint, mask threshold, alpha cleanup or semantic modification",
+    "placement": "Integer-centered full resized image on the transparent 512 square, retaining every source pixel and its alpha through resampling",
+    "size_caveat": "Original full canvas is always retained. Assets whose painted subject occupied less than 80% of the source canvas remain slightly below 80% in runtime rather than cropping faint source alpha specks."
+  },
+  "visual_audit": {
+    "subjects": "All eight inspected at original resolution and runtime preview. Intended pause, gear, horn, left/right arrows, paired sort arrows, magnifier, and release fish silhouettes are recognizable.",
+    "style": "Hand-painted material shading and texture; warm brass with teal accents; no labels, vector stand-ins, square tiles or external frames.",
+    "transparency": "All original and runtime images RGBA with alpha 0..255. Masters contain faint alpha 1–7/255 specks outside the main silhouettes; preserved rather than edited.",
+    "minor_prompt_variance": "Sound horn includes a small integrated stand despite the prompt asking for no mount; it remains clearly recognizable as the intended nautical sound symbol.",
+    "runtime_contrast_check": "All eight runtime PNGs visually inspected at 280 px and 60 px against warm parchment, dark teal and sky blue. Silhouettes are legible, transparent edges show no visible colored halo at 60 px, and glass translucency in the search icon is visible against different backgrounds.",
+    "status": "Accepted for runtime integration"
+  },
+  "icons": [
+    {
+      "kind": "pause",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. Subject: PAUSE. Two handsome matching parallel vertical pause bars, carved warm honey-colored wood, subtly rounded corners, fine brass edging and a narrow rich teal enamel inlay down each face. Bars stand upright and separate with a generous transparent gap. Strong classic pause silhouette, symmetric and elegant, front-facing with slight crafted bevels. No connecting piece or button frame.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-b624c1a0-71c5-4d9a-a4f8-8f3959302d9d.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/pause.png",
+      "runtime_path": "game/assets/ui/icons/pause.png",
+      "master_sha256": "889058e9f801b1fa27e4ef6f288b8f7136e378b8ec72abba7ac8ceb4971005cf",
+      "runtime_sha256": "09976e9684a72fef6bad845f79f039c698677a124e0c42f28301590e89f53114",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          41,
+          86,
+          1234,
+          1254
+        ],
+        "alpha_ge_8_bbox": [
+          299,
+          148,
+          956,
+          1108
+        ],
+        "alpha_ge_128_bbox": [
+          301,
+          151,
+          953,
+          1107
+        ],
+        "fully_transparent_pixels": 1073741,
+        "fully_opaque_pixels": 1752,
+        "low_alpha_pixels_1_to_7": 9977,
+        "edge_nonzero_pixels": 6
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          42,
+          58,
+          488,
+          483
+        ],
+        "alpha_ge_8_bbox": [
+          122,
+          61,
+          390,
+          453
+        ],
+        "alpha_ge_128_bbox": [
+          123,
+          62,
+          389,
+          452
+        ],
+        "fully_transparent_pixels": 177979,
+        "fully_opaque_pixels": 1216,
+        "low_alpha_pixels_1_to_7": 2062,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.4082934609250399,
+        "resized_full_canvas": [
+          512,
+          512
+        ],
+        "placement_xy": [
+          0,
+          0
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          122,
+          61,
+          268,
+          392
+        ],
+        "longest_visible_axis_fraction": 0.765625
+      },
+      "master_is_byte_identical_to_generator_output": true
+    },
+    {
+      "kind": "settings",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. Subject: SETTINGS. One artisan brass cogwheel, eight stout evenly spaced teeth and a beautiful muted teal enamel center set within a layered brass hub. Clearly a functional nautical workshop gear, tactile warm brushed metal with subtle patina and softly painted highlights, front-facing and symmetrical, readable bold silhouette. No surrounding frame or badge.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-19934415-8a3a-4e26-a800-4d0d6e432546.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/settings.png",
+      "runtime_path": "game/assets/ui/icons/settings.png",
+      "master_sha256": "45d634f312aeda15952f2122f7dad1f09709fff67f18e5fd25564bc542ebb80c",
+      "runtime_sha256": "eaaee8c24235e80c24dcd8a0e203a16c4b3616095b50e527f65ec2ddc4bbd36d",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          0,
+          0,
+          1210,
+          1234
+        ],
+        "alpha_ge_8_bbox": [
+          82,
+          81,
+          1172,
+          1173
+        ],
+        "alpha_ge_128_bbox": [
+          83,
+          82,
+          1171,
+          1172
+        ],
+        "fully_transparent_pixels": 771373,
+        "fully_opaque_pixels": 585,
+        "low_alpha_pixels_1_to_7": 11963,
+        "edge_nonzero_pixels": 36
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          27,
+          20,
+          463,
+          465
+        ],
+        "alpha_ge_8_bbox": [
+          51,
+          50,
+          460,
+          461
+        ],
+        "alpha_ge_128_bbox": [
+          51,
+          51,
+          460,
+          460
+        ],
+        "fully_transparent_pixels": 148576,
+        "fully_opaque_pixels": 1038,
+        "low_alpha_pixels_1_to_7": 1813,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.37545787545787546,
+        "resized_full_canvas": [
+          471,
+          471
+        ],
+        "placement_xy": [
+          20,
+          20
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          51,
+          50,
+          409,
+          411
+        ],
+        "longest_visible_axis_fraction": 0.802734375
+      },
+      "master_is_byte_identical_to_generator_output": true
+    },
+    {
+      "kind": "sound",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. Subject: SOUND. A small elegant nautical brass speaker horn, bell facing right, a compact teal leather-wrapped base on the left, with exactly two distinct curved turquoise sound-wave strokes emerging to the right of its bell. The horn and waves together form one balanced centered icon. Softly dimensional handmade brass, warm painted glints and deep teal shadow, no mount or button frame.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-c7a37c95-7802-4436-abbe-f38e61bb3016.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/sound.png",
+      "runtime_path": "game/assets/ui/icons/sound.png",
+      "master_sha256": "0cde8964b06099f62ae2156d6128e107ea7264c7a0a48031970801d7f3d887b9",
+      "runtime_sha256": "f51bf44ed07a44f1e1139ea0ad51e14182a24038fcec7e22df448317da0471f9",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          43,
+          21,
+          1212,
+          1214
+        ],
+        "alpha_ge_8_bbox": [
+          61,
+          195,
+          1207,
+          1031
+        ],
+        "alpha_ge_128_bbox": [
+          64,
+          196,
+          1206,
+          1030
+        ],
+        "fully_transparent_pixels": 1043054,
+        "fully_opaque_pixels": 444,
+        "low_alpha_pixels_1_to_7": 24523,
+        "edge_nonzero_pixels": 0
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          51,
+          41,
+          465,
+          445
+        ],
+        "alpha_ge_8_bbox": [
+          53,
+          100,
+          463,
+          400
+        ],
+        "alpha_ge_128_bbox": [
+          54,
+          101,
+          463,
+          400
+        ],
+        "fully_transparent_pixels": 194050,
+        "fully_opaque_pixels": 1286,
+        "low_alpha_pixels_1_to_7": 2900,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.35776614310645727,
+        "resized_full_canvas": [
+          449,
+          449
+        ],
+        "placement_xy": [
+          31,
+          31
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          53,
+          100,
+          410,
+          300
+        ],
+        "longest_visible_axis_fraction": 0.80078125
+      },
+      "master_is_byte_identical_to_generator_output": true
+    },
+    {
+      "kind": "back",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. IMPORTANT composition: the actual visible object should fit inside the central 75% of the image width and height, leaving a generous transparent border. Subject: BACK navigation. ONE elegant curved left-pointing arrow made as a carved warm brass physical object with a rich deep teal enamel strip along the broad main face. The shaft flows upward from the lower right, curls gently across the center, and terminates in an unmistakable large LEFT-facing arrowhead at the upper left. A single unbroken thick shape, balanced bold silhouette, slight beveled thickness and lovely gouache material texture. No arrow inside a circle, no base, no button.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-f5257ba7-d266-4d5e-9b5d-eb65c5159520.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/back.png",
+      "runtime_path": "game/assets/ui/icons/back.png",
+      "master_sha256": "1194448ff0d5873997dccc2a1d81239e2403caa6dd0477b484c9d1bfad827a94",
+      "runtime_sha256": "60202b323b7d35978ae135cee3c9293bf72c855f65b80c3db9d37746392a90e1",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          97,
+          17,
+          1210,
+          1214
+        ],
+        "alpha_ge_8_bbox": [
+          147,
+          182,
+          1107,
+          1073
+        ],
+        "alpha_ge_128_bbox": [
+          148,
+          183,
+          1106,
+          1072
+        ],
+        "fully_transparent_pixels": 1261728,
+        "fully_opaque_pixels": 595,
+        "low_alpha_pixels_1_to_7": 8809,
+        "edge_nonzero_pixels": 0
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          58,
+          20,
+          477,
+          476
+        ],
+        "alpha_ge_8_bbox": [
+          60,
+          74,
+          452,
+          438
+        ],
+        "alpha_ge_128_bbox": [
+          60,
+          75,
+          452,
+          438
+        ],
+        "fully_transparent_pixels": 209919,
+        "fully_opaque_pixels": 886,
+        "low_alpha_pixels_1_to_7": 1548,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.4082934609250399,
+        "resized_full_canvas": [
+          512,
+          512
+        ],
+        "placement_xy": [
+          0,
+          0
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          60,
+          74,
+          392,
+          364
+        ],
+        "longest_visible_axis_fraction": 0.765625
+      },
+      "master_is_byte_identical_to_generator_output": true
+    },
+    {
+      "kind": "arrow",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. IMPORTANT composition: the actual visible object should fit inside the central 75% of the image width and height, leaving a generous transparent border. Subject: NEXT navigation. ONE handsome horizontal right-pointing navigation arrow made as a carved warm brass physical object, with a rich deep teal enamel strip along the broad main face. Broad short straight shaft and unmistakable large RIGHT-facing arrowhead. A single bold unbroken silhouette, carefully beveled dimensional metal edges and lovely gouache texture. Same family as an artisan brass-and-teal nautical wayfinding sign. No circle, no base, no button.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-385adee4-b844-478d-b72f-ea5bd9bad6bb.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/arrow.png",
+      "runtime_path": "game/assets/ui/icons/arrow.png",
+      "master_sha256": "437893ee17f93ea2f871342b8cc0836de2faf2020973f8558222aa59d6c952c7",
+      "runtime_sha256": "9607932867c6227ddf74373f578c9ef813fe44e96bb616d46f73ef673df8ed48",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          23,
+          21,
+          1240,
+          1254
+        ],
+        "alpha_ge_8_bbox": [
+          109,
+          256,
+          1147,
+          998
+        ],
+        "alpha_ge_128_bbox": [
+          110,
+          257,
+          1146,
+          997
+        ],
+        "fully_transparent_pixels": 1195566,
+        "fully_opaque_pixels": 772,
+        "low_alpha_pixels_1_to_7": 10701,
+        "edge_nonzero_pixels": 3
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          46,
+          28,
+          464,
+          475
+        ],
+        "alpha_ge_8_bbox": [
+          51,
+          109,
+          461,
+          402
+        ],
+        "alpha_ge_128_bbox": [
+          51,
+          109,
+          460,
+          402
+        ],
+        "fully_transparent_pixels": 203204,
+        "fully_opaque_pixels": 860,
+        "low_alpha_pixels_1_to_7": 1628,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.394990366088632,
+        "resized_full_canvas": [
+          495,
+          495
+        ],
+        "placement_xy": [
+          8,
+          8
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          51,
+          109,
+          410,
+          293
+        ],
+        "longest_visible_axis_fraction": 0.80078125
+      },
+      "master_is_byte_identical_to_generator_output": true
+    },
+    {
+      "kind": "sort",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. IMPORTANT composition: the actual visible object should fit inside the central 75% of the image width and height, leaving a generous transparent border. Subject: SORT. Exactly TWO bold separate upright navigation arrows, one pointing UP on the left and one pointing DOWN on the right. Left arrow is carved warm brass/gold, right arrow has deep teal enamel face with subtle brass edging. Both arrows have matching short straight thick shafts, big clean arrowheads, softly beveled physical thickness and tactile painted material texture. Two equally sized distinct silhouettes with a generous fully transparent gap. Front-facing paired arrows, balanced composition. No extra marks, letters, frame, circle or base.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-ac6d61a2-af2f-4874-aecd-438129e5b538.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/sort.png",
+      "runtime_path": "game/assets/ui/icons/sort.png",
+      "master_sha256": "353242d018c9679063a0077f2dbc82492c9ffc15c7f966a6243e868600edecc9",
+      "runtime_sha256": "23e292285951a944c079f397c40217538bc0f048af625f98644667726dbd8dc4",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          25,
+          19,
+          1216,
+          1220
+        ],
+        "alpha_ge_8_bbox": [
+          106,
+          206,
+          1155,
+          1063
+        ],
+        "alpha_ge_128_bbox": [
+          107,
+          207,
+          1154,
+          1062
+        ],
+        "fully_transparent_pixels": 1107878,
+        "fully_opaque_pixels": 685,
+        "low_alpha_pixels_1_to_7": 16632,
+        "edge_nonzero_pixels": 0
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          49,
+          45,
+          465,
+          480
+        ],
+        "alpha_ge_8_bbox": [
+          52,
+          91,
+          463,
+          427
+        ],
+        "alpha_ge_128_bbox": [
+          53,
+          92,
+          462,
+          426
+        ],
+        "fully_transparent_pixels": 190793,
+        "fully_opaque_pixels": 1210,
+        "low_alpha_pixels_1_to_7": 2386,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.3908484270734032,
+        "resized_full_canvas": [
+          490,
+          490
+        ],
+        "placement_xy": [
+          11,
+          11
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          52,
+          91,
+          411,
+          336
+        ],
+        "longest_visible_axis_fraction": 0.802734375
+      },
+      "master_is_byte_identical_to_generator_output": true
+    },
+    {
+      "kind": "search",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. IMPORTANT composition: the actual visible object should fit inside the central 75% of the image width and height, leaving a generous transparent border. Subject: SEARCH. One beautiful brass magnifying glass, its large round lens at upper left and short sturdy diagonally descending handle at lower right. The handle is wrapped with teal leather and a small warm brass end cap. Real dimensional metal ring and subtle almost clear glass with one soft white-blue painted glint, warm hand-painted brass rim, bold instantly legible search-tool silhouette. The lens should remain translucent, all the area outside the actual glass and handle fully transparent. No scenery reflected in glass, no extra object, no frame or background.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-bae4b7d1-d894-42d4-8a9b-8a2880e5b844.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/search.png",
+      "runtime_path": "game/assets/ui/icons/search.png",
+      "master_sha256": "e5de4df9cadf9096935ba426d9a949646382f7cb4064bd6de2bd655ff1728933",
+      "runtime_sha256": "93d2dc4b53f1e4a0fe4af5263211e9f298d47f7b00ca55d67ace7de7452147de",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          0,
+          21,
+          1222,
+          1230
+        ],
+        "alpha_ge_8_bbox": [
+          146,
+          126,
+          1115,
+          1113
+        ],
+        "alpha_ge_128_bbox": [
+          148,
+          127,
+          1114,
+          1112
+        ],
+        "fully_transparent_pixels": 1156776,
+        "fully_opaque_pixels": 758,
+        "low_alpha_pixels_1_to_7": 7781,
+        "edge_nonzero_pixels": 6
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          40,
+          16,
+          493,
+          482
+        ],
+        "alpha_ge_8_bbox": [
+          60,
+          51,
+          456,
+          455
+        ],
+        "alpha_ge_128_bbox": [
+          60,
+          52,
+          455,
+          454
+        ],
+        "fully_transparent_pixels": 192344,
+        "fully_opaque_pixels": 789,
+        "low_alpha_pixels_1_to_7": 1480,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.4082934609250399,
+        "resized_full_canvas": [
+          512,
+          512
+        ],
+        "placement_xy": [
+          0,
+          0
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          60,
+          51,
+          396,
+          404
+        ],
+        "longest_visible_axis_fraction": 0.7890625
+      },
+      "master_is_byte_identical_to_generator_output": true
+    },
+    {
+      "kind": "release",
+      "prompt": "Use case: stylized-concept. Asset type: a premium hand-painted game UI inventory/navigation icon for a cozy lakeside fishing adventure. Produce exactly ONE 1024x1024 square high-definition original PNG with a genuinely transparent alpha background. Style: refined hand-painted gouache game illustration, warm brass/gold, muted deep teal enamel and russet leather palette, tactile subtle brush shading and tiny material detail, polished gently dimensional object volume, soft light from the upper left. It must read immediately when reduced to 60 pixels yet reward close inspection. Center the complete silhouette with at least ten percent clear margin on all four sides. Single isolated subject, no square tile, no backplate, no frame, no circle badge, no scenery, no external cast shadow, no letters, numbers, words, watermark or text. No flat vector primitives, no emoji, no SVG appearance. Transparent background including spaces between separate parts. IMPORTANT composition: the actual visible object should fit inside the central 75% of the image width and height, leaving a generous transparent border. Subject: RELEASE A FISH. One graceful small silver-and-teal freshwater fish swimming freely toward the upper left, positioned above exactly two curled turquoise water-wave ribbons. Fish profile is anatomically coherent with one head, tail and delicate fins, silver belly, muted teal back and softly sparkling hand-painted scales. The two clear curved wave strokes sit below the fish with generous transparent gaps, giving a peaceful return-to-water gesture. Warm brass-toned edge highlights used very sparingly, primarily beautiful silver, deep teal and turquoise. Full fish silhouette, no fishing hook, no rod, no bucket, no heart, no badge circle, no extra fish.",
+      "source": "/workspace/scratch/c16084497664/generated_images/exec-8ef31f14-df52-42cf-a4fb-3b75f6436ea6.png",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "calls": 1,
+      "master_path": "art_masters/ui_icons/release.png",
+      "runtime_path": "game/assets/ui/icons/release.png",
+      "master_sha256": "af2a60d5c9b87db9251ad804d1cba1a96c430d65f2e03697c6c6cc16e5bee464",
+      "runtime_sha256": "ce5a3b1cba16c30beadfd60a1ffca8a6dbdcb3c3e28461254851e8148d974228",
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          31,
+          21,
+          1214,
+          1254
+        ],
+        "alpha_ge_8_bbox": [
+          146,
+          196,
+          1140,
+          1121
+        ],
+        "alpha_ge_128_bbox": [
+          147,
+          197,
+          1139,
+          1120
+        ],
+        "fully_transparent_pixels": 1122368,
+        "fully_opaque_pixels": 909,
+        "low_alpha_pixels_1_to_7": 36938,
+        "edge_nonzero_pixels": 8
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_nonzero_bbox": [
+          35,
+          21,
+          468,
+          473
+        ],
+        "alpha_ge_8_bbox": [
+          59,
+          80,
+          466,
+          458
+        ],
+        "alpha_ge_128_bbox": [
+          60,
+          80,
+          465,
+          457
+        ],
+        "fully_transparent_pixels": 187130,
+        "fully_opaque_pixels": 1850,
+        "low_alpha_pixels_1_to_7": 5392,
+        "edge_nonzero_pixels": 0
+      },
+      "packing": {
+        "scale": 0.4082934609250399,
+        "resized_full_canvas": [
+          512,
+          512
+        ],
+        "placement_xy": [
+          0,
+          0
+        ],
+        "used_rect_alpha_ge_8_xywh": [
+          59,
+          80,
+          407,
+          378
+        ],
+        "longest_visible_axis_fraction": 0.794921875
+      },
+      "master_is_byte_identical_to_generator_output": true
+    }
+  ]
+}
