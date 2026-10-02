@@ -37,6 +37,20 @@ func _run() -> void:
 	_touch(start + Vector2(2,3),false)
 	await process_frame
 	_check(taps == 1, "ScreenTouch through Viewport activates normal button tap exactly once")
+	for down: bool in [true,false]:
+		var mouse: InputEventMouseButton = InputEventMouseButton.new()
+		mouse.device = InputEvent.DEVICE_ID_EMULATION
+		mouse.button_index = MOUSE_BUTTON_LEFT
+		mouse.pressed = down
+		mouse.position = start
+		root.push_input(mouse,true)
+	await process_frame
+	_check(taps == 1,"touch-generated emulated mouse cannot cause a second click")
+	_touch(start,true)
+	_drag(start + Vector2(90,0),Vector2(90,0))
+	_touch(start + Vector2(90,0),false)
+	await process_frame
+	_check(taps == 1,"horizontal swipe also cancels a button tap")
 	_touch(start,true)
 	_drag(start + Vector2(0,-5),Vector2(0,-5))
 	_check(scroll.scroll_vertical == 0, "below-threshold motion keeps list still")
@@ -204,6 +218,8 @@ func _test_main_pages() -> void:
 	app._landing_presentation_finished(app._last_record.duplicate(true))
 	await _layout_frames()
 	_check(app._screen == "result" and not app._landing_pending,"matching landing signal reveals result")
+	app._fishing_ended(true,app._last_record.duplicate(true))
+	_check(app._screen == "result" and not app._landing_pending,"duplicate terminal completion cannot re-arm a completed landing")
 	app._settle()
 	_check(app.store.total_count() == count,"retry result settlement never duplicates catch")
 	app._dispose_result("released")

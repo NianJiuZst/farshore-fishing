@@ -401,6 +401,11 @@ func _safe_area() -> void:
 	_safe.add_theme_constant_override("margin_right",20)
 	_safe.add_theme_constant_override("margin_top",top)
 	_safe.add_theme_constant_override("margin_bottom",bottom)
+	if is_instance_valid(_overlay):
+		var overlay_margin: MarginContainer = _overlay.get_node_or_null("OverlayMargin") as MarginContainer
+		if overlay_margin != null:
+			overlay_margin.add_theme_constant_override("margin_top",maxi(32 if _screen == "home" else 24,top))
+			overlay_margin.add_theme_constant_override("margin_bottom",maxi(28 if _screen == "home" else 24,bottom))
 
 func _process(delta: float) -> void:
 	if not is_node_ready(): return
@@ -510,6 +515,9 @@ func _fishing_ended(success: bool, record: Dictionary) -> void:
 	if str(record.get("session_id", "")) != session.session_id: return
 	if success and active_state != Session.State.CAUGHT: return
 	if not success and active_state != Session.State.ESCAPED: return
+	# Duplicate terminal notifications must not re-arm an already completed
+	# presentation. The stage intentionally will not replay the same catch ID.
+	if success and not _last_record.is_empty() and str(record.get("catch_id","")) == str(_last_record.get("catch_id","")): return
 	if success:
 		_last_record = record.duplicate(true)
 		_save_ok = false
@@ -574,6 +582,7 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_overlay.add_child(dim)
 	var margin: MarginContainer=MarginContainer.new()
+	margin.name = "OverlayMargin"
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	margin.add_theme_constant_override("margin_left",28)
 	margin.add_theme_constant_override("margin_right",28)
@@ -660,6 +669,7 @@ func _show_home() -> void:
 	_overlay.mouse_filter = Control.MOUSE_FILTER_PASS
 	add_child(_overlay)
 	var margin: MarginContainer = MarginContainer.new()
+	margin.name = "OverlayMargin"
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	for side: String in ["left","right"]: margin.add_theme_constant_override("margin_"+side,32)
 	margin.add_theme_constant_override("margin_top",maxi(32,_safe.get_theme_constant("margin_top")))

@@ -9,6 +9,7 @@ var _finger: int = -1
 var _origin: Vector2
 var _previous: Vector2
 var _dragging: bool = false
+var _tap_cancelled: bool = false
 var _velocity: float = 0.0
 var _last_msec: int = 0
 var _ignore_mouse_until: int = 0
@@ -43,6 +44,7 @@ func _input(event: InputEvent) -> void:
 			_previous = touch.position
 			_last_msec = Time.get_ticks_msec()
 			_dragging = false
+			_tap_cancelled = false
 			_velocity = 0.0
 			_scroll_position = float(scroll_vertical)
 			_tap_target = _button_at(self, touch.position)
@@ -54,7 +56,7 @@ func _input(event: InputEvent) -> void:
 		if touch.index != _finger: return
 		var native_tap: bool = _native_target and not _dragging
 		var target: BaseButton = _tap_target
-		var dispatch_tap: bool = not touch.canceled and not _dragging and not _native_target and is_instance_valid(target) and target.get_global_rect().has_point(touch.position) and not target.disabled
+		var dispatch_tap: bool = not touch.canceled and not _tap_cancelled and not _dragging and not _native_target and is_instance_valid(target) and target.get_global_rect().has_point(touch.position) and not target.disabled
 		if _dragging:
 			completed_drags += 1
 			if is_instance_valid(target): cancelled_taps += 1
@@ -72,6 +74,7 @@ func _input(event: InputEvent) -> void:
 		var drag: InputEventScreenDrag = event
 		if drag.index != _finger: return
 		var displacement: Vector2 = drag.position - _origin
+		if displacement.length() >= DRAG_THRESHOLD: _tap_cancelled = true
 		if not _dragging and absf(displacement.y) >= DRAG_THRESHOLD and absf(displacement.y) >= absf(displacement.x) * 0.7:
 			_dragging = true
 			if is_instance_valid(_tap_target): _tap_target.set_pressed_no_signal(false)
@@ -105,6 +108,7 @@ func _apply_scroll(amount: float) -> void:
 func stop_gesture() -> void:
 	_finger = -1
 	_dragging = false
+	_tap_cancelled = true
 	_velocity = 0.0
 	_tap_target = null
 	_native_target = false
