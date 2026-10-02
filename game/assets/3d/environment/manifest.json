@@ -9,5 +9,6 @@
   "view_direction": "-Z",
   "location": "Managed Mississippi oxbow test fishery; intentionally low alluvial banks",
   "water": "Separate real-time stage surface",
-  "build": "blender -b --python tools/art3d/build_environment.py"
+  "build": "blender -b --python tools/art3d/build_environment.py",
+  "runtime_surface_textures": "Separately credited CC0 Poly Haven HDRI and timber PBR textures; no third-party mesh"
 }

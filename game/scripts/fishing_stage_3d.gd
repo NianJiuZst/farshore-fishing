@@ -7,6 +7,7 @@ signal landing_finished(record: Dictionary)
 const WATER_SHADER = preload("res://assets/shaders3d/river_water.gdshader")
 const FOLIAGE_SHADER = preload("res://assets/shaders3d/foliage.gdshader")
 const RIPPLE_SHADER = preload("res://assets/shaders3d/ripple.gdshader")
+const HDR_SKY_SHADER = preload("res://assets/shaders3d/hdr_sky.gdshader")
 const WOOD_SHADER = preload("res://assets/shaders3d/weathered_wood.gdshader")
 const GROUND_SHADER = preload("res://assets/shaders3d/riverbank.gdshader")
 const ANGLER_POS := Vector3(-0.92, 0.584, 0.77)
@@ -24,6 +25,8 @@ var time_of_day: String = "day"
 var mode: String = "lobby"
 var _built: bool = false
 var _suspended: bool = false
+var _character_was_playing: bool = false
+var _fish_was_playing: bool = false
 var _time: float = 0.0
 var _state: int = Session.State.IDLE
 var _before_pause: int = Session.State.IDLE
@@ -35,6 +38,7 @@ var _water_material: ShaderMaterial
 var _foliage_materials: Array[ShaderMaterial] = []
 var _world: WorldEnvironment
 var _sun: DirectionalLight3D
+var _panorama: ShaderMaterial
 var _sky: ProceduralSkyMaterial
 var _reflection_probe: ReflectionProbe
 var _last_lighting_key: String = ""
@@ -64,12 +68,14 @@ var _last_anim: String = ""
 var _last_loop: bool = true
 var _cast_finished_emitted: bool = false
 var _fishery_label: Label3D
+var _rain: GPUParticles3D
 
 func _ready() -> void:
 	process_priority = 100
 	_build_world()
 	_built = true
 	set_time_of_day(time_of_day)
+	set_weather(weather)
 	set_mode(mode)
 	if session != null: bind_session(session)
 	RenderingServer.frame_pre_draw.connect(_sync_tackle_transform)
@@ -119,6 +125,9 @@ func set_weather(value: String) -> void:
 	_water_material.set_shader_parameter("wind_strength", wind)
 	for material: ShaderMaterial in _foliage_materials:
 		material.set_shader_parameter("wind_strength", wind)
+	if _rain:
+		_rain.visible = value in ["rain", "storm"]
+		_rain.emitting = _rain.visible
 	set_time_of_day(time_of_day)
 
 func set_time_of_day(value: String) -> void:
@@ -135,10 +144,13 @@ func set_time_of_day(value: String) -> void:
 	_sky.ground_bottom_color = Color("183834")
 	_sky.ground_horizon_color = _sky.sky_horizon_color
 	_sun.light_color = Color("b2ccdd") if night else (Color("ffc488") if dusk else Color("fff0d7"))
-	_sun.light_energy = 0.45 if night else (0.7 if overcast else 1.0)
-	_sun.rotation_degrees = Vector3(-28 if dusk else -39, -38, 0)
+	_sun.light_energy = 0.45 if night else (0.65 if overcast else 0.92)
+	_sun.rotation_degrees = Vector3(-28 if dusk else -58, -36, 0)
 	_world.environment.ambient_light_color = Color("809aaa") if not night else Color("547c91")
-	_world.environment.ambient_light_energy = 0.40 if not night else 0.22
+	_world.environment.ambient_light_energy = 0.42 if not night else 0.22
+	if _panorama:
+		_world.environment.sky.sky_material = _sky if night else _panorama
+		_panorama.set_shader_parameter("energy", 0.82 if dusk else (0.72 if overcast else 1.0))
 	_world.environment.fog_light_color = Color("8faeae") if not night else Color("3a5b63")
 	_world.environment.fog_density = 0.0012 if not overcast else 0.0045
 	if _reflection_probe:
@@ -146,13 +158,21 @@ func set_time_of_day(value: String) -> void:
 		_reflection_probe.position.x = 0.002 if _reflection_probe.position.x < 0.001 else 0.0
 
 func suspend(value: bool) -> void:
+	if _suspended == value: return
 	_suspended = value
+	if _rain: _rain.speed_scale = 0.0 if value else 1.0
 	if _animator:
-		if value: _animator.pause()
-		elif not _animator.assigned_animation.is_empty(): _animator.play()
+		if value:
+			_character_was_playing = _animator.is_playing()
+			_animator.pause()
+		elif _character_was_playing and not _animator.assigned_animation.is_empty():
+			_animator.play()
 	if _fish_animator:
-		if value: _fish_animator.pause()
-		elif not _fish_animator.assigned_animation.is_empty(): _fish_animator.play()
+		if value:
+			_fish_was_playing = _fish_animator.is_playing()
+			_fish_animator.pause()
+		elif _fish_was_playing and not _fish_animator.assigned_animation.is_empty():
+			_fish_animator.play()
 
 func play_landing(record: Dictionary) -> void:
 	if not _built: return
@@ -246,6 +266,7 @@ func _process(delta: float) -> void:
 	_water_material.set_shader_parameter("motion_time", _time)
 	for material: ShaderMaterial in _foliage_materials: material.set_shader_parameter("motion_time", _time)
 	_update_effects(delta)
+	if _rain and _rain.visible: _rain.position = camera.position + Vector3(0, 5.0, -3.0)
 	if _angler:
 		var facing: float = PI - 0.25 if mode == "lobby" else 0.0
 		_angler.rotation.y = lerp_angle(_angler.rotation.y, facing, 1.0 - exp(-delta * 4.0))
@@ -380,15 +401,26 @@ func _build_world() -> void:
 	_sky.sun_angle_max = 8.0
 	_sky.sun_curve = 0.09
 	sky.sky_material = _sky
-	sky.radiance_size = Sky.RADIANCE_SIZE_128
+	var panorama_path: String = "res://assets/3d/environment/cc0/cloud_layers_2k.hdr"
+	if ResourceLoader.exists(panorama_path):
+		_panorama = ShaderMaterial.new()
+		_panorama.shader = HDR_SKY_SHADER
+		_panorama.set_shader_parameter("panorama", load(panorama_path) as Texture2D)
+		sky.sky_material = _panorama
+		# HDR sun is near panorama u=.90; 180-degree rotation aligns it with
+		# the key at azimuth -36deg / elevation58deg, in front of lobby face.
+		env.sky_rotation = Vector3(0, PI, 0)
+	sky.radiance_size = Sky.RADIANCE_SIZE_256
 	env.sky = sky
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
 	env.reflected_light_source = Environment.REFLECTION_SOURCE_SKY
-	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
+	env.tonemap_mode = Environment.TONE_MAPPER_ACES
+	env.tonemap_exposure = 0.92
 	env.adjustment_enabled = true
 	env.adjustment_saturation = 1.16
 	env.adjustment_contrast = 1.08
 	env.fog_enabled = true
+	env.fog_sky_affect = 0.08
 	env.fog_height = 0.0
 	env.fog_height_density = 0.0
 	_world.environment = env
@@ -447,6 +479,7 @@ func _build_world() -> void:
 	_fish_root.name = "LiveFishPresentation"
 	add_child(_fish_root)
 	_build_effects()
+	_build_weather()
 	_fishery_label = Label3D.new()
 	_fishery_label.text = "RIVERBEND\nMANAGED FISHERY"
 	_fishery_label.font_size = 48
@@ -476,10 +509,30 @@ func _apply_foliage(node: Node) -> void:
 		var shader := ShaderMaterial.new()
 		shader.shader = GROUND_SHADER if is_ground else WOOD_SHADER
 		shader.set_shader_parameter("ground_color" if is_ground else "wood_color", colors[str(node.name)])
+		if str(node.name) in ["DockHoney", "DockPale", "DockWeathered", "WoodEndgrain"]:
+			var pbr_base: String = "res://assets/3d/environment/cc0/brown_planks_03_"
+			if ResourceLoader.exists(pbr_base + "diff_2k.png"):
+				shader.set_shader_parameter("use_pbr", true)
+				shader.set_shader_parameter("timber_albedo", load(pbr_base + "diff_2k.png"))
+				shader.set_shader_parameter("timber_normal", load(pbr_base + "nor_gl_2k.png"))
+				shader.set_shader_parameter("timber_roughness", load(pbr_base + "rough_2k.png"))
 		mesh_node.material_override = shader
 	for child: Node in node.get_children(): _apply_foliage(child)
 
 func _build_water() -> void:
+	# Transparent water sees a modeled bed rather than the HDR panorama's ground.
+	var bed := MeshInstance3D.new()
+	bed.name = "SubmergedRiverbed"
+	var bed_mesh := PlaneMesh.new()
+	bed_mesh.size = Vector2(155, 180)
+	bed.mesh = bed_mesh
+	bed.position = Vector3(0, -2.8, -58)
+	var bed_material := ShaderMaterial.new()
+	bed_material.shader = GROUND_SHADER
+	bed_material.set_shader_parameter("ground_color", Color("233a32"))
+	bed.material_override = bed_material
+	bed.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	add_child(bed)
 	var surface := MeshInstance3D.new()
 	surface.name = "VolumetricRiverSurface"
 	var plane := PlaneMesh.new()
@@ -578,7 +631,7 @@ func _update_rod() -> void:
 func _build_line() -> void:
 	_line = MeshInstance3D.new()
 	_line.name = "PhysicalCurvedFishingLine"
-	_line_material = _material(Color(0.73, 0.77, 0.62, 0.84), 0.7)
+	_line_material = _material(Color(0.57, 0.66, 0.62, 0.80), 0.7)
 	_line_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	_line_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	_line.material_override = _line_material
@@ -588,14 +641,14 @@ func _build_line() -> void:
 
 func _update_line() -> void:
 	var end: Vector3 = _bobber.position + Vector3.UP * 0.11
-	var sag: float = 0.11 if presentation_state in ["fight", "landing", "landed"] else 0.6
+	var sag: float = 0.11 if presentation_state in ["fight", "landing", "landed"] else 0.35
 	if cast_in_progress: sag = 0.30 + sin(_cast_time * 3.5) * 0.12
 	var points := PackedVector3Array()
 	var radii := PackedFloat32Array()
 	for i in range(33):
 		var p: float = float(i) / 32.0
 		points.append(_rod_tip.lerp(end, p) + Vector3.DOWN * sin(p * PI) * sag)
-		radii.append(0.007 if camera.position.distance_to(end) > 8 else 0.0045)
+		radii.append(0.0025 if camera.position.distance_to(end) > 8 else 0.0017)
 	_line.mesh = _tube_mesh(points, radii, 4)
 
 func _build_bobber() -> void:
@@ -643,6 +696,9 @@ func _play_character(clip: String, loop: bool = true) -> void:
 	_last_loop = loop
 	_animator.get_animation(found).loop_mode = Animation.LOOP_LINEAR if loop else Animation.LOOP_NONE
 	_animator.play(found, 0.18)
+	if _suspended:
+		_character_was_playing = true
+		_animator.pause()
 
 func _play_fish(clip: String) -> void:
 	if not _fish_animator: return
@@ -651,6 +707,9 @@ func _play_fish(clip: String) -> void:
 	if not found.is_empty():
 		_fish_animator.get_animation(found).loop_mode = Animation.LOOP_LINEAR
 		_fish_animator.play(found, 0.15)
+		if _suspended:
+			_fish_was_playing = true
+			_fish_animator.pause()
 
 func _resolve_animation(player: AnimationPlayer, clip: String) -> String:
 	for candidate: StringName in player.get_animation_list():
@@ -697,6 +756,41 @@ func _build_effects() -> void:
 		drop.visible = false
 		add_child(drop)
 		_spray_pool.append({"node": drop, "velocity": Vector3.ZERO, "age": 99.0})
+
+func _build_weather() -> void:
+	_rain = GPUParticles3D.new()
+	_rain.name = "NativeRainStreaks"
+	_rain.amount = 256
+	_rain.lifetime = 1.35
+	_rain.preprocess = 0.5
+	_rain.local_coords = false
+	_rain.visibility_aabb = AABB(Vector3(-12, -18, -15), Vector3(24, 32, 30))
+	var motion := ParticleProcessMaterial.new()
+	motion.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_BOX
+	motion.emission_box_extents = Vector3(7.0, 3.5, 9.0)
+	motion.direction = Vector3(-0.04, -1.0, 0.02)
+	motion.spread = 3.0
+	motion.initial_velocity_min = 14.0
+	motion.initial_velocity_max = 18.0
+	motion.gravity = Vector3(-0.8, -3.5, 0.0)
+	motion.scale_min = 0.7
+	motion.scale_max = 1.2
+	motion.particle_flag_align_y = true
+	_rain.process_material = motion
+	var streak := CylinderMesh.new()
+	streak.top_radius = 0.003
+	streak.bottom_radius = 0.006
+	streak.height = 0.30
+	streak.radial_segments = 4
+	var rain_material := _material(Color(0.60, 0.75, 0.82, 0.37), 0.3)
+	rain_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	rain_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	streak.material = rain_material
+	_rain.draw_pass_1 = streak
+	_rain.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_rain.emitting = false
+	_rain.visible = false
+	add_child(_rain)
 
 func _ripple_mesh() -> ArrayMesh:
 	var vertices := PackedVector3Array()

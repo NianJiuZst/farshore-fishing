@@ -29,11 +29,11 @@ Landing is presentation only. The controller settles the catch once immediately,
 - Character GLB has native Skeleton3D, skinned geometry, five clips, and a hand bone-attached RodSocket
 - Rod is a tapered dynamic 3D tube with cork grip and metallic reel; line is a light curved tube, not a screen-space stroke
 - Both fish are actual bone-animated GLBs, used underwater and in the breach/lift beat
-- Real triangulated water surface uses analytic crossing/phase-warped waves, normal derivatives, Fresnel opacity, sky/local-probe PBR reflection, shoreline foam, and impact wave uniforms
-- Fixed pools of 12 mesh ripples and 30 ballistic spray droplets bound effect node/allocation growth
-- Original procedural wood, ground and foliage shaders add material detail without imported photograph backdrops
+- Real triangulated water surface uses analytic crossing/phase-warped waves, generated seamless micro-normal textures, Fresnel opacity, sky/local-probe PBR reflection, shoreline foam, and impact wave uniforms
+- Fixed pools of 12 soft, irregular mesh wavefronts and 30 ballistic spray droplets bound effect node/allocation growth. Existing rain conditions enable 256 native GPU rain streaks in a camera-local emission volume; pause freezes particle speed and clear weather hides emission.
+- A CC0 Poly Haven HDR environment supplies native sky/IBL; CC0 scanned timber albedo/normal/roughness textures supply physically scaled dock detail. Ground and foliage detail remain original procedural shaders. Original branches, leaves, terrain and dock are actual geometry, not backdrop images
 
-No Halyard, Verlet Rope addon, custom SSR plugin, downloaded scene assets, billboard forest/background PNG, account, or network gameplay dependency is included.
+No Halyard, Verlet Rope addon, custom SSR plugin, downloaded world mesh, billboard forest/background PNG, account, or network gameplay dependency is included. CC0 texture provenance and hashes are in `docs/ASSETS_3D_ENVIRONMENT_CC0.json`.
 
 ## Rendering and verification boundaries
 
@@ -50,3 +50,15 @@ Independent automated QA checks loaded skeletons, weighted geometry, all adverti
     python3 tools/render_godot.py --timeout 240 -- --path game --audio-driver Dummy --rendering-method mobile --rendering-driver vulkan --script ../build/stage3d/capture_final.gd
 
 The capture harness is a diagnostic build artifact. The production scene is `game/scenes/fishing_stage_3d.tscn` and its script is `game/scripts/fishing_stage_3d.gd`.
+
+## Known native-engine shutdown warning
+
+Godot 4.6.3 Mobile prints `7 RIDs of type Texture were leaked` after a rendered ReflectionProbe has existed. Independent probe/no-probe tests reproduced 7 versus 0, and six scene create/render/free cycles had stable texture/video memory and no orphan nodes. This matches [Godot issue 122498](https://github.com/godotengine/godot/issues/122498), a reflection-atlas color-view/buffer cleanup defect in the engine. The single persistent stage retains its probe for visual quality. This warning is disclosed, not described as a clean shutdown or an observed per-catch memory leak.
+
+The current authored environment is 1,420,035 triangles in 21 material-group mesh nodes; root-viewport Mobile captures render roughly 4.3–4.5M primitives including shadow/probe passes. These are desktop render counters, not a measured Snapdragon throughput claim.
+
+Final visual captures use only the sky hemisphere of the 2K CC0 HDR panorama for sky radiance and reflection; a native sky shader masks photographed horizon/terrain, and a real3D channel bed sits below the transparent water. `fog_sky_affect=0.08` keeps distance haze from erasing the sky. Native camera flow is 3/4-front lobby → full-body cast → near-shoulder waiting/reeling → surface approach with live underwater fish → size-aware breach/lift. Tackle is synchronized after skeleton updates in `RenderingServer.frame_pre_draw`; an independent rendered test measured line-to-tip error below 0.000001m across casting and lifting.
+
+## Frozen visual evidence
+
+The final stage-only 720×1280 Mobile/Vulkan frames are in `build/stage3d/release_candidate_01_lobby.png` through `release_candidate_10_rain.png` (cast, shoulder wait/reel, underwater approach, full-size gar breach/lift, rain). These are actual native renders, not painted mockups. The dedicated release-candidate log is `build/stage3d/approved_capture.log`; that diagnostic filename is not a claim of user acceptance. Native Main UI captures and the independent six-suite gate are coordinated separately before packaging.

@@ -45,7 +45,7 @@ def blob(name, p, size, material, subdivisions=1, distort=.12):
     o.scale=(size[0],size[2],size[1]);o.data.materials.append(M[material]); return o
 
 def leaf_crown(center, radii, h, material, count=170, willow=False):
-    # A shaded inner branch canopy plus hundreds of individual curved, closed leaves.
+    # Hundreds of individual curved, closed leaves, with no primitive canopy shell.
     # No opacity cards, sprite textures, or billboard forest meshes.
     center=Vector(center); rx,ry,rz=radii
     verts=[]; faces=[]
@@ -205,6 +205,6 @@ for material in list(M):
 triangles=sum(len(o.data.polygons) for o in bpy.context.scene.objects if o.type=='MESH')
 objects=sum(o.type=='MESH' for o in bpy.context.scene.objects)
 bpy.ops.export_scene.gltf(filepath=str(OUT/'managed_oxbow.glb'),export_format='GLB',export_animations=False,export_yup=True,export_materials='EXPORT',export_apply=True)
-report={'asset':'managed_oxbow.glb','authoring':'Original deterministic parametric Blender mesh construction; no third-party model or texture input','seed':81207,'triangles':triangles,'mesh_nodes':objects,'unit':'meter','up':'+Y','view_direction':'-Z','location':'Managed Mississippi oxbow test fishery; intentionally low alluvial banks','water':'Separate real-time stage surface','build':'blender -b --python tools/art3d/build_environment.py'}
+report={'asset':'managed_oxbow.glb','authoring':'Original deterministic parametric Blender mesh construction; no third-party model or texture input','seed':81207,'triangles':triangles,'mesh_nodes':objects,'unit':'meter','up':'+Y','view_direction':'-Z','location':'Managed Mississippi oxbow test fishery; intentionally low alluvial banks','runtime_surface_textures':'Separately credited CC0 Poly Haven HDRI and timber PBR textures; no third-party mesh', 'water':'Separate real-time stage surface','build':'blender -b --python tools/art3d/build_environment.py'}
 (OUT/'manifest.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))
