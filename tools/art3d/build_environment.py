@@ -43,6 +43,29 @@ def blob(name, p, size, material, subdivisions=1, distort=.12):
     for v in o.data.vertices:
         v.co *= R.uniform(1-distort,1+distort)
     o.scale=(size[0],size[2],size[1]);o.data.materials.append(M[material]); return o
+
+def leaf_crown(center, radii, h, material, count=170, willow=False):
+    # A shaded inner branch canopy plus hundreds of individual curved, closed leaves.
+    # No opacity cards, sprite textures, or billboard forest meshes.
+    center=Vector(center); rx,ry,rz=radii
+    verts=[]; faces=[]
+    for k in range(count):
+        a=R.random()*math.tau; v=R.uniform(-.95,.95); radial=math.sqrt(1-v*v)
+        r=R.uniform(.74,1.10)
+        q=center+Vector((rx*radial*math.cos(a),ry*v,rz*radial*math.sin(a)))*r
+        # Leaves are cupped along the midrib and twist away from their branch.
+        direction=Vector((math.cos(a),R.uniform(-.9,.65),math.sin(a))).normalized()
+        side=direction.cross(Vector((0,1,0))).normalized()
+        if side.length<.1: side=Vector((1,0,0))
+        up=side.cross(direction).normalized()
+        length=R.uniform(.22,.37)*(1.08 if willow else 1.0)
+        width=length*(.21 if willow else R.uniform(.28,.40))
+        base=len(verts)
+        points=[q,q+direction*length*.44+side*width,q+direction*length+up*length*.08,q+direction*length*.44-side*width,q+direction*length*.45+up*length*.12,q+direction*length*.44-up*.005]
+        verts += [tuple(p) for p in points]
+        faces += [(base+0,base+1,base+4),(base+1,base+2,base+4),(base+2,base+3,base+4),(base+3,base+0,base+4),(base+1,base+0,base+5),(base+2,base+1,base+5),(base+3,base+2,base+5),(base+0,base+3,base+5)]
+    mesh('Foliage individual curved leaves',verts,faces,material)
+
 # Dock: separate physically beveled planks, bearer beams, bolts, submerged pilings.
 for z in [-1.25,.4,2.05,3.7]:
     box('Bearer',(-.55,.35,z),(3.9,.24,.18),'WoodEndgrain',.025)
@@ -110,29 +133,26 @@ for side in [-1,1]:
     mesh('Wet bank',vs,fs,'Mud')
 # Walk-in landing ground at foreground.
 mesh('Near shore',[(-40,.04,3.8),(-9,.04,2.8),(-4,.18,3.6),(2,.25,4.3),(12,.05,3.5),(40,.03,4.0),(40,.42,35),(-40,.42,35)],[(0,1,2,3,4,5,6,7)],'Soil')
-# Light hummocks far away; flattened oxbow terrain, no fantasy mountain wall.
-for i in range(11):
-    x=-75+i*15;blob('Distant tree ridge',(x,1.8,-108-R.uniform(0,15)),(R.uniform(10,19),R.uniform(3,6),R.uniform(8,14)),'FoliageDeep',2,.08)
 # Branch-built deciduous/cypress silhouettes with layered irregular crowns.
 def tree(x,z,h,willow=False):
     y=.42; root=Vector((x,y,z)); lean=R.uniform(-.5,.5)
-    tube('Trunk',[root,root+Vector((lean*.3,h*.46,0)),root+Vector((lean,h*.88,.18))],[h*.055,h*.033,h*.009],'Bark',8)
+    tube('Trunk',[root,root+Vector((lean*.3,h*.46,0)),root+Vector((lean,h*.88,.18))],[h*.055,h*.033,h*.009],'Bark',14)
     # Buttress-root flares, highly characteristic river trees.
     for j in range(5):
         a=j*math.tau/5
-        tube('Buttress root',[(x+math.cos(a)*h*.12,y,z+math.sin(a)*h*.12),(x,y+h*.3,z)],[h*.025,h*.037],'Bark',6)
+        tube('Buttress root',[(x+math.cos(a)*h*.12,y,z+math.sin(a)*h*.12),(x,y+h*.3,z)],[h*.025,h*.037],'Bark',10)
     count=9 if willow else 7
     for j in range(count):
         a=j*2.4; level=.44+(j/count)*.42; reach=h*R.uniform(.22,.37)
         end=root+Vector((math.cos(a)*reach+lean,h*level,math.sin(a)*reach))
-        tube('Limb',[root+Vector((lean*.5,h*level*.66,0)),end],[h*.025,h*.007],'BarkLight',6)
+        tube('Limb',[root+Vector((lean*.5,h*level*.66,0)),end],[h*.025,h*.007],'BarkLight',10)
         c=end+Vector((0,h*.11,0));r=h*R.uniform(.18,.27)
-        blob('Foliage crown',c,(r*1.25,r*.68,r),R.choice(['FoliageGreen','FoliageSun','FoliageGold']),2,.19)
+        leaf_crown(c,(r*1.25,r*.68,r),h,R.choice(['FoliageGreen','FoliageSun','FoliageGold']),400 if z>-40 else (160 if z>-85 else 90),willow)
         if willow:
             for k in range(4):
                 theta=a+k*1.4;hang=c+Vector((math.cos(theta)*r*.67,-h*.19,math.sin(theta)*r*.67))
-                blob('Foliage hanging sprays',hang,(r*.37,h*.24,r*.35),'FoliageGreen',1,.2)
-    blob('Foliage high crown',root+Vector((lean,h*.93,0)),(h*.24,h*.18,h*.24),'FoliageSun',2,.15)
+                leaf_crown(hang,(r*.37,h*.24,r*.35),h,'FoliageGreen',60,True)
+    leaf_crown(root+Vector((lean,h*.93,0)),(h*.24,h*.18,h*.24),h,'FoliageSun',340 if z>-40 else (160 if z>-85 else 90),willow)
 for side in [-1,1]:
     for i in range(14):
         z=3-i*7.2+R.uniform(-2,2);x=bank_edge(z,side)+side*R.uniform(2.0,8.0)
@@ -140,6 +160,10 @@ for side in [-1,1]:
     for i in range(15):
         z=-15-i*6; x=bank_edge(z,side)+side*R.uniform(12,25)
         tree(x,z,R.uniform(5,9),False)
+# A real low far shore and tree row end the oxbow; no giant primitive ridge wall.
+mesh('Far low bank',[(-90,-.08,-93),(90,-.08,-93),(90,.55,-106),(-90,.55,-106),(-90,.7,-145),(90,.7,-145)],[(0,1,2,3),(3,2,5,4)],'Grass')
+for i in range(25):
+    tree(-74+i*6.1+R.uniform(-1,1),-108+R.uniform(-4,4),R.uniform(4.8,7.7),i%7==0)
 # A closer hero tree frames left edge; taller field catches sunset shadows.
 tree(-6.4,3.2,7.8,True)
 # Rocks and multiblade reed/cattail clumps, actual geometry on both riverbanks.
@@ -175,7 +199,7 @@ for material in list(M):
     bpy.context.view_layer.objects.active=objs[0];bpy.ops.object.join();ob=objs[0];ob.name=material
     bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
     # Weighted visual softness on crafted hard edges; crowns remain low-poly textured by topology.
-    for p in ob.data.polygons:p.use_smooth=material in ['Bark','BarkLight','Enamel','Iron','Rope']
+    for p in ob.data.polygons:p.use_smooth=material in ['Bark','BarkLight','Enamel','Iron','Rope'] or material.startswith('Foliage')
     # Triangulate consistent winding and import topology.
     mod=ob.modifiers.new('Deterministic triangles','TRIANGULATE');bpy.ops.object.modifier_apply(modifier=mod.name)
 triangles=sum(len(o.data.polygons) for o in bpy.context.scene.objects if o.type=='MESH')

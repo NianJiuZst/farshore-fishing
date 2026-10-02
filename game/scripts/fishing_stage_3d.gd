@@ -36,6 +36,8 @@ var _foliage_materials: Array[ShaderMaterial] = []
 var _world: WorldEnvironment
 var _sun: DirectionalLight3D
 var _sky: ProceduralSkyMaterial
+var _reflection_probe: ReflectionProbe
+var _last_lighting_key: String = ""
 var _environment_root: Node3D
 var _angler: Node3D
 var _animator: AnimationPlayer
@@ -57,18 +59,31 @@ var _ripple_pool: Array[Dictionary] = []
 var _spray_pool: Array[Dictionary] = []
 var _last_ripple: float = -9.0
 var _impact_index: int = 0
-var _camera_target: Vector3 = Vector3(-1.5, 0.85, -2.5)
+var _camera_target: Vector3 = Vector3(-1.5, 1.05, -1.7)
 var _last_anim: String = ""
 var _last_loop: bool = true
 var _cast_finished_emitted: bool = false
 var _fishery_label: Label3D
 
 func _ready() -> void:
+	process_priority = 100
 	_build_world()
 	_built = true
 	set_time_of_day(time_of_day)
 	set_mode(mode)
 	if session != null: bind_session(session)
+	RenderingServer.frame_pre_draw.connect(_sync_tackle_transform)
+
+func _exit_tree() -> void:
+	if RenderingServer.frame_pre_draw.is_connected(_sync_tackle_transform):
+		RenderingServer.frame_pre_draw.disconnect(_sync_tackle_transform)
+
+func _sync_tackle_transform() -> void:
+	# Skeleton/BoneAttachment updates have settled immediately before drawing.
+	# Keep rod endpoint and world-space line on the same visible animation pose.
+	if not _built or _suspended: return
+	_update_rod()
+	if _line.visible and _bobber.visible: _update_line()
 
 func bind_session(value: FishingSession) -> void:
 	if session != null and session.changed.is_connected(_session_changed):
@@ -109,20 +124,26 @@ func set_weather(value: String) -> void:
 func set_time_of_day(value: String) -> void:
 	time_of_day = value
 	if not _built: return
+	var lighting_key: String = value + ":" + weather
+	if lighting_key == _last_lighting_key: return
+	_last_lighting_key = lighting_key
 	var night: bool = value in ["night", "夜晚"]
 	var dusk: bool = value in ["dusk", "evening", "黄昏"]
 	var overcast: bool = weather in ["rain", "storm"]
-	_sky.sky_top_color = Color("223b52") if night else Color("6fa0ab")
-	_sky.sky_horizon_color = Color("668483") if night else Color("d6d9b6")
+	_sky.sky_top_color = Color("223b52") if night else Color("477c9f")
+	_sky.sky_horizon_color = Color("668483") if night else Color("91b3bf")
 	_sky.ground_bottom_color = Color("183834")
 	_sky.ground_horizon_color = _sky.sky_horizon_color
-	_sun.light_color = Color("b2ccdd") if night else (Color("ffc488") if dusk else Color("ffe0ac"))
+	_sun.light_color = Color("b2ccdd") if night else (Color("ffc488") if dusk else Color("fff0d7"))
 	_sun.light_energy = 0.45 if night else (0.7 if overcast else 1.0)
 	_sun.rotation_degrees = Vector3(-28 if dusk else -39, -38, 0)
-	_world.environment.ambient_light_color = Color("829a99") if not night else Color("547c91")
-	_world.environment.ambient_light_energy = 0.24 if not night else 0.20
-	_world.environment.fog_light_color = Color("aabaaa") if not night else Color("3a5b63")
-	_world.environment.fog_density = 0.0058 if not overcast else 0.009
+	_world.environment.ambient_light_color = Color("809aaa") if not night else Color("547c91")
+	_world.environment.ambient_light_energy = 0.40 if not night else 0.22
+	_world.environment.fog_light_color = Color("8faeae") if not night else Color("3a5b63")
+	_world.environment.fog_density = 0.0012 if not overcast else 0.0045
+	if _reflection_probe:
+		# UPDATE_ONCE recaptures on transform change after sky/light changes.
+		_reflection_probe.position.x = 0.002 if _reflection_probe.position.x < 0.001 else 0.0
 
 func suspend(value: bool) -> void:
 	_suspended = value
@@ -146,7 +167,7 @@ func play_landing(record: Dictionary) -> void:
 	_fish_root.visible = true
 	_fish_root.position = Vector3(-0.15, -0.28, -3.15)
 	_play_character("lift", false)
-	_play_fish("struggle")
+	_play_fish("breach")
 	_splash(_fish_root.position, 1.25)
 
 func cancel_landing() -> void:
@@ -219,11 +240,15 @@ func _begin_cast() -> void:
 
 func _process(delta: float) -> void:
 	if not _built or _suspended: return
-	delta = minf(delta, 0.05)
+	# Presentation and AnimationPlayer share real elapsed time, including slow frames.
+	# The core Session independently clamps simulation steps.
 	_time += delta
 	_water_material.set_shader_parameter("motion_time", _time)
 	for material: ShaderMaterial in _foliage_materials: material.set_shader_parameter("motion_time", _time)
 	_update_effects(delta)
+	if _angler:
+		var facing: float = PI - 0.25 if mode == "lobby" else 0.0
+		_angler.rotation.y = lerp_angle(_angler.rotation.y, facing, 1.0 - exp(-delta * 4.0))
 	_update_rod()
 	if cast_in_progress: _update_cast(delta)
 	elif _landing_time >= 0.0: _update_landing(delta)
@@ -286,14 +311,15 @@ func _update_fishing(_delta: float) -> void:
 func _update_landing(delta: float) -> void:
 	_landing_time += delta
 	var t: float = _landing_time
-	if t < 1.15:
-		var p: float = t / 1.15
+	if t < 1.40:
+		var p: float = t / 1.40
 		_fish_root.position = Vector3(-0.2, -0.24, -3.2).lerp(Vector3(-0.05, 0.9, -1.75), p)
 		_fish_root.position.y += sin(p * PI) * 0.68
 		_fish_root.rotation = Vector3(sin(p * PI) * -0.25, 0.38 + p * 0.8, sin(p * PI) * 0.35)
 		if t > 0.08 and t - delta <= 0.08: _splash(Vector3(-0.2, 0, -3.2), 1.3)
 	else:
-		var p: float = smoothstep(0.0, 1.0, (t - 1.15) / 1.1)
+		if t - delta < 1.40: _play_fish("landed")
+		var p: float = smoothstep(0.0, 1.0, (t - 1.40) / 1.1)
 		_fish_root.position = Vector3(-0.05, 0.9, -1.75).lerp(Vector3(-0.3, 1.28, -0.58), p)
 		_fish_root.position.y += sin(_time * 8) * 0.025 * (1.0 - p * 0.7)
 		_fish_root.rotation = Vector3(0, lerpf(1.18, -0.20, p), 0.10 + sin(_time * 5) * 0.04)
@@ -310,28 +336,32 @@ func _update_landing(delta: float) -> void:
 		landing_finished.emit(result)
 
 func _update_camera(delta: float) -> void:
-	var position_goal: Vector3 = Vector3(1.1, 3.0, 5.3)
-	var target_goal: Vector3 = Vector3(-1.5, 0.85, -2.5)
+	var position_goal: Vector3 = Vector3(0.7, 2.5, 4.6)
+	var target_goal: Vector3 = Vector3(-1.5, 1.05, -1.7)
 	var fov_goal: float = 54.0
 	if mode == "fishing":
 		position_goal = Vector3(1.1, 3.7, 6.2)
 		target_goal = Vector3(-1.3, 0.55, -4.5)
 		fov_goal = 51.0
+	if presentation_state == "waiting":
+		position_goal = Vector3(-0.54, 2.10, 1.55)
+		target_goal = _bobber_target + Vector3(0, 0.10, 0)
+		fov_goal = 59.0
 	if presentation_state in ["nibble", "bite"]:
 		# Camera approaches the actual surface, revealing real underwater fish geometry.
-		position_goal = Vector3(1.7, 2.55, 3.7)
+		position_goal = Vector3(_bobber_target.x + 1.0, 1.85, _bobber_target.z + 4.1)
 		target_goal = _bobber_target + Vector3(0, -0.10, 0)
 		fov_goal = 42.0
 	elif presentation_state == "fight" and session:
 		var p: float = clampf(session.progress, 0.0, 1.0)
-		position_goal = Vector3(2.7, 3.3, 5.8)
-		target_goal = Vector3(-0.25, 0.55, -5.6 + p * 2.3)
-		fov_goal = 46.0
+		position_goal = Vector3(-0.48, 2.12, 1.48)
+		target_goal = _bobber_target.lerp(Vector3(-0.10, 0.12, -2.7), p)
+		fov_goal = 55.0
 	elif presentation_state in ["landing", "landed"]:
 		var p: float = clampf(_landing_time / 2.5, 0.0, 1.0) if _landing_time >= 0 else 1.0
-		position_goal = Vector3(0.30, 2.05, 3.65)
-		target_goal = Vector3(-0.65, 0.95 + p * 0.29, -0.10)
-		fov_goal = 43.0
+		position_goal = Vector3(0.15, 2.13, 4.7 + maxf(0.0, _fish_length - 1.1) * 1.45)
+		target_goal = Vector3(-0.30, 0.95 + p * 0.25, -0.25)
+		fov_goal = 46.0
 	var blend: float = 1.0 - exp(-delta * (2.3 if presentation_state in ["landing", "bite"] else 1.5))
 	camera.position = camera.position.lerp(position_goal, blend)
 	_camera_target = _camera_target.lerp(target_goal, blend)
@@ -345,19 +375,22 @@ func _build_world() -> void:
 	env.background_mode = Environment.BG_SKY
 	var sky := Sky.new()
 	_sky = ProceduralSkyMaterial.new()
-	_sky.sky_curve = 0.2
+	_sky.sky_curve = 0.85
 	_sky.ground_curve = 0.35
 	_sky.sun_angle_max = 8.0
 	_sky.sun_curve = 0.09
 	sky.sky_material = _sky
 	sky.radiance_size = Sky.RADIANCE_SIZE_128
 	env.sky = sky
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
 	env.reflected_light_source = Environment.REFLECTION_SOURCE_SKY
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
+	env.adjustment_enabled = true
+	env.adjustment_saturation = 1.16
+	env.adjustment_contrast = 1.08
 	env.fog_enabled = true
 	env.fog_height = 0.0
-	env.fog_height_density = 0.035
+	env.fog_height_density = 0.0
 	_world.environment = env
 	add_child(_world)
 	_sun = DirectionalLight3D.new()
@@ -368,6 +401,15 @@ func _build_world() -> void:
 	_sun.shadow_bias = 0.05
 	_sun.shadow_normal_bias = 1.2
 	add_child(_sun)
+	var bounce := OmniLight3D.new()
+	bounce.name = "SoftDockBounce"
+	bounce.position = Vector3(0.0, 3.1, 3.6)
+	bounce.light_color = Color("f1dfc5")
+	bounce.light_energy = 0.32
+	bounce.omni_range = 6.5
+	bounce.omni_attenuation = 1.2
+	bounce.shadow_enabled = false
+	add_child(bounce)
 	var packed: PackedScene = load("res://assets/3d/environment/managed_oxbow.glb") as PackedScene
 	if packed:
 		_environment_root = packed.instantiate() as Node3D
@@ -377,6 +419,7 @@ func _build_world() -> void:
 	else: push_error("Missing authored 3D environment. This is not a release-ready stage.")
 	_build_water()
 	var probe := ReflectionProbe.new()
+	_reflection_probe = probe
 	probe.name = "RiverbankReflection"
 	probe.position = Vector3(0, 2.0, -18)
 	probe.size = Vector3(92, 35, 138)
@@ -389,7 +432,7 @@ func _build_world() -> void:
 	add_child(probe)
 	camera = Camera3D.new()
 	camera.name = "FishingCamera"
-	camera.position = Vector3(1.1, 3.0, 5.3)
+	camera.position = Vector3(0.7, 2.5, 4.6)
 	camera.fov = 54.0
 	camera.near = 0.08
 	camera.far = 200.0
@@ -417,10 +460,10 @@ func _build_world() -> void:
 func _apply_foliage(node: Node) -> void:
 	if node is MeshInstance3D and str(node.name).begins_with("Foliage"):
 		var mesh_node := node as MeshInstance3D
-		var color := Color("53702e")
-		if str(node.name).contains("Deep"): color = Color("264937")
-		elif str(node.name).contains("Green"): color = Color("446a34")
-		elif str(node.name).contains("Gold"): color = Color("81924a")
+		var color := Color("406639")
+		if str(node.name).contains("Deep"): color = Color("203f32")
+		elif str(node.name).contains("Green"): color = Color("355c37")
+		elif str(node.name).contains("Gold"): color = Color("637b42")
 		var shader := ShaderMaterial.new()
 		shader.shader = FOLIAGE_SHADER
 		shader.set_shader_parameter("leaf_color", color)
@@ -449,6 +492,19 @@ func _build_water() -> void:
 	surface.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	_water_material = ShaderMaterial.new()
 	_water_material.shader = WATER_SHADER
+	var noise := FastNoiseLite.new()
+	noise.seed = 81207
+	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
+	noise.frequency = 0.035
+	noise.fractal_octaves = 4
+	var normal_texture := NoiseTexture2D.new()
+	normal_texture.width = 512
+	normal_texture.height = 512
+	normal_texture.seamless = true
+	normal_texture.as_normal_map = true
+	normal_texture.bump_strength = 2.6
+	normal_texture.noise = noise
+	_water_material.set_shader_parameter("normal_texture", normal_texture)
 	surface.material_override = _water_material
 	add_child(surface)
 
@@ -562,7 +618,8 @@ func _build_bobber() -> void:
 func _ensure_fish(record: Dictionary) -> void:
 	var id: String = str(record.get("species_id", record.get("id", "common_carp")))
 	if id not in ["common_carp", "alligator_gar"]: id = "common_carp"
-	_fish_length = clampf(float(record.get("length_cm", record.get("length", 72.0))) / 100.0, 0.35, 1.60)
+	var millimeters: float = float(record.get("length_mm", float(record.get("length_cm", record.get("length", 72.0))) * 10.0))
+	_fish_length = clampf(millimeters / 1000.0, 0.10, 3.50)
 	if id != _fish_id or _fish == null:
 		if _fish: _fish.queue_free()
 		_fish_id = id
@@ -617,14 +674,10 @@ func _find_named(node: Node, wanted: String) -> Node:
 func _build_effects() -> void:
 	for i in range(12):
 		var ring := MeshInstance3D.new()
-		var torus := TorusMesh.new()
-		torus.inner_radius = 0.47
-		torus.outer_radius = 0.50
-		torus.rings = 36
-		torus.ring_segments = 4
-		ring.mesh = torus
+		ring.mesh = _ripple_mesh()
 		var material := ShaderMaterial.new()
 		material.shader = RIPPLE_SHADER
+		material.render_priority = 1
 		ring.material_override = material
 		ring.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		ring.visible = false
@@ -645,12 +698,37 @@ func _build_effects() -> void:
 		add_child(drop)
 		_spray_pool.append({"node": drop, "velocity": Vector3.ZERO, "age": 99.0})
 
+func _ripple_mesh() -> ArrayMesh:
+	var vertices := PackedVector3Array()
+	var normals := PackedVector3Array()
+	var uvs := PackedVector2Array()
+	var indices := PackedInt32Array()
+	for i in range(81):
+		var a: float = TAU * float(i) / 80.0
+		for j in range(2):
+			var radius: float = 0.36 if j == 0 else 0.50
+			vertices.append(Vector3(cos(a) * radius, 0, sin(a) * radius))
+			normals.append(Vector3.UP)
+			uvs.append(Vector2(float(i) / 80.0, float(j)))
+		if i > 0:
+			var b: int = i * 2
+			indices.append_array(PackedInt32Array([b-2, b, b-1, b-1, b, b+1]))
+	var arrays: Array = []
+	arrays.resize(Mesh.ARRAY_MAX)
+	arrays[Mesh.ARRAY_VERTEX] = vertices
+	arrays[Mesh.ARRAY_NORMAL] = normals
+	arrays[Mesh.ARRAY_TEX_UV] = uvs
+	arrays[Mesh.ARRAY_INDEX] = indices
+	var mesh := ArrayMesh.new()
+	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+	return mesh
+
 func _spawn_ripple(at: Vector3, power: float, duration: float) -> void:
 	_last_ripple = _time
 	for effect: Dictionary in _ripple_pool:
 		if float(effect.age) < float(effect.duration): continue
 		var ring: MeshInstance3D = effect.node
-		ring.position = Vector3(at.x, 0.028, at.z)
+		ring.position = Vector3(at.x, 0.012, at.z)
 		ring.visible = true
 		effect.age = 0.0
 		effect.duration = duration
@@ -685,7 +763,8 @@ func _update_effects(delta: float) -> void:
 			continue
 		var radius: float = 0.2 + ratio * (1.6 + float(effect.power))
 		ring.scale = Vector3(radius, 0.10, radius)
-		(effect.material as ShaderMaterial).set_shader_parameter("ripple_color", Color(0.66, 0.78, 0.66, (1.0 - ratio) * 0.62))
+		(effect.material as ShaderMaterial).set_shader_parameter("ripple_color", Color(0.57, 0.71, 0.61, pow(1.0 - ratio, 1.2) * 0.35))
+		(effect.material as ShaderMaterial).set_shader_parameter("progress", ratio)
 	for effect: Dictionary in _spray_pool:
 		effect.age = float(effect.age) + delta
 		var drop: MeshInstance3D = effect.node
