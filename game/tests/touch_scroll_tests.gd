@@ -52,12 +52,15 @@ func _run() -> void:
 	await process_frame
 	_check(taps == 1,"horizontal swipe also cancels a button tap")
 	_touch(start,true)
+	_emulated_button(start,true)
 	_drag(start + Vector2(0,-5),Vector2(0,-5))
 	_check(scroll.scroll_vertical == 0, "below-threshold motion keeps list still")
 	for step: int in range(1,8):
 		_drag(start + Vector2(0,-step*42),Vector2(0,-42))
+		_emulated_motion(start + Vector2(0,-step*42),Vector2(0,-42))
 		await process_frame
 	_touch(start + Vector2(0,-294),false)
+	_emulated_button(start + Vector2(0,-294),false)
 	var after_drag: int = scroll.scroll_vertical
 	_check(after_drag > 200, "real vertical ScreenDrag scrolls over nested STOP button/panel")
 	_check(taps == 1, "drag over button suppresses click")
@@ -143,7 +146,12 @@ func _test_main_pages() -> void:
 	_check(app.scenery is Node3D and app.scenery.camera is Camera3D, "production background is actual Node3D and Camera3D")
 	for label: String in ["开始钓鱼","行囊","图鉴","设置"]:
 		_check(_find_button(app._overlay,label) != null,"lobby exposes " + label)
+	app._handle_back()
+	_check(app._screen == "lobby_exit","lobby system Back opens explicit exit choice")
+	app._handle_back()
+	_check(app._screen == "home" and not app._action.is_visible_in_tree(),"canceling lobby exit returns to lobby without entering fishing")
 	var old_selection: Dictionary = app.store.state.selection.duplicate(true)
+	await _test_native_controls(app)
 	app._show_prepare()
 	app._set_trial_target("alligator_gar")
 	await _layout_frames()
@@ -167,6 +175,22 @@ func _test_main_pages() -> void:
 		print("PRODUCTION_TOUCH ",method," offset=",page_scroll.scroll_vertical," maximum=",range_max)
 		_check(page_scroll.scroll_vertical >= mini(100,roundi(range_max)),method + " scrolls from actual ScreenDrag over live page children")
 		page_scroll.stop_gesture()
+		var before_screen: String = app._screen
+		var before_bait: String = app.bait_id
+		await _drag_to_bottom(page_scroll)
+		_check(page_scroll.scroll_vertical >= roundi(range_max)-2,method + " repeated real touch drags reach the actual bottom")
+		_check(app._screen == before_screen and app.bait_id == before_bait,method + " bottom-reaching drags do not activate child controls")
+		var last_button: Button = _last_button(app._page)
+		if last_button != null:
+			_check(page_scroll.get_global_rect().intersects(last_button.get_global_rect()) and last_button.get_global_rect().end.y <= page_scroll.get_global_rect().end.y+2,method + " final actual button is visible at bottom")
+		var bottom_before: int = page_scroll.scroll_vertical
+		var reverse_start: Vector2 = page_scroll.get_global_rect().get_center()
+		_touch(reverse_start,true)
+		_drag(reverse_start+Vector2(0,120),Vector2(0,120))
+		_touch(reverse_start+Vector2(0,120),false)
+		_check(page_scroll.scroll_vertical < bottom_before,method + " reverse touch swipe moves back from bottom")
+		page_scroll.stop_gesture()
+	app._set_bait("worm")
 	app._show_gear()
 	await _layout_frames()
 	var bag: ScrollContainer = _find_type(app._overlay,"ScrollContainer") as ScrollContainer
@@ -174,7 +198,7 @@ func _test_main_pages() -> void:
 	if bait == null: bait = _find_button(app._overlay,"已选 · 谷物")
 	_check(bait != null,"production bait button exists")
 	if bait != null:
-		bag.ensure_control_visible(bait)
+		await _drag_to_bottom(bag)
 		await _layout_frames()
 		var before: String = app.bait_id
 		var origin: Vector2 = bait.get_global_rect().get_center()
@@ -184,13 +208,14 @@ func _test_main_pages() -> void:
 		await _layout_frames()
 		_check(app.bait_id == before and app._screen == "gear","touch drag over real bait cannot select or rebuild page")
 		bag.stop_gesture()
-		bag.ensure_control_visible(bait)
+		await _drag_to_bottom(bag)
 		await _layout_frames()
 		origin = bait.get_global_rect().get_center()
+		var revision_before: int = int(app.store.state.save_revision)
 		_touch(origin,true)
 		_touch(origin,false)
 		await _layout_frames()
-		_check(app.bait_id == "grain" and app.store.state.selection.bait_id == "grain","real bait ScreenTouch tap updates persisted choice exactly once")
+		_check(app.bait_id == "grain" and app.store.state.selection.bait_id == "grain" and int(app.store.state.save_revision) == revision_before+1,"real bait ScreenTouch tap updates persisted choice exactly once")
 	app._close_page()
 	await _layout_frames()
 	_check(app._screen == "prepare","bag Back returns to prepare context")
@@ -228,3 +253,127 @@ func _test_main_pages() -> void:
 	app.queue_free()
 	await process_frame
 	production_completed = true
+
+func _drag_to_bottom(page_scroll: ScrollContainer) -> void:
+	var maximum: int = roundi(page_scroll.get_v_scroll_bar().max_value-page_scroll.get_v_scroll_bar().page)
+	var extent: Rect2 = page_scroll.get_global_rect()
+	var distance: float = maxf(80.0,extent.size.y-150.0)
+	var origin: Vector2 = Vector2(extent.get_center().x,extent.end.y-70.0)
+	var attempts: int = ceili(float(maximum)/distance)+2
+	for iteration: int in range(attempts):
+		if page_scroll.scroll_vertical >= maximum-1: break
+		_touch(origin,true)
+		_drag(origin-Vector2(0,distance),Vector2(0,-distance))
+		_touch(origin-Vector2(0,distance),false)
+		page_scroll.stop_gesture()
+		await process_frame
+	print("PRODUCTION_TOUCH_BOTTOM offset=",page_scroll.scroll_vertical," maximum=",maximum)
+
+func _last_button(node: Node) -> Button:
+	for index: int in range(node.get_child_count()-1,-1,-1):
+		var found: Button = _last_button(node.get_child(index))
+		if found != null: return found
+	return node as Button if node is Button else null
+
+func _emulated_button(position: Vector2, down: bool) -> void:
+	var event: InputEventMouseButton = InputEventMouseButton.new()
+	event.device = InputEvent.DEVICE_ID_EMULATION
+	event.button_index = MOUSE_BUTTON_LEFT
+	event.button_mask = MOUSE_BUTTON_MASK_LEFT if down else 0
+	event.position = position
+	event.pressed = down
+	root.push_input(event,true)
+
+func _emulated_motion(position: Vector2, relative: Vector2) -> void:
+	var event: InputEventMouseMotion = InputEventMouseMotion.new()
+	event.device = InputEvent.DEVICE_ID_EMULATION
+	event.button_mask = MOUSE_BUTTON_MASK_LEFT
+	event.position = position
+	event.relative = relative
+	root.push_input(event,true)
+
+func _test_native_controls(app: Control) -> void:
+	app._show_settings()
+	await _layout_frames()
+	var slider: HSlider = _find_type(app._page,"HSlider") as HSlider
+	var original_volume: float = slider.value
+	var center: Vector2 = slider.get_global_rect().get_center()
+	_touch(center,true)
+	_emulated_button(center,true)
+	_drag(center-Vector2(0,90),Vector2(0,-90))
+	_emulated_motion(center-Vector2(0,90),Vector2(0,-90))
+	_touch(center-Vector2(0,90),false)
+	_emulated_button(center-Vector2(0,90),false)
+	await _layout_frames()
+	_check(is_equal_approx(slider.value,original_volume),"vertical touch over native HSlider does not adjust or grab volume")
+	var stable_volume: float = slider.value
+	_emulated_motion(center+Vector2(180,0),Vector2(180,0))
+	await process_frame
+	_check(is_equal_approx(slider.value,stable_volume),"post-release emulated motion cannot keep slider grabbed")
+	app._show_settings()
+	await _layout_frames()
+	slider = _find_type(app._page,"HSlider") as HSlider
+	var slider_rect: Rect2 = slider.get_global_rect()
+	var counts: Dictionary = {"start":0,"end":0}
+	slider.drag_started.connect(func() -> void: counts.start += 1)
+	slider.drag_ended.connect(func(_changed: bool) -> void: counts.end += 1)
+	var tap_at: Vector2 = slider_rect.position + Vector2(slider_rect.size.x * 0.25,slider_rect.size.y*0.5)
+	_touch(tap_at,true)
+	_emulated_button(tap_at,true)
+	_touch(tap_at,false)
+	_emulated_button(tap_at,false)
+	await _layout_frames()
+	_check(slider.value < 0.4 and is_equal_approx(float(app.store.state.settings.volume),slider.value),"native HSlider tap still edits and persists the chosen value")
+	_check(counts.start == 1 and counts.end == 1,"native slider tap dispatch is balanced and not doubled by mouse emulation")
+	center = slider_rect.get_center()
+	_touch(center,true)
+	_emulated_button(center,true)
+	_drag(center+Vector2(110,0),Vector2(110,0))
+	_emulated_motion(center+Vector2(110,0),Vector2(110,0))
+	_touch(center+Vector2(110,0),false)
+	_emulated_button(center+Vector2(110,0),false)
+	await _layout_frames()
+	_check(slider.value > 0.6 and counts.start == 2 and counts.end == 2,"horizontal touch drag retains native slider editing with exactly one release")
+	stable_volume = slider.value
+	var stray: InputEventMouseMotion = InputEventMouseMotion.new()
+	stray.device = 101
+	stray.position = slider_rect.position+Vector2(20,slider_rect.size.y*0.5)
+	stray.global_position = stray.position
+	stray.relative = Vector2(-200,0)
+	stray.button_mask = MOUSE_BUTTON_MASK_LEFT
+	root.push_input(stray,true)
+	_check(is_equal_approx(slider.value,stable_volume),"slider is no longer grabbed after native horizontal touch release")
+	app._show_catalog()
+	await _layout_frames()
+	var option: OptionButton = _find_type(app._page,"OptionButton") as OptionButton
+	var original_choice: int = option.selected
+	center = option.get_global_rect().get_center()
+	_touch(center,true)
+	_emulated_button(center,true)
+	_drag(center-Vector2(0,110),Vector2(0,-110))
+	_emulated_motion(center-Vector2(0,110),Vector2(0,-110))
+	_touch(center-Vector2(0,110),false)
+	_emulated_button(center-Vector2(0,110),false)
+	await _layout_frames()
+	_check(not option.get_popup().visible and option.selected == original_choice,"vertical touch over native OptionButton never opens or changes dropdown")
+	option.get_popup().hide()
+
+	app._show_catalog()
+	await _layout_frames()
+	option = _find_type(app._page,"OptionButton") as OptionButton
+	center = option.get_global_rect().get_center()
+	_touch(center,true)
+	_emulated_button(center,true)
+	_touch(center,false)
+	_emulated_button(center,false)
+	await _layout_frames()
+	_check(option.get_popup().visible,"native OptionButton tap still opens dropdown")
+	option.get_popup().hide()
+	app._show_catalog()
+	await _layout_frames()
+	var search: LineEdit = _find_type(app._page,"LineEdit") as LineEdit
+	center = search.get_global_rect().get_center()
+	_touch(center,true)
+	_touch(center,false)
+	await _layout_frames()
+	_check(search.has_focus(),"native search field touch still receives keyboard focus")

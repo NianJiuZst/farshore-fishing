@@ -16,6 +16,8 @@ window/handheld/orientation=1
 window/vsync/vsync_mode=1
 window/dpi/allow_hidpi=true
 [rendering]
+rendering_device/driver.android="vulkan"
+rendering_device/fallback_to_opengl3=false
 renderer/rendering_method="mobile"
 renderer/rendering_method.mobile="mobile"
 textures/default_filters/use_nearest_mipmap_filter=false

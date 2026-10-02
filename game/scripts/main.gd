@@ -98,6 +98,7 @@ func _ready() -> void:
 	session.ended.connect(_fishing_ended)
 	session.cue.connect(sound.cue)
 	_refresh_location()
+	_update_conditions()
 	_session_changed(Session.State.IDLE)
 	_show_home()
 	get_viewport().size_changed.connect(_safe_area)
@@ -707,10 +708,16 @@ func _show_home() -> void:
 	if store.read_only or not _content_ok:
 		_page.add_child(_text("暂不能开始：" + (store.error_message if store.read_only else "内容校验失败"),22,Color("ffbfa0")))
 
+func _show_lobby_exit() -> void:
+	_open_page("lobby_exit","退出游戏",_show_home)
+	_page.add_child(_text("现在退出游戏？",26))
+	_page.add_child(_button("继续留在大厅",_show_home,true))
+	_page.add_child(_button("退出游戏",_exit_game))
+
 func _show_prepare() -> void:
 	_page_context = "prepare"
 	_open_page("prepare","准备出发",_show_home)
-	_section("河湾试钓场","河岸木台")
+	_section(Trial.NAME,Trial.SPOT_NAME)
 	_page.add_child(_text("虚构的封闭管理试钓水域",22,MUTED))
 	var fish_row: HBoxContainer = HBoxContainer.new()
 	_page.add_child(fish_row)
@@ -813,7 +820,7 @@ func _show_travel() -> void:
 	_open_page("travel","选择钓点")
 	_page.add_child(_icon("compass",120))
 	_section(Trial.NAME,"3D 可进入")
-	_page.add_child(_text("河岸木台  ·  鲤鱼 / 鳄雀鳝",27))
+	_page.add_child(_text(Trial.SPOT_NAME + "  ·  鲤鱼 / 鳄雀鳝",27))
 	_page.add_child(_text("本次 3D 试钓仅开放这一处虚构管理水域。旧版水域的解锁、44 种图鉴和全部钓获纪录均保留。",23,MUTED))
 	_page.add_child(_button("进入钓点",_enter_fishery,true))
 
@@ -1344,6 +1351,7 @@ func _notification(what: int) -> void:
 		_handle_back()
 	elif what == NOTIFICATION_WM_CLOSE_REQUEST:
 		if _screen == "result": _show_result()
+		elif _screen == "home": _show_lobby_exit()
 		else: _show_pause()
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -1357,6 +1365,6 @@ func _handle_back() -> void:
 		"species","zoom": _show_catalog()
 		"result": _show_result()
 		"escape": _finish_result()
-		"home": _show_settings()
+		"home": _show_lobby_exit()
 		"prepare": _show_home()
 		_: _close_page()
