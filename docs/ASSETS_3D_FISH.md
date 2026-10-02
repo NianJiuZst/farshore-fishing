@@ -99,6 +99,8 @@ blender -b --python tools/art3d/build_fish.py -- --species all --no-render
 # 用最终母稿重新输出多角度/动作核查图：
 blender -b --python tools/art3d/build_fish.py -- --species all --review-existing
 blender -b --python ownbuild/fish3d-review/verify_blender.py
+# 独立项目复现 Blender + Godot 验证：
+bash ownbuild/fish3d-review/run_checks.sh
 ```
 
 授权说明：模型拓扑、UV、程序化纹理、骨骼、权重、动作和脚本为本项目原创制作。事实资料不作为第三方图片或模型再分发许可。未购买资产、使用未批准的付费接口或新建账号。
