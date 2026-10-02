@@ -18,7 +18,7 @@ This family owns nine original species, with head +X, Blender +Z / glTF +Y up, a
 
 Representative cod and wolffish are built and visually checked before expanding the other seven. Every species has independent cross-sections, mouth geometry, fin position/shape, eye proportions and anatomy, with species-specific pigment. Shared rig/tooling is used only for export and deformation.
 
-Evidence lives under `ownbuild/fish3d-catalog/<id>/`. Current completion status and measured counts will be appended after actual rendering and review, not inferred from registry entries.
+Evidence lives under `ownbuild/fish3d-catalog/<id>/`. All nine final models have passed the checks below, with eight actual rendered views each.
 
 ## Review corrections and structural checks
 
@@ -27,3 +27,52 @@ Evidence lives under `ownbuild/fish3d-catalog/<id>/`. Current completion status 
 - The shared animated-root checker added during production caught undersupported manually positioned pelvic/pectoral roots and caudal roots in provisional haddock/herring/chub exports. All nine profiles were then revised to seat paired-fin roots on their own body surface and give the caudal rootline 0.7 mm longitudinal overlap into the body cap. No tolerance overrides were introduced.
 - Per-species `anatomy_contract.json` records independently executed profile calls. Gadoids have 3 dorsal / 2 anal fins; wolffish has no pelvic fins; each Scomber has 5 dorsal / 5 anal finlets; horse mackerel has 71 lateral scutes per flank and no finlets; herring has one dorsal and 33 low ventral scutes.
 - `glb_file_audit.json` independently parses binary GLB chunks and accessor data, checking actual embedded images, skin joint/weight buffers, all four clip durations, zero exported root translation drift, centered one-metre rest length, and distinct position buffers. This does not substitute for rendered deformation or Android runtime QA.
+
+
+## Final asset signoff, 2026-10-02 UTC
+
+**Nine of nine species complete.** Every canonical GLB and editable Blender 4.3.2 master exists. All 72 final Cycles images (1200×800, 24 samples) were inspected: hero, side, top, underside, swim, struggle, breach and landed. Each `review_signoff.json` binds these images to the exact profile, master and GLB hashes. The family montage is `ownbuild/fish3d-catalog/atlantic_cod/northern_marine_hero_montage.jpg`.
+
+All nine binary files have independently distinct position-buffer hashes, embedded original PBR images, normalized weights, centered 1m rest length, +X forward and glTF +Y up. Exported animation durations are swim 2.0s, struggle 1.2s, breach 1.4s and landed 3.0s, with zero root translation drift. The Blender deformation tests confirm real skin displacement and continuous loop endpoints. The attachment gate samples nine phases of every clip, 36 animated poses per species, and separately measures membrane and ray contacts against the deformed body. No tolerance override was used.
+
+| Species ID | Triangles | Bones | GLB MiB | Max membrane distance mm | Max ray distance mm |
+|---|---:|---:|---:|---:|---:|
+| atlantic_cod | 38348 | 19 | 3.35 | 1.327 | 1.720 |
+| pollack | 38762 | 19 | 5.11 | 1.323 | 1.668 |
+| saithe | 38484 | 19 | 5.15 | 1.524 | 1.886 |
+| haddock | 38072 | 19 | 5.09 | 1.342 | 1.727 |
+| atlantic_wolffish | 42628 | 14 | 4.06 | 2.292 | 2.406 |
+| japanese_horse_mackerel | 33910 | 17 | 4.51 | 1.131 | 1.553 |
+| chub_mackerel | 33306 | 27 | 5.08 | 1.834 | 2.299 |
+| atlantic_mackerel | 33474 | 27 | 5.08 | 1.687 | 2.164 |
+| atlantic_herring | 29586 | 16 | 4.59 | 1.088 | 1.476 |
+
+The three pelagic spiny first dorsals were additionally refined to eight raised rays for Japanese horse mackerel, ten for chub mackerel and twelve for Atlantic mackerel. The two mackerels differ in authored body depth/width, eye size, mouth, dorsal base/gap, and wave pattern; they are not palette swaps.
+
+### Reproduction
+
+Build one original model and run the full deformation/attachment gate:
+
+```sh
+blender -b -t 2 --python-exit-code 1 --python tools/art3d/fish_pipeline.py -- --species atlantic_cod --no-render
+```
+
+Revalidate a saved master without changing geometry:
+
+```sh
+blender -b -t 2 --python-exit-code 1 --python tools/art3d/fish_pipeline.py -- --species atlantic_cod --validate-existing
+```
+
+Render each view with the bounded two-slot helper (two threads per render):
+
+```sh
+for view in hero side top underside pose_swim pose_struggle pose_breach pose_landed; do
+  tools/art3d/render_fish_view.sh atlantic_cod "$view" 24
+done
+```
+
+Independent binary/anatomy QA scripts are preserved with the evidence under the cod representative folder. Visual evidence and reports are part of the outside-project, byte-verified family backup. Reference photographs were not included in game materials or the backup asset bundle.
+
+### Verification boundary
+
+These are Blender/rendered-anatomy, animated-contact, and native GLB-content checks. This family note does not claim Android-device frame rates, complete gameplay reachability, or the final aggregate Godot/Android acceptance pass. Those belong to the full 44-species integration and release QA.
