@@ -246,7 +246,7 @@ func _build_fishing_screen() -> void:
 	_wallet.custom_minimum_size.x=60
 	money_row.add_child(_wallet)
 	top.add_child(money)
-	var pause_button: Button=_button("Ⅱ",_show_pause)
+	var pause_button: Button=_button("暂停",_show_pause)
 	pause_button.custom_minimum_size=Vector2(96,96)
 	pause_button.size_flags_horizontal=Control.SIZE_SHRINK_END
 	pause_button.add_theme_font_size_override("font_size",23)
@@ -1109,7 +1109,7 @@ func _show_result() -> void:
 		_page_footer.add_child(actions)
 		actions.add_child(_button("出售  +%d" % int(_last_record.get("sale_value",0)),_dispose_result.bind("sold"),true))
 		actions.add_child(_button("放生  +8",_dispose_result.bind("released")))
-	var kept: Label=_text("出售或放生均保留图鉴与纪录",18,MUTED)
+	var kept: Label=_text("放归后保留图鉴与纪录" if protected else "出售或放生均保留图鉴与纪录",18,MUTED)
 	kept.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page_footer.add_child(kept)
 	_page_footer.visible=true

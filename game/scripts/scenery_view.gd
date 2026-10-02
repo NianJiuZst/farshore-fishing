@@ -118,6 +118,12 @@ func _draw_angler(w: float,h: float) -> void:
 		# Reuse original painted stones/wood as grounded shore support. No flat polygon deck.
 		var y: float=0.33 if region_id in ["lake","bayou"] else (0.285 if region_id in ["japan","yangtze"] else 0.31)
 		draw_texture_rect_region(support,Rect2(0,h*y,w*1.25,h*0.65),Rect2(0,0,support.get_width()*0.5,support.get_height()))
+	# Soft contact shadows sit directly below boot, stool feet and bag.
+	for contact: Vector2 in [Vector2(w*0.235,h*0.782),Vector2(w*0.485,h*0.798),Vector2(w*0.605,h*0.799)]:
+		for ring: int in range(4,0,-1):
+			draw_set_transform(contact,0,Vector2(2.0,0.33))
+			draw_circle(Vector2.ZERO,8+ring*3,Color(0.07,0.15,0.13,0.022))
+	draw_set_transform(Vector2.ZERO)
 	var sway: float=sin(clock_time*1.4)*1.8
 	var bend: float=session.tension*25 if session else 0.0
 	var base: Vector2=Vector2(w*0.263,h*0.663)
