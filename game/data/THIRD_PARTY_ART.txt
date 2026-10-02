@@ -19,3 +19,8 @@ https://polyhaven.com/a/brown_planks_03
 模型与贴图构成真实3D场景；PNG历史插画和界面图标不冒充3D模型。
 
 其余软件与字体许可见对应Godot、Noto文件。
+
+Rock Face 03: Dario Barresi (photography), Rico Cilliers (processing)
+https://polyhaven.com/a/rock_face_03
+CC0 1.0: https://polyhaven.com/license
+Unmodified 2K diffuse, OpenGL normal and roughness textures.

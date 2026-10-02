@@ -101,6 +101,20 @@ func _process(delta: float) -> void:
 	# A small turn exposes volume while preserving a readable species silhouette.
 	_pivot.rotation.y = sin(_clock * 0.33) * 0.20
 
+func measurement_endpoints() -> Array[Vector2]:
+	# These are the projected normalized rest-length landmarks, not the width of
+	# the transparent viewport. The record supplies physical specimen length;
+	# swimming deformations are presentation, not a new length measurement.
+	var points: Array[Vector2] = []
+	if model == null or _camera == null or _viewport == null: return points
+	var extent: Vector2 = Vector2(_viewport.size)
+	if extent.x <= 0 or extent.y <= 0: return points
+	for x: float in [-0.5, 0.5]:
+		var projected: Vector2 = _camera.unproject_position(model.to_global(Vector3(x, 0, 0)))
+		var local_point: Vector2 = projected * size / extent
+		points.append(get_global_transform_with_canvas() * local_point)
+	return points
+
 func _find_animator(node: Node) -> AnimationPlayer:
 	if node is AnimationPlayer: return node as AnimationPlayer
 	for child: Node in node.get_children():

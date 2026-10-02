@@ -65,6 +65,51 @@
       "sha256": "6ad47668bdbf39fb3121d0df71e881c652c8f57289b427998157b92ba716b110",
       "processing": "Unmodified provider 2K file; no recompression or downsampling",
       "downloaded_utc": "2026-10-02"
+    },
+    {
+      "asset": "rock_face_03",
+      "author": "Dario Barresi (photography), Rico Cilliers (processing)",
+      "role": "Diffuse",
+      "asset_page": "https://polyhaven.com/a/rock_face_03",
+      "license": "CC0 1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rock_face_03/rock_face_03_diff_2k.png",
+      "path": "game/assets/3d/environment/cc0/rock_face_03_diff_2k.png",
+      "bytes": 22809381,
+      "sha256": "09c30549220c8297c06eabcb25d272fcc1b514548be712221bd9d47f010def8b",
+      "processing": "Unmodified official provider 2K PNG selected through its public website; no recompression/downsampling",
+      "downloaded_utc": "2026-10-02"
+    },
+    {
+      "asset": "rock_face_03",
+      "author": "Dario Barresi (photography), Rico Cilliers (processing)",
+      "role": "Normal GL",
+      "asset_page": "https://polyhaven.com/a/rock_face_03",
+      "license": "CC0 1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rock_face_03/rock_face_03_nor_gl_2k.png",
+      "path": "game/assets/3d/environment/cc0/rock_face_03_nor_gl_2k.png",
+      "bytes": 23159678,
+      "sha256": "53044f276b4f1c3041b91c7d4767bda0d75cb4b2d237f08b64eb4e95ee456a93",
+      "processing": "Unmodified official provider 2K PNG selected through its public website; no recompression/downsampling",
+      "downloaded_utc": "2026-10-02"
+    },
+    {
+      "asset": "rock_face_03",
+      "author": "Dario Barresi (photography), Rico Cilliers (processing)",
+      "role": "Roughness",
+      "asset_page": "https://polyhaven.com/a/rock_face_03",
+      "license": "CC0 1.0",
+      "license_url": "https://polyhaven.com/license",
+      "license_deed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rock_face_03/rock_face_03_rough_2k.png",
+      "path": "game/assets/3d/environment/cc0/rock_face_03_rough_2k.png",
+      "bytes": 7453585,
+      "sha256": "9ba99f1441a94235f729d24ddaabd4dd4b978a460bd71b593dc6275b745044f6",
+      "processing": "Unmodified official provider 2K PNG selected through its public website; no recompression/downsampling",
+      "downloaded_utc": "2026-10-02"
     }
   ]
 }
