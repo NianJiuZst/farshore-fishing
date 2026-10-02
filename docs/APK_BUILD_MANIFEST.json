@@ -39,5 +39,6 @@
     }
   ],
   "fish_species": 32,
-  "runtime_test": "Separate evidence required; binary inspection is not an installation test"
+  "runtime_test": "Separate evidence required; binary inspection is not an installation test",
+  "artifact_status": "verified_1.0.0_baseline_not_current_redesigned_release"
 }

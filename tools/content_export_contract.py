@@ -1,0 +1,33 @@
+"""Read the authoritative catalog list from the frozen project's content loader."""
+from pathlib import Path
+import json
+import re
+
+def content_contract(project: Path, check_art: bool = True):
+    loader = (project/'scripts/catalog.gd').read_text()
+    files = list(dict.fromkeys(re.findall(r'"(fish_[a-z0-9_]+\.json)"', loader)))
+    assert files, 'No authoritative fish catalog files found in ContentCatalog'
+    entries = []
+    for filename in files:
+        value = json.loads((project/'data'/filename).read_text())
+        assert isinstance(value, list), f'Catalog is not a JSON array: {filename}'
+        entries.extend(value)
+    ids = [e['species_id'] for e in entries]
+    assert len(ids) == len(set(ids)) and ids, 'Empty or duplicate fish IDs'
+    if check_art:
+        for entry in entries:
+            for field in ['art', 'thumb']:
+                resource = entry[field]
+                assert resource.startswith('res://assets/fish/'), f'Unexpected artwork path: {resource}'
+                path = project/resource.removeprefix('res://')
+                assert path.resolve().is_relative_to(project.resolve())
+                assert path.is_file() and path.stat().st_size > 0, f'Missing artwork: {resource}'
+    world = json.loads((project/'data/world.json').read_text())
+    return {
+        'catalog_files': files,
+        'species_ids': sorted(ids), 'species_count':len(ids),
+        'region_ids': sorted(r['region_id'] for r in world['regions']),
+        'region_count':len(world['regions']), 'spot_count':len(world['spots']),
+        'gear_count':len(world['gear']), 'bait_count':len(world['baits']),
+        'ui_icon_files':sorted(str(p.relative_to(project)) for p in (project/'assets/ui/icons').glob('*.png')),
+    }

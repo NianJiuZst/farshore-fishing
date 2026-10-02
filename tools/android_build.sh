@@ -10,7 +10,15 @@ case "$ARCH" in
   x86_64) PRESET='Android Emulator x86_64 Release'; ABI=x86_64; SUFFIX=x86_64-test ;;
   *) echo 'Usage: tools/android_build.sh [arm64|x86_64] [output.apk]' >&2; exit 2 ;;
 esac
-OUTPUT="${2:-$ROOT/build/farshore-fishing-1.0.0-$SUFFIX.apk}"
+VERSION="$(python3 - "$ROOT/game/project.godot" <<'PY'
+from pathlib import Path
+import re,sys
+match=re.search(r'^config/version="([A-Za-z0-9._-]+)"$',Path(sys.argv[1]).read_text(),re.M)
+assert match, 'A safe application version is required'
+print(match.group(1))
+PY
+)"
+OUTPUT="${2:-$ROOT/build/farshore-fishing-$VERSION-$SUFFIX.apk}"
 [[ "$OUTPUT" = /* ]] || OUTPUT="$ROOT/$OUTPUT"
 if [[ -z "${GODOT:-}" ]]; then
   if command -v godot >/dev/null 2>&1; then GODOT=godot
@@ -36,7 +44,8 @@ for file in "$JAVA_HOME/bin/javac" "$BUILD_TOOLS/apksigner" "$BUILD_TOOLS/zipali
   [[ -f "$file" ]] || { echo "Missing build prerequisite: $file" >&2; exit 3; }
 done
 [[ "$("$GODOT" --version 2>/dev/null)" == 4.6.3.stable.official.7d41c59c4 ]] || { echo 'Godot 4.6.3 official is required' >&2; exit 3; }
-mkdir -p "$ROOT/build/logs" "$ROOT/build/audit/$ARCH" "$XDG_CONFIG_HOME/godot" "$XDG_DATA_HOME/godot/export_templates" "$XDG_CACHE_HOME" "$ANDROID_USER_HOME" "$GRADLE_USER_HOME" "$(dirname "$OUTPUT")"
+AUDIT="$ROOT/build/audit/$VERSION/$ARCH"
+mkdir -p "$ROOT/build/logs" "$AUDIT" "$XDG_CONFIG_HOME/godot" "$XDG_DATA_HOME/godot/export_templates" "$XDG_CACHE_HOME" "$ANDROID_USER_HOME" "$GRADLE_USER_HOME" "$(dirname "$OUTPUT")"
 export FARSHORE_ROOT="$ROOT" FARSHORE_EXISTING_KEY="$SIGN_KEY"
 python3 "$ROOT/tools/prepare_android_environment.py"
 PROJECT="$(python3 "$ROOT/tools/stage_android_project.py" "$ARCH")"
@@ -53,8 +62,23 @@ fi
 if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script|Export failed|ERROR:' "$ROOT/build/logs/export-$ARCH.log"; then
   echo "Godot export reported errors; inspect build/logs/export-$ARCH.log" >&2; exit 4
 fi
+python3 - "$PROJECT" "$ROOT/game" <<'PY'
+from pathlib import Path
+import hashlib,json,sys
+stage,source=Path(sys.argv[1]),Path(sys.argv[2])
+origin=json.loads((stage.parent/(stage.name+'.snapshot.json')).read_text())
+for rel,expected in origin['sha256'].items():
+    if rel.startswith('tests/') or rel.endswith(('.import','.uid')):
+        continue
+    p=source/rel
+    assert p.is_file(), f'Original source missing after staged export: {rel}'
+    with p.open('rb') as f: got=hashlib.file_digest(f,'sha256').hexdigest()
+    assert got==expected, f'Original source changed during export: {rel}'
+print('Original production source hashes remain unchanged')
+PY
 "$BUILD_TOOLS/zipalign" -P 16 -f 4 "$UNSIGNED" "$ALIGNED"
-"$BUILD_TOOLS/apksigner" sign --ks "$SIGN_KEY" --ks-key-alias "$SIGN_ALIAS" --ks-pass "file:$SIGN_PASS_FILE" --key-pass "file:$SIGN_PASS_FILE" --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled true --v4-signing-enabled false --out "$OUTPUT" "$ALIGNED"
-python3 "$ROOT/tools/verify_android_apk.py" "$OUTPUT" "$ABI" "$ROOT/build/audit/$ARCH" "$BUILD_TOOLS"
+"$BUILD_TOOLS/apksigner" sign --ks "$SIGN_KEY" --ks-key-alias "$SIGN_ALIAS" --ks-pass "file:$SIGN_PASS_FILE" --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled true --v4-signing-enabled false --out "$OUTPUT" "$ALIGNED"
+python3 "$ROOT/tools/verify_android_apk.py" "$OUTPUT" "$ABI" "$AUDIT" "$BUILD_TOOLS" "$PROJECT.snapshot.json"
+cp "$PROJECT.snapshot.json" "$AUDIT/source-snapshot-manifest.json"
 echo "Signed and verified: $OUTPUT"
 sha256sum "$OUTPUT"

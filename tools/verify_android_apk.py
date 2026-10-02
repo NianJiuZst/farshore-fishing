@@ -11,6 +11,7 @@ import tempfile
 import zipfile
 
 apk, abi, out, bt = Path(sys.argv[1]), sys.argv[2], Path(sys.argv[3]), Path(sys.argv[4])
+expected_content = json.loads(Path(sys.argv[5]).read_text()).get('content') if len(sys.argv) > 5 else None
 out.mkdir(parents=True, exist_ok=True)
 
 def run(args, filename):
@@ -23,7 +24,11 @@ def run(args, filename):
 badging = run([bt/'aapt', 'dump', 'badging', apk], 'badging.txt')
 permissions = run([bt/'aapt', 'dump', 'permissions', apk], 'permissions.txt')
 manifest = run([bt/'aapt', 'dump', 'xmltree', apk, 'AndroidManifest.xml'], 'manifest.txt')
-signature = run([bt/'apksigner', 'verify', '--verbose', '--print-certs', apk], 'signature.txt')
+run([bt/'apksigner', 'verify', '--verbose', '--print-certs', apk], 'signature-platform-range.txt')
+# With minSdk29, apksigner normally checks v3 and reports v2 "false" without
+# testing it. Extend only the verifier's API range to24 to validate both blocks;
+# this does not change the actual manifest minimum29 or the APK.
+signature = run([bt/'apksigner', 'verify', '--min-sdk-version', '24', '--verbose', '--print-certs', apk], 'signature.txt')
 run([bt/'zipalign', '-c', '-P', '16', '-v', '4', apk], 'zipalign16k.txt')
 assert "package: name='org.farshore.fishing'" in badging, 'Unexpected package identity'
 assert "sdkVersion:'29'" in badging, 'Minimum SDK must be Android 10 / API29'
@@ -33,7 +38,12 @@ requested = re.findall(r"uses-permission(?:-sdk-\d+)?: name='([^']+)'", permissi
 assert requested == ['android.permission.VIBRATE'], f'Unexpected requested permissions: {requested}'
 assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature
 assert 'Verified using v3 scheme (APK Signature Scheme v3): true' in signature
+cert_sha256 = re.search(r'Signer #1 certificate SHA-256 digest: ([0-9a-f]+)', signature).group(1)
+assert cert_sha256 == '1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeedb2e5281', 'Unexpected release signing identity'
+version_code = int(re.search(r"versionCode='(\d+)'", badging).group(1))
+version_name = re.search(r"versionName='([^']+)'", badging).group(1)
 libs = []
+extract_native = bool(re.search(r'android:extractNativeLibs[^\n]*0xffffffff', manifest))
 with zipfile.ZipFile(apk) as z:
     names = z.namelist()
     assert not any('.signing-private' in n or n.endswith(('.p12', '.jks', '.keystore')) for n in names)
@@ -55,22 +65,57 @@ with zipfile.ZipFile(apk) as z:
                 assert align >= 16384, f'{name} LOAD is not 16 KiB aligned'
                 aligns.append(align)
         assert aligns, 'Missing ELF LOAD segments'
-        libs.append({'path': name, 'uncompressed_bytes': len(raw), 'elf_load_alignment': aligns})
+        compressed = z.getinfo(name).compress_type != zipfile.ZIP_STORED
+        if compressed:
+            assert extract_native, 'Compressed native libraries require manifest extractNativeLibs=true'
+        libs.append({'path': name, 'uncompressed_bytes': len(raw), 'compressed': compressed, 'elf_load_alignment': aligns})
     (out/'apk-file-list.txt').write_text('\n'.join(names)+'\n')
-    assert 'assets/data/fish_a.json' in names and 'assets/data/fish_b.json' in names, 'Fish catalogs missing from offline APK'
+    catalog_files = expected_content['catalog_files'] if expected_content else [Path(n).name for n in names if re.fullmatch(r'assets/data/fish_[a-z0-9_]+\.json', n)]
+    assert catalog_files, 'Fish catalogs missing from offline APK'
     fish = []
-    for name in ['assets/data/fish_a.json', 'assets/data/fish_b.json']:
+    for filename in catalog_files:
+        name = 'assets/data/'+filename
+        assert name in names, f'Missing authoritative fish catalog: {filename}'
         fish.extend(json.loads(z.read(name)))
-    assert len({f['species_id'] for f in fish}) == 32, 'Final APK must contain 32 unique fish'
+    fish_ids = sorted(f['species_id'] for f in fish)
+    assert len(set(fish_ids)) == len(fish_ids) and fish_ids, 'Empty or duplicated fish catalog'
+    world = json.loads(z.read('assets/data/world.json'))
+    if expected_content:
+        assert fish_ids == expected_content['species_ids'], 'APK fish inventory differs from frozen source'
+        assert sorted(r['region_id'] for r in world['regions']) == expected_content['region_ids'], 'APK regions differ from frozen source'
+        assert len(world['spots']) == expected_content['spot_count'], 'APK spot count differs from frozen source'
+    for f in fish:
+        for field in ['art', 'thumb']:
+            mapped = 'assets/' + f[field].removeprefix('res://') + '.import'
+            assert mapped in names, f'Missing artwork import mapping: {mapped}'
+            mapping = z.read(mapped).decode()
+            targets = re.findall(r'path(?:\.[a-z0-9_]+)?="(res://[^"]+)"', mapping)
+            assert targets, f'Empty artwork import mapping: {mapped}'
+            for target in targets:
+                assert 'assets/'+target.removeprefix('res://') in names, f'Missing imported texture: {target}'
     assert any(n.endswith(('.ttf', '.otf', '.ttc', '.fontdata')) for n in names), 'Bundled font missing'
+    ui_icons = expected_content.get('ui_icon_files', []) if expected_content else []
+    for resource in ui_icons:
+        mapped = 'assets/' + resource + '.import'
+        assert mapped in names, f'Missing generated UI icon mapping: {mapped}'
+        targets = re.findall(r'path(?:\.[a-z0-9_]+)?="(res://[^"]+)"', z.read(mapped).decode())
+        assert targets, f'Empty UI icon import mapping: {mapped}'
+        for target in targets:
+            assert 'assets/'+target.removeprefix('res://') in names, f'Missing UI icon texture: {target}'
+    assert not any(n.startswith('assets/tests/') or n.endswith(('recover.gd','recovered.json')) for n in names), 'Development harness must not ship'
 result = {
     'verified_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
     'apk': apk.name, 'bytes': apk.stat().st_size,
     'sha256': hashlib.file_digest(apk.open('rb'), 'sha256').hexdigest(),
     'package': 'org.farshore.fishing', 'min_sdk': 29, 'target_sdk': 36,
+    'compile_sdk': 36, 'version_code': version_code, 'version_name': version_name,
     'abi': abi, 'debuggable': False, 'permissions': requested,
     'signature_v2': True, 'signature_v3': True, 'zip_alignment_kib': 16,
+    'certificate_sha256': cert_sha256,
     'native_libraries': libs, 'fish_species': len(fish),
+    'fish_catalog_files':catalog_files, 'regions':len(world['regions']), 'fishing_spots':len(world['spots']),
+    'generated_ui_icons':len(ui_icons),
+    'extract_native_libraries': extract_native,
     'runtime_test': 'Separate evidence required; binary inspection is not an installation test',
 }
 (out/'build-manifest.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
