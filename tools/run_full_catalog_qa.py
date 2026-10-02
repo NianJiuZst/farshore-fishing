@@ -73,7 +73,7 @@ def execute(name: str, command: list[str], output: Path, timeout: float = 300) -
                 stream.write("\nQA_TIMEOUT: command did not finish within the test budget\n")
                 code = 124
     lines = log.read_text(errors="replace").splitlines()
-    errors = [line for line in lines if "SCRIPT ERROR:" in line or line.startswith("ERROR:")]
+    errors = [line for line in lines if "SCRIPT ERROR:" in line or line.startswith("ERROR:") or line.startswith("FAIL")]
     warnings = [line for line in lines if line.startswith("WARNING:")]
     result = {"name": name, "exit_code": code, "passed": code == 0 and not errors, "seconds": round(time.monotonic()-started, 2), "log": str(log.relative_to(ROOT)), "errors": errors, "warnings": warnings, "summary_lines": [line for line in lines if "TESTS:" in line or "SCOPE:" in line or "checked_models" in line]}
     print(json.dumps(result, ensure_ascii=False), flush=True)
@@ -85,6 +85,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True, help="New output directory beneath repository build/")
     parser.add_argument("--skip-import", action="store_true", help="Use assets already imported by the coordinated producer")
     parser.add_argument("--render", action="store_true", help="Also run strict slice3d, UI style and touch through private Mobile/Vulkan software renderer")
+    parser.add_argument("--render-timeout", type=float, default=600, help="Per-suite software renderer budget; full44 and full license scrolling exceed the old180s budget")
     args = parser.parse_args()
     output = (ROOT / args.output).resolve()
     if ROOT / "build" not in output.parents:
@@ -114,10 +115,10 @@ def main() -> int:
     results.append(execute("binary_catalog", ["python3", "tools/audit_fish_catalog_3d.py", "--require-all", "--output", str(output / "binary_catalog.json")], output))
     if args.render:
         for name, script, extra in [row for row in SUITES if row[0] in ["slice3d", "ui_style", "touch"]]:
-            command = ["python3", "tools/render_godot.py", "--timeout", "180", "--", "--path", "game", "--rendering-method", "mobile", "--rendering-driver", "vulkan", "--script", "res://tests/"+script]
+            command = ["python3", "tools/render_godot.py", "--timeout", str(args.render_timeout), "--", "--path", "game", "--rendering-method", "mobile", "--rendering-driver", "vulkan", "--script", "res://tests/"+script]
             if extra:
                 command += ["--", *extra]
-            results.append(execute(name+"_vulkan", command, output, 240))
+            results.append(execute(name+"_vulkan", command, output, args.render_timeout+60))
     after = manifest()
     (output / "runtime_after_sha256.json").write_text(json.dumps(after, indent=2)+"\n")
     changed = sorted(p for p in before.keys() | after.keys() if before.get(p) != after.get(p))

@@ -579,16 +579,26 @@ func _test_retained_3d_scenery() -> void:
 	var meshes: Array[Node] = []
 	_find_all_type(app.scenery, "MeshInstance3D", meshes)
 	_check(meshes.size() >= 10, "production scenery retains actual environment and actor meshes")
-	var retained: Array[WeakRef] = []
+	var retained: Array[Dictionary] = []
+	var dynamic: Array[Dictionary] = []
 	for mesh: MeshInstance3D in meshes:
 		if mesh.mesh == null:
 			_check(not mesh.visible, "only hidden lazy geometry may omit a mesh: " + str(mesh.name))
 			continue
 		_check(mesh.mesh.get_rid().is_valid(), "3D scenery mesh retains a valid rendering resource: " + str(mesh.name))
-		retained.append(weakref(mesh.mesh))
+		if mesh == app.scenery._rod_mesh or mesh == app.scenery._line:
+			# Stage deliberately rebuilds curved tackle geometry at frame_pre_draw
+			# after BoneAttachment poses settle. Require a retained live node and
+			# valid current resource, not retention of every obsolete curve buffer.
+			dynamic.append({"node":weakref(mesh),"id":mesh.get_instance_id(),"name":str(mesh.name)})
+		else:
+			retained.append({"resource":weakref(mesh.mesh),"name":str(mesh.name)})
 	await _settle_layout()
-	for resource: WeakRef in retained:
-		_check(resource.get_ref() != null, "active3D mesh survives subsequent frames without a draw-local lifetime")
+	for entry: Dictionary in retained:
+		_check(entry.resource.get_ref() != null, "static active3D mesh survives subsequent frames without a draw-local lifetime: " + str(entry.name))
+	for entry: Dictionary in dynamic:
+		var current: MeshInstance3D = entry.node.get_ref() as MeshInstance3D
+		_check(current != null and current.get_instance_id() == int(entry.id) and current.mesh != null and current.mesh.get_rid().is_valid(),"animated tackle retains its node and valid current geometry across actual draws: " + str(entry.name))
 	var selection: Dictionary = app.store.state.selection.duplicate(true)
 	for sid: String in app.catalog.spots:
 		var spot: Dictionary = app.catalog.spots[sid]
