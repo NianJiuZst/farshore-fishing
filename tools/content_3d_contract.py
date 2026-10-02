@@ -59,7 +59,8 @@ def three_d_contract(project):
               **{f'assets/3d/{species}.glb': ['swim','struggle','breach','landed'] for species in playable},
               'assets/3d/environment/managed_oxbow.glb': []}
     glbs = {name: glb_contract(project/name, clips) for name, clips in models.items()}
-    textures = sorted(str(p.relative_to(project)) for p in (project/'assets/3d').rglob('*.png'))
+    image_extensions = {'.png','.jpg','.jpeg','.webp','.hdr','.exr'}
+    textures = sorted(str(p.relative_to(project)) for p in (project/'assets/3d').rglob('*') if p.is_file() and p.suffix.lower() in image_extensions)
     assert len(textures) >= 12, 'Expected fish base-color, normal and roughness texture imports'
     shaders = sorted(str(p.relative_to(project)) for p in (project/'assets/shaders3d').glob('*.gdshader'))
     assert len(shaders) >= 5, 'Missing water/foliage/ripple/wood/riverbank shaders'
@@ -68,6 +69,21 @@ def three_d_contract(project):
     authoring = [f'art_masters/3d/{name}.blend' for name in ['angler', *playable]]
     authoring += ['tools/art3d/build_angler.py','tools/art3d/build_fish.py','tools/art3d/build_environment.py',
                   'docs/ASSETS_3D_ANGLER.md','docs/ASSETS_3D_FISH.md']
+    third_party = []
+    notices = {}
+    provenance = root/'docs/ASSETS_3D_ENVIRONMENT_CC0.json'
+    if provenance.exists():
+        authoring.append('docs/ASSETS_3D_ENVIRONMENT_CC0.json')
+        for item in json.loads(provenance.read_text())['files']:
+            path = root/item['path']
+            assert path.resolve().is_relative_to((project/'assets/3d').resolve()), 'Third-party asset escaped the 3D asset tree'
+            assert sha256(path) == item['sha256'], f'Third-party asset differs from provenance record: {item["path"]}'
+            relative = str(path.relative_to(project))
+            assert relative in textures, f'Third-party texture is missing from export contract: {relative}'
+            third_party.append({'path':relative,'sha256':item['sha256'],'license':item['license'],'source_url':item['source_url']})
+        notice = 'data/THIRD_PARTY_ART.txt'
+        assert (project/notice).is_file(), 'Third-party art notice must be bundled'
+        notices[notice] = sha256(project/notice)
     for name in authoring:
         path = root/name
         assert path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(root.resolve()), f'Missing original authoring source: {name}'
@@ -80,6 +96,7 @@ def three_d_contract(project):
             'configured_android_driver': 'vulkan',
             'opengl_fallback_disabled': 'rendering_device/fallback_to_opengl3=false' in settings,
             'glb_models': glbs, 'texture_files': textures, 'shader_sha256': shader_hashes,
+            'third_party_textures':third_party, 'notice_sha256':notices,
             'authoring_files_sha256': {p: sha256(root/p) for p in authoring},
             'provenance_scope': 'Editable Blender masters, original generators, and asset documentation with exact file hashes'}
 

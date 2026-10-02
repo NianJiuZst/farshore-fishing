@@ -144,6 +144,8 @@ with zipfile.ZipFile(apk) as z:
                 assert 'assets/'+target in names and z.getinfo('assets/'+target).file_size > 0
                 shader_payloads[shader] = 'assets/'+target
         assert 'assets/assets/3d/environment/manifest.json' in names
+        for notice, expected in contract.get('notice_sha256', {}).items():
+            assert hashlib.sha256(z.read('assets/'+notice)).hexdigest() == expected, f'Bundled art notice differs: {notice}'
         three_d_audit = {'playable_species':contract['playable_species'], 'playable_species_count':2,
                         'playable_locations':1, 'legacy_catalog_is_not_all_3d':True,
                         'configured_renderer':'mobile', 'configured_android_driver':'vulkan',
@@ -151,6 +153,8 @@ with zipfile.ZipFile(apk) as z:
                         'vulkan_manifest_features':vulkan_features,
                         'imported_glb_scenes':len(imported['models']), 'rigged_models':3,
                         'texture_imports':len(contract['texture_files']), 'shader_payloads':shader_payloads,
+                        'third_party_texture_sources':contract.get('third_party_textures', []),
+                        'bundled_notices':list(contract.get('notice_sha256', {})),
                         'scope':'Exact exported imported-scene bytes matched pre-export Skeleton3D/AnimationPlayer/skin audit; runtime rendering requires separate evidence'}
     assert not any(n.startswith('assets/tests/') or n.endswith(('recover.gd','recovered.json')) for n in names), 'Development harness must not ship'
 result = {

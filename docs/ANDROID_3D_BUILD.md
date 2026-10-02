@@ -16,6 +16,8 @@ Preparation snapshot:2026-10-02 11:58 UTC. No1.2.0 APK has been exported at this
 
 `content_3d_contract.py` reads the authoritative trial adapter and actual GLB JSON. It requires skins, joint/weight attributes, bone-targeting sampled animations, the five angler clips, the four clips for each fish, and embedded GLB textures. It records the environment GLB, exported texture sources, and all3D shader hashes.
 
+The later environment-art integration adds Poly Haven CC0 planks and an HDR panorama. The contract includes HDR as well as PNG imports, checks each downloaded source against `ASSETS_3D_ENVIRONMENT_CC0.json`, and requires the exact `data/THIRD_PARTY_ART.txt` notice in the APK. The geometry/rigs remain project-built; the CC0 environment art is identified separately. Its provenance manifest is included in the authoring backup.
+
 Before export, the pipeline creates separate external archives for the game source and for the three editable Blender masters plus generator/asset-documentation files. Both archives are read back and checked against per-file SHA256 inventories. Export runs only in a disposable project with an ordinary in-project `res://android` directory. Original production-file hashes are checked again afterward.
 
 After isolated import, `inspect_imported_3d.gd` loads the four actual PackedScenes and requires MeshInstance3D geometry, Skeleton3D, skinned meshes, AnimationPlayer, and the named nonempty clips where appropriate. It records hashes of the imported scenes. The final APK audit verifies that those exact inspected scene bytes and their texture payloads are present, alongside environment metadata and shaders. This is structural/resource verification; rendered animation and Android behavior need runtime evidence.
