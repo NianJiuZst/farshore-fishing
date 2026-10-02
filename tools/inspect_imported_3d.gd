@@ -39,6 +39,7 @@ func _run() -> void:
 			continue
 		var instance: Node = packed.instantiate()
 		var result: Dictionary = {"skeletons":0,"bones":0,"meshes":0,"skinned_meshes":0,"animation_players":0,"animations":{},"rod_sockets":0,"bone_attached_rod_sockets":0}
+		result.resource_dependencies = Array(ResourceLoader.get_dependencies("res://" + path))
 		_collect(instance, result)
 		if result.meshes == 0: failures.append("No imported geometry: " + path)
 		if path == "assets/3d/angler.glb" and (result.rod_sockets != 1 or result.bone_attached_rod_sockets != 1):

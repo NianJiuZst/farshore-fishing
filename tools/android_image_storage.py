@@ -61,20 +61,25 @@ def validate_archive(archive, expected, destination=None):
     assert found == {p:d['sha256'] for p,d in expected.items()}, 'Archive file hashes differ'
 
 
-action = sys.argv[1] if len(sys.argv) == 2 else ''
-assert action in {'store','restore'}, 'Usage: android_image_storage.py store|restore'
+action = sys.argv[1] if len(sys.argv) in {2,3} else ''
+component = sys.argv[2] if len(sys.argv) == 3 else 'image'
+assert action in {'store','restore'} and component in {'image','emulator'}, 'Usage: android_image_storage.py store|restore [image|emulator]'
+if component == 'emulator':
+    image = root/'tools/android-sdk/emulator'
+    pointer = storage/'emulator-binaries-storage.json'
 require_stopped()
 storage.mkdir(parents=True,exist_ok=True)
 if action == 'store':
     if pointer.exists():
         assert json.loads(pointer.read_text())['status'] == 'restored', 'A stored image already awaits restoration'
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-    archive = storage/f'api36-default-x86_64-{stamp}.tar.gz'
+    prefix = 'api36-default-x86_64' if component == 'image' else 'android-emulator-binaries'
+    archive = storage/f'{prefix}-{stamp}.tar.gz'
     before_free = shutil.disk_usage(root).free
     expected = inventory(image)
-    assert expected and 'system.img' in expected
+    assert expected and ('system.img' if component == 'image' else 'emulator') in expected
     allocated = sum(p.stat().st_blocks*512 for p in image.rglob('*') if p.is_file())
-    print('Archiving stopped official image; files:',len(expected),'allocated bytes:',allocated,flush=True)
+    print('Archiving stopped official SDK component:',component,'files:',len(expected),'allocated bytes:',allocated,flush=True)
     with tarfile.open(archive,'x:gz',compresslevel=1) as tar:
         for name in expected: tar.add(image/name,arcname=name,recursive=False)
     archive_free = shutil.disk_usage(root).free
@@ -85,7 +90,7 @@ if action == 'store':
               'archive_bytes':archive.stat().st_size,'source_allocated_bytes':allocated,'files':expected,
               'free_before_bytes':before_free,'free_at_archive_peak_bytes':archive_free}
     pointer.write_text(json.dumps(report,indent=2)+'\n')
-    assert image.resolve().is_relative_to((root/'tools/android-sdk/system-images').resolve())
+    assert image.resolve().is_relative_to((root/'tools/android-sdk').resolve())
     shutil.rmtree(image)
     report.update({'status':'stored','free_after_store_bytes':shutil.disk_usage(root).free})
     pointer.write_text(json.dumps(report,indent=2)+'\n')
@@ -107,4 +112,4 @@ else:
     report['status'] = 'restored'
     report['restored_at_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
     pointer.write_text(json.dumps(report,indent=2)+'\n')
-    print('Exact official API36 image restored and every file hash/mode verified; archive and manifest retained')
+    print('Exact official SDK component restored:',component,'; every file hash/mode verified; archive and manifest retained')

@@ -45,4 +45,12 @@ Build ARM64 first, verify its signed APK and source/authoring archive hashes, th
 
 For this workspace's disk limit, the inactive official API36 base image is temporarily stored losslessly under ignored `build/toolchain-storage/`. All21 file hashes were streamed back and verified before removing the installed copy. AVD userdata and authentication files are preserved separately. Run `python3 tools/android_image_storage.py restore` after export cleanup; it restores and checks every original file/hash/mode. The emulator runner refuses to launch while that image remains parked. This operation does not alter game textures, APK packaging, or renderer quality.
 
+The inactive official emulator binaries are also parked using the same method (399 files). Restore them with `python3 tools/android_image_storage.py restore emulator`; both components must be verified as restored before the runner starts.
+
+## Import metadata and source delivery
+
+The chosen GLB import contract extracts embedded images (`embedded_image_handling=1`). The imported scene dependency audit confirmed264 fish texture dependencies, including all252 newly generated profile-fish PNGs. Those PNGs and their `.import` files are retained in source together with GLB `.import` files and script `.gd.uid` sidecars. They are required resource inputs for the reviewed imported scenes. The primary tree is not cleaned or made different from the export source. Python bytecode caches are ignored recursively.
+
+The eventual source bundle must include the complete game/runtime assets,45 editable Blender masters, current shared/profile generators, tests, licenses/provenance and compact review reports/contact sheets. Raw studio review PNG sequences may stay in the preserved local review folders; temporary downloaded reference photographs, SDK/cache files and credentials must not enter the source deliverable. The publisher's final file manifest should state the actual selected archive contents.
+
 Current preparation probes found44 distinct fish geometry fingerprints,54 required scenes,45 rigged models,271 texture sources,45 editable masters, and48 authoring Python files. These are source/structure checks, not final APK or phone-rendering results.

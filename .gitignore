@@ -12,6 +12,8 @@ game/android/build/
 *password*
 tools/android-gradle/
 tools/__pycache__/
+**/__pycache__/
+*.py[cod]
 game/exported/
 # Official re-downloadable toolchains and diagnostic vendor-source copies
 tools/godot-templates/
