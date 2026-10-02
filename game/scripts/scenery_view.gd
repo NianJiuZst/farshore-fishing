@@ -73,7 +73,7 @@ func _draw() -> void:
 			var y: float = fposmod(float(i*97) + clock_time*360.0, h)
 			draw_line(Vector2(x,y),Vector2(x-7,y+19),Color(0.9,0.95,1,0.24),1.5,true)
 	if front_art:
-		draw_texture_rect_region(front_art,Rect2(w*0.5,h*0.39,w*0.5,h*0.39),Rect2(front_art.get_width()*0.5,0,front_art.get_width()*0.5,front_art.get_height()))
+		draw_texture_rect_region(front_art,Rect2(w*0.55,h*0.40,w*0.45,h*0.60),Rect2(front_art.get_width()*0.5,0,front_art.get_width()*0.5,front_art.get_height()))
 	_draw_angler(w,h)
 	# A transparent dusk vignette keeps controls legible while the painting stays edge-to-edge.
 
@@ -114,8 +114,9 @@ func _draw_angler(w: float,h: float) -> void:
 		draw_texture_rect(rowboat,Rect2(-w*0.04,h*0.70+sin(clock_time*1.4)*1.8,w*0.94,w*0.627),false)
 	else:
 		var support: Texture2D=front_art if front_art!=null else load("res://assets/scenery/japan_foreground.png")
+		if region_id=="bayou":support=load("res://assets/scenery/lake_foreground.png")
 		# Reuse original painted stones/wood as grounded shore support. No flat polygon deck.
-		var y: float=0.38 if region_id=="lake" else 0.31
+		var y: float=0.33 if region_id in ["lake","bayou"] else (0.285 if region_id in ["japan","yangtze"] else 0.31)
 		draw_texture_rect_region(support,Rect2(0,h*y,w*1.25,h*0.65),Rect2(0,0,support.get_width()*0.5,support.get_height()))
 	var sway: float=sin(clock_time*1.4)*1.8
 	var bend: float=session.tension*25 if session else 0.0

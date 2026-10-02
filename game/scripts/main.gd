@@ -309,6 +309,8 @@ func _build_fishing_screen() -> void:
 	_charge.visible=false
 	layout.add_child(_charge)
 	_bars=VBoxContainer.new()
+	_bars.custom_minimum_size.x=370
+	_bars.size_flags_horizontal=Control.SIZE_SHRINK_END
 	_bars.add_theme_constant_override("separation",8)
 	layout.add_child(_bars)
 	_tension=_bar(CORAL)
