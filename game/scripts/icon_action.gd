@@ -23,7 +23,11 @@ func _ready() -> void:
 	_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 	_caption.vertical_alignment=VERTICAL_ALIGNMENT_CENTER
 	_caption.add_theme_color_override("font_outline_color",Color("173b42") if light_label else Color(0.96,0.98,0.91,0.90))
-	_caption.add_theme_constant_override("outline_size",4 if light_label else 2)
+	_caption.add_theme_constant_override("outline_size",6 if light_label else 2)
+	if light_label:
+		_caption.add_theme_color_override("font_shadow_color",Color("102c34"))
+		_caption.add_theme_constant_override("shadow_offset_x",1)
+		_caption.add_theme_constant_override("shadow_offset_y",2)
 	add_child(_caption)
 	resized.connect(_layout)
 	_layout()

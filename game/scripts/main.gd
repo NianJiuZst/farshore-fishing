@@ -130,7 +130,7 @@ func _text(value: String, size_px: int = 24, color: Color = INK) -> Label:
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	label.add_theme_color_override("font_outline_color",Color("21454b") if color.get_luminance()>0.55 else Color(0.96,0.98,0.91,0.82))
-	label.add_theme_constant_override("outline_size",3 if color.get_luminance()>0.55 else 1)
+	label.add_theme_constant_override("outline_size",5 if color.get_luminance()>0.55 else 1)
 	return label
 
 func _button(value: String, callback: Callable, primary: bool = false) -> Button:
@@ -190,9 +190,9 @@ func _navigation(label: String, kind: String, callback: Callable) -> Button:
 	button.icon_kind=kind
 	button.stacked=true
 	button.icon_extent=80
-	button.label_color=PAPER
+	button.label_color=Color.WHITE
 	button.light_label=true
-	button.add_theme_font_size_override("font_size",22)
+	button.add_theme_font_size_override("font_size",24)
 	return button
 
 func _build_fishing_screen() -> void:
@@ -232,7 +232,7 @@ func _build_fishing_screen() -> void:
 	money_row.add_theme_constant_override("separation",0)
 	money.add_child(money_row)
 	money_row.add_child(_icon("coin",40))
-	_wallet=_text("120",25,PAPER)
+	_wallet=_text("120",27,Color.WHITE)
 	_wallet.custom_minimum_size.x=60
 	money_row.add_child(_wallet)
 	top.add_child(money)
@@ -244,12 +244,12 @@ func _build_fishing_screen() -> void:
 	pause_button.icon_kind="pause"
 	pause_button.stacked=true
 	pause_button.icon_extent=53
-	pause_button.label_color=PAPER
+	pause_button.label_color=Color.WHITE
 	pause_button.light_label=true
 	top.add_child(pause_button)
 	var facts: HBoxContainer=HBoxContainer.new()
 	layout.add_child(facts)
-	_condition=_text("",20,Color("f7f6dd"))
+	_condition=_text("",22,Color("f7f6dd"))
 	_condition.add_theme_color_override("font_shadow_color",NAVY)
 	_condition.add_theme_constant_override("shadow_offset_y",2)
 	var fact_style: StyleBoxFlat=_box(Color(0.04,0.16,0.20,0.80),12)
@@ -311,11 +311,11 @@ func _build_fishing_screen() -> void:
 	_action=_button("抛竿",func() -> void: pass,true)
 	_action.custom_minimum_size.y=166
 	_action.stacked=true
-	_action.icon_extent=112
+	_action.icon_extent=120
 	_action.icon_kind="rod"
-	_action.label_color=PAPER
+	_action.label_color=Color.WHITE
 	_action.light_label=true
-	_action.add_theme_font_size_override("font_size",34)
+	_action.add_theme_font_size_override("font_size",38)
 	_action.button_down.connect(_action_down)
 	_action.button_up.connect(_action_up)
 	_action.mouse_exited.connect(_action_cancel)
@@ -793,10 +793,10 @@ func _show_catalog() -> void:
 	discovery.select(_discovery_filter)
 	discovery.item_selected.connect(func(index: int) -> void: _discovery_filter=index; _fill_catalog())
 	filters.add_child(discovery)
-	var sort_button: Button=_button("数量↓" if _sort_count else "名称↓",func() -> void: _sort_count=not _sort_count; _show_catalog())
+	var sort_button: Button=_button("数量" if _sort_count else "名称",func() -> void: _sort_count=not _sort_count; _show_catalog())
 	sort_button.custom_minimum_size=Vector2(130,96)
-	sort_button.icon_kind="none"
-	sort_button.icon_extent=0
+	sort_button.icon_kind="sort"
+	sort_button.icon_extent=40
 	sort_button.size_flags_horizontal=Control.SIZE_SHRINK_END
 	filters.add_child(sort_button)
 	_list=GridContainer.new()
