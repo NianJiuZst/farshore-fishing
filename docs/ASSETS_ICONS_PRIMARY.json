@@ -40,7 +40,13 @@
           1240,
           1230
         ],
-        "transparent_fraction": 0.852531866130456
+        "transparent_fraction": 0.852531866130456,
+        "visible_alpha_bbox_threshold_16": [
+          21,
+          20,
+          1227,
+          1219
+        ]
       },
       "runtime_audit": {
         "dimensions": [
@@ -98,7 +104,13 @@
           1246,
           1212
         ],
-        "transparent_fraction": 0.5229937247061397
+        "transparent_fraction": 0.5229937247061397,
+        "visible_alpha_bbox_threshold_16": [
+          82,
+          100,
+          1227,
+          1158
+        ]
       },
       "runtime_audit": {
         "dimensions": [
@@ -156,7 +168,13 @@
           1226,
           1214
         ],
-        "transparent_fraction": 0.804111373111625
+        "transparent_fraction": 0.804111373111625,
+        "visible_alpha_bbox_threshold_16": [
+          146,
+          65,
+          1155,
+          1185
+        ]
       },
       "runtime_audit": {
         "dimensions": [
@@ -176,6 +194,198 @@
           486
         ],
         "transparent_fraction": 0.8001976013183594
+      }
+    },
+    {
+      "kind": "bag",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one handsome teal canvas adventure backpack with warm brown leather flap, straps and reinforced base, brass buckles, a tiny coral-and-cream fishing float attached at the side. Full pack silhouette and top handle visible. Carefully painted stitching and soft folds.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-902264d0-cb15-4206-befa-b1afb34c222f.png",
+      "master_path": "art_masters/ui_icons/bag.png",
+      "runtime_path": "game/assets/ui/icons/bag.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "6e0e4dfd6ed4a1b45289f292eae3ba47658cf072a83442252730fe2fec465c71",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          27,
+          1183,
+          1223
+        ],
+        "transparent_fraction": 0.38443678792457436,
+        "visible_alpha_bbox_threshold_16": [
+          87,
+          30,
+          1178,
+          1220
+        ]
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "ce5c96b5972e0b65211cba16d3bb727dc99d0ddb30c61cc7325d4bd2e56d43a4",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          33,
+          10,
+          483,
+          501
+        ],
+        "transparent_fraction": 0.3821067810058594
+      }
+    },
+    {
+      "kind": "compass",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one handsome open-faced brass navigation pocket compass, round physical brass casing, teal compass face, cream directional ticks and one coral-and-cream compass needle. No letters and no numerals on its face. Complete object including small top attachment loop; three-quarter view. The circular disc is the physical compass itself, no surrounding badge.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-535d92db-86a7-4abc-85bd-de47120efc92.png",
+      "master_path": "art_masters/ui_icons/compass.png",
+      "runtime_path": "game/assets/ui/icons/compass.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "be6869bbf3a9030d2a25423080eac304a8a5d1d84b808c149e0d80a1500b25a6",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          31,
+          1238,
+          1198
+        ],
+        "transparent_fraction": 0.4410727776378746,
+        "visible_alpha_bbox_threshold_16": [
+          106,
+          36,
+          1231,
+          1190
+        ]
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "fe81a7028af17a7c8ff8c86a06456718dd7e237e303fa697e2132db64dac1f4c",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          40,
+          12,
+          506,
+          489
+        ],
+        "transparent_fraction": 0.4384002685546875
+      }
+    },
+    {
+      "kind": "book",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one open cream-paper naturalist field guide with a worn teal cover and warm leather spine, pages subtly fanned, small handpainted fish illustrations and water plant sketches on the facing pages. No lettering, no words and no fake writing. Beautifully tactile paper.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-4b39626b-056a-4b96-b000-be2bee0bba2e.png",
+      "master_path": "art_masters/ui_icons/book.png",
+      "runtime_path": "game/assets/ui/icons/book.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "a60fd3b053b716de1b31696b9d21ae662b7cc85d14d0bf2df28b68fde23f3b45",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          21,
+          1254,
+          1198
+        ],
+        "transparent_fraction": 0.411214893838918,
+        "visible_alpha_bbox_threshold_16": [
+          15,
+          111,
+          1246,
+          1156
+        ]
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "9b6e817a1b184170560c9669dc0b0902e36a52d540d2aacaaea187ade7d9b6af",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          4,
+          20,
+          512,
+          474
+        ],
+        "transparent_fraction": 0.4100990295410156
       }
     }
   ]
