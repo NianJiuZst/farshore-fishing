@@ -6,11 +6,14 @@ import bpy, math, os, json
 from mathutils import Vector, Matrix, Quaternion
 from math import sin, cos, pi
 ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),'../..'))
-OUT=os.path.join(ROOT,'build/angler-review'); os.makedirs(OUT,exist_ok=True)
+OUT=os.environ.get('ANGLER_REVIEW_DIR',os.path.join(ROOT,'build/angler-review')); os.makedirs(OUT,exist_ok=True)
+CANDIDATE=os.environ.get('ANGLER_CANDIDATE','0')=='1'
+MASTER_PATH=os.path.join(OUT,'angler.blend') if CANDIDATE else os.path.join(ROOT,'art_masters/3d/angler.blend')
+GLB_PATH=os.path.join(OUT,'angler.glb') if CANDIDATE else os.path.join(ROOT,'game/assets/3d/angler.glb')
 bpy.ops.object.select_all(action='SELECT'); bpy.ops.object.delete(use_global=False)
 for data in list(bpy.data.materials): bpy.data.materials.remove(data)
 bpy.context.preferences.filepaths.save_version=0
-scene=bpy.context.scene; scene.render.engine='CYCLES'; scene.cycles.samples=64; scene.cycles.use_denoising=False
+scene=bpy.context.scene; scene.render.engine='CYCLES'; scene.cycles.samples=int(os.environ.get("ANGLER_SAMPLES","32")); scene.cycles.use_denoising=False
 scene.render.resolution_x=1000; scene.render.resolution_y=1200; scene.render.resolution_percentage=100
 scene.world.color=(.16,.18,.22); scene.render.image_settings.file_format='PNG'; scene.view_settings.view_transform='AgX'
 M={}
@@ -105,24 +108,81 @@ bone('root',(0,0,0),(0,0,.16))
 bone('pelvis',(0,0,.83),(0,0,1.02),'root'); bone('spine',(0,0,1.02),(0,0,1.22),'pelvis'); bone('chest',(0,0,1.22),(0,0,1.42),'spine'); bone('neck',(0,0,1.42),(0,.01,1.51),'chest'); bone('head',(0,.01,1.51),(0,.025,1.73),'neck')
 rod_dir=Vector((0,.84,.54)).normalized(); handR=Vector((.115,.40,1.14)); handL=handR-rod_dir*.18
 for sign,s in [(1,'R'),(-1,'L')]:
- shoulder=Vector((sign*.235,0,1.355)); elbow=Vector((sign*.31,.12,1.105)); hand=handR if s=='R' else handL
- bone('clavicle.'+s,(sign*.045,0,1.36),shoulder,'chest'); bone('upper_arm.'+s,shoulder,elbow,'clavicle.'+s); bone('forearm.'+s,elbow,hand,'upper_arm.'+s); bone('hand.'+s,hand,hand+rod_dir*.09,'forearm.'+s)
- bone('thigh.'+s,(sign*.115,0,.88),(sign*.125,.016,.48),'pelvis'); bone('shin.'+s,(sign*.125,.016,.48),(sign*.135,-.015,.12),'thigh.'+s); bone('foot.'+s,(sign*.135,-.015,.12),(sign*.135,.16,.08),'shin.'+s)
-# Full skinned pelvis and torso, sewn structured vest over the inner shirt.
-rings_z('Canvas seat and hips',[(0,0,.79,.15,.097),(0,0,.80,.165,.107),(0,0,.91,.183,.115),(0,0,.995,.156,.10)],'Trousers · umber canvas',lambda z,j:{'pelvis':1})
-rings_z('Sandstone shirt body',[(0,0,.98,.147,.09),(0,0,1.05,.168,.105),(0,0,1.25,.19,.098),(0,0,1.36,.18,.08),(0,0,1.415,.07,.058)],'Shirt · warm sandstone',lambda z,j:{'spine':max(0,min(1,(1.30-z)/.25)),'chest':max(0,min(1,(z-1.05)/.25))})
-# Vest has custom open front seam with contrasting central shirt visible.
-verts=[]; faces=[]; weights=[]
-bodyrings=[(.995,.163,.106),(1.01,.172,.116),(1.075,.18,.121),(1.20,.204,.123),(1.315,.215,.116),(1.365,.198,.100),(1.405,.078,.074)]
-for j,(z,rx,ry) in enumerate(bodyrings):
- for i in range(41):
-  a=pi/2+.13+(2*pi-.26)*i/40
-  verts.append((rx*cos(a),ry*sin(a),z))
-  chest=max(0,min(1,(z-1.08)/.21)); weights.append({'spine':1-chest,'chest':chest})
-for j in range(len(bodyrings)-1):
- for i in range(40): a=j*41+i; faces.append((a,a+1,a+42,a+41))
-vest=mesh('Tailored open front fishing vest',verts,faces,'Jacket · glacial teal',weights,1)
-sol=vest.modifiers.new('Bound textile thickness','SOLIDIFY'); sol.thickness=.008
+ shoulder=Vector((sign*.195,0,1.385)); hand=handR if s=='R' else handL
+ # Equal bilateral anatomy. Rest elbows are solved from real segment lengths, not guessed.
+ upper_length=.305; forearm_length=.270; axis=(hand-shoulder).normalized(); dist=(hand-shoulder).length
+ along=(upper_length**2-forearm_length**2+dist**2)/(2*dist)
+ pole=Vector((sign*.5,-.1,-.9)); bend=(pole-axis*pole.dot(axis)).normalized()
+ elbow=shoulder+axis*along+bend*math.sqrt(upper_length**2-along**2)
+ bone('clavicle.'+s,(sign*.055,0,1.405),shoulder,'chest'); bone('upper_arm.'+s,shoulder,elbow,'clavicle.'+s); bone('forearm.'+s,elbow,hand,'upper_arm.'+s); bone('hand.'+s,hand,hand+rod_dir*.09,'forearm.'+s)
+ bone('thigh.'+s,(sign*.09,-.015,.895),(sign*.108,.018,.49),'pelvis'); bone('shin.'+s,(sign*.108,.018,.49),(sign*.123,-.012,.12),'thigh.'+s); bone('foot.'+s,(sign*.123,-.012,.12),(sign*.123,.16,.08),'shin.'+s)
+# Human-shaped shirt: one shared quad surface from waist across chest, shoulder saddle,
+# armpits, deltoids, elbows and tapered forearms. No capped arm cylinders, shoulder balls,
+# intersecting sleeve pieces, or voxel union is used for the upper garment.
+verts=[]; faces=[]; weights=[]; N=32
+shirt_rings=[(.995,.157,.105),(1.075,.164,.11),(1.18,.181,.12),(1.265,.191,.117),(1.34,.191,.101),(1.414,.176,.08),(1.452,.066,.058)]
+for j,(z,rx,ry) in enumerate(shirt_rings):
+ for i in range(N):
+  a=2*pi*i/N
+  # A slightly fuller back and flatter pectoral plane give a normal clothed ribcage.
+  y=ry*sin(a); y*=1.05 if y<0 else 1
+  verts.append((rx*cos(a),y,z))
+  t=max(0,min(1,(z-1.08)/.20));weights.append({'spine':1-t,'chest':t})
+# Remove two side patches to form real armholes in the surface topology.
+for j in range(len(shirt_rings)-1):
+ for i in range(N):
+  in_armhole=(j in (3,4)) and (i in list(range(28,32))+list(range(0,4))+list(range(12,20)))
+  if not in_armhole:
+   a=j*N+i;b=j*N+(i+1)%N;faces.append((a,b,b+N,a+N))
+# Right shoulder boundary traverses the lower armhole, front edge, top and back edge.
+right_boundary=[3*N+i%N for i in range(28,37)]+[4*N+4]+[5*N+i%N for i in range(36,27,-1)]+[4*N+28]
+for sign,side in [(1,'R'),(-1,'L')]:
+ boundary=right_boundary if sign==1 else [(i//N)*N+(16-i%N)%N for i in right_boundary]
+ sh,el=bone_spec['upper_arm.'+side][:2];wr=bone_spec['hand.'+side][0]
+ for idx in boundary:
+  weights[idx]={'chest':.75,'upper_arm.'+side:.25}
+ # Angle correspondence is inherited from the armhole; every sleeve ring bridges to it.
+ angles=[]
+ for idx in right_boundary:
+  co=Vector(verts[idx]);angles.append(math.atan2(co.z-1.34,co.y))
+ prev=boundary
+ sections=[(sh.lerp(el,.17),.072,.068,0.0),
+           (sh.lerp(el,.34),.069,.063,0.0),
+           (sh.lerp(el,.56),.061,.057,0.0),
+           (sh.lerp(el,.78),.052,.050,.06),
+           (sh.lerp(el,.94),.048,.047,.30),
+           (el,.048,.047,.50),
+           (el.lerp(wr,.10),.051,.049,.72),
+           (el.lerp(wr,.28),.052,.048,1.0),
+           (el.lerp(wr,.53),.046,.041,1.0),
+           (el.lerp(wr,.75),.038,.034,1.0),
+           (el.lerp(wr,.89),.034,.031,1.0),
+           (el.lerp(wr,.90),.034,.031,1.0)]
+ for k,(center,r_depth,r_width,fore) in enumerate(sections):
+  tangent=(el-sh).normalized() if k<4 else ((el-sh).normalized()+(wr-el).normalized()).normalized() if k<7 else (wr-el).normalized()
+  U=Vector((0,1,0));U=(U-tangent*U.dot(tangent)).normalized();V=sign*tangent.cross(U).normalized()
+  ids=[]
+  for angle in angles:
+   ids.append(len(verts));verts.append(tuple(center+U*r_depth*cos(angle)+V*r_width*sin(angle)))
+   chest=.18 if k==0 else 0
+   weights.append({'chest':chest,'upper_arm.'+side:(1-chest)*(1-fore),'forearm.'+side:(1-chest)*fore})
+  for i in range(20):faces.append((prev[i],prev[(i+1)%20],ids[(i+1)%20],ids[i]))
+  prev=ids
+shirt=mesh('Continuous anatomically tailored shirt',verts,faces,'Shirt · warm sandstone',weights,1)
+# Make the branched surface winding consistent, including the mirrored left sleeve.
+import bmesh
+bm=bmesh.new();bm.from_mesh(shirt.data);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(shirt.data);bm.free()
+# The outerwear is one sewn, color-blocked utility jacket. Shared shoulder vertices
+# carry teal torso panels and sandstone sleeve panels, so the garment has neither floating
+# armhole plates nor independently intersecting clothing surfaces.
+shirt.name='Continuous tailored fishing jacket'
+shirt.data.materials.append(M['Jacket · glacial teal'])
+torso_face=0
+for j in range(len(shirt_rings)-1):
+ for i in range(N):
+  if j in (3,4) and i in list(range(28,32))+list(range(0,4))+list(range(12,20)):continue
+  shirt.data.polygons[torso_face].material_index=0 if i in (7,8) else 1
+  torso_face+=1
 # Inner zipper, piping and gathered lower welt.
 line('Zipper center',[(0,.113,1.014),(0,.132,1.16),(0,.115,1.32),(0,.078,1.396)],.004,'Metal · antique brass','chest')
 for sign,s in [(1,'R'),(-1,'L')]:
@@ -130,68 +190,71 @@ for sign,s in [(1,'R'),(-1,'L')]:
  #panel('Shoulder reinforcement '+s,[(sign*.064,.076,1.385),(sign*.182,.084,1.36),(sign*.185,.112,1.305),(sign*.073,.113,1.305)],'Jacket · highlight panels','chest',.006,.012)
  x=sign*.105
  panel('Expandable chest pocket '+s,[(x-.052,.121,1.18),(x+.052,.121,1.18),(x+.06,.13,1.294),(x-.052,.13,1.294)],'Jacket · highlight panels','chest',.022,.009)
- panel('Chest pocket flap '+s,[(x-.056,.149,1.279),(x,.155,1.263),(x+.056,.149,1.28),(x+.056,.141,1.306),(x-.056,.141,1.306)],'Jacket · glacial teal','chest',.008,.006)
- ellipsoid('Pocket snap '+s,(x,.163,1.282),(.006,.004,.006),'Metal · antique brass','chest',12,8)
- panel('Lower hand warmer pocket '+s,[(x-.06,.116,1.031),(x+.055,.116,1.031),(x+.067,.132,1.131),(x-.051,.132,1.147)],'Jacket · highlight panels','spine',.012,.012)
- line('Pocket stitch '+s,[(x-.05,.142,1.06),(x+.042,.142,1.06),(x+.051,.145,1.12)],.0015,'Stitch · flax','spine')
-# Padded raised collar split at throat.
-for sign,s in [(1,'R'),(-1,'L')]:
- panel('Standing collar '+s,[(sign*.031,.076,1.38),(sign*.082,.035,1.395),(sign*.082,.025,1.453),(sign*.037,.073,1.445)],'Jacket · seam binding','neck',.018,.009)
+ #panel('Chest pocket flap '+s,[(x-.056,.149,1.279),(x,.155,1.263),(x+.056,.149,1.28),(x+.056,.141,1.306),(x-.056,.141,1.306)],'Jacket · glacial teal','chest',.008,.006)
+ #ellipsoid('Pocket snap '+s,(x,.163,1.282),(.006,.004,.006),'Metal · antique brass','chest',12,8)
+ #panel('Lower hand warmer pocket '+s,[(x-.06,.116,1.031),(x+.055,.116,1.031),(x+.067,.132,1.131),(x-.051,.132,1.147)],'Jacket · highlight panels','spine',.012,.012)
+ #line('Pocket stitch '+s,[(x-.05,.142,1.06),(x+.042,.142,1.06),(x+.051,.145,1.12)],.0015,'Stitch · flax','spine')
+# A normal low stand collar follows the neck; no floating front collar plates.
+collar_vertices=[];collar_faces=[]
+for z,rx,ry in [(1.432,.069,.061),(1.437,.071,.064),(1.461,.073,.065),(1.466,.072,.064)]:
+ for i in range(33):
+  a=pi/2+.24+(2*pi-.48)*i/32;collar_vertices.append((rx*cos(a),ry*sin(a),z))
+for j in range(3):
+ for i in range(32):a=j*33+i;collar_faces.append((a,a+1,a+34,a+33))
+collar=mesh('Fitted stand collar',collar_vertices,collar_faces,'Jacket · seam binding',[{'neck':1}for _ in collar_vertices],1)
+solid=collar.modifiers.new('Collar fabric thickness','SOLIDIFY');solid.thickness=.005
 # Belt sewn at waist, brass buckle and loops.
 rings_z('Canvas belt',[(0,0,.956,.172,.11),(0,0,.972,.171,.112),(0,0,.985,.167,.106)],'Boots · oiled leather',lambda z,j:{'pelvis':1},32,0)
 panel('Belt buckle',[(-.026,.119,.958),(.026,.119,.958),(.026,.119,.985),(-.026,.119,.985)],'Metal · antique brass','pelvis',.008,.004)
 for x in [-.13,-.07,.07,.13]: line('Belt loop',[(x,.094,.948),(x,.119,.989)],.008,'Trousers · umber canvas','pelvis')
-# Legs are tapered, asymmetrically creased volumes with anatomical knees.
-for sign,s in [(1,'R'),(-1,'L')]:
+# Pants are a deliberately branched quad garment. The two leg openings share the
+# same seven crotch-saddle vertices and pelvic ring. This replaces the old fused box seat.
+verts=[];faces=[];weights=[];N=32
+hiprings=[(.995,.158,.107),(.973,.162,.109),(.927,.179,.121),(.873,.186,.130),(.836,.178,.116)]
+for j,(z,rx,ry) in enumerate(hiprings):
+ for i in range(N):
+  a=2*pi*i/N;y=ry*sin(a)
+  # Normal seat volume is behind the body, the front is relatively flat.
+  if y<0:y*=1.13
+  verts.append((rx*cos(a),y,z));weights.append({'pelvis':1})
+for j in range(len(hiprings)-1):
+ for i in range(N):a=j*N+i;b=j*N+(i+1)%N;faces.append((a,b,b+N,a+N))
+base=(len(hiprings)-1)*N
+saddle=[]
+for y in [.087,.062,.032,0,-.032,-.064,-.095]:
+ saddle.append(len(verts));z=.783+.036*(abs(y)/.095)**1.4;verts.append((0,y,z));weights.append({'pelvis':.45,'thigh.R':.275,'thigh.L':.275})
+right_root=[base+i%N for i in range(24,41)]+saddle
+for sign,side in [(1,'R'),(-1,'L')]:
+ prev=right_root if sign==1 else [base+(16-(i-base))%N if i<base+N else i for i in right_root]
+ angles=[math.atan2(verts[i][1],verts[i][0]-.105) for i in right_root]
+ # Hip/thigh fullness, flatter knee, calf swell, and a modestly wider straight trouser hem.
+ sections=[(.775,.107,.094,.110,-.007),(.716,.107,.091,.103,-.009),(.638,.109,.082,.090,-.007),
+           (.560,.110,.071,.077,.005),(.499,.110,.065,.067,.015),(.465,.111,.065,.067,.015),
+           (.405,.115,.069,.075,-.002),(.350,.117,.070,.075,-.013),(.285,.120,.063,.068,-.020),
+           (.220,.123,.057,.058,-.015),(.173,.123,.057,.054,-.012),(.163,.123,.058,.054,-.011)]
+ for z,cx,rx,ry,cy in sections:
+  ids=[]
+  for angle in angles:
+   ids.append(len(verts));x=sign*(cx+rx*cos(angle));y=cy+ry*sin(angle);verts.append((x,y,z))
+   knee=max(0,min(1,(z-.452)/.082));hip=max(0,min(1,(z-.74)/.09))
+   weights.append({'pelvis':hip,'thigh.'+side:(1-hip)*knee,'shin.'+side:(1-hip)*(1-knee)})
+  for i in range(24):faces.append((prev[i],prev[(i+1)%24],ids[(i+1)%24],ids[i]))
+  prev=ids
+pants=mesh('Continuous tailored trouser pelvis and legs',verts,faces,'Trousers · umber canvas',weights,1)
+bm=bmesh.new();bm.from_mesh(pants.data);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(pants.data);bm.free()
+# Sensibly sized ankle boots sit partly underneath trouser hems.
+for sign,side in [(1,'R'),(-1,'L')]:
  x=sign*.123
- pts=[(sign*.109,0,.895),(sign*.112,0,.86),(sign*.12,0,.735),(sign*.126,.012,.59),(sign*.127,.016,.50),(sign*.127,.007,.455),(sign*.13,-.013,.33),(sign*.136,-.015,.21),(sign*.136,-.015,.18)]
- radii=[(.09,.097),(.097,.105),(.085,.092),(.073,.077),(.075,.069),(.066,.066),(.058,.058),(.06,.053),(.058,.052)]
- w=[]
- for p in pts:
-  t=max(0,min(1,(p[2]-.44)/.12)); w.append({'thigh.'+s:t,'shin.'+s:1-t})
- sweep('Tailored trouser leg '+s,pts,radii,'Trousers · umber canvas',w,24,1)
- ellipsoid('Reinforced articulated knee '+s,(x,.062,.495),(.062,.020,.088),'Trousers · reinforced knees','shin.'+s,24,12)
- line('Trouser outer seam '+s,[(sign*.203,0,.855),(sign*.202,-.005,.74),(sign*.192,-.009,.60),(sign*.186,-.013,.51)],.0024,'Stitch · flax','thigh.'+s)
- for z in [.355,.29]: line('Natural canvas crease '+s,[(x-.042,.031,z+.009),(x-.015,.047,z),(x+.038,.033,z+.004)],.004,'Trousers · reinforced knees','shin.'+s)
- # Shaped leather boot upper and rubber toe/sole.
- rings_z('Leather ankle boot '+s,[(x,.012,.056,.073,.145),(x,.018,.084,.078,.146),(x,.025,.112,.074,.132),(x,.0,.155,.059,.072),(x,-.01,.207,.061,.062),(x,-.01,.225,.056,.06)],'Boots · oiled leather',lambda z,j,ss=s:{'foot.'+ss:1},32,1)
- rings_z('Durable tread sole '+s,[(x,.018,.018,.076,.15),(x,.021,.025,.081,.153),(x,.021,.057,.081,.153),(x,.019,.069,.074,.146)],'Boots · rubber sole',lambda z,j,ss=s:{'foot.'+ss:1},32,1)
- for i in range(4):
-  z=.118+i*.019; y=.082-i*.011
-  line('Crossed boot lace '+s,[(x-.027,y,z),(x+.026,y+.005,z+.010)],.0034,'Boots · laces','foot.'+s)
-  line('Crossed boot lace '+s,[(x+.027,y,z),(x-.026,y+.005,z+.010)],.0034,'Boots · laces','foot.'+s)
-  for d in [-1,1]: ellipsoid('Brass lace eyelet',(x+d*.029,y-.002,z),(.004,.004,.004),'Metal · antique brass','foot.'+s,10,6)
- for yy in [-.07,-.025,.02,.065,.11]:
-  line('Sole tread '+s,[(x-.066,yy,.029),(x+.066,yy,.029)],.007,'Boots · rubber sole','foot.'+s)
-# Fuse the custom sculpted pant sections into one continuous tailored cloth surface.
-parts=[o for o in mesh_objects if o.name.startswith(('Canvas seat','Tailored trouser leg'))]
-bpy.ops.object.select_all(action='DESELECT')
-for o in parts:
- bpy.context.view_layer.objects.active=o
- for mod in list(o.modifiers): bpy.ops.object.modifier_apply(modifier=mod.name)
- o.select_set(True)
-bpy.context.view_layer.objects.active=parts[0]; bpy.ops.object.join(); pants=parts[0]; pants.name='Continuous tailored canvas trousers'
-mesh_objects=[o for o in mesh_objects if o not in parts]+[pants]
-mod=pants.modifiers.new('Continuous cloth topology','REMESH'); mod.mode='VOXEL'; mod.voxel_size=.007; mod.use_smooth_shade=True; bpy.ops.object.modifier_apply(modifier=mod.name)
-mod=pants.modifiers.new('Soft cloth transitions','SMOOTH'); mod.factor=.8; mod.iterations=6; bpy.ops.object.modifier_apply(modifier=mod.name)
-mod=pants.modifiers.new('Mobile cloth topology','DECIMATE'); mod.ratio=.44; bpy.ops.object.modifier_apply(modifier=mod.name)
-pants.vertex_groups.clear()
-for n in ['pelvis','thigh.R','shin.R','thigh.L','shin.L']: pants.vertex_groups.new(name=n)
-for v in pants.data.vertices:
- s='R' if v.co.x>=0 else 'L'; z=v.co.z; hip=max(0,min(1,(z-.79)/.11)); thigh=max(0,min(1,(z-.44)/.12))
- for n,w in [('pelvis',hip),('thigh.'+s,(1-hip)*thigh),('shin.'+s,(1-hip)*(1-thigh))]:
-  if w>0:pants.vertex_groups[n].add([v.index],w,'REPLACE')
-
-# Arms, continuous skinned and shaped sleeves with rolled cuffs.
+ rings_z('Fitted leather boot '+side,[(x,.020,.044,.059,.132),(x,.027,.062,.064,.139),(x,.033,.091,.062,.134),(x,.005,.124,.053,.076),(x,-.010,.162,.050,.056),(x,-.011,.180,.049,.054)],'Boots · oiled leather',lambda z,j,ss=side:{'foot.'+ss:1},28,1)
+ rings_z('Proportioned boot sole '+side,[(x,.023,.015,.062,.140),(x,.023,.023,.068,.145),(x,.023,.044,.068,.145),(x,.023,.050,.062,.140)],'Boots · rubber sole',lambda z,j,ss=side:{'foot.'+ss:1},28,1)
+ for i in range(3):
+  z=.094+i*.017;y=.150-i*.031
+  for sign2 in [-1,1]:line('Boot lace '+side,[(x-.022*sign2,y,z),(x+.022*sign2,y-.01,z+.012)],.0027,'Boots · laces','foot.'+side)
+# Tailored cuffs and exposed wrists finish the continuous shirt sleeves.
 for sign,s in [(1,'R'),(-1,'L')]:
- sh,el=bone_spec['upper_arm.'+s][:2]; wr=bone_spec['hand.'+s][0]
- pts=[sh+(sh-el).normalized()*.028,sh,sh.lerp(el,.40),sh.lerp(el,.62),sh.lerp(el,.69),sh.lerp(el,.77),sh.lerp(el,.87),el,el.lerp(wr,.22),el.lerp(wr,.61),el.lerp(wr,.82),el.lerp(wr,.84)]
- radii=[(.02,.022),(.076,.082),(.072,.074),(.062,.065),(.066,.067),(.058,.06),(.061,.060),(.061,.058),(.06,.056),(.047,.048),(.042,.046),(.045,.049)]
- weights=[{'upper_arm.'+s:1}]*6+[{'upper_arm.'+s:.85,'forearm.'+s:.15},{'upper_arm.'+s:.5,'forearm.'+s:.5},{'upper_arm.'+s:.1,'forearm.'+s:.9}]+[{'forearm.'+s:1}]*3
- sweep('Sculpted shirt sleeve '+s,pts,radii,'Shirt · warm sandstone',weights,24,1)
- cuffpts=[el.lerp(wr,.77),el.lerp(wr,.79),el.lerp(wr,.87),el.lerp(wr,.885)]
- sweep('Rolled stitched cuff '+s,cuffpts,[.05,.053,.05,.045],'Shirt · seam','forearm.'+s,24,1)
- sweep('Exposed wrist '+s,[el.lerp(wr,.83),el.lerp(wr,.91),wr,wr+rod_dir*.03],[.034,.034,.035,.036],'Skin · warm tan','hand.'+s,20,1)
+ sh,el=bone_spec['upper_arm.'+s][:2];wr=bone_spec['hand.'+s][0]
+ sweep('Shirt cuff '+s,[el.lerp(wr,.875),el.lerp(wr,.895),el.lerp(wr,.935),el.lerp(wr,.945)],[(.034,.032),(.036,.034),(.035,.033),(.032,.030)],'Shirt · seam','forearm.'+s,20,1)
+ sweep('Exposed wrist '+s,[el.lerp(wr,.925),el.lerp(wr,.97),wr,wr+rod_dir*.027],[.027,.027,.028,.028],'Skin · warm tan','hand.'+s,20,1)
  # Palm local geometry follows grip direction, each fingertip wraps around the invisible handle.
  d=rod_dir; side=Vector((1,0,0)); toward=-side.cross(d).normalized()
  R=Matrix(((side.x,d.x,toward.x),(side.y,d.y,toward.y),(side.z,d.z,toward.z)))
@@ -260,10 +323,25 @@ mesh('Sculpted curved cap visor',verts,faces,'Jacket · seam binding',[{'head':1
 #panel('Ochre cap patch',[(-.027,.083,1.681),(0,.092,1.668),(.027,.083,1.681),(.024,.072,1.71),(-.024,.072,1.71)],'Cap · ochre badge','head',.003,.004)
 #ellipsoid('Cap patch fish',(0,.094,1.688),(.015,.002,.0055),'Stitch · flax','head',16,8)
 #panel('Cap fish tail',[(-.015,.094,1.688),(-.023,.093,1.694),(-.023,.094,1.682)],'Stitch · flax','head',.002,.001)
-# A tiny original fishing fly pinned to the chest.
-line('Pocket fly hook',[(.145,.16,1.25),(.151,.165,1.233),(.143,.167,1.23),(.139,.165,1.24)],.0018,'Metal · antique brass','chest')
-ellipsoid('Pocket fly body',(.145,.167,1.253),(.005,.006,.015),'Cap · ochre badge','chest',16,8)
-for d in [-1,1]: line('Fly feather',[(.145,.165,1.25),(.145+d*.012,.165,1.266),(.145+d*.006,.165,1.274)],.0018,'Stitch · flax','chest')
+# Fit practical pocket panels, snaps, the pin and belt loops to their supporting garment.
+# This changes clothing silhouette/fit, not cloth wrinkle detail.
+def jacket_front(x,z):
+ rows=shirt_rings
+ for j in range(len(rows)-1):
+  if rows[j][0]<=z<=rows[j+1][0]:
+   t=(z-rows[j][0])/(rows[j+1][0]-rows[j][0]);rx=rows[j][1]*(1-t)+rows[j+1][1]*t;ry=rows[j][2]*(1-t)+rows[j+1][2]*t
+   return ry*math.sqrt(max(.04,1-(x/rx)**2))
+ return .11
+for obj in mesh_objects:
+ if obj.name.startswith(('Expandable chest pocket','Chest pocket flap','Lower hand warmer pocket','Pocket stitch','Pocket snap','Pocket fly','Fly feather')):
+  if obj.name.startswith('Expandable chest pocket'):
+   for vertex in obj.data.vertices:
+    side=1 if vertex.co.x>0 else -1;vertex.co.x=side*.08+(vertex.co.x-side*.105)*.8;vertex.co.z-=.025
+  minimum=min(v.co.y for v in obj.data.vertices)
+  offset=.014 if obj.name.startswith(('Chest pocket flap','Pocket snap','Pocket fly','Fly feather')) else .005
+  for vertex in obj.data.vertices:vertex.co.y=jacket_front(vertex.co.x,vertex.co.z)+offset+(vertex.co.y-minimum)*.55
+ if obj.name.startswith('Belt loop'):
+  for vertex in obj.data.vertices:vertex.co.y=.11*math.sqrt(max(.01,1-(vertex.co.x/.171)**2))+.006
 # Build the deformation skeleton.
 armdata=bpy.data.armatures.new('FarshoreAnglerSkeleton'); rig=bpy.data.objects.new('AnglerRig',armdata); scene.collection.objects.link(rig)
 bpy.context.view_layer.objects.active=rig; rig.select_set(True); bpy.ops.object.mode_set(mode='EDIT')
@@ -275,7 +353,7 @@ for n,(h,t,parent) in bone_spec.items():
 bpy.ops.object.mode_set(mode='OBJECT'); rig.show_in_front=True
 for obj in mesh_objects:
  if not len(obj.vertex_groups): continue
- mod=obj.modifiers.new('Farshore skeletal deformation','ARMATURE'); mod.object=rig; obj.parent=rig
+ mod=obj.modifiers.new('Farshore skeletal deformation','ARMATURE'); mod.object=rig; mod.show_viewport=False; obj.parent=rig
 # Socket is a real glTF node parented to the right hand. Local Blender +Y -> Godot -Z.
 socket=bpy.data.objects.new('RodSocket',None); scene.collection.objects.link(socket); socket.empty_display_type='ARROWS'; socket.empty_display_size=.12
 socket.parent=rig; socket.parent_type='BONE'; socket.parent_bone='hand.R'
@@ -344,7 +422,7 @@ def perform(clip,t,duration):
   a=(bone_spec[n][1]-bone_spec[n][0]).length; b=(bone_spec['forearm.'+s][1]-bone_spec['forearm.'+s][0]).length
   V=wrist-shoulder; dist=min(V.length,a+b-.001); axis=V.normalized()
   along=(a*a-b*b+dist*dist)/(2*dist); height=math.sqrt(max(0,a*a-along*along))
-  elbowhint=Vector((sign*.75,-.14,-.7)); perp=(elbowhint-axis*elbowhint.dot(axis)).normalized(); elbow=shoulder+axis*along+perp*height
+  elbowhint=Vector((sign*.5,-.1,-.9)); perp=(elbowhint-axis*elbowhint.dot(axis)).normalized(); elbow=shoulder+axis*along+perp*height
   oriented_bone(n,shoulder,elbow); bpy.context.view_layer.update(); oriented_bone('forearm.'+s,elbow,wrist); bpy.context.view_layer.update()
   # Hand orientation is shared with the rod, keeping contact consistent throughout casting.
   oriented_bone('hand.'+s,wrist,wrist+d*.09,Vector((0,-d.z,d.y))); bpy.context.view_layer.update()
@@ -366,6 +444,9 @@ for clip,dur in clips.items():
  action.use_fake_user=True
  track=rig.animation_data.nla_tracks.new(); track.name=clip; st=track.strips.new(clip,1,action); track.mute=True
 rig.animation_data.action=bpy.data.actions['idle']; scene.frame_set(1); scene.frame_end=97
+for obj in mesh_objects:
+ for modifier in obj.modifiers:
+  if modifier.type=='ARMATURE':modifier.show_viewport=True
 # Master includes neutral studio cameras and lights. The exported asset excludes those.
 world=bpy.data.worlds.new('Slate studio world'); world.use_nodes=True; world.node_tree.nodes['Background'].inputs[0].default_value=(.20,.25,.29,1); world.node_tree.nodes['Background'].inputs[1].default_value=.35; scene.world=world
 
@@ -410,23 +491,40 @@ for m in unique:runtime.data.materials.append(m)
 for p,i in zip(runtime.data.polygons,inds):p.material_index=i
 rig.select_set(True); socket.select_set(True); bpy.context.view_layer.objects.active=rig
 os.makedirs(os.path.join(ROOT,'game/assets/3d'),exist_ok=True); os.makedirs(os.path.join(ROOT,'art_masters/3d'),exist_ok=True)
-bpy.ops.export_scene.gltf(filepath=os.path.join(ROOT,'game/assets/3d/angler.glb'),export_format='GLB',use_selection=True,export_animations=True,export_animation_mode='ACTIONS',export_nla_strips=True,export_skins=True,export_apply=True,export_force_sampling=True,export_frame_range=False,export_anim_slide_to_zero=True,export_def_bones=True,export_yup=True,export_morph=False,export_cameras=False,export_lights=False)
+bpy.ops.export_scene.gltf(filepath=GLB_PATH,export_format='GLB',use_selection=True,export_animations=True,export_animation_mode='ACTIONS',export_nla_strips=True,export_skins=True,export_apply=True,export_force_sampling=True,export_frame_range=False,export_anim_slide_to_zero=True,export_def_bones=True,export_yup=True,export_morph=False,export_cameras=False,export_lights=False)
 bpy.data.objects.remove(runtime,do_unlink=True)
 for tr in rig.animation_data.nla_tracks: tr.mute=True
 rig.animation_data.action=bpy.data.actions['idle']; scene.frame_set(1); camera((2.5,4,2.2))
-bpy.ops.wm.save_as_mainfile(filepath=os.path.join(ROOT,'art_masters/3d/angler.blend'))
+bpy.ops.wm.save_as_mainfile(filepath=MASTER_PATH)
 # Persist topology/statistics and honest review evidence.
 deps=bpy.context.evaluated_depsgraph_get(); triangles=0
 for o in mesh_objects:
  ev=o.evaluated_get(deps); me=ev.to_mesh(); me.calc_loop_triangles(); triangles+=len(me.loop_triangles); ev.to_mesh_clear()
-with open(os.path.join(OUT,'stats.json'),'w') as f: json.dump({'triangles':triangles,'mesh_objects':len(mesh_objects),'bones':len(bone_spec),'clips_seconds':clips,'height_m':round(1.767-lowest,4),'front_godot':'-Z','socket':'AnglerRig/Skeleton3D/hand_R/RodSocket; use recursive node lookup','materials':list(M)},f,indent=2)
+with open(os.path.join(OUT,'stats.json'),'w') as f: json.dump({'triangles':triangles,'mesh_objects':len(mesh_objects),'bones':len(bone_spec),'clips_seconds':clips,'height_m':round(1.767-lowest,4),'front_godot':'-Z','socket':'AnglerRig/Skeleton3D/hand_R/RodSocket; use recursive node lookup','materials':list(M),'arm_lengths_m':{'upper_arm':.305,'forearm':.270},'shoulder_joint_width_m':.390,'garment_topology':'shared quad armhole branches and shared crotch saddle; no primitive seams'},f,indent=2)
 print('ASSET_STATS',triangles,len(mesh_objects),len(bone_spec),flush=True)
+# Unobscured relaxed A-pose is review-only; the five runtime actions are untouched.
+rig.animation_data.action=None
+for pose in rig.pose.bones:pose.matrix_basis=Matrix.Identity(4)
+bpy.context.view_layer.update()
+for sign,side in [(1,'R'),(-1,'L')]:
+ sh=bone_spec['upper_arm.'+side][0]
+ el=sh+Vector((sign*.38,0,-.925)).normalized()*.305
+ wr=el+Vector((sign*.25,.015,-.968)).normalized()*.270
+ oriented_bone('upper_arm.'+side,sh,el);bpy.context.view_layer.update()
+ oriented_bone('forearm.'+side,el,wr);bpy.context.view_layer.update()
+ direction=(wr-el).normalized()
+ oriented_bone('hand.'+side,wr,wr+direction*.09,Vector((0,1,0)));bpy.context.view_layer.update()
+for name,location in [('A-front',(0,4,1.1)),('A-side',(4,0,1.1))]:
+ camera(location);scene.render.filepath=os.path.join(OUT,name+'.png');bpy.ops.render.render(write_still=True)
+rig.animation_data.action=bpy.data.actions['idle'];scene.frame_set(1)
 # A simple review-only fishing handle makes hand/rod contact inspectable in renders.
 preview=sweep('REVIEW ONLY rod grip',[(0,-.25,0),(0,-.23,0),(0,.18,0),(0,.20,0)],[.015,.018,.018,.011],'Boots · oiled leather','hand.R',16,0)
 preview.parent=socket; preview.matrix_parent_inverse=Matrix.Identity(4); preview.matrix_basis=Matrix.Identity(4)
 shaft=sweep('REVIEW ONLY rod shaft',[(0,.18,0),(0,.60,0),(0,1.15,-.025),(0,1.65,-.09)],[.009,.008,.005,.002],'Jacket · seam binding','hand.R',12,0)
 shaft.parent=socket; shaft.matrix_parent_inverse=Matrix.Identity(4); shaft.matrix_basis=Matrix.Identity(4)
 
+render('00-front',(0,4,1.3))
+render('00-side',(4,0,1.3))
 render('01-three-quarter',(2.5,4,2.15))
 render('02-front',(0,4,1.75))
 render('03-back',(2.5,-4,2.15))
