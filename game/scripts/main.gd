@@ -56,6 +56,7 @@ var _safe: MarginContainer
 var _collection: Label
 var _bait_label: Label
 var _hud: Control
+var _page_notice: Label
 
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
@@ -260,6 +261,8 @@ func _build_fishing_screen() -> void:
 	_collection=_text("",20,Color("fff1bb"))
 	_collection.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
 	_collection.size_flags_horizontal=Control.SIZE_SHRINK_END
+	_collection.custom_minimum_size.x=150
+	_collection.autowrap_mode=TextServer.AUTOWRAP_OFF
 	_collection.add_theme_stylebox_override("normal",fact_style)
 	_collection.add_theme_color_override("font_shadow_color",NAVY)
 	_collection.add_theme_constant_override("shadow_offset_y",2)
@@ -348,6 +351,7 @@ func _process(delta: float) -> void:
 	if _toast_seconds > 0:
 		_toast_seconds -= delta
 		_toast.visible = _toast_seconds > 0
+		if is_instance_valid(_page_notice): _page_notice.visible=_toast_seconds>0
 	_charge.value = session.charge
 	_tension.value = session.tension
 	_progress.value = session.progress
@@ -510,6 +514,10 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	line.color=Color("567576")
 	line.custom_minimum_size.y=1
 	outer.add_child(line)
+	_page_notice=_text("",21,GOLD)
+	_page_notice.visible=false
+	_page_notice.add_theme_stylebox_override("normal",_box(Color("275059"),14,GOLD,1))
+	outer.add_child(_page_notice)
 	var scroll: ScrollContainer=ScrollContainer.new()
 	scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
 	scroll.size_flags_vertical=Control.SIZE_EXPAND_FILL
@@ -1020,7 +1028,7 @@ func _show_result() -> void:
 	saved.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(saved)
 	if protected:
-		_page.add_child(_text("保护观察 · 本次为虚拟相遇，记录后即刻放归。"+str(_last_record.get("conservation_note","")),21,GOLD))
+		_page.add_child(_text("保护观察 · 仅为游戏内虚拟相遇\n记录后即刻放归，不对应现实捕捞",21,GOLD))
 		_page.add_child(_button("放归自然  ·  +8 旅币",_dispose_result.bind("released"),true))
 	else:
 		var actions: HBoxContainer=HBoxContainer.new()
@@ -1129,6 +1137,9 @@ func _toast_message(value: String) -> void:
 	_toast.text=value
 	_toast.visible=true
 	_toast_seconds=5.0
+	if _overlay!=null and is_instance_valid(_page_notice):
+		_page_notice.text=value
+		_page_notice.visible=true
 
 func _notification(what: int) -> void:
 	if not is_node_ready(): return

@@ -5,15 +5,24 @@ var foreground: String = "reeds"
 var weather: String = "clear"
 var time_of_day: String = "day"
 var angler: Texture2D = preload("res://assets/ui/expedition_angler.png")
+var rowboat: Texture2D = preload("res://assets/ui/expedition_rowboat.png")
 var art: Texture2D
 var front_art: Texture2D
 var session: FishingSession
 var clock_time: float = 0.0
 var tint: Color = Color("4f8588")
 var _sparks: Array[Vector2] = []
+var _bottom_shade: GradientTexture2D
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var gradient: Gradient=Gradient.new()
+	gradient.set_color(0,Color(0.025,0.10,0.14,0.04))
+	gradient.set_color(1,Color(0.025,0.10,0.14,0.93))
+	_bottom_shade=GradientTexture2D.new()
+	_bottom_shade.gradient=gradient
+	_bottom_shade.fill_from=Vector2(0,0)
+	_bottom_shade.fill_to=Vector2(0,1)
 	for i: int in range(32):
 		_sparks.append(Vector2(float((i * 193 + 67) % 720), float((i * 87 + 11) % 460)))
 
@@ -21,10 +30,10 @@ func set_region(region: Dictionary, spot: Dictionary) -> void:
 	region_id = str(region.get("region_id", "lake"))
 	foreground = str(spot.get("foreground", "reeds"))
 	tint = Color(str(region.get("color", "#81aa9a")))
-	var path: String = str(region.get("scene", ""))
+	var path: String = str(spot.get("scene",region.get("scene", "")))
 	art = load(path) as Texture2D if ResourceLoader.exists(path) else null
 	var foreground_path: String = "res://assets/scenery/"+region_id+"_foreground.png"
-	front_art = load(foreground_path) as Texture2D if ResourceLoader.exists(foreground_path) else null
+	front_art = load(foreground_path) as Texture2D if ResourceLoader.exists(foreground_path) and not bool(spot.get("hide_region_foreground",false)) else null
 	queue_redraw()
 
 func _process(delta: float) -> void:
@@ -67,9 +76,7 @@ func _draw() -> void:
 		draw_texture_rect_region(front_art,Rect2(w*0.5,h*0.39,w*0.5,h*0.39),Rect2(front_art.get_width()*0.5,0,front_art.get_width()*0.5,front_art.get_height()))
 	_draw_angler(w,h)
 	# A transparent dusk vignette keeps controls legible while the painting stays edge-to-edge.
-	for shade: int in range(40):
-		var alpha: float = 0.10+float(shade)/40.0*0.80
-		draw_rect(Rect2(0,h*0.70+shade*h*0.0075,w,h*0.0075+1),Color(0.025,0.10,0.14,alpha))
+	if _bottom_shade: draw_texture_rect(_bottom_shade,Rect2(0,h*0.70,w,h*0.30),false)
 	if session == null: return
 	var active: int = session.before_pause if session.state == FishingSession.State.PAUSED else session.state
 	if active in [FishingSession.State.CASTING,FishingSession.State.WAITING,FishingSession.State.NIBBLE,FishingSession.State.BITE,FishingSession.State.FIGHT]:
@@ -125,8 +132,7 @@ func _draw_angler(w: float,h: float) -> void:
 	var wood: Color=Color("856e50")
 	var deck: PackedVector2Array=PackedVector2Array([Vector2(0,h*0.764),Vector2(w*0.61,h*0.754),Vector2(w*0.74,h*0.88),Vector2(0,h*0.92)])
 	if foreground=="boat":
-		draw_colored_polygon(PackedVector2Array([Vector2(w*0.05,h*0.79),Vector2(w*0.62,h*0.74),Vector2(w*0.72,h*0.84),Vector2(w*0.23,h*0.90)]),Color("aa8560"))
-		draw_polyline(PackedVector2Array([Vector2(w*0.05,h*0.79),Vector2(w*0.62,h*0.74),Vector2(w*0.72,h*0.84)]),Color("e4c994"),12,true)
+		draw_texture_rect(rowboat,Rect2(-w*0.04,h*0.70+sin(clock_time*1.4)*1.8,w*0.94,w*0.627),false)
 	else:
 		draw_colored_polygon(deck,wood)
 		for i: int in range(7):

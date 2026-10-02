@@ -16,7 +16,17 @@
       "path": "game/scripts/ui_art.gd",
       "type": "original code-native vector UI illustrations",
       "source": "Project-authored native Godot CanvasItem drawing",
-      "subjects": ["compass", "field guide", "favorite heart", "expedition bag", "coin", "sun", "fishing rod", "four bait categories", "fish badge"],
+      "subjects": [
+        "compass",
+        "field guide",
+        "favorite heart",
+        "expedition bag",
+        "coin",
+        "sun",
+        "fishing rod",
+        "four bait categories",
+        "fish badge"
+      ],
       "verified": "Rendered in Godot runtime screenshots, no external icon font or borrowed graphical assets"
     },
     {
@@ -24,6 +34,14 @@
       "type": "native metric reference ruler",
       "source": "Project-authored Godot CanvasItem drawing",
       "verified": "Ticks scale to the shown individual length; numeric length/weight remain authoritative"
+    },
+    {
+      "path": "game/assets/ui/expedition_rowboat.png",
+      "type": "original generated transparent boat prop",
+      "source": "Built-in image_gen tool, generated 2026-10-02",
+      "source_output": "exec-05b52774-1992-4eee-883d-b4dd39c6d9f7.png",
+      "prompt": "Use case: stylized-concept. Asset type: original transparent prop sprite for a premium hand-painted 2D fishing adventure. One small broad wooden lake fishing rowboat, completely empty of people, viewed three-quarter from above and behind the stern. The bow points to the upper left; stern is lower right. A practical charming sturdy craft with warm tan oak inner planks, a muted seafoam/teal painted outer hull, cream gunwale highlights, two simple narrow wooden bench seats, one folded rope at the bow. Original clean painterly illustration, crisp silhouette with subtle watercolor grain and warm sunlit shading. Important composition: wide horizontal boat, entire hull contained in frame, seen from above sufficiently for a seated traveler sprite to be composited into its middle later; middle seating area visually open. Isolated genuine transparent alpha background, no water rectangle, no scenery, no shadow ground, no people, no fishing equipment, no text, no border, no watermark.",
+      "verified": "Viewed actual source pixels. RGBA 1536x1024; alpha extrema 0..254. Proportional max 960x600 runtime PNG retains alpha. Used only for boat fishing spots with animated seated traveler."
     }
   ]
 }
