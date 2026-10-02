@@ -19,7 +19,7 @@ The source preserves individually editable tailored clothing, cap, face, hands, 
 - Feet aligned to Godot's Y=0 ground plane
 - Front faces Godot −Z; +Y is up; +X is the character's right-hand side
 - Runtime skeleton: `AnglerRig/Skeleton3D`, with 30 deformation bones
-- Godot sanitizes bone dots to underscores: `hand.R` in Blender becomes `hand_R`
+- Skeleton bone names retain dots (`hand.R`, `hand.L`); the imported attachment node is sanitized to `hand_R`
 - Socket: `AnglerRig/Skeleton3D/hand_R/RodSocket`
 - Resolve `RodSocket` recursively by name so root renaming is safe
 - `RodSocket` is under an imported `BoneAttachment3D`; it follows the right-hand grip position and rotation
@@ -75,6 +75,7 @@ The Blender review images are real path-traced scene renders of the generated me
 - Maximum skin-weight sum error: 2.98 × 10⁻⁸
 - CPU deformation comparison, idle to backswing: 0.63968 m maximum displacement over 2,686 sampled vertices
 - Godot socket-to-hand position check: within 0.00001 m at all five sampled cast phases
+- Both-hand grip consistency across all 67 cast frames: maximum error 0.000000659 m from the shared handle axis
 - The exported clips have lengths 3.20, 2.20, 4.00, 2.00, and 2.00 seconds for idle, cast, wait, reel, and lift respectively
 - All sampled skinned vertex positions are finite; all exported weights are nonnegative and normalized
 - Final GLB SHA-256: `19775a036d4fe72edd877e4208f1f805be4325524855b15a47febf21506c072b`
