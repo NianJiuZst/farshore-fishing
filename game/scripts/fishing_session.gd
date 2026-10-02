@@ -159,8 +159,11 @@ func press() -> void:
 		State.WAITING, State.NIBBLE:
 			_finish(false, "空竿收回，鱼还没有咬牢。下次再多观察一会儿浮漂")
 		State.BITE:
-			reeling = false # Hooking is one deliberate edge, not held auto-reeling.
+			reeling = false
 			set_state(State.FIGHT)
+			# A genuine new bite press may continue as a held reel. A gesture
+			# held before the bite never reaches this branch; pause can cancel it.
+			if state == State.FIGHT and _pressed: reeling = true
 			cue.emit("hook")
 		State.FIGHT: reeling = true
 

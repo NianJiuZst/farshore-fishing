@@ -174,7 +174,7 @@ func _advance_to(session: FishingSession, target: int, limit: int = 1200) -> boo
 
 func _fight(session: FishingSession, mode: String = "balanced") -> void:
 	if session.state == Session.State.BITE: session.press()
-	session.release() # Hook and reeling are independent input edges.
+	session.release() # Compare fight policies from a deliberately released hook.
 	var controller = TestController.new("always_pull" if mode == "hold" else "never_pull" if mode == "release" else "behavior_aware")
 	for tick: int in 16000:
 		if session.state != Session.State.FIGHT: return
@@ -206,7 +206,7 @@ func _test_state_machine() -> void:
 	_check(not session.cast(_individual(), catalog.gear[0]), "duplicate cast rejected outside charging")
 	_check(_advance_to(session, Session.State.BITE), "casting, waiting and nibble reach bite")
 	session.press()
-	_check(session.state == Session.State.FIGHT and not session.reeling, "hook starts fight without stuck held input")
+	_check(session.state == Session.State.FIGHT and session.reeling, "a deliberate bite press starts fight and can continue held reeling")
 	_fight(session)
 	_check(session.state == Session.State.CAUGHT, "balanced hold/release catches a real fish")
 	_check(states == [Session.State.CHARGING, Session.State.CASTING, Session.State.WAITING, Session.State.NIBBLE, Session.State.BITE, Session.State.FIGHT, Session.State.CAUGHT], "complete state order")

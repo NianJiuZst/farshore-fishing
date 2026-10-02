@@ -24,7 +24,9 @@ func _initialize() -> void:
 		if arg.begins_with("--capture="): video_path = arg.trim_prefix("--capture=")
 		if arg.begins_with("--output="): output_path = arg.trim_prefix("--output=")
 	var old_source: String = FileAccess.get_file_as_string(old_path) if not old_path.is_empty() else FileAccess.get_file_as_string("res://scripts/fishing_session.gd").replace("\telif line_wear > 0.78 and _wear_warning_time >= 8.0 and _break_hazard >= _break_threshold:", "\telif _break_hazard >= _break_threshold:")
-	# The default reconstructs only the reviewed one-line pre-guard revision.
+	if old_path.is_empty():
+		old_source = old_source.replace("\t\t\treeling = false\n\t\t\tset_state(State.FIGHT)\n\t\t\t# A genuine new bite press may continue as a held reel. A gesture\n\t\t\t# held before the bite never reaches this branch; pause can cancel it.\n\t\t\tif state == State.FIGHT and _pressed: reeling = true\n\t\t\tcue.emit(\"hook\")", "\t\t\treeling = false # Hooking is one deliberate edge, not held auto-reeling.\n\t\t\tset_state(State.FIGHT)\n\t\t\tcue.emit(\"hook\")")
+	# Reverse only the reviewed hazard guard and held-hook input changes.
 	# Hash verification prevents silent drift and requires no .git or capsule.
 	var old_hash: String = old_source.sha256_text()
 	if old_hash != "130fd17c3a86b058da18a98f8b2e5c95599b7cbacd040ad14a381298175493cb":
