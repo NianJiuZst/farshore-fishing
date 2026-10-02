@@ -20,27 +20,32 @@ An imported Godot project is required for texture/font loading; open the project
 
 Every SaveStore fixture uses a newly created `/tmp/farshore-core-*` directory. The separate HOME and XDG directories isolate the Main startup path from a player's real save. Tests print the fixture path. Failures produce `FAIL:` lines and a nonzero process exit. The numeric assertion count includes repeated candidate/sample checks and is not a count of independent scenarios.
 
-**Post-recovery verification: 42,012 / 42,012 assertions passed**, art checks enabled, exit code **0**, with no warnings or errors. A fresh Godot process and new isolated HOME/XDG directories tested the restored production project on **2026-10-02 at 08:35 UTC**, after checkpoint `31fdf64c64f665508533f04c707abafe1a329b06`. The complete test was reconstructed after an export-directory deletion and independently backed up; this rerun reconfirmed the same coverage, timings, and progression. Current raw output: `build/core-tests-recovered.log`; earlier output: `build/core-tests.log`.
+**Expanded-content verification: 69,160 / 69,160 assertions passed**, art checks enabled, exit code **0**, with no warnings or errors. A fresh editor import, Godot process, and isolated HOME/XDG directories tested the full 44-species project and redesigned Main on **2026-10-02 at 09:10 UTC**. Current raw output: `build/core-tests-expanded.log`; import output: `build/import-expanded-test.log`. The separate persistence suite passed **314 / 314** assertions, including all existing recovery/stress tests and 113 new conservation/compatibility checks.
+
+The earlier 32-species post-recovery baseline passed 42,012 / 42,012 assertions at 08:35 UTC after checkpoint `31fdf64c64f665508533f04c707abafe1a329b06` (`build/core-tests-recovered.log`). Existing session, save-failure, navigation, and terminal-state regressions are retained in the expanded suite. A semantic empty-search hint check replaces an obsolete exact child-layout assumption; it still requires the actual visible explanatory text.
+
+During content production only, `-- --skip-ui` explicitly omits Main integration and prints that omission. The 69,093 / 69,093 preliminary logic-only pass is recorded in `build/core-tests-expanded-logic.log`; it is not used as the full-suite result. The final command above uses no skip flag.
 
 ## What runs against production code
 
 ### Content and encounter generation
 
-- Loads `ContentCatalog`, `FishDefinition`, and both production JSON catalogs
-- Confirms 32 unique species and scientific names, four regions, eight spots, three gear tiers, and four free bait choices
-- Confirms at least eight fish per region, text/provenance presence, supported behavior IDs, and valid spot/region membership
-- Enumerates **5,520 legal combinations** of spot, available gear, cast power, bait, day/dusk, and clear/rain
+- Loads `ContentCatalog`, `FishDefinition`, and all four production JSON catalogs
+- Confirms exactly 44 unique species and scientific names, six regions, twelve spots, three gear tiers, and four free bait choices
+- Confirms at least eight fish per region in both content membership and actual reachable candidate sets, text/provenance presence, supported behavior IDs, and valid spot/region membership
+- Enumerates **7,440 legal combinations** of spot, available gear, cast power, bait, day/dusk, and clear/rain
 - Confirms every fish is reachable in at least one combination and every spot has real candidates
-- Finds **32 empty combinations**, which are permitted configurations rather than fabricated out-of-region fallbacks; minimum starter cast remains playable
+- Finds **64 empty combinations**, which are permitted configurations rather than fabricated out-of-region fallbacks; minimum starter cast remains playable
 - Confirms bait, time, and weather actually change encounter weights; unknown spots return an empty encounter
-- Art-enabled mode validates all **64 fish art and thumbnail references** through the production catalog
+- Art-enabled mode validates all **88 fish art and thumbnail references** through the production catalog
 
 ### Seeds, size, weight, and difficulty
 
 - Compares 150 paired, same-seed real encounter sequences, excluding only the system wall-clock `caught_at` field
 - Checks selection, length, weight, size class, behavior, and difficulty are reproduced
-- Generates **5,120 real individuals**, 160 per species
+- Generates **7,040 real individuals**, 160 per species
 - Verifies integer length/weight bounds, species-specific cubic length-weight anchors and bounded condition variation, uncommon giant individuals, and greater weight/difficulty for larger individuals
+- Every sample preserves the exact boolean conservation flag and conservation note; protected observations always have a zero sale value, while ordinary fish retain their existing sale economics
 - The tests validate the game model; they do not establish scientific accuracy of its tuning coefficients
 
 ### Fishing sessions and interruptions
@@ -74,8 +79,18 @@ All nine combinations succeed. Continuous pull has one phase; burst and rest eac
 - Confirms sale and release preserve historical catches and unique discovery totals
 - Starts progression with **zero currency**, uses only currently reachable candidates, plays every encounter through the actual session, and uses only the ordinary catch reward plus release bonus
 - Pays actual configured gear and travel prices while respecting discovery gates
-- Reaches **all 32 species, all four regions, and gear tier 2 in 57 successful catches**, with **281 coins** remaining
+- Reaches **all 44 species, all six regions, and gear tier 2 in 87 completed encounters**, with **221 coins** remaining
+- Verifies every journey follows unlocked-region and spot-equipment gates, every round earns exactly 25 + 8 coins, every purchase spends earned currency, and the seven required purchases total exactly **2,650 coins**
+- Verifies the new discovery/currency thresholds remain Mississippi **20 / 450** and Yangtze **28 / 600**, with no added gear beyond tier 2; the full earned collection and unlock state survives a real disk restart
 - This is an existence proof of an unlocked resource path: the harness deliberately chooses a new reachable species when possible. It is not a prediction of random-player collection time or rarity pacing
+
+### Protected conservation observation
+
+- Confirms exactly one protected species, stable ID `chinese_sturgeon`, with an explicit conservation explanation
+- Drives its real generated individual through the production session, settlement, direct sale rejection, JSON reload, and successful release
+- Confirms sale rejection changes neither state nor currency; release preserves the complete observation history and discovery count and grants only the ordinary release bonus once
+- This is an explicitly virtual field-guide observation, not a claim about lawful real-world capture
+- Detailed four-boundary settlement/release I/O failures, exact retries, forged nonzero sale values, and legacy schema-2 compatibility are covered by `save_tests.gd` and documented in `SAVE_TESTS.md`
 
 ### Main integration and regressions
 
@@ -93,6 +108,12 @@ The tests instantiate the real `main.gd` Control and operate its actual methods,
 - Empty search results displaying a helpful hint
 - Failed destination and bait writes rolling live selections back
 - Rejecting a gear downgrade below the current spot's requirement
+- Rejecting both new-region unlocks below their discovery or currency threshold; failed writes and duplicate callbacks cannot spend the unlock cost twice
+- Verifying the actual four new travel controls reflect gear requirements and a permitted expanded-region selection persists
+- Running a protected production session through Main automatically opens its saved observation result with guidance and no sale button
+- Direct protected result and pending-page sale callbacks are blocked by the actual transaction layer
+- Actual release controls recover from injected disk failures, return to playable idle or clear the pending entry, and preserve all historical records without duplicate income
+- Reopening the protected pending page after a real disk reload preserves its release-only controls
 
 Regressions found during review were fixed in production by the integrator and are retained in this suite: escape Back soft-lock, unprotected exit with an unsaved result, selection mutation before a failed commit, duplicate-retry UI failure, stale-result UI takeover, under-equipped deep-spot selection, and terminal-state Pause/Continue soft-locks.
 

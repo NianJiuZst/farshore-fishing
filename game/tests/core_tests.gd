@@ -5,6 +5,9 @@ const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Main = preload("res://scripts/main.gd")
+const EXPECTED_SPECIES: int = 44
+const EXPECTED_REGIONS: int = 6
+const EXPECTED_SPOTS: int = 12
 
 class FailingStore extends "res://scripts/save_store.gd":
 	var fail_once: bool = false
@@ -34,8 +37,12 @@ func _run() -> void:
 	_test_failures_and_terminal()
 	_test_behavior_balance()
 	_test_real_settlement()
+	_test_protected_observation()
 	_test_growth()
-	await _test_main_integration()
+	if "--skip-ui" in OS.get_cmdline_user_args():
+		print("MAIN INTEGRATION SKIPPED: content-production logic-only run; not a complete suite")
+	else:
+		await _test_main_integration()
 	print("CORE_TESTS: ", checks - failures, "/", checks, " passed; failures=", failures)
 	quit(0 if failures == 0 else 1)
 
@@ -48,26 +55,37 @@ func _check(value: bool, label: String) -> void:
 func _test_catalog_and_reachability() -> void:
 	var art_check: bool = "--check-art" in OS.get_cmdline_user_args()
 	_check(catalog.load_all(art_check), "catalog load: " + str(catalog.errors))
-	_check(catalog.fish.size() == 32 and catalog.spots.size() == 8, "32 unique fish and eight spots")
-	_check(catalog.regions.size() == 4 and catalog.gear.size() == 3 and catalog.baits.size() == 4, "four regions, three gear tiers, four baits")
+	_check(catalog.fish.size() == EXPECTED_SPECIES and catalog.spots.size() == EXPECTED_SPOTS, "44 unique fish and twelve spots")
+	_check(catalog.regions.size() == EXPECTED_REGIONS and catalog.gear.size() == 3 and catalog.baits.size() == 4, "six regions, three gear tiers, four baits")
 	var scientific_names: Dictionary = {}
 	var region_counts: Dictionary = {}
+	var protected_ids: Array[String] = []
 	for fish: FishDefinition in catalog.fish.values():
 		_check(not scientific_names.has(fish.scientific_name), "unique scientific species: " + fish.species_id)
 		scientific_names[fish.scientific_name] = true
 		_check(not fish.name.is_empty() and not fish.description.is_empty() and not fish.morphology.is_empty(), "complete identity and field-guide text: " + fish.species_id)
 		_check(not fish.raw.get("sources", []).is_empty(), "source provenance present: " + fish.species_id)
 		_check(fish.behavior in ["steady", "burst", "rest"], "supported behavior: " + fish.species_id)
+		if fish.release_only:
+			protected_ids.append(fish.species_id)
+			_check(fish.raw.get("release_only") is bool and not fish.conservation_note.is_empty(), "protected species carries boolean flag and conservation explanation")
 		for rid: String in fish.regions():
 			region_counts[rid] = int(region_counts.get(rid, 0)) + 1
 	for region: Dictionary in catalog.regions:
 		_check(int(region_counts.get(str(region.region_id), 0)) >= 8, "at least eight species per region: " + str(region.region_id))
+	_check(protected_ids == ["chinese_sturgeon"], "exactly Chinese sturgeon is the protected virtual observation")
+	_check(int(catalog.region("bayou").get("unlock_count", -1)) == 20 and int(catalog.region("bayou").get("unlock_cost", -1)) == 450, "Mississippi discovery and currency gate remains 20 / 450")
+	_check(int(catalog.region("yangtze").get("unlock_count", -1)) == 28 and int(catalog.region("yangtze").get("unlock_cost", -1)) == 600, "Yangtze discovery and currency gate remains 28 / 600")
 	var generator: EncounterGenerator = Encounter.new(42)
 	var reachable: Dictionary = {}
+	var reachable_by_region: Dictionary = {}
 	var empty_count: int = 0
 	var combinations: int = 0
 	for spot_id: String in catalog.spots:
 		var spot: Dictionary = catalog.spots[spot_id]
+		var region_id: String = str(spot.region_id)
+		if not reachable_by_region.has(region_id): reachable_by_region[region_id] = {}
+		_check(int(spot.min_gear) >= 0 and int(spot.min_gear) <= 2, "all spots reachable with shipped gear: " + spot_id)
 		var spot_seen: Dictionary = {}
 		for gear_id: int in catalog.gear.size():
 			if gear_id < int(spot.min_gear): continue
@@ -83,10 +101,13 @@ func _test_catalog_and_reachability() -> void:
 							for item: Dictionary in candidates:
 								var fish: FishDefinition = item.fish
 								reachable[fish.species_id] = true
+								reachable_by_region[region_id][fish.species_id] = true
 								spot_seen[fish.species_id] = true
-								_check(float(item.weight) > 0.0 and spot_id in fish.spots() and str(spot.region_id) in fish.regions(), "candidate valid membership and positive weight")
+								_check(float(item.weight) > 0.0 and spot_id in fish.spots() and region_id in fish.regions() and int(fish.raw.get("min_gear", 0)) <= gear_id and str(fish.raw.get("salinity", spot.salinity)) == str(spot.salinity), "candidate valid membership, salinity, gear and positive weight")
 		_check(not spot_seen.is_empty(), "each legal spot has real candidates: " + spot_id)
-	_check(reachable.size() == catalog.fish.size(), "all 32 fish reachable across legal gear/cast/bait/time/weather combinations")
+	_check(reachable.size() == EXPECTED_SPECIES and reachable.size() == catalog.fish.size(), "all 44 fish reachable across legal gear/cast/bait/time/weather combinations")
+	for region: Dictionary in catalog.regions:
+		_check((reachable_by_region.get(str(region.region_id), {}) as Dictionary).size() >= 8, "at least eight actually reachable species per region: " + str(region.region_id))
 	_check(generator.generate(catalog, "not_a_spot", "worm", 0, 0.5, "day", "clear").is_empty(), "unknown spot explicitly returns no encounter")
 	_check(not generator.candidates(catalog, "lake_shore", "worm", 0, 0.05, "day", "clear").is_empty(), "minimum starter cast remains playable")
 	var worm: Array[Dictionary] = generator.candidates(catalog, "lake_shore", "worm", 0, 0.5, "day", "clear")
@@ -116,6 +137,8 @@ func _test_seed_and_size() -> void:
 		for index: int in 160:
 			var sample: Dictionary = a.make_individual(fish, str(fish.spots()[0]), str(fish.regions()[0]), "worm", 2, "day", "clear")
 			_check(int(sample.length_mm) >= fish.min_mm and int(sample.length_mm) <= fish.max_mm and int(sample.weight_g) > 0, "valid integer size/weight: " + fish.species_id)
+			_check(sample.get("release_only") is bool and bool(sample.get("release_only")) == fish.release_only and str(sample.get("conservation_note", "")) == fish.conservation_note, "generator preserves exact conservation metadata: " + fish.species_id)
+			_check(int(sample.sale_value) == 0 if fish.release_only else int(sample.sale_value) >= 10, "protected observation has zero sale value; ordinary fish retains economics: " + fish.species_id)
 			var anchor_weight: float = float(fish.anchor_g) * pow(float(sample.length_mm) / fish.anchor_mm, 3.0)
 			_check(absf(float(sample.weight_g) - anchor_weight) <= anchor_weight * 0.091 + 0.51, "weight follows species cubic anchor with bounded condition: " + fish.species_id)
 			if str(sample.size_class) == "巨物": giant_count += 1
@@ -124,7 +147,7 @@ func _test_seed_and_size() -> void:
 		_check(int(samples.back().weight_g) > int(samples.front().weight_g) and float(samples.back().difficulty) >= float(samples.front().difficulty), "larger individuals heavier and at least as difficult: " + fish.species_id)
 		_check(giant_count < 35, "giants uncommon: " + fish.species_id)
 	_check(anchors.size() >= 24, "species-specific size anchors, not one shared range")
-	print("PASS GROUP reproducible RNG and 5,120 real individual samples")
+	print("PASS GROUP reproducible RNG and ", catalog.fish.size() * 160, " real individual samples, including conservation metadata")
 
 func _individual(id: String = "roach", seed_value: int = 42) -> Dictionary:
 	var fish: FishDefinition = catalog.fish[id]
@@ -320,6 +343,34 @@ func _test_real_settlement() -> void:
 	_check(restarted.initialize(test_root.path_join("session-settlement")) and restarted.total_count() == 3 and restarted.discovered_count() == 1, "real-session records survive disk reload")
 	print("PASS GROUP actual sessions → save → retry → sale/release → restart")
 
+func _test_protected_observation() -> void:
+	_check(catalog.fish.has("chinese_sturgeon"), "production catalog contains protected observation")
+	if not catalog.fish.has("chinese_sturgeon"): return
+	var fish: FishDefinition = catalog.fish["chinese_sturgeon"]
+	var record: Dictionary = Encounter.new(413).make_individual(fish, str(fish.spots()[0]), "yangtze", "shrimp", 2, "day", "clear")
+	_check(bool(record.release_only) and int(record.sale_value) == 0 and not str(record.conservation_note).is_empty(), "production protected observation starts flagged with zero sale value")
+	var session: FishingSession = _launch(record, 2)
+	var root_path: String = test_root.path_join("protected-session")
+	var store: SaveStore = Store.new()
+	_check(store.initialize(root_path), "protected session store initializes")
+	store.begin_session(session.session_id)
+	_check(_advance_to(session, Session.State.BITE), "protected observation follows actual encounter lifecycle")
+	_fight(session)
+	_check(session.state == Session.State.CAUGHT and bool(session.individual.get("release_only", false)), "actual session preserves protected flag through completion")
+	_check(bool(store.settle_catch(session.individual).get("ok", false)), "actual protected observation persists")
+	var before: Dictionary = store.state
+	var catch_id: String = str(session.individual.get("catch_id", ""))
+	_check(not bool(store.dispose_catch(catch_id, "sold").get("ok", false)) and store.state == before, "actual generated protected record cannot be sold")
+	var reload: SaveStore = Store.new()
+	_check(reload.initialize(root_path) and _same_json(reload.state, before), "actual protected metadata survives JSON roundtrip")
+	_check(not bool(reload.dispose_catch(catch_id, "sold").get("ok", false)) and _same_json(reload.state, before), "reloaded actual protected record cannot be sold")
+	_check(bool(reload.dispose_catch(catch_id, "released").get("ok", false)), "actual protected observation can be released")
+	_check(reload.total_count() == 1 and reload.discovered_count() == 1 and int(reload.state.currency) == 153, "protected release preserves one discovery with ordinary rewards only")
+	_check(_same_json(reload.state.species_stats, before.species_stats) and (reload.state.pending_catches as Dictionary).is_empty(), "protected release retains immutable historical record and clears pending")
+	before = reload.state
+	_check(not bool(reload.dispose_catch(catch_id, "released").get("ok", false)) and reload.state == before, "actual protected release is idempotent")
+	print("PASS GROUP actual protected observation → production session → save → sale refusal → reload → release")
+
 func _accessible(gear_id: int, unlocked: Array) -> Dictionary:
 	var generator: EncounterGenerator = Encounter.new(75)
 	var available: Dictionary = {}
@@ -342,7 +393,10 @@ func _test_growth() -> void:
 	for bait: Dictionary in catalog.baits: _check(int(bait.price) == 0, "basic bait always free: " + str(bait.bait_id))
 	var generator: EncounterGenerator = Encounter.new(9357)
 	var catches: int = 0
-	for iteration: int in 120:
+	var spent: int = 0
+	var unlock_history: Array[String] = []
+	# 160 exceeds all mandatory costs / the 33-coin round reward plus 44 discoveries.
+	for iteration: int in 160:
 		state = store.state
 		var available: Dictionary = _accessible(int(state.gear), state.unlocked_regions)
 		_check(not available.is_empty(), "growth always retains a free playable encounter")
@@ -353,6 +407,7 @@ func _test_growth() -> void:
 				selected = id
 				break
 		var route: Dictionary = available[selected]
+		_check(str(route.region) in state.unlocked_regions and int(catalog.spots[str(route.spot)].min_gear) <= int(state.gear), "growth route obeys actual region and spot equipment gates")
 		var record: Dictionary = generator.make_individual(route.fish, route.spot, route.region, route.bait, int(state.gear), "day", "clear")
 		var session: FishingSession = _launch(record, int(state.gear))
 		store.begin_session(session.session_id)
@@ -362,8 +417,10 @@ func _test_growth() -> void:
 		_check(bool(store.dispose_catch(str(session.individual.catch_id),"released").get("ok",false)), "release-only progression yields nonconsumable income")
 		catches += 1
 		state = store.state
+		_check(int(state.currency) == catches * 33 - spent, "growth earns only exact catch plus release income")
 		var next_gear: int = int(state.gear) + 1
 		if next_gear < catalog.gear.size() and int(state.currency) >= int(catalog.gear[next_gear].price):
+			spent += int(catalog.gear[next_gear].price)
 			state.currency = int(state.currency) - int(catalog.gear[next_gear].price)
 			state.gear = next_gear
 			state.owned_gear.append(next_gear)
@@ -372,12 +429,18 @@ func _test_growth() -> void:
 			state = store.state
 			if str(region.region_id) in state.unlocked_regions: continue
 			if store.discovered_count() >= int(region.unlock_count) and int(state.currency) >= int(region.unlock_cost):
+				spent += int(region.unlock_cost)
 				state.currency = int(state.currency) - int(region.unlock_cost)
 				state.unlocked_regions.append(str(region.region_id))
 				_check(store.commit_state(state), "earned regional unlock commits: " + str(region.region_id))
-		if store.discovered_count() == 32: break
-	_check(store.discovered_count() == 32 and (store.state.unlocked_regions as Array).size() == 4 and int(store.state.gear) == 2, "zero-currency release-only route reaches all 32 species/regions/gear without resource cycle")
-	print("PASS GROUP zero-start release-only growth: ", catches, " real catches, discovered=", store.discovered_count(), ", balance=", store.state.currency)
+				unlock_history.append("%s discoveries=%d cost=%d" % [region.region_id, store.discovered_count(), region.unlock_cost])
+		_check(int(store.state.currency) == catches * 33 - spent and int(store.state.currency) >= 0, "growth never spends unearned currency or creates a negative balance")
+		if store.discovered_count() == EXPECTED_SPECIES: break
+	_check(store.discovered_count() == EXPECTED_SPECIES and (store.state.unlocked_regions as Array).size() == EXPECTED_REGIONS and int(store.state.gear) == 2, "zero-currency release-only route reaches all 44 species/six regions/gear without resource cycle")
+	_check(spent == 2650 and (store.state.owned_gear as Array).size() == 3, "full collection pays exact seven configured purchases totaling 2650")
+	var restart: Store = Store.new()
+	_check(restart.initialize(test_root.path_join("growth")) and _same_json(restart.state, store.state) and restart.discovered_count() == EXPECTED_SPECIES, "expanded collection, all unlocks and exact economy survive restart")
+	print("PASS GROUP zero-start release-only growth: ", catches, " real encounters, discovered=", store.discovered_count(), ", balance=", store.state.currency, "; purchases=", spent, "; unlocks=", unlock_history)
 
 func _test_main_integration() -> void:
 	var ui = Main.new()
@@ -471,7 +534,7 @@ func _test_main_integration() -> void:
 	ui._show_catalog()
 	ui._search = "不存在的鱼种查找"
 	ui._fill_catalog()
-	_check(ui._list.get_child_count() == 1 and ui._list.get_child(0) is Label, "catalog search presents an empty-result hint")
+	_check(_has_label_fragment(ui._list, "没有符合条件"), "catalog search presents an empty-result hint independent of visual layout")
 	ui._search = ""
 	ui._show_travel()
 	var old_spot: String = ui.spot_id
@@ -494,6 +557,7 @@ func _test_main_integration() -> void:
 	ui.spot_id = "norway_boat"
 	ui._equip(0)
 	_check(int(fixture.state.gear) >= int(catalog.spots[ui.spot_id].min_gear), "cannot downgrade below current spot gear requirement")
+	_test_main_expansion(ui, fixture)
 	ui.sound.suspend(false)
 	ui.sound.ambience.stop()
 	ui.sound.effect.stop()
@@ -505,9 +569,126 @@ func _test_main_integration() -> void:
 	await create_timer(0.10).timeout
 	print("PASS GROUP Main controls, navigation, background, escaped/result flows and failed selection writes")
 
+func _test_main_expansion(ui: Variant, original: FailingStore) -> void:
+	var candidate: Dictionary = original.state
+	candidate.currency = 1000
+	_check(original.commit_state(candidate), "UI discovery-gate fixture has sufficient travel money")
+	for region_id: String in ["bayou", "yangtze"]:
+		var before: Dictionary = original.state
+		ui._unlock_region(region_id)
+		_check(original.state == before, "Main rejects new region before discovery gate: " + region_id)
+	# Reuse actual earned collection data from the full production-session growth test.
+	var source: Store = Store.new()
+	_check(source.initialize(test_root.path_join("growth")) and source.discovered_count() == EXPECTED_SPECIES, "Main expansion fixture uses actual completed growth history")
+	var fixture: FailingStore = FailingStore.new()
+	var root_path: String = test_root.path_join("ui-expansion")
+	_check(fixture.initialize(root_path), "Main expansion store initializes")
+	candidate = source.state
+	candidate.save_revision = fixture.state.save_revision
+	candidate.unlocked_regions = ["lake", "japan", "norway", "med"]
+	candidate.selection = {"region_id":"norway", "spot_id":"norway_boat", "bait_id":"worm"}
+	_check(fixture.commit_state(candidate), "Main expansion fixture preserves actual earned statistics")
+	ui.store = fixture
+	ui.region_id = "norway"
+	ui.spot_id = "norway_boat"
+	ui.bait_id = "worm"
+	for region_id: String in ["bayou", "yangtze"]:
+		var cost: int = int(catalog.region(region_id).unlock_cost)
+		candidate = fixture.state
+		candidate.currency = cost - 1
+		_check(fixture.commit_state(candidate), "Main insufficient-currency fixture: " + region_id)
+		var before: Dictionary = fixture.state
+		ui._unlock_region(region_id)
+		_check(fixture.state == before, "Main rejects new region below exact currency gate: " + region_id)
+		candidate = fixture.state
+		candidate.currency = cost
+		_check(fixture.commit_state(candidate), "Main exact-price fixture: " + region_id)
+		before = fixture.state
+		fixture.fail_once = true
+		ui._unlock_region(region_id)
+		_check(fixture.state == before, "failed new-region unlock keeps currency and unlock list unchanged: " + region_id)
+		ui._unlock_region(region_id)
+		_check(region_id in fixture.state.unlocked_regions and int(fixture.state.currency) == 0, "new-region retry spends exact price once: " + region_id)
+		before = fixture.state
+		ui._unlock_region(region_id)
+		_check(fixture.state == before, "duplicate new-region unlock spends nothing: " + region_id)
+	ui._choose_spot("bayou", "bayou_backwater")
+	ui._equip(1)
+	ui._show_travel()
+	for spot_id: String in ["bayou_backwater", "bayou_channel", "yangtze_river", "yangtze_estuary"]:
+		var button: Button = _find_button_fragment(ui._overlay, str(catalog.spots[spot_id].name))
+		_check(button != null and button.disabled == (int(catalog.spots[spot_id].min_gear) > 1), "new-spot travel buttons obey current equipment gate: " + spot_id)
+	ui._equip(2)
+	ui._choose_spot("yangtze", "yangtze_estuary")
+	_check(ui.region_id == "yangtze" and ui.spot_id == "yangtze_estuary" and str(fixture.state.selection.spot_id) == "yangtze_estuary", "actual Main travels to unlocked expanded region and persists selection")
+	if not catalog.fish.has("chinese_sturgeon"): return
+	var fish: FishDefinition = catalog.fish["chinese_sturgeon"]
+	var record: Dictionary = Encounter.new(413).make_individual(fish, "yangtze_estuary", "yangtze", "shrimp", 2, "day", "clear")
+	ui.session.reset()
+	ui.session.press()
+	_check(ui.session.cast(record, catalog.gear[2]), "Main accepts production protected encounter")
+	fixture.begin_session(ui.session.session_id)
+	_check(_advance_to(ui.session, Session.State.BITE), "Main protected session reaches virtual observation")
+	_fight(ui.session)
+	_check(ui._screen == "result" and ui._save_ok and bool(ui._last_record.get("release_only", false)), "Main automatically settles and displays actual protected observation")
+	_check(_find_button_fragment(ui._overlay, "出售") == null and _has_label_fragment(ui._overlay, "保护观察"), "protected result offers conservation guidance and no sale button")
+	var before: Dictionary = fixture.state
+	ui._dispose_result("sold")
+	_check(fixture.state == before and ui._screen == "result", "direct Main protected sale bypass leaves saved result and balance intact")
+	fixture.fail_once = true
+	ui._dispose_result("released")
+	_check(fixture.state == before and ui._screen == "result", "Main protected release write failure preserves exact result and history")
+	var release: Button = _find_button_fragment(ui._overlay, "放归")
+	_check(release != null and not release.disabled, "protected result retains enabled release control for retry")
+	if release: release.pressed.emit()
+	_check(ui._screen == "" and ui.session.state == Session.State.IDLE and int(fixture.state.currency) == int(before.currency) + 8 and fixture.total_count() == source.total_count() + 1, "actual protected release control retries once and restores playable idle")
+	_check(_same_json(fixture.state.species_stats, before.species_stats), "Main protected release keeps all observation history unchanged")
+	# Restore a new actual protected observation from disk to exercise the pending page.
+	var session: FishingSession = _launch(record, 2)
+	fixture.begin_session(session.session_id)
+	_advance_to(session, Session.State.BITE)
+	_fight(session)
+	_check(bool(fixture.settle_catch(session.individual).get("ok", false)), "protected pending-page fixture comes from another completed production session")
+	var reload: FailingStore = FailingStore.new()
+	_check(reload.initialize(root_path), "pending protected observation reloads for actual Main")
+	ui.store = reload
+	ui._show_pending()
+	_check(_find_button_fragment(ui._overlay, "出售") == null and _has_label_fragment(ui._overlay, "保护观察"), "reloaded protected pending page has no sale control")
+	before = reload.state
+	var catch_id: String = str(session.individual.catch_id)
+	ui._dispose_pending(catch_id, "sold")
+	_check(reload.state == before and ui._screen == "pending", "direct protected pending sale bypass is rejected")
+	reload.fail_once = true
+	ui._dispose_pending(catch_id, "released")
+	_check(reload.state == before, "pending protected release failure keeps exact balance and observation")
+	release = _find_button_fragment(ui._overlay, "放归")
+	_check(release != null and not release.disabled, "reloaded protected pending page exposes release retry")
+	if release: release.pressed.emit()
+	_check((reload.state.pending_catches as Dictionary).is_empty() and int(reload.state.currency) == int(before.currency) + 8 and _same_json(reload.state.species_stats, before.species_stats), "pending release control rewards once without altering historical counts or records")
+	before = reload.state
+	ui._dispose_pending(catch_id, "released")
+	_check(reload.state == before, "duplicate pending release cannot replay its bonus")
+	print("PASS GROUP Main expanded discovery/currency/gear gates, failed unlock retry, protected result and reloaded pending controls")
+
 func _find_button(node: Node, label: String) -> Button:
 	if node is Button and node.text == label: return node
 	for child: Node in node.get_children():
 		var result: Button = _find_button(child,label)
 		if result != null: return result
 	return null
+
+func _find_button_fragment(node: Node, fragment: String) -> Button:
+	if node is Button and fragment in node.text: return node
+	for child: Node in node.get_children():
+		var result: Button = _find_button_fragment(child, fragment)
+		if result != null: return result
+	return null
+
+func _has_label_fragment(node: Node, fragment: String) -> bool:
+	if node is Label and fragment in node.text: return true
+	for child: Node in node.get_children():
+		if _has_label_fragment(child, fragment): return true
+	return false
+
+func _same_json(left: Variant, right: Variant) -> bool:
+	return JSON.parse_string(JSON.stringify(left, "", true, true)) == JSON.parse_string(JSON.stringify(right, "", true, true))
