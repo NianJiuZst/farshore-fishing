@@ -1,17 +1,22 @@
 extends SceneTree
-## Actual production 3D slice. No replica state machine, fake actor, or save mock.
+## Actual full-catalog production 3D integration. No readiness override,
+## replica state machine, fake actor or substitute species model.
 const MainScene = preload("res://scenes/main.tscn")
 const Main = preload("res://scripts/main.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Stage = preload("res://scripts/fishing_stage_3d.gd")
-const Trial = preload("res://scripts/trial_fishery.gd")
+const Registry = preload("res://scripts/fish_3d_registry.gd")
+const Encounter = preload("res://scripts/encounter.gd")
 var app: Control
 var checks: int = 0
 var failures: int = 0
 var test_root: String
 var cast_events: Array[int] = []
 var landing_events: Array[Dictionary] = []
+var visited_spots: Dictionary = {}
+var caught_species: Dictionary = {}
+var completed: bool = false
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -24,11 +29,11 @@ func _check(condition: bool, label: String) -> void:
 
 func _run() -> void:
 	var data: String = OS.get_environment("XDG_DATA_HOME")
-	if not data.begins_with("/tmp/farshore-slice3d-") or not OS.get_environment("HOME").begins_with("/tmp/farshore-slice3d-") or not OS.get_user_data_dir().begins_with(data + "/"):
+	if not data.begins_with("/tmp/farshore-") or not OS.get_environment("HOME").begins_with("/tmp/farshore-") or not OS.get_user_data_dir().begins_with(data + "/"):
 		printerr("SLICE3D_TESTS: refusing non-isolated HOME/XDG_DATA_HOME")
 		quit(2)
 		return
-	test_root = data.path_join("fixtures")
+	test_root = data.path_join("fixtures-%s-%s" % [OS.get_process_id(),Time.get_ticks_usec()])
 	root.size = Vector2i(720,1280)
 	app = MainScene.instantiate()
 	root.add_child(app)
@@ -39,6 +44,13 @@ func _run() -> void:
 	app.sound.suspend(true)
 	var fixture: SaveStore = Store.new()
 	_check(fixture.initialize(test_root), "isolated production SaveStore initializes")
+	# Equipment/travel fixture only: catches and progression are earned by the
+	# real generated sessions below, not fabricated collection records.
+	var setup: Dictionary = fixture.state
+	setup.gear = 4
+	setup.owned_gear = [0,1,2,3,4]
+	setup.unlocked_regions = ["lake","japan","norway","med","bayou","yangtze"]
+	_check(fixture.commit_state(setup), "explicit full-world equipment/travel fixture has zero fabricated catches")
 	app.store = fixture
 	app.encounter.rng.seed = 20261002
 	app.session._rng.seed = 2468
@@ -46,21 +58,38 @@ func _run() -> void:
 	app.scenery.landing_finished.connect(func(record: Dictionary) -> void: landing_events.append(record.duplicate(true)))
 	await _layout()
 	_test_configuration()
-	_test_world_and_rigs()
+	if not app._models_complete or not app._content_ok:
+		print("SLICE3D_SCOPE: full44 gameplay NOT RUN; actual asset/content dependency failed, no readiness override")
+		await _finish()
+		return
+	await _test_world_and_rigs()
 	_test_weather_presentation()
 	await _test_lobby_and_prepare()
 	_test_input_cancel()
-	await _test_species_flow("common_carp", true)
-	await _test_species_flow("alligator_gar", false)
+	for species: String in app.catalog.fish:
+		await _test_species_flow(species, species in ["common_carp","chinese_sturgeon"])
+	for spot: String in app.catalog.spots:
+		if visited_spots.has(spot): continue
+		var recipe: Dictionary = _find_recipe("",spot)
+		_check(not recipe.is_empty(),"each original spot has a reproducible ordinary encounter: " + spot)
+		if not recipe.is_empty(): await _test_species_flow(str(recipe.species),false,recipe)
+	_check(caught_species.size() == 44 and app.store.discovered_count() == 44,"all44 species caught through ordinary Main Encounter and real Session flow")
+	_check(visited_spots.size() == 12,"all twelve spots across six regions finish an actual cast/fight/landing/disposition")
+	await _test_species_flow("alligator_gar",false,{},true)
 	_test_restart_pending()
 	_test_extreme_landing_framing()
+	completed = true
+	await _finish()
+
+func _finish() -> void:
 	app.sound.suspend(true)
 	app.sound.ambience.stream = null
 	app.sound.effect.stream = null
 	app.queue_free()
 	await process_frame
 	await process_frame
-	print("SLICE3D_TESTS: ", checks-failures, "/", checks, " passed; failures=", failures, "; cast events=", cast_events.size(), "; landing events=", landing_events.size())
+	_check(completed,"full44 integration reached its explicit completion marker")
+	print("SLICE3D_TESTS: ", checks-failures, "/", checks, " passed; failures=", failures, "; cast events=", cast_events.size(), "; landing events=", landing_events.size(), "; species=",caught_species.size(),"; spots=",visited_spots.size())
 	quit(0 if failures == 0 else 1)
 
 func _layout() -> void:
@@ -93,8 +122,11 @@ func _find_all(node: Node, class_name_value: String, values: Array[Node]) -> voi
 func _test_configuration() -> void:
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method")) == "mobile", "native Mobile rendering is the production default")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method.mobile")) == "mobile", "Android retains Mobile rendering without a compatibility downgrade")
-	_check(app._content_ok and app.catalog.fish.size() == 44 and app.catalog.spots.size() == 12, "all legacy catalog data survives the two-fish slice")
-	_check(Trial.PLAYABLE_SPECIES == ["common_carp","alligator_gar"], "exactly the two authorized species are playable in this slice")
+	_check(app.catalog.fish.size() == 44 and app.catalog.regions.size() == 6 and app.catalog.spots.size() == 12, "complete original44 species, six regions and twelve spots")
+	_check(app.catalog.gear.size() == 5 and app.catalog.baits.size() == 8,"five rods and eight baits remain available")
+	var errors: Array[String] = Registry.validate_catalog(app.catalog,true)
+	_check(errors.is_empty() and app._models_complete and app._content_ok,"full44 imported resources and real content gate ready: " + str(errors))
+	_check(not bool(ProjectSettings.get_setting("rendering/rendering_device/fallback_to_opengl3",true)),"production cannot silently downgrade Vulkan to OpenGL")
 
 func _test_world_and_rigs() -> void:
 	_check(app.scenery is Node3D and app.scenery.camera is Camera3D and app.scenery.camera.current, "production scene has an active real 3D world camera")
@@ -111,7 +143,7 @@ func _test_world_and_rigs() -> void:
 	var cast: Animation = _clip(app.scenery._animator,"cast")
 	_check(cast != null and is_equal_approx(cast.length,Stage.CAST_DURATION), "cast presentation duration matches the loaded character clip")
 	_check(Stage.RELEASE_TIME > 0 and Stage.RELEASE_TIME < Stage.CAST_DURATION, "release event occurs inside the authored cast clip")
-	for species: String in Trial.PLAYABLE_SPECIES:
+	for species: String in Registry.species_ids():
 		app.scenery._ensure_fish({"species_id":species,"length_mm":850})
 		_audit_rig(app.scenery._fish,species,["swim","struggle","breach","landed"],6)
 		_check(app.scenery._fish_id == species, "live fish switches to the actual species mesh: " + species)
@@ -119,6 +151,7 @@ func _test_world_and_rigs() -> void:
 		var short_scale: Vector3 = app.scenery._fish.scale
 		app.scenery._ensure_fish({"species_id":species,"length_mm":1200})
 		_check(app.scenery._fish.scale.x > short_scale.x and is_equal_approx(short_scale.x,0.5) and is_equal_approx(app.scenery._fish.scale.x,1.2), species + " actual mesh scale follows the production millimeter measurement")
+		await process_frame
 	app.scenery._fish_root.visible = false
 
 func _clip(player: AnimationPlayer, suffix: String) -> Animation:
@@ -203,14 +236,13 @@ func _test_lobby_and_prepare() -> void:
 	if start: start.pressed.emit()
 	await _layout()
 	_check(app._screen == "prepare" and app._mode == "lobby", "start opens preparation before any cast")
-	app._set_trial_target("alligator_gar")
-	_check(app._trial_target == "alligator_gar" and app.store.state.selection == selection, "trial target is ephemeral and preserves the saved legacy selection")
+	_check(app.store.state.selection == selection,"preparation preserves the actual saved original-world selection")
 	var enter: Button = _find_button(app._overlay,"进入钓点")
 	_check(enter != null and not enter.disabled, "preparation exposes the actual enter-fishery action")
 	if enter: enter.pressed.emit()
 	await _layout()
 	_check(app._mode == "fishing" and app._overlay == null and app.session.state == Session.State.IDLE and app._action.is_visible_in_tree(), "entering fishery makes the ready-to-cast HUD visible")
-	_check(app.store.state.selection == selection, "entering the managed river does not overwrite legacy region or spot")
+	_check(app.store.state.selection == selection, "entering the selected full-world fishery does not overwrite saved region or spot")
 
 func _test_input_cancel() -> void:
 	app._action_down()
@@ -220,20 +252,69 @@ func _test_input_cancel() -> void:
 	app._action_up()
 	_check(app.session.state == Session.State.IDLE and not app.scenery.cast_in_progress and app.session.individual.is_empty(), "cancelled hold cannot release into an unintended cast")
 
-func _test_species_flow(species: String, interruptions: bool) -> void:
+func _find_recipe(species: String, required_spot: String = "") -> Dictionary:
+	var spots: Array[String] = []
+	if not required_spot.is_empty(): spots.append(required_spot)
+	elif app.catalog.fish.has(species):
+		# Prefer an unvisited original spot to cover the world as well as species.
+		for sid: String in app.catalog.fish[species].spots():
+			if not visited_spots.has(sid): spots.append(sid)
+		for sid: String in app.catalog.fish[species].spots():
+			if sid not in spots: spots.append(sid)
+	var probe: EncounterGenerator = Encounter.new(1)
+	for sid: String in spots:
+		var spot: Dictionary = app.catalog.spots[sid]
+		# Higher ID does not imply greater depth: the heavy rod reaches90m while
+		# the original deep rod reaches180m, which Atlantic wolffish requires.
+		for gear_id: int in [4,2,1,3,0]:
+			var gear: Dictionary = app.catalog.gear[gear_id]
+			if gear_id < int(spot.min_gear) or float(gear.max_depth_m) < float(spot.depth_min_m): continue
+			var charge: float = minf(0.55,float(gear.reach))
+			if app.catalog.fish.has(species):
+				var fish: FishDefinition = app.catalog.fish[species]
+				var minimum: float = float(fish.raw.get("min_cast",0.0))
+				var maximum: float = minf(float(fish.raw.get("max_cast",1.0)),float(gear.reach))
+				if minimum > maximum: continue
+				charge = (minimum + maximum) * 0.5
+			for bait: Dictionary in app.catalog.baits:
+				var possible: bool = species.is_empty()
+				for candidate: Dictionary in probe.candidates(app.catalog,sid,str(bait.bait_id),gear_id,charge,"day","clear"):
+					if str(candidate.fish.species_id) == species: possible = true
+				if not possible: continue
+				for seed_value: int in range(1,10001):
+					var sample: Dictionary = Encounter.new(seed_value).generate(app.catalog,sid,str(bait.bait_id),gear_id,charge,"day","clear")
+					if sample.is_empty(): continue
+					if not species.is_empty() and str(sample.species_id) != species: continue
+					if float(sample.size_fraction) < 0.18 or float(sample.size_fraction) > 0.55: continue
+					return {"species":str(sample.species_id),"region":str(sample.region_id),"spot":sid,"bait":str(bait.bait_id),"gear":gear_id,"charge":charge,"seed":seed_value}
+	return {}
+
+func _test_species_flow(species: String, interruptions: bool, requested_recipe: Dictionary = {}, keep_pending: bool = false) -> void:
+	var recipe: Dictionary = requested_recipe if not requested_recipe.is_empty() else _find_recipe(species)
+	_check(not recipe.is_empty(),species + " has a legal reproducible ordinary Encounter recipe")
+	if recipe.is_empty(): return
 	app._show_prepare()
-	app._set_trial_target(species)
+	app._set_bait(str(recipe.bait))
+	app._equip(int(recipe.gear))
+	app._choose_spot(str(recipe.region),str(recipe.spot))
 	app._enter_fishery()
+	app.game_clock = 0.0
+	app._update_conditions()
+	app.encounter = Encounter.new(int(recipe.seed))
+	_check(app._mode == "fishing" and app._overlay == null and app.scenery.region_id == str(recipe.region) and app.scenery.spot_id == str(recipe.spot),species + " enters its actual3D biome and original eligible spot")
 	var selection: Dictionary = app.store.state.selection.duplicate(true)
 	var before_count: int = app.store.total_count()
 	var before_cast_events: int = cast_events.size()
 	var before_land_events: int = landing_events.size()
 	var camera_before: Transform3D = app.scenery.camera.global_transform
 	app._action_down()
-	_tick(0.8)
+	_tick(float(recipe.charge) / 0.48)
 	app._action_up()
 	_check(app.session.state == Session.State.CASTING and app.scenery.cast_in_progress, species + " actual action release starts character cast presentation")
-	_check(str(app.session.individual.species_id) == species and str(app.session.individual.region_id) == Trial.REGION_ID, species + " is reachable through actual production trial generation")
+	_check(str(app.session.individual.get("species_id","")) == species and str(app.session.individual.get("region_id","")) == str(recipe.region) and str(app.session.individual.get("spot_id","")) == str(recipe.spot), species + " is reached through ordinary full-world Main generation")
+	if app.session.state != Session.State.CASTING or str(app.session.individual.get("species_id","")) != species: return
+	_check(app.spot_id in app.catalog.fish[species].spots(),species + " generated result obeys original species location eligibility")
+	print("FULL44_RECIPE ",species," ",JSON.stringify(recipe))
 	var identity: String = app.session.session_id
 	var individual: Dictionary = app.session.individual.duplicate(true)
 	_tick(0.65)
@@ -266,6 +347,7 @@ func _test_species_flow(species: String, interruptions: bool) -> void:
 	_check(app.session.state == Session.State.CAUGHT and app._landing_pending and app._save_ok, species + " balanced production fight catches and begins landing")
 	_check(app._screen != "result" and app.store.total_count() == before_count+1, species + " save is immediate while results wait for the 3D landing")
 	var record: Dictionary = app._last_record.duplicate(true)
+	if record.is_empty(): return
 	var catch_id: String = str(record.get("catch_id",""))
 	_check(app.store.state.pending_catches.has(catch_id), species + " catch is durable before presentation completion")
 	var fresh: SaveStore = Store.new()
@@ -293,10 +375,20 @@ func _test_species_flow(species: String, interruptions: bool) -> void:
 	_check(not app._landing_pending and app._screen == "result" and app.store.total_count() == count_snapshot, species + " repeated already-presented completion cannot re-arm a stuck landing")
 	for repeat: int in 3: app._handle_back()
 	_check(app._screen == "result" and app._last_record == record and app.store.state.pending_catches.has(catch_id), species + " repeated result Back preserves the exact pending catch")
-	if species == "common_carp":
-		app._dispose_result("released")
-		_check(app.session.state == Session.State.IDLE and app._last_record.is_empty() and app.store.total_count() == count_snapshot, "real result disposition returns to fishing without losing history")
-	_check(app.store.state.selection == selection, species + " fishing and presentation preserve archived location selection")
+	if species == "chinese_sturgeon":
+		var before_sale: Dictionary = app.store.state
+		app._dispose_result("sold")
+		_check(app.store.state == before_sale and app._screen == "result", "protected observation refuses a direct sale callback")
+	if not keep_pending:
+		var disposition: String = "released" if bool(record.get("release_only",false)) or caught_species.size() % 2 == 0 else "sold"
+		app._dispose_result(disposition)
+		_check(app.session.state == Session.State.IDLE and app._last_record.is_empty() and app.store.total_count() == count_snapshot, species + " actual disposition returns to fishing without losing history")
+		var after: Dictionary = app.store.state
+		app._dispose_result(disposition)
+		_check(app.store.state == after,species + " duplicate disposition cannot replay money or history")
+		visited_spots[str(recipe.spot)] = true
+	caught_species[species] = true
+	_check(app.store.state.selection == selection, species + " fishing and presentation preserve actual saved location selection")
 
 func _interrupt_presentation(label: String) -> void:
 	var before_time: float = app.scenery._cast_time if label == "cast" else app.scenery._landing_time
@@ -346,7 +438,12 @@ func _check_landing_framing(species: String) -> void:
 
 func _test_extreme_landing_framing() -> void:
 	var saved: Dictionary = app.store.state.duplicate(true)
-	for row: Array in [["common_carp",180],["common_carp",900],["alligator_gar",650],["alligator_gar",2400]]:
+	var extremes: Array[Array] = []
+	for id: String in app.catalog.fish:
+		var fish: FishDefinition = app.catalog.fish[id]
+		extremes.append([id,fish.min_mm])
+		extremes.append([id,fish.max_mm])
+	for row: Array in extremes:
 		var species: String = str(row[0])
 		var length_mm: int = int(row[1])
 		app.scenery.cancel_landing()
