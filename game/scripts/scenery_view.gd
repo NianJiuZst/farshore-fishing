@@ -8,6 +8,7 @@ var angler: Texture2D = preload("res://assets/ui/expedition_angler.png")
 var rowboat: Texture2D = preload("res://assets/ui/expedition_rowboat.png")
 var art: Texture2D
 var front_art: Texture2D
+var shore_support: Texture2D
 var session: FishingSession
 var clock_time: float = 0.0
 var tint: Color = Color("4f8588")
@@ -34,6 +35,9 @@ func set_region(region: Dictionary, spot: Dictionary) -> void:
 	art = load(path) as Texture2D if ResourceLoader.exists(path) else null
 	var foreground_path: String = "res://assets/scenery/"+region_id+"_foreground.png"
 	front_art = load(foreground_path) as Texture2D if ResourceLoader.exists(foreground_path) and not bool(spot.get("hide_region_foreground",false)) else null
+	shore_support=front_art
+	if region_id=="bayou":shore_support=load("res://assets/scenery/lake_foreground.png")
+	elif shore_support==null:shore_support=load("res://assets/scenery/japan_foreground.png")
 	queue_redraw()
 
 func _process(delta: float) -> void:
@@ -113,11 +117,9 @@ func _draw_angler(w: float,h: float) -> void:
 	if foreground=="boat":
 		draw_texture_rect(rowboat,Rect2(-w*0.04,h*0.70+sin(clock_time*1.4)*1.8,w*0.94,w*0.627),false)
 	else:
-		var support: Texture2D=front_art if front_art!=null else load("res://assets/scenery/japan_foreground.png")
-		if region_id=="bayou":support=load("res://assets/scenery/lake_foreground.png")
 		# Reuse original painted stones/wood as grounded shore support. No flat polygon deck.
 		var y: float=0.33 if region_id in ["lake","bayou"] else (0.285 if region_id in ["japan","yangtze"] else 0.31)
-		draw_texture_rect_region(support,Rect2(0,h*y,w*1.25,h*0.65),Rect2(0,0,support.get_width()*0.5,support.get_height()))
+		_draw_painted_support(Rect2(0,h*y,w*1.25,h*0.65))
 	# Soft contact shadows sit directly below boot, stool feet and bag.
 	for contact: Vector2 in [Vector2(w*0.235,h*0.782),Vector2(w*0.485,h*0.798),Vector2(w*0.605,h*0.799)]:
 		for ring: int in range(4,0,-1):
@@ -135,3 +137,17 @@ func _draw_angler(w: float,h: float) -> void:
 	draw_polyline(points,Color("274844"),6,true)
 	draw_polyline(points,Color("d4b477"),2,true)
 	draw_texture_rect(angler,Rect2(w*0.12,h*0.49+sway,w*0.54,w*0.568),false)
+
+func _draw_painted_support(destination: Rect2) -> void:
+	if shore_support==null:return
+	var source: Rect2=Rect2(0,0,shore_support.get_width()*0.5,shore_support.get_height())
+	# Feather only the lowest edge into the already painted landscape. The contact
+	# surface remains fully opaque and the resource stays owned for the whole frame.
+	var opaque: float=0.88
+	draw_texture_rect_region(shore_support,Rect2(destination.position,Vector2(destination.size.x,destination.size.y*opaque)),Rect2(source.position,Vector2(source.size.x,source.size.y*opaque)))
+	for i: int in range(24):
+		var start: float=opaque+(1.0-opaque)*i/24.0
+		var fraction: float=(1.0-opaque)/24.0
+		var target: Rect2=Rect2(destination.position+Vector2(0,destination.size.y*start),Vector2(destination.size.x,destination.size.y*fraction))
+		var sample: Rect2=Rect2(0,source.size.y*start,source.size.x,source.size.y*fraction)
+		draw_texture_rect_region(shore_support,target,sample,Color(1,1,1,1.0-i/24.0))

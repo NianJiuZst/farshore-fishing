@@ -4,7 +4,7 @@ config/name="远岸钓记"
 config/version="1.1.0"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://assets/icon.svg"
+config/icon="res://assets/ui/icons/badge.png"
 config/description="离线的手绘钓鱼旅行与自然图鉴"
 [display]
 window/size/viewport_width=720
