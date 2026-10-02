@@ -7,6 +7,13 @@ const SPOT_ID: String = "river_trial_dock"
 const NAME: String = "河湾试钓场"
 const SPOT_NAME: String = "木栈桥"
 const PLAYABLE_SPECIES: Array[String] = ["common_carp", "alligator_gar"]
+# Deliberate game-balance weights, not measured feeding probabilities. Existing
+# bait IDs retain their legacy values; the four additions are tuned for this
+# explicitly managed two-species acceptance site only.
+const EXTRA_BAIT_WEIGHTS: Dictionary = {
+	"common_carp": {"sweetcorn": 2.4, "dough": 2.1, "cut_fish": 0.06, "spinner": 0.09},
+	"alligator_gar": {"sweetcorn": 0.05, "dough": 0.06, "cut_fish": 2.6, "spinner": 2.05}
+}
 const DESCRIPTION: String = "虚构的管理型试钓水域 · 本版体验鲤鱼与鳄雀鳝的3D钓鱼流程"
 
 static func region() -> Dictionary:
@@ -34,7 +41,7 @@ static func generate(catalog: ContentCatalog, encounter: EncounterGenerator, bai
 		# Trial targets intentionally bypass the old travel/gear unlock gates. Mixed
 		# mode still uses the existing bait and weather preferences. No raw species
 		# distribution data is edited to manufacture a natural shared habitat.
-		var weight: float = maxf(0.05, species.weight_for("bait_weights", bait_id)) * species.weight_for("time_weights", time_of_day) * species.weight_for("weather_weights", weather)
+		var weight: float = maxf(0.05, bait_weight(species, bait_id)) * species.weight_for("time_weights", time_of_day) * species.weight_for("weather_weights", weather)
 		choices.append({"species": species, "weight": weight})
 		total += weight
 	if choices.is_empty() or total <= 0.0: return {}
@@ -52,6 +59,11 @@ static func generate(catalog: ContentCatalog, encounter: EncounterGenerator, bai
 	# not a biological claim that a real fish always behaves this way.
 	if selected.species_id == "alligator_gar": record["behavior"] = "burst"
 	return record
+
+static func bait_weight(species: FishDefinition, bait_id: String) -> float:
+	var additions: Dictionary = EXTRA_BAIT_WEIGHTS.get(species.species_id, {})
+	if additions.has(bait_id): return float(additions[bait_id])
+	return species.weight_for("bait_weights", bait_id)
 
 static func record_location(record: Dictionary, catalog: ContentCatalog) -> String:
 	var rid: String = str(record.get("region_id", ""))

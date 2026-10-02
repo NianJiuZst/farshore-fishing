@@ -24,8 +24,9 @@ func _run() -> void:
 	for id: String in catalog.fish: original_species[id] = JSON.stringify(catalog.fish[id].raw)
 	var seen: Dictionary = {}
 	for target: String in ["mixed", "common_carp", "alligator_gar"]:
-		for bait: String in ["worm", "grain", "shrimp", "lure"]:
-			for gear: int in range(3):
+		for bait_definition: Dictionary in catalog.baits:
+			var bait: String = str(bait_definition.bait_id)
+			for gear: int in range(catalog.gear.size()):
 				for sample: int in range(50):
 					var record: Dictionary = Trial.generate(catalog, encounter, bait, gear, 0.5, "day", "clear", target)
 					_check(not record.is_empty(), "both fish available with starter and later gear")
@@ -35,9 +36,25 @@ func _run() -> void:
 					var fish: FishDefinition = catalog.fish[record.species_id]
 					_check(record.length_mm >= fish.min_mm and record.length_mm <= fish.max_mm and record.weight_g > 0, "real specimen range retained")
 					seen[record.species_id] = true
+	_check(catalog.gear.size() == 5 and catalog.baits.size() == 8, "five rods and eight baits present")
+	for species_id: String in Trial.PLAYABLE_SPECIES:
+		for original_bait: String in ["worm", "grain", "shrimp", "lure"]:
+			_check(is_equal_approx(Trial.bait_weight(catalog.fish[species_id], original_bait), catalog.fish[species_id].weight_for("bait_weights", original_bait)), "original bait balance unchanged")
+	var rates: Dictionary = {}
+	for extra_bait: String in ["sweetcorn", "dough", "cut_fish", "spinner"]:
+		var carp_count: int = 0
+		for sample: int in range(2000):
+			var sampled: Dictionary = Trial.generate(catalog, encounter, extra_bait, 0, 0.5, "day", "clear")
+			_check(not sampled.is_empty(), "new bait creates valid encounter")
+			if str(sampled.get("species_id", "")) == "common_carp": carp_count += 1
+		rates[extra_bait] = float(carp_count) / 2000.0
+	_check(float(rates.sweetcorn) > 0.93 and float(rates.dough) > 0.90, "corn and dough meaningfully favor carp")
+	_check(float(rates.cut_fish) < 0.08 and float(rates.spinner) < 0.12, "cut bait and spinner meaningfully favor gar")
+	print("TRIAL BAIT carp rates (fixed seed, 2000 each): ", rates)
 	_check(seen.size() == 2, "both trial species sampled")
 	_check(Trial.generate(catalog, encounter, "worm", 0, 0.5, "day", "clear", "chinese_sturgeon").is_empty(), "non-trial target rejected")
 	_check(Trial.generate(catalog, encounter, "unknown", 0, 0.5, "day", "clear").is_empty(), "invalid bait rejected")
+	_check(Trial.generate(catalog, encounter, "worm", catalog.gear.size(), 0.5, "day", "clear").is_empty(), "out-of-range new gear rejected")
 	_check(Trial.generate(catalog, encounter, "worm", -1, 0.5, "day", "clear").is_empty(), "invalid gear rejected")
 	_check(JSON.stringify({"regions": catalog.regions, "spots": catalog.spots, "gear": catalog.gear}) == original_world, "legacy world unchanged")
 	for id: String in catalog.fish: _check(JSON.stringify(catalog.fish[id].raw) == original_species[id], "legacy species unchanged " + id)
@@ -63,6 +80,16 @@ func _run() -> void:
 	_check(restored.initialize(directory), "reload actual disk")
 	_check(restored.total_count() == 3 and restored.discovered_count() == 3, "all records retained after restart")
 	_check(restored.state.selection == selection, "legacy selection survives restart")
+	var expanded_profile: Dictionary = restored.state.duplicate(true)
+	expanded_profile.owned_gear = [0, 3, 4]
+	expanded_profile.gear = 4
+	expanded_profile.selection.bait_id = "cut_fish"
+	_check(restored.commit_state(expanded_profile), "new gear and bait persist through the existing transaction writer")
+	var expanded_reload: SaveStore = Store.new()
+	_check(expanded_reload.initialize(directory), "expanded profile reloads from real disk")
+	_check(expanded_reload.state.gear == 4 and expanded_reload.state.owned_gear == [0, 3, 4], "new owned gear IDs survive reload")
+	_check(expanded_reload.state.selection.bait_id == "cut_fish", "new bait ID survives reload")
+	_check(expanded_reload.total_count() == 3 and expanded_reload.discovered_count() == 3, "expanded loadout never wipes old protected or trial records")
 	_check(Trial.record_location(records[1], catalog) == "河湾试钓场 / 木栈桥", "trial record gets explicit managed label")
 	_check("江海观察站" in Trial.record_location(old, catalog), "old record label remains resolvable")
 	print("TRIAL_FISHERY_TESTS: ", checks - failures, "/", checks, " passed; failures=", failures)
