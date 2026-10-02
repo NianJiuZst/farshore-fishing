@@ -8,7 +8,7 @@ var scroll: ScrollContainer
 var first: Button
 func _initialize() -> void: call_deferred("_run")
 func _run() -> void:
-	root.size = Vector2i(720,1280)
+	root.size = Vector2i(720,1584) if "--tall" in OS.get_cmdline_user_args() else Vector2i(720,1280)
 	var host: Control = Control.new()
 	host.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	root.add_child(host)
@@ -146,6 +146,7 @@ func _test_main_pages() -> void:
 	app.set_process(false)
 	app.sound.suspend(true)
 	await _layout_frames()
+	print("LAYOUT_SCOPE: physical=",root.size," logical=",root.get_visible_rect().size," aspect=",ProjectSettings.get_setting("display/window/stretch/aspect","keep"),"; representative desktop layout only")
 	_check(app._screen == "home" and app._mode == "lobby", "production default screen is lobby")
 	_check(not app._action.is_visible_in_tree(), "lobby has no visible cast button")
 	_check(app.scenery is Node3D and app.scenery.camera is Camera3D, "production background is actual Node3D and Camera3D")
@@ -168,7 +169,12 @@ func _test_main_pages() -> void:
 		if page_scroll == null: continue
 		var range_max: float = page_scroll.get_v_scroll_bar().max_value-page_scroll.get_v_scroll_bar().page
 		if range_max <= 0:
-			_check(false,method + " fixture overflows for real drag test")
+			# A genuinely taller logical viewport may fit Settings in full. Keep
+			# the baseline overflow requirement, but validate visible reachability
+			# rather than inventing scrolling when a tall page has no overflow.
+			_check("--tall" in OS.get_cmdline_user_args() and root.get_visible_rect().size.y>1280,method + " only skips drag when a genuinely taller logical page fits")
+			var final_button: Button = _last_button(app._page)
+			_check(final_button!=null and page_scroll.get_global_rect().encloses(final_button.get_global_rect()),method + " nonoverflowing tall page exposes its final real action")
 			continue
 		var start: Vector2 = page_scroll.get_global_rect().get_center() + Vector2(0,200)
 		_touch(start,true)

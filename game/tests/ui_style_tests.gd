@@ -18,6 +18,7 @@ var routes: Array[String] = []
 var test_root: String
 var idle_action_rect: Rect2
 var rendered_icon_kinds: Dictionary = {}
+var logical_viewport_size: Vector2 = Vector2(720,1280)
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -32,7 +33,7 @@ func _run() -> void:
 		return
 	test_root = isolated_data.path_join("fixtures-%s-%s" % [OS.get_process_id(),Time.get_ticks_usec()])
 	_test_raster_assets()
-	root.size = Vector2i(720, 1280)
+	root.size = Vector2i(720,1584) if "--tall" in OS.get_cmdline_user_args() else Vector2i(720,1280)
 	app = MainScene.instantiate()
 	root.add_child(app)
 	app.set_process(false)
@@ -50,7 +51,11 @@ func _run() -> void:
 		quit(1)
 		return
 	_check(not app.store.read_only, "isolated startup save is writable")
-	_check(app.size.is_equal_approx(Vector2(720, 1280)), "actual Main layout uses the 720x1280 design viewport")
+	logical_viewport_size = root.get_visible_rect().size
+	var expected_height: float = 1584.0 if "--tall" in OS.get_cmdline_user_args() and str(ProjectSettings.get_setting("display/window/stretch/aspect","keep"))=="expand" else 1280.0
+	_check(app.size.is_equal_approx(Vector2(720,expected_height)), "actual Main logical viewport follows the production stretch policy")
+	_check(app._safe.get_theme_constant("margin_top")>=22 and app._safe.get_theme_constant("margin_bottom")>=20 and app._safe.get_theme_constant("margin_left")>=20 and app._safe.get_theme_constant("margin_right")>=20,"native desktop fallback safe margins are retained")
+	print("LAYOUT_SCOPE: physical=",root.size," logical=",logical_viewport_size," aspect=",ProjectSettings.get_setting("display/window/stretch/aspect","keep"),"; representative desktop layout, not Android safe-area or hardware certification")
 	var fixture: SaveStore = Store.new()
 	_check(fixture.initialize(test_root), "production SaveStore fixture initializes")
 	app.store = fixture
@@ -70,9 +75,10 @@ func _run() -> void:
 		if action != null:
 			_check(action.get("icon_kind") == pair[1], "main action has the correct icon: " + str(pair[0]))
 	idle_action_rect = app._action.get_global_rect()
-	_check(idle_action_rect.position.x >= 450 and idle_action_rect.end.x <= 720 and idle_action_rect.end.y >= 1240 and idle_action_rect.end.y <= 1280, "main action occupies the safe bottom-right edge")
+	_check(idle_action_rect.position.x >= 450 and idle_action_rect.end.x <= logical_viewport_size.x and idle_action_rect.end.y >= logical_viewport_size.y-40 and idle_action_rect.end.y <= logical_viewport_size.y, "main action occupies the safe bottom-right edge")
 	_check(app._nav_rail.get_global_rect().position.x >= 570, "secondary navigation occupies the right screen edge")
 	_check(app._place.get_global_rect().end.y < 160 and app._condition.get_global_rect().end.y < 210, "essential location/weather HUD stays compact at top")
+	await _test_synthetic_insets()
 	await _test_selected_bait_and_weather()
 	await _test_retained_3d_scenery()
 	# Starter saves expose disabled unlock/equipment controls and empty collections.
@@ -128,7 +134,7 @@ func _run() -> void:
 	await process_frame
 	print("UI_BITMAP_BINDINGS: ", rendered_icon_kinds.keys())
 	print("UI_STYLE_ROUTES: ", ", ".join(routes))
-	print("UI_STYLE_TESTS: ", checks - failures, "/", checks, " passed; failures=", failures, "; button visits=", buttons_checked, "; logical viewport=720x1280")
+	print("UI_STYLE_TESTS: ", checks - failures, "/", checks, " passed; failures=", failures, "; button visits=", buttons_checked, "; physical viewport=",root.size,"; logical viewport=",logical_viewport_size)
 	quit(0 if failures == 0 else 1)
 
 func _check(condition: bool, label: String) -> void:
@@ -330,7 +336,7 @@ func _audit_catch(species_id: String) -> void:
 	_check(release != null and not release.disabled, species_id + " actual result release is available")
 	if release != null:
 		var rect: Rect2 = release.get_global_rect()
-		_check(rect.position.y >= 0 and rect.end.y <= 1280 and rect.position.x >= 0 and rect.end.x <= 720, species_id + " actual release control remains inside viewport")
+		_check(rect.position.y >= 0 and rect.end.y <= logical_viewport_size.y and rect.position.x >= 0 and rect.end.x <= logical_viewport_size.x, species_id + " actual release control remains inside viewport")
 		release.pressed.emit()
 	await _settle_layout()
 	_check(app._overlay == null and app._last_record.is_empty(), species_id + " real release clears result")
@@ -382,6 +388,24 @@ func _test_raster_assets() -> void:
 func _check_action_position(state_name: String, expected_icon: String) -> void:
 	_check(app._action.get_global_rect().is_equal_approx(idle_action_rect), state_name + ": primary action does not move between fishing states")
 	_check(app._action.icon_kind == expected_icon, state_name + ": primary action uses correct actual bitmap")
+
+func _test_synthetic_insets() -> void:
+	# Exercise layout under representative large cutouts without pretending that
+	# desktop DisplayServer returned a real Android phone's safe-area values.
+	app._safe.add_theme_constant_override("margin_top",104)
+	app._safe.add_theme_constant_override("margin_bottom",80)
+	await _settle_layout()
+	_check(app._place.get_global_rect().position.y>=104,"synthetic top inset keeps live location HUD below cutout")
+	_check(app._action.get_global_rect().end.y<=logical_viewport_size.y-80,"synthetic bottom inset keeps primary action above gesture area")
+	app._show_settings()
+	await _audit("synthetic_insets/settings",app._overlay)
+	var margin: MarginContainer = app._overlay.get_node("OverlayMargin") as MarginContainer
+	_check(margin.get_theme_constant("margin_top")>=104 and margin.get_theme_constant("margin_bottom")>=80,"overlay inherits the same synthetic safe insets")
+	app._close_page()
+	app._safe_area()
+	await _settle_layout()
+	_check(app._action.get_global_rect().is_equal_approx(idle_action_rect),"restoring native margins restores exact primary-action placement")
+	print("SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing")
 
 func _test_selected_bait_and_weather() -> void:
 	for bait: Dictionary in app.catalog.baits:

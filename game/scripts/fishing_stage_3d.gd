@@ -19,6 +19,7 @@ const ANGLER_POS := Vector3(-0.92, 0.584, 0.77)
 const CAST_DURATION: float = 2.20
 const RELEASE_TIME: float = 1.20
 const LANDING_DURATION: float = 3.35
+const REFERENCE_CAMERA_ASPECT: float = 720.0 / 1280.0
 const FishModels = preload("res://scripts/fish_3d_registry.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const GEAR_VISUALS: Array[Dictionary] = [
@@ -117,6 +118,7 @@ var _spray_pool: Array[Dictionary] = []
 var _last_ripple: float = -9.0
 var _impact_index: int = 0
 var _camera_target: Vector3 = Vector3(-1.5, 1.05, -1.7)
+var _camera_base_vertical_fov: float = 54.0
 var _last_anim: String = ""
 var _last_loop: bool = true
 var _cast_finished_emitted: bool = false
@@ -661,10 +663,17 @@ func _update_camera(delta: float) -> void:
 	var blend: float = 1.0 - exp(-delta * (2.3 if presentation_state in ["landing", "bite"] else 1.5))
 	camera.position = camera.position.lerp(position_goal, blend)
 	_camera_target = _camera_target.lerp(target_goal, blend)
-	camera.fov = lerpf(camera.fov, fov_goal, blend)
+	# Blend the authored16:9 vertical angle exactly as before, then express it
+	# as horizontal coverage. KEEP_WIDTH preserves this view on taller screens
+	# and reveals extra vertical space instead of cropping large fish sideways.
+	_camera_base_vertical_fov = lerpf(_camera_base_vertical_fov, fov_goal, blend)
+	camera.fov = _reference_horizontal_fov(_camera_base_vertical_fov)
 	camera.look_at(_camera_target)
 	if _asset_error_label and _asset_error_label.visible:
 		_asset_error_label.position = camera.position - camera.basis.z * 3.2
+
+static func _reference_horizontal_fov(vertical_degrees: float) -> float:
+	return rad_to_deg(2.0 * atan(tan(deg_to_rad(vertical_degrees) * 0.5) * REFERENCE_CAMERA_ASPECT))
 
 func _build_world() -> void:
 	_world = WorldEnvironment.new()
@@ -737,7 +746,8 @@ func _build_world() -> void:
 	camera = Camera3D.new()
 	camera.name = "FishingCamera"
 	camera.position = Vector3(0.7, 2.5, 4.6)
-	camera.fov = 54.0
+	camera.keep_aspect = Camera3D.KEEP_WIDTH
+	camera.fov = _reference_horizontal_fov(_camera_base_vertical_fov)
 	camera.near = 0.08
 	camera.far = 200.0
 	add_child(camera)

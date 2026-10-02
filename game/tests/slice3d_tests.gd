@@ -34,7 +34,7 @@ func _run() -> void:
 		quit(2)
 		return
 	test_root = data.path_join("fixtures-%s-%s" % [OS.get_process_id(),Time.get_ticks_usec()])
-	root.size = Vector2i(720,1280)
+	root.size = Vector2i(720,1584) if "--tall" in OS.get_cmdline_user_args() else Vector2i(720,1280)
 	app = MainScene.instantiate()
 	root.add_child(app)
 	app.set_process(false)
@@ -57,6 +57,7 @@ func _run() -> void:
 	app.scenery.cast_presentation_finished.connect(func() -> void: cast_events.append(1))
 	app.scenery.landing_finished.connect(func(record: Dictionary) -> void: landing_events.append(record.duplicate(true)))
 	await _layout()
+	print("LAYOUT_SCOPE: physical=",root.size," logical=",root.get_visible_rect().size," aspect=",ProjectSettings.get_setting("display/window/stretch/aspect","keep"),"; representative desktop layout only, not phone hardware")
 	_test_configuration()
 	if not app._models_complete or not app._content_ok:
 		print("SLICE3D_SCOPE: full44 gameplay NOT RUN; actual asset/content dependency failed, no readiness override")
@@ -120,6 +121,10 @@ func _find_all(node: Node, class_name_value: String, values: Array[Node]) -> voi
 	for child: Node in node.get_children(): _find_all(child,class_name_value,values)
 
 func _test_configuration() -> void:
+	_check(int(ProjectSettings.get_setting("rendering/anti_aliasing/quality/msaa_3d",0))==2 and root.msaa_3d==Viewport.MSAA_4X,"actual main viewport uses native4x MSAA")
+	_check(str(ProjectSettings.get_setting("display/window/stretch/aspect","keep"))=="expand","production fills both baseline and tall display aspects")
+	_check(root.get_visible_rect().size.is_equal_approx(Vector2(root.size)),"720px-wide test viewport fills the physical window without letterboxing")
+	_check(app.scenery.camera.keep_aspect==Camera3D.KEEP_WIDTH,"actual world camera preserves authored horizontal coverage at every aspect")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method")) == "mobile", "native Mobile rendering is the production default")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method.mobile")) == "mobile", "Android retains Mobile rendering without a compatibility downgrade")
 	_check(app.catalog.fish.size() == 44 and app.catalog.regions.size() == 6 and app.catalog.spots.size() == 12, "complete original44 species, six regions and twelve spots")
@@ -426,7 +431,7 @@ func _check_landing_framing(species: String) -> void:
 	_find_all(app.scenery._fish,"MeshInstance3D",meshes)
 	var clipped: int = 0
 	var sample_count: int = 0
-	var bounds: Rect2 = Rect2(Vector2(8,8),Vector2(root.size)-Vector2(16,16))
+	var bounds: Rect2 = Rect2(Vector2(8,8),app.get_viewport_rect().size-Vector2(16,16))
 	for mesh: MeshInstance3D in meshes:
 		if not mesh.visible or mesh.mesh == null: continue
 		var box: AABB = mesh.get_aabb()

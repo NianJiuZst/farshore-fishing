@@ -18,6 +18,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 SUITES = [
+    ("camera_aspect", "camera_aspect_tests.gd", []),
     ("save", "save_tests.gd", []),
     ("core", "core_tests.gd", []),
     ("tackle", "tackle_tests.gd", []),
@@ -83,15 +84,24 @@ def execute(name: str, command: list[str], output: Path, timeout: float = 300) -
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True, help="New output directory beneath repository build/")
+    parser.add_argument("--tall", action="store_true", help="Use representative720x1584 physical/logical viewport for layout suites")
+    parser.add_argument("--suites", help="Optional comma-separated suite names; summary explicitly records the narrowed scope")
     parser.add_argument("--skip-import", action="store_true", help="Use assets already imported by the coordinated producer")
     parser.add_argument("--render", action="store_true", help="Also run strict slice3d, UI style and touch through private Mobile/Vulkan software renderer")
-    parser.add_argument("--render-timeout", type=float, default=600, help="Per-suite software renderer budget; full44 and full license scrolling exceed the old180s budget")
+    parser.add_argument("--render-timeout", type=float, default=1200, help="Per-suite software renderer budget; full44,4x MSAA,tall frames and full license scrolling exceed the old180s budget")
     args = parser.parse_args()
     output = (ROOT / args.output).resolve()
     if ROOT / "build" not in output.parents:
         parser.error("output must be a new subdirectory under repository build/")
     output.mkdir(parents=True, exist_ok=False)
     godot = os.environ.get("GODOT", "godot")
+    selected = SUITES
+    if args.suites:
+        wanted = args.suites.split(",")
+        unknown = sorted(set(wanted)-{row[0] for row in SUITES})
+        if unknown:
+            parser.error("unknown suites: " + ", ".join(unknown))
+        selected = [row for row in SUITES if row[0] in wanted]
     results = []
     before_import = manifest()
     (output / "before_import_sha256.json").write_text(json.dumps(before_import, indent=2)+"\n")
@@ -107,14 +117,16 @@ def main() -> int:
     # Import legitimately regenerates metadata and extracted3D textures. Raw
     # GLBs, scripts, scenes and data must not change while this occurs.
     source_import_changes = [p for p in existing_import_changes if Path(p).suffix in {".glb", ".gd", ".gdshader", ".json", ".tscn", ".tres", ".godot"}]
-    for name, script, extra in SUITES:
+    for name, script, original_extra in selected:
+        extra = original_extra + (["--tall"] if args.tall and name in ["slice3d","ui_style","touch"] else [])
         command = [godot, "--headless", "--audio-driver", "Dummy", "--path", "game", "--script", "res://tests/"+script]
         if extra:
             command += ["--", *extra]
         results.append(execute(name, command, output))
     results.append(execute("binary_catalog", ["python3", "tools/audit_fish_catalog_3d.py", "--require-all", "--output", str(output / "binary_catalog.json")], output))
     if args.render:
-        for name, script, extra in [row for row in SUITES if row[0] in ["slice3d", "ui_style", "touch"]]:
+        for name, script, original_extra in [row for row in selected if row[0] in ["slice3d", "ui_style", "touch"]]:
+            extra = original_extra + (["--tall"] if args.tall else [])
             command = ["python3", "tools/render_godot.py", "--timeout", str(args.render_timeout), "--", "--path", "game", "--rendering-method", "mobile", "--rendering-driver", "vulkan", "--script", "res://tests/"+script]
             if extra:
                 command += ["--", *extra]
@@ -123,7 +135,7 @@ def main() -> int:
     (output / "runtime_after_sha256.json").write_text(json.dumps(after, indent=2)+"\n")
     changed = sorted(p for p in before.keys() | after.keys() if before.get(p) != after.get(p))
     passed = not changed and not source_import_changes and all(r["passed"] for r in results)
-    summary = {"passed": passed, "runtime_files": len(before), "runtime_unchanged": not changed, "runtime_changes": changed, "existing_files_changed_during_import": existing_import_changes, "source_changes_during_import": source_import_changes, "results": results, "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."}
+    summary = {"passed": passed, "selected_suites": [row[0] for row in selected], "representative_tall_layout": args.tall, "runtime_files": len(before), "runtime_unchanged": not changed, "runtime_changes": changed, "existing_files_changed_during_import": existing_import_changes, "source_changes_during_import": source_import_changes, "results": results, "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."}
     (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2)+"\n")
     print(json.dumps({"passed": passed, "runtime_unchanged": not changed, "runtime_changes": changed, "source_changes_during_import": source_import_changes, "summary": str(output.relative_to(ROOT) / "summary.json")}), flush=True)
     return 0 if passed else 1

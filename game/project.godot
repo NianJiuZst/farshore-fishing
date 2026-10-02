@@ -12,10 +12,12 @@ window/size/viewport_height=1280
 window/size/window_width_override=450
 window/size/window_height_override=800
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/handheld/orientation=1
 window/vsync/vsync_mode=1
 window/dpi/allow_hidpi=true
 [rendering]
+anti_aliasing/quality/msaa_3d=2
 rendering_device/driver.android="vulkan"
 rendering_device/fallback_to_opengl3=false
 renderer/rendering_method="mobile"
