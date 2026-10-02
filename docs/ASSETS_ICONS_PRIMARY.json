@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "collection": "Farshore Fishing primary high-definition painted UI icons",
+  "generated_date_utc": "2026-10-02",
+  "style": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. ",
+  "icons": [
+    {
+      "kind": "rod",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one handsome fishing rod arranged diagonally lower left to upper right, gracefully tapering but not excessively thin; full rod tip and handle visible, warm wood and cork grip, teal bindings, small warm brass reel attached near grip and a tiny coral-and-cream fishing bobber hanging from its line. Object forms a compact legible composition; show fine rod guide rings and fishing line without cropping.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-caeb96f0-6e00-4db0-ab61-293eb64d445a.png",
+      "master_path": "art_masters/ui_icons/rod.png",
+      "runtime_path": "game/assets/ui/icons/rod.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "3869d01cb8f24a9026a6bda862a32945800c636c9de8defe186d66f520d4817c",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          17,
+          15,
+          1240,
+          1230
+        ],
+        "transparent_fraction": 0.852531866130456
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "d70ac1ce9592f9c7741135343ab9336a73926b4fdd1ad1ea81a53f953440c5a9",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          6,
+          6,
+          506,
+          500
+        ],
+        "transparent_fraction": 0.8542251586914062
+      }
+    },
+    {
+      "kind": "reel",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one compact, detailed old-fashioned brass fishing reel with spool of fine teal fishing line, warm wood crank knob, polished brass gears and engraved mechanical edges, in a balanced three-quarter view. This is the reel itself alone, no rod.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-acd0d407-a7a8-44ef-9dd4-58d73ae76731.png",
+      "master_path": "art_masters/ui_icons/reel.png",
+      "runtime_path": "game/assets/ui/icons/reel.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "793588556726d561644bd42234c4af21bd599ba747d19f324cc1c645e2e438b1",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          78,
+          25,
+          1246,
+          1212
+        ],
+        "transparent_fraction": 0.5229937247061397
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "9a8177cafaab3d28bd170b96ca460903a0c2bd497e34b344ff8b0142928195be",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          31,
+          38,
+          509,
+          475
+        ],
+        "transparent_fraction": 0.5210113525390625
+      }
+    },
+    {
+      "kind": "hook",
+      "prompt": "Use case: stylized-concept. Asset type: one premium mobile fishing adventure game inventory UI icon, square 1024x1024 or higher. Scene/backdrop: genuinely transparent alpha, absolutely no backdrop. Style/medium: refined handpainted cozy adventure game inventory illustration, tactile gouache brush shading, softly lit upper left, polished near-3D object volume, readable at 60px yet beautifully detailed HD. Palette: warm brass and gold, teal canvas, warm leather, tiny coral accent where appropriate. Composition/framing: one independent object centered with around 10% generous clear margin on every side, complete uncropped silhouette, lightly isometric three-quarter view where appropriate. Constraints: generate only the physical object, no outside cast shadow, no surrounding outline, no backplate, no UI tile, no frame, no numbers, no letters, no text, no watermark, no circle behind it. Not flat vector, not emoji, not a geometric placeholder. Subject: one beautifully polished bronze single fishing hook with its eye loop at the top, elegantly curved shank and one sharp inward-pointing barb, slightly diagonally angled. Warm golden metal highlights with subtle tactile brushed metal. No fish, no bait, no rope, no extra hooks.",
+      "generator": "OpenAI built-in image_gen.imagegen, transparent_background=true, one distinct asset call",
+      "source_type": "original AI-generated artwork; no external photos or licensed stock inputs",
+      "license_caveat": "Generated output; no third-party stock license asserted. Use is subject to applicable OpenAI terms; no representation of exclusive copyright or trademark clearance.",
+      "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-929b937d-97ef-4cc1-9b51-2f5f5828e8a1.png",
+      "master_path": "art_masters/ui_icons/hook.png",
+      "runtime_path": "game/assets/ui/icons/hook.png",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "visual_audit": {
+        "viewed_original": true,
+        "viewed_runtime_light_and_teal_background": true,
+        "complete_silhouette": true,
+        "no_backplate_tile_frame_text": true,
+        "no_visible_outer_cast_shadow": true,
+        "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
+        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible."
+      },
+      "master_audit": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "0f219d25c143369312d1ecf4ddee934e8c807de14dafc54dd81c3722ffe2f69d",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          29,
+          23,
+          1226,
+          1214
+        ],
+        "transparent_fraction": 0.804111373111625
+      },
+      "runtime_audit": {
+        "dimensions": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "d05c208753dac1df299764b787842e9ed6db174db6d1d00a689e14c6a2e62617",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          36,
+          20,
+          490,
+          486
+        ],
+        "transparent_fraction": 0.8001976013183594
+      }
+    }
+  ]
+}
