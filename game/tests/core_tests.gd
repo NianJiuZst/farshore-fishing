@@ -5,6 +5,7 @@ const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Main = preload("res://scripts/main.gd")
+const Registry = preload("res://scripts/fish_3d_registry.gd")
 const EXPECTED_SPECIES: int = 44
 const EXPECTED_REGIONS: int = 6
 const EXPECTED_SPOTS: int = 12
@@ -22,6 +23,7 @@ var failures: int = 0
 var catalog: ContentCatalog = Catalog.new()
 var test_root: String = ""
 var timings: Array[String] = []
+var main_completed: bool = false
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -43,6 +45,7 @@ func _run() -> void:
 		print("MAIN INTEGRATION SKIPPED: content-production logic-only run; not a complete suite")
 	else:
 		await _test_main_integration()
+		_check(main_completed,"Main integration reaches its explicit completion marker")
 	print("CORE_TESTS: ", checks - failures, "/", checks, " passed; failures=", failures)
 	quit(0 if failures == 0 else 1)
 
@@ -456,12 +459,36 @@ func _test_main_integration() -> void:
 	var fixture: FailingStore = FailingStore.new()
 	_check(fixture.initialize(test_root.path_join("ui")), "UI store fixture initializes")
 	ui.store = fixture
+	ui.encounter.rng.seed = 20261002
+	ui.session._rng.seed = 2468
+	var asset_errors: Array[String] = Registry.validate_catalog(catalog,true)
+	_check(asset_errors.is_empty(),"aggregate Main gameplay requires all44 species-specific imported resources: " + str(asset_errors))
+	_check(ui._models_complete == asset_errors.is_empty(),"Main readiness agrees with the actual full44 registry")
+	if not asset_errors.is_empty():
+		_check(not ui._content_ok,"partial assets keep content gate closed")
+		var start: Button = _find_button(ui._overlay,"开始钓鱼")
+		_check(start != null and start.disabled,"partial assets disable visible lobby Start")
+		ui._show_prepare()
+		var enter: Button = _find_button(ui._overlay,"进入钓点")
+		_check(enter != null and enter.disabled,"partial assets disable visible prepare entry")
+		ui._enter_fishery()
+		_check(ui._mode == "lobby" and ui._overlay != null,"direct callback cannot bypass missing-model gate")
+		print("MAIN_SCOPE: incomplete44 assets; full gameplay checks NOT RUN; no readiness override")
+		await _free_main(ui)
+		# Reaching this explicit dependency result is not a full-suite pass: the
+		# strict asset assertion above fails. Avoid misleading cascade failures.
+		main_completed = true
+		return
+	_check(ui._content_ok,"complete-model Main validates actual production content")
 	ui._show_prepare()
 	ui._enter_fishery()
+	_check(ui._mode == "fishing" and ui._overlay == null,"full-world Main enters saved lake spot")
 	ui._action_down()
 	for tick: int in 15: ui.session.step(0.05)
 	ui._action_up()
 	_check(ui.session.state == Session.State.CASTING, "real Main action buttons create session")
+	_check(str(ui.session.individual.get("region_id","")) == ui.region_id and str(ui.session.individual.get("spot_id","")) == ui.spot_id,"ordinary Main encounter uses actual selected full-world location")
+	_check(ui.spot_id in catalog.fish[str(ui.session.individual.species_id)].spots(),"ordinary Main encounter respects species spot eligibility")
 	_advance_to(ui.session, Session.State.BITE)
 	var record_before: Dictionary = ui.session.individual.duplicate(true)
 	ui._show_catalog()
@@ -544,6 +571,7 @@ func _test_main_integration() -> void:
 	fixture.fail_once = true
 	ui._choose_spot("lake", "lake_bay")
 	_check(ui.spot_id == old_spot and ui.region_id == old_region, "failed travel save rolls live selection back")
+	_check(ui.scenery.spot_id == old_spot and ui.scenery.region_id == old_region and str(fixture.state.selection.spot_id) == old_spot,"failed travel save also restores actual3D scene and preserves saved location")
 	ui._show_gear()
 	var old_bait: String = ui.bait_id
 	fixture.fail_once = true
@@ -558,8 +586,18 @@ func _test_main_integration() -> void:
 	ui.region_id = "norway"
 	ui.spot_id = "norway_boat"
 	ui._equip(0)
-	_check(int(fixture.state.gear) == 0 and str(fixture.state.selection.spot_id) == "norway_boat", "trial permits starter gear without changing the archived deep-water selection")
+	_check(int(fixture.state.gear) == 0 and str(fixture.state.selection.spot_id) == "norway_boat", "equipping owned starter gear preserves saved deep-water selection")
+	ui._show_prepare()
+	var deep_enter: Button = _find_button(ui._overlay,"进入钓点")
+	_check(not ui._can_use_spot("norway_boat") and deep_enter != null and deep_enter.disabled,"deep-water spot correctly requires suitable gear instead of a trial-only exception")
+	ui._enter_fishery()
+	_check(ui._screen == "prepare","direct entry respects deep-water gear restriction")
 	_test_main_expansion(ui, fixture)
+	await _free_main(ui)
+	main_completed = true
+	print("PASS GROUP Main controls, full-world navigation, background, escaped/result flows and failed selection writes")
+
+func _free_main(ui: Variant) -> void:
 	ui.sound.suspend(false)
 	ui.sound.ambience.stop()
 	ui.sound.effect.stop()
@@ -569,7 +607,6 @@ func _test_main_integration() -> void:
 	ui.queue_free()
 	await process_frame
 	await create_timer(0.10).timeout
-	print("PASS GROUP Main controls, navigation, background, escaped/result flows and failed selection writes")
 
 func _test_main_expansion(ui: Variant, original: FailingStore) -> void:
 	var candidate: Dictionary = original.state
@@ -594,6 +631,7 @@ func _test_main_expansion(ui: Variant, original: FailingStore) -> void:
 	ui.region_id = "norway"
 	ui.spot_id = "norway_boat"
 	ui.bait_id = "worm"
+	_check(ui._refresh_location() and ui.scenery.region_id == "norway" and ui.scenery.spot_id == "norway_boat","expanded fixture loads its actual saved biome and station")
 	for region_id: String in ["bayou", "yangtze"]:
 		var cost: int = int(catalog.region(region_id).unlock_cost)
 		candidate = fixture.state
@@ -619,10 +657,13 @@ func _test_main_expansion(ui: Variant, original: FailingStore) -> void:
 	ui._show_travel()
 	for spot_id: String in ["bayou_backwater", "bayou_channel", "yangtze_river", "yangtze_estuary"]:
 		var button: Button = _find_button_fragment(ui._overlay, str(catalog.spots[spot_id].name))
-		_check(button == null and catalog.spots.has(spot_id), "archived spot data remains but is not advertised as a playable 3D destination: " + spot_id)
+		_check(button != null,"full-world travel advertises the actual original spot: " + spot_id)
+		if button != null: _check(button.disabled == not ui._can_use_spot(spot_id),"actual travel button enforces configured gear/depth gate: " + spot_id)
 	ui._equip(2)
 	ui._choose_spot("yangtze", "yangtze_estuary")
 	_check(ui.region_id == "yangtze" and ui.spot_id == "yangtze_estuary" and str(fixture.state.selection.spot_id) == "yangtze_estuary", "actual Main travels to unlocked expanded region and persists selection")
+	_check(ui.scenery.region_id == "yangtze" and ui.scenery.spot_id == "yangtze_estuary","expanded travel loads the matching actual3D biome")
+	ui._enter_fishery()
 	if not catalog.fish.has("chinese_sturgeon"): return
 	var fish: FishDefinition = catalog.fish["chinese_sturgeon"]
 	var record: Dictionary = Encounter.new(413).make_individual(fish, "yangtze_estuary", "yangtze", "shrimp", 2, "day", "clear")

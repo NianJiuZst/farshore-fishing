@@ -109,7 +109,7 @@ func _ready() -> void:
 	session.changed.connect(_session_changed)
 	session.ended.connect(_fishing_ended)
 	session.cue.connect(sound.cue)
-	_refresh_location()
+	if not _refresh_location(): _content_ok = false
 	_update_conditions()
 	_session_changed(Session.State.IDLE)
 	_show_home()
@@ -231,7 +231,9 @@ func _navigation(label: String, kind: String, callback: Callable) -> Button:
 func _build_fishing_screen() -> void:
 	scenery = Stage.new()
 	scenery.name = "FishingWorld3D"
-	scenery.set_location(region_id,spot_id)
+	if not scenery.set_location(region_id,spot_id):
+		catalog.errors.append("当前3D钓点无法加载，已保留存档选择")
+		_content_ok = false
 	add_child(scenery)
 	scenery.bind_session(session)
 	scenery.cast_presentation_finished.connect(_cast_presentation_finished)
@@ -453,8 +455,15 @@ func _update_conditions() -> void:
 	_weather_icon.kind="rain" if weather=="rain" else ("dusk" if time_of_day=="dusk" else "sun")
 	_condition.text = "%s  ·  %s" % ["晴" if weather == "clear" else "微雨","日间" if time_of_day == "day" else "黄昏"]
 
-func _refresh_location() -> void:
-	scenery.set_location(region_id,spot_id)
+func _refresh_location() -> bool:
+	# A rejected scene change must never be presented as a successful trip.
+	if not scenery.set_location(region_id,spot_id):
+		_toast_message("这个3D钓点暂时无法进入，已保留原钓点")
+		return false
+	_refresh_location_labels()
+	return true
+
+func _refresh_location_labels() -> void:
 	_place.text = str(catalog.region(region_id).get("name",region_id))
 	_spot_label.text = str(catalog.spots.get(spot_id,{}).get("name",spot_id))
 	_bait_control.icon_kind=bait_id
@@ -768,6 +777,7 @@ func _enter_fishery() -> void:
 		_toast_message("请先结束这一竿，再重新进入钓点")
 		_show_pause()
 		return
+	if not _refresh_location(): return
 	_remove_overlay()
 	_mode = "fishing"
 	_page_context = "fishing"
@@ -779,7 +789,6 @@ func _enter_fishery() -> void:
 	scenery.suspend(false)
 	session.reset()
 	sound.suspend(false)
-	_refresh_location()
 
 func _return_to_lobby() -> void:
 	if not _last_record.is_empty():
@@ -908,6 +917,13 @@ func _can_use_spot(sid: String) -> bool:
 	return _effective_gear_id() >= int(spot.min_gear) and float(gear.max_depth_m) >= float(spot.depth_min_m)
 
 func _choose_spot(rid: String,sid: String) -> void:
+	# Travel buttons can have queued callbacks after CAUGHT, which is not an
+	# active round. Neither landing nor an unresolved result may change location.
+	if _landing_pending or not _last_record.is_empty():
+		_toast_message("请先完成起鱼并处理这次钓获，再选择钓点")
+		if _landing_pending: _show_pause()
+		else: _show_result()
+		return
 	if not catalog.spots.has(sid) or str(catalog.spots[sid].region_id) != rid or rid not in store.state.get("unlocked_regions",[]) or not _can_use_spot(sid):
 		_toast_message("请先解锁水域，并选择适合钓点的装备")
 		return
@@ -917,16 +933,24 @@ func _choose_spot(rid: String,sid: String) -> void:
 		return
 	var previous_region: String = region_id
 	var previous_spot: String = spot_id
+	# Load first, synchronously, before committing the save or changing labels.
+	# Stage guarantees that a rejected load retains its previous scene/location.
+	if not scenery.set_location(rid,sid):
+		_toast_message("这个3D钓点暂时无法进入，已保留原钓点")
+		return
 	region_id = rid
 	spot_id = sid
-	if _save_selection():
-		_refresh_location()
-		if _mode == "lobby": _show_prepare()
-		else: _close_page()
-		_toast_message(str(catalog.spots[sid].cast_hint))
-	else:
+	if not _save_selection():
 		region_id = previous_region
 		spot_id = previous_spot
+		if not scenery.set_location(previous_region,previous_spot):
+			_content_ok = false
+			_toast_message("保存失败且原钓点无法恢复，请重新启动游戏")
+		return
+	_refresh_location_labels()
+	if _mode == "lobby": _show_prepare()
+	else: _close_page()
+	_toast_message(str(catalog.spots[sid].cast_hint))
 
 func _active_round() -> bool:
 	var value: int = session.before_pause if session.state == Session.State.PAUSED else session.state
