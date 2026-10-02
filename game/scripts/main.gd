@@ -110,6 +110,8 @@ func _apply_theme() -> void:
 	style.set_stylebox("panel","PopupMenu",_box(Color("edf1e5"),0))
 	style.set_color("font_color","PopupMenu",INK)
 	style.set_constant("v_separation","PopupMenu",30)
+	var dropdown_arrow: Texture2D=Art.scaled_texture("arrow",24,true)
+	if dropdown_arrow!=null:style.set_icon("arrow","OptionButton",dropdown_arrow)
 	theme=style
 
 func _box(color: Color, radius: int = 16, border: Color = Color(0,0,0,0), width: int = 0) -> StyleBoxFlat:
@@ -217,16 +219,11 @@ func _build_fishing_screen() -> void:
 	var top_glass: PanelContainer=_card(Color(0.035,0.13,0.17,0.88),10)
 	layout.add_child(top_glass)
 	top_glass.add_child(top)
-	var emblem: PanelContainer=_card(Color(0.05,0.17,0.21,0.9),4)
-	emblem.custom_minimum_size=Vector2(90,96)
-	emblem.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
-	emblem.add_child(_icon("badge",82))
-	top.add_child(emblem)
 	var heading: VBoxContainer=VBoxContainer.new()
 	heading.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	heading.add_theme_constant_override("separation",0)
+	heading.alignment=BoxContainer.ALIGNMENT_CENTER
 	top.add_child(heading)
-	heading.add_child(_text("远 岸 钓 记",17,Color("fff1bb")))
 	_place=_text("雾林湖",31,Color.WHITE)
 	_place.add_theme_color_override("font_shadow_color",NAVY)
 	_place.add_theme_constant_override("shadow_offset_y",2)
@@ -292,7 +289,7 @@ func _build_fishing_screen() -> void:
 
 	_toast.visible=false
 	layout.add_child(_toast)
-	_status=_text("这一竿，会遇见谁？",30,PAPER)
+	_status=_text("准备抛竿",30,PAPER)
 	_status.add_theme_color_override("font_shadow_color",NAVY)
 	_status.add_theme_constant_override("shadow_offset_y",2)
 	layout.add_child(_status)
@@ -327,9 +324,6 @@ func _build_fishing_screen() -> void:
 	_action.button_up.connect(_action_up)
 	_action.mouse_exited.connect(_action_cancel)
 	action_row.add_child(_action)
-	var trail: Label=_text("沿着水声，去往远岸",17,Color("a9c5bc"))
-	trail.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	layout.add_child(trail)
 
 func _bar(color: Color) -> ProgressBar:
 	var bar: ProgressBar = ProgressBar.new()
@@ -422,18 +416,18 @@ func _session_changed(value: int) -> void:
 	_action.disabled = value in [Session.State.CASTING,Session.State.WAITING,Session.State.NIBBLE,Session.State.CAUGHT,Session.State.ESCAPED,Session.State.PAUSED]
 	match value:
 		Session.State.IDLE:
-			_status.text = "这一竿，会遇见谁？"
+			_status.text = "准备抛竿"
 			_hint.text = "长按蓄力，松手抛竿 · " + catalog.bait_name(bait_id)
 			_action.text = "抛竿"
 		Session.State.CHARGING:
-			_status.text = "选择这一竿的距离"
+			_status.text = "蓄力中"
 			_action.text = "投出"
 		Session.State.CASTING:
-			_status.text = "鱼线划过水面"
+			_status.text = "正在抛竿"
 			_hint.text = "落点会影响能遇见的鱼群"
 			_action.text = "抛竿中"
 		Session.State.WAITING:
-			_status.text = "听水，等一个小小的信号"
+			_status.text = "等待咬钩"
 			_hint.text = "浮漂轻动是试探，明显下沉后再提竿"
 			_action.text = "静候咬钩"
 		Session.State.NIBBLE:
@@ -447,7 +441,7 @@ func _session_changed(value: int) -> void:
 		Session.State.FIGHT:
 			_action.text = "收线"
 		Session.State.PAUSED:
-			_status.text = "旅程已暂停"
+			_status.text = "已暂停"
 			_hint.text = "鱼、张力与计时保持原位"
 
 func _fishing_ended(success: bool, record: Dictionary) -> void:
@@ -462,7 +456,7 @@ func _fishing_ended(success: bool, record: Dictionary) -> void:
 	else:
 		store.abandon_session(session.session_id)
 		sound.cue("escape")
-		_open_page("escape","把这次相遇留给水面",_finish_result)
+		_open_page("escape","鱼已逃脱",_finish_result)
 		_page.add_child(_text(session.escape_reason,27))
 		_page.add_child(_text("逃脱不会增加钓获数，也不会消耗鱼饵。下一竿随时可以开始。",22,MUTED))
 		_page.add_child(_button("再试一竿",_finish_result,true))
@@ -517,7 +511,6 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	title_box.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	title_box.add_theme_constant_override("separation",0)
 	head.add_child(title_box)
-	title_box.add_child(_text("F A R S H O R E   /   远岸",16,GOLD))
 	_title=_text(heading,37,INK)
 	title_box.add_child(_title)
 	var close: Button=_button("返回",back if back.is_valid() else _close_page)
@@ -557,10 +550,10 @@ func _close_page() -> void:
 
 func _show_home() -> void:
 	_open_page("home","远岸钓记")
-	_page.add_child(_text("把世界，钓成一本旅行手册",36))
-	_page.add_child(_text("风从远岸来，水里藏着新的相遇。\n%d 处水域 · %d 种真实鱼 · 完全离线" % [catalog.regions.size(),catalog.fish.size()]+"",24,MUTED))
+	_page.add_child(_text("游戏说明",36))
+	_page.add_child(_text("%d 处水域 · %d 种真实鱼 · 完全离线" % [catalog.regions.size(),catalog.fish.size()]+"",24,MUTED))
 	_page.add_child(_scene_picture("res://assets/scenery/lake.png",320))
-	_page.add_child(_button("继续我的旅程",_close_page,true))
+	_page.add_child(_button("开始钓鱼",_close_page,true))
 	_page.add_child(_text("第一竿\n1  长按蓄力，松手抛竿\n2  浮漂明显下沉时，点击提竿\n3  按住收线，张力太高就松手\n4  成功后出售或放生，历史纪录一直保留",24))
 	_page.add_child(_button("声音、震动与存档说明",_show_settings))
 	if not store.status_message.is_empty(): _page.add_child(_text(store.status_message,23,CORAL))
@@ -578,7 +571,7 @@ func _show_pause() -> void:
 		return
 	if active_state == Session.State.ESCAPED:
 		_finish_result()
-	_open_page("pause","停一会儿，风景还在")
+	_open_page("pause","暂停")
 	_page.add_child(_text("当前鱼与钓鱼进度保持不变。\n切到后台时也会暂停，回来后由你决定继续。",26))
 	_page.add_child(_button("继续钓鱼",_close_page,true))
 	_page.add_child(_button("设置",_show_settings))
@@ -602,8 +595,8 @@ func _exit_game() -> void:
 	get_tree().quit()
 
 func _show_travel() -> void:
-	_open_page("travel","把下一站，交给海风")
-	_page.add_child(_text("%d 处水域  /  %d 个钓点  ·  从湖畔走向更远的海" % [catalog.regions.size(),catalog.spots.size()],21,MUTED))
+	_open_page("travel","旅行")
+	_page.add_child(_text("%d 处水域  /  %d 个钓点  ·  选择水域与钓点" % [catalog.regions.size(),catalog.spots.size()],21,MUTED))
 	for region: Dictionary in catalog.regions:
 		var rid: String=str(region.region_id)
 		var unlocked: bool=rid in store.state.get("unlocked_regions",[])
@@ -632,7 +625,7 @@ func _show_travel() -> void:
 		subtitle.position=Vector2(24,238)
 		subtitle.size=Vector2(580,35)
 		hero.add_child(subtitle)
-		var stamp: Label=_text("此刻在这里" if rid==region_id else ("旅程已开启" if unlocked else "等待启程"),20,GOLD)
+		var stamp: Label=_text("当前水域" if rid==region_id else ("已解锁" if unlocked else "未解锁"),20,GOLD)
 		stamp.position=Vector2(24,18)
 		stamp.size=Vector2(190,50)
 		stamp.autowrap_mode=TextServer.AUTOWRAP_OFF
@@ -645,7 +638,13 @@ func _show_travel() -> void:
 		for side: String in ["left","right","top","bottom"]: padding.add_theme_constant_override("margin_"+side,18)
 		contents.add_child(padding)
 		padding.add_child(inner)
-		inner.add_child(_text(str(region.description),22,MUTED))
+		var regional_total: int=0
+		var regional_known: int=0
+		for species: FishDefinition in catalog.fish.values():
+			if rid in species.regions():
+				regional_total+=1
+				if _count(species.species_id)>0: regional_known+=1
+		inner.add_child(_text("当地鱼种 %d  ·  已发现 %d" % [regional_total,regional_known],22,MUTED))
 		if not unlocked:
 			var need: int=int(region.unlock_count)
 			var cost: int=int(region.unlock_cost)
@@ -656,7 +655,7 @@ func _show_travel() -> void:
 			for sid: String in region.spots:
 				var spot: Dictionary=catalog.spots[sid]
 				var min_gear: int=int(spot.min_gear)
-				var label: String=("● " if sid==spot_id else "")+str(spot.name)+"   %s–%s m" % [str(spot.depth_min_m),str(spot.depth_max_m)]
+				var label: String=("当前 · " if sid==spot_id else "")+str(spot.name)+"   %s–%s m" % [str(spot.depth_min_m),str(spot.depth_max_m)]
 				if int(store.state.gear)<min_gear: label+="  ·  需升级装备"
 				var go: Button=_button(label,_choose_spot.bind(rid,sid),sid==spot_id)
 				go.disabled=int(store.state.gear)<min_gear
@@ -692,9 +691,9 @@ func _active_round() -> bool:
 	return value not in [Session.State.IDLE,Session.State.CAUGHT,Session.State.ESCAPED]
 
 func _show_gear() -> void:
-	_open_page("gear","装好行囊，再出发")
+	_open_page("gear","行囊")
 	_page.add_child(_text("旅币 %d  ·  每一种鱼饵，都可以无限补给" % int(store.state.currency),22,MUTED))
-	_section("我的钓竿","一份可靠的陪伴")
+	_section("我的钓竿","")
 	for item: Dictionary in catalog.gear:
 		var id: int=int(item.id)
 		var current: bool=int(store.state.gear)==id
@@ -714,11 +713,11 @@ func _show_gear() -> void:
 		info.add_child(_text(str(item.description),21,MUTED))
 		info.add_child(_text("探深 %d m   /   控线容错 ×%.2f" % [int(item.max_depth_m),float(item.tolerance)],20,TEAL))
 		var owned: bool=id in store.state.owned_gear
-		var label: String="正在使用" if current else ("换上这支竿" if owned else "带上它  ·  %d 旅币" % int(item.price))
+		var label: String="正在使用" if current else ("装备" if owned else "购买  ·  %d 旅币" % int(item.price))
 		var action: Button=_button(label,_equip.bind(id),not owned)
 		action.disabled=current or (not owned and int(store.state.currency)<int(item.price))
 		box.add_child(action)
-	_section("为相遇挑选鱼饵","无限补给")
+	_section("鱼饵","无限补给")
 	var grid: GridContainer=GridContainer.new()
 	grid.columns=2
 	grid.add_theme_constant_override("h_separation",16)
@@ -731,7 +730,7 @@ func _show_gear() -> void:
 		var box: VBoxContainer=VBoxContainer.new()
 		card.add_child(box)
 		box.add_child(_icon(str(bait.bait_id),82))
-		box.add_child(_button(("✓ " if bait.bait_id==bait_id else "")+str(bait.name),_set_bait.bind(str(bait.bait_id)),bait.bait_id==bait_id))
+		box.add_child(_button(("已选 · " if bait.bait_id==bait_id else "")+str(bait.name),_set_bait.bind(str(bait.bait_id)),bait.bait_id==bait_id))
 		box.add_child(_text(str(bait.hint),20,MUTED))
 
 func _equip(id: int) -> void:
@@ -760,7 +759,7 @@ func _set_bait(id: String) -> void:
 	else: bait_id = previous_bait
 
 func _show_catalog() -> void:
-	_open_page("catalog","水下的万千模样")
+	_open_page("catalog","图鉴")
 	var progress: HBoxContainer=HBoxContainer.new()
 	_page.add_child(progress)
 	progress.add_child(_icon("book",72))
@@ -769,7 +768,7 @@ func _show_catalog() -> void:
 	overview.add_theme_constant_override("separation",4)
 	progress.add_child(overview)
 	overview.add_child(_text("已发现 %d / %d 种" % [store.discovered_count(),catalog.fish.size()],30,GOLD))
-	overview.add_child(_text("每一次相遇，都有迹可循  ·  累计 %d 条" % store.total_count(),20,MUTED))
+	overview.add_child(_text("累计钓获 %d 条" % store.total_count(),20,MUTED))
 	var meter: ProgressBar=_bar(TEAL)
 	meter.value=float(store.discovered_count())/maxi(1,catalog.fish.size())
 	meter.custom_minimum_size.y=8
@@ -867,16 +866,16 @@ func _show_species(id: String) -> void:
 	var art_box: VBoxContainer=VBoxContainer.new()
 	plate.add_child(art_box)
 	art_box.add_child(_fish_image(fish,false,not known,285))
-	var caption: Label=_text("NATURAL HISTORY  /  自然手记" if known else "水下还有一个未曾见过的身影",17,Color("56776d"))
+	var caption: Label=_text(str(fish.raw.get("rarity","")) if known else "尚未发现",17,Color("56776d"))
 	caption.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	art_box.add_child(caption)
-	if known: _page.add_child(_button("放大欣赏  ↗",_show_zoom.bind(id)))
+	if known: _page.add_child(_button("查看大图",_show_zoom.bind(id)))
 	_page.add_child(_text(fish.description,25))
 	if bool(fish.raw.get("release_only",false)):
 		_page.add_child(_text("保护观察 · 仅在游戏中虚拟相遇，记录后即刻放归水中",22,GOLD))
-	_section("辨认它","观察笔记")
+	_section("形态特征","")
 	_page.add_child(_text(fish.morphology,23,MUTED))
-	_section("在哪里相遇")
+	_section("分布与钓点")
 	var where: Array[String]=[]
 	for sid: String in fish.spots():
 		where.append(str(catalog.region(str(catalog.spots[sid].region_id)).name)+" · "+str(catalog.spots[sid].name))
@@ -887,7 +886,7 @@ func _show_species(id: String) -> void:
 		var weight: float=fish.weight_for("bait_weights",str(bait.bait_id))
 		if weight>best: preferred=str(bait.bait_id); best=weight
 	_page.add_child(_text("鱼饵线索  /  "+catalog.bait_name(preferred)+"\n尺寸、行为与出现倍率含游戏调校",21,MUTED))
-	_section("我的相遇","累计 %d 条" % _count(id))
+	_section("钓获纪录","累计 %d 条" % _count(id))
 	if known:
 		var stats: Dictionary=store.state.species_stats[id]
 		for pair: Array in [["最长个体","max_length"],["最重个体","max_weight"],["首次钓获","first"],["最近钓获","last"]]:
@@ -898,8 +897,8 @@ func _show_species(id: String) -> void:
 			box.add_child(_text(str(pair[0]),25,GOLD))
 			box.add_child(_text(_record_text(stats.get(pair[1],{})),21,MUTED))
 		var favorite: bool=id in store.state.favorites
-		_page.add_child(_button("移出收藏" if favorite else "收藏这一种相遇  ♡",_favorite.bind(id),not favorite))
-	else: _page.add_child(_text("这一页，等你亲手写下第一笔",23,MUTED))
+		_page.add_child(_button("移出收藏" if favorite else "加入收藏",_favorite.bind(id),not favorite))
+	else: _page.add_child(_text("尚无钓获纪录",23,MUTED))
 	_section("资料参考")
 	for source: Dictionary in fish.raw.get("sources",[]):
 		_page.add_child(_text(str(source.get("title",""))+"\n"+str(source.get("url","")),17,MUTED))
@@ -960,9 +959,9 @@ func _favorite(id: String) -> void:
 	if _commit(candidate): _show_species(id)
 
 func _show_favorites() -> void:
-	_open_page("favorites","把喜欢的相遇，珍藏")
+	_open_page("favorites","收藏")
 	var favorites: Array=store.state.get("favorites",[])
-	_page.add_child(_text("我的六格收藏  /  %d · 6\n真实的相遇，是最好的旅行纪念" % favorites.size(),23,MUTED))
+	_page.add_child(_text("已收藏 %d / 6 种" % favorites.size(),23,MUTED))
 	var grid: GridContainer=GridContainer.new()
 	grid.columns=2
 	grid.add_theme_constant_override("h_separation",16)
@@ -976,7 +975,7 @@ func _show_favorites() -> void:
 		card.add_child(box)
 		if slot>=favorites.size() or not catalog.fish.has(str(favorites[slot])):
 			box.add_child(_icon("heart",112))
-			box.add_child(_button("留给下一次相遇",_show_catalog))
+			box.add_child(_button("添加收藏",_show_catalog))
 			var empty: Label=_text("在图鉴中收藏喜欢的鱼",18,MUTED)
 			empty.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 			box.add_child(empty)
@@ -998,12 +997,12 @@ func _show_result() -> void:
 	if not catalog.fish.has(id): return
 	var fish: FishDefinition=catalog.fish[id]
 	var protected: bool=bool(_last_record.get("release_only",fish.raw.get("release_only",false)))
-	_open_page("result","一次珍贵的观察" if protected else "上岸的惊喜")
+	_open_page("result","保护观察" if protected else "钓获")
 	var flags: Array[String]=[]
 	if bool(_last_settlement.get("new_species",false)): flags.append("首次发现")
 	if bool(_last_settlement.get("new_length",false)): flags.append("长度新纪录")
 	if bool(_last_settlement.get("new_weight",false)): flags.append("重量新纪录")
-	var ribbon: Label=_text("✦  "+("  ·  ".join(flags) if not flags.is_empty() else "又见到你了"),22,GOLD)
+	var ribbon: Label=_text(("  ·  ".join(flags) if not flags.is_empty() else "钓获记录"),22,GOLD)
 	ribbon.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(ribbon)
 	var fish_name: Label=_text(fish.name,43,INK)
@@ -1048,7 +1047,7 @@ func _show_result() -> void:
 	place.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(place)
 	if not _save_ok:
-		_page.add_child(_text("保存未成功："+str(_last_settlement.get("error",store.error_message))+"\n相遇还保留在这里。请重试保存，不要退出。",23,CORAL))
+		_page.add_child(_text("保存未成功："+str(_last_settlement.get("error",store.error_message))+"\n请重试保存，不要退出。",23,CORAL))
 		_page.add_child(_button("重试保存",_settle,true))
 		return
 	var saved: Label=_text("已记入图鉴  ·  累计 %d 条  ·  +%d 旅币" % [_count(id),int(_last_record.get("reward",0))],21,TEAL)
@@ -1062,7 +1061,7 @@ func _show_result() -> void:
 		_page.add_child(actions)
 		actions.add_child(_button("出售  +%d" % int(_last_record.get("sale_value",0)),_dispose_result.bind("sold"),true))
 		actions.add_child(_button("放生  +8",_dispose_result.bind("released")))
-	var kept: Label=_text("每次相遇与个人纪录，都会好好留下",18,MUTED)
+	var kept: Label=_text("出售或放生均保留图鉴与纪录",18,MUTED)
 	kept.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(kept)
 
@@ -1084,7 +1083,7 @@ func _finish_result() -> void:
 	_save_selection()
 
 func _show_pending() -> void:
-	_open_page("pending","尚未告别的相遇")
+	_open_page("pending","待处理钓获")
 	var pending: Dictionary=store.state.get("pending_catches",{})
 	if pending.is_empty(): _page.add_child(_text("所有钓获都已妥善处理",26))
 	for id: String in pending:
@@ -1107,7 +1106,7 @@ func _dispose_pending(id: String,action: String) -> void:
 	else: _page.add_child(_text(str(result.get("error",store.error_message)),24,CORAL))
 
 func _show_settings() -> void:
-	_open_page("settings","设置与旅程说明")
+	_open_page("settings","设置")
 	var settings: Dictionary = store.state.get("settings",{})
 	for pair: Array in [["sound","声音"],["vibration","震动"]]:
 		var key: String = str(pair[0])

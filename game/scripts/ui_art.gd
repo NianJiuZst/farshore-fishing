@@ -10,6 +10,7 @@ const REQUIRED_ICONS: Array[String]=[
 ]
 static var _textures: Dictionary={}
 static var _reported: Dictionary={}
+static var _small_textures: Dictionary={}
 var kind: String="compass":
 	set(value):
 		if kind==value:return
@@ -59,3 +60,17 @@ static func _report_missing(icon_kind: String) -> void:
 	if not _reported.has(icon_kind):
 		_reported[icon_kind]=true
 		push_error("Missing required generated UI icon: "+ICON_ROOT+icon_kind+".png")
+
+static func scaled_texture(icon_kind: String, pixels: int, turn_clockwise: bool = false) -> Texture2D:
+	var key: String=icon_kind+"_"+str(pixels)+"_"+str(turn_clockwise)
+	if _small_textures.has(key):return _small_textures[key] as Texture2D
+	var texture: Texture2D=texture_for(icon_kind)
+	if texture==null:return null
+	var source: Image=texture.get_image()
+	if source==null:return null
+	if source.is_compressed():source.decompress()
+	if turn_clockwise:source.rotate_90(CLOCKWISE)
+	source.resize(pixels,pixels,Image.INTERPOLATE_LANCZOS)
+	var small: ImageTexture=ImageTexture.create_from_image(source)
+	_small_textures[key]=small
+	return small
