@@ -1,0 +1,42 @@
+{
+  "species": "tench",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 30154,
+  "vertices": 15679,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Thick olive-green rounded body and minute embedded scales",
+    "Small red eyes, thick lips and one short barbel pair",
+    "Rounded dorsal/paired/anal fins and near-square shallowly concave tail",
+    "Thick caudal peduncle rather than a thin forked-tail stalk"
+  ],
+  "sources": [
+    "https://www.fishbase.se/summary/tinca-tinca.html"
+  ],
+  "glb_bytes": 5034736,
+  "glb_sha256": "2e4143cb0aee94e636bec2872e75e884753770394ba98d7ecade25da451ac55e",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

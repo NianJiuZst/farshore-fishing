@@ -1,0 +1,103 @@
+{
+  "aabb_size": [
+    1.0,
+    0.459811061620712,
+    0.267038345336914
+  ],
+  "animation_players": 1,
+  "bone_count": 16,
+  "clips": {
+    "breach": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 1.39999997615814,
+      "tracks": 15
+    },
+    "landed": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 3.0,
+      "tracks": 15
+    },
+    "struggle": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 1.20000004768372,
+      "tracks": 15
+    },
+    "swim": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 2.0,
+      "tracks": 15
+    }
+  },
+  "failures": [],
+  "glb_sha256": "2e4143cb0aee94e636bec2872e75e884753770394ba98d7ecade25da451ac55e",
+  "godot_version": "4.6.3-stable (official)",
+  "material_surfaces": 11,
+  "meshes": 11,
+  "skeletons": 1,
+  "skinned_meshes": 11,
+  "species": "tench"
+}

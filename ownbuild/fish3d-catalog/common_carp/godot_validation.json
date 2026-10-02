@@ -1,0 +1,103 @@
+{
+  "aabb_size": [
+    1.0,
+    0.524007976055145,
+    0.333535671234131
+  ],
+  "animation_players": 1,
+  "bone_count": 16,
+  "clips": {
+    "breach": {
+      "animated_bones": [
+        "head",
+        "gill_R",
+        "gill_L",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "pelvic_R",
+        "pelvic_L",
+        "dorsal",
+        "pectoral_R",
+        "pectoral_L"
+      ],
+      "seconds": 1.39999997615814,
+      "tracks": 15
+    },
+    "landed": {
+      "animated_bones": [
+        "head",
+        "gill_R",
+        "gill_L",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "pelvic_R",
+        "pelvic_L",
+        "dorsal",
+        "pectoral_R",
+        "pectoral_L"
+      ],
+      "seconds": 3.0,
+      "tracks": 15
+    },
+    "struggle": {
+      "animated_bones": [
+        "head",
+        "gill_R",
+        "gill_L",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "pelvic_R",
+        "pelvic_L",
+        "dorsal",
+        "pectoral_R",
+        "pectoral_L"
+      ],
+      "seconds": 1.20000004768372,
+      "tracks": 15
+    },
+    "swim": {
+      "animated_bones": [
+        "head",
+        "gill_R",
+        "gill_L",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "pelvic_R",
+        "pelvic_L",
+        "dorsal",
+        "pectoral_R",
+        "pectoral_L"
+      ],
+      "seconds": 2.0,
+      "tracks": 15
+    }
+  },
+  "failures": [],
+  "glb_sha256": "80f3037eb7ecafcaafb57461ab6b505e9102c7822b60311d326a431a49217cc8",
+  "godot_version": "4.6.3-stable (official)",
+  "material_surfaces": 9,
+  "meshes": 9,
+  "skeletons": 1,
+  "skinned_meshes": 9,
+  "species": "common_carp"
+}

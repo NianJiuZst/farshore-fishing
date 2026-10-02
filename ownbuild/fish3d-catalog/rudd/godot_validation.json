@@ -1,0 +1,103 @@
+{
+  "aabb_size": [
+    1.0,
+    0.434257805347443,
+    0.206611648201942
+  ],
+  "animation_players": 1,
+  "bone_count": 16,
+  "clips": {
+    "breach": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 1.39999997615814,
+      "tracks": 15
+    },
+    "landed": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 3.0,
+      "tracks": 15
+    },
+    "struggle": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 1.20000004768372,
+      "tracks": 15
+    },
+    "swim": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 2.0,
+      "tracks": 15
+    }
+  },
+  "failures": [],
+  "glb_sha256": "9eda48cfc864a7423083981ae9faca93080f43e895d2bcddf2691436442d6f47",
+  "godot_version": "4.6.3-stable (official)",
+  "material_surfaces": 12,
+  "meshes": 12,
+  "skeletons": 1,
+  "skinned_meshes": 12,
+  "species": "rudd"
+}

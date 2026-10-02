@@ -1,0 +1,44 @@
+{
+  "species": "longnose_gar",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 28610,
+  "vertices": 14885,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 10,
+  "materials": 10,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Needle-narrow snout more than twice remaining head length",
+    "Thin elongate armored body with fine diamond-shaped scales",
+    "Dark side and tail spots, rear dorsal and anal",
+    "Rounded slightly asymmetric tail, no barbels",
+    "Distinct from broad-snouted robust alligator gar"
+  ],
+  "sources": [
+    "https://www.nps.gov/miss/learn/nature/long-nosed-gar-lepisosteus-osseus.htm",
+    "https://dnr.sc.gov/fish/species/longnosegar.html"
+  ],
+  "glb_bytes": 5294380,
+  "glb_sha256": "9fb9123f0e2c35c0373abe3f077ebac44a9cbbd11770da701ee286027af88b9d",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

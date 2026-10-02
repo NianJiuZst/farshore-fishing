@@ -1,6 +1,6 @@
 {
   "species": "chinese_sturgeon",
-  "pipeline_sha256": "722f359a315e92ff570f001cd4705d03b3c3b2d3752c75245c0674ce94ac5b65",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
   "triangles": 31910,
   "vertices": 16749,
   "bones": [
@@ -37,8 +37,8 @@
     "https://www.fisheries.noaa.gov/species/chinese-sturgeon",
     "https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf"
   ],
-  "glb_bytes": 2641012,
-  "glb_sha256": "92bc79775f65b8140e3f5eaebaa8b769663576788fd92a4adc9e054e792a7e12",
+  "glb_bytes": 2641428,
+  "glb_sha256": "d5b845fa76371a215ec3ec9eb54a1f65b56d68eddb96ca1174d136d2898aa8af",
   "flatfish": false,
   "ocular_side": "bilateral"
 }

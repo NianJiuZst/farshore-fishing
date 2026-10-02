@@ -1,0 +1,1490 @@
+{
+  "expected": 44,
+  "generated": 44,
+  "artifact_contact_pass": 44,
+  "required_views_present_count": 167,
+  "required_views_total": 352,
+  "maximum_attachment_distance_m": 0.003669856349006295,
+  "failures": [],
+  "species": [
+    {
+      "species": "common_carp",
+      "failures": [],
+      "glb_bytes": 12589628,
+      "glb_sha256": "80f3037eb7ecafcaafb57461ab6b505e9102c7822b60311d326a431a49217cc8",
+      "master_sha256": "1892ae9cbec633aaef437ba891fee85381e2f329f488fb3ad36e34588bc7a427",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 28334,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.5240079164505005,
+        0.33353567123413086
+      ],
+      "geometry_signature": "c660baee2daae13a09a55484c7fea8e35dfb83a2e95a5b6cd6173824d02a8bdf",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002135354094207287,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "crucian_carp",
+      "failures": [],
+      "glb_bytes": 4271164,
+      "glb_sha256": "43d0d850ca96f78ab22b374a3964caca155b2e56a11eb7f551598c69a3c5a8c8",
+      "master_sha256": "bc66abd4211e66baef51e00f33a09c6c8516ffe06df240b7fb45fd167912b264",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 29406,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.5340719223022461,
+        0.27260804176330566
+      ],
+      "geometry_signature": "5120f002943c1ab9ae2bbbd156c5929cd94f9dde34c241a0daaa6895265f2c60",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002057678299024701,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle"
+      ]
+    },
+    {
+      "species": "roach",
+      "failures": [],
+      "glb_bytes": 4449248,
+      "glb_sha256": "1af810758d6e674467d700ca554a2214beba1dfc434f7ec2568f87db81c40ccf",
+      "master_sha256": "ce8a26bee55b13c6720e9c24c6988ce88c05275c0ec34e7e63736ea9d842aab8",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 27810,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.38820964097976685,
+        0.20395466685295105
+      ],
+      "geometry_signature": "075ff6d4e7189507ab71640d30e0a6b1084e34e81f32d48bc3441636b972eccb",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002023801440373063,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "rudd",
+      "failures": [],
+      "glb_bytes": 4418272,
+      "glb_sha256": "9eda48cfc864a7423083981ae9faca93080f43e895d2bcddf2691436442d6f47",
+      "master_sha256": "4b470f1428835245409bb6c9fad932e0a1d3087cc5a738392d828042887c7893",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 27978,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.4342578053474426,
+        0.20661164820194244
+      ],
+      "geometry_signature": "8d7f168eb0a1b6e49d06736c1b22ac7b06e9330ba41b93c525a0faa733ac7a3e",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002067080233246088,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "european_perch",
+      "failures": [],
+      "glb_bytes": 5283560,
+      "glb_sha256": "f48906c003e6e6b9febe78e769ac8640720183e81451037fc64f88ff5195e3a3",
+      "master_sha256": "732dd87c543844289b6af086b28e04a37cabce83adbdea5250e770c8673073af",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 33616,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.47479307651519775,
+        0.23518997430801392
+      ],
+      "geometry_signature": "596ad1782708a628c200677fabe157a816e07e4e0c50256dc6e8fe3f04acfb76",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0020346331875771284,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "northern_pike",
+      "failures": [],
+      "glb_bytes": 4924548,
+      "glb_sha256": "7087f34e042b5a1041f622275f3137865d7ddf4f20e4ff82a876a4bac36f17c1",
+      "master_sha256": "25c8f02578b988b2bb63788489f863616a1467d4bf0ae09b51480e520af789e5",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 32058,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.261152982711792,
+        0.19603750109672546
+      ],
+      "geometry_signature": "1d1f81b0cf881c4a4535e8d06fef5649670731b6c42c87d6de54dde47976b534",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0019920053891837597,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "common_bream",
+      "failures": [],
+      "glb_bytes": 4092852,
+      "glb_sha256": "53253642e824a76c216055c7d9cbeb8bc88cf75343fd59b2be94c74feb8b911d",
+      "master_sha256": "9063482fd7fc5548f1d6cc1dff56c89c6cf0e2759fb9e03c8f7bda067b0626d3",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 29574,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.6591581702232361,
+        0.19249774515628815
+      ],
+      "geometry_signature": "89515098987be93e1a96b65bf44de1d62a83633a3ba83f3155d3836a9b2e69b1",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0020410045981407166,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "tench",
+      "failures": [],
+      "glb_bytes": 5034736,
+      "glb_sha256": "2e4143cb0aee94e636bec2872e75e884753770394ba98d7ecade25da451ac55e",
+      "master_sha256": "c5f1d1853edd32bc4b3c45fb615e94e6b73d4ac691cab4388903e7edf0c08a2c",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 30154,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.45981109142303467,
+        0.26703834533691406
+      ],
+      "geometry_signature": "e0ccb456d2f4b516f047c7951f1ed99c06c2bf3128398d14fd52e0363cf8534d",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0020536992233246565,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "japanese_horse_mackerel",
+      "failures": [],
+      "glb_bytes": 4725936,
+      "glb_sha256": "ad20a543999aa0e050041920a57d00ea6609f6148117de5c5d9137150268162f",
+      "master_sha256": "d6ad96e0147abadd2409209279b464763d78a5ed89d3008e369caad0e04350fa",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 33910,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.28277596831321716,
+        0.31921935081481934
+      ],
+      "geometry_signature": "793c14cd002eb2aa2b6dd4a39e0a76e85cc97edc1fab77c49bbdf636d9d6e2d3",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0015532372053712606,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "chub_mackerel",
+      "failures": [],
+      "glb_bytes": 5331640,
+      "glb_sha256": "ec51f5841816054213c2dc06a15ca494563dcdcf024ad410e6e5e6cfac5b5aa8",
+      "master_sha256": "f682a403377b549519fb71bfcc3408ea2fea16c20355eb313566bd28f3e522bb",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 27,
+      "triangles": 33306,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.2830350995063782,
+        0.1821843981742859
+      ],
+      "geometry_signature": "84dbc28eef9246aeda68f52381819c7c9936029815353dff10331bc4f5aa8918",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0022989860735833645,
+      "attachment_groups": 18,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "red_seabream",
+      "failures": [],
+      "glb_bytes": 4205712,
+      "glb_sha256": "2db9214a767231be58b76adf0704678fa483f10cd1c4690e5bb20e80a7b9c45e",
+      "master_sha256": "d5bdf40e1ae92304a17f9e404ba00912959e10fd9661d40527d9dbcfeede95e0",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 32110,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.473553866147995,
+        0.25832247734069824
+      ],
+      "geometry_signature": "055e18a8b5b3da030ecd8321d90e0eecbfab1fffbd1cf6f1585d0548b0d5a170",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0019172534812241793,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "black_seabream",
+      "failures": [],
+      "glb_bytes": 4913484,
+      "glb_sha256": "670c3d601e73454092a3e83f90e694f73c657eecd5afb9f27621e5bbf1b54954",
+      "master_sha256": "35a6ed776f9ebf8f951a539b73bd22a0378d6d7d0110cf773f420033ac7f2d4d",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 32278,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.4963071048259735,
+        0.26875197887420654
+      ],
+      "geometry_signature": "3307a97a6b2f7ac2e39ea332becd729883463ca3a6caba8704bb283e6c6a75fd",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018366466974839568,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "japanese_seabass",
+      "failures": [],
+      "glb_bytes": 4588452,
+      "glb_sha256": "79c588c5e6c8a4eee9298f69a94703f3bb4b28ec5aac5f55eb475bb2cf528c1d",
+      "master_sha256": "473ab5de94500d20ea7d29f6c4e4711d9a7fe6f6b5af0f397563c46d9d60be6c",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 33592,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.3747296929359436,
+        0.2129622995853424
+      ],
+      "geometry_signature": "ff06e6f29ed7994e97e8a3b62c47bcea2169b491d0cc4ab558afb2ac23f4710a",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.001803992665372789,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "japanese_whiting",
+      "failures": [],
+      "glb_bytes": 5026920,
+      "glb_sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+      "master_sha256": "c6573e2dad16440505ab62621eb558af86f6b23b80dea4a42b4d53c00ec2ead7",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 31346,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.23914742469787598,
+        0.14853176474571228
+      ],
+      "geometry_signature": "ae7bf550326d24bf3545659bdfdac9bacc6058633dc9b9521a2ec675300c092d",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0019154840847477317,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "marbled_rockfish",
+      "failures": [],
+      "glb_bytes": 5913992,
+      "glb_sha256": "78c5fd2e2e99d4f7d04867f5361461537dd5383eb7c59fe77cbb42d74317a9ad",
+      "master_sha256": "a67f96d6ccb982308c0bd8dd9f8d1d2e47937792821af4092cd7ee4c531aa4d2",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 34540,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.4425773322582245,
+        0.3598766326904297
+      ],
+      "geometry_signature": "5e7c4f3d001f2662dafff35a61bd0b5fd4d827a7a4a54c1d47da4a1177969323",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0017419253708794713,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "olive_flounder",
+      "failures": [],
+      "glb_bytes": 4698588,
+      "glb_sha256": "9b23be7408e9c4c52d851129b492680f2fb834b13ccba5af3a736c284f3130c5",
+      "master_sha256": "a5ff7e00bf66e845663a56dfcba93859550b71c4b1d600d7bb45f21359746ae3",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 18,
+      "triangles": 52374,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.08544084429740906,
+        0.48707693815231323
+      ],
+      "geometry_signature": "659f0ed998a4b4e8470dea360885e57d999b75896cf6dc40331d542723136f50",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.00240467581897974,
+      "attachment_groups": 9,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "atlantic_cod",
+      "failures": [],
+      "glb_bytes": 3511496,
+      "glb_sha256": "3fb0c50281d344fa97484cac7ffa48de7508fa344d19a3840e94e1cfd6dd4218",
+      "master_sha256": "e91b01015c7e52d7da82a88e7d9497ff5d5d7e777b0ac05c50f3d32e6bdb56e8",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 19,
+      "triangles": 38348,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.2867020070552826,
+        0.27111437916755676
+      ],
+      "geometry_signature": "a6d5951ec89d35449f7204737bc5bdf342868c8ec55eab36b1b7ea1968260e66",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0017198108835145831,
+      "attachment_groups": 10,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "pollack",
+      "failures": [],
+      "glb_bytes": 5361456,
+      "glb_sha256": "634d7c68da5e738653e9b9ed29e816c676db0f4f1f2f22d76939c1ff63fee53c",
+      "master_sha256": "6f2d082db0a8d2256f0c140a6926d5ac4373602a5f573d9d08434995ec288ced",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 19,
+      "triangles": 38762,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.27419769763946533,
+        0.20442426204681396
+      ],
+      "geometry_signature": "2da301aa0a8e69fe03d21cd136c83803a64cfe4fbef12e906b81c3ac8c0c1e0d",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0016682458808645606,
+      "attachment_groups": 10,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "saithe",
+      "failures": [],
+      "glb_bytes": 5404468,
+      "glb_sha256": "50eb1ba6e45900ff6695f2aec9f0f6a5319f86bdbc16a1f825a5d336f703b573",
+      "master_sha256": "493d683eaa3d69df56a0c09826d13a36bbae623615882f86aa0cfa8e663be226",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 19,
+      "triangles": 38484,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.2500605583190918,
+        0.24758604168891907
+      ],
+      "geometry_signature": "0d28cb60699dcc034c47e3f32e0fa8c101581c883a1f1001d21a6c1fb424dd2f",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018855240195989609,
+      "attachment_groups": 10,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "haddock",
+      "failures": [],
+      "glb_bytes": 5333836,
+      "glb_sha256": "8a036c1b8417f3cc70a0381684d18713af1b96613de93b46a52fc6c2427ab56e",
+      "master_sha256": "69a487c8deb7ebe9d44588f9b4d18430d7b100156c1a76d2f88337f2a7426719",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 19,
+      "triangles": 38072,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.3712310194969177,
+        0.22857216000556946
+      ],
+      "geometry_signature": "82cb5902d0e9466a665f6e7e5466f364fc1af62ede18246b19d0bbc32d75a7e7",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0017271478427574039,
+      "attachment_groups": 10,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "atlantic_mackerel",
+      "failures": [],
+      "glb_bytes": 5331848,
+      "glb_sha256": "12394131cb93c1b0816a76771a9492fcbf1d6227308b9a4150cc9455b6815ef4",
+      "master_sha256": "fdeeddfe2e2d534191bc0d5760cd6bb53c86ce1020913a991f93e339ca30945b",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 27,
+      "triangles": 33474,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.24939370155334473,
+        0.1822277307510376
+      ],
+      "geometry_signature": "0b44d638fbc0d591d0c6254e7bf8011e97c0f0369700b14492442268f1ef765d",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0021641210187226534,
+      "attachment_groups": 18,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "atlantic_herring",
+      "failures": [],
+      "glb_bytes": 4810980,
+      "glb_sha256": "b2d04d4912f51343aef712894c35b46a334d23c0887a238d9f0350f81923f742",
+      "master_sha256": "ae01f79c8734b75790fbe36cd80f480d7220bd2d6279b9e7b9e4487273d01527",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 29586,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.29812830686569214,
+        0.1649150252342224
+      ],
+      "geometry_signature": "49857c4074eff4985e08e9afbc44295499c5779efca0bb1d1d1109f0370e5b7e",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0014756418531760573,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "european_plaice",
+      "failures": [],
+      "glb_bytes": 4797160,
+      "glb_sha256": "e44d5f7db964357bfa4e7bef31d6fa4740387198ce0f44401fecdcd2035c33e1",
+      "master_sha256": "8a4c6e9fadb1aa77834f9a0cfda504289aabff306447d2e53734926a4404c28c",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 18,
+      "triangles": 57268,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.0918293371796608,
+        0.5534849166870117
+      ],
+      "geometry_signature": "5d3a34fd0c040d86fa2a62491326c7826d17cc803abf654f5f14a615fd9cad04",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002464004559442401,
+      "attachment_groups": 9,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "atlantic_wolffish",
+      "failures": [],
+      "glb_bytes": 4252192,
+      "glb_sha256": "c92007119d8b31de66ee9e896a162fa44309bdeb21163ab6e2ced51a2575658e",
+      "master_sha256": "455b68480f101f99e1239b972ad4413f2fe7438c766b92f713340ecdfd8775f3",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 14,
+      "triangles": 42628,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.2348630726337433,
+        0.3731759786605835
+      ],
+      "geometry_signature": "8368e995cd9f1b133f7e6d5de16b620ee99fc85787f17fa13d52026e3b568d4a",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0024056732654571533,
+      "attachment_groups": 5,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "european_seabass",
+      "failures": [],
+      "glb_bytes": 4866736,
+      "glb_sha256": "26e456afcc5563888a34628facbad226bb0c0588c38824b88e177afd4d86407f",
+      "master_sha256": "314b6325ecbca93d6241327a9931e78307a642818ee50591a522c9eb25eb2127",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 32684,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.38888001441955566,
+        0.22850003838539124
+      ],
+      "geometry_signature": "60937e143a4658af651e2fbb184ed880f7d26769267d08106bbc09671a7c9800",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018474279204383492,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "gilthead_seabream",
+      "failures": [],
+      "glb_bytes": 5123776,
+      "glb_sha256": "910f3207d9ec2fe0aab28632ef245ba9b7612ae48a7e2b7c357724057c50e812",
+      "master_sha256": "8ca51ed3ad0215a6354921700805dfddcf5a52f47f4ba0bc0a0325515f67ef16",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 32950,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.5024562478065491,
+        0.27557188272476196
+      ],
+      "geometry_signature": "116637e9b2b5883e4cd80c3e709ba7f5ac13f8e5b06d75672fd36ae1b59b6d5e",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018756076460704207,
+      "attachment_groups": 8,
+      "required_views_present": []
+    },
+    {
+      "species": "saddled_seabream",
+      "failures": [],
+      "glb_bytes": 5036240,
+      "glb_sha256": "592c088c8d25b7de57c18a8b85ab4534dbb98b9420cbd45ee07402439a4ee017",
+      "master_sha256": "af3be62d1655e69793ffa161aec9ef3d6d1411ec388905b47c9b6ddbb253e612",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 33322,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.3902755379676819,
+        0.21601444482803345
+      ],
+      "geometry_signature": "2a8b60e52d689fc213084039bff2da48ccdad2b53d5b93fbe681931c6892ebf6",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018793650669977069,
+      "attachment_groups": 8,
+      "required_views_present": []
+    },
+    {
+      "species": "white_seabream",
+      "failures": [],
+      "glb_bytes": 5165668,
+      "glb_sha256": "fcf0ddec5bf285c73f47727c50b61e831d3d6c7c4a0da6944d60b22733fc5982",
+      "master_sha256": "ac0114db1c78f0dbccc6004101a7fbff3f0359fc38b7358de0101838688e9436",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 32446,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.5103610754013062,
+        0.26320284605026245
+      ],
+      "geometry_signature": "616ecb19dd94f542231205f924b252b710586e1ac6739fcf38c82e620916cf6a",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018325867131352425,
+      "attachment_groups": 8,
+      "required_views_present": []
+    },
+    {
+      "species": "annular_seabream",
+      "failures": [],
+      "glb_bytes": 4918176,
+      "glb_sha256": "57916d199f5386553e66cb0d6e559e1386e80e8c6397da95b9b0e0112a14ddb5",
+      "master_sha256": "5448ee35169d440537afcde5bc2b270130c7eb8e08c9e28d7a695b09c0fe263b",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 31942,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.4436885118484497,
+        0.23138317465782166
+      ],
+      "geometry_signature": "5fffb82855c462f61780c8ad7e857671e37b366d51e3d76f34754e7f54ab4e74",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018676932668313384,
+      "attachment_groups": 8,
+      "required_views_present": []
+    },
+    {
+      "species": "red_mullet",
+      "failures": [],
+      "glb_bytes": 4602164,
+      "glb_sha256": "b5edb5745bd647fc5648e0de62638b976e869cf6ef6d7465b9e180c490c17249",
+      "master_sha256": "9e2637fb7212c098e49a4d8e7bb51341231e41ff058c5734975efaf7b1cc6536",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 30402,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.36966776847839355,
+        0.22246521711349487
+      ],
+      "geometry_signature": "769e5deaf3b84f85181fad586c1f22c67b7409e22bbf388f72cb9a5cc7440962",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018345010466873646,
+      "attachment_groups": 8,
+      "required_views_present": []
+    },
+    {
+      "species": "painted_comber",
+      "failures": [],
+      "glb_bytes": 5846284,
+      "glb_sha256": "2b2f3cc10ba1df65120bc3e7b9d3ae3badeaebd2f0d105fda21abd3c581a817f",
+      "master_sha256": "405fe7152ee6aae02982b75fc5b1056d0da52e172234fbd251e595e18fe8706f",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 32648,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.3829087018966675,
+        0.22548332810401917
+      ],
+      "geometry_signature": "a38da32ca6fde05cb52ec113939c6709a0c44c2ef83885d716bcc7d1261b31b3",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018708424177020788,
+      "attachment_groups": 8,
+      "required_views_present": []
+    },
+    {
+      "species": "common_pandora",
+      "failures": [],
+      "glb_bytes": 4699912,
+      "glb_sha256": "0798ae024f2c79889c832459a1626be6ab9d0776eb469fd37d25b388fec9fa6f",
+      "master_sha256": "be1ff9ba8dc1de127246db12076fc5a8f1d06f360c58c20e9c109d6f70309782",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 32446,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.40828222036361694,
+        0.21804727613925934
+      ],
+      "geometry_signature": "2df2e2affb5c32c5b6dd32552cd50a74f5f5bb55c2c54ea5dc7fad017a01f161",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.001854192465543747,
+      "attachment_groups": 8,
+      "required_views_present": []
+    },
+    {
+      "species": "alligator_gar",
+      "failures": [],
+      "glb_bytes": 12842108,
+      "glb_sha256": "ab4820619fe604d2e174c2e8b1439da69a58cc0576cd38c4ea21e4c279431ce3",
+      "master_sha256": "638d3595eae741b4bbc41cf1e6fbb8981a08f42021c857879b89502ecf9b9122",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 29408,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.24907022714614868,
+        0.2279767394065857
+      ],
+      "geometry_signature": "33bc59f22e5966267b30071e716ea80a1302200b11535472ab9f893bcc506a71",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002191350096836686,
+      "attachment_groups": 7,
+      "required_views_present": []
+    },
+    {
+      "species": "longnose_gar",
+      "failures": [],
+      "glb_bytes": 5294380,
+      "glb_sha256": "9fb9123f0e2c35c0373abe3f077ebac44a9cbbd11770da701ee286027af88b9d",
+      "master_sha256": "a985afc1a9bbd9c1c81a5b488d75259783a2f66a9e765e131c835f19bb65c349",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 28610,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.19316762685775757,
+        0.14565519988536835
+      ],
+      "geometry_signature": "2e9d456eef76017c69f672b678d2c938573a804aa5aba679a92d7f711061c0fd",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0019224630668759346,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "bowfin",
+      "failures": [],
+      "glb_bytes": 5303068,
+      "glb_sha256": "b41e73e0603fc5da5f3ffec008d29be8e690640c2d0aaac630b1bf97fb56cd45",
+      "master_sha256": "115c86c7cebdfe32145d5341e493878652b7296d844dcb1826a2c159d5562852",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 33112,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.2663359045982361,
+        0.29805487394332886
+      ],
+      "geometry_signature": "ed73de1e542b13fc27340db9b093691ea1d060c1cb5e15a2be6ff4891d00ab5b",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002103338483721018,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "largemouth_bass",
+      "failures": [],
+      "glb_bytes": 4906752,
+      "glb_sha256": "890aa67eb870b4a5d5ddb3496cdde6ad722bb912c281e1c5bb554e913c223611",
+      "master_sha256": "ac63a57f425e8816df5dbe51abfe71e39455c40c4ac79c1e89e229616bbe3a8c",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 33244,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.3786458373069763,
+        0.2467285841703415
+      ],
+      "geometry_signature": "7db99fe6378081afd3d1915d3a8870dfb5593042f4d2a5fa3a5fc22ce89cc6ba",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.001793971168808639,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "channel_catfish",
+      "failures": [],
+      "glb_bytes": 2473920,
+      "glb_sha256": "79eadc9f2e788e9c046d584ce78102f67ed699cb6cb0633124d9d4889e99fbe7",
+      "master_sha256": "182d0099cdf8b0dad6dddeb53f5db4559c225761405a7277446303bebd1f477a",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 32270,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.34445720911026,
+        0.33552899956703186
+      ],
+      "geometry_signature": "21c830a692daf08c45361ed8fce35d8db40b7f16591364737b83e4e34599483e",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0021227889228612185,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "flathead_catfish",
+      "failures": [],
+      "glb_bytes": 3280752,
+      "glb_sha256": "c34087572690a8e8203d22a859e8d565c5c1693f175240013dd110ff696c850b",
+      "master_sha256": "9139492b3143a0439b335b2cb9289c795466dd97242652752920cd2b50109c86",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 30316,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.32050150632858276,
+        0.3718385696411133
+      ],
+      "geometry_signature": "720c204c541317d616428298c508fb6e39e528431631401c006c76cc90673683",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0021221721544861794,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "chinese_sturgeon",
+      "failures": [],
+      "glb_bytes": 2641428,
+      "glb_sha256": "d5b845fa76371a215ec3ec9eb54a1f65b56d68eddb96ca1174d136d2898aa8af",
+      "master_sha256": "a2bf7e9579b899e4cfa2b8cd86e393df131bc33fdce2ac8bbb4ebd8e93e3e2dc",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 31910,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.28302332758903503,
+        0.27554160356521606
+      ],
+      "geometry_signature": "42c0b3c19d344011e3b08c93ba3292705ad060f091b75f5158f80c70c82c70f6",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002678186632692814,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "mandarin_fish",
+      "failures": [],
+      "glb_bytes": 5013976,
+      "glb_sha256": "f96526ef4c84e015f1e60aceaa92ca4ae12368c9895de5e10163358e66186207",
+      "master_sha256": "bd974bcf1191d4a209e9a85d7d01238cb65c85d9f45ce899161e5f2134b95242",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 17,
+      "triangles": 33976,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.4242928624153137,
+        0.2597309947013855
+      ],
+      "geometry_signature": "fb813c015ab5443a05328527d6ba77fcae48655654fedb2fab60cf9935bfdb33",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0018144837813451886,
+      "attachment_groups": 8,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "northern_snakehead",
+      "failures": [],
+      "glb_bytes": 5353596,
+      "glb_sha256": "fdceece8f75f0f3921c956c3a05dc902ed5d245cb58b4f068f8b84a49b2589f0",
+      "master_sha256": "c7fba23f9b5ce772c6698e3506aa888707710a6e3183c66a9eb5398f7de4a101",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 33568,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.2307867705821991,
+        0.293862521648407
+      ],
+      "geometry_signature": "15b259b1630f666ba3201e45d5fc948c36058b631096fc3bd0920e4d60e714d6",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.0020766202360391617,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ]
+    },
+    {
+      "species": "yellowcheek",
+      "failures": [],
+      "glb_bytes": 5060744,
+      "glb_sha256": "fdbff99da77369235c21f66ebe8a31432cfb7aca01182a0b849e23d5e1a80d03",
+      "master_sha256": "ec0116e9636d6c0683a4f39e9fddee75d3cb8c1ac35d6fb37055a48a5fdcda5c",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 29550,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.29602718353271484,
+        0.1877213716506958
+      ],
+      "geometry_signature": "3a4b10275e1b90b42f214760c92b7d37b4f0017532ac2fd57c987ace8f326213",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.002013001823797822,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "southern_catfish",
+      "failures": [],
+      "glb_bytes": 2804568,
+      "glb_sha256": "198e629f0409a34e51e05c0e99fcf0b031882a1dcff3070e4b58cfa130cffa94",
+      "master_sha256": "3909c973d888a1a2ddb03e219bdc2bebb34cd9f58073c4a281cf7d6b68fb8d53",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 33928,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.24882656335830688,
+        0.3519700765609741
+      ],
+      "geometry_signature": "b046305d136107403f3bddb4a56634d8db485801c704e1a25eca07daaa3baec8",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.003456374164670706,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    },
+    {
+      "species": "longsnout_catfish",
+      "failures": [],
+      "glb_bytes": 2236288,
+      "glb_sha256": "6cc5c4479b8770ea793ee695bfd54d2ef4d6de91d5d63253425308bc5ff62dfe",
+      "master_sha256": "6ccf4074c28a4b75274d2b3687f28d029db11786cbffa3ff2a96412be3c7b229",
+      "clips": [
+        "breach",
+        "landed",
+        "struggle",
+        "swim"
+      ],
+      "bones": 16,
+      "triangles": 28986,
+      "weight_sum_range": [
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "rest_size_xyz": [
+        1.0,
+        0.3239171504974365,
+        0.2811582088470459
+      ],
+      "geometry_signature": "66cfc201de9e084cc6c96a10df418e3e4a891dbd088c329d9642d0f3e71fedd6",
+      "contact_failures": [],
+      "max_attachment_distance_m": 0.003669856349006295,
+      "attachment_groups": 7,
+      "required_views_present": [
+        "hero"
+      ]
+    }
+  ]
+}

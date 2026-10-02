@@ -1,0 +1,103 @@
+{
+  "aabb_size": [
+    1.0,
+    0.261152982711792,
+    0.196037501096725
+  ],
+  "animation_players": 1,
+  "bone_count": 16,
+  "clips": {
+    "breach": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal",
+        "anal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 1.39999997615814,
+      "tracks": 15
+    },
+    "landed": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal",
+        "anal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 3.0,
+      "tracks": 15
+    },
+    "struggle": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal",
+        "anal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 1.20000004768372,
+      "tracks": 15
+    },
+    "swim": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal",
+        "anal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "seconds": 2.0,
+      "tracks": 15
+    }
+  },
+  "failures": [],
+  "glb_sha256": "7087f34e042b5a1041f622275f3137865d7ddf4f20e4ff82a876a4bac36f17c1",
+  "godot_version": "4.6.3-stable (official)",
+  "material_surfaces": 10,
+  "meshes": 10,
+  "skeletons": 1,
+  "skinned_meshes": 10,
+  "species": "northern_pike"
+}

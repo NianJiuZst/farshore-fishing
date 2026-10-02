@@ -1,0 +1,43 @@
+{
+  "species": "roach",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 27810,
+  "vertices": 14463,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Slender laterally compressed silver body",
+    "Red iris and orange-red lower fins",
+    "Terminal small mouth, no barbels",
+    "Dorsal origin nearly aligned above pelvic origin",
+    "Forked caudal and normal-length anal fin"
+  ],
+  "sources": [
+    "https://www.fishbase.se/Summary/Rutilus-rutilus"
+  ],
+  "glb_bytes": 4449248,
+  "glb_sha256": "1af810758d6e674467d700ca554a2214beba1dfc434f7ec2568f87db81c40ccf",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

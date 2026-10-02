@@ -1,0 +1,107 @@
+{
+  "aabb_size": [
+    1.0,
+    0.474793076515198,
+    0.235189974308014
+  ],
+  "animation_players": 1,
+  "bone_count": 17,
+  "clips": {
+    "breach": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal_soft",
+        "anal",
+        "dorsal_spiny",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "seconds": 1.39999997615814,
+      "tracks": 16
+    },
+    "landed": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal_soft",
+        "anal",
+        "dorsal_spiny",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "seconds": 3.0,
+      "tracks": 16
+    },
+    "struggle": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal_soft",
+        "anal",
+        "dorsal_spiny",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "seconds": 1.20000004768372,
+      "tracks": 16
+    },
+    "swim": {
+      "animated_bones": [
+        "head",
+        "jaw",
+        "gill_R",
+        "gill_L",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail",
+        "caudal",
+        "dorsal_soft",
+        "anal",
+        "dorsal_spiny",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "seconds": 2.0,
+      "tracks": 16
+    }
+  },
+  "failures": [],
+  "glb_sha256": "f48906c003e6e6b9febe78e769ac8640720183e81451037fc64f88ff5195e3a3",
+  "godot_version": "4.6.3-stable (official)",
+  "material_surfaces": 13,
+  "meshes": 13,
+  "skeletons": 1,
+  "skinned_meshes": 13,
+  "species": "european_perch"
+}

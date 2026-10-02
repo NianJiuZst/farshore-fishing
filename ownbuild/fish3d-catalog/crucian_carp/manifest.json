@@ -1,0 +1,43 @@
+{
+  "species": "crucian_carp",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 29406,
+  "vertices": 15299,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Short high laterally compressed bronze body",
+    "No mouth barbels",
+    "Long dorsal with convex upper contour",
+    "Rounded paired fins and shallowly notched caudal",
+    "Small terminal mouth and short blunt snout"
+  ],
+  "sources": [
+    "https://www.fishbase.se/summary/270"
+  ],
+  "glb_bytes": 4271164,
+  "glb_sha256": "43d0d850ca96f78ab22b374a3964caca155b2e56a11eb7f551598c69a3c5a8c8",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

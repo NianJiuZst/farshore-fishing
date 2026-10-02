@@ -1,6 +1,6 @@
 {
   "species": "european_plaice",
-  "pipeline_sha256": "1daac6e2fd064944f97cf81f6443cd2ca91e9b497a7ede8d7443edf505a2a6b1",
+  "pipeline_sha256": "c799a7c7106af70b2ff17a9f307bad85df287957e8d345d90ae5abc25fc82d3a",
   "triangles": 57268,
   "vertices": 29312,
   "bones": [
@@ -40,8 +40,8 @@
     "https://biotic.marlin.ac.uk/data/species/6202",
     "https://fish-commercial-names.ec.europa.eu/fish-names/species/pleuronectes-platessa_en"
   ],
-  "glb_bytes": 4796572,
-  "glb_sha256": "ee99665b007e2f023332cf33d29ed77d152f2492c4a5edd5315b9555fcfe0b41",
+  "glb_bytes": 4797160,
+  "glb_sha256": "e44d5f7db964357bfa4e7bef31d6fa4740387198ce0f44401fecdcd2035c33e1",
   "flatfish": true,
   "ocular_side": "right"
 }

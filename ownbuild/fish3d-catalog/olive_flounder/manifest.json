@@ -1,6 +1,6 @@
 {
   "species": "olive_flounder",
-  "pipeline_sha256": "1daac6e2fd064944f97cf81f6443cd2ca91e9b497a7ede8d7443edf505a2a6b1",
+  "pipeline_sha256": "cb161afc8c0fe54bf122f473276cb1242f91cc482074d80f232f413e859cc3d0",
   "triangles": 52374,
   "vertices": 26867,
   "bones": [
@@ -39,8 +39,8 @@
     "https://www.fishbase.se/summary/Paralichthys-olivaceus.html",
     "https://swfsc-publications.fisheries.noaa.gov/publications/CR/2025/2025Purcell2.pdf"
   ],
-  "glb_bytes": 4697896,
-  "glb_sha256": "f6e87648ac49667aed3223a5385c239240bf641d91c5d4c473b08a2a489cdc06",
+  "glb_bytes": 4698588,
+  "glb_sha256": "9b23be7408e9c4c52d851129b492680f2fb834b13ccba5af3a736c284f3130c5",
   "flatfish": true,
   "ocular_side": "left"
 }

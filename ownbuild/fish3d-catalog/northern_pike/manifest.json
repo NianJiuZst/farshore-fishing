@@ -1,0 +1,44 @@
+{
+  "species": "northern_pike",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 32058,
+  "vertices": 16649,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 10,
+  "materials": 10,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Elongate torpedo body with broad flat duckbill snout",
+    "Large long mouth and slightly projecting lower jaw",
+    "Dorsal and anal fins both far back near forked tail",
+    "Pale irregular lateral ovals on olive body, fine scales",
+    "No barbels and no adipose fin"
+  ],
+  "sources": [
+    "https://home.nps.gov/miss/learn/nature/northern-pike.htm",
+    "https://www.fishbase.se/summary/258"
+  ],
+  "glb_bytes": 4924548,
+  "glb_sha256": "7087f34e042b5a1041f622275f3137865d7ddf4f20e4ff82a876a4bac36f17c1",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

@@ -1,0 +1,43 @@
+{
+  "species": "rudd",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 27978,
+  "vertices": 14551,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Deeper golden-silver body than roach",
+    "Upturned small mouth and forward lower lip",
+    "Dorsal starts clearly behind pelvic origin",
+    "Bright scarlet lower fins and caudal",
+    "No barbels; red-orange iris"
+  ],
+  "sources": [
+    "https://www.fishbase.se/summary/2951"
+  ],
+  "glb_bytes": 4418272,
+  "glb_sha256": "9eda48cfc864a7423083981ae9faca93080f43e895d2bcddf2691436442d6f47",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

@@ -152,12 +152,12 @@ class Fish:
     def bone(self,name,head,tail,parent='head'):
         if name in self.bones:return
         self.bones[name]=(head,tail,parent)
-    def fin(self,name,roots,edge,bone=None,parent='spine_mid',rays=20,material=None):
+    def fin(self,name,roots,edge,bone=None,parent='spine_mid',rays=20,material=None,ray_material=None):
         bn=bone or name.lower();r=Vector(roots[len(roots)//2]);e=Vector(edge[len(edge)//2])
         if (e-r).length<.01:e=r+Vector((-.03,0,.03))
         self.bone(bn,r,e,parent)
         if bn not in self.fin_bones and bn!='caudal':self.fin_bones.append(bn)
-        before=len(core.MESHES);membrane=core.fin(name,roots,edge,bn,material or self.mats['fin'],self.mats['ray'],rays)
+        before=len(core.MESHES);membrane=core.fin(name,roots,edge,bn,material or self.mats['fin'],ray_material or self.mats['ray'],rays)
         aid=len(self.attachment_groups)+1;self.attachment_groups[aid]={'name':name,'bone':bn}
         for ob in core.MESHES[before:]:
             uv=ob.data.uv_layers.active.data;root_ids=set()

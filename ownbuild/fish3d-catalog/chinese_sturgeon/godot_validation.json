@@ -1,8 +1,8 @@
 {
   "aabb_size": [
     1.0,
-    0.283017575740814,
-    0.275534272193909
+    0.283023297786713,
+    0.275541603565216
   ],
   "animation_players": 1,
   "bone_count": 16,
@@ -93,6 +93,7 @@
     }
   },
   "failures": [],
+  "glb_sha256": "d5b845fa76371a215ec3ec9eb54a1f65b56d68eddb96ca1174d136d2898aa8af",
   "godot_version": "4.6.3-stable (official)",
   "material_surfaces": 12,
   "meshes": 12,

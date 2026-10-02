@@ -1,0 +1,44 @@
+{
+  "species": "european_perch",
+  "pipeline_sha256": "fc44cc066c7598baba861ed6381bf11aa247c2577675545924fa12d43ab5039c",
+  "triangles": 33616,
+  "vertices": 17526,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal_spiny",
+    "dorsal_soft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 13,
+  "materials": 13,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Seven dark vertical flank bars on yellow-green body",
+    "Two separated dorsal fins, tall hard-spined front dorsal",
+    "Single dark spot toward rear of first dorsal",
+    "Orange-red lower fins and tail, no barbels",
+    "Humped anterior back and moderately large terminal mouth"
+  ],
+  "sources": [
+    "https://www.fishbase.se/summary/358"
+  ],
+  "glb_bytes": 5283560,
+  "glb_sha256": "f48906c003e6e6b9febe78e769ac8640720183e81451037fc64f88ff5195e3a3",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

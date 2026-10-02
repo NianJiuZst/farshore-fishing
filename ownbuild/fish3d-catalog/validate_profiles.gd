@@ -56,7 +56,7 @@ func validate() -> void:
             surfaces += mesh.mesh.get_surface_count()
         if abs(bounds.size.x - 1.0) > 0.001: failures.append(species + " unnormalized rest length")
         if skinned != meshes.size(): failures.append(species + " unskinned mesh")
-        var report = {"species": species, "godot_version": Engine.get_version_info().string, "skeletons": skeletons.size(), "animation_players": players.size(), "bone_count": sk.get_bone_count(), "meshes": meshes.size(), "skinned_meshes": skinned, "material_surfaces": surfaces, "aabb_size": [bounds.size.x, bounds.size.y, bounds.size.z], "clips": clips, "failures": failures.filter(func(s): return s.begins_with(species))}
+        var report = {"species": species, "glb_sha256": FileAccess.get_sha256(repo.path_join("game/assets/3d/" + species + ".glb")), "godot_version": Engine.get_version_info().string, "skeletons": skeletons.size(), "animation_players": players.size(), "bone_count": sk.get_bone_count(), "meshes": meshes.size(), "skinned_meshes": skinned, "material_surfaces": surfaces, "aabb_size": [bounds.size.x, bounds.size.y, bounds.size.z], "clips": clips, "failures": failures.filter(func(s): return s.begins_with(species))}
         var out_path = "res://" + species + "/godot_validation.json"
         var file = FileAccess.open(out_path, FileAccess.WRITE)
         file.store_string(JSON.stringify(report, "  "))

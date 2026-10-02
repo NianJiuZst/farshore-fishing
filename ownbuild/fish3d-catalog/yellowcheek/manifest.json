@@ -1,0 +1,44 @@
+{
+  "species": "yellowcheek",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 29550,
+  "vertices": 15377,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Long pointed head and large terminal predatory mouth",
+    "No barbels; pale yellow cheeks and lower fins",
+    "Small dorsal beginning behind pelvic fins",
+    "Deeply forked tail and streamlined fine-scaled body",
+    "Not a pike: pointed unflattened snout and central small dorsal"
+  ],
+  "sources": [
+    "https://dfz.jl.gov.cn/jltc/201805/t20180502_5217576.html",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3216"
+  ],
+  "glb_bytes": 5060744,
+  "glb_sha256": "fdbff99da77369235c21f66ebe8a31432cfb7aca01182a0b849e23d5e1a80d03",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

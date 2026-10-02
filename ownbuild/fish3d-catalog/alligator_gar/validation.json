@@ -1,0 +1,122 @@
+{
+  "species": "alligator_gar",
+  "clips": {
+    "swim": {
+      "seconds": 2.0,
+      "max_skin_displacement_m": 0.09331112614395207,
+      "loop_seam_m": 1.2764325612961424e-18
+    },
+    "struggle": {
+      "seconds": 1.2,
+      "max_skin_displacement_m": 0.32713100828173797,
+      "loop_seam_m": 4.148405408052649e-18
+    },
+    "breach": {
+      "seconds": 1.4,
+      "max_skin_displacement_m": 0.28025844359726765,
+      "loop_seam_m": 2.8719737235144958e-18
+    },
+    "landed": {
+      "seconds": 3.0,
+      "max_skin_displacement_m": 0.01993557569542552,
+      "loop_seam_m": 2.6592347369027673e-19
+    }
+  },
+  "failures": [],
+  "attachments": {
+    "tolerance_m": 0.004,
+    "samples_per_clip": 9,
+    "groups": {
+      "1": {
+        "name": "dorsal",
+        "bone": "dorsal",
+        "membrane_roots": 36,
+        "ray_roots": 90,
+        "membrane_max_distance_m": 0.0015398584073409438,
+        "ray_max_distance_m": 0.0018834074726328254,
+        "max_distance_m": 0.0018834074726328254,
+        "rest_distance_m": 0.0018827250460162759,
+        "worst_clip": "struggle",
+        "worst_frame": 28
+      },
+      "2": {
+        "name": "anal",
+        "bone": "anal",
+        "membrane_roots": 32,
+        "ray_roots": 80,
+        "membrane_max_distance_m": 0.0012171505950391293,
+        "ray_max_distance_m": 0.0015999492025002837,
+        "max_distance_m": 0.0015999492025002837,
+        "rest_distance_m": 0.0015973795671015978,
+        "worst_clip": "breach",
+        "worst_frame": 22
+      },
+      "3": {
+        "name": "caudal",
+        "bone": "caudal",
+        "membrane_roots": 52,
+        "ray_roots": 130,
+        "membrane_max_distance_m": 0.0015716443303972483,
+        "ray_max_distance_m": 0.002191350096836686,
+        "max_distance_m": 0.002191350096836686,
+        "rest_distance_m": 0.0021766722202301025,
+        "worst_clip": "breach",
+        "worst_frame": 22
+      },
+      "4": {
+        "name": "pectoral_R",
+        "bone": "pectoral_R",
+        "membrane_roots": 32,
+        "ray_roots": 80,
+        "membrane_max_distance_m": 0.001411944511346519,
+        "ray_max_distance_m": 0.0018375087529420853,
+        "max_distance_m": 0.0018375087529420853,
+        "rest_distance_m": 0.00183283316437155,
+        "worst_clip": "struggle",
+        "worst_frame": 28
+      },
+      "5": {
+        "name": "pelvic_R",
+        "bone": "pelvic_R",
+        "membrane_roots": 28,
+        "ray_roots": 70,
+        "membrane_max_distance_m": 0.0012928580399602652,
+        "ray_max_distance_m": 0.001717330771498382,
+        "max_distance_m": 0.001717330771498382,
+        "rest_distance_m": 0.0017162519507110119,
+        "worst_clip": "swim",
+        "worst_frame": 24
+      },
+      "6": {
+        "name": "pectoral_L",
+        "bone": "pectoral_L",
+        "membrane_roots": 32,
+        "ray_roots": 80,
+        "membrane_max_distance_m": 0.0013903361978009343,
+        "ray_max_distance_m": 0.0019005588255822659,
+        "max_distance_m": 0.0019005588255822659,
+        "rest_distance_m": 0.0018899093847721815,
+        "worst_clip": "breach",
+        "worst_frame": 12
+      },
+      "7": {
+        "name": "pelvic_L",
+        "bone": "pelvic_L",
+        "membrane_roots": 28,
+        "ray_roots": 70,
+        "membrane_max_distance_m": 0.0011913705384358764,
+        "ray_max_distance_m": 0.0017836587503552437,
+        "max_distance_m": 0.0017836587503552437,
+        "rest_distance_m": 0.001781546976417303,
+        "worst_clip": "struggle",
+        "worst_frame": 10
+      }
+    }
+  },
+  "weight_sum_min": 0.9999009668827057,
+  "weight_sum_max": 1.0000000298023224,
+  "max_influences": 3,
+  "master_sha256": "638d3595eae741b4bbc41cf1e6fbb8981a08f42021c857879b89502ecf9b9122",
+  "glb_sha256": "ab4820619fe604d2e174c2e8b1439da69a58cc0576cd38c4ea21e4c279431ce3",
+  "attachment_tag_version": 1
+}

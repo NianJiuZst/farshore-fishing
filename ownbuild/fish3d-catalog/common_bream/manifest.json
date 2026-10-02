@@ -1,0 +1,43 @@
+{
+  "species": "common_bream",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 29574,
+  "vertices": 15387,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Very deep and thin laterally compressed bronze-silver body",
+    "Small downturned protrusible mouth and small head",
+    "Long anal-fin base with dark gray membrane",
+    "High short dorsal and deeply forked caudal",
+    "No barbels; body much deeper than roach or rudd"
+  ],
+  "sources": [
+    "https://www.fishbase.se/summary/Abramis-brama"
+  ],
+  "glb_bytes": 4092852,
+  "glb_sha256": "53253642e824a76c216055c7d9cbeb8bc88cf75343fd59b2be94c74feb8b911d",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

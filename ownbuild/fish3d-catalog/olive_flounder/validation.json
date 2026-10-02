@@ -3,27 +3,144 @@
   "clips": {
     "swim": {
       "seconds": 2.0,
-      "max_skin_displacement_m": 0.06135200477201234,
+      "max_skin_displacement_m": 0.061352088202581895,
       "loop_seam_m": 0.0
     },
     "struggle": {
       "seconds": 1.2,
-      "max_skin_displacement_m": 0.23653427011803516,
-      "loop_seam_m": 6.2982920850455795e-18
+      "max_skin_displacement_m": 0.23653457686344775,
+      "loop_seam_m": 6.298302109485938e-18
     },
     "breach": {
       "seconds": 1.4,
-      "max_skin_displacement_m": 0.16297713339131917,
-      "loop_seam_m": 4.373813392806486e-18
+      "max_skin_displacement_m": 0.1629773733974999,
+      "loop_seam_m": 4.37382175865734e-18
     },
     "landed": {
       "seconds": 3.0,
-      "max_skin_displacement_m": 0.010819570603270793,
+      "max_skin_displacement_m": 0.010819584721918598,
       "loop_seam_m": 0.0
     }
   },
   "failures": [],
+  "attachments": {
+    "tolerance_m": 0.004,
+    "samples_per_clip": 9,
+    "groups": {
+      "1": {
+        "name": "Dorsal_0",
+        "bone": "dorsal_0",
+        "membrane_roots": 40,
+        "ray_roots": 100,
+        "membrane_max_distance_m": 0.000997356604784727,
+        "ray_max_distance_m": 0.0014884603442624211,
+        "max_distance_m": 0.0014884603442624211,
+        "rest_distance_m": 0.0014884566189721227,
+        "worst_clip": "landed",
+        "worst_frame": 68
+      },
+      "2": {
+        "name": "Dorsal_1",
+        "bone": "dorsal_1",
+        "membrane_roots": 40,
+        "ray_roots": 100,
+        "membrane_max_distance_m": 0.0010385772911831737,
+        "ray_max_distance_m": 0.0012906251940876245,
+        "max_distance_m": 0.0012906251940876245,
+        "rest_distance_m": 0.0012864433228969574,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "3": {
+        "name": "Dorsal_2",
+        "bone": "dorsal_2",
+        "membrane_roots": 40,
+        "ray_roots": 100,
+        "membrane_max_distance_m": 0.0010197325609624386,
+        "ray_max_distance_m": 0.0011738367611542344,
+        "max_distance_m": 0.0011738367611542344,
+        "rest_distance_m": 0.0011392575688660145,
+        "worst_clip": "struggle",
+        "worst_frame": 19
+      },
+      "4": {
+        "name": "Anal_0",
+        "bone": "anal_0",
+        "membrane_roots": 40,
+        "ray_roots": 100,
+        "membrane_max_distance_m": 0.0009876106632873416,
+        "ray_max_distance_m": 0.0014585007447749376,
+        "max_distance_m": 0.0014585007447749376,
+        "rest_distance_m": 0.0014554027002304792,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "5": {
+        "name": "Anal_1",
+        "bone": "anal_1",
+        "membrane_roots": 40,
+        "ray_roots": 100,
+        "membrane_max_distance_m": 0.001014175359159708,
+        "ray_max_distance_m": 0.0012850621715188026,
+        "max_distance_m": 0.0012850621715188026,
+        "rest_distance_m": 0.0012783650308847427,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "6": {
+        "name": "Anal_2",
+        "bone": "anal_2",
+        "membrane_roots": 40,
+        "ray_roots": 100,
+        "membrane_max_distance_m": 0.0009624214726500213,
+        "ray_max_distance_m": 0.0010538127971813083,
+        "max_distance_m": 0.0010538127971813083,
+        "rest_distance_m": 0.001043553464114666,
+        "worst_clip": "struggle",
+        "worst_frame": 10
+      },
+      "7": {
+        "name": "Caudal",
+        "bone": "caudal",
+        "membrane_roots": 54,
+        "ray_roots": 135,
+        "membrane_max_distance_m": 0.0020539385732263327,
+        "ray_max_distance_m": 0.00240467581897974,
+        "max_distance_m": 0.00240467581897974,
+        "rest_distance_m": 0.002399653196334839,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "8": {
+        "name": "Pectoral_ocular",
+        "bone": "pectoral_ocular",
+        "membrane_roots": 34,
+        "ray_roots": 85,
+        "membrane_max_distance_m": 0.0012289220467209816,
+        "ray_max_distance_m": 0.0016583333490416408,
+        "max_distance_m": 0.0016583333490416408,
+        "rest_distance_m": 0.001658195280469954,
+        "worst_clip": "struggle",
+        "worst_frame": 14
+      },
+      "9": {
+        "name": "Pectoral_blind",
+        "bone": "pectoral_blind",
+        "membrane_roots": 26,
+        "ray_roots": 65,
+        "membrane_max_distance_m": 0.001158904517069459,
+        "ray_max_distance_m": 0.0015676099574193358,
+        "max_distance_m": 0.0015676099574193358,
+        "rest_distance_m": 0.0015671206638216972,
+        "worst_clip": "struggle",
+        "worst_frame": 19
+      }
+    }
+  },
   "weight_sum_min": 0.9999006390571594,
   "weight_sum_max": 1.0000000298023224,
-  "max_influences": 3
+  "max_influences": 3,
+  "master_sha256": "a5ff7e00bf66e845663a56dfcba93859550b71c4b1d600d7bb45f21359746ae3",
+  "glb_sha256": "9b23be7408e9c4c52d851129b492680f2fb834b13ccba5af3a736c284f3130c5",
+  "attachment_tag_version": 1
 }
