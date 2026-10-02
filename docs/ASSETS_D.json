@@ -1,0 +1,367 @@
+[
+  {
+    "asset_id": "chinese_sturgeon",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/chinese_sturgeon.png",
+    "master_path": "art_masters/d/chinese_sturgeon.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: scientific-educational. Asset type: final standalone natural-history fish painting for the Chinese fishing game Farshore, matching the existing realistically hand-painted common carp style: fine restrained watercolor and gouache, subtle pencil detail, accurate natural proportions, lifelike rather than cartoon. Exactly ONE complete CHINESE STURGEON (Sinosturio sinensis, synonym Acipenser sinensis; 中华鲟), true LEFT-FACING lateral view, nose left and tail right. Powerful elongated streamlined grey-brown body with grey-black back and ivory belly; FIVE longitudinal rows of discrete raised pale diamond bony SCUTES (one dorsal ridge, a lateral and a lower lateral row on each side; only near-side rows fully visible), leathery skin between scutes NOT carp scales. Long flattened gently tapered snout, small ventral mouth underneath the head, FOUR short sensory barbels hanging between snout tip and mouth (place each distinctly so they can be identified), normal small eye. Single dorsal fin far back near tail; pectoral fins behind gills, pelvic fins posteriorly, anal fin near tail. Strong heterocercal tail with distinctly longer upper lobe than lower lobe, not symmetrical. Fully intact anatomically credible fins and tail, relaxed straight body, generous clear alpha padding around every extremity. Soft upper-left lighting, controlled muted natural colors and fine fin rays. Genuine transparent alpha background only, no paper rectangle, no checkerboard pattern, no cast shadow, no scenery, no water, no plants, no labels, no text, no logo, no fishing hook, no wounds or person. Intended landscape canvas 1536 by 1024, fish fills broad horizontal center without cropping. This is a conservation-themed observation illustration, not a monster or ambush predator.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-ef8459ef-f375-4922-8fef-a8c44b31c50d.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/fish/common_carp.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Scientific sources referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "sha256": "fab48101a26cc61751c86eef7e05bf775834fd7c83bfb5e955541a5d64695350",
+    "used_by": "res://assets/fish/chinese_sturgeon.png",
+    "thumbnail_path": "game/assets/fish/chinese_sturgeon_thumb.png",
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.8131076706625183,
+    "alpha_present": true,
+    "reference_sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/chinese-sturgeon",
+        "title": "NOAA Fisheries: Chinese Sturgeon",
+        "supports": "中华鲟身份、江海洄游、长江与中国沿海分布、下位口四须及歪尾形态；保护说明。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf",
+        "title": "NOAA: Status Review Report of Five Foreign Sturgeon",
+        "supports": "中华鲟背、侧及腹骨板，底栖取食和海洋阶段；非伏击型猛鱼。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=9762",
+        "title": "Eschmeyer’s Catalog of Fishes: Acipenser sinensis",
+        "supports": "2026年目录接受 Sinosturio sinensis；保留 Acipenser sinensis 同物异名。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "anatomy_review": "已查看原画：近侧骨板纵列、吻下四条须、腹面口、靠后背鳍和上叶长的歪尾清楚；轮廓完整。五列骨板是全身总数，侧视不会同时展示远侧两列。 所有鱼图均按物种剪影与主要鉴别特征复核，非分类学鳍条计数图。",
+    "runtime_export": "Lanczos proportional resize to 1024px wide and thumbnail to 256px wide; genuine generated alpha preserved without thresholding, color-keying, or background removal."
+  },
+  {
+    "asset_id": "mandarin_fish",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/mandarin_fish.png",
+    "master_path": "art_masters/d/mandarin_fish.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: scientific-educational. Asset type: final individual fish natural-history painting for Farshore field guide. Exactly ONE complete MANDARIN FISH Siniperca chuatsi, 鳜. True LEFT-FACING lateral view, nose left tail right, relaxed natural straight posture, complete silhouette and generous transparent padding. Match refined near-real hand-painted watercolor/gouache style with very fine pencil details, soft upper-left light and natural small eye, detailed anatomical fin rays, not cartoon. Species anatomy: strongly laterally compressed moderately deep golden-olive body, large predatory mouth with protruding lower jaw and upper jaw extending behind eye. Body brownish yellow with many irregular dark brown blotches and two stronger slanting dark bands, dark stripe runs from snout through eye; small scales, creamy belly. Single continuous dorsal fin comprising prominent sharp spiny front followed by taller rounded soft rear; round fan-shaped caudal tail, rounded pectoral/anal fins, all fully intact. Mandarin fish must NOT have forked carp tail, no carp barbels, no gigantic cartoon eyes. Delicate mottled fin pattern. Genuine transparent alpha background only, no floor, no water, no plants, no drop shadow, no paper rectangle, no checkerboard pattern, no labels or text, no hook, no human. Landscape 1536x1024 intended canvas; lifelike fish occupies broad horizontal center without cropped fins.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-e7d258bf-d399-4cb6-ad71-0d30d9cbac6d.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/fish/common_carp.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Scientific sources referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "sha256": "dbcba3f6fe845db98ed6f8427153238c0881f42832ec4f906b552825833370c8",
+    "used_by": "res://assets/fish/mandarin_fish.png",
+    "thumbnail_path": "game/assets/fish/mandarin_fish_thumb.png",
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.5596475224194729,
+    "alpha_present": true,
+    "reference_sources": [
+      {
+        "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_mandarinfish.htm",
+        "title": "FAO: Siniperca chuatsi cultured species fact sheet",
+        "supports": "体形、大口、下颌、斑纹和鳍型；淡水河湖及养殖体重背景。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://ssswxb.ihb.ac.cn/article/doi/10.7541/2018.136",
+        "title": "水生生物学报：浅水湖泊四种渔具捕捞选择性及对鱼类群落影响比较研究",
+        "supports": "长江中游牛山湖的鳜实测样本与分布；不把研究捕捞当作游玩许可。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "anatomy_review": "已查看原画：黄褐不规则斑、眼部横纹、大口与突出下颌、连续棘软背鳍和圆尾清楚；无须、无叉尾。 所有鱼图均按物种剪影与主要鉴别特征复核，非分类学鳍条计数图。",
+    "runtime_export": "Lanczos proportional resize to 1024px wide and thumbnail to 256px wide; genuine generated alpha preserved without thresholding, color-keying, or background removal."
+  },
+  {
+    "asset_id": "northern_snakehead",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/northern_snakehead.png",
+    "master_path": "art_masters/d/northern_snakehead.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: scientific-educational. Asset type: individual fish natural-history painting for Farshore. Exactly ONE complete fish, true LEFT-FACING lateral view, nose LEFT and tail RIGHT, relaxed straight body, all fins and tail fully inside canvas with transparent breathing room. Refined near-real hand-painted watercolor and gouache illustration with fine pencil detail, anatomically credible fins, soft upper-left lighting and natural small eye, restrained natural colors; matches natural-history common carp painting, NOT cartoon. Genuine transparent alpha background, no paper or solid rectangle, no scenery, no water or plants, no cast shadow or glow, no checkerboard, no label or text, no logo, no hook or person. Landscape intended canvas 1536x1024. Subject: NORTHERN SNAKEHEAD Channa argus 乌鳢. Long stout cylindrical brown-olive fish, broad somewhat flattened snake-like head, terminal large mouth with lower jaw slightly forward, small high-set eyes. Long single low dorsal fin stretching from behind head almost to tail, long anal fin along rear belly, round caudal tail, rounded pectoral fins, small pelvic fins immediately behind pectoral position. Large irregular dark brown saddle/blotches along tan-olive body, mottled head, small scales; creamy pale belly. Dorsal and anal fins both soft rayed, no spines. Tail ROUND not forked; no barbels, no adipose fin, no carp shape. Entire elongated fish and every fin intact.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-fd5f630e-3264-4c7f-a582-05357916aa9f.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/fish/common_carp.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Scientific sources referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "sha256": "10d9249112f8271fd05441f35fc6a2053a23a7275ba54d9d45c1589c322a685b",
+    "used_by": "res://assets/fish/northern_snakehead.png",
+    "thumbnail_path": "game/assets/fish/northern_snakehead_thumb.png",
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.7106658354685212,
+    "alpha_present": true,
+    "reference_sources": [
+      {
+        "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=2265",
+        "title": "USGS: Northern Snakehead species profile",
+        "supports": "物种身份、深色斑块、长背鳍与臀鳍及扁头；中国至长江支流原生分布。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://pubs.usgs.gov/circ/2004/1251/report.pdf",
+        "title": "USGS Circular 1251: Snakeheads, a biological synopsis and risk assessment",
+        "supports": "Channa argus 中国原生分布及淡水生境；不同于斑鳢或弓鳍鱼。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "anatomy_review": "已查看原画：长筒形体、扁头、深色斑、长背鳍及长臀鳍、圆尾和小腹鳍均存在。 所有鱼图均按物种剪影与主要鉴别特征复核，非分类学鳍条计数图。",
+    "runtime_export": "Lanczos proportional resize to 1024px wide and thumbnail to 256px wide; genuine generated alpha preserved without thresholding, color-keying, or background removal."
+  },
+  {
+    "asset_id": "yellowcheek",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/yellowcheek.png",
+    "master_path": "art_masters/d/yellowcheek.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: scientific-educational. Asset type: individual fish natural-history painting for Farshore. Exactly ONE complete fish, true LEFT-FACING lateral view, nose LEFT and tail RIGHT, relaxed straight body, all fins and tail fully inside canvas with transparent breathing room. Refined near-real hand-painted watercolor and gouache illustration with fine pencil detail, anatomically credible fins, soft upper-left lighting and natural small eye, restrained natural colors; matches natural-history common carp painting, NOT cartoon. Genuine transparent alpha background, no paper or solid rectangle, no scenery, no water or plants, no cast shadow or glow, no checkerboard, no label or text, no logo, no hook or person. Landscape intended canvas 1536x1024. Subject: YELLOWCHEEK Elopichthys bambusa 鳡. Elongated powerful torpedo-shaped Chinese freshwater cyprinid, long pointed slightly beak-shaped head, large terminal mouth, lower jaw has subtle hard projecting symphyseal knob fitting upper jaw notch, NO barbels. Small silvery grey-gold scales, deep olive-grey back, silver-white belly, clear pale warm YELLOW cheek patch behind eye, natural yellowish pectoral pelvic and anal fins, darker grey dorsal and tail. ONE SHORT dorsal fin near mid-to-rear body beginning just BEHIND pelvic fins, short anal fin farther back, deeply forked strong caudal tail. No adipose fin, no salmon spots, no pike broad duckbill, no giant teeth. Modest small golden eye. Elegant powerful natural adult silhouette.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-7081a998-63d6-4008-aab8-42024a215bb9.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/fish/common_carp.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Scientific sources referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "sha256": "7695518ef48377fb98d04678a949f4b07ba708bc97fd0d650f2c258e76d06b76",
+    "used_by": "res://assets/fish/yellowcheek.png",
+    "thumbnail_path": "game/assets/fish/yellowcheek_thumb.png",
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.7903150164714495,
+    "alpha_present": true,
+    "reference_sources": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305197810001481",
+        "title": "Abbas et al.: Yellowcheek population structure in the Yangtze River",
+        "supports": "长江中下游洞庭湖、鄱阳湖、东湖等真实取样及大型中上层掠食鱼生态。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://dfz.jl.gov.cn/jltc/201805/t20180502_5217576.html",
+        "title": "吉林省地方志编纂委员会：鳡",
+        "supports": "长吻大口、无须、小背鳍、深叉尾及颊部淡黄色的外部特征。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3216",
+        "title": "Eschmeyer’s Catalog of Fishes: Elopichthys bambusa",
+        "supports": "物种身份和现行名称；不与鯮 Luciobrama macrocephalus 混淆。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "anatomy_review": "已查看原画：长而较细的体形、尖头大口、黄颊、较小背鳍在腹鳍后及深叉尾可辨；无须或脂鳍。 所有鱼图均按物种剪影与主要鉴别特征复核，非分类学鳍条计数图。",
+    "runtime_export": "Lanczos proportional resize to 1024px wide and thumbnail to 256px wide; genuine generated alpha preserved without thresholding, color-keying, or background removal."
+  },
+  {
+    "asset_id": "southern_catfish",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/southern_catfish.png",
+    "master_path": "art_masters/d/southern_catfish.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: scientific-educational. Asset type: individual fish natural-history painting for Farshore. Exactly ONE complete fish, true LEFT-FACING lateral view, nose LEFT and tail RIGHT, relaxed straight body, all fins and tail fully inside canvas with transparent breathing room. Refined near-real hand-painted watercolor and gouache illustration with fine pencil detail, anatomically credible fins, soft upper-left lighting and natural small eye, restrained natural colors; matches natural-history common carp painting, NOT cartoon. Genuine transparent alpha background, no paper or solid rectangle, no scenery, no water or plants, no cast shadow or glow, no checkerboard, no label or text, no logo, no hook or person. Landscape intended canvas 1536x1024. Subject: SOUTHERN CATFISH Silurus meridionalis 南方鲇. Long massive smooth scaleless grey-olive body with pale cream belly, broad low flattened head and very wide terminal-to-upturned mouth with projecting lower jaw; tiny eyes. Exactly TWO PAIRS OF BARBELS: one pair long maxillary whiskers and one pair short chin whiskers, show the near-side pair clearly and far-side where natural. A SINGLE tiny short soft dorsal fin near front just behind head, NO adipose fin. Very LONG anal fin running along almost the entire rear lower body up to tail, small pelvic fins. Tail small and shallowly emarginate, subtly concave edge (not deeply forked), no tall spiny dorsal or sail. Large pectoral fin behind head. Natural subdued brown-grey skin mottling, no carp scales. All fins complete.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-c7becb57-cdf3-42a9-95c6-1315e5321803.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/fish/common_carp.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Scientific sources referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "sha256": "32bd907b2be75de72083f167c4bebbd5b4abdeb8ecb839371cb66d53290bddeb",
+    "used_by": "res://assets/fish/southern_catfish.png",
+    "thumbnail_path": "game/assets/fish/southern_catfish_thumb.png",
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.7623564467423133,
+    "alpha_present": true,
+    "reference_sources": [
+      {
+        "url": "https://www.yueyang.gov.cn/uploadfiles/202302/20230223161357669.pdf",
+        "title": "岳阳市公开环境资料：南方鲇物种条目",
+        "supports": "洞庭湖及湘资沅澧四水分布；两对须、小背鳍、长臀鳍、微凹尾等形态。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S004484861932705X",
+        "title": "Screening and characterization of sex-linked DNA markers in Southern catfish",
+        "supports": "长江支流嘉陵江重庆北碚段真实亲鱼取样，明确 Silurus meridionalis 身份。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "anatomy_review": "已查看原画：宽扁头、大口、长上颌须与较短下颌须、短小背鳍、长臀鳍及浅凹尾清楚；无脂鳍。侧视须有透视重叠，插画不用于精确鳍条/触须计数检索。 所有鱼图均按物种剪影与主要鉴别特征复核，非分类学鳍条计数图。",
+    "runtime_export": "Lanczos proportional resize to 1024px wide and thumbnail to 256px wide; genuine generated alpha preserved without thresholding, color-keying, or background removal."
+  },
+  {
+    "asset_id": "longsnout_catfish",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/longsnout_catfish.png",
+    "master_path": "art_masters/d/longsnout_catfish.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: scientific-educational. Asset type: final individual fish natural-history painting for Farshore. Exactly ONE complete CHINESE LONGSNOUT CATFISH Rhinobagrus dumerili (synonyms Tachysurus dumerili and Leiocassis longirostris), 长吻鮠 or 江团. True LEFT-FACING scientific lateral view, nose left tail right, complete fish with generous transparent padding, every fin intact. Refined lifelike hand-painted watercolor and gouache with fine pencil and anatomical fin-ray detail, muted natural hues, small natural eye; matching a high-quality near-real common-carp field-guide illustration, not cartoon. Very distinctive anatomy: elongated moderately thick scaleless smooth body; long conical snout clearly protruding FAR BEYOND small DOWNWARD-FACING subterminal mouth; thick lips, small eyes. FOUR PAIRS of relatively SHORT sensory barbels (nasal pair, maxillary pair, two chin pairs), visible near-side four and natural far-side glimpses, not giant sweeping catfish moustache. One short triangular dorsal fin with a strong leading spine positioned near front of back, a separate thick fleshy ADIPOSE FIN farther back above anal-fin area. Pectoral fins also have strong leading spine. Short-to-medium anal fin, small pelvic fins, a deeply FORKED tail with near-equal pointed lobes. Body pearl-grey with subtle pale pink-lilac flank and creamy white belly, dark grey-brown back, grey fins. No spots, no scales, no excessively long anal fin, no flat bulldog head. Genuine transparent alpha background only, no paper rectangle, no water or plant, no background, no cast shadow or glow, no checkerboard pattern, no text or label or logo, no fishing hook, no person. Intended 1536x1024 landscape canvas.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-0cc9d42a-ad04-4560-84ff-b9e2cf27903c.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/fish/common_carp.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Scientific sources referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "sha256": "f10e1279bee6ad144bf7689486eb5cd9eb9c4bb3f173a79a18c7ab9981456f71",
+    "used_by": "res://assets/fish/longsnout_catfish.png",
+    "thumbnail_path": "game/assets/fish/longsnout_catfish_thumb.png",
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_zero_fraction": 0.8075228198206442,
+    "alpha_present": true,
+    "reference_sources": [
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5698",
+        "title": "Eschmeyer’s Catalog of Fishes: Rhinobagrus dumerili",
+        "supports": "2026年目录接受现名 Rhinobagrus dumerili；长江流域淡水分布。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5910",
+        "title": "Eschmeyer’s Catalog of Fishes: Liocassis longirostris",
+        "supports": "Leiocassis longirostris 与 Tachysurus dumerili 等名称关联到同一物种。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://nyncw.sh.gov.cn/bwbdscl/20190103/0009-109878.html",
+        "title": "上海市农业农村委员会：如何饲养长吻鮠",
+        "supports": "一般个体质量背景，游戏数值未当作实测长度重量系数。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://doi.org/10.5657/FAS.2012.0299",
+        "title": "Park, Kim & Choi (2012): Histological Observations and Regeneration of Barbels in Juveniles of the Chinese Longsnout Catfish",
+        "supports": "原始研究明确四对须，并提供外形与口须照片；与国内标准外形相互核对。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://wyxy.shou.edu.cn/_upload/article/files/e1/64/0e9f65ac480f81b7d1dda7b3721e/cd94ead1-0a57-40f8-ba32-2f526a8a5efd.pdf",
+        "title": "上海海洋大学：水产养殖种质资源基本情况普查培训材料",
+        "supports": "长吻鮠外观及脂鳍、吻部、叉尾识别参考。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "anatomy_review": "已查看原画：吻部突出、下位口、短须组、无鳞、前部棘背鳍、独立脂鳍和深叉尾可辨；须在侧视下重叠，不替代标本检索。 所有鱼图均按物种剪影与主要鉴别特征复核，非分类学鳍条计数图。",
+    "runtime_export": "Lanczos proportional resize to 1024px wide and thumbnail to 256px wide; genuine generated alpha preserved without thresholding, color-keying, or background removal."
+  },
+  {
+    "asset_id": "scenery_yangtze",
+    "usage": "Yangtze destination painted scenic stage",
+    "runtime_path": "game/assets/scenery/yangtze.png",
+    "master_path": "art_masters/d/yangtze.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1440,
+      960
+    ],
+    "generation_method": "OpenAI built-in image_gen; one requested asset per call",
+    "generation_prompt": "Use case: stylized-concept. Asset type: FINAL full scenic background stage for Farshore, a therapeutic 2D Chinese fishing travel game, matching the existing refined softly realistic watercolor and gouache European lake background. One beautiful 3:2 landscape illustration at intended 1536x1024. Scene: a broad middle-to-lower YANGTZE RIVER river-and-lake corridor in China on a quiet hazy morning. Wide soft jade-grey river bends into hazy distance, lush low reed-covered shoals and sandbar islands, low distant blue-grey wooded limestone foothills along one bank, layered gentle distant green hills, soft warm ivory sky with high pale-blue clouds. This is a serene broadly credible Yangtze river landscape, not dramatic Guilin karst peaks, not a Hong Kong city, no skyscrapers. Main waterline horizon at about 38–42 percent down, beautiful gently flowing OPEN WATER dominates the central third and lower half to keep bobber and line clearly visible after portrait cropping. Close natural bank restricted to lower corners: soft weathered rocks, low green reeds and a few grasses. Leave the bottom CENTER and left-central water uncluttered so a separate game angler and fishing gear can be overlaid. Distant shore broad and spacious rather than a small pond; calm river surface with restrained soft brush ripples, warm muted green and taupe reflections, airy atmospheric perspective and subtle paper texture. Near-real art-book travel painting, detailed gentle hand-painted brushwork, warm restful lighting, harmonious sage/teal blue palette; not photo, not cartoon, not chunky vector. Full bleed. No people, no fisherman, no fish, no rod, no boat, no UI, no text, no logos, no border, no labels or lettering.",
+    "generation_edits": [],
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-8262ddcb-5a8d-44d6-9ae5-8310f3adc8d5.png",
+    "reference_images_used": [],
+    "style_reference_inspected": "game/assets/scenery/lake.png",
+    "license_status": "Original AI-generated artwork; no external photographs copied or embedded. Provider terms apply; no claim of guaranteed exclusivity or copyrightability. Scientific sources referenced for facts only.",
+    "review_status": "visual_review_completed",
+    "sha256": "77ceea2359d5d2cf144c9ab70e9df8756dd4ead6e9d572d0b7c1f162d5ba258d",
+    "used_by": "res://assets/scenery/yangtze.png",
+    "region_id": "yangtze",
+    "reference_sources": [],
+    "anatomy_review": "Not applicable: landscape.",
+    "scene_review": "Broad river and reed-shoal corridor, low wooded hills and mist, open portrait-friendly center. No people, fish, UI or text. A fictional regional composite, not a surveyed map or a claim of an exact geographic viewpoint.",
+    "runtime_export": "Proportional Lanczos resize from 1536×1024 to 1440×960, runtime metadata stripped; original master preserved."
+  }
+]

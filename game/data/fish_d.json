@@ -1,0 +1,404 @@
+[
+  {
+    "species_id": "chinese_sturgeon",
+    "name": "中华鲟",
+    "scientific_name": "Sinosturio sinensis",
+    "region_ids": [
+      "yangtze"
+    ],
+    "spot_ids": [
+      "yangtze_estuary"
+    ],
+    "art": "res://assets/fish/chinese_sturgeon.png",
+    "thumb": "res://assets/fish/chinese_sturgeon_thumb.png",
+    "description": "跨越江海洄游的古老鱼类，以底栖动物等为食。此处仅表现长江口外近海阶段的虚拟保护观察；相遇后必须放生，不可出售。常用学名 Acipenser sinensis 为同一物种的旧组合。",
+    "morphology": "灰黑背与浅色腹；全身五列骨板，吻长而扁，口位于腹面，吻下四根短须；背鳍靠后，尾鳍上叶明显长于下叶。",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/chinese-sturgeon",
+        "title": "NOAA Fisheries: Chinese Sturgeon",
+        "supports": "中华鲟身份、江海洄游、长江与中国沿海分布、下位口四须及歪尾形态；保护说明。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf",
+        "title": "NOAA: Status Review Report of Five Foreign Sturgeon",
+        "supports": "中华鲟背、侧及腹骨板，底栖取食和海洋阶段；非伏击型猛鱼。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=9762",
+        "title": "Eschmeyer’s Catalog of Fishes: Acipenser sinensis",
+        "supports": "2026年目录接受 Sinosturio sinensis；保留 Acipenser sinensis 同物异名。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 800,
+    "max_mm": 2400,
+    "anchor_mm": 1400,
+    "anchor_g": 18000,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "behavior": "steady",
+    "difficulty": 0.67,
+    "weight": 3,
+    "bait_weights": {
+      "worm": 1.0,
+      "grain": 0.1,
+      "shrimp": 1.8,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.2,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 35,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
+    "research_status": "reviewed_2026-10-02",
+    "release_only": true,
+    "conservation_note": "保护观察：虚拟互动，不对应现实捕捞",
+    "scientific_synonyms": [
+      "Acipenser sinensis"
+    ],
+    "encounter_type": "conservation_observation",
+    "reachability_note": "现实中华鲟可跨盐度洄游；当前数据仅在河口外近海盐水钓点设置保护观察，不把淡水产卵场与海水筛选混用。"
+  },
+  {
+    "species_id": "mandarin_fish",
+    "name": "鳜",
+    "scientific_name": "Siniperca chuatsi",
+    "region_ids": [
+      "yangtze"
+    ],
+    "spot_ids": [
+      "yangtze_river"
+    ],
+    "art": "res://assets/fish/mandarin_fish.png",
+    "thumb": "res://assets/fish/mandarin_fish_thumb.png",
+    "description": "长江流域河湖里的花纹猎手。大口与突出的下颌适合捕食小鱼，靠近水草和有遮蔽的水边可见它的身影。",
+    "morphology": "体侧扁，黄褐底色有不规则深色斑块；大口、下颌前突，背鳍前段硬棘明显、后段圆，尾鳍圆而不深叉。",
+    "sources": [
+      {
+        "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_mandarinfish.htm",
+        "title": "FAO: Siniperca chuatsi cultured species fact sheet",
+        "supports": "体形、大口、下颌、斑纹和鳍型；淡水河湖及养殖体重背景。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://ssswxb.ihb.ac.cn/article/doi/10.7541/2018.136",
+        "title": "水生生物学报：浅水湖泊四种渔具捕捞选择性及对鱼类群落影响比较研究",
+        "supports": "长江中游牛山湖的鳜实测样本与分布；不把研究捕捞当作游玩许可。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 650,
+    "anchor_mm": 360,
+    "anchor_g": 900,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "behavior": "burst",
+    "difficulty": 0.55,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 0.3,
+      "grain": 0.05,
+      "shrimp": 1.3,
+      "lure": 2.2
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.08,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 15,
+    "salinity": "fresh",
+    "rarity": "少见",
+    "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "northern_snakehead",
+    "name": "乌鳢",
+    "scientific_name": "Channa argus",
+    "region_ids": [
+      "yangtze"
+    ],
+    "spot_ids": [
+      "yangtze_river"
+    ],
+    "art": "res://assets/fish/northern_snakehead.png",
+    "thumb": "res://assets/fish/northern_snakehead_thumb.png",
+    "description": "在长江流域缓流、水草和湖湾活动的淡水鱼。细长身体和扁平头部让它容易隐在植物旁，捕食小鱼等动物。",
+    "morphology": "长筒形身体与扁宽头；褐色底上有深色斑块；背鳍和臀鳍很长，尾鳍圆，胸鳍后方有小腹鳍，无须。",
+    "sources": [
+      {
+        "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=2265",
+        "title": "USGS: Northern Snakehead species profile",
+        "supports": "物种身份、深色斑块、长背鳍与臀鳍及扁头；中国至长江支流原生分布。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://pubs.usgs.gov/circ/2004/1251/report.pdf",
+        "title": "USGS Circular 1251: Snakeheads, a biological synopsis and risk assessment",
+        "supports": "Channa argus 中国原生分布及淡水生境；不同于斑鳢或弓鳍鱼。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 200,
+    "max_mm": 800,
+    "anchor_mm": 450,
+    "anchor_g": 1000,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "behavior": "burst",
+    "difficulty": 0.61,
+    "weight": 8,
+    "bait_weights": {
+      "worm": 0.6,
+      "grain": 0.05,
+      "shrimp": 1.0,
+      "lure": 2.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.12,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 8,
+    "salinity": "fresh",
+    "rarity": "少见",
+    "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "yellowcheek",
+    "name": "鳡",
+    "scientific_name": "Elopichthys bambusa",
+    "region_ids": [
+      "yangtze"
+    ],
+    "spot_ids": [
+      "yangtze_river"
+    ],
+    "art": "res://assets/fish/yellowcheek.png",
+    "thumb": "res://assets/fish/yellowcheek_thumb.png",
+    "description": "长江干流及相连湖泊中的大型淡水掠食鱼。修长体形和深叉尾适合快速游动；淡黄色颊部是醒目的识别线索。",
+    "morphology": "体长而近圆筒形，吻尖、口大，无须；鳞细，颊部淡黄，背鳍较小且起点在腹鳍之后，尾鳍深叉。",
+    "sources": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305197810001481",
+        "title": "Abbas et al.: Yellowcheek population structure in the Yangtze River",
+        "supports": "长江中下游洞庭湖、鄱阳湖、东湖等真实取样及大型中上层掠食鱼生态。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://dfz.jl.gov.cn/jltc/201805/t20180502_5217576.html",
+        "title": "吉林省地方志编纂委员会：鳡",
+        "supports": "长吻大口、无须、小背鳍、深叉尾及颊部淡黄色的外部特征。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3216",
+        "title": "Eschmeyer’s Catalog of Fishes: Elopichthys bambusa",
+        "supports": "物种身份和现行名称；不与鯮 Luciobrama macrocephalus 混淆。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 350,
+    "max_mm": 1200,
+    "anchor_mm": 700,
+    "anchor_g": 3500,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "behavior": "burst",
+    "difficulty": 0.79,
+    "weight": 5,
+    "bait_weights": {
+      "worm": 0.2,
+      "grain": 0.05,
+      "shrimp": 0.8,
+      "lure": 2.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.28,
+    "max_cast": 1.0,
+    "depth_min_m": 1,
+    "depth_max_m": 20,
+    "salinity": "fresh",
+    "rarity": "稀有",
+    "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "southern_catfish",
+    "name": "南方鲇",
+    "scientific_name": "Silurus meridionalis",
+    "region_ids": [
+      "yangtze"
+    ],
+    "spot_ids": [
+      "yangtze_river"
+    ],
+    "art": "res://assets/fish/southern_catfish.png",
+    "thumb": "res://assets/fish/southern_catfish_thumb.png",
+    "description": "长江流域的大型鲇类，也见于洞庭湖及其相连水系。宽阔嘴部与触须帮助它在河湖底层寻找食物。",
+    "morphology": "身体无鳞，前部粗、后部侧扁，头扁宽、口大；两对须，背鳍短小且无硬刺，无脂鳍；臀鳍很长，尾缘微凹。",
+    "sources": [
+      {
+        "url": "https://www.yueyang.gov.cn/uploadfiles/202302/20230223161357669.pdf",
+        "title": "岳阳市公开环境资料：南方鲇物种条目",
+        "supports": "洞庭湖及湘资沅澧四水分布；两对须、小背鳍、长臀鳍、微凹尾等形态。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S004484861932705X",
+        "title": "Screening and characterization of sex-linked DNA markers in Southern catfish",
+        "supports": "长江支流嘉陵江重庆北碚段真实亲鱼取样，明确 Silurus meridionalis 身份。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 300,
+    "max_mm": 1200,
+    "anchor_mm": 650,
+    "anchor_g": 2500,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "behavior": "steady",
+    "difficulty": 0.71,
+    "weight": 6,
+    "bait_weights": {
+      "worm": 1.3,
+      "grain": 0.05,
+      "shrimp": 2.0,
+      "lure": 0.8
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.22,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 30,
+    "salinity": "fresh",
+    "rarity": "少见",
+    "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "longsnout_catfish",
+    "name": "长吻鮠",
+    "scientific_name": "Rhinobagrus dumerili",
+    "region_ids": [
+      "yangtze"
+    ],
+    "spot_ids": [
+      "yangtze_river"
+    ],
+    "art": "res://assets/fish/longsnout_catfish.png",
+    "thumb": "res://assets/fish/longsnout_catfish_thumb.png",
+    "description": "俗称江团的长江淡水鱼。常在河湾底层活动，长而突出的吻部与柔和的灰粉色身体很有辨识度。",
+    "morphology": "身体无鳞，吻呈前突锥形，口下位、唇厚，四对短须；背鳍与胸鳍具硬刺，另有肥厚脂鳍，尾鳍深叉。",
+    "sources": [
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5698",
+        "title": "Eschmeyer’s Catalog of Fishes: Rhinobagrus dumerili",
+        "supports": "2026年目录接受现名 Rhinobagrus dumerili；长江流域淡水分布。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5910",
+        "title": "Eschmeyer’s Catalog of Fishes: Liocassis longirostris",
+        "supports": "Leiocassis longirostris 与 Tachysurus dumerili 等名称关联到同一物种。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://nyncw.sh.gov.cn/bwbdscl/20190103/0009-109878.html",
+        "title": "上海市农业农村委员会：如何饲养长吻鮠",
+        "supports": "一般个体质量背景，游戏数值未当作实测长度重量系数。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://doi.org/10.5657/FAS.2012.0299",
+        "title": "Park, Kim & Choi (2012): Histological Observations and Regeneration of Barbels in Juveniles of the Chinese Longsnout Catfish",
+        "supports": "原始研究明确四对须，并提供外形与口须照片；与国内标准外形相互核对。",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://wyxy.shou.edu.cn/_upload/article/files/e1/64/0e9f65ac480f81b7d1dda7b3721e/cd94ead1-0a57-40f8-ba32-2f526a8a5efd.pdf",
+        "title": "上海海洋大学：水产养殖种质资源基本情况普查培训材料",
+        "supports": "长吻鮠外观及脂鳍、吻部、叉尾识别参考。",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 220,
+    "max_mm": 750,
+    "anchor_mm": 450,
+    "anchor_g": 1100,
+    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "behavior": "rest",
+    "difficulty": 0.43,
+    "weight": 11,
+    "bait_weights": {
+      "worm": 1.6,
+      "grain": 0.1,
+      "shrimp": 2.1,
+      "lure": 0.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.1
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 30,
+    "salinity": "fresh",
+    "rarity": "常见",
+    "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
+    "research_status": "reviewed_2026-10-02",
+    "scientific_synonyms": [
+      "Leiocassis longirostris",
+      "Tachysurus dumerili"
+    ],
+    "taxonomy_note": "学名采用 Eschmeyer’s Catalog 2026-08 处理；国内渔业文献仍普遍沿用 Leiocassis longirostris。"
+  }
+]
