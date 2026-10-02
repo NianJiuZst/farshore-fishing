@@ -13,7 +13,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-caeb96f0-6e00-4db0-ab61-293eb64d445a.png",
       "master_path": "art_masters/ui_icons/rod.png",
       "runtime_path": "game/assets/ui/icons/rod.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -21,9 +21,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -56,18 +57,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "d70ac1ce9592f9c7741135343ab9336a73926b4fdd1ad1ea81a53f953440c5a9",
+        "sha256": "2d9e5225df8f99d703c8b2c3d6ef008dc6c6a7198214d8ec6e35811dd877df6f",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          6,
-          6,
-          506,
-          500
+          48,
+          48,
+          464,
+          460
         ],
-        "transparent_fraction": 0.8542251586914062
+        "visible_alpha_bbox_threshold_8": [
+          50,
+          50,
+          460,
+          458
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          50,
+          50,
+          460,
+          458
+        ],
+        "transparent_fraction": 0.8982772827148438,
+        "full_source_resized_dimensions": [
+          426,
+          426
+        ],
+        "full_source_position": [
+          43,
+          43
+        ],
+        "uniform_scale_factor": 0.3394039735099338
       }
     },
     {
@@ -79,7 +101,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-acd0d407-a7a8-44ef-9dd4-58d73ae76731.png",
       "master_path": "art_masters/ui_icons/reel.png",
       "runtime_path": "game/assets/ui/icons/reel.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -87,9 +109,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -122,18 +145,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "9a8177cafaab3d28bd170b96ca460903a0c2bd497e34b344ff8b0142928195be",
+        "sha256": "51d1ccf8ea1392c0ea74f52a4f38da78f3f73c4cce88593366b99c920beabd95",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          31,
-          38,
-          509,
-          475
+          58,
+          55,
+          477,
+          448
         ],
-        "transparent_fraction": 0.5210113525390625
+        "visible_alpha_bbox_threshold_8": [
+          60,
+          66,
+          471,
+          446
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          60,
+          66,
+          470,
+          446
+        ],
+        "transparent_fraction": 0.6307334899902344,
+        "full_source_resized_dimensions": [
+          449,
+          449
+        ],
+        "full_source_position": [
+          31,
+          31
+        ],
+        "uniform_scale_factor": 0.35807860262008734
       }
     },
     {
@@ -145,7 +189,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-929b937d-97ef-4cc1-9b51-2f5f5828e8a1.png",
       "master_path": "art_masters/ui_icons/hook.png",
       "runtime_path": "game/assets/ui/icons/hook.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -153,9 +197,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Thin rod guide line remains visible.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -188,18 +233,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "d05c208753dac1df299764b787842e9ed6db174db6d1d00a689e14c6a2e62617",
+        "sha256": "c94a3684420292a3eacce6f0ad3d9d1245f135104dd2273f16591d1c1d6f7b88",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          36,
-          20,
-          490,
-          486
+          59,
+          45,
+          465,
+          462
         ],
-        "transparent_fraction": 0.8001976013183594
+        "visible_alpha_bbox_threshold_8": [
+          80,
+          50,
+          449,
+          460
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          80,
+          50,
+          449,
+          460
+        ],
+        "transparent_fraction": 0.8391151428222656,
+        "full_source_resized_dimensions": [
+          458,
+          458
+        ],
+        "full_source_position": [
+          27,
+          27
+        ],
+        "uniform_scale_factor": 0.36541889483065954
       }
     },
     {
@@ -211,7 +277,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-902264d0-cb15-4206-befa-b1afb34c222f.png",
       "master_path": "art_masters/ui_icons/bag.png",
       "runtime_path": "game/assets/ui/icons/bag.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -219,9 +285,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -254,18 +321,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "ce5c96b5972e0b65211cba16d3bb727dc99d0ddb30c61cc7325d4bd2e56d43a4",
+        "sha256": "a0554e96e2a1c3c62dd091bad8cbb467489c1c841c0b5518ed6236eac9152c48",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          33,
-          10,
-          483,
-          501
+          68,
+          48,
+          448,
+          463
         ],
-        "transparent_fraction": 0.3821067810058594
+        "visible_alpha_bbox_threshold_8": [
+          70,
+          50,
+          446,
+          461
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          70,
+          50,
+          446,
+          461
+        ],
+        "transparent_fraction": 0.5590400695800781,
+        "full_source_resized_dimensions": [
+          432,
+          432
+        ],
+        "full_source_position": [
+          40,
+          40
+        ],
+        "uniform_scale_factor": 0.34424853064651556
       }
     },
     {
@@ -277,7 +365,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-535d92db-86a7-4abc-85bd-de47120efc92.png",
       "master_path": "art_masters/ui_icons/compass.png",
       "runtime_path": "game/assets/ui/icons/compass.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -285,9 +373,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -320,18 +409,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "fe81a7028af17a7c8ff8c86a06456718dd7e237e303fa697e2132db64dac1f4c",
+        "sha256": "f1a9ed83e2122da63ae3ad65eed0be402a7daa9c0e958a1abe00d8291c977847",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          40,
-          12,
-          506,
-          489
+          68,
+          44,
+          473,
+          458
         ],
-        "transparent_fraction": 0.4384002685546875
+        "visible_alpha_bbox_threshold_8": [
+          71,
+          47,
+          470,
+          456
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          71,
+          47,
+          470,
+          456
+        ],
+        "transparent_fraction": 0.5764656066894531,
+        "full_source_resized_dimensions": [
+          444,
+          444
+        ],
+        "full_source_position": [
+          34,
+          34
+        ],
+        "uniform_scale_factor": 0.3543647363872083
       }
     },
     {
@@ -343,7 +453,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-4b39626b-056a-4b96-b000-be2bee0bba2e.png",
       "master_path": "art_masters/ui_icons/book.png",
       "runtime_path": "game/assets/ui/icons/book.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -351,9 +461,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -386,18 +497,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "9b6e817a1b184170560c9669dc0b0902e36a52d540d2aacaaea187ade7d9b6af",
+        "sha256": "fa9a9a95e600077abfb1f31aa3021d53e4379a68a527e29831a2008e40ccfbb9",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          4,
-          20,
-          512,
-          474
+          49,
+          63,
+          465,
+          435
         ],
-        "transparent_fraction": 0.4100990295410156
+        "visible_alpha_bbox_threshold_8": [
+          52,
+          84,
+          463,
+          433
+        ],
+        "visible_alpha_bbox_threshold_16": [
+          52,
+          84,
+          463,
+          433
+        ],
+        "transparent_fraction": 0.6058998107910156,
+        "full_source_resized_dimensions": [
+          418,
+          418
+        ],
+        "full_source_position": [
+          47,
+          47
+        ],
+        "uniform_scale_factor": 0.3330625507717303
       }
     },
     {
@@ -409,7 +541,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-a2ffc2cc-2dff-4288-abd4-b7f676bfe4b7.png",
       "master_path": "art_masters/ui_icons/heart.png",
       "runtime_path": "game/assets/ui/icons/heart.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -417,9 +549,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Physical metal edging follows the object's own shape, not a UI frame.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -452,24 +585,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "c3e0c1572ee841e1fc6fd62c356b1ae153fd9d9987bb29825e219428c574987b",
+        "sha256": "973bd3173fa627034c546156556bd1833bb71a3a3a96e169cfe85017dfcfbec3",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          37,
-          15,
-          480,
-          476
+          51,
+          29,
+          465,
+          461
+        ],
+        "visible_alpha_bbox_threshold_8": [
+          53,
+          58,
+          463,
+          453
         ],
         "visible_alpha_bbox_threshold_16": [
-          39,
-          45,
-          477,
-          467
+          53,
+          58,
+          463,
+          453
         ],
-        "transparent_fraction": 0.5120925903320312
+        "transparent_fraction": 0.5726356506347656,
+        "full_source_resized_dimensions": [
+          479,
+          479
+        ],
+        "full_source_position": [
+          16,
+          16
+        ],
+        "uniform_scale_factor": 0.3821062441752097
       }
     },
     {
@@ -481,7 +629,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-c4369d65-d700-4aec-8d9f-5e95ecfb4612.png",
       "master_path": "art_masters/ui_icons/coin.png",
       "runtime_path": "game/assets/ui/icons/coin.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -489,9 +637,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Physical metal edging follows the object's own shape, not a UI frame.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -524,24 +673,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "a4789fc891a2a678402db6128ff51758534d2da203703f427ef3ef0e2e46a5ec",
+        "sha256": "f772508247a5513e64476a059dd1f95e8b9ce57dea69ff77164c9779fc58de4e",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          42,
-          31,
-          481,
-          486
+          61,
+          50,
+          461,
+          465
+        ],
+        "visible_alpha_bbox_threshold_8": [
+          63,
+          52,
+          459,
+          462
         ],
         "visible_alpha_bbox_threshold_16": [
-          45,
-          33,
-          479,
-          483
+          63,
+          52,
+          459,
+          462
         ],
-        "transparent_fraction": 0.4165916442871094
+        "transparent_fraction": 0.5142288208007812,
+        "full_source_resized_dimensions": [
+          467,
+          467
+        ],
+        "full_source_position": [
+          22,
+          22
+        ],
+        "uniform_scale_factor": 0.3720508166969147
       }
     },
     {
@@ -553,7 +717,7 @@
       "generated_working_path": "/workspace/scratch/c16084497664/generated_images/exec-8a6f1bc7-423f-4c65-8b3a-ecd5d64ee5a9.png",
       "master_path": "art_masters/ui_icons/badge.png",
       "runtime_path": "game/assets/ui/icons/badge.png",
-      "processing": "Original generator output preserved byte-for-byte as master; runtime downsampled to 512x512 with Pillow Lanczos. No new drawn artwork or background added.",
+      "processing": "Original generator output preserved byte-for-byte as master; runtime normalized with approved full-source LANCZOS downsampling and transparent 512px padding to about 410px visible extent. No crop, alpha cleanup or new drawn artwork.",
       "visual_audit": {
         "viewed_original": true,
         "viewed_runtime_light_and_teal_background": true,
@@ -561,9 +725,10 @@
         "no_backplate_tile_frame_text": true,
         "no_visible_outer_cast_shadow": true,
         "alpha_edge_result": "Clean against cream and deep teal; no visible matte fringe at runtime size",
-        "note": "Generator used tighter margins than requested; no edge cropping. Physical metal edging follows the object's own shape, not a UI frame.",
+        "note": "Generator source margins varied; approved full-source transparent padding now normalizes runtime icons to about 80% visible extent while preserving all original pixels.",
         "viewed_at_60px_and_128px": true,
-        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette."
+        "small_size_result": "Recognizable at 60px; detailed at 128px. The rod naturally uses a thin diagonal silhouette.",
+        "normalized_runtime_review": "Passed: viewed at 180px on deep teal and 60px on sky blue. Complete recognizable silhouettes, consistent visual extent, no external shadows, frames or visible matte fringe."
       },
       "master_audit": {
         "dimensions": [
@@ -596,24 +761,39 @@
           512
         ],
         "mode": "RGBA",
-        "sha256": "a0a40f3963ddde43e6b01af90b55ba1149d1e60d697459a37d6f45607191bb6e",
+        "sha256": "c57553cc8a7d55547d2803692076f340df7af06a33bd47a7fc2e41831bc048df",
         "alpha_extrema": [
           0,
           255
         ],
         "alpha_bbox": [
-          32,
-          23,
-          502,
-          506
+          58,
+          50,
+          472,
+          475
+        ],
+        "visible_alpha_bbox_threshold_8": [
+          60,
+          52,
+          470,
+          462
         ],
         "visible_alpha_bbox_threshold_16": [
-          34,
-          25,
-          500,
-          490
+          60,
+          52,
+          470,
+          462
         ],
-        "transparent_fraction": 0.4727783203125
+        "transparent_fraction": 0.5909080505371094,
+        "full_source_resized_dimensions": [
+          451,
+          451
+        ],
+        "full_source_position": [
+          30,
+          30
+        ],
+        "uniform_scale_factor": 0.3593339176161262
       }
     }
   ],
@@ -633,6 +813,18 @@
     "external_photo_sources": 0,
     "all_visually_reviewed": true,
     "no_code_or_apk_changes": true,
-    "margin_note": "Prompt requested around 10% clear margin. Generator returned varied tighter margins, especially for the rod and book; complete silhouettes were confirmed visually. Runtime files are direct downscales of untouched masters."
+    "margin_note": "Normalized all nine runtime images using full-source/no-crop transparent padding with the same 410px visible-extent recipe as navigation icons. Original masters remain byte-for-byte unchanged."
+  },
+  "packing_recipe": {
+    "runtime_canvas": [
+      512,
+      512
+    ],
+    "background": "RGBA (0,0,0,0)",
+    "visible_alpha_threshold_for_measurement_only": 8,
+    "target_longest_visible_axis": 410,
+    "scale_formula": "min(410/max(visible_bbox_width, visible_bbox_height), 512/source_width, 512/source_height)",
+    "resize": "Pillow RGBA LANCZOS on the complete original image; no crop, paint, mask threshold, alpha cleanup or semantic modification",
+    "placement": "Integer-centered full resized image on transparent 512 square, retaining every source pixel and its alpha through resampling"
   }
 }
