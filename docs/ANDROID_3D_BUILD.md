@@ -1,5 +1,7 @@
 # Android 1.2.0-beta.1 full-catalog 3D build
 
+> Historical beta1 record. The observational-fishing and photoreal-static-art beta2 runtime acceptance is recorded in [BETA2_ACCEPTANCE.md](BETA2_ACCEPTANCE.md). Old results below do not certify the new independent preview package or target phone.
+
 Verified build snapshot:2026-10-02 17:03 UTC. Both ABI packages for 1.2.0-beta.1 are signed and statically audited against the frozen game and exact imported scene payloads. The ARM64 APK is the phone release; x86_64 is test-only. Desktop baseline/tall-frame acceptance is recorded in the release evidence; Android runtime status remains separate in `ANDROID_TESTS.md`. The released 1.1.0 APK and its evidence remain preserved.
 
 ## Verified package and scope

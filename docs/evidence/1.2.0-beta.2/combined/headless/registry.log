@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/fish_3d_registry_tests.gd -- --require-all
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+FISH_3D_REGISTRY_TESTS: 98/98; imported models=44/44; release_gate=true

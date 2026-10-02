@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/fishing_guard_trace_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+FISHING_GUARD_TRACE_TESTS: old_new_differences=0 capture_mismatches=0 frames=382 substeps=764 max_wear=0.00892862787066

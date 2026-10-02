@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "selected_suites": [
+    "fish_art_ui",
+    "slice3d",
+    "ui_style",
+    "touch"
+  ],
+  "representative_tall_layout": true,
+  "runtime_files": 1070,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "fish_art_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 16.77,
+      "log": "build/combined-beta2-final-tall/fish_art_ui.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "PHOTO_UI_SCOPE: canonical-photoreal-44; production native pages; no release gate override; not Android validation",
+        "FISH_ART_UI_TESTS: 1182/1182 passed; canonical-photoreal-44; (720, 1584) desktop layout"
+      ]
+    },
+    {
+      "name": "slice3d",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 64.2,
+      "log": "build/combined-beta2-final-tall/slice3d.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4511/4511 passed; failures=0; cast events=47; landing events=45; species=44; spots=12"
+      ]
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 20.92,
+      "log": "build/combined-beta2-final-tall/ui_style.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 12575/12575 passed; failures=0; button visits=267; physical viewport=(720, 1584); logical viewport=(720.0, 1584.0)"
+      ]
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 12.75,
+      "log": "build/combined-beta2-final-tall/touch.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 130/130 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.67,
+      "log": "build/combined-beta2-final-tall/binary_catalog.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 44, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    },
+    {
+      "name": "slice3d_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 235.86,
+      "log": "build/combined-beta2-final-tall/slice3d_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4511/4511 passed; failures=0; cast events=47; landing events=45; species=44; spots=12"
+      ]
+    },
+    {
+      "name": "ui_style_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 401.13,
+      "log": "build/combined-beta2-final-tall/ui_style_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 12575/12575 passed; failures=0; button visits=267; physical viewport=(720, 1584); logical viewport=(720.0, 1584.0)"
+      ]
+    },
+    {
+      "name": "touch_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 340.1,
+      "log": "build/combined-beta2-final-tall/touch_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 130/130 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ]
+    }
+  ],
+  "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."
+}

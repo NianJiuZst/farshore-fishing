@@ -1,5 +1,7 @@
 # 1.2.0-beta.1 full-catalog3D acceptance
 
+> Historical beta1 record. The observational-fishing and photoreal-static-art beta2 runtime acceptance is recorded in [BETA2_ACCEPTANCE.md](BETA2_ACCEPTANCE.md). Old results below do not certify the new independent preview package or target phone.
+
 ## Accepted scope and evidence boundary
 
 The frozen source supports **44 species-specific animated3D fish, six regions, twelve playable spots, five rods, eight baits and31 generated UI icons**, with a fixed rigged human angler. Normal play uses the original full-world Encounter rules. The obsolete two-species/trial-only restriction is removed; historical trial records remain readable.

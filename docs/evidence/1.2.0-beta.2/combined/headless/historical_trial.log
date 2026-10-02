@@ -1,0 +1,5 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/trial_fishery_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+TRIAL BAIT carp rates (fixed seed, 2000 each): { "sweetcorn": 0.9875, "dough": 0.976, "cut_fish": 0.025, "spinner": 0.039 }
+TRIAL_FISHERY_TESTS: 38082/38082 passed; failures=0

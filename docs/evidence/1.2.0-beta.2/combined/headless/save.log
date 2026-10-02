@@ -1,0 +1,14 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/save_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+SAVE_TEST_ROOT=/tmp/farshore-save-tests-1790973252_62626-19-130047
+PASS GROUP stats, independent records, dispositions, favorites, restart
+PASS GROUP duplicate and stale-session rejection
+PASS GROUP real I/O error injection and transactional retries
+PASS GROUP protected observation sale guard, four settlement/release I/O failures, exact retries, restart and schema 2 compatibility
+PASS GROUP corruption fallback and preservation
+PASS GROUP unknown higher schema protection
+PASS GROUP schema migration, defaults, validation and new content
+PASS GROUP pending cap preserves unprocessed catches
+PASS GROUP 10,000 catches: 5395 bytes, 20785 ms; memory adapter replaces I/O only, final disk roundtrip verified
+SAVE_TESTS: 314/314 passed; failures=0

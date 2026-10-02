@@ -32,7 +32,7 @@
 - 一般覆盖更新必须保持相同包名、签名身份，并提升 versionCode。当前独立预览包不满足与旧包覆盖更新的条件；存档结构兼容不等于跨包自动迁移
 - 本地存档在应用私有数据目录的 Godot user:// 下。系统普通文件浏览器通常不能直接访问
 - 卸载、清除应用数据会丢失进度。本版没有云同步，不承诺跨安装保留
-- 构建、静态检查、桌面、模拟器与真机验证严格分开，以本版 docs/3D_ACCEPTANCE.md、docs/ANDROID_3D_BUILD.md 及最终发布说明为准；docs/ACCEPTANCE.md 的旧版历史结果不替代本版验证
+- 构建、静态检查、桌面、模拟器与真机验证严格分开，以本版 docs/BETA2_ACCEPTANCE.md、docs/ANDROID_BETA2_BUILD.md 及最终发布说明为准；docs/ACCEPTANCE.md 的旧版历史结果不替代本版验证
 
 ## 打开工程
 
@@ -48,7 +48,7 @@
 
 ## 构建 Android
 
-详见 docs/BUILD.md。匹配的官方模板、JDK、Android SDK 与 Gradle 精确版本记录在该文件。执行 tools/android_build.sh arm64。SDK 首次安装需自行接受其许可。签名通过环境变量指向独立的私钥与密码文件，源码不包含签名凭据。
+当前预览版的已验证预构建模板路线见 docs/ANDROID_BETA2_BUILD.md；历史 Gradle 路线见 docs/BUILD.md。先校验独立源码归档，再从隔离副本导出，不能直接在唯一源码目录执行清理或打包。匹配的官方 Godot 模板、JDK 与 Android SDK 版本和命令均在构建文档中。SDK 首次安装需自行接受其许可。签名通过环境变量指向独立的私钥与密码文件，源码不包含签名凭据。
 
 ## 自动化测试
 
@@ -57,7 +57,7 @@
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/save_tests.gd
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-core-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/core_tests.gd
 
-先创建上述临时目录。可用 `python3 tools/run_full_catalog_qa.py --output build/full-catalog-qa --render` 协调导入、逻辑/界面/3D测试、独立44模型二进制审计与可用的桌面Vulkan测试。源码测试包括真实全目录出鱼、动画连接、最小/最大鱼镜头、触控冲突、存档故障与重启；历史trial_fishery测试只验证旧适配器/记录兼容。每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。最终视觉、源代码和设备证据见docs/3D_ACCEPTANCE.md，不能以旧版计数替代本次复验。
+先创建上述临时目录。可用 `python3 tools/run_full_catalog_qa.py --output build/full-catalog-qa --render` 协调导入、逻辑/界面/3D测试、独立44模型二进制审计与可用的桌面Vulkan测试。源码测试包括真实全目录出鱼、动画连接、最小/最大鱼镜头、触控冲突、存档故障与重启；历史trial_fishery测试只验证旧适配器/记录兼容。每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。本版视觉、源代码和设备证据边界见docs/BETA2_ACCEPTANCE.md，不能以旧版计数替代本次复验。
 
 ## 当前已核验范围
 

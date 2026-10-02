@@ -1,0 +1,161 @@
+{
+  "date_utc": "2026-10-02",
+  "runtime_files": 1070,
+  "runtime_source_sha256": "3d7b62513b85f31c39f2744a3cdc87882b28121812a06b639e6bccfb84eb73de",
+  "passed": true,
+  "scope": "Combined observational fishing, strict44 photoreal static views and unchanged real3D gameplay. Desktop/headless only; Android installation and phone behavior are not certified.",
+  "files": {
+    "docs/evidence/1.2.0-beta.2/combined/headless/angler_anatomy.log": {
+      "bytes": 432,
+      "sha256": "ae7687dd3be1cd2c814e4078f2dae61d40cc42554eead35a4890d749f4003eed"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/bait_balance.log": {
+      "bytes": 232,
+      "sha256": "323551a349b170c4263c08c36a1136fb6e4716984c8529690a85087f5fbd9761"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/before_import_sha256.json": {
+      "bytes": 133133,
+      "sha256": "2b136e04ff49659f9f419ecac6b7bbe148155a1663c880bdb0610b546a346862"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/binary_catalog.json": {
+      "bytes": 45165,
+      "sha256": "1c6b71ce0b901ca4dafe960528cf009459d9e46245fcdcd9761d011012b9a7d8"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/binary_catalog.log": {
+      "bytes": 296,
+      "sha256": "bd0ef2fe36cac7d0faec9e722ef875fa3a7e00796e8dc6f5a01423d64978c8dd"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/camera_aspect.log": {
+      "bytes": 283,
+      "sha256": "89f957cfd66bd9ed5feefc5f6abda9b368d5fa2f2fb76938025f17b6e799ac21"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/core.log": {
+      "bytes": 2319,
+      "sha256": "5c819a648edd63a2e77c5ffdac8c5206c128de599fa43adeb11449ce03b767db"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/fish_art.log": {
+      "bytes": 280,
+      "sha256": "a8a8c5cd93ede583423e905d4e1ae728fa7ccb55c8e92b914c2530c9dc7ca461"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/fish_art_ui.log": {
+      "bytes": 376,
+      "sha256": "81645f710e7ca2470526debe7abc54dc5811f48a721b0d508ea3622c054b9503"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/fish_preview.log": {
+      "bytes": 208,
+      "sha256": "9dfc4d7e481e3d8d8fdc16f7635be372dd9e47579914447547a2c2f235e6e30e"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/float_observation.log": {
+      "bytes": 365,
+      "sha256": "61a277c0465591e279a8303308d136727522aaeddfd05afeeb69e32a6a310f5c"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/guard_trace.log": {
+      "bytes": 302,
+      "sha256": "23a445e4653fca705acd3f58638fc6baad3503020f58f5444134b13d75c9ac23"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/hazard_boundary.log": {
+      "bytes": 232,
+      "sha256": "48ba5f4b76f51e39470928d958242f104055fbeab80e838d01be4d002dfd8ed4"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/historical_trial.log": {
+      "bytes": 352,
+      "sha256": "854fc971bedcad016223c77da215b5e1b8dba525ecf1f5f2e25dc615dd79788b"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/main_travel.log": {
+      "bytes": 262,
+      "sha256": "e2a5cd47871cf30adba2912562f05ab8aaa2cca725f7c5b8ccb16893e8b89cc7"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/registry.log": {
+      "bytes": 268,
+      "sha256": "99c52926fb21d1c09c4cc2d24bf243f89e4b7638d558982f4cbb241c688a6394"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/runtime_after_sha256.json": {
+      "bytes": 133133,
+      "sha256": "2b136e04ff49659f9f419ecac6b7bbe148155a1663c880bdb0610b546a346862"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/runtime_before_sha256.json": {
+      "bytes": 133133,
+      "sha256": "2b136e04ff49659f9f419ecac6b7bbe148155a1663c880bdb0610b546a346862"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/save.log": {
+      "bytes": 913,
+      "sha256": "c8873d9d096f9218c5687447b9b15827028246c69b18d83bc0118440bf91acf9"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/session_observation.log": {
+      "bytes": 236,
+      "sha256": "5098ff2c5c76e2b8cf3e75b28d21f95839a03ebd4982dbf9c221e0a22f7ab69b"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/slice3d.log": {
+      "bytes": 11866,
+      "sha256": "06d91128b0d0dc2591ebac8a623fdfca20c5ed531fefe79a4cdb8e9e2e54ba56"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/summary.json": {
+      "bytes": 8345,
+      "sha256": "ad53236f56d72c52e291230b69b56284442e999cabd246d872ea89ce40fe9f83"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/tackle.log": {
+      "bytes": 326,
+      "sha256": "b65ce68b1d58e9f68a4037e9fed4367f0d49975a920608b2c0a0362b530b8ae4"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/touch.log": {
+      "bytes": 1161,
+      "sha256": "3f5779a7caabbb3f923e388d12fbf608bdd2a560b6a34856e77f2c61001d32b6"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/headless/ui_style.log": {
+      "bytes": 2763,
+      "sha256": "e43c3b03ccfdff268a262f71a7ae6c269529db4ce87348c65dca2ab358695183"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/before_import_sha256.json": {
+      "bytes": 133133,
+      "sha256": "2b136e04ff49659f9f419ecac6b7bbe148155a1663c880bdb0610b546a346862"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/binary_catalog.json": {
+      "bytes": 45165,
+      "sha256": "1c6b71ce0b901ca4dafe960528cf009459d9e46245fcdcd9761d011012b9a7d8"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/binary_catalog.log": {
+      "bytes": 292,
+      "sha256": "73ad1d4b1887a6f9a7b29a02fa292d6aaa8f6ba75caddaf17ee6b8c009918054"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/fish_art_ui.log": {
+      "bytes": 386,
+      "sha256": "d905a6965685f692411cdffe451f9cd533a59786781d77a03f7b4556f08ef7ee"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/runtime_after_sha256.json": {
+      "bytes": 133133,
+      "sha256": "2b136e04ff49659f9f419ecac6b7bbe148155a1663c880bdb0610b546a346862"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/runtime_before_sha256.json": {
+      "bytes": 133133,
+      "sha256": "2b136e04ff49659f9f419ecac6b7bbe148155a1663c880bdb0610b546a346862"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/slice3d.log": {
+      "bytes": 11876,
+      "sha256": "8632eb0304370d27b5627f1065c173f70ff5cff844de527f88f4af9e3c8bf355"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/slice3d_vulkan.log": {
+      "bytes": 12228,
+      "sha256": "75c74201a4cf30498429568f827e25ad4c43c415801db6c21667d2765a3f5716"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/summary.json": {
+      "bytes": 5033,
+      "sha256": "c31f8e658a97f63dea4c6851d42f50adefaded792748116d63787e0264329580"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/touch.log": {
+      "bytes": 1060,
+      "sha256": "dadbedfefdcc5e440a61a6d65357950a9049ee0adf3d4632aff6f200922a63a2"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/touch_vulkan.log": {
+      "bytes": 1412,
+      "sha256": "79b04d1d53c90fa686b61f0b8b74ea3077dd2c6be563f5465b1f08d99a4e59cd"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/ui_style.log": {
+      "bytes": 2773,
+      "sha256": "a954b58cbce898c77e9b44454a04143d6870822a19f8816ee65572a8da718fb8"
+    },
+    "docs/evidence/1.2.0-beta.2/combined/tall/ui_style_vulkan.log": {
+      "bytes": 3125,
+      "sha256": "d157fe56b7fe4f6cd0215916d70d180747f19af01aac46ff85db1391dc66d8d6"
+    }
+  }
+}
