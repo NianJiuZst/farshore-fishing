@@ -1,0 +1,522 @@
+[
+  {
+    "asset_id": "alligator_gar",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/alligator_gar.png",
+    "thumbnail_path": "game/assets/fish/alligator_gar_thumb.png",
+    "master_path": "art_masters/c/alligator_gar.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-aa9c8ee8-88a6-4cd1-bbc8-cfb3c2d05174.png",
+    "master_dimensions": [
+      2048,
+      768
+    ],
+    "runtime_dimensions": [
+      1024,
+      384
+    ],
+    "thumbnail_dimensions": [
+      256,
+      96
+    ],
+    "generation_method": "OpenAI built-in image_gen; one distinct species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone near-real hand-painted fish painting for the Chinese 2D fishing game Farshore. Exactly ONE complete ALLIGATOR GAR, Atractosteus spatula, adult, strict LEFT-facing true lateral profile, nose LEFT and tail RIGHT. Robust very elongated cylindrical olive-brown body, thick diamond-shaped ganoid armored scales, broad flattened alligator-like snout relatively short and broad compared with a longnose gar, powerful nearly closed toothed jaws, normal small golden eye. One small dorsal fin set far back, anal fin similarly far back, rounded paddle-like caudal fin with dark spots, olive-gray paired fins, pale cream belly, a few dark spots concentrated posteriorly. The far-back dorsal and anal fins must be distinct from tail. Entire snout, tail and every fin within frame with 6% clear padding. Match the delicate realistic watercolor-gouache natural-history hand painting, subtle pencil detail, restrained natural colors and soft upper-left lighting of the inspected existing common carp and northern pike assets. Accurate fish anatomy, no caricature. Landscape 2048x768. TRUE TRANSPARENT alpha background, no paper rectangle, no water, no shadow, no checkerboard, no labels, no text, no hook, no extra fish.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fws.gov/species/alligator-gar-atractosteus-spatula",
+        "title": "USFWS: Alligator Gar",
+        "supports": "学名、密西西比流域南部范围、菱形硬鳞和大型体形",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/alligator-gar",
+        "title": "MDWFP: Alligator Gar",
+        "supports": "南密西西比、河汊与牛轭湖、宽吻和鳍部斑点；有真实大型个体记录",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://myfwc.com/wildlifehabitats/profiles/freshwater/alligator-gar/",
+        "title": "FWC: Alligator Gar",
+        "supports": "约2.44米大型尺寸背景及后移鱼鳍；不是体重科研回归来源",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/fish/common_carp.png",
+      "game/assets/fish/northern_pike.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "完整侧视、粗壮长体、宽短吻、菱形鳞甲、后移背鳍/臀鳍、斑点圆尾；与长吻雀鳝区分清楚。 绘画不是鳍条、鳞片或牙齿计数的分类学检索图。",
+    "alpha": {
+      "extrema": [
+        0,
+        255
+      ],
+      "zero_fraction": 0.6754735310872396,
+      "nonzero_bbox": [
+        7,
+        50,
+        1018,
+        313
+      ]
+    },
+    "alpha_compositing_audit": "docs/fish_c_alpha_audit.jpg; visually inspected on cream and dark teal, no opaque backdrop or visible halo. Source hidden RGB is intentionally ignored wherever alpha=0.",
+    "export": "Pillow Lanczos proportional resize only, native alpha retained; 1024px runtime width and 256px thumbnail width. Original generation bytes preserved in master.",
+    "master_sha256": "a026591d47aacf890929200df54efdc62be4c85cfdf33ce53b5448a4e5956143",
+    "sha256": "ad3ec092e2aa5d2f9de9256b50aaff001d6739f2854dd54d0bc0556955bf8aa4",
+    "thumbnail_sha256": "bb8e525c8d498990a4c015445b8ee15ccc8b5a4a7e94464309b7a276f07053b1",
+    "runtime_bytes": 360181,
+    "used_by": "res://assets/fish/alligator_gar.png"
+  },
+  {
+    "asset_id": "longnose_gar",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/longnose_gar.png",
+    "thumbnail_path": "game/assets/fish/longnose_gar_thumb.png",
+    "master_path": "art_masters/c/longnose_gar.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-0d5aad7e-28c6-44ef-bfeb-0ac6207ad3ac.png",
+    "master_dimensions": [
+      2048,
+      768
+    ],
+    "runtime_dimensions": [
+      1024,
+      384
+    ],
+    "thumbnail_dimensions": [
+      256,
+      96
+    ],
+    "generation_method": "OpenAI built-in image_gen; one distinct species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone near-real hand-painted fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, strict LEFT-facing true lateral profile, nose LEFT and tail RIGHT, natural straight relaxed posture; entire snout, tail and all fins within frame with 7% transparent padding. Delicate realistic watercolor and gouache natural-history hand painting, subtle pencil detail, restrained natural colors, soft upper-left light, accurate biological silhouette and natural small eye. Match the existing common carp and northern pike style, near-real rather than cartoon. TRUE TRANSPARENT alpha background. No water, no scenery, no shadow, no halo, no paper rectangle, no checkerboard, no text, no hook or labels. Subject: LONGNOSE GAR Lepisosteus osseus. Very long slim olive-brown cylindrical body covered by hard rhombic ganoid scales, whitish belly, VERY LONG THIN needle-like snout about twice as long as the rest of the head, distinctly much more slender and longer than an alligator gar snout. Mouth nearly closed, minute pointed teeth may be visible. Small black rounded spots on sides and especially posterior body and fins. One small soft dorsal fin very far back, anal fin below similarly far back; round asymmetric paddle-like tail, NOT a forked tail. Paired fins relatively small. Landscape 2048x768.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.nps.gov/miss/learn/nature/long-nosed-gar-lepisosteus-osseus.htm",
+        "title": "NPS: Long-nosed Gar",
+        "supports": "上密西西比泛洪湖与大河回水栖境、细长吻和分布",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://dnr.sc.gov/fish/species/longnosegar.html",
+        "title": "SCDNR: Longnose Gar",
+        "supports": "吻长超过其余头部两倍、体色黑斑、缓流水域与鱼食",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/longnose-gar/",
+        "title": "Florida Museum: Longnose Gar",
+        "supports": "北美分布、菱形硬鳞、体长可超过游戏上限",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/fish/common_carp.png",
+      "game/assets/fish/northern_pike.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "针状细长吻、狭长体、菱形硬鳞、后置背鳍/臀鳍和带斑圆尾；全鱼和吻尖均保留。 绘画不是鳍条、鳞片或牙齿计数的分类学检索图。",
+    "alpha": {
+      "extrema": [
+        0,
+        255
+      ],
+      "zero_fraction": 0.7792332967122396,
+      "nonzero_bbox": [
+        19,
+        50,
+        1010,
+        363
+      ]
+    },
+    "alpha_compositing_audit": "docs/fish_c_alpha_audit.jpg; visually inspected on cream and dark teal, no opaque backdrop or visible halo. Source hidden RGB is intentionally ignored wherever alpha=0.",
+    "export": "Pillow Lanczos proportional resize only, native alpha retained; 1024px runtime width and 256px thumbnail width. Original generation bytes preserved in master.",
+    "master_sha256": "3dfff35b300e56fc928cc30c9e5bd4966174c9762e6c565de4da78d7e4597787",
+    "sha256": "6bc013c73f029cc97463cface3bd04f19d124b0bc25feca047233979bcee2a01",
+    "thumbnail_sha256": "a89ae2799c4a2fd81673106b67cc9ddc6650d999c4c528f86e6cad774b72321e",
+    "runtime_bytes": 255230,
+    "used_by": "res://assets/fish/longnose_gar.png"
+  },
+  {
+    "asset_id": "bowfin",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/bowfin.png",
+    "thumbnail_path": "game/assets/fish/bowfin_thumb.png",
+    "master_path": "art_masters/c/bowfin.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-caf8a973-f5dd-4625-8e4d-0fb204efea08.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "generation_method": "OpenAI built-in image_gen; one distinct species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone near-real hand-painted fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, strict LEFT-facing true lateral profile, nose LEFT and tail RIGHT, natural straight relaxed posture; entire snout, tail and all fins within frame with 7% transparent padding. Delicate realistic watercolor and gouache natural-history hand painting, subtle pencil detail, restrained natural colors, soft upper-left light, accurate biological silhouette and natural small eye. Match the existing common carp and northern pike style, near-real rather than cartoon. TRUE TRANSPARENT alpha background. No water, no scenery, no shadow, no halo, no paper rectangle, no checkerboard, no text, no hook or labels. Subject: EMERALD / EYESPOT BOWFIN Amia ocellicauda, Mississippi-basin adult male. Elongate robust olive-green body with soft irregular dark brown mottling, pale yellow-green belly, rounded head and short broad blunt snout, large natural mouth with slight underbite, small brown eye. Long flexible ribbon-like SOFT DORSAL FIN runs along more than half the back, from behind head area almost to the tail; NO SPINY dorsal section. Rounded paddle-shaped caudal fin, one clear round black eyespot ringed yellow at upper base of tail. Very SHORT anal fin near tail, much shorter than dorsal fin, rounded greenish paired fins and subtle emerald tint to lower fins. Do not create a snakehead or long anal fin. Small overlapping cycloid scales, NOT diamond armor. Landscape 1536x1024.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://mdc.mo.gov/discover-nature/field-guide/emerald-bowfin",
+        "title": "Missouri Department of Conservation: Emerald Bowfin",
+        "supports": "当前学名 Amia ocellicauda；密西西比低地、回水/牛轭湖生境、形态",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9709656/",
+        "title": "Brownstein et al. 2022: Hidden species diversity in an iconic living fossil vertebrate",
+        "supports": "2022物种界定；Amia ocellicauda 覆盖密西西比流域，Amia calva 为更东侧沿海支系",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/fish/common_carp.png",
+      "game/assets/fish/northern_pike.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "长软条背鳍、短臀鳍、圆尾和尾基眼斑，橄榄斑驳体色及小鳞；没有错误的长臀鳍。 绘画不是鳍条、鳞片或牙齿计数的分类学检索图。",
+    "alpha": {
+      "extrema": [
+        0,
+        255
+      ],
+      "zero_fraction": 0.702847616215227,
+      "nonzero_bbox": [
+        15,
+        14,
+        1017,
+        639
+      ]
+    },
+    "alpha_compositing_audit": "docs/fish_c_alpha_audit.jpg; visually inspected on cream and dark teal, no opaque backdrop or visible halo. Source hidden RGB is intentionally ignored wherever alpha=0.",
+    "export": "Pillow Lanczos proportional resize only, native alpha retained; 1024px runtime width and 256px thumbnail width. Original generation bytes preserved in master.",
+    "master_sha256": "74a39d142206f2963c37dabb9fe42f8502d9a826fe0d20fa57cfa287d171aa0b",
+    "sha256": "31c626a31cf521f4df41de8ac6532ee22021c2aebffe72a7192d585e1bf1d12a",
+    "thumbnail_sha256": "bf4d3eace0ffddbed7224527be09180e13053e5c3697833c3dd5108b102a7cc4",
+    "runtime_bytes": 542663,
+    "used_by": "res://assets/fish/bowfin.png"
+  },
+  {
+    "asset_id": "largemouth_bass",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/largemouth_bass.png",
+    "thumbnail_path": "game/assets/fish/largemouth_bass_thumb.png",
+    "master_path": "art_masters/c/largemouth_bass.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-ce36c954-bb9e-4200-afde-f65a2dcb86b2.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "generation_method": "OpenAI built-in image_gen; one distinct species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone near-real hand-painted fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, strict LEFT-facing true lateral profile, nose LEFT and tail RIGHT, relaxed straight natural posture; entire snout, tail and all fins within frame with 7% transparent padding. Delicate realistic watercolor and gouache natural-history hand painting, subtle pencil detail, restrained natural colors, soft upper-left light, accurate biological silhouette and natural small eye. Match the existing common carp and northern pike style, near-real rather than cartoon. TRUE TRANSPARENT alpha background, landscape 1536x1024. No water, no scenery, no shadow, no halo, no paper rectangle, no checkerboard, no text, no hook or labels. Subject: LARGEMOUTH BASS Micropterus nigricans, northern native Mississippi form. Robust but moderately elongated compressed green body, dark olive back and pale creamy belly, irregular dark blotches forming a broad broken horizontal band from behind gill cover along flank to tail base. Large mouth nearly closed, upper jaw/maxilla clearly extends behind the rear edge of the eye, slightly protruding lower jaw. Spiny front dorsal fin and soft rounded rear dorsal section joined by a very deep distinct notch; no extra dorsal fin. Fan-shaped shallowly notched tail, olive fins, fine overlapping scales. No smallmouth vertical tiger bars, no red gills exposed, no exaggerated mouth gape.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/largemouth-bass",
+        "title": "MDWFP: Largemouth Bass",
+        "supports": "密西西比本地大口黑鲈形态、缓流与掩体生境；该页沿用旧学名",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.dnr.state.mn.us/minnaqua/speciesprofile/largemouthbass.html",
+        "title": "Minnesota DNR: Largemouth Bass profile",
+        "supports": "上游水草丰富的河流回水和湖湾；该页沿用旧学名",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9170712/",
+        "title": "Kim et al. 2022: Phylogenomics and species delimitation of Black Basses",
+        "supports": "当前种界与命名：大口黑鲈 Micropterus nigricans，佛罗里达黑鲈 M. salmoides",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://dnr.maryland.gov/fisheries/Documents/Reg_Changes/LargemouthBass_ScientificRenaming.pdf",
+        "title": "Maryland DNR: Largemouth Bass Scientific Renaming",
+        "supports": "核实AFS 2023对大口黑鲈学名变更的采用",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/fish/common_carp.png",
+      "game/assets/fish/northern_pike.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "上颌延至眼后、断续深色横带、前硬棘和后软条背鳍间深凹缺；自然黑鲈体形。 绘画不是鳍条、鳞片或牙齿计数的分类学检索图。",
+    "alpha": {
+      "extrema": [
+        0,
+        255
+      ],
+      "zero_fraction": 0.62703319454612,
+      "nonzero_bbox": [
+        0,
+        14,
+        1024,
+        683
+      ]
+    },
+    "alpha_compositing_audit": "docs/fish_c_alpha_audit.jpg; visually inspected on cream and dark teal, no opaque backdrop or visible halo. Source hidden RGB is intentionally ignored wherever alpha=0.",
+    "export": "Pillow Lanczos proportional resize only, native alpha retained; 1024px runtime width and 256px thumbnail width. Original generation bytes preserved in master.",
+    "master_sha256": "a8b3b3f620514958c58f2ac28903873621acbbb81549672b2f47895711a1c964",
+    "sha256": "723a2162601f7ee7be528f5f43d0f7b0b4f4ab46820925e540fcceb542394572",
+    "thumbnail_sha256": "2000b7e928056386991e5c19bc953c8b35c756e15705bd05f5fc52a4d589706f",
+    "runtime_bytes": 692868,
+    "used_by": "res://assets/fish/largemouth_bass.png"
+  },
+  {
+    "asset_id": "channel_catfish",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/channel_catfish.png",
+    "thumbnail_path": "game/assets/fish/channel_catfish_thumb.png",
+    "master_path": "art_masters/c/channel_catfish.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-1a0f5eae-7bab-44ec-a5e8-fc8340b0b9e7.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "generation_method": "OpenAI built-in image_gen; one distinct species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone near-real hand-painted fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, strict LEFT-facing true lateral profile, nose LEFT and tail RIGHT, relaxed straight natural posture; entire snout, tail and all fins within frame with 7% transparent padding. Delicate realistic watercolor and gouache natural-history hand painting, subtle pencil detail, restrained natural colors, soft upper-left light, accurate biological silhouette and natural small eye. Match the existing common carp and northern pike style, near-real rather than cartoon. TRUE TRANSPARENT alpha background, landscape 1536x1024. No water, no scenery, no shadow, no halo, no paper rectangle, no checkerboard, no text, no hook or labels. Subject: CHANNEL CATFISH Ictalurus punctatus, medium adult retaining scattered small dark spots. Long blue-gray olive body, darker back and silvery white belly, smooth SCALELESS skin with scattered separate black dots across flanks, no armor or scale grid. Rounded tapered head with modest terminal mouth and four pairs of thin natural barbels around nose and jaws, near-side barbels fully visible. Single triangular dorsal fin near front and SEPARATE small fleshy adipose fin near tail; deeply FORKED caudal fin, rounded outer edge of anal fin. Natural smooth catfish anatomy and long thin whiskers entirely in frame. Do not make a flathead or a blue catfish without spots.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.mdwfp.com/sites/default/files/2024-12/Fish%20ID%20Guide_0.pdf",
+        "title": "MDWFP Fish ID Guide: Channel Catfish, p.21",
+        "supports": "物种身份、河流牛轭湖生境、黑斑、深叉尾和圆臀鳍；成年大鱼斑点可消退",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+        "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+        "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/fish/common_carp.png",
+      "game/assets/fish/northern_pike.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "须、无鳞皮肤、散点、深叉尾、圆弧臀鳍和小脂鳍均已复核；与扁头鲶相区分。 绘画不是鳍条、鳞片或牙齿计数的分类学检索图。",
+    "alpha": {
+      "extrema": [
+        0,
+        255
+      ],
+      "zero_fraction": 0.7535187705893118,
+      "nonzero_bbox": [
+        9,
+        14,
+        1017,
+        667
+      ]
+    },
+    "alpha_compositing_audit": "docs/fish_c_alpha_audit.jpg; visually inspected on cream and dark teal, no opaque backdrop or visible halo. Source hidden RGB is intentionally ignored wherever alpha=0.",
+    "export": "Pillow Lanczos proportional resize only, native alpha retained; 1024px runtime width and 256px thumbnail width. Original generation bytes preserved in master.",
+    "master_sha256": "c8a8c3127c1c235e3f4900578dbae2cdec9e75fe79b6744face22b383eb8ce88",
+    "sha256": "e8c7cb6e67db53d4e2ecfc0d02b48164b453947fef02996611d75a012c4992a5",
+    "thumbnail_sha256": "8d6990b3c404f65ce427e7e9effe36ab04ddfd9814195d9b63aeb04c0a3e4529",
+    "runtime_bytes": 450963,
+    "used_by": "res://assets/fish/channel_catfish.png"
+  },
+  {
+    "asset_id": "flathead_catfish",
+    "usage": "fish codex detail and catch display",
+    "runtime_path": "game/assets/fish/flathead_catfish.png",
+    "thumbnail_path": "game/assets/fish/flathead_catfish_thumb.png",
+    "master_path": "art_masters/c/flathead_catfish.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-bbdecf44-04d2-4a9a-9d01-f4545459f049.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1024,
+      683
+    ],
+    "thumbnail_dimensions": [
+      256,
+      171
+    ],
+    "generation_method": "OpenAI built-in image_gen; one distinct species per call",
+    "generation_prompt": "Use case: scientific-educational. Asset: standalone near-real hand-painted fish painting for a 2D fishing-game field guide. Exactly ONE complete fish, strict LEFT-facing true lateral profile, nose LEFT and tail RIGHT, relaxed straight natural posture; entire snout, tail and all fins within frame with 7% transparent padding. Delicate realistic watercolor and gouache natural-history hand painting, subtle pencil detail, restrained natural colors, soft upper-left light, accurate biological silhouette and natural small eye. Match the existing common carp and northern pike style, near-real rather than cartoon. TRUE TRANSPARENT alpha background, landscape 1536x1024. No water, no scenery, no shadow, no halo, no paper rectangle, no checkerboard, no text, no hook or labels. Subject: FLATHEAD CATFISH Pylodictis olivaris, large adult. Wide heavy flattened head with very small eyes and a distinctly protruding broad lower jaw; broad smooth SCALELESS yellow-olive and tan body with irregular brown marbling, pale creamy yellow belly. Four pairs of long natural barbels at nose/mouth and chin, near-side whiskers fully visible. Single small triangular dorsal near front, separate small fleshy adipose fin nearer tail, short rounded anal fin, tail broad with NEARLY SQUARE gently rounded edge and extremely shallow notch, never deeply forked. Thick shoulders taper to a strong tail. No hard scales, no diamond armor, no separate evenly dotted channel-catfish markings.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/flathead-catfish",
+        "title": "MDWFP: Flathead Catfish",
+        "supports": "大型体形、宽扁头和突下颌；河流深潭、水下掩体及牛轭湖生境",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+        "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+        "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/fish/common_carp.png",
+      "game/assets/fish/northern_pike.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "anatomy_review": "宽扁头、突下颌、小眼、黄色斑驳无鳞皮肤、须和近方尾；没有叉尾鮰的深叉尾。 绘画不是鳍条、鳞片或牙齿计数的分类学检索图。",
+    "alpha": {
+      "extrema": [
+        0,
+        255
+      ],
+      "zero_fraction": 0.7103741535505125,
+      "nonzero_bbox": [
+        0,
+        14,
+        1016,
+        667
+      ]
+    },
+    "alpha_compositing_audit": "docs/fish_c_alpha_audit.jpg; visually inspected on cream and dark teal, no opaque backdrop or visible halo. Source hidden RGB is intentionally ignored wherever alpha=0.",
+    "export": "Pillow Lanczos proportional resize only, native alpha retained; 1024px runtime width and 256px thumbnail width. Original generation bytes preserved in master.",
+    "master_sha256": "357b28270cefaf5094846a4368ef17028f8cebe3cdff8daa58f131b84c9f0b9e",
+    "sha256": "ae4b5f9d5b7c0675140c16e51818eaafb3d5afc0c8c7b37055510184dce55159",
+    "thumbnail_sha256": "4740392c92b2cf642f222e3fae64708a1f21895b5f428f4002dd373d21fe40e0",
+    "runtime_bytes": 534919,
+    "used_by": "res://assets/fish/flathead_catfish.png"
+  },
+  {
+    "asset_id": "scenery_bayou",
+    "usage": "static bayou destination background",
+    "region_id": "bayou",
+    "runtime_path": "game/assets/scenery/bayou.png",
+    "master_path": "art_masters/c/bayou.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-c75b0d77-08a2-4f1a-8df1-52708b5e55ce.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1440,
+      960
+    ],
+    "generation_method": "OpenAI built-in image_gen; independent scenery asset call",
+    "generation_prompt": "Use case: stylized-concept. Asset type: FINAL background painting for Farshore, a healing 2D fishing travel game. One wide landscape illustration, 3:2, 1536x1024. Scene: a tranquil lower Mississippi / Louisiana warm river backwater, broad slow bayou water opening toward a distant bend, flanked by majestic bald cypress and tupelo trees with flared trunks, a few cypress knees and light hanging Spanish moss. Early warm morning, pale golden sun filtering through leaves, subtle blue atmospheric haze in distance. Waterline horizon around 35–40 percent down; center and lower half mostly uninterrupted calm jade-olive and teal water, small lily pads and sedges along the outer edge only. Keep center vertical third usable for portrait framing and a fishing bobber; no large objects on central water, no close dock or boat because game draws foreground separately. Refined near-real hand-painted watercolor travel illustration with subtle gouache accents, fine soft brushwork and delicate paper grain, realistic natural depth, harmonious sage green, soft ochre and cool teal palette, restful art-book quality. Match the painterly European lake background inspected in this project, but distinctly warm Louisiana cypress wetland rather than mountains. Full bleed finished artwork, no borders. NO people, anglers, fish, reptiles, fishing rods, hooks, boats, UI, text, logos, signs, lettering, watermarks or photographic look.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fws.gov/refuge/cat-island",
+        "title": "USFWS: Cat Island National Wildlife Refuge",
+        "supports": "路易斯安那密西西比泛洪平原的柏树/水紫树沼泽、曲流和回水环境；仅作一般生态背景核查，非照摹具体地点",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.fws.gov/refuge/atchafalaya",
+        "title": "USFWS: Atchafalaya National Wildlife Refuge",
+        "supports": "下密西西比冲积低地的阔叶林与落羽杉沼泽生态背景",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/scenery/lake.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "audit": "Painterly warm cypress river backwater, open central water, soft morning light, no people, fish, boats, UI or lettering. Fictional lower Mississippi wetland, not a depiction of a real protected site.",
+    "export": "Pillow Lanczos proportional resize only; original generation bytes retained in master.",
+    "master_sha256": "104a113c2bcb577aa7e2a175013a5e4b82f9b4fd8bc8caff68d982a6daa16e8a",
+    "sha256": "75d8ba9249d6e70da644bff35f0a5f447375810d4b174a285a7a5fac357c670d",
+    "runtime_bytes": 2621390,
+    "used_by": "res://assets/scenery/bayou.png",
+    "integration_note": "Region is geographically broad. This is lower-river artwork; upper-Mississippi spot name/text must remain explicit and must not place alligator gar there."
+  },
+  {
+    "asset_id": "scenery_bayou_foreground",
+    "usage": "transparent foreground overlay",
+    "region_id": "bayou",
+    "runtime_path": "game/assets/scenery/bayou_foreground.png",
+    "master_path": "art_masters/c/bayou_foreground.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-46e4e290-a5ac-472a-a3c1-90091162f846.png",
+    "master_dimensions": [
+      2172,
+      724
+    ],
+    "runtime_dimensions": [
+      1440,
+      480
+    ],
+    "generation_method": "OpenAI built-in image_gen; independent scenery asset call",
+    "generation_prompt": "Use case: stylized-concept. Asset type: separate foreground overlay layer for a painterly 2D Mississippi bayou fishing game. Wide 3:1 composition 1536x512 with TRUE TRANSPARENT alpha background. Only small organically grouped Louisiana waterside sedges, slender reeds, a few cypress root knees and sunlit low marsh grasses growing at the extreme LOWER RIGHT EDGE and a smaller cluster at the LOWER LEFT EDGE. Natural thin detailed leaves and weathered bark in restrained olive/sage/ochre. Central 60 percent and all upper half completely transparent; sparse elegant silhouette, no solid ground band across bottom, no horizontal line. Refined realistic watercolor with gouache highlights and subtle pencil texture, soft warm morning sunlight, matching a tranquil Louisiana cypress bayou illustration. Every plant tip fully within frame except bases naturally meeting bottom border. No water, river surface, sky, tree canopy, people, animals, fishing equipment, boats, text, frame, paper rectangle, shadow, glow or checkerboard.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.fws.gov/refuge/cat-island",
+        "title": "USFWS: Cat Island National Wildlife Refuge",
+        "supports": "路易斯安那密西西比泛洪平原的柏树/水紫树沼泽、曲流和回水环境；仅作一般生态背景核查，非照摹具体地点",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.fws.gov/refuge/atchafalaya",
+        "title": "USFWS: Atchafalaya National Wildlife Refuge",
+        "supports": "下密西西比冲积低地的阔叶林与落羽杉沼泽生态背景",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/scenery/lake.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guarantee of copyrightability or exclusivity is asserted. Source webpages used for factual research only.",
+    "review_status": "visual_review_completed",
+    "audit": "Sparse marsh sedges and cypress knees at outer lower corners; center stays transparent. Composite verified clean on teal. Rightmost reed tips intentionally meet outer crop.",
+    "export": "Pillow Lanczos proportional resize only; original generation bytes retained in master.",
+    "master_sha256": "4dac0f4710e2c33525804f972d377c8305ae569a47f8bb613d3feb7ea74f3bfa",
+    "sha256": "6a964c4632fe84459d8f2d1f97b22b172627fc74f74670d14d8f95ac87306aff",
+    "runtime_bytes": 629299,
+    "used_by": "res://assets/scenery/bayou_foreground.png",
+    "integration_note": "Region is geographically broad. This is lower-river artwork; upper-Mississippi spot name/text must remain explicit and must not place alligator gar there.",
+    "alpha": {
+      "extrema": [
+        0,
+        255
+      ],
+      "zero_fraction": 0.6839771412037037,
+      "nonzero_bbox": [
+        0,
+        0,
+        1440,
+        480
+      ]
+    },
+    "alpha_compositing_audit": "docs/bayou_foreground_audit.jpg"
+  }
+]
