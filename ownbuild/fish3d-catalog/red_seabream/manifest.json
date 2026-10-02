@@ -1,0 +1,44 @@
+{
+  "species": "red_seabream",
+  "pipeline_sha256": "c799a7c7106af70b2ff17a9f307bad85df287957e8d345d90ae5abc25fc82d3a",
+  "triangles": 32110,
+  "vertices": 16709,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Deep compressed red-pink sparid, distinct bulged convex nape",
+    "Small terminal mouth and stout jaw ending well forward of eye",
+    "Fine blue spots across rose sides; pink-silver belly",
+    "Continuous spiny dorsal, pointed pectorals and strongly forked caudal"
+  ],
+  "sources": [
+    "https://ciesm.org/atlas_preview/Pagrusmajor.php",
+    "https://fishdb.sinica.edu.tw/chi/species.php?science=Pagrus+major"
+  ],
+  "glb_bytes": 4205712,
+  "glb_sha256": "2db9214a767231be58b76adf0704678fa483f10cd1c4690e5bb20e80a7b9c45e",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

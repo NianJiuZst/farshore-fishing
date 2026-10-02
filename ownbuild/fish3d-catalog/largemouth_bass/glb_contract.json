@@ -1,0 +1,42 @@
+{
+  "species": "largemouth_bass",
+  "glb_sha256": "51a1cd7e584ec1556cfd0ff0398cf6ec54abe89bb8904be044910823acd4676a",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.1624920815229416,
+      -0.12337460368871689
+    ],
+    "max": [
+      0.5,
+      0.21615377068519592,
+      0.1233539804816246
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "bdc01cf18c7431ac59d8834622122cdd02e3518e03a6510cc3952ce1835c18f8",
+  "passed": true
+}

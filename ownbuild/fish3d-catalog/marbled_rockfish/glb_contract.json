@@ -1,0 +1,42 @@
+{
+  "species": "marbled_rockfish",
+  "glb_sha256": "6ea410730b6be64aae56995879d1783caea7d0930633b122e94c1f8dba1c33f9",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.16543233394622803,
+      -0.17994453012943268
+    ],
+    "max": [
+      0.5,
+      0.27714499831199646,
+      0.179932102560997
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "b9411f801a1c4acb04d5a2587448157dadd6c9bf20e07bde0aef7c024e4b0a0e",
+  "passed": true
+}

@@ -1,0 +1,42 @@
+{
+  "species": "japanese_whiting",
+  "glb_sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.09061924368143082,
+      -0.07428163290023804
+    ],
+    "max": [
+      0.5,
+      0.14852817356586456,
+      0.07425012439489365
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "c8d3b22b84e1ae833c198977b7660312d139c268f60d8629cccd266743c3a82d",
+  "passed": true
+}

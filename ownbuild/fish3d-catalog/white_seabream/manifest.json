@@ -1,0 +1,43 @@
+{
+  "species": "white_seabream",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 32446,
+  "vertices": 16885,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Deep compressed silver body with high curved dorsal contour",
+    "Black caudal saddle that does not reach the underside of peduncle",
+    "Black opercular margin and dark pelvic fins; restrained adult vertical bars",
+    "Short small mouth with incisor-like front teeth and forked tail"
+  ],
+  "sources": [
+    "https://doris.ffessm.fr/Especes/Diplodus-sargus-Sar-commun-de-Mediterranee-463"
+  ],
+  "glb_bytes": 5165668,
+  "glb_sha256": "fcf0ddec5bf285c73f47727c50b61e831d3d6c7c4a0da6944d60b22733fc5982",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

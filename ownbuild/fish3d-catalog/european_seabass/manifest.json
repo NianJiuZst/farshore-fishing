@@ -1,0 +1,44 @@
+{
+  "species": "european_seabass",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "triangles": 32684,
+  "vertices": 16992,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalfirst",
+    "dorsalsecond",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Adult silver-grey body with blue-grey back and no juvenile flank spots",
+    "Two separate dorsal fins: compact first with nine hard spines, distinct second soft fin",
+    "Moderately forked tail and broad terminal mouth; lower jaw only slightly projecting",
+    "Diffuse opercular spot and two flat opercular spines per side"
+  ],
+  "sources": [
+    "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_europeanseabass.htm",
+    "https://www.marlin.ac.uk/species/detail/2127"
+  ],
+  "glb_bytes": 4866736,
+  "glb_sha256": "26e456afcc5563888a34628facbad226bb0c0588c38824b88e177afd4d86407f",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

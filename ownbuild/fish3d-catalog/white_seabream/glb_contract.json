@@ -1,0 +1,42 @@
+{
+  "species": "white_seabream",
+  "glb_sha256": "fcf0ddec5bf285c73f47727c50b61e831d3d6c7c4a0da6944d60b22733fc5982",
+  "weighted_primitives": 12,
+  "skin_nodes": 12,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.20748747885227203,
+      -0.13161326944828033
+    ],
+    "max": [
+      0.5,
+      0.3028736114501953,
+      0.13158957660198212
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "6bf70f21dd3f1f6e0b7996cf078030394acf5b956aa428299149dd1676e78eaf",
+  "passed": true
+}

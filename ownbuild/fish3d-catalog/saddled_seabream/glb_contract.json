@@ -1,0 +1,42 @@
+{
+  "species": "saddled_seabream",
+  "glb_sha256": "592c088c8d25b7de57c18a8b85ab4534dbb98b9420cbd45ee07402439a4ee017",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.16289781033992767,
+      -0.10801948606967926
+    ],
+    "max": [
+      0.5,
+      0.22737771272659302,
+      0.10799496620893478
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "4fbfe010038f1b809a890a8284cb978b90b659e7cfa97809c38c910686ef7850",
+  "passed": true
+}

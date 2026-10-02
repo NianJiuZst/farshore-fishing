@@ -1,0 +1,131 @@
+{
+  "species": "mandarin_fish",
+  "clips": {
+    "swim": {
+      "seconds": 2.0,
+      "max_skin_displacement_m": 0.09180848579741895,
+      "loop_seam_m": 9.6080100361229e-19
+    },
+    "struggle": {
+      "seconds": 1.2,
+      "max_skin_displacement_m": 0.3051957970730948,
+      "loop_seam_m": 2.882403088621882e-18
+    },
+    "breach": {
+      "seconds": 1.4,
+      "max_skin_displacement_m": 0.20618146726673892,
+      "loop_seam_m": 2.0016687010536843e-18
+    },
+    "landed": {
+      "seconds": 3.0,
+      "max_skin_displacement_m": 0.016211412910305926,
+      "loop_seam_m": 1.7614686699710507e-19
+    }
+  },
+  "failures": [],
+  "attachments": {
+    "tolerance_m": 0.004,
+    "samples_per_clip": 9,
+    "groups": {
+      "1": {
+        "name": "DorsalSpiny",
+        "bone": "dorsalspiny",
+        "membrane_roots": 82,
+        "ray_roots": 205,
+        "membrane_max_distance_m": 0.0011510439217090607,
+        "ray_max_distance_m": 0.0015240426873788238,
+        "max_distance_m": 0.0015240426873788238,
+        "rest_distance_m": 0.0015186292584985495,
+        "worst_clip": "struggle",
+        "worst_frame": 24
+      },
+      "2": {
+        "name": "DorsalSoft",
+        "bone": "dorsalsoft",
+        "membrane_roots": 48,
+        "ray_roots": 120,
+        "membrane_max_distance_m": 0.0010992010356858373,
+        "ray_max_distance_m": 0.0014597746776416898,
+        "max_distance_m": 0.0014597746776416898,
+        "rest_distance_m": 0.001455250196158886,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "3": {
+        "name": "Anal",
+        "bone": "anal",
+        "membrane_roots": 38,
+        "ray_roots": 95,
+        "membrane_max_distance_m": 0.0011609109351411462,
+        "ray_max_distance_m": 0.0014237001305446029,
+        "max_distance_m": 0.0014237001305446029,
+        "rest_distance_m": 0.0014120881678536534,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "4": {
+        "name": "Caudal",
+        "bone": "caudal",
+        "membrane_roots": 56,
+        "ray_roots": 140,
+        "membrane_max_distance_m": 0.0003130058466922492,
+        "ray_max_distance_m": 0.0008160579018294811,
+        "max_distance_m": 0.0008160579018294811,
+        "rest_distance_m": 0.0008112192153930664,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "5": {
+        "name": "Pectoral_R",
+        "bone": "pectoral_r",
+        "membrane_roots": 42,
+        "ray_roots": 105,
+        "membrane_max_distance_m": 0.001413731835782528,
+        "ray_max_distance_m": 0.0018144837813451886,
+        "max_distance_m": 0.0018144837813451886,
+        "rest_distance_m": 0.0018127242801710963,
+        "worst_clip": "struggle",
+        "worst_frame": 28
+      },
+      "6": {
+        "name": "Pectoral_L",
+        "bone": "pectoral_l",
+        "membrane_roots": 42,
+        "ray_roots": 105,
+        "membrane_max_distance_m": 0.0013385429047048092,
+        "ray_max_distance_m": 0.001776485238224268,
+        "max_distance_m": 0.001776485238224268,
+        "rest_distance_m": 0.001775967888534069,
+        "worst_clip": "struggle",
+        "worst_frame": 10
+      },
+      "7": {
+        "name": "Pelvic_R",
+        "bone": "pelvic_r",
+        "membrane_roots": 32,
+        "ray_roots": 80,
+        "membrane_max_distance_m": 0.0012149112299084663,
+        "ray_max_distance_m": 0.0016083702212199569,
+        "max_distance_m": 0.0016083702212199569,
+        "rest_distance_m": 0.0016068986151367426,
+        "worst_clip": "breach",
+        "worst_frame": 17
+      },
+      "8": {
+        "name": "Pelvic_L",
+        "bone": "pelvic_l",
+        "membrane_roots": 32,
+        "ray_roots": 80,
+        "membrane_max_distance_m": 0.001150512951426208,
+        "ray_max_distance_m": 0.0016552688321098685,
+        "max_distance_m": 0.0016552688321098685,
+        "rest_distance_m": 0.0016536490293219686,
+        "worst_clip": "breach",
+        "worst_frame": 38
+      }
+    }
+  },
+  "weight_sum_min": 0.9999013543128967,
+  "weight_sum_max": 1.0000000298023224,
+  "max_influences": 3
+}

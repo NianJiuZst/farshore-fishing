@@ -1,0 +1,42 @@
+{
+  "species": "annular_seabream",
+  "glb_sha256": "57916d199f5386553e66cb0d6e559e1386e80e8c6397da95b9b0e0112a14ddb5",
+  "weighted_primitives": 12,
+  "skin_nodes": 12,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.17806611955165863,
+      -0.11570356786251068
+    ],
+    "max": [
+      0.5,
+      0.2656223773956299,
+      0.11567960679531097
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "443f6bc8e7ec3a9b6fa098be317c030cbfc6ce95ea209dbe01aee3ca2b986cdb",
+  "passed": true
+}

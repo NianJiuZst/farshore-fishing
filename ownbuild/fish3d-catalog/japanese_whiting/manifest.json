@@ -1,0 +1,43 @@
+{
+  "species": "japanese_whiting",
+  "pipeline_sha256": "c799a7c7106af70b2ff17a9f307bad85df287957e8d345d90ae5abc25fc82d3a",
+  "triangles": 31346,
+  "vertices": 16293,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal_first",
+    "dorsal_second",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Slender subcylindrical sand-whiting body with pointed elongated snout and small terminal mouth",
+    "Separate first XI-spined dorsal and long low second dorsal with 21-23 soft rays",
+    "Long low anal opposite second dorsal; shallow-emarginate rather than deeply forked tail",
+    "Pale sandy dorsum and silvery cream sides, pale fins"
+  ],
+  "sources": [
+    "https://fishdb.sinica.edu.tw/taxon/382628-fishdb"
+  ],
+  "glb_bytes": 5026920,
+  "glb_sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

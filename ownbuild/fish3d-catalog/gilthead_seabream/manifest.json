@@ -1,0 +1,43 @@
+{
+  "species": "gilthead_seabream",
+  "pipeline_sha256": "c799a7c7106af70b2ff17a9f307bad85df287957e8d345d90ae5abc25fc82d3a",
+  "triangles": 32950,
+  "vertices": 17149,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Deep oval compressed body and smoothly curved steep forehead with small eyes",
+    "Golden transverse band between eyes; black upper opercular blotch edged red below",
+    "Low small slightly oblique mouth with thick lips",
+    "Eleven-spined continuous dorsal, long pointed pectorals and forked tail"
+  ],
+  "sources": [
+    "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_giltheadseabr.htm"
+  ],
+  "glb_bytes": 5123776,
+  "glb_sha256": "910f3207d9ec2fe0aab28632ef245ba9b7612ae48a7e2b7c357724057c50e812",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

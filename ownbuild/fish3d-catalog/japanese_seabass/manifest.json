@@ -1,0 +1,44 @@
+{
+  "species": "japanese_seabass",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "triangles": 33592,
+  "vertices": 17464,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Elongated silver-green adult Japanese seabass with no dense flank spotting",
+    "Thirteen-spined dorsal joined through deep notch to elongated soft dorsal",
+    "Large oblique mouth and slightly projecting lower jaw",
+    "Forked caudal and short anal fin beneath rear soft dorsal"
+  ],
+  "sources": [
+    "https://www.fishbase.se/summary/Lateolabrax_japonicus.html",
+    "https://www.museum.kagoshima-u.ac.jp/ichthy/INHFJ_2022_026_034.pdf"
+  ],
+  "glb_bytes": 4588452,
+  "glb_sha256": "79c588c5e6c8a4eee9298f69a94703f3bb4b28ec5aac5f55eb475bb2cf528c1d",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

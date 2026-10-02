@@ -1,0 +1,43 @@
+{
+  "species": "saddled_seabream",
+  "pipeline_sha256": "c799a7c7106af70b2ff17a9f307bad85df287957e8d345d90ae5abc25fc82d3a",
+  "triangles": 33322,
+  "vertices": 17323,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Oblong, less deep-bodied bream with short snout and proportionally large eyes",
+    "Small oblique upturned terminal mouth",
+    "White-bordered black caudal-peduncle saddle; fine longitudinal dark flank lines",
+    "Continuous dorsal with eleven spines and deeply forked uncoloured tail"
+  ],
+  "sources": [
+    "https://doris.ffessm.fr/Especes/Oblada-melanura-Oblade-720"
+  ],
+  "glb_bytes": 5036240,
+  "glb_sha256": "592c088c8d25b7de57c18a8b85ab4534dbb98b9420cbd45ee07402439a4ee017",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

@@ -1,0 +1,44 @@
+{
+  "species": "common_pandora",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 32446,
+  "vertices": 16885,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "longpectoral_r",
+    "longpectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Oval compressed pink-silver body with longer almost straight snout, unlike convex-naped red seabream",
+    "Small low oblique mouth; snout exceeds twice eye diameter",
+    "Fine blue speckles concentrated on upper body and red upper opercular edge",
+    "Continuous twelve-spined dorsal, very long pointed pectorals and forked tail without white tips"
+  ],
+  "sources": [
+    "https://doris.ffessm.fr/Especes/Pagellus-erythrinus-Pageot-commun-2771",
+    "https://www.fao.org/fishery/docs/CDrom/ARTFIMED/ArtFiWeb/descript/Species/SPAPAERY.HTML"
+  ],
+  "glb_bytes": 4699908,
+  "glb_sha256": "c2b75aa1910221125b70952880474c62b1dcab9c5a8182028d04fd334c465996",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

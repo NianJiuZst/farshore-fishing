@@ -1,0 +1,42 @@
+{
+  "species": "mandarin_fish",
+  "glb_sha256": "6c20bd5638b71b4a9ec8c17253b81f03f07589d2af2cbe630f6addb173ae527b",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.1497359573841095,
+      -0.12987281382083893
+    ],
+    "max": [
+      0.5,
+      0.2745569050312042,
+      0.12985818088054657
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "890c2a6a3f9cae538160957f748bc3d54b5164c02ad8f28fd9d1c515faba636f",
+  "passed": true
+}

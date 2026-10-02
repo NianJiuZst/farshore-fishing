@@ -1,0 +1,43 @@
+{
+  "species": "painted_comber",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 32648,
+  "vertices": 16976,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Elongated slightly deep-bellied compressed serranid with pointed straight head",
+    "Six prominent brown flank bands, pale blue belly patch and red-blue head tracery",
+    "Yellow tail and peduncle, continuous spiny-soft dorsal",
+    "Large mouth with three small opercular spines and thoracic pelvic fins"
+  ],
+  "sources": [
+    "https://doris.ffessm.fr/Especes/Serranus-scriba-Serran-ecriture-144"
+  ],
+  "glb_bytes": 5840436,
+  "glb_sha256": "926e596fd7bfbdb81da3e912d8736dedb29d7743c83b9fe4e435c781c8ac00cc",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

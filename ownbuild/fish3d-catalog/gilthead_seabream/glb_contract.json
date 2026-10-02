@@ -1,0 +1,42 @@
+{
+  "species": "gilthead_seabream",
+  "glb_sha256": "910f3207d9ec2fe0aab28632ef245ba9b7612ae48a7e2b7c357724057c50e812",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.19749034941196442,
+      -0.13779719173908234
+    ],
+    "max": [
+      0.5,
+      0.30496588349342346,
+      0.13777467608451843
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "7fa7480c5e9597999a5b4bce36e2edd11f041527983a66a4272572d1e38ba53e",
+  "passed": true
+}

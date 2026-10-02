@@ -1,0 +1,42 @@
+{
+  "species": "japanese_seabass",
+  "glb_sha256": "79c588c5e6c8a4eee9298f69a94703f3bb4b28ec5aac5f55eb475bb2cf528c1d",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.14320975542068481,
+      -0.10649451613426208
+    ],
+    "max": [
+      0.5,
+      0.23151995241641998,
+      0.10646778345108032
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "d521692501e10d39e11fbf3ffc6110ffeb8ad5791141f0ace745b760b3c96917",
+  "passed": true
+}

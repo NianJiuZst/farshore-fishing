@@ -1,0 +1,44 @@
+{
+  "species": "red_mullet",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 30402,
+  "vertices": 15801,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalfirst",
+    "dorsalsecond",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Elongated relatively flat-bellied body and abrupt blunt forehead above small low mouth",
+    "Exactly two white sensory chin barbels, no longer than pectoral fins",
+    "Two clearly separated dorsals, unstriped pale first dorsal and unstriped forked caudal",
+    "Large easily shed-looking scales, pink-silver sides; no opercular spine"
+  ],
+  "sources": [
+    "https://doris.ffessm.fr/Especes/Mullus-barbatus-Rouget-de-vase-579",
+    "https://www.fao.org/4/x0170f/x0170f55.pdf"
+  ],
+  "glb_bytes": 4602164,
+  "glb_sha256": "b5edb5745bd647fc5648e0de62638b976e869cf6ef6d7465b9e180c490c17249",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

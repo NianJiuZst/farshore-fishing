@@ -1,0 +1,43 @@
+{
+  "species": "annular_seabream",
+  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "triangles": 31942,
+  "vertices": 16621,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 12,
+  "materials": 12,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Small oval compressed silver-yellow bream with tapered head and small mouth",
+    "Nearly closed black ring around caudal peduncle, unlike open white-seabream saddle",
+    "Yellow pelvic fins and yellow anterior anal fin",
+    "Continuous moderately raised dorsal, proportionally narrow forked tail, no adult flank bars"
+  ],
+  "sources": [
+    "https://doris.ffessm.fr/Especes/Diplodus-annularis-Sparaillon-487"
+  ],
+  "glb_bytes": 4918176,
+  "glb_sha256": "57916d199f5386553e66cb0d6e559e1386e80e8c6397da95b9b0e0112a14ddb5",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

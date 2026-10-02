@@ -1,0 +1,45 @@
+{
+  "species": "marbled_rockfish",
+  "pipeline_sha256": "cb161afc8c0fe54bf122f473276cb1242f91cc482074d80f232f413e859cc3d0",
+  "triangles": 34540,
+  "vertices": 17960,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsal_spiny",
+    "dorsal_soft",
+    "anal",
+    "broadpectoral_r",
+    "broadpectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Moderately deep stout body with broad bony head and large oblique mouth",
+    "Continuous notched dorsal with twelve anterior spines and rounded soft rear",
+    "Broad fan-shaped pectorals, rounded caudal, short three-spined anal",
+    "Irregular reddish-brown saddles; pale spotting below lateral line only",
+    "No suborbital ridge or suborbital spine and no skin flap in pectoral axil"
+  ],
+  "sources": [
+    "https://fishesofaustralia.net.au/home/species/3136",
+    "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.912129/full"
+  ],
+  "glb_bytes": 5904660,
+  "glb_sha256": "6ea410730b6be64aae56995879d1783caea7d0930633b122e94c1f8dba1c33f9",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

@@ -1,0 +1,43 @@
+{
+  "species": "black_seabream",
+  "pipeline_sha256": "c799a7c7106af70b2ff17a9f307bad85df287957e8d345d90ae5abc25fc82d3a",
+  "triangles": 32278,
+  "vertices": 16797,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "High compressed dark-silver body with steep forehead and rounded powerful nape",
+    "Small thick-lipped terminal mouth, robust shell-crushing jaw",
+    "Faint broad adult bars under large dark-edged scales",
+    "Long continuous spiny dorsal and forked dark caudal, dark pelvic fins"
+  ],
+  "sources": [
+    "https://fishdb.sinica.edu.tw/mobi/species.php?science=Acanthopagrus+schlegelii"
+  ],
+  "glb_bytes": 4913484,
+  "glb_sha256": "670c3d601e73454092a3e83f90e694f73c657eecd5afb9f27621e5bbf1b54954",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

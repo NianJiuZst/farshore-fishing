@@ -1,0 +1,42 @@
+{
+  "species": "red_mullet",
+  "glb_sha256": "b5edb5745bd647fc5648e0de62638b976e869cf6ef6d7465b9e180c490c17249",
+  "weighted_primitives": 12,
+  "skin_nodes": 12,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.1296556293964386,
+      -0.11124730855226517
+    ],
+    "max": [
+      0.5,
+      0.24001215398311615,
+      0.1112179085612297
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "6aa777a1c7b9ce1c4b29c79ea6f983fdeca3c94220a82a5bdaf5330585ffd1a6",
+  "passed": true
+}

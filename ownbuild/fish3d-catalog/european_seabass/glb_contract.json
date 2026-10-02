@@ -1,0 +1,42 @@
+{
+  "species": "european_seabass",
+  "glb_sha256": "26e456afcc5563888a34628facbad226bb0c0588c38824b88e177afd4d86407f",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.15376199781894684,
+      -0.11426473408937454
+    ],
+    "max": [
+      0.5,
+      0.23511801660060883,
+      0.1142353042960167
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "99226b99aebc3632e8361f07e30fb070e8b5ce1609913c4e225bfc2e0364d60e",
+  "passed": true
+}

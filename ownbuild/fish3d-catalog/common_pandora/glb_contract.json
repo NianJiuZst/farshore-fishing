@@ -1,0 +1,42 @@
+{
+  "species": "common_pandora",
+  "glb_sha256": "c2b75aa1910221125b70952880474c62b1dcab9c5a8182028d04fd334c465996",
+  "weighted_primitives": 11,
+  "skin_nodes": 11,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.16601082682609558,
+      -0.1090373769402504
+    ],
+    "max": [
+      0.5,
+      0.24227137863636017,
+      0.10900989919900894
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "b33efae98b30114a65d3519a4b90b733e0f08e2fe5e29a964f75639c0a2943b0",
+  "passed": true
+}

@@ -1,0 +1,43 @@
+{
+  "species": "mandarin_fish",
+  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "triangles": 33976,
+  "vertices": 17668,
+  "bones": [
+    "root",
+    "head",
+    "spine_front",
+    "spine_mid",
+    "spine_rear",
+    "tail",
+    "caudal",
+    "jaw",
+    "dorsalspiny",
+    "dorsalsoft",
+    "anal",
+    "pectoral_r",
+    "pectoral_l",
+    "pelvic_r",
+    "pelvic_l",
+    "gill_R",
+    "gill_L"
+  ],
+  "skinned_meshes": 11,
+  "materials": 11,
+  "forward": "+X",
+  "godot_up": "+Y",
+  "rest_length_m": 1,
+  "morphology": [
+    "Compressed high-backed body, broad oblique predatory mouth with protruding lower jaw",
+    "Brown-yellow fine-scaled sides with irregular dark blotches and eye-to-mouth markings",
+    "Hard-spined anterior dorsal and tall rounded soft posterior dorsal joined at a notch",
+    "Rounded caudal and pectorals; gill cover with two flat rear spines per side"
+  ],
+  "sources": [
+    "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_mandarinfish.htm"
+  ],
+  "glb_bytes": 5015804,
+  "glb_sha256": "6c20bd5638b71b4a9ec8c17253b81f03f07589d2af2cbe630f6addb173ae527b",
+  "flatfish": false,
+  "ocular_side": "bilateral"
+}

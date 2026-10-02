@@ -1,0 +1,115 @@
+{
+  "species": "marbled_rockfish",
+  "clips": {
+    "swim": {
+      "seconds": 2.0,
+      "max_skin_displacement_m": 0.09248117362259066,
+      "loop_seam_m": 9.811387784404023e-19
+    },
+    "struggle": {
+      "seconds": 1.2,
+      "max_skin_displacement_m": 0.30725604156575065,
+      "loop_seam_m": 2.9434160915687906e-18
+    },
+    "breach": {
+      "seconds": 1.4,
+      "max_skin_displacement_m": 0.20759685898831495,
+      "loop_seam_m": 2.0440391570949365e-18
+    },
+    "landed": {
+      "seconds": 3.0,
+      "max_skin_displacement_m": 0.01633040851508825,
+      "loop_seam_m": 1.798754491194991e-19
+    }
+  },
+  "failures": [],
+  "attachments": {
+    "tolerance_m": 0.004,
+    "samples_per_clip": 9,
+    "groups": {
+      "1": {
+        "name": "Dorsal_spiny",
+        "bone": "dorsal_spiny",
+        "membrane_roots": 86,
+        "ray_roots": 215,
+        "max_distance_m": 0.0017250401433557272,
+        "rest_distance_m": 0.001723151421174407,
+        "worst_clip": "struggle",
+        "worst_frame": 28
+      },
+      "2": {
+        "name": "Dorsal_soft",
+        "bone": "dorsal_soft",
+        "membrane_roots": 44,
+        "ray_roots": 110,
+        "max_distance_m": 0.0015878957929089665,
+        "rest_distance_m": 0.0015792179619893432,
+        "worst_clip": "struggle",
+        "worst_frame": 19
+      },
+      "3": {
+        "name": "Anal",
+        "bone": "anal",
+        "membrane_roots": 34,
+        "ray_roots": 85,
+        "max_distance_m": 0.0014522685669362545,
+        "rest_distance_m": 0.0014447876019403338,
+        "worst_clip": "struggle",
+        "worst_frame": 1
+      },
+      "4": {
+        "name": "Caudal",
+        "bone": "caudal",
+        "membrane_roots": 58,
+        "ray_roots": 145,
+        "max_distance_m": 0.0007878585602156818,
+        "rest_distance_m": 0.0007796883583068848,
+        "worst_clip": "struggle",
+        "worst_frame": 28
+      },
+      "5": {
+        "name": "BroadPectoral_R",
+        "bone": "broadpectoral_r",
+        "membrane_roots": 50,
+        "ray_roots": 125,
+        "max_distance_m": 0.0017419253708794713,
+        "rest_distance_m": 0.0017407967243343592,
+        "worst_clip": "breach",
+        "worst_frame": 32
+      },
+      "6": {
+        "name": "BroadPectoral_L",
+        "bone": "broadpectoral_l",
+        "membrane_roots": 50,
+        "ray_roots": 125,
+        "max_distance_m": 0.0016634921776130795,
+        "rest_distance_m": 0.0016633433988317847,
+        "worst_clip": "breach",
+        "worst_frame": 22
+      },
+      "7": {
+        "name": "Pelvic_R",
+        "bone": "pelvic_r",
+        "membrane_roots": 30,
+        "ray_roots": 75,
+        "max_distance_m": 0.0016200680984184146,
+        "rest_distance_m": 0.001618415117263794,
+        "worst_clip": "breach",
+        "worst_frame": 17
+      },
+      "8": {
+        "name": "Pelvic_L",
+        "bone": "pelvic_l",
+        "membrane_roots": 30,
+        "ray_roots": 75,
+        "max_distance_m": 0.001678257598541677,
+        "rest_distance_m": 0.0016767263878136873,
+        "worst_clip": "breach",
+        "worst_frame": 38
+      }
+    }
+  },
+  "weight_sum_min": 0.9999006390571594,
+  "weight_sum_max": 1.0000000298023224,
+  "max_influences": 3
+}

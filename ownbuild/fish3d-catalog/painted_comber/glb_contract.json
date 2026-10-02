@@ -1,0 +1,42 @@
+{
+  "species": "painted_comber",
+  "glb_sha256": "926e596fd7bfbdb81da3e912d8736dedb29d7743c83b9fe4e435c781c8ac00cc",
+  "weighted_primitives": 12,
+  "skin_nodes": 12,
+  "four_clips": [
+    "breach",
+    "landed",
+    "struggle",
+    "swim"
+  ],
+  "root_translation_drift_m": 0.0,
+  "root_channels": [
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale",
+    "translation",
+    "rotation",
+    "scale"
+  ],
+  "rest_bounds_glb": {
+    "min": [
+      -0.5,
+      -0.15058642625808716,
+      -0.11275218427181244
+    ],
+    "max": [
+      0.5,
+      0.23232226073741913,
+      0.11273114383220673
+    ]
+  },
+  "normalized_x_length_m": 1.0,
+  "unique_outline_sha256": "a23d59ad692f415ebcc8cff8154b65514d715703d6843c3be1a33dd7fb008ccf",
+  "passed": true
+}
