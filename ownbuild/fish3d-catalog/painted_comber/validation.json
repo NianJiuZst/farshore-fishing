@@ -127,5 +127,8 @@
   },
   "weight_sum_min": 0.9999003708362579,
   "weight_sum_max": 1.0000000298023224,
-  "max_influences": 3
+  "max_influences": 3,
+  "attachment_tag_version": 1,
+  "glb_sha256": "2b2f3cc10ba1df65120bc3e7b9d3ae3badeaebd2f0d105fda21abd3c581a817f",
+  "master_sha256": "405fe7152ee6aae02982b75fc5b1056d0da52e172234fbd251e595e18fe8706f"
 }

@@ -4,7 +4,7 @@ import numpy as np
 from fish_profiles.japanese_whiting import paired,median,caudal,eyes,gills,mouth,crest
 
 def pigment(u,v,upper,color,height,rough):
-    dots=np.maximum(0,np.sin(u*421+np.cos(v*49))*np.cos(v*313-u*27)-.81)/.19
+    dots=np.maximum(0,np.sin(u*421+np.cos((v*math.tau*8)))*np.cos((v*math.tau*50)-u*27)-.81)/.19
     dots*=np.clip((upper-.48)*4,0,1)*np.clip((.82-u)*14,0,1)
     color=color*(1-dots[:,:,None]*.82)+np.array([.19,.44,.66])*dots[:,:,None]*.82
     red=np.exp(-((u-.744)/.019)**2-((upper-.74)/.13)**2)

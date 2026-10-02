@@ -5,7 +5,7 @@ from mathutils import Vector
 from fish_profiles.japanese_whiting import paired,median,caudal,eyes,gills
 
 def pigment(u,v,upper,color,height,rough):
-    n=np.sin(u*45+np.sin(v*19)*1.8)*np.cos(v*21-u*23)+.28*np.sin(u*133+v*91)
+    n=np.sin(u*45+np.sin((v*math.tau*3))*1.8)*np.cos((v*math.tau*3)-u*23)+.28*np.sin(u*133+(v*math.tau*14))
     blot=np.clip((n-.13)*1.90,0,1)*np.clip((upper-.13)*2.1,0,1)
     color=color*(1-blot[:,:,None]*.86)
     head=np.clip((u-.72)*6,0,1);slash=np.exp(-((abs(np.cos(v*math.tau))-.45-.18*np.sin(u*12))/.062)**2)*head

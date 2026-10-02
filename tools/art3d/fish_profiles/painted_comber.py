@@ -5,12 +5,12 @@ from mathutils import Vector
 from fish_profiles.japanese_whiting import paired,median,caudal,eyes,gills,mouth,crest
 
 def pigment(u,v,upper,color,height,rough):
-    bars=np.maximum(0,np.cos(u*math.tau*7.3+np.sin(v*17)*.16))**5*np.clip((.78-u)*12,0,1)*np.clip((u-.15)*20,0,1)
+    bars=np.maximum(0,np.cos(u*math.tau*7.3+np.sin((v*math.tau*3))*.16))**5*np.clip((.78-u)*12,0,1)*np.clip((u-.15)*20,0,1)
     color*=1-.68*bars[:,:,None]
     blue=np.exp(-((u-.47)/.14)**4-((upper-.32)/.16)**4)
     color=color*(1-blue[:,:,None]*.90)+np.array([.30,.49,.80])*blue[:,:,None]*.90
     head=np.clip((u-.73)/.07,0,1)
-    wave=np.sin(v*81+u*45+np.sin(u*85)*1.6)
+    wave=np.sin((v*math.tau*13)+u*45+np.sin(u*85)*1.6)
     ink=np.exp(-(wave/.18)**2)*head
     color=color*(1-ink[:,:,None]*.80)+np.array([.26,.46,.66])*ink[:,:,None]*.80
     red=np.exp(-((wave-.48)/.15)**2)*head

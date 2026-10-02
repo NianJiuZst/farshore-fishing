@@ -1,6 +1,6 @@
 {
   "species": "painted_comber",
-  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "pipeline_sha256": "7addf61f14dea134acb5f9e0f7fb57d6ccb9da5f21af07dadabe2da6cccb42bb",
   "triangles": 32648,
   "vertices": 16976,
   "bones": [
@@ -36,8 +36,8 @@
   "sources": [
     "https://doris.ffessm.fr/Especes/Serranus-scriba-Serran-ecriture-144"
   ],
-  "glb_bytes": 5840436,
-  "glb_sha256": "926e596fd7bfbdb81da3e912d8736dedb29d7743c83b9fe4e435c781c8ac00cc",
+  "glb_bytes": 5846284,
+  "glb_sha256": "2b2f3cc10ba1df65120bc3e7b9d3ae3badeaebd2f0d105fda21abd3c581a817f",
   "flatfish": false,
   "ocular_side": "bilateral"
 }

@@ -1,6 +1,6 @@
 {
   "species": "common_pandora",
-  "pipeline_sha256": "cb829208b314db915ab83ed54dab39f2205a78f5f26440000235f829c368c155",
+  "pipeline_sha256": "7addf61f14dea134acb5f9e0f7fb57d6ccb9da5f21af07dadabe2da6cccb42bb",
   "triangles": 32446,
   "vertices": 16885,
   "bones": [
@@ -37,8 +37,8 @@
     "https://doris.ffessm.fr/Especes/Pagellus-erythrinus-Pageot-commun-2771",
     "https://www.fao.org/fishery/docs/CDrom/ARTFIMED/ArtFiWeb/descript/Species/SPAPAERY.HTML"
   ],
-  "glb_bytes": 4699908,
-  "glb_sha256": "c2b75aa1910221125b70952880474c62b1dcab9c5a8182028d04fd334c465996",
+  "glb_bytes": 4699912,
+  "glb_sha256": "0798ae024f2c79889c832459a1626be6ab9d0776eb469fd37d25b388fec9fa6f",
   "flatfish": false,
   "ocular_side": "bilateral"
 }

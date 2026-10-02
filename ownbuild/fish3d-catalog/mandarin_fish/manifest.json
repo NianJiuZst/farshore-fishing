@@ -1,6 +1,6 @@
 {
   "species": "mandarin_fish",
-  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "pipeline_sha256": "7addf61f14dea134acb5f9e0f7fb57d6ccb9da5f21af07dadabe2da6cccb42bb",
   "triangles": 33976,
   "vertices": 17668,
   "bones": [
@@ -36,8 +36,8 @@
   "sources": [
     "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_mandarinfish.htm"
   ],
-  "glb_bytes": 5015804,
-  "glb_sha256": "6c20bd5638b71b4a9ec8c17253b81f03f07589d2af2cbe630f6addb173ae527b",
+  "glb_bytes": 5013976,
+  "glb_sha256": "f96526ef4c84e015f1e60aceaa92ca4ae12368c9895de5e10163358e66186207",
   "flatfish": false,
   "ocular_side": "bilateral"
 }

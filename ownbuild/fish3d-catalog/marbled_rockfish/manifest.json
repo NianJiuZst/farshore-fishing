@@ -1,6 +1,6 @@
 {
   "species": "marbled_rockfish",
-  "pipeline_sha256": "cb161afc8c0fe54bf122f473276cb1242f91cc482074d80f232f413e859cc3d0",
+  "pipeline_sha256": "7addf61f14dea134acb5f9e0f7fb57d6ccb9da5f21af07dadabe2da6cccb42bb",
   "triangles": 34540,
   "vertices": 17960,
   "bones": [
@@ -38,8 +38,8 @@
     "https://fishesofaustralia.net.au/home/species/3136",
     "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.912129/full"
   ],
-  "glb_bytes": 5904660,
-  "glb_sha256": "6ea410730b6be64aae56995879d1783caea7d0930633b122e94c1f8dba1c33f9",
+  "glb_bytes": 5913992,
+  "glb_sha256": "78c5fd2e2e99d4f7d04867f5361461537dd5383eb7c59fe77cbb42d74317a9ad",
   "flatfish": false,
   "ocular_side": "bilateral"
 }

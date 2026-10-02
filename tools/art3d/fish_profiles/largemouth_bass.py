@@ -5,9 +5,9 @@ from fish_profiles.japanese_whiting import paired,median,caudal,eyes,gills
 
 def pigment(u,v,upper,color,height,rough):
     latitude=np.cos(v*math.tau);stripe=np.exp(-((latitude-.015)/.155)**2)
-    broken=np.clip(.67+.33*np.cos(u*89+np.sin(v*27)),0,1)*np.clip((.88-u)*12,0,1)
+    broken=np.clip(.67+.33*np.cos(u*89+np.sin((v*math.tau*4))),0,1)*np.clip((.88-u)*12,0,1)
     color*=1-(stripe*broken*.82)[:,:,None]
-    freckles=np.maximum(0,np.sin(u*231+v*93)*np.cos(u*87-v*173)-.62)*np.clip((upper-.38)*2,0,1)
+    freckles=np.maximum(0,np.sin(u*231+(v*math.tau*15))*np.cos(u*87-(v*math.tau*28))-.62)*np.clip((upper-.38)*2,0,1)
     color*=1-freckles[:,:,None]*.65
     return color,height,rough
 PROFILE={'id':'largemouth_bass','sections':[(-.345,.022,.037,.033,0),(-.28,.031,.059,.051,0),(-.17,.049,.092,.077,.002),(-.045,.066,.121,.098,.004),(.08,.074,.137,.107,.005),(.202,.072,.130,.096,.005),(.299,.065,.108,.078,.003),(.391,.050,.061,.039,-.001),(.466,.030,.019,.020,-.012)],'skin':{'back':(.18,.28,.12),'side':(.45,.58,.25),'belly':(.81,.80,.59),'pattern':'scales','scale_columns':62,'scale_rows':29,'variation':.035},'custom_skin':pigment,'fin_color':(.42,.46,.22),'head_start':.69,'head_end':.81,'roughness':.46,'normal_strength':.21,'morphology':['Adult olive-green elongated sunfish body and broken dark horizontal lateral stripe','Very large oblique mouth; upper jaw reaches posterior to the eye','Deep notch between low spiny dorsal and high rounded soft dorsal','Wide slightly emarginate tail and rounded rather than spear-like pectorals'],'sources':['https://www.dnr.sc.gov/fish/species/largemouthbass.html','https://www.dnr.state.mn.us/minnaqua/speciesprofile/largemouthbass.html','https://dnr.maryland.gov/fisheries/Documents/Reg_Changes/LargemouthBass_ScientificRenaming.pdf']}

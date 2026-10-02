@@ -1,6 +1,6 @@
 {
   "species": "largemouth_bass",
-  "pipeline_sha256": "2b64628dba2d519777b88a352f511fdbc1976305a4095b780a22813f030111d8",
+  "pipeline_sha256": "7addf61f14dea134acb5f9e0f7fb57d6ccb9da5f21af07dadabe2da6cccb42bb",
   "triangles": 33244,
   "vertices": 17280,
   "bones": [
@@ -38,8 +38,8 @@
     "https://www.dnr.state.mn.us/minnaqua/speciesprofile/largemouthbass.html",
     "https://dnr.maryland.gov/fisheries/Documents/Reg_Changes/LargemouthBass_ScientificRenaming.pdf"
   ],
-  "glb_bytes": 4905168,
-  "glb_sha256": "51a1cd7e584ec1556cfd0ff0398cf6ec54abe89bb8904be044910823acd4676a",
+  "glb_bytes": 4906752,
+  "glb_sha256": "890aa67eb870b4a5d5ddb3496cdde6ad722bb912c281e1c5bb554e913c223611",
   "flatfish": false,
   "ocular_side": "bilateral"
 }
