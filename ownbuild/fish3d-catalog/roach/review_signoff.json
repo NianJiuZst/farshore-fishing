@@ -1,0 +1,23 @@
+{
+  "species": "roach",
+  "status": "reviewed_pass",
+  "master_sha256": "ce8a26bee55b13c6720e9c24c6988ce88c05275c0ec34e7e63736ea9d842aab8",
+  "glb_sha256": "1af810758d6e674467d700ca554a2214beba1dfc434f7ec2568f87db81c40ccf",
+  "reviewed_views": {
+    "hero": "34d071bfbbde37e0800b8e3eabbd03ed9c830446294a335fe0bfa1772e358961",
+    "top": "1e13ebf09efc93e602e4ed61ad41a937eaa35b863f413d55090531b458f3fb09",
+    "side": "888560723abf80805a48dee9d0f4d47936818bfc47bcac5b8060637fe9d86d6a",
+    "underside": "5630c8e16fa9e7448a118b03d902ca106599686f0dc7f8c987c9e1164631f46a",
+    "pose_swim": "e9c2ceb3b8863268cefc060eb08c0af69df75280f6df43b00193b0fc1778d37f",
+    "pose_struggle": "9ee4417ed9a0c2236b3055b23f66c213ee73113ab1b000be632b243b3141a7e2",
+    "pose_breach": "20c1c5a5ab8d35c1dac70d1d396d0aaa8d586fff88834a2006d7fb6adef513d3",
+    "pose_landed": "4b34ff4690c30f204ecbf04438b9afab9b2d8d92ceede89397060511d8df93a0"
+  },
+  "anatomy_checks": [
+    "Silver relatively slender body, red eyes and orange-red lower fins",
+    "Dorsal/pelvic origins align, terminal mouth and forked tail",
+    "Complete volume and attached paired fins visible across views"
+  ],
+  "maximum_attachment_distance_m": 0.002023801440373063,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

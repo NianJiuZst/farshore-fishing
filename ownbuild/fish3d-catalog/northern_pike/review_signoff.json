@@ -1,0 +1,23 @@
+{
+  "species": "northern_pike",
+  "status": "reviewed_pass",
+  "master_sha256": "25c8f02578b988b2bb63788489f863616a1467d4bf0ae09b51480e520af789e5",
+  "glb_sha256": "7087f34e042b5a1041f622275f3137865d7ddf4f20e4ff82a876a4bac36f17c1",
+  "reviewed_views": {
+    "hero": "10eb583dc4b2817c66640aecc670332040175200f89f77d8f220f97e4cdc006c",
+    "top": "7b6ee59abee28b311c5fbfccdfc6b62d412420c6fb2d6392eb1d1cb98e65b5a7",
+    "side": "a454b0135f0f4cfe103b8abb7ee5482ac5a4543487af6c4c9a4c62df8c088d06",
+    "underside": "2e51ace435cbfff1fc46353111fdf14d39cb31b3b63734bcdb98550e26350fd1",
+    "pose_swim": "f33c4cde0f3d8a582b773d1802c46274988dcc55798e5673bf13b9832e100082",
+    "pose_struggle": "338257aac74230d19e920dac6e7ff21b1896508e03f3239afd526f297e6c9e07",
+    "pose_breach": "715c922bd9cbc2e18a8de1e03f031f6ef1a5f640114b026f72ca3b2dd063bfad",
+    "pose_landed": "1955e1a1e95762553f251f06feb7ca13482b79f5584033a6b163a5842a83d837"
+  },
+  "anatomy_checks": [
+    "Broad flattened duckbill visible in top view",
+    "Posterior dorsal and anal, forked tail and pale flank ovals distinguish pike",
+    "Jaw and all paired-fin attachments remain coherent through sampled poses"
+  ],
+  "maximum_attachment_distance_m": 0.0019920053891837597,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

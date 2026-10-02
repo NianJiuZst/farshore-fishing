@@ -36,3 +36,7 @@ The shared `_freshwater.py` file contains surface-anchoring and mouth/fin author
 - Other original per-species sources are retained in each Python profile and model manifest
 
 No third-party model/photo reuse, paid assets, new accounts or undocumented licensing assumptions. Canonical promotion is atomic; scoped source/assets are checkpointed and a bounded per-species external backup is maintained.
+
+## Final source-art acceptance
+
+All nine freshwater species now have eight actual 1200×800 studio views visually reviewed against their anatomy, plus current contact/loop and native Godot import reports. `review_signoff.json` binds each acceptance to its canonical master, GLB and all eight PNG hashes. The final perch review includes its refined articulated gape and first-dorsal membrane pigmentation; longnose gar and yellowcheek were reviewed as distinct long-jawed profiles. No source-art visual blocker remains. Android package, device performance and production UI acceptance remain separate integration gates.

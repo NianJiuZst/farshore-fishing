@@ -1,0 +1,106 @@
+{
+  "status": "verified",
+  "canonical_pairs": 14,
+  "reviewed_images_verified": 112,
+  "backup_root": "/workspace/shared/farshore-3d-checkpoints/fish/catalog",
+  "species": [
+    {
+      "species": "common_carp",
+      "master_sha256": "1892ae9cbec633aaef437ba891fee85381e2f329f488fb3ad36e34588bc7a427",
+      "glb_sha256": "80f3037eb7ecafcaafb57461ab6b505e9102c7822b60311d326a431a49217cc8",
+      "review_sha256": "d49f8818855adf1dcc4b27126781813a814060d073b328d893bd44369e7e3bfa",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "alligator_gar",
+      "master_sha256": "638d3595eae741b4bbc41cf1e6fbb8981a08f42021c857879b89502ecf9b9122",
+      "glb_sha256": "ab4820619fe604d2e174c2e8b1439da69a58cc0576cd38c4ea21e4c279431ce3",
+      "review_sha256": "d7e302c5b002c9505ded76bce9f18146b61c21c14e955bee55800a346cadb45e",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "chinese_sturgeon",
+      "master_sha256": "a2bf7e9579b899e4cfa2b8cd86e393df131bc33fdce2ac8bbb4ebd8e93e3e2dc",
+      "glb_sha256": "d5b845fa76371a215ec3ec9eb54a1f65b56d68eddb96ca1174d136d2898aa8af",
+      "review_sha256": "5b9c1c430a2b0ab677d4276838c91182498f1baec423d96e6de364f6e296e067",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "olive_flounder",
+      "master_sha256": "a5ff7e00bf66e845663a56dfcba93859550b71c4b1d600d7bb45f21359746ae3",
+      "glb_sha256": "9b23be7408e9c4c52d851129b492680f2fb834b13ccba5af3a736c284f3130c5",
+      "review_sha256": "3d5467ed5e4647da03b1ddf35c86b904bab3d275dfe742883473d32188d140f3",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "european_plaice",
+      "master_sha256": "8a4c6e9fadb1aa77834f9a0cfda504289aabff306447d2e53734926a4404c28c",
+      "glb_sha256": "e44d5f7db964357bfa4e7bef31d6fa4740387198ce0f44401fecdcd2035c33e1",
+      "review_sha256": "1757f08f9fe1c71453f1e599542da7e5e37feff11c51fc050909b8b1470a01f3",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "crucian_carp",
+      "master_sha256": "bc66abd4211e66baef51e00f33a09c6c8516ffe06df240b7fb45fd167912b264",
+      "glb_sha256": "43d0d850ca96f78ab22b374a3964caca155b2e56a11eb7f551598c69a3c5a8c8",
+      "review_sha256": "6430f536ac8abb2ec331988411c3945f0f320c7b94eca39a136d62324f030f55",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "roach",
+      "master_sha256": "ce8a26bee55b13c6720e9c24c6988ce88c05275c0ec34e7e63736ea9d842aab8",
+      "glb_sha256": "1af810758d6e674467d700ca554a2214beba1dfc434f7ec2568f87db81c40ccf",
+      "review_sha256": "1bcda1440160291d0670a28f2145ca279f6ca65f3c1654b4df764bebd902d33f",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "rudd",
+      "master_sha256": "4b470f1428835245409bb6c9fad932e0a1d3087cc5a738392d828042887c7893",
+      "glb_sha256": "9eda48cfc864a7423083981ae9faca93080f43e895d2bcddf2691436442d6f47",
+      "review_sha256": "92a22579a98c69ca93d7bd55ccc4d2e016de6bb0e2e92a55f7333037c3f3dd79",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "european_perch",
+      "master_sha256": "732dd87c543844289b6af086b28e04a37cabce83adbdea5250e770c8673073af",
+      "glb_sha256": "f48906c003e6e6b9febe78e769ac8640720183e81451037fc64f88ff5195e3a3",
+      "review_sha256": "afd6a627d39b9e5f1e0101a5ffd4dc2f595f8a3be7931073f9b8ef8467b5777a",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "northern_pike",
+      "master_sha256": "25c8f02578b988b2bb63788489f863616a1467d4bf0ae09b51480e520af789e5",
+      "glb_sha256": "7087f34e042b5a1041f622275f3137865d7ddf4f20e4ff82a876a4bac36f17c1",
+      "review_sha256": "b8fece51180d7e81a2a3a13feb336ee2f8cfe2a3be4863dc33cc913dd8343a39",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "common_bream",
+      "master_sha256": "9063482fd7fc5548f1d6cc1dff56c89c6cf0e2759fb9e03c8f7bda067b0626d3",
+      "glb_sha256": "53253642e824a76c216055c7d9cbeb8bc88cf75343fd59b2be94c74feb8b911d",
+      "review_sha256": "7e3d8f915411e6a61108a0a8194cb3bf7594870124f776eff120cc52243531f1",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "tench",
+      "master_sha256": "c5f1d1853edd32bc4b3c45fb615e94e6b73d4ac691cab4388903e7edf0c08a2c",
+      "glb_sha256": "2e4143cb0aee94e636bec2872e75e884753770394ba98d7ecade25da451ac55e",
+      "review_sha256": "fd194e3a6a6177be87901dcb0cce136737c3d888c09d5f084e260152958a2057",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "longnose_gar",
+      "master_sha256": "a985afc1a9bbd9c1c81a5b488d75259783a2f66a9e765e131c835f19bb65c349",
+      "glb_sha256": "9fb9123f0e2c35c0373abe3f077ebac44a9cbbd11770da701ee286027af88b9d",
+      "review_sha256": "3b87920b8c49b3573aa0c067cbc696ffdfc8da281640c6cdc0cbf10756b6a0f0",
+      "reviewed_images_verified": 8
+    },
+    {
+      "species": "yellowcheek",
+      "master_sha256": "ec0116e9636d6c0683a4f39e9fddee75d3cb8c1ac35d6fb37055a48a5fdcda5c",
+      "glb_sha256": "fdbff99da77369235c21f66ebe8a31432cfb7aca01182a0b849e23d5e1a80d03",
+      "review_sha256": "1f79f309f25d09e29ea0c081b8b82b1696823208d74d77dea499c4a3a50324ec",
+      "reviewed_images_verified": 8
+    }
+  ]
+}

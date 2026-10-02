@@ -64,3 +64,9 @@ Every f.fin membrane and raised ray receives persistent root-vertex tags before 
 `--validate-existing` reopens a tagged master and reruns the full contact/loop gate without rebuilding geometry or saving over the master. It records current master/GLB SHA-256 values. The same flag audits preserved legacy fish with in-memory derived contact tags. New exports bind successful reports to the atomically promoted master/GLB hashes.
 
 Use `tools/art3d/render_fish_view.sh <species> <view> [samples]` for view jobs: two bounded slots, two threads each; slot A remains compatible with the first `/tmp/farshore-fish3d-render.lock`. Views retain quality. The floor automatically sits below the lowest rest fin so deep-bodied bream and long anal fins are not clipped by the review backdrop.
+
+## Final hash-bound visual acceptance
+
+Run `python tools/art3d/audit_fish_catalog.py --require-reviews` for the explicit final art gate. The ordinary command reports visual progress without treating unfinished review as a generation failure. The final gate requires an explicit pass record, the current canonical GLB hash, all eight reviewed view names and their actual PNG hashes. When a master hash is recorded, it must also match. It understands the pipeline/northern `review_signoff.json` and coastal/catfish `visual_review.json` formats. Mere image presence never implies visual acceptance.
+
+`python tools/art3d/test_review_gate.py` verifies accepted family schemas and rejection of missing reviews, changed GLB/master, incomplete review, failed status and changed/missing images. `catalog_art_freeze.json` records the exact all-44 canonical master/GLB pairs at final source-art acceptance; integration must verify those hashes if art is reimported or packaged later.

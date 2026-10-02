@@ -1,0 +1,23 @@
+{
+  "species": "european_plaice",
+  "status": "reviewed_pass",
+  "master_sha256": "8a4c6e9fadb1aa77834f9a0cfda504289aabff306447d2e53734926a4404c28c",
+  "glb_sha256": "e44d5f7db964357bfa4e7bef31d6fa4740387198ce0f44401fecdcd2035c33e1",
+  "reviewed_views": {
+    "hero": "9cf1566e5952745b8970a66c4283fe29ef0f730df77f7cdd5dcd418002b5ba82",
+    "top": "4267c24a48c64c62918e10da140b9c58e2e708b5eb47408500e3359e55123ac6",
+    "side": "ed56da9632734054f845fc7c6fe88ef77eac3506f112a8f9de47578444e5cb58",
+    "underside": "8d58055f6b6947ea11ca017b060dff00743b29e2a3293f2784951635cc0f6e35",
+    "pose_swim": "4b67b0c8969e3e5cbe8fff36d4f2d5af30eb6f1cc727a8a11ebadafa99f71999",
+    "pose_struggle": "41ddad45623880839c5ead9dd65296843163b76401c831315e2b1cddba11e5ca",
+    "pose_breach": "1233ce9d99a4af42fccd164ebde46300c363564db69ccfd8e63fc7ee3497196a",
+    "pose_landed": "2e72e103a1d1458f7dc6d9a334df089d807a84ea38e5336521878f40a58f72c1"
+  },
+  "anatomy_checks": [
+    "Broader oval than flounder, smaller mouth and six low head knobs",
+    "Right-eyed upper face, natural orange spots and ivory eyeless underside",
+    "All sampled fin/tail attachments and body deformation remain coherent"
+  ],
+  "maximum_attachment_distance_m": 0.002464004559442401,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

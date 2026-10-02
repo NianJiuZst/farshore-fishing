@@ -1,0 +1,23 @@
+{
+  "species": "chinese_sturgeon",
+  "status": "reviewed_pass",
+  "master_sha256": "a2bf7e9579b899e4cfa2b8cd86e393df131bc33fdce2ac8bbb4ebd8e93e3e2dc",
+  "glb_sha256": "d5b845fa76371a215ec3ec9eb54a1f65b56d68eddb96ca1174d136d2898aa8af",
+  "reviewed_views": {
+    "hero": "cb73ae0829bfe1043e24196ab9e195e027989411340c3ebc70da59cd5b3aa0c6",
+    "top": "625d034491eee0e9454526a0aa13ce563001511fa196ad8741586467eb62f540",
+    "side": "452725d416f65e908907ba17873e47c51d231f9d989f6b4b398ff37d4d9e0713",
+    "underside": "7771a10fe5d11ac515f512372c770f75abbfca68b7519993f74435df60b210f3",
+    "pose_swim": "bbf9393f6ad249a9e25d974fef9a3e4c842549eabd56edaedb4f48ca04ba2899",
+    "pose_struggle": "aa8741227ccd71151d1314754483210c03d1b3da248a565e4f494907f009a608",
+    "pose_breach": "9d136da352919ff7d79eaa50a94c1a4ec1ada56497a3c7e8657b3e0f88867b04",
+    "pose_landed": "27f4d31b90f0a20a2ccaed0f7675814627037cef3133f92689f77f9eb02adcfe"
+  },
+  "anatomy_checks": [
+    "Five rows of low three-dimensional scutes and strongly heterocercal caudal",
+    "Four rostral barbels and separate ventral mouth visible in underside view",
+    "Paired and median attachments remain closed through the posed views"
+  ],
+  "maximum_attachment_distance_m": 0.002678186632692814,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

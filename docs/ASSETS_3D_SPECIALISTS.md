@@ -44,3 +44,7 @@ Final anatomy references are the original catalog source records plus [NOAA Chin
 Actual Main preview identified a caudal attachment gap that studio hero renders did not reliably expose. The new persistent-root BVH audit measured14.4mm at the old flounder tail root, while dorsal/anal root groups stayed at1–1.5mm. The caudal rootline was moved onto the actual posterior body cap and paired roots were surface-derived. Flounder now passes at2.41mm; plaice at2.46mm; sturgeon at2.68mm over rest plus36 animated samples. The production Main transparent SubViewport was recaptured across six swim phases by the runtime owner, showing one connected fish silhouette and a closed tail seam.
 
 The same audit exposed root-placement errors in the two initial legacy models. Their exact originals were verified against retained backups before repair. Their body geometry, original palette/material identity, four clips and triangle counts remain unchanged; fin roots now follow the actual body surfaces/cap. Repaired carp/gar pass at2.14/2.19mm.
+
+## Final source-art freeze
+
+All three specialists and both repaired legacy models have current hash-bound eight-view `review_signoff.json` records, evaluated animated contact passes and native Godot import checks. Original carp/gar backups remain retained separately. The all-44 catalog gate now checks the exact canonical GLB and reviewed-image hashes before accepting final source art; this does not stand in for Android device or release verification.

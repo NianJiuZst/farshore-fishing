@@ -1,0 +1,23 @@
+{
+  "species": "alligator_gar",
+  "status": "reviewed_pass",
+  "master_sha256": "638d3595eae741b4bbc41cf1e6fbb8981a08f42021c857879b89502ecf9b9122",
+  "glb_sha256": "ab4820619fe604d2e174c2e8b1439da69a58cc0576cd38c4ea21e4c279431ce3",
+  "reviewed_views": {
+    "hero": "4def1cb4c49befb3be10509d20299e1672d4f64807e37ccae56c6b0816fca9f8",
+    "top": "b47cbbb00fc212373022beefcfee0db44b489e1c8bb494d6e221b439c38b8be9",
+    "side": "6aa3ea3d49efbfbe69c1087a4ce447dc3673d151357db63b75b72b77a9441497",
+    "underside": "9438eea8f686d1bc2c8cdff1d3fa2515d8cb69dab3af97a12ada6243a59ddce3",
+    "pose_swim": "88a512ff87960230c3c244bd2685c5f188d4b5ad2b44696add4fb8baffac758b",
+    "pose_struggle": "f4e2dad4f9fc0ee3aef645f2ffee7401fe56e1fe2cacf75ef48fcadae765d979",
+    "pose_breach": "2e0883b7b72d51521abc304a2fb2a728ec7dbb3f01249f6076251cd3ebc5ce6c",
+    "pose_landed": "bb05415897fd5f9543bf9693304fc2286f7cbdeb957b42b8e35ff829be507090"
+  },
+  "anatomy_checks": [
+    "Broad flattened snout and robust armored body remain distinct from longnose gar",
+    "Rear dorsal/anal, rounded asymmetric tail and spotted fins",
+    "Repaired fin/tail roots stay coherent in all sampled poses; top view confirms snout width"
+  ],
+  "maximum_attachment_distance_m": 0.002191350096836686,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

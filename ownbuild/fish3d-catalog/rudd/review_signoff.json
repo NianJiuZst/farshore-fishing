@@ -1,0 +1,23 @@
+{
+  "species": "rudd",
+  "status": "reviewed_pass",
+  "master_sha256": "4b470f1428835245409bb6c9fad932e0a1d3087cc5a738392d828042887c7893",
+  "glb_sha256": "9eda48cfc864a7423083981ae9faca93080f43e895d2bcddf2691436442d6f47",
+  "reviewed_views": {
+    "hero": "902e5576fc24bcd865bb5d766b1d2c9e2dff6123addf3edb41a7c7dcdfdc47be",
+    "top": "9bc873d34f8c1a942ef3ebed6fc92865b0d5ad7e7654d281ddf8308de8c1b4ec",
+    "side": "074f0cc1c7fb0a0ad62a08ada01971ba28967f3a74db8dfff4a9bd0d6cd0a35e",
+    "underside": "b9cb42cf03104c4046c79ad5e4bb9d8812ba357afdb9d81812fb1c3f32736aa1",
+    "pose_swim": "67b56d20b45deec84190e79e70b195a53295b7accb05527ee0c79e3f94cdc4a0",
+    "pose_struggle": "41c3126d0c1e2fb6288646b7f8d3be1b9b5fecd932ee9175c140bf1c75609d17",
+    "pose_breach": "e947eff252ea7b3b1d33e1707f8bc34c0d58d003fcc5b195c52e728a8abfe859",
+    "pose_landed": "f65bb63b48660e8adfcf74d5712fbd57d2488c0c1d2e4428ba33b2e00abe00de"
+  },
+  "anatomy_checks": [
+    "Deeper gold body, upturned mouth and scarlet lower fins/tail",
+    "Dorsal lies behind pelvic origin, distinguishing it from roach",
+    "Skin/fin deformation remains coherent and body has complete volume"
+  ],
+  "maximum_attachment_distance_m": 0.002067080233246088,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

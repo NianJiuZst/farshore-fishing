@@ -1,0 +1,23 @@
+{
+  "species": "common_carp",
+  "status": "reviewed_pass",
+  "master_sha256": "1892ae9cbec633aaef437ba891fee85381e2f329f488fb3ad36e34588bc7a427",
+  "glb_sha256": "80f3037eb7ecafcaafb57461ab6b505e9102c7822b60311d326a431a49217cc8",
+  "reviewed_views": {
+    "hero": "9b42fb44f3b5b2ffbce59b12893dd84be545b73ed8136b6a8976a1ee04a67390",
+    "top": "3e7bb8edde669e48177381831e1a8f445acb76b0742842e68d762d6679f9de7c",
+    "side": "9c6fbbedfdd8634da033abcc7eca810b4f7023ba98d285f079f9ac9cebb80973",
+    "underside": "9f1e2787f766793cc4e4656b0d826391505ac3ab69db2a1f9e8defdcad852819",
+    "pose_swim": "912ed26de183b4995004362bea4375349a5b37e9357e98842a0db25d4e99456c",
+    "pose_struggle": "5e1fdd252357b6a3d89469a3944cf591ffe3ba115fd585f1cb39748e1e27c8c1",
+    "pose_breach": "6ad6642d6ed269488811a145aa3f32e9569b2267e09e983dcff544b3adb84cbe",
+    "pose_landed": "c5b4aa62e40787e3fefdf8c519166727aecb0b3c8797ee6a8459e11edd4794b1"
+  },
+  "anatomy_checks": [
+    "Long dorsal, forked tail, four barbels and bronze cycloid scales retained",
+    "Repaired paired and median fin bases contact body across poses",
+    "Top/underside show actual body volume and paired fins"
+  ],
+  "maximum_attachment_distance_m": 0.002135354094207287,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

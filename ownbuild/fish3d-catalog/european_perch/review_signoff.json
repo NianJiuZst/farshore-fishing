@@ -1,0 +1,23 @@
+{
+  "species": "european_perch",
+  "status": "reviewed_pass",
+  "master_sha256": "732dd87c543844289b6af086b28e04a37cabce83adbdea5250e770c8673073af",
+  "glb_sha256": "f48906c003e6e6b9febe78e769ac8640720183e81451037fc64f88ff5195e3a3",
+  "reviewed_views": {
+    "hero": "28fcd22b17499e876a82d1e126eff884d58e0b20b6144c0c7020e0a9489a2a3e",
+    "top": "05b228b4f98f7df0e4123b42c03cabff0adb9078866b43bd159dbf5a1d93748a",
+    "side": "362b18e89a5f955086cde8cdc92fdf92c56e7dbf873746f52b48efb063c8406f",
+    "underside": "a7fe6d43b9e2ec21a1ccecd2a7ce0bc6e4703ab52c7f005af9b0bab63e5e8858",
+    "pose_swim": "9acf41f6ff636fad97a6c39733c998329a2d765f7de96e36c43d8d568f3ce9c5",
+    "pose_struggle": "e222466e893c4c1d5561faa1a450781970ede2bbd1e77241e083e5281a372624",
+    "pose_breach": "56da2d82898eb7f4e9b5213b4501fde37085b99831e339f46b0089593f261c43",
+    "pose_landed": "4629db82370430692a219ffb06acb3fa3bc484e28f1e01ba2ca85df03f679720"
+  },
+  "anatomy_checks": [
+    "Deep perch body, five broad dark bars, orange lower fins and forked tail",
+    "Separate spiny and soft dorsals; black rear mark is pigmentation on first dorsal membrane, not a floating object",
+    "Long articulated gape and seated paired-fin bases; actual top/underside and four poses remain volumetric and attached"
+  ],
+  "maximum_attachment_distance_m": 0.0020346331875771284,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

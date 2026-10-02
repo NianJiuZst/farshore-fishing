@@ -1,0 +1,23 @@
+{
+  "species": "yellowcheek",
+  "status": "reviewed_pass",
+  "master_sha256": "ec0116e9636d6c0683a4f39e9fddee75d3cb8c1ac35d6fb37055a48a5fdcda5c",
+  "glb_sha256": "fdbff99da77369235c21f66ebe8a31432cfb7aca01182a0b849e23d5e1a80d03",
+  "reviewed_views": {
+    "hero": "b52d16f615dece4fce96ac287ab976e4100832c17ce637417dfb3e3611b13d2d",
+    "top": "91882daf796a2e06150e9173cb5e29cbfd8bb6049f6235449091467591544a22",
+    "side": "65c3c94f4f582b3d72c880b79b6cdee395b8aaa81e6f05b7de26203b149785c2",
+    "underside": "a478d2d60bd73cce91ab44c9dcd84d00e86cee999cd494282198d3bc2cbb1dff",
+    "pose_swim": "97be700b6dec2e040ac6651d6dbf6d2cbfc0bfb02774d5d99f04a2f608142991",
+    "pose_struggle": "480fa625b87aeb473d9bb7e002b69505126fb302ca278de2936d37c3425d27d0",
+    "pose_breach": "0885f74e1f1c65be0add4b86074369c45153fcfdff0c8d8c8bbfff4f2248afc2",
+    "pose_landed": "ceedec10c8cc82979ccc4efff5eaf1cfa897046d875fca710781e55ff9a3e156"
+  },
+  "anatomy_checks": [
+    "Elongated silvery predatory cyprinid body, projecting long jaw and yellow cheek/paired-fin coloration",
+    "Single central dorsal, short anal and deeply forked tail distinct from gar, pike and roach profiles",
+    "Real head/trunk volume is readable in top and underside; fin bases and articulated lower jaw stay coherent in swim, struggle, breach and landed views"
+  ],
+  "maximum_attachment_distance_m": 0.002013001823797822,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

@@ -1,0 +1,23 @@
+{
+  "species": "olive_flounder",
+  "status": "reviewed_pass",
+  "master_sha256": "a5ff7e00bf66e845663a56dfcba93859550b71c4b1d600d7bb45f21359746ae3",
+  "glb_sha256": "9b23be7408e9c4c52d851129b492680f2fb834b13ccba5af3a736c284f3130c5",
+  "reviewed_views": {
+    "hero": "5957e7341cd958a06d6886d5f48f42570a33e63109e5869084395669418fb62e",
+    "top": "00ef2b42bbbbcaa3ac18485020eaff13f2a83da5e7664696491e4a123ca32a85",
+    "side": "3adc3771ed8c0e6943f1b547718bc8498848e8705c9874ec6bbe5f2f18b74603",
+    "underside": "842cc3f55204bdd206f6fa5deb3a1ab5d53526e63cbc6734afd847a89a007785",
+    "pose_swim": "e08c936bb2a907d20ae12e6d34a4c49586f886bc8489688ee7d40fd7e8a1176f",
+    "pose_struggle": "778745a0ba6536e99d90f5ee08bf180835ef9cb3059160a01c19c705f698304a",
+    "pose_breach": "6bee1571419212987b708d66bd803a4d1947d541b228caab4ab3a9111d3c54e0",
+    "pose_landed": "34299512b971e64392608b405c9b17b812cb88eac5edcb10bd10915b1700c194"
+  },
+  "anatomy_checks": [
+    "Actual thin body volume, left-eyed upper face and ivory eyeless blind side",
+    "Asymmetric larger mouth and olive small-spotted marbling",
+    "Repaired tail and surface-derived paired roots remain coherent in four posed views"
+  ],
+  "maximum_attachment_distance_m": 0.00240467581897974,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

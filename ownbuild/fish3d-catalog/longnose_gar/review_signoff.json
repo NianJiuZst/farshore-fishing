@@ -1,0 +1,23 @@
+{
+  "species": "longnose_gar",
+  "status": "reviewed_pass",
+  "master_sha256": "a985afc1a9bbd9c1c81a5b488d75259783a2f66a9e765e131c835f19bb65c349",
+  "glb_sha256": "9fb9123f0e2c35c0373abe3f077ebac44a9cbbd11770da701ee286027af88b9d",
+  "reviewed_views": {
+    "hero": "14afba781c987d024c05ea7e7dc225a06d4a7ec49fc269a8409af249af024b4d",
+    "top": "fa3996d3e4e28f2f2390044201e41f88ca0fc4bbcc8d1b9a2f75229eb9d1c107",
+    "side": "29d15d1fca8d546fa0e6f2c77e95240b6638c31225b8b98961a5b332ee536801",
+    "underside": "e12ffaabd1de8c30782b904dea9d61ee7d13d0740da287c348589b18dbfd19d1",
+    "pose_swim": "5a1a89f56c54051be394ca855c1d4a3165adcc6258e04d0f5f45876b91249f42",
+    "pose_struggle": "6d6f5caf6ad2cc22682a2e4a1e6b58fda4701ef753ba3e344ec3636eeb1c4139",
+    "pose_breach": "3056a9abbdf623590a38fab07aa5b2327ef5a2b977d7d65f3d44c34aee05396b",
+    "pose_landed": "93e563fbb427b01a22de79770790e67aa72c5ebdd31f4e61a34ede9d421a176f"
+  },
+  "anatomy_checks": [
+    "Very narrow elongated jaws, long cylindrical armored trunk, low seated eyes and distinct slender silhouette",
+    "Dorsal and anal located far back, spotted rounded asymmetric tail, pale underside and ganoid scale texture",
+    "Top and underside establish three-dimensional head and body width; jaw, fin roots and caudal remain seated across all four posed captures"
+  ],
+  "maximum_attachment_distance_m": 0.0019224630668759346,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

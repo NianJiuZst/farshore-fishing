@@ -1,0 +1,23 @@
+{
+  "species": "common_bream",
+  "status": "reviewed_pass",
+  "master_sha256": "9063482fd7fc5548f1d6cc1dff56c89c6cf0e2759fb9e03c8f7bda067b0626d3",
+  "glb_sha256": "53253642e824a76c216055c7d9cbeb8bc88cf75343fd59b2be94c74feb8b911d",
+  "reviewed_views": {
+    "hero": "5631e7743256318494dca9581f3139dcbd1c15efeadeab1550b6b0aa03ca3f9c",
+    "top": "8f8358356b4e70c892ab40bb53a401b22108598a1647357e049bb2393b58b4d6",
+    "side": "6cacbc783d42b5a788e53746f21faaa0e2e2fb009d28b52966b19dddaa4cf430",
+    "underside": "ba5c7388a93278ca576625cb09849ac0873c617c20e099933c13a57c49a6e81b",
+    "pose_swim": "1abc4cbc8d78888d28f719a45d80a448c96439be810f2069b45dce9d6a933256",
+    "pose_struggle": "9794fd8baaeb53152045c7e9fbcb3fdc32f1e2ae476d27ac3a8ee1ddc0d135fd",
+    "pose_breach": "c3c1a11a4ba651f9794bf0fa5e69e2a2182667cd2e24db5445c1959122b4baa6",
+    "pose_landed": "8394de560901e17c2f2dcaa3e9290bad16051ab19cb2cbc95f14042d921271e7"
+  },
+  "anatomy_checks": [
+    "Deep thin body, small head/mouth, short high dorsal and long gray anal",
+    "Deeply forked caudal and no barbels",
+    "Review floor does not clip long anal; all four posed views retain closed attachments"
+  ],
+  "maximum_attachment_distance_m": 0.0020410045981407166,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

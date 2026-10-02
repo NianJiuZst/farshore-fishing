@@ -1,0 +1,23 @@
+{
+  "species": "crucian_carp",
+  "status": "reviewed_pass",
+  "master_sha256": "bc66abd4211e66baef51e00f33a09c6c8516ffe06df240b7fb45fd167912b264",
+  "glb_sha256": "43d0d850ca96f78ab22b374a3964caca155b2e56a11eb7f551598c69a3c5a8c8",
+  "reviewed_views": {
+    "hero": "f3f5a99ff460e1c3c28b5fc0e026ae3c5920cb0bae4b5bfeae4f2a9a783dd77a",
+    "top": "fc748fb72be0d1f1c243e7578a11742852c9ded56cfa21ae1979b8bb42fe8f4f",
+    "side": "12653249d1040396017c33d36c75b427e72992dec74069643f2d346f6b22513b",
+    "underside": "259b005dc4f5ae4b7d51ad7a7561056d5092dc97f8cbd1e1ff33bf8a79a71b5b",
+    "pose_swim": "81976892d8d8177df1f9d17282d3b01e00213463cbf54639eff36f3c8db683fd",
+    "pose_struggle": "aaa35f18459533e108e095216819af8a322bdcfe996316e36f0ec1b53d063503",
+    "pose_breach": "68da45e87255de954190bb9037aacd1fbc8d6c40fadbe138a0f18213d5a447da",
+    "pose_landed": "43cf81fa00d96397aff5394eca70501c708548c9e168974fbfeb83ae0ec9e334"
+  },
+  "anatomy_checks": [
+    "Deep bronze body, convex long dorsal and shallowly notched tail",
+    "No barbels and small terminal mouth",
+    "Round paired fins remain attached throughout sampled poses"
+  ],
+  "maximum_attachment_distance_m": 0.002057678299024701,
+  "scope": "Studio geometry/material/anatomy/posed review plus Blender contact and Godot import verification; production Android frame-rate acceptance is owned by integration."
+}

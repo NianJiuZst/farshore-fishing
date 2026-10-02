@@ -2,8 +2,11 @@
   "expected": 44,
   "generated": 44,
   "artifact_contact_pass": 44,
-  "required_views_present_count": 167,
+  "required_views_present_count": 352,
   "required_views_total": 352,
+  "visual_review_pass": 44,
+  "visual_review_failures": [],
+  "review_gate_required": true,
   "maximum_attachment_distance_m": 0.003669856349006295,
   "failures": [],
   "species": [
@@ -43,7 +46,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "crucian_carp",
@@ -78,8 +86,15 @@
         "side",
         "underside",
         "pose_swim",
-        "pose_struggle"
-      ]
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "roach",
@@ -109,8 +124,20 @@
       "max_attachment_distance_m": 0.002023801440373063,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "rudd",
@@ -140,8 +167,20 @@
       "max_attachment_distance_m": 0.002067080233246088,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "european_perch",
@@ -171,8 +210,20 @@
       "max_attachment_distance_m": 0.0020346331875771284,
       "attachment_groups": 8,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "northern_pike",
@@ -210,7 +261,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "common_bream",
@@ -240,8 +296,20 @@
       "max_attachment_distance_m": 0.0020410045981407166,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "tench",
@@ -271,8 +339,20 @@
       "max_attachment_distance_m": 0.0020536992233246565,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "japanese_horse_mackerel",
@@ -310,7 +390,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "chub_mackerel",
@@ -348,7 +433,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "red_seabream",
@@ -378,8 +468,20 @@
       "max_attachment_distance_m": 0.0019172534812241793,
       "attachment_groups": 8,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "black_seabream",
@@ -409,8 +511,20 @@
       "max_attachment_distance_m": 0.0018366466974839568,
       "attachment_groups": 8,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "japanese_seabass",
@@ -440,8 +554,20 @@
       "max_attachment_distance_m": 0.001803992665372789,
       "attachment_groups": 8,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "japanese_whiting",
@@ -479,7 +605,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "marbled_rockfish",
@@ -517,7 +648,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "olive_flounder",
@@ -555,7 +691,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "atlantic_cod",
@@ -593,7 +734,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "pollack",
@@ -631,7 +777,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "saithe",
@@ -669,7 +820,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "haddock",
@@ -707,7 +863,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "atlantic_mackerel",
@@ -745,7 +906,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "atlantic_herring",
@@ -783,7 +949,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "european_plaice",
@@ -821,7 +992,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "atlantic_wolffish",
@@ -859,7 +1035,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "european_seabass",
@@ -889,8 +1070,20 @@
       "max_attachment_distance_m": 0.0018474279204383492,
       "attachment_groups": 8,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "gilthead_seabream",
@@ -919,7 +1112,21 @@
       "contact_failures": [],
       "max_attachment_distance_m": 0.0018756076460704207,
       "attachment_groups": 8,
-      "required_views_present": []
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "saddled_seabream",
@@ -948,7 +1155,21 @@
       "contact_failures": [],
       "max_attachment_distance_m": 0.0018793650669977069,
       "attachment_groups": 8,
-      "required_views_present": []
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "white_seabream",
@@ -977,14 +1198,28 @@
       "contact_failures": [],
       "max_attachment_distance_m": 0.0018325867131352425,
       "attachment_groups": 8,
-      "required_views_present": []
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "annular_seabream",
       "failures": [],
-      "glb_bytes": 4918176,
-      "glb_sha256": "57916d199f5386553e66cb0d6e559e1386e80e8c6397da95b9b0e0112a14ddb5",
-      "master_sha256": "5448ee35169d440537afcde5bc2b270130c7eb8e08c9e28d7a695b09c0fe263b",
+      "glb_bytes": 4919968,
+      "glb_sha256": "f7ac5d17797e045a0cd5d9e68d9ff1e2996e6802d8eec7c81c4031ffdc1f2e34",
+      "master_sha256": "dd1ac5a1b69d6a28fc82d232d4b7122978ca3f688eb5cff24a4f431dec735e16",
       "clips": [
         "breach",
         "landed",
@@ -1002,18 +1237,32 @@
         0.4436885118484497,
         0.23138317465782166
       ],
-      "geometry_signature": "5fffb82855c462f61780c8ad7e857671e37b366d51e3d76f34754e7f54ab4e74",
+      "geometry_signature": "7d6141faae2ff57c8b8de57e813e6ac4d19be09950c2905adcdc31f9f8aa80b9",
       "contact_failures": [],
       "max_attachment_distance_m": 0.0018676932668313384,
       "attachment_groups": 8,
-      "required_views_present": []
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "red_mullet",
       "failures": [],
-      "glb_bytes": 4602164,
-      "glb_sha256": "b5edb5745bd647fc5648e0de62638b976e869cf6ef6d7465b9e180c490c17249",
-      "master_sha256": "9e2637fb7212c098e49a4d8e7bb51341231e41ff058c5734975efaf7b1cc6536",
+      "glb_bytes": 4602276,
+      "glb_sha256": "58fc14f9cde61ba440b22f899880a17edd98a11d0dfb6220130dc2c6296a516b",
+      "master_sha256": "b315c142fefe200dcc92629396ed6bf674f95b56fce89b8f42beddaaab76a0cd",
       "clips": [
         "breach",
         "landed",
@@ -1028,14 +1277,28 @@
       ],
       "rest_size_xyz": [
         1.0,
-        0.36966776847839355,
+        0.3628788888454437,
         0.22246521711349487
       ],
-      "geometry_signature": "769e5deaf3b84f85181fad586c1f22c67b7409e22bbf388f72cb9a5cc7440962",
+      "geometry_signature": "f7452ca8118961ccc48ec8fd82c3f748b82d62039fc46e2ae4181d46d08eeb26",
       "contact_failures": [],
-      "max_attachment_distance_m": 0.0018345010466873646,
-      "attachment_groups": 8,
-      "required_views_present": []
+      "max_attachment_distance_m": 0.002508625853806734,
+      "attachment_groups": 10,
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "painted_comber",
@@ -1064,7 +1327,21 @@
       "contact_failures": [],
       "max_attachment_distance_m": 0.0018708424177020788,
       "attachment_groups": 8,
-      "required_views_present": []
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "common_pandora",
@@ -1093,7 +1370,21 @@
       "contact_failures": [],
       "max_attachment_distance_m": 0.001854192465543747,
       "attachment_groups": 8,
-      "required_views_present": []
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "alligator_gar",
@@ -1122,7 +1413,21 @@
       "contact_failures": [],
       "max_attachment_distance_m": 0.002191350096836686,
       "attachment_groups": 7,
-      "required_views_present": []
+      "required_views_present": [
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "longnose_gar",
@@ -1152,8 +1457,20 @@
       "max_attachment_distance_m": 0.0019224630668759346,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "bowfin",
@@ -1183,8 +1500,20 @@
       "max_attachment_distance_m": 0.002103338483721018,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "largemouth_bass",
@@ -1214,8 +1543,20 @@
       "max_attachment_distance_m": 0.001793971168808639,
       "attachment_groups": 8,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "channel_catfish",
@@ -1253,7 +1594,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "flathead_catfish",
@@ -1283,8 +1629,20 @@
       "max_attachment_distance_m": 0.0021221721544861794,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "chinese_sturgeon",
@@ -1322,7 +1680,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "mandarin_fish",
@@ -1352,8 +1715,20 @@
       "max_attachment_distance_m": 0.0018144837813451886,
       "attachment_groups": 8,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "northern_snakehead",
@@ -1391,7 +1766,12 @@
         "pose_struggle",
         "pose_breach",
         "pose_landed"
-      ]
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "yellowcheek",
@@ -1421,8 +1801,20 @@
       "max_attachment_distance_m": 0.002013001823797822,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "review_signoff.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "southern_catfish",
@@ -1452,8 +1844,20 @@
       "max_attachment_distance_m": 0.003456374164670706,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     },
     {
       "species": "longsnout_catfish",
@@ -1483,8 +1887,20 @@
       "max_attachment_distance_m": 0.003669856349006295,
       "attachment_groups": 7,
       "required_views_present": [
-        "hero"
-      ]
+        "hero",
+        "top",
+        "side",
+        "underside",
+        "pose_swim",
+        "pose_struggle",
+        "pose_breach",
+        "pose_landed"
+      ],
+      "visual_review": {
+        "record": "visual_review.json",
+        "passed": true,
+        "failures": []
+      }
     }
   ]
 }
