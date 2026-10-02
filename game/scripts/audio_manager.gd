@@ -25,12 +25,14 @@ func apply(settings: Dictionary) -> void:
 	AudioServer.set_bus_mute(0,not enabled)
 
 func cue(kind: String) -> void:
+	# Pre-hook information is carried by the float alone, including vibration.
+	if kind in ["nibble", "bite"]: return
 	var path: String = "res://assets/audio/" + kind + ".wav"
 	if has_output and ResourceLoader.exists(path) and enabled:
 		effect.stream = load(path)
 		effect.play()
-	if vibration and OS.get_name() == "Android" and kind in ["bite","hook","catch"]:
-		Input.vibrate_handheld(65 if kind == "bite" else 30)
+	if vibration and OS.get_name() == "Android" and kind in ["hook","catch"]:
+		Input.vibrate_handheld(30)
 
 func suspend(value: bool) -> void:
 	if ambience: ambience.stream_paused = value

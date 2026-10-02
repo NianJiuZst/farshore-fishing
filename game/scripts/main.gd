@@ -443,7 +443,7 @@ func _process(delta: float) -> void:
 		_progress_label.text="收线 %d%%" % roundi(session.progress*100)
 		_tension_label.add_theme_color_override("font_color",Color("ff9276") if session.tension>0.82 else Color.WHITE)
 		_hint.text="张力过高，松手卸力" if session.tension>0.82 else "按住收线，松手卸力"
-		_action.text = "卸力" if session.reeling else "收线"
+		_action.text = "收线"
 	elif session.state == Session.State.CHARGING:
 		_hint.text = "落点距离 %d%% · 松手投出" % roundi(minf(session.charge,float(catalog.gear[_effective_gear_id()].reach))*100)
 
@@ -468,7 +468,7 @@ func _refresh_location_labels() -> void:
 	_spot_label.text = str(catalog.spots.get(spot_id,{}).get("name",spot_id))
 	_bait_control.icon_kind=bait_id
 	if scenery.has_method("set_gear_profile"): scenery.set_gear_profile(catalog.gear[_effective_gear_id()])
-	if session.state not in [Session.State.FIGHT,Session.State.BITE]: _action.icon_kind = _current_rod_icon()
+	if session.state in [Session.State.IDLE,Session.State.CHARGING,Session.State.CASTING]: _action.icon_kind = _current_rod_icon()
 	_update_wallet()
 
 func _update_wallet() -> void:
@@ -500,12 +500,14 @@ func _action_cancel() -> void:
 	session.cancel_input()
 
 func _session_changed(value: int) -> void:
-	_action.icon_kind="reel" if value==Session.State.FIGHT else ("hook" if value==Session.State.BITE else _current_rod_icon())
+	# The reel remains visually identical throughout float observation. Only the
+	# float itself can reveal a committed bite, never the control or HUD.
+	_action.icon_kind="reel" if value in [Session.State.WAITING,Session.State.NIBBLE,Session.State.BITE,Session.State.FIGHT] else _current_rod_icon()
 	_nav_rail.visible=value not in [Session.State.FIGHT,Session.State.CAUGHT]
 	_bait_control.disabled=value==Session.State.CAUGHT
 	_charge.visible = value == Session.State.CHARGING
 	_bars.visible = value == Session.State.FIGHT
-	_action.disabled = value in [Session.State.CASTING,Session.State.WAITING,Session.State.NIBBLE,Session.State.CAUGHT,Session.State.ESCAPED,Session.State.PAUSED]
+	_action.disabled = value in [Session.State.CASTING,Session.State.CAUGHT,Session.State.ESCAPED,Session.State.PAUSED]
 	match value:
 		Session.State.IDLE:
 			_status.text = "准备抛竿"
@@ -518,19 +520,13 @@ func _session_changed(value: int) -> void:
 			_status.text = "正在抛竿"
 			_hint.text = "落点会影响能遇见的鱼群"
 			_action.text = "抛竿中"
-		Session.State.WAITING:
-			_status.text = "等待咬钩"
-			_hint.text = "浮漂轻动是试探，明显下沉后再提竿"
-			_action.text = "静候咬钩"
-		Session.State.NIBBLE:
-			_status.text = "有鱼在试探"
-			_hint.text = "再耐心一点，准备提竿"
-			_action.text = "试探"
-		Session.State.BITE:
-			_status.text = "咬钩了！"
-			_hint.text = "现在点击，提起鱼竿"
-			_action.text = "提竿！"
+		Session.State.WAITING, Session.State.NIBBLE, Session.State.BITE:
+			_status.text = "观察鱼漂"
+			_hint.text = "观察鱼漂 · 按下收线，过早会空竿"
+			_action.text = "收线"
 		Session.State.FIGHT:
+			_status.text = "控线遛鱼"
+			_hint.text = "按住收线，松手卸力"
 			_action.text = "收线"
 		Session.State.CAUGHT:
 			_action.text = "起鱼中"
@@ -562,9 +558,10 @@ func _fishing_ended(success: bool, record: Dictionary) -> void:
 	else:
 		store.abandon_session(session.session_id)
 		sound.cue("escape")
-		_open_page("escape","鱼已逃脱",_finish_result)
+		var empty_cast: bool = session.escape_reason.begins_with("空竿")
+		_open_page("escape","空竿收回" if empty_cast else "鱼已逃脱",_finish_result)
 		_page.add_child(_text(session.escape_reason,27))
-		_page.add_child(_text("逃脱不会增加钓获数，也不会消耗鱼饵。下一竿随时可以开始。",22,MUTED))
+		_page.add_child(_text("没有计入钓获，也没有消耗鱼饵。下一竿随时可以开始。",22,MUTED))
 		_page.add_child(_button("再试一竿",_finish_result,true))
 
 func _settle(present_result: bool = true) -> void:
@@ -582,9 +579,11 @@ func _settle(present_result: bool = true) -> void:
 	if present_result: _show_result()
 
 func _cast_presentation_finished() -> void:
-	# Keep the Session state machine authoritative; only its presentation clock
-	# was held. Its normal CASTING → WAITING transition resumes next frame.
-	pass
+	# The full character cast has already elapsed while simulation was gated.
+	# Make the landed float actionable now, rather than add a second cast timer.
+	# A late or duplicate animation callback cannot restart another phase.
+	if session.state == Session.State.CASTING and not scenery.cast_in_progress:
+		session.set_state(Session.State.WAITING)
 
 func _landing_presentation_finished(record: Dictionary) -> void:
 	if not _landing_pending or str(record.get("catch_id","")) != str(_last_record.get("catch_id","")): return
@@ -761,7 +760,7 @@ func _show_prepare() -> void:
 		_page.add_child(_button("使用已装备钓竿",_clear_trial_gear))
 	_page.add_child(_button("调整钓竿与鱼饵",_show_gear))
 	_page.add_child(_text(str(spot.get("cast_hint","长按蓄力，松手抛竿")),23,MUTED))
-	_page.add_child(_text("浮漂下沉时提竿 → 按住收线，张力高时松手",23,MUTED))
+	_page.add_child(_text("鱼漂持续下沉、送漂或走漂时再收线；轻点试探时提竿会空竿",23,MUTED))
 	var enter: Button = _button("进入钓点",_enter_fishery,true)
 	enter.disabled = store.read_only or not _content_ok or not _can_use_spot(spot_id) or region_id not in store.state.get("unlocked_regions",[])
 	_page_footer.add_child(enter)

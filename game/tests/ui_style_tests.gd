@@ -119,9 +119,15 @@ func _run() -> void:
 	_check_action_position("charging", "rod")
 	var fish: Dictionary = app.encounter.make_individual(app.catalog.fish["common_carp"], "lake_shore", "lake", "worm", 2, "day", "clear")
 	app.session.cast(fish, app.catalog.gear[2])
-	app.session.set_state(FishingSession.State.BITE)
-	await _audit("bite", app)
-	_check_action_position("bite", "hook")
+	var float_ui: Array = []
+	for phase: int in [FishingSession.State.WAITING, FishingSession.State.NIBBLE, FishingSession.State.BITE]:
+		app.session.set_state(phase)
+		await _audit("float_observation_%d" % phase, app)
+		_check_action_position("float_observation_%d" % phase, "reel")
+		_check(not app._action.disabled and app._action.text == "收线", "reel stays enabled and equally labeled throughout float observation")
+		var signature: Array = [app._action.text, app._action.icon_kind, app._action.disabled, app._action.label_color, app._action.modulate, app._status.text, app._hint.text, app._bars.visible, app._nav_rail.visible]
+		if float_ui.is_empty(): float_ui = signature
+		else: _check(signature == float_ui, "nibble/bite provides no HUD, color, label, or navigation giveaway")
 	app.session.press()
 	await _audit("fight", app)
 	_check_action_position("fight", "reel")
