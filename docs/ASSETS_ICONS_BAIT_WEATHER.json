@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "asset_set": "Farshore bait, weather and measuring icons",
+  "status": "complete",
+  "generation_mode": "Built-in image_gen; one independent call per icon, no API key or CLI fallback",
+  "license_caveat": "AI-generated assets. No third-party stock artwork is incorporated. This provenance record is not a legal opinion, copyright registration, or warranty of exclusivity; usage is subject to applicable OpenAI terms and local law.",
+  "runtime_processing": "Original generated 1254×1254 RGBA masters are preserved unchanged. Pillow LANCZOS downsampling places each complete original at 408×408 pixels centered at (52,52) within a transparent 512×512 RGBA canvas, ensuring at least 10 percent transparent exterior margin. No content was painted, recolored, substituted, cropped or thresholded programmatically.",
+  "assets": [
+    {
+      "kind": "worm",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: a single natural rosy earthworm in a graceful loosely curled S shape, soft coral-pink segmented body with gently tapered ends and subtle anatomical texture. This is realistic fishing bait painted beautifully, not a cute character; no eyes, face, mouth, accessories, hook or container.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-7eb61728-16bd-4be0-b2fc-9e3ca4b221fb.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "Single natural rosy segmented worm with graceful curved silhouette; no cute face or eyes.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/worm.png",
+      "runtime_path": "game/assets/ui/icons/worm.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "26dec17a0f05c7974c9f5f6c6c0eadb0b80588492858ddf2c60bbfc4a0ad1413",
+        "bytes": 892195,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 1202768,
+        "alpha_partial_pixels": 368868,
+        "alpha_opaque_pixels": 880,
+        "alpha_nonzero_bbox": [
+          0,
+          21,
+          1234,
+          1230
+        ],
+        "alpha_at_least_8_bbox": [
+          97,
+          90,
+          1222,
+          1153
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "3df5cbc8126c61d20b73fbc079f0ad6c101c7567e95054e4d82eccfd045d14b6",
+        "bytes": 115265,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 222045,
+        "alpha_partial_pixels": 39115,
+        "alpha_opaque_pixels": 984,
+        "alpha_nonzero_bbox": [
+          81,
+          79,
+          452,
+          429
+        ],
+        "alpha_at_least_8_bbox": [
+          83,
+          81,
+          450,
+          427
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    },
+    {
+      "kind": "grain",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: a small natural cluster of exactly five plump golden bait kernels, mostly golden corn with one or two wheat-like grains, casually overlapping into a compact mound. Tactile warm gold surfaces, subtle amber creases and highlights. No container, bowl, bag, foliage or extra objects.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-6acf0521-8473-48d1-bd41-d6eae66bd102.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "Five visible kernels: three corn kernels and two wheat-shaped grains; no container.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/grain.png",
+      "runtime_path": "game/assets/ui/icons/grain.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "d24bd2bf685fe404f0969f5e098792e85446557d79aed849358022da598c2331",
+        "bytes": 1302899,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 927919,
+        "alpha_partial_pixels": 644176,
+        "alpha_opaque_pixels": 421,
+        "alpha_nonzero_bbox": [
+          0,
+          21,
+          1206,
+          1254
+        ],
+        "alpha_at_least_8_bbox": [
+          65,
+          172,
+          1202,
+          1058
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "7ba21fc586d1a995dc6982a8c70a5f84fc810e6b4f60c5d6a9fd4288c05a2ed4",
+        "bytes": 157661,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 193350,
+        "alpha_partial_pixels": 68102,
+        "alpha_opaque_pixels": 692,
+        "alpha_nonzero_bbox": [
+          71,
+          85,
+          445,
+          438
+        ],
+        "alpha_at_least_8_bbox": [
+          73,
+          108,
+          443,
+          396
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    },
+    {
+      "kind": "shrimp",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: one whole curved pink-orange bait shrimp, graceful compact crescent body, detailed translucent segmented shell and tail fan, complete thin antennae kept comfortably inside the margin. Recognizably natural shrimp, no cartoon face, no hook, container, garnish or extra creatures.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-9f376205-770f-4978-95ab-7f6f244cf28b.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "One complete curved bait shrimp, with readable tail and intact antennae.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/shrimp.png",
+      "runtime_path": "game/assets/ui/icons/shrimp.png",
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "5ace75a7304d412c7d1b45187dc6c50abf9a6ae39490aa442c73ac9dfb393eda",
+        "bytes": 1389184,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 1019618,
+        "alpha_partial_pixels": 552791,
+        "alpha_opaque_pixels": 107,
+        "alpha_nonzero_bbox": [
+          0,
+          21,
+          1241,
+          1216
+        ],
+        "alpha_at_least_8_bbox": [
+          33,
+          149,
+          1234,
+          1135
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "10c89aa74b7d1bfe37c8e2e96053e6821fecc5311f405a5967ae191b80a35ed3",
+        "bytes": 178153,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 204039,
+        "alpha_partial_pixels": 56611,
+        "alpha_opaque_pixels": 1494,
+        "alpha_nonzero_bbox": [
+          52,
+          73,
+          456,
+          424
+        ],
+        "alpha_at_least_8_bbox": [
+          63,
+          100,
+          454,
+          421
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    },
+    {
+      "kind": "lure",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: one beautifully crafted minnow-shaped fishing lure, slightly diagonal from lower left to upper right. Painted muted teal back, pearly warm-gold belly, tiny realistic glass lure eye, fine scale strokes and polished brass attachment eyelets. Include one small silver metal fishing hook attached beneath the lure and fully visible, with plausible curved geometry. Clearly an inanimate angler's tackle item, no caught fish, no fishing line, no water, no container.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-111e8a4e-cfe3-47fc-93fb-169e92350f9a.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/lure.png",
+      "runtime_path": "game/assets/ui/icons/lure.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "One teal/gold minnow tackle lure with a clearly attached metal hook; no caught fish.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "bf233b1a8768f952f7e2492614c2cda94d2ab252c783662ef78dfb85488f45ba",
+        "bytes": 1003347,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 1207470,
+        "alpha_partial_pixels": 364613,
+        "alpha_opaque_pixels": 433,
+        "alpha_nonzero_bbox": [
+          25,
+          19,
+          1240,
+          1254
+        ],
+        "alpha_at_least_8_bbox": [
+          44,
+          104,
+          1237,
+          1149
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "c1b1628ba0284b6b156af4ea16fe7511941f077631cd9931d97992228a72f332",
+        "bytes": 124210,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 222954,
+        "alpha_partial_pixels": 38154,
+        "alpha_opaque_pixels": 1036,
+        "alpha_nonzero_bbox": [
+          64,
+          62,
+          457,
+          447
+        ],
+        "alpha_at_least_8_bbox": [
+          66,
+          86,
+          455,
+          426
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    },
+    {
+      "kind": "sun",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: a single small warm-gold sun, a rounded amber-gold disc surrounded by soft sculpted rounded rays. The rays are organic thick tapered forms with painterly shading, forming an immediately readable sunny-weather silhouette. Beautiful softly dimensional golden sun, not a medal, badge, coin or framed emblem. No facial features, no clouds, no sky background.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-ed4c6420-e332-473c-863a-7532b2124f5d.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/sun.png",
+      "runtime_path": "game/assets/ui/icons/sun.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "One warm golden disc with sculpted rays, without a badge frame or face.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "3afd3b504dc9ffeb68f0dc13e6c26420b34be7c09249ebd668d9cba121f16a6c",
+        "bytes": 1488664,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 816258,
+        "alpha_partial_pixels": 755469,
+        "alpha_opaque_pixels": 789,
+        "alpha_nonzero_bbox": [
+          0,
+          11,
+          1236,
+          1214
+        ],
+        "alpha_at_least_8_bbox": [
+          46,
+          36,
+          1220,
+          1202
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "a4fb54fdd47931a52242f08692e93525c355402c531e814a7b63505ff277c11e",
+        "bytes": 177586,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 181294,
+        "alpha_partial_pixels": 79443,
+        "alpha_opaque_pixels": 1407,
+        "alpha_nonzero_bbox": [
+          64,
+          56,
+          451,
+          445
+        ],
+        "alpha_at_least_8_bbox": [
+          66,
+          63,
+          449,
+          443
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    },
+    {
+      "kind": "dusk",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: a warm amber low-setting sun partially hidden behind a compact curved cluster of turquoise horizon waves. A coherent isolated sun-and-waves icon; sun a glowing warm amber disc with restrained subtle sculpted short rays, waves two or three softly curving painterly turquoise crests with small gold-lit edges. No full sky or scenic rectangle, no frame, no clouds, no land, no external glow. All empty areas truly transparent.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-3bfb7338-f4bb-40c7-80c9-69e2ff5ca0ff.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/dusk.png",
+      "runtime_path": "game/assets/ui/icons/dusk.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "Amber sun behind a compact turquoise wave cluster; transparent empty areas, without a sky rectangle.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "3c15805c8f43f28913e68611ce2f3fde9695ce269d9219aba9e08e07ae611240",
+        "bytes": 1435325,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 907353,
+        "alpha_partial_pixels": 664579,
+        "alpha_opaque_pixels": 584,
+        "alpha_nonzero_bbox": [
+          0,
+          21,
+          1230,
+          1254
+        ],
+        "alpha_at_least_8_bbox": [
+          62,
+          116,
+          1190,
+          1109
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "d273a9391359aedde4b443caabbb72d961d9fbde970940619458e70b5527f5c4",
+        "bytes": 171063,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 191900,
+        "alpha_partial_pixels": 68875,
+        "alpha_opaque_pixels": 1369,
+        "alpha_nonzero_bbox": [
+          70,
+          59,
+          451,
+          415
+        ],
+        "alpha_at_least_8_bbox": [
+          72,
+          90,
+          440,
+          413
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    },
+    {
+      "kind": "rain",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: one soft pale gray-blue rain cloud with exactly three clearly separated turquoise raindrops beneath it. The cloud is a softly sculpted fluffy form with creamy upper-left highlights, subdued blue-gray lower shading and fine gouache brushwork; the three drops have rounded teardrop silhouettes and subtle glossy volume. A coherent isolated cloud-and-drops weather icon. No sun, no lightning, no snow, no sky, no puddle, no additional weather.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-13c8c322-72f7-422c-bd65-a1a75771cde7.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/rain.png",
+      "runtime_path": "game/assets/ui/icons/rain.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "One gray-blue cloud and exactly three turquoise raindrops.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "8427e87a8cd9ef7300290a39c99b4f5c42d24bc82233d4c49049aefd15e86665",
+        "bytes": 1201511,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 934767,
+        "alpha_partial_pixels": 636765,
+        "alpha_opaque_pixels": 984,
+        "alpha_nonzero_bbox": [
+          0,
+          21,
+          1228,
+          1234
+        ],
+        "alpha_at_least_8_bbox": [
+          66,
+          111,
+          1203,
+          1165
+        ],
+        "outermost_edge_max_alpha": 1
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "0c1f354adde267924c39ff5c5b87e84867a88fa1d521ca6bf997c86d6b61fed1",
+        "bytes": 140876,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 193962,
+        "alpha_partial_pixels": 67160,
+        "alpha_opaque_pixels": 1022,
+        "alpha_nonzero_bbox": [
+          71,
+          86,
+          445,
+          449
+        ],
+        "alpha_at_least_8_bbox": [
+          73,
+          88,
+          443,
+          431
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    },
+    {
+      "kind": "ruler",
+      "exact_prompt": "Use case: stylized-concept. Asset type: high-definition hand-painted inventory icon for a cozy fishing adventure game. Create ONE polished, premium raster illustration, square 1024 by 1024 pixels or larger, on a genuinely transparent alpha background. Style: refined hand-painted cozy adventure illustration with tactile gouache brush shading and convincing nearly three-dimensional object volume, detailed at high resolution yet clearly legible at 60 pixels. Palette: warm gold, brass, muted teal and coral accents; natural materials and warm earthy tones appropriate to the subject. Soft light from upper left, gentle self-shading only. Composition: one centered isolated object or explicitly described coherent object cluster, full silhouette visible, generous transparent margin of at least 10 percent around all extents. No square tile, background plate, frame, border, ground, scene, vignette, glow halo, external cast shadow, writing, letters, numerals, logo or watermark. Do not render a checkerboard pattern; background must be genuinely transparent. Subject: a single traditional warm wooden measuring stick with polished brass end caps, oriented diagonally from lower left to upper right. A broad straight honey-oak wooden strip with tactile wood grain, beveled edges, small physical tick grooves along one long side in two lengths, and plain brass ends. The entire measuring stick must fit within the icon. ABSOLUTELY NO NUMBERS, NO LETTERS, NO LABELS, NO WRITING: measurement marks are simple short unlabeled engraved tick grooves only. One solid stick, not a folding ruler and not a tape measure; no extra objects.",
+      "source_image": "/workspace/scratch/c16084497664/generated_images/exec-ba126d2a-8432-4cf5-9a1f-5911c64d115e.png",
+      "generation_method": "OpenAI built-in image_gen.imagegen",
+      "generation_date_utc": "2026-10-02",
+      "transparent_background_requested": true,
+      "generation_calls": 1,
+      "master_path": "art_masters/ui_icons/ruler.png",
+      "runtime_path": "game/assets/ui/icons/ruler.png",
+      "visual_audit": {
+        "status": "passed",
+        "reviewed": "Actual generated master pixels and 512px runtime pixels on cream and deep-teal backgrounds; also 60px and 128px legibility contact sheet.",
+        "subject": "One brass-ended wooden measuring stick with engraved tick grooves; no letters or numerals. The grooves are decorative icon art, not a calibrated gameplay measuring control.",
+        "edges": "Full silhouette intact, no visible matte or external cast shadow, no square tile, no text. True variable alpha retained. Original generated files contain isolated extremely faint alpha specks; these are not visible at runtime and are retained without masking or repainting.",
+        "style": "Detailed warm hand-painted inventory rendering with soft upper-left light; natural bait icons are more realistic than the sculptural weather icons, sharing tactile painted volume and palette."
+      },
+      "master": {
+        "dimensions_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "sha256": "8553ab4666c0c756050721cef48e054c992d6ede295b69f8647beacb134f2ebf",
+        "bytes": 799114,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 1271746,
+        "alpha_partial_pixels": 300266,
+        "alpha_opaque_pixels": 504,
+        "alpha_nonzero_bbox": [
+          65,
+          42,
+          1222,
+          1220
+        ],
+        "alpha_at_least_8_bbox": [
+          69,
+          45,
+          1220,
+          1214
+        ],
+        "outermost_edge_max_alpha": 0
+      },
+      "runtime": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "sha256": "3e5aa957eed89abda5ac0b3b049ec71a1ce42b6cfbdbf85dfb75e918763c2971",
+        "bytes": 99655,
+        "alpha_min_max": [
+          0,
+          255
+        ],
+        "alpha_zero_pixels": 229594,
+        "alpha_partial_pixels": 31884,
+        "alpha_opaque_pixels": 666,
+        "alpha_nonzero_bbox": [
+          72,
+          64,
+          451,
+          449
+        ],
+        "alpha_at_least_8_bbox": [
+          74,
+          66,
+          449,
+          447
+        ],
+        "outermost_edge_max_alpha": 0
+      }
+    }
+  ],
+  "completed_utc": "2026-10-02T10:00:09.397059+00:00"
+}
