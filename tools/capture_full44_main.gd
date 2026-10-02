@@ -26,7 +26,7 @@ func _run() -> void:
 	app.scenery._animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 	app.sound.apply({"sound":false,"vibration":false,"volume":0.0})
 	app.sound.suspend(true)
-	print("EVIDENCE_SCOPE: actual Main; isolated save with Norway/rod ownership seeded; ordinary generated encounter and balanced fight; no trial target, readiness override or fake scene")
+	print("EVIDENCE_SCOPE: genuine first-run empty isolated save; default lake/starter rod; no seeded unlocks or catches" if "--first-run" in OS.get_cmdline_user_args() else "EVIDENCE_SCOPE: actual Main; isolated save with Norway/rod ownership seeded; ordinary generated encounter and balanced fight; no trial target, readiness override or fake scene")
 	print("ACTUAL_RENDERER ",RenderingServer.get_current_rendering_method()," | ",RenderingServer.get_video_adapter_name()," | ",RenderingServer.get_video_adapter_api_version())
 	print("VERSION ",ProjectSettings.get_setting("application/config/version")," MODEL_READINESS complete=",app._models_complete," errors=",app._model_errors.size()," ROOT_MSAA=",root.msaa_3d," physical=",root.size," logical=",app.size)
 	_check(root.msaa_3d==Viewport.MSAA_4X and app.size==Vector2(root.size),"actual capture fills requested aspect with native4x MSAA")

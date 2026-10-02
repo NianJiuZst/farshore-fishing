@@ -23,3 +23,5 @@ Use `tools/capture_full44_main.gd` through `tools/render_godot.py` with a fresh 
 The image manifest records physical/logical sizes, actual renderer/MSAA, strict44 readiness, ordinary recipe, catch and runtime hashes. Existing evidence directories are never overwritten. This is reproducible production UI evidence, never a fake scene, readiness override or a claim about a user's own catch.
 
 Final frozen pass counts and renderer caveats belong in `3D_ACCEPTANCE.md`; development runs are not substituted for the final hash-bound gate.
+
+Focused expanded-layout checkpoint: both physical/logical sizes pass native-scene full44 minimum/maximum framing and UI safe-inset checks. The touch fixture was corrected after measuring that the baseline carp detail has196px overflow while the taller page fits entirely (0px overflow). Baseline still requires the original overflowing drag; the tall case requires all content visible and proves TouchScroll recognized the real drag without the3D preview intercepting it. Focused touch results are132/132 baseline and130/130 tall. These focused results do not replace the final frozen aggregate.

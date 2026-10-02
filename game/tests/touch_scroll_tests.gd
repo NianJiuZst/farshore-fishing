@@ -501,6 +501,11 @@ func _test_production_preview_page(app: Control) -> void:
 	_check(preview!=null and preview.model is Node3D,"actual production detail page mounts the registered3D fish")
 	if preview!=null:
 		var page_scroll: ScrollContainer=app._page.get_parent()
+		var maximum: int=maxi(0,floori(page_scroll.get_v_scroll_bar().max_value-page_scroll.get_v_scroll_bar().page))
+		var prior_drags: int=page_scroll.completed_drags
+		_check(maximum>=170 or "--tall" in OS.get_cmdline_user_args(),"baseline3D detail retains its original overflowing drag fixture")
+		if maximum==0:
+			_check(page_scroll.get_global_rect().grow(1.0).encloses(app._page.get_global_rect()),"nonoverflowing tall detail keeps all page content visible")
 		var start: Vector2=preview.get_global_rect().get_center()
 		_touch(start,true)
 		_emulated_button(start,true)
@@ -509,7 +514,8 @@ func _test_production_preview_page(app: Control) -> void:
 		_touch(start-Vector2(0,180),false)
 		_emulated_button(start-Vector2(0,180),false)
 		await process_frame
-		_check(page_scroll.scroll_vertical>=170 and app._screen=="species","actual screen drag beginning on3D fish scrolls the detail page without input capture")
+		print("PREVIEW_TOUCH_RANGE maximum=",page_scroll.get_v_scroll_bar().max_value-page_scroll.get_v_scroll_bar().page," offset=",page_scroll.scroll_vertical," completed_drags=",page_scroll.completed_drags)
+		_check(page_scroll.scroll_vertical>=mini(170,maximum) and page_scroll.completed_drags==prior_drags+1 and app._screen=="species","real drag starting on3D fish is owned by page and reaches its available scroll range without input capture")
 		page_scroll.stop_gesture()
 	app._show_prepare()
 	await _layout_frames()
