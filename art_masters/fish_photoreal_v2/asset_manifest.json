@@ -1,0 +1,267 @@
+{
+  "format_version": 1,
+  "generated_on": "2026-10-02",
+  "generator": "OpenAI built-in imagegen",
+  "purpose": "Photorealistic illustrative encyclopedia and catch-card fish assets. Not diagnostic scientific plates or wild photographs.",
+  "orientation": "Head left, tail right except right-eyed European plaice; flatfish shown natural ocular side",
+  "variants": "Runtime PNG retains all master pixels and alpha. Thumbnails are Lanczos downscaled by ImageMagick to max512px. No generated imagery is replaced by procedural drawing.",
+  "coordinate_system": "All normalized values are relative to full original/runtime canvas, not subject bounding box. Bboxes are [left,top,right,bottom] with right/bottom exclusive. Ruler uses nose/tail x coordinates, excludes whisker extension.",
+  "complete": false,
+  "asset_count": 4,
+  "assets": [
+    {
+      "species_id": "alligator_gar",
+      "name": "鳄雀鳝",
+      "scientific_name": "Atractosteus spatula",
+      "master": "masters/alligator_gar.png",
+      "runtime": "runtime/alligator_gar.png",
+      "thumb": "thumbs/alligator_gar_thumb.png",
+      "width": 2048,
+      "height": 768,
+      "thumb_width": 512,
+      "thumb_height": 192,
+      "thumb_subject_bbox_px": [
+        6,
+        36,
+        506,
+        163
+      ],
+      "thumb_sha256": "17cc4a8dc96d794f1f0aa3ab9eb655b82020a3995906066387b42c00effe343c",
+      "subject_bbox_px": [
+        26,
+        145,
+        2024,
+        650
+      ],
+      "subject_bbox_normalized": [
+        0.0126953125,
+        0.18880208333333334,
+        0.98828125,
+        0.8463541666666666
+      ],
+      "nose_normalized": [
+        0.01318359375,
+        0.453125
+      ],
+      "tail_normalized": [
+        0.98779296875,
+        0.20182291666666666
+      ],
+      "ruler_extent_normalized": [
+        0.01318359375,
+        0.98779296875
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "26d0ba87b60f884195cff782e159f546cf8ac84da3ca8e0b288de4954d13f449",
+      "transparent_fraction": 0.6318168640136719,
+      "morphology_reference": "短而宽的鳄状吻，粗壮圆筒身体和菱形硬鳞；背鳍、臀鳍后移，圆尾及鳍上有深色斑点。",
+      "fact_sources": [
+        {
+          "url": "https://www.fws.gov/species/alligator-gar-atractosteus-spatula",
+          "title": "USFWS: Alligator Gar",
+          "supports": "学名、密西西比流域南部范围、菱形硬鳞和大型体形",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/alligator-gar",
+          "title": "MDWFP: Alligator Gar",
+          "supports": "南密西西比、河汊与牛轭湖、宽吻和鳍部斑点；有真实大型个体记录",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://myfwc.com/wildlifehabitats/profiles/freshwater/alligator-gar/",
+          "title": "FWC: Alligator Gar",
+          "supports": "约2.44米大型尺寸背景及后移鱼鳍；不是体重科研回归来源",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "chinese_sturgeon",
+      "name": "中华鲟",
+      "scientific_name": "Sinosturio sinensis",
+      "master": "masters/chinese_sturgeon.png",
+      "runtime": "runtime/chinese_sturgeon.png",
+      "thumb": "thumbs/chinese_sturgeon_thumb.png",
+      "width": 2172,
+      "height": 724,
+      "thumb_width": 512,
+      "thumb_height": 171,
+      "thumb_subject_bbox_px": [
+        2,
+        12,
+        509,
+        160
+      ],
+      "thumb_sha256": "2c8811c7675ea5fecb9b5dad15080093a8744c9ab5d17a0d2d3b56bae08b6659",
+      "subject_bbox_px": [
+        12,
+        55,
+        2159,
+        675
+      ],
+      "subject_bbox_normalized": [
+        0.0055248618784530384,
+        0.07596685082872928,
+        0.9940147329650092,
+        0.9323204419889503
+      ],
+      "nose_normalized": [
+        0.005985267034990792,
+        0.5704419889502762
+      ],
+      "tail_normalized": [
+        0.9935543278084714,
+        0.0787292817679558
+      ],
+      "ruler_extent_normalized": [
+        0.005985267034990792,
+        0.9935543278084714
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "47075e323643b30fccb2dd2a3897b8a0c9b267ce53704276cfab26c03da942ca",
+      "transparent_fraction": 0.6472412573893755,
+      "morphology_reference": "灰黑背与浅色腹；全身五列骨板，吻长而扁，口位于腹面，吻下四根短须；背鳍靠后，尾鳍上叶明显长于下叶。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/chinese-sturgeon",
+          "title": "NOAA Fisheries: Chinese Sturgeon",
+          "supports": "中华鲟身份、江海洄游、长江与中国沿海分布、下位口四须及歪尾形态；保护说明。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf",
+          "title": "NOAA: Status Review Report of Five Foreign Sturgeon",
+          "supports": "中华鲟背、侧及腹骨板，底栖取食和海洋阶段；非伏击型猛鱼。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=9762",
+          "title": "Eschmeyer’s Catalog of Fishes: Acipenser sinensis",
+          "supports": "2026年目录接受 Sinosturio sinensis；保留 Acipenser sinensis 同物异名。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "species_id": "common_carp",
+      "name": "鲤鱼",
+      "scientific_name": "Cyprinus carpio",
+      "master": "masters/common_carp.png",
+      "runtime": "runtime/common_carp.png",
+      "thumb": "thumbs/common_carp_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        6,
+        14,
+        506,
+        242
+      ],
+      "thumb_sha256": "52203b94e6009e65de6095111f653c508eba11f489e7ff81c2710dc11e559625",
+      "subject_bbox_px": [
+        22,
+        50,
+        1753,
+        836
+      ],
+      "subject_bbox_normalized": [
+        0.012401352874859075,
+        0.05636978579481398,
+        0.9881623449830891,
+        0.9425028184892897
+      ],
+      "nose_normalized": [
+        0.012965050732807215,
+        0.5738444193912063
+      ],
+      "tail_normalized": [
+        0.9875986471251409,
+        0.25817361894024804
+      ],
+      "ruler_extent_normalized": [
+        0.012965050732807215,
+        0.9875986471251409
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "4fe3609cc3fc3575550856ff16805ecb24b25eda9aa544da7f613411670ab386",
+      "transparent_fraction": 0.5145309487282799,
+      "morphology_reference": "粗壮体形，黄褐色大鳞；口角有须，背鳍基部长，尾鳍分叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Cyprinus-carpio.html",
+          "title": "Cyprinus carpio — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23079816/",
+          "title": "Genetic analysis of common carp populations sampled from Yangtze locations",
+          "supports": "长江流域石首、扬州野生群体采样支持地域分布；不是具体钓点保证"
+        },
+        {
+          "url": "https://home.nps.gov/miss/learn/nature/ascarp_common.htm",
+          "title": "National Park Service: Common carp in Mississippi River",
+          "supports": "美国引入史与密西西比河1883年记录，明确为引入种"
+        }
+      ]
+    },
+    {
+      "species_id": "olive_flounder",
+      "name": "牙鲆",
+      "scientific_name": "Paralichthys olivaceus",
+      "master": "masters/olive_flounder.png",
+      "runtime": "runtime/olive_flounder.png",
+      "thumb": "thumbs/olive_flounder_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        7,
+        10,
+        505,
+        247
+      ],
+      "thumb_sha256": "416094b1ebc69e7c7a84d369f414822021d5063a9e9bb83018ae3026c26ad985",
+      "subject_bbox_px": [
+        24,
+        34,
+        1751,
+        854
+      ],
+      "subject_bbox_normalized": [
+        0.013528748590755355,
+        0.038331454340473504,
+        0.9870349492671928,
+        0.9627959413754228
+      ],
+      "nose_normalized": [
+        0.014092446448703494,
+        0.5163472378804961
+      ],
+      "tail_normalized": [
+        0.9864712514092446,
+        0.5231116121758738
+      ],
+      "ruler_extent_normalized": [
+        0.014092446448703494,
+        0.9864712514092446
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "0575f6826de111061260fd4e0d7ff04cc47201a9692dd6534c5b6223c1e058ee",
+      "transparent_fraction": 0.4288501453412628,
+      "morphology_reference": "长椭圆扁平身体，左眼侧朝向观察者，双眼可见；橄榄褐斑驳体色，大口，长背鳍和臀鳍沿体缘伸展。",
+      "fact_sources": [
+        {
+          "url": "https://swfsc-publications.fisheries.noaa.gov/publications/CR/2025/2025Purcell2.pdf",
+          "title": "Paralichthys olivaceus — species account",
+          "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
+          "checked_on": "2026-10-02"
+        }
+      ]
+    }
+  ]
+}
