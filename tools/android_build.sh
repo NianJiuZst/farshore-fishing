@@ -58,7 +58,7 @@ ALIGNED="$ROOT/build/farshore-$ARCH-aligned.apk"
 if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script' "$ROOT/build/logs/import-$ARCH.log"; then
   echo "Godot import failed; inspect build/logs/import-$ARCH.log" >&2; exit 4
 fi
-if [[ -f "$PROJECT/scripts/trial_fishery.gd" ]]; then
+if [[ -f "$PROJECT/data/fish_3d.json" ]]; then
   "$GODOT" --headless --path "$PROJECT" --script "$ROOT/tools/inspect_imported_3d.gd" -- "$PROJECT.snapshot.json" "$AUDIT/imported-3d-scenes.json" >"$ROOT/build/logs/imported-3d-$ARCH.log" 2>&1
   if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script|ERROR:' "$ROOT/build/logs/imported-3d-$ARCH.log"; then
     echo "Imported 3D structure audit failed; inspect build/logs/imported-3d-$ARCH.log" >&2; exit 4

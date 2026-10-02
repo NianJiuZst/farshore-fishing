@@ -51,7 +51,7 @@ func _run() -> void:
 					failures.append("Missing or empty imported clip: " + path + "/" + clip)
 		models[path] = result
 		instance.free()
-	var report: Dictionary = {"models":models,"failures":failures,"scope":"Imported scene structure only; no GPU/device claim"}
+	var report: Dictionary = {"models":models,"required_scene_count":contract.glb_models.size(),"failures":failures,"scope":"Imported scene structure only; no GPU/device claim"}
 	var output: FileAccess = FileAccess.open(args[1], FileAccess.WRITE)
 	if output == null:
 		printerr("Cannot write imported scene audit")

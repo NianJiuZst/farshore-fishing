@@ -116,6 +116,10 @@ with zipfile.ZipFile(apk) as z:
             assert 'assets/'+target.removeprefix('res://') in names, f'Missing UI icon texture: {target}'
     if expected_content and expected_content.get('three_d'):
         contract = expected_content['three_d']
+        registry_bytes = z.read('assets/data/fish_3d.json')
+        assert hashlib.sha256(registry_bytes).hexdigest() == contract['registry_sha256'], '3D runtime registry differs from frozen source'
+        registry = json.loads(registry_bytes)
+        assert sorted(registry['models']) == contract['playable_species']
         settings = scalar_settings(z.read('assets/project.binary'))
         assert settings.get('rendering/renderer/rendering_method') == 'mobile', 'APK must use the Mobile renderer'
         assert settings.get('rendering/renderer/rendering_method.mobile', 'mobile') == 'mobile'
@@ -153,12 +157,15 @@ with zipfile.ZipFile(apk) as z:
         assert 'assets/assets/3d/environment/manifest.json' in names
         for notice, expected in contract.get('notice_sha256', {}).items():
             assert hashlib.sha256(z.read('assets/'+notice)).hexdigest() == expected, f'Bundled art notice differs: {notice}'
-        three_d_audit = {'playable_species':contract['playable_species'], 'playable_species_count':2,
-                        'playable_locations':1, 'legacy_catalog_is_not_all_3d':True,
+        three_d_audit = {'playable_species':contract['playable_species'], 'playable_species_count':contract['playable_species_count'],
+                        'playable_regions':contract['playable_regions'], 'playable_locations':contract['playable_locations'],
+                        'all_catalog_species_have_3d_models':True,
+                        'runtime_registry_sha256':contract['registry_sha256'],
                         'configured_renderer':'mobile', 'configured_android_driver':'vulkan',
                         'opengl_fallback_disabled':True,
                         'vulkan_manifest_features':vulkan_features,
-                        'imported_glb_scenes':len(imported['models']), 'rigged_models':3,
+                        'imported_glb_scenes':len(imported['models']), 'rigged_models':contract['rigged_model_count'],
+                        'region_scenes':len(contract['region_scene_files']), 'station_scenes':len(contract['station_scene_files']),
                         'texture_imports':len(contract['texture_files']), 'shader_payloads':shader_payloads,
                         'third_party_texture_sources':contract.get('third_party_textures', []),
                         'bundled_notices':list(contract.get('notice_sha256', {})),

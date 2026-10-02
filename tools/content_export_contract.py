@@ -38,5 +38,5 @@ def content_contract(project: Path, check_art: bool = True):
         'region_count':len(world['regions']), 'spot_count':len(world['spots']),
         'gear_count':len(world['gear']), 'bait_count':len(world['baits']),
         'ui_icon_files':sorted(str(p.relative_to(project)) for p in (project/'assets/ui/icons').glob('*.png')),
-        'three_d':three_d_contract(project),
+        'three_d':three_d_contract(project, ids),
     }
