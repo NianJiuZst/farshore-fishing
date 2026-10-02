@@ -1,5 +1,13 @@
 # Gameplay and UI integration verification
 
+## Current native-3D slice checkpoint
+
+On **2026-10-02 at 11:33 UTC**, the real current Main and all legacy production classes passed **69,160 / 69,160 assertions**, `--check-art` enabled, exit 0, with no ERROR/WARNING output. Log: `build/qa3d/core.log`. This supersedes the historical UI baselines below; the numeric total is unchanged because the same four retired-destination assertions were replaced one-for-one with explicit archived-destination assertions.
+
+The Main fixture now enters through `_show_prepare()` → `_enter_fishery()` rather than trying to close the startup lobby into fishing. Successful protected-observation fixtures advance the actual stage's landing clock before expecting a result overlay. Legacy travel destinations remain in the catalog/save, but are not advertised as playable 3D locations. Starter gear is valid in the managed trial while the archived deep-water selection remains unchanged. Pure encounter reachability, all 44 species, progression, conservation and transactional persistence assertions remain intact; the old 44-species progression is a retained-data compatibility test, not a claim that 44 native 3D fish are playable.
+
+`slice3d_tests.gd` independently covers the full presentation-bound production Main route, actual skinned meshes and animations, both playable species, camera changes, interrupted casting/landing, immediate durable saves, deferred results and duplicate callbacks. `touch_scroll_tests.gd` separately owns actual viewport touch gestures. See `3D_ACCEPTANCE.md`.
+
 ## Result and reproducible command
 
 Engine: **Godot 4.6.3.stable.official.7d41c59c4**. Tests use the shipped GDScript classes, current JSON content, real scene controls, and real SaveStore disk transactions. No fishing, encounter, or settlement algorithm is reimplemented in the test harness.
@@ -113,10 +121,10 @@ The tests instantiate the real `main.gd` Control and operate its actual methods,
 - Catalog/favorite views referencing existing history without creating catches
 - Empty search results displaying a helpful hint
 - Failed destination and bait writes rolling live selections back
-- Rejecting a gear downgrade below the current spot's requirement
+- Equipping starter gear in the managed trial while preserving an archived deep-water selection
 - Rejecting both new-region unlocks below their discovery or currency threshold; failed writes and duplicate callbacks cannot spend the unlock cost twice
-- Verifying the actual four new travel controls reflect gear requirements and a permitted expanded-region selection persists
-- Running a protected production session through Main automatically opens its saved observation result with guidance and no sale button
+- Verifying four archived destinations retain data but have no false playable-3D travel controls; a permitted legacy selection still persists through the existing compatibility method
+- Running a protected compatibility session through Main immediately saves its observation, then opens a result after the actual landing timer, with guidance and no sale button
 - Direct protected result and pending-page sale callbacks are blocked by the actual transaction layer
 - Actual release controls recover from injected disk failures, return to playable idle or clear the pending entry, and preserve all historical records without duplicate income
 - Reopening the protected pending page after a real disk reload preserves its release-only controls

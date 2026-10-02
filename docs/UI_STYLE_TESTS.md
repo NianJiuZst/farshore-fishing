@@ -1,18 +1,16 @@
-# Painted, borderless UI integration gate
+# Native-3D lobby and borderless UI integration gate
 
-## Verified result
+## Current verified result
 
-The current gate instantiates the actual production `res://scenes/main.tscn` at a **720 × 1280 logical viewport**. It loads the shipped content, textures, controls, navigation, session, and SaveStore. No replica interface or replacement gameplay algorithm is used.
+On **2026-10-02 at 11:40 UTC**, the actual production `res://scenes/main.tscn` passed **10,830 / 10,830 assertions**, **28 routes**, **215 button visits**, exit 0, with no ERROR/WARNING output. The logical viewport is **720 × 1280**. Log: `build/qa3d/ui_style.log`.
 
-On **2026-10-02, 10:12–10:14 UTC**, frozen production commit `334d594a99bd86fed030a344a48125d6c5a0c56f` passed **10,267 / 10,267 assertions**, **26 style routes**, and **220 button visits**, exit 0, with no ERROR/WARNING output. All 25 distinct HD RGBA icon files and twelve spots' retained support textures were checked. The full core suite simultaneously passed **69,160 / 69,160** with `--check-art` and real Main; save passed **314 / 314**. All 41 recorded production/test/scene/project/icon hashes were identical before and after all runs. See `UI_REGRESSION_MANIFEST.json` for exact hashes and log digests. Raw output: `build/ui-style-painted-icons.log`.
+This is production source/control integration, not a replica screen. It is headless and does not certify Android, Vulkan rendering, actual screenshot appearance, device performance, physical target size or accessibility. Rendered evidence belongs in `3D_ACCEPTANCE.md`; real synthesized touchscreen gestures belong in `touch_scroll_tests.gd`.
 
- The previous borderless-only baseline was 3,817 assertions / 208 button visits; it did not establish generated-raster completeness or cover the Settings slider target. The expanded gate retains its transparent-style, caption, target, and route checks and adds the raster, compact-HUD, interruption, and active-control contracts below.
-
-This gate is headless source/runtime-control integration. It is **not Android APK, emulator, physical-phone, GPU/rendering, visual-quality, or accessibility certification**. Core gameplay and save suites remain independent requirements.
+The historical painted-2D checkpoint was 10,267/10,267, 26 routes and 220 button visits on commit `334d594a99bd86fed030a344a48125d6c5a0c56f`. Its frozen evidence remains in `UI_REGRESSION_MANIFEST.json`. It is not presented as a test of this 3D revision.
 
 ## Reproduce safely
 
-Run from the repository root after importing assets with the documented Godot 4.6.3 editor:
+After importing assets in Godot 4.6.3, run from the repository root:
 
 ```sh
 D=$(mktemp -d /tmp/farshore-ui-style-XXXXXX)
@@ -26,53 +24,43 @@ printf 'Saved log: %s/output.log\n' "$D"
 exit "$R"
 ```
 
-The script refuses to instantiate Main unless HOME and XDG_DATA_HOME are under `/tmp/farshore-ui-style-…`, and Godot's resolved user-data directory is beneath that XDG directory. Main initializes `user://` in `_ready()` before a fixture can be substituted, so every run must use a **fresh** isolation directory. No player's save is read or modified.
+The script refuses non-isolated HOME/XDG_DATA_HOME. Main initializes `user://` before its SaveStore fixture is installed, so each run needs a fresh directory. The fixture uses real disk transactions and production-generated 44-species observations. It settles/releases those observations, unlocks the retained legacy collection, and installs six favorites. Fixed production RNG seeds stabilize record banners and totals. Counts include repeated assertions and button visits, not that many independent scenarios.
 
-The separate fixture uses real SaveStore disk transactions. Its 44 discovery records come from the production encounter generator and are settled/released before all areas, equipment, and six favorites are unlocked. The encounter RNG uses a fixed seed so record-banner visibility and assertion totals are reproducible. Ordinary/protected result pages are reached through actual FishingSession cast/finish signals and Main settlement. Dummy/headless audio prevents device output.
+## Preserved control and asset contracts
 
-## Generated-raster contract
+- All 25 required HD RGBA icon sources exist and have distinct bytes, at least 512×512 dimensions, transparent cutout space/corners, painted pixels, and antialiased alpha edges
+- The production resolver loads the exact icon PNG and retains alpha; actual bindings, condition/bait icons, and generated OptionButton arrows are checked
+- The icon renderer uses texture drawing without primitive/vector or SVG substitutes; measurement marks remain valid functional geometry
+- All inspected Button/OptionButton states, including hover_pressed, remain transparent; opaque card centers, visible borders/shadows, and dark rectangular backplates fail
+- All buttons, search fields and the actual settings volume slider have targets at least 96×96 logical units
+- Live production IconAction controls have matching, contained visible captions with outline/shadow; icon/caption children do not steal input
+- Fish catalog buttons may use their adjacent specimen illustration. Trial target controls use real icons; no text-only exception was introduced
+- Disabled controls change caption/icon opacity. Native viewport mouse input on Settings Back checks hover, held feedback, transparency and its navigation callback
+- Retired decorative branding/poetic captions fail; functional title, source/legal credits and conservation instructions remain allowed
 
-- Exactly 25 named production icons are required: rod, reel, hook, bag, compass, book, heart, coin, badge, pause, settings, sound, back, arrow, sort, search, release, worm, grain, shrimp, lure, sun, dusk, rain, ruler
-- Each actual runtime PNG exists, has distinct source bytes, decodes as RGBA8, and is at least 512 × 512 pixels. It must have >10% transparent space, >2% opaque painted subject, antialiased alpha edges, and transparent corners. These checks reject absent, empty, flattened, or duplicated placeholder files
-- The production resolver must return the exact `res://assets/ui/icons/<kind>.png`; the imported texture must retain alpha. `validate_assets()` must accept the complete set
-- Runtime ExpeditionArt children must reference a supported, actually loaded PNG. The icon renderer must draw a texture and contain no primitive/vector or SVG fallback. The functional measurement ruler remains allowed to draw actual measurement marks; those marks are not an icon fallback
-- OptionButton's live dropdown arrow must be the production scaled/rotated generated-arrow texture, rather than an inherited vector icon
-- The unused badge/ruler files remain part of the complete asset set; the decorative badge is forbidden in inspected UI routes. Availability is not misrepresented as every asset being simultaneously displayed
-- Selecting each of the four real bait controls changes and persists the selection and updates the HUD to that bait's actual bitmap. Day/dusk/rain changes select the corresponding real condition bitmap
-- Pixel/format tests do not prove aesthetic quality or image-generation provenance. Generation prompts, masters, and source SHA-256 evidence are in the three `ASSETS_ICONS_*.json` manifests; visual inspection is separate
+## Native-3D contract adaptations
 
-## Transparent controls and compact HUD
+The startup route is now a real lobby with no visible cast action. The suite inspects that lobby and its preparation page before using `_enter_fishery()` to exercise fishing controls. Navigation later re-enters through the same production route instead of bypassing the lobby by mutating mode.
 
-- Every inspected Button/OptionButton has transparent normal, hover, pressed, hover_pressed, focus, and disabled style boxes. Filled centers, visible borders, visible shadows, and unrecognized textured style boxes fail
-- Buttons, editable search, and the volume slider have laid-out targets of at least **96 × 96 logical units**. This is not a claim about physical millimeters or Android density; native popup-menu item dimensions are not certified
-- Actions use the production IconAction implementation with a matching visible caption, contained text geometry, and outline/shadow. Icon/caption children ignore pointer input. Catalog species actions may use their own adjacent fish illustration instead of a redundant pictogram
-- Disabled actions change icon/caption opacity. Actual viewport mouse movement, press, and release on Settings Back exercise hover/held feedback and the actual navigation callback
-- PanelContainer styles stay transparent; large dark ColorRect backplates are rejected. Search may have a functional underline
-- The main action stays at the safe bottom-right edge without moving across idle, charging, bite, and fight. Its bitmap changes rod → hook → reel. Secondary navigation occupies the right edge and hides during fight, including after pause/settings/resume. Location/weather stay compact at the top
-- Retired English branding and decorative/poetic captions are rejected in every inspected label. Functional game title, legal/source credits, conservation guidance, and concise control explanations remain allowed
+The retired `SceneryView.shore_support`/twelve painted-background assertions were replaced with actual Node3D/Camera3D/retained-MeshInstance3D checks. Every populated mesh has a valid rendering RID and remains owned across frames; only currently hidden, lazily generated geometry may omit a mesh. Legacy set-region presentation calls cannot overwrite the stored location. Sprite3D/AnimatedSprite3D actor substitutes fail. Full skin-weight, bone-pose, animation and moving-camera evidence is in `slice3d_tests.gd`.
 
-Progress bars/sliders, measurement marks, scenery/specimen artwork, and light full-screen menu surfaces remain legitimate functional elements. No broad rule suppresses errors or bypasses a failed style assertion.
+The primary fishing action retains its bottom-right geometry across charge/bite/fight and changes rod→hook→reel. Compact top HUD and right-edge secondary navigation remain checked. Navigation hides during fight, including after pause/settings/resume.
 
-## Actual control and interruption coverage
+## Actual controls and interruptions
 
-- Repeated system Back opens/closes pause from idle without a stale overlay
-- Casting, waiting, nibble, bite, and fight each pass through pause → real Settings action → real sound/vibration toggle and volume completion callbacks → real visible Back. Paused Main updates cannot advance encounter state or world time. Exact encounter identity/individual are retained, and held reel input is released
-- Catalog search, region/discovery selection, sort, species detail, zoom, and Back use their live production controls/signals. Search filters an exact scientific name; empty results show the real hint; region counts match the production catalog; discovery filters and sorting survive rebuilding; nested Back preserves the query
-- Repeated result Back retains the exact pending record and cannot duplicate historical counts/currency. Real ordinary/protected release controls remain in the viewport and settle through their production callbacks
-- Protected result text has no misleading sale instructions, and its footer explicitly says `放归后保留图鉴与纪录`
+- All four live bait actions update/persist selection and bind the matching HUD bitmap
+- Day/dusk/rain updates choose the correct real condition asset
+- Repeated idle system Back opens/closes pause without stale overlays
+- Cast/wait/nibble/bite/fight each visit pause→Settings→real sound/vibration/volume callbacks→visible Back; exact encounter identity and progress survive, clocks stay frozen and held reel input clears
+- Actual catalog search, region/discovery filters, sorting, species detail, zoom and Back preserve state; exact scientific-name search and empty-result guidance are checked
+- Actual ordinary and protected catch signals save first, leave the result hidden during landing, then show it after the real stage clock completes
+- Repeated result Back preserves pending record/count/currency; actual release controls remain inside the viewport and settle through production callbacks
+- Protected result copy contains no sale instruction and explicitly states `放归后保留图鉴与纪录`
 
-The catalog OptionButton selection tests emit the actual controls' selection signals after setting their value; they do not claim native popup-pointer coverage. The settings and catch tests emit real controls' callbacks; only the explicitly identified Settings Back test uses native viewport mouse input.
+Controls' production signals are used for most callbacks. Only the identified Settings Back feedback test injects native mouse input here. This suite does not claim to verify ScreenTouch/ScreenDrag, inertia, gesture cancellation or bottom-of-list reachability; the separate production touch suite is mandatory for those.
 
-## Route inspections
+## Routes
 
-The style walker visits 26 route/state combinations: fishing idle; starter home/pause/travel/gear/catalog/favorites/settings/licenses/empty-pending; undiscovered protected species; fully discovered travel/gear/catalog/favorites; discovered species and zoom; active filtered catalog; ordinary/protected result and pending pages; charging/bite/fight/escape. There are 220 button visits, not 220 unique controls or independent scenarios. Repeated per-label/per-asset/per-state assertions must not be presented as independent scenarios.
+Lobby, preparation, fishing; starter home/pause/travel/gear/catalog/favorites/settings/licenses/empty-pending; undiscovered protected species; discovered travel/gear/catalog/favorites; discovered species and zoom; active filtered catalog; ordinary/protected result and pending; charge/bite/fight/escape.
 
-## Regressions found during this revision
-
-- Replaced the old hardcoded lure expectation with the selected production bait and exercised all four real selection controls
-- Core's actual Main integration exposed orphan result Labels when there was no new-record ribbon. The UI owner changed allocation to happen only when attached; the full core rerun then exited cleanly
-- The old gate did not inspect HSlider target size. The expanded gate caught the 70-unit volume target; the UI owner increased it to 96, and the full gate passed without reducing the assertion
-- A rendered review found white support rectangles from draw-local texture lifetimes. Production retains `shore_support`; all twelve real spots now retain the intended PNG across redraw frames with a valid RID. Appearance still relies on the separate rendered review
-- Earlier baseline repairs remain covered: 88-unit discovery-filter width, a cast caption extending outside its target, and inherited opaque hover_pressed styles
-
-Actual screenshots and scenic/contact-plane inspection are documented separately by the UI author. Headless results are not screenshot evidence and do not imply Android compatibility.
+No failed functional style assertion was waived to obtain the 3D pass. Changes replace obsolete 2D/legacy-travel assumptions with the explicit managed-river scope, add lobby/preparation routes and preserve all active control, layout, caption, input and persistence checks.

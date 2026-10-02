@@ -446,6 +446,7 @@ func _test_main_integration() -> void:
 	var ui = Main.new()
 	root.add_child(ui)
 	ui.set_process(false)
+	ui.scenery.set_process(false)
 	await process_frame
 	# Virtual-time stepping emits many cues in one frame; audio output is not under test.
 	ui.sound.apply({"sound":false,"vibration":false,"volume":0.0})
@@ -455,7 +456,8 @@ func _test_main_integration() -> void:
 	var fixture: FailingStore = FailingStore.new()
 	_check(fixture.initialize(test_root.path_join("ui")), "UI store fixture initializes")
 	ui.store = fixture
-	ui._close_page()
+	ui._show_prepare()
+	ui._enter_fishery()
 	ui._action_down()
 	for tick: int in 15: ui.session.step(0.05)
 	ui._action_up()
@@ -556,7 +558,7 @@ func _test_main_integration() -> void:
 	ui.region_id = "norway"
 	ui.spot_id = "norway_boat"
 	ui._equip(0)
-	_check(int(fixture.state.gear) >= int(catalog.spots[ui.spot_id].min_gear), "cannot downgrade below current spot gear requirement")
+	_check(int(fixture.state.gear) == 0 and str(fixture.state.selection.spot_id) == "norway_boat", "trial permits starter gear without changing the archived deep-water selection")
 	_test_main_expansion(ui, fixture)
 	ui.sound.suspend(false)
 	ui.sound.ambience.stop()
@@ -617,7 +619,7 @@ func _test_main_expansion(ui: Variant, original: FailingStore) -> void:
 	ui._show_travel()
 	for spot_id: String in ["bayou_backwater", "bayou_channel", "yangtze_river", "yangtze_estuary"]:
 		var button: Button = _find_button_fragment(ui._overlay, str(catalog.spots[spot_id].name))
-		_check(button != null and button.disabled == (int(catalog.spots[spot_id].min_gear) > 1), "new-spot travel buttons obey current equipment gate: " + spot_id)
+		_check(button == null and catalog.spots.has(spot_id), "archived spot data remains but is not advertised as a playable 3D destination: " + spot_id)
 	ui._equip(2)
 	ui._choose_spot("yangtze", "yangtze_estuary")
 	_check(ui.region_id == "yangtze" and ui.spot_id == "yangtze_estuary" and str(fixture.state.selection.spot_id) == "yangtze_estuary", "actual Main travels to unlocked expanded region and persists selection")
@@ -630,6 +632,8 @@ func _test_main_expansion(ui: Variant, original: FailingStore) -> void:
 	fixture.begin_session(ui.session.session_id)
 	_check(_advance_to(ui.session, Session.State.BITE), "Main protected session reaches virtual observation")
 	_fight(ui.session)
+	# Settlement is immediate; the 3D presentation must finish before showing results.
+	for tick: int in 90: ui.scenery._process(0.05)
 	_check(ui._screen == "result" and ui._save_ok and bool(ui._last_record.get("release_only", false)), "Main automatically settles and displays actual protected observation")
 	_check(_find_button_fragment(ui._overlay, "出售") == null and _has_label_fragment(ui._overlay, "保护观察"), "protected result offers conservation guidance and no sale button")
 	var before: Dictionary = fixture.state

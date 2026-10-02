@@ -34,6 +34,8 @@ func _run() -> void:
 	app = MainScene.instantiate()
 	root.add_child(app)
 	app.set_process(false)
+	app.scenery.set_process(false)
+	app.scenery._process(0.025)
 	app.sound.apply({"sound": false, "vibration": false, "volume": 0.0})
 	app.sound.suspend(true)
 	_check(app._content_ok, "actual Main loaded its production catalog and textures")
@@ -45,7 +47,11 @@ func _run() -> void:
 	# Stable production RNG avoids record-banner/count drift between runs.
 	app.encounter.rng.seed = 20261002
 	app.session._rng.seed = 2468
-	app._close_page()
+	await _audit("lobby", app._overlay)
+	_check(app._mode == "lobby" and not app._action.is_visible_in_tree(), "startup lobby does not expose a casting control")
+	app._show_prepare()
+	await _audit("prepare", app._overlay)
+	app._enter_fishery()
 	app.session.reset()
 	await _audit("fishing", app)
 	for pair: Array in [["旅行", "compass"], ["图鉴", "book"], ["收藏", "heart"], ["行囊", "bag"], ["鱼饵", app.bait_id], ["抛竿", "rod"]]:
@@ -58,7 +64,7 @@ func _run() -> void:
 	_check(app._nav_rail.get_global_rect().position.x >= 570, "secondary navigation occupies the right screen edge")
 	_check(app._place.get_global_rect().end.y < 160 and app._condition.get_global_rect().end.y < 210, "essential location/weather HUD stays compact at top")
 	await _test_selected_bait_and_weather()
-	await _test_retained_scenery_support()
+	await _test_retained_3d_scenery()
 	# Starter saves expose disabled unlock/equipment controls and empty collections.
 	for method: String in ["_show_home", "_show_pause", "_show_travel", "_show_gear", "_show_catalog", "_show_favorites", "_show_settings", "_show_licenses", "_show_pending"]:
 		app.call(method)
@@ -73,6 +79,7 @@ func _run() -> void:
 	await _audit("discovered_species", app._overlay)
 	app._show_zoom("common_carp")
 	await _audit("specimen_zoom", app._overlay)
+	app._enter_fishery()
 	await _test_active_feedback()
 	await _test_catalog_controls()
 	await _test_pause_back_settings()
@@ -288,6 +295,8 @@ func _audit_catch(species_id: String) -> void:
 	app.store.begin_session(app.session.session_id)
 	app.session.set_state(FishingSession.State.FIGHT)
 	app.session._finish(true, "")
+	_check(app._save_ok and app._landing_pending and app._screen != "result", species_id + " catch is saved before its 3D landing finishes")
+	for tick: int in 90: app.scenery._process(0.05)
 	_check(app._save_ok and app._screen == "result", species_id + " actual catch settles into result page")
 	await _audit("catch/" + species_id, app._overlay)
 	if species_id == "chinese_sturgeon":
@@ -541,25 +550,26 @@ func _all_label_text(node: Node) -> String:
 	for child: Node in node.get_children(): combined += "\n" + _all_label_text(child)
 	return combined
 
-func _test_retained_scenery_support() -> void:
+func _test_retained_3d_scenery() -> void:
+	_check(app.scenery is Node3D, "production scenery is a real Node3D world")
+	_check(app.scenery.camera is Camera3D and app.scenery.camera.current, "production world has an active perspective camera")
+	var meshes: Array[Node] = []
+	_find_all_type(app.scenery, "MeshInstance3D", meshes)
+	_check(meshes.size() >= 10, "production scenery retains actual environment and actor meshes")
+	var retained: Array[WeakRef] = []
+	for mesh: MeshInstance3D in meshes:
+		if mesh.mesh == null:
+			_check(not mesh.visible, "only hidden lazy geometry may omit a mesh: " + str(mesh.name))
+			continue
+		_check(mesh.mesh.get_rid().is_valid(), "3D scenery mesh retains a valid rendering resource: " + str(mesh.name))
+		retained.append(weakref(mesh.mesh))
+	var selection: Dictionary = app.store.state.selection.duplicate(true)
 	for sid: String in app.catalog.spots:
 		var spot: Dictionary = app.catalog.spots[sid]
-		var rid: String = str(spot.region_id)
-		app.scenery.set_region(app.catalog.region(rid), spot)
-		_check(app.scenery.shore_support != null, sid + ": painted angler support has a retained texture member")
-		if app.scenery.shore_support == null: continue
-		var texture_path: String = str(app.scenery.shore_support.resource_path)
-		var expected: String = "res://assets/scenery/" + rid + "_foreground.png"
-		if rid == "bayou": expected = "res://assets/scenery/lake_foreground.png"
-		elif bool(spot.get("hide_region_foreground", false)) or not ResourceLoader.exists(expected): expected = "res://assets/scenery/japan_foreground.png"
-		_check(texture_path == expected, sid + ": support uses intended painted runtime foreground")
-		var retained: WeakRef = weakref(app.scenery.shore_support)
-		app.scenery.queue_redraw()
-		await _settle_layout()
-		_check(retained.get_ref() != null and retained.get_ref() == app.scenery.shore_support, sid + ": support survives redraw frames without relying on a draw-local reference")
-		_check(app.scenery.shore_support.get_rid().is_valid(), sid + ": retained support has valid rendering resource")
-	app._refresh_location()
+		app.scenery.set_region(app.catalog.region(str(spot.region_id)), spot)
+		_check(app.store.state.selection == selection, sid + ": presentation cannot overwrite an archived selection")
 	await _settle_layout()
-	_check(app.scenery.region_id == app.region_id, "scenery regression restores the selected fishing location")
-	# Pixel appearance requires the separate rendered 12-spot review. Headless
-	# verifies the exact ownership bug: the member retains every draw texture.
+	for resource: WeakRef in retained:
+		_check(resource.get_ref() != null, "real 3D mesh survives subsequent frames without a draw-local lifetime")
+	_check(_find_type(app.scenery, "Sprite3D") == null and _find_type(app.scenery, "AnimatedSprite3D") == null, "3D environment and actors are not billboard sprite substitutes")
+	app._refresh_location()
