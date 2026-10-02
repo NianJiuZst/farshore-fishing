@@ -40,9 +40,8 @@ func _process(_delta: float) -> void:
 	var active: bool=is_hovered() or button_pressed
 	_caption.add_theme_color_override("font_color",label_color.lightened(0.18) if active else label_color)
 	_caption.modulate.a=0.42 if disabled else 1.0
-	_art.modulate=Color(1.15,1.12,0.94,0.45 if disabled else 1.0) if active else Color(1,1,1,0.42 if disabled else 1.0)
+	_art.modulate=Color(1.06,1.06,1.06,0.45 if disabled else 1.0) if active else Color(1,1,1,0.42 if disabled else 1.0)
 	_art.kind=icon_kind
-	_art.queue_redraw()
 func _layout() -> void:
 	if _caption==null:return
 	_caption.add_theme_font_size_override("font_size",get_theme_font_size("font_size"))

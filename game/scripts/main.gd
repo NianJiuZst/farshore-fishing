@@ -33,6 +33,7 @@ var _page: VBoxContainer
 var _title: Label
 var _place: Label
 var _condition: Label
+var _weather_icon: Control
 var _wallet: Label
 var _status: Label
 var _hint: Label
@@ -61,6 +62,10 @@ var _page_notice: Label
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
 	_content_ok = catalog.load_all(true)
+	var icon_errors: Array[String]=Art.validate_assets()
+	if not icon_errors.is_empty():
+		catalog.errors.append_array(icon_errors)
+		_content_ok=false
 	store.initialize()
 	var saved: Dictionary = store.state
 	var selection: Dictionary = saved.get("selection", {})
@@ -249,6 +254,8 @@ func _build_fishing_screen() -> void:
 	top.add_child(pause_button)
 	var facts: HBoxContainer=HBoxContainer.new()
 	layout.add_child(facts)
+	_weather_icon=_icon("sun",42)
+	facts.add_child(_weather_icon)
 	_condition=_text("",22,Color("f7f6dd"))
 	_condition.add_theme_color_override("font_shadow_color",NAVY)
 	_condition.add_theme_constant_override("shadow_offset_y",2)
@@ -373,6 +380,7 @@ func _update_conditions() -> void:
 	weather = "clear" if int(game_clock/240.0)%2 == 0 else "rain"
 	scenery.time_of_day = time_of_day
 	scenery.weather = weather
+	_weather_icon.kind="rain" if weather=="rain" else ("dusk" if time_of_day=="dusk" else "sun")
 	_condition.text = "%s  ·  %s  /  %s" % [str(catalog.spots.get(spot_id,{}).get("name","")),"晴日" if weather == "clear" else "微雨","日间" if time_of_day == "day" else "黄昏"]
 
 func _refresh_location() -> void:
@@ -697,7 +705,7 @@ func _show_gear() -> void:
 		var row: HBoxContainer=HBoxContainer.new()
 		box.add_child(row)
 		var icon: Control=_icon("rod",104)
-		icon.accent=[Color("f2c864"),Color("8bd3b5"),Color("efa57e")][id]
+
 		row.add_child(icon)
 		var info: VBoxContainer=VBoxContainer.new()
 		info.size_flags_horizontal=Control.SIZE_EXPAND_FILL
