@@ -34,7 +34,7 @@ def _attach(f,name,roots,edge,**kwargs):
  return f.fin(name,roots,edge,**kwargs)
 
 def anatomy(f):
- _attach(f,'SpinyFirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(.229,.069,18)],[(.229,0,.092),(.212,0,.171),(.175,0,.157),(.127,0,.113),(.069,0,.094)],parent='spine_front',rays=10)
+ _attach(f,'SpinyFirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(.229,.069,18)],[(.229,0,.092),(.212,0,.171),(.175,0,.157),(.127,0,.113),(.069,0,.094)],parent='spine_front',rays=8)
  _attach(f,'LongSecondDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(.040,-.333,35)],[(.040,0,.096),(.009,0,.144),(-.042,0,.113),(-.169,0,.089),(-.273,0,.071),(-.333,0,.032)],parent='spine_mid',rays=32)
  _attach(f,'LongAnal',[f.surface(float(x),math.pi,-.001) for x in np.linspace(.003,-.329,32)],[(.003,0,-.062),(-.030,0,-.103),(-.094,0,-.089),(-.223,0,-.067),(-.298,0,-.049),(-.329,0,-.027)],parent='spine_rear',rays=28)
  for i,x in enumerate((.052,.032)):

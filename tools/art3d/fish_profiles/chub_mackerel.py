@@ -61,7 +61,7 @@ def _attach(f,name,roots,edge,**kwargs):
  return f.fin(name,roots,edge,**kwargs)
 
 def anatomy(f):
- _attach(f,'FirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(0.243,0.02,18)],[(0.243, 0, 0.077), (0.216, 0, 0.178), (0.18, 0, 0.16), (0.129, 0, 0.121), (0.07, 0, 0.094), (0.02, 0, 0.084)],parent='spine_front',rays=14)
+ _attach(f,'FirstDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(0.243,0.02,18)],[(0.243, 0, 0.077), (0.216, 0, 0.178), (0.18, 0, 0.16), (0.129, 0, 0.121), (0.07, 0, 0.094), (0.02, 0, 0.084)],parent='spine_front',rays=10)
  _attach(f,'SecondDorsal',[f.surface(float(x),0,-.001) for x in np.linspace(-0.104,-0.207,18)],[(-0.104, 0, 0.071), (-0.128, 0, 0.111), (-0.163, 0, 0.092), (-0.207, 0, 0.048)],parent='spine_rear',rays=15)
  _attach(f,'MainAnal',[f.surface(float(x),math.pi,-.001) for x in np.linspace(-0.112,-0.211,18)],[(-0.112, 0, -0.053), (-0.142, 0, -0.092), (-0.178, 0, -0.072), (-0.211, 0, -0.041)],parent='spine_rear',rays=15)
  # Exactly five anatomically separated finlets above and below the peduncle.
