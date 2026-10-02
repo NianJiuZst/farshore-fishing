@@ -1,0 +1,22 @@
+{
+  "status": "identity and tooling prepared; no gameplay export or release ZIP generated",
+  "public_identity": {
+    "schema_version": 1,
+    "android_package_name": "org.farshore.fishing.preview",
+    "launcher_name": "远岸钓记·试钓版",
+    "certificate_sha256": "e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284",
+    "application_version": "1.2.0-beta.2",
+    "android_version_code": 4,
+    "separate_installation": true,
+    "update_boundary": "Independent preview app; does not replace org.farshore.fishing or inherit its save data",
+    "signing_algorithm": "RSA-4096",
+    "created_utc": "2026-10-02T19:41:41.826914+00:00"
+  },
+  "private_directory_mode": "0700",
+  "private_key_and_password_modes": "0600",
+  "protected_key_certificate_matches_frozen_source": true,
+  "historical_identity_default_retained": true,
+  "content_contract_species_count": 44,
+  "packaging_held_for_combined_art_gate": true,
+  "credentials_uploaded": false
+}

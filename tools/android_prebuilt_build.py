@@ -19,6 +19,7 @@ import zipfile
 from content_export_contract import content_contract
 from release_source_zip import inventory, verify_zip, digest
 from normalize_android_features import normalize_apk
+from android_identity import expected_identity
 
 
 def source_inventory(base):
@@ -58,6 +59,17 @@ def build(root, source_zip, manifest_path, template_path, output):
         assert digest(root / name) == expected['sha256'], 'Source differs from frozen commit: ' + name
     source = root / 'game'
     content = content_contract(source)
+    identity = expected_identity(content)
+    is_preview = identity['android_package_name'] == 'org.farshore.fishing.preview'
+    default_signing = Path('/workspace/shared/.signing-private/farshore-fishing-preview') if is_preview else root.parent/'.signing-private/farshore-fishing'
+    signing = Path(os.environ.get('FARSHORE_SIGNING_DIR', str(default_signing)))
+    key = Path(os.environ.get('FARSHORE_KEYSTORE', str(signing/('farshore-preview-release.p12' if is_preview else 'farshore-release.p12'))))
+    password = Path(os.environ.get('FARSHORE_PASSWORD_FILE', str(signing/'keystore-password.txt')))
+    alias = os.environ.get('FARSHORE_KEY_ALIAS', 'farshore-preview-release' if is_preview else 'farshore-release')
+    assert key.is_file() and password.is_file(), 'Restore the already-approved signing identity before export'
+    public_certificate = subprocess.check_output([str(root/'tools/jdk/jdk-21.0.12.1+1/bin/keytool'), '-exportcert', '-alias', alias,
+                                                  '-keystore', str(key), '-storepass:file', str(password)], stderr=subprocess.PIPE)
+    assert hashlib.sha256(public_certificate).hexdigest() == identity['certificate_sha256'], 'Protected key differs from frozen public identity'
     version = content['application_version']
     assert content['android_version_code'] > 3
     audit = root / 'build/audit' / version / 'arm64'
@@ -100,7 +112,7 @@ def build(root, source_zip, manifest_path, template_path, output):
                ANDROID_SDK_ROOT=str(root/'tools/android-sdk'), XDG_CONFIG_HOME=str(work/'config'),
                XDG_DATA_HOME=str(work/'data'), XDG_CACHE_HOME=str(work/'cache'), GRADLE_USER_HOME=str(work/'unused-gradle'),
                ANDROID_USER_HOME=str(root/'build/android-user'), FARSHORE_ROOT=str(root),
-               FARSHORE_EXISTING_KEY=str(root.parent/'.signing-private/farshore-fishing/farshore-release.p12'))
+               FARSHORE_EXISTING_KEY=str(key))
     env['PATH'] = env['JAVA_HOME'] + '/bin:' + env['PATH']
     subprocess.run([sys.executable, str(root/'tools/prepare_android_environment.py')], check=True, env=env)
     godot = os.environ.get('GODOT', shutil.which('godot'))
@@ -124,10 +136,9 @@ def build(root, source_zip, manifest_path, template_path, output):
     bt = root/'tools/android-sdk/build-tools/36.1.0'
     subprocess.run([str(bt/'zipalign'), '-P', '16', '-f', '4', str(unsigned), str(aligned)], env=env, check=True)
     unsigned.unlink()
-    signing = root.parent/'.signing-private/farshore-fishing'
     output.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run([str(bt/'apksigner'), 'sign', '--ks', str(signing/'farshore-release.p12'), '--ks-key-alias', 'farshore-release',
-                    '--ks-pass', 'file:' + str(signing/'keystore-password.txt'), '--v1-signing-enabled', 'false',
+    subprocess.run([str(bt/'apksigner'), 'sign', '--ks', str(key), '--ks-key-alias', alias,
+                    '--ks-pass', 'file:' + str(password), '--v1-signing-enabled', 'false',
                     '--v2-signing-enabled', 'true', '--v3-signing-enabled', 'true', '--v4-signing-enabled', 'false',
                     '--out', str(output), str(aligned)], env=env, check=True)
     with (audit/'verification.log').open('w') as log:

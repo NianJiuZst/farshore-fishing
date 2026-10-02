@@ -10,10 +10,12 @@ import sys
 import tempfile
 import zipfile
 from godot_binary_settings import scalar_settings
+from android_identity import expected_identity
 
 apk, abi, out, bt = Path(sys.argv[1]), sys.argv[2], Path(sys.argv[3]), Path(sys.argv[4])
 expected_snapshot = json.loads(Path(sys.argv[5]).read_text()) if len(sys.argv) > 5 else {}
 expected_content = expected_snapshot.get('content')
+identity = expected_identity(expected_content)
 out.mkdir(parents=True, exist_ok=True)
 
 def run(args, filename):
@@ -32,7 +34,8 @@ run([bt/'apksigner', 'verify', '--verbose', '--print-certs', apk], 'signature-pl
 # this does not change the actual manifest minimum29 or the APK.
 signature = run([bt/'apksigner', 'verify', '--min-sdk-version', '24', '--verbose', '--print-certs', apk], 'signature.txt')
 run([bt/'zipalign', '-c', '-P', '16', '-v', '4', apk], 'zipalign16k.txt')
-assert "package: name='org.farshore.fishing'" in badging, 'Unexpected package identity'
+assert "package: name='" + identity['android_package_name'] + "'" in badging, 'Unexpected package identity'
+assert "application-label:'" + identity['launcher_name'] + "'" in badging, 'Unexpected launcher name'
 assert "sdkVersion:'29'" in badging, 'Minimum SDK must be Android 10 / API29'
 assert "targetSdkVersion:'36'" in badging, 'Target SDK must be Android 16 / API36'
 assert "application-debuggable" not in badging, 'Player release must not be debuggable'
@@ -41,7 +44,7 @@ assert requested == ['android.permission.VIBRATE'], f'Unexpected requested permi
 assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature
 assert 'Verified using v3 scheme (APK Signature Scheme v3): true' in signature
 cert_sha256 = re.search(r'Signer #1 certificate SHA-256 digest: ([0-9a-f]+)', signature).group(1)
-assert cert_sha256 == '1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeedb2e5281', 'Unexpected release signing identity'
+assert cert_sha256 == identity['certificate_sha256'], 'Unexpected release signing identity'
 version_code = int(re.search(r"versionCode='(\d+)'", badging).group(1))
 version_name = re.search(r"versionName='([^']+)'", badging).group(1)
 if expected_content and 'application_version' in expected_content:
@@ -52,6 +55,10 @@ three_d_audit = None
 extract_native = bool(re.search(r'android:extractNativeLibs[^\n]*0xffffffff', manifest))
 with zipfile.ZipFile(apk) as z:
     names = z.namelist()
+    if expected_content and identity.get('separate_installation'):
+        identity_bytes = z.read('assets/data/android_build_identity.json')
+        assert json.loads(identity_bytes) == identity, 'Bundled public identity differs from frozen manifest'
+        assert hashlib.sha256(identity_bytes).hexdigest() == expected_snapshot['sha256']['data/android_build_identity.json']
     assert not any('.signing-private' in n or n.endswith(('.p12', '.jks', '.keystore')) for n in names)
     abis = sorted({n.split('/')[1] for n in names if n.startswith('lib/') and n.endswith('.so')})
     assert abis == [abi], f'Wrong native ABIs: {abis}'
@@ -178,7 +185,7 @@ result = {
     'verified_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
     'apk': apk.name, 'bytes': apk.stat().st_size,
     'sha256': hashlib.file_digest(apk.open('rb'), 'sha256').hexdigest(),
-    'package': 'org.farshore.fishing', 'min_sdk': 29, 'target_sdk': 36,
+    'package': identity['android_package_name'], 'launcher_name':identity['launcher_name'], 'min_sdk': 29, 'target_sdk': 36,
     'compile_sdk': 36, 'version_code': version_code, 'version_name': version_name,
     'abi': abi, 'debuggable': False, 'permissions': requested,
     'signature_v2': True, 'signature_v3': True, 'zip_alignment_kib': 16,

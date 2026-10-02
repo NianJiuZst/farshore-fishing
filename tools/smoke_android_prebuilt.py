@@ -12,6 +12,7 @@ import tempfile
 import zipfile
 from godot_binary_settings import scalar_settings
 from normalize_android_features import normalize_apk
+from android_identity import project_identity
 
 
 def smoke(root, template, evidence):
@@ -43,6 +44,7 @@ anti_aliasing/quality/msaa_3d=2
 textures/vram_compression/import_etc2_astc=true
 ''')
     presets = (root/'game/export_presets.cfg').read_text().replace('gradle_build/use_gradle_build=true', 'gradle_build/use_gradle_build=false')
+    identity = project_identity(root/'game', presets, '1.2.0-beta.2', 4)
     presets = presets.replace('custom_template/release=""', 'custom_template/release='+json.dumps(str(template)))
     presets = re.sub(r'^gradle_build/(min_sdk|target_sdk)="[^"]*"', r'gradle_build/\1=""', presets, flags=re.M)
     presets = re.sub(r'^(launcher_icons/[^=]+)="[^"]*"', r'\1=""', presets, flags=re.M)
@@ -86,7 +88,7 @@ textures/vram_compression/import_etc2_astc=true
     badging = run([bt/'aapt', 'dump', 'badging', apk], 'badging.txt')
     permissions = run([bt/'aapt', 'dump', 'permissions', apk], 'permissions.txt')
     manifest = run([bt/'aapt', 'dump', 'xmltree', apk, 'AndroidManifest.xml'], 'manifest.txt')
-    assert "package: name='org.farshore.fishing'" in badging
+    assert "package: name='"+identity['android_package_name']+"'" in badging
     assert "versionName='1.2.0-beta.2'" in badging and "versionCode='4'" in badging
     assert "sdkVersion:'29'" in badging and "targetSdkVersion:'36'" in badging
     assert "application-debuggable" not in badging
@@ -117,7 +119,7 @@ textures/vram_compression/import_etc2_astc=true
     assert not any(p.suffix in {'.keystore','.p12','.jks'} for p in work.rglob('*') if p.is_file()), 'Unexpected credential generation'
     report = {'result': 'PASS', 'scope': 'Unsigned minimal-project packaging smoke only; no gameplay or device-runtime claim',
               'unsigned_apk_bytes': apk.stat().st_size, 'unsigned_apk_sha256': hashlib.sha256(apk.read_bytes()).hexdigest(),
-              'package': 'org.farshore.fishing', 'version': '1.2.0-beta.2', 'version_code': 4,
+              'package': identity['android_package_name'], 'version': '1.2.0-beta.2', 'version_code': 4,
               'min_sdk': 29, 'target_sdk': 36, 'extract_native_libraries': False, 'allow_backup': False,
               'vulkan_required': True, 'renderer': 'mobile', 'opengl_fallback_disabled': True,
               'permissions': ['android.permission.VIBRATE'], 'native_libraries': libs, 'zip_alignment_kib': 16,

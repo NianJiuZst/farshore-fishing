@@ -5,6 +5,28 @@ does not establish a signed gameplay APK or an Android runtime pass. A final
 runtime/source freeze and authorized signing identity/package remain separate
 release gates. The original signing key is not included in source or these tools.
 
+## Approved independent preview identity
+
+The user approved a new dedicated signing identity and an independent preview app
+after the original local signing key was lost in the executor replacement. The
+prepared package is `org.farshore.fishing.preview`, launcher name **远岸钓记·试钓版**,
+version1.2.0-beta.2/code4. It coexists with the prior `org.farshore.fishing` app and
+starts separate local data; it is not an in-place update and does not inherit old
+saves. Public metadata is in `ANDROID_PREVIEW_IDENTITY.json` and the frozen game's
+`data/android_build_identity.json`. The private key/password are stored only in a
+separate protected shared-workspace folder, never the repository or release ZIP.
+
+The exact preview certificate SHA256 is
+`e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284`.
+`android_identity.py` pins both this authorized identity and the historical one.
+The verifier takes the exact expected package/launcher/certificate from the frozen
+content manifest and retains the historical defaults when verifying old artifacts.
+The export wrapper checks the protected key's public certificate before exporting.
+
+Packaging/publication is currently held for the combined gameplay and44-species
+encyclopedia-art freeze. No gameplay APK or source release ZIP was created during
+this identity preparation.
+
 ## Fresh official toolchain
 
 - Godot 4.6.3.stable.official.7d41c59c4 and its official SHA512-verified template bundle

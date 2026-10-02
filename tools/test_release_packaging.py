@@ -11,9 +11,22 @@ import release_source_zip as source
 import derive_android_template as template
 import park_android_ndk as ndk
 import normalize_android_features as normalization
+import android_identity
 
 
 class PackagingTests(unittest.TestCase):
+    def test_exact_preview_identity_and_legacy_default(self):
+        self.assertEqual(android_identity.expected_identity(),android_identity.LEGACY)
+        preview={**android_identity.PREVIEW,'separate_installation':True,'application_version':'1.2.0-beta.2','android_version_code':4}
+        self.assertEqual(android_identity.expected_identity({'android_identity':preview}),preview)
+        bad={**preview,'certificate_sha256':android_identity.LEGACY['certificate_sha256']}
+        with self.assertRaises(AssertionError):android_identity.validate_identity(bad)
+        with self.assertRaises(AssertionError):android_identity.validate_identity({**preview,'android_package_name':'org.farshore.other'})
+        with tempfile.TemporaryDirectory(prefix='farshore-identity-test-') as folder:
+            project=Path(folder);(project/'data').mkdir();(project/'data/android_build_identity.json').write_text(json.dumps(preview))
+            presets='package/unique_name="org.farshore.fishing.preview"\npackage/name="远岸钓记·试钓版"\n'
+            self.assertEqual(android_identity.project_identity(project,presets,'1.2.0-beta.2',4),preview)
+            with self.assertRaises(AssertionError):android_identity.project_identity(project,presets,'1.2.0-beta.2',3)
     def test_vulkan_types_exact_reversal_and_rejection(self):
         raw=(Path(__file__).resolve().parent/'tests/fixtures/prebuilt-vulkan-string-manifest.bin').read_bytes()
         corrected, proof=normalization.normalize_manifest(raw)
