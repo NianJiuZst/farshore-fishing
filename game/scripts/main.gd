@@ -707,8 +707,8 @@ func _show_home() -> void:
 	var column: VBoxContainer = VBoxContainer.new()
 	column.mouse_filter = Control.MOUSE_FILTER_PASS
 	margin.add_child(column)
-	column.add_child(_text("远岸钓记",40,Color.WHITE))
-	column.add_child(_text(str(catalog.region(region_id).get("name",region_id)) + "  ·  " + str(catalog.spots.get(spot_id,{}).get("name",spot_id)),22,Color("dce9d7")))
+	column.add_child(_text(str(catalog.region(region_id).get("name",region_id)),40,Color.WHITE))
+	column.add_child(_text(str(catalog.spots.get(spot_id,{}).get("name",spot_id)),22,Color("dce9d7")))
 	var room: Control = Control.new()
 	room.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	room.size_flags_vertical = Control.SIZE_EXPAND_FILL
