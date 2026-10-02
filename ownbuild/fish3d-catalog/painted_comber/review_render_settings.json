@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "samples": 24,
+    "resolution_percentage": 100,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  },
+  "side": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  },
+  "top": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  },
+  "underside": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  },
+  "pose_swim": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  },
+  "pose_struggle": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  },
+  "pose_breach": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  },
+  "pose_landed": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/painted_comber.blend"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "species": "red_seabream",
+  "glb_sha256": "2db9214a767231be58b76adf0704678fa483f10cd1c4690e5bb20e80a7b9c45e",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "High convex-naped red-pink body has scattered blue flecks, unlike the lower straight-snouted pandora",
+    "Pointed pectorals and continuous spiny dorsal remain readable in side, top and all four poses",
+    "Forked caudal and other fin roots remain seated without opening at strong struggle curvature",
+    "Pale underside, bilateral eyes and paired fins prove volumetric anatomy",
+    "Contact, loop, weighted-skin and independent GLB audits pass"
+  ],
+  "view_hashes": {
+    "hero": "406f185ecfb5434f0581ae9bea55d5d35bc6545bb9f81e66c87697dca17af696",
+    "side": "cfddc1f1ab7810bce0bf2927b1fa75820e7239d6a2dd373553f854613efe6b39",
+    "top": "995ba78389566332da1b3c2ec3e5576ec2dd77f519a01b26cba4897767cbbab9",
+    "underside": "7cc7336906cf9fcd413a6d75276eb309d532702ac73e102596747bf9128740ce",
+    "pose_swim": "b97e6a7547380feb380facc8e585f1398e94a5e629eca3516ea95a9537fcaec2",
+    "pose_struggle": "c75f99fa33aa7fffb055171132f9e1a202863fc50d2dc1f9e4483c679d8b8d4f",
+    "pose_breach": "f33acdc957193ad8c26ac302e9842a784855d8e5becb3e73aaab4f1c673ea5dd",
+    "pose_landed": "34fdadddf3a75e8d16b80621b62515d22e0010c1ee3102cf7d90aa633d900ce0"
+  }
+}

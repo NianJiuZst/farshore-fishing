@@ -1,0 +1,32 @@
+{
+  "species": "painted_comber",
+  "glb_sha256": "2b2f3cc10ba1df65120bc3e7b9d3ae3badeaebd2f0d105fda21abd3c581a817f",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Pointed large-mouthed serranid shape, vertical brown bars, blue abdominal flank patch and red-blue head tracery remain distinct",
+    "Yellow peduncle and broad nearly truncate caudal differ from the fork-tailed sparids",
+    "Top and underside confirm solid body volume and bilateral thoracic paired fins",
+    "All dorsal, anal, caudal and paired fin membranes/rays remain coherent and rooted through every pose",
+    "All numerical animation, normalization, weighted-skin and root-contact gates pass"
+  ],
+  "view_hashes": {
+    "hero": "52dd4ff977c8814c14ed918471058d5b41567aa352af0ffc72bb3b70209b4c70",
+    "side": "c31ba9077c04ca2465ab4f92dfdcef52414aa3eec1c5284db19de274cc744b34",
+    "top": "5791927819ab736d3729265344dad03ebc04eecc38f692a581c2ecff2f362e52",
+    "underside": "4ba070416e5b9652b44e43004b2a1817c87836977c5db8a3844c0dc805e11d8e",
+    "pose_swim": "01f13090de9543703f976db851c1a04a834a974617cdc07b1b067ec721155c5e",
+    "pose_struggle": "018bd1d188e373b08e65993069e82e47eb4607d782fa36806144254610af683b",
+    "pose_breach": "40d08a4750a76631d327e84b3498e93314af24fea92a1d09385edc725b18f1c7",
+    "pose_landed": "a9a542931628b2af838e87a1a73952b9f252c58cbb192179f5b22165cdc4d230"
+  }
+}

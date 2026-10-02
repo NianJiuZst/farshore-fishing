@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "samples": 24,
+    "resolution_percentage": 100,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  },
+  "side": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  },
+  "top": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  },
+  "underside": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  },
+  "pose_swim": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  },
+  "pose_struggle": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  },
+  "pose_breach": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  },
+  "pose_landed": {
+    "samples": 16,
+    "resolution_percentage": 80,
+    "master": "/workspace/scratch/c16084497664/farshore-fishing/art_masters/3d/red_seabream.blend"
+  }
+}

@@ -1,7 +1,11 @@
 # Original coastal and reef fish, full catalog conversion
 
 ## Status
-All 15 original species are authored and exported. Structural, weighted-skin, four-clip, loop, normalization and fin-root-contact audits pass. Whiting, marbled rockfish, mandarin fish, largemouth bass, Japanese seabass, saddled seabream and white seabream have passed complete eight-view inspection. All fifteen heroes have been inspected. Remaining angle and pose review is in progress; this document does not yet certify full visual completion.
+All 15 species are complete. All 120 final saved-master views (hero, side, top, underside, swim, struggle, breach and landed) were inspected. Every species passes structural GLB, centered 1 m normalization, genuine weighted skin, four-clip deformation/loop, constant root translation and nine-phase-per-clip appendage-contact audits. Maximum sampled attachment distance is 2.509 mm, including both corrected red-mullet barbel bases, below the unmodified 4 mm gate.
+
+Total runtime geometry is 489,926 triangles across the 15 independently authored species, with 74,830,148 bytes of GLB assets. Per-species body outlines and position-only geometry hashes are all distinct. The independent audit and final signoff file record exact content hashes.
+
+Whiting also passed the stage worker's genuine 100 mm landing-camera check at unchanged 0.1 m physical scale: complete 113 px portrait bounds, 6/6 checks, model hash 2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31. Stage evidence: build/stage3d/whiting_100mm/japanese_whiting_100mm_minimum.png.
 
 ## Authorship and provenance
 All meshes and surface maps were generated from original hand-authored anatomy and pigment algorithms in Blender 4.3.2. No source photograph, external fish mesh, purchased model, unlicensed texture or add-on is included. Sources below are factual morphology references only, checked 2026-10-02. Proportions are an artistic game reconstruction, not scan metrology.
@@ -167,3 +171,13 @@ References:
 Per-species evidence lives in ownbuild/fish3d-catalog/<id>/. Canonical assets are art_masters/3d/<id>.blend and game/assets/3d/<id>.glb. Editable source is tools/art3d/fish_profiles/<id>.py. The bounded external checkpoint is /workspace/shared/farshore-3d-checkpoints/fish/catalog/<id>/, with byte-for-byte comparisons after copy. No full-project archive is created by this batch.
 
 Review images are generated from the saved master, not mocked. Heroes use 1200×800 at 24 samples; supporting views use 960×640 at 16 samples in the bounded batch runner (initial representative captures use 1200×800). Render settings are recorded per view. Two threads and the shared two-slot lock are used.
+
+## Visual corrections completed
+
+- Whiting: fuller tiny mouth tip with visible oblique lip crease and recess, preserving its slender outline
+- Five custom pigment profiles: angular-periodic atlas patterns after dorsal wrap review
+- Red mullet: both chin barbels anchored on the real chin surface, with progressive jaw weights and persistent base-ring contact tags
+- Annular seabream: yellow anal pigment restricted to its anterior membrane; posterior tissue is pale
+- All affected final views were regenerated and inspected after the corrections
+
+Final canonical geometry/pigment commits include 9a0a19d, 7898660, 6d16972 and 1e2a01c. Visual evidence commits preserve each inspected set.

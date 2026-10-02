@@ -1,0 +1,32 @@
+{
+  "species": "annular_seabream",
+  "glb_sha256": "f7ac5d17797e045a0cd5d9e68d9ff1e2996e6802d8eec7c81c4031ffdc1f2e34",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Near-complete black peduncle ring is visible on both top and underside, unlike the open white-seabream saddle",
+    "Yellow pelvic fins and corrected yellow anterior anal membrane are distinct from pale posterior anal tissue",
+    "Oval tapered head/body and unbarred silver-yellow flank remain coherent in every pose",
+    "All fin roots remain seated; correction changed material assignment only and contact/GLB audits still pass",
+    "Four-clip deformation/loop, normalized skinned GLB, constant root translation and fin-root audit pass"
+  ],
+  "view_hashes": {
+    "hero": "eca934cafb35c0516469277b29739af15b1b6515c0f696ec463229f4d3e96970",
+    "side": "24dc99a5fd1b4b30e683a45e4f6f14926fe4c2bd589c461fd8069a47ade084f4",
+    "top": "38de79c3956726a87940c0c2696101709de77bbdec4df95edb961dd06133ec30",
+    "underside": "ab7b09c77312440dfd7841ad0c5f0a456072923718494f98c7df3c46badf155d",
+    "pose_swim": "9bcad5646b535c0cedb16aced92d868a46405a83c860acb3e1a2b3fb50ff7819",
+    "pose_struggle": "ed4bc1e751a33b540ba8c3f9cfaf125ac3770a6f5c542b06e01722398a813fba",
+    "pose_breach": "d0e9c6840556f6c126fd40050f01a217b3bb370ad2e6bb265cca3951eb2c8133",
+    "pose_landed": "295fa04e5f7a4cc5f134dc1fab327d3a7395596da9ccef4020be89ee15ab8cd3"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "species": "red_mullet",
+  "glb_sha256": "58fc14f9cde61ba440b22f899880a17edd98a11d0dfb6220130dc2c6296a516b",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Abrupt blunt forehead, small low mouth, large scales and two separated unstriped dorsal fins remain distinctive",
+    "Exactly two thin pale chin barbels emerge from embedded surface roots in hero, side and all four poses",
+    "Both barbel root rings are included in numeric contact sampling with progressive jaw weighting and pass at <=2.51 mm",
+    "Forked unstriped tail and all other fins stay attached, with a genuinely volumetric flattened belly",
+    "Four-clip deformation/loop, normalized skinned GLB, constant root translation and fin-root audit pass"
+  ],
+  "view_hashes": {
+    "hero": "71dea6d4911bf31201c69d6e768d43709907c42b9320d3088f67d882377dc09d",
+    "side": "a3c77ce0e211b7d2dabfe8a7f8188443537ef69b2591f66aa4a05a7d14e4cabc",
+    "top": "7c4ee2a915a2de7c54026372bf1cf413f42ff1c31db987e87c0e5c0a4ecaad57",
+    "underside": "44f92307132438ce962b7f9b86a600117061cc83d2e56ed8bf32251f868941e5",
+    "pose_swim": "fdd7d213451e7fb562f5debbdb97e425d6f6c552b319e397c626211daa94eed6",
+    "pose_struggle": "8827fd5d3e78ea37f2396df9af75a0ddc349f434ee51597697e48eeff290a16e",
+    "pose_breach": "a0fe2314df169e72dae7b5b34e10a134e52f755b38891737103f44a5f26d0824",
+    "pose_landed": "888cad3d3196dc0b2fa0aa060cdef42b6914f9b99369f0881c83c0bb01b84078"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "species": "gilthead_seabream",
+  "glb_sha256": "910f3207d9ec2fe0aab28632ef245ba9b7612ae48a7e2b7c357724057c50e812",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Gold forehead band physically wraps between both eyes in the top view",
+    "Black upper opercular spot and red lower margin are placed correctly on each flank",
+    "Smooth curved high forehead and small thick-lipped low mouth differ from longer-snouted pandora",
+    "All median/paired fins retain attached bases through four poses and pale underside stays coherent",
+    "Four-clip deformation/loop, normalized skinned GLB, constant root translation and fin-root audit pass"
+  ],
+  "view_hashes": {
+    "hero": "2a537d2fece0ed3928d4410ae8fc8c645a30d593fa380d132c2a61280738e719",
+    "side": "fd6e02ab87785a6afd46f237a022cb05d30e5db58fba85b647122b5b0dc847a0",
+    "top": "2cb96bece1aea738b2162d151f3acc11977b8741bf6ca434782a34277df62d35",
+    "underside": "72b187b34066a9e17cc98f01c361bc93d213db0cca2a90d4f387bfa80bf0b27c",
+    "pose_swim": "763cc4e123c43503ec36040fbaa713be504e02d97ab5cff78e649d09dce8dc1c",
+    "pose_struggle": "02cf6b10e97ea89fb00e24207aeb3da2f6be93e2166f21daca16c3890290d3b4",
+    "pose_breach": "09374212071c76519295e8f611a11771b7afee71276a89688c6db6c5b9c8e362",
+    "pose_landed": "995283ef4b64d98a084ed271209f45ffb873339afa9c0a590eb7b8d6d75fe6cd"
+  }
+}

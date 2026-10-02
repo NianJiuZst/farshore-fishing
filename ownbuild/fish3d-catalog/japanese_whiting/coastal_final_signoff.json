@@ -1,0 +1,145 @@
+{
+  "species_count": 15,
+  "view_count": 120,
+  "all_visual_reviews_pass": true,
+  "species": [
+    {
+      "id": "japanese_whiting",
+      "glb_sha256": "2e69b6b7a03640b5e2d4205d8c3bf6d04e9db87127477e9357e9872071051f31",
+      "triangles": 31346,
+      "glb_bytes": 5026920,
+      "max_attachment_m": 0.0019154840847477317,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "marbled_rockfish",
+      "glb_sha256": "78c5fd2e2e99d4f7d04867f5361461537dd5383eb7c59fe77cbb42d74317a9ad",
+      "triangles": 34540,
+      "glb_bytes": 5913992,
+      "max_attachment_m": 0.0017419253708794713,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "mandarin_fish",
+      "glb_sha256": "f96526ef4c84e015f1e60aceaa92ca4ae12368c9895de5e10163358e66186207",
+      "triangles": 33976,
+      "glb_bytes": 5013976,
+      "max_attachment_m": 0.0018144837813451886,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "largemouth_bass",
+      "glb_sha256": "890aa67eb870b4a5d5ddb3496cdde6ad722bb912c281e1c5bb554e913c223611",
+      "triangles": 33244,
+      "glb_bytes": 4906752,
+      "max_attachment_m": 0.001793971168808639,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "japanese_seabass",
+      "glb_sha256": "79c588c5e6c8a4eee9298f69a94703f3bb4b28ec5aac5f55eb475bb2cf528c1d",
+      "triangles": 33592,
+      "glb_bytes": 4588452,
+      "max_attachment_m": 0.001803992665372789,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "european_seabass",
+      "glb_sha256": "26e456afcc5563888a34628facbad226bb0c0588c38824b88e177afd4d86407f",
+      "triangles": 32684,
+      "glb_bytes": 4866736,
+      "max_attachment_m": 0.0018474279204383492,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "red_seabream",
+      "glb_sha256": "2db9214a767231be58b76adf0704678fa483f10cd1c4690e5bb20e80a7b9c45e",
+      "triangles": 32110,
+      "glb_bytes": 4205712,
+      "max_attachment_m": 0.0019172534812241793,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "black_seabream",
+      "glb_sha256": "670c3d601e73454092a3e83f90e694f73c657eecd5afb9f27621e5bbf1b54954",
+      "triangles": 32278,
+      "glb_bytes": 4913484,
+      "max_attachment_m": 0.0018366466974839568,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "gilthead_seabream",
+      "glb_sha256": "910f3207d9ec2fe0aab28632ef245ba9b7612ae48a7e2b7c357724057c50e812",
+      "triangles": 32950,
+      "glb_bytes": 5123776,
+      "max_attachment_m": 0.0018756076460704207,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "saddled_seabream",
+      "glb_sha256": "592c088c8d25b7de57c18a8b85ab4534dbb98b9420cbd45ee07402439a4ee017",
+      "triangles": 33322,
+      "glb_bytes": 5036240,
+      "max_attachment_m": 0.0018793650669977069,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "white_seabream",
+      "glb_sha256": "fcf0ddec5bf285c73f47727c50b61e831d3d6c7c4a0da6944d60b22733fc5982",
+      "triangles": 32446,
+      "glb_bytes": 5165668,
+      "max_attachment_m": 0.0018325867131352425,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "annular_seabream",
+      "glb_sha256": "f7ac5d17797e045a0cd5d9e68d9ff1e2996e6802d8eec7c81c4031ffdc1f2e34",
+      "triangles": 31942,
+      "glb_bytes": 4919968,
+      "max_attachment_m": 0.0018676932668313384,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "common_pandora",
+      "glb_sha256": "0798ae024f2c79889c832459a1626be6ab9d0776eb469fd37d25b388fec9fa6f",
+      "triangles": 32446,
+      "glb_bytes": 4699912,
+      "max_attachment_m": 0.001854192465543747,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "red_mullet",
+      "glb_sha256": "58fc14f9cde61ba440b22f899880a17edd98a11d0dfb6220130dc2c6296a516b",
+      "triangles": 30402,
+      "glb_bytes": 4602276,
+      "max_attachment_m": 0.002508625853806734,
+      "visual_review": "pass",
+      "views": 8
+    },
+    {
+      "id": "painted_comber",
+      "glb_sha256": "2b2f3cc10ba1df65120bc3e7b9d3ae3badeaebd2f0d105fda21abd3c581a817f",
+      "triangles": 32648,
+      "glb_bytes": 5846284,
+      "max_attachment_m": 0.0018708424177020788,
+      "visual_review": "pass",
+      "views": 8
+    }
+  ],
+  "total_triangles": 489926,
+  "total_glb_bytes": 74830148,
+  "max_attachment_m": 0.002508625853806734
+}

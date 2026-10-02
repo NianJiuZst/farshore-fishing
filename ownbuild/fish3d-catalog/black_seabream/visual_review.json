@@ -1,0 +1,32 @@
+{
+  "species": "black_seabream",
+  "glb_sha256": "670c3d601e73454092a3e83f90e694f73c657eecd5afb9f27621e5bbf1b54954",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "High dark-grey body, steep forehead and thick small mouth remain distinct from the pink and white sparids",
+    "Subtle adult bars and large scale relief remain clear without blue flecks or false tail saddle",
+    "Top and underside confirm compressed torso, bilateral eyes and paired dark fins",
+    "Spiny and soft dorsal, forked tail, anal and paired fins remain attached through all four poses",
+    "Four-clip deformation/loop, normalized skinned GLB, constant root translation and fin-root audit pass"
+  ],
+  "view_hashes": {
+    "hero": "42268a4587c9f8289f6806892310e931d4c6ab1186534ac6ad37471d703b65b7",
+    "side": "e175def5066b850f75741613b9c5fadab09b794a0350b1d84348e7b6474c0e96",
+    "top": "797ef122e28ad1dc60a67bcd7ae791cb5fe5733ae0c0c53596860a4f8857cd07",
+    "underside": "86880b7cd880bb1990294a5be246f6cfd107e1131f20d8531bb7cbbd42aa7d75",
+    "pose_swim": "bd64e2b912742137abba52e4d7b29331528416a81bd6bea1050a86503c583d37",
+    "pose_struggle": "30ab0cd9b392f3cf5681ba369e3eedf1aed859ab3c246a4a6ba729f52b0a1113",
+    "pose_breach": "dbab3185aa40102ed91bea6eda1eaed856bad71841ef50549357e056f8d16876",
+    "pose_landed": "823bb7ebe9247c15aecb4beb5822f740b2b2c2df923520d0f61bd02004e60aec"
+  }
+}

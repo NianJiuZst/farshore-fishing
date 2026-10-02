@@ -1,0 +1,32 @@
+{
+  "species": "common_pandora",
+  "glb_sha256": "0798ae024f2c79889c832459a1626be6ab9d0776eb469fd37d25b388fec9fa6f",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Long nearly straight pointed snout and lower oval outline distinguish it from red seabream",
+    "Fine upper-body blue flecks and the red upper opercular mark remain legible",
+    "Very long pointed pectorals and relatively short anal stay rooted through every pose",
+    "Caudal is forked without false white tips; underside remains pale and body has real thickness",
+    "Contact, loop, weighted-skin and independent GLB audits pass"
+  ],
+  "view_hashes": {
+    "hero": "3b47ad64dd235e0ec735864d148ac760612c0e32ec34c8aef862141d489d26dc",
+    "side": "4c29fd0edb59f13e191d010cdeaad2531e44d38348169a9597ef099d282475c8",
+    "top": "21b2185cf13767ae044a2a57c5eb5ec55ca3466c1684142cb059aa2e330acadc",
+    "underside": "48079711e8f9a05b1c0636f1803073ad8246e70a951678b3228707968064b538",
+    "pose_swim": "ad5351b61b5efa39ed187897c316e21e78d7664406ce58dd457ce48412d8f231",
+    "pose_struggle": "2b17e5c2b5b7526372a5d510d46fb12ea95d0289e944511e7db0fd4e2d4284a5",
+    "pose_breach": "d48a3800ccb1efb41af0cc2a298c168d24dd53710d883df5b038c269c61ecbb0",
+    "pose_landed": "aaa6de4ce67df76d539e1d4b7db18daa3967daf1d7e5b2af8c6b6c72fa695bda"
+  }
+}

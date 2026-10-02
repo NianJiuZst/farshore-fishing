@@ -1,0 +1,31 @@
+{
+  "species": "european_seabass",
+  "glb_sha256": "26e456afcc5563888a34628facbad226bb0c0588c38824b88e177afd4d86407f",
+  "visual_review": "pass",
+  "reviewed_views": [
+    "hero",
+    "side",
+    "top",
+    "underside",
+    "pose_swim",
+    "pose_struggle",
+    "pose_breach",
+    "pose_landed"
+  ],
+  "observations": [
+    "Two separate dorsal fins stay clearly separated, unlike Japanese seabass notched layout",
+    "Adult silver-blue body is unspotted with diffuse opercular mark and two small opercular points",
+    "Terminal mouth, moderately forked tail and paired fins stay seated in every view",
+    "All four posed captures have coherent soft tissue and fin roots, agreeing with weighted-skin contact audit"
+  ],
+  "view_hashes": {
+    "hero": "4917418734460031cca62bef1f7c30137b50f08ba14bc22136f0976302dded56",
+    "side": "72771927073afb5eb025eb85d1718a22a443f297b9b9fcbbeb1847e004cbb1f5",
+    "top": "cf8d88d4e6d78d00f7772b0057f9c2bcb29c738af549f02f41dfa464b10122ce",
+    "underside": "b53ddaac25fb40bfc576e003433b9bdafe1041892b516999a02f620b45904b05",
+    "pose_swim": "ad74cdc48174b091f74ed368434cfb9605f1dd52e3f97c67efa6a77344246598",
+    "pose_struggle": "0aac98959502c1f142b7b6145935abebda05b6596ff4900ec0ce70d45e034433",
+    "pose_breach": "206ef731a241f1bd77a087fc4cb0f98c6a42a3a26c403be05198fb0fb8d666f5",
+    "pose_landed": "3cd36cb2b65decbfcb2ee4e0a9511ce4044f7a3349ccdf5d2629121602548bfd"
+  }
+}
