@@ -20,6 +20,7 @@ from content_export_contract import content_contract
 from release_source_zip import inventory, verify_zip, digest
 from normalize_android_features import normalize_apk
 from android_identity import expected_identity
+from content_fish_art_contract import validate_import_audit, verify_exported_photo_art, photo_authoring_files, require_photo_archive_members
 
 
 def source_inventory(base):
@@ -59,6 +60,7 @@ def build(root, source_zip, manifest_path, template_path, output):
         assert digest(root / name) == expected['sha256'], 'Source differs from frozen commit: ' + name
     source = root / 'game'
     content = content_contract(source)
+    require_photo_archive_members(root, verified, content['photo_art'])
     identity = expected_identity(content)
     is_preview = identity['android_package_name'] == 'org.farshore.fishing.preview'
     default_signing = Path('/workspace/shared/.signing-private/farshore-fishing-preview') if is_preview else root.parent/'.signing-private/farshore-fishing'
@@ -77,7 +79,8 @@ def build(root, source_zip, manifest_path, template_path, output):
     snapshot = {'source_commit': commit, 'archive': str(source_zip), 'archive_kind': 'verified_release_zip',
                 'archive_sha256': digest(source_zip), 'sha256': source_inventory(source), 'content': content,
                 'authoring_backup': {'archive': str(source_zip), 'archive_kind': 'verified_release_zip',
-                                    'archive_sha256': digest(source_zip), 'sha256': content['three_d']['authoring_files_sha256']}}
+                                    'archive_sha256': digest(source_zip),
+                                    'sha256': {**content['three_d']['authoring_files_sha256'], **photo_authoring_files(root, content['photo_art'])}}}
     for name, sha in snapshot['sha256'].items():
         assert verified['game/' + name]['sha256'] == sha, 'Source archive is missing a current game input: ' + name
     for name, sha in snapshot['authoring_backup']['sha256'].items():
@@ -118,6 +121,9 @@ def build(root, source_zip, manifest_path, template_path, output):
     godot = os.environ.get('GODOT', shutil.which('godot'))
     assert subprocess.check_output([godot, '--version'], text=True).strip() == '4.6.3.stable.official.7d41c59c4'
     command([godot, '--headless', '--path', stage, '--import'], env, audit/'import.log')
+    command([godot, '--headless', '--path', stage, '--script', root/'tools/inspect_imported_fish_art.gd', '--', snapshot_path, audit/'imported-fish-art.json'], env, audit/'imported-fish-art.log')
+    photo_audit = json.loads((audit/'imported-fish-art.json').read_text())
+    validate_import_audit(content['photo_art'], photo_audit)
     command([godot, '--headless', '--path', stage, '--script', root/'tools/inspect_imported_3d.gd', '--', snapshot_path, audit/'imported-3d-scenes.json'], env, audit/'imported-3d.log')
     subprocess.run([sys.executable, str(root/'tools/content_3d_contract.py'), str(stage), str(audit/'imported-3d-scenes.json')], check=True)
     unsigned, aligned = work/'unsigned.apk', work/'aligned.apk'
@@ -131,6 +137,8 @@ def build(root, source_zip, manifest_path, template_path, output):
     with zipfile.ZipFile(unsigned) as archive:
         assert archive.testzip() is None and 'assets/project.binary' in archive.namelist()
         assert all(i.compress_type == zipfile.ZIP_STORED for i in archive.infolist() if i.filename.startswith('lib/') and i.filename.endswith('.so'))
+        # Reject stale/remapped photo payloads before invoking the signing tool.
+        verify_exported_photo_art(archive, content['photo_art'], photo_audit)
     verify_zip(source_zip, report['files'], report['source_archive']['prefix'])
     assert digest(source_zip) == report['source_archive']['sha256']
     bt = root/'tools/android-sdk/build-tools/36.1.0'

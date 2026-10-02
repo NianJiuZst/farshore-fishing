@@ -11,11 +11,14 @@ import tempfile
 import zipfile
 from godot_binary_settings import scalar_settings
 from android_identity import expected_identity
+from content_fish_art_contract import verify_exported_photo_art
 
 apk, abi, out, bt = Path(sys.argv[1]), sys.argv[2], Path(sys.argv[3]), Path(sys.argv[4])
 expected_snapshot = json.loads(Path(sys.argv[5]).read_text()) if len(sys.argv) > 5 else {}
 expected_content = expected_snapshot.get('content')
 identity = expected_identity(expected_content)
+if identity.get('separate_installation'):
+    assert expected_content and expected_content.get('photo_art'), 'Preview APK requires the frozen all44 photo contract'
 out.mkdir(parents=True, exist_ok=True)
 
 def run(args, filename):
@@ -52,9 +55,14 @@ if expected_content and 'application_version' in expected_content:
     assert version_code == expected_content['android_version_code'], 'APK version code differs from frozen source'
 libs = []
 three_d_audit = None
+photo_art_audit = None
 extract_native = bool(re.search(r'android:extractNativeLibs[^\n]*0xffffffff', manifest))
 with zipfile.ZipFile(apk) as z:
     names = z.namelist()
+    assert len(names) == len(set(names)), 'Duplicate APK members are forbidden'
+    if expected_content and expected_content.get('photo_art'):
+        photo_report = json.loads((out/'imported-fish-art.json').read_text())
+        photo_art_audit = verify_exported_photo_art(z, expected_content['photo_art'], photo_report)
     if expected_content and identity.get('separate_installation'):
         identity_bytes = z.read('assets/data/android_build_identity.json')
         assert json.loads(identity_bytes) == identity, 'Bundled public identity differs from frozen manifest'
@@ -195,6 +203,7 @@ result = {
     'gear_options':len(world['gear']), 'bait_options':len(world['baits']),
     'generated_ui_icons':len(ui_icons),
     'three_d':three_d_audit,
+    'photo_art':photo_art_audit,
     'extract_native_libraries': extract_native,
     'runtime_test': 'Separate evidence required; binary inspection is not an installation test',
 }

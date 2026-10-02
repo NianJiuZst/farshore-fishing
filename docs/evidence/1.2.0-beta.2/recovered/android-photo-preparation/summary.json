@@ -1,0 +1,61 @@
+{
+  "verified_at_utc": "2026-10-02T20:46:39.883596+00:00",
+  "result": "PASS",
+  "godot": "4.6.3.stable.official.7d41c59c4",
+  "kind": "disposable resource-only export; not an APK or source release archive",
+  "primary_game_exported": false,
+  "android_runtime_verified": false,
+  "signed_apk_created": false,
+  "source_release_archive_created": false,
+  "photo_art": {
+    "species_count": 44,
+    "full_photos": 44,
+    "thumbnails": 44,
+    "texture_payloads": 88,
+    "manifest_sha256": "b963714b24e48888e605c191a1839cb0c63bc1730b6ceac4b699b8b4b00d562d",
+    "exact_imported_texture_bytes": true,
+    "decoded_rgba8_hashes_match_manifest": true,
+    "canonical_import_targets": true,
+    "static_ui_resources": {
+      "scripts/fish_art_catalog.gd": "scripts/fish_art_catalog.gdc",
+      "scripts/fish_art_view.gd": "scripts/fish_art_view.gdc",
+      "scripts/measure_ruler.gd": "scripts/measure_ruler.gdc",
+      "scripts/main.gd": "scripts/main.gdc",
+      "scenes/main.tscn": ".godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn",
+      "assets/fish_silhouette.gdshader": "assets/fish_silhouette.gdshader"
+    },
+    "scope": "Source PNG hashes and staged decoded RGBA8/alpha geometry bound to exact exported .ctex bytes; separate runtime/device evidence required"
+  },
+  "actual_export_format": {
+    "source_pngs_exported": 0,
+    "resource_count": 1017,
+    "resource_zip_bytes": 532281857,
+    "resource_zip_sha256": "45337fa4eef3e40f810b5cb3992888d5b4d05b83d3060a014384aa8921953a0e",
+    "example_photo_import": "[remap]\n\nimporter=\"texture\"\ntype=\"CompressedTexture2D\"\nuid=\"uid://vvpxhs571eau\"\npath=\"res://.godot/imported/common_carp.png-a0e2723410a2d00785f3b6d143aa8c75.ctex\"\nmetadata={\n\"vram_texture\": false\n}\n\u0000",
+    "example_static_view_remap": "[remap]\n\npath=\"res://scripts/fish_art_view.gdc\"\n",
+    "example_main_scene_remap": "[remap]\n\npath=\"res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn\"\n"
+  },
+  "negative_payload_probes": {
+    "stale_ctex": {
+      "rejected": true,
+      "reason": "Exported texture differs from decoded/imported audit: assets/fish/common_carp.png"
+    },
+    "missing_thumb": {
+      "rejected": true,
+      "reason": "Missing exported photo resource: assets/fish/common_carp_thumb.png.import"
+    },
+    "retargeted_import": {
+      "rejected": true,
+      "reason": "Exported photo remap differs from canonical import: assets/fish/common_carp.png"
+    },
+    "changed_manifest": {
+      "rejected": true,
+      "reason": "Exported photo manifest differs from frozen source"
+    },
+    "missing_static_view": {
+      "rejected": true,
+      "reason": "Missing exported photo resource: scripts/fish_art_view.gdc"
+    }
+  },
+  "disposable_workspace_removed": true
+}

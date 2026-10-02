@@ -14,6 +14,7 @@ import tarfile
 import zipfile
 import re
 from content_export_contract import content_contract
+from content_fish_art_contract import photo_authoring_files
 from verified_source_backup import verified_backup, prior_proofs
 
 root = Path(__file__).resolve().parent.parent
@@ -48,7 +49,7 @@ prior_game, prior_authoring = prior_proofs(root/'build/android-workspaces')
 require_reuse = os.environ.get('FARSHORE_REQUIRE_BACKUP_REUSE') == '1'
 authoring_proof = None
 if content.get('three_d'):
-    authoring_hashes = content['three_d']['authoring_files_sha256']
+    authoring_hashes = {**content['three_d']['authoring_files_sha256'], **photo_authoring_files(root, content['photo_art'])}
     authoring_proof = verified_backup(root,authoring_hashes,snapshot_dir,'authoring',stamp,candidates=prior_authoring,require_reuse=require_reuse)
 assert not any(Path(p).suffix in {'.p12', '.jks', '.keystore'} for p in before), 'Signing material must never be inside game/'
 game_proof = verified_backup(source,before,snapshot_dir,'game',stamp,prefix='game/',candidates=prior_game,require_reuse=require_reuse)

@@ -4,6 +4,7 @@ import json
 import re
 from content_3d_contract import three_d_contract
 from android_identity import project_identity
+from content_fish_art_contract import photo_art_contract
 
 def content_contract(project: Path, check_art: bool = True):
     settings = (project/'project.godot').read_text()
@@ -41,5 +42,6 @@ def content_contract(project: Path, check_art: bool = True):
         'region_count':len(world['regions']), 'spot_count':len(world['spots']),
         'gear_count':len(world['gear']), 'bait_count':len(world['baits']),
         'ui_icon_files':sorted(str(p.relative_to(project)) for p in (project/'assets/ui/icons').glob('*.png')),
+        'photo_art':photo_art_contract(project, entries),
         'three_d':three_d_contract(project, ids),
     }

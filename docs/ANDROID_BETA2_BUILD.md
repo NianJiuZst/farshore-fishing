@@ -23,9 +23,10 @@ The verifier takes the exact expected package/launcher/certificate from the froz
 content manifest and retains the historical defaults when verifying old artifacts.
 The export wrapper checks the protected key's public certificate before exporting.
 
-Packaging/publication is currently held for the combined gameplay and44-species
-encyclopedia-art freeze. No gameplay APK or source release ZIP was created during
-this identity preparation.
+During preparation, packaging/publication was held until the combined gameplay
+and44-species encyclopedia-art freeze passed. No gameplay APK or source release
+ZIP was created during the identity or photo-resource preparation probes. The
+separate final-build verification manifests establish any later packaging result.
 
 ## Fresh official toolchain
 
@@ -118,3 +119,98 @@ backup disabled, required Vulkan, Mobile/no OpenGL fallback, portrait expand,
 Final application identity/signature and the full gameplay/content APK audit still
 require the authorized final release. Desktop QA does not establish Android
 installation, retained saves, Vulkan driver behavior or Snapdragon performance.
+
+## Combined all44 photograph packaging contract
+
+The photo preparation probe is separate from the final release. Its isolated
+resource-only ZIP passed native import decoding and exact exported-byte checks for
+44 full-resolution photographs and44 thumbnails. No signed gameplay APK, release
+source ZIP, tag or upload was created by this probe. Its disposable source/cache
+and ZIP were removed after the compact evidence was saved under
+`evidence/1.2.0-beta.2/recovered/android-photo-preparation/`.
+
+`content_fish_art_contract.py` requires the actual `data/fish_art.json` schema:
+`complete=true`, `format_version=1`,44 unique canonical species, and88 canonical
+PNG resources. The `sha256`/`thumb_sha256` fields bind raw PNG bytes; the
+`image_sha256`/`thumb_image_sha256` fields bind the decoded, no-mipmap RGBA8 pixels
+after Godot's transparent-border import processing. These are different hashes.
+PNG dimensions, alpha bounds, source/import mappings and lossless import settings
+must agree. The strict runtime photo gate and static view/main/ruler/shader/scene
+sources are required and hashed in the frozen contract.
+
+`inspect_imported_fish_art.gd` runs read-only inside the disposable imported game.
+It invokes the native strict manifest validator, including anatomical landmarks,
+alpha geometry, dimensions and all decoded image hashes, then records the exact
+88 canonical `.ctex` target hashes. It never rewrites the manifest to bless changed
+pixels. The runtime/import checks need only the staged game; authoring checks run
+separately against the original repository root.
+
+The measured4.6.3 resource export contains no original fish PNG files. Its stripped
+`.png.import` mappings retain `[remap]` information but omit source/dependency/import
+parameter sections. The APK gate therefore requires the canonical targets and
+the exact audited `.ctex` bytes, not nonexistent PNGs or stripped source metadata.
+If a raw fish PNG is also exported, its hash must still match. The exported
+`data/fish_art.json` must be byte-identical to the frozen manifest. Native static UI
+scripts must resolve to their matching `.gdc` resources, main scene to the exported
+`.scn`, and the silhouette shader to byte-identical source. This is a resource and
+source-integrity gate, not a claim to decompile and compare generated GDScript.
+
+Both export routes run the new audit before exporting, and reject bad photo bytes
+before signing. The final signed APK is checked again and its build manifest gains
+a `photo_art` evidence section. Duplicate archive members are rejected. Existing
+54-scene/44-rigged-fish/world-data, Mobile/Vulkan, API29/36, VIBRATE-only,
+native-library byte identity,16KiB ZIP/ELF and exact preview certificate gates remain
+active. These checks do not establish Android installation or phone performance.
+
+The release source ZIP additionally requires135 photo-authoring files: the44
+original masters,44 identical full-resolution runtime derivatives,44 thumbnails,
+the exact artist manifest, derivative-generation script and provenance record.
+The runtime manifest's `source_manifest_sha256` binds that artist manifest. Missing
+or untracked required authoring members stop packaging even if the rest of the
+selected commit could be archived. The existing3D editable masters/generators and
+their frozen-source checks remain required too.
+
+Regression coverage includes complete synthetic44 source/import/export fixtures;
+partial, duplicate and retargeted catalogs; changed PNGs; missing decoded hashes;
+wrong geometry/import hashes; stale/missing/swapped `.ctex`; missing static UI;
+changed manifest/shader; and missing/corrupt authoring originals. The real exported
+resource ZIP also rejected five injected stale/missing/retargeted payload cases.
+All11 packaging test groups passed, including the retained official-template,
+Vulkan-attribute, identity, archive and SDK-storage tests.
+
+### Final commands after the coordinator approves the exact combined freeze
+
+Do not execute this block during preparation. First commit the complete combined
+runtime, all authoring files, tests, documentation and current evidence. The
+selected source commit and every tracked working file must agree, and final
+combined gameplay/visual tests must pass. These commands perform local packaging
+only; they do not authorize a push, tag or Release.
+
+```bash
+FREEZE=$(git rev-parse HEAD)
+OUT=/workspace/scratch/c16084497664/farshore-fishing-beta2-release
+mkdir -p "$OUT" build/logs
+python3 tools/test_release_packaging.py
+python3 tools/guard_release_command.py \
+  --log build/logs/beta2-source-zip.log \
+  --proof build/logs/beta2-source-zip-resource-proof.json -- \
+  python3 tools/release_source_zip.py --commit "$FREEZE" \
+  --output "$OUT/farshore-fishing-1.2.0-beta.2-source.zip" \
+  --prefix farshore-fishing-1.2.0-beta.2 \
+  --manifest "$OUT/farshore-fishing-1.2.0-beta.2-source-manifest.json"
+python3 tools/guard_release_command.py \
+  --log build/logs/beta2-final-apk.log \
+  --proof build/logs/beta2-final-apk-resource-proof.json -- \
+  python3 tools/android_prebuilt_build.py \
+  --source-zip "$OUT/farshore-fishing-1.2.0-beta.2-source.zip" \
+  --source-manifest "$OUT/farshore-fishing-1.2.0-beta.2-source-manifest.json" \
+  --template build/recovered-derived-android-release-arm64.apk \
+  --output "$OUT/farshore-fishing-1.2.0-beta.2-arm64.apk"
+```
+
+The protected preview-key defaults are already handled by the build tool. Do not
+copy a key/password into commands, logs, source, attachments or archives. Existing
+outputs and audit directories are immutable; investigate a failed attempt rather
+than overwriting them. Final static proof is written to
+`build/audit/1.2.0-beta.2/arm64/`; inspect its photo/3D/import/build manifests,
+signature and alignment logs before calling the APK statically verified.

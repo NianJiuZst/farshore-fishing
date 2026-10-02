@@ -76,10 +76,16 @@ if [[ -f "$PROJECT/data/fish_3d.json" ]]; then
   fi
   python3 "$ROOT/tools/content_3d_contract.py" "$PROJECT" "$AUDIT/imported-3d-scenes.json"
 fi
+"$GODOT" --headless --path "$PROJECT" --script "$ROOT/tools/inspect_imported_fish_art.gd" -- "$PROJECT.snapshot.json" "$AUDIT/imported-fish-art.json" >"$ROOT/build/logs/imported-fish-art-$ARCH.log" 2>&1
+if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script|ERROR:' "$ROOT/build/logs/imported-fish-art-$ARCH.log"; then
+  echo "Imported photograph audit failed; inspect build/logs/imported-fish-art-$ARCH.log" >&2; exit 4
+fi
+python3 "$ROOT/tools/content_fish_art_contract.py" "$PROJECT.snapshot.json" "$AUDIT/imported-fish-art.json"
 "$GODOT" --headless --path "$PROJECT" --export-release "$PRESET" "$UNSIGNED" >"$ROOT/build/logs/export-$ARCH.log" 2>&1
 if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script|Export failed|ERROR:' "$ROOT/build/logs/export-$ARCH.log"; then
   echo "Godot export reported errors; inspect build/logs/export-$ARCH.log" >&2; exit 4
 fi
+python3 "$ROOT/tools/content_fish_art_contract.py" "$PROJECT.snapshot.json" "$AUDIT/imported-fish-art.json" --archive "$UNSIGNED"
 python3 - "$PROJECT" "$ROOT/game" <<'PY'
 from pathlib import Path
 import hashlib,json,sys

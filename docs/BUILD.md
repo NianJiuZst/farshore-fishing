@@ -1,5 +1,92 @@
 # Android build: 远岸钓记
 
+## Current beta.2 preview: verified-source-first prebuilt route
+
+The combined gameplay/44-photograph target is **1.2.0-beta.2 / versionCode4**,
+package `org.farshore.fishing.preview`, launcher **远岸钓记·试钓版**. It installs
+alongside the old app with separate local data; it does not inherit the old app's
+saves. Final packaging requires coordinator approval of the combined source/test
+freeze. Preparation and a resource-only export probe passed; this
+section does not claim that the final gameplay APK or Android runtime has passed.
+
+Use `tools/android_prebuilt_build.py` for the recovered environment. Required pins
+are official Godot4.6.3 `7d41c59c4` and its verified matching `android_release.apk`,
+Temurin JDK21.0.12.1+1, Android build-tools36.1.0 and platform36/revision2. The
+restored SDK/JDK are under ignored `tools/android-sdk/` and `tools/jdk/`; toolchain
+binaries/caches are not distributed in source. This route does not require Gradle,
+NDK or an emulator. The historical Gradle route below is retained as an alternative
+and requires its full separate prerequisites; its beta.1 identity/install examples
+are historical, not instructions to install the independent preview as an update.
+
+`derive_android_template.py` accepts only the pinned official template. It changes
+minimumAPI24→29 and `extractNativeLibs` true→false, keeps ARM64 native libraries
+byte-identical and uncompressed, and preserves targetAPI36. Godot's pinned exporter
+has a Vulkan manifest-attribute typing defect; `normalize_android_features.py`
+corrects only the four recognized string-typed `required`/`version` attributes to
+their unchanged boolean/integer values, with exact reversal and unchanged-member
+proof. Any unexpected template, attribute, value or payload fails closed.
+
+The complete commit-exact external source ZIP must exist first. Every tracked
+member, mode, CRC, Git blob and SHA256 is rechecked; all44 original photo masters,
+runtime derivatives, thumbnails and their provenance/generator must be included.
+The ZIP also preserves the editable3D authoring source. Only a copied isolated game
+is imported/exported; primary source hashes are checked throughout. The44 full
+photos and44 thumbnails must match the strict manifest's raw PNG and decoded
+RGBA8 hashes, then the exact canonical imported `.ctex` bytes must match the APK.
+Godot's exported PNG `.import` mappings do not imply that original PNGs are bundled.
+Static native photo UI resources, the54 imported3D scenes, catalogs/world data,
+Mobile/Vulkan, no OpenGL fallback, API29/36, VIBRATE-only, v2/v3 signatures,
+16KiB ZIP/ELF alignment and official native-library bytes remain mandatory.
+
+The same already-approved private preview key is required for reproducible signed
+updates. No private key/password is included in this repository or source archive,
+and these tools do not generate one. Public certificate SHA256 is
+`e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284`.
+Restore/use that key securely; never put key/password contents in a command, log,
+source file or attachment. The prebuilt wrapper already selects the protected
+preview-key defaults and verifies the public certificate before export.
+
+After all combined tests pass and the exact committed freeze is approved, run from
+the repository root. Choose a new external output directory; existing artifacts
+and audit directories must never be overwritten:
+
+```bash
+FREEZE=$(git rev-parse HEAD)
+OUT=/workspace/scratch/c16084497664/farshore-fishing-beta2-release
+mkdir -p "$OUT" build/logs
+python3 tools/test_release_packaging.py
+# In this recovered workspace the verified derived template already exists.
+# On another prepared workspace, create it from the pinned official template:
+# python3 tools/derive_android_template.py \
+#   tools/godot-templates/4.6.3.stable/android_release.apk \
+#   build/recovered-derived-android-release-arm64.apk \
+#   build/recovered-derived-android-release-arm64-proof.json
+python3 tools/guard_release_command.py \
+  --log build/logs/beta2-source-zip.log \
+  --proof build/logs/beta2-source-zip-resource-proof.json -- \
+  python3 tools/release_source_zip.py --commit "$FREEZE" \
+  --output "$OUT/farshore-fishing-1.2.0-beta.2-source.zip" \
+  --prefix farshore-fishing-1.2.0-beta.2 \
+  --manifest "$OUT/farshore-fishing-1.2.0-beta.2-source-manifest.json"
+python3 tools/guard_release_command.py \
+  --log build/logs/beta2-final-apk.log \
+  --proof build/logs/beta2-final-apk-resource-proof.json -- \
+  python3 tools/android_prebuilt_build.py \
+  --source-zip "$OUT/farshore-fishing-1.2.0-beta.2-source.zip" \
+  --source-manifest "$OUT/farshore-fishing-1.2.0-beta.2-source-manifest.json" \
+  --template build/recovered-derived-android-release-arm64.apk \
+  --output "$OUT/farshore-fishing-1.2.0-beta.2-arm64.apk"
+```
+
+The source archive, final APK and `build/audit/1.2.0-beta.2/arm64/` manifests/logs
+must be reviewed together. Source completeness or a static binary pass is not an
+installation, gameplay/save-lifecycle, Vulkan-driver or Snapdragon performance
+pass. These local commands do not publish, tag or upload anything. For the exact
+pipeline, normalization proof, independent identity, all44 photo gates and current
+verification boundary, see [ANDROID_BETA2_BUILD.md](ANDROID_BETA2_BUILD.md).
+
+## Historical beta.1 Gradle route and evidence
+
 Build snapshot:2026-10-02 17:03 UTC. **1.2.0-beta.1 / versionCode3** is signed and statically verified for ARM64 and the separate x86_64 test ABI. The final frozen game and all 54 imported 3D scene payloads match the audited snapshots. Android runtime evidence is tracked separately in `ANDROID_TESTS.md`. Verified 1.1.0 artifacts and their original records remain under `history/1.1.0/`.
 
 ## Locked toolchain and package

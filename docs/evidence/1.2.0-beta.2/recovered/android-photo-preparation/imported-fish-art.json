@@ -1,0 +1,1462 @@
+{
+  "complete": true,
+  "failures": [],
+  "manifest_sha256": "b963714b24e48888e605c191a1839cb0c63bc1730b6ceac4b699b8b4b00d562d",
+  "scope": "Staged native Texture2D decoding, alpha bounds and anatomical manifest validation; no GPU/device claim",
+  "species_ids": [
+    "alligator_gar",
+    "annular_seabream",
+    "atlantic_cod",
+    "atlantic_herring",
+    "atlantic_mackerel",
+    "atlantic_wolffish",
+    "black_seabream",
+    "bowfin",
+    "channel_catfish",
+    "chinese_sturgeon",
+    "chub_mackerel",
+    "common_bream",
+    "common_carp",
+    "common_pandora",
+    "crucian_carp",
+    "european_perch",
+    "european_plaice",
+    "european_seabass",
+    "flathead_catfish",
+    "gilthead_seabream",
+    "haddock",
+    "japanese_horse_mackerel",
+    "japanese_seabass",
+    "japanese_whiting",
+    "largemouth_bass",
+    "longnose_gar",
+    "longsnout_catfish",
+    "mandarin_fish",
+    "marbled_rockfish",
+    "northern_pike",
+    "northern_snakehead",
+    "olive_flounder",
+    "painted_comber",
+    "pollack",
+    "red_mullet",
+    "red_seabream",
+    "roach",
+    "rudd",
+    "saddled_seabream",
+    "saithe",
+    "southern_catfish",
+    "tench",
+    "white_seabream",
+    "yellowcheek"
+  ],
+  "textures": {
+    "assets/fish/alligator_gar.png": {
+      "alpha_bounds": [
+        26,
+        145,
+        2024,
+        650
+      ],
+      "height": 768,
+      "image_sha256": "64aaefe58af3dbb9ae41a1487a4139b376bafff5c5a41f9a2e20b2b71e2db2ae",
+      "import_mapping_sha256": "508ba37fa63436afb87e90df12c6034fc0b31613123d262bfcd24fe273ee9b9f",
+      "payload_bytes": 1409022,
+      "payload_sha256": "6fb31c634062234e0184952be1cbf8c8c5b5e8a5df193a01bea4d3a9ea69416a",
+      "source_sha256": "26d0ba87b60f884195cff782e159f546cf8ac84da3ca8e0b288de4954d13f449",
+      "target": ".godot/imported/alligator_gar.png-cd68bdc9a0a67639df8702c1c10b2cfa.ctex",
+      "width": 2048
+    },
+    "assets/fish/alligator_gar_thumb.png": {
+      "alpha_bounds": [
+        6,
+        36,
+        506,
+        163
+      ],
+      "height": 192,
+      "image_sha256": "065684cfe35568e4b880ae1f12d5ede8e6fa2b3e84cc34606bb30b659ba77512",
+      "import_mapping_sha256": "6419ac408630571f20ebeccb4f0ff84363cec9f5f10d1f55cb6ea462d0a36017",
+      "payload_bytes": 74588,
+      "payload_sha256": "cb9cd85f290380e748c61ddf65c751ee7a7b9cef7217fcf9da6ebf187fc1b42d",
+      "source_sha256": "1c42285f3a68948e98ef00c5260bb298f7649c1631363cb469532bf680f3bb14",
+      "target": ".godot/imported/alligator_gar_thumb.png-ed2030470c6a080ad78cb79d6cb531b3.ctex",
+      "width": 512
+    },
+    "assets/fish/annular_seabream.png": {
+      "alpha_bounds": [
+        23,
+        8,
+        1753,
+        877
+      ],
+      "height": 887,
+      "image_sha256": "533a0119d3a812d2665b8327cc89a808c486c07e5fe1ee71f93c09c551c7c607",
+      "import_mapping_sha256": "5df039e02746ddcd61fe2cdf5d86e08ede48e686b9f277463cfe07c34f58e5ea",
+      "payload_bytes": 1555048,
+      "payload_sha256": "7549c634d07b137f9abccbe253ba738ab626f2b84572b7f389a7b4cb799938ed",
+      "source_sha256": "a3db99baaa2464ab7a9c9e18ba6c0f974b9c236295cd4d0843caccc59ef685e3",
+      "target": ".godot/imported/annular_seabream.png-6cb760d0938b450609bd12acc49aceb0.ctex",
+      "width": 1774
+    },
+    "assets/fish/annular_seabream_thumb.png": {
+      "alpha_bounds": [
+        6,
+        2,
+        506,
+        253
+      ],
+      "height": 256,
+      "image_sha256": "f496943d0e4559af46da6aa79dbc47a0fd1b2d506733c7bbdd6eb4fd54b75982",
+      "import_mapping_sha256": "8099a906eeceac08c3ec6c0a6d83112841238778fcb88e75ecf0a0718640c73a",
+      "payload_bytes": 140274,
+      "payload_sha256": "f74ff07eb4f08e893d22bf43c384c9cbc08d0330b55632ca40c03a19620af64b",
+      "source_sha256": "5954696f60218a34aca08e6d270fd7b3990a6eae47d1dc3d3ca9c4dda9c19592",
+      "target": ".godot/imported/annular_seabream_thumb.png-c94e0000e5ddccd8727fc7814431fb45.ctex",
+      "width": 512
+    },
+    "assets/fish/atlantic_cod.png": {
+      "alpha_bounds": [
+        25,
+        106,
+        1753,
+        779
+      ],
+      "height": 887,
+      "image_sha256": "65d398bcb3f6f39aae6539f630d0c4f7c6262699f3c7fd80ad244030eba5943e",
+      "import_mapping_sha256": "001140146e85c4ae68c15779bbfab650d171e51a649b02dcdafc9af9f2509927",
+      "payload_bytes": 1075660,
+      "payload_sha256": "e6706f0e2208150b8441001dc9bf48b22c8cb9772ab07391f4fcf754722f49b5",
+      "source_sha256": "fce033271b914e6ac42287067520413b62041b2183f023ee81d10fd05edb6487",
+      "target": ".godot/imported/atlantic_cod.png-57b5655bcda44f1dbffd31a35c9bcc34.ctex",
+      "width": 1774
+    },
+    "assets/fish/atlantic_cod_thumb.png": {
+      "alpha_bounds": [
+        7,
+        31,
+        506,
+        225
+      ],
+      "height": 256,
+      "image_sha256": "e2a8bd0e786ff1745cabe4835bd06b39a09adeff938a2e7f8a738378a2e2b243",
+      "import_mapping_sha256": "05effd5521f11a978dcea63ccfdbd50a69875fe86879d59cfb0b833fe7a94faa",
+      "payload_bytes": 106866,
+      "payload_sha256": "934e6ea6717977939daece0dd3747dc24349f3a4c54a872a8084803c968df6ef",
+      "source_sha256": "e169a433f50bf6f87b4dcaa25081fa40d1b0dcd89d2f6abc689f62fa28b3c31f",
+      "target": ".godot/imported/atlantic_cod_thumb.png-d2fe6022200a91cf1cadb2bb3b130305.ctex",
+      "width": 512
+    },
+    "assets/fish/atlantic_herring.png": {
+      "alpha_bounds": [
+        21,
+        149,
+        1733,
+        747
+      ],
+      "height": 897,
+      "image_sha256": "5666472e7f7fbaaae05a7991b88dd84aa09f438d078e82f146d2550138c8ab7e",
+      "import_mapping_sha256": "c4aced87821fac3208a9e4139c2ea79f2c1602924a48c34d187501585000c5b9",
+      "payload_bytes": 883250,
+      "payload_sha256": "6db24c8ad61d8777213e902c29191f3a551d85d8094729a9558273cbdeecaa29",
+      "source_sha256": "6b5b63a09652478c77f3c67281c2c265456ac890604c300363a4849270b79b27",
+      "target": ".godot/imported/atlantic_herring.png-c5a056c236042dc2a2e736889484aac0.ctex",
+      "width": 1752
+    },
+    "assets/fish/atlantic_herring_thumb.png": {
+      "alpha_bounds": [
+        6,
+        43,
+        507,
+        219
+      ],
+      "height": 262,
+      "image_sha256": "13d8d8608dafc29c651417e84385d2db8689fa02bf3b461608ee887b343e4e1d",
+      "import_mapping_sha256": "d82e8548f247343e6ff9cd845acee541093d3d6879efd7574d3d80792ed3076a",
+      "payload_bytes": 87984,
+      "payload_sha256": "51a78c8071fd0cde30cd2e090183b9a5b2f94eee57d407767e3e3b0d59d5c83f",
+      "source_sha256": "2f7a2d7380c1ec5ad746caffefaf64655074abdfe83b5e3f65b9ed6d6cc0e370",
+      "target": ".godot/imported/atlantic_herring_thumb.png-4282928580593437fe6c92267f1cd5e8.ctex",
+      "width": 512
+    },
+    "assets/fish/atlantic_mackerel.png": {
+      "alpha_bounds": [
+        24,
+        87,
+        1892,
+        691
+      ],
+      "height": 820,
+      "image_sha256": "6bf795a420cdc2b1533d41138baa319394208f731c64e9298e6f2b04f94a14d7",
+      "import_mapping_sha256": "0a71a011f567a06fa3ff31e3d7918c8202a8f96c60dd18613030e634a106d600",
+      "payload_bytes": 911030,
+      "payload_sha256": "fb78e6c3cde15d8c9c726d8d51f1383f735530144270143dc6f9688a0fcde1ce",
+      "source_sha256": "40af0d053938433865aabd2eee54f0612d8221e93161edb87f7268d301de224c",
+      "target": ".godot/imported/atlantic_mackerel.png-c56964af8c4e8e0a5396615b7e41120a.ctex",
+      "width": 1918
+    },
+    "assets/fish/atlantic_mackerel_thumb.png": {
+      "alpha_bounds": [
+        6,
+        23,
+        505,
+        185
+      ],
+      "height": 219,
+      "image_sha256": "41f58fa42effda1cb3773c150db9aeecd2f71c514aa181359a7f0a8bfd361e50",
+      "import_mapping_sha256": "dc1ac4bb0e1666a2cbb598a8d25ab840ac199fd23ece7a4bff286abb3bf2337e",
+      "payload_bytes": 73366,
+      "payload_sha256": "d6d230b616a1902237e1ae2f84148a780f62b10d93f979c10fbb899a3d771f02",
+      "source_sha256": "c49d15b5f327e334806cb2084819a139fc78b5ee01c41e8f89cb125e2e8fb266",
+      "target": ".godot/imported/atlantic_mackerel_thumb.png-1417bdc66ef60bab73214de22268ea87.ctex",
+      "width": 512
+    },
+    "assets/fish/atlantic_wolffish.png": {
+      "alpha_bounds": [
+        23,
+        92,
+        2036,
+        647
+      ],
+      "height": 765,
+      "image_sha256": "f5e4b5b01eac13aac210bfa6706a93a0b5b16cf6c8a646b68e914856c07c649a",
+      "import_mapping_sha256": "698ef2b6f6a104acd61a2691f9bc18586b2d14c3b2c5c6d1986b967211e7a194",
+      "payload_bytes": 1380438,
+      "payload_sha256": "550be525371c70af21abc24b7fc9fb7e8b456351132236383d6e7e13d0d8672f",
+      "source_sha256": "2f68748edcdb0721ed6e79b50e34e6183deee58b950ee919881d9ca083e163a4",
+      "target": ".godot/imported/atlantic_wolffish.png-09d3a06bfc4ba9e5cfa93feefb5d8d43.ctex",
+      "width": 2057
+    },
+    "assets/fish/atlantic_wolffish_thumb.png": {
+      "alpha_bounds": [
+        5,
+        23,
+        507,
+        161
+      ],
+      "height": 190,
+      "image_sha256": "ae40fc84c892cb71616210919bd0151ae536f8de78aa0e0ec6f7329061dc43b5",
+      "import_mapping_sha256": "000f4e8bce13e3ccc0fca5eab276c0abc10839426c74dae2ca6c423ad10df27b",
+      "payload_bytes": 87066,
+      "payload_sha256": "1195035a838c606c60eccc7bae2c00157bc6dbdc24e5cc699ac3969cfaa70cc1",
+      "source_sha256": "641975339dfb7dda99e296e5f2ae5df3133ee6ce1dafcddf03a81d6de1344bfc",
+      "target": ".godot/imported/atlantic_wolffish_thumb.png-0f5fbc1ed49ac007968460319b0a4e4f.ctex",
+      "width": 512
+    },
+    "assets/fish/black_seabream.png": {
+      "alpha_bounds": [
+        17,
+        19,
+        1573,
+        960
+      ],
+      "height": 992,
+      "image_sha256": "dd7adcd4d5f075a49d50d72b61233f6d251f72de79d675ba8906464b379896ea",
+      "import_mapping_sha256": "f81f4a358040fe17f5144bc963125bcf98a6952d9e5e86d577bd1ad564cfb75e",
+      "payload_bytes": 1387996,
+      "payload_sha256": "152c4df5800927c1c0ff13bc1d31fe62ea157402a27424941d1e8d6731daaaa0",
+      "source_sha256": "72b789e4e0d2fe3701e8333a0f2a673d60361830ac8172fbf20970fed73c2b2c",
+      "target": ".godot/imported/black_seabream.png-41cb78f8a4c45dc4ead1c0a3923e59d5.ctex",
+      "width": 1586
+    },
+    "assets/fish/black_seabream_thumb.png": {
+      "alpha_bounds": [
+        5,
+        6,
+        508,
+        310
+      ],
+      "height": 320,
+      "image_sha256": "d17e43722b4e7f106f05edfb72313eb5edfc959918b4ec9d90a2af36197b5e91",
+      "import_mapping_sha256": "1f61bde86e29da3d3ca84b9ec28174e4dd940fcd87a839a007e3c7f7c57667c9",
+      "payload_bytes": 149736,
+      "payload_sha256": "6f4c18840dfb7022d2b660097f8b01e6c3cc3955b8ee41791b8e722f6c3957c0",
+      "source_sha256": "041e2d6d548cc22fd18ffd12ccf132ba4e747dfaeda0e0a4083739004782f468",
+      "target": ".godot/imported/black_seabream_thumb.png-cb2790fae1eba9749f522d99065a5968.ctex",
+      "width": 512
+    },
+    "assets/fish/bowfin.png": {
+      "alpha_bounds": [
+        26,
+        69,
+        2143,
+        666
+      ],
+      "height": 724,
+      "image_sha256": "4e90b5f73bd94688cf58e1936cf2911d7e3d768321bb583cf54ff6a72c957dac",
+      "import_mapping_sha256": "6d23fda1501ed58af7a47712218a8110d8ac570003452d6ecd62f8dcacaa447a",
+      "payload_bytes": 1363066,
+      "payload_sha256": "3ac0b644a4bf65ed812870882fb211b1b1d5d3af70ed386a21241940368eeaec",
+      "source_sha256": "19227a7242b7b0891566f91ae31192de52f2c330f7a73e9bcc6811f66d258c11",
+      "target": ".godot/imported/bowfin.png-bb3156894b627484164a15c4aa040c31.ctex",
+      "width": 2172
+    },
+    "assets/fish/bowfin_thumb.png": {
+      "alpha_bounds": [
+        6,
+        16,
+        506,
+        158
+      ],
+      "height": 171,
+      "image_sha256": "bc452c098ee96648eeea0ed170492e244e5493ad673d31ed49871904e508cc65",
+      "import_mapping_sha256": "0216a35a7335757bd45cdd8d5b94a0be8908678d5def561ad728ed5d8ac24411",
+      "payload_bytes": 85638,
+      "payload_sha256": "b78a8c3d6174b57ab54ccb839167c45b0b3bd45baba7df40080733079dd48c15",
+      "source_sha256": "ccdd355490e2923f387a4d7ede6b489bc778082bfe9485508e31e597eeda476b",
+      "target": ".godot/imported/bowfin_thumb.png-f37eb1005e5fd56a84527721dbdda5e6.ctex",
+      "width": 512
+    },
+    "assets/fish/channel_catfish.png": {
+      "alpha_bounds": [
+        12,
+        6,
+        1934,
+        754
+      ],
+      "height": 808,
+      "image_sha256": "a6277b31cc4624255315ad41d2a69b01e373c7747492128e80db70f20991898d",
+      "import_mapping_sha256": "c8a8e00af2ff0d914b0e7a16e2c1873ca4f6c59dcb2e7e9d62cfb3ed103ad930",
+      "payload_bytes": 1027096,
+      "payload_sha256": "fd75c46d24b9fe8fedddbff2aca7e4019b5026da9aa4b00ae2fb0ea3d71d68bc",
+      "source_sha256": "16eaf522029950d48f862cdbd3057a820f8bf3dbb0a491e09933eb8806ce3456",
+      "target": ".godot/imported/channel_catfish.png-66eba98102057324fdbfdd82765b84ba.ctex",
+      "width": 1947
+    },
+    "assets/fish/channel_catfish_thumb.png": {
+      "alpha_bounds": [
+        3,
+        2,
+        509,
+        198
+      ],
+      "height": 212,
+      "image_sha256": "96eb8ac43d1f0dfd8d7b8f7ea89dea8ac8f48c5ee2f0976eb971cb48f41a9a11",
+      "import_mapping_sha256": "611bd394b8d1df5ec511691f9b3525d416915899b09b612392ade84804f33e19",
+      "payload_bytes": 83370,
+      "payload_sha256": "e5665d79adb583900ac2464bbb4b324f4d04cbe76bfa6abf9549929c1414b1c5",
+      "source_sha256": "22b5e8cb585d5935fdbb20ab91e51268aee70b89ea7915b7bf4e3e26c1072d98",
+      "target": ".godot/imported/channel_catfish_thumb.png-7c5cdd66701d32307e2504744763aaa5.ctex",
+      "width": 512
+    },
+    "assets/fish/chinese_sturgeon.png": {
+      "alpha_bounds": [
+        12,
+        52,
+        2149,
+        677
+      ],
+      "height": 724,
+      "image_sha256": "f063e3bf37f52d8e56cdb2653d0239cf9810d7b276a837a258da5c8d546b7289",
+      "import_mapping_sha256": "5ec845075e250d107b954cfbef8e584a0b7480a78ed30c9545a5c9d8989cd45a",
+      "payload_bytes": 851436,
+      "payload_sha256": "a104070ee7a1cc5ce1296605aea0becb47161e610d471856e717f80886dca102",
+      "source_sha256": "2186c112bb2430f2e643dcc2c988d011d8f38a03ae01ac63a28ba5fcb27a5988",
+      "target": ".godot/imported/chinese_sturgeon.png-236579f30ed12c72c3de2107baf90b9a.ctex",
+      "width": 2172
+    },
+    "assets/fish/chinese_sturgeon_thumb.png": {
+      "alpha_bounds": [
+        2,
+        12,
+        507,
+        160
+      ],
+      "height": 171,
+      "image_sha256": "49504160b0b46abb486eb5aff697ba5bac828e90de2db5f7ed815e95ea25ef77",
+      "import_mapping_sha256": "4040a2c1a47412c54d7b3f980206654f54cc2bb70578d02e629db92a3f8986ee",
+      "payload_bytes": 61906,
+      "payload_sha256": "fe27c6678979ac2c2dfa233c10f11ecc9a0ed44ff429d2668c828e2cc8851b31",
+      "source_sha256": "885a78885b3ce19bbce1f7aaa5205aef62c408835db99cca9f75f32565c2f685",
+      "target": ".godot/imported/chinese_sturgeon_thumb.png-7627ee85f0e6b8e59b7b32e543939118.ctex",
+      "width": 512
+    },
+    "assets/fish/chub_mackerel.png": {
+      "alpha_bounds": [
+        26,
+        79,
+        1864,
+        752
+      ],
+      "height": 835,
+      "image_sha256": "ed2f41f11957c0afca14eca7aa167b62237e88fc2ace324fabfcdf548e1a324d",
+      "import_mapping_sha256": "80bcdae6d502903ac560db41a4cff7cf2dbb37ca9f8abafbc4740e421f5148a8",
+      "payload_bytes": 977642,
+      "payload_sha256": "1464b8a55228ecd1eac2af2215eeb2df0e62387972bca9c1e6c971945ebc7919",
+      "source_sha256": "ef196ac31e4c5431d0cd7d3182b0ba7ee3046184b1cfa057608a12c679b39604",
+      "target": ".godot/imported/chub_mackerel.png-49c7c8c8bac9b2b8db3a409f122eebed.ctex",
+      "width": 1883
+    },
+    "assets/fish/chub_mackerel_thumb.png": {
+      "alpha_bounds": [
+        7,
+        22,
+        507,
+        205
+      ],
+      "height": 227,
+      "image_sha256": "79b0947d8e0c5b7e07b4bd52e292be930ea7b39e38c04e204f5469251040bc0e",
+      "import_mapping_sha256": "4ac7e1ce8bf4b6f5d93fc896d0490a87ce7889e02a0716e23ad51c38a02b9da3",
+      "payload_bytes": 82380,
+      "payload_sha256": "4b55a5fa04ab85c05b8bd070b60b4ad195b6a37285faf2f8071af8ef87380306",
+      "source_sha256": "6af1c67f0094c858ef7ac2bfce67815627591244488a15237eccbb188fd2b151",
+      "target": ".godot/imported/chub_mackerel_thumb.png-0df4b6ee1f19f3716a28b29cfd69c1ed.ctex",
+      "width": 512
+    },
+    "assets/fish/common_bream.png": {
+      "alpha_bounds": [
+        23,
+        16,
+        1734,
+        882
+      ],
+      "height": 897,
+      "image_sha256": "86acdb0f233aea95bd4fe7cd9066d0e965930e7a2add59aa847fd85f59a347dc",
+      "import_mapping_sha256": "c3cb73cef14978577fad20ec1718029491e15e2549f99683e3cc4f232e61f874",
+      "payload_bytes": 1420466,
+      "payload_sha256": "cec961d0b9741a051c6569ab6b846cc9c3cdf60c075e56fa77b4481cf2d5aff7",
+      "source_sha256": "cf7753d0e88e2fe43ffd4e279d8c829edbd642fe94421e37dcd2e9d30ede1d3b",
+      "target": ".godot/imported/common_bream.png-ba7b3cb927432609d837cb5776e0fede.ctex",
+      "width": 1753
+    },
+    "assets/fish/common_bream_thumb.png": {
+      "alpha_bounds": [
+        6,
+        4,
+        507,
+        258
+      ],
+      "height": 262,
+      "image_sha256": "953018a981701598685d16bbead5ccb27a8be0666a4d548a207dbf9b4a2cf2be",
+      "import_mapping_sha256": "4081380ff3bc329fbc05f142b21a19545e270a3cc16349442223ab403c0bdd2f",
+      "payload_bytes": 133088,
+      "payload_sha256": "7ca91aee7d442f3f840c835cab85e14bc62553dce7d63db06e006eedfc2d30a1",
+      "source_sha256": "1909f4386c7c37ad93952d7b562559424511071c8de6ab31c7c1f90211d604bb",
+      "target": ".godot/imported/common_bream_thumb.png-5af5a1e2dea3a47bcce2db48e26ef62d.ctex",
+      "width": 512
+    },
+    "assets/fish/common_carp.png": {
+      "alpha_bounds": [
+        22,
+        50,
+        1753,
+        836
+      ],
+      "height": 887,
+      "image_sha256": "4cf5a3d26de37148d6e38a95e633853471e17e0186cdce69f1e29dc2024aa695",
+      "import_mapping_sha256": "6715504d78990e166c0b964398967e47ef70276ed214a2167d2a583757fdaa77",
+      "payload_bytes": 1357110,
+      "payload_sha256": "d1a3d0e1222f442a52b72a3a7ecbf3d7521742384b018036a4c9c8db21372ff5",
+      "source_sha256": "4fe3609cc3fc3575550856ff16805ecb24b25eda9aa544da7f613411670ab386",
+      "target": ".godot/imported/common_carp.png-a0e2723410a2d00785f3b6d143aa8c75.ctex",
+      "width": 1774
+    },
+    "assets/fish/common_carp_thumb.png": {
+      "alpha_bounds": [
+        6,
+        14,
+        506,
+        242
+      ],
+      "height": 256,
+      "image_sha256": "544a7c67ea79409033a8af9eb6de5bab28cc4d04eb34671cc4b39f0ef8c82431",
+      "import_mapping_sha256": "e38ae299173cc275e58a7d697dd9ed13fc9327c745693feace46a09c6a052df9",
+      "payload_bytes": 125372,
+      "payload_sha256": "aec4d4e46d3bbe52ec3ba26e0d9aca279414dc3b8fe363568a8a930e016d398f",
+      "source_sha256": "0c0938c537e6ed92c9beb292728c10a4c76f926d193af96419185b126c3f24cb",
+      "target": ".godot/imported/common_carp_thumb.png-409e7b2471787dc5234aa1523edbd159.ctex",
+      "width": 512
+    },
+    "assets/fish/common_pandora.png": {
+      "alpha_bounds": [
+        11,
+        9,
+        1765,
+        878
+      ],
+      "height": 887,
+      "image_sha256": "3231ce58fe3f085cb8533dc2e9a340114b8ac06b825e146892a2fdf61e884561",
+      "import_mapping_sha256": "ae37557cb977f0033b196f6575438d679bdd20d09c2a585e6348c2e1bd60f803",
+      "payload_bytes": 1371552,
+      "payload_sha256": "4b9b55aefa5adb70c07ceb6b9a581dc98e67617de2973fe2fdceeba9ade792f5",
+      "source_sha256": "cb49b926c89dd54a785a5c58e94ed8142ae3b94c2bc0bbda40da812baaa4663d",
+      "target": ".godot/imported/common_pandora.png-1bed27e02eab47845f8463a1619723be.ctex",
+      "width": 1774
+    },
+    "assets/fish/common_pandora_thumb.png": {
+      "alpha_bounds": [
+        3,
+        3,
+        509,
+        254
+      ],
+      "height": 256,
+      "image_sha256": "89becf7e2b31aa9de94b069d87a6b2c2eab73d5023b4856d59b45e1360ebfca2",
+      "import_mapping_sha256": "80b5147693c06ed900ef9213c2d055d7c32730750b40ad3a82ef97f31a3c6038",
+      "payload_bytes": 127418,
+      "payload_sha256": "bb5e4739ae9b9500165a96137b35a40a6e2a8e8f6775d9234cd0481c33f38f25",
+      "source_sha256": "b6b89b72233b7d6d77f45aeb3d56071a33d3fd96b4e33be1fd8b660ef5ee9675",
+      "target": ".godot/imported/common_pandora_thumb.png-90559b1ba3b09113e9dc6ac47fd2ca44.ctex",
+      "width": 512
+    },
+    "assets/fish/crucian_carp.png": {
+      "alpha_bounds": [
+        20,
+        17,
+        1733,
+        880
+      ],
+      "height": 897,
+      "image_sha256": "b0479e06f1778ce13130578ce424a45778bea3611b5235967e43090868152aff",
+      "import_mapping_sha256": "ddfc79796a3af7d1a24cd7c3732d364025bed158368a7128653c5850a35a092c",
+      "payload_bytes": 1383084,
+      "payload_sha256": "35659a79c03ecbe60acf72ccb9cecfc5923464f44cdc16c2e3d70b12be8a28d1",
+      "source_sha256": "983838e0eda784e0f8c79a8826e3209c54fbc0c99c3a2dfad5fad276cdde1cd1",
+      "target": ".godot/imported/crucian_carp.png-d42fdc7d0482b392f0b703198deb373b.ctex",
+      "width": 1752
+    },
+    "assets/fish/crucian_carp_thumb.png": {
+      "alpha_bounds": [
+        5,
+        5,
+        507,
+        257
+      ],
+      "height": 262,
+      "image_sha256": "8abe45966f6508a9842a95fe93b2045069aa9c76556e45986a07f8f41e13912f",
+      "import_mapping_sha256": "9d98f4bb76560b9fbca0420dce599bab198973770252964504f413f5f46b5054",
+      "payload_bytes": 127634,
+      "payload_sha256": "9b0b025062455d6e08349d7fda79a43aacfbb2f065a2264ed3f31f253ac9c3c1",
+      "source_sha256": "8c984e146c5ad2013a89a821de55df9f791cdf59430399429360c9d3d57e76e8",
+      "target": ".godot/imported/crucian_carp_thumb.png-29f64bb4d1f45818bfa59f2e87392a10.ctex",
+      "width": 512
+    },
+    "assets/fish/european_perch.png": {
+      "alpha_bounds": [
+        19,
+        26,
+        1748,
+        854
+      ],
+      "height": 887,
+      "image_sha256": "86896ff77be24b6a32f0c885ef19f5f3a8806c7152055281714d38eb6f3d6356",
+      "import_mapping_sha256": "076090b469a015313e4e4262a1a0a64aca02a895e297820f7dd75ec64deac8c0",
+      "payload_bytes": 1398892,
+      "payload_sha256": "9c9f5208e8b82bce22f4be40aba521246d3a44c55f0eeb8415c7dbdbdc04ad70",
+      "source_sha256": "efadccd6f27ece289fabbbbff7607f9f951ff5428d2dcf913e8a3e60110328b4",
+      "target": ".godot/imported/european_perch.png-a0088a57099180e72217c6335e3c5836.ctex",
+      "width": 1774
+    },
+    "assets/fish/european_perch_thumb.png": {
+      "alpha_bounds": [
+        5,
+        7,
+        505,
+        247
+      ],
+      "height": 256,
+      "image_sha256": "7a52428399415f61683d9e3519c238b460ad8c02431a296521bb090becd282a7",
+      "import_mapping_sha256": "8b1aa9e1b77d9464db36b31b7ebfbb29d7a93d8634a143d7f5c44f018b759305",
+      "payload_bytes": 131602,
+      "payload_sha256": "8669e6a630b6b56052bb05d37ac5919b813680c2502fbb82bc910826b4ede208",
+      "source_sha256": "de4f01c6747a8d7206b8fb3369e9a944a38f7c70982ec692bdb08cb77157b425",
+      "target": ".godot/imported/european_perch_thumb.png-9eca30cc8763c03b43caada01449a915.ctex",
+      "width": 512
+    },
+    "assets/fish/european_plaice.png": {
+      "alpha_bounds": [
+        23,
+        59,
+        1516,
+        953
+      ],
+      "height": 1024,
+      "image_sha256": "97e1773566b3c6ad17ab7a798a5e221a7aad4365312d719f6e1b328eb2ba494f",
+      "import_mapping_sha256": "27566436a0e804ff3c939879382c2e9c18a5fe8d9402448f2c0db99dbb044c7a",
+      "payload_bytes": 1807288,
+      "payload_sha256": "05c8301b614b48a74c8f38da8272eba92080231ba2d465cf0ca7ca589bb14690",
+      "source_sha256": "4cb8103bdc3d1ff8a7a0a962999b7a5dd8aea9152040c098c5d946b2fdef46be",
+      "target": ".godot/imported/european_plaice.png-c780f6012b953f099f32a6ee8fc55a41.ctex",
+      "width": 1536
+    },
+    "assets/fish/european_plaice_thumb.png": {
+      "alpha_bounds": [
+        7,
+        19,
+        506,
+        318
+      ],
+      "height": 341,
+      "image_sha256": "7bcedbbcb5bd791c25cad119274dc46189a0b0722deb95000a664d41e2503350",
+      "import_mapping_sha256": "9aba3920147c5d1cb0cf636003eb454771e7dc2d528886566d0c966db56709a0",
+      "payload_bytes": 171830,
+      "payload_sha256": "c90dc26197edb09c4a313c18a14d5508bade58af50e5619951b9ea1dcf30916b",
+      "source_sha256": "9287fefeda795feb2a9db141018a95e2b10e71e5f7428af90b712af6b631f91a",
+      "target": ".godot/imported/european_plaice_thumb.png-8675d43f3945efef029778732a92ad00.ctex",
+      "width": 512
+    },
+    "assets/fish/european_seabass.png": {
+      "alpha_bounds": [
+        25,
+        40,
+        1863,
+        793
+      ],
+      "height": 832,
+      "image_sha256": "9fd933dbcb5ccfad8d82276053bc9b7e9808350d7de932c634257d04f35817cc",
+      "import_mapping_sha256": "8e0310eb00d08b866623781a47d832c336712ea774c2d5a51012cb3b742c8f22",
+      "payload_bytes": 1199138,
+      "payload_sha256": "18aeb4b16539dac2effcd2c2cef58b52d06e973b65ccf84da80dbe55bf25956a",
+      "source_sha256": "a43255f3c19700df3bd5a95bab7828e3cc3d9533f83fabdec48001feceb8a438",
+      "target": ".godot/imported/european_seabass.png-bee7f98e77c7efd57183ad9ac9ec6a50.ctex",
+      "width": 1890
+    },
+    "assets/fish/european_seabass_thumb.png": {
+      "alpha_bounds": [
+        6,
+        11,
+        505,
+        215
+      ],
+      "height": 225,
+      "image_sha256": "1377146a8b26a820336bb833636f85e3d800c9d1f7626b2a3cc2d2452cefeb45",
+      "import_mapping_sha256": "9886cf119b4e0f677556d89b1fae1e91ad2f5685a282dc0a65d96b76f97ccffc",
+      "payload_bytes": 89588,
+      "payload_sha256": "7e54d09768f2c4d556e40dbd18be7632eef207addebdea29dd6cc1c0f79cf818",
+      "source_sha256": "ebcf58d523d943e60a30fb43a73911cc5d6a37051e1ef5b7f0f5406fd00aef37",
+      "target": ".godot/imported/european_seabass_thumb.png-7c1744c0334ce8548a989016ecb4651a.ctex",
+      "width": 512
+    },
+    "assets/fish/flathead_catfish.png": {
+      "alpha_bounds": [
+        27,
+        43,
+        1877,
+        733
+      ],
+      "height": 827,
+      "image_sha256": "899a6041bfc7417ddffedf124cd03b20d79c198c759bfd0b5676e96df76435ea",
+      "import_mapping_sha256": "d5ec12ac105c18ed24d18607a83494445270bb4fcac0bb6e13a5a37e99463369",
+      "payload_bytes": 1140512,
+      "payload_sha256": "a20aa21a0e1391c54c36402d071808105f424ef527ccc72aede414f2401e9e9a",
+      "source_sha256": "95d0872b31bc90b070cced510c40d200aa63b8c25aa430fbe45cd56dce1408d2",
+      "target": ".godot/imported/flathead_catfish.png-2bf5d12f51b47c546eaad9cb473a151a.ctex",
+      "width": 1902
+    },
+    "assets/fish/flathead_catfish_thumb.png": {
+      "alpha_bounds": [
+        7,
+        12,
+        505,
+        197
+      ],
+      "height": 223,
+      "image_sha256": "a332ca9759b7b1d6655d156b5dcd86a0ad248ba6a5db3d679499b1c03b498f91",
+      "import_mapping_sha256": "d87b9e30b4887e852ef8f2659ecc61e31959a2870510892f0fe583e84d410005",
+      "payload_bytes": 95628,
+      "payload_sha256": "d795c3b158df257cee22b7fd5e54ddbef75bba60dbcc055eb181001053ca8808",
+      "source_sha256": "247654a211f75b4e2696e1bbba4d0b6aaf86e55c82dfc6be997fe8640cb93bac",
+      "target": ".godot/imported/flathead_catfish_thumb.png-96661161a9219e0af308ee61a569273d.ctex",
+      "width": 512
+    },
+    "assets/fish/gilthead_seabream.png": {
+      "alpha_bounds": [
+        27,
+        17,
+        1726,
+        875
+      ],
+      "height": 898,
+      "image_sha256": "f5355b0b9aec5424cff433f27adb67ea564e85460ae34d52675a3fe247056bd8",
+      "import_mapping_sha256": "bde91a2fe500e28c348f6f55fcfe54fc1a4408cbb886a83ec30130f368864cb7",
+      "payload_bytes": 1439724,
+      "payload_sha256": "fa53f9fd69cb0ee2be63e1c5565085661171fc89b1659fa2992f0ac55bd15585",
+      "source_sha256": "af56f3fbb76ea0c728334676b37bdec6b782e1f9e6315e73501088cbcf952ce9",
+      "target": ".godot/imported/gilthead_seabream.png-e21b63e4fa928469ffefb7fa13812f2f.ctex",
+      "width": 1752
+    },
+    "assets/fish/gilthead_seabream_thumb.png": {
+      "alpha_bounds": [
+        7,
+        5,
+        505,
+        256
+      ],
+      "height": 262,
+      "image_sha256": "62cf509a36c03eae25b0e843fd4c7ba7d287217da2dc63f3f6d01e416b049d47",
+      "import_mapping_sha256": "506445af2e40275c1c9e5101d6620da4a198a9491126add1c2ca510d35cd34fa",
+      "payload_bytes": 132364,
+      "payload_sha256": "14523217c7c7b4f3fde6fb2b9054742ba1847523a8f1023751b626f8394369ec",
+      "source_sha256": "39df1d20a62781fb6f9d29763926ee29d094536b76a7878210405c4b2d0fef4e",
+      "target": ".godot/imported/gilthead_seabream_thumb.png-e72672d67aa77ff5bad57d5929a39fe3.ctex",
+      "width": 512
+    },
+    "assets/fish/haddock.png": {
+      "alpha_bounds": [
+        29,
+        66,
+        1748,
+        770
+      ],
+      "height": 887,
+      "image_sha256": "90ba1414d043172ba6303481fb3575d3c0e4fe3353c3a18184f72bdb6975025f",
+      "import_mapping_sha256": "4f26b989b2d5d8b1b77ff4cee1cd93d69a8703c7928f1219a906c5ef0df774ae",
+      "payload_bytes": 992992,
+      "payload_sha256": "4049c1a8d1784db0ee45b4c81baba4442ae8d084176dd2512d340d523434bf68",
+      "source_sha256": "7ce1d25df84a05d5c9ed573a99c7b3b0a018a3c9a49ac41c655a95f43ef0dc61",
+      "target": ".godot/imported/haddock.png-ab3e597b998d50ba22361001e7994907.ctex",
+      "width": 1774
+    },
+    "assets/fish/haddock_thumb.png": {
+      "alpha_bounds": [
+        8,
+        19,
+        505,
+        222
+      ],
+      "height": 256,
+      "image_sha256": "3e9fecc0833f96ef5b557f8d6c7f6555f936530ff4ef01c1ed9874bb0430b474",
+      "import_mapping_sha256": "33616c555f52d673a2fcc9174ab7ad9aa527bd57a262504f6a153aae7f55d7cc",
+      "payload_bytes": 89704,
+      "payload_sha256": "3cdfbe0c3e49136e148391b378c367acb3d0b1e010f689cd1ec1c8cd9f73d9ac",
+      "source_sha256": "d3a3c0574f86e8d3e03e8b542f1717844225ed0d0c6dd620f7aba214c86c6b36",
+      "target": ".godot/imported/haddock_thumb.png-373c9f25e8ff8da3b5907930cd4f9d9b.ctex",
+      "width": 512
+    },
+    "assets/fish/japanese_horse_mackerel.png": {
+      "alpha_bounds": [
+        18,
+        92,
+        1732,
+        787
+      ],
+      "height": 897,
+      "image_sha256": "21aa35bacb73513932ce4a173a3b81a2da25aaf7b8ab84517de6d2f4b77b76b7",
+      "import_mapping_sha256": "06eddbd6ef3d184be7db1fb0e69f439350498ff342806407538180878255fe16",
+      "payload_bytes": 1043558,
+      "payload_sha256": "70498ae285e7d9ea95227200bea557512f356306b477382182cb41838fb675ff",
+      "source_sha256": "8397c5e31b4c35327c18acca3955d49774c072dbb8d469597aba911510dfd311",
+      "target": ".godot/imported/japanese_horse_mackerel.png-269d4090ac3cef8efb968708f325c57f.ctex",
+      "width": 1752
+    },
+    "assets/fish/japanese_horse_mackerel_thumb.png": {
+      "alpha_bounds": [
+        5,
+        27,
+        506,
+        230
+      ],
+      "height": 262,
+      "image_sha256": "84658a310b2effc66764c8f73aa7f82687e246dbb262adad1c2c29b2b6a6dca5",
+      "import_mapping_sha256": "daaa01d6ed56534ef2a75a633b220b6846c5b81dc02cc62bdca484c3b43de88e",
+      "payload_bytes": 103802,
+      "payload_sha256": "cb09ff5e5f2e0640f3f97b47f2067e1490b203ae20000be46be3f1ed45033fa9",
+      "source_sha256": "e5c305ac7281d8f6ba4518befe260cb872cbc847351e10babedf2f2007be456d",
+      "target": ".godot/imported/japanese_horse_mackerel_thumb.png-de1967ed576ce89eabbd0bbd579c8651.ctex",
+      "width": 512
+    },
+    "assets/fish/japanese_seabass.png": {
+      "alpha_bounds": [
+        12,
+        70,
+        1761,
+        795
+      ],
+      "height": 887,
+      "image_sha256": "f2be2152b1c87bf9a37f75e999d0388363daed6c2d4a5a2e2e75032ef0e77dab",
+      "import_mapping_sha256": "a841f6549a8e19da2cb292d0e7983de52cae24c75d027c0663a3d52b6f0ce37c",
+      "payload_bytes": 1199452,
+      "payload_sha256": "38c3d24152d0a7bda87041f65d304f1e68d7a9d232e2c51d82117296390d26dc",
+      "source_sha256": "2167c6b26f026c0e9f1f1c659d69d1271a2836a37cb128f3b39eb629fb7b8d27",
+      "target": ".godot/imported/japanese_seabass.png-b36b3e74f6f3afbba4a3ba1622470245.ctex",
+      "width": 1774
+    },
+    "assets/fish/japanese_seabass_thumb.png": {
+      "alpha_bounds": [
+        3,
+        20,
+        508,
+        230
+      ],
+      "height": 256,
+      "image_sha256": "5df2e9a9d3f31956d2893f29b35dcb80bc17758619e4f4e540101d9e66ac488b",
+      "import_mapping_sha256": "3166dfe2ea1e5331e1c0c4402b0e7a587d5dfade3de1ceb5686bc22fa15a051c",
+      "payload_bytes": 101258,
+      "payload_sha256": "45b63d1e0f798e208d5afdfefa38fbd78588fbedf292568bcd125f490f632018",
+      "source_sha256": "c92caca40abc65df50b688fb79b19dfb525684e9e93c294f692daf4cc948eab5",
+      "target": ".godot/imported/japanese_seabass_thumb.png-3cdfdc9ab5b36bee8ee3b88f75b6ebc7.ctex",
+      "width": 512
+    },
+    "assets/fish/japanese_whiting.png": {
+      "alpha_bounds": [
+        29,
+        92,
+        1953,
+        682
+      ],
+      "height": 793,
+      "image_sha256": "69fdfa5d9a47a86efe757c9e78ccf3a32f3bb485b5dc3469ff55b8f7a0306bdb",
+      "import_mapping_sha256": "a4ecfca8e006d5c7ca70f0bd2b66b0d451324356dc716055293cdec821c3e86b",
+      "payload_bytes": 992970,
+      "payload_sha256": "1f0f99c58e610535d9780fe94050bcc003b4b66b960b9329069ab6b9d301a9e7",
+      "source_sha256": "539b73cf2fe9df8d74a4f08d1a33e25decf28b7cec062b770570ae9b3eea2aff",
+      "target": ".godot/imported/japanese_whiting.png-2935047656071bfe9db4c2fe0c8508f2.ctex",
+      "width": 1983
+    },
+    "assets/fish/japanese_whiting_thumb.png": {
+      "alpha_bounds": [
+        7,
+        24,
+        504,
+        177
+      ],
+      "height": 205,
+      "image_sha256": "cbfacb1dd54aaef5a563fe6a994e5cf8fcceef463280939c77758e8b918e346a",
+      "import_mapping_sha256": "74e5c0b3164aced2cb90a8f07b9477bc9ead216a270c8902a99ff636066d76df",
+      "payload_bytes": 75202,
+      "payload_sha256": "bce7c9fa409a7983018f3a641f65fb38b57f55e5b50bb229920dfd51dbac2d4a",
+      "source_sha256": "536ade2bd08d9bb798a3db0bdaeb4dfd0d122bd228a812be4f0cfc796fbceab5",
+      "target": ".godot/imported/japanese_whiting_thumb.png-f6464f360fd32f77e32b774b90162004.ctex",
+      "width": 512
+    },
+    "assets/fish/largemouth_bass.png": {
+      "alpha_bounds": [
+        21,
+        25,
+        1874,
+        800
+      ],
+      "height": 828,
+      "image_sha256": "da23ec5a0c934d560376d0d0066489cd23b08570b5f9909f73af1dbf0a7dd550",
+      "import_mapping_sha256": "3cb5b91ae7dfce4a8bf85f48d5f638f19173749526ded818c02c58a768bd0042",
+      "payload_bytes": 1481348,
+      "payload_sha256": "2a3538ebddd7dd6a5627507b28f41344499f02cd138e91ed00dbede88e3749f9",
+      "source_sha256": "88aaa9fecb334a9d8e50d36479e9311ca269b192790ad68b666acaacfc99719d",
+      "target": ".godot/imported/largemouth_bass.png-3a9b7c893931e91c7a4925ea99766465.ctex",
+      "width": 1900
+    },
+    "assets/fish/largemouth_bass_thumb.png": {
+      "alpha_bounds": [
+        5,
+        7,
+        505,
+        216
+      ],
+      "height": 223,
+      "image_sha256": "03d13e9ade4e8df83ed178dc2a6aaf9f25d9ca318700e255f0bc3f6b816d6d69",
+      "import_mapping_sha256": "70297a65afd9dd92bcf9fac3672c2abcb0279f2180976a3ecd557d55843f722c",
+      "payload_bytes": 119168,
+      "payload_sha256": "a64f14f634c4bd8af7718821bb1a6e7ca36605aed9102b49915c04c08c9bdfd7",
+      "source_sha256": "b8d5ad6d1877e2cf2e2cf2bb3d05cdf7bfc99199b3654a7390290a467c2a5ad4",
+      "target": ".godot/imported/largemouth_bass_thumb.png-a186c7707467c54292f6e5982a1435f8.ctex",
+      "width": 512
+    },
+    "assets/fish/longnose_gar.png": {
+      "alpha_bounds": [
+        32,
+        159,
+        2155,
+        574
+      ],
+      "height": 724,
+      "image_sha256": "79a9d8d79adedbeea9d598a852faf13e7a90b48cd22dfc7a4784ed9a38da83f4",
+      "import_mapping_sha256": "359130a057605c08de447bd8e60a590d39e5cad86ec0a1d1d8446a3bfdbd90b2",
+      "payload_bytes": 692778,
+      "payload_sha256": "d9a4234993062d9dae5298f5fdf9ae272a1887e68013df9e27acd16d07cae53d",
+      "source_sha256": "4941911a3006417e437ff013e2b45d4bb987baec28cbf8403f1925d0268787fc",
+      "target": ".godot/imported/longnose_gar.png-ce65ba043ea86b3f300af7d3f64882d3.ctex",
+      "width": 2172
+    },
+    "assets/fish/longnose_gar_thumb.png": {
+      "alpha_bounds": [
+        7,
+        37,
+        508,
+        136
+      ],
+      "height": 171,
+      "image_sha256": "6f44ecb705fc44b2b1c15af27373652ad7224be53ae6512612928f04e6e0b830",
+      "import_mapping_sha256": "b8215e72777b2fa8fc7751252b375dd4d57452bd1d1eb2e3333bf35a269a3299",
+      "payload_bytes": 46882,
+      "payload_sha256": "589aeb6396e3f01ea093370c48b418e3312e0934604048cdac7299b4cf46c631",
+      "source_sha256": "576b790b3f99b00cb55ef025e294f9dc5b6f432d4d9ea1714d809ed040e7498c",
+      "target": ".godot/imported/longnose_gar_thumb.png-1922099e9871a585b0f6bceba251dd32.ctex",
+      "width": 512
+    },
+    "assets/fish/longsnout_catfish.png": {
+      "alpha_bounds": [
+        19,
+        66,
+        1899,
+        715
+      ],
+      "height": 820,
+      "image_sha256": "c1e9b0715e53ae1d788a6e719e2ee2637f06d9790ee7dbc7df260c75a9a3b593",
+      "import_mapping_sha256": "7c3dba1a331fbe941c4e753f829c280e9532540b0f8e8fd583063241207a1850",
+      "payload_bytes": 924910,
+      "payload_sha256": "72e3847d6b1c22c39937beb3308d1e290a20ad3b14b642de5f6f1a62f1e1aae7",
+      "source_sha256": "e8fcebe5eb2dd3d2bdb407022a09081bcadaa432e5ae661d27f06028842c2200",
+      "target": ".godot/imported/longsnout_catfish.png-3cf3b6b6aa9bd9a291b63a4c504315d4.ctex",
+      "width": 1918
+    },
+    "assets/fish/longsnout_catfish_thumb.png": {
+      "alpha_bounds": [
+        5,
+        17,
+        507,
+        191
+      ],
+      "height": 219,
+      "image_sha256": "728dd48e8fffff18d54220f8081113865ae18c3d7cd50b7ce874fec40f488df4",
+      "import_mapping_sha256": "e915a0e66db85eebb6ac2f6337db62b38c5ba5f1b09ac9c039a36d04d216b965",
+      "payload_bytes": 79780,
+      "payload_sha256": "b6a7f5c23bc993d7b9e4c4dc1f56b03cfc49a2d4143ed9dc68994b03a43ddab6",
+      "source_sha256": "a45243f551bd0ee94f10df72b1aae61aa1eebf2f6745a5b287e8a6466acd1383",
+      "target": ".godot/imported/longsnout_catfish_thumb.png-509ac3f49e21d5760a6e9d20d0c1da04.ctex",
+      "width": 512
+    },
+    "assets/fish/mandarin_fish.png": {
+      "alpha_bounds": [
+        12,
+        24,
+        1741,
+        871
+      ],
+      "height": 896,
+      "image_sha256": "b49e8ac55597293b54d6eeaa646b604130eae91da00bd38ea8387e011ee43ba2",
+      "import_mapping_sha256": "3f3411afa3347065fc0e322a68f98dd3830f4bd54b3550c7700e79bc10cfadad",
+      "payload_bytes": 1638976,
+      "payload_sha256": "525952f2981e8244083b3f263c8d55e72887d93e55252fda9ccf6278d0eb0a91",
+      "source_sha256": "f34705d6bd7929c11c96c6a7909481552b381ba3ad202657f152186df25c3286",
+      "target": ".godot/imported/mandarin_fish.png-1542025771aea11e7cd19b4b900e6c78.ctex",
+      "width": 1754
+    },
+    "assets/fish/mandarin_fish_thumb.png": {
+      "alpha_bounds": [
+        3,
+        7,
+        509,
+        255
+      ],
+      "height": 262,
+      "image_sha256": "33d79b432bba0a4b39ac28d99162af53e69c3428d6d7d50ba6b187bd6b13971e",
+      "import_mapping_sha256": "1ed9b36bec41d98f09cf5bc386ed958cd745c70b7c2e4fbd3a17750d28483442",
+      "payload_bytes": 154106,
+      "payload_sha256": "cf90b36af5a19650474d4581a997c8b656c767bfbaf5afefd1ab6ff60f5c17a6",
+      "source_sha256": "bb79055ccc0aeb495d86766d01660d474885757fcd19cf43d6d6855a9e468209",
+      "target": ".godot/imported/mandarin_fish_thumb.png-6167985ac6bad49cc87edb122fbb6ff3.ctex",
+      "width": 512
+    },
+    "assets/fish/marbled_rockfish.png": {
+      "alpha_bounds": [
+        7,
+        6,
+        1767,
+        874
+      ],
+      "height": 887,
+      "image_sha256": "ad1711a1dccc6e334094ff136e99b741fb8c415f4b0c117e3145019ceef511ee",
+      "import_mapping_sha256": "e36907e17349d284bdbdeb65e86c1e9ceadd4c751e4b6c12ad928604cf088792",
+      "payload_bytes": 1652046,
+      "payload_sha256": "3c66595057d905974c83fc353df4094b68ff510eb5e09ff74fa3f762651e5bea",
+      "source_sha256": "2c58133fef58679481f0e5de7d49460c678698b667c89f2e2ef5e4e97bbbccdb",
+      "target": ".godot/imported/marbled_rockfish.png-74cb3693a55df6a9fee03ab8ac6dbd0e.ctex",
+      "width": 1774
+    },
+    "assets/fish/marbled_rockfish_thumb.png": {
+      "alpha_bounds": [
+        2,
+        2,
+        510,
+        252
+      ],
+      "height": 256,
+      "image_sha256": "213e6bc6101f1088210223b465f6683ae19d66344ecd8565714cd20538c2e442",
+      "import_mapping_sha256": "5e93f0dd23e6582b1da37bedbe68395a5d15e6f5f1bad2e67f3772982a241a29",
+      "payload_bytes": 161892,
+      "payload_sha256": "68c00a195004b050061bce805a7fe98fe0e25e69de9b75328e3dcbc867d7f4c2",
+      "source_sha256": "e4856c4854e3fa47dd49cea516d37c028b44fda337c9265340b4fe83dabfc1c5",
+      "target": ".godot/imported/marbled_rockfish_thumb.png-57585b2f28aa40a600770e3d2ee92c89.ctex",
+      "width": 512
+    },
+    "assets/fish/northern_pike.png": {
+      "alpha_bounds": [
+        22,
+        165,
+        1895,
+        692
+      ],
+      "height": 820,
+      "image_sha256": "4c4a058005ced5771b9d58bb6b337e33c3a6e390274827098ed35fe452d5ad4d",
+      "import_mapping_sha256": "7eb10ada9c534c614284b4f6567f23b4bfc9b9bef60e2f28a04e3ab1f29430c1",
+      "payload_bytes": 953462,
+      "payload_sha256": "271fa80b14ac39c7b18ba85533ce8fce1981a17a98b53631571abc523f7366cb",
+      "source_sha256": "a2f3fc04093b1c0d200830cb80ee7a90d852c4721b2dc8476825c7364947c4c5",
+      "target": ".godot/imported/northern_pike.png-fa280c334f674586b9bc8f25ec789830.ctex",
+      "width": 1918
+    },
+    "assets/fish/northern_pike_thumb.png": {
+      "alpha_bounds": [
+        6,
+        44,
+        506,
+        185
+      ],
+      "height": 219,
+      "image_sha256": "0efaab2cefd8557f75d8f309c8444718e153b00bb08db816c8cf0f23d06aab15",
+      "import_mapping_sha256": "a90c636d008e7ed82f7d22a95228284ad42cd6f182dac3b438c80af4391749de",
+      "payload_bytes": 81682,
+      "payload_sha256": "62e1a06e2f2b1690f38a74527b0b2aa8afb1c0931fb3aca3151a0a42feede985",
+      "source_sha256": "f6b5299af68bdfae4be3bbb41b06439c579ddeea8ddc50487027cad94f3b3ea0",
+      "target": ".godot/imported/northern_pike_thumb.png-e8c329ed2148422538809c16f26ce5af.ctex",
+      "width": 512
+    },
+    "assets/fish/northern_snakehead.png": {
+      "alpha_bounds": [
+        22,
+        74,
+        2153,
+        636
+      ],
+      "height": 724,
+      "image_sha256": "0932d844e71cf8f811698d44c6a9a5b1f0c006f6e508704d6cda0a37c8585853",
+      "import_mapping_sha256": "4039261b0588697e33290cc3b43bea1fbf3a3f32f3ab21e2a389d9488962a35d",
+      "payload_bytes": 1474302,
+      "payload_sha256": "48e75d7e481a97ecd06637e10293dc3200cc480e8f3b6373cacc2d4494ba3adc",
+      "source_sha256": "01a5b63a7ae3b8f14df2a7b124e9e1317a1ec3e16f4934ade3d7598fe820602d",
+      "target": ".godot/imported/northern_snakehead.png-82879ba0c32b80d682a4b2264992eb3c.ctex",
+      "width": 2172
+    },
+    "assets/fish/northern_snakehead_thumb.png": {
+      "alpha_bounds": [
+        5,
+        17,
+        508,
+        151
+      ],
+      "height": 171,
+      "image_sha256": "13d30bdcbab9a4122b156046c07c9e823531adf1d0468ce47e5df08a5ba2e249",
+      "import_mapping_sha256": "60d20b0f501314748c91ce8538965888d008f1cead3d2851577541217c6f8c13",
+      "payload_bytes": 98274,
+      "payload_sha256": "f95d3ada4d55f02e9e6be852da0fcbf2b457ab692f7511ade266bb7d651c2d87",
+      "source_sha256": "6cb47631eb0fe2107546e43e770a988b88d44b731d71b61f45ce0e36d42c2487",
+      "target": ".godot/imported/northern_snakehead_thumb.png-55c514d61089458838181e2cbb1463db.ctex",
+      "width": 512
+    },
+    "assets/fish/olive_flounder.png": {
+      "alpha_bounds": [
+        24,
+        34,
+        1751,
+        854
+      ],
+      "height": 887,
+      "image_sha256": "3f8ca1533f37f873b25088a46c3a6e089f0dcfcc146fe8cadcc232a0825f8ef6",
+      "import_mapping_sha256": "cd0cc7112a620a09304c447c86ce033947736d718a76c978bf4b8905247d8e0e",
+      "payload_bytes": 1648190,
+      "payload_sha256": "bd882cb054edb5cd160adaa531d783cabcbc4a806d5099150450cc430267a1f1",
+      "source_sha256": "0575f6826de111061260fd4e0d7ff04cc47201a9692dd6534c5b6223c1e058ee",
+      "target": ".godot/imported/olive_flounder.png-475c845c36f97ae1e1bfc10a6cbe474a.ctex",
+      "width": 1774
+    },
+    "assets/fish/olive_flounder_thumb.png": {
+      "alpha_bounds": [
+        7,
+        10,
+        505,
+        247
+      ],
+      "height": 256,
+      "image_sha256": "b04f1f4a3ef6b7d48b7f01e472e3247805ea666849e8a3355459ea1a937b51ce",
+      "import_mapping_sha256": "f9c82dbe04818feb606511e9ea60c1897eac50ad9daf459b7ee566a70de96e0c",
+      "payload_bytes": 143384,
+      "payload_sha256": "5527ade75ce8fba34916feef1ebabf85570e58385fc0381256daf64fd8c56958",
+      "source_sha256": "99018b7ca2e85cb83e3281e08148a3f500e33f9cb6734246b3cff72bbcef1466",
+      "target": ".godot/imported/olive_flounder_thumb.png-6a5daa44cd2d689f5f7bd934e6a29b76.ctex",
+      "width": 512
+    },
+    "assets/fish/painted_comber.png": {
+      "alpha_bounds": [
+        19,
+        38,
+        1755,
+        847
+      ],
+      "height": 887,
+      "image_sha256": "b290323e74a4da9c8f635f98c14f42d4a5d3b37ce9c9d2eecf1a179d4f9d0a86",
+      "import_mapping_sha256": "19486f0b3388c80c5424a122e76bb41683cb57b1ab0091be8f997b74aeb1977d",
+      "payload_bytes": 1547560,
+      "payload_sha256": "252b39725c69d1e5fe28fc988375e429cb35508b651d170a93c91055347a9804",
+      "source_sha256": "b299999069108793dd1c0c42b0f8aee8103a61705113473b1fe155de9a96d420",
+      "target": ".godot/imported/painted_comber.png-e6d2d967eb91c4e55eb20e77e1719faf.ctex",
+      "width": 1774
+    },
+    "assets/fish/painted_comber_thumb.png": {
+      "alpha_bounds": [
+        5,
+        11,
+        507,
+        245
+      ],
+      "height": 256,
+      "image_sha256": "4e752ff43dba8d6206f0e7316073e5435b7125cf4f03d90eaa9bf2b0a43b6850",
+      "import_mapping_sha256": "f287e1a393748a0774558cb312ce131697a69a01efd2d4834828a813b7a0982d",
+      "payload_bytes": 150912,
+      "payload_sha256": "14ea2e06a0a3af8845864641bfd69b7a0a30af3a93fe1c1fb02407443d1bf494",
+      "source_sha256": "a7dc5f8875699ff215481eea64c3160faddec5af43fccfb0fe9edecb7809dbbf",
+      "target": ".godot/imported/painted_comber_thumb.png-549a4fed2a9bbcba4673e0b69b4bc970.ctex",
+      "width": 512
+    },
+    "assets/fish/pollack.png": {
+      "alpha_bounds": [
+        21,
+        122,
+        1731,
+        776
+      ],
+      "height": 897,
+      "image_sha256": "5061bef2eceb0a456c2657738675b0d68d6d11632f8b401b13dc37a968c95d43",
+      "import_mapping_sha256": "b9b098aa6dd99aa197ec2cc92aa5ffefa9defde945d75a36e39443a4bde5d589",
+      "payload_bytes": 1057888,
+      "payload_sha256": "eea6823887ff6f4b0e5185d4a85489c08897cbf09ac767b3c765c193ca3eca49",
+      "source_sha256": "1fd14b22a31171b11e27dbd4c3f84c4c95a993066b855428fed1f11bf9b47a13",
+      "target": ".godot/imported/pollack.png-a8098256f88c05b2b335b33409ecf990.ctex",
+      "width": 1752
+    },
+    "assets/fish/pollack_thumb.png": {
+      "alpha_bounds": [
+        6,
+        36,
+        506,
+        227
+      ],
+      "height": 262,
+      "image_sha256": "f60a1f96cc4a9221ee1ccbc0613c521da9c6d746c0abe7fb832fdcac397e73ec",
+      "import_mapping_sha256": "769d9b15f2228e869ab675c34d3d2fd46df2f93258fff403c0ba3e0f6c38f163",
+      "payload_bytes": 97050,
+      "payload_sha256": "dc5ec2497228ac37e43f23b23b0545c026469b1087e7a7ee8fa68375868dd7a5",
+      "source_sha256": "1374135dadeb98a2d5cca376863568ed520a6c1b0771596ec93bd2f3948f5f3c",
+      "target": ".godot/imported/pollack_thumb.png-558687783d2e7b4cca062123883f2d01.ctex",
+      "width": 512
+    },
+    "assets/fish/red_mullet.png": {
+      "alpha_bounds": [
+        19,
+        22,
+        1762,
+        836
+      ],
+      "height": 887,
+      "image_sha256": "5d81d85baa67ec40d0a3ca6719cf663a3e48575798d6740e55bc8f0fda02505e",
+      "import_mapping_sha256": "0356096f98587e5f4b0a16a005132e25a15bc1520eee0810691e2e1a7be3a1aa",
+      "payload_bytes": 1134684,
+      "payload_sha256": "290550f8b46449fa907eecfb6d0fd74da35df41aa5f51df4f85de72aa8b988bd",
+      "source_sha256": "dd5d7e3eeb01994472427eb0612aab991c8e7d7e6a05175596bbb9cad9da017d",
+      "target": ".godot/imported/red_mullet.png-ed09d28c4f8f494a61c29da6d29e3c37.ctex",
+      "width": 1774
+    },
+    "assets/fish/red_mullet_thumb.png": {
+      "alpha_bounds": [
+        5,
+        6,
+        509,
+        241
+      ],
+      "height": 256,
+      "image_sha256": "0e48cef11eaca123131f6f94d98be79ee5f5ebb05a10796a086cc541fb589cfe",
+      "import_mapping_sha256": "e779c1d9b8d3c7339024e39c5cd847eca1221e5e9790bf84e0104b2f69f65dc6",
+      "payload_bytes": 110278,
+      "payload_sha256": "50ed8bb73b680a8999238d84af58d847d97cfbfda04413c8e00905945d8848df",
+      "source_sha256": "7fa10608d5a618a923a714d5da26b3d665c851452f46abd89ad7032b1a089965",
+      "target": ".godot/imported/red_mullet_thumb.png-cb64fc3524ec6fe6de0ab2f18c6f461c.ctex",
+      "width": 512
+    },
+    "assets/fish/red_seabream.png": {
+      "alpha_bounds": [
+        14,
+        2,
+        1763,
+        877
+      ],
+      "height": 887,
+      "image_sha256": "1a0e5733f99192f02cb17ed81eede3829b8cfc5b7a2c02e76f601b387694b4ac",
+      "import_mapping_sha256": "8499c9e9283fb7b97b6f8586a623645f1fe9597482dd2b6ab47b702a537ebbd9",
+      "payload_bytes": 1535366,
+      "payload_sha256": "3b647029b33c35dc50050bb2070c58706da3fbad770c5903e8100d202156a193",
+      "source_sha256": "e645c15c1d3fe0c366250903120cff49e6dfbed213a65993ee2fa539b60a7b08",
+      "target": ".godot/imported/red_seabream.png-e0c01e574d93c563e497da78c2e2001f.ctex",
+      "width": 1774
+    },
+    "assets/fish/red_seabream_thumb.png": {
+      "alpha_bounds": [
+        4,
+        1,
+        509,
+        253
+      ],
+      "height": 256,
+      "image_sha256": "4cdb1799b6a18a532b8031f8dedcf4664504d61a156646c3f37bbd82cfb490c9",
+      "import_mapping_sha256": "4993d5c3a4881eeca446fa770c713733799ed1ef01b223eae72dc18f6251c44b",
+      "payload_bytes": 147600,
+      "payload_sha256": "e8195752ad9d4f49ea34948afb99ac18f2ca79c775d36bae16c2ac9010edc044",
+      "source_sha256": "feb2b8dc6e8a2091181ac9d4386511b29bbc178ece41a1ea488f2a30ac35699f",
+      "target": ".godot/imported/red_seabream_thumb.png-75f011d8ba25016c3211103dc5efc9a5.ctex",
+      "width": 512
+    },
+    "assets/fish/roach.png": {
+      "alpha_bounds": [
+        32,
+        71,
+        1743,
+        817
+      ],
+      "height": 887,
+      "image_sha256": "658a0b6c468562f66934cc4e2fa83441816ca94290d9a24b23555c9c7160eca9",
+      "import_mapping_sha256": "4c7fc387ee47b49becc98a10dd03c1d06109b8c1881bb0292a431fe22582c175",
+      "payload_bytes": 1147954,
+      "payload_sha256": "9239e08aababe83b6e061f9ed1d9a404b94437cf4ceebaff966a4f42659e27b7",
+      "source_sha256": "605f6f121da3915875f223a50e800f6da0c62ed311f12e393be2cc92ce2f4758",
+      "target": ".godot/imported/roach.png-923a904e91d6f4b750892e66c64bd0d7.ctex",
+      "width": 1774
+    },
+    "assets/fish/roach_thumb.png": {
+      "alpha_bounds": [
+        9,
+        20,
+        503,
+        236
+      ],
+      "height": 256,
+      "image_sha256": "edfcd5ee888c23d6a8f00de299871e3af2b3f6fa4707fd11337e2c4f63c9b877",
+      "import_mapping_sha256": "9df3776bcb1a3426249c776b41d508b9d6591a34deacafd7836a0e89d6d99d20",
+      "payload_bytes": 109316,
+      "payload_sha256": "be61211d70e98c3a78214ed04d9bfa6407a7350e07a99e7e47cf56c9b6c99495",
+      "source_sha256": "33094075a52999a609a726cb6a820e05d4d94c6137dd513f72c20f6c4dfc03b2",
+      "target": ".godot/imported/roach_thumb.png-adf3417d734ba914ab2bdaf28b5b5062.ctex",
+      "width": 512
+    },
+    "assets/fish/rudd.png": {
+      "alpha_bounds": [
+        47,
+        26,
+        1745,
+        861
+      ],
+      "height": 887,
+      "image_sha256": "7e8e099bb4373b5f79c62a4740a881cdf074efcedaad6c8cc351fd9762a2323b",
+      "import_mapping_sha256": "2c006a8eea7472af956f92d3ade1982bac1ca613cf54b818b4e8e5ff100b8114",
+      "payload_bytes": 1445068,
+      "payload_sha256": "815749d26f12cdc1bcf20257b60e52c6ce84400aad1ed8e667fe8275affd1020",
+      "source_sha256": "2261f108e092dd905aed96d11eafb40c35d322db4645715b3e8e30075a3f9841",
+      "target": ".godot/imported/rudd.png-2570ba22ddb96489452224a45f043cbd.ctex",
+      "width": 1774
+    },
+    "assets/fish/rudd_thumb.png": {
+      "alpha_bounds": [
+        13,
+        7,
+        504,
+        249
+      ],
+      "height": 256,
+      "image_sha256": "3609401728a4aedc87710341a2946849f8a49805f9f040dadd160c22ffd88a0d",
+      "import_mapping_sha256": "a1c1d387694d67704bd20bdc34c09aa062a189570193821a418fd19ed371ec7e",
+      "payload_bytes": 134686,
+      "payload_sha256": "5231232938c25660e2ff2061fd985ba981738a41ad202075b0a8b2f162f24d51",
+      "source_sha256": "c0a26006d076d357c57af7c481440b0bbd19cdfbd89ef580a70f6e7a5e68ef8c",
+      "target": ".godot/imported/rudd_thumb.png-8fd79a55643a8e838339b519f980c355.ctex",
+      "width": 512
+    },
+    "assets/fish/saddled_seabream.png": {
+      "alpha_bounds": [
+        17,
+        14,
+        1758,
+        872
+      ],
+      "height": 887,
+      "image_sha256": "90f7b24bcd1845e4723258c20aa01e91a39f85e2665a9ca27727dedf50203965",
+      "import_mapping_sha256": "60e191a51e04fd6a20969a2279332514af9040865721530efc81d6b966cc66c0",
+      "payload_bytes": 1359598,
+      "payload_sha256": "7c3b18ad5ff36f87d22e8ccf89f04948fc637f2078ac3b4f1aa9ce7cca046900",
+      "source_sha256": "9c9a14ff35a0347385409d6a163772b7a33be06e3d897d711b278cd30fd37ac9",
+      "target": ".godot/imported/saddled_seabream.png-fadb1b35fdd5584e07570f1edd57dcc4.ctex",
+      "width": 1774
+    },
+    "assets/fish/saddled_seabream_thumb.png": {
+      "alpha_bounds": [
+        5,
+        4,
+        507,
+        252
+      ],
+      "height": 256,
+      "image_sha256": "8d8e13960dcb2727afed487b622a8d98c0ff089220e1d73dfa646c432258045d",
+      "import_mapping_sha256": "19a5dae3208e2ad94ddb9aaa38fbee43742a3c48c3e7cb94a049c155b6446ef7",
+      "payload_bytes": 116642,
+      "payload_sha256": "9b5377432cae06bf47530da578909a868e7e2ab84feccef96991e9b71ba65060",
+      "source_sha256": "4454f36602cf075d01051056386fab0d07d32e3c783c4e4c608e309ecf565a06",
+      "target": ".godot/imported/saddled_seabream_thumb.png-106f4f66e62a1461645e5a006c509c18.ctex",
+      "width": 512
+    },
+    "assets/fish/saithe.png": {
+      "alpha_bounds": [
+        17,
+        136,
+        1757,
+        741
+      ],
+      "height": 887,
+      "image_sha256": "dba4999581b377758a7d2acac49880245ed474f044df1405fd04495ca0fb9ab0",
+      "import_mapping_sha256": "144b628e1e584d6f15028dbe104af354f4a3bd9bf479f004ee791b7ed1fb3302",
+      "payload_bytes": 933740,
+      "payload_sha256": "5e3c8009ed05e9f95f6fe3f1088ac1af1f2509794e8424d40efcb02d27b61be6",
+      "source_sha256": "0a388637203cfa1f7db2333f31d4684f0f11dd5b0cd6357e5283c023fe4a4652",
+      "target": ".godot/imported/saithe.png-b6716465c6ce815a3c7d7b6d5892ee20.ctex",
+      "width": 1774
+    },
+    "assets/fish/saithe_thumb.png": {
+      "alpha_bounds": [
+        5,
+        39,
+        507,
+        214
+      ],
+      "height": 256,
+      "image_sha256": "cf322be53367b7fc4f8c95dcb4e09d61ab6d06355e32b1f37b0fd49bea2d59dc",
+      "import_mapping_sha256": "b277bef680c033acc18e1743de6a9525e67fa381907935438a8b8a73dbfe85e3",
+      "payload_bytes": 79934,
+      "payload_sha256": "fdeb5f62571a75617cf412ca79c90b97a90269c5194be50fddd0705266e68c7e",
+      "source_sha256": "7224115a363ec7f42ee79a46d18230d04f3ec15d90b5ff6e0c53407e7ae73560",
+      "target": ".godot/imported/saithe_thumb.png-4a68546decea570b1d51f7406e832ce2.ctex",
+      "width": 512
+    },
+    "assets/fish/southern_catfish.png": {
+      "alpha_bounds": [
+        21,
+        105,
+        1928,
+        673
+      ],
+      "height": 809,
+      "image_sha256": "bf6c77186c4e78d15be36cbda7b3df6093ebde70782833392e64f9e41376e00e",
+      "import_mapping_sha256": "21eb871488f109570996a5947a180a3980ffc65b2bad8a09da214ff4f3e53a43",
+      "payload_bytes": 834896,
+      "payload_sha256": "2e8c933b4516b378fba904174a7fd766858367ed28229c9c6adad438dd98d09f",
+      "source_sha256": "b22dc45203df03e9a58e987f64f8de6b4d4a64f9a6a52c634c39821836d0fe94",
+      "target": ".godot/imported/southern_catfish.png-b8e7e40d605502d0c0f60236efa93081.ctex",
+      "width": 1944
+    },
+    "assets/fish/southern_catfish_thumb.png": {
+      "alpha_bounds": [
+        5,
+        27,
+        508,
+        177
+      ],
+      "height": 213,
+      "image_sha256": "613eb09d53d5086873e70dc9fd21e5ba09873b51b43aa0a3798281f959496a40",
+      "import_mapping_sha256": "70f9403add7d07f30c52edd9c256c85da8b23db36656b008495e7a4f18045053",
+      "payload_bytes": 71018,
+      "payload_sha256": "cca130bb05303c5f78c48f33bee752bba9f4e81eab3694b554dfe1ca7ba2b914",
+      "source_sha256": "367fada4ee81bdcbb4d1188baeeb0edd9b1e2ce285483439f9cf86449c9a0317",
+      "target": ".godot/imported/southern_catfish_thumb.png-1ead559b0d1b0b7e9ccdd0752b2264d9.ctex",
+      "width": 512
+    },
+    "assets/fish/tench.png": {
+      "alpha_bounds": [
+        21,
+        15,
+        1733,
+        879
+      ],
+      "height": 897,
+      "image_sha256": "7a46b8d00b1947345868ea10b208a4c29d58794ae2da836e2e9a2e08cd887151",
+      "import_mapping_sha256": "f368163431c61f7ef89bc1c3a98dd4b35487cb4dbcbd4ca9904f60288f918df3",
+      "payload_bytes": 1409380,
+      "payload_sha256": "544e2bcfbf2981131ff710c0658ca5db91df44be266927c490dcd293a24b79d6",
+      "source_sha256": "3747a89c50c76f147c35727c36443fb03c7e4c03a5013fcc8ccd1a321df38e86",
+      "target": ".godot/imported/tench.png-b0024bff14a731a88b70db6841b76e46.ctex",
+      "width": 1752
+    },
+    "assets/fish/tench_thumb.png": {
+      "alpha_bounds": [
+        6,
+        4,
+        507,
+        257
+      ],
+      "height": 262,
+      "image_sha256": "714a0d7a42f257684f9b0eb4a28f22e72ff895db5f8e61c33621fd29481159fc",
+      "import_mapping_sha256": "a7b45369e67b86eebd8099719cc88c4a15dfdaff4976edc4f2068d6ee453e889",
+      "payload_bytes": 127724,
+      "payload_sha256": "7c1c149d33e8df6cc64f03133093d39067b03311380a0a54f4763c05a8d2c80e",
+      "source_sha256": "bc546312669fe1081c454ab4cdb8c48b453af1db13fdff04eb6054c326a81c56",
+      "target": ".godot/imported/tench_thumb.png-06a02a3890037525aaf6fbfb42fa029f.ctex",
+      "width": 512
+    },
+    "assets/fish/white_seabream.png": {
+      "alpha_bounds": [
+        25,
+        76,
+        1514,
+        952
+      ],
+      "height": 1024,
+      "image_sha256": "6e7d6d3e8af6005668a7402420d970ed32198750f12490caef6745cb4ef7842e",
+      "import_mapping_sha256": "c77879583b83e23548cb34541c23f4e8cdfb57ad3243cb3cde33844cebdd8756",
+      "payload_bytes": 1668584,
+      "payload_sha256": "ded21ea16a723ce7df8ef4e627482b826b2d603e94aee1e7a8b25ee99910c64f",
+      "source_sha256": "8eed207fc1940bae2d5c235ba3ab445cd1c3ae69e3d18a4d61f791e8100596ef",
+      "target": ".godot/imported/white_seabream.png-6798add9e856542f26629b2679bcbff4.ctex",
+      "width": 1536
+    },
+    "assets/fish/white_seabream_thumb.png": {
+      "alpha_bounds": [
+        8,
+        25,
+        505,
+        317
+      ],
+      "height": 341,
+      "image_sha256": "671818e2689b3b098c6c38f1f017ab54d50954dc4823a7fa2af3a40e41965670",
+      "import_mapping_sha256": "f0b50890ef943f5ba308e2c1683ed251d355a85da634c4c2aca17a0ce01e07d0",
+      "payload_bytes": 144256,
+      "payload_sha256": "0be9fdd23b8b4391be87fffeaf5617a9682d9741fa4e8507837dbff2f94329af",
+      "source_sha256": "3568806d2ffde9a0a10da3396abcc7d7bfbfb9e1d99ed301bb20b2787a3f9e34",
+      "target": ".godot/imported/white_seabream_thumb.png-6f81dcc93ac3fbb8adac6f13abaa7e75.ctex",
+      "width": 512
+    },
+    "assets/fish/yellowcheek.png": {
+      "alpha_bounds": [
+        38,
+        85,
+        2149,
+        640
+      ],
+      "height": 724,
+      "image_sha256": "2b5a4efcfaa8ec9a4b3e94572509cb743e64afbe3dd52c9f684cfaefe2ae168a",
+      "import_mapping_sha256": "d5c25c8aa8d9f3d58eac564cb3f3b2db73df113a446080689002e6826cb91b8e",
+      "payload_bytes": 931010,
+      "payload_sha256": "1f9502f6ddee417b2d18bf3686a0432bbf25445366b4506d5c6b10f2419fd0b1",
+      "source_sha256": "7d28156c8c62000345ced88e44f3c44fae2fb298e65fe2b557822231e9a44fd1",
+      "target": ".godot/imported/yellowcheek.png-bd6508f04662a00bbb34ae992343ee38.ctex",
+      "width": 2172
+    },
+    "assets/fish/yellowcheek_thumb.png": {
+      "alpha_bounds": [
+        9,
+        20,
+        507,
+        151
+      ],
+      "height": 171,
+      "image_sha256": "f3c1d895602e5ec30abf3a393330beaf2ce0cf5516e1aca8a5e69ab9134ba1ee",
+      "import_mapping_sha256": "bf1ee4935f21a5c43db21dcc03ea3a14f6ea67e9c56ad50416e31588dfcbc8b4",
+      "payload_bytes": 65296,
+      "payload_sha256": "e9969259d6e3d05d15bbf3fa277a4e3457dbb1b20b480a8152d8a1551158e542",
+      "source_sha256": "ffaf6a8ddd980002dd8cb3e4bff69a0dac87c9a83920b33ab45c8393c5cabaa7",
+      "target": ".godot/imported/yellowcheek_thumb.png-6b5eafccb78e9cd2001a7523d5c9fac0.ctex",
+      "width": 512
+    }
+  }
+}
