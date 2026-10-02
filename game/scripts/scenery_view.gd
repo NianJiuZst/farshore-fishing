@@ -109,36 +109,14 @@ func _draw() -> void:
 		draw_line(bob+Vector2(0,-20),bob+Vector2(0,-5),Color("dc7658"),6,true)
 		draw_circle(bob+Vector2(0,2),5,Color("f9efcf"))
 
-func _draw_foreground(w: float, h: float) -> void:
-	var low: float = h * 0.98
-	if foreground == "boat":
-		draw_colored_polygon(PackedVector2Array([Vector2(w*0.20,h),Vector2(w*0.32,h*0.88),Vector2(w*0.75,h*0.88),Vector2(w*0.91,h)]),Color("b99771"))
-		draw_polyline(PackedVector2Array([Vector2(w*0.20,h),Vector2(w*0.32,h*0.88),Vector2(w*0.75,h*0.88),Vector2(w*0.91,h)]),Color("e7d0a9"),12,true)
-	elif foreground == "pier":
-		draw_colored_polygon(PackedVector2Array([Vector2(0,h),Vector2(0,h*0.88),Vector2(w*0.31,h*0.86),Vector2(w*0.46,h)]),Color("8c775c"))
-		for i: int in range(5):
-			draw_line(Vector2(0,h*0.88+i*22),Vector2(w*(0.32+i*0.02),h*0.86+i*22),Color("b2a084"),3,true)
-	elif foreground == "rocks":
-		for i: int in range(6):
-			draw_circle(Vector2(i*46,low+12-(i%2)*12),47,Color("828c86"))
-	else:
-		for i: int in range(15):
-			var x: float = i*14.0
-			var sway: float = sin(clock_time+i)*4
-			draw_line(Vector2(x,h),Vector2(x+12+sway,low-60-(i%3)*20),Color("4e6f4b"),3,true)
-			draw_line(Vector2(x+12+sway,low-65-(i%3)*20),Vector2(x+12+sway,low-85-(i%3)*20),Color("705c40"),7,true)
-
 func _draw_angler(w: float,h: float) -> void:
-	var wood: Color=Color("856e50")
-	var deck: PackedVector2Array=PackedVector2Array([Vector2(0,h*0.764),Vector2(w*0.61,h*0.754),Vector2(w*0.74,h*0.88),Vector2(0,h*0.92)])
 	if foreground=="boat":
 		draw_texture_rect(rowboat,Rect2(-w*0.04,h*0.70+sin(clock_time*1.4)*1.8,w*0.94,w*0.627),false)
 	else:
-		draw_colored_polygon(deck,wood)
-		for i: int in range(7):
-			var k: float=i/7.0
-			draw_line(Vector2(0,lerpf(h*0.764,h*0.92,k)),Vector2(lerpf(w*0.61,w*0.74,k),lerpf(h*0.754,h*0.88,k)),Color("b79c72"),3,true)
-		draw_line(Vector2(0,h*0.764),Vector2(w*0.61,h*0.754),Color("d7c394"),8,true)
+		var support: Texture2D=front_art if front_art!=null else load("res://assets/scenery/japan_foreground.png")
+		# Reuse original painted stones/wood as grounded shore support. No flat polygon deck.
+		var y: float=0.38 if region_id=="lake" else 0.31
+		draw_texture_rect_region(support,Rect2(0,h*y,w*1.25,h*0.65),Rect2(0,0,support.get_width()*0.5,support.get_height()))
 	var sway: float=sin(clock_time*1.4)*1.8
 	var bend: float=session.tension*25 if session else 0.0
 	var base: Vector2=Vector2(w*0.263,h*0.663)
