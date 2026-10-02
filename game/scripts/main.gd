@@ -507,6 +507,8 @@ func _session_changed(value: int) -> void:
 			_action.text = "提竿！"
 		Session.State.FIGHT:
 			_action.text = "收线"
+		Session.State.CAUGHT:
+			_action.text = "起鱼中"
 		Session.State.PAUSED:
 			_status.text = "已暂停"
 			_hint.text = "鱼、张力与计时保持原位"

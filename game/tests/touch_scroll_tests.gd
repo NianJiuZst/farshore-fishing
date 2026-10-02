@@ -235,7 +235,7 @@ func _test_main_pages() -> void:
 	var catch_id: String = str(app._last_record.get("catch_id",""))
 	var count: int = app.store.total_count()
 	_check(app._save_ok and app.store.state.pending_catches.has(catch_id),"successful catch is durably pending before landing presentation")
-	_check(app._landing_pending and app._overlay == null,"result overlay waits for landing presentation")
+	_check(app._landing_pending and app._overlay == null and app._action.text == "起鱼中" and app._action.disabled,"result waits for landing with an accurate disabled landing caption")
 	app._show_pause()
 	_check(app._screen == "pause" and app._landing_pending,"Back pauses landing without bypassing result gate")
 	app._close_page()
