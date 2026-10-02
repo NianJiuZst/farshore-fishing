@@ -4,6 +4,9 @@ set -euo pipefail
 umask 022
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
+if [[ "${FARSHORE_BUILD_SPACE_GUARDED:-}" != 1 ]]; then
+  exec python3 "$ROOT/tools/guard_android_build.py" "$@"
+fi
 ARCH="${1:-arm64}"
 case "$ARCH" in
   arm64) PRESET='Android ARM64 Release'; ABI=arm64-v8a; SUFFIX=arm64 ;;
@@ -88,9 +91,36 @@ if origin.get('authoring_backup'):
         assert got==expected, f'Original authoring file changed during export: {rel}'
 print('Original production source hashes remain unchanged')
 PY
+python3 - "$PROJECT" "$ROOT/game" "$UNSIGNED" <<'PY'
+from pathlib import Path
+import shutil,sys,zipfile
+stage,source,apk=map(Path,sys.argv[1:])
+root=source.parent
+assert stage.resolve().parent==(root/'build/android-workspaces').resolve()
+assert not stage.is_symlink() and not stage.resolve().is_relative_to(source.resolve())
+with zipfile.ZipFile(apk) as archive:
+    assert 'AndroidManifest.xml' in archive.namelist() and 'assets/project.binary' in archive.namelist()
+    assert archive.testzip() is None, 'Unsigned APK CRC validation failed'
+# APK bytes and pre-export evidence are complete. Keep the source/imported scenes;
+# remove only replaceable Gradle output and exported-asset copies before signing.
+freed=0
+for relative in ['android/build/build','android/build/src/main/assets','android/build/assetPackInstallTime/src/main/assets']:
+    target=stage/relative
+    if not target.exists(): continue
+    assert target.resolve().is_relative_to(stage.resolve()) and not target.resolve().is_relative_to(source.resolve())
+    for parent in [target,*target.parents]:
+        if parent==stage.parent: break
+        assert not parent.is_symlink()
+    freed+=sum(p.stat().st_blocks*512 for p in target.rglob('*') if p.is_file())
+    shutil.rmtree(target)
+    target.mkdir(parents=True)
+print('Cleared completed Gradle copies after APK CRC/source checks; allocated bytes:',freed)
+PY
 "$BUILD_TOOLS/zipalign" -P 16 -f 4 "$UNSIGNED" "$ALIGNED"
+rm -- "$UNSIGNED"
 "$BUILD_TOOLS/apksigner" sign --ks "$SIGN_KEY" --ks-key-alias "$SIGN_ALIAS" --ks-pass "file:$SIGN_PASS_FILE" --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled true --v4-signing-enabled false --out "$OUTPUT" "$ALIGNED"
 python3 "$ROOT/tools/verify_android_apk.py" "$OUTPUT" "$ABI" "$AUDIT" "$BUILD_TOOLS" "$PROJECT.snapshot.json"
 cp "$PROJECT.snapshot.json" "$AUDIT/source-snapshot-manifest.json"
+rm -- "$ALIGNED"
 echo "Signed and verified: $OUTPUT"
 sha256sum "$OUTPUT"

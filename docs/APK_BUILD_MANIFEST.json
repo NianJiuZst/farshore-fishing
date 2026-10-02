@@ -1,59 +1,7 @@
 {
-  "verified_at_utc": "2026-10-02T10:16:48.939850+00:00",
-  "apk": "farshore-fishing-1.1.0-arm64.apk",
-  "bytes": 137793032,
-  "sha256": "cc0a6e02885b8b0aedb0afa2e112638073109bba44c88e5d614ce72a44ac43f7",
-  "package": "org.farshore.fishing",
-  "min_sdk": 29,
-  "target_sdk": 36,
-  "compile_sdk": 36,
-  "version_code": 2,
-  "version_name": "1.1.0",
-  "abi": "arm64-v8a",
-  "debuggable": false,
-  "permissions": [
-    "android.permission.VIBRATE"
-  ],
-  "signature_v2": true,
-  "signature_v3": true,
-  "zip_alignment_kib": 16,
-  "certificate_sha256": "1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeedb2e5281",
-  "native_libraries": [
-    {
-      "path": "lib/arm64-v8a/libc++_shared.so",
-      "uncompressed_bytes": 1374336,
-      "compressed": false,
-      "elf_load_alignment": [
-        16384,
-        16384,
-        16384
-      ]
-    },
-    {
-      "path": "lib/arm64-v8a/libgodot_android.so",
-      "uncompressed_bytes": 70322664,
-      "compressed": false,
-      "elf_load_alignment": [
-        16384,
-        16384,
-        16384
-      ]
-    }
-  ],
-  "fish_species": 44,
-  "fish_catalog_files": [
-    "fish_a.json",
-    "fish_b.json",
-    "fish_c.json",
-    "fish_d.json"
-  ],
-  "regions": 6,
-  "fishing_spots": 12,
-  "generated_ui_icons": 25,
-  "extract_native_libraries": false,
-  "runtime_test": "Separate evidence required; binary inspection is not an installation test",
-  "artifact_status": "verified_final_generated_icon_release_android_runtime_pending",
-  "source_git_commit": "366790826b98fb79c2e1764c47087ce4062e5a8d",
-  "source_archive": "game-20261002T101559495847Z.tar.gz",
-  "source_archive_sha256": "8c8d67abb764153b41563341f9d8ae1e44a1f7908873ab87c138fe90509010f0"
+  "artifact_status": "awaiting_frozen_1.2.0-beta.1_build",
+  "planned_version_name": "1.2.0-beta.1",
+  "planned_version_code": 3,
+  "historical_verified_record": "history/1.1.0/APK_BUILD_MANIFEST.json",
+  "note": "No beta APK/source-export verification has occurred at this preparation checkpoint."
 }
