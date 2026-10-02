@@ -1297,12 +1297,12 @@ func _show_settings() -> void:
 	_page.add_child(_text("离线存档",28))
 	_page.add_child(_text("所有纪录只属于这份本地存档。卸载、清除应用数据会丢失进度。正常覆盖更新请保持相同包名与签名。每次钓获、出售/放生、购买、解锁与收藏都会立即保存。",23,MUTED))
 	_page.add_child(_button("处理已保存但未出售/放生的鱼",_show_pending))
-	_page.add_child(_text("远岸钓记 "+str(ProjectSettings.get_setting("application/config/version","1.2.0"))+"\nGodot 4.6.3 · 离线单机 · 3D 试钓\n3D 体验：1 位钓手 / 2 种鱼 / 1 处钓点\n鱼类与场景插画：AI 辅助生成并开发校对\n字体：Noto Sans CJK（SIL Open Font License）\n音效：本项目程序合成原创\nGodot Engine：MIT License",21,MUTED))
-	_page.add_child(_button("查看引擎与字体许可",_show_licenses))
+	_page.add_child(_text("远岸钓记 "+str(ProjectSettings.get_setting("application/config/version","1.2.0"))+"\nGodot 4.6.3 · 离线单机 · 3D 试钓\n3D 体验：1 位钓手 / 2 种鱼 / 1 处钓点\n3D角色/鱼/场景几何、骨骼动画：本项目制作\n天空/木材纹理：Poly Haven CC0\n界面图标/历史鱼类插画：AI辅助生成并开发校对\n字体：Noto Sans CJK（SIL Open Font License）\n音效：本项目程序合成原创\nGodot Engine：MIT License",21,MUTED))
+	_page.add_child(_button("查看引擎、字体与素材许可",_show_licenses))
 
 func _show_licenses() -> void:
 	_open_page("licenses","开源许可",_show_settings)
-	for path: String in ["res://data/GODOT_LICENSE.txt","res://data/FONT_LICENSE.txt"]:
+	for path: String in ["res://data/GODOT_LICENSE.txt","res://data/FONT_LICENSE.txt","res://data/THIRD_PARTY_ART.txt"]:
 		if FileAccess.file_exists(path): _page.add_child(_text(FileAccess.get_file_as_string(path),17,MUTED))
 
 func _toggle_setting(key: String) -> void:
