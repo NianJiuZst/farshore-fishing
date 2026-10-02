@@ -457,7 +457,7 @@
     "sha256": "75d8ba9249d6e70da644bff35f0a5f447375810d4b174a285a7a5fac357c670d",
     "runtime_bytes": 2621390,
     "used_by": "res://assets/scenery/bayou.png",
-    "integration_note": "Region is geographically broad. This is lower-river artwork; upper-Mississippi spot name/text must remain explicit and must not place alligator gar there."
+    "integration_note": "Lower-river artwork for bayou_backwater and bayou region poster. Upper-river bayou_channel uses its own background and must suppress the cypress-knee foreground."
   },
   {
     "asset_id": "scenery_bayou_foreground",
@@ -503,7 +503,7 @@
     "sha256": "6a964c4632fe84459d8f2d1f97b22b172627fc74f74670d14d8f95ac87306aff",
     "runtime_bytes": 629299,
     "used_by": "res://assets/scenery/bayou_foreground.png",
-    "integration_note": "Region is geographically broad. This is lower-river artwork; upper-Mississippi spot name/text must remain explicit and must not place alligator gar there.",
+    "integration_note": "Lower-river artwork for bayou_backwater and bayou region poster. Upper-river bayou_channel uses its own background and must suppress the cypress-knee foreground.",
     "alpha": {
       "extrema": [
         0,
@@ -518,5 +518,53 @@
       ]
     },
     "alpha_compositing_audit": "docs/bayou_foreground_audit.jpg"
+  },
+  {
+    "asset_id": "scenery_bayou_channel",
+    "usage": "upper Mississippi spot-specific background; correct temperate pike habitat",
+    "region_id": "bayou",
+    "spot_id": "bayou_channel",
+    "runtime_path": "game/assets/scenery/bayou_channel.png",
+    "master_path": "art_masters/c/bayou_channel.png",
+    "source_generated_file": "/workspace/scratch/c16084497664/generated_images/exec-342b470b-6d74-43a5-895d-f271e8d4010f.png",
+    "master_dimensions": [
+      1536,
+      1024
+    ],
+    "runtime_dimensions": [
+      1440,
+      960
+    ],
+    "generation_method": "OpenAI built-in image_gen; one independent spot background call",
+    "generation_prompt": "Use case: stylized-concept. Asset: FINAL standalone background painting for Farshore, a healing 2D fishing travel game, 1536x1024 landscape 3:2. Scene: a quiet UPPER MISSISSIPPI RIVER bay and adjoining side channel in the temperate Minnesota/Wisconsin/Iowa river corridor in late spring or early summer. Broad gently flowing muted teal-green river water and a connected reed-fringed bay; temperate floodplain banks with black willow, cottonwood and silver maple close to water, rounded oak crowns on slightly higher ground. Modest wooded limestone bluffs and low layered hills frame the distant bend, realistic rolling Midwestern river country, NOT dramatic alpine mountains. Main shoreline/waterline about 37 percent down, most center and lower half open calm water; sparse sedges and emergent water plants only at edges provide pike and bass cover, a small fallen log tucked on a far bank. Eye-level bank-side game camera matching the existing lake and bayou painting, no close dock because engine draws foreground separately. Pale blue soft morning sky, gentle warm sun, natural cooler air and mist in distant bluffs. Restrained sage, olive, teal water, pale blue and warm ochre palette; water softly opaque with natural suspended sediment, not Caribbean turquoise or aquarium-clear. Refined near-real hand-painted watercolor travel illustration with subtle gouache accents, fine soft brushwork, delicate paper grain and convincing natural depth, restful art-book quality. Central vertical third remains attractive for portrait framing; restrained central water contrast for a tiny game bobber. Full bleed painting. NO bald cypress, cypress knees, Spanish moss, palms, mangroves, tropical vegetation, Louisiana swamp silhouettes, people, animals, fish, boats, fishing rods, hooks, signs, letters, text, UI, borders, logos or watermark. Do not copy any external photograph.",
+    "generation_edits": [],
+    "reference_sources": [
+      {
+        "url": "https://www.usgs.gov/centers/upper-midwest-environmental-sciences-center/science/forest-landscape-ecology-upper",
+        "title": "USGS: Forest Landscape Ecology of the Upper Mississippi River Floodplain",
+        "supports": "上密西西比泛洪林包括柳、杨、银槭，以及橡树等较长寿树种；用于一般植被核查",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.fws.gov/refuge/upper-mississippi-river/about-us",
+        "title": "USFWS: Upper Mississippi River Refuge — About Us",
+        "supports": "明尼苏达/威斯康星/伊利诺伊/爱荷华河谷的林地峭壁和泛洪平原景观",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "reference_images_used": [],
+    "style_reference_assets_inspected": [
+      "game/assets/scenery/lake.png",
+      "game/assets/scenery/bayou.png"
+    ],
+    "license_status": "Original AI-generated artwork produced with OpenAI built-in image_gen for this project; no third-party photographs copied or embedded. Provider terms apply; no guaranteed copyrightability or exclusivity asserted. Source webpages used for facts only.",
+    "review_status": "visual_review_completed",
+    "audit": "Viewed full generated painting: broad river bay with temperate deciduous woodland, low wooded limestone bluffs, reeds and open water. No bald cypress, cypress knees, Spanish moss, tropical vegetation, people, fish, boats, UI or text. Fictional habitat illustration, not a copied location photograph.",
+    "export": "Pillow Lanczos proportional resize only from 1536x1024 to 1440x960 RGB; original generation bytes preserved in master.",
+    "master_sha256": "cd38105b97fcd161df1cbcfeb4b9712dfa2ed2a436bea5f38db37dfc60567f4f",
+    "sha256": "a1b5fe2c1c5acccf209f7704ad9a703720f48a32ce017a8238b243dcd8a860e3",
+    "runtime_bytes": 2264184,
+    "used_by": "res://assets/scenery/bayou_channel.png",
+    "integration_note": "Use spot.scene override for bayou_channel and disable lower-bayou cypress foreground here. Keep region poster and bayou_backwater pointing to bayou.png. Alligator gar stays excluded from this upper-river spot."
   }
 ]

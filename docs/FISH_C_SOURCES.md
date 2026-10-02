@@ -91,5 +91,7 @@
 
 逐张生成提示词、原始输出路径、源网页、license声明、完整文件SHA-256、透明通道统计和形态审核保存在 `docs/ASSETS_C.json`；原画位于 `art_masters/c/`。运行鱼图为宽1024像素，缩略图宽256像素，均按比例重采样并保留原生alpha。不得把缩略图、大小或花色变体计算为新物种。
 
-背景为虚构的下游河汊风景，不是具体地点摄影；仅使用河汊与柏树湿地的一般视觉元素。它不能充当上密西西比冷水生态的图片证据；上游钓点需要明确文字区分。
+场景按生态分区：`bayou.png` 为虚构下游柏树河汊，用于地区海报和 `bayou_backwater`；新增 `bayou_channel.png` 专供上密西西比河湾，表现温带落叶泛洪林、柳/杨/银槭、较高处的橡树与低矮林地石灰岩崖壁，不包含落羽杉、柏膝或西班牙苔。上游钓点还必须禁用下游专属的 `bayou_foreground.png`。两幅均为一般生态环境插画，不是具体地点摄影。
+
+上游背景植被依据 [USGS 泛洪林研究](https://www.usgs.gov/centers/upper-midwest-environmental-sciences-center/science/forest-landscape-ecology-upper)，河谷崖壁和地理范围依据 [USFWS 上密西西比河保护区](https://www.fws.gov/refuge/upper-mississippi-river/about-us)。此分场景避免把白斑狗鱼的上游栖地画成路易斯安那柏树沼泽。
 
