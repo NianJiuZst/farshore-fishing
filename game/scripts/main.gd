@@ -1167,7 +1167,7 @@ func _show_settings() -> void:
 	volume.max_value=1.0
 	volume.step=0.05
 	volume.value=float(settings.get("volume",0.6))
-	volume.custom_minimum_size.y=70
+	volume.custom_minimum_size.y=96
 	volume.drag_ended.connect(func(changed_value: bool) -> void:
 		if changed_value:
 			var candidate: Dictionary=store.state.duplicate(true)
