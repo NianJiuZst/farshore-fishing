@@ -22,6 +22,8 @@ SUITES = [
     ("save", "save_tests.gd", []),
     ("core", "core_tests.gd", []),
     ("session_observation", "session_observation_tests.gd", []),
+    ("hazard_boundary", "fishing_hazard_boundary_tests.gd", []),
+    ("guard_trace", "fishing_guard_trace_tests.gd", []),
     ("float_observation", "float_observation_tests.gd", []),
     ("tackle", "tackle_tests.gd", []),
     ("bait_balance", "bait_balance_tests.gd", []),
