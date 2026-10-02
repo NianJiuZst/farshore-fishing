@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import zipfile
+from godot_binary_settings import scalar_settings
 
 apk, abi, out, bt = Path(sys.argv[1]), sys.argv[2], Path(sys.argv[3]), Path(sys.argv[4])
 expected_content = json.loads(Path(sys.argv[5]).read_text()).get('content') if len(sys.argv) > 5 else None
@@ -43,6 +44,7 @@ assert cert_sha256 == '1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeed
 version_code = int(re.search(r"versionCode='(\d+)'", badging).group(1))
 version_name = re.search(r"versionName='([^']+)'", badging).group(1)
 libs = []
+three_d_audit = None
 extract_native = bool(re.search(r'android:extractNativeLibs[^\n]*0xffffffff', manifest))
 with zipfile.ZipFile(apk) as z:
     names = z.namelist()
@@ -102,6 +104,48 @@ with zipfile.ZipFile(apk) as z:
         assert targets, f'Empty UI icon import mapping: {mapped}'
         for target in targets:
             assert 'assets/'+target.removeprefix('res://') in names, f'Missing UI icon texture: {target}'
+    if expected_content and expected_content.get('three_d'):
+        contract = expected_content['three_d']
+        settings = scalar_settings(z.read('assets/project.binary'))
+        assert settings.get('rendering/renderer/rendering_method') == 'mobile', 'APK must use the Mobile renderer'
+        assert settings.get('rendering/renderer/rendering_method.mobile', 'mobile') == 'mobile'
+        # Vulkan is the pinned Godot4.6.3 Android default and may be omitted by
+        # ProjectSettings when equal to its initial value. Source explicitly pins it.
+        assert settings.get('rendering/rendering_device/driver.android', 'vulkan') == 'vulkan'
+        assert settings.get('rendering/rendering_device/fallback_to_opengl3') is False, 'APK must disable silent OpenGL fallback'
+        imported = json.loads((out/'imported-3d-scenes.json').read_text())
+        assert not imported['failures'] and set(imported['models']) == set(contract['glb_models'])
+        for model in contract['glb_models']:
+            mapped = 'assets/' + model + '.import'
+            assert mapped in names, f'Missing exported 3D model import: {model}'
+            target = re.search(r'^path="res://([^"]+)"', z.read(mapped).decode(), re.M).group(1)
+            assert target in imported['imported_scene_sha256']
+            assert hashlib.sha256(z.read('assets/'+target)).hexdigest() == imported['imported_scene_sha256'][target], f'Exported scene differs from structurally inspected scene: {model}'
+        for texture in contract['texture_files']:
+            mapped = 'assets/' + texture + '.import'
+            assert mapped in names, f'Missing 3D texture import: {texture}'
+            targets = re.findall(r'path(?:\.[a-z0-9_]+)?="res://([^"]+)"', z.read(mapped).decode())
+            assert targets and all('assets/'+p in names for p in targets), f'Missing 3D texture payload: {texture}'
+        shader_payloads = {}
+        for shader, expected in contract['shader_sha256'].items():
+            direct = 'assets/'+shader
+            if direct in names:
+                assert hashlib.sha256(z.read(direct)).hexdigest() == expected, f'Shader bytes differ: {shader}'
+                shader_payloads[shader] = direct
+            else:
+                mapped = direct+'.remap'
+                assert mapped in names, f'Missing exported 3D shader: {shader}'
+                target = re.search(r'path="res://([^"]+)"', z.read(mapped).decode()).group(1)
+                assert 'assets/'+target in names and z.getinfo('assets/'+target).file_size > 0
+                shader_payloads[shader] = 'assets/'+target
+        assert 'assets/assets/3d/environment/manifest.json' in names
+        three_d_audit = {'playable_species':contract['playable_species'], 'playable_species_count':2,
+                        'playable_locations':1, 'legacy_catalog_is_not_all_3d':True,
+                        'configured_renderer':'mobile', 'configured_android_driver':'vulkan',
+                        'opengl_fallback_disabled':True,
+                        'imported_glb_scenes':len(imported['models']), 'rigged_models':3,
+                        'texture_imports':len(contract['texture_files']), 'shader_payloads':shader_payloads,
+                        'scope':'Exact exported imported-scene bytes matched pre-export Skeleton3D/AnimationPlayer/skin audit; runtime rendering requires separate evidence'}
     assert not any(n.startswith('assets/tests/') or n.endswith(('recover.gd','recovered.json')) for n in names), 'Development harness must not ship'
 result = {
     'verified_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -115,6 +159,7 @@ result = {
     'native_libraries': libs, 'fish_species': len(fish),
     'fish_catalog_files':catalog_files, 'regions':len(world['regions']), 'fishing_spots':len(world['spots']),
     'generated_ui_icons':len(ui_icons),
+    'three_d':three_d_audit,
     'extract_native_libraries': extract_native,
     'runtime_test': 'Separate evidence required; binary inspection is not an installation test',
 }

@@ -43,6 +43,22 @@ def digest_files(base):
 before = digest_files(source)
 assert len(before) > 75, 'Incomplete project: refusing export'
 content = content_contract(source)
+authoring_proof = None
+if content.get('three_d'):
+    authoring_hashes = content['three_d']['authoring_files_sha256']
+    authoring_archive = snapshot_dir/f'authoring-{stamp}.tar.gz'
+    with tarfile.open(authoring_archive, 'w:gz') as tar:
+        for relative in authoring_hashes:
+            tar.add(root/relative, arcname=relative, recursive=False)
+    with tarfile.open(authoring_archive, 'r:gz') as tar:
+        actual = {}
+        for member in tar:
+            assert member.isfile()
+            with tar.extractfile(member) as stream:
+                actual[member.name] = hashlib.file_digest(stream, 'sha256').hexdigest()
+        assert actual == authoring_hashes, 'Authoring backup does not match source hashes'
+    with authoring_archive.open('rb') as stream:
+        authoring_proof = {'archive':str(authoring_archive), 'archive_sha256':hashlib.file_digest(stream,'sha256').hexdigest(), 'sha256':authoring_hashes}
 assert not any(Path(p).suffix in {'.p12', '.jks', '.keystore'} for p in before), 'Signing material must never be inside game/'
 archive = snapshot_dir/f'game-{stamp}.tar.gz'
 with tarfile.open(archive, 'w:gz') as tar:
@@ -63,6 +79,10 @@ shutil.copytree(source, stage, dirs_exist_ok=True,
                 ignore=shutil.ignore_patterns('.godot', 'android', 'exported'))
 after = digest_files(source)
 copied = digest_files(stage)
+if authoring_proof:
+    for relative, expected in authoring_proof['sha256'].items():
+        with (root/relative).open('rb') as stream:
+            assert hashlib.file_digest(stream,'sha256').hexdigest() == expected, f'Authoring source changed during snapshot: {relative}'
 if before != after or before != copied:
     changed = sorted(k for k in set(before)|set(after)|set(copied)
                      if before.get(k) != after.get(k) or before.get(k) != copied.get(k))
@@ -109,5 +129,5 @@ for target in cleanup_targets:
         if parent == stage.parent:
             break
         assert not parent.is_symlink(), f'Symlink in Gradle cleanup target: {parent}'
-(stage.parent/(stage.name+'.snapshot.json')).write_text(json.dumps({'archive':str(archive),'archive_sha256':archive_sha256,'sha256':before,'content':content},indent=2)+'\n')
+(stage.parent/(stage.name+'.snapshot.json')).write_text(json.dumps({'archive':str(archive),'archive_sha256':archive_sha256,'authoring_backup':authoring_proof,'sha256':before,'content':content},indent=2)+'\n')
 print(stage)

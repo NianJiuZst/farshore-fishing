@@ -58,6 +58,13 @@ ALIGNED="$ROOT/build/farshore-$ARCH-aligned.apk"
 if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script' "$ROOT/build/logs/import-$ARCH.log"; then
   echo "Godot import failed; inspect build/logs/import-$ARCH.log" >&2; exit 4
 fi
+if [[ -f "$PROJECT/scripts/trial_fishery.gd" ]]; then
+  "$GODOT" --headless --path "$PROJECT" --script "$ROOT/tools/inspect_imported_3d.gd" -- "$PROJECT.snapshot.json" "$AUDIT/imported-3d-scenes.json" >"$ROOT/build/logs/imported-3d-$ARCH.log" 2>&1
+  if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script|ERROR:' "$ROOT/build/logs/imported-3d-$ARCH.log"; then
+    echo "Imported 3D structure audit failed; inspect build/logs/imported-3d-$ARCH.log" >&2; exit 4
+  fi
+  python3 "$ROOT/tools/content_3d_contract.py" "$PROJECT" "$AUDIT/imported-3d-scenes.json"
+fi
 "$GODOT" --headless --path "$PROJECT" --export-release "$PRESET" "$UNSIGNED" >"$ROOT/build/logs/export-$ARCH.log" 2>&1
 if grep -Eq 'SCRIPT ERROR:|Parse Error:|Failed to load script|Export failed|ERROR:' "$ROOT/build/logs/export-$ARCH.log"; then
   echo "Godot export reported errors; inspect build/logs/export-$ARCH.log" >&2; exit 4
@@ -74,6 +81,11 @@ for rel,expected in origin['sha256'].items():
     assert p.is_file(), f'Original source missing after staged export: {rel}'
     with p.open('rb') as f: got=hashlib.file_digest(f,'sha256').hexdigest()
     assert got==expected, f'Original source changed during export: {rel}'
+if origin.get('authoring_backup'):
+    for rel,expected in origin['authoring_backup']['sha256'].items():
+        p=source.parent/rel
+        with p.open('rb') as f: got=hashlib.file_digest(f,'sha256').hexdigest()
+        assert got==expected, f'Original authoring file changed during export: {rel}'
 print('Original production source hashes remain unchanged')
 PY
 "$BUILD_TOOLS/zipalign" -P 16 -f 4 "$UNSIGNED" "$ALIGNED"
