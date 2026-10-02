@@ -15,6 +15,10 @@ import subprocess
 import time
 
 root = Path(__file__).resolve().parent.parent
+image_storage = root/'build/toolchain-storage/api36-image-storage.json'
+if image_storage.exists():
+    assert json.loads(image_storage.read_text()).get('status') == 'restored', 'Restore and hash-verify the parked SDK image with tools/android_image_storage.py restore before launching'
+assert (root/'tools/android-sdk/system-images/android-36/default/x86_64/system.img').is_file(), 'Official API36 base image is unavailable'
 control = root/'build/android-control'
 requests = control/'requests'; results = control/'results'
 requests.mkdir(parents=True, exist_ok=True); results.mkdir(parents=True, exist_ok=True)
