@@ -1,0 +1,191 @@
+{
+  "scope": "Fresh replacement-workspace actual Godot4.6.3 Mobile software Vulkan. Ordinary generated257mm tench, starter tackle; real Main action methods. Fixed20fps recorded simulation, no internal playback speedup, not Android measured FPS. Audio muted.",
+  "verified_at_utc": "2026-10-02T19:12:48.978912+00:00",
+  "frames": 382,
+  "state_first_frames": {
+    "2": 0,
+    "3": 44,
+    "4": 163,
+    "5": 209,
+    "6": 222
+  },
+  "phase_frames": {
+    "windup": [
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320
+    ],
+    "surge": [
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "recovery": [
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381
+    ]
+  },
+  "single_pre_hook_camera_transform_and_fov": true,
+  "source_hashes_match_after_capture": true,
+  "source_hashes": {
+    "res://scripts/fishing_session.gd": "130fd17c3a86b058da18a98f8b2e5c95599b7cbacd040ad14a381298175493cb",
+    "res://scripts/fishing_stage_3d.gd": "4a47bff79b5fd174a98d4dedf66434ded625c107f5b92c41905a6451e6582ccf",
+    "res://scripts/main.gd": "65791996de4e3e7e176bca59bde9758a42038fc6f84e02920f1bfc6a1acb3e00"
+  },
+  "checks": {
+    "float_observation": {
+      "passed": 46,
+      "total": 46
+    },
+    "camera_aspect": {
+      "passed": 531,
+      "total": 531
+    },
+    "actual_tackle_render": {
+      "passed": 11,
+      "total": 11,
+      "maximum_line_tip_error_m": 2.731428e-07
+    }
+  },
+  "visual_review": "Viewed actual cast-finished state3 frame: only restrained small ripple, no white oval spray; action\u6536\u7ebf enabled. Viewed on-screen rod windup frame315. No production source changes during validation. Known seven-texture ReflectionProbe shutdown warning only.",
+  "files": {
+    "observational_fishing_actual_mobile_vulkan.mp4": {
+      "bytes": 2915119,
+      "sha256": "ad5503266a89cad16cc9c6fa3cd5e9424675c1f7fd779258364d5dda972f7519"
+    },
+    "evidence.json": {
+      "bytes": 133184,
+      "sha256": "3bf57db822dc8893aaa5bd19ffe6387bd7953d3ef0744929b5d758b69fb2fd87"
+    },
+    "video_probe.json": {
+      "bytes": 261,
+      "sha256": "42eb6bcd5665f382158e00a946e1afbf58d3fe32411efa16f327972f87f87ff2"
+    },
+    "float_tests.log": {
+      "bytes": 258,
+      "sha256": "556d6c86057c29db0475723b42a79a3ab80f02ae3df86dc6e0d3f8da823c7431"
+    },
+    "camera_tests.log": {
+      "bytes": 180,
+      "sha256": "4043e05b3553ff902695970af1149b0eb639c0dc8fb3ae1b69eebfd8aa346190"
+    },
+    "tackle_render.log": {
+      "bytes": 676,
+      "sha256": "958eaad2b78de89a2e0ccbda3ff24e6a230cac6aeeea5791ab5cdf11812e4f46"
+    },
+    "capture.log": {
+      "bytes": 1492,
+      "sha256": "d7986709640daa2d67f443645250a668cfb60ad0fcf905ab000c237ed58f52b7"
+    }
+  }
+}

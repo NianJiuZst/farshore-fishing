@@ -368,7 +368,7 @@ func _step_fight(delta: float) -> void:
 		_finish(false, "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力")
 	elif slack_time > 2.15 or unloading_time > 4.4 + _giant * 0.5:
 		_finish(false, "松手太久，鱼带着松线挣脱了")
-	elif _break_hazard >= _break_threshold:
+	elif line_wear > 0.78 and _wear_warning_time >= 8.0 and _break_hazard >= _break_threshold:
 		_finish(false, "僵持后的鱼线磨损越来越重，终于断开了")
 	elif fish_distance <= 0.001 and fish_stamina <= 0.025:
 		progress = 1.0

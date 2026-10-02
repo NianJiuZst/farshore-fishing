@@ -1,0 +1,14 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+OBSERVATION_CAPTURE_RENDERER mobile / llvmpipe (LLVM 19.1.7, 256 bits)
+ORDINARY_ENCOUNTER {"bait_id":"worm","behavior":"steady","catch_id":"1790968225.27808-96342580--9223371996253911594-1:catch","caught_at":"2026-10-03 03:10:25","conservation_note":"","difficulty":0.399081890458517,"disposition":"pending","equipment":0,"game_time":2.64999999999999,"length_mm":257,"region_id":"lake","release_only":false,"reward":25,"sale_value":26,"session_id":"1790968225.27808-96342580--9223371996253911594-1","size_class":"标准","size_fraction":0.182163780917034,"species_id":"tench","spot_id":"lake_shore","time_of_day":"day","weather":"clear","weight_g":259}
+CAPTURE_STATE 2 frame=0 action=抛竿中 disabled=true fish_visible=false
+CAPTURE_STATE 3 frame=44 action=收线 disabled=false fish_visible=false
+CAPTURE_STATE 4 frame=163 action=收线 disabled=false fish_visible=false
+CAPTURE_STATE 5 frame=209 action=收线 disabled=false fish_visible=false
+CAPTURE_STATE 6 frame=222 action=收线 disabled=false fish_visible=true
+OBSERVATION_CAPTURE_COMPLETE frames=382 states={ "2": 0, "3": 44, "4": 163, "5": 209, "6": 222 } surge=true
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

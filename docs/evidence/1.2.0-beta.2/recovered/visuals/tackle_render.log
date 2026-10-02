@@ -1,0 +1,12 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+RENDER_DEVICE mobile | llvmpipe (LLVM 19.1.7, 256 bits) | 1.4.305
+RENDER_LINE_ERROR cast_release meters=0.00000011920929
+RENDER_LINE_ERROR cast_air meters=0.00000023841858
+RENDER_LINE_ERROR breach meters=0.00000002980232
+RENDER_LINE_ERROR lift meters=0.0000002731428
+TACKLE_RENDER_TESTS: 11/11 passed; failures=0
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)
