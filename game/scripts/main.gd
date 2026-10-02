@@ -602,8 +602,7 @@ func _close_page() -> void:
 	_update_wallet()
 
 func _show_home() -> void:
-	_open_page("home","远岸钓记")
-	_page.add_child(_text("游戏说明",36))
+	_open_page("home","玩法说明")
 	_page.add_child(_text("%d 处水域 · %d 种真实鱼 · 完全离线" % [catalog.regions.size(),catalog.fish.size()]+"",24,MUTED))
 	_page.add_child(_scene_picture("res://assets/scenery/lake.png",320))
 	_page.add_child(_button("开始钓鱼",_close_page,true))
@@ -766,7 +765,7 @@ func _show_gear() -> void:
 		info.add_child(_text(str(item.description),21,MUTED))
 		info.add_child(_text("探深 %d m   /   控线容错 ×%.2f" % [int(item.max_depth_m),float(item.tolerance)],20,TEAL))
 		var owned: bool=id in store.state.owned_gear
-		var label: String="正在使用" if current else ("装备" if owned else "购买  ·  %d 旅币" % int(item.price))
+		var label: String="已装备" if current else ("装备" if owned else "购买  ·  %d 旅币" % int(item.price))
 		var action: Button=_button(label,_equip.bind(id),not owned)
 		action.disabled=current or (not owned and int(store.state.currency)<int(item.price))
 		box.add_child(action)
@@ -1049,9 +1048,10 @@ func _show_result() -> void:
 	if bool(_last_settlement.get("new_species",false)): flags.append("首次发现")
 	if bool(_last_settlement.get("new_length",false)): flags.append("长度新纪录")
 	if bool(_last_settlement.get("new_weight",false)): flags.append("重量新纪录")
-	var ribbon: Label=_text(("  ·  ".join(flags) if not flags.is_empty() else "钓获记录"),22,GOLD)
-	ribbon.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	if not flags.is_empty():_page.add_child(ribbon)
+	if not flags.is_empty():
+		var ribbon: Label=_text("  ·  ".join(flags),22,GOLD)
+		ribbon.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+		_page.add_child(ribbon)
 	var fish_name: Label=_text(fish.name,43,INK)
 	fish_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(fish_name)
