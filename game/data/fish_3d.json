@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "coordinate_system": {
+    "nose_axis": "+X",
+    "up_axis": "+Y",
+    "rest_length_m": 1.0,
+    "centered": true
+  },
+  "required_animation_clips": [
+    "swim",
+    "struggle",
+    "breach",
+    "landed"
+  ],
+  "models": {
+    "common_carp": {
+      "scene": "res://assets/3d/common_carp.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "crucian_carp": {
+      "scene": "res://assets/3d/crucian_carp.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "roach": {
+      "scene": "res://assets/3d/roach.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "rudd": {
+      "scene": "res://assets/3d/rudd.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "european_perch": {
+      "scene": "res://assets/3d/european_perch.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "northern_pike": {
+      "scene": "res://assets/3d/northern_pike.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "common_bream": {
+      "scene": "res://assets/3d/common_bream.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "tench": {
+      "scene": "res://assets/3d/tench.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "japanese_horse_mackerel": {
+      "scene": "res://assets/3d/japanese_horse_mackerel.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "chub_mackerel": {
+      "scene": "res://assets/3d/chub_mackerel.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "red_seabream": {
+      "scene": "res://assets/3d/red_seabream.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "black_seabream": {
+      "scene": "res://assets/3d/black_seabream.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "japanese_seabass": {
+      "scene": "res://assets/3d/japanese_seabass.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "japanese_whiting": {
+      "scene": "res://assets/3d/japanese_whiting.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "marbled_rockfish": {
+      "scene": "res://assets/3d/marbled_rockfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "olive_flounder": {
+      "scene": "res://assets/3d/olive_flounder.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": true
+    },
+    "atlantic_cod": {
+      "scene": "res://assets/3d/atlantic_cod.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "pollack": {
+      "scene": "res://assets/3d/pollack.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "saithe": {
+      "scene": "res://assets/3d/saithe.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "haddock": {
+      "scene": "res://assets/3d/haddock.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "atlantic_mackerel": {
+      "scene": "res://assets/3d/atlantic_mackerel.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "atlantic_herring": {
+      "scene": "res://assets/3d/atlantic_herring.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "european_plaice": {
+      "scene": "res://assets/3d/european_plaice.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": true
+    },
+    "atlantic_wolffish": {
+      "scene": "res://assets/3d/atlantic_wolffish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "european_seabass": {
+      "scene": "res://assets/3d/european_seabass.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "gilthead_seabream": {
+      "scene": "res://assets/3d/gilthead_seabream.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "saddled_seabream": {
+      "scene": "res://assets/3d/saddled_seabream.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "white_seabream": {
+      "scene": "res://assets/3d/white_seabream.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "annular_seabream": {
+      "scene": "res://assets/3d/annular_seabream.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "red_mullet": {
+      "scene": "res://assets/3d/red_mullet.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "painted_comber": {
+      "scene": "res://assets/3d/painted_comber.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "common_pandora": {
+      "scene": "res://assets/3d/common_pandora.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "alligator_gar": {
+      "scene": "res://assets/3d/alligator_gar.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "longnose_gar": {
+      "scene": "res://assets/3d/longnose_gar.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "bowfin": {
+      "scene": "res://assets/3d/bowfin.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "largemouth_bass": {
+      "scene": "res://assets/3d/largemouth_bass.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "channel_catfish": {
+      "scene": "res://assets/3d/channel_catfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "flathead_catfish": {
+      "scene": "res://assets/3d/flathead_catfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "chinese_sturgeon": {
+      "scene": "res://assets/3d/chinese_sturgeon.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "mandarin_fish": {
+      "scene": "res://assets/3d/mandarin_fish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "northern_snakehead": {
+      "scene": "res://assets/3d/northern_snakehead.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "yellowcheek": {
+      "scene": "res://assets/3d/yellowcheek.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "southern_catfish": {
+      "scene": "res://assets/3d/southern_catfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    },
+    "longsnout_catfish": {
+      "scene": "res://assets/3d/longsnout_catfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false
+    }
+  }
+}
