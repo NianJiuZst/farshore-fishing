@@ -5,16 +5,18 @@
     "scientific_name": "Cyprinus carpio",
     "region_ids": [
       "lake",
-      "yangtze"
+      "yangtze",
+      "bayou"
     ],
     "spot_ids": [
       "lake_shore",
       "lake_bay",
-      "yangtze_river"
+      "yangtze_river",
+      "bayou_channel"
     ],
     "art": "res://assets/fish/common_carp.png",
     "thumb": "res://assets/fish/common_carp_thumb.png",
-    "description": "欧亚淡水鱼，常在缓流、湖泊与河湾底层觅食。游戏中的欧洲湖泊与长江洲滩都能遇见它。",
+    "description": "欧亚淡水鱼，常在缓流、湖泊与河湾底层觅食。长江有野生群体；美国密西西比流域的种群来自人为引入。",
     "morphology": "粗壮体形，黄褐色大鳞；口角有须，背鳍基部长，尾鳍分叉。",
     "sources": [
       {
@@ -27,6 +29,11 @@
         "url": "https://pubmed.ncbi.nlm.nih.gov/23079816/",
         "title": "Genetic analysis of common carp populations sampled from Yangtze locations",
         "supports": "长江流域石首、扬州野生群体采样支持地域分布；不是具体钓点保证"
+      },
+      {
+        "url": "https://home.nps.gov/miss/learn/nature/ascarp_common.htm",
+        "title": "National Park Service: Common carp in Mississippi River",
+        "supports": "美国引入史与密西西比河1883年记录，明确为引入种"
       }
     ],
     "min_mm": 180,
@@ -289,10 +296,12 @@
     "name": "白斑狗鱼",
     "scientific_name": "Esox lucius",
     "region_ids": [
-      "lake"
+      "lake",
+      "bayou"
     ],
     "spot_ids": [
-      "lake_bay"
+      "lake_bay",
+      "bayou_channel"
     ],
     "art": "res://assets/fish/northern_pike.png",
     "thumb": "res://assets/fish/northern_pike_thumb.png",
@@ -304,6 +313,11 @@
         "title": "Esox lucius — species account",
         "supports": "物种身份、地域与生境；形态资料。数值遭遇深度为游戏可达子区间，不代表全球生物学极限。",
         "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://home.nps.gov/miss/learn/nature/northern-pike.htm",
+        "title": "National Park Service: Northern pike",
+        "supports": "上密西西比河公园河道及漫滩湖泊、草带和凉爽深水，仅增加上游河湾"
       }
     ],
     "min_mm": 300,

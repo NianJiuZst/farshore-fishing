@@ -1,0 +1,400 @@
+[
+  {
+    "species_id": "alligator_gar",
+    "name": "鳄雀鳝",
+    "scientific_name": "Atractosteus spatula",
+    "spot_ids": [
+      "bayou_backwater"
+    ],
+    "description": "密西西比下游大型捕食鱼，常在温暖的牛轭湖和河汊中活动。粗壮身躯披着菱形硬鳞，宽扁的吻部很像鳄鱼。",
+    "morphology": "短而宽的鳄状吻，粗壮圆筒身体和菱形硬鳞；背鳍、臀鳍后移，圆尾及鳍上有深色斑点。",
+    "sources": [
+      {
+        "url": "https://www.fws.gov/species/alligator-gar-atractosteus-spatula",
+        "title": "USFWS: Alligator Gar",
+        "supports": "学名、密西西比流域南部范围、菱形硬鳞和大型体形",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/alligator-gar",
+        "title": "MDWFP: Alligator Gar",
+        "supports": "南密西西比、河汊与牛轭湖、宽吻和鳍部斑点；有真实大型个体记录",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://myfwc.com/wildlifehabitats/profiles/freshwater/alligator-gar/",
+        "title": "FWC: Alligator Gar",
+        "supports": "约2.44米大型尺寸背景及后移鱼鳍；不是体重科研回归来源",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 650,
+    "max_mm": 2400,
+    "anchor_mm": 1400,
+    "anchor_g": 22000,
+    "behavior": "steady",
+    "difficulty": 0.9,
+    "weight": 4,
+    "bait_weights": {
+      "worm": 0.2,
+      "grain": 0.02,
+      "shrimp": 0.5,
+      "lure": 1.9
+    },
+    "time_weights": {
+      "day": 1,
+      "dusk": 1.25
+    },
+    "weather_weights": {
+      "clear": 1,
+      "rain": 1.1
+    },
+    "min_gear": 2,
+    "min_cast": 0.55,
+    "depth_min_m": 1,
+    "depth_max_m": 8,
+    "rarity": "稀有",
+    "reachability_note": "仅下密西西比/路易斯安那温暖、植被丰富的河汊；不放入上密西西比冷水钓点。",
+    "taxonomy_note": "有效学名 Atractosteus spatula；旧名 Lepisosteus spatula。",
+    "region_ids": [
+      "bayou"
+    ],
+    "art": "res://assets/fish/alligator_gar.png",
+    "thumb": "res://assets/fish/alligator_gar_thumb.png",
+    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
+    "max_cast": 1,
+    "salinity": "fresh",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "longnose_gar",
+    "name": "长吻雀鳝",
+    "scientific_name": "Lepisosteus osseus",
+    "spot_ids": [
+      "bayou_backwater",
+      "bayou_channel"
+    ],
+    "description": "嘴像细长的镊子，身体却披着坚硬的菱形鳞片。生活在大河的缓流、泛洪湖和回水处，以小鱼为食。",
+    "morphology": "吻极细长，长度超过其余头部；细长橄榄褐色身体，体侧和后方鱼鳍散布黑斑，圆尾，背鳍明显后移。",
+    "sources": [
+      {
+        "url": "https://www.nps.gov/miss/learn/nature/long-nosed-gar-lepisosteus-osseus.htm",
+        "title": "NPS: Long-nosed Gar",
+        "supports": "上密西西比泛洪湖与大河回水栖境、细长吻和分布",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://dnr.sc.gov/fish/species/longnosegar.html",
+        "title": "SCDNR: Longnose Gar",
+        "supports": "吻长超过其余头部两倍、体色黑斑、缓流水域与鱼食",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/longnose-gar/",
+        "title": "Florida Museum: Longnose Gar",
+        "supports": "北美分布、菱形硬鳞、体长可超过游戏上限",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 450,
+    "max_mm": 1500,
+    "anchor_mm": 900,
+    "anchor_g": 3500,
+    "behavior": "burst",
+    "difficulty": 0.7,
+    "weight": 8,
+    "bait_weights": {
+      "worm": 0.35,
+      "grain": 0.02,
+      "shrimp": 0.6,
+      "lure": 1.9
+    },
+    "time_weights": {
+      "day": 1,
+      "dusk": 1.3
+    },
+    "weather_weights": {
+      "clear": 1,
+      "rain": 1.05
+    },
+    "min_gear": 1,
+    "min_cast": 0.25,
+    "depth_min_m": 1,
+    "depth_max_m": 10,
+    "rarity": "少见",
+    "reachability_note": "上下游均有分布；上游钓点取河湾缓流边缘，而非急流主槽。",
+    "region_ids": [
+      "bayou"
+    ],
+    "art": "res://assets/fish/longnose_gar.png",
+    "thumb": "res://assets/fish/longnose_gar_thumb.png",
+    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
+    "max_cast": 1,
+    "salinity": "fresh",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "bowfin",
+    "name": "弓鳍鱼",
+    "scientific_name": "Amia ocellicauda",
+    "spot_ids": [
+      "bayou_backwater",
+      "bayou_channel"
+    ],
+    "description": "长长的背鳍像一条柔软的缎带。密西西比流域的弓鳍鱼常栖息在水草丰茂的缓水和牛轭湖，也能浮到水面补充空气。",
+    "morphology": "橄榄色细长身体带深色斑驳，长软条背鳍与短臀鳍形成对比；圆尾，雄鱼尾基有浅色环绕的黑色眼斑。",
+    "sources": [
+      {
+        "url": "https://mdc.mo.gov/discover-nature/field-guide/emerald-bowfin",
+        "title": "Missouri Department of Conservation: Emerald Bowfin",
+        "supports": "当前学名 Amia ocellicauda；密西西比低地、回水/牛轭湖生境、形态",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9709656/",
+        "title": "Brownstein et al. 2022: Hidden species diversity in an iconic living fossil vertebrate",
+        "supports": "2022物种界定；Amia ocellicauda 覆盖密西西比流域，Amia calva 为更东侧沿海支系",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 280,
+    "max_mm": 850,
+    "anchor_mm": 500,
+    "anchor_g": 1500,
+    "behavior": "burst",
+    "difficulty": 0.65,
+    "weight": 9,
+    "bait_weights": {
+      "worm": 1,
+      "grain": 0.05,
+      "shrimp": 0.9,
+      "lure": 1.7
+    },
+    "time_weights": {
+      "day": 0.9,
+      "dusk": 1.45
+    },
+    "weather_weights": {
+      "clear": 1,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.1,
+    "depth_min_m": 1,
+    "depth_max_m": 8,
+    "rarity": "少见",
+    "reachability_note": "回水和牛轭湖优先；上游河湾仅取植被缓水边缘，不表示偏好急流主槽。",
+    "taxonomy_note": "稳定游戏ID保留 bowfin，密西西比条目按2022修订采用 Amia ocellicauda。历史资料广义 Amia calva 不能直接当作新分类后的流域学名；中文显示名保留泛称“弓鳍鱼”。",
+    "region_ids": [
+      "bayou"
+    ],
+    "art": "res://assets/fish/bowfin.png",
+    "thumb": "res://assets/fish/bowfin_thumb.png",
+    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
+    "max_cast": 1,
+    "salinity": "fresh",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "largemouth_bass",
+    "name": "大口黑鲈",
+    "scientific_name": "Micropterus nigricans",
+    "spot_ids": [
+      "bayou_backwater",
+      "bayou_channel"
+    ],
+    "description": "在倒木、水草和缓流边缘伏击猎物的北美黑鲈。巨大的嘴部和体侧断续的深色横带，是容易识别的特征。",
+    "morphology": "绿色体侧有断续黑色横带，上颌后缘超过眼睛；背鳍硬棘部与软条部之间凹缺明显，尾鳍较宽。",
+    "sources": [
+      {
+        "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/largemouth-bass",
+        "title": "MDWFP: Largemouth Bass",
+        "supports": "密西西比本地大口黑鲈形态、缓流与掩体生境；该页沿用旧学名",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.dnr.state.mn.us/minnaqua/speciesprofile/largemouthbass.html",
+        "title": "Minnesota DNR: Largemouth Bass profile",
+        "supports": "上游水草丰富的河流回水和湖湾；该页沿用旧学名",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9170712/",
+        "title": "Kim et al. 2022: Phylogenomics and species delimitation of Black Basses",
+        "supports": "当前种界与命名：大口黑鲈 Micropterus nigricans，佛罗里达黑鲈 M. salmoides",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://dnr.maryland.gov/fisheries/Documents/Reg_Changes/LargemouthBass_ScientificRenaming.pdf",
+        "title": "Maryland DNR: Largemouth Bass Scientific Renaming",
+        "supports": "核实AFS 2023对大口黑鲈学名变更的采用",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 180,
+    "max_mm": 650,
+    "anchor_mm": 400,
+    "anchor_g": 1200,
+    "behavior": "burst",
+    "difficulty": 0.57,
+    "weight": 13,
+    "bait_weights": {
+      "worm": 1.1,
+      "grain": 0.05,
+      "shrimp": 1,
+      "lure": 2.1
+    },
+    "time_weights": {
+      "day": 1,
+      "dusk": 1.4
+    },
+    "weather_weights": {
+      "clear": 1,
+      "rain": 1.1
+    },
+    "min_gear": 1,
+    "min_cast": 0.05,
+    "depth_min_m": 1,
+    "depth_max_m": 10,
+    "rarity": "常见",
+    "reachability_note": "取上下游河湾的植被和倒木缓水，不把上游钓点解释成纯冷水急流。",
+    "taxonomy_note": "按2022修订及AFS 2023采用 Micropterus nigricans。旧资料 M. salmoides salmoides 对应本条；不混用引入的佛罗里达黑鲈或杂交个体。",
+    "region_ids": [
+      "bayou"
+    ],
+    "art": "res://assets/fish/largemouth_bass.png",
+    "thumb": "res://assets/fish/largemouth_bass_thumb.png",
+    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
+    "max_cast": 1,
+    "salinity": "fresh",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "channel_catfish",
+    "name": "斑点叉尾鮰",
+    "scientific_name": "Ictalurus punctatus",
+    "spot_ids": [
+      "bayou_backwater",
+      "bayou_channel"
+    ],
+    "description": "在河道、回水和牛轭湖底部寻找昆虫、甲壳动物与小鱼。口边的须帮助它在浑水中探索食物。",
+    "morphology": "无鳞的灰橄榄色身体，浅腹与分散黑斑；口边有须，尾鳍深叉，臀鳍后缘圆弧，背后有小脂鳍。",
+    "sources": [
+      {
+        "url": "https://www.mdwfp.com/sites/default/files/2024-12/Fish%20ID%20Guide_0.pdf",
+        "title": "MDWFP Fish ID Guide: Channel Catfish, p.21",
+        "supports": "物种身份、河流牛轭湖生境、黑斑、深叉尾和圆臀鳍；成年大鱼斑点可消退",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+        "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+        "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 250,
+    "max_mm": 1000,
+    "anchor_mm": 550,
+    "anchor_g": 2000,
+    "behavior": "steady",
+    "difficulty": 0.55,
+    "weight": 13,
+    "bait_weights": {
+      "worm": 1.8,
+      "grain": 0.3,
+      "shrimp": 1.9,
+      "lure": 0.25
+    },
+    "time_weights": {
+      "day": 0.9,
+      "dusk": 1.45
+    },
+    "weather_weights": {
+      "clear": 1,
+      "rain": 1.15
+    },
+    "min_gear": 1,
+    "min_cast": 0.1,
+    "depth_min_m": 1,
+    "depth_max_m": 18,
+    "rarity": "常见",
+    "reachability_note": "上下密西西比河流、回水和河湾可达；深度为钓点子区间。",
+    "region_ids": [
+      "bayou"
+    ],
+    "art": "res://assets/fish/channel_catfish.png",
+    "thumb": "res://assets/fish/channel_catfish_thumb.png",
+    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
+    "max_cast": 1,
+    "salinity": "fresh",
+    "research_status": "reviewed_2026-10-02"
+  },
+  {
+    "species_id": "flathead_catfish",
+    "name": "扁头鲶",
+    "scientific_name": "Pylodictis olivaris",
+    "spot_ids": [
+      "bayou_backwater",
+      "bayou_channel"
+    ],
+    "description": "体形粗壮的大型底层捕食者，常守在深潭、倒木和水下掩体旁。宽扁的头部和伸出的下颌，让它与叉尾鮰很不一样。",
+    "morphology": "宽扁头、突出的下颌和小眼；黄褐色无鳞身体带不规则斑驳，长口须，小脂鳍；尾缘近方或微圆，不深叉。",
+    "sources": [
+      {
+        "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide/flathead-catfish",
+        "title": "MDWFP: Flathead Catfish",
+        "supports": "大型体形、宽扁头和突下颌；河流深潭、水下掩体及牛轭湖生境",
+        "checked_on": "2026-10-02"
+      },
+      {
+        "url": "https://www.nps.gov/miss/learn/nature/channel-catfish-ictalurus-punctatus-and-flathead-catfish-pylodictis-olivaris.htm",
+        "title": "NPS: Channel and Flathead Catfish, Mississippi National River",
+        "supports": "上密西西比存在、栖境和两种鲶鱼的区别",
+        "checked_on": "2026-10-02"
+      }
+    ],
+    "min_mm": 350,
+    "max_mm": 1350,
+    "anchor_mm": 750,
+    "anchor_g": 8000,
+    "behavior": "rest",
+    "difficulty": 0.82,
+    "weight": 6,
+    "bait_weights": {
+      "worm": 0.65,
+      "grain": 0.02,
+      "shrimp": 1.1,
+      "lure": 1.5
+    },
+    "time_weights": {
+      "day": 0.8,
+      "dusk": 1.6
+    },
+    "weather_weights": {
+      "clear": 1,
+      "rain": 1.1
+    },
+    "min_gear": 2,
+    "min_cast": 0.35,
+    "depth_min_m": 3,
+    "depth_max_m": 20,
+    "rarity": "稀有",
+    "reachability_note": "上游河湾深槽及下游河汊较深的倒木坑；浅于3米部分不作为遭遇区。",
+    "region_ids": [
+      "bayou"
+    ],
+    "art": "res://assets/fish/flathead_catfish.png",
+    "thumb": "res://assets/fish/flathead_catfish_thumb.png",
+    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
+    "max_cast": 1,
+    "salinity": "fresh",
+    "research_status": "reviewed_2026-10-02"
+  }
+]
