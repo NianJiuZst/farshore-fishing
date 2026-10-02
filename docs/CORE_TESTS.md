@@ -26,6 +26,12 @@ The earlier 32-species post-recovery baseline passed 42,012 / 42,012 assertions 
 
 During content production only, `-- --skip-ui` explicitly omits Main integration and prints that omission. The 69,093 / 69,093 preliminary logic-only pass is recorded in `build/core-tests-expanded-logic.log`; it is not used as the full-suite result. The final command above uses no skip flag.
 
+## Painted-icon regression checkpoint
+
+On 2026-10-02 during 10:12–10:14 UTC, the final full `--check-art` suite (including actual Main, with no `--skip-ui`) passed **69,160 / 69,160**, exit 0, on frozen production UI commit `334d594a99bd86fed030a344a48125d6c5a0c56f`. The raw output is `build/core-tests-painted-icons.log`. The first run exposed orphan result labels at exit despite passing the behavioral assertions; the UI owner repaired conditional label allocation, and this subsequent run contained **no ERROR, WARNING, or leaked-resource output**. This distinction is important: behavioral assertion success alone was not called a clean runtime pass.
+
+The expanded painted-interface suite is documented in `UI_STYLE_TESTS.md`; it separately checks all 25 HD raster assets, actual runtime bindings, transparent control states, compact HUD, active catalog/settings/catch controls, and interruption routes. All 41 recorded production/test/scene/project/icon file hashes stayed unchanged during the final full runs; exact evidence is in `UI_REGRESSION_MANIFEST.json`.
+
 ## What runs against production code
 
 ### Content and encounter generation

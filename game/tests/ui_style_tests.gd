@@ -3,6 +3,9 @@ extends SceneTree
 const MainScene = preload("res://scenes/main.tscn")
 const Store = preload("res://scripts/save_store.gd")
 const IconActionScript = preload("res://scripts/icon_action.gd")
+const ArtScript = preload("res://scripts/ui_art.gd")
+const EXPECTED_ICONS: Array[String] = ["rod", "reel", "hook", "bag", "compass", "book", "heart", "coin", "badge", "pause", "settings", "sound", "back", "arrow", "sort", "search", "release", "worm", "grain", "shrimp", "lure", "sun", "dusk", "rain", "ruler"]
+const RETIRED_COPY: Array[String] = ["F A R S H O R E", "NATURAL HISTORY", "沿着水声，去往远岸", "把世界，钓成一本旅行手册", "风从远岸来", "停一会儿，风景还在", "把下一站，交给海风", "真实的相遇，是最好的旅行纪念", "水下还有一个未曾见过的身影"]
 const STATES: Array[String] = ["normal", "hover", "pressed", "hover_pressed", "focus", "disabled"]
 const MIN_TARGET: float = 96.0
 var app: Control
@@ -11,6 +14,8 @@ var failures: int = 0
 var buttons_checked: int = 0
 var routes: Array[String] = []
 var test_root: String
+var idle_action_rect: Rect2
+var rendered_icon_kinds: Dictionary = {}
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -24,6 +29,7 @@ func _run() -> void:
 		quit(2)
 		return
 	test_root = isolated_data.path_join("fixtures")
+	_test_raster_assets()
 	root.size = Vector2i(720, 1280)
 	app = MainScene.instantiate()
 	root.add_child(app)
@@ -36,14 +42,23 @@ func _run() -> void:
 	var fixture: SaveStore = Store.new()
 	_check(fixture.initialize(test_root), "production SaveStore fixture initializes")
 	app.store = fixture
+	# Stable production RNG avoids record-banner/count drift between runs.
+	app.encounter.rng.seed = 20261002
+	app.session._rng.seed = 2468
 	app._close_page()
 	app.session.reset()
 	await _audit("fishing", app)
-	for pair: Array in [["旅行", "compass"], ["图鉴", "book"], ["收藏", "heart"], ["行囊", "bag"], ["鱼饵", "lure"], ["抛竿", "rod"]]:
+	for pair: Array in [["旅行", "compass"], ["图鉴", "book"], ["收藏", "heart"], ["行囊", "bag"], ["鱼饵", app.bait_id], ["抛竿", "rod"]]:
 		var action: Button = _find_button(app, str(pair[0]))
 		_check(action != null, "main navigation exists: " + str(pair[0]))
 		if action != null:
 			_check(action.get("icon_kind") == pair[1], "main action has the correct icon: " + str(pair[0]))
+	idle_action_rect = app._action.get_global_rect()
+	_check(idle_action_rect.position.x >= 450 and idle_action_rect.end.x <= 720 and idle_action_rect.end.y >= 1240 and idle_action_rect.end.y <= 1280, "main action occupies the safe bottom-right edge")
+	_check(app._nav_rail.get_global_rect().position.x >= 570, "secondary navigation occupies the right screen edge")
+	_check(app._place.get_global_rect().end.y < 160 and app._condition.get_global_rect().end.y < 210, "essential location/weather HUD stays compact at top")
+	await _test_selected_bait_and_weather()
+	await _test_retained_scenery_support()
 	# Starter saves expose disabled unlock/equipment controls and empty collections.
 	for method: String in ["_show_home", "_show_pause", "_show_travel", "_show_gear", "_show_catalog", "_show_favorites", "_show_settings", "_show_licenses", "_show_pending"]:
 		app.call(method)
@@ -59,6 +74,8 @@ func _run() -> void:
 	app._show_zoom("common_carp")
 	await _audit("specimen_zoom", app._overlay)
 	await _test_active_feedback()
+	await _test_catalog_controls()
+	await _test_pause_back_settings()
 	# Check real callbacks survive repeated replacement of overlays.
 	for repeat: int in range(3):
 		app._show_settings()
@@ -74,18 +91,23 @@ func _run() -> void:
 	app.session.reset()
 	app.session.start_charge()
 	await _audit("charging", app)
+	_check_action_position("charging", "rod")
 	var fish: Dictionary = app.encounter.make_individual(app.catalog.fish["common_carp"], "lake_shore", "lake", "worm", 2, "day", "clear")
 	app.session.cast(fish, app.catalog.gear[2])
 	app.session.set_state(FishingSession.State.BITE)
 	await _audit("bite", app)
+	_check_action_position("bite", "hook")
 	app.session.press()
 	await _audit("fight", app)
+	_check_action_position("fight", "reel")
+	_check(not app._nav_rail.is_visible_in_tree(), "nonessential navigation hides during the fight")
 	app.session._finish(false, "UI test escape")
 	await _audit("escape", app._overlay)
 	app._finish_result()
 	await _settle_layout()
 	app.queue_free()
 	await process_frame
+	print("UI_BITMAP_BINDINGS: ", rendered_icon_kinds.keys())
 	print("UI_STYLE_ROUTES: ", ", ".join(routes))
 	print("UI_STYLE_TESTS: ", checks - failures, "/", checks, " passed; failures=", failures, "; button visits=", buttons_checked, "; logical viewport=720x1280")
 	quit(0 if failures == 0 else 1)
@@ -110,6 +132,17 @@ func _audit(route: String, subtree: Node) -> void:
 	print("UI_STYLE_ROUTE ", route, " buttons=", buttons_checked - before)
 
 func _walk(node: Node, route: String) -> void:
+	if node.get_script() == ArtScript:
+		var kind: String = str(node.get("kind"))
+		if kind != "none":
+			_check(kind in EXPECTED_ICONS, route + ": icon is a required generated bitmap: " + kind)
+			var texture: Texture2D = ArtScript.texture_for(kind)
+			_check(texture != null and texture.resource_path == ArtScript.ICON_ROOT + kind + ".png", route + ": live icon resolves its production PNG: " + kind)
+			rendered_icon_kinds[kind] = true
+			_check(kind != "badge", route + ": no decorative branding emblem")
+	if node is Label:
+		for retired: String in RETIRED_COPY:
+			_check(not retired in (node as Label).text, route + ": no retired decorative/poetic copy: " + retired)
 	if node is Button:
 		_audit_button(node as Button, route)
 	elif node is PanelContainer:
@@ -121,6 +154,9 @@ func _walk(node: Node, route: String) -> void:
 			var style: StyleBox = search.get_theme_stylebox(state)
 			var underline_only: bool = style is StyleBoxFlat and (style as StyleBoxFlat).bg_color.a <= 0.001 and (style as StyleBoxFlat).border_width_top == 0 and (style as StyleBoxFlat).border_width_left == 0 and (style as StyleBoxFlat).border_width_right == 0
 			_check(_transparent_style(style) or underline_only, route + ": search has no filled backplate in " + state)
+	elif node is HSlider:
+		var slider: HSlider = node as HSlider
+		_check(slider.size.x >= MIN_TARGET and slider.size.y >= MIN_TARGET, route + ": volume slider touch target >=96 logical units, actual=" + str(slider.size))
 	elif node is ColorRect:
 		var rect: ColorRect = node as ColorRect
 		_check(not (rect.color.a > 0.1 and rect.color.get_luminance() < 0.2 and rect.size.x > MIN_TARGET and rect.size.y > MIN_TARGET), route + ": no dark rectangular backplate at " + str(node.get_path()))
@@ -140,7 +176,8 @@ func _audit_button(button: Button, route: String) -> void:
 	_check(not button.text.strip_edges().is_empty(), label + " has a text label")
 	_check(button.mouse_filter != Control.MOUSE_FILTER_IGNORE, label + " is a real interactive hit target")
 	if button is OptionButton:
-		_check(button.get_theme_icon("arrow") != null or button.icon != null, label + " visible selection icon")
+		var arrow: Texture2D = button.get_theme_icon("arrow")
+		_check(arrow != null and arrow == ArtScript.scaled_texture("arrow", 24, true), label + " dropdown uses the generated arrow bitmap, not an inherited vector")
 		return
 	_check(button.get_script() == IconActionScript, label + " uses the production borderless icon control")
 	if button.get_script() != IconActionScript: return
@@ -253,9 +290,276 @@ func _audit_catch(species_id: String) -> void:
 	app.session._finish(true, "")
 	_check(app._save_ok and app._screen == "result", species_id + " actual catch settles into result page")
 	await _audit("catch/" + species_id, app._overlay)
+	if species_id == "chinese_sturgeon":
+		_check(not "出售" in _all_label_text(app._overlay), "protected result contains no misleading sale instructions")
+		_check("放归后保留图鉴与纪录" in _all_label_text(app._page_footer), "protected footer explicitly explains release-only record preservation")
+	var retained_record: Dictionary = app._last_record.duplicate(true)
+	var retained_count: int = app.store.total_count()
+	var retained_currency: int = int(app.store.state.currency)
+	for repeat: int in range(3):
+		app._handle_back()
+		await _settle_layout()
+		_check(app._screen == "result" and app._last_record == retained_record, species_id + " repeated Back protects the exact pending result")
+		_check(app.store.total_count() == retained_count and int(app.store.state.currency) == retained_currency, species_id + " repeated result Back cannot duplicate rewards")
 	app._show_pending()
 	await _audit("pending/" + species_id, app._overlay)
 	app._show_result()
-	app._dispose_result("released")
+	var release: Button = _find_button_prefix(app._overlay, "放归自然" if species_id == "chinese_sturgeon" else "放生")
+	_check(release != null and not release.disabled, species_id + " actual result release is available")
+	if release != null:
+		var rect: Rect2 = release.get_global_rect()
+		_check(rect.position.y >= 0 and rect.end.y <= 1280 and rect.position.x >= 0 and rect.end.x <= 720, species_id + " actual release control remains inside viewport")
+		release.pressed.emit()
 	await _settle_layout()
 	_check(app._overlay == null and app._last_record.is_empty(), species_id + " real release clears result")
+
+func _test_raster_assets() -> void:
+	_check(ArtScript.REQUIRED_ICONS.size() == 25, "production declares exactly 25 required raster icons")
+	var hashes: Dictionary = {}
+	for kind: String in EXPECTED_ICONS:
+		_check(kind in ArtScript.REQUIRED_ICONS, "production manifest contains " + kind)
+		var path: String = ArtScript.ICON_ROOT + kind + ".png"
+		_check(FileAccess.file_exists(path), "runtime PNG exists: " + path)
+		_check(not FileAccess.file_exists(ArtScript.ICON_ROOT + kind + ".svg"), "no vector fallback for " + kind)
+		var texture: Texture2D = ArtScript.texture_for(kind)
+		_check(texture != null and texture.resource_path == path, "production texture resolver loads exact PNG: " + kind)
+		if texture == null: continue
+		_check(texture.get_width() >= 512 and texture.get_height() >= 512, "HD production dimensions >=512: " + kind)
+		var picture: Image = Image.new()
+		var decoded: Error = picture.load_png_from_buffer(FileAccess.get_file_as_bytes(path))
+		_check(decoded == OK, "source file decodes as actual PNG: " + kind)
+		_check(picture != null and picture.get_format() == Image.FORMAT_RGBA8, "source PNG is real RGBA8: " + kind)
+		if decoded != OK: continue
+		var imported: Image = texture.get_image()
+		_check(imported != null and imported.detect_alpha() != Image.ALPHA_NONE, "runtime texture retains transparent alpha: " + kind)
+		var pixels: PackedByteArray = picture.get_data()
+		var clear_pixels: int = 0
+		var painted_pixels: int = 0
+		var blended_pixels: int = 0
+		for offset: int in range(3, pixels.size(), 4):
+			var alpha: int = pixels[offset]
+			if alpha <= 8: clear_pixels += 1
+			elif alpha >= 240: painted_pixels += 1
+			else: blended_pixels += 1
+		var total: int = picture.get_width() * picture.get_height()
+		_check(clear_pixels > total / 10, "genuine transparent cutout space >10%: " + kind)
+		_check(painted_pixels > total / 50, "nonempty painted subject >2%: " + kind)
+		_check(blended_pixels > 20, "real antialiased transparent edges: " + kind)
+		for point: Vector2i in [Vector2i.ZERO, Vector2i(picture.get_width()-1, 0), Vector2i(0, picture.get_height()-1), Vector2i(picture.get_width()-1, picture.get_height()-1)]:
+			_check(picture.get_pixelv(point).a <= 0.01, "transparent PNG corner " + str(point) + ": " + kind)
+		var digest: String = FileAccess.get_sha256(path)
+		_check(not hashes.has(digest), "distinct source image, not a reused generic icon: " + kind)
+		hashes[digest] = kind
+	_check(ArtScript.validate_assets().is_empty(), "production startup validator accepts complete HD icon set")
+	var renderer_source: String = FileAccess.get_file_as_string("res://scripts/ui_art.gd")
+	_check("draw_texture_rect(" in renderer_source, "runtime art renderer actually paints its loaded texture")
+	for forbidden: String in ["draw_line(", "draw_polyline(", "draw_polygon(", "draw_colored_polygon(", "draw_circle(", "draw_arc(", "draw_rect(", ".svg", "GradientTexture", "load_svg"]:
+		_check(not forbidden in renderer_source, "icon renderer has no primitive/vector fallback: " + forbidden)
+	print("UI_BITMAP_ASSETS: ", hashes.size(), "/25 distinct HD RGBA PNGs checked")
+
+func _check_action_position(state_name: String, expected_icon: String) -> void:
+	_check(app._action.get_global_rect().is_equal_approx(idle_action_rect), state_name + ": primary action does not move between fishing states")
+	_check(app._action.icon_kind == expected_icon, state_name + ": primary action uses correct actual bitmap")
+
+func _test_selected_bait_and_weather() -> void:
+	for bait: Dictionary in app.catalog.baits:
+		app._show_gear()
+		await _settle_layout()
+		var id: String = str(bait.bait_id)
+		var choice: Button = _find_button(app._overlay, ("已选 · " if id == app.bait_id else "") + str(bait.name))
+		_check(choice != null and not choice.disabled, "real bait control available: " + id)
+		if choice != null: choice.pressed.emit()
+		await _settle_layout()
+		_check(app.bait_id == id and app.store.state.selection.bait_id == id, "bait selection persists through actual control: " + id)
+		app._close_page()
+		await _settle_layout()
+		_check(app._bait_control.icon_kind == id and app._bait_control._art.kind == id, "HUD renders current selected bait: " + id)
+		_check(ArtScript.texture_for(app._bait_control._art.kind).resource_path == ArtScript.ICON_ROOT + id + ".png", "selected bait binds actual raster: " + id)
+	app._set_bait("worm")
+	app._close_page()
+	for pair: Array in [[0.0, "sun"], [150.0, "dusk"], [240.0, "rain"], [480.0, "dusk"], [600.0, "sun"]]:
+		app.game_clock = float(pair[0])
+		app._update_conditions()
+		rendered_icon_kinds[str(pair[1])] = true
+		_check(app._weather_icon.kind == pair[1], "live weather/time chooses correct bitmap at " + str(pair[0]))
+		_check(ArtScript.texture_for(app._weather_icon.kind).resource_path == ArtScript.ICON_ROOT + str(pair[1]) + ".png", "live condition binds actual raster " + str(pair[1]))
+	app.game_clock = 0.0
+	app._update_conditions()
+
+func _test_catalog_controls() -> void:
+	app._show_catalog()
+	await _settle_layout()
+	var search: LineEdit = _find_type(app._overlay, "LineEdit") as LineEdit
+	_check(search != null, "catalog exposes actual editable search")
+	if search == null: return
+	search.text = "Cyprinus carpio"
+	search.text_changed.emit(search.text)
+	await _settle_layout()
+	_check(app._search == "Cyprinus carpio" and app._list.get_child_count() == 1, "real search callback filters to one scientific-name match")
+	var carp: Button = _find_button(app._list, app.catalog.fish["common_carp"].name)
+	_check(carp != null, "filtered catalog exposes matching species action")
+	if carp != null: carp.pressed.emit()
+	await _settle_layout()
+	_check(app._screen == "species", "real species action opens detail")
+	var zoom: Button = _find_button(app._overlay, "查看大图")
+	_check(zoom != null, "discovered species exposes real zoom action")
+	if zoom != null: zoom.pressed.emit()
+	await _settle_layout()
+	_check(app._screen == "zoom", "real zoom action opens specimen")
+	var back: Button = _find_button(app._overlay, "返回")
+	if back != null: back.pressed.emit()
+	await _settle_layout()
+	_check(app._screen == "species", "visible zoom Back returns to the correct species")
+	app._handle_back()
+	await _settle_layout()
+	_check(app._screen == "catalog" and app._search == "Cyprinus carpio" and app._list.get_child_count() == 1, "system Back returns to catalog without losing search")
+	search = _find_type(app._overlay, "LineEdit") as LineEdit
+	search.text = "no_species_matches_this_query"
+	search.text_changed.emit(search.text)
+	await _settle_layout()
+	_check(app._list.get_child_count() == 1 and app._list.get_child(0) is Label and "没有符合条件" in app._list.get_child(0).text, "active empty search displays its explanatory hint")
+	search.text = ""
+	search.text_changed.emit("")
+	var choices: Array[Node] = []
+	_find_all_type(app._overlay, "OptionButton", choices)
+	_check(choices.size() == 2, "catalog has actual region and discovery controls")
+	if choices.size() == 2:
+		var region: OptionButton = choices[0] as OptionButton
+		var discovery: OptionButton = choices[1] as OptionButton
+		region.select(2)
+		region.item_selected.emit(2)
+		await _settle_layout()
+		var rid: String = str(app.catalog.regions[1].region_id)
+		var expected: int = 0
+		for fish: FishDefinition in app.catalog.fish.values():
+			if rid in fish.regions(): expected += 1
+		_check(app._region_filter == rid and app._list.get_child_count() == expected, "real region selection callback filters the production fish set")
+		discovery.select(2)
+		discovery.item_selected.emit(2)
+		await _settle_layout()
+		_check(app._discovery_filter == 2 and app._list.get_child(0) is Label, "real undiscovered filter respects the complete discovered fixture")
+		discovery.select(1)
+		discovery.item_selected.emit(1)
+		await _settle_layout()
+		_check(app._list.get_child_count() == expected, "real discovered filter restores the exact region count")
+	var was_sorted_by_count: bool = app._sort_count
+	var sort_button: Button = _find_button(app._overlay, "数量" if was_sorted_by_count else "名称")
+	_check(sort_button != null, "real sort action exists")
+	if sort_button != null: sort_button.pressed.emit()
+	await _settle_layout()
+	_check(app._sort_count != was_sorted_by_count and app._screen == "catalog", "real sort callback toggles order and rebuilds the catalog")
+	await _audit("catalog_active_filters", app._overlay)
+	app._region_filter = "all"
+	app._discovery_filter = 0
+	app._search = ""
+	app._sort_count = false
+	app._close_page()
+
+func _test_pause_back_settings() -> void:
+	app._close_page()
+	app.session.reset()
+	for repeat: int in range(3):
+		app._handle_back()
+		await _settle_layout()
+		_check(app._screen == "pause" and app.session.state == FishingSession.State.PAUSED, "system Back opens paused overlay from idle")
+		app._handle_back()
+		await _settle_layout()
+		_check(app._overlay == null and app._screen.is_empty() and app.session.state == FishingSession.State.IDLE, "repeated system Back closes pause without stale overlays")
+	for active: int in [FishingSession.State.CASTING, FishingSession.State.WAITING, FishingSession.State.NIBBLE, FishingSession.State.BITE, FishingSession.State.FIGHT]:
+		app.session.reset()
+		app.session.start_charge()
+		var fish: Dictionary = app.encounter.make_individual(app.catalog.fish["common_carp"], "lake_shore", "lake", "worm", 2, "day", "clear")
+		_check(app.session.cast(fish, app.catalog.gear[2]), "pause fixture starts an actual encounter")
+		app.session.set_state(active)
+		app.session.elapsed = 0.25
+		if active == FishingSession.State.FIGHT: app.session.press()
+		var identity: String = app.session.session_id
+		var individual: Dictionary = app.session.individual.duplicate(true)
+		app._handle_back()
+		await _settle_layout()
+		_check(app.session.state == FishingSession.State.PAUSED and app.session.before_pause == active and not app.session.reeling, "pause overlay freezes actual state and releases held input: " + str(active))
+		var frozen_clock: float = app.game_clock
+		var frozen: Array = [app.session.elapsed, app.session.tension, app.session.progress, app.session.fight_time]
+		for step: int in range(60): app._process(0.5)
+		_check(app.game_clock == frozen_clock, "pause prevents world time/weather advancing: " + str(active))
+		_check(frozen == [app.session.elapsed, app.session.tension, app.session.progress, app.session.fight_time], "paused Main updates preserve exact fishing progress: " + str(active))
+		var settings: Button = _find_button(app._overlay, "设置")
+		_check(settings != null, "pause provides real Settings route")
+		if settings != null: settings.pressed.emit()
+		await _settle_layout()
+		_check(app._screen == "settings" and app.session.state == FishingSession.State.PAUSED, "Settings remains paused: " + str(active))
+		var original: bool = bool(app.store.state.settings.sound)
+		var toggle: Button = _find_button_prefix(app._overlay, "声音：")
+		_check(toggle != null, "real sound setting exists")
+		if toggle != null: toggle.pressed.emit()
+		await _settle_layout()
+		_check(bool(app.store.state.settings.sound) != original and app._screen == "settings", "actual sound toggle persists while preserving Settings")
+		var vibration_before: bool = bool(app.store.state.settings.vibration)
+		var vibration: Button = _find_button_prefix(app._overlay, "震动：")
+		_check(vibration != null, "real vibration setting exists")
+		if vibration != null: vibration.pressed.emit()
+		await _settle_layout()
+		_check(bool(app.store.state.settings.vibration) != vibration_before and app.session.state == FishingSession.State.PAUSED, "actual vibration toggle persists without advancing encounter")
+		var volume: HSlider = _find_type(app._overlay, "HSlider") as HSlider
+		_check(volume != null, "real volume slider exists")
+		if volume != null:
+			volume.value = 0.35
+			volume.drag_ended.emit(true)
+			_check(is_equal_approx(float(app.store.state.settings.volume), 0.35), "real slider completion persists chosen volume")
+		var back: Button = _find_button(app._overlay, "返回")
+		_check(back != null, "Settings has actual Back control")
+		if back != null: back.pressed.emit()
+		await _settle_layout()
+		_check(app._screen.is_empty() and app._overlay == null and app.session.state == active, "Settings Back resumes original live state: " + str(active))
+		_check(app.session.session_id == identity and app.session.individual == individual and not app.session.reeling, "paused navigation preserves exact encounter without latched input: " + str(active))
+		if active == FishingSession.State.FIGHT:
+			_check(not app._nav_rail.is_visible_in_tree(), "resumed fight again hides nonessential navigation")
+	app.session.reset()
+	app.sound.apply({"sound": false, "vibration": false, "volume": 0.0})
+	app.sound.suspend(true)
+
+func _find_button_prefix(node: Node, prefix: String) -> Button:
+	if node is Button and (node as Button).text.begins_with(prefix): return node as Button
+	for child: Node in node.get_children():
+		var found: Button = _find_button_prefix(child, prefix)
+		if found != null: return found
+	return null
+
+func _find_type(node: Node, type_name: String) -> Node:
+	if node.is_class(type_name): return node
+	for child: Node in node.get_children():
+		var found: Node = _find_type(child, type_name)
+		if found != null: return found
+	return null
+
+func _find_all_type(node: Node, type_name: String, found: Array[Node]) -> void:
+	if node.is_class(type_name): found.append(node)
+	for child: Node in node.get_children(): _find_all_type(child, type_name, found)
+
+func _all_label_text(node: Node) -> String:
+	var combined: String = (node as Label).text if node is Label else ""
+	for child: Node in node.get_children(): combined += "\n" + _all_label_text(child)
+	return combined
+
+func _test_retained_scenery_support() -> void:
+	for sid: String in app.catalog.spots:
+		var spot: Dictionary = app.catalog.spots[sid]
+		var rid: String = str(spot.region_id)
+		app.scenery.set_region(app.catalog.region(rid), spot)
+		_check(app.scenery.shore_support != null, sid + ": painted angler support has a retained texture member")
+		if app.scenery.shore_support == null: continue
+		var texture_path: String = str(app.scenery.shore_support.resource_path)
+		var expected: String = "res://assets/scenery/" + rid + "_foreground.png"
+		if rid == "bayou": expected = "res://assets/scenery/lake_foreground.png"
+		elif bool(spot.get("hide_region_foreground", false)) or not ResourceLoader.exists(expected): expected = "res://assets/scenery/japan_foreground.png"
+		_check(texture_path == expected, sid + ": support uses intended painted runtime foreground")
+		var retained: WeakRef = weakref(app.scenery.shore_support)
+		app.scenery.queue_redraw()
+		await _settle_layout()
+		_check(retained.get_ref() != null and retained.get_ref() == app.scenery.shore_support, sid + ": support survives redraw frames without relying on a draw-local reference")
+		_check(app.scenery.shore_support.get_rid().is_valid(), sid + ": retained support has valid rendering resource")
+	app._refresh_location()
+	await _settle_layout()
+	_check(app.scenery.region_id == app.region_id, "scenery regression restores the selected fishing location")
+	# Pixel appearance requires the separate rendered 12-spot review. Headless
+	# verifies the exact ownership bug: the member retains every draw texture.
