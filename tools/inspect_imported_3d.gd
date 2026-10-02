@@ -12,6 +12,9 @@ func _collect(node: Node, result: Dictionary) -> void:
 	if node is MeshInstance3D and node.mesh != null:
 		result.meshes += 1
 		if node.skin != null: result.skinned_meshes += 1
+	if node.name == "RodSocket":
+		result.rod_sockets += 1
+		if node.get_parent() is BoneAttachment3D: result.bone_attached_rod_sockets += 1
 	if node is AnimationPlayer:
 		result.animation_players += 1
 		for name: StringName in node.get_animation_list():
@@ -35,9 +38,11 @@ func _run() -> void:
 			failures.append("Missing PackedScene: " + path)
 			continue
 		var instance: Node = packed.instantiate()
-		var result: Dictionary = {"skeletons":0,"bones":0,"meshes":0,"skinned_meshes":0,"animation_players":0,"animations":{}}
+		var result: Dictionary = {"skeletons":0,"bones":0,"meshes":0,"skinned_meshes":0,"animation_players":0,"animations":{},"rod_sockets":0,"bone_attached_rod_sockets":0}
 		_collect(instance, result)
 		if result.meshes == 0: failures.append("No imported geometry: " + path)
+		if path == "assets/3d/angler.glb" and (result.rod_sockets != 1 or result.bone_attached_rod_sockets != 1):
+			failures.append("Expected one bone-attached RodSocket: " + path)
 		if not contract.glb_models[path].required_clips.is_empty():
 			if result.skeletons == 0 or result.skinned_meshes == 0 or result.animation_players == 0:
 				failures.append("Missing imported rig/skin/AnimationPlayer: " + path)
