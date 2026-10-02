@@ -1,85 +1,101 @@
-# Original 3D angler asset
+# Original 3D angler: anatomical revision
 
-## Files and reproduction
+## Deliverables and reproduction
 
 - Runtime: `game/assets/3d/angler.glb`
 - Editable source: `art_masters/3d/angler.blend`
-- Reproducible authoring: `tools/art3d/build_angler.py`
-- Render and verification evidence: `build/angler-review/`
+- Generator: `tools/art3d/build_angler.py`
+- Durable Godot tests: `game/tests/angler_anatomy_tests.gd`
+- Revised model renders and logs: `build/angler-review/anatomy-approved/`
 
-Rebuild with the installed official Blender 4.3.2:
+Rebuild using official Blender 4.3.2:
 
-    /usr/bin/blender --background --python tools/art3d/build_angler.py
+    blender --background --python tools/art3d/build_angler.py
 
-The source preserves individually editable tailored clothing, cap, face, hands, boot details, a named armature, and animation actions. The runtime export batches those objects into one skinned mesh with shared material surfaces. The review-only studio lights, ground, camera, and hand-contact test rod are excluded from the GLB. No runtime PNG billboard, sprite, normal-map impostor, or external model is used.
+For an isolated candidate, set `ANGLER_CANDIDATE=1` and `ANGLER_REVIEW_DIR` to an absolute writable review directory. This produces the candidate `.blend`, `.glb`, actual rendered front/side A-poses and fishing keyframes without replacing the runtime asset. `ANGLER_SAMPLES` controls the studio-render sample count only.
 
-## Coordinate and attachment contract
+All runtime body parts are genuine 3D mesh volumes, with bone weights and baked skeletal clips. There are no image-plane limbs, billboards, sprites or external character assets. Studio lights, cameras, ground, A-pose reviews and the contact-review rod are excluded from the GLB.
 
-- Meter scale; approximately 1.75 m including cap
-- Feet aligned to Godot's Y=0 ground plane
-- Front faces Godot −Z; +Y is up; +X is the character's right-hand side
-- Runtime skeleton: `AnglerRig/Skeleton3D`, with 30 deformation bones
-- Skeleton bone names retain dots (`hand.R`, `hand.L`); the imported attachment node is sanitized to `hand_R`
-- Socket: `AnglerRig/Skeleton3D/hand_R/RodSocket`
+## What changed after the anatomy review
+
+The review prioritized normal human limb proportions and normal clothing fit, not additional wrinkles or surface decorations.
+
+| Measure | Previous model | Revised model |
+| --- | ---: | ---: |
+| Upper-arm length, each side | 28.73 cm | 30.50 cm |
+| Right forearm | 34.30 cm | 27.00 cm |
+| Left forearm | 44.84 cm | 27.00 cm |
+| Shoulder-joint spacing | 47.0 cm | 39.0 cm |
+| Forearm / upper-arm ratio | 1.19 right, 1.56 left | 0.885 both sides |
+| Runtime triangles | 67,298 | 43,912 |
+
+- The former asymmetric, overlong forearms were rebuilt with equal bilateral segment lengths. Arm placement and animation are solved from those lengths.
+- The torso, shoulder saddle, armpits, deltoid area, elbows and forearms now belong to one connected, branching quad garment surface. There are no separate capped sleeve cylinders or overlapping shoulder balls.
+- The teal torso and sandstone sleeves share vertices as a sewn utility jacket. This eliminates floating armhole plates and surface intersection at the shoulder boundaries.
+- The pelvis and trouser legs use one shared crotch saddle and connected quad topology. The old box-like seat/leg assembly and voxel-union construction were removed.
+- Thigh, knee, calf and hem profiles are continuous. Separate oval knee pads and superficial crease/seam rods were removed.
+- Boots have narrower, normal-width soles and shafts; trouser hems overlap the boot shafts naturally. Hands, faces, cap and individual fingers remain dimensional.
+- Raised pockets, flaps and unnecessary decorative pieces were removed after cast-pose inspection showed residual arm intersections. The resulting simple zip jacket keeps a clean, normal clothing silhouette.
+
+Unobscured front and side A-pose renders were inspected before reviewing the casting poses. Those are model-review poses, not extra runtime animation clips.
+
+## Coordinate and rod contract
+
+- Meters; grounded total height approximately 1.75 m (measured 1.7518 m including cap)
+- Feet at Godot Y=0; up +Y; front −Z
+- Skeleton: `AnglerRig/Skeleton3D`; 30 deformation bones
+- Skeleton names retain dots: `hand.R`, `hand.L`, `upper_arm.R`, etc.
+- Imported attachment node: `AnglerRig/Skeleton3D/hand_R/RodSocket`
 - Resolve `RodSocket` recursively by name so root renaming is safe
-- `RodSocket` is under an imported `BoneAttachment3D`; it follows the right-hand grip position and rotation
-- Rod-tip direction is socket local −Z
-- Right grip is socket origin; left lower grip is 0.18 m toward socket +Z
-- A compatible handle extends about 0.22–0.25 m along +Z behind the forward grip
-- Attach the rod as a child with an identity transform. Do not apply an additional −90° axis correction
+- The socket is under a genuine `BoneAttachment3D` and follows the right-hand grip
+- Socket local −Z points toward the rod tip; right grip at its origin
+- Left lower grip stays on socket local +Z at 0.18 m
+- A compatible handle extends about 0.22–0.25 m behind the forward grip
+- Attach the stage rod with an identity transform; do not add an axis correction
 
-The reel animation releases the left support grip for a crank motion while the right hand holds the rod. The crank circle is 0.046 m radius and 1.5 revolutions/second; its center is about 0.08 m to character left and 0.085 m behind the right grip. A separate stage-owned rod/reel provides the runtime equipment and line.
+The reel clip frees the left hand for a crank circle: radius 0.046 m, 1.5 revolutions/second, centered approximately 0.08 m to character left and 0.085 m behind the right grip. Runtime equipment and fishing line remain stage-owned.
 
-## Baked skeletal animation clips
+## Baked animation clips
 
-All clips are authored and baked at 30 frames/second on the actual deformation skeleton. No procedural actor translation replaces the skeletal motion.
+All clips are authored at 30 fps and baked onto the deformation skeleton. Existing names, durations, hand trajectories and attachment conventions are preserved.
 
-| Clip | Duration | Intended playback |
+| Clip | Duration | Use |
 | --- | ---: | --- |
-| `idle` | 3.20 s | Loop; subtle breathing and upper-body weight movement |
-| `cast` | 2.20 s | Once; clear backswing, acceleration, forward release, recovery |
-| `wait` | 4.00 s | Loop; relaxed rod hold and small body movement |
-| `reel` | 2.00 s | Loop; left-hand crank, right-hand hold, torso effort |
-| `lift` | 2.00 s | Once; raised rod and lean-back catch reaction, recovery |
+| `idle` | 3.20 s | Breathing and small upper-body weight movement |
+| `cast` | 2.20 s | Backswing, acceleration, forward release and recovery |
+| `wait` | 4.00 s | Relaxed hold |
+| `reel` | 2.00 s | Left-hand crank, right-hand hold and body effort |
+| `lift` | 2.00 s | Rod high, backward lean, recovery |
 
-Cast synchronization in seconds from the clip start:
+Cast cues remain: backswing peak 0.78 s; acceleration 1.00 s; release 1.20 s; follow-through peak 1.42 s; recovery complete 2.20 s. Stage code should loop idle/wait/reel and leave cast/lift non-looping.
 
-- 0.00: neutral ready grip
-- 0.34: gather and raise
-- 0.78: backswing peak
-- 1.00: acceleration begins
-- 1.20: forward line-release cue
-- 1.42: follow-through peak
-- 2.20: recovered neutral grip
+## Verification and measured runtime data
 
-Set `idle`, `wait`, and `reel` to loop in the stage's animation library. `cast` and `lift` should remain non-looping. Explicit loop configuration in Godot is intentional rather than inferred from clip names.
+Run with isolated user data:
 
-## Art construction
+    XDG_DATA_HOME=/tmp/angler-tests-data XDG_CACHE_HOME=/tmp/angler-tests-cache godot --headless --path game --script res://tests/angler_anatomy_tests.gd
 
-The original cozy, stylized angler has a teal, pocketed fishing vest; sandstone cloth sleeves and rolled cuffs; continuous sculpted umber canvas trousers; reinforced knees; leather boots with soles, lace eyelets and laces; a stitched teal cap; dimensional face, hazel eyes, ears, nose, lips and brows; and individually modeled curled fingers and opposing thumbs. The vest includes sewn binding, pocket flaps, brass snaps, center zipper, and a small original fishing fly. Clothing proportions and large forms were reviewed as real renders, including front/back and casting keyframes.
+For candidates, append `-- --model=/absolute/path/angler.glb`.
 
-Materials are embedded Principled PBR base-color/roughness/metalness materials. There are no texture downloads, paid assets, accounts, add-ons, or third-party art dependencies. All geometry and performances were authored specifically for this project in the generator. Project use, modification, bundling, and distribution are unrestricted by any third-party asset license. This does not claim exclusive intellectual-property rights over generic shapes or designs.
+The revised GLB passed 3,723/3,723 checks in official Godot 4.6.3. These checks import the actual GLB using `GLTFDocument`, verify one real skinned mesh and skeleton, check all five exact clip lengths, evaluate both arms and hand contacts on every one of the 67 cast frames, and calculate actual skinned vertex positions.
 
-## Verification
+- Runtime: 1,475,728 bytes (about 1.41 MiB)
+- Geometry: 43,912 triangles; 23,043 weighted export vertices
+- Batching: one mesh; 17 material surfaces; one skin; 30 bones
+- Maximum arm-segment length error over the full cast: 0.000000112 m
+- Maximum both-hand grip alignment error: 0.000000571 m
+- Foot motion during cast: 0 m
+- Maximum sampled vertex deformation between ready and backswing: 0.63968 m
+- Original GLB skin-weight sum error: at most 5.96 × 10⁻⁸; all weights finite and nonnegative
+- Godot's normalized 16-bit imported weights show at most 0.00003053 quantization error; tests account for that representation
+- GLB SHA-256: `f4de4c8a8ee0d002b5691e93c1f5f933b963ae90f287501a2ff47311edf735a7`
 
-Godot 4.6.3 official was used to import the GLB directly through `GLTFDocument`. Checks cover an actual `Skeleton3D`, actual weighted `MeshInstance3D`, all five `AnimationPlayer` clips at their exact lengths, and the animated hand socket through windup, release, follow-through, and recovery. The import requires normal process-frame updates for `BoneAttachment3D`; querying immediately after `seek()` without processing frames can show a stale socket.
+`BoneAttachment3D` needs normal process-frame updates after an animation seek. Immediate queries before processing can return the preceding socket transform.
 
-The Blender review images are real path-traced scene renders of the generated mesh and rig, not concept art. A review-only handle/shaft is visible in final contact-review renders; the gameplay rod is supplied by the stage.
+The images in the review directory are actual Blender path-traced model renders. They verify model form and posed hand/handle contact. Headless Godot tests verify imported geometry, skinning and contracts; integrated game-render and Android checks are separate stages and must not be inferred from the studio renders.
 
-### Completed build measurements
+## Provenance
 
-- Runtime GLB: 2,135,512 bytes (about 2.04 MiB)
-- Runtime geometry: 67,298 triangles; 34,771 weighted export vertices
-- Runtime batching: one mesh, 20 material surfaces, one skin, 30 bones
-- Grounded height: 1.7489 m
-- Maximum skin-weight sum error: 2.98 × 10⁻⁸
-- CPU deformation comparison, idle to backswing: 0.63968 m maximum displacement over 2,686 sampled vertices
-- Godot socket-to-hand position check: within 0.00001 m at all five sampled cast phases
-- Both-hand grip consistency across all 67 cast frames: maximum error 0.000000659 m from the shared handle axis
-- The exported clips have lengths 3.20, 2.20, 4.00, 2.00, and 2.00 seconds for idle, cast, wait, reel, and lift respectively
-- All sampled skinned vertex positions are finite; all exported weights are nonnegative and normalized
-- Final GLB SHA-256: `19775a036d4fe72edd877e4208f1f805be4325524855b15a47febf21506c072b`
+All character geometry, clothing topology, materials and performances were authored specifically for this project in the generator. Materials are embedded PBR base-color/roughness/metalness materials. No paid model, downloaded base mesh, unrecognized add-on, account, texture download or third-party art license is required. Project use, modification, bundling and distribution have no third-party asset-license dependency; this does not claim exclusive rights over generic designs.
 
-The initial shoulder-panel/cheek forms were simplified after rendered review; the trouser pelvis and legs were fused and reweighted into a continuous surface; fingers were reshaped to visibly close around the handle; the unneeded cap badge was removed; and the undershirt shoulder volume was reduced to stop cloth intersection with the vest. Final polished review images use the `final-` prefix in `build/angler-review/`.
-
-The Blender build logs include a missing optional Draco library diagnostic from Blender's exporter. Draco compression is not enabled or required: the uncompressed GLB was exported successfully and then independently imported and tested in Godot. No render-only material, camera, light, or contact-review rod enters the runtime asset.
+Blender may log that its optional Draco library is absent. Compression is not enabled or required; the uncompressed GLB exports and imports successfully.
