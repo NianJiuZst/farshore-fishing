@@ -26,6 +26,7 @@ SUITES = [
     ("hazard_boundary", "fishing_hazard_boundary_tests.gd", []),
     ("guard_trace", "fishing_guard_trace_tests.gd", []),
     ("float_observation", "float_observation_tests.gd", []),
+    ("fast_recast", "fast_recast_camera_tests.gd", []),
     ("fish_art", "fish_art_tests.gd", []),
     ("fish_art_ui", "fish_art_ui_tests.gd", []),
     ("failure_modal", "fishing_failure_modal_tests.gd", []),
