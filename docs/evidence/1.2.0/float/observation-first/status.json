@@ -1,0 +1,20 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 115.38,
+  "stable_inputs": true,
+  "changed_inputs": [],
+  "command": [
+    "godot",
+    "--headless",
+    "--audio-driver",
+    "Dummy",
+    "--path",
+    "/workspace/scratch/c16084497664/farshore-fishing-restored/game",
+    "--script",
+    "res://tests/float_encounter_tests.gd",
+    "--",
+    "--output=/workspace/scratch/c16084497664/farshore-fishing-restored/docs/evidence/1.2.0/float/observation-first/raw.json",
+    "--seeds=8",
+    "--skip-fights"
+  ]
+}

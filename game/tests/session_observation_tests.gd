@@ -19,6 +19,7 @@ func _record(id: String = "common_carp", size: float = 0.35) -> Dictionary:
 	result.length_mm = roundi(lerpf(f.min_mm, f.max_mm, size))
 	result.weight_g = roundi(f.anchor_g * pow(float(result.length_mm) / f.anchor_mm, 3.0))
 	result.difficulty = clampf(f.difficulty * 0.7 + size * 0.5, 0.15, 1.0)
+	Encounter.new(123).apply_float_presentation(result,catalog,0.6)
 	return result
 func _launch(seed_value: int = 431, id: String = "common_carp", size: float = 0.35) -> FishingSession:
 	var s: FishingSession = Session.new(seed_value)
@@ -32,7 +33,8 @@ func _advance(s: FishingSession, target: int) -> bool:
 		s.step(1.0 / 120.0)
 	return false
 func _snapshot(s: FishingSession) -> Array:
-	return [s.elapsed, s.fight_time, s.fish_stamina, s.fish_distance, s.tension, s.line_wear, s._rng.state, s._accumulator, s.float_dip, s.float_drag, s._phase_time]
+	var m: FloatEncounter = s.float_encounter
+	return [s.elapsed,s.fight_time,s.fish_stamina,s.fish_distance,s.tension,s.line_wear,s._rng.state,s._accumulator,s.float_dip,s.float_lift,s.float_drag,s.float_tilt,s.float_clock,s._phase_time,m.rng.state,m.phase,m.age,m.attempt,m.mouth_depth,m.bait_in_mouth,m.hook_ready,m.possession_time]
 func _run() -> void:
 	_check(catalog.load_all(false), "catalog loads")
 	for target: int in [Session.State.WAITING, Session.State.NIBBLE]:
@@ -89,8 +91,11 @@ func _run() -> void:
 		_check(s.state == target and _snapshot(s) == before and not s.reeling, "resume preserves outcome and clears input")
 	var late: FishingSession = _launch()
 	_advance(late, Session.State.BITE)
-	late.step(5.0)
-	_check(late.state == Session.State.ESCAPED, "unobserved bite escapes")
+	var first_attempt: int = late.float_encounter.attempt
+	while late.float_encounter.can_hook(): late.step(1.0/120.0)
+	_check(late.state != Session.State.FIGHT and not late.float_encounter.bait_in_mouth,"unobserved take releases possession without auto-hooking")
+	while late.state != Session.State.ESCAPED and late.float_clock < 90.0: late.step(1.0/120.0)
+	_check(late.state == Session.State.ESCAPED and late.float_encounter.attempt > first_attempt,"unobserved encounters revisit then eventually depart")
 	var old_id: String = late.session_id
 	late.reset()
 	late._finish(true, "late reset callback")
@@ -122,19 +127,32 @@ func _test_fixed_step() -> void:
 	for tick: int in 240: many.step(1.0 / 120.0)
 	_check(one.state == many.state and is_equal_approx(one.elapsed, many.elapsed) and one._rng.state == many._rng.state, "long frame consumes every second without delta cap")
 func _test_float_observation() -> void:
-	var patterns: Dictionary = {}
+	var signatures: Dictionary = {}
+	var direct_takes: int = 0
+	var rejected_casts: int = 0
 	for id: String in catalog.fish:
-		var s: FishingSession = _launch(793, id)
-		_advance(s, Session.State.NIBBLE)
-		var nibble: float = 0.0
-		while s.state == Session.State.NIBBLE:
-			s.step(1.0 / 60.0)
-			if s.state == Session.State.NIBBLE: nibble = maxf(nibble, maxf(s.float_dip, s.float_lift))
-		_check(nibble > 0.12 and nibble < 0.5, "species has restrained but visible nibble: " + id)
-		s.step(0.55)
-		_check(maxf(s.float_dip, s.float_lift) > 0.45 and s.float_drag.length() > 0.035, "bite is readable from real float movement: " + id)
-		patterns["%.3f/%.3f/%.3f" % [s.float_dip, s.float_lift, s.float_drag.length()]] = true
-	_check(patterns.size() >= 3, "species traits yield distinct dip/lift/tow patterns")
+		var visible_held: bool = false
+		var maximum_step: float = 0.0
+		for seed_value: int in [793,1491,9277]:
+			var s: FishingSession = _launch(seed_value,id)
+			var previous: float = 0.0
+			var previous_phase: String = "approach"
+			while s.state != Session.State.ESCAPED and s.float_clock < 90.0:
+				s.step(1.0/120.0)
+				var m: FloatEncounter = s.float_encounter
+				var displacement: float = s.float_dip-s.float_lift
+				maximum_step = maxf(maximum_step,absf(displacement-previous))
+				previous = displacement
+				if previous_phase == "approach" and m.phase == "mouth": direct_takes += 1
+				previous_phase = m.phase
+				if m.can_hook():
+					signatures[m.signature] = true
+					if absf(displacement) >= 0.18: visible_held = true
+			if s.float_encounter.rejected_pickups > 0: rejected_casts += 1
+		_check(visible_held,"species has a visible held take across seeded encounters: " + id)
+		_check(maximum_step < 0.075,"float remains continuous through approach/contact/take/spit/revisit: " + id)
+	_check(signatures.has("sink") and signatures.has("lift") and signatures.has("travel") and signatures.has("soft"),"actual encounters include sink, lift, lateral and soft takes")
+	_check(direct_takes > 0 and rejected_casts > 0,"encounters allow direct takes and rejected exploration without a fixed state sequence")
 func _test_wear_warning() -> void:
 	var s: FishingSession = _launch()
 	s.set_state(Session.State.FIGHT)

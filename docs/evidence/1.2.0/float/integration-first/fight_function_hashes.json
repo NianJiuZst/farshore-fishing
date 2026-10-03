@@ -1,0 +1,33 @@
+{
+  "baseline": "1637653",
+  "functions": {
+    "_surge_reset": {
+      "unchanged": true,
+      "sha256": "b8061671fd942812c9322f49f9f5de96b4e61f3a04304feba025cead34e76945"
+    },
+    "_begin_fight": {
+      "unchanged": true,
+      "sha256": "994c8c3532daaba7a988571ebc2d96ef52e825544376b13f7d26a05d7b633167"
+    },
+    "_set_phase": {
+      "unchanged": true,
+      "sha256": "4e78db0c7ee9a2cb6f8bc18d8a941f3748a35faf58bb6484ae5e1d3c15f452da"
+    },
+    "_next_phase": {
+      "unchanged": true,
+      "sha256": "edfc4c0684b336f14bc1fa51bd4ed145d24e1cc9915ff20f9786b3ee2c3fd954"
+    },
+    "_step_fight": {
+      "unchanged": true,
+      "sha256": "cd06437642bcc959b5ba782b59179b0adc215c74f60c9c851a5c7e8426863a69"
+    },
+    "_step_line_wear": {
+      "unchanged": true,
+      "sha256": "6f33c0f5ae0772fcff2a5ac89b34f28440a9f4875f10c57f4390bc4e93bf3e51"
+    },
+    "_finish": {
+      "unchanged": true,
+      "sha256": "e5b9259eac34268f3dc986e17b8faccfc7591c018d7080faec6a04b419383cf9"
+    }
+  }
+}

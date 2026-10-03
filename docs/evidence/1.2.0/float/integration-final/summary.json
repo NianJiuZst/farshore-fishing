@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "suite": "session_observation",
+      "exit_code": 0
+    },
+    {
+      "suite": "core",
+      "exit_code": 0
+    },
+    {
+      "suite": "fishing_hazard_boundary",
+      "exit_code": 0
+    },
+    {
+      "suite": "fishing_guard_trace",
+      "exit_code": 2
+    }
+  ],
+  "stable": true,
+  "changed": []
+}

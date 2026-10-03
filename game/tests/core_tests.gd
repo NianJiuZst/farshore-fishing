@@ -209,7 +209,18 @@ func _test_state_machine() -> void:
 	_check(session.state == Session.State.FIGHT and session.reeling, "a deliberate bite press starts fight and can continue held reeling")
 	_fight(session)
 	_check(session.state == Session.State.CAUGHT, "balanced hold/release catches a real fish")
-	_check(states == [Session.State.CHARGING, Session.State.CASTING, Session.State.WAITING, Session.State.NIBBLE, Session.State.BITE, Session.State.FIGHT, Session.State.CAUGHT], "complete state order")
+	var allowed: Dictionary = {
+		Session.State.CHARGING:[Session.State.CASTING],
+		Session.State.CASTING:[Session.State.WAITING],
+		Session.State.WAITING:[Session.State.NIBBLE,Session.State.BITE],
+		Session.State.NIBBLE:[Session.State.WAITING,Session.State.BITE],
+		Session.State.BITE:[Session.State.NIBBLE,Session.State.WAITING,Session.State.FIGHT],
+		Session.State.FIGHT:[Session.State.CAUGHT],
+	}
+	var valid_order: bool = states.size() >= 6 and states[0] == Session.State.CHARGING and states[1] == Session.State.CASTING and states.back() == Session.State.CAUGHT
+	for index: int in range(1,states.size()):
+		valid_order = valid_order and states[index] in allowed.get(states[index-1],[])
+	_check(valid_order and states.count(Session.State.FIGHT) == 1 and states.count(Session.State.CAUGHT) == 1,"valid encounter transitions permit rejects/revisits and retain exactly one fight and catch")
 	_check(cues == ["cast", "hook"], "only deliberate cast/hook emit cues; pre-hook states are silent")
 	_check(endings.size() == 1 and bool(endings[0].success), "one successful terminal event")
 	_check(not str(endings[0].record.catch_id).is_empty() and str(endings[0].record.session_id) == session.session_id, "catch linked to unique session")

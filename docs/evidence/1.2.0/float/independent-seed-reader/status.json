@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "stable_inputs": true,
+  "before": {
+    "game/scripts/float_encounter.gd": "73c4fea41fe4a0c81024ba93ab1e59d7dadaeb4b3cb291afb0a16957fea9d9da",
+    "game/scripts/fishing_session.gd": "a331e242ce362560d6532ad3d173d4abd6623a90e3722a6f4fa203150b09fcbe",
+    "game/scripts/encounter.gd": "c1fded848147ce80c96f5c9396fc1fb16302c8e5d1eab55a5b31eb34e6e3a745",
+    "game/tests/float_encounter_tests.gd": "f7bf2a5aa6537e129f7e8a1311c81bad873b229e28797d9ffb7c15d58fd27a55"
+  },
+  "after": {
+    "game/scripts/float_encounter.gd": "73c4fea41fe4a0c81024ba93ab1e59d7dadaeb4b3cb291afb0a16957fea9d9da",
+    "game/scripts/fishing_session.gd": "a331e242ce362560d6532ad3d173d4abd6623a90e3722a6f4fa203150b09fcbe",
+    "game/scripts/encounter.gd": "c1fded848147ce80c96f5c9396fc1fb16302c8e5d1eab55a5b31eb34e6e3a745",
+    "game/tests/float_encounter_tests.gd": "f7bf2a5aa6537e129f7e8a1311c81bad873b229e28797d9ffb7c15d58fd27a55"
+  }
+}

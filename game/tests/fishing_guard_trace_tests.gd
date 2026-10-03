@@ -1,10 +1,21 @@
 extends SceneTree
-## Compare the pre-guard recovery source and current session using the actual
-## capture's seeded ordinary encounter, 20fps input policy and 0.025s substeps.
-## This is a session trace comparison, not a new rendered-video certification.
+## Formal release: preserve exact reviewed fight-function hashes and exercise
+## current fight controls independently from the deliberately changed float.
+## --historical-video retains the original strict beta2 capture/hash audit.
 const Catalog = preload("res://scripts/catalog.gd")
 const Encounter = preload("res://scripts/encounter.gd")
 const Session = preload("res://scripts/fishing_session.gd")
+const Controller = preload("res://tests/fishing_test_controller.gd")
+const FIGHT_BASELINE_COMMIT: String = "1637653"
+const FIGHT_HASHES: Dictionary = {
+	"_surge_reset":"b8061671fd942812c9322f49f9f5de96b4e61f3a04304feba025cead34e76945",
+	"_begin_fight":"994c8c3532daaba7a988571ebc2d96ef52e825544376b13f7d26a05d7b633167",
+	"_set_phase":"4e78db0c7ee9a2cb6f8bc18d8a941f3748a35faf58bb6484ae5e1d3c15f452da",
+	"_next_phase":"edfc4c0684b336f14bc1fa51bd4ed145d24e1cc9915ff20f9786b3ee2c3fd954",
+	"_step_fight":"cd06437642bcc959b5ba782b59179b0adc215c74f60c9c851a5c7e8426863a69",
+	"_step_line_wear":"6f33c0f5ae0772fcff2a5ac89b34f28440a9f4875f10c57f4390bc4e93bf3e51",
+	"_finish":"e5b9259eac34268f3dc986e17b8faccfc7591c018d7080faec6a04b419383cf9",
+}
 var old_session: RefCounted
 var new_session: FishingSession
 var cast_time: float = 0.0
@@ -14,8 +25,89 @@ var video_different: Array[int] = []
 var compared_substeps: int = 0
 var max_wear: float = 0.0
 var capture: Dictionary = {}
+var formal_checks: int = 0
+var formal_failures: Array[String] = []
 
 func _initialize() -> void:
+	if "--historical-video" in OS.get_cmdline_user_args(): _run_historical()
+	else: call_deferred("_run_formal")
+
+func _formal_check(ok: bool, label: String) -> void:
+	formal_checks += 1
+	if not ok:
+		formal_failures.append(label)
+		printerr("FAIL FORMAL_FIGHT: ",label)
+
+func _run_formal() -> void:
+	var source: String = FileAccess.get_file_as_string("res://scripts/fishing_session.gd")
+	var observed_hashes: Dictionary = {}
+	for name: String in FIGHT_HASHES:
+		var pattern: RegEx = RegEx.new()
+		pattern.compile("(?ms)^func " + name + "\\(.*?(?=^func |\\z)")
+		var found: RegExMatch = pattern.search(source)
+		var actual: String = "" if found == null else found.get_string().strip_edges().sha256_text()
+		observed_hashes[name] = actual
+		_formal_check(actual == FIGHT_HASHES[name],"reviewed fight function unchanged from " + FIGHT_BASELINE_COMMIT + ": " + name)
+	var catalog: ContentCatalog = Catalog.new()
+	_formal_check(catalog.load_all(false),"catalog loads")
+	var rows: Array[Dictionary] = []
+	for id: String in ["common_bream","rudd","roach"]:
+		for fraction: float in [0.35,0.95]:
+			for gear: int in [0,4]:
+				for seed_value: int in [1103,2468]:
+					for fps: int in [16,30,60]:
+						for mode: String in ["always_pull","never_pull","metronome","tension_only","behavior_aware"]:
+							rows.append(_combat_case(catalog,id,fraction,gear,seed_value,fps,mode))
+	var output: String = ""
+	for arg: String in OS.get_cmdline_user_args():
+		if arg.begins_with("--output="): output = arg.trim_prefix("--output=")
+	var report: Dictionary = {"scope":"Formal fight-only regression; exact reviewed function hashes plus current seeded controls. Starts FIGHT explicitly. Does not certify unchanged pre-hook timing or a historical rendered video.","baseline_commit":FIGHT_BASELINE_COMMIT,"expected_function_hashes":FIGHT_HASHES,"actual_function_hashes":observed_hashes,"current_source_sha256":source.sha256_text(),"checks":formal_checks,"failures":formal_failures,"runs":rows}
+	if not output.is_empty():
+		var file: FileAccess = FileAccess.open(output,FileAccess.WRITE)
+		_formal_check(file != null,"write formal fight evidence")
+		if file != null:
+			report.checks = formal_checks
+			file.store_string(JSON.stringify(report,"\t"))
+			file.close()
+	print("FISHING_GUARD_TRACE_TESTS: ",formal_checks-formal_failures.size(),"/",formal_checks," passed; formal_fight_cases=",rows.size(),"; unchanged_functions=",FIGHT_HASHES.size(),"; historical_video_not_revalidated=true")
+	quit(0 if formal_failures.is_empty() else 1)
+
+func _combat_case(catalog: ContentCatalog,id: String,fraction: float,gear: int,seed_value: int,fps: int,mode: String) -> Dictionary:
+	var fish: FishDefinition = catalog.fish[id]
+	var record: Dictionary = Encounter.new(seed_value).make_individual(fish,str(fish.spots()[0]),str(fish.regions()[0]),"worm",gear,"day","clear")
+	record.size_fraction = fraction
+	record.length_mm = roundi(lerpf(fish.min_mm,fish.max_mm,fraction))
+	record.weight_g = roundi(fish.anchor_g*pow(float(record.length_mm)/fish.anchor_mm,3.0))
+	record.difficulty = clampf(fish.difficulty*0.7+fraction*0.5,0.15,1.0)
+	Encounter.new(seed_value).apply_float_presentation(record,catalog,0.6)
+	var s: FishingSession = Session.new(seed_value)
+	s.press()
+	s.cast(record,catalog.gear[gear])
+	s.set_state(Session.State.FIGHT)
+	s.release()
+	var endings: Array[bool] = []
+	s.ended.connect(func(ok: bool,_record: Dictionary) -> void: endings.append(ok))
+	var controller: RefCounted = Controller.new(mode)
+	var delta: float = 1.0/fps
+	var max_tension: float = 0.0
+	while s.state == Session.State.FIGHT and s.fight_time < 420.0:
+		var held: bool = controller.update(s,delta)
+		if held and not s.reeling: s.press()
+		elif not held and s.reeling: s.release()
+		s.step(delta)
+		max_tension = maxf(max_tension,s.tension)
+	var label: String = "%s size=%.2f gear=%d seed=%d fps=%d strategy=%s" % [id,fraction,gear,seed_value,fps,mode]
+	_formal_check(s.state in [Session.State.CAUGHT,Session.State.ESCAPED],"fight ends without timeout: " + label)
+	if mode == "behavior_aware": _formal_check(s.state == Session.State.CAUGHT,"readable fight control catches: " + label)
+	if mode in ["always_pull","never_pull"]: _formal_check(s.state == Session.State.ESCAPED,"unmodulated fight input loses: " + label)
+	_formal_check(endings.size() == 1,"one terminal settlement: " + label)
+	var outcome: int = s.state
+	s._finish(s.state != Session.State.CAUGHT,"late opposite callback")
+	s.step(10.0)
+	_formal_check(endings.size() == 1 and s.state == outcome,"late callback cannot reverse or duplicate fight: " + label)
+	return {"species":id,"size_fraction":fraction,"gear":gear,"seed":seed_value,"fps":fps,"strategy":mode,"caught":s.state == Session.State.CAUGHT,"seconds":s.fight_time,"max_tension":max_tension,"wear":s.line_wear,"reason":s.escape_reason}
+
+func _run_historical() -> void:
 	var old_path: String = ""
 	var video_path: String = ProjectSettings.globalize_path("res://").path_join("../docs/evidence/1.2.0-beta.2/recovered/fishing_observation_capture.json")
 	var output_path: String = ""

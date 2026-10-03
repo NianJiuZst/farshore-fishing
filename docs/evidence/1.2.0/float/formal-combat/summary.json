@@ -1,0 +1,133 @@
+{
+  "scope": "Formal fight-only regression; exact reviewed function hashes plus current seeded controls. Starts FIGHT explicitly. Does not certify unchanged pre-hook timing or a historical rendered video.",
+  "checks": 1305,
+  "failures": [],
+  "by_strategy_size": [
+    {
+      "strategy": "always_pull",
+      "size": "giant",
+      "runs": 36,
+      "caught": 0,
+      "success_rate": 0.0,
+      "catch_seconds_median": null,
+      "catch_seconds_min": null,
+      "catch_seconds_max": null,
+      "failure_reasons": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 36
+      }
+    },
+    {
+      "strategy": "always_pull",
+      "size": "ordinary",
+      "runs": 36,
+      "caught": 0,
+      "success_rate": 0.0,
+      "catch_seconds_median": null,
+      "catch_seconds_min": null,
+      "catch_seconds_max": null,
+      "failure_reasons": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 36
+      }
+    },
+    {
+      "strategy": "behavior_aware",
+      "size": "giant",
+      "runs": 36,
+      "caught": 36,
+      "success_rate": 1.0,
+      "catch_seconds_median": 80.56250000001015,
+      "catch_seconds_min": 69.7500000000016,
+      "catch_seconds_max": 93.2833333333536,
+      "failure_reasons": {}
+    },
+    {
+      "strategy": "behavior_aware",
+      "size": "ordinary",
+      "runs": 36,
+      "caught": 36,
+      "success_rate": 1.0,
+      "catch_seconds_median": 28.487499999999,
+      "catch_seconds_min": 21.7999999999994,
+      "catch_seconds_max": 41.566666666665,
+      "failure_reasons": {}
+    },
+    {
+      "strategy": "metronome",
+      "size": "giant",
+      "runs": 36,
+      "caught": 0,
+      "success_rate": 0.0,
+      "catch_seconds_median": null,
+      "catch_seconds_min": null,
+      "catch_seconds_max": null,
+      "failure_reasons": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 36
+      }
+    },
+    {
+      "strategy": "metronome",
+      "size": "ordinary",
+      "runs": 36,
+      "caught": 12,
+      "success_rate": 0.3333333333333333,
+      "catch_seconds_median": 59.9208333333361,
+      "catch_seconds_min": 36.3249999999986,
+      "catch_seconds_max": 108.608333333366,
+      "failure_reasons": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 18,
+        "松手太久，鱼带着松线挣脱了": 4,
+        "僵持后的鱼线磨损越来越重，终于断开了": 2
+      }
+    },
+    {
+      "strategy": "never_pull",
+      "size": "giant",
+      "runs": 36,
+      "caught": 0,
+      "success_rate": 0.0,
+      "catch_seconds_median": null,
+      "catch_seconds_min": null,
+      "catch_seconds_max": null,
+      "failure_reasons": {
+        "松手太久，鱼带着松线挣脱了": 36
+      }
+    },
+    {
+      "strategy": "never_pull",
+      "size": "ordinary",
+      "runs": 36,
+      "caught": 0,
+      "success_rate": 0.0,
+      "catch_seconds_median": null,
+      "catch_seconds_min": null,
+      "catch_seconds_max": null,
+      "failure_reasons": {
+        "松手太久，鱼带着松线挣脱了": 36
+      }
+    },
+    {
+      "strategy": "tension_only",
+      "size": "giant",
+      "runs": 36,
+      "caught": 23,
+      "success_rate": 0.6388888888888888,
+      "catch_seconds_median": 100.441666666693,
+      "catch_seconds_min": 90.2916666666846,
+      "catch_seconds_max": 127.591666666714,
+      "failure_reasons": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 13
+      }
+    },
+    {
+      "strategy": "tension_only",
+      "size": "ordinary",
+      "runs": 36,
+      "caught": 36,
+      "success_rate": 1.0,
+      "catch_seconds_median": 35.16249999999865,
+      "catch_seconds_min": 28.1416666666657,
+      "catch_seconds_max": 52.1666666666643,
+      "failure_reasons": {}
+    }
+  ]
+}

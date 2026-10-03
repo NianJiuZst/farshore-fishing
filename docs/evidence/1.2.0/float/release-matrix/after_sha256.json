@@ -1,0 +1,15 @@
+{
+  "game/scripts/float_encounter.gd": "73c4fea41fe4a0c81024ba93ab1e59d7dadaeb4b3cb291afb0a16957fea9d9da",
+  "game/scripts/fishing_session.gd": "a331e242ce362560d6532ad3d173d4abd6623a90e3722a6f4fa203150b09fcbe",
+  "game/scripts/encounter.gd": "c1fded848147ce80c96f5c9396fc1fb16302c8e5d1eab55a5b31eb34e6e3a745",
+  "game/scripts/catalog.gd": "ad632ffa73a3feee9a61e38f1f9d5071a03fd9acb1277602f05dec3324e4e204",
+  "game/scripts/fish_definition.gd": "c609ebcc0e58a1d60e74ba70e2a955cb5a4efc04ffd4bfd90898c2f6349ed0ce",
+  "game/data/fish_a.json": "480f44129173d82f7853aed9d6494f64290c6d07fca5d97ee48f7f388901b125",
+  "game/data/fish_b.json": "8ff294d9e1dbca1391dd6b3d787f253cf223e2c07a1845e4d1c7b84ee23b9856",
+  "game/data/fish_c.json": "03cbffe5b65981a514a0a5aa6058b2240347d6c5f0f2a0ff6b89052b8912a768",
+  "game/data/fish_d.json": "cd2861bf83a13313f07dc89f9be16e30882ea9c0cbf88bc18eda3be0e70a485f",
+  "game/data/world.json": "8d97464d380accb5c6ca02951798df356f8b7a3e9939fd3df25ec7ca6db3528a",
+  "game/tests/float_encounter_tests.gd": "f74bfe6981c693b3d8bfc59299bf6f99193b5fbc3377fcc2e4490afe7806aa63",
+  "game/tests/fishing_test_controller.gd": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc",
+  "tools/run_float_encounter_matrix.py": "0c7a17afd741dd014da445d562aa1abae849d3d158704a57b58ee8892970fe24"
+}

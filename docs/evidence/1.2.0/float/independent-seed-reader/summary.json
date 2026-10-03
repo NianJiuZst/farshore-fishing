@@ -1,0 +1,39 @@
+{
+  "by_species": {
+    "atlantic_wolffish": {
+      "runs": 256,
+      "hooks": 255
+    },
+    "common_carp": {
+      "runs": 256,
+      "hooks": 255
+    },
+    "japanese_horse_mackerel": {
+      "runs": 256,
+      "hooks": 255
+    }
+  },
+  "failures": [
+    {
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    }
+  ]
+}

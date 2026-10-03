@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "stable_inputs": true,
+  "before": {
+    "game/scripts/fishing_session.gd": "a331e242ce362560d6532ad3d173d4abd6623a90e3722a6f4fa203150b09fcbe",
+    "game/tests/fishing_guard_trace_tests.gd": "d782b7ce380afe2ac71ce1a11513204f78d7487f3a635be25cb495c19e01a9b6",
+    "game/tests/fishing_test_controller.gd": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc"
+  },
+  "after": {
+    "game/scripts/fishing_session.gd": "a331e242ce362560d6532ad3d173d4abd6623a90e3722a6f4fa203150b09fcbe",
+    "game/tests/fishing_guard_trace_tests.gd": "d782b7ce380afe2ac71ce1a11513204f78d7487f3a635be25cb495c19e01a9b6",
+    "game/tests/fishing_test_controller.gd": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc"
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "groups": [
+    {
+      "confirmation_seconds": 0.25,
+      "fps": 16,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "fps": 30,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "fps": 60,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "fps": 16,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "fps": 30,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "fps": 60,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "fps": 16,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "fps": 30,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "fps": 60,
+      "runs": 384,
+      "hooks": 381,
+      "empty_strikes": 0,
+      "no_strike": 3,
+      "ever_ready_without_strike": 0
+    }
+  ],
+  "failures": [
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "common_carp",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "japanese_horse_mackerel",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 16,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 30,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.25,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.35,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    },
+    {
+      "confirmation_seconds": 0.45,
+      "ever_ready": false,
+      "fps": 60,
+      "hooked": false,
+      "seed": 1079376,
+      "species": "atlantic_wolffish",
+      "strike_phase": "",
+      "strike_time": -1.0
+    }
+  ]
+}

@@ -1,0 +1,6908 @@
+[
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229398357465,
+    "seed": 990101,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.86666666666665
+  },
+  {
+    "dip": 0.329460234180959,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 993672,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.0666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813808907294458,
+    "seed": 997243,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.2
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814343202644993,
+    "seed": 1000814,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.59999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832599037745,
+    "seed": 1004385,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.93333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813228957964863,
+    "seed": 1007956,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 27.4000000000005
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813231665520721,
+    "seed": 1011527,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.23333333333332
+  },
+  {
+    "dip": 0.329510447181177,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1015098,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 4.56666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809674064694,
+    "seed": 1018669,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.5
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809650174047,
+    "seed": 1022240,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.29999999999999
+  },
+  {
+    "dip": 0.239956726034314,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1025811,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.83333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81322929408106,
+    "seed": 1029382,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.46666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813811315667957,
+    "seed": 1032953,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 21.1666666666669
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809238971642,
+    "seed": 1036524,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.9
+  },
+  {
+    "dip": 0.329127923755391,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1040095,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.86666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832380775569,
+    "seed": 1043666,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 17.6333333333334
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813230436332471,
+    "seed": 1047237,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.9
+  },
+  {
+    "dip": 0.871485971232768,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1050808,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.09999999999998
+  },
+  {
+    "dip": 0.873830888390775,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1054379,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.96666666666664
+  },
+  {
+    "dip": 0.329405145598497,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1057950,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.33333333333332
+  },
+  {
+    "dip": 0.329405100993899,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1061521,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.59999999999999
+  },
+  {
+    "dip": 0.870571617129244,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1065092,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.93333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81381048268534,
+    "seed": 1068663,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.63333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229911173293,
+    "seed": 1072234,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.7666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833044132618,
+    "seed": 1075805,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.69999999999998
+  },
+  {
+    "hooked": false,
+    "seed": 1079376,
+    "species": "common_carp",
+    "strike_phase": "",
+    "strike_time": -1.0
+  },
+  {
+    "dip": 0.239945712751157,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1082947,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.4333333333334
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809950291323,
+    "seed": 1086518,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 19.3333333333335
+  },
+  {
+    "dip": 0.23994569039937,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1090089,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.66666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342490500729,
+    "seed": 1093660,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.9666666666667
+  },
+  {
+    "dip": 0.329460092027983,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1097231,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.8000000000001
+  },
+  {
+    "dip": 0.23995669529061,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1100802,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.6333333333333
+  },
+  {
+    "dip": 0.329460166520453,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1104373,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.76666666666665
+  },
+  {
+    "dip": 0.873111910210847,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1107944,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.43333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814343788458067,
+    "seed": 1111515,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.4
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229188867765,
+    "seed": 1115086,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 21.3666666666669
+  },
+  {
+    "dip": 0.873828999320944,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1118657,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.7333333333333
+  },
+  {
+    "dip": 0.871489707040509,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1122228,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.4666666666666
+  },
+  {
+    "dip": 0.239956716464956,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1125799,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.89999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342380909335,
+    "seed": 1129370,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.79999999999998
+  },
+  {
+    "dip": 0.872333478074744,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1132941,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.3333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81380950281626,
+    "seed": 1136512,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.872330788929347,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1140083,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 3.96666666666666
+  },
+  {
+    "dip": 0.239939281508485,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1143654,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.93333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813810378850803,
+    "seed": 1147225,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.43333333333332
+  },
+  {
+    "dip": 0.329460263377998,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1150796,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.1666666666666
+  },
+  {
+    "dip": 0.873111481873412,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1154367,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.7666666666666
+  },
+  {
+    "dip": 0.239945660364888,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1157938,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.33333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229271394048,
+    "seed": 1161509,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.16666666666664
+  },
+  {
+    "dip": 0.239956677347822,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1165080,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.239956733678202,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1168651,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.2
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809838736494,
+    "seed": 1172222,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.36666666666665
+  },
+  {
+    "dip": 0.873829385060092,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1175793,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.5
+  },
+  {
+    "dip": 0.87148706878607,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1179364,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.73333333333331
+  },
+  {
+    "dip": 0.329344805515365,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1182935,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.1333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814831729089166,
+    "seed": 1186506,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.2
+  },
+  {
+    "dip": 0.239956677113899,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1190077,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.16666666666665
+  },
+  {
+    "dip": 0.871487291544967,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1193648,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.2
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814344135141569,
+    "seed": 1197219,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.63333333333332
+  },
+  {
+    "dip": 0.329510402178921,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1200790,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.99999999999998
+  },
+  {
+    "dip": 0.329510399912899,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1204361,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.99999999999998
+  },
+  {
+    "dip": 0.329460216296712,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1207932,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 20.0333333333335
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342500372519,
+    "seed": 1211503,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.66666666666665
+  },
+  {
+    "dip": 0.872333106237259,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1215074,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.16666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342376562003,
+    "seed": 1218645,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.43333333333332
+  },
+  {
+    "dip": 0.329405283071409,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1222216,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.43333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833213085273,
+    "seed": 1225787,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 4.89999999999999
+  },
+  {
+    "dip": 0.239956662642137,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1229358,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.39999999999999
+  },
+  {
+    "dip": 0.23994569537733,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1232929,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.39999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813230198640215,
+    "seed": 1236500,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 19.5000000000001
+  },
+  {
+    "dip": 0.873830128592589,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1240071,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.49999999999998
+  },
+  {
+    "dip": 0.873113859677902,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1243642,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.63333333333332
+  },
+  {
+    "dip": 0.329278851349514,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1247213,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.8
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832383967979,
+    "seed": 1250784,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.872334321286146,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1254355,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.4666666666667
+  },
+  {
+    "dip": 0.239956682273399,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1257926,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.3
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814344097868483,
+    "seed": 1261497,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.3
+  },
+  {
+    "dip": 0.329510372633332,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1265068,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.0666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832327347194,
+    "seed": 1268639,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.9666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809114913285,
+    "seed": 1272210,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.7666666666666
+  },
+  {
+    "dip": 0.329405271881692,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1275781,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.9666666666666
+  },
+  {
+    "dip": 0.329345105448954,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1279352,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 21.6666666666669
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833546119782,
+    "seed": 1282923,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.63333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342064891689,
+    "seed": 1286494,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 22.2000000000003
+  },
+  {
+    "dip": 0.871485378569978,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1290065,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.9333333333333
+  },
+  {
+    "dip": 0.329510423675338,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1293636,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.49999999999999
+  },
+  {
+    "dip": 0.329278830614591,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1297207,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.4
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813227971318119,
+    "seed": 1300778,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.6333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833483622823,
+    "seed": 1304349,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.7666666666668
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229986215685,
+    "seed": 1307920,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.871484287825751,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1311491,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.8
+  },
+  {
+    "dip": 0.329206884567128,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1315062,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 22.1333333333336
+  },
+  {
+    "dip": 0.87233310640174,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1318633,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.3333333333333
+  },
+  {
+    "dip": 0.329345033610257,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1322204,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.1333333333333
+  },
+  {
+    "dip": 0.872332819261838,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1325775,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.7
+  },
+  {
+    "dip": 0.329510460592045,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1329346,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.9666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342504161108,
+    "seed": 1332917,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.86666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342601296734,
+    "seed": 1336488,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.2666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814343971156585,
+    "seed": 1340059,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.63333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832070405831,
+    "seed": 1343630,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.6
+  },
+  {
+    "dip": 0.329041767315614,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1347201,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.89999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832634206892,
+    "seed": 1350772,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.8333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833130902609,
+    "seed": 1354343,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.8
+  },
+  {
+    "dip": 0.239939279142546,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1357914,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.5666666666666
+  },
+  {
+    "dip": 0.329405214615408,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1361485,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.5333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.8143430662402,
+    "seed": 1365056,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.33333333333332
+  },
+  {
+    "dip": 0.239951458690227,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1368627,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.4
+  },
+  {
+    "dip": 0.239951450201629,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1372198,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832314138667,
+    "seed": 1375769,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.329344951783684,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1379340,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.86666666666664
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833202952871,
+    "seed": 1382911,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.5
+  },
+  {
+    "dip": 0.239956690799028,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1386482,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.0666666666666
+  },
+  {
+    "dip": 0.239951472011842,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1390053,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.6666666666666
+  },
+  {
+    "dip": 0.239939272686369,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1393624,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.26666666666665
+  },
+  {
+    "dip": 0.329460144727847,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1397195,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.19999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809991169081,
+    "seed": 1400766,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.33333333333331
+  },
+  {
+    "dip": 0.329344968108651,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1404337,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.9
+  },
+  {
+    "dip": 0.329460251717549,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1407908,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342656108301,
+    "seed": 1411479,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.9333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814343416343624,
+    "seed": 1415050,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.3333333333333
+  },
+  {
+    "dip": 0.329460260336312,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1418621,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.99999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.8143422393759,
+    "seed": 1422192,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.0333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833360465267,
+    "seed": 1425763,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.56666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814341920521067,
+    "seed": 1429334,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.239956714190017,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1432905,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.59999999999999
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814343281337575,
+    "seed": 1436476,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.329206634373303,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1440047,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.59999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229279883127,
+    "seed": 1443618,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.33333333333332
+  },
+  {
+    "dip": 0.872330949253406,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1447189,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.06666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809041425504,
+    "seed": 1450760,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.5
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81323050258158,
+    "seed": 1454331,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.63333333333332
+  },
+  {
+    "dip": 0.239951485884208,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1457902,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.2333333333333
+  },
+  {
+    "dip": 0.871486804127209,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1461473,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 4.93333333333333
+  },
+  {
+    "dip": 0.873829608278857,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1465044,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.29999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813810542144066,
+    "seed": 1468615,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.6
+  },
+  {
+    "dip": 0.239945682708656,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1472186,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.2
+  },
+  {
+    "dip": 0.873830352992147,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1475757,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 19.2666666666668
+  },
+  {
+    "dip": 0.329510407880089,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1479328,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.1
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833354157236,
+    "seed": 1482899,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.66666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813228622923642,
+    "seed": 1486470,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.2
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813231163155637,
+    "seed": 1490041,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.6666666666666
+  },
+  {
+    "dip": 0.239951458040045,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1493612,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.33333333333331
+  },
+  {
+    "dip": 0.32927883823321,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1497183,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.4333333333333
+  },
+  {
+    "dip": 0.872333461420971,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1500754,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.8666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229122631495,
+    "seed": 1504325,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.89999999999998
+  },
+  {
+    "dip": 0.329405267954008,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1507896,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.3333333333333
+  },
+  {
+    "dip": 0.87148458173414,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1511467,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.63333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813228658284474,
+    "seed": 1515038,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.9
+  },
+  {
+    "dip": 0.873112730786685,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1518609,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.86666666666664
+  },
+  {
+    "dip": 0.871487568988483,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1522180,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 21.7333333333336
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813231063166275,
+    "seed": 1525751,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.9666666666666
+  },
+  {
+    "dip": 0.329460277052219,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1529322,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.6333333333333
+  },
+  {
+    "dip": 0.871484655385608,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1532893,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.76666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809182874072,
+    "seed": 1536464,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.3666666666666
+  },
+  {
+    "dip": 0.239956718340123,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1540035,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.9666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813228587280068,
+    "seed": 1543606,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.7666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81434311733363,
+    "seed": 1547177,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.9666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229443896907,
+    "seed": 1550748,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.29999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342296078852,
+    "seed": 1554319,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.7333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809842838349,
+    "seed": 1557890,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.4
+  },
+  {
+    "dip": 0.871487377675551,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1561461,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.69999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832088954879,
+    "seed": 1565032,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.9666666666666
+  },
+  {
+    "dip": 0.329041561245114,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1568603,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.7000000000001
+  },
+  {
+    "dip": 0.873111723826742,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1572174,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.8666666666667
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342451567269,
+    "seed": 1575745,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.9333333333333
+  },
+  {
+    "dip": 0.329279146109733,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1579316,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.1333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832152665449,
+    "seed": 1582887,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.79999999999999
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81322967409006,
+    "seed": 1586458,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.46666666666664
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809222260515,
+    "seed": 1590029,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.13333333333331
+  },
+  {
+    "dip": 0.329405320700649,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1593600,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.7666666666668
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814343994790772,
+    "seed": 1597171,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.89999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342077471126,
+    "seed": 1600742,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.1
+  },
+  {
+    "dip": 0.873110419992378,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1604313,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.4
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813810395433661,
+    "seed": 1607884,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.96666666666665
+  },
+  {
+    "dip": 0.872332955931983,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1611455,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.46666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342994844991,
+    "seed": 1615026,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.03333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813811177757361,
+    "seed": 1618597,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.2
+  },
+  {
+    "dip": 0.329405302327926,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1622168,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 25.0333333333337
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229781382395,
+    "seed": 1625739,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 19.6333333333335
+  },
+  {
+    "dip": 0.239939260796873,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1629310,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.4333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813230313265092,
+    "seed": 1632881,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 29.1666666666673
+  },
+  {
+    "dip": 0.329344968421204,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1636452,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.79999999999998
+  },
+  {
+    "dip": 0.329206738538355,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1640023,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.83333333333331
+  },
+  {
+    "dip": 0.873114050848225,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1643594,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.73333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814831925475612,
+    "seed": 1647165,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 14.6
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832573591247,
+    "seed": 1650736,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.63333333333332
+  },
+  {
+    "dip": 0.329344807117269,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1654307,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.2
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813810194844833,
+    "seed": 1657878,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.46666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81322941942956,
+    "seed": 1661449,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 17.8333333333334
+  },
+  {
+    "dip": 0.239945707398678,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1665020,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 17.5666666666667
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832393318411,
+    "seed": 1668591,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.1666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813227962894368,
+    "seed": 1672162,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.4666666666666
+  },
+  {
+    "dip": 0.872333825160928,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1675733,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.69999999999999
+  },
+  {
+    "dip": 0.329207042514052,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1679304,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.86666666666664
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809668165554,
+    "seed": 1682875,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 22.4666666666669
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813808591356167,
+    "seed": 1686446,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814344490789954,
+    "seed": 1690017,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.6
+  },
+  {
+    "dip": 0.873830891073294,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1693588,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.8666666666668
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342572169964,
+    "seed": 1697159,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.7333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.8138096064579,
+    "seed": 1700730,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.29999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813230270126774,
+    "seed": 1704301,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.49999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81434232417645,
+    "seed": 1707872,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 24.8666666666671
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833667398087,
+    "seed": 1711443,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.93333333333331
+  },
+  {
+    "dip": 0.239945686376101,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1715014,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.33333333333331
+  },
+  {
+    "dip": 0.329405102030116,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1718585,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.99999999999998
+  },
+  {
+    "dip": 0.329510462226218,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1722156,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 20.7666666666669
+  },
+  {
+    "dip": 0.871486173073656,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1725727,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.59999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832909640119,
+    "seed": 1729298,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.79999999999998
+  },
+  {
+    "dip": 0.239956716332433,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1732869,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.6333333333333
+  },
+  {
+    "dip": 0.328844776844365,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1736440,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 18.2000000000001
+  },
+  {
+    "dip": 0.239939272924387,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1740011,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.3
+  },
+  {
+    "dip": 0.872334487133376,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1743582,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.0666666666666
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342467443472,
+    "seed": 1747153,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.5
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813808930126642,
+    "seed": 1750724,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.8333333333333
+  },
+  {
+    "dip": 0.329460178779367,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1754295,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.96666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813810111648971,
+    "seed": 1757866,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.53333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229044489066,
+    "seed": 1761437,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.5
+  },
+  {
+    "dip": 0.239945683715802,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1765008,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.39999999999999
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809350052479,
+    "seed": 1768579,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.9
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813809844200075,
+    "seed": 1772150,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.66666666666665
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814833245724024,
+    "seed": 1775721,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.26666666666665
+  },
+  {
+    "dip": 0.239945657135643,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1779292,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.2333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813228733247793,
+    "seed": 1782863,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.46666666666665
+  },
+  {
+    "dip": 0.329345121095657,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1786434,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.96666666666665
+  },
+  {
+    "dip": 0.873830606091755,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1790005,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.2333333333333
+  },
+  {
+    "dip": 0.329279057599987,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1793576,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.86666666666665
+  },
+  {
+    "dip": 0.239951473229377,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1797147,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.93333333333331
+  },
+  {
+    "dip": 0.329206947236218,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1800718,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 17.0333333333333
+  },
+  {
+    "dip": 0.239951458770215,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1804289,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.19999999999998
+  },
+  {
+    "dip": 0.239945696427846,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1807860,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 16.4333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813230160098654,
+    "seed": 1811431,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.99999999999998
+  },
+  {
+    "dip": 0.329345090076947,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1815002,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.29999999999999
+  },
+  {
+    "dip": 0.239945723493828,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1818573,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.29999999999999
+  },
+  {
+    "dip": 0.873831004499145,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1822144,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 10.5666666666666
+  },
+  {
+    "dip": 0.329128010365339,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1825715,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.53333333333332
+  },
+  {
+    "dip": 0.329278972139885,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1829286,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.0333333333333
+  },
+  {
+    "dip": 0.872331566266753,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1832857,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 19.0333333333334
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813808536934578,
+    "seed": 1836428,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 21.7000000000002
+  },
+  {
+    "dip": 0.329405285997774,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1839999,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.8333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813808673733693,
+    "seed": 1843570,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.29999999999999
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832810565101,
+    "seed": 1847141,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.83333333333331
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813230130612054,
+    "seed": 1850712,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 15.2333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813811321663893,
+    "seed": 1854283,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.5666666666666
+  },
+  {
+    "dip": 0.873113586432314,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1857854,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 12.4333333333333
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813230663620935,
+    "seed": 1861425,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.86666666666666
+  },
+  {
+    "dip": 0.872334850061233,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1864996,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 20.4666666666668
+  },
+  {
+    "dip": 0.329345031583268,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1868567,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.59999999999998
+  },
+  {
+    "dip": 0.239939268478575,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1872138,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 5.13333333333332
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.813229414864155,
+    "seed": 1875709,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 8.39999999999998
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814832951291596,
+    "seed": 1879280,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 20.7000000000002
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.81483252777899,
+    "seed": 1882851,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 13.2
+  },
+  {
+    "dip": 0.239945691414689,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1886422,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 21.0666666666669
+  },
+  {
+    "dip": 0.872330247457691,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1889993,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 9.66666666666664
+  },
+  {
+    "dip": 0.329510473100556,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1893564,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 6.89999999999999
+  },
+  {
+    "dip": 0.0,
+    "hooked": true,
+    "lift": 0.814342808803907,
+    "seed": 1897135,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 11.4333333333333
+  },
+  {
+    "dip": 0.329344927268991,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1900706,
+    "species": "common_carp",
+    "strike_phase": "carry",
+    "strike_time": 7.26666666666665
+  },
+  {
+    "dip": 0.329253702096776,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 990101,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.66666666666665
+  },
+  {
+    "dip": 0.329024703381739,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 993672,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.6666666666666
+  },
+  {
+    "dip": 0.328729082082669,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 997243,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.9
+  },
+  {
+    "dip": 0.328484789067709,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1000814,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.36666666666665
+  },
+  {
+    "dip": 0.329317712963271,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1004385,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.73333333333331
+  },
+  {
+    "dip": 0.328486516170419,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1007956,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 27.1000000000005
+  },
+  {
+    "dip": 0.328834179605107,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1011527,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.09999999999999
+  },
+  {
+    "dip": 0.329253822783521,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1015098,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 4.16666666666666
+  },
+  {
+    "dip": 0.329106977357977,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1018669,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.3
+  },
+  {
+    "dip": 0.329183490247014,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1022240,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.09999999999999
+  },
+  {
+    "dip": 0.239917254348326,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1025811,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.56666666666665
+  },
+  {
+    "dip": 0.329024461784573,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1029382,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.23333333333332
+  },
+  {
+    "dip": 0.329106112174295,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1032953,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 21.0333333333335
+  },
+  {
+    "dip": 0.329183585860766,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1036524,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.6666666666666
+  },
+  {
+    "dip": 0.328611937307028,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1040095,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.56666666666666
+  },
+  {
+    "dip": 0.329317828428799,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1043666,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 17.4
+  },
+  {
+    "dip": 0.328728015708377,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1047237,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.7
+  },
+  {
+    "dip": 0.876001715561515,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1050808,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.329376970018668,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1054379,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.76666666666664
+  },
+  {
+    "dip": 0.328728131870855,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1057950,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.99999999999999
+  },
+  {
+    "dip": 0.328727672507834,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1061521,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.29999999999999
+  },
+  {
+    "dip": 0.875159179097316,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1065092,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.53333333333332
+  },
+  {
+    "dip": 0.32931722761203,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1068663,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.49999999999998
+  },
+  {
+    "dip": 0.328835106559826,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1072234,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.5666666666666
+  },
+  {
+    "dip": 0.3291070696558,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1075805,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.49999999999998
+  },
+  {
+    "hooked": false,
+    "seed": 1079376,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "",
+    "strike_time": -1.0
+  },
+  {
+    "dip": 0.239917282336721,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1082947,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.1666666666667
+  },
+  {
+    "dip": 0.328348491820319,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1086518,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 19.0666666666668
+  },
+  {
+    "dip": 0.239932078276896,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1090089,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.36666666666666
+  },
+  {
+    "dip": 0.328729440652785,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1093660,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.6666666666667
+  },
+  {
+    "dip": 0.329022926138586,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1097231,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.5333333333334
+  },
+  {
+    "dip": 0.239917295273211,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1100802,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.3
+  },
+  {
+    "dip": 0.32925317176758,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1104373,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.46666666666665
+  },
+  {
+    "dip": 0.874233702851541,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1107944,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.13333333333332
+  },
+  {
+    "dip": 0.329106845726281,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1111515,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.2333333333333
+  },
+  {
+    "dip": 0.32872887617675,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1115086,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 21.1000000000002
+  },
+  {
+    "dip": 0.328727150590053,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1118657,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.5666666666666
+  },
+  {
+    "dip": 0.87424070255668,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1122228,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.0333333333333
+  },
+  {
+    "dip": 0.239932047791417,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1125799,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.329183997652137,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1129370,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.53333333333332
+  },
+  {
+    "dip": 0.874235876851174,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1132941,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.99999999999998
+  },
+  {
+    "dip": 0.328485943062898,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1136512,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.56666666666665
+  },
+  {
+    "dip": 0.875149801591757,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1140083,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 3.73333333333333
+  },
+  {
+    "dip": 0.239938480226323,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1143654,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.63333333333332
+  },
+  {
+    "dip": 0.328834900484752,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1147225,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.23333333333332
+  },
+  {
+    "dip": 0.329183793736862,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1150796,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.7666666666666
+  },
+  {
+    "dip": 0.875149567139918,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1154367,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.5
+  },
+  {
+    "dip": 0.239938495402022,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1157938,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.93333333333331
+  },
+  {
+    "dip": 0.329107570708406,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1161509,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.93333333333331
+  },
+  {
+    "dip": 0.239932088684607,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1165080,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.09999999999998
+  },
+  {
+    "dip": 0.23993204504414,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1168651,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.9666666666666
+  },
+  {
+    "dip": 0.328728501432773,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1172222,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.13333333333332
+  },
+  {
+    "dip": 0.87423176894452,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1175793,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.2
+  },
+  {
+    "dip": 0.32910726715301,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1179364,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.56666666666665
+  },
+  {
+    "dip": 0.329252625081222,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1182935,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.9
+  },
+  {
+    "dip": 0.329184036138638,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1186506,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.9
+  },
+  {
+    "dip": 0.239932089553223,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1190077,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.79999999999998
+  },
+  {
+    "dip": 0.875155432553261,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1193648,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.9
+  },
+  {
+    "dip": 0.329182383641235,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1197219,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.49999999999999
+  },
+  {
+    "dip": 0.329253436877205,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1200790,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.66666666666665
+  },
+  {
+    "dip": 0.328933787372574,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1204361,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.328835543194471,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1207932,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 19.6666666666668
+  },
+  {
+    "dip": 0.328835965063306,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1211503,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.39999999999998
+  },
+  {
+    "dip": 0.874234741681132,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1215074,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.86666666666666
+  },
+  {
+    "dip": 0.329376976637146,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1218645,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.19999999999998
+  },
+  {
+    "dip": 0.329107705648007,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1222216,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.03333333333332
+  },
+  {
+    "dip": 0.328933509848543,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1225787,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 4.69999999999999
+  },
+  {
+    "dip": 0.239932094068481,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1229358,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.96666666666666
+  },
+  {
+    "dip": 0.239917313684614,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1232929,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.09999999999998
+  },
+  {
+    "dip": 0.329376306039392,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1236500,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 19.3666666666668
+  },
+  {
+    "dip": 0.876787989745505,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1240071,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.19999999999998
+  },
+  {
+    "dip": 0.875158562954712,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1243642,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.23333333333332
+  },
+  {
+    "dip": 0.328833840868924,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1247213,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.5333333333333
+  },
+  {
+    "dip": 0.329107219467259,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1250784,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.59999999999998
+  },
+  {
+    "dip": 0.8742382036496,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1254355,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.1000000000001
+  },
+  {
+    "dip": 0.239917327091918,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1257926,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.9333333333333
+  },
+  {
+    "dip": 0.329182822364115,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1261497,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.1666666666666
+  },
+  {
+    "dip": 0.329317440070447,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1265068,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.7666666666666
+  },
+  {
+    "dip": 0.329183505874292,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1268639,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.7333333333333
+  },
+  {
+    "dip": 0.328613216418805,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1272210,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.4666666666666
+  },
+  {
+    "dip": 0.329183817460911,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1275781,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.6
+  },
+  {
+    "dip": 0.328836364079398,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1279352,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 21.2333333333335
+  },
+  {
+    "dip": 0.328727654299408,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1282923,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.43333333333331
+  },
+  {
+    "dip": 0.328486853909064,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1286494,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 21.8666666666669
+  },
+  {
+    "dip": 0.329023366612394,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1290065,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.8333333333333
+  },
+  {
+    "dip": 0.32937645703911,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1293636,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.19999999999999
+  },
+  {
+    "dip": 0.328484609676178,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1297207,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.1
+  },
+  {
+    "dip": 0.32931820984403,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1300778,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.3333333333333
+  },
+  {
+    "dip": 0.329317071880081,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1304349,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.6333333333334
+  },
+  {
+    "dip": 0.328348487128654,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1307920,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.39999999999998
+  },
+  {
+    "dip": 0.328932761446283,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1311491,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.7
+  },
+  {
+    "dip": 0.328611873924743,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1315062,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 21.8000000000002
+  },
+  {
+    "dip": 0.87515357122262,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1318633,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.0333333333333
+  },
+  {
+    "dip": 0.329317950440244,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1322204,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.8
+  },
+  {
+    "dip": 0.876787112808617,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1325775,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.4333333333333
+  },
+  {
+    "dip": 0.329183782582218,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1329346,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.6
+  },
+  {
+    "dip": 0.329024686096844,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1332917,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.59999999999998
+  },
+  {
+    "dip": 0.328728660867609,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1336488,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.99999999999998
+  },
+  {
+    "dip": 0.328611030071618,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1340059,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.43333333333331
+  },
+  {
+    "dip": 0.329253823520951,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1343630,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.3333333333333
+  },
+  {
+    "dip": 0.328835610483977,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1347201,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.59999999999998
+  },
+  {
+    "dip": 0.328933938704828,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1350772,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.6
+  },
+  {
+    "dip": 0.328834600914855,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1354343,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.6
+  },
+  {
+    "dip": 0.239938486941971,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1357914,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.2666666666666
+  },
+  {
+    "dip": 0.329024171426468,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1361485,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.2
+  },
+  {
+    "dip": 0.329317528238872,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1365056,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.16666666666665
+  },
+  {
+    "dip": 0.239925043030623,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1368627,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.0333333333333
+  },
+  {
+    "dip": 0.239925054626471,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1372198,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.06666666666665
+  },
+  {
+    "dip": 0.329107528278147,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1375769,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.56666666666665
+  },
+  {
+    "dip": 0.329023663933498,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1379340,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.56666666666664
+  },
+  {
+    "dip": 0.328834355118569,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1382911,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.3
+  },
+  {
+    "dip": 0.239925035870044,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1386482,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.7333333333333
+  },
+  {
+    "dip": 0.239917307318215,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1390053,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.3333333333333
+  },
+  {
+    "dip": 0.239932081516708,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1393624,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.93333333333332
+  },
+  {
+    "dip": 0.32918316653545,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1397195,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.89999999999999
+  },
+  {
+    "dip": 0.328933330573489,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1400766,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.13333333333332
+  },
+  {
+    "dip": 0.328612291792258,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1404337,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.5333333333333
+  },
+  {
+    "dip": 0.329183671931809,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1407908,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.46666666666665
+  },
+  {
+    "dip": 0.329024324049716,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1411479,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.7
+  },
+  {
+    "dip": 0.328834883137325,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1415050,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.1333333333333
+  },
+  {
+    "dip": 0.328835885788459,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1418621,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.59999999999999
+  },
+  {
+    "dip": 0.329317961476419,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1422192,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.8
+  },
+  {
+    "dip": 0.328834455347331,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1425763,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.36666666666665
+  },
+  {
+    "dip": 0.328836690265054,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1429334,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.26666666666664
+  },
+  {
+    "dip": 0.239932059083355,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1432905,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.33333333333332
+  },
+  {
+    "dip": 0.328611722507022,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1436476,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.23333333333331
+  },
+  {
+    "dip": 0.328726854700305,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1440047,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.33333333333332
+  },
+  {
+    "dip": 0.328728985821253,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1443618,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.06666666666665
+  },
+  {
+    "dip": 0.875999290941799,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1447189,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.329107765091499,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1450760,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.2333333333333
+  },
+  {
+    "dip": 0.329182926073001,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1454331,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.49999999999998
+  },
+  {
+    "dip": 0.239917286830361,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1457902,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.9333333333333
+  },
+  {
+    "dip": 0.874235426280434,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1461473,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 4.63333333333333
+  },
+  {
+    "dip": 0.87678784995334,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1465044,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.99999999999998
+  },
+  {
+    "dip": 0.32925275413201,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1468615,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.4666666666666
+  },
+  {
+    "dip": 0.239917330651473,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1472186,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.8666666666666
+  },
+  {
+    "dip": 0.875155908052127,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1475757,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.9333333333334
+  },
+  {
+    "dip": 0.328933966795456,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1479328,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.7333333333333
+  },
+  {
+    "dip": 0.328834846636981,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1482899,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.329253861460282,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1486470,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.96666666666664
+  },
+  {
+    "dip": 0.329376016424214,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1490041,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.5666666666666
+  },
+  {
+    "dip": 0.239925047898295,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1493612,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.96666666666665
+  },
+  {
+    "dip": 0.328932793460206,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1497183,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.1666666666666
+  },
+  {
+    "dip": 0.875155226057661,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1500754,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.5333333333333
+  },
+  {
+    "dip": 0.328486501329351,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1504325,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.63333333333331
+  },
+  {
+    "dip": 0.329024326135884,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1507896,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.9666666666666
+  },
+  {
+    "dip": 0.875150269404486,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1511467,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.39999999999999
+  },
+  {
+    "dip": 0.328349955013516,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1515038,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.5666666666666
+  },
+  {
+    "dip": 0.876788170781602,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1518609,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.56666666666664
+  },
+  {
+    "dip": 0.876004004736387,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1522180,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 21.4333333333336
+  },
+  {
+    "dip": 0.328610294046224,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1525751,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.8
+  },
+  {
+    "dip": 0.329253963680791,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1529322,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.2333333333333
+  },
+  {
+    "dip": 0.329376005698683,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1532893,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.69999999999998
+  },
+  {
+    "dip": 0.328729148152734,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1536464,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.1
+  },
+  {
+    "dip": 0.239925016219442,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1540035,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.7
+  },
+  {
+    "dip": 0.329254037081239,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1543606,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.5
+  },
+  {
+    "dip": 0.329183567809079,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1547177,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.7666666666666
+  },
+  {
+    "dip": 0.329317765994813,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1550748,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.09999999999998
+  },
+  {
+    "dip": 0.329318017319514,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1554319,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.5
+  },
+  {
+    "dip": 0.329107154803493,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1557890,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.2
+  },
+  {
+    "dip": 0.328728605399556,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1561461,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.49999999999998
+  },
+  {
+    "dip": 0.329107430689617,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1565032,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.7
+  },
+  {
+    "dip": 0.328346729386936,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1568603,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.4333333333334
+  },
+  {
+    "dip": 0.876787608148581,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1572174,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.6
+  },
+  {
+    "dip": 0.32925365979162,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1575745,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.7
+  },
+  {
+    "dip": 0.32893417613585,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1579316,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.7666666666666
+  },
+  {
+    "dip": 0.329317753177694,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1582887,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.56666666666665
+  },
+  {
+    "dip": 0.328728702870369,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1586458,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.23333333333331
+  },
+  {
+    "dip": 0.328934419639603,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1590029,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.86666666666665
+  },
+  {
+    "dip": 0.329254009902446,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1593600,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.3333333333334
+  },
+  {
+    "dip": 0.329252954921505,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1597171,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.76666666666665
+  },
+  {
+    "dip": 0.32918397387114,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1600742,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.79999999999998
+  },
+  {
+    "dip": 0.875998088700017,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1604313,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.1666666666666
+  },
+  {
+    "dip": 0.328728050045544,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1607884,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.76666666666665
+  },
+  {
+    "dip": 0.875152677448932,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1611455,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.16666666666665
+  },
+  {
+    "dip": 0.329183405282534,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1615026,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.83333333333331
+  },
+  {
+    "dip": 0.328726954956795,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1618597,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.0333333333333
+  },
+  {
+    "dip": 0.328934674325274,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1622168,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 24.6000000000004
+  },
+  {
+    "dip": 0.328611962611277,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1625739,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 19.4000000000001
+  },
+  {
+    "dip": 0.239938488875724,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1629310,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.0666666666666
+  },
+  {
+    "dip": 0.329317466710575,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1632881,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 29.0333333333339
+  },
+  {
+    "dip": 0.328612495380531,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1636452,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.43333333333331
+  },
+  {
+    "dip": 0.328834266978883,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1640023,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.56666666666664
+  },
+  {
+    "dip": 0.876008352126544,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1643594,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.33333333333332
+  },
+  {
+    "dip": 0.329253801322096,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1647165,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.3333333333333
+  },
+  {
+    "dip": 0.329183439304582,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1650736,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.43333333333332
+  },
+  {
+    "dip": 0.329252765428649,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1654307,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 14.9666666666666
+  },
+  {
+    "dip": 0.329106946630969,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1657878,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.29999999999998
+  },
+  {
+    "dip": 0.329107374912382,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1661449,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 17.6333333333334
+  },
+  {
+    "dip": 0.239925026750757,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1665020,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 17.3
+  },
+  {
+    "dip": 0.329317973814817,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1668591,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.9333333333333
+  },
+  {
+    "dip": 0.329377106108217,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1672162,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.1666666666666
+  },
+  {
+    "dip": 0.874236378485082,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1675733,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.36666666666666
+  },
+  {
+    "dip": 0.328836051978505,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1679304,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.49999999999998
+  },
+  {
+    "dip": 0.328835233700979,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1682875,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 22.2333333333336
+  },
+  {
+    "dip": 0.329318312834453,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1686446,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.16666666666665
+  },
+  {
+    "dip": 0.329376087435393,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1690017,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 13.5
+  },
+  {
+    "dip": 0.876006452087306,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1693588,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.5000000000001
+  },
+  {
+    "dip": 0.329107489809208,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1697159,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.5
+  },
+  {
+    "dip": 0.329317846075555,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1700730,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.09999999999998
+  },
+  {
+    "dip": 0.329106770900615,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1704301,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.33333333333332
+  },
+  {
+    "dip": 0.328612871736967,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1707872,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 24.566666666667
+  },
+  {
+    "dip": 0.329182352529028,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1711443,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.79999999999998
+  },
+  {
+    "dip": 0.239938485747648,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1715014,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.03333333333331
+  },
+  {
+    "dip": 0.32925277369717,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1718585,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.76666666666665
+  },
+  {
+    "dip": 0.329024670812257,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1722156,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 20.3333333333335
+  },
+  {
+    "dip": 0.329376459084901,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1725727,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.49999999999998
+  },
+  {
+    "dip": 0.329317459472738,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1729298,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.63333333333331
+  },
+  {
+    "dip": 0.239932049629502,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1732869,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.3666666666666
+  },
+  {
+    "dip": 0.328485125550178,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1736440,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 17.9
+  },
+  {
+    "dip": 0.239932084305731,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1740011,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.96666666666664
+  },
+  {
+    "dip": 0.876790809418847,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1743582,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.73333333333331
+  },
+  {
+    "dip": 0.328835536369135,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1747153,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.2333333333333
+  },
+  {
+    "dip": 0.328934596158969,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1750724,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.5333333333333
+  },
+  {
+    "dip": 0.329107342059051,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1754295,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.63333333333331
+  },
+  {
+    "dip": 0.328834852214156,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1757866,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.33333333333332
+  },
+  {
+    "dip": 0.329183856164345,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1761437,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.2666666666666
+  },
+  {
+    "dip": 0.239917329742893,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1765008,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.06666666666665
+  },
+  {
+    "dip": 0.328934111009655,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1768579,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.6333333333333
+  },
+  {
+    "dip": 0.329023973189256,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1772150,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.328834914437817,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1775721,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.06666666666665
+  },
+  {
+    "dip": 0.239925066252764,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1779292,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.8
+  },
+  {
+    "dip": 0.329253668600221,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1782863,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.23333333333332
+  },
+  {
+    "dip": 0.329377200991144,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1786434,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.56666666666665
+  },
+  {
+    "dip": 0.876005116124678,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1790005,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.89999999999998
+  },
+  {
+    "dip": 0.328485739808604,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1793576,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.49999999999998
+  },
+  {
+    "dip": 0.239938480543528,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1797147,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.328348953039635,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1800718,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.6666666666667
+  },
+  {
+    "dip": 0.239917341896029,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1804289,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.83333333333331
+  },
+  {
+    "dip": 0.239917301595642,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1807860,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 16.1333333333333
+  },
+  {
+    "dip": 0.329376401570734,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1811431,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 7.86666666666665
+  },
+  {
+    "dip": 0.329107669355453,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1815002,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 4.89999999999999
+  },
+  {
+    "dip": 0.239932041080604,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1818573,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.06666666666665
+  },
+  {
+    "dip": 0.876790049339987,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1822144,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 10.2
+  },
+  {
+    "dip": 0.328727636340224,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1825715,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.23333333333332
+  },
+  {
+    "dip": 0.328728462752608,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1829286,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.7
+  },
+  {
+    "dip": 0.874232624880014,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1832857,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 18.7666666666668
+  },
+  {
+    "dip": 0.328934710508698,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1836428,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 21.3666666666669
+  },
+  {
+    "dip": 0.328836123914912,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1839999,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.4333333333333
+  },
+  {
+    "dip": 0.32910793171984,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1843570,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.99999999999999
+  },
+  {
+    "dip": 0.329183338300768,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1847141,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.328933400546448,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1850712,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 15.0333333333333
+  },
+  {
+    "dip": 0.329022915659857,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1854283,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.4333333333333
+  },
+  {
+    "dip": 0.875156781046043,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1857854,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.0666666666666
+  },
+  {
+    "dip": 0.328611288394549,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1861425,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 5.66666666666666
+  },
+  {
+    "dip": 0.328613430267792,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1864996,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 20.1666666666668
+  },
+  {
+    "dip": 0.32910711085758,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1868567,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.26666666666664
+  },
+  {
+    "dip": 0.239938493911485,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1872138,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 4.79999999999999
+  },
+  {
+    "dip": 0.329253523562152,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1875709,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 8.19999999999998
+  },
+  {
+    "dip": 0.329106861602821,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1879280,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 20.5000000000002
+  },
+  {
+    "dip": 0.329253527164779,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1882851,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 12.9666666666666
+  },
+  {
+    "dip": 0.239932070890679,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1886422,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 20.7666666666669
+  },
+  {
+    "dip": 0.328610099020906,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1889993,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 9.53333333333331
+  },
+  {
+    "dip": 0.329107694708763,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1893564,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.49999999999999
+  },
+  {
+    "dip": 0.329183530393018,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1897135,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 11.2
+  },
+  {
+    "dip": 0.328933972944659,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1900706,
+    "species": "japanese_horse_mackerel",
+    "strike_phase": "carry",
+    "strike_time": 6.93333333333332
+  },
+  {
+    "dip": 0.8518561208101,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 990101,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.76666666666665
+  },
+  {
+    "dip": 0.32185450019286,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 993672,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.9333333333333
+  },
+  {
+    "dip": 0.849704921589687,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 997243,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.0666666666666
+  },
+  {
+    "dip": 0.853834484631965,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1000814,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.49999999999998
+  },
+  {
+    "dip": 0.849627926842681,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1004385,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.79999999999998
+  },
+  {
+    "dip": 0.84740552755558,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1007956,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 27.2666666666672
+  },
+  {
+    "dip": 0.851653655036277,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1011527,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.16666666666665
+  },
+  {
+    "dip": 0.323511478621851,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1015098,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 4.46666666666666
+  },
+  {
+    "dip": 0.853878539918476,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1018669,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.4
+  },
+  {
+    "dip": 0.853901849348739,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1022240,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.19999999999999
+  },
+  {
+    "dip": 0.239060460310282,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1025811,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.89999999999999
+  },
+  {
+    "dip": 0.853932382917304,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1029382,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.36666666666665
+  },
+  {
+    "dip": 0.847179235313202,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1032953,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 21.0666666666669
+  },
+  {
+    "dip": 0.847394128748225,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1036524,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 14.7666666666666
+  },
+  {
+    "dip": 0.321421156419387,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1040095,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.79999999999999
+  },
+  {
+    "dip": 0.851855969941007,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1043666,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 17.5
+  },
+  {
+    "dip": 0.847298595593975,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1047237,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.8
+  },
+  {
+    "dip": 0.847300341594677,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1050808,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.03333333333332
+  },
+  {
+    "dip": 0.85395208163903,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1054379,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.86666666666664
+  },
+  {
+    "dip": 0.32179134159605,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1057950,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.23333333333332
+  },
+  {
+    "dip": 0.321376525375189,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1061521,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.49999999999999
+  },
+  {
+    "dip": 0.849746261378292,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1065092,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.849536491019015,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1068663,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.53333333333332
+  },
+  {
+    "dip": 0.849586557000155,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1072234,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.6666666666666
+  },
+  {
+    "dip": 0.84730521583518,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1075805,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.56666666666665
+  },
+  {
+    "hooked": false,
+    "seed": 1079376,
+    "species": "atlantic_wolffish",
+    "strike_phase": "",
+    "strike_time": -1.0
+  },
+  {
+    "dip": 0.23902126144937,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1082947,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.5000000000001
+  },
+  {
+    "dip": 0.853894998479727,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1086518,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 19.2333333333334
+  },
+  {
+    "dip": 0.238936701561957,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1090089,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.69999999999999
+  },
+  {
+    "dip": 0.85187870773314,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1093660,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.8333333333333
+  },
+  {
+    "dip": 0.322782583051774,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1097231,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.7333333333334
+  },
+  {
+    "dip": 0.239026825859244,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1100802,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.6666666666666
+  },
+  {
+    "dip": 0.324539546360605,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1104373,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.73333333333332
+  },
+  {
+    "dip": 0.853848715795979,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1107944,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.36666666666665
+  },
+  {
+    "dip": 0.851738901280081,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1111515,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 14.3
+  },
+  {
+    "dip": 0.853943241186445,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1115086,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 21.2666666666669
+  },
+  {
+    "dip": 0.853799602909783,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1118657,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.6666666666666
+  },
+  {
+    "dip": 0.854015326604609,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1122228,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.3666666666666
+  },
+  {
+    "dip": 0.238927368489574,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1125799,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.93333333333331
+  },
+  {
+    "dip": 0.851893804908033,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1129370,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.66666666666665
+  },
+  {
+    "dip": 0.853915931923937,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1132941,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.2666666666666
+  },
+  {
+    "dip": 0.85391839773639,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1136512,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.73333333333332
+  },
+  {
+    "dip": 0.84716958479744,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1140083,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 3.9
+  },
+  {
+    "dip": 0.23893734985428,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1143654,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.96666666666665
+  },
+  {
+    "dip": 0.849581474188645,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1147225,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.33333333333332
+  },
+  {
+    "dip": 0.324333505563667,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1150796,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.1
+  },
+  {
+    "dip": 0.851702817208712,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1154367,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 14.7
+  },
+  {
+    "dip": 0.238947345878,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1157938,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.33333333333331
+  },
+  {
+    "dip": 0.853949974307353,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1161509,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.06666666666665
+  },
+  {
+    "dip": 0.238942046831663,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1165080,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.23905847825418,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1168651,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.2666666666666
+  },
+  {
+    "dip": 0.853883410633538,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1172222,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.26666666666665
+  },
+  {
+    "dip": 0.853842663064449,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1175793,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.4333333333333
+  },
+  {
+    "dip": 0.851815243443569,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1179364,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.66666666666665
+  },
+  {
+    "dip": 0.324510356769322,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1182935,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.1333333333333
+  },
+  {
+    "dip": 0.847460579261012,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1186506,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.0333333333333
+  },
+  {
+    "dip": 0.238942031819846,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1190077,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.16666666666665
+  },
+  {
+    "dip": 0.851799966478191,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1193648,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.1333333333333
+  },
+  {
+    "dip": 0.8494773471221,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1197219,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.53333333333332
+  },
+  {
+    "dip": 0.324038021139167,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1200790,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.93333333333331
+  },
+  {
+    "dip": 0.322858289991285,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1204361,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.89999999999998
+  },
+  {
+    "dip": 0.322529841560618,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1207932,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 19.9333333333335
+  },
+  {
+    "dip": 0.849669651415869,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1211503,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.53333333333331
+  },
+  {
+    "dip": 0.851784893780059,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1215074,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.09999999999999
+  },
+  {
+    "dip": 0.851878841317564,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1218645,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.29999999999998
+  },
+  {
+    "dip": 0.322899913045882,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1222216,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.33333333333332
+  },
+  {
+    "dip": 0.853848647505743,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1225787,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 4.79999999999999
+  },
+  {
+    "dip": 0.239039472898377,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1229358,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.39999999999999
+  },
+  {
+    "dip": 0.239069846069388,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1232929,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.46666666666664
+  },
+  {
+    "dip": 0.849555781992618,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1236500,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 19.4000000000001
+  },
+  {
+    "dip": 0.849591999074099,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1240071,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.39999999999998
+  },
+  {
+    "dip": 0.853985547396583,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1243642,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.53333333333332
+  },
+  {
+    "dip": 0.321751933990419,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1247213,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.7333333333333
+  },
+  {
+    "dip": 0.849647462480199,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1250784,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.69999999999998
+  },
+  {
+    "dip": 0.849679325728944,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1254355,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.3666666666667
+  },
+  {
+    "dip": 0.238891625814663,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1257926,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.3
+  },
+  {
+    "dip": 0.849504083953336,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1261497,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 14.2
+  },
+  {
+    "dip": 0.323746724665195,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1265068,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.0
+  },
+  {
+    "dip": 0.851826172612338,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1268639,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.8333333333333
+  },
+  {
+    "dip": 0.84969890330472,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1272210,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 14.6333333333333
+  },
+  {
+    "dip": 0.324058710663225,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1275781,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.9
+  },
+  {
+    "dip": 0.321499781699413,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1279352,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 21.5333333333336
+  },
+  {
+    "dip": 0.851727955485024,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1282923,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.53333333333331
+  },
+  {
+    "dip": 0.853973581742942,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1286494,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 22.0666666666669
+  },
+  {
+    "dip": 0.847172957367581,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1290065,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.8666666666666
+  },
+  {
+    "dip": 0.324021976616528,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1293636,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.43333333333332
+  },
+  {
+    "dip": 0.320140296395767,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1297207,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.3
+  },
+  {
+    "dip": 0.854024824985659,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1300778,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.5
+  },
+  {
+    "dip": 0.851701805065955,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1304349,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.6666666666668
+  },
+  {
+    "dip": 0.849593982922595,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1307920,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.53333333333331
+  },
+  {
+    "dip": 0.853760620811235,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1311491,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.7666666666666
+  },
+  {
+    "dip": 0.320623711075692,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1315062,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 22.0333333333336
+  },
+  {
+    "dip": 0.85179686116499,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1318633,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.2666666666666
+  },
+  {
+    "dip": 0.324572224402637,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1322204,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.1
+  },
+  {
+    "dip": 0.851755457507161,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1325775,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.6333333333333
+  },
+  {
+    "dip": 0.324318678440167,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1329346,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.9
+  },
+  {
+    "dip": 0.84970130509147,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1332917,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.73333333333331
+  },
+  {
+    "dip": 0.849639913427364,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1336488,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.1333333333333
+  },
+  {
+    "dip": 0.849536415948269,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1340059,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.53333333333331
+  },
+  {
+    "dip": 0.853974967425594,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1343630,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.4666666666666
+  },
+  {
+    "dip": 0.321441516406301,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1347201,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.83333333333332
+  },
+  {
+    "dip": 0.849618363516631,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1350772,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.7
+  },
+  {
+    "dip": 0.853819421229915,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1354343,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.7
+  },
+  {
+    "dip": 0.238937532720011,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1357914,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.6
+  },
+  {
+    "dip": 0.32217738242078,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1361485,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.4333333333333
+  },
+  {
+    "dip": 0.853871240122019,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1365056,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.23333333333332
+  },
+  {
+    "dip": 0.23889199458076,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1368627,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.4
+  },
+  {
+    "dip": 0.238945369912284,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1372198,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.851875515483568,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1375769,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.69999999999998
+  },
+  {
+    "dip": 0.321412974394969,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1379340,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.76666666666664
+  },
+  {
+    "dip": 0.853806680564795,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1382911,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.4
+  },
+  {
+    "dip": 0.239029456014149,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1386482,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.1
+  },
+  {
+    "dip": 0.238984357788128,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1390053,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.7
+  },
+  {
+    "dip": 0.238986968827995,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1393624,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.29999999999999
+  },
+  {
+    "dip": 0.324288851026083,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1397195,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.16666666666665
+  },
+  {
+    "dip": 0.851766506519729,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1400766,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.23333333333331
+  },
+  {
+    "dip": 0.321822339984664,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1404337,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.8
+  },
+  {
+    "dip": 0.324057748331458,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1407908,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.76666666666665
+  },
+  {
+    "dip": 0.849631454743251,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1411479,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.8
+  },
+  {
+    "dip": 0.85175662042469,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1415050,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.2333333333333
+  },
+  {
+    "dip": 0.321471915381838,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1418621,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.86666666666665
+  },
+  {
+    "dip": 0.851862814361943,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1422192,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.9
+  },
+  {
+    "dip": 0.853807520834945,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1425763,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.46666666666665
+  },
+  {
+    "dip": 0.847502268920158,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1429334,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.46666666666664
+  },
+  {
+    "dip": 0.23892851117016,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1432905,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.63333333333332
+  },
+  {
+    "dip": 0.853860143480355,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1436476,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.36666666666665
+  },
+  {
+    "dip": 0.321370239438516,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1440047,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.53333333333332
+  },
+  {
+    "dip": 0.853945668070748,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1443618,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.23333333333332
+  },
+  {
+    "dip": 0.847188770980749,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1447189,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.99999999999998
+  },
+  {
+    "dip": 0.849713834934494,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1450760,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.3666666666666
+  },
+  {
+    "dip": 0.847231181133435,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1454331,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.53333333333332
+  },
+  {
+    "dip": 0.238931307386871,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1457902,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 14.2666666666666
+  },
+  {
+    "dip": 0.849618680748296,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1461473,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 4.86666666666666
+  },
+  {
+    "dip": 0.847323208589886,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1465044,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.19999999999998
+  },
+  {
+    "dip": 0.84950792879515,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1468615,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.5
+  },
+  {
+    "dip": 0.2389848680898,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1472186,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.2333333333333
+  },
+  {
+    "dip": 0.849637803354288,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1475757,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 19.1666666666668
+  },
+  {
+    "dip": 0.322861459896368,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1479328,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.0
+  },
+  {
+    "dip": 0.853820125711517,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1482899,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.56666666666665
+  },
+  {
+    "dip": 0.847420761384606,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1486470,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.0666666666666
+  },
+  {
+    "dip": 0.853795078482703,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1490041,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.6
+  },
+  {
+    "dip": 0.239034395308741,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1493612,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.36666666666664
+  },
+  {
+    "dip": 0.321763828328799,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1497183,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.3666666666666
+  },
+  {
+    "dip": 0.853927228160753,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1500754,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.8
+  },
+  {
+    "dip": 0.853924379927116,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1504325,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.79999999999998
+  },
+  {
+    "dip": 0.322542939903234,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1507896,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.2333333333333
+  },
+  {
+    "dip": 0.853778562975176,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1511467,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.59999999999999
+  },
+  {
+    "dip": 0.849722056605616,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1515038,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.7666666666667
+  },
+  {
+    "dip": 0.847319059945849,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1518609,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.76666666666664
+  },
+  {
+    "dip": 0.851812581717583,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1522180,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 21.6666666666669
+  },
+  {
+    "dip": 0.853773890569635,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1525751,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.9
+  },
+  {
+    "dip": 0.323513121833173,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1529322,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.5333333333333
+  },
+  {
+    "dip": 0.853788285191658,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1532893,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.73333333333332
+  },
+  {
+    "dip": 0.84739101102242,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1536464,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.2333333333333
+  },
+  {
+    "dip": 0.238926732608345,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1540035,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.0
+  },
+  {
+    "dip": 0.849738882401985,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1543606,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.6333333333333
+  },
+  {
+    "dip": 0.853910721884249,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1547177,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.8666666666666
+  },
+  {
+    "dip": 0.851857597421618,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1550748,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.19999999999998
+  },
+  {
+    "dip": 0.851866230812964,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1554319,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.6
+  },
+  {
+    "dip": 0.853886346037073,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1557890,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.3
+  },
+  {
+    "dip": 0.851813820871229,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1561461,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.853943006411218,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1565032,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.8333333333333
+  },
+  {
+    "dip": 0.320550201343937,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1568603,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.6333333333334
+  },
+  {
+    "dip": 0.851768460174868,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1572174,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.8
+  },
+  {
+    "dip": 0.849679369634427,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1575745,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.8
+  },
+  {
+    "dip": 0.321848755316913,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1579316,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.0333333333333
+  },
+  {
+    "dip": 0.851854863200305,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1582887,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.66666666666665
+  },
+  {
+    "dip": 0.851812568297275,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1586458,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.36666666666664
+  },
+  {
+    "dip": 0.849683430037377,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1590029,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.99999999999998
+  },
+  {
+    "dip": 0.323529392389112,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1593600,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.6666666666668
+  },
+  {
+    "dip": 0.849521629496122,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1597171,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.79999999999998
+  },
+  {
+    "dip": 0.854006963046123,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1600742,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.96666666666664
+  },
+  {
+    "dip": 0.849460856933264,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1604313,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.3333333333333
+  },
+  {
+    "dip": 0.84956861818401,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1607884,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.86666666666665
+  },
+  {
+    "dip": 0.851788903694612,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1611455,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.39999999999998
+  },
+  {
+    "dip": 0.847320690120257,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1615026,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.89999999999998
+  },
+  {
+    "dip": 0.847193148618101,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1618597,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.1
+  },
+  {
+    "dip": 0.32187566553205,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1622168,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 24.9000000000004
+  },
+  {
+    "dip": 0.849623756550313,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1625739,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 19.5333333333335
+  },
+  {
+    "dip": 0.239035962473719,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1629310,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.4666666666666
+  },
+  {
+    "dip": 0.847287502994084,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1632881,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 29.0666666666673
+  },
+  {
+    "dip": 0.321824547281423,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1636452,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.69999999999998
+  },
+  {
+    "dip": 0.32138320335766,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1640023,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.76666666666664
+  },
+  {
+    "dip": 0.854003458368726,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1643594,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.63333333333332
+  },
+  {
+    "dip": 0.853977245011694,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1647165,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 14.4666666666666
+  },
+  {
+    "dip": 0.849599663957282,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1650736,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.49999999999999
+  },
+  {
+    "dip": 0.324510973274992,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1654307,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.2
+  },
+  {
+    "dip": 0.851739835566084,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1657878,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.36666666666665
+  },
+  {
+    "dip": 0.85182256874648,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1661449,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 17.7333333333334
+  },
+  {
+    "dip": 0.239064210867433,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1665020,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 17.6333333333334
+  },
+  {
+    "dip": 0.851864467661151,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1668591,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.0333333333333
+  },
+  {
+    "dip": 0.854033583836224,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1672162,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.3333333333333
+  },
+  {
+    "dip": 0.853925669107091,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1675733,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.63333333333332
+  },
+  {
+    "dip": 0.32022644505195,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1679304,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.73333333333331
+  },
+  {
+    "dip": 0.853893124713982,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1682875,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 22.3666666666669
+  },
+  {
+    "dip": 0.854031975533849,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1686446,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.33333333333331
+  },
+  {
+    "dip": 0.849456218102986,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1690017,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.5
+  },
+  {
+    "dip": 0.853948724587316,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1693588,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.7666666666668
+  },
+  {
+    "dip": 0.849653226233191,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1697159,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.6
+  },
+  {
+    "dip": 0.853936249734857,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1700730,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.19999999999998
+  },
+  {
+    "dip": 0.849555824601258,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1704301,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.39999999999998
+  },
+  {
+    "dip": 0.851861516424529,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1707872,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 24.7333333333337
+  },
+  {
+    "dip": 0.851637052590684,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1711443,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.83333333333331
+  },
+  {
+    "dip": 0.238938285114162,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1715014,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.36666666666664
+  },
+  {
+    "dip": 0.323707130608068,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1718585,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.96666666666665
+  },
+  {
+    "dip": 0.322567598978021,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1722156,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 20.6333333333335
+  },
+  {
+    "dip": 0.849566217447177,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1725727,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.53333333333331
+  },
+  {
+    "dip": 0.847278847004707,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1729298,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.66666666666665
+  },
+  {
+    "dip": 0.238928055029715,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1732869,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.6666666666666
+  },
+  {
+    "dip": 0.320611815958341,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1736440,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.1333333333334
+  },
+  {
+    "dip": 0.238987429033072,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1740011,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.3333333333333
+  },
+  {
+    "dip": 0.849669766423338,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1743582,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.96666666666664
+  },
+  {
+    "dip": 0.849658306829763,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1747153,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.3666666666666
+  },
+  {
+    "dip": 0.85190229611638,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1750724,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.7
+  },
+  {
+    "dip": 0.322523474926274,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1754295,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.86666666666665
+  },
+  {
+    "dip": 0.851749920106127,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1757866,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.43333333333332
+  },
+  {
+    "dip": 0.853967430722001,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1761437,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.4
+  },
+  {
+    "dip": 0.238985086837309,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1765008,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.43333333333332
+  },
+  {
+    "dip": 0.847408610608382,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1768579,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.7666666666666
+  },
+  {
+    "dip": 0.853863789119814,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1772150,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.56666666666665
+  },
+  {
+    "dip": 0.853828413646187,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1775721,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.16666666666665
+  },
+  {
+    "dip": 0.238994773802571,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1779292,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.2333333333333
+  },
+  {
+    "dip": 0.847409190820981,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1782863,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.33333333333332
+  },
+  {
+    "dip": 0.324348614836328,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1786434,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.89999999999998
+  },
+  {
+    "dip": 0.851814792050089,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1790005,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.1333333333333
+  },
+  {
+    "dip": 0.321443990167471,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1793576,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.76666666666665
+  },
+  {
+    "dip": 0.238983041556337,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1797147,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.96666666666664
+  },
+  {
+    "dip": 0.321052648819209,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1800718,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.9333333333333
+  },
+  {
+    "dip": 0.239034157526371,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1804289,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.23333333333331
+  },
+  {
+    "dip": 0.239069185731174,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1807860,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 16.5
+  },
+  {
+    "dip": 0.849562771031137,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1811431,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.89999999999998
+  },
+  {
+    "dip": 0.322896937496815,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1815002,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.19999999999999
+  },
+  {
+    "dip": 0.239015565936194,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1818573,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.36666666666665
+  },
+  {
+    "dip": 0.853955794400766,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1822144,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 10.4666666666666
+  },
+  {
+    "dip": 0.321787769764307,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1825715,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.46666666666665
+  },
+  {
+    "dip": 0.321040483507115,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1829286,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.9333333333333
+  },
+  {
+    "dip": 0.849525238373105,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1832857,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 18.9666666666668
+  },
+  {
+    "dip": 0.85401868600984,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1836428,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 21.5666666666669
+  },
+  {
+    "dip": 0.321473266215513,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1839999,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.7
+  },
+  {
+    "dip": 0.85399814598401,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1843570,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.16666666666665
+  },
+  {
+    "dip": 0.847327044145281,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1847141,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.69999999999998
+  },
+  {
+    "dip": 0.849595588336271,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1850712,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 15.1333333333333
+  },
+  {
+    "dip": 0.847154125618724,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1854283,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.4666666666666
+  },
+  {
+    "dip": 0.851858820988914,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1857854,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 12.3333333333333
+  },
+  {
+    "dip": 0.847271047008351,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1861425,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.76666666666666
+  },
+  {
+    "dip": 0.851914958863264,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1864996,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 20.3666666666668
+  },
+  {
+    "dip": 0.323180527149013,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1868567,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.53333333333331
+  },
+  {
+    "dip": 0.238988857446286,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1872138,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 5.16666666666666
+  },
+  {
+    "dip": 0.851845839594987,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1875709,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 8.29999999999998
+  },
+  {
+    "dip": 0.847297925082981,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1879280,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 20.5666666666668
+  },
+  {
+    "dip": 0.849675818668135,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1882851,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 13.0666666666666
+  },
+  {
+    "dip": 0.238936321443415,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1886422,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 21.1000000000002
+  },
+  {
+    "dip": 0.853759274148977,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1889993,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 9.63333333333331
+  },
+  {
+    "dip": 0.322217472119972,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1893564,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 6.76666666666665
+  },
+  {
+    "dip": 0.847393238945629,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1897135,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 11.3
+  },
+  {
+    "dip": 0.321448602003998,
+    "hooked": true,
+    "lift": 0.0,
+    "seed": 1900706,
+    "species": "atlantic_wolffish",
+    "strike_phase": "carry",
+    "strike_time": 7.16666666666665
+  }
+]
