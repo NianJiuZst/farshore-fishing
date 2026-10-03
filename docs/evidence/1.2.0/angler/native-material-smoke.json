@@ -1,0 +1,10 @@
+{
+	"hashes": {
+		"res://assets/3d/angler.glb": "5234a26c04f89fb5d6ca8e52af684eb285330241ca75770b0af42c64feefecd7",
+		"res://assets/shaders3d/float_lacquer.gdshader": "6f4967ae346cfca3046231b280d57999b05e900ef15e3a500692b4a29bb67de7",
+		"res://scripts/fishing_stage_3d.gd": "c32c79a29d4a5ccad4e3228aaca6e10df7fd95e525c2d6df3f117cba89b58114"
+	},
+	"normal_ready": true,
+	"scope": "Actual desktop Godot4.6.3 Mobile software Vulkan; material/UV regression smoke; float geometry fixtures",
+	"sources_unchanged": true
+}

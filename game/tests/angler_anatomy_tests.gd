@@ -47,6 +47,16 @@ func _run() -> void:
 		_check(player.has_animation(clip), "clip exists: " + clip)
 		if player.has_animation(clip):
 			_check(absf(player.get_animation(clip).length - float(durations[clip])) < 0.00001, "exact duration: " + clip)
+	# A joined character cannot safely sort transparent solid body surfaces.
+	# MPFB's default BLEND export looks correct in Cycles but corrupts Godot pixels.
+	for surface: int in range(instance.mesh.get_surface_count()):
+		var material := instance.mesh.surface_get_material(surface) as BaseMaterial3D
+		_check(material != null, "standard character material")
+		if material != null:
+			_check(material.transparency in [BaseMaterial3D.TRANSPARENCY_DISABLED, BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR], "every character surface writes depth")
+			var material_name: String = material.resource_name.to_lower()
+			if "body" in material_name or "casualsuit" in material_name or "shoes" in material_name:
+				_check(material.transparency == BaseMaterial3D.TRANSPARENCY_DISABLED, "skin, garments and footwear remain opaque")
 	var needed: Array[String] = ["upper_arm.R", "forearm.R", "hand.R", "upper_arm.L", "forearm.L", "hand.L", "foot.R", "foot.L"]
 	for bone: String in needed:
 		_check(skeleton.find_bone(bone) >= 0, "named bone: " + bone)

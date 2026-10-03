@@ -56,11 +56,17 @@ Clips are baked at 30 fps. Cast timing is unchanged: wind-up peak 0.78 s, accele
 - One mesh, six materials, one skin, 30 bones and five clips
 - Seven embedded GLB image textures, with no external dependencies in the GLB itself
 - Godot’s existing import setting extracts matching `game/assets/3d/angler_*.png` files; those images and their import settings are tracked and hashed in the provenance inventory
-- 24,469,596 GLB bytes (23.34 MiB); exact SHA-256 in the provenance JSON
-- Runtime GLB size increase over the preceding model: 22,999,644 bytes (about 21.93 MiB)
+- 24,469,632 GLB bytes (23.34 MiB); exact SHA-256 in the provenance JSON
+- Runtime GLB size increase over the preceding model: 22,999,680 bytes (about 21.93 MiB)
 - 4096² garment normal; 2048² skin, garment color and hair color; 1024² eye and shoe color; 512² eyebrow texture
 
 The full-quality source is retained for the user's high-end Android target. No texture or geometry reduction was applied merely for older-device compatibility.
+
+## Native material correction
+
+A true Godot Main/Stage render exposed a defect that Cycles and the original skeleton checks did not reveal: MPFB exported every surface as alpha `BLEND`, even the completely opaque skin, jacket, jeans and shoes. On the joined game mesh that disables depth writes and lets internal/back surfaces paint over the face and garments. Hair, eyes and clothing then appear missing or torn despite valid topology and weights.
+
+The build now explicitly disconnects alpha for opaque surfaces and creates a node-based alpha clip for the authored eye, eyebrow and hair cutouts. The official Blender exporter produces three `OPAQUE` surfaces and three `MASK` surfaces (cutoff 0.35), all with depth writing in Godot. A durable imported-material test rejects alpha-BLEND surfaces and requires opaque body, clothes and footwear. This corrects the actual runtime render rather than changing human geometry or hiding the failing view.
 
 ## Verification and limits
 
@@ -68,7 +74,7 @@ The full-quality source is retained for the user's high-end Android target. No t
 
 Append `-- --model=/absolute/path/angler.glb` to inspect an isolated candidate.
 
-The promoted release asset passed all 6,353 imported-GLB checks in official Godot 4.6.3, including all 67 cast frames, every clip duration, normalized skinning, actual vertex deformation, grounded feet and both hand/rod contacts:
+The promoted release asset passed all 6,368 imported-GLB checks in official Godot 4.6.3, including all 67 cast frames, every clip duration, normalized skinning, actual vertex deformation, grounded feet, both hand/rod contacts, and the new depth-writing material checks:
 
 - Maximum arm-segment error: 0.0000001121 m
 - Maximum two-hand alignment error: 0.0000005940 m
@@ -76,6 +82,6 @@ The promoted release asset passed all 6,353 imported-GLB checks in official Godo
 - Maximum sampled cast vertex displacement: 0.46448 m
 - Imported normalized-weight quantization error: 0.00004581
 
-Actual reviewed studio images and logs are preserved under `docs/evidence/1.2.0/angler/` (working originals: `build/angler-realistic/final2/`). The subsequent promotion uses the same geometry hash and clip contract. Studio images demonstrate the model itself; native game and Android captures remain distinct integration evidence.
+Actual reviewed studio images and logs are preserved under `docs/evidence/1.2.0/angler/` (working originals: `build/angler-realistic/final2/`). The subsequent promotion uses the same geometry hash and clip contract. Studio images demonstrate the model itself. The corrected actual Main/Stage lobby, cast loading and release are preserved as `native-lobby.png`, `native-cast-loading.png` and `native-cast-release.png` beside them, with exact source hashes in `native-material-smoke.json`. These are Godot 4.6.3 Mobile on desktop software Vulkan, not a claim of Android hardware performance. The native images confirm the material correction removes the red facial patches, missing hair and apparent garment holes. Full Android captures remain separate integration evidence.
 
 This is a game character with natural anatomy and textured clothing, not a scan-quality or film face. Very close hand views can show minor retargeting faceting, and an extreme cast close-up shows a small dark armpit fold/seam. The cuff/finger intersections and knee skin breakthrough found in interim candidates were corrected. There is no facial performance or independent finger animation in this fixed angler.

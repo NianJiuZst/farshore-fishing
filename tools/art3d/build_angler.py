@@ -152,6 +152,19 @@ for material in bpy.data.materials:
   for node in material.node_tree.nodes:
    if node.type=='BSDF_PRINCIPLED':
     node.inputs['Roughness'].default_value=.82 if any(n in material.name.lower()for n in ['suit','shoes','short02'])else .57
+    # MPFB's game material wires Alpha even for fully opaque maps. Exporting
+    # those as BLEND disables depth writes in Godot and corrupts this joined
+    # mesh's surface order. Solid surfaces must be genuinely opaque; authored
+    # eye/hair/brow cutouts use a node-based clip that glTF exports as MASK.
+    alpha=node.inputs['Alpha'];links=material.node_tree.links
+    cutout=any(name in material.name.lower()for name in ['low-poly','eyebrow','short02'])
+    incoming=alpha.links[0].from_socket if alpha.is_linked else None
+    for link in list(alpha.links):links.remove(link)
+    if cutout and incoming is not None:
+     clip=material.node_tree.nodes.new('ShaderNodeMath');clip.name='Depth-writing alpha cutout';clip.operation='GREATER_THAN';clip.inputs[1].default_value=.35
+     links.new(incoming,clip.inputs[0]);links.new(clip.outputs[0],alpha)
+    else:alpha.default_value=1.0
+    material.surface_render_method='DITHERED'
 # Ground via visible geometry bounds.
 rig.animation_data.action=bpy.data.actions['idle'];scene.frame_set(1);bpy.context.view_layer.update()
 lowest=min((o.matrix_world@v).z for o in meshes for v in [Vector(c)for c in o.bound_box]);rig.location.z=-lowest

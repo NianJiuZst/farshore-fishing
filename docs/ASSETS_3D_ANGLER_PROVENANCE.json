@@ -185,18 +185,18 @@
     },
     {
       "path": "art_masters/3d/angler.blend",
-      "bytes": 36288380,
-      "sha256": "2a3a517a9dfa4625fa95a7702a55f24f6d70a95323f9658348fadf4a5cca1e53"
+      "bytes": 36296660,
+      "sha256": "c1a5fdbd2662edc143b31000e128d3d80d42daba88e3acc49d8335048103c51e"
     },
     {
       "path": "game/assets/3d/angler.glb",
-      "bytes": 24469596,
-      "sha256": "fe62840133b8668044a23bc7aaf83b3964d249c88193f5a5c543371f5bac4d1a"
+      "bytes": 24469632,
+      "sha256": "5234a26c04f89fb5d6ca8e52af684eb285330241ca75770b0af42c64feefecd7"
     }
   ],
   "runtime_contract": {
-    "sha256": "fe62840133b8668044a23bc7aaf83b3964d249c88193f5a5c543371f5bac4d1a",
-    "bytes": 24469596,
+    "sha256": "5234a26c04f89fb5d6ca8e52af684eb285330241ca75770b0af42c64feefecd7",
+    "bytes": 24469632,
     "meshes": 1,
     "geometry_sha256": "2677b8cfea30d0c3bd9652b5951a3a97d85780ddb39b3c5a6e08eac6d1f01030",
     "primitive_vertex_counts": [
@@ -282,6 +282,44 @@
       "license": "CC0-1.0",
       "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
       "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    }
+  ],
+  "runtime_materials": [
+    {
+      "name": "Human.body",
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "depth_writing": true
+    },
+    {
+      "name": "Human.low-poly",
+      "alpha_mode": "MASK",
+      "alpha_cutoff": 0.3499999940395355,
+      "depth_writing": true
+    },
+    {
+      "name": "Human.eyebrow001",
+      "alpha_mode": "MASK",
+      "alpha_cutoff": 0.3499999940395355,
+      "depth_writing": true
+    },
+    {
+      "name": "Human.short02",
+      "alpha_mode": "MASK",
+      "alpha_cutoff": 0.3499999940395355,
+      "depth_writing": true
+    },
+    {
+      "name": "Human.male_casualsuit05",
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "depth_writing": true
+    },
+    {
+      "name": "Human.shoes02",
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "depth_writing": true
     }
   ]
 }

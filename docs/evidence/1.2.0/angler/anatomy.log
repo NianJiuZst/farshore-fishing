@@ -1,4 +1,4 @@
 Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
 
 ANGLER_METRICS segment_error_m=0.00000011205673 grip_error_m=0.000000593994 foot_error_m=0.0 skin_motion_m=0.46448335051537 height_m=1.7494283914566 imported_weight_quantization_error=0.0000458098948
-ANGLER_ANATOMY_TESTS: 6353/6353 passed; failures=0
+ANGLER_ANATOMY_TESTS: 6368/6368 passed; failures=0
