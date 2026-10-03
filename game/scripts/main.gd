@@ -80,8 +80,8 @@ var _safe: MarginContainer
 var _collection: Label
 var _bait_label: Label
 var _page_notice: Label
-var notebook = NotebookUI.new()
-var menu_pages = MenuPages.new()
+var notebook: FishNotebookUI = NotebookUI.new()
+var menu_pages: FishingMenuPages = MenuPages.new()
 var _page_back: Callable = Callable()
 var _settings_back: Callable = Callable()
 var _notebook_origin: String = "catalog"
