@@ -99,9 +99,43 @@ class PhotoPackagingTests(unittest.TestCase):
 
     def test_complete_source_import_and_stripped_export_roundtrip(self):
         self.assertEqual(self.contract['texture_count'], 88)
-        self.assertEqual(self.verify()['texture_payloads'], 88)
+        exported = self.verify()
+        self.assertEqual(exported['texture_payloads'], 88)
+        self.assertEqual(set(exported['static_ui_payload_sha256']), set(photos.UI_RESOURCES))
+        for resource, target in exported['static_ui_resources'].items():
+            self.assertEqual(exported['static_ui_payload_sha256'][resource], photos.sha256(self.payloads[target]))
         self.assertEqual(self.verify(prefix='')['species_count'], 44)
         self.assertFalse(any(n.endswith('.png') for n in self.payloads))
+
+    def test_beta3_ui_sources_are_required(self):
+        required = {'scripts/fish_notebook_ui.gd', 'scripts/fishing_menu_pages.gd',
+                    'scripts/fishing_failure_modal.gd'}
+        self.assertEqual(set(photos.BETA3_UI_RESOURCES), required)
+        self.assertTrue(required.issubset(self.contract['ui_resource_sha256']))
+        for resource in sorted(required):
+            raw = (self.project/resource).read_bytes()
+            (self.project/resource).unlink()
+            with self.subTest(resource=resource), self.assertRaisesRegex(AssertionError, 'Missing/unsafe source'):
+                photos.photo_art_contract(self.project, self.catalog)
+            self.write(resource, raw)
+
+    def test_beta3_ui_export_remaps_payloads_and_source_hashes_fail_closed(self):
+        for resource in photos.BETA3_UI_RESOURCES:
+            target = str(Path(resource).with_suffix('.gdc'))
+            for mutation in ('missing_remap', 'missing_payload', 'wrong_target', 'duplicate_target', 'invalid_bytecode', 'changed_source'):
+                payloads = self.payloads.copy()
+                if mutation == 'missing_remap': payloads.pop(resource + '.remap')
+                if mutation == 'missing_payload': payloads.pop(target)
+                if mutation == 'wrong_target': payloads[resource + '.remap'] = b'[remap]\npath="res://scripts/main.gdc"\n'
+                if mutation == 'duplicate_target': payloads[resource + '.remap'] += b'path="res://scripts/main.gdc"\n'
+                if mutation == 'invalid_bytecode': payloads[target] = b'not compiled GDScript'
+                if mutation == 'changed_source': payloads[resource] = b'old UI source'
+                with self.subTest(resource=resource, mutation=mutation), self.assertRaises(AssertionError):
+                    self.verify(payloads)
+            payloads = self.payloads.copy()
+            payloads[resource] = (self.project/resource).read_bytes()
+            payloads.pop(resource + '.remap'); payloads.pop(target)
+            self.assertEqual(self.verify(payloads)['static_ui_resources'][resource], resource)
 
     def test_source_manifest_and_png_fail_closed(self):
         original = copy.deepcopy(self.manifest)
@@ -177,6 +211,11 @@ class PhotoPackagingTests(unittest.TestCase):
         required = photos.require_photo_archive_members(self.root, files, contract)
         self.assertEqual(len(photos.photo_authoring_files(self.root, contract)), 135)
         self.assertIn('art_masters/fish_photoreal_v2/masters/fish_43.png', required)
+        for resource in photos.BETA3_UI_RESOURCES:
+            self.assertIn('game/' + resource, required)
+            missing_ui = files.copy(); missing_ui.pop('game/' + resource)
+            with self.subTest(resource=resource), self.assertRaisesRegex(AssertionError, 'omits required photo inputs'):
+                photos.require_photo_archive_members(self.root, missing_ui, contract)
         missing = files.copy(); missing.pop('art_masters/fish_photoreal_v2/masters/fish_43.png')
         with self.assertRaises(AssertionError): photos.require_photo_archive_members(self.root, missing, contract)
         (base/'masters/fish_43.png').write_bytes(b'corrupt original')
@@ -186,7 +225,7 @@ class PhotoPackagingTests(unittest.TestCase):
 class PackagingTests(unittest.TestCase):
     def test_exact_preview_identity_and_legacy_default(self):
         self.assertEqual(android_identity.expected_identity(),android_identity.LEGACY)
-        preview={**android_identity.PREVIEW,'separate_installation':True,'application_version':'1.2.0-beta.2','android_version_code':4}
+        preview={**android_identity.PREVIEW,'separate_installation':True,'application_version':'1.2.0-beta.3','android_version_code':5}
         self.assertEqual(android_identity.expected_identity({'android_identity':preview}),preview)
         bad={**preview,'certificate_sha256':android_identity.LEGACY['certificate_sha256']}
         with self.assertRaises(AssertionError):android_identity.validate_identity(bad)
@@ -194,8 +233,8 @@ class PackagingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(prefix='farshore-identity-test-') as folder:
             project=Path(folder);(project/'data').mkdir();(project/'data/android_build_identity.json').write_text(json.dumps(preview))
             presets='package/unique_name="org.farshore.fishing.preview"\npackage/name="远岸钓记·试钓版"\n'
-            self.assertEqual(android_identity.project_identity(project,presets,'1.2.0-beta.2',4),preview)
-            with self.assertRaises(AssertionError):android_identity.project_identity(project,presets,'1.2.0-beta.2',3)
+            self.assertEqual(android_identity.project_identity(project,presets,'1.2.0-beta.3',5),preview)
+            with self.assertRaises(AssertionError):android_identity.project_identity(project,presets,'1.2.0-beta.3',4)
     def test_vulkan_types_exact_reversal_and_rejection(self):
         raw=(Path(__file__).resolve().parent/'tests/fixtures/prebuilt-vulkan-string-manifest.bin').read_bytes()
         corrected, proof=normalization.normalize_manifest(raw)

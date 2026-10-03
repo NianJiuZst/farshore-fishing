@@ -3,10 +3,10 @@
   "android_package_name": "org.farshore.fishing.preview",
   "launcher_name": "远岸钓记·试钓版",
   "certificate_sha256": "e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284",
-  "application_version": "1.2.0-beta.2",
-  "android_version_code": 4,
+  "application_version": "1.2.0-beta.3",
+  "android_version_code": 5,
   "separate_installation": true,
-  "update_boundary": "Independent preview app; does not replace org.farshore.fishing or inherit its save data",
+  "update_boundary": "Updates the matching org.farshore.fishing.preview beta2 installation with its save intact; remains separate from org.farshore.fishing",
   "signing_algorithm": "RSA-4096",
   "created_utc": "2026-10-02T19:41:41.826914+00:00"
 }

@@ -11,9 +11,13 @@ import re
 import struct
 
 MANIFEST = 'data/fish_art.json'
+# These native UI modules must be present in the frozen source, source archive,
+# and exported resources. Godot compiles scripts to matching .gdc targets.
+BETA3_UI_RESOURCES = ('scripts/fish_notebook_ui.gd', 'scripts/fishing_menu_pages.gd',
+                      'scripts/fishing_failure_modal.gd')
 UI_RESOURCES = ('scripts/fish_art_catalog.gd', 'scripts/fish_art_view.gd',
                 'scripts/measure_ruler.gd', 'scripts/main.gd',
-                'scenes/main.tscn', 'assets/fish_silhouette.gdshader')
+                'scenes/main.tscn', 'assets/fish_silhouette.gdshader') + BETA3_UI_RESOURCES
 
 
 def sha256(raw):
@@ -191,10 +195,12 @@ def verify_exported_photo_art(archive, contract, report, prefix='assets/'):
         if prefix + resource in names:
             assert sha256(read(resource)) == expected['source_sha256'], 'Optional exported PNG differs'
     ui_payloads = {}
+    ui_payload_hashes = {}
     for resource, expected_hash in contract['ui_resource_sha256'].items():
         if prefix + resource in names:
             assert sha256(read(resource)) == expected_hash, 'Exported static UI source differs: ' + resource
             ui_payloads[resource] = resource
+            ui_payload_hashes[resource] = expected_hash
             continue
         # Godot4.6.3 exports GDScript as .gdc and main.tscn as an exported .scn.
         mapping = read(resource + '.remap').decode()
@@ -210,10 +216,12 @@ def verify_exported_photo_art(archive, contract, report, prefix='assets/'):
         else:
             raise AssertionError('Static silhouette shader must export byte-identical source')
         ui_payloads[resource] = target
+        ui_payload_hashes[resource] = sha256(read(target))
     return {'species_count': 44, 'full_photos': 44, 'thumbnails': 44, 'texture_payloads': 88,
             'manifest_sha256': contract['manifest_sha256'], 'exact_imported_texture_bytes': True,
             'decoded_rgba8_hashes_match_manifest': True, 'canonical_import_targets': True,
             'static_ui_resources': ui_payloads,
+            'static_ui_payload_sha256': ui_payload_hashes,
             'scope': 'Source PNG hashes and staged decoded RGBA8/alpha geometry bound to exact exported .ctex bytes; separate runtime/device evidence required'}
 
 
