@@ -1,0 +1,23 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+FLOAT_WATER_NORMAL_READY (512, 512)
+FLOAT_CAPTURE human_lobby_720x1280 dip=0.0 lift=0.0 drag=(0.0, 0.0)
+FLOAT_CAPTURE human_lobby_720x1584 dip=0.0 lift=0.0 drag=(0.0, 0.0)
+FLOAT_CAPTURE_RENDERER mobile / llvmpipe (LLVM 19.1.7, 256 bits)
+FLOAT_CAPTURE_FIXTURES {"lift":{"contact_peak":0.212251110903992,"contact_time":8.35000000000017,"peak_time":10.2000000000001,"return_time":12.8583333333332,"seed":3,"signature":"lift","video_start":7.43333333333352},"sink":{"contact_peak":0.352837155061204,"contact_time":5.98333333333342,"peak_time":7.95000000000018,"return_time":10.0333333333334,"seed":2,"signature":"sink","video_start":5.14166666666674},"soft":{"contact_peak":0.267450658473179,"contact_time":6.52500000000011,"peak_time":8.97500000000013,"return_time":12.4999999999999,"seed":1,"signature":"soft","video_start":5.05000000000007},"travel":{"contact_peak":0.376304754163741,"contact_time":28.974999999999,"peak_time":32.9666666666654,"return_time":35.3916666666653,"seed":14,"signature":"travel","video_start":27.1166666666657}}
+FLOAT_CAPTURE human_cast_loading_720x1280 dip=0.0 lift=0.0 drag=(0.0, 0.0)
+FLOAT_CAPTURE human_cast_release_720x1280 dip=0.0 lift=0.0 drag=(0.0, 0.0)
+FLOAT_CAPTURE human_reel_720x1280 dip=0.84675855650167 lift=0.0 drag=(0.004082, -0.006126)
+FLOAT_CAPTURE human_reel_720x1584 dip=0.84675855650167 lift=0.0 drag=(0.004082, -0.006126)
+FLOAT_CAPTURE human_fight_load_720x1280 dip=0.84675855650167 lift=0.0 drag=(0.004082, -0.006126)
+HUMAN_CAPTURE_FIGHT_OUTCOME state=7 time=29.7833333333323
+FLOAT_CAPTURE human_lift_720x1280 dip=0.84675855650167 lift=0.0 drag=(0.004082, -0.006126)
+FLOAT_CAPTURE human_landing_720x1280 dip=0.84675855650167 lift=0.0 drag=(0.004082, -0.006126)
+FLOAT_CAPTURE float_construction_inspection_720x1280 dip=0.0 lift=0.0 drag=(0.0, 0.0)
+FLOAT_CAPTURE float_guide_top_720x1280 dip=0.0 lift=0.0 drag=(0.0, 0.0)
+FLOAT_CAPTURE float_guide_bottom_720x1280 dip=0.0 lift=0.0 drag=(0.0, 0.0)
+FLOAT_CAPTURE_COMPLETE frames=104 sources_unchanged=true output=/workspace/scratch/c16084497664/farshore-fishing-restored/build/human-recast-final
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)
