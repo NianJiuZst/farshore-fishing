@@ -10,6 +10,7 @@ signal location_error(region_id: String, spot_id: String, message: String)
 const WATER_SHADER = preload("res://assets/shaders3d/river_water.gdshader")
 const FOLIAGE_SHADER = preload("res://assets/shaders3d/foliage.gdshader")
 const RIPPLE_SHADER = preload("res://assets/shaders3d/ripple.gdshader")
+const FLOAT_SHADER = preload("res://assets/shaders3d/float_lacquer.gdshader")
 const REED_SHADER = preload("res://assets/shaders3d/shore_reeds.gdshader")
 const ROCK_SHADER = preload("res://assets/shaders3d/rock_surface.gdshader")
 const HDR_SKY_SHADER = preload("res://assets/shaders3d/hdr_sky.gdshader")
@@ -22,6 +23,12 @@ const LANDING_DURATION: float = 3.35
 const REFERENCE_CAMERA_ASPECT: float = 720.0 / 1280.0
 const FLOAT_VIEW_OFFSET := Vector3(0.34, 1.16, 3.05)
 const FLOAT_VIEW_FOV: float = 43.0
+# All float dimensions are metres. Local y=0 is the shotted neutral waterline.
+# The 11.4cm sight tip projects to about 53px in the fixed 720px-wide water view.
+const FLOAT_TIP_TOP: float = 0.114
+const FLOAT_DIP_TRAVEL: float = 0.18
+const FLOAT_LIFT_TRAVEL: float = 0.09
+const FLOAT_LINE_EYE := Vector3(0, -0.161, 0.0015)
 const FishModels = preload("res://scripts/fish_3d_registry.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const GEAR_VISUALS: Array[Dictionary] = [
@@ -106,7 +113,12 @@ var _rod_tip: Vector3 = Vector3.ZERO
 var _line: MeshInstance3D
 var _line_material: StandardMaterial3D
 var _bobber: Node3D
-var _bobber_target: Vector3 = Vector3(-0.9, 0.04, -9.0)
+var _float_materials: Dictionary = {}
+var _float_meniscus: MeshInstance3D
+var _float_wake: MeshInstance3D
+var _float_last_surface_position := Vector3.ZERO
+var _float_surface_tracking: bool = false
+var _bobber_target: Vector3 = Vector3(-0.9, 0.0, -9.0)
 var _cast_origin: Vector3
 var _cast_camera_origin: Vector3
 var _cast_camera_target_origin: Vector3
@@ -203,6 +215,8 @@ func set_location(region_value: String, spot_value: String) -> bool:
 	if not _replace_location_geometry(region_value, spot_value): return false
 	cancel_landing()
 	_bobber.visible = false
+	_float_meniscus.visible = false
+	_float_wake.visible = false
 	_line.visible = false
 	presentation_state = "lobby" if mode == "lobby" else "ready"
 	_play_character("idle")
@@ -377,6 +391,8 @@ func set_mode(value: String) -> void:
 		presentation_state = "lobby"
 		cast_in_progress = false
 		_bobber.visible = false
+		_float_meniscus.visible = false
+		_float_wake.visible = false
 		_line.visible = false
 		if _fish_root: _fish_root.visible = false
 		_play_character("idle")
@@ -480,6 +496,8 @@ func _session_changed(value: int) -> void:
 			cast_in_progress = false
 			presentation_state = "lobby" if mode == "lobby" else "ready"
 			_bobber.visible = false
+			_float_meniscus.visible = false
+			_float_wake.visible = false
 			_line.visible = false
 			_fish_root.visible = false
 			_play_character("idle")
@@ -494,7 +512,7 @@ func _session_changed(value: int) -> void:
 				_play_character("wait")
 		Session.State.NIBBLE, Session.State.BITE:
 			# No reveal, camera cut, animation change or splash announces a hook.
-			# Only the continuous, species-dependent float motion gives evidence.
+			# Only continuous fish/bait/rig-dependent float motion gives evidence.
 			presentation_state = "bite" if value == Session.State.BITE else "nibble"
 			_fish_root.visible = false
 		Session.State.FIGHT:
@@ -506,6 +524,8 @@ func _session_changed(value: int) -> void:
 		Session.State.ESCAPED:
 			presentation_state = "escaped"
 			_bobber.visible = false
+			_float_meniscus.visible = false
+			_float_wake.visible = false
 			_line.visible = false
 			_fish_root.visible = false
 			_play_character("idle")
@@ -523,9 +543,12 @@ func _begin_cast() -> void:
 	_cast_camera_fov_origin = _camera_base_vertical_fov
 	_bobber.scale = Vector3.ONE
 	_bobber.rotation = Vector3.ZERO
+	_float_surface_tracking = false
 	var charge: float = clampf(session.charge, 0.0, _rod_visual_reach) if session else 0.5
-	_bobber_target = Vector3(-0.72 + charge * 0.5, 0.035, -7.0 - charge * 5.0)
+	_bobber_target = Vector3(-0.72 + charge * 0.5, 0.0, -7.0 - charge * 5.0)
 	_bobber.visible = false
+	_float_meniscus.visible = false
+	_float_wake.visible = false
 	_line.visible = false
 	_fish_root.visible = false
 	_play_character("cast", false)
@@ -533,9 +556,15 @@ func _begin_cast() -> void:
 func _process(delta: float) -> void:
 	if not _built or _suspended: return
 	# Presentation and AnimationPlayer share real elapsed time, including slow frames.
-	# The core Session independently clamps simulation steps.
+	# The core Session preserves elapsed time with independent fixed steps.
 	_time += delta
-	_water_material.set_shader_parameter("motion_time", _time)
+	# The same authoritative clock moves water and the observed float. Rendering
+	# cannot add oscillations that suggest a bite while the session is still.
+	var observing: bool = session != null and _state in [Session.State.WAITING, Session.State.NIBBLE, Session.State.BITE] and not cast_in_progress
+	_water_material.set_shader_parameter("motion_time", session.float_clock if observing else _time)
+	_float_meniscus.visible = false
+	_float_wake.visible = false
+	if not observing: _set_float_water_material(false, 0.0)
 	for material: ShaderMaterial in _foliage_materials: material.set_shader_parameter("motion_time", _time)
 	_update_effects(delta)
 	if _rain and _rain.visible: _rain.position = camera.position + Vector3(0, 5.0, -3.0)
@@ -560,7 +589,7 @@ func _update_cast(delta: float) -> void:
 		_bobber.position = _cast_origin.lerp(_bobber_target, p) + Vector3.UP * sin(p * PI) * 2.6
 		_bobber.rotation.z = sin(p * PI) * -0.55
 		if p >= 1.0 and not _cast_impact_emitted:
-			# The 7cm float makes a small surface ring, not fish-sized spray.
+			# The narrow float makes a small surface ring, not fish-sized spray.
 			# This remains separate from the unchanged breach/surge splashes.
 			_cast_impact_emitted = true
 			_spawn_ripple(_bobber_target, 0.10, 1.0, 0.28)
@@ -577,15 +606,22 @@ func _update_fishing(_delta: float) -> void:
 		_bobber.visible = true
 		_line.visible = true
 		_fish_root.visible = false
-		# A small, physically sized float remains readable in the same water view.
-		# Its motion is simulation-driven, not a looping state-specific animation.
+		# A weighted antenna float: calm water leaves a vertical calibrated tip;
+		# unloaded shot exposes lower bands; a sustained pull takes the tip under.
+		# Both fish travel and ambient current come from the encounter model.
 		var dip: float = session.float_dip if session else 0.0
 		var lift: float = session.float_lift if session else 0.0
 		var drag: Vector2 = session.float_drag if session else Vector2.ZERO
+		var current: Vector2 = session.float_current if session else Vector2.ZERO
 		var tilt: float = session.float_tilt if session else 0.0
-		var water_drift := Vector3(sin(_time * 0.77) * 0.018, sin(_time * 1.37) * 0.004, cos(_time * 0.59) * 0.012)
-		_bobber.position = _bobber_target + water_drift + Vector3(drag.x, lift * 0.035 - dip * 0.105, drag.y)
-		_bobber.rotation = Vector3(tilt * 0.24, 0, tilt + sin(_time * 1.91) * 0.045)
+		var clock: float = session.float_clock if session else 0.0
+		var horizontal: Vector2 = Vector2(_bobber_target.x, _bobber_target.z) + current + drag
+		var water_height: float = _water_surface_height(horizontal, clock)
+		_bobber.position = Vector3(horizontal.x, water_height + lift * FLOAT_LIFT_TRAVEL - dip * FLOAT_DIP_TRAVEL, horizontal.y)
+		var direction: Vector2 = drag.normalized() if drag.length_squared() > 0.00001 else Vector2.ZERO
+		_bobber.rotation = Vector3(direction.y * absf(tilt), 0, -direction.x * absf(tilt)) if direction != Vector2.ZERO else Vector3(0, 0, tilt)
+		_set_float_water_material(true, water_height)
+		_update_float_surface(_delta, water_height)
 	elif _state == Session.State.FIGHT and session:
 		var p: float = clampf(session.progress, 0.0, 1.0)
 		var warning: float = session.surge_warning
@@ -631,11 +667,11 @@ func _update_landing(delta: float) -> void:
 	_line.visible = true
 	_bobber.rotation = Vector3.ZERO
 	_bobber.scale = Vector3.ONE
-	_bobber.position = _fish_mouth_world() + Vector3.UP * 0.085
+	_bobber.position = _fish_mouth_world() + Vector3.UP * 0.215
 	if _fish_id == "chinese_sturgeon":
 		# Route around the rostrum rather than passing through the head on the
 		# way to its ventral mouth. Guide scales with the actual specimen.
-		_bobber.position = _sturgeon_leader_guide_world() + Vector3.UP * (0.085 + _fish_length * 0.11)
+		_bobber.position = _sturgeon_leader_guide_world() + Vector3.UP * (0.215 + _fish_length * 0.11)
 	if t >= LANDING_DURATION:
 		var result: Dictionary = _landing_record.duplicate(true)
 		_landing_time = -1.0
@@ -1036,9 +1072,12 @@ func _line_danger() -> float:
 	return maxf(smoothstep(0.70, 0.98, session.tension), smoothstep(0.48, 0.90, session.line_wear))
 
 func _update_line() -> void:
-	var end: Vector3 = _bobber.to_global(Vector3(0, 0.057, 0))
+	var end: Vector3 = _bobber.to_global(FLOAT_LINE_EYE)
 	var sag: float = 0.11 if presentation_state in ["fight", "landing", "landed"] else 0.35
 	var danger: float = _line_danger()
+	if presentation_state in ["waiting", "nibble", "bite"] and session:
+		# Directional travel tightens the same physical line continuously.
+		sag = lerpf(0.35, 0.07, clampf(session.float_drag.length() / 0.40, 0.0, 1.0))
 	if presentation_state == "fight" and session:
 		sag = lerpf(0.20, 0.018, clampf(session.tension + session.surge_warning * 0.18, 0, 1))
 	_line_material.albedo_color = Color(0.57, 0.66, 0.62, 0.80).lerp(Color(0.86, 0.82, 0.66, 0.92), danger * 0.65)
@@ -1053,8 +1092,6 @@ func _update_line() -> void:
 	if presentation_state in ["landing", "landed"] and _fish != null:
 		# One continuous line through the float eye, then a short leader to the
 		# real mouth attachment. The float no longer masquerades as the hook.
-		points.append(_bobber.to_global(Vector3(0, -0.015, 0)))
-		radii.append(radii[-1])
 		if _fish_id == "chinese_sturgeon":
 			var leader_start: Vector3 = points[-1]
 			var guide: Vector3 = _sturgeon_leader_guide_world()
@@ -1072,18 +1109,161 @@ func _build_bobber() -> void:
 	_bobber = Node3D.new()
 	_bobber.name = "BuoyantFloat"
 	add_child(_bobber)
-	for i in range(3):
-		var part := MeshInstance3D.new()
-		var shape := SphereMesh.new()
-		shape.radius = [0.010, 0.010, 0.0025][i]
-		shape.height = [0.030, 0.025, 0.032][i]
-		shape.radial_segments = 16
-		shape.rings = 10
-		part.mesh = shape
-		part.position.y = [0.0, 0.014, 0.041][i]
-		part.material_override = _material(Color("c45436") if i != 1 else Color("fff1c4"), 0.4)
-		_bobber.add_child(part)
+	var lacquer := _material(Color("66402b"), 0.24)
+	lacquer.clearcoat_enabled = true
+	lacquer.clearcoat = 0.65
+	lacquer.clearcoat_roughness = 0.22
+	var carbon := _material(Color("202826"), 0.34)
+	var ivory := _material(Color("fff1c6"), 0.42)
+	var vermilion := _material(Color("ff572c"), 0.38)
+	var yellow := _material(Color("dfec56"), 0.40)
+	var black := _material(Color("161c19"), 0.38)
+	var brass := _material(Color("b69a57"), 0.26, 0.55)
+	# Slender lacquered balsa body, shaped as a genuine solid of revolution.
+	_float_part("LacqueredBalsaBody", _float_profile_mesh(PackedVector2Array([
+		Vector2(-0.089, 0.0016), Vector2(-0.085, 0.004), Vector2(-0.077, 0.010),
+		Vector2(-0.064, 0.015), Vector2(-0.052, 0.0165), Vector2(-0.041, 0.0155),
+		Vector2(-0.031, 0.012), Vector2(-0.023, 0.007), Vector2(-0.018, 0.0035)
+	])), lacquer)
+	_float_cylinder("CarbonKeel", -0.156, -0.086, 0.00125, carbon)
+	_float_cylinder("LowerFerrule", -0.091, -0.084, 0.0023, brass)
+	_float_cylinder("ShoulderFerrule", -0.020, -0.015, 0.0038, brass)
+	_float_cylinder("SightAntennaCore", -0.026, 0.111, 0.0033, ivory)
+	# Alternating paint bands are actual opaque cylindrical geometry. The lower
+	# cream/red bands are hidden at rest and appear as the fish unloads the shot.
+	var bands: Array[Dictionary] = [
+		{"name":"LiftIvory", "bottom":-0.016, "top":-0.002, "mat":ivory},
+		{"name":"LiftRed", "bottom":-0.002, "top":0.014, "mat":vermilion},
+		{"name":"WaterlineBlack", "bottom":0.014, "top":0.020, "mat":black},
+		{"name":"LowerIvory", "bottom":0.020, "top":0.034, "mat":ivory},
+		{"name":"LowerBlack", "bottom":0.034, "top":0.040, "mat":black},
+		{"name":"YellowSight", "bottom":0.040, "top":0.057, "mat":yellow},
+		{"name":"UpperBlack", "bottom":0.057, "top":0.063, "mat":black},
+		{"name":"UpperIvory", "bottom":0.063, "top":0.077, "mat":ivory},
+		{"name":"TipBlack", "bottom":0.077, "top":0.083, "mat":black},
+		{"name":"OrangeTip", "bottom":0.083, "top":0.111, "mat":vermilion}
+	]
+	for band: Dictionary in bands:
+		_float_cylinder(str(band.name), float(band.bottom), float(band.top), 0.0036, band.mat)
+	var cap := SphereMesh.new()
+	cap.radius = 0.0036
+	cap.height = 0.006
+	cap.radial_segments = 16
+	cap.rings = 8
+	_float_part("RoundedTipCap", cap, vermilion, Vector3(0, 0.111, 0))
+	var eye := TorusMesh.new()
+	eye.inner_radius = 0.0022
+	eye.outer_radius = 0.0036
+	eye.rings = 16
+	eye.ring_segments = 8
+	var eye_part: MeshInstance3D = _float_part("StainlessLineEye", eye, _material(Color("bcc8c2"), 0.23, 0.8), FLOAT_LINE_EYE)
+	eye_part.rotation.x = PI * 0.5
+	_float_cylinder("EyeWhipping", -0.158, -0.150, 0.0017, ivory)
 	_bobber.visible = false
+	# Small, lit water geometry. It follows shaft intersection and actual travel;
+	# it neither glows nor reacts to hidden nibble/bite state changes.
+	_float_meniscus = MeshInstance3D.new()
+	_float_meniscus.name = "FloatSurfaceMeniscus"
+	_float_meniscus.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	var contact_mesh := TorusMesh.new()
+	contact_mesh.inner_radius = 0.88
+	contact_mesh.outer_radius = 1.0
+	contact_mesh.rings = 32
+	contact_mesh.ring_segments = 6
+	_float_meniscus.mesh = contact_mesh
+	var water_film := _material(Color(0.56, 0.64, 0.55, 0.24), 0.28)
+	water_film.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_float_meniscus.material_override = water_film
+	_float_meniscus.visible = false
+	add_child(_float_meniscus)
+	_float_wake = MeshInstance3D.new()
+	_float_wake.name = "FloatDirectionalWake"
+	_float_wake.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_float_wake.material_override = water_film.duplicate()
+	_float_wake.visible = false
+	add_child(_float_wake)
+
+func _float_part(label: String, mesh: Mesh, material: Material, at: Vector3 = Vector3.ZERO) -> MeshInstance3D:
+	var part := MeshInstance3D.new()
+	part.name = label
+	part.mesh = mesh
+	var material_key: int = material.get_instance_id()
+	if not _float_materials.has(material_key):
+		var paint: StandardMaterial3D = material as StandardMaterial3D
+		var shader_material := ShaderMaterial.new()
+		shader_material.shader = FLOAT_SHADER
+		shader_material.set_shader_parameter("paint_color", paint.albedo_color)
+		shader_material.set_shader_parameter("paint_roughness", paint.roughness)
+		shader_material.set_shader_parameter("paint_metallic", paint.metallic)
+		shader_material.set_shader_parameter("lacquer_amount", paint.clearcoat if paint.clearcoat_enabled else 0.0)
+		_float_materials[material_key] = shader_material
+	part.material_override = _float_materials[material_key]
+	part.position = at
+	# Subpixel shadow flicker would become a false visual bite signal.
+	part.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_bobber.add_child(part)
+	return part
+
+func _set_float_water_material(at_surface: bool, water_height: float) -> void:
+	for material: ShaderMaterial in _float_materials.values():
+		material.set_shader_parameter("at_water_surface", at_surface)
+		material.set_shader_parameter("water_height", water_height)
+
+func _float_cylinder(label: String, bottom: float, top: float, radius: float, material: Material) -> void:
+	var shape := CylinderMesh.new()
+	shape.top_radius = radius
+	shape.bottom_radius = radius
+	shape.height = top - bottom
+	shape.radial_segments = 16
+	_float_part(label, shape, material, Vector3(0, (top + bottom) * 0.5, 0))
+
+func _float_profile_mesh(profile: PackedVector2Array) -> ArrayMesh:
+	var points := PackedVector3Array()
+	var radii := PackedFloat32Array()
+	for point: Vector2 in profile:
+		points.append(Vector3(0, point.x, 0))
+		radii.append(point.y)
+	return _tube_mesh(points, radii, 24)
+
+func _water_surface_height(at: Vector2, clock: float) -> float:
+	# Exact analytic displacement used by river_water.gdshader. Session force
+	# signals are relative to this surface; float_water_height is not added twice.
+	var warp: float = sin(at.x * 0.47 - at.y * 0.29 + clock * 0.22) * 0.85 + sin(at.y * 0.71 + at.x * 0.12) * 0.31
+	var height: float = sin(at.dot(Vector2(0.87, 0.38)) * 2.1 + clock * 1.05 + warp) * 0.006
+	height += sin(at.dot(Vector2(-0.67, 0.74)) * 3.7 - clock * 1.43 + warp * 0.72) * 0.004
+	height += sin(at.dot(Vector2(0.55, -0.81)) * 7.4 + clock * 1.73 + sin(at.x * 1.7) * 0.4) * 0.002
+	return height * (1.45 if weather in ["rain", "wind", "storm"] else 0.7)
+
+func _update_float_surface(delta: float, water_height: float) -> void:
+	var axis: Vector3 = _bobber.basis.y
+	var shaft_height: float = (water_height - _bobber.position.y) / maxf(0.35, axis.y)
+	var surface_position: Vector3 = _bobber.position + axis * shaft_height
+	surface_position.y = water_height + 0.002
+	var velocity := Vector3.ZERO
+	if _float_surface_tracking and delta > 0.0:
+		velocity = (surface_position - _float_last_surface_position) / delta
+		velocity.y = 0.0
+	_float_last_surface_position = surface_position
+	_float_surface_tracking = true
+	var contact: bool = shaft_height < FLOAT_TIP_TOP and shaft_height > -0.089
+	_float_meniscus.visible = contact
+	_float_meniscus.position = surface_position
+	var radius: float = 0.0052 if shaft_height >= -0.018 else lerpf(0.006, 0.017, clampf((-shaft_height - 0.018) / 0.035, 0.0, 1.0))
+	_float_meniscus.scale = Vector3(radius, 0.0018, radius)
+	var speed: float = velocity.length()
+	_float_wake.visible = contact and speed > 0.008
+	if not _float_wake.visible: return
+	var trailing: Vector3 = -velocity.normalized()
+	var side: Vector3 = trailing.cross(Vector3.UP)
+	var length: float = clampf(speed * 0.65, 0.008, 0.11)
+	var points := PackedVector3Array([
+		surface_position + trailing * length + side * (length * 0.28 + radius),
+		surface_position + side * radius,
+		surface_position - side * radius,
+		surface_position + trailing * length - side * (length * 0.28 + radius)
+	])
+	_float_wake.mesh = _tube_mesh(points, PackedFloat32Array([0.0003, 0.0008, 0.0008, 0.0003]), 4)
+	(_float_wake.material_override as StandardMaterial3D).albedo_color.a = clampf(speed * 1.1, 0.025, 0.20)
 
 func _ensure_fish(record: Dictionary) -> bool:
 	var id: String = str(record.get("species_id", record.get("id", "")))
