@@ -512,8 +512,12 @@ func _test_main_integration() -> void:
 	var back: Button = _find_button(ui._overlay, "返回钓点")
 	_check(back != null and ui._overlay is FishingFailureModal,"failure modal has its visible return action")
 	if back: back.pressed.emit()
-	await create_timer(0.22).timeout
-	await process_frame
+	# Input draining deliberately uses wall time. The preceding CPU-heavy
+	# matrix can make a new SceneTreeTimer consume the old long frame delta,
+	# so wait on the actual UI outcome instead of a simulated timer duration.
+	var drain_deadline: int = Time.get_ticks_msec()+1000
+	while ui._screen == "escape" and Time.get_ticks_msec()<drain_deadline:
+		await process_frame
 	_check(ui.session.state == Session.State.IDLE and ui._screen == "","failure return drains old input then restores playable idle")
 	ui._action_down()
 	for tick: int in 15: ui.session.step(0.05)
