@@ -21,6 +21,9 @@ const CAST_DURATION: float = 2.20
 const RELEASE_TIME: float = 1.20
 const LANDING_DURATION: float = 3.35
 const REFERENCE_CAMERA_ASPECT: float = 720.0 / 1280.0
+const FISHING_CAMERA_POSITION := Vector3(1.1, 3.7, 6.2)
+const FISHING_CAMERA_TARGET := Vector3(-1.3, 0.55, -4.5)
+const FISHING_CAMERA_FOV: float = 51.0
 const FLOAT_VIEW_OFFSET := Vector3(0.34, 1.16, 3.05)
 const FLOAT_VIEW_FOV: float = 43.0
 # All float dimensions are metres. Local y=0 is the shotted neutral waterline.
@@ -539,6 +542,14 @@ func _begin_cast() -> void:
 	_cast_finished_emitted = false
 	_cast_impact_emitted = false
 	presentation_state = "casting"
+	# A player can recast immediately after a failed take or a close landing.
+	# Establish the authored windup view at this explicit cast action so a short
+	# charge cannot preserve the previous water/landing camera and hide the angler.
+	camera.position = FISHING_CAMERA_POSITION
+	_camera_target = FISHING_CAMERA_TARGET
+	_camera_base_vertical_fov = FISHING_CAMERA_FOV
+	camera.fov = _reference_horizontal_fov(FISHING_CAMERA_FOV)
+	camera.look_at(_camera_target)
 	_cast_camera_origin = camera.position
 	_cast_camera_target_origin = _camera_target
 	_cast_camera_fov_origin = _camera_base_vertical_fov
@@ -690,9 +701,9 @@ func _update_camera(delta: float) -> void:
 	var target_goal: Vector3 = Vector3(-1.5, 1.05, -1.7)
 	var fov_goal: float = 54.0
 	if mode == "fishing":
-		position_goal = Vector3(1.1, 3.7, 6.2)
-		target_goal = Vector3(-1.3, 0.55, -4.5)
-		fov_goal = 51.0
+		position_goal = FISHING_CAMERA_POSITION
+		target_goal = FISHING_CAMERA_TARGET
+		fov_goal = FISHING_CAMERA_FOV
 	var observe_float: bool = presentation_state in ["waiting", "nibble", "bite"]
 	if observe_float:
 		position_goal = _bobber_target + FLOAT_VIEW_OFFSET

@@ -51,7 +51,8 @@ func run() -> void:
 	var record: Dictionary = app.encounter.make_individual(app.catalog.fish["common_carp"], "lake_shore", "lake", "worm", 2, "day", "clear")
 	var fixtures: Dictionary = find_fixtures(record)
 	print("FLOAT_CAPTURE_FIXTURES ", JSON.stringify(fixtures))
-	for signature: String in ["lift", "sink", "travel", "soft"]:
+	var signatures: Array[String] = [] if "--human-only" in OS.get_cmdline_user_args() else ["lift", "sink", "travel", "soft"]
+	for signature: String in signatures:
 		var fixture: Dictionary = fixtures[signature]
 		begin_fixture(record, int(fixture.seed))
 		tick(3.3)
@@ -124,12 +125,29 @@ func begin_fixture(record: Dictionary, seed_value: int) -> void:
 	app.store.begin_session(app.session.session_id)
 func capture_human_fishing(record: Dictionary, seed_value: int) -> void:
 	begin_fixture(record, seed_value)
+	tick(3.3)
+	# Exercise the real failure-modal dismissal followed by a50ms charge. This
+	# used to retain the close water camera and hide the whole cast windup.
+	app._action_down()
+	app._action_up()
+	assert(app._screen == "escape")
+	app._overlay.dismiss_requested.emit()
+	app._action_down()
+	tick(0.05)
+	app._action_up()
+	assert(app.scenery.cast_in_progress)
 	for frame: int in 44:
 		tick(0.05)
 		await movie_frame("human_cast")
 		if frame == 17: await capture("human_cast_loading_720x1280")
 		if frame == 26: await capture("human_cast_release_720x1280")
 	tick(1.1)
+	app._action_down()
+	app._action_up()
+	assert(app._screen == "escape")
+	app._overlay.dismiss_requested.emit()
+	begin_fixture(record, seed_value)
+	tick(3.3)
 	# A visible sustained load chooses the strike. No hidden BITE/possession
 	# state, elapsed wait, species, future timing or RNG drives this reader.
 	var held_signal: float = 0.0
