@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "retrieved_utc": "2026-10-03",
+  "tool": {
+    "name": "MPFB",
+    "version": "2.0.17 source",
+    "repository": "https://github.com/makehumancommunity/mpfb2",
+    "commit": "afb9f530a7c2741dedb8df0ebae2e0b183caec21",
+    "code_license": "GPL-3.0-or-later",
+    "asset_license": "CC0-1.0",
+    "source_code_in_game": false
+  },
+  "source_pack": {
+    "url": "https://files.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+    "sha256": "b542127a8e25547c7c29c19f2d1d2adb9a664c80396ecd694095dbc8028a0107",
+    "license": "CC0-1.0"
+  },
+  "base_mesh": {
+    "path": "src/mpfb/data/3dobjs/base.obj",
+    "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "license": "CC0-1.0"
+  },
+  "selected_asset_files": [
+    {
+      "path": "skins/middleage_caucasian_male/middleage_caucasian_male.mhmat",
+      "bytes": 1469,
+      "sha256": "113326b7670cb273610314b91e2597b228711adf5f0666660b16fef269bfbe72",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "skins/middleage_caucasian_male/middleage_lightskinned_male_diffuse.png",
+      "bytes": 3668589,
+      "sha256": "3f94f3f6a5cab92dedf5cce392a87332312fc435f1cb44c6e7b897daef9a5fbb",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyes/low-poly/low-poly.mhclo",
+      "bytes": 1344,
+      "sha256": "68582e28e9176cba7cfcf35208f671b6201b8d1bc95c32decff61a3160ec34d8",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyes/low-poly/low-poly.obj",
+      "bytes": 6604,
+      "sha256": "783fe1e6331162c876520b4c2bed7a8ca06354ca15497e8ebd68bb1b59f4d3de",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyebrows/eyebrow001/eyebrow001.mhclo",
+      "bytes": 9141,
+      "sha256": "54c8892c2ba577f4152d779ce1f20f7cd323beb8cbd9cb701796165c221b4f5b",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyebrows/eyebrow001/eyebrow001.mhmat",
+      "bytes": 1098,
+      "sha256": "976e5f4f1d3922d7a11c6e2db233f8b4584b068d00619d5749687e81c92d61fc",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyebrows/eyebrow001/eyebrow001.obj",
+      "bytes": 8227,
+      "sha256": "88b13146395133f3901715e11706cdfd293e5d6087ad7c5e01efe1485a26b513",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyebrows/eyebrow001/eyebrow001.png",
+      "bytes": 89619,
+      "sha256": "9940f7d0b1b223709a19b05156ba6f6e9e4dbdbced02d7574f4d51d72c58967b",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "hair/short02/short02.mhclo",
+      "bytes": 119240,
+      "sha256": "625736cdb73e6d094df6e5a2df18f371781f1d2cd37b0ae15795c5d7051c3ec2",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "hair/short02/short02.mhmat",
+      "bytes": 1323,
+      "sha256": "2ed04c8aad9c1a35d858ca72091525d32b1da3b61b5a031634dd528fd8530f6d",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "hair/short02/short02.obj",
+      "bytes": 139742,
+      "sha256": "48f979114adfa712165a69cc55c45a70831af1fb3cba8e2a89120f0c87407b64",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "hair/short02/short02_diffuse.png",
+      "bytes": 3553543,
+      "sha256": "47fe33831a3929567c733356dd66243116e05df2ace1f884ddca0080b728229f",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "hair/short02/short02_normal.png",
+      "bytes": 1626745,
+      "sha256": "2cfac7619f8eec77dd90df979d912415058f4f0fc16940cba40a8eb1ae6d74b5",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/male_casualsuit05/male_casualsuit05.mhclo",
+      "bytes": 217422,
+      "sha256": "df41c9fba3da054e35b964706ad2f8d189e65cc00a45f4a34f65235946f647f0",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/male_casualsuit05/male_casualsuit05.mhmat",
+      "bytes": 1396,
+      "sha256": "e29fdf895bfc03ebf49f1fcb784cd41cfd8cf95beba4a0a54bc95c084b9b9528",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/male_casualsuit05/male_casualsuit05.obj",
+      "bytes": 261223,
+      "sha256": "6069dd8b828591c16f74678c235387954775b815b5b77640d24fb7c9541b85c2",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/male_casualsuit05/male_casualsuit05_ao.png",
+      "bytes": 1724222,
+      "sha256": "cf22b778ce3d2c92cf0c5e7eef2bcc2a0d9812e578d4c08a4bb428eb33eacc66",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/male_casualsuit05/male_casualsuit05_diffuse.png",
+      "bytes": 3345738,
+      "sha256": "d4345efe9332c23e9302f5a3bca8c895004be841b5ebea593c96189870e3852a",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/male_casualsuit05/male_casualsuit05_normal.png",
+      "bytes": 9295328,
+      "sha256": "aec19a8fa1988aa178e7ead9f9c0b290fc441ed62ce47d5c4dd611a0037a796c",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/shoes02/shoes02.mhclo",
+      "bytes": 110217,
+      "sha256": "0d447fd6b7415d6b2603e91697336ee51ac2f00ef85878d6667e9acfb45a20fe",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/shoes02/shoes02.mhmat",
+      "bytes": 1184,
+      "sha256": "7f2cb19506784fbe22ba3f766f94bb13d1eee1712dd29ed10b926c5905bab924",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/shoes02/shoes02.obj",
+      "bytes": 125457,
+      "sha256": "5726aabac42ff489998d0a769545dea013961bbb71b9c6024d75170181a98818",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "clothes/shoes02/shoes02_diffuse.png",
+      "bytes": 1282057,
+      "sha256": "efef94ea34b0e0c2283095cb47a9e0389b55449c61a4f4972d0ad4d2bf06b4f0",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyes/materials/brown.mhmat",
+      "bytes": 1247,
+      "sha256": "4abad93ce50541c08127721e77bce035640c9f16bed16cd0f5524b1cd5908465",
+      "license": "CC0-1.0"
+    },
+    {
+      "path": "eyes/materials/brown_eye.png",
+      "bytes": 610817,
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+      "license": "CC0-1.0"
+    }
+  ],
+  "notes": [
+    "Source asset inventory includes source diffuse/normal/AO maps; only shader-connected textures are exported.",
+    "Source meshes, clothing fit data, selected texture assets and macro targets are preserved in the packed editable source derivative.",
+    "No third-party reference photographs, MPFB program source, executable tools, or complete downloaded asset archive are redistributed."
+  ],
+  "derived_files": [
+    {
+      "path": "art_masters/3d/angler_human_source.blend",
+      "bytes": 30031656,
+      "sha256": "3c236f16bbc0a82e135875d491af80891f604f5d577838f3ae55e97bee9e7595"
+    },
+    {
+      "path": "art_masters/3d/angler.blend",
+      "bytes": 36288380,
+      "sha256": "2a3a517a9dfa4625fa95a7702a55f24f6d70a95323f9658348fadf4a5cca1e53"
+    },
+    {
+      "path": "game/assets/3d/angler.glb",
+      "bytes": 24469596,
+      "sha256": "fe62840133b8668044a23bc7aaf83b3964d249c88193f5a5c543371f5bac4d1a"
+    }
+  ],
+  "runtime_contract": {
+    "sha256": "fe62840133b8668044a23bc7aaf83b3964d249c88193f5a5c543371f5bac4d1a",
+    "bytes": 24469596,
+    "meshes": 1,
+    "geometry_sha256": "2677b8cfea30d0c3bd9652b5951a3a97d85780ddb39b3c5a6e08eac6d1f01030",
+    "primitive_vertex_counts": [
+      8938,
+      518,
+      537,
+      1794,
+      18092,
+      10337
+    ],
+    "skins": 1,
+    "bones": 30,
+    "weighted_primitives": 6,
+    "required_clips": [
+      "idle",
+      "cast",
+      "wait",
+      "reel",
+      "lift"
+    ],
+    "animations": [
+      "cast",
+      "idle",
+      "lift",
+      "reel",
+      "wait"
+    ],
+    "embedded_images": 7
+  },
+  "derived_texture_files": [
+    {
+      "path": "game/assets/3d/angler_brown_eye.png",
+      "bytes": 610817,
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+      "license": "CC0-1.0",
+      "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+      "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    },
+    {
+      "path": "game/assets/3d/angler_eyebrow001.png",
+      "bytes": 89619,
+      "sha256": "9940f7d0b1b223709a19b05156ba6f6e9e4dbdbced02d7574f4d51d72c58967b",
+      "license": "CC0-1.0",
+      "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+      "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    },
+    {
+      "path": "game/assets/3d/angler_male_casualsuit05_diffuse.png",
+      "bytes": 3345738,
+      "sha256": "d4345efe9332c23e9302f5a3bca8c895004be841b5ebea593c96189870e3852a",
+      "license": "CC0-1.0",
+      "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+      "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    },
+    {
+      "path": "game/assets/3d/angler_male_casualsuit05_normal.png",
+      "bytes": 9295328,
+      "sha256": "aec19a8fa1988aa178e7ead9f9c0b290fc441ed62ce47d5c4dd611a0037a796c",
+      "license": "CC0-1.0",
+      "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+      "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    },
+    {
+      "path": "game/assets/3d/angler_middleage_lightskinned_male_diffuse.png",
+      "bytes": 3668589,
+      "sha256": "3f94f3f6a5cab92dedf5cce392a87332312fc435f1cb44c6e7b897daef9a5fbb",
+      "license": "CC0-1.0",
+      "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+      "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    },
+    {
+      "path": "game/assets/3d/angler_shoes02_diffuse.png",
+      "bytes": 1282057,
+      "sha256": "efef94ea34b0e0c2283095cb47a9e0389b55449c61a4f4972d0ad4d2bf06b4f0",
+      "license": "CC0-1.0",
+      "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+      "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    },
+    {
+      "path": "game/assets/3d/angler_short02_diffuse.png",
+      "bytes": 3553543,
+      "sha256": "47fe33831a3929567c733356dd66243116e05df2ace1f884ddca0080b728229f",
+      "license": "CC0-1.0",
+      "source_url": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+      "derivation": "Godot extracts the unmodified embedded source image from angler.glb"
+    }
+  ]
+}

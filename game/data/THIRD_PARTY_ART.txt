@@ -15,7 +15,7 @@ https://polyhaven.com/a/brown_planks_03
 许可声明：https://creativecommons.org/publicdomain/zero/1.0/
 
 保留作者信息以便追溯；不把这些第三方素材声明为本项目独占原创。
-没有安装或运行Poly Haven插件。人物、鱼、环境几何、骨骼与动画由本项目制作。
+没有安装或运行Poly Haven插件。鱼与场景几何、角色适配及钓鱼骨骼动画由本项目制作。角色基础网格、服装、皮肤及配件来源见下。
 模型与贴图构成真实3D场景；PNG历史插画和界面图标不冒充3D模型。
 
 其余软件与字体许可见对应Godot、Noto文件。
@@ -29,3 +29,15 @@ Unmodified 2K diffuse, OpenGL normal and roughness textures.
 44种鱼的透明高清插画由本项目使用图像生成模型制作并逐一检查，属于近写实插画，不是真实野生动物照片。
 仅用于图鉴、收藏、详情、放大及钓获结算，水中游动、搏鱼、出水和起鱼仍使用原生3D模型。
 完整原图、提示词、逐种形态参考和修订记录见源码 art_masters/fish_photoreal_v2；运行资源与量尺锚点清单见 data/fish_art.json。
+
+1.2.0 正式版写实角色
+角色基础网格、服装、皮肤及配件：MakeHuman Community（CC0 1.0）
+角色适配、权重调整与钓鱼动画：本项目制作
+采用 MPFB 的 hm08 人体基础网格，以及 MakeHuman 系统素材包中的
+middleage_caucasian_male、low-poly eyes / brown、eyebrow001、short02、male_casualsuit05、shoes02。
+原素材权利人：Data Collection AB、Joel Palmius、Jonas Hauquier / MakeHuman Team
+MPFB 工具代码采用 GPLv3；本游戏不包含该工具代码。其基础数据、系统素材及生成输出采用 CC0 1.0，允许修改、商用与源码再分发。
+许可：https://github.com/makehumancommunity/mpfb2/blob/afb9f530a7c2741dedb8df0ebae2e0b183caec21/LICENSE.md
+系统素材：https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html
+CC0：https://creativecommons.org/publicdomain/zero/1.0/
+完整逐文件来源、哈希和制作说明见源码 docs/ASSETS_3D_ANGLER_LICENSES.md、ASSETS_3D_ANGLER_PROVENANCE.json。

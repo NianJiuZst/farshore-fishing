@@ -1,0 +1,50 @@
+{
+  "triangles": 57380,
+  "bones": 30,
+  "materials": 6,
+  "textures": [
+    {
+      "name": "brown_eye.png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "name": "eyebrow001.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "name": "male_casualsuit05_diffuse.png",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "male_casualsuit05_normal.png",
+      "width": 4096,
+      "height": 4096
+    },
+    {
+      "name": "middleage_lightskinned_male_diffuse.png",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "shoes02_diffuse.png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "name": "short02_diffuse.png",
+      "width": 2048,
+      "height": 2048
+    }
+  ],
+  "glb_bytes": 24469596,
+  "clips": {
+    "idle": 3.2,
+    "cast": 2.2,
+    "wait": 4.0,
+    "reel": 2.0,
+    "lift": 2.0
+  }
+}
