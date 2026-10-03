@@ -1,0 +1,38 @@
+COMMAND: python3 tools/render_godot.py --timeout 1200 -- --path game --rendering-method mobile --rendering-driver vulkan --script /workspace/scratch/c16084497664/farshore-fishing-restored/build/beta3-final-native/capture_final.gd -- --short
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+CAPTURE home_zero
+CAPTURE prepare_zero
+CAPTURE travel_zero
+CAPTURE gear_zero
+CAPTURE gear_baits
+CAPTURE catalog_zero
+INPUT_AFTER touch_image screen=species
+INPUT_AFTER mouse_image screen=species
+CAPTURE species_zero
+CAPTURE favorites_zero
+CAPTURE settings
+CAPTURE about
+CAPTURE hud_idle
+STATS_BASELINE count=3 max_length_id=audit_0_catch max_weight_id=audit_1_catch first_id=audit_0_catch last_id=audit_2_catch
+CAPTURE species_known
+CAPTURE species_known_records
+CAPTURE favorites_known
+BACK_AFTER favorites_species_zoom_chain=PASS
+CAPTURE catalog_known
+CAPTURE empty_cast
+CAPTURE hud_fight
+CAPTURE result
+CAPTURE result_protected
+CAPTURE result_protected_actions
+CAPTURE result_save_error
+CAPTURE pause
+SETTINGS_BACK_AFTER toggle_about_back=pause
+CAPTURE lobby_exit
+CAPTURE home_tall_final
+CAPTURE lobby_exit_tall_final
+BETA3_AFTER_COMPLETE /workspace/scratch/c16084497664/farshore-fishing-restored/game/../build/beta3-final-native/screens
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

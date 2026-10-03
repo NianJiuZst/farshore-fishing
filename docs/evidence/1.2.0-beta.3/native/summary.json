@@ -1,0 +1,38 @@
+{
+  "passed": false,
+  "runtime_unchanged": false,
+  "runtime_changes": [
+    "game/tests/core_tests.gd",
+    "game/tests/slice3d_tests.gd"
+  ],
+  "runtime_files": 1084,
+  "results": [
+    {
+      "name": "ui_iteration_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 192.76,
+      "log": "build/beta3-final-native/ui_iteration_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": [
+        "UI_ITERATION_TESTS: 82/82 passed; failures=0; physical=(720, 1584) logical=(720.0, 1584.0); production Main + viewport touch; not Android hardware"
+      ]
+    },
+    {
+      "name": "visual_review_vulkan",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 136.0,
+      "log": "build/beta3-final-native/visual_review_vulkan.log",
+      "errors": [],
+      "warnings": [
+        "WARNING: 7 RIDs of type \"Texture\" were leaked."
+      ],
+      "summary_lines": []
+    }
+  ],
+  "scope": "Native desktop software Mobile/Vulkan on final beta3 runtime; isolated save fixtures; not Android installation, physical touch or FPS proof"
+}

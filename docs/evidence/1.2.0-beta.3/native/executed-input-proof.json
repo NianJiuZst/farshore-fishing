@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "production_and_executed_native_inputs_unchanged": true,
+  "bound_files": 1082,
+  "native_checks_passed": true,
+  "native_ui_journey_assertions": 82,
+  "unexecuted_tests_changed_during_native_job": [
+    "game/tests/core_tests.gd",
+    "game/tests/slice3d_tests.gd"
+  ],
+  "explanation": "Original native summary keeps its conservative whole-tree stability failure. Only these two unrelated headless-test files changed; neither native harness loads them. Every production input and executed native-test file is byte-identical before/after and at final complete headless freeze. The corrected headless22-suite rerun passes independently.",
+  "native_test_sha256": "54280d1b886250746afe1d74297dffaa2393baf65effea74076df45f660550df",
+  "capture_script_sha256": "a072d8e7685abff215a30e8c22c439616ca81abccaf646f64da41c63d5dc669e"
+}

@@ -1,0 +1,8 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+UI_ITERATION_JOURNEYS: literal-beta2-read, real-empty/slack/break + Back/focus/retry, catalog-filter/image/zoom/Back + favorites-origin, pending-result/details/Back/release-once, pause/settings-toggle/About/Back/same-session, home-progress-width, lobby-exit/Back/continue-only
+UI_ITERATION_TESTS: 82/82 passed; failures=0; physical=(720, 1280) logical=(720.0, 1280.0); production Main + viewport touch; not Android hardware
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

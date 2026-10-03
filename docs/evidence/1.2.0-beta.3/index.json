@@ -1,0 +1,361 @@
+{
+  "date_utc": "2026-10-03",
+  "runtime_files": 1084,
+  "runtime_freeze_commit": "161891e271580c8c6d6b052c32987c2aa9065a1f",
+  "all22_headless_suites_passed": true,
+  "tall_ui_suites_passed": true,
+  "native_executed_input_proof": {
+    "passed": true,
+    "production_and_executed_native_inputs_unchanged": true,
+    "bound_files": 1082,
+    "native_checks_passed": true,
+    "native_ui_journey_assertions": 82,
+    "unexecuted_tests_changed_during_native_job": [
+      "game/tests/core_tests.gd",
+      "game/tests/slice3d_tests.gd"
+    ],
+    "explanation": "Original native summary keeps its conservative whole-tree stability failure. Only these two unrelated headless-test files changed; neither native harness loads them. Every production input and executed native-test file is byte-identical before/after and at final complete headless freeze. The corrected headless22-suite rerun passes independently.",
+    "native_test_sha256": "54280d1b886250746afe1d74297dffaa2393baf65effea74076df45f660550df",
+    "capture_script_sha256": "a072d8e7685abff215a30e8c22c439616ca81abccaf646f64da41c63d5dc669e"
+  },
+  "unchanged_from_beta2": {
+    "game/scripts/fishing_session.gd": "3957e67e25bf8fed7eeebc1bbe9e7055dd016ba4fd9fca406c4a3141a39da87a",
+    "game/scripts/fishing_stage_3d.gd": "4a47bff79b5fd174a98d4dedf66434ded625c107f5b92c41905a6451e6582ccf",
+    "game/scripts/save_store.gd": "95c73860775844145bb4be39b37d210eaace7b10419f8039ce9718770205b774"
+  },
+  "android_hardware_verified": false,
+  "files": {
+    "before/catalog_zero.png": {
+      "bytes": 138139,
+      "sha256": "d791f22f7a7fa3bcc64be2b548ebba345cc430b2c62b629623ba2dd8a464d641"
+    },
+    "before/empty_cast.png": {
+      "bytes": 46483,
+      "sha256": "1e64c0b33579b38e38fca6eedc5b999eadb412603c36ae8261e4236011ba6131"
+    },
+    "before/gear_zero.png": {
+      "bytes": 157751,
+      "sha256": "fa62e24ffc7dec123b07d6cfa11423c75c9887c027b84ce0c0ce3ed78de76dc4"
+    },
+    "before/home_zero.png": {
+      "bytes": 1134325,
+      "sha256": "6ceb4fa214c9507f4ab5849df32a27849d51d7711dc250eb8e8fc76bc42700e0"
+    },
+    "before/settings.png": {
+      "bytes": 192438,
+      "sha256": "bb2babaec82237d4bd706b69cb5bd9abdd1d3fb5263a9b9cc2cedf3d0a162d0c"
+    },
+    "focused/beta3-ui-iteration-1280.log": {
+      "bytes": 497,
+      "sha256": "7983485bd8124086aa68dbd2f69ff90e27bc0ce5a8be8c3bbe40830808288b32"
+    },
+    "focused/beta3-ui-iteration-1584.log": {
+      "bytes": 497,
+      "sha256": "756552bd76c5f12554e72b636bb63dd815a2b8e0a54d2863607c3732161c0f0e"
+    },
+    "focused/beta3-ui-iteration-native.log": {
+      "bytes": 787,
+      "sha256": "23b986d30564f2b1f52bac468c5d73429b9b3d536d9e344bd95c2e56f116cabb"
+    },
+    "focused/farshore-notebook-portrait.log": {
+      "bytes": 354,
+      "sha256": "90a6b792b29daeffd338bc8d18a147aa728c3b555a1e1fb778969b6cac8a87d2"
+    },
+    "headless/angler_anatomy.log": {
+      "bytes": 432,
+      "sha256": "ae7687dd3be1cd2c814e4078f2dae61d40cc42554eead35a4890d749f4003eed"
+    },
+    "headless/bait_balance.log": {
+      "bytes": 232,
+      "sha256": "323551a349b170c4263c08c36a1136fb6e4716984c8529690a85087f5fbd9761"
+    },
+    "headless/before_import_sha256.json": {
+      "bytes": 134707,
+      "sha256": "ed6f5ce5474aefae49be339ca28c70866ec90581d089c0937e7bcdf7b541c6bc"
+    },
+    "headless/binary_catalog.json": {
+      "bytes": 45165,
+      "sha256": "1c6b71ce0b901ca4dafe960528cf009459d9e46245fcdcd9761d011012b9a7d8"
+    },
+    "headless/binary_catalog.log": {
+      "bytes": 287,
+      "sha256": "e66da40854c565260386c48637445eeaa00c520543611c0b3afbfff3a50145c3"
+    },
+    "headless/camera_aspect.log": {
+      "bytes": 283,
+      "sha256": "89f957cfd66bd9ed5feefc5f6abda9b368d5fa2f2fb76938025f17b6e799ac21"
+    },
+    "headless/core.log": {
+      "bytes": 2319,
+      "sha256": "59a3178a33bcb43dcc5aed2036e21714ecc0f0753abb5cfe757635cd4b96a168"
+    },
+    "headless/failure_modal.log": {
+      "bytes": 412,
+      "sha256": "711c22390b0c62b342b1e8ed6656a977c2be5192c5abcba828c27baf2883a40e"
+    },
+    "headless/fish_art.log": {
+      "bytes": 280,
+      "sha256": "a8a8c5cd93ede583423e905d4e1ae728fa7ccb55c8e92b914c2530c9dc7ca461"
+    },
+    "headless/fish_art_ui.log": {
+      "bytes": 376,
+      "sha256": "81645f710e7ca2470526debe7abc54dc5811f48a721b0d508ea3622c054b9503"
+    },
+    "headless/fish_preview.log": {
+      "bytes": 208,
+      "sha256": "9dfc4d7e481e3d8d8fdc16f7635be372dd9e47579914447547a2c2f235e6e30e"
+    },
+    "headless/float_observation.log": {
+      "bytes": 365,
+      "sha256": "61a277c0465591e279a8303308d136727522aaeddfd05afeeb69e32a6a310f5c"
+    },
+    "headless/guard_trace.log": {
+      "bytes": 302,
+      "sha256": "23a445e4653fca705acd3f58638fc6baad3503020f58f5444134b13d75c9ac23"
+    },
+    "headless/hazard_boundary.log": {
+      "bytes": 232,
+      "sha256": "48ba5f4b76f51e39470928d958242f104055fbeab80e838d01be4d002dfd8ed4"
+    },
+    "headless/historical_trial.log": {
+      "bytes": 352,
+      "sha256": "854fc971bedcad016223c77da215b5e1b8dba525ecf1f5f2e25dc615dd79788b"
+    },
+    "headless/main_travel.log": {
+      "bytes": 262,
+      "sha256": "e2a5cd47871cf30adba2912562f05ab8aaa2cca725f7c5b8ccb16893e8b89cc7"
+    },
+    "headless/notebook_ui.log": {
+      "bytes": 279,
+      "sha256": "41419e82bd1b726fbd518b1795c8ff95c98d2f617e7e8703696a7e9b784db26e"
+    },
+    "headless/registry.log": {
+      "bytes": 268,
+      "sha256": "99c52926fb21d1c09c4cc2d24bf243f89e4b7638d558982f4cbb241c688a6394"
+    },
+    "headless/runtime_after_sha256.json": {
+      "bytes": 134707,
+      "sha256": "ed6f5ce5474aefae49be339ca28c70866ec90581d089c0937e7bcdf7b541c6bc"
+    },
+    "headless/runtime_before_sha256.json": {
+      "bytes": 134707,
+      "sha256": "ed6f5ce5474aefae49be339ca28c70866ec90581d089c0937e7bcdf7b541c6bc"
+    },
+    "headless/save.log": {
+      "bytes": 913,
+      "sha256": "458c818a1d73cee18d626d2f11b07b70161803d1cdef19fcf6c9be27de0b8e01"
+    },
+    "headless/session_observation.log": {
+      "bytes": 236,
+      "sha256": "5098ff2c5c76e2b8cf3e75b28d21f95839a03ebd4982dbf9c221e0a22f7ab69b"
+    },
+    "headless/slice3d.log": {
+      "bytes": 11866,
+      "sha256": "5c71d22acb0a91461c80bbbfe1f720171417385ab1c6481acdafd55c6ff63219"
+    },
+    "headless/summary.json": {
+      "bytes": 9466,
+      "sha256": "5fc4bb1aa675445bde157bdad8e7270677aef37fe16e3641aaa7a35982862ea8"
+    },
+    "headless/tackle.log": {
+      "bytes": 326,
+      "sha256": "b65ce68b1d58e9f68a4037e9fed4367f0d49975a920608b2c0a0362b530b8ae4"
+    },
+    "headless/touch.log": {
+      "bytes": 1057,
+      "sha256": "17c856febe5cb755fd5706859483c8d8090aececf0e561fddb7561926a99b4aa"
+    },
+    "headless/ui_iteration.log": {
+      "bytes": 599,
+      "sha256": "fe75a21e3210b41bd2cd6eae9a828f1fa6ce1eed941876c4aa64985026fcc2f1"
+    },
+    "headless/ui_style.log": {
+      "bytes": 2763,
+      "sha256": "48e1f6b516e38a5dd10a7bf38f95a172c6c749aa4c7493a1126269dab58d8f94"
+    },
+    "native/capture_final.gd": {
+      "bytes": 7092,
+      "sha256": "a072d8e7685abff215a30e8c22c439616ca81abccaf646f64da41c63d5dc669e"
+    },
+    "native/executed-input-proof.json": {
+      "bytes": 849,
+      "sha256": "a5cec77795fd9867c3a0b2d9513c4715fe28fcc66987a93339d370129f8ff0db"
+    },
+    "native/runtime_after_sha256.json": {
+      "bytes": 134707,
+      "sha256": "a5658804a7fe612a0440730b4cc94a11872d49dc82147850a462242923f34758"
+    },
+    "native/runtime_before_sha256.json": {
+      "bytes": 134707,
+      "sha256": "c7011e5f8d7efbea9346990534c525530ca65b05960e65aa5ee7182333b9a74c"
+    },
+    "native/summary.json": {
+      "bytes": 1145,
+      "sha256": "8828f64e86684783a1efc6ea054297941922baf523d37f2b151819ba3dfede23"
+    },
+    "native/ui_iteration_vulkan.log": {
+      "bytes": 961,
+      "sha256": "17768d55006d2d373b2034bc68feaad8db86ae23c425cd69facd0f8682e83c3f"
+    },
+    "native/visual_review_vulkan.log": {
+      "bytes": 1545,
+      "sha256": "702ba28d21aae0ea556f1d0035f03034d29abc63921e4cdee0db1c81179e4c5e"
+    },
+    "packaging-preparation/packaging-regressions.log": {
+      "bytes": 1901,
+      "sha256": "92801f8e2053ed5418da24ac25f7bcbe45e62570e59ea40fc6e7a6a81292708c"
+    },
+    "packaging-preparation/source-contract.json": {
+      "bytes": 2658,
+      "sha256": "23731cbd18b6dccd295599fd3d5789b323814532a2b23954c145d66e768eafad"
+    },
+    "screenshots/about.png": {
+      "bytes": 80409,
+      "sha256": "a4a3fb1bcdabcf23f0189a763118654b81de0c01e592ae3ce420ee28b6135117"
+    },
+    "screenshots/catalog_known.png": {
+      "bytes": 101415,
+      "sha256": "d963a7d622eae9d1ab0d999b35d9c15605eea306116b3c2cde107c4114b61acc"
+    },
+    "screenshots/catalog_zero.png": {
+      "bytes": 101755,
+      "sha256": "ecce4b8411e934a31376df2ea0d9603acfdd1d3b9357b94ba0cf5305aa88c8d5"
+    },
+    "screenshots/empty_cast.png": {
+      "bytes": 962380,
+      "sha256": "840b5732cf702176cadaa8372327ac59ec7541ab1ac971562360a930de4716bb"
+    },
+    "screenshots/favorites_known.png": {
+      "bytes": 101827,
+      "sha256": "8688b7a0f4c4093213675b6a077c20b211200baa212d2b7eb5a369e656ccd5c9"
+    },
+    "screenshots/favorites_zero.png": {
+      "bytes": 64557,
+      "sha256": "56d765ce5e8ee75086076e70bc85790a7f4a7acbd4f035e79f622208bee3b49c"
+    },
+    "screenshots/gear_baits.png": {
+      "bytes": 127599,
+      "sha256": "8e1cbbe34d490dffe4f469a0899cd274db95309f46b7914bff03da639bcb74fd"
+    },
+    "screenshots/gear_zero.png": {
+      "bytes": 116205,
+      "sha256": "f1b58a0a6f08ca64a87f0df78373cb87d72672cba9b3dc2a96b72220378ad310"
+    },
+    "screenshots/home_tall_final.png": {
+      "bytes": 1533105,
+      "sha256": "e04be76de48a3ed51de966ac4bf80e21abd9b4167515a413441fdf4b7fd496a2"
+    },
+    "screenshots/home_zero.png": {
+      "bytes": 915455,
+      "sha256": "476ad5ef93d55866866de985ca72f8669fd4ee396d96ec54f14cf14d475e55ee"
+    },
+    "screenshots/hud_fight.png": {
+      "bytes": 1285807,
+      "sha256": "6786bbe482341c53aeda4f843d7d98df52c2b4408962f63e4bdb56afcb4dd087"
+    },
+    "screenshots/hud_idle.png": {
+      "bytes": 1310062,
+      "sha256": "e3edce8cb37c9a3bcdeee2aa13cb11d2052f48b5c626cc530746b19cdce9096e"
+    },
+    "screenshots/lobby_exit.png": {
+      "bytes": 990739,
+      "sha256": "383540f67fcc2b4d0ac4db0f415420391eecca70025f4f45abdfbc8857bdaee6"
+    },
+    "screenshots/lobby_exit_tall_final.png": {
+      "bytes": 1207550,
+      "sha256": "d687d72df948ecc0c4585fb48fdf4a222adc9d6d6cbbf94a12eb07d7bd828015"
+    },
+    "screenshots/pause.png": {
+      "bytes": 65994,
+      "sha256": "02904165371784dc0341f6b5b8cdb348041ca4acba97037ee8ef386e24b1a87b"
+    },
+    "screenshots/prepare_zero.png": {
+      "bytes": 316118,
+      "sha256": "feebeb97c3947a3a7cce2487bebe9751c8fef038b9891c3f163b38069618b275"
+    },
+    "screenshots/result.png": {
+      "bytes": 286144,
+      "sha256": "11dc7295efd43f5edf4edfde01f3230328c1cb1bf4ae4c1213ca20424a09c75b"
+    },
+    "screenshots/result_protected.png": {
+      "bytes": 196415,
+      "sha256": "f4e7beb45e5f4c4ea44394c4c98ed2772733a86019dd57ad0a17159ab474d466"
+    },
+    "screenshots/result_protected_actions.png": {
+      "bytes": 196415,
+      "sha256": "f4e7beb45e5f4c4ea44394c4c98ed2772733a86019dd57ad0a17159ab474d466"
+    },
+    "screenshots/result_save_error.png": {
+      "bytes": 277174,
+      "sha256": "e3ee5fe93be49d5fa736cad2777204b1e1ed436a759ad54920240a91d16fac3f"
+    },
+    "screenshots/settings.png": {
+      "bytes": 87316,
+      "sha256": "bade7e7ffc07729f4d70706149b0a839fedb6a91553669f293bd15c294a81e6b"
+    },
+    "screenshots/species_known.png": {
+      "bytes": 287804,
+      "sha256": "cd6954f4124182e7ef6d7e438810d1ad1244c73e889fb7475794b130af7c4fde"
+    },
+    "screenshots/species_known_records.png": {
+      "bytes": 112297,
+      "sha256": "72aa067ff89ebe149c4068794285b5be0fc43d5b4387415749c4e2332892f6b8"
+    },
+    "screenshots/species_zero.png": {
+      "bytes": 254982,
+      "sha256": "2a9f8fe38c3a7f0ca8c56873d4c77b3328555cb196bf557bf905ff0f6ef69c00"
+    },
+    "screenshots/travel_zero.png": {
+      "bytes": 702794,
+      "sha256": "5d474c715dae4e60384331c98364e799854b97f9e48e8f182ed28cfbdd5c4c13"
+    },
+    "tall/before_import_sha256.json": {
+      "bytes": 134707,
+      "sha256": "c7011e5f8d7efbea9346990534c525530ca65b05960e65aa5ee7182333b9a74c"
+    },
+    "tall/binary_catalog.json": {
+      "bytes": 45165,
+      "sha256": "1c6b71ce0b901ca4dafe960528cf009459d9e46245fcdcd9761d011012b9a7d8"
+    },
+    "tall/binary_catalog.log": {
+      "bytes": 283,
+      "sha256": "c0918daff7988e13523423bd9e26c2d44f1fb7cbcbd5572cc797c059d69398f2"
+    },
+    "tall/failure_modal.log": {
+      "bytes": 422,
+      "sha256": "ac0c2d1cedcffa5508c7a8b402f705ec399e12b5c6c67eb9c05b4f6b154ada9c"
+    },
+    "tall/fish_art_ui.log": {
+      "bytes": 386,
+      "sha256": "d905a6965685f692411cdffe451f9cd533a59786781d77a03f7b4556f08ef7ee"
+    },
+    "tall/notebook_ui.log": {
+      "bytes": 289,
+      "sha256": "da62921368198f75281705fad37aaae30b170b2f53343ce34c0720b411c9b28f"
+    },
+    "tall/runtime_after_sha256.json": {
+      "bytes": 134707,
+      "sha256": "c7011e5f8d7efbea9346990534c525530ca65b05960e65aa5ee7182333b9a74c"
+    },
+    "tall/runtime_before_sha256.json": {
+      "bytes": 134707,
+      "sha256": "c7011e5f8d7efbea9346990534c525530ca65b05960e65aa5ee7182333b9a74c"
+    },
+    "tall/summary.json": {
+      "bytes": 3828,
+      "sha256": "3a5d579d76af91d9020b7e8659aaa9bffd8967e897b6fe654234475380578577"
+    },
+    "tall/touch.log": {
+      "bytes": 1064,
+      "sha256": "b86bf9fce63cb185c23d085b626edd5e74d8a3b3f4e089edb5cf9d112d0cc99d"
+    },
+    "tall/ui_iteration.log": {
+      "bytes": 609,
+      "sha256": "f45b0303a9abf462fff96edda3861745d021b831731d7714c245590cdccd9abc"
+    },
+    "tall/ui_style.log": {
+      "bytes": 2773,
+      "sha256": "af7321732ce2c82f5e210910adb6cb7b95a8b3d8129b7ff5752a33987768f02d"
+    }
+  }
+}

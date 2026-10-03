@@ -1,0 +1,18 @@
+test_exact_preview_identity_and_legacy_default (__main__.PackagingTests.test_exact_preview_identity_and_legacy_default) ... ok
+test_official_template_manifest_fail_closed (__main__.PackagingTests.test_official_template_manifest_fail_closed) ... ok
+test_raw_payload_copy_with_git_timestamp_and_utf8 (__main__.PackagingTests.test_raw_payload_copy_with_git_timestamp_and_utf8) ... ok
+test_sdk_symlink_mode_hash_roundtrip (__main__.PackagingTests.test_sdk_symlink_mode_hash_roundtrip) ... ok
+test_source_roundtrip_reuse_changed_added_and_corruption (__main__.PackagingTests.test_source_roundtrip_reuse_changed_added_and_corruption) ... ok
+test_vulkan_types_exact_reversal_and_rejection (__main__.PackagingTests.test_vulkan_types_exact_reversal_and_rejection) ... ok
+test_archive_requires_all44_originals_and_derivatives (__main__.PhotoPackagingTests.test_archive_requires_all44_originals_and_derivatives) ... ok
+test_audit_pixel_source_geometry_target_and_completeness_fail_closed (__main__.PhotoPackagingTests.test_audit_pixel_source_geometry_target_and_completeness_fail_closed) ... ok
+test_beta3_ui_export_remaps_payloads_and_source_hashes_fail_closed (__main__.PhotoPackagingTests.test_beta3_ui_export_remaps_payloads_and_source_hashes_fail_closed) ... ok
+test_beta3_ui_sources_are_required (__main__.PhotoPackagingTests.test_beta3_ui_sources_are_required) ... ok
+test_complete_source_import_and_stripped_export_roundtrip (__main__.PhotoPackagingTests.test_complete_source_import_and_stripped_export_roundtrip) ... ok
+test_export_missing_retargeted_stale_and_static_ui_fail_closed (__main__.PhotoPackagingTests.test_export_missing_retargeted_stale_and_static_ui_fail_closed) ... ok
+test_source_manifest_and_png_fail_closed (__main__.PhotoPackagingTests.test_source_manifest_and_png_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.502s
+
+OK

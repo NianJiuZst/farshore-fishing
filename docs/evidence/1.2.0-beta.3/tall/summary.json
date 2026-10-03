@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "selected_suites": [
+    "fish_art_ui",
+    "failure_modal",
+    "notebook_ui",
+    "ui_iteration",
+    "ui_style",
+    "touch"
+  ],
+  "representative_tall_layout": true,
+  "runtime_files": 1084,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "fish_art_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 17.43,
+      "log": "build/beta3-final-tall/fish_art_ui.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "PHOTO_UI_SCOPE: canonical-photoreal-44; production native pages; no release gate override; not Android validation",
+        "FISH_ART_UI_TESTS: 1182/1182 passed; canonical-photoreal-44; (720, 1584) desktop layout"
+      ]
+    },
+    {
+      "name": "failure_modal",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.83,
+      "log": "build/beta3-final-tall/failure_modal.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_FAILURE_MODAL_TESTS: 37/37 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1584) logical=(720.0, 1584.0); not Android hardware testing"
+      ]
+    },
+    {
+      "name": "notebook_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 23.73,
+      "log": "build/beta3-final-tall/notebook_ui.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_NOTEBOOK_UI_TESTS: 313/313 passed; (720, 1584); actual Main + Viewport touch, no Android claim"
+      ]
+    },
+    {
+      "name": "ui_iteration",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 9.89,
+      "log": "build/beta3-final-tall/ui_iteration.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "UI_ITERATION_TESTS: 82/82 passed; failures=0; physical=(720, 1584) logical=(720.0, 1584.0); production Main + viewport touch; not Android hardware"
+      ]
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 20.78,
+      "log": "build/beta3-final-tall/ui_style.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 13694/13694 passed; failures=0; button visits=270; physical viewport=(720, 1584); logical viewport=(720.0, 1584.0)"
+      ]
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 14.13,
+      "log": "build/beta3-final-tall/touch.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1584) logical=(720.0, 1584.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 129/129 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.67,
+      "log": "build/beta3-final-tall/binary_catalog.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 44, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    }
+  ],
+  "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."
+}
