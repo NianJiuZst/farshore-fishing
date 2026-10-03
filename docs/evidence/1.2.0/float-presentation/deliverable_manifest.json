@@ -1,0 +1,44 @@
+{
+  "video": "float_only_20fps_mobile_vulkan.mp4",
+  "sha256": "9ea62f787aa87b4aa44ccc7b0b9b4e3628daca9ee4d7d0ed3164a0afd282ab2d",
+  "bytes": 6592701,
+  "width": 450,
+  "height": 990,
+  "fps": 20,
+  "frames": 542,
+  "duration_seconds": 27.1,
+  "segments": [
+    {
+      "label": "lift",
+      "first_frame": 0,
+      "last_frame": 113,
+      "start_seconds": 0.0,
+      "end_seconds": 5.7
+    },
+    {
+      "label": "sink",
+      "first_frame": 114,
+      "last_frame": 216,
+      "start_seconds": 5.7,
+      "end_seconds": 10.85
+    },
+    {
+      "label": "travel",
+      "first_frame": 217,
+      "last_frame": 387,
+      "start_seconds": 10.85,
+      "end_seconds": 19.4
+    },
+    {
+      "label": "soft",
+      "first_frame": 388,
+      "last_frame": 541,
+      "start_seconds": 19.4,
+      "end_seconds": 27.1
+    }
+  ],
+  "capture_revision": "0bceea0",
+  "scope": "Four separate selected seeded encounters, each shown as a continuous contact/take/return excerpt. Cuts separate examples. Actual desktop Godot4.6.3 Mobile software Vulkan;120Hz simulation sampled20fps; not Android hardware FPS. No added on-screen status labels.",
+  "excluded_tail": "Original646-frame capture also contained104human cast/reel frames. They are deliberately omitted: retained old camera made its cast footage invalid.",
+  "post_capture_fix": "Subsequent stage change resets the windup camera on explicit cast so fast real-UI recasts show the angler. No observation motion, shader or WAIT/NIBBLE/BITE camera logic changed;90/90float observation tests rerun. The original capture-stage hash is therefore historical, not the later release-stage hash."
+}

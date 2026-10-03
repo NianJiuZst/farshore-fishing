@@ -1,0 +1,8 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+RECAST_PROBE failure-dismiss charge=0.05 torso_visible=false behind=true screen=(826.5348, 187.1011) camera=(-0.050402, 1.343532, -5.44318) origin=(-0.050402, 1.343532, -5.44318)
+RECAST_PROBE failure-dismiss windup0.8 charge=0.05 torso_visible=false behind=true screen=(826.5348, 187.1011) camera=(-0.050402, 1.343532, -5.44318) origin=(-0.050402, 1.343532, -5.44318)
+RECAST_PROBE failure-dismiss charge=0.15 torso_visible=false behind=true screen=(1154.326, 161.1432) camera=(-0.061841, 1.671769, -2.104568) origin=(-0.061841, 1.671769, -2.104568)
+RECAST_PROBE failure-dismiss windup0.8 charge=0.15 torso_visible=false behind=true screen=(1154.326, 161.1432) camera=(-0.061841, 1.671769, -2.104568) origin=(-0.061841, 1.671769, -2.104568)
+RECAST_PROBE catch-result dispose/recast charge=0.05 torso_visible=false behind=false screen=(-165.473, 421.8631) camera=(0.040703, 1.830247, 3.02705) origin=(0.040703, 1.830247, 3.02705)
+RECAST_PROBE catch-result windup0.8 charge=0.05 torso_visible=false behind=false screen=(-165.473, 421.8631) camera=(0.040703, 1.830247, 3.02705) origin=(0.040703, 1.830247, 3.02705)

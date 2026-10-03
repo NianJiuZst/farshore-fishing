@@ -51,7 +51,8 @@ func run() -> void:
 	var record: Dictionary = app.encounter.make_individual(app.catalog.fish["common_carp"], "lake_shore", "lake", "worm", 2, "day", "clear")
 	var fixtures: Dictionary = find_fixtures(record)
 	print("FLOAT_CAPTURE_FIXTURES ", JSON.stringify(fixtures))
-	var signatures: Array[String] = [] if "--human-only" in OS.get_cmdline_user_args() else ["lift", "sink", "travel", "soft"]
+	var signatures: Array[String] = ["lift", "sink", "travel", "soft"]
+	if "--human-only" in OS.get_cmdline_user_args(): signatures.clear()
 	for signature: String in signatures:
 		var fixture: Dictionary = fixtures[signature]
 		begin_fixture(record, int(fixture.seed))
