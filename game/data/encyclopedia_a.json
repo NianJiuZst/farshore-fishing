@@ -1,0 +1,1464 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "common_carp",
+      "accepted_scientific_name": "Cyprinus carpio",
+      "taxonomy": {
+        "family_scientific": "Cyprinidae",
+        "family_zh": "鲤科",
+        "genus_scientific": "Cyprinus",
+        "genus_zh": "鲤属",
+        "note": "本条按现行学名处理欧洲普通鲤；长期养殖、杂交和东亚近缘种使旧文献中的“鲤”未必具有完全相同的分类范围。口角的两对须，是辨别它与无须鲫类的重要线索。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 记常见全长31厘米；这是常见长度资料，并未限定成年样本。美国国家公园资料另记当地平均约0.9—1.4千克，不能当作全球成鱼平均值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 129,
+        "length_type": "TL",
+        "text": "数据库收录最大全长129厘米；属于已报道极值，来源摘要未注明该个体的养殖或野生状态。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 40.1,
+        "text": "数据库最大已发表体重40.1千克。与129厘米长度来自不同参考文献，不代表同一尾鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "偏好温暖的低地河流、缓流回水和植被较多的湖泊，常利用软底与浑水环境；",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "现行资料把天然野生范围主要列为黑海、里海和咸海流域；世界许多水域的种群来自人为引入，美国密西西比河也属于引入范围。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "黎明和黄昏活动较强；繁殖时可迁入回水或淹水草地，雌鱼在多尾雄鱼伴随下把黏性卵产在植物等水下物体上。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "成幼鱼都摄食底栖小动物与植物材料，也会吸食水面昆虫。食谱很宽，觅食并不只发生在泥底。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "一尾鱼的跨洋旅程",
+        "text": "19世纪移民把食用鲤的习惯带到北美，推动了美国养殖与放养热潮。国家公园资料记录，密西西比河1883年已在密苏里州汉尼拔和伊利诺伊州昆西捕到鲤。今天看似普通的河中居民，背后其实有一段人类迁徙和食物文化的历史。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Cyprinus carpio — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Cyprinus-carpio.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Common Carp — Mississippi National River & Recreation Area",
+          "publisher": "U.S. National Park Service",
+          "url": "https://home.nps.gov/miss/learn/nature/ascarp_common.htm",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "crucian_carp",
+      "accepted_scientific_name": "Carassius carassius",
+      "taxonomy": {
+        "family_scientific": "Cyprinidae",
+        "family_zh": "鲤科",
+        "genus_scientific": "Carassius",
+        "genus_zh": "鲫属",
+        "note": "这里的欧洲鲫是 Carassius carassius；不能把金鱼或银鲫的体型、繁殖方式和地理记录直接并入本种。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 所列常见全长为15厘米，未注明只统计成鱼；已查资料没有可单独作为普遍成鱼典型体重的数值。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 64,
+        "length_type": "TL",
+        "text": "FishBase 收录最大全长64厘米。它是文献极值，不是普通池塘欧洲鲫的预期大小。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 3,
+        "text": "FishBase 收录最大已发表体重3千克；长度和重量分列，不能拼成同一尾鱼的测量记录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "常栖浅塘、草多的湖泊、牛轭湖与低地河流回水。密集水草既是隐蔽场所，也是繁殖时黏性卵附着的基底。在缺少其他鱼和大型捕食鱼的池塘，它有时会形成数量很高的种群；耐受低氧使这些小水体成为特别重要的栖所。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "原分布横跨欧洲及亚洲北部多条水系，向东达西伯利亚；部分欧洲引入记录可能与银鲫混淆，判断地方记录时须核对物种。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "白天也会取食，但夜间较活跃；缺氧的冰下水域仍可能存活。繁殖季可多次产卵，通常是一尾雌鱼由数尾雄鱼追随。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "食物包括浮游生物、底栖无脊椎动物、植物碎片和有机碎屑，是利用浅水池塘多种食物的杂食者。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "冰下的“酿酒”本领",
+        "text": "2017年的实验研究揭示，欧洲鲫肌肉里的特殊酶系统能把无氧代谢的产物转成乙醇，再经鳃排入水中，从而避免乳酸持续积累。相关酶由复制后的基因演化而来。它依靠体内能源储备度过缺氧期，这种能力有条件和时限，并非可以离水生活。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Carassius carassius — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/270",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Extreme anoxia tolerance in crucian carp and goldfish through neofunctionalization of duplicated genes",
+          "publisher": "Scientific Reports / Fagernes et al. (2017)",
+          "url": "https://www.nature.com/articles/s41598-017-07385-4",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "roach",
+      "accepted_scientific_name": "Rutilus rutilus",
+      "taxonomy": {
+        "family_scientific": "Leuciscidae",
+        "family_zh": "雅罗鱼科",
+        "genus_scientific": "Rutilus",
+        "genus_zh": "拟鲤属",
+        "note": "采用 FishBase 现行雅罗鱼科分类；旧书常把这一类鱼放在广义鲤科。中文同名或近似名不能替代学名鉴定。幼鱼虹膜偏黄，成鱼虹膜可转为深红，腹鳍及臀鳍常为橙红色。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "数据库常见全长25厘米；这是未限定成年阶段的常见长度，不是成熟长度或全球成年平均值。已查来源未给典型成年体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 50.2,
+        "length_type": "TL",
+        "text": "最大已报道全长50.2厘米，来自 FishBase 汇录；并不代表每个水域都能长到这一尺寸。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 1.8,
+        "text": "数据库收录最大已发表体重1.8千克，长度与重量的原始引文不同，分别展示。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "在富营养低地湖泊、中大型河流及回水最丰富，也见于小溪和微咸潟湖；急流河段需要可供躲避和越冬的缓流庇护处。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "广布欧洲与亚洲部分水系，向东达西伯利亚勒拿河流域；伊比利亚等地区并非其普遍天然范围，已有人工引入记录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "幼鱼广泛利用岸边生境。部分湖泊种群冬天迁入相连溪流，另一些个体留湖；这种“部分迁移”并非每尾鱼都采取同样路线。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要摄食底栖无脊椎动物、浮游动物、植物和碎屑；河口或湖中食物供应的差别，可能改变个体利用的栖息地点。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "从鸟的食丸里找回鱼的行踪",
+        "text": "研究者在两个斯堪的纳维亚湖泊为两千多尾拟鲤装上标记，持续跟踪四年，再到鸬鹚栖息地回收被吞食鱼的电子标签。结果显示，冬季迁入溪流的鱼较少被鸬鹚捕食；在湖中停留越久，风险越高。迁移的收益因此有了可以核对的野外证据。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Rutilus rutilus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/Summary/Rutilus-rutilus",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Migration confers survival benefits against avian predators for partially migratory freshwater fish",
+          "publisher": "Lund University / Skov et al., Biology Letters (2013)",
+          "url": "https://portal.research.lu.se/en/publications/migration-confers-survival-benefits-against-avian-predators-for-p/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "rudd",
+      "accepted_scientific_name": "Scardinius erythrophthalmus",
+      "taxonomy": {
+        "family_scientific": "Leuciscidae",
+        "family_zh": "雅罗鱼科",
+        "genus_scientific": "Scardinius",
+        "genus_zh": "红眼鱼属",
+        "note": "现行分类为雅罗鱼科；部分旧文献使用广义鲤科。它与拟鲤外形相近，历史分布资料曾因混淆而出错。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 记常见全长20厘米；新西兰保育部记当地较常见约25厘米，但未注明量长方式。两者均未限定成年阶段，不能当作全球成年平均；典型成年体重仍缺可靠资料。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 61.7,
+        "length_type": "TL",
+        "text": "最大全长61.7厘米；FishBase 与美国地质调查局物种档案均列出该值，后者指向2010年发表的记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "text": "未找到可信的物种最大体重：FishBase 异常显示0.00克；新西兰保育部的“约500克”是地方体型描述，不能冒充全球最大纪录。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "偏好植被丰富的低地河流、回水、牛轭湖与池湖。美国地质调查局也汇集了流水中生长、繁殖良好的群体，不能把本种限定成纯静水鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "天然范围以欧洲至里海、咸海相关流域为主；北美等地为引入。FishBase 特别指出，旧有西伯利亚报道曾把它与拟鲤混淆。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "繁殖时在较暖、平静的近岸水草间产黏性卵。不同栖息地中的繁殖成功率有差异，水草与近岸庇护条件很重要。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "食谱随季节、体型和水温而变，可吃浮游动物、昆虫、水生植物，某些种群还捕食小鱼，并非始终只吃草。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一张会随季节改写的菜单",
+        "text": "尼亚加拉河研究发现，引入的红眼鱼早春较多吃鱼，夏秋随大型水生植物增多而转向植物。美国地质调查局指出，这可能在开阔水域与岸边草带之间建立新的营养转移路径；一种鱼能换菜单，也可能改变它进入的新生态系统。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Scardinius erythrophthalmus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/2951",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Scardinius erythrophthalmus — Great Lakes Species Profile",
+          "publisher": "U.S. Geological Survey / NOAA GLANSIS",
+          "url": "https://nas.er.usgs.gov/queries/GreatLakes/FactSheet.aspx?Species_ID=648",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Rudd facts",
+          "publisher": "New Zealand Department of Conservation",
+          "url": "https://www.doc.govt.nz/nature/pests-and-threats/freshwater-pests/rudd/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "european_perch",
+      "accepted_scientific_name": "Perca fluviatilis",
+      "taxonomy": {
+        "family_scientific": "Percidae",
+        "family_zh": "鲈科",
+        "genus_scientific": "Perca",
+        "genus_zh": "鲈属",
+        "note": "属鲈科鲈属；这里指欧亚的河鲈，不把北美黄鲈 Perca flavescens 的纪录合并进来。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长25厘米，未限定成年阶段。澳大利亚博物馆另记当地常长到40—45厘米、1—2千克；原文未指明量长方式，不能当作全球成年均值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 60,
+        "length_type": "SL",
+        "text": "FishBase 汇录最大标准长60厘米，量至尾鳍基部，不能与含尾鳍的全长直接比较。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 4.8,
+        "text": "数据库最大已发表体重4.8千克。澳大利亚博物馆特别提醒，流传的10.4千克说法缺少官方测量支持，因此不采用。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "从湖泊、中型溪河到河口潟湖都能生活；幼体在开阔水中摄食，许多幼鱼在第一个夏季移向岸边利用底栖食物。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "天然广布欧洲及亚洲北部；澳大利亚约1860年从欧洲引入，如今在其多个南部州已有记录，并非澳洲原生鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "是日间活动的捕食者，日出和日落前后常较活跃。繁殖时可短距离迁移，卵包在长条状卵带中，挂附于水草或水下物体。白色卵带可长达约一米，雌鱼把它绕挂在植物或树枝间，雄鱼在产卵过程中使其受精。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼先吃浮游无脊椎动物，长大后会捕食底栖动物与小鱼；也取食甲壳类、蠕虫、软体动物和昆虫幼虫。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "从欧洲湖泊来到澳大利亚",
+        "text": "河鲈在澳洲被称为 Redfin，名字来自鲜红的下方鳍。澳大利亚博物馆记录它大约在1860年被引入，此后扩散到新南威尔士、维多利亚等地。同一种鱼在欧洲是本土湖泊居民，在另一大陆却有完全不同的人为传播史；看到分布图时，原生与引入两层含义需要分开。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Perca fluviatilis — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/358",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Redfin, Perca fluviatilis",
+          "publisher": "Australian Museum / Mark McGrouther",
+          "url": "https://australian.museum/learn/animals/fishes/redfin-perca-fluviatilis/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "northern_pike",
+      "accepted_scientific_name": "Esox lucius",
+      "taxonomy": {
+        "family_scientific": "Esocidae",
+        "family_zh": "狗鱼科",
+        "genus_scientific": "Esox",
+        "genus_zh": "狗鱼属",
+        "note": "为狗鱼科狗鱼属的白斑狗鱼；同属其他狗鱼的纪录不可直接混用，淡斑深底色是本种常用辨认线索。背鳍靠后。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长为雄性或未定性别40厘米、雌性55厘米，未写明只含成鱼。美国国家公园资料给当地平均约46—64厘米、0.9—2.3千克，适用范围不同。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 150,
+        "length_type": "TL",
+        "text": "数据库另列雌鱼最大全长150厘米；雄性或未定性别记录为叉长137厘米。两种量法、性别范围均不同，不作换算。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 28.4,
+        "text": "FishBase 收录最大已发表体重28.4千克，作为数据库历史报告值，并非本次重新认证的当代垂钓世界纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "常在清澈、长有水草的湖泊、河流缓潭和回水中活动，也能进入波罗的海低盐水。伏击地点与季节水温、溶氧有关。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "广布北半球欧亚大陆和北美多条水系，北美包括五大湖及密西西比河流域；部分欧洲地区的现有种群源于引入。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "多独处并占据活动区域，借水草遮掩后突然加速。春季可进入浅湿地繁殖，夏季较大的个体会寻找更凉且有氧的深水。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "成鱼以鱼为主，也吃蛙和螯虾；同类相食很常见。国家公园资料指出，细长、少硬棘的猎物更容易吞咽。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "跟着温度搬家的伏击者",
+        "text": "冰融时，浅湿地和淹水区升温较早，狗鱼在这里产卵。到了夏末，同一尾大型狗鱼却可能出现在深冷水中：温暖浅水会提高代谢消耗，深处又必须有足够氧气。美国国家公园的观察把这段季节转换串起来，也说明“草边有狗鱼”只是生活史的一部分。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Esox lucius — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/258",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Northern Pike — Mississippi National River & Recreation Area",
+          "publisher": "U.S. National Park Service",
+          "url": "https://home.nps.gov/miss/learn/nature/northern-pike.htm",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "common_bream",
+      "accepted_scientific_name": "Abramis brama",
+      "taxonomy": {
+        "family_scientific": "Leuciscidae",
+        "family_zh": "雅罗鱼科",
+        "genus_scientific": "Abramis",
+        "genus_zh": "欧鳊属",
+        "note": "按当前分类列雅罗鱼科欧鳊属；旧称广义鲤科。它不是中国常说的鳊属 Parabramis 鱼类。高而侧扁的身体、灰暗的鳍和很长的臀鳍，是成鱼外形的醒目组合。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 汇录常见全长25厘米，没有限定成年鱼；本次核查未找到可统一概括各地成鱼的典型体重，故不补猜。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 82,
+        "length_type": "TL",
+        "text": "FishBase 记最大全长82厘米，属于报道极值。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 6,
+        "text": "数据库最大已发表体重6千克；最大长度、体重分别来自不同文献，不能认定属于同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "成鱼栖于多种湖泊与中大型河流，在温暖浅湖、缓流下游、回水及微咸河口较丰富；幼鱼先利用静水，部分一两岁的个体再进入河流觅食。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "原生于欧洲多数水系，西起法国阿杜尔河、向北达伯朝拉河，亚洲向东至咸海流域；爱尔兰、西班牙部分地区及贝加尔湖等地有引入记录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "常成大群在缓水中移动，伸成管状的口适于摄食。繁殖群体可逆流迁移，雄鱼会守产卵区域，黏性卵附在近岸植被上。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "常吃摇蚊等昆虫、甲壳类、软体动物和植物；幼鱼以浮游动物为主。当浮游动物很丰富时还能转为滤食，较大个体也会吃小鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "湖里少了鱼，可能只是去越冬",
+        "text": "丹麦技术大学自2005年起研究湖鱼的冬季迁移，记录到欧鳊与拟鲤在湖泊的入流、出流溪道聚集，部分个体可在湖外停留数月。参与迁移的比例会逐年变化。因此，冬季湖中采样数量下降，不一定代表整群鱼死亡，也可能需要到相连溪流寻找它们。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Abramis brama — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Abramis-brama",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Birdpredation, fish behavior and fish movements between lakes",
+          "publisher": "Technical University of Denmark / DTU Aqua",
+          "url": "https://orbit.dtu.dk/en/projects/birdpredation-fish-behavior-and-fish-movements-between-lakes-3826/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "tench",
+      "accepted_scientific_name": "Tinca tinca",
+      "taxonomy": {
+        "family_scientific": "Tincidae",
+        "family_zh": "丁鱥科",
+        "genus_scientific": "Tinca",
+        "genus_zh": "丁鱥属",
+        "note": "现行 FishBase 将丁鱥独立列入丁鱥科；旧文献中广义鲤科的归属不在这里继续沿用。细小鳞片深嵌在厚皮中，口角各有一根短须，小眼呈橙红色，尾柄粗短。体色多为橄榄绿色。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长20厘米，未标为只统计成鱼。资料所说成鱼“可长到70厘米”是上限表述，不能拿来充当典型成年尺寸。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 84,
+        "length_type": "TL",
+        "text": "FishBase 正文另收录最大全长84厘米；尺寸栏列最大标准长70厘米。全长含尾鳍，标准长不含，二者保留原量法。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 7.5,
+        "text": "数据库最大已发表体重7.5千克。并未证明它与84厘米长度记录属于同一尾鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "偏好温暖、泥底、密草的浅湖和回水；幼鱼尤其依赖植被，能耐受较低溶氧，冬季常隐在泥中越冬。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "天然范围涵盖欧洲大部分地区，亚洲向东至叶尼塞河西侧流域；爱尔兰及若干其他地区为引入，美国种群也有明确的放养历史。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "在静水密草中繁殖，可多次排出黏性卵。初孵幼体会附着在植物上，先利用卵黄提供能量，之后才进入自由觅食阶段。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "摄食底栖动物、植物材料和碎屑；成鱼常较多捕食软体动物，食物组成与所在水体能提供的底栖资源相关。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "曾被当作新食用鱼推广",
+        "text": "美国地质调查局整理的史料记载，美国鱼类委员会于1877年从德国引入丁鱥，试图作为食用和游钓鱼推广。1886—1896年间放养数量超过13.8万尾，接受鱼苗的州至少有36个，后来官方转而用池塘培育鲈鱼。大规模放养并不意味着各处种群都能一直存续。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Tinca tinca — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/tinca-tinca.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Tench (Tinca tinca) — Species Profile",
+          "publisher": "U.S. Geological Survey, Nonindigenous Aquatic Species Database",
+          "url": "https://nas.er.usgs.gov/queries/factsheet.aspx?speciesid=652",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Ecological Risk Screening Summary — Tench (Tinca tinca)",
+          "publisher": "U.S. Fish and Wildlife Service",
+          "url": "https://www.fws.gov/sites/default/files/documents/Ecological-Risk-Screening-Summary-Tench.pdf",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_horse_mackerel",
+      "accepted_scientific_name": "Trachurus japonicus",
+      "taxonomy": {
+        "family_scientific": "Carangidae",
+        "family_zh": "鲹科",
+        "genus_scientific": "Trachurus",
+        "genus_zh": "竹荚鱼属",
+        "note": "鲹科竹荚鱼属，台湾资料亦写作竹筴鱼。侧线上的硬棱鳞与没有离鳍的特征，有助于和日本鲭区分。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长35厘米，未限定成年样本；18—20厘米是资料中的成熟长度区间，不能替代典型成年大小。未找到通用的成年典型体重。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 50,
+        "length_type": "TL",
+        "text": "数据库收录最大全长50厘米。台湾鱼类资料库也给50厘米，但未在该字段注明量长方式；这里采用 FishBase 的全长标记。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 0.66,
+        "text": "最大已发表体重660克，即0.66千克；这是数据库汇录，与最大长度分别陈列，不认定来自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "生活于近岸与大陆架水域。旧数据库给0—275米范围，2026年东京湾电子标签研究却记录到348米，说明汇总范围会随新观测扩展。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "西北太平洋鱼类，见于日本、朝鲜半岛、中国沿海及台湾；不是凡叫“竹荚鱼”的海域种群都属于这个物种。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成群游泳，幼鱼常伴随漂浮海藻。东京湾追踪个体冬季向深水、春季向浅水移动，白天普遍比夜间游得更深。研究中并非所有个体冬季都会迁至湾口。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "肉食性，以小型甲壳类和小鱼为主；群体会随时间改变所在水层，食物利用也发生在立体的水域中。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "九尾鱼带回的水下日记",
+        "text": "2022年研究者在东京湾放流90尾带记录器的鱼，后来收到11尾的再捕报告，其中9枚记录器提供有效数据，取得延续至2023年的资料；成果于2026年发表。回收鱼放流时叉长25.5—35厘米，较大的个体平均游得更深。少数记录器让人看到岸边银色鱼群背后，原来有季节与昼夜交织的垂直旅程；结果只代表这批追踪个体。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Trachurus japonicus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Trachurus-japonicus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "日本竹筴魚 Trachurus japonicus",
+          "publisher": "中央研究院臺灣魚類資料庫",
+          "url": "https://fishdb.sinica.edu.tw/taxon/381555-fishdb",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Vertical Habitat Use by Japanese Jack Mackerel Trachurus japonicus Inferred From a Biologging Study in Tokyo Bay",
+          "publisher": "Fisheries Oceanography / Kinoshita et al. (2026)",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fog.70035",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "chub_mackerel",
+      "accepted_scientific_name": "Scomber japonicus",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Scomber",
+        "genus_zh": "鲭属",
+        "note": "鲭科鲭属。旧资料中的大西洋“日本鲭”多对应现行 Scomber colias；印度洋北部及红海部分旧记录则属花腹鲭，不能混并。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见叉长30厘米，量至尾鳍叉口，原字段未限定成鱼；它与全长不是同一量法。尚未查得统一的成年典型体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 64,
+        "length_type": "TL",
+        "text": "FishBase 收录最大全长64厘米；NOAA 美国西岸资料所述可达25英寸，约63.5厘米，与这一量级接近。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 2.9,
+        "text": "最大已发表体重2.9千克，来自数据库的独立重量记录；不能据此推算64厘米个体一定多重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "沿岸及大陆架的中上层鱼，也可利用陆坡水域；幼鱼在沙滩外、海藻带和海湾出现，成鱼活动范围从表层到较深水。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "现行《鱼类目录》列其分布在太平洋和印度洋；印度洋部分包括南非、莫桑比克、马达加斯加和印度附近。旧资料中的大西洋种群如今通常归作大西洋鲐 Scomber colias，本条不将东南大西洋计入日本鲐的现行分布。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "很小的幼鱼就开始按相近体型结群，也会与其他小型中上层鱼混群；可分批产卵，卵和仔鱼漂浮于水中。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "吃桡足类等甲壳动物、小鱼和鱿鱼，也会摄食同种幼鱼；它本身又是金枪鱼、鲨鱼、海鸟和海洋哺乳动物的猎物。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "鱼群会随海洋气候移动",
+        "text": "NOAA 记录，美国西岸成鱼夏季北上、冬季南移，厄尔尼诺期间夏季北移尤其明显。该机构也指出，这类小型中上层鱼的数量会自然经历丰年与低谷，海洋条件是重要背景。某年港外鱼群很多，并不能直接推出下一年同一地点也会同样热闹；北美观察也不能直接当作日本每个渔场的日程表。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Scomber japonicus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Scomber_japonicus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Pacific Mackerel",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/pacific-mackerel",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Scomber japonicus — Catalog of Fishes",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Scomber&species=japonicus&tbl=species",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "red_seabream",
+      "accepted_scientific_name": "Pagrus major",
+      "taxonomy": {
+        "family_scientific": "Sparidae",
+        "family_zh": "鲷科",
+        "genus_scientific": "Pagrus",
+        "genus_zh": "真鲷属",
+        "note": "属鲷科真鲷属。鲜鱼体侧常有蓝色小点，尾缘也有特征色带；不能仅凭“红色鲷鱼”的俗称混合不同物种。上下颌前方有锥状齿，两侧有臼齿。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长30厘米；CIESM 物种页列常见10—50厘米，但未给量长方式，也未限定成鱼。因此这些不是只统计成年的平均值或范围。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 100,
+        "length_type": "SL",
+        "text": "FishBase 收录最大标准长100厘米；标准长不包含尾鳍。其他网页的“体长100厘米”未必采用相同量法。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 9.7,
+        "text": "数据库最大已发表体重9.7千克；与最大长度来源不同，不代表同一条纪录鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "主要生活在大陆架沙泥底，也会到岩礁活动，资料汇总深度约10—200米；幼鱼较常使用浅水，成鱼有季节性浅深转换。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "天然分布在西北太平洋，从日本、韩国沿海向南至中国及南海东北部，台湾及澎湖也有记录；地中海出现记录与人工养殖引入有关。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "可群游并随季节迁移，春末、夏季进入较浅海域繁殖。卵与早期仔鱼为浮游阶段，不在礁石缝中筑巢守卵。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要捕食底栖无脊椎动物，包括软体动物、甲壳类、蠕虫和棘皮动物，也吃小鱼；强壮的齿列能处理带硬壳的食物。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "庆典鱼的地中海足迹",
+        "text": "真鲷在日本婚礼、新年和节庆餐桌上受到重视，这使它不仅是渔获，也是文化中的食用鱼。CIESM 还记录，真鲷曾被带到意大利、塞浦路斯与克罗地亚发展海水养殖，亚得里亚海捕到的个体被解释为养殖逃逸鱼。餐桌需求有时会把一种鱼带到离故乡很远的海。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Pagrus major — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Pagrus-major.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "真鯛 Pagrus major",
+          "publisher": "中央研究院臺灣魚類資料庫",
+          "url": "https://fishdb.sinica.edu.tw/taxon/382642-fishdb",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Pagrus major — Atlas of Exotic Fishes in the Mediterranean",
+          "publisher": "CIESM, Mediterranean Science Commission",
+          "url": "https://ciesm.org/atlas_preview/Pagrusmajor.php",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "black_seabream",
+      "accepted_scientific_name": "Acanthopagrus schlegelii",
+      "taxonomy": {
+        "family_scientific": "Sparidae",
+        "family_zh": "鲷科",
+        "genus_scientific": "Acanthopagrus",
+        "genus_zh": "棘鲷属",
+        "note": "Eschmeyer 接受学名拼作 Acanthopagrus schlegelii；一些研究写 schlegeli，引用其生态结果时仍按本条接受名统一。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "所查 FishBase 物种页没有 common length，已读原始研究也未提供可推广的成年典型尺寸。成熟长度与小样本测量都不能代替“成鱼通常多大”。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 50,
+        "length_type": "SL",
+        "text": "FishBase 记最大标准长50厘米，不含尾鳍；这是已发表汇录值，并非全长上限。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 3.2,
+        "text": "数据库最大已发表体重3.2千克，未与50厘米记录绑定；没有把模型推算体重写成实测极值。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "利用海湾、浅岩礁和河口微咸水。广岛湾自然海岸的声学研究中，标记成鱼使用潮间带及邻近12米以浅水域，说明很浅的岸带也重要。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "西太平洋分布，从越南北部、中国大陆和台湾沿海向北至韩国、日本；采用现行分类目录范围，不把所有俗称“黑鲷”的鱼并入。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "广岛湾6尾成鱼的追踪显示，它们常在离岸170米内活动，游于海底上方约1—4米。这是具体地点和有限样本的观察，不是每个种群固定的活动半径。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "FishBase 记录的主要食物包括软体动物和多毛类，属于利用近底层动物资源的鱼。不同水域的食物组成不能只由俗名推断。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "有些黑鲷一生会改变性别",
+        "text": "黑鲷是雄性先熟的鱼类。台湾海洋大学养殖群体的组织研究观察到，部分个体在第三个繁殖季由雄转雌，精巢与生殖通道退化，卵巢和雌性通道继续发育。并不是所有个体都按同一时间表转换；这项研究让性别变化从一句奇闻，变成了可在组织切片中追踪的过程。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Acanthopagrus schlegelii — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Acanthopagrus-schlegelii.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Eschmeyer’s Catalog of Fishes — Acanthopagrus schlegelii",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=15707",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Horizontal movements and home range of black sea bream in the natural coast of Hiroshima Bay",
+          "publisher": "Fisheries Science / Tsuyuki & Umino (2024)",
+          "url": "https://link.springer.com/article/10.1007/s12562-024-01748-3",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Development of the Genital Duct System in the Protandrous Black Porgy",
+          "publisher": "The Anatomical Record / Lee, Huang & Chang (2011)",
+          "url": "https://anatomypubs.onlinelibrary.wiley.com/doi/10.1002/ar.21339",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_seabass",
+      "accepted_scientific_name": "Lateolabrax japonicus",
+      "taxonomy": {
+        "family_scientific": "Lateolabracidae",
+        "family_zh": "花鲈科",
+        "genus_scientific": "Lateolabrax",
+        "genus_zh": "花鲈属",
+        "note": "采用花鲈科花鲈属。斑点花鲈 Lateolabrax maculatus 已被接受为独立种，不能把其大陆沿岸分布、养殖数据直接当成本种资料。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 的 common length 为标准长16.1厘米，但没有限定成年阶段，明显不能据此定义一般成鱼。已查资料未提供可靠统一的成年典型长度或体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 102,
+        "length_type": "TL",
+        "text": "FishBase 最大已报道全长102厘米，为数据库汇录的极值，非普通成鱼平均长度。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 8.7,
+        "text": "最大已发表体重8.7千克；虽与长度指向同一汇编，也没有证据证明两数来自同一尾鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "利用沿岸岩礁、河口和河流。仔鱼从近海产卵区进入岸边育幼环境，部分幼鱼继续上溯淡水，另一些留在海岸水域。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "本条重点采用日本沿岸与河口的实地研究和日本海洋生物数据库记录。旧资料写“日本至南海”，但近缘种拆分后，广域旧记录应逐一复核。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "存在部分迁移：同一种群并非所有鱼都进河。幼鱼可利用大潮差河口的潮流上溯，也可借小潮差河口中的盐水楔移动。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "早期摄食浮游动物，长成后捕食小鱼和虾。河口丰富的猎物可让入河幼鱼快速生长，但环境变化也较大。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "两种童年，共同维持一个种群",
+        "text": "2018年研究综述总结了日本花鲈的多条成长路线：丹后湾成年鱼中，约四成被推定幼时曾把河口当作育幼场，其余主要使用海岸。河口面积小却食物丰富，海岸又提供另一种机会。研究者认为，两条路线并存有助于种群稳定；这不是每尾花鲈都必须“海生河长”的固定剧本。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Lateolabrax japonicus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Lateolabrax_japonicus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Lateolabrax japonicus — BISMaL",
+          "publisher": "Japan Agency for Marine-Earth Science and Technology (JAMSTEC)",
+          "url": "https://www.godac.jamstec.go.jp/bismal/e/view/9005278",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Partial migration of juvenile temperate seabass: a versatile survival strategy",
+          "publisher": "Fisheries Science / Kasai et al. (2018), Hokkaido University repository",
+          "url": "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/72719/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "japanese_whiting",
+      "accepted_scientific_name": "Sillago japonica",
+      "taxonomy": {
+        "family_scientific": "Sillaginidae",
+        "family_zh": "沙鮻科",
+        "genus_scientific": "Sillago",
+        "genus_zh": "沙鮻属",
+        "note": "沙鮻科沙鮻属，中文也常写作鱚科、鱚属。物种以 Sillago japonica 为准，不把其他外形近似的沙鮻合并。它具有两个背鳍，吻部细长而尖。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 记常见标准长22厘米，量至尾鳍基部，未限定只含成鱼。已核资料没有可用的成年典型体重，不能由细长体形猜算。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 30,
+        "length_type": "TL",
+        "text": "数据库数值栏最大全长30厘米，正文另称有超过30厘米的个人通讯记录，但未给准确数值；因此30厘米不是不可超越的生理极限。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "FishBase数值栏"
+      },
+      "max_weight": {
+        "value_kg": null,
+        "text": "所查 FishBase 与台湾鱼类资料库没有可靠的最大已发表体重，保留缺值，不由长度或其他沙鮻物种换算。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "近岸小型底栖鱼，偏好浅海湾和沙滩外的沙底，台湾资料列0—30米。沙质底部同时提供躲藏位置与可捕食的小动物。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "分布在西北太平洋，包括日本、韩国、中国北方沿海和台湾；台湾记录主要在西北沿海与澎湖一带。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "容易受惊，会利用沙底地形藏身。为卵生鱼，馆山湾实地研究显示繁殖季可延续数月，并非所有卵在一次产卵中全部释放。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要寻找沙泥中的多毛类和甲壳类。小口与近底活动方式，适合利用这些藏在底质里的食物。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "把一季繁殖拆成多个批次",
+        "text": "研究者在1993—1995年调查日本馆山湾的日本沙鮻，比较性腺成熟阶段与卵径分布，判断当地繁殖季约在6—10月、8月附近较旺盛。成熟雌鱼体内同时出现不同大小的卵，支持分批产卵的解释。繁殖季与九州等地的资料并不完全一致，提醒我们“夏季产卵”背后还有地方差异。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Sillago japonica — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Sillago-japonica.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "日本沙鮻 Sillago japonica",
+          "publisher": "中央研究院臺灣魚類資料庫",
+          "url": "https://fishdb.sinica.edu.tw/taxon/382628-fishdb",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Reproduction of the Japanese Whiting, Sillago japonica, in Tateyama Bay",
+          "publisher": "Aquaculture Science / Sulistiono, Watanabe & Yokota (1999)",
+          "url": "https://www.jstage.jst.go.jp/article/aquaculturesci1953/47/2/47_2_209/_pdf",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "marbled_rockfish",
+      "accepted_scientific_name": "Sebastiscus marmoratus",
+      "taxonomy": {
+        "family_scientific": "Scorpaenidae",
+        "family_zh": "鲉科",
+        "genus_scientific": "Sebastiscus",
+        "genus_zh": "菖鲉属（石狗公属）",
+        "note": "科级采用 Eschmeyer 的鲉科、平鲉亚科；FishBase 仍把平鲉类单列 Sebastidae，属于分类体系差异。台湾属名为石狗公属。胸鳍宽大，尾鳍圆。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "本次未查到可靠的常见成年尺寸。台湾资料的“体长30厘米”未说明是典型值还是上限，不能写成成鱼平均；典型成年体重亦缺资料。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 36.2,
+        "length_type": "TL",
+        "text": "FishBase 记录最大全长36.2厘米，台湾资料正文也列同值；只作为已报道极值展示。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 2.8,
+        "text": "数据库收录最大已发表体重2.8千克；重量与36.2厘米长度来源不同，明确不把它们拼成同一尾鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "近沿海底栖，活动于岩礁、砾石、珊瑚礁和沙石混合底。台湾资料主要列约2—40米，地区生境描述不是全世界绝对深度界线。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "西太平洋分布，从越南、菲律宾向北至韩国及日本，台湾礁区也有记录；分类目录另记悉尼港引入个体，不能据此说澳洲是原生范围。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "雌鱼产出活的仔鱼，仔鱼随后有浮游阶段；台湾资料把当地繁殖产仔期记为冬季。鳍棘基部具有毒腺，现实接触时应避免被刺伤。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "肉食性，以小鱼及甲壳类为主。它利用的是礁区近底动物资源，不能因为“石狗公”这个俗名而把其他毒鱼食性照搬过来。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "礁底鱼也有漂流的童年",
+        "text": "褐菖鲉并不把卵直接散在海水中完成全部发育。生殖组织研究确认它通过体内受精繁殖，雌鱼之后产出仔鱼。成年鱼常见于近岸礁底，刚出生的仔鱼却要经历浮游阶段；同一种鱼的不同年龄，需要的海洋空间原来可以很不一样。",
+        "source_ids": [
+          "s2",
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Sebastiscus marmoratus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Sebastiscus-marmoratus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "石狗公 Sebastiscus marmoratus",
+          "publisher": "中央研究院臺灣魚類資料庫",
+          "url": "https://fishdb.sinica.edu.tw/taxon/382891-fishdb",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Eschmeyer’s Catalog of Fishes — Sebastiscus marmoratus",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=42370",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "The Testicular Cycle Development of Ovoviviparous Teleost, Sebastiscus marmoratus",
+          "publisher": "Zoological Research / Lin, You & Chen (2000)",
+          "url": "https://www.zoores.ac.cn/article/id/675",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "olive_flounder",
+      "accepted_scientific_name": "Paralichthys olivaceus",
+      "taxonomy": {
+        "family_scientific": "Paralichthyidae",
+        "family_zh": "牙鲆科",
+        "genus_scientific": "Paralichthys",
+        "genus_zh": "牙鲆属",
+        "note": "属牙鲆科牙鲆属。“比目鱼”是许多鲽形目鱼的泛称，不能据此合并其他鲆、鲽的体型纪录或生活史。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "本次查看的 FishBase 与台湾鱼类资料库主要给最大尺寸，没有可靠的常见成年长度或典型体重。103厘米是最大报告值，不用来填补“通常多大”的空白。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 103,
+        "length_type": "TL",
+        "text": "FishBase 收录最大全长103厘米；台湾鱼类资料库也列103厘米，但该站尺寸字段未写明量法。这里使用全长有明确标注的来源。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 9.1,
+        "text": "数据库最大已发表体重9.1千克。它与长度虽引用同一汇编，仍没有同一个体的成对测量证据。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "主要生活在沿岸和大陆架沙泥底海域，资料汇总深度10—200米；生境随发育改变，仔鱼时期与底栖成鱼并不生活在完全相同的空间。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "分布于西太平洋，包括日本、库页岛、千岛群岛、朝鲜半岛至南海相关水域；台湾北部、西南部与澎湖均有资料记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "早期从浮游生活转向底栖生活，同时发生显著变态发育；成鱼双眼在身体左侧，有眼侧有斑纹、盲侧较浅，不能把它理解为一出生就完全扁平的鱼。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "肉食性，主要捕食底栖甲壳类与其他小鱼。大口和明显犬齿与这一食性相配合，而不是用小口滤取水中浮游颗粒。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "眼睛迁移，需要身体一起改造",
+        "text": "牙鲆成长时，一侧眼睛会迁向另一侧，最终两眼同处左面。2000年的实验研究在不同发育阶段改变甲状腺激素条件，发现部分阶段的处理可提前眼迁移、促使延长的鳍条被吸收并加快沉底。外形变化与生活方式转换相互配合，而各组织对激素的敏感时机又不完全一致。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Paralichthys olivaceus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Paralichthys-olivaceus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "牙鮃 Paralichthys olivaceus",
+          "publisher": "中央研究院臺灣魚類資料庫",
+          "url": "https://fishdb.sinica.edu.tw/taxon/382745-fishdb",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Sensitivity of metamorphic events and morphogenesis of Japanese flounder during larval development to thyroxine",
+          "publisher": "Fisheries Science / Yoo, Takeuchi & Seikai (2000)",
+          "url": "https://www.jstage.jst.go.jp/article/fishsci1994/66/5/66_5_846/_article",
+          "accessed": "2026-10-03"
+        }
+      ]
+    }
+  ]
+}

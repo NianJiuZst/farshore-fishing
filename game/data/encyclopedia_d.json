@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "chinese_sturgeon",
+      "accepted_scientific_name": "Acipenser sinensis",
+      "taxonomy": {
+        "family_scientific": "Acipenseridae",
+        "family_zh": "鲟科",
+        "genus_scientific": "Acipenser",
+        "genus_zh": "鲟属",
+        "note": "本条按2026年8月版《鱼类目录》采用鲟属。2025年系统分类研究提出的 Sinosturio sinensis 是另一属级处理，同指中华鲟；它不是长江鲟，也不是白鲟。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "成年体型可参考历史繁殖群体：1994—1999年研究中的雄鱼平均体长约220厘米、103千克，雌鱼约277厘米、213千克。这是已成熟亲鱼的样本均值，不是现今全部野生个体的常见规格；可靠的全种成年常见区间尚未核实。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "max_length": {
+        "value_cm": 500,
+        "length_type": "unspecified",
+        "text": "NOAA状态报告汇总的可达长度为500厘米，原文未明确全长或叉长；这是文献上限描述，不代表典型成鱼。",
+        "source_ids": [
+          "s3"
+        ],
+        "record_label": "NOAA状态报告上限"
+      },
+      "max_weight": {
+        "value_kg": 450,
+        "text": "同一状态报告给出的体重上限为450千克；长度和体重分别记录，不认定两项来自同一尾鱼。",
+        "source_ids": [
+          "s3"
+        ],
+        "record_label": "NOAA状态报告上限"
+      },
+      "habitat": {
+        "text": "一生跨越海洋、河口和淡水大河。大部分生长期在海中度过，成熟后进入长江繁殖；下位口、四根吻须和五列骨板构成醒目的体貌，也反映它贴近底部寻找食物的生活方式。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "历史分布涉及中国多条沿海河流及朝鲜半岛、日本附近海域。NOAA现行物种介绍将主要存留范围列为葛洲坝以下长江和黄海、东海，不能把旧分布记录当成今天仍有稳定种群。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "属于溯河洄游鱼，繁殖准备可跨越一年，产卵后成鱼再回海洋。它成熟较晚，繁殖间隔也长，因此洄游通道、水温与水流改变会影响补充下一代的机会。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "以底栖动物等为食，食谱包括环节动物、甲壳类、软体动物、小鱼和水生昆虫；不宜将它描写成依靠高速追逐或伏击大鱼的猎手。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "在淡水中接续下一代",
+        "text": "中华鲟研究所的研究记载，人工养大的子一代在淡水条件下成熟，2009年繁育成功，随后培育出约1.8万尾子二代鱼苗。这说明人工保护能延续繁殖周期，但不能替代自然江海通道。本作相遇仅作保护观察，结束后放生，不可出售。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Eschmeyer’s Catalog of Fishes：Acipenseridae，sinensis条目（2026-08-13版）",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?family=Acipenseridae&tbl=species",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Chinese Sturgeon",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/chinese-sturgeon",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Meadows & Coll (2013), Status Review Report of Five Foreign Sturgeon",
+          "publisher": "NOAA National Marine Fisheries Service",
+          "url": "https://repository.library.noaa.gov/view/noaa/16217/noaa_16217_DS1.pdf",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "郭柏福等（2011）：中华鲟初次全人工繁殖的特性研究",
+          "publisher": "水生生物学报 / 中国科学院水生生物研究所",
+          "url": "https://doi.org/10.3724/SP.J.1035.2011.00940",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "mandarin_fish",
+      "accepted_scientific_name": "Siniperca chuatsi",
+      "taxonomy": {
+        "family_scientific": "Sinipercidae",
+        "family_zh": "鳜科",
+        "genus_scientific": "Siniperca",
+        "genus_zh": "鳜属",
+        "note": "现行目录将鳜置于鳜科、鳜属。早期资料曾放入鮨科或真鲈科，阅读旧养殖手册时须注意分类体系差异；本条专指鳜，不把其他鳜类的记录合并进来。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FAO养殖资料中，一龄鱼约400—600克、二龄约1—1.5千克，常选用的二至三龄亲鱼约1—2千克。这些是有明确年龄或用途的养殖规格，不能等同野生成鱼平均值；可靠的野生成年常见体长区间尚未核实。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 70,
+        "length_type": "TL",
+        "text": "FishBase所列最大长度为70厘米全长，计至尾鳍末端；不是成熟时必然达到的长度。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 8,
+        "text": "FishBase所列最大已发表体重为8千克。它与70厘米长度记录分别引用，不能据此拼成一尾纪录鱼。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "居于淡水江河和湖泊，常利用底部石块、树根和茂密水草遮蔽身体。黄褐底色上的不规则斑纹与岸边环境相融，宽口和突出的下颌适于吞入相对较大的猎物。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "现行分类目录列出珠江、长江和黑龙江流域，中国与俄罗斯均有原生记录。长江河湖是其分布的一部分，不应把泛称“鳜类”的东北亚分布照搬为本种分布。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "自然环境中常在夜间觅食，白天停留在隐蔽处，养殖条件下也可在白天摄食。它会留意猎物的运动，靠近后突然出击；冬季水温降低时常转入深水，活动随之减弱。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "以活的小鱼为主，也摄食虾等水生动物。其幼体在开口阶段就能取食其他鱼的仔鱼，食物不足时还可能发生同类相食，食鱼习性并非到成年才形成。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "story": {
+        "title": "幼鱼为什么一开口就追鱼",
+        "text": "2020年研究比较鳜类基因组，发现与捕食及鳃耙发育相关的遗传线索。研究者又在斑马鱼中验证：改变相关发育基因，会减少鳃耙并改变取食偏好。这为鳜早期的食鱼本领提供了解释，也提醒我们，验证模型的结果不等于一枚基因决定全部行为。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Eschmeyer’s Catalog of Fishes：Siniperca chuatsi",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=35917",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Siniperca chuatsi species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Siniperca-chuatsi",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Cultured aquatic species fact sheet: Siniperca chuatsi (2009)",
+          "publisher": "Food and Agriculture Organization of the United Nations",
+          "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_mandarinfish.htm",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "He et al. (2020), Mandarin fish (Sinipercidae) genomes provide insights into innate predatory feeding",
+          "publisher": "Communications Biology",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7347838/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "northern_snakehead",
+      "accepted_scientific_name": "Channa argus",
+      "taxonomy": {
+        "family_scientific": "Channidae",
+        "family_zh": "鳢科",
+        "genus_scientific": "Channa",
+        "genus_zh": "鳢属",
+        "note": "乌鳢是鳢科鳢属鱼类，现行目录接受 Channa argus。旧文献可见 Ophicephalus argus；虽然与其他鳢类及弓鳍鱼外形相似，它们的名称和尺寸纪录不能互换。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "原生种群通常在二至三龄、约30厘米时开始成熟，这是成熟起点，不是所有成鱼的平均体长。本次核查未取得适用于全分布区的成年常见尺寸统计，不能把幼鱼或大型纪录当作典型。",
+        "source_ids": [
+          "s2",
+          "s3",
+          "s4"
+        ]
+      },
+      "max_length": {
+        "value_cm": 100,
+        "length_type": "TL",
+        "text": "FishBase列最大已发表长度100厘米全长；不同地区资料中的85厘米是各自概述范围。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 9.5,
+        "text": "所核查FishBase瑞典站当前记录为9.5千克；一些旧镜像仍显示8千克。此数与长度上限独立，不表示同一条鱼。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "偏爱水流缓慢、有淤泥或水草的浅水环境，也能生活在河道、湖泊、水库与沟渠。繁殖期常利用有植物的浅区，冬季可转向较深水域。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "distribution": {
+        "text": "原生于中国、朝鲜半岛和俄罗斯部分地区，长江流域属于原生范围。美国等地的记录主要来自引入；同一种鱼在原生地和引入地所处的生态关系不同。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "behavior": {
+        "text": "能通过辅助呼吸器官利用空气，因此可在溶氧低的水体生存。它常隐藏等待，再突然攻击猎物；低温时降低代谢需求，也能熬过部分水体的结冰季节。",
+        "source_ids": [
+          "s2",
+          "s4"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼摄食浮游动物、小型甲壳类和其他鱼的仔鱼，长大后主要吃鱼，也吃蛙类、甲壳类与水生昆虫，食谱随体型和当地猎物而变。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "会守护幼鱼的捕食者",
+        "text": "乌鳢会清理水草形成产卵空间，卵漂浮在水面附近。两条亲鱼共同守卫卵和刚孵出的幼鱼，护幼还能延续数周。看见成群幼鱼附近有大鱼，并不一定是追捕场面，也可能是一家鱼的育幼活动。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Eschmeyer’s Catalog of Fishes：Channa argus",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19483",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Channa argus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Channa-argus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "NEMESIS species profile: Channa argus",
+          "publisher": "Smithsonian Environmental Research Center",
+          "url": "https://invasions.si.edu/nemesis/species_summary/166680",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Northern Snakehead (Channa argus) species profile",
+          "publisher": "U.S. Geological Survey, Nonindigenous Aquatic Species",
+          "url": "https://nas.er.usgs.gov/queries/factsheet.aspx?lv=true&speciesid=2265",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "yellowcheek",
+      "accepted_scientific_name": "Elopichthys bambusa",
+      "taxonomy": {
+        "family_scientific": "Xenocyprididae",
+        "family_zh": "鲴科",
+        "genus_scientific": "Elopichthys",
+        "genus_zh": "鳡属",
+        "note": "现行《鱼类目录》将鳡置于鲴科、鳡属；许多较早论文仍使用广义鲤科。它是鳡属的现生代表，不是外形同样长吻的鯮；分类改变并不使历史研究变成另一个物种。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "typical_size": {
+        "text": "可靠的全种成年常见长度、体重区间尚未核实。吉林官方形态条目列有22—80厘米体长，但未划分年龄，因此不能充当成鱼均值；FishBase列成熟长度约66—105厘米，成熟范围同样不是常见规格。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 200,
+        "length_type": "TL",
+        "text": "FishBase汇总最大长度200厘米全长，属于可达的大型记录，不是所有水域都常见的尺寸。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 40,
+        "text": "FishBase列最大已发表体重40千克；长度与体重来自独立文献记录，不强行对应到同一尾鱼。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "生活于淡水江河和相连湖库。江河中上层的开阔水面提供追逐猎物的空间；修长身体、尖吻、小背鳍与深叉尾，使它的轮廓明显区别于体高而圆厚的鲤、鲫。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "distribution": {
+        "text": "分布于东亚，从黑龙江流域延伸到中国南部及红河流域一带。长江中下游的洞庭湖、鄱阳湖、东湖、丹江水库和太湖都曾有原始种群研究取样，地点记录不等于现时丰度。",
+        "source_ids": [
+          "s2",
+          "s4"
+        ]
+      },
+      "behavior": {
+        "text": "是游泳能力强的主动捕食者，行动敏捷，常在中上层追赶其他鱼。FishBase将其列为淡水内洄游鱼；所需的活动通道位于河湖系统之中，不需要像中华鲟那样到海中生长。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要捕食其他鱼类。仔鱼在卵黄消耗后就能吞食其他仔鱼，也吃浮游动物；幼体的这种食性记录，不能误写成成鱼主要滤食浮游生物。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "游得快，仍需要连通的河湖",
+        "text": "2010年研究用九组微卫星标记比较长江流域五处的140尾成鱼，发现遗传多样性处于低至中等水平，并观察到种群间差异。研究提醒人们：保护大型游泳鱼，既要关心个体，也要关心河湖联系及种群之间能否交换基因。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Eschmeyer’s Catalog of Fishes：Elopichthys bambusa",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3216",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Elopichthys bambusa species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Elopichthys-bambusa.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "鳡（2018）",
+          "publisher": "吉林省地方志编纂委员会",
+          "url": "https://dfz.jl.gov.cn/jltc/201805/t20180502_5217576.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Abbas et al. (2010), Microsatellite diversity and population genetic structure of yellowcheek in the Yangtze River",
+          "publisher": "Biochemical Systematics and Ecology",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305197810001481",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "southern_catfish",
+      "accepted_scientific_name": "Silurus meridionalis",
+      "taxonomy": {
+        "family_scientific": "Siluridae",
+        "family_zh": "鲇科",
+        "genus_scientific": "Silurus",
+        "genus_zh": "鲇属",
+        "note": "现行目录接受南方鲇为独立种。它最初以怀头鲇的一个亚种描述，旧名 Silurus soldatovi meridionalis 不能用来混入东北怀头鲇或欧洲巨鲇的巨大纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "可靠的野生成鱼常见体长、体重统计本次未核实。实验幼鱼和单条大型标本都不是成年群体平均值；不同河段的年龄结构与食物条件也有差异。",
+        "source_ids": [
+          "s2",
+          "s3",
+          "s4"
+        ]
+      },
+      "max_length": {
+        "value_cm": null,
+        "length_type": "unspecified",
+        "text": "目前核对资料未给出可追溯的物种最大长度纪录。信阳农林学院报道的2017年南湾湖标本长143厘米、重22.8千克，两项数字属于同一个体，仅作为已核实的标本例子。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "record_label": "物种最大长度"
+      },
+      "max_weight": {
+        "value_kg": null,
+        "text": "尚未确认可靠统一的最大体重纪录。上述大学报道同时介绍这种鱼可达50千克，但未给出这一上限的具体个体记录，因此不把它作为已核实纪录。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "record_label": "物种最大体重"
+      },
+      "habitat": {
+        "text": "属于淡水底层鱼，生活于大江河及相关水体。研究把它作为伏击型捕食鱼讨论：并非不断巡游追逐，而是以较低日常活动消耗，等待摄食机会。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ]
+      },
+      "distribution": {
+        "text": "《鱼类目录》列出中国长江流域。生态研究还讨论长江、珠江水系的种群，说明阅读分布资料时须区分目录简述与具体研究范围，不能仅凭俗名推断某条大鲇的身份。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "behavior": {
+        "text": "常昼伏夜出，以伏击方式捕食。2018年实验发现它在缺食时能降低基础代谢和消化活动，恢复供食后又迅速调整；这是实验条件下的生理可塑性，不是可以无限期挨饿。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "diet": {
+        "text": "肉食性，捕食鱼、虾和其他水生动物。较大的口有利于一次摄入较多食物，而两次进食之间的等待，也让它成为研究消化与运动能量分配的对象。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "story": {
+        "title": "吃回来，也有能量代价",
+        "text": "研究者连续观察15天停食与随后15天恢复摄食：鱼在恢复阶段快速生长，消化能力回到原先水平，但相对体长的游泳表现下降。这提示快速补偿生长可能伴随运动能力的代价；“吃得多、长得快”不代表每项能力都同步提高。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Eschmeyer’s Catalog of Fishes：Silurus meridionalis",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=6151",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Silurus meridionalis species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Silurus_meridionalis",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "水产学院为南湾水库制作大型鲇鱼类标本（2017-10-13）",
+          "publisher": "信阳农林学院水产学院",
+          "url": "https://www.xyafu.edu.cn/scxy/info/1074/1557.htm",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Fu, Peng & Killen (2018), Digestive and locomotor capacity show opposing responses to changing food availability in an ambush predatory fish",
+          "publisher": "Journal of Experimental Biology",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29636411/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "longsnout_catfish",
+      "accepted_scientific_name": "Rhinobagrus dumerili",
+      "taxonomy": {
+        "family_scientific": "Bagridae",
+        "family_zh": "鲿科",
+        "genus_scientific": "Rhinobagrus",
+        "genus_zh": "暂无已核实中文名",
+        "note": "现行目录接受本条学名；国内常用的 Leiocassis longirostris 和数据库中的 Tachysurus dumerili 为同种旧组合。新属的中文名未核实，暂保留拉丁名，不套用旧属名称。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "上海农业部门资料称一般个体重1.3—3千克，未提供年龄与抽样组成，因此只作普通个体参考，不冒充野生成鱼均值。成年常见体长区间本次未核实。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 80.4,
+        "length_type": "TL",
+        "text": "FishBase旧组合条目所收录最大长度为80.4厘米全长，与最大体重独立，不能自动配成同一条鱼。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 13,
+        "text": "上海农业部门资料描述最大可达13千克，属于官方养殖科普上限，未附单尾测量凭据；FishBase收录的最大已发表体重为4.8千克。两种资料的记录范围不同，不将13千克称为认证纪录。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "record_label": "上海农业科普上限"
+      },
+      "habitat": {
+        "text": "主要是淡水底层鱼，长江是确定的分布区。养殖资料强调清洁水体与较高溶氧需求；这不能倒推为野生鱼只会出现在某一固定水深或底质。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "现行分类目录明确列出中国长江流域；FishBase旧组合页面另记中国和朝鲜半岛。分类与历史记录未完全一致，本条以长江记录作为本作区域依据。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "它在底层寻找食物，摄食选择与感觉、消化系统共同有关。经人工驯食可接受配合饲料，说明观察到的喂养行为会受经历与条件影响，不能把某种养殖投喂方法写成野外唯一习性。",
+        "source_ids": [
+          "s2",
+          "s3",
+          "s4"
+        ]
+      },
+      "diet": {
+        "text": "属于典型肉食性鱼，动物性食物提供重要营养；研究发现其蛋白需求高，对食物中碳水化合物的利用较弱。养殖资料记录可摄食水蚯蚓等动物性饵料，不能据此把豆饼写成天然主食。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "story": {
+        "title": "食物偏好也藏在基因里",
+        "text": "2024年研究把长吻鮠与草食性鱼的基因组作比较，找出包括味觉受体和胰蛋白酶在内的一批候选基因，再借助斑马鱼、草鱼模型研究功能。结果把“愿意吃什么”与“身体怎样利用食物”联系起来，而不只是给鱼贴一个肉食标签。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Eschmeyer’s Catalog of Fishes：Rhinobagrus dumerili",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5698",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Tachysurus dumerili species summary (China)",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/country/CountrySpeciesSummary.php?c_code=156&genusname=Tachysurus&speciesname=dumerili",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "如何饲养长吻鮠？",
+          "publisher": "上海市农业农村委员会 / 上海三农服务热线",
+          "url": "https://nyncw.sh.gov.cn/bwbdscl/20190103/0009-109878.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Liu et al. (2024), The Chinese longsnout catfish genome provides novel insights into the feeding preference and corresponding metabolic strategy of carnivores",
+          "publisher": "Genome Research / Cold Spring Harbor Laboratory Press",
+          "url": "https://genome.cshlp.org/content/34/7/981",
+          "accessed": "2026-10-03"
+        }
+      ]
+    }
+  ]
+}

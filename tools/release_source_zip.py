@@ -15,6 +15,7 @@ import struct
 import subprocess
 import zipfile
 from content_fish_art_contract import require_photo_archive_members
+from content_natural_history_contract import require_natural_history_archive_members
 
 
 def digest(path):
@@ -127,6 +128,7 @@ def create(root, commit, output, prefix, base_zip=None, base_manifest=None):
         assert sha1 == expected['git_blob_sha1'], 'Uncommitted tracked change: ' + name
         expected['sha256'] = sha256
     require_photo_archive_members(root, files)
+    require_natural_history_archive_members(root, files)
     old = None
     old_files = {}
     old_prefix = ''

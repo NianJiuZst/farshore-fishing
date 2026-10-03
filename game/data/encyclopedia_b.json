@@ -1,0 +1,1499 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "atlantic_cod",
+      "accepted_scientific_name": "Gadus morhua",
+      "taxonomy": {
+        "family_scientific": "Gadidae",
+        "family_zh": "鳕科",
+        "genus_scientific": "Gadus",
+        "genus_zh": "鳕属",
+        "note": "本条采用FishBase当前物种名；大西洋鳕与太平洋鳕为不同物种，不能混用其尺寸或分布。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "资料库列常见总长100厘米；这是物种的常见长度项，并非仅统计已成熟个体的平均值。不同海区成熟大小差异很大。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 200,
+        "length_type": "TL",
+        "text": "FishBase汇总的已报道最大总长为200厘米（TL，吻端至尾鳍末端）。这是文献上限，不能当作常见成鱼尺寸；与下列最大重量不保证出自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 96,
+        "text": "FishBase列出的已发表最大重量为96千克。该值是资料库汇总记录，页面未将其确认为统一规则下的垂钓世界纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "生活在冷温带海岸至大陆架水域，幼鱼常利用浅水海草、石砾和岩块遮蔽。成鱼较多进入深而冷的水层，也会离底游动。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "原生于北大西洋两岸及邻近北冰洋；包括格陵兰、冰岛、挪威和巴伦支海。西侧分布向南延伸到北卡罗来纳外海。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "白天可聚群离底活动，夜间分散觅食；冬季至早春形成繁殖群。卵和早期仔鱼随水流漂移，之后才转入近底生活。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼先吃桡足类等小型甲壳动物；长大后鱼类占比增加，猎物有鲱、毛鳞鱼、黑线鳕，甚至较小的同种。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "议会厅里的木鳕鱼",
+        "text": "鳕鱼曾深刻影响新英格兰的贸易与城市发展。NOAA记载，马萨诸塞州议会大厦自1784年起悬挂一条涂彩松木鳕鱼，象征渔业带来的繁荣。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Gadus morhua species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Gadus-morhua.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Atlantic cod",
+          "publisher": "Marine Biological Association · MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/2095",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Atlantic Cod",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/atlantic-cod",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "pollack",
+      "accepted_scientific_name": "Pollachius pollachius",
+      "taxonomy": {
+        "family_scientific": "Gadidae",
+        "family_zh": "鳕科",
+        "genus_scientific": "Pollachius",
+        "genus_zh": "青鳕属",
+        "note": "青鳕与绿青鳕同属，但不是同一种鱼；本种侧线明显拱起、下颌突出，不能只凭英语pollock辨认。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase的常见总长为75厘米。这是常见尺寸记录，未标为成年专属样本或成鱼平均值；沿岸小鱼通常仍处于生长阶段。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 130,
+        "length_type": "TL",
+        "text": "FishBase汇总的已报道最大总长为130厘米（TL，吻端至尾鳍末端）。这是文献上限，不能当作常见成鱼尺寸；与下列最大重量不保证出自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 18.1,
+        "text": "FishBase列已发表最大重量18.1千克，引用截至2001年的IGFA垂钓纪录数据库。这是历史垂钓资料汇编中的数值，本次未确认其是否仍为现行纪录；不能与最大长度视为同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "偏好岩礁等硬底、海带林和沉船周围。幼鱼在浅海、河口及藻丛生活数年，较大个体多转往40—100米的离岸岩区。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "分布于东北大西洋，从冰岛、法罗群岛、挪威向南到比斯开湾；资料库也收录波罗的海南部记录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "平时独游或组成疏松小群，繁殖时更易集群。体色随年龄和栖地变化，幼鱼可能带绿色、褐色，甚至鲜明的红金色调。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼取食甲壳动物，成鱼捕食玉筋鱼、鲱、黍鲱和虾类。它常停在海带林或沉船附近，观察上方游动的猎物。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "从鱼群下方突然出击",
+        "text": "观察记录中的青鳕会贴近海底等待玉筋鱼群，突然向上冲刺抓取一条，再回到原位，等鱼群重新聚拢。幼鱼也表现出相似方式，攻击糠虾或小型虾虎鱼。这种有停顿的伏击，比把它想成一直追逐猎物的游泳者更贴近实况。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Pollachius pollachius species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/34",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Pollack",
+          "publisher": "Marine Biological Association · MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/9",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "saithe",
+      "accepted_scientific_name": "Pollachius virens",
+      "taxonomy": {
+        "family_scientific": "Gadidae",
+        "family_zh": "鳕科",
+        "genus_scientific": "Pollachius",
+        "genus_zh": "青鳕属",
+        "note": "采用Pollachius virens；常被称作saithe或coalfish，北美也称pollock。它的浅色侧线较直，可与青鳕区分。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见总长60厘米，但这不是成年个体的统计均值。IMR的东北北极种群资料另列可达130厘米、20千克，属于该海区介绍。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 130,
+        "length_type": "TL",
+        "text": "FishBase汇总的已报道最大总长为130厘米（TL，吻端至尾鳍末端）。这是文献上限，不能当作常见成鱼尺寸；与下列最大重量不保证出自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 32,
+        "text": "FishBase列出的已发表最大重量为32千克。该值是资料库汇总记录，页面未将其确认为统一规则下的垂钓世界纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "既在水层活动，也靠近海底生活。IMR给出东北北极种群常见栖息底深25—400米；幼鱼常在浅水和饵料丰富的海底隆起处密集聚群。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "仅分布于北大西洋，包括挪威、北海、冰岛及法罗群岛；西北大西洋亦有种群。不同海区并非完全封闭的单位。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "身体强健、游速快，常成群进行觅食和产卵迁移。挪威幼鱼约2—4岁离开沿岸育幼水域，转向较外侧的海岸浅滩。主要产卵水域包括罗弗敦群岛外海和黑尔格兰附近浅滩。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼以桡足类、磷虾等甲壳动物为主，较大个体更多捕食鱼类，包括鲱、黍鲱、蓝鳕和挪威小鳕。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "跟着鲱鱼远行",
+        "text": "挪威海洋研究所记录，成鱼会追随挪威春产卵鲱深入挪威海，有时远至冰岛和法罗群岛。标志放流也揭示不同种群之间的移动；在另一个生命阶段，卵和仔鱼则借海流向北漂移。主动追食与被动漂流共同串起它的一生。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Pollachius virens species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/1343",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Northeast Arctic saithe",
+          "publisher": "Institute of Marine Research, Norway",
+          "url": "https://www.hi.no/en/hi/temasider/species/northeast-arctic-saithe",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "haddock",
+      "accepted_scientific_name": "Melanogrammus aeglefinus",
+      "taxonomy": {
+        "family_scientific": "Gadidae",
+        "family_zh": "鳕科",
+        "genus_scientific": "Melanogrammus",
+        "genus_zh": "黑线鳕属",
+        "note": "现用名Melanogrammus aeglefinus。深色侧线和胸鳍上方黑斑是识别特征；并非所有被俗称鳕鱼的鱼都属于本属。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见总长35厘米，未限定成熟状态。NOAA另称其成熟个体通常约30—91厘米、一般重约0.9—3.2千克；后者为美国海域物种介绍。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 112,
+        "length_type": "TL",
+        "text": "FishBase汇总的已报道最大总长为112厘米（TL，吻端至尾鳍末端）。这是文献上限，不能当作常见成鱼尺寸；与下列最大重量不保证出自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 16.8,
+        "text": "FishBase列出的已发表最大重量为16.8千克。该值是资料库汇总记录，页面未将其确认为统一规则下的垂钓世界纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "冷水底栖鱼，常在砂、砾石、贝壳碎屑及岩底上方活动。成年鱼较常见于80—200米，较小个体多在更浅的海岸浅滩。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "分布于北大西洋两岸及邻近北极海域；挪威和巴伦支海有种群，西侧从纽芬兰至美国新泽西外海。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "可成群活动，繁殖季向较浅水域移动。雌鱼分批排卵，卵受精后升入水层；仔鱼在表层生活数月再沉向海底。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要挑食底栖无脊椎动物，包括蠕虫、软体动物、甲壳类和棘皮动物；成鱼也吃小型鲱鱼等鱼类。海星、海胆、沙钱和蛇尾均在其食物记录之中。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "黑色“指印”旁的新生命",
+        "text": "两侧的黑斑常被形容为拇指印，是区别大西洋鳕的快捷线索。另一项不易看见的特点是繁殖力：NOAA介绍，一条中等大小雌鱼一年可产约85万枚卵，较大雌鱼可达约300万枚。数量庞大的浮性卵仍须经历海流搬运和漫长的幼鱼阶段。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Melanogrammus aeglefinus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Melanogrammus-aeglefinus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Haddock",
+          "publisher": "Marine Biological Association · MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/79",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Haddock",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/haddock",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_mackerel",
+      "accepted_scientific_name": "Scomber scombrus",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Scomber",
+        "genus_zh": "鲭属",
+        "note": "采用Scomber scombrus；不能把同属其他鲭鱼的腹部斑纹、鳔或尺寸资料直接移用于本种。它的腹侧无明显斑点，体内无鳔。背部深色条纹倾斜或近乎竖直，构成醒目的识别图案。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见叉长30厘米（FL），未限定为成熟个体。叉长止于尾鳍叉口，比量到尾尖的总长短，不宜直接混比。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 60,
+        "length_type": "FL",
+        "text": "FishBase汇总的已报道最大长度为60厘米，原记录采用FL（叉长，量至尾鳍叉口）。这是文献上限，不能与下列最大重量拼成同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 3.4,
+        "text": "已发表最大重量3.4千克，采用FishBase汇总值。页面未把这一数值确认为统一规则下的垂钓世界纪录；它也不是常见成鱼体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "冷温带大陆架的中上层鱼，常在近表层形成大群；冬季较多分布于大陆架边缘和较深水层，春季向岸侧移动。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "分布于北大西洋，包括挪威附近海域和地中海；同一物种在不同海区有不同迁移和繁殖群体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "流线型身体适合快速群游，迁移受水温、海洋水文及饵料条件影响。主要在白天觅食，卵与仔鱼在水层漂浮。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以浮游动物、小鱼和虾类为食。庞大的鱼群并非固定停在一个海湾，会随食物和季节性海况移动。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "几公里长的银色鱼群",
+        "text": "MarLIN引用的记录中，鲭鱼群可长约9公里、宽4公里，并向下延伸40米。这是被报道的巨大聚集实例，不代表每群都如此。没有鳔的它依然能组成层次分明的鱼群；从海面看到的一小片闪光，可能只是水下群体的一角。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Scomber scombrus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Scomber-scombrus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Atlantic mackerel",
+          "publisher": "Marine Biological Association · MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/44",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_herring",
+      "accepted_scientific_name": "Clupea harengus",
+      "taxonomy": {
+        "family_scientific": "Clupeidae",
+        "family_zh": "鲱科",
+        "genus_scientific": "Clupea",
+        "genus_zh": "鲱属",
+        "note": "FishBase采用Clupea harengus，并提示旧亚种划分证据不足，应区分种群而不贸然视作独立物种。本种与太平洋鲱不同。体侧和鳍上通常没有独立的深色大斑。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "常见标准体长30厘米（SL），来自FishBase的常见长度栏，并非成鱼平均值。这里的长度不含尾鳍，不能与总长直接等同。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 45,
+        "length_type": "SL",
+        "text": "FishBase汇总的已报道最大长度为45厘米，原记录采用SL（标准体长，不含尾鳍）。这是文献上限，不能与下列最大重量拼成同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 1.1,
+        "text": "已发表最大重量1.1千克，采用FishBase汇总值。页面未把这一数值确认为统一规则下的垂钓世界纪录；它也不是常见成鱼体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "生活在近岸和大陆架海域，常活动于表层至约200米水层。能进入半咸水区域，产卵时需要适宜的海底基质。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "北大西洋两岸均有分布；东北侧包括冰岛、挪威、北海及波罗的海，向东可达斯匹次卑尔根和新地岛附近。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "常结成密集鱼群，在觅食、产卵与越冬水域间迁移。不同海区的繁殖季不一致，不能将某一地区月份套用于所有种群。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "摄食桡足类、磷虾等浮游动物及鱼类仔鱼；既能逐个捕食，也能滤食。自身又是鳕鱼、海鸟和海兽的重要食物。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "海底铺起鱼卵地毯",
+        "text": "鲱鱼虽然主要在水层群游，却把卵产到海底。NOAA记录，鱼群集中繁殖时，岩石、砾石或沙底可被数厘米厚的卵层覆盖。卵一般在约7—10天孵化，温度会改变所需时间；在此之前，黑线鳕等底栖鱼也会前来取食这些卵。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Clupea harengus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/clupea-harengus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Atlantic herring",
+          "publisher": "Marine Biological Association · MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/45",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Atlantic Herring",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/atlantic-herring",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "european_plaice",
+      "accepted_scientific_name": "Pleuronectes platessa",
+      "taxonomy": {
+        "family_scientific": "Pleuronectidae",
+        "family_zh": "鲽科",
+        "genus_scientific": "Pleuronectes",
+        "genus_zh": "鲽属",
+        "note": "采用Pleuronectes platessa；本种通常两眼位于右侧，有橙红斑点。FishBase明确提醒，地中海记录可能是欧洲川鲽的误认。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见总长40厘米（TL），未限定成熟状态。最大长度栏采用标准体长SL，两种测量终点不同，不能直接算倍数。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 100,
+        "length_type": "SL",
+        "text": "FishBase汇总的已报道最大长度为100厘米，原记录采用SL（标准体长，不含尾鳍）。这是文献上限，不能与下列最大重量拼成同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 7,
+        "text": "已发表最大重量7千克，采用FishBase汇总值。页面未把这一数值确认为统一规则下的垂钓世界纪录；它也不是常见成鱼体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "多栖于沙底，也利用泥、砾石及岩区间的沙地；较常见于10—50米。第一年幼鱼可进入极浅水的沙质潮池。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "生活在欧洲北方海域及东北大西洋，英国、爱尔兰周边有广泛记录。本条不把有争议的现代地中海记录视为稳定原生分布。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "常静伏海底并将身体部分埋沙，能调节体色贴近底质，但橙色斑点仍明显。长大后移向更深水，并有季节性产卵迁移。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要吃底栖贝类与多毛类，也捕食甲壳动物、蛇尾及小型玉筋鱼。扁平身体使它能贴着底面寻找食物。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "电子标签揭开的迁移",
+        "text": "Cefas研究给成熟雌鱼安装记录深度和温度的电子标签，发现夏季分开的觅食群会在冬季向产卵区分散。南部北海一些鱼会利用潮流辅助移动，北部个体却没有同样的做法。看似伏在沙里的鱼，因此拥有随海区而变的旅行方式。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Pleuronectes platessa species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Pleuronectes-platessa.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Plaice",
+          "publisher": "Marine Biological Association · MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/2172",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Subdivision of the North Sea plaice population: evidence from electronic tags",
+          "publisher": "Cefas · Hunter, Metcalfe, Arnold & Reynolds",
+          "url": "https://www.cefas.co.uk/publications/posters/30096web.pdf",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_wolffish",
+      "accepted_scientific_name": "Anarhichas lupus",
+      "taxonomy": {
+        "family_scientific": "Anarhichadidae",
+        "family_zh": "狼鱼科",
+        "genus_scientific": "Anarhichas",
+        "genus_zh": "狼鱼属",
+        "note": "采用Anarhichas lupus，科也常译狼鳚科；此处中文科、属名与FAO AGROVOC对应。英文catfish在这里不能理解为淡水鲶鱼。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "所核查的FishBase与MarLIN物种页未给出可靠的常见成鱼长度或体重。FishBase列首次成熟长度约50—60厘米，但成熟门槛不是典型成年尺寸。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 150,
+        "length_type": "TL",
+        "text": "FishBase汇总的已报道最大长度为150厘米，原记录采用TL（总长，量至尾鳍末端）。这是文献上限，不能与下列最大重量拼成同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 23.6,
+        "text": "FishBase列已发表最大重量23.6千克，引用截至2001年的IGFA垂钓纪录数据库。这是历史垂钓资料汇编中的数值，本次未确认其是否仍为现行纪录；不能与最大长度视为同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "冷海底栖鱼，常占据岩底裂隙或洞穴，只露出头部；也出现在泥沙底。MarLIN介绍成鱼通常见于100—300米，幼鱼可更浅。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "北大西洋两岸均有分布，包括斯堪的纳维亚、冰岛、格陵兰与加拿大东岸。波罗的海和地中海的记录仍有疑问，不作稳定分布依据。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "通常独居，依托海底结构生活；雄鱼会守护卵团直至孵化，护卵期间很少摄食，繁殖投入不只限于产卵。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "强壮的颌肌和粗大牙齿用于处理硬壳猎物，食物有贝类、蟹、海胆和其他棘皮动物；也有摄食鱼类的记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "凶悍牙齿背后的守卵父亲",
+        "text": "外露的犬齿很抢眼，然而狼鱼的自然史同样包含漫长守候：雄鱼守着卵团，直到幼鱼孵出。它的牙齿也不是只用来抓鱼，腭部常见磨损，配合强力咬合可压碎海底动物的硬壳。外表、食性与亲代照顾呈现了这条鱼的不同侧面。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Anarhichas lupus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Anarhichas-lupus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Wolf fish or Catfish",
+          "publisher": "Marine Biological Association · MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/1747",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "狼鱼科 Anarhichadidae",
+          "publisher": "FAO AGROVOC",
+          "url": "https://agrovoc.fao.org/browse/agrovoc/zh/page/c_44200",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "european_seabass",
+      "accepted_scientific_name": "Dicentrarchus labrax",
+      "taxonomy": {
+        "family_scientific": "Moronidae",
+        "family_zh": "狼鲈科",
+        "genus_scientific": "Dicentrarchus",
+        "genus_zh": "舌齿鲈属",
+        "note": "采用Dicentrarchus labrax，中文亦称挪威舌齿鲈；与东亚的花鲈属不同。幼鱼可有体斑，不能据此误判为另一种成年斑点海鲈。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见总长50厘米（TL），未限定为成熟鱼的平均值。FAO所述养殖上市重量是生产目标，不能当作野生成鱼典型体重。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 103,
+        "length_type": "TL",
+        "text": "FishBase列已报道最大总长103厘米（TL，量至尾鳍末端），引用截至2001年的IGFA垂钓纪录数据库。这是历史资料的极值，本次未确认现行纪录；与最大重量不保证属于同一条鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 12,
+        "text": "已发表最大重量12千克，采用FishBase物种页汇总值；来源页未将其确认为统一规则下的垂钓世界纪录，也未说明是否来自养殖环境。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "广盐性近岸鱼，利用河口、半咸水潟湖及多种海底环境，有时进入河流。较常见于浅水，成鱼也可下至约100米。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "东北大西洋由摩洛哥至挪威，并见于地中海和黑海南部；原生核心范围之外的零星记录须与稳定种群区分。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "幼鱼较常成群，成鱼群聚程度降低。北部海区在寒冷季节多移向外海；地中海的一些鱼也会留在潟湖过冬。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以小鱼、虾、蟹及乌贼等为食；幼鱼多吃无脊椎动物，随着生长，食谱中鱼类的比例增加。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "盐田也曾是鱼塘",
+        "text": "FAO记载，现代人工育苗普及前，人们已利用海岸潟湖和盐田养欧洲海鲈：夏秋蒸发旺盛时收盐，冬春养鱼，鱼苗来自进入河口的野生鱼群。到了20世纪六七十年代，法国和意大利推进大规模育苗，才逐步改变这种依赖自然来鱼的方式。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Dicentrarchus labrax species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Dicentrarchus-labrax.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Dicentrarchus labrax cultured aquatic species fact sheet",
+          "publisher": "FAO · M. Bagni",
+          "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_europeanseabass.htm",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "拉汉鱼典：Dicentrarchus labrax",
+          "publisher": "中央研究院 · 台湾鱼类资料库",
+          "url": "https://fishdb.sinica.edu.tw/chi/chinesequer2.php?R1=&T1=&cn=&dere=asc&fm=&gc=&me=&orderby=family_ch&page=361&pz=25&vn=",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "gilthead_seabream",
+      "accepted_scientific_name": "Sparus aurata",
+      "taxonomy": {
+        "family_scientific": "Sparidae",
+        "family_zh": "鲷科",
+        "genus_scientific": "Sparus",
+        "genus_zh": "鲷属",
+        "note": "采用Sparus aurata。旧文献的aurata／auratus组合曾与西太平洋的Pagrus auratus混用，引用资料时必须检查产地。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见标准体长35厘米（SL，不含尾鳍），未标为成鱼均值。FAO列雄鱼20—30厘米、雌鱼33—40厘米的成熟尺寸，不等于普遍成鱼大小。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 70,
+        "length_type": "TL",
+        "text": "FishBase列已报道最大总长70厘米（TL，吻端至尾鳍末端）；属于文献汇总的极值，不代表通常能见到的成鱼，与最大重量也不保证出自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 7.36,
+        "text": "IGFA目前公开列出的全钓法纪录为7.36千克。这是该机构的垂钓纪录口径；FishBase引用旧IGFA资料的17.2千克与当前页面不一致，尚不能确认其原始个体，故不把它当作确定的最大值。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "record_label": "IGFA垂钓纪录"
+      },
+      "habitat": {
+        "text": "海草床、岩地、沙底和浪区均可利用。幼鱼春季进入温暖、食物丰富的潟湖与河口，秋末多返回外海；较大个体可进入更深水域。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "见于东大西洋和地中海，包括不列颠群岛以南海岸、加那利群岛及西非海域。新西兰的旧同名报告属于别种。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "可独游或小群活动，主要在海底附近觅食。繁殖通常发生于外海；雌鱼在繁殖季分多批排卵，幼鱼再向近岸迁移。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要吃贝类等动物，包括贻贝和牡蛎，也可摄入植物性食物。坚硬的臼齿配合前部牙齿，适于处理有壳猎物。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一生中转换繁殖角色",
+        "text": "金头鲷具有先雄后雌的性系统，先以雄性成熟，其中个体随后转为雌性。FAO还指出，在人工养殖条件下，群体的年龄和性别组成会影响转变：老年雌鱼的存在可抑制年轻鱼转雌。因此不能用一个固定生日判断每条鱼的性别。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Sparus aurata species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Sparus-aurata.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Sparus aurata cultured aquatic species fact sheet",
+          "publisher": "FAO",
+          "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_giltheadseabr.htm",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "金头鲷（动物）与上位概念鲷属",
+          "publisher": "FAO AGROVOC",
+          "url": "https://agrovoc.review.fao.org/browse/agrovoc/zh/page/c_36080",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Sparus aurata — All-Tackle record",
+          "publisher": "International Game Fish Association",
+          "url": "https://igfa.org/game-fish-database/?search_term_1=206&search_type=SpeciesID",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "saddled_seabream",
+      "accepted_scientific_name": "Oblada melanurus",
+      "taxonomy": {
+        "family_scientific": "Sparidae",
+        "family_zh": "鲷科",
+        "genus_scientific": "Oblada",
+        "genus_zh": "尾斑鲷属",
+        "note": "现用名采用Eschmeyer的Oblada melanurus。原资料的Oblada melanura为常见旧拼写；melanurus在该目录中视作不变词尾名词，指同一物种。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "typical_size": {
+        "text": "DORIS明确给成鱼通常15—25厘米，但未注明长度类型；FishBase另列常见总长20厘米（TL），未限定成熟状态。两项应分别理解。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 36.6,
+        "length_type": "TL",
+        "text": "FishBase列已报道最大总长36.6厘米（TL，吻端至尾鳍末端）；属于文献汇总的极值，不代表通常能见到的成鱼，与最大重量也不保证出自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 0.525,
+        "text": "FishBase的已发表最大重量栏为0.525千克。DORIS另提0.7—0.8千克报告，却未在该段列出个体凭证；这里保留可追溯的资料库值，并注明来源差异，不宣称绝对上限。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "FishBase收录值"
+      },
+      "habitat": {
+        "text": "常在近岸岩底和海草床上方的水层群游，成鱼多见于表层至10—20米，也会下探约30米觅食。幼鱼组成浅水小群。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "地中海常见，东大西洋范围从比斯开湾延至安哥拉，并包括马德拉、加那利和佛得角等岛屿海域。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "群居而较警觉，冬季趋向更远、更深的水域。白天觅食较活跃，春夏温暖且浮游生物丰富时活动尤为明显。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "杂食但以小型动物为主，取食桡足类、仔鱼和无脊椎动物卵，也会到海底捡食小动物与藻类。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一厘米幼鱼的黑尾标记",
+        "text": "尾柄白边黑斑并非成年后才出现：DORIS记载，约1厘米长的幼鱼已经可以凭它辨认。网站还有一条仍近乎透明的15毫米幼鱼观察记录，黑色尾斑却十分显眼。同一种标记，因此能帮助观察者追踪不同生命阶段的鱼群。斑块周围的白色边缘，也让这个微小标记更容易被看见。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Oblada melanurus species summary",
+          "publisher": "FishBase",
+          "url": "https://fishbase.se/summary/850",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Oblada melanura · Oblade",
+          "publisher": "FFESSM · DORIS",
+          "url": "https://doris.ffessm.fr/Especes/Oblada-melanura-Oblade-720",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Eschmeyer's Catalog of Fishes: Sparus melanurus",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=20002",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "WoRCS taxon list: Oblada melanura accepted as Oblada melanurus",
+          "publisher": "WoRMS / VLIZ",
+          "url": "https://www.marinespecies.org/worcs/aphia.php?p=taxlist&pid=146419&rComp=%3E%3D&tRank=220",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "white_seabream",
+      "accepted_scientific_name": "Diplodus sargus",
+      "taxonomy": {
+        "family_scientific": "Sparidae",
+        "family_zh": "鲷科",
+        "genus_scientific": "Diplodus",
+        "genus_zh": "重牙鲷属",
+        "note": "采用现行D. sargus。旧亚种D. sargus cadenati、D. sargus capensis现分别为独立种；历史广义分布不能不加区分地沿用。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见总长22厘米（TL）；DORIS给常见长度15—30厘米但未注明量法。两者都是常见尺寸描述，不能改称只含成熟鱼的统计均值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 45,
+        "length_type": "TL",
+        "text": "FishBase列已报道最大总长45厘米（TL，吻端至尾鳍末端）；属于文献汇总的极值，不代表通常能见到的成鱼，与最大重量也不保证出自同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 1.9,
+        "text": "FishBase列已发表最大重量1.9千克，引用截至2001年的IGFA垂钓纪录数据库。这是历史垂钓资料汇编中的数值，本次未确认其是否仍为现行纪录；不能与最大长度视为同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "偏好浅岩礁、海草床、港口防波堤及人工礁，也会到沙底活动。受惊时躲入岩穴，冬季更多转向温度较稳定的深水。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "采用DORIS经近似种厘清后的地中海和黑海分布。东大西洋的D. cadenati与南非的D. capensis不在本条合并处理。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "夏季常成小群贴近底部游动；幼鱼在浅岸和港口育成。体色会随底质和状态改变，浅沙底较淡，夜间或受惊时条纹更显著。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼摄取小型甲壳类、蠕虫等；随着长大，贻贝、海胆及其他有壳动物更重要。前部切齿和后部臼齿分别帮助取食与压碎。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "曾被当成同种的邻居",
+        "text": "大西洋与地中海的“白海鲷”长期共用同一物种框架，后来D. cadenati被作为独立种处理，2016年又描述了东地中海的D. levantinus。看上去相似的黑尾斑，不能单独解决身份问题；牙列、条纹及产地都能为分类提供线索。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Diplodus sargus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Diplodus-sargus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Diplodus sargus · Sar commun de Méditerranée",
+          "publisher": "FFESSM · DORIS",
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-sargus-Sar-commun-de-Mediterranee-463",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Diplodus taxon list and accepted species",
+          "publisher": "WoRMS Editorial Board",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Diplodus",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "annular_seabream",
+      "accepted_scientific_name": "Diplodus annularis",
+      "taxonomy": {
+        "family_scientific": "Sparidae",
+        "family_zh": "鲷科",
+        "genus_scientific": "Diplodus",
+        "genus_zh": "重牙鲷属",
+        "note": "采用Diplodus annularis。尾柄近乎完整的黑环与黄色腹鳍，是同白海鲷区分的线索；不能仅凭尾部都有黑斑合并两种。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "DORIS给成年鱼通常约10—20厘米，未注明量法；FishBase列常见总长13厘米（TL），未限定成熟状态。小型成鱼不应自动当成其他海鲷的幼鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 28,
+        "length_type": "TL",
+        "text": "FishBase列已报道最大总长28厘米（TL，吻端至尾鳍末端）。这是资料库收录的极值，并非典型成鱼大小；与最大重量不保证属于同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 0.33,
+        "text": "FishBase汇总的已发表最大重量为0.33千克。此处保留其文献记录含义，不改称垂钓世界纪录，也不以体长公式推算替代。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "主要利用海草床，也出现在沙底、人工礁和安静港湾。DORIS称常见于0—15米，较深记录随海区和季节而异。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "地中海、黑海和亚速海有分布；东大西洋见于葡萄牙至比斯开湾，并包括加那利群岛。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "日间活动，夜里可停在底部并展开鱼鳍。幼鱼体色较黄，生长过程中黄色逐渐从身体后方向前褪去，尾部黑环仍清晰。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "取食蠕虫、甲壳动物、软体动物、棘皮动物和水螅类；啄食底面时也可能连同藻类吞入，但主要食谱为动物。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "看到两种组织，不等于会变性",
+        "text": "鲷科的性系统并不整齐划一。2011年研究以巴利阿里群岛样本做组织切片，将环尾海鲷判为非功能性雌雄同体：存在两类生殖组织，并不等于已经证实会转换有效繁殖性别。该研究提醒，判断生殖方式须看组织的实际发育，不能照搬近亲的故事。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Diplodus annularis species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Diplodus-annularis.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Diplodus annularis · Sparaillon",
+          "publisher": "FFESSM · DORIS",
+          "url": "https://doris.ffessm.fr/Especes/Diplodus-annularis-Sparaillon-487",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "The Use of Histological Techniques to Study the Reproductive Biology of the Hermaphroditic Mediterranean Fishes Coris julis, Serranus scriba, and Diplodus annularis (2011)",
+          "publisher": "Marine and Coastal Fisheries · Alonso-Fernández et al.",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1080/19425120.2011.556927",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "red_mullet",
+      "accepted_scientific_name": "Mullus barbatus",
+      "taxonomy": {
+        "family_scientific": "Mullidae",
+        "family_zh": "须鲷科",
+        "genus_scientific": "Mullus",
+        "genus_zh": "羊鱼属",
+        "note": "采用Mullus barbatus，科中文也称羊鱼科。虽俗名含鲷，却不属于Sparidae鲷科；与条纹较明显的M. surmuletus也须分开识别。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见标准体长20厘米（SL）；FAO地中海识别表另给常见10—20厘米，未写明量法。两者均不是只含成年个体的统计均值。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 38.2,
+        "length_type": "TL",
+        "text": "FishBase列已报道最大总长38.2厘米（TL，吻端至尾鳍末端）。这是资料库收录的极值，并非典型成鱼大小；与最大重量不保证属于同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 0.68,
+        "text": "FishBase汇总的已发表最大重量为0.68千克。此处保留其文献记录含义，不改称垂钓世界纪录，也不以体长公式推算替代。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "在大陆架泥、砂和砾石底生活，常把吻部贴向松软沉积物觅食。不同资料给出的深度范围不同，浅海和数百米水深都有记录。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "分布于东大西洋、地中海及黑海，北起斯堪的纳维亚附近，南至塞内加尔；本条主要介绍地中海种群。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "常成群活动。遇险时会竖起第一背鳍、收起下颌须并一同游走；不觅食时，触须可折入头下的沟槽。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "两根下颌须带有感觉结构，用来探查泥沙中的小型甲壳动物、蠕虫和软体动物，再翻动底质摄取猎物。仔鱼则吃浮游动物。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "翻泥者身后的跟随者",
+        "text": "红须鲷在软底翻找食物时，会把藏着的小动物挖出或惊走。DORIS记录，其他鱼会被这种觅食活动吸引，在旁等待捡取暴露的猎物。这是一种有观察依据的伴随取食关系；两根看似简单的胡须，也会间接为邻近鱼类打开一小片觅食空间。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Mullus barbatus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Mullus-barbatus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Mullus barbatus · Rouget de vase",
+          "publisher": "FFESSM · DORIS",
+          "url": "https://doris.ffessm.fr/Especes/Mullus-barbatus-Rouget-de-vase-579",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Mullidae and Mullus barbatus identification sheets, pp.1195–1197",
+          "publisher": "FAO",
+          "url": "https://www.fao.org/4/x0170f/x0170f55.pdf",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Mullidae · 须鲷科／羊鱼科",
+          "publisher": "中央研究院 · 台湾鱼类资料库",
+          "url": "https://fishdb.sinica.edu.tw/taxon/6382-fishdb",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "painted_comber",
+      "accepted_scientific_name": "Serranus scriba",
+      "taxonomy": {
+        "family_scientific": "Serranidae",
+        "family_zh": "鮨科",
+        "genus_scientific": "Serranus",
+        "genus_zh": "鮨属",
+        "note": "采用Serranus scriba。DORIS指出，过去东大西洋的一些同名记录混入近似种S. papilionaceus，因此本条不用旧资料无限扩大分布。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见标准体长25厘米（SL，不含尾鳍），未限定成熟鱼。亚得里亚海某研究样本均长11厘米，但那是局部采样结果，不能替代全物种典型成鱼值。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 36,
+        "length_type": "SL",
+        "text": "FishBase列已报道最大标准体长36厘米（SL，不含尾鳍）。这是资料库收录的极值，并非典型成鱼大小；与最大重量不保证属于同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "text": "所核查的FishBase、DORIS与原始研究未提供可当作全物种最大重量的可靠汇总值。研究样本最大108.99克只代表该次采样，故此处留空，不冒充纪录。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "常在浅水岩底、藻丛和海草床附近生活，通常见于30米以内，也有更深记录。隐蔽处可作为观察猎物和短距出击的位置。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "采用当前资料中的地中海及黑海分布；东大西洋旧称字纹鮨的记录，应先与S. papilionaceus重新核对。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "一般独居且有领地性，常停在原处观察周围。它具有同时成熟的雌雄生殖组织，亚得里亚海研究的组织切片已证实这一点。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "伏击小鱼、甲壳动物和软体动物，能够从藻丛附近迅速冲向猎物。它既是浅水捕食者，也会受到体表寄生动物侵扰。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "张大嘴巴等清洁",
+        "text": "DORIS记载，字纹鮨会到清洁隆头鱼的服务地点，头朝上竖起身体、张开嘴巴，表现出请求清洁的姿态。平日静候猎物的鱼，在这一刻主动让另一条鱼靠近。观察到的姿态和清洁关系有记录，但并不意味着所有寄生虫都能被清除。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Serranus scriba species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Serranus-scriba.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Serranus scriba · Serran-écriture",
+          "publisher": "FFESSM · DORIS",
+          "url": "https://doris.ffessm.fr/Especes/Serranus-scriba-Serran-ecriture-144",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Reproductive period and histological analysis of Serranus scriba in Trogir Bay (2005)",
+          "publisher": "Acta Adriatica · Zorica, Sinovčić & Čikeš Keč",
+          "url": "https://acta.izor.hr/ojs/index.php/acta/article/view/130",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "common_pandora",
+      "accepted_scientific_name": "Pagellus erythrinus",
+      "taxonomy": {
+        "family_scientific": "Sparidae",
+        "family_zh": "鲷科",
+        "genus_scientific": "Pagellus",
+        "genus_zh": "小鲷属",
+        "note": "采用Pagellus erythrinus，中文名绯小鲷。它与赤鲷属Pagrus是不同属；旧文献中的Pagellus canariensis为本种异名。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见标准体长25厘米（SL）；FAO识别表给常见10—30厘米，未注明长度类型。两者都不能改写成成年鱼的平均长度，且不可混比测量终点。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 60,
+        "length_type": "SL",
+        "text": "FishBase列已报道最大标准体长60厘米（SL，不含尾鳍）。这是资料库收录的极值，并非典型成鱼大小；与最大重量不保证属于同一个体。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 3.2,
+        "text": "FishBase列最大重量3.2千克，引用截至2001年的IGFA垂钓纪录数据库；DORIS给3.24千克。本条保留资料库精度并注明差异，未确认现行纪录，也不与最大长度拼成同一个体。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "沿岸近底活动，能利用岩、砾、砂、泥等底质，偏好软底；通常20—100米，冬季趋向更深水域。幼鱼较成鱼贴近海岸。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "东大西洋从挪威及不列颠附近至几内亚比绍，并包括地中海、马德拉和加那利群岛；斯堪的纳维亚记录较少。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "常结成小群，较为警觉。繁殖期随地区水温及水文条件变化；卵和仔鱼在水层发育，幼鱼随后进入较浅水域。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "杂食而偏肉食，主要寻找底栖蠕虫、小型甲壳动物和软体动物，也吃小鱼。前部尖齿及后部臼齿构成不同的取食工具。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "先成为母鱼的成长路线",
+        "text": "绯小鲷具有先雌后雄的性系统，部分较大的雌鱼长大后转为雄鱼。FAO识别表概述转变可从第三年开始；实际年龄和大小不是所有海区统一的开关。群体中的雌雄比例与个体成长因此相互关联，不能只看一张照片就判断其繁殖角色。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Pagellus erythrinus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Pagellus-erythrinus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Pagellus erythrinus · Pageot commun",
+          "publisher": "FFESSM · DORIS",
+          "url": "https://doris.ffessm.fr/Especes/Pagellus-erythrinus-Pageot-commun-2771",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Pagellus erythrinus identification sheet",
+          "publisher": "FAO",
+          "url": "https://www.fao.org/fishery/docs/CDrom/ARTFIMED/ArtFiWeb/descript/Species/SPAPAERY.HTML",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "拉汉鱼典：Pagellus erythrinus",
+          "publisher": "中央研究院 · 台湾鱼类资料库",
+          "url": "https://fishdb.sinica.edu.tw/chi/chinesequer2.php?R1=&T1=&cn=&dere=desc&fm=&gc=&me=&orderby=is_accepted_name&page=216&pz=100&vn=",
+          "accessed": "2026-10-03"
+        }
+      ]
+    }
+  ]
+}

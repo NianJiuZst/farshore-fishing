@@ -31,6 +31,7 @@ SUITES = [
     ("fish_art_ui", "fish_art_ui_tests.gd", []),
     ("failure_modal", "fishing_failure_modal_tests.gd", []),
     ("notebook_ui", "fish_notebook_ui_tests.gd", []),
+    ("natural_history", "natural_history_tests.gd", []),
     ("ui_iteration", "ui_iteration_tests.gd", []),
     ("tackle", "tackle_tests.gd", []),
     ("bait_balance", "bait_balance_tests.gd", []),
@@ -129,7 +130,7 @@ def main() -> int:
     # GLBs, scripts, scenes and data must not change while this occurs.
     source_import_changes = [p for p in existing_import_changes if Path(p).suffix in {".glb", ".gd", ".gdshader", ".json", ".tscn", ".tres", ".godot"}]
     for name, script, original_extra in selected:
-        extra = original_extra + (["--tall"] if args.tall and name in ["slice3d","ui_style","touch","fish_art_ui","failure_modal","notebook_ui","ui_iteration"] else [])
+        extra = original_extra + (["--tall"] if args.tall and name in ["slice3d","ui_style","touch","fish_art_ui","failure_modal","notebook_ui","natural_history","ui_iteration"] else [])
         command = [godot, "--headless", "--audio-driver", "Dummy", "--path", "game", "--script", "res://tests/"+script]
         if extra:
             command += ["--", *extra]

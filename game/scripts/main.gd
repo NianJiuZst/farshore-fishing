@@ -8,6 +8,7 @@ const Trial = preload("res://scripts/trial_fishery.gd") # Read historical trial 
 const Registry = preload("res://scripts/fish_3d_registry.gd")
 const FishArt = preload("res://scripts/fish_art_catalog.gd")
 const FishArtViewScript = preload("res://scripts/fish_art_view.gd")
+const NaturalHistory = preload("res://scripts/fish_natural_history.gd")
 const TouchScrollScript = preload("res://scripts/touch_scroll.gd")
 const NotebookUI = preload("res://scripts/fish_notebook_ui.gd")
 const MenuPages = preload("res://scripts/fishing_menu_pages.gd")
@@ -25,6 +26,7 @@ const TEAL: Color = Color("256b63")
 const CORAL: Color = Color("9d4931")
 var catalog: ContentCatalog = Catalog.new()
 var fish_art: FishArtCatalog = FishArt.new()
+var natural_history: FishNaturalHistory = NaturalHistory.new()
 var store: SaveStore = Store.new()
 var encounter: EncounterGenerator = Encounter.new()
 var session: FishingSession = Session.new()
@@ -96,6 +98,9 @@ func _ready() -> void:
 	_content_ok = catalog.load_all(true)
 	if not fish_art.load_all(catalog):
 		catalog.errors.append_array(fish_art.errors)
+		_content_ok = false
+	if not natural_history.load_all(catalog):
+		catalog.errors.append_array(natural_history.errors)
 		_content_ok = false
 	var icon_errors: Array[String]=Art.validate_assets()
 	if not icon_errors.is_empty():
@@ -1020,7 +1025,7 @@ func _show_zoom(id: String) -> void:
 	var plate: PanelContainer=_card(Color("e8ecd9"),18)
 	_page.add_child(plate)
 	plate.add_child(_fish_image(fish,false,false,590))
-	_page.add_child(_text(fish.scientific_name,23,TEAL))
+	_page.add_child(_text(_scientific_name(fish),23,TEAL))
 	_page.add_child(_text(fish.morphology,26))
 
 func _fish_image(fish: FishDefinition, thumbnail: bool, silhouette: bool, height: float) -> TextureRect:
@@ -1076,8 +1081,8 @@ func _show_result() -> void:
 	_open_page("result","保护观察" if protected else "钓获")
 	var flags: Array[String]=[]
 	if bool(_last_settlement.get("new_species",false)): flags.append("首次发现")
-	if bool(_last_settlement.get("new_length",false)): flags.append("长度新纪录")
-	if bool(_last_settlement.get("new_weight",false)): flags.append("重量新纪录")
+	if bool(_last_settlement.get("new_length",false)): flags.append("个人长度新纪录")
+	if bool(_last_settlement.get("new_weight",false)): flags.append("个人重量新纪录")
 	if not flags.is_empty():
 		var ribbon: Label=_text("  ·  ".join(flags),22,GOLD)
 		ribbon.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
@@ -1085,7 +1090,7 @@ func _show_result() -> void:
 	var fish_name: Label=_text(fish.name,43,INK)
 	fish_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(fish_name)
-	var latin: Label=_text(fish.scientific_name,21,MUTED)
+	var latin: Label=_text(_scientific_name(fish),21,MUTED)
 	latin.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_page.add_child(latin)
 	var plate: PanelContainer=_card(Color("e8ecd9"),20)
@@ -1309,6 +1314,18 @@ func _restore_page_scroll(expected: Control, value: int) -> void:
 	var scroll: ScrollContainer = expected.find_child("PageScroll",true,false) as ScrollContainer
 	if scroll != null:
 		scroll.scroll_vertical = value
+
+func _scientific_name(fish: FishDefinition) -> String:
+	return natural_history.scientific_name(fish.species_id, fish.scientific_name)
+
+func _open_species_source(url: String) -> void:
+	# Sources are optional explicit browser actions. All fish facts remain local;
+	# the paused notebook/session stays open when the user comes back.
+	if not NaturalHistory.safe_source_url(url):
+		_toast_message("这条资料链接无法打开")
+		return
+	session.cancel_input()
+	if OS.shell_open(url) != OK: _toast_message("无法打开浏览器，请稍后再试")
 
 func _scroll_to_section(section_name: String) -> void:
 	if not is_instance_valid(_page): return

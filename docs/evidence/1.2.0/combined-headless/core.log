@@ -1,0 +1,16 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/core_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+CORE_TEST_ROOT=/tmp/farshore-core-31-320819
+PASS GROUP catalog/reachability: 28704 legal combinations; 320 intentionally possible empty combinations; fish=44; art=false
+PASS GROUP reproducible RNG and 7040 real individual samples, including conservation metadata
+PASS GROUP real charge → cast → wait → nibble → bite → fight → success
+PASS GROUP pause invariance across five live states and canceled input
+PASS GROUP missed bite, overload, slack and terminal idempotence
+BALANCE common_bream gear=0 fraction=0.267 difficulty=0.400 fight=36.81s; common_bream gear=1 fraction=0.267 difficulty=0.400 fight=30.17s; common_bream gear=2 fraction=0.267 difficulty=0.400 fight=29.25s; common_bream gear=3 fraction=0.267 difficulty=0.400 fight=30.54s; common_bream gear=4 fraction=0.267 difficulty=0.400 fight=23.62s; rudd gear=0 fraction=0.267 difficulty=0.302 fight=34.74s; rudd gear=1 fraction=0.267 difficulty=0.302 fight=27.83s; rudd gear=2 fraction=0.267 difficulty=0.302 fight=27.77s; rudd gear=3 fraction=0.267 difficulty=0.302 fight=29.33s; rudd gear=4 fraction=0.267 difficulty=0.302 fight=22.29s; roach gear=0 fraction=0.267 difficulty=0.239 fight=34.97s; roach gear=1 fraction=0.267 difficulty=0.239 fight=28.07s; roach gear=2 fraction=0.267 difficulty=0.239 fight=27.79s; roach gear=3 fraction=0.267 difficulty=0.239 fight=28.82s; roach gear=4 fraction=0.267 difficulty=0.239 fight=21.72s
+PASS GROUP actual sessions → save → retry → sale/release → restart
+PASS GROUP actual protected observation → production session → save → sale refusal → reload → release
+PASS GROUP zero-start release-only growth: 100 real encounters, discovered=44, balance=230; purchases=3070; unlocks=["japan discoveries=5 cost=140", "norway discoveries=16 cost=300", "bayou discoveries=21 cost=450", "med discoveries=30 cost=500", "yangtze discoveries=38 cost=600"]
+PASS GROUP Main expanded discovery/currency/gear gates, failed unlock retry, protected result and reloaded pending controls
+PASS GROUP Main controls, full-world navigation, background, escaped/result flows and failed selection writes
+CORE_TESTS: 182417/182417 passed; failures=0

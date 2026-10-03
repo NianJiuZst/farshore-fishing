@@ -21,6 +21,7 @@ from release_source_zip import inventory, verify_zip, digest
 from normalize_android_features import normalize_apk
 from android_identity import expected_identity
 from content_fish_art_contract import validate_import_audit, verify_exported_photo_art, photo_authoring_files, require_photo_archive_members
+from content_natural_history_contract import natural_history_contract, require_natural_history_archive_members, verify_exported_natural_history
 
 
 def source_inventory(base):
@@ -47,8 +48,43 @@ def command(args, env, log):
     assert not re.search(r'SCRIPT ERROR:|Parse Error:|Failed to load script|Export failed|^ERROR:', log.read_text(), re.M), 'Engine errors in ' + str(log)
 
 
-def build(root, source_zip, manifest_path, template_path, output):
+def checked_staging_parent(root, staging_parent=None):
+    parent = Path('/tmp') if staging_parent is None else Path(staging_parent)
+    assert parent.is_absolute(), 'Staging parent must be an absolute external directory'
+    for part in (parent, *parent.parents):
+        assert not part.is_symlink(), 'Staging parent and ancestors must not be symlinks'
+    parent = parent.resolve()
+    assert parent != Path('/') and not parent.is_relative_to(Path(root).resolve()), 'Staging parent must be outside the primary repository'
+    assert not parent.exists() or parent.is_dir(), 'Staging parent is not a directory'
+    return parent
+
+
+def create_staging_work(root, version, staging_parent=None):
+    parent = checked_staging_parent(root, staging_parent)
+    assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*', version), 'Unsafe staging version'
+    parent.mkdir(parents=True, exist_ok=True)
+    assert checked_staging_parent(root, parent) == parent
+    work = Path(tempfile.mkdtemp(prefix='farshore-prebuilt-' + version + '-', dir=parent))
+    assert not work.is_symlink() and work.resolve().parent == parent
+    stat = work.stat()
+    return work, (stat.st_dev, stat.st_ino)
+
+
+def remove_staging_work(root, work, owned_identity, staging_parent=None):
+    """Remove only the exact new directory this invocation created, after success."""
+    parent = checked_staging_parent(root, staging_parent)
+    work = Path(work)
+    assert work.parent == parent and re.fullmatch(r'farshore-prebuilt-[A-Za-z0-9._-]+', work.name), 'Cleanup target is not an owned staging directory'
+    assert work.is_dir() and not work.is_symlink() and work.resolve().parent == parent, 'Unsafe staging cleanup target'
+    stat = work.stat()
+    assert (stat.st_dev, stat.st_ino) == owned_identity, 'Owned staging directory was replaced'
+    assert shutil.rmtree.avoids_symlink_attacks, 'Safe staging cleanup requires descriptor-based removal'
+    shutil.rmtree(work)
+
+
+def build(root, source_zip, manifest_path, template_path, output, staging_parent=None):
     root, source_zip, manifest_path, template_path, output = map(lambda p: Path(p).resolve(), [root, source_zip, manifest_path, template_path, output])
+    staging_parent = checked_staging_parent(root, staging_parent)
     assert not source_zip.is_relative_to(root), 'Source release archive must be outside project'
     assert not output.exists(), 'Never overwrite an existing player release'
     report = json.loads(manifest_path.read_text())
@@ -60,7 +96,9 @@ def build(root, source_zip, manifest_path, template_path, output):
         assert digest(root / name) == expected['sha256'], 'Source differs from frozen commit: ' + name
     source = root / 'game'
     content = content_contract(source)
+    content['natural_history'] = natural_history_contract(source, content['species_ids'])
     require_photo_archive_members(root, verified, content['photo_art'])
+    require_natural_history_archive_members(root, verified, content['natural_history'])
     identity = expected_identity(content)
     is_preview = identity['android_package_name'] == 'org.farshore.fishing.preview'
     default_signing = Path('/workspace/shared/.signing-private/farshore-fishing-preview') if is_preview else root.parent/'.signing-private/farshore-fishing'
@@ -85,7 +123,7 @@ def build(root, source_zip, manifest_path, template_path, output):
         assert verified['game/' + name]['sha256'] == sha, 'Source archive is missing a current game input: ' + name
     for name, sha in snapshot['authoring_backup']['sha256'].items():
         assert verified[name]['sha256'] == sha, 'Source archive is missing a current authoring input: ' + name
-    work = Path(tempfile.mkdtemp(prefix='farshore-prebuilt-' + version + '-'))
+    work, staging_identity = create_staging_work(root, version, staging_parent)
     stage = work / 'game'
     shutil.copytree(source, stage, ignore=shutil.ignore_patterns('android', 'exported', '__pycache__'))
     assert source_inventory(stage) == snapshot['sha256']
@@ -101,7 +139,8 @@ def build(root, source_zip, manifest_path, template_path, output):
     settings = re.sub(r'^gradle_build/(min_sdk|target_sdk)="[^"]*"', r'gradle_build/\1=""', settings, flags=re.M)
     assert 'res://../' not in settings and 'gradle_build/gradle_build_directory="res://android"' in settings
     preset.write_text(settings)
-    snapshot['staging'] = {'path': str(stage), 'source_copy_verified_before_preset_changes': True,
+    snapshot['staging'] = {'path': str(stage), 'parent': str(staging_parent), 'owned_directory_identity': list(staging_identity),
+                           'source_copy_verified_before_preset_changes': True,
                            'hardlinks': False, 'gradle_directory': 'res://android', 'export_method': 'official_derived_prebuilt_template',
                            'source_preset_sha256': hashlib.sha256(original_preset.encode()).hexdigest(),
                            'staged_preset_sha256': digest(preset), 'derived_template_sha256': digest(template_path),
@@ -139,6 +178,7 @@ def build(root, source_zip, manifest_path, template_path, output):
         assert all(i.compress_type == zipfile.ZIP_STORED for i in archive.infolist() if i.filename.startswith('lib/') and i.filename.endswith('.so'))
         # Reject stale/remapped photo payloads before invoking the signing tool.
         verify_exported_photo_art(archive, content['photo_art'], photo_audit)
+        verify_exported_natural_history(archive, content['natural_history'])
     verify_zip(source_zip, report['files'], report['source_archive']['prefix'])
     assert digest(source_zip) == report['source_archive']['sha256']
     bt = root/'tools/android-sdk/build-tools/36.1.0'
@@ -153,6 +193,8 @@ def build(root, source_zip, manifest_path, template_path, output):
         subprocess.run([sys.executable, str(root/'tools/verify_android_apk.py'), str(output), 'arm64-v8a', str(audit), str(bt), str(snapshot_path)],
                        env=env, stdout=log, stderr=subprocess.STDOUT, check=True)
     with zipfile.ZipFile(template_path) as template, zipfile.ZipFile(output) as apk:
+        natural_history_audit = verify_exported_natural_history(apk, content['natural_history'])
+        (audit/'exported-natural-history.json').write_text(json.dumps(natural_history_audit, indent=2) + '\n')
         native_hashes = {}
         for name in template.namelist():
             if name.startswith('lib/') and name.endswith('.so'):
@@ -163,11 +205,11 @@ def build(root, source_zip, manifest_path, template_path, output):
               'apk': str(output), 'bytes': output.stat().st_size, 'sha256': digest(output),
               'source_zip_sha256': digest(source_zip), 'source_and_authoring_unchanged': True,
               'native_bytes_match_official_template': native_hashes, 'all_existing_static_gates_passed': True,
+              'natural_history': natural_history_audit,
               'runtime_boundary': 'Desktop gameplay evidence is separate. Android beta runtime and physical ARM64 performance remain unverified.',
               'root_free_bytes': shutil.disk_usage(root).free, 'tmp_free_bytes': shutil.disk_usage('/tmp').free}
     (audit/'prebuilt-finalization.json').write_text(json.dumps(result, indent=2) + '\n')
-    assert work.parent == Path('/tmp') and work.name.startswith('farshore-prebuilt-') and not work.is_symlink()
-    shutil.rmtree(work)
+    remove_staging_work(root, work, staging_identity, staging_parent)
     print(json.dumps(result, indent=2))
 
 
@@ -178,5 +220,6 @@ if __name__ == '__main__':
     parser.add_argument('--source-manifest', type=Path, required=True)
     parser.add_argument('--template', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--staging-parent', type=Path, help='Absolute directory outside the repository for a new owned staging directory (default: /tmp)')
     args = parser.parse_args()
-    build(args.root, args.source_zip, args.source_manifest, args.template, args.output)
+    build(args.root, args.source_zip, args.source_manifest, args.template, args.output, args.staging_parent)

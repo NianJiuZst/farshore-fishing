@@ -10,6 +10,8 @@
 - 送漂、顿沉、定向横移和小幅持漂来自同一套线组受力；水波、短促试探和有效鱼讯有可观察的节奏差别，不能只等最大动作
 - 重新制作分段3D浮漂，明确中性水线、彩色漂目、漂身、碳脚和穿线环；固定水面镜头贯穿观察过程，没有咬钩提示音、按钮变色或自动切镜
 - 准备页和设置内新增“读漂与提竿”，说明水线、试探、含饵与吐饵；游戏简化实际钓组，不将某个漂相描述为现实中必中的口诀
+- 44种鱼全部补充科属、学名、一般尺寸、带量法和来源范围的最大尺寸、分布、栖息地、食性、习性和自然史故事；自然资料、游戏尺寸设定与个人最长/最重纪录分别显示
+- 详情支持自然资料、个人纪录、资料来源跳转；资料正文可离线阅读，点击来源才在外部浏览器打开原文
 - 保留既有44种鱼、高清插画、六地区十二钓点、五款竿、八种饵、图鉴真实纪录和全部存档保护
 
 角色使用 MakeHuman Community 的 CC0 真人比例基础网格、皮肤和服装，配合本项目的权重适配与钓鱼动作。本版完整验证范围见最终验收记录。beta3 的弹窗、整图点击图鉴、独立长度/重量纪录、滚动与返回路径继续保留。
@@ -58,7 +60,7 @@
 
 ## 构建 Android
 
-当前预览版的已验证预构建模板路线见 docs/BETA3_BUILD.md；历史 Gradle 路线见 docs/BUILD.md。先校验独立源码归档，再从隔离副本导出，不能直接在唯一源码目录执行清理或打包。匹配的官方 Godot 模板、JDK 与 Android SDK 版本和命令均在构建文档中。SDK 首次安装需自行接受其许可。签名通过环境变量指向独立的私钥与密码文件，源码不包含签名凭据。
+本正式版的预构建模板路线、冻结与隔离导出命令见 docs/FORMAL_ANDROID_BUILD.md；历史 Gradle 路线见 docs/BUILD.md。先校验独立源码归档，再从隔离副本导出，不能直接在唯一源码目录执行清理或打包。匹配的官方 Godot 模板、JDK 与 Android SDK 版本和命令均在构建文档中。SDK 首次安装需自行接受其许可。签名通过环境变量指向独立的私钥与密码文件，源码不包含签名凭据。
 
 ## 自动化测试
 
@@ -67,11 +69,11 @@
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/save_tests.gd
     HOME=/tmp/farshore-test-home XDG_DATA_HOME=/tmp/farshore-core-test-user XDG_CACHE_HOME=/tmp/farshore-test-cache godot --headless --path game --script res://tests/core_tests.gd
 
-先创建上述临时目录。可用 `python3 tools/run_full_catalog_qa.py --output build/full-catalog-qa --render` 协调导入、逻辑/界面/3D测试、独立44模型二进制审计与可用的桌面Vulkan测试。源码测试包括真实全目录出鱼、动画连接、最小/最大鱼镜头、触控冲突、存档故障与重启；历史trial_fishery测试只验证旧适配器/记录兼容。每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。本版视觉、源代码和设备证据边界见docs/BETA3_ACCEPTANCE.md，不能以旧版计数替代本次复验。
+先创建上述临时目录。可用 `python3 tools/run_full_catalog_qa.py --output build/full-catalog-qa --render` 协调导入、逻辑/界面/3D测试、独立44模型二进制审计与可用的桌面Vulkan测试。源码测试包括真实全目录出鱼、动画连接、最小/最大鱼镜头、触控冲突、存档故障与重启；历史trial_fishery测试只验证旧适配器/记录兼容。每项测试的隔离目录要求和最新结果见对应文档。测试源码不导出到发行APK。本版视觉、源代码和设备证据边界见docs/FORMAL_ACCEPTANCE.md，不能以旧版计数替代本次复验。
 
 ## 当前已核验范围
 
-- 实际GDScript机制矩阵：18,040场、341项回归与9项平衡门槛通过；当前会话源文件及原始证据见 docs/FISHING_SKILL_BALANCE.md
+- 本版读漂机制矩阵：24,768场，6,273项断言与7项玩法门槛通过；另有独立种子与观察延迟检查。模拟控制器结果不代表所有玩家的成功率，完整方法和证据见 docs/FLOAT_ENCOUNTER_VALIDATION.md
 - 写实插画专项：完整性/几何34/34；全部44鱼静态页面在720×1280和720×1584各1182/1182；选取7鱼的原生桌面Mobile Vulkan页面280/280，末次日志干净退出。证据见 docs/evidence/1.2.0-beta.2/fish-photoreal/
 - 这些是机制、桌面与无窗口专项证据；合并版本的整体回归、Android打包和目标手机验收另行记录，不能由上述专项通过推定
 
@@ -79,7 +81,8 @@
 
 - game/scripts/：类型化 GDScript 模块
 - game/scenes/main.tscn：原生 Control 场景入口
-- game/data/fish_a.json 至 fish_d.json：44 物种的单一来源分片
+- game/data/fish_a.json 至 fish_d.json：44 物种的游戏定义分片，保留历史物种标识以兼容存档
+- game/data/encyclopedia_a.json 至 encyclopedia_d.json：44物种的独立离线自然资料、最新学名显示、字段级来源与尺寸记录范围
 - game/data/world.json：水域、钓点、装备与鱼饵
 - game/data/fish_3d.json：44种独立3D资源的严格清单，缺失资源会阻止进入钓鱼而不是替换成另一种鱼
 - game/data/fish_art.json：44种写实插画及缩略图的严格清单，绑定原PNG、导入像素、透明边界和解剖端点
@@ -97,7 +100,9 @@
 
 ## 资料与许可
 
-鱼类分布和形态参考鱼类数据库与海洋研究机构，逐物种链接见 docs/FISH_A_SOURCES.md、FISH_B_SOURCES.md、FISH_C_SOURCES.md、FISH_D_SOURCES.md。出现倍率、尺寸锚点、重量立方缩放、时间/天气、难度与稀有度是游戏调校，不冒充实测科研关系，也不提供现实垂钓法规建议。
+图鉴自然资料的逐字段来源、分类差异和原始研究故事见 docs/ENCYCLOPEDIA_A_SOURCES.md、docs/ENCYCLOPEDIA_B_SOURCES.md、docs/ENCYCLOPEDIA_CD_SOURCES.md，独立交叉检查及其范围见 docs/ENCYCLOPEDIA_INDEPENDENT_REVIEW.md。常见尺寸可能来自特定地区或全年龄样本，不把资料库常见长度冒充全球成鱼平均值；缺少可靠极值时明确留空。
+
+既有鱼类分布和形态参考鱼类数据库与海洋研究机构，逐物种链接见 docs/FISH_A_SOURCES.md、FISH_B_SOURCES.md、FISH_C_SOURCES.md、FISH_D_SOURCES.md。出现倍率、尺寸锚点、重量立方缩放、时间/天气、难度与稀有度是游戏调校，不冒充实测科研关系，也不提供现实垂钓法规建议。
 
 正式版人物基于 MakeHuman Community 的 CC0 图形资产，官方来源、逐文件哈希、工具/资产许可区别及重建步骤见 docs/ASSETS_3D_ANGLER_LICENSES.md、docs/ASSETS_3D_ANGLER_PROVENANCE.json。
 
@@ -105,4 +110,4 @@
 
 ## 版本边界
 
-本次范围为既有44鱼、六地区十二钓点的读漂提竿交互、精细3D浮漂和真人比例人物替换，不新增额外地区/鱼种或联网系统。账号、云存档、联网排行、商店发布、广告与内购均不在本版范围内。详见 docs/KNOWN_ISSUES.md 区分未验证的目标设备体验与未来扩展。
+本次范围为既有44鱼、六地区十二钓点的读漂提竿交互、精细3D浮漂、真人比例人物替换与44物种的详细自然资料，不新增额外地区/鱼种或联网系统。账号、云存档、联网排行、商店发布、广告与内购均不在本版范围内。详见 docs/KNOWN_ISSUES.md 区分未验证的目标设备体验与未来扩展。

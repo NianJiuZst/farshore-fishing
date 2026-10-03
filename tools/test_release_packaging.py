@@ -8,6 +8,8 @@ import subprocess
 import struct
 import tempfile
 import unittest
+from unittest import mock
+import warnings
 import zipfile
 import zlib
 import release_source_zip as source
@@ -17,6 +19,281 @@ import normalize_android_features as normalization
 import android_identity
 import content_fish_art_contract as photos
 import content_3d_contract as three_d
+import content_natural_history_contract as natural
+import android_prebuilt_build as prebuilt
+
+
+class NaturalHistoryPackagingTests(unittest.TestCase):
+    """Small synthetic all44 fixtures; no editor, APK build or signing access."""
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory(prefix='farshore-encyclopedia-test-')
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)/'repo'
+        self.project = self.root/'game'
+        self.ids = [f'fish_{index}' for index in range(44)]
+        self.documents = {}
+        entry = {'accepted_scientific_name': 'Micropterus nigricans',
+                 'taxonomy': {'family_scientific': 'Centrarchidae', 'family_zh': '太阳鱼科',
+                              'genus_scientific': 'Micropterus', 'genus_zh': '黑鲈属', 'source_ids': ['s1']},
+                 'max_length': {'value_cm': 97.0, 'length_type': 'TL', 'text': 'Published maximum length', 'source_ids': ['s1']},
+                 'max_weight': {'value_kg': None, 'text': 'No reliable species-wide maximum', 'source_ids': ['s2'], 'record_label': 'Regional report'},
+                 'story': {'title': 'A documented history', 'text': 'Verified narrative', 'source_ids': ['s2']},
+                 'sources': [{'id': 's1', 'title': 'Taxonomy and length', 'publisher': 'Reference One', 'url': 'https://example.org/species', 'accessed': '2026-10-03'},
+                             {'id': 's2', 'title': 'Natural history', 'publisher': 'Reference Two', 'url': 'https://research.example.org/paper?version=1#results', 'accessed': '2026-10-03'}]}
+        entry.update({key: {'text': 'Documented ' + key, 'source_ids': ['s1']} for key in natural.TEXT_FIELDS})
+        for index, path in enumerate(natural.DATA_FILES):
+            self.documents[path] = {'schema_version': 1, 'entries': [{**copy.deepcopy(entry), 'species_id': species} for species in self.ids[index*11:(index+1)*11]]}
+        self.write('project.godot', b'[application]\nconfig/version="1.2.0"\n')
+        self.write('scripts/catalog.gd', b'const FILES = ["fish_a.json"]\n')
+        # The accepted name is independent of the saved identity/old catalog name.
+        self.write('data/fish_a.json', json.dumps([{'species_id': species, 'scientific_name': 'Oldgenus oldname'} for species in self.ids]).encode())
+        self.module = ('extends RefCounted\nconst FILES: Array[String] = ' + json.dumps(['res://' + path for path in natural.DATA_FILES]) + '\n').encode()
+        self.write(natural.MODULE, self.module)
+        self.save_documents()
+        self.contract = natural.natural_history_contract(self.project)
+        self.payloads = {path: (self.project/path).read_bytes() for path in natural.DATA_FILES}
+        self.target = str(Path(natural.MODULE).with_suffix('.gdc'))
+        self.payloads[natural.MODULE + '.remap'] = ('[remap]\npath="res://' + self.target + '"\n').encode()
+        self.payloads[self.target] = b'GDSC-fixture-compiled-natural-history'
+
+    def write(self, path, raw):
+        destination = self.project/path
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(raw)
+
+    def save_documents(self):
+        for path, document in self.documents.items():
+            self.write(path, json.dumps(document, ensure_ascii=False).encode())
+
+    def files(self):
+        return {str(path.relative_to(self.root)): {'sha256': photos.sha256(path.read_bytes())} for path in self.root.rglob('*') if path.is_file()}
+
+    def verify(self, payloads=None, prefix='assets/', duplicate=None):
+        stream = io.BytesIO()
+        contents = self.payloads if payloads is None else payloads
+        with zipfile.ZipFile(stream, 'w') as archive:
+            for path, raw in contents.items(): archive.writestr(prefix + path, raw)
+            if duplicate:
+                with warnings.catch_warnings():
+                    warnings.simplefilter('ignore', UserWarning)
+                    archive.writestr(prefix + duplicate, contents[duplicate])
+        stream.seek(0)
+        with zipfile.ZipFile(stream) as archive:
+            return natural.verify_exported_natural_history(archive, self.contract, prefix)
+
+    def test_complete44_source_compiled_and_plain_export_roundtrip(self):
+        self.assertEqual(self.contract['species_ids'], sorted(self.ids))
+        self.assertEqual(set(self.contract['resource_sha256']), {natural.MODULE, *natural.DATA_FILES})
+        for prefix in ('assets/', ''):
+            proof = self.verify(prefix=prefix)
+            self.assertTrue(proof['exact_frozen_json_bytes'])
+            self.assertEqual(proof['module_export_target'], self.target)
+            self.assertEqual(proof['module_payload_sha256'], photos.sha256(self.payloads[self.target]))
+            self.assertEqual(set(proof['data_payload_sha256']), set(natural.DATA_FILES))
+        direct = self.payloads.copy()
+        direct.pop(natural.MODULE + '.remap'); direct.pop(self.target)
+        direct[natural.MODULE] = self.module
+        self.assertEqual(self.verify(direct)['module_payload_sha256'], photos.sha256(self.module))
+
+    def test_required_sources_loader_inventory_and_symlinks_fail_closed(self):
+        for path in (natural.MODULE, *natural.DATA_FILES):
+            raw = (self.project/path).read_bytes(); (self.project/path).unlink()
+            with self.subTest(missing=path), self.assertRaises(AssertionError): natural.natural_history_contract(self.project)
+            self.write(path, raw)
+        for loaded in (natural.DATA_FILES[:-1], natural.DATA_FILES + (natural.DATA_FILES[0],), natural.DATA_FILES[:-1] + ('data/encyclopedia_extra.json',)):
+            self.write(natural.MODULE, ('const FILES: Array[String] = ' + json.dumps(['res://' + path for path in loaded])).encode())
+            with self.subTest(loader=loaded), self.assertRaises(AssertionError): natural.natural_history_contract(self.project)
+        self.write(natural.MODULE, self.module)
+        extra = self.project/'data/encyclopedia_extra.json'; extra.write_text('{}')
+        with self.assertRaises(AssertionError): natural.natural_history_contract(self.project)
+        extra.unlink()
+        module = self.project/natural.MODULE; module.unlink()
+        outside = Path(self.temp.name)/'outside.gd'; outside.write_bytes(self.module); module.symlink_to(outside)
+        with self.assertRaisesRegex(AssertionError, 'Missing/unsafe source'): natural.natural_history_contract(self.project)
+
+    def test_schema_and_exact44_identity_fail_closed(self):
+        original = copy.deepcopy(self.documents)
+        for mutation in ('old_schema', 'boolean_schema', 'non_object', 'missing_entries', 'empty_file', 'non_entry', 'missing_species', 'duplicate_species', 'unknown_species'):
+            self.documents = copy.deepcopy(original)
+            first = self.documents[natural.DATA_FILES[0]]
+            if mutation == 'old_schema': first['schema_version'] = 0
+            if mutation == 'boolean_schema': first['schema_version'] = True
+            if mutation == 'non_object': self.documents[natural.DATA_FILES[0]] = []
+            if mutation == 'missing_entries': first.pop('entries')
+            if mutation == 'empty_file': first['entries'] = []
+            if mutation == 'non_entry': first['entries'][0] = 'invalid'
+            if mutation == 'missing_species': first['entries'].pop()
+            if mutation == 'duplicate_species': first['entries'][0]['species_id'] = first['entries'][1]['species_id']
+            if mutation == 'unknown_species': first['entries'][0]['species_id'] = 'unknown_fish'
+            self.save_documents()
+            with self.subTest(mutation=mutation), self.assertRaises(AssertionError): natural.natural_history_contract(self.project)
+        self.documents = original; self.save_documents()
+        for invalid_ids in (self.ids[:-1], self.ids[:-1] + [self.ids[0]], self.ids + ['extra'], self.ids[:-1] + [None]):
+            with self.subTest(ids=invalid_ids[-1]), self.assertRaises(AssertionError): natural.natural_history_contract(self.project, invalid_ids)
+        for raw in (b'{"schema_version":1,"schema_version":1,"entries":[]}', b'{"schema_version":1,"entries":[{"species_id":"fish_0","species_id":"fish_1"}]}', b'{"schema_version":1,"entries":[NaN]}', b'{not json}'):
+            self.write(natural.DATA_FILES[0], raw)
+            with self.subTest(raw=raw), self.assertRaises((AssertionError, ValueError)): natural.natural_history_contract(self.project)
+
+    def test_taxonomy_and_all_sourced_text_fields_fail_closed(self):
+        original = self.documents[natural.DATA_FILES[0]]['entries'][0]
+        for key in ('species_id', 'accepted_scientific_name'):
+            for bad in ('', ' ', None, 12, 'Oldgenus', '../escape'):
+                entry = copy.deepcopy(original); entry[key] = bad
+                with self.subTest(key=key, value=bad), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        for key in ('family_scientific', 'family_zh', 'genus_scientific', 'genus_zh'):
+            entry = copy.deepcopy(original); entry['taxonomy'][key] = ''
+            with self.subTest(taxonomy=key), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        entry = copy.deepcopy(original); entry['taxonomy']['genus_scientific'] = 'Oldgenus'
+        with self.assertRaisesRegex(AssertionError, 'name and genus differ'): natural.validate_entry(entry)
+        for key in ('taxonomy', *natural.TEXT_FIELDS, 'max_length', 'max_weight', 'story'):
+            for replacement in (None, {}, {'text': 17, 'source_ids': ['s1']}):
+                entry = copy.deepcopy(original); entry[key] = replacement
+                with self.subTest(field=key, value=replacement), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        entry = copy.deepcopy(original); entry['story'].pop('title')
+        with self.assertRaises(AssertionError): natural.validate_entry(entry)
+
+    def test_source_metadata_safe_urls_and_field_references_fail_closed(self):
+        original = self.documents[natural.DATA_FILES[0]]['entries'][0]
+        for unsafe in ('http://example.org/x', 'https://user:pass@example.org/x', 'https://example.org:443/x', 'https://example.org\\evil',
+                       'https://example.org/\nsecret', 'https://example.org/\x00', 'https://example.org/\x7f', 'https://example.org/ white',
+                       'https://localhost/x', 'https://bad..org/x', 'https://-bad.org/x', 'https://example.org@evil.org/x',
+                       'https://example%2eorg/x', 'https://[broken/x', 'javascript:alert(1)', None, 'https://example.org/' + 'x'*2048):
+            entry = copy.deepcopy(original); entry['sources'][0]['url'] = unsafe
+            with self.subTest(url=unsafe), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        for key in ('id', 'title', 'publisher', 'accessed'):
+            for invalid in ('', None, 19):
+                entry = copy.deepcopy(original); entry['sources'][0][key] = invalid
+                with self.subTest(source=key, value=invalid), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        for bad in ('2026-02-30', '20261003'):
+            entry = copy.deepcopy(original); entry['sources'][0]['accessed'] = bad
+            with self.subTest(date=bad), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        for sources in ([], original['sources'][:1], [original['sources'][0]]*2, [None, None]):
+            entry = copy.deepcopy(original); entry['sources'] = sources
+            with self.subTest(sources=sources), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        for key in ('taxonomy', *natural.TEXT_FIELDS, 'max_length', 'max_weight', 'story'):
+            for refs in ([], None, 's1', ['undefined'], [1], ['s1', 's1']):
+                entry = copy.deepcopy(original); entry[key]['source_ids'] = refs
+                with self.subTest(field=key, refs=refs), self.assertRaises(AssertionError): natural.validate_entry(entry)
+
+    def test_numeric_null_length_types_and_optional_scoped_record_labels(self):
+        original = self.documents[natural.DATA_FILES[0]]['entries'][0]
+        for field, unit in (('max_length', 'value_cm'), ('max_weight', 'value_kg')):
+            for valid in (None, 12, 1.25):
+                entry = copy.deepcopy(original); entry[field][unit] = valid
+                natural.validate_entry(entry)
+            for invalid in (True, False, '12', '', 0, -1, float('nan'), float('inf'), -float('inf'), [], {}):
+                entry = copy.deepcopy(original); entry[field][unit] = invalid
+                with self.subTest(field=field, value=invalid), self.assertRaises(AssertionError): natural.validate_entry(entry)
+            entry = copy.deepcopy(original); entry[field].pop(unit)
+            with self.assertRaises(AssertionError): natural.validate_entry(entry)
+            for invalid in ('', ' ', None, 1, []):
+                entry = copy.deepcopy(original); entry[field]['record_label'] = invalid
+                with self.subTest(field=field, label=invalid), self.assertRaises(AssertionError): natural.validate_entry(entry)
+        for length_type in ('TL', 'FL', 'SL', 'unspecified'):
+            entry = copy.deepcopy(original); entry['max_length']['length_type'] = length_type
+            natural.validate_entry(entry)
+        for invalid in ('', None, 'total', 'cm', 1):
+            entry = copy.deepcopy(original); entry['max_length']['length_type'] = invalid
+            with self.subTest(length_type=invalid), self.assertRaises(AssertionError): natural.validate_entry(entry)
+
+    def test_export_missing_changed_extra_remapped_and_duplicate_json_fails_closed(self):
+        for path in natural.DATA_FILES:
+            for mutation in ('missing', 'changed', 'substituted', 'remapped'):
+                payloads = self.payloads.copy()
+                if mutation == 'missing': payloads.pop(path)
+                if mutation == 'changed': payloads[path] += b' '
+                if mutation == 'substituted': payloads[path] = payloads[natural.DATA_FILES[(natural.DATA_FILES.index(path)+1)%4]]
+                if mutation == 'remapped': payloads[path + '.remap'] = b'[remap]\npath="res://other.json"\n'
+                with self.subTest(path=path, mutation=mutation), self.assertRaises(AssertionError): self.verify(payloads)
+        payloads = {**self.payloads, 'data/encyclopedia_extra.json': b'{}'}
+        with self.assertRaises(AssertionError): self.verify(payloads)
+        with self.assertRaisesRegex(AssertionError, 'Duplicate archive'): self.verify(duplicate=natural.DATA_FILES[0])
+
+    def test_export_module_remap_payload_and_source_fail_closed(self):
+        for mutation in ('missing_remap', 'missing_payload', 'wrong_target', 'traversal', 'duplicate_path', 'invalid_bytecode', 'header_only', 'source_and_remap', 'changed_source', 'source_and_bytecode'):
+            payloads = self.payloads.copy()
+            if mutation == 'missing_remap': payloads.pop(natural.MODULE + '.remap')
+            if mutation == 'missing_payload': payloads.pop(self.target)
+            if mutation == 'wrong_target': payloads[natural.MODULE + '.remap'] = b'[remap]\npath="res://scripts/main.gdc"\n'
+            if mutation == 'traversal': payloads[natural.MODULE + '.remap'] = b'[remap]\npath="res://../outside.gdc"\n'
+            if mutation == 'duplicate_path': payloads[natural.MODULE + '.remap'] += payloads[natural.MODULE + '.remap']
+            if mutation == 'invalid_bytecode': payloads[self.target] = b'invalid bytecode'
+            if mutation == 'header_only': payloads[self.target] = b'GDSC'
+            if mutation == 'source_and_remap': payloads[natural.MODULE] = self.module
+            if mutation in ('changed_source', 'source_and_bytecode'):
+                payloads.pop(natural.MODULE + '.remap'); payloads[natural.MODULE] = self.module
+                if mutation == 'changed_source':
+                    payloads.pop(self.target); payloads[natural.MODULE] += b'#drift'
+            with self.subTest(mutation=mutation), self.assertRaises(AssertionError): self.verify(payloads)
+
+    def test_archive_requires_all_five_hashes_and_rejects_source_drift(self):
+        files = self.files()
+        required = natural.require_natural_history_archive_members(self.root, files)
+        self.assertEqual(len(required), 5)
+        for path in required:
+            for mutation in ('missing', 'changed', 'missing_digest'):
+                altered = copy.deepcopy(files)
+                if mutation == 'missing': altered.pop(path)
+                if mutation == 'changed': altered[path]['sha256'] = '0'*64
+                if mutation == 'missing_digest': altered[path] = {}
+                with self.subTest(path=path, mutation=mutation), self.assertRaises(AssertionError): natural.require_natural_history_archive_members(self.root, altered, self.contract)
+        self.write(natural.DATA_FILES[0], (self.project/natural.DATA_FILES[0]).read_bytes() + b' ')
+        with self.assertRaisesRegex(AssertionError, 'source differs'): natural.require_natural_history_archive_members(self.root, files, self.contract)
+        for path in (natural.MODULE, *natural.DATA_FILES): (self.project/path).unlink()
+        with self.assertRaises(AssertionError): natural.require_natural_history_archive_members(self.root, self.files())
+
+    def test_source_zip_integration_validates_content_before_creating_archive(self):
+        def inventory():
+            result = {}
+            for path in self.root.rglob('*'):
+                if path.is_file():
+                    with path.open('rb') as stream: sha1, unused = source.stream_hashes(stream, path.stat().st_size)
+                    result[str(path.relative_to(self.root))] = {'mode': '100644', 'git_blob_sha1': sha1, 'bytes': path.stat().st_size}
+            return '0'*40, result
+        output = Path(self.temp.name)/'fixture-source.zip'
+        with mock.patch.object(source, 'inventory', return_value=inventory()):
+            report = source.create(self.root, 'fixture', output, 'fixture')
+        self.assertTrue({'game/' + path for path in (natural.MODULE, *natural.DATA_FILES)}.issubset(report['files']))
+        self.documents[natural.DATA_FILES[0]]['entries'][0]['max_weight']['value_kg'] = -1
+        self.save_documents()
+        invalid = Path(self.temp.name)/'invalid.zip'
+        with mock.patch.object(source, 'inventory', return_value=inventory()), self.assertRaisesRegex(AssertionError, 'positive finite'):
+            source.create(self.root, 'fixture', invalid, 'invalid')
+        self.assertFalse(invalid.exists())
+        self.assertFalse(invalid.with_name(invalid.name + '.pending').exists())
+
+
+class IsolatedStagingTests(unittest.TestCase):
+    def test_default_and_external_staging_create_and_owned_cleanup(self):
+        with tempfile.TemporaryDirectory(prefix='farshore-staging-test-') as folder:
+            root = Path(folder)/'repo'; root.mkdir()
+            self.assertEqual(prebuilt.checked_staging_parent(root), Path('/tmp'))
+            parent = Path(folder)/'external/builds'
+            work, identity = prebuilt.create_staging_work(root, '1.2.0', parent)
+            self.assertEqual(work.parent, parent)
+            (work/'fixture.txt').write_text('owned')
+            (parent/'unrelated.txt').write_text('preserve')
+            prebuilt.remove_staging_work(root, work, identity, parent)
+            self.assertFalse(work.exists())
+            self.assertEqual((parent/'unrelated.txt').read_text(), 'preserve')
+
+    def test_unsafe_staging_and_replaced_cleanup_targets_fail_closed(self):
+        with tempfile.TemporaryDirectory(prefix='farshore-staging-test-') as folder:
+            base = Path(folder); root = base/'repo'; root.mkdir()
+            parent = base/'external'; parent.mkdir()
+            link = base/'linked'; link.symlink_to(parent, target_is_directory=True)
+            regular = base/'regular'; regular.write_text('preserve')
+            for invalid in (root, root/'game', Path('relative'), Path('/'), link, link/'child', regular):
+                with self.subTest(parent=invalid), self.assertRaises(AssertionError): prebuilt.create_staging_work(root, '1.2.0', invalid)
+            with self.assertRaises(AssertionError): prebuilt.create_staging_work(root, '../escape', parent)
+            work, identity = prebuilt.create_staging_work(root, '1.2.0', parent)
+            (work/'fixture.txt').write_text('preserve')
+            with self.assertRaises(AssertionError): prebuilt.remove_staging_work(root, work, (identity[0], identity[1]+1), parent)
+            with self.assertRaises(AssertionError): prebuilt.remove_staging_work(root, root, identity, parent)
+            moved = work.with_name(work.name + '-preserved'); work.rename(moved)
+            work.symlink_to(moved, target_is_directory=True)
+            with self.assertRaises(AssertionError): prebuilt.remove_staging_work(root, work, identity, parent)
+            self.assertEqual((moved/'fixture.txt').read_text(), 'preserve')
 
 
 class AnglerPackagingTests(unittest.TestCase):

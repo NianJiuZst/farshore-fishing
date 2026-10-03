@@ -1,0 +1,19 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/touch_scroll_tests.gd -- --production --require-full
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only
+PRODUCTION_TOUCH _show_gear offset=315 maximum=1828.0
+PRODUCTION_TOUCH_BOTTOM offset=1828 maximum=1828
+PRODUCTION_TOUCH _show_travel offset=315 maximum=1773.0
+PRODUCTION_TOUCH_BOTTOM offset=1773 maximum=1773
+PRODUCTION_TOUCH _show_catalog offset=315 maximum=6820.0
+PRODUCTION_TOUCH_BOTTOM offset=6820 maximum=6820
+PRODUCTION_TOUCH _show_settings offset=79 maximum=79.0
+PRODUCTION_TOUCH_BOTTOM offset=79 maximum=79
+PRODUCTION_TOUCH _show_licenses offset=315 maximum=102440.0
+PRODUCTION_TOUCH_BOTTOM offset=102440 maximum=102440
+PRODUCTION_TOUCH_BOTTOM offset=1828 maximum=1828
+PRODUCTION_TOUCH_BOTTOM offset=1828 maximum=1828
+PREVIEW_TOUCH_RANGE maximum=772.0 offset=193 completed_drags=1
+TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled
+TOUCH_SCROLL_TESTS: 132/132 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag

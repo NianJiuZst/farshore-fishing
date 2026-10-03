@@ -1,0 +1,134 @@
+{
+	"adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"api": "1.4.305",
+	"app_size": "(720.0, 1280.0)",
+	"browser_opened": false,
+	"captures": [
+		{
+			"file": "01_carp_unknown_zero.png",
+			"fixture_total_catch_count": 0,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 0,
+			"selected_species_catch_count": 0,
+			"species_id": "common_carp",
+			"width": 720
+		},
+		{
+			"file": "02_carp_one_fixture_catch.png",
+			"fixture_total_catch_count": 1,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 0,
+			"selected_species_catch_count": 1,
+			"species_id": "common_carp",
+			"width": 720
+		},
+		{
+			"file": "03_carp_three_fixture_catches.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 0,
+			"selected_species_catch_count": 3,
+			"species_id": "common_carp",
+			"width": 720
+		},
+		{
+			"file": "04_carp_taxonomy_size.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 790,
+			"selected_species_catch_count": 3,
+			"species_id": "common_carp",
+			"width": 720
+		},
+		{
+			"file": "05_carp_habits_diet_story.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 2037,
+			"selected_species_catch_count": 3,
+			"species_id": "common_carp",
+			"width": 720
+		},
+		{
+			"file": "06_carp_personal_records.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 3312,
+			"selected_species_catch_count": 3,
+			"species_id": "common_carp",
+			"width": 720
+		},
+		{
+			"file": "07_carp_sources.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 3665,
+			"selected_species_catch_count": 3,
+			"species_id": "common_carp",
+			"width": 720
+		},
+		{
+			"file": "08_southern_catfish_unknown_maxima.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 745,
+			"selected_species_catch_count": 0,
+			"species_id": "southern_catfish",
+			"width": 720
+		},
+		{
+			"file": "09_sturgeon_current_name_zero_catch.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 0,
+			"selected_species_catch_count": 0,
+			"species_id": "chinese_sturgeon",
+			"width": 720
+		},
+		{
+			"file": "10_sturgeon_taxonomy_size.png",
+			"fixture_total_catch_count": 3,
+			"height": 1280,
+			"scope": "Actual production Main UI; isolated artificial catch fixtures; not a player save or Android hardware",
+			"screen": "species",
+			"scroll": 741,
+			"selected_species_catch_count": 0,
+			"species_id": "chinese_sturgeon",
+			"width": 720
+		}
+	],
+	"checks": 969,
+	"failures": 0,
+	"hashes": {
+		"res://data/encyclopedia_a.json": "bf982fc91eec83da1cc80102e8810c6767811ddfd539de20387e3a58f1d00705",
+		"res://data/encyclopedia_b.json": "6d9838fbb6c626d9f8b8a2ab8e2e895fbb725b80b52d04a204b55e484527ce89",
+		"res://data/encyclopedia_c.json": "a13d2e359e4d8a76306b3519b0e005e46d493458bb92b0c616bceef8c34a4004",
+		"res://data/encyclopedia_d.json": "c82621e614f30353befc4e726dcf8795cd9bfdee1b6a3946df693a21276c38ad",
+		"res://scripts/fish_natural_history.gd": "68707aca86bf1c042ab22e5a50b562ff313ec6f19b14301b8ec200760fabc50a",
+		"res://scripts/fish_notebook_ui.gd": "35ab1ab8d61949f7c9782e1b5ef563f37e5c8ac3b3d0c761d536317a853ebe31",
+		"res://scripts/main.gd": "1d3808723e43d07d09857af3c7ea797a8fe88e7270429e9312e0f2f95e18d09f",
+		"res://tests/natural_history_tests.gd": "d3aade1db04c8d0ee39bdb636af289f9363fe51c18a6c7e37a952f88c0848156"
+	},
+	"renderer": "mobile",
+	"scope": "Native desktop Mobile/Vulkan production Main UI; root 3D disabled for notebook-only presentation; no phone/device performance claim",
+	"source_taps_intercepted": 1,
+	"viewport": "(720, 1280)"
+}

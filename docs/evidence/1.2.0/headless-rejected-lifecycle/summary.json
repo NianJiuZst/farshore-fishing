@@ -1,0 +1,344 @@
+{
+  "passed": false,
+  "selected_suites": [
+    "camera_aspect",
+    "save",
+    "core",
+    "session_observation",
+    "float_encounter",
+    "hazard_boundary",
+    "guard_trace",
+    "float_observation",
+    "fish_art",
+    "fish_art_ui",
+    "failure_modal",
+    "notebook_ui",
+    "ui_iteration",
+    "tackle",
+    "bait_balance",
+    "registry",
+    "fish_preview",
+    "main_travel",
+    "slice3d",
+    "ui_style",
+    "touch",
+    "historical_trial",
+    "angler_anatomy"
+  ],
+  "representative_tall_layout": false,
+  "runtime_files": 1104,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "camera_aspect",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.62,
+      "log": "build/formal-final-headless/camera_aspect.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CAMERA_ASPECT_TESTS: 531/531 passed; failures=0; mathematical desktop projection, not device certification"
+      ]
+    },
+    {
+      "name": "save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 22.34,
+      "log": "build/formal-final-headless/save.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "SAVE_TESTS: 314/314 passed; failures=0"
+      ]
+    },
+    {
+      "name": "core",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 25.15,
+      "log": "build/formal-final-headless/core.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CORE_TESTS: 182417/182417 passed; failures=0"
+      ]
+    },
+    {
+      "name": "session_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.82,
+      "log": "build/formal-final-headless/session_observation.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "SESSION_OBSERVATION_TESTS: 126/126 passed; failures=0"
+      ]
+    },
+    {
+      "name": "float_encounter",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.88,
+      "log": "build/formal-final-headless/float_encounter.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_ENCOUNTER_TESTS: 94/94 passed; failures=0; simulations=0; passive_traces=0"
+      ]
+    },
+    {
+      "name": "hazard_boundary",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.67,
+      "log": "build/formal-final-headless/hazard_boundary.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_HAZARD_BOUNDARY_TESTS: 28/28; cases=7"
+      ]
+    },
+    {
+      "name": "guard_trace",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.17,
+      "log": "build/formal-final-headless/guard_trace.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_GUARD_TRACE_TESTS: 1304/1304 passed; formal_fight_cases=360; unchanged_functions=7; historical_video_not_revalidated=true"
+      ]
+    },
+    {
+      "name": "float_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.17,
+      "log": "build/formal-final-headless/float_observation.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_OBSERVATION_TESTS: 90/90 passed; failures=0; presentation fixtures, not phone performance"
+      ]
+    },
+    {
+      "name": "fish_art",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.87,
+      "log": "build/formal-final-headless/fish_art.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_ART_TESTS: 34/34 passed; prototype geometry and release gate, not 44 finished art or Android validation"
+      ]
+    },
+    {
+      "name": "fish_art_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 19.99,
+      "log": "build/formal-final-headless/fish_art_ui.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "PHOTO_UI_SCOPE: canonical-photoreal-44; production native pages; no release gate override; not Android validation",
+        "FISH_ART_UI_TESTS: 1182/1182 passed; canonical-photoreal-44; (720, 1280) desktop layout"
+      ]
+    },
+    {
+      "name": "failure_modal",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.02,
+      "log": "build/formal-final-headless/failure_modal.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_FAILURE_MODAL_TESTS: 37/37 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1280) logical=(720.0, 1280.0); not Android hardware testing"
+      ]
+    },
+    {
+      "name": "notebook_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 25.16,
+      "log": "build/formal-final-headless/notebook_ui.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_NOTEBOOK_UI_TESTS: 313/313 passed; (720, 1280); actual Main + Viewport touch, no Android claim"
+      ]
+    },
+    {
+      "name": "ui_iteration",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 10.79,
+      "log": "build/formal-final-headless/ui_iteration.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "UI_ITERATION_TESTS: 93/93 passed; failures=0; physical=(720, 1280) logical=(720.0, 1280.0); production Main + viewport touch; not Android hardware"
+      ]
+    },
+    {
+      "name": "tackle",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.78,
+      "log": "build/formal-final-headless/tackle.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TACKLE_TESTS: 557/557 passed; failures=0"
+      ]
+    },
+    {
+      "name": "bait_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.87,
+      "log": "build/formal-final-headless/bait_balance.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "BAIT_BALANCE_TESTS: 33091/33091; reachable_species=44/44"
+      ]
+    },
+    {
+      "name": "registry",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.47,
+      "log": "build/formal-final-headless/registry.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_3D_REGISTRY_TESTS: 98/98; imported models=44/44; release_gate=true"
+      ]
+    },
+    {
+      "name": "fish_preview",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.82,
+      "log": "build/formal-final-headless/fish_preview.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_PREVIEW_TESTS: 25/25 passed"
+      ]
+    },
+    {
+      "name": "main_travel",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 5.78,
+      "log": "build/formal-final-headless/main_travel.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "MAIN_TRAVEL_TESTS: 24/24 passed; failures=0; boundary tests only, no readiness override"
+      ]
+    },
+    {
+      "name": "slice3d",
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 71.12,
+      "log": "build/formal-final-headless/slice3d.log",
+      "errors": [
+        "FAIL 3D: roach actual wait and nibble preserve hidden fish; only float movement exposes bite",
+        "FAIL 3D: roach actual hook action begins fight without latched input",
+        "FAIL 3D: roach balanced production fight catches and begins landing",
+        "FAIL 3D: roach save is immediate while results wait for the 3D landing",
+        "FAIL 3D: rudd camera transition moves the actual 3D view",
+        "FAIL 3D: northern_snakehead actual wait and nibble preserve hidden fish; only float movement exposes bite",
+        "FAIL 3D: northern_snakehead actual hook action begins fight without latched input",
+        "FAIL 3D: northern_snakehead balanced production fight catches and begins landing",
+        "FAIL 3D: northern_snakehead save is immediate while results wait for the 3D landing",
+        "FAIL 3D: all44 species caught through ordinary Main Encounter and real Session flow"
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 4455/4465 passed; failures=10; cast events=47; landing events=43; species=42; spots=12"
+      ]
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 22.47,
+      "log": "build/formal-final-headless/ui_style.log",
+      "errors": [
+        "FAIL UI: fight: primary action uses correct actual bitmap"
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 13905/13906 passed; failures=1; button visits=275; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ]
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 15.03,
+      "log": "build/formal-final-headless/touch.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 132/132 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ]
+    },
+    {
+      "name": "historical_trial",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.88,
+      "log": "build/formal-final-headless/historical_trial.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TRIAL_FISHERY_TESTS: 38082/38082 passed; failures=0"
+      ]
+    },
+    {
+      "name": "angler_anatomy",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.05,
+      "log": "build/formal-final-headless/angler_anatomy.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "ANGLER_ANATOMY_TESTS: 6368/6368 passed; failures=0"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.7,
+      "log": "build/formal-final-headless/binary_catalog.log",
+      "errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 44, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    }
+  ],
+  "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."
+}

@@ -3,7 +3,8 @@
 This is the preparation handoff for **1.2.0 / versionCode 6**. Preparation on
 2026-10-03 does not establish a formal APK, source ZIP, release tag, upload, or
 Android device pass. Freeze and validate the complete float-encounter, character,
-and interface iteration in one commit before running the final commands below.
+interface, and all44 offline encyclopedia iteration in one commit before running
+the final commands below.
 
 ## Installation identity and save boundary
 
@@ -102,6 +103,34 @@ changed, or remapped replacement fails the gate. These checks prove resource
 presence and payload bytes; they do
 not decompile GDScript or establish gameplay correctness.
 
+`tools/content_natural_history_contract.py` independently requires
+`game/scripts/fish_natural_history.gd` and exactly
+`game/data/encyclopedia_a.json`, `encyclopedia_b.json`, `encyclopedia_c.json`, and
+`encyclopedia_d.json`. The loader must name these four files. Schema version 1
+must cover the same 44 canonical saved species IDs exactly once, with no unknown,
+duplicate, or missing species. Accepted scientific names must agree with the
+current genus; they are independent of historical catalog names and save IDs.
+Every taxonomy, typical-size, habitat, distribution, behavior, diet, maximum-size,
+and story field must cite defined source IDs. Entries require at least two sources
+with titles, publishers, valid access dates, and ordinary HTTPS URLs without
+credentials, ports, control characters, or malformed hosts. Maximum length and
+weight must be positive finite numbers or explicit `null` with explanation and
+sources. Length conventions are restricted to `TL`, `FL`, `SL`, or `unspecified`;
+an optional `record_label` must be nonempty text for a scoped record. Duplicate
+JSON properties and non-finite JSON constants fail validation.
+
+All five SHA256 values are bound into `content.natural_history` in the frozen
+source snapshot and required in the commit-exact source ZIP. The source ZIP
+gate cannot silently skip a formal 1.2.0 project with all encyclopedia files
+missing. Both the unsigned and signed APK checks require the exact four frozen
+JSON byte streams and reject missing, substituted, extra, or remapped encyclopedia
+JSONs. The module must be exact source or one exact remap to its matching `.gdc`
+with a compiled-script header; missing, ambiguous, retargeted, or invalid payloads
+fail. The signed-APK result is saved as `exported-natural-history.json` and in
+`prebuilt-finalization.json`, including JSON hashes, module target, source hash,
+and exported payload hash. These are schema and packaging checks; scientific
+fact review and runtime/UI acceptance remain separate evidence.
+
 All existing art requirements remain active:
 
 - 44 canonical species, 44 full photos and 44 thumbnails; exact PNG and decoded
@@ -145,8 +174,8 @@ acceptance items. Desktop and static APK checks cannot certify those results.
 
 ## Preparation evidence
 
-`python3 tools/test_release_packaging.py` passed **20 tests with no skips** on
-2026-10-03. New regressions cover formal identity/package/certificate boundaries,
+`python3 tools/test_release_packaging.py` passed **32 tests with no skips** on
+2026-10-03. The original 20 groups cover formal identity/package/certificate boundaries,
 the required float source, six invalid float export cases, strict lacquer-shader
 source/export hashes, and source-archive membership. The retained
 official-template, source archive reuse/corruption,
@@ -154,7 +183,14 @@ Vulkan normalization, beta3 UI, and synthetic complete 44-species photo tests pa
 Three angler regression groups cover the complete seven-image binding, ten
 missing/stale/duplicate provenance or extraction failures, and raw material
 violations even when provenance hashes are refreshed to match the modified GLB.
-This is preparation evidence, not a formal gameplay export.
+Ten new encyclopedia groups cover all44 roundtrips, source/loader membership,
+schema and saved-ID coverage, taxonomy and sourced text, source metadata and safe
+URLs, numeric/null maxima and optional record labels, corrupted or absent JSONs,
+module remaps/bytecode, source-archive hashes, and rejection before source-ZIP
+creation. Two staging groups verify default/external staging, owned cleanup,
+preservation of unrelated files, and rejection of primary-tree, relative, symlink,
+or replaced-directory targets. The actual four encyclopedia payloads also pass
+the source contract. This is preparation evidence, not a formal gameplay export.
 
 GitHub CLI authentication was verified with
 `GH_CONFIG_DIR=/workspace/shared/.github-cli` without printing credentials. About
@@ -168,6 +204,19 @@ The retained derived template matches its transformation proof at SHA256
 Unchanged beta3 compressed source members may be reused; every reused member and
 the complete final archive are revalidated against the frozen commit. No prior
 release is a cleanup target.
+
+At the encyclopedia preparation checkpoint, persistent storage had
+7,252,824,064 bytes free and `/tmp` had 2,430,103,552 bytes free. The exporter copies
+1,439,528,849 bytes of `game/` including its existing `.godot` cache. Using the
+retained 612,008,636-byte beta3 APK as an estimate, the copy plus two concurrent
+APK files needs about 2.664 GB before the 512 MiB `/tmp` floor, so the default
+`/tmp` route does **not** fit this checkpoint. The commands below explicitly put
+the isolated build under `/workspace/scratch/c16084497664/farshore-isolated-builds`.
+A 1.658 GB source ZIP, the projected stage/two APKs, and the 768 MiB persistent
+floor total about 5.127 GB, leaving about 2.1 GB for growth and transient files.
+These are measured inputs and estimates, not an export peak guarantee; the
+existing disk/tmpfs/memory guard remains required. Preserve historical releases,
+the history-rewrite backup, and unrelated `/tmp` data.
 
 ## Final local commands after the combined freeze
 
@@ -204,6 +253,7 @@ python3 tools/guard_release_command.py \
   --source-zip "$OUT/farshore-fishing-1.2.0-source.zip" \
   --source-manifest "$OUT/farshore-fishing-1.2.0-source-manifest.json" \
   --template build/recovered-derived-android-release-arm64.apk \
+  --staging-parent /workspace/scratch/c16084497664/farshore-isolated-builds \
   --output "$OUT/farshore-fishing-1.2.0-arm64.apk"
 ```
 
@@ -214,10 +264,20 @@ rejects hardlinks, adjusts only copied presets, omits tests only from that copy,
 and rechecks primary source/authoring hashes and the external archive afterward.
 Never export, clean, or delete the primary `game/` tree.
 
+`--staging-parent` must be an absolute directory outside the primary repository,
+without symlinks in its path. Omitting it still selects `/tmp`. Each invocation
+creates a new `farshore-prebuilt-<version>-...` directory and records its device
+and inode. Successful cleanup requires that same directory identity, the exact
+parent, and a nonsymlink path; only that owned directory is removed. A failed
+attempt keeps its evidence for diagnosis. The parent directory and unrelated
+siblings are never cleanup targets. Tests run these helpers only on small
+temporary fixtures and do not access signing files or invoke a real export.
+
 Before describing the APK as statically verified, inspect
 `build/audit/1.2.0/arm64/`: frozen source manifest, imported photo and 3D audits,
 final APK manifest including `scripts/float_encounter.gd` and
-`assets/shaders3d/float_lacquer.gdshader`, signature/alignment
+`assets/shaders3d/float_lacquer.gdshader`, `exported-natural-history.json` for all
+four JSON payloads and `scripts/fish_natural_history.gd`, signature/alignment
 logs, and `prebuilt-finalization.json`. Existing output and audit paths are
 immutable. Diagnose a failed attempt before selecting a fresh output/audit
 location; do not overwrite evidence. Record publication and physical-device

@@ -1,0 +1,2 @@
+COMMAND: python3 tools/audit_fish_catalog_3d.py --require-all --output /workspace/scratch/c16084497664/farshore-fishing-restored/build/formal-combined-1.2.0/binary_catalog.json
+{"checked_models": 44, "missing": 0, "failures": [], "full_catalog_complete": true, "full_release_gate": true}

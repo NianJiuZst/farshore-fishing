@@ -1,0 +1,620 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "alligator_gar",
+      "accepted_scientific_name": "Atractosteus spatula",
+      "taxonomy": {
+        "family_scientific": "Lepisosteidae",
+        "family_zh": "雀鳝科",
+        "genus_scientific": "Atractosteus",
+        "genus_zh": "大雀鳝属",
+        "note": "本种是宽吻、上颌每侧有两列大齿的鳄雀鳝；长吻雀鳝另属 Lepisosteus，不能把两者的体形或纪录混用。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见全长约200厘米，USFWS列79英寸（约201厘米）。两者是物种概述的常见长度，并非仅对性成熟成鱼抽样所得的平均值；所查资料未给出可靠的常见成鱼体重范围。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 304.8,
+        "length_type": "unspecified",
+        "text": "USFWS报告最大长度10英尺（约305厘米），但未注明量法和原始标本。FishBase另列260厘米全长（TL）；两种来源的证据口径不同，不能把305厘米写成已核实的全长世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "USFWS概述上限"
+      },
+      "max_weight": {
+        "value_kg": 158.8,
+        "text": "USFWS概述称可达350磅（约158.8千克），未附个体详情。TPWD另记2011年密西西比州327磅（约148.3千克）的具体纪录；这些重量不与上列最大长度配成同一条鱼。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "record_label": "USFWS概述上限"
+      },
+      "habitat": {
+        "text": "主要生活在大河的缓流深潭、回水、牛轭湖、沼泽和湖泊，也能利用河口湾。它能到水面吞气，借鳔辅助呼吸；这种适应不等于不需要良好的河流生境。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "distribution": {
+        "text": "原生于北美密西西比河流域南部及墨西哥湾沿岸水系，沿岸范围从佛罗里达西部延至墨西哥韦拉克鲁斯；历史范围北达密苏里河和俄亥俄河下游。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "幼鱼生长快，较老个体生长减慢且可存活数十年。繁殖时一尾雌鱼可伴随数尾雄鱼进入浅水植被区，把卵散布在被水淹没的植物上。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "diet": {
+        "text": "鱼类贯穿其一生的食谱；幼鱼也取食昆虫等小动物，成鱼主要吃鱼，偶尔吃鸟和小型哺乳动物。宽吻和利齿属于捕食适应，不能据此外推它专吃某一种鱼。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "story": {
+        "title": "巨鱼也要等一场合适的洪水",
+        "text": "鳄雀鳝的繁殖成功与春季被淹的浅滩植被密切相关。适合产卵的水位并非年年都有，某些年份可能几乎没有新幼鱼加入。长寿让种群能跨过旱年，却也意味着损失大量成鱼后，恢复可能需要几十年。保住连通的洪泛地，对这条披甲巨鱼同样关键。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Atractosteus spatula species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Atractosteus-spatula.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Alligator Gar (Atractosteus spatula)",
+          "publisher": "U.S. Fish & Wildlife Service",
+          "url": "https://www.fws.gov/species/alligator-gar-atractosteus-spatula",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Alligator Gar (Atractosteus spatula)",
+          "publisher": "Texas Parks and Wildlife Department",
+          "url": "https://tpwd.texas.gov/huntwild/wild/species/alg/",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Alligator Gar",
+          "publisher": "Florida Fish and Wildlife Conservation Commission",
+          "url": "https://myfwc.com/wildlifehabitats/profiles/freshwater/alligator-gar/",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "longnose_gar",
+      "accepted_scientific_name": "Lepisosteus osseus",
+      "taxonomy": {
+        "family_scientific": "Lepisosteidae",
+        "family_zh": "雀鳝科",
+        "genus_scientific": "Lepisosteus",
+        "genus_zh": "雀鳝属",
+        "note": "林奈1758年最初以 Esox osseus 描述，后来归入雀鳝属。细长吻和上颌单列牙齿可与鳄雀鳝的宽吻、双列大齿区分。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "南卡州档案列平均长度约76–91厘米、平均重约1.8千克；上密西西比公园资料列约61–91厘米。两者均未限定仅统计成鱼，故是地区常见体形参考，而非统一的成年平均值。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "max_length": {
+        "value_cm": 200,
+        "length_type": "TL",
+        "text": "FishBase汇编最大报告全长200厘米（TL）。这是极端长度记录，不能用来代表常见个体，也不能与最大重量合并为同一标本。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 22.8,
+        "text": "FishBase列最大已发表重量22.8千克；佛罗里达博物馆概述仍列16千克，故这里明确采用数据库汇编值，而不把较旧概述当作新的纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "偏好中大型河流的回水、牛轭湖、缓流深潭和水库，幼鱼常在沉水植物间藏身。偶尔进入半咸水；繁殖季会向支流浅水区移动，生活地点并非始终不变。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "原生范围包括圣劳伦斯河、五大湖区域、密西西比流域及北美东南沿海诸河，南至得克萨斯和墨西哥的格兰德河水系。游戏的上、下密西西比分区都处在这一广阔范围内。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "behavior": {
+        "text": "常在近水面静候或缓慢接近猎物，再突然侧摆长吻夹住小鱼，调整方向后吞下。鳔与咽部相通且血管丰富，能通过吞气补充呼吸，在缺氧水中尤其有用。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "刚开始取食的幼鱼吃小型甲壳动物和昆虫，很快转向鱼食；成鱼以当地可得的小鱼为主。不同湖河的猎物组成差别很大，不能将它简单视作专门消灭游钓鱼的害鱼。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "出生时先把自己粘住",
+        "text": "细长利齿并不是长吻雀鳝生命的开场。初孵幼鱼的吻端有临时黏附结构，会悬挂在水下物体上，靠卵黄囊供养。等卵黄吸收后，它们才开始水平游泳、吞入第一口空气并主动觅食。成年猎手小时候，曾是水草上一枚安静的“小挂件”。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Lepisosteus osseus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Lepisosteus-osseus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Longnose Gar",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/longnose-gar/",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Freshwater Fish: Longnose Gar",
+          "publisher": "South Carolina Department of Natural Resources",
+          "url": "https://www.dnr.sc.gov/fish/species/longnosegar.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Long-nosed Gar: Mississippi National River & Recreation Area",
+          "publisher": "U.S. National Park Service",
+          "url": "https://www.nps.gov/miss/learn/nature/long-nosed-gar-lepisosteus-osseus.htm",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "bowfin",
+      "accepted_scientific_name": "Amia ocellicauda",
+      "taxonomy": {
+        "family_scientific": "Amiidae",
+        "family_zh": "弓鳍鱼科",
+        "genus_scientific": "Amia",
+        "genus_zh": "弓鳍鱼属",
+        "note": "密西西比流域条目采用2022年研究重新区分的 A. ocellicauda。旧资料常把它并入广义 A. calva；新分类下两种不能共享未经复核的分布和最大值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "密苏里州现行档案明确列成鱼长度15–27英寸（约38–69厘米）、体重1–5磅（约0.45–2.27千克）。这是成鱼参考范围；安大略生活史数据库另列相同长度量级、体重0.6–3.3千克，地区和资料口径有差异。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 92.7,
+        "length_type": "TL",
+        "text": "安大略生活史数据库在现名 A. ocellicauda 下列最大长度92.7厘米全长（TL）；这是文献汇编上限，页面没有把它标成重新鉴定标本的全球认证纪录。",
+        "source_ids": [
+          "s3"
+        ],
+        "record_label": "生活史资料汇编上限"
+      },
+      "max_weight": {
+        "value_kg": 9.3,
+        "text": "同一数据库列最大体重9.3千克，另将安大略地方纪录列为6.85千克。这里采用其物种汇编值，不暗示9.3千克与92.7厘米来自同一个体；FishBase新物种页尚无最大值。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ],
+        "record_label": "生活史资料汇编上限"
+      },
+      "habitat": {
+        "text": "多见于水草丰茂的低地沼泽、缓流池潭、回水和牛轭湖，通常避开急流。在密西西比河沿线，支汊和回水比主河槽更合适。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "包括密西西比与俄亥俄河流域、五大湖及圣劳伦斯河系统，向西南延至得克萨斯部分墨西哥湾水系；更东侧沿海的 A. calva 是另一物种。",
+        "source_ids": [
+          "s2",
+          "s4"
+        ]
+      },
+      "behavior": {
+        "text": "白天常藏在较深处，夜间进入浅水觅食，并到水面补充鳔内空气。雄鱼在浅水植物间筑巢、护卵，还会带着成群幼鱼活动，直到幼鱼逐渐独立。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼主要吃微小甲壳动物和水生昆虫；成鱼吃鱼、螯虾、昆虫、蠕虫及蛙。长背鳍、圆尾和尾基眼斑很醒目，但它并不是外形相似的亚洲鳢类。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "“活化石”也藏着新发现",
+        "text": "研究者结合177尾弓鳍鱼的基因组数据和头骨CT，2022年发现过去常被视为单一种的弓鳍鱼实际包含两个主要谱系。它们外形近似，却能由遗传资料及部分头骨、牙齿特征区分。古老的是整个演化支系，并不意味着现生物种从远古起就一直没有演化。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Emerald Bowfin",
+          "publisher": "Missouri Department of Conservation",
+          "url": "https://mdc.mo.gov/discover-nature/field-guide/emerald-bowfin",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Brownstein et al. (2022): Hidden species diversity in an iconic living fossil vertebrate",
+          "publisher": "Biology Letters / The Royal Society",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9709656/",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Emerald Bowfin: Ontario Freshwater Fishes Life History Database",
+          "publisher": "Robert J. Eakins, Ontario Freshwater Fishes Life History Database",
+          "url": "https://www.ontariofishes.ca/fish_detail.php?FID=10",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Amia ocellicauda species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Amia-ocellicauda.html",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "largemouth_bass",
+      "accepted_scientific_name": "Micropterus nigricans",
+      "taxonomy": {
+        "family_scientific": "Centrarchidae",
+        "family_zh": "太阳鱼科",
+        "genus_scientific": "Micropterus",
+        "genus_zh": "黑鲈属",
+        "note": "按2022年种界及命名研究采用 M. nigricans；佛罗里达黑鲈则使用 M. salmoides。旧文献的“大口黑鲈”可能混用两者及其杂交后代，数字需逐条辨别。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "密苏里州档案列通常全长约25–51厘米、重约0.23–2.04千克（10–20英寸、0.5–4.5磅）。该栏没有限定性成熟成鱼，所以仅作地区常见尺寸；不能将游戏体重锚点写成成鱼平均值。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 61,
+        "length_type": "TL",
+        "text": "现用 M. nigricans 的密苏里州物种档案报告上限约24英寸，即61厘米全长。这是该地区档案的概述上限；未核实排除佛罗里达种及杂交鱼后的全球最大纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "密苏里资料上限"
+      },
+      "max_weight": {
+        "value_kg": 6.8,
+        "text": "密苏里州档案报告最大约15磅（6.8千克），没有注明对应标本。此处保留来源范围，不将传统广义“大口黑鲈”的世界重量纪录直接归给本种；与最大长度也不是同一个体配对。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "密苏里资料上限"
+      },
+      "habitat": {
+        "text": "栖于温暖、较清的湖泊、水库和大河回水，偏好水流微弱的水域。上密西西比一带的植被湖湾、水草繁茂的浅湖及河流回水都能提供合适环境。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "黑鲈属原生于落基山脉以东的北美水系；本种包含密西西比流域的大口黑鲈。长期人工移殖和杂交使部分地区分布复杂，旧名覆盖的全部海外记录不能自动视作纯种 M. nigricans。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "在密苏里州，晨昏较活跃。繁殖季雄鱼在较坚实、少淤泥的底面筑巢，随后守护卵和幼鱼；选巢位置会避开持续水流和强烈波浪。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼先取食浮游动物和水生昆虫，长大后更多捕食鱼和螯虾，也会吃落水的小动物。明尼苏达资料特别提到太阳鱼是当地成鱼的重要食物。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "一位会扇水的护巢父亲",
+        "text": "雄性大口黑鲈的育幼工作并不止于挖坑。它会用鳍扇动水流照顾卵，孵化后还保护聚成一团的幼鱼。明尼苏达自然资源部门记录，这种幼鱼群在分散前可受保护约一个月。季节和生长节奏随地区变化，因此一张巢旁的雄鱼照片，背后可能是一段持续数周的育幼生活。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Largemouth Bass (Micropterus nigricans)",
+          "publisher": "Missouri Department of Conservation",
+          "url": "https://mdc.mo.gov/discover-nature/field-guide/largemouth-bass",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Kim, Taylor & Near (2022): Phylogenomics and species delimitation of the economically important Black Basses",
+          "publisher": "Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-022-11743-2",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Species Profile: Largemouth Bass (local biology, page retains the older scientific name)",
+          "publisher": "Minnesota Department of Natural Resources",
+          "url": "https://www.dnr.state.mn.us/minnaqua/speciesprofile/largemouthbass.html",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "channel_catfish",
+      "accepted_scientific_name": "Ictalurus punctatus",
+      "taxonomy": {
+        "family_scientific": "Ictaluridae",
+        "family_zh": "鮰科（北美鲶科）",
+        "genus_scientific": "Ictalurus",
+        "genus_zh": "真鮰属",
+        "note": "有效学名 Ictalurus punctatus，1818年的最初组合为 Silurus punctatus。其深叉尾、较圆的臀鳍和幼年明显的体侧黑斑有助于鉴别；不能与蓝鲶或扁头鲶混作一条纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "佛罗里达博物馆明确将成鱼常见长度列为15–24英寸，约38–61厘米；该段未单列量法。USFWS的常见长度22英寸（约56厘米）则未注明年龄组。所查来源没有可稳妥概括全部成鱼的常见体重区间。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 132,
+        "length_type": "TL",
+        "text": "FishBase与博物馆详细尺寸段均列最大报告全长132厘米（TL）。博物馆导语另写54英寸，与其详细段不一致；此处采用与FishBase及USFWS的52英寸记录相符的详细段。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 26.3,
+        "text": "最大已发表重量26.3千克。南卡州纪录表列1964年莫尔特里湖58磅（约26.3千克）的钓获，并标为世界纪录；这不是与132厘米最大长度配成的同一个体资料。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "habitat": {
+        "text": "利用湖泊、水库以及河流沙底或石底的深潭、缓流段。虽然能适应浑水，却也偏好含氧良好的水域；“住在河底”并不等于只适合污浊、缺氧的环境。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "原生范围包括北美中部密西西比—密苏里、圣劳伦斯—五大湖等水系，从加拿大南部延至墨西哥北部。美国其他许多地区的出现与移殖有关，不能一概视作原生。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "能在夏季浅水觅食、繁殖地与冬季深水栖地之间移动，有个体连续数年返回同一夏季地点。繁殖时把卵产在底部凹穴或隐蔽空腔，由雄鱼守护。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "成鱼吃小鱼、螯虾、贝螺及水生昆虫，也偶尔摄食植物；幼鱼更多依赖浮游动物和昆虫幼体。它会用触觉与化学感受寻找食物，并非只能靠看见猎物才进食。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一条会用皮肤“尝味”的鱼",
+        "text": "USFWS用“游动的舌头”形容斑点叉尾鮰：味蕾不只在口内，还分布在身体表面，鳃周围和口须附近尤其密集。这些感受器让浑暗水中的食物线索有了方向。看似装饰的八根须，其实是伸到嘴外的感知工具，能在接触食物前帮助鱼探索周围。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Ictalurus punctatus species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Ictalurus-punctatus.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Channel Catfish",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/channel-catfish/",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Channel Catfish (Ictalurus punctatus)",
+          "publisher": "U.S. Fish & Wildlife Service",
+          "url": "https://www.fws.gov/species/channel-catfish-ictalurus-punctatus",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Freshwater Fish Records for South Carolina",
+          "publisher": "South Carolina Department of Natural Resources",
+          "url": "https://dnr.sc.gov/fish/freshrecs/records.html",
+          "accessed": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "species_id": "flathead_catfish",
+      "accepted_scientific_name": "Pylodictis olivaris",
+      "taxonomy": {
+        "family_scientific": "Ictaluridae",
+        "family_zh": "鮰科（北美鲶科）",
+        "genus_scientific": "Pylodictis",
+        "genus_zh": "铲鮰属",
+        "note": "有效学名 Pylodictis olivaris。虽然中文常叫扁头鲶，它属于北美鮰类，不能与鲶科 Silurus 的大型种混同；突出下颌和近方形、仅浅凹的尾缘很有识别价值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "密苏里州档案明确列常见成鱼长度15–45英寸（约38–114厘米），体重1–45磅（约0.45–20.4千克）。范围很宽，表示不同年龄个体的地区概况；18英寸左右的成熟长度也不能替代常见体形。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 155,
+        "length_type": "TL",
+        "text": "FishBase列最大报告全长155厘米（TL）。它是数据库汇编的极端尺寸，而不是野外常见成鱼的预期长度。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 55.8,
+        "text": "FishBase列最大已发表重量55.8千克；堪萨斯州官方物种页记1998年埃尔克城水库123磅的钓获纪录，换算约55.8千克。本条不额外推定最大长度和重量必属同一条鱼。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "habitat": {
+        "text": "成鱼偏好大型河流及水库有倒木、漂积物和其他掩体的深潭；幼鱼却常躲在沙石浅流、急滩的石块之间。它通常避开坡降很大或会断流的溪流，栖境会随成长而改变。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "原生于密西西比流域及美国东南部至墨西哥的部分墨西哥湾水系。大西洋沿岸若干河流中的种群来自移殖；五大湖原生性在旧资料中有争议，USGS的新评述不支持把该区简单列作原生。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "成年个体通常独居，有惯用的白天休息掩体，夜间进入浅潭或急滩觅食。雄鱼会护卵，并用鳍搅动水流供氧、冲走淤泥，幼鱼在巢边短暂成群后逐渐分散。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "小幼鱼多吃昆虫幼体，成鱼以活鱼为主，也吃螯虾等甲壳动物。地方观察指出它很少取食腐败物，因此不能把所有鲶形鱼都想成相同的底栖食腐者。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "十一尾鱼改变一条河的故事",
+        "text": "USGS记录，北卡罗来纳州开普菲尔河系统在1966年曾被投放十一尾性成熟扁头鲶；它们在约十五年内成为当地占优势的捕食者。这个历史案例说明，大型本土捕食鱼一旦被搬到自然分布之外，也可能重塑新的食物网。“北美原生”并不等于适合放进北美任何一条河。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Pylodictis olivaris species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Pylodictis-olivaris.html",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s2",
+          "title": "Flathead Catfish",
+          "publisher": "Missouri Department of Conservation",
+          "url": "https://mdc.mo.gov/discover-nature/field-guide/flathead-catfish",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s3",
+          "title": "Flathead Catfish (Pylodictis olivaris): Nonindigenous Aquatic Species profile",
+          "publisher": "U.S. Geological Survey",
+          "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=750",
+          "accessed": "2026-10-03"
+        },
+        {
+          "id": "s4",
+          "title": "Flathead Catfish",
+          "publisher": "Kansas Department of Wildlife and Parks",
+          "url": "https://www.ksoutdoors.gov/outdoor-activities/fishing-in-kansas/what-to-fish/flathead-catfish",
+          "accessed": "2026-10-03"
+        }
+      ]
+    }
+  ]
+}

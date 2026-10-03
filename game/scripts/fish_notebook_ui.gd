@@ -99,7 +99,7 @@ func fill_catalog(app: Control, grid: GridContainer, open_species: Callable) -> 
 		if app._discovery_filter == 1 and not known: continue
 		if app._discovery_filter == 2 and known: continue
 		var query: String = str(app._search).strip_edges().to_lower()
-		if not query.is_empty() and not (query in fish.name.to_lower() or query in fish.scientific_name.to_lower()): continue
+		if not query.is_empty() and not (query in fish.name.to_lower() or query in fish.scientific_name.to_lower() or query in app._scientific_name(fish).to_lower()): continue
 		grid.add_child(_species_tile(app, fish, state, open_species))
 	if grid.get_child_count() == 0:
 		var empty: VBoxContainer = VBoxContainer.new()
@@ -117,9 +117,15 @@ func populate_species(app: Control, page: VBoxContainer, id: String, open_zoom: 
 	var stats: Dictionary = state.get("species_stats", {}).get(id, {})
 	var count: int = int(stats.get("catch_count", 0))
 	var known: bool = count > 0
-	var latin: Label = _label(app, fish.scientific_name, 22, MUTED)
+	var biology: Dictionary = app.natural_history.get_entry(id)
+	var latin: Label = _label(app, app._scientific_name(fish), 22, MUTED)
 	latin.name = "SpeciesScientificName"
 	page.add_child(latin)
+	if not biology.is_empty():
+		var taxonomy: Dictionary = biology.taxonomy
+		var family: Label = _label(app, str(taxonomy.family_zh) + " · " + str(taxonomy.genus_zh), 20, TEAL)
+		family.name = "SpeciesFamilyGenus"
+		page.add_child(family)
 	var image: TextureRect = app._fish_image(fish, false, false, 242)
 	page.add_child(image)
 	var status: HBoxContainer = HBoxContainer.new()
@@ -161,18 +167,35 @@ func populate_species(app: Control, page: VBoxContainer, id: String, open_zoom: 
 		favorite_button.disabled = app.store.read_only
 		actions.add_child(favorite_button)
 	page.add_child(_rule())
-	_section(app, page, "认识这种鱼")
-	page.add_child(_label(app, fish.description, 24, INK))
+	var jump: HBoxContainer = HBoxContainer.new()
+	jump.add_theme_constant_override("separation", 12)
+	page.add_child(jump)
+	for item: Array in [["自然资料", "book", "NatureSection"], ["个人纪录", "heart", "PersonalRecordSection"], ["资料来源", "compass", "ReferenceSection"]]:
+		var button: Button = app._button(str(item[0]), app._scroll_to_section.bind(str(item[2])))
+		button.name = "NotebookJump_" + str(item[2])
+		button.icon_kind = str(item[1])
+		button.icon_extent = 26
+		button.custom_minimum_size.y = 96
+		button.add_theme_font_size_override("font_size", 20)
+		jump.add_child(button)
+	var nature: HBoxContainer = _section(app, page, "自然界资料")
+	nature.name = "NatureSection"
+	if biology.is_empty():
+		page.add_child(_label(app, "这条鱼的资料暂不可用", 22, MUTED))
+	else: _natural_history(app, page, biology)
 	if fish.release_only:
 		page.add_child(_label(app, "保护观察 · 仅在游戏中虚拟相遇，记录后即刻放归水中", 21, GOLD))
-	_section(app, page, "形态特征")
+	_section(app, page, "辨认特征")
 	page.add_child(_label(app, fish.morphology, 22, MUTED))
-	_section(app, page, "栖息水域与钓点")
+	page.add_child(_rule())
+	_section(app, page, "游戏内寻鱼")
+	page.add_child(_label(app, "游戏尺寸设定 · " + app._length(fish.min_mm) + "—" + app._length(fish.max_mm), 21, TEAL))
+	page.add_child(_label(app, "这一范围用于游戏抽取，与上方自然界的文献尺寸分别记录。", 19, MUTED))
 	for sid: String in fish.spots():
 		var spot: Dictionary = app.catalog.spots.get(sid, {})
 		var region: Dictionary = app.catalog.region(str(spot.get("region_id", "")))
 		page.add_child(_label(app, str(region.get("name", "")) + " · " + str(spot.get("name", sid)), 22, INK))
-	_section(app, page, "鱼饵线索")
+	_section(app, page, "游戏鱼饵线索")
 	var preferred: String = "worm"
 	var best: float = -1.0
 	for bait: Dictionary in app.catalog.baits:
@@ -185,7 +208,8 @@ func populate_species(app: Control, page: VBoxContainer, id: String, open_zoom: 
 	if not str(bait_info.get("hint", "")).is_empty(): page.add_child(_label(app, str(bait_info.hint), 21, MUTED))
 	page.add_child(_label(app, "此线索用于游戏；尺寸、行为与出现倍率含游戏调校", 18, MUTED))
 	page.add_child(_rule())
-	_section(app, page, "个人钓获纪录", "%d 条" % count)
+	var personal: HBoxContainer = _section(app, page, "个人钓获纪录", "%d 条" % count)
+	personal.name = "PersonalRecordSection"
 	if known:
 		for pair: Array in [["最长个体", "max_length"], ["最重个体", "max_weight"], ["首次钓获", "first"], ["最近钓获", "last"]]:
 			_record(app, page, str(pair[0]), stats.get(pair[1], {}), str(pair[1]))
@@ -204,10 +228,70 @@ func populate_species(app: Control, page: VBoxContainer, id: String, open_zoom: 
 	else:
 		page.add_child(_label(app, "第一次钓获后，将记录时间、地点与尺寸", 20, MUTED))
 	if app.store.read_only: page.add_child(_label(app, "存档保护模式 · 当前纪录只读", 19, MUTED))
-	_section(app, page, "资料参考")
-	for source: Dictionary in fish.raw.get("sources", []):
-		page.add_child(_label(app, str(source.get("title", "")), 19, MUTED))
-		page.add_child(_label(app, str(source.get("url", "")), 16, MUTED))
+	var references: HBoxContainer = _section(app, page, "资料来源")
+	references.name = "ReferenceSection"
+	page.add_child(_label(app, "本页内容可离线阅读。点击网站后会打开外部浏览器，浏览原文需要联网。", 19, MUTED))
+	var index: int = 0
+	for source: Dictionary in biology.get("sources", []):
+		index += 1
+		page.add_child(_label(app, "[%d] %s · %s" % [index, str(source.publisher), str(source.title)], 20, INK))
+		page.add_child(_label(app, "资料核对 · " + str(source.accessed), 17, MUTED))
+		var source_button: Button = app._button("打开网站 [%d]" % index, app._open_species_source.bind(str(source.url)))
+		source_button.name = "NotebookSource_" + str(index)
+		source_button.icon_kind = "arrow"
+		source_button.icon_extent = 26
+		source_button.custom_minimum_size.y = 96
+		source_button.add_theme_font_size_override("font_size", 21)
+		source_button.set_meta("source_url", str(source.url))
+		page.add_child(source_button)
+
+func _natural_history(app: Control, page: VBoxContainer, biology: Dictionary) -> void:
+	var taxonomy: Dictionary = biology.taxonomy
+	page.add_child(_label(app, str(taxonomy.family_zh) + " " + str(taxonomy.family_scientific) + "\n" + str(taxonomy.genus_zh) + " " + str(taxonomy.genus_scientific) + _references(biology, taxonomy), 23, INK))
+	if not str(taxonomy.get("note", "")).is_empty(): page.add_child(_label(app, str(taxonomy.note), 20, MUTED))
+	_bio_paragraph(app, page, biology, "typical_size", "一般能长多大")
+	_section(app, page, "最大尺寸与记录范围")
+	var maximum: HBoxContainer = HBoxContainer.new()
+	maximum.name = "NaturalMaximums"
+	maximum.add_theme_constant_override("separation", 20)
+	page.add_child(maximum)
+	var length: Dictionary = biology.max_length
+	var weight: Dictionary = biology.max_weight
+	var method: String = {"TL":"全长 TL", "FL":"叉长 FL", "SL":"标准体长 SL", "unspecified":"长度 · 量法未注明"}.get(str(length.length_type), "长度")
+	var length_caption: String = str(length.get("record_label", "资料库收录极值")) + "\n" + method
+	maximum.add_child(_metric(app, length_caption, _real_number(length.value_cm) + " cm" if length.value_cm != null else "未见可靠值", "NaturalMaxLength"))
+	maximum.add_child(_metric(app, str(weight.get("record_label", "资料库收录体重极值")), _real_weight(weight.value_kg), "NaturalMaxWeight"))
+	page.add_child(_label(app, str(length.text) + _references(biology, length), 21, MUTED))
+	page.add_child(_label(app, str(weight.text) + _references(biology, weight), 21, MUTED))
+	page.add_child(_label(app, "长度与重量是分别收录的资料纪录。TL 含尾鳍，FL 量到尾叉，SL 量到尾鳍基部，不同量法不直接换算。", 18, MUTED))
+	_bio_paragraph(app, page, biology, "distribution", "分布在哪里")
+	_bio_paragraph(app, page, biology, "habitat", "喜欢怎样的水域")
+	_bio_paragraph(app, page, biology, "behavior", "生活习性")
+	_bio_paragraph(app, page, biology, "diet", "吃什么")
+	_bio_paragraph(app, page, biology, "story", str(biology.story.title))
+
+func _bio_paragraph(app: Control, page: VBoxContainer, biology: Dictionary, key: String, heading: String) -> void:
+	_section(app, page, heading)
+	var field: Dictionary = biology.get(key, {})
+	var paragraph: Label = _label(app, str(field.get("text", "")) + _references(biology, field), 23, INK)
+	paragraph.name = "Natural_" + key
+	page.add_child(paragraph)
+
+func _references(biology: Dictionary, field: Dictionary) -> String:
+	var found: Array[String] = []
+	var index: int = 0
+	for source: Dictionary in biology.get("sources", []):
+		index += 1
+		if str(source.id) in field.get("source_ids", []): found.append(str(index))
+	return "  [" + ", ".join(found) + "]" if not found.is_empty() else ""
+
+func _real_number(value: Variant) -> String:
+	if value == null: return "未见可靠值"
+	return ("%.2f" % float(value)).trim_suffix("0").trim_suffix("0").trim_suffix(".")
+
+func _real_weight(value: Variant) -> String:
+	if value == null: return "未见可靠值"
+	return _real_number(float(value) * 1000.0) + " g" if float(value) < 1.0 else _real_number(value) + " kg"
 
 func populate_favorites(app: Control, page: VBoxContainer, open_catalog: Callable, open_species: Callable) -> void:
 	page.name = "FishNotebookFavorites"
@@ -247,7 +331,7 @@ func _species_tile(app: Control, fish: FishDefinition, state: Dictionary, open_s
 	for color_name: String in ["font_color", "font_hover_color", "font_pressed_color", "font_focus_color", "font_disabled_color", "font_outline_color"]:
 		tile.add_theme_color_override(color_name, Color.TRANSPARENT)
 	tile.set_meta("notebook_tile", true)
-	tile.tooltip_text = fish.name + " · " + fish.scientific_name
+	tile.tooltip_text = fish.name + " · " + app._scientific_name(fish)
 	tile.custom_minimum_size = Vector2(288, 324)
 	tile.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	tile.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
@@ -274,7 +358,7 @@ func _species_tile(app: Control, fish: FishDefinition, state: Dictionary, open_s
 	tile.button_down.connect(func() -> void: title.add_theme_color_override("font_color", GOLD))
 	tile.button_up.connect(func() -> void: title.add_theme_color_override("font_color", TEAL if tile.has_focus() else INK))
 	box.add_child(title)
-	var latin: Label = _label(app, fish.scientific_name, 16, MUTED)
+	var latin: Label = _label(app, app._scientific_name(fish), 16, MUTED)
 	latin.max_lines_visible = 1
 	latin.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	box.add_child(latin)
@@ -314,7 +398,7 @@ func _record(app: Control, page: VBoxContainer, title: String, snapshot: Diction
 	box.add_child(_label(app, str(snapshot.get("caught_at", "时间未记录")), 18, MUTED))
 	box.add_child(_rule())
 
-func _section(app: Control, page: VBoxContainer, title: String, detail: String = "") -> void:
+func _section(app: Control, page: VBoxContainer, title: String, detail: String = "") -> HBoxContainer:
 	var row: HBoxContainer = HBoxContainer.new()
 	row.custom_minimum_size.y = 48
 	row.add_child(_label(app, title, 27, INK))
@@ -323,6 +407,7 @@ func _section(app: Control, page: VBoxContainer, title: String, detail: String =
 		note.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 		row.add_child(note)
 	page.add_child(row)
+	return row
 
 func _grid() -> GridContainer:
 	var grid: GridContainer = GridContainer.new()

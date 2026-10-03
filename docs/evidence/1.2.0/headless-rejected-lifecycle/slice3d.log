@@ -1,0 +1,105 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/slice3d_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware
+3D_RIG angler meshes=8 skinned=1 weighted_vertices=40216 clips=["cast", "idle", "lift", "reel", "wait"]
+3D_RIG common_carp meshes=9 skinned=9 weighted_vertices=15168 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG crucian_carp meshes=11 skinned=11 weighted_vertices=15390 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG roach meshes=12 skinned=12 weighted_vertices=14554 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG rudd meshes=12 skinned=12 weighted_vertices=14642 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG european_perch meshes=13 skinned=13 weighted_vertices=17617 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG northern_pike meshes=10 skinned=10 weighted_vertices=16894 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG common_bream meshes=11 skinned=11 weighted_vertices=15478 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG tench meshes=11 skinned=11 weighted_vertices=15770 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG japanese_horse_mackerel meshes=13 skinned=13 weighted_vertices=18116 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG chub_mackerel meshes=12 skinned=12 weighted_vertices=17562 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_seabream meshes=11 skinned=11 weighted_vertices=16800 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG black_seabream meshes=11 skinned=11 weighted_vertices=16888 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG japanese_seabass meshes=11 skinned=11 weighted_vertices=17709 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG japanese_whiting meshes=11 skinned=11 weighted_vertices=16461 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG marbled_rockfish meshes=11 skinned=11 weighted_vertices=18205 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG olive_flounder meshes=10 skinned=10 weighted_vertices=26980 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_cod meshes=12 skinned=12 weighted_vertices=20131 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG pollack meshes=13 skinned=13 weighted_vertices=20338 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG saithe meshes=12 skinned=12 weighted_vertices=20203 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG haddock meshes=12 skinned=12 weighted_vertices=19989 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_mackerel meshes=12 skinned=12 weighted_vertices=17650 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_herring meshes=12 skinned=12 weighted_vertices=15652 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG european_plaice meshes=12 skinned=12 weighted_vertices=29887 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_wolffish meshes=13 skinned=13 weighted_vertices=22960 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG european_seabass meshes=11 skinned=11 weighted_vertices=17237 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG gilthead_seabream meshes=11 skinned=11 weighted_vertices=17240 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG saddled_seabream meshes=11 skinned=11 weighted_vertices=17491 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG white_seabream meshes=12 skinned=12 weighted_vertices=16976 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG annular_seabream meshes=12 skinned=12 weighted_vertices=16726 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_mullet meshes=12 skinned=12 weighted_vertices=15892 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG painted_comber meshes=12 skinned=12 weighted_vertices=17221 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG common_pandora meshes=11 skinned=11 weighted_vertices=16976 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG alligator_gar meshes=9 skinned=9 weighted_vertices=16582 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG longnose_gar meshes=10 skinned=10 weighted_vertices=14976 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG bowfin meshes=11 skinned=11 weighted_vertices=17407 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG largemouth_bass meshes=11 skinned=11 weighted_vertices=17525 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG channel_catfish meshes=12 skinned=12 weighted_vertices=16958 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG flathead_catfish meshes=13 skinned=13 weighted_vertices=15868 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG chinese_sturgeon meshes=12 skinned=12 weighted_vertices=18204 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG mandarin_fish meshes=11 skinned=11 weighted_vertices=17913 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG northern_snakehead meshes=10 skinned=10 weighted_vertices=17667 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG yellowcheek meshes=11 skinned=11 weighted_vertices=15468 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG southern_catfish meshes=12 skinned=12 weighted_vertices=17912 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG longsnout_catfish meshes=12 skinned=12 weighted_vertices=15104 clips=["breach", "landed", "struggle", "swim"]
+FULL44_RECIPE common_carp {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":42,"species":"common_carp","spot":"lake_shore"}
+FULL44_RECIPE crucian_carp {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":38,"species":"crucian_carp","spot":"lake_shore"}
+FULL44_RECIPE roach {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":7,"species":"roach","spot":"lake_bay"}
+FAIL 3D: roach actual wait and nibble preserve hidden fish; only float movement exposes bite
+FAIL 3D: roach actual hook action begins fight without latched input
+FAIL 3D: roach balanced production fight catches and begins landing
+FAIL 3D: roach save is immediate while results wait for the 3D landing
+FULL44_RECIPE rudd {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":2,"species":"rudd","spot":"lake_shore"}
+FAIL 3D: rudd camera transition moves the actual 3D view
+FULL44_RECIPE european_perch {"bait":"worm","charge":0.51,"gear":4,"region":"lake","seed":3,"species":"european_perch","spot":"lake_bay"}
+FULL44_RECIPE northern_pike {"bait":"worm","charge":0.635,"gear":4,"region":"bayou","seed":163,"species":"northern_pike","spot":"bayou_channel"}
+FULL44_RECIPE common_bream {"bait":"worm","charge":0.535,"gear":4,"region":"lake","seed":2,"species":"common_bream","spot":"lake_bay"}
+FULL44_RECIPE tench {"bait":"worm","charge":0.485,"gear":4,"region":"lake","seed":12,"species":"tench","spot":"lake_shore"}
+FULL44_RECIPE japanese_horse_mackerel {"bait":"worm","charge":0.51,"gear":4,"region":"japan","seed":42,"species":"japanese_horse_mackerel","spot":"japan_harbor"}
+FULL44_RECIPE chub_mackerel {"bait":"worm","charge":0.61,"gear":4,"region":"japan","seed":141,"species":"chub_mackerel","spot":"japan_reef"}
+FULL44_RECIPE red_seabream {"bait":"worm","charge":0.635,"gear":4,"region":"japan","seed":93,"species":"red_seabream","spot":"japan_reef"}
+FULL44_RECIPE black_seabream {"bait":"worm","charge":0.535,"gear":4,"region":"yangtze","seed":2,"species":"black_seabream","spot":"yangtze_estuary"}
+FULL44_RECIPE japanese_seabass {"bait":"worm","charge":0.585,"gear":4,"region":"japan","seed":93,"species":"japanese_seabass","spot":"japan_harbor"}
+FULL44_RECIPE japanese_whiting {"bait":"worm","charge":0.46,"gear":4,"region":"japan","seed":2,"species":"japanese_whiting","spot":"japan_harbor"}
+FULL44_RECIPE marbled_rockfish {"bait":"worm","charge":0.51,"gear":4,"region":"japan","seed":2,"species":"marbled_rockfish","spot":"japan_reef"}
+FULL44_RECIPE olive_flounder {"bait":"worm","charge":0.635,"gear":4,"region":"japan","seed":14,"species":"olive_flounder","spot":"japan_reef"}
+FULL44_RECIPE atlantic_cod {"bait":"worm","charge":0.535,"gear":4,"region":"norway","seed":38,"species":"atlantic_cod","spot":"norway_harbor"}
+FULL44_RECIPE pollack {"bait":"worm","charge":0.51,"gear":4,"region":"norway","seed":38,"species":"pollack","spot":"norway_boat"}
+FULL44_RECIPE saithe {"bait":"worm","charge":0.535,"gear":4,"region":"norway","seed":7,"species":"saithe","spot":"norway_harbor"}
+FULL44_RECIPE haddock {"bait":"worm","charge":0.585,"gear":4,"region":"norway","seed":3,"species":"haddock","spot":"norway_boat"}
+FULL44_RECIPE atlantic_mackerel {"bait":"worm","charge":0.46,"gear":4,"region":"med","seed":101,"species":"atlantic_mackerel","spot":"med_boat"}
+FULL44_RECIPE atlantic_herring {"bait":"worm","charge":0.46,"gear":4,"region":"norway","seed":18,"species":"atlantic_herring","spot":"norway_boat"}
+FULL44_RECIPE european_plaice {"bait":"worm","charge":0.485,"gear":4,"region":"norway","seed":2,"species":"european_plaice","spot":"norway_harbor"}
+FULL44_RECIPE atlantic_wolffish {"bait":"worm","charge":0.725,"gear":2,"region":"norway","seed":14,"species":"atlantic_wolffish","spot":"norway_boat"}
+FULL44_RECIPE european_seabass {"bait":"worm","charge":0.535,"gear":4,"region":"med","seed":101,"species":"european_seabass","spot":"med_pier"}
+FULL44_RECIPE gilthead_seabream {"bait":"worm","charge":0.51,"gear":4,"region":"med","seed":38,"species":"gilthead_seabream","spot":"med_pier"}
+FULL44_RECIPE saddled_seabream {"bait":"worm","charge":0.46,"gear":4,"region":"med","seed":95,"species":"saddled_seabream","spot":"med_pier"}
+FULL44_RECIPE white_seabream {"bait":"worm","charge":0.485,"gear":4,"region":"med","seed":3,"species":"white_seabream","spot":"med_pier"}
+FULL44_RECIPE annular_seabream {"bait":"worm","charge":0.46,"gear":4,"region":"med","seed":2,"species":"annular_seabream","spot":"med_pier"}
+FULL44_RECIPE red_mullet {"bait":"worm","charge":0.51,"gear":4,"region":"med","seed":2,"species":"red_mullet","spot":"med_boat"}
+FULL44_RECIPE painted_comber {"bait":"worm","charge":0.485,"gear":4,"region":"med","seed":14,"species":"painted_comber","spot":"med_pier"}
+FULL44_RECIPE common_pandora {"bait":"worm","charge":0.56,"gear":4,"region":"med","seed":14,"species":"common_pandora","spot":"med_boat"}
+FULL44_RECIPE alligator_gar {"bait":"worm","charge":0.735,"gear":4,"region":"bayou","seed":101,"species":"alligator_gar","spot":"bayou_backwater"}
+FULL44_RECIPE longnose_gar {"bait":"worm","charge":0.585,"gear":4,"region":"bayou","seed":76,"species":"longnose_gar","spot":"bayou_backwater"}
+FULL44_RECIPE bowfin {"bait":"worm","charge":0.51,"gear":4,"region":"bayou","seed":38,"species":"bowfin","spot":"bayou_backwater"}
+FULL44_RECIPE largemouth_bass {"bait":"worm","charge":0.485,"gear":4,"region":"bayou","seed":3,"species":"largemouth_bass","spot":"bayou_backwater"}
+FULL44_RECIPE channel_catfish {"bait":"worm","charge":0.51,"gear":4,"region":"bayou","seed":2,"species":"channel_catfish","spot":"bayou_backwater"}
+FULL44_RECIPE flathead_catfish {"bait":"worm","charge":0.635,"gear":4,"region":"bayou","seed":14,"species":"flathead_catfish","spot":"bayou_backwater"}
+FULL44_RECIPE chinese_sturgeon {"bait":"worm","charge":0.56,"gear":4,"region":"yangtze","seed":11,"species":"chinese_sturgeon","spot":"yangtze_estuary"}
+FULL44_RECIPE mandarin_fish {"bait":"worm","charge":0.5,"gear":4,"region":"yangtze","seed":93,"species":"mandarin_fish","spot":"yangtze_river"}
+FULL44_RECIPE northern_snakehead {"bait":"worm","charge":0.52,"gear":4,"region":"yangtze","seed":7,"species":"northern_snakehead","spot":"yangtze_river"}
+FAIL 3D: northern_snakehead actual wait and nibble preserve hidden fish; only float movement exposes bite
+FAIL 3D: northern_snakehead actual hook action begins fight without latched input
+FAIL 3D: northern_snakehead balanced production fight catches and begins landing
+FAIL 3D: northern_snakehead save is immediate while results wait for the 3D landing
+FULL44_RECIPE yellowcheek {"bait":"worm","charge":0.6,"gear":4,"region":"yangtze","seed":282,"species":"yellowcheek","spot":"yangtze_river"}
+FULL44_RECIPE southern_catfish {"bait":"worm","charge":0.57,"gear":4,"region":"yangtze","seed":3,"species":"southern_catfish","spot":"yangtze_river"}
+FULL44_RECIPE longsnout_catfish {"bait":"worm","charge":0.51,"gear":4,"region":"yangtze","seed":2,"species":"longsnout_catfish","spot":"yangtze_river"}
+FAIL 3D: all44 species caught through ordinary Main Encounter and real Session flow
+FULL44_RECIPE alligator_gar {"bait":"worm","charge":0.735,"gear":4,"region":"bayou","seed":101,"species":"alligator_gar","spot":"bayou_backwater"}
+SLICE3D_TESTS: 4455/4465 passed; failures=10; cast events=47; landing events=43; species=42; spots=12

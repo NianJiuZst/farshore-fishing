@@ -1,0 +1,1 @@
+Rejected aggregate from before lifecycle-harness fixes. Runtime was unchanged, but legacy tests still forced a hook at20seconds or by assigning BITE. This is not release acceptance. See later final aggregate and FLOAT_ENCOUNTER_VALIDATION.md.
