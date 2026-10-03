@@ -22,6 +22,7 @@ SUITES = [
     ("save", "save_tests.gd", []),
     ("core", "core_tests.gd", []),
     ("session_observation", "session_observation_tests.gd", []),
+    ("float_encounter", "float_encounter_tests.gd", ["--regressions-only"]),
     ("hazard_boundary", "fishing_hazard_boundary_tests.gd", []),
     ("guard_trace", "fishing_guard_trace_tests.gd", []),
     ("float_observation", "float_observation_tests.gd", []),

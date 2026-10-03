@@ -206,7 +206,7 @@ func populate_float_guide(app: Control, page: VBoxContainer) -> void:
 func populate_about(app: Control, page: VBoxContainer) -> void:
 	_section(app,page,"远岸钓记",str(ProjectSettings.get_setting("application/config/version","")))
 	page.add_child(app._text("离线单机 · 44 种鱼 · 12 处钓点",25,INK))
-	page.add_child(app._text("角色、鱼与场景几何及骨骼动画：本项目制作\n天空、木材与岩石纹理：Poly Haven，CC0\n高清鱼类插画与界面图标：图像生成模型制作并校对\n字体：Noto Sans CJK，SIL Open Font License\n音效：本项目程序合成\n引擎：Godot 4.6.3，MIT License",22,MUTED))
+	page.add_child(app._text("角色基础网格、服装、皮肤及配件：MakeHuman Community，CC0 1.0\n角色适配、权重调整与钓鱼动画：本项目制作\n鱼与场景几何及骨骼动画：本项目制作\n天空、木材与岩石纹理：Poly Haven，CC0\n高清鱼类插画与界面图标：图像生成模型制作并校对\n字体：Noto Sans CJK，SIL Open Font License\n音效：本项目程序合成\n引擎：Godot 4.6.3，MIT License",22,MUTED))
 	page.add_child(app._button("查看引擎、字体与素材许可",app._show_licenses))
 
 func _hero(app: Control, region: Dictionary, height: float, locked: bool) -> Control:
