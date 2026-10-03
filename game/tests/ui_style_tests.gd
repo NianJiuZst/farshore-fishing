@@ -39,6 +39,7 @@ func _run() -> void:
 	root.add_child(app)
 	app.set_process(false)
 	app.scenery.set_process(false)
+	app.scenery._animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 	app.scenery._process(0.025)
 	app.sound.apply({"sound": false, "vibration": false, "volume": 0.0})
 	app.sound.suspend(true)
@@ -115,24 +116,32 @@ func _run() -> void:
 		await _audit_catch(species)
 	app._close_page()
 	app.session.reset()
+	app.session.set_seed(2468)
 	app.session.start_charge()
 	await _audit("charging", app)
 	_check_action_position("charging", "rod")
 	var fish: Dictionary = app.encounter.make_individual(app.catalog.fish["common_carp"], "lake_shore", "lake", "worm", 2, "day", "clear")
-	app.session.cast(fish, app.catalog.gear[2])
+	app.encounter.apply_float_presentation(fish,app.catalog,0.6)
+	_check(app.session.cast(fish, app.catalog.gear[2]),"observation bitmap fixture casts an actual fish")
 	var float_ui: Array = []
 	for phase: int in [FishingSession.State.WAITING, FishingSession.State.NIBBLE, FishingSession.State.BITE]:
-		app.session.set_state(phase)
+		var reached: bool = _advance_live_phase(phase)
+		_check(reached,"bitmap fixture reaches real observation phase: " + str(phase))
+		if not reached: break
 		await _audit("float_observation_%d" % phase, app)
 		_check_action_position("float_observation_%d" % phase, "reel")
 		_check(not app._action.disabled and app._action.text == "收线", "reel stays enabled and equally labeled throughout float observation")
 		var signature: Array = [app._action.text, app._action.icon_kind, app._action.disabled, app._action.label_color, app._action.modulate, app._status.text, app._hint.text, app._bars.visible, app._nav_rail.visible]
 		if float_ui.is_empty(): float_ui = signature
 		else: _check(signature == float_ui, "nibble/bite provides no HUD, color, label, or navigation giveaway")
-	app.session.press()
-	await _audit("fight", app)
-	_check_action_position("fight", "reel")
-	_check(not app._nav_rail.is_visible_in_tree(), "nonessential navigation hides during the fight")
+	_check(app.session.float_encounter.can_hook(),"fight bitmap fixture has actual seated bait possession before input")
+	app._action_down()
+	app._action_up()
+	_check(app.session.state == FishingSession.State.FIGHT and app._overlay == null,"fresh actual action hooks the bitmap fixture rather than opening an empty-cast modal")
+	if app.session.state == FishingSession.State.FIGHT:
+		await _audit("fight", app)
+		_check_action_position("fight", "reel")
+		_check(not app._nav_rail.is_visible_in_tree(), "nonessential navigation hides during the fight")
 	app.session._finish(false, "UI test escape")
 	await _audit("escape", app._overlay)
 	app._finish_result()
@@ -152,6 +161,28 @@ func _check(condition: bool, label: String) -> void:
 
 func _settle_layout() -> void:
 	for frame: int in range(4): await process_frame
+
+func _tick_live_fixture(delta: float = 0.025) -> void:
+	if not app.scenery._suspended:
+		if app.scenery._animator: app.scenery._animator.advance(delta)
+		if app.scenery._fish_animator:
+			app.scenery._fish_animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
+			app.scenery._fish_animator.advance(delta)
+	app.scenery._process(delta)
+	app._process(delta)
+
+func _advance_live_phase(target: int) -> bool:
+	# UI fixtures use a documented reproducible encounter seed and actual
+	# presentation/session progress. Assigning BITE is not hook possession.
+	for tick: int in 3600:
+		if app.session.state == target: return true
+		if app.session.state in [FishingSession.State.ESCAPED,FishingSession.State.CAUGHT,FishingSession.State.PAUSED]: return false
+		if target == FishingSession.State.FIGHT and app.session.float_encounter.can_hook():
+			app._action_down()
+			app._action_up()
+			return app.session.state == FishingSession.State.FIGHT
+		_tick_live_fixture()
+	return false
 
 func _audit(route: String, subtree: Node) -> void:
 	await _settle_layout()
@@ -332,10 +363,16 @@ func _audit_catch(species_id: String) -> void:
 	app.region_id = rid
 	app._refresh_location()
 	var record: Dictionary = app.encounter.make_individual(species, sid, rid, "worm", 2, "day", "clear")
+	app.encounter.apply_float_presentation(record,app.catalog,0.6)
+	app.session.set_seed(2468)
 	app.session.start_charge()
 	_check(app.session.cast(record, app.catalog.gear[2]), species_id + " actual session casts")
 	app.store.begin_session(app.session.session_id)
-	app.session.set_state(FishingSession.State.FIGHT)
+	var hooked: bool = _advance_live_phase(FishingSession.State.FIGHT)
+	_check(hooked,species_id + " result art fixture reaches fight through a real held-bait hook")
+	if not hooked: return
+	# Result-page content is an explicit settled UI fixture; full fight and
+	# landing success across all44 species is exercised by slice3d_tests.
 	app.session._finish(true, "")
 	_check(app._save_ok and app._landing_pending and app._screen != "result", species_id + " catch is saved before its 3D landing finishes")
 	for tick: int in 90: app.scenery._process(0.05)
@@ -537,22 +574,25 @@ func _test_pause_back_settings() -> void:
 		_check(app._overlay == null and app._screen.is_empty() and app.session.state == FishingSession.State.IDLE, "repeated system Back closes pause without stale overlays")
 	for active: int in [FishingSession.State.CASTING, FishingSession.State.WAITING, FishingSession.State.NIBBLE, FishingSession.State.BITE, FishingSession.State.FIGHT]:
 		app.session.reset()
+		app.session.set_seed(2468)
 		app.session.start_charge()
 		var fish: Dictionary = app.encounter.make_individual(app.catalog.fish["common_carp"], "lake_shore", "lake", "worm", 2, "day", "clear")
+		app.encounter.apply_float_presentation(fish,app.catalog,0.6)
 		_check(app.session.cast(fish, app.catalog.gear[2]), "pause fixture starts an actual encounter")
-		app.session.set_state(active)
-		app.session.elapsed = 0.25
-		if active == FishingSession.State.FIGHT: app.session.press()
+		var reached: bool = _advance_live_phase(active)
+		_check(reached,"pause fixture reaches actual lifecycle state: " + str(active))
+		if not reached: continue
+		if active == FishingSession.State.FIGHT: app._action_down()
 		var identity: String = app.session.session_id
 		var individual: Dictionary = app.session.individual.duplicate(true)
 		app._handle_back()
 		await _settle_layout()
 		_check(app.session.state == FishingSession.State.PAUSED and app.session.before_pause == active and not app.session.reeling, "pause overlay freezes actual state and releases held input: " + str(active))
 		var frozen_clock: float = app.game_clock
-		var frozen: Array = [app.session.elapsed, app.session.tension, app.session.progress, app.session.fight_time]
+		var frozen: Array = [app.session.elapsed,app.session.tension,app.session.progress,app.session.fight_time,app.session.float_clock,app.session.float_encounter.rng.state,app.session.float_encounter.phase,app.session.float_encounter.mouth_depth,app.session.float_encounter.can_hook()]
 		for step: int in range(60): app._process(0.5)
 		_check(app.game_clock == frozen_clock, "pause prevents world time/weather advancing: " + str(active))
-		_check(frozen == [app.session.elapsed, app.session.tension, app.session.progress, app.session.fight_time], "paused Main updates preserve exact fishing progress: " + str(active))
+		_check(frozen == [app.session.elapsed,app.session.tension,app.session.progress,app.session.fight_time,app.session.float_clock,app.session.float_encounter.rng.state,app.session.float_encounter.phase,app.session.float_encounter.mouth_depth,app.session.float_encounter.can_hook()], "paused Main updates preserve exact fishing and possession progress: " + str(active))
 		var settings: Button = _find_button(app._overlay, "设置")
 		_check(settings != null, "pause provides real Settings route")
 		if settings != null: settings.pressed.emit()

@@ -69,6 +69,7 @@ func _run() -> void:
 	await _test_lobby_and_prepare()
 	_test_input_cancel()
 	await _test_empty_strikes()
+	await _test_contact_only_departure()
 	for species: String in app.catalog.fish:
 		await _test_species_flow(species, species in ["common_carp","chinese_sturgeon"])
 	for spot: String in app.catalog.spots:
@@ -325,7 +326,32 @@ func _find_recipe(species: String, required_spot: String = "") -> Dictionary:
 					return {"species":str(sample.species_id),"region":str(sample.region_id),"spot":sid,"bait":str(bait.bait_id),"gear":gear_id,"charge":charge,"seed":seed_value}
 	return {}
 
-func _test_species_flow(species: String, interruptions: bool, requested_recipe: Dictionary = {}, keep_pending: bool = false) -> void:
+func _test_contact_only_departure() -> void:
+	# This independently audited session seed makes three exploratory attempts
+	# and departs without possession. It is a real non-catching encounter.
+	app.session.set_seed(1034792)
+	app.encounter = Encounter.new(42)
+	var count_before: int = app.store.total_count()
+	var money_before: int = int(app.store.state.currency)
+	app._action_down()
+	_tick(0.46/0.48)
+	app._action_up()
+	_check(app.session.state == Session.State.CASTING,"contact-only fixture starts through actual Main charge/generation/cast")
+	var identity: String = app.session.session_id
+	var ever_hittable: bool = false
+	for tick: int in 3600:
+		if app.session.state == Session.State.PAUSED and app.session.before_pause == Session.State.ESCAPED: break
+		_tick(0.025)
+		ever_hittable = ever_hittable or app.session.float_encounter.can_hook()
+	_check(not ever_hittable and app.session.float_encounter.departed and app.session.float_encounter.attempt > 1,"contact-only fixture genuinely rejects and revisits before departing without a hittable take")
+	_check(app._screen == "escape" and app.session.before_pause == Session.State.ESCAPED and app.session.session_id == identity,"natural departure reaches the real failure modal for the same cast")
+	_check(app.store.total_count() == count_before and int(app.store.state.currency) == money_before and app.store.state.pending_catches.is_empty(),"contact-only departure grants no catch, currency or pending result")
+	app._finish_result()
+	await _layout()
+	_check(app.session.state == Session.State.IDLE and app._overlay == null and app.session.individual.is_empty(),"natural departure returns through actual result action to a clean new cast")
+	app.session.set_seed(2468)
+
+func _test_species_flow(species: String, interruptions: bool, requested_recipe: Dictionary = {}, keep_pending: bool = false, retry: int = 0) -> void:
 	var recipe: Dictionary = requested_recipe if not requested_recipe.is_empty() else _find_recipe(species)
 	_check(not recipe.is_empty(),species + " has a legal reproducible ordinary Encounter recipe")
 	if recipe.is_empty(): return
@@ -342,9 +368,11 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 	var before_count: int = app.store.total_count()
 	var before_cast_events: int = cast_events.size()
 	var before_land_events: int = landing_events.size()
-	var camera_before: Transform3D = app.scenery.camera.global_transform
 	app._action_down()
 	_tick(float(recipe.charge) / 0.48)
+	# Compare from the actual cast origin after charging has updated the ready
+	# camera, not an old observation/landing pose from the preceding round.
+	var camera_before: Transform3D = app.scenery.camera.global_transform
 	app._action_up()
 	_check(app.session.state == Session.State.CASTING and app.scenery.cast_in_progress, species + " actual action release starts character cast presentation")
 	_check(str(app.session.individual.get("species_id","")) == species and str(app.session.individual.get("region_id","")) == str(recipe.region) and str(app.session.individual.get("spot_id","")) == str(recipe.spot), species + " is reached through ordinary full-world Main generation")
@@ -366,10 +394,29 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 	var landed_elapsed: float = app.session.elapsed
 	app._cast_presentation_finished()
 	_check(app.session.state == Session.State.WAITING and is_equal_approx(app.session.elapsed, landed_elapsed), species + " duplicate cast presentation callback cannot reset the bite clock")
-	for tick: int in 800:
-		if app.session.state == Session.State.BITE: break
+	var reported_long_encounter: bool = false
+	for tick: int in 3600:
+		if app.session.state == Session.State.BITE and app.session.float_encounter.can_hook(): break
+		if app.session.state == Session.State.PAUSED and app.session.before_pause == Session.State.ESCAPED: break
 		_tick(0.025)
-	_check(app.session.state == Session.State.BITE and not app.scenery._fish_root.visible, species + " actual wait and nibble preserve hidden fish; only float movement exposes bite")
+		if not reported_long_encounter and app.session.float_clock >= 20.0:
+			reported_long_encounter = true
+			print("FULL44_EXTENDED_ENCOUNTER ",species," clock=",app.session.float_clock," phase=",app.session.float_encounter.phase," attempt=",app.session.float_encounter.attempt," ready=",app.session.float_encounter.can_hook())
+	if app.session.float_encounter.departed:
+		_check(app._screen == "escape" and app.session.state == Session.State.PAUSED and app.session.before_pause == Session.State.ESCAPED,species + " contact-only cast uses the genuine terminal failure flow")
+		_check(app.store.total_count() == before_count and app.store.state.pending_catches.is_empty(),species + " non-taking cast cannot fabricate a catch or pending result")
+		app._finish_result()
+		await _layout()
+		_check(app.session.state == Session.State.IDLE and app._overlay == null,species + " retry begins only after the natural departure result is closed")
+		_check(retry < 5,species + " actual encounter retries are bounded")
+		if retry < 5:
+			print("FULL44_CONTACT_ONLY_RETRY ",species," previous_session=",identity," retry=",retry+1)
+			await _test_species_flow(species,interruptions,recipe,keep_pending,retry+1)
+		return
+	var held_take: bool = app.session.state == Session.State.BITE and app.session.float_encounter.can_hook()
+	_check(held_take and not app.scenery._fish_root.visible, species + " real held take remains visually hidden except for continuous float movement")
+	if not held_take: return
+	print("FULL44_REAL_TAKE ",species," clock=",app.session.float_clock," attempt=",app.session.float_encounter.attempt," session=",identity)
 	_check(app.scenery.camera.global_transform != camera_before and app.scenery.camera.position.distance_to(camera_before.origin) > 0.25, species + " camera transition moves the actual 3D view")
 	_check(app.session.session_id == identity and app.session.individual == individual, species + " cast/wait/pause preserve the exact encounter")
 	app._action_down()
