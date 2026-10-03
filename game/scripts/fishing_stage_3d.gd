@@ -544,6 +544,10 @@ func _begin_cast() -> void:
 	_bobber.scale = Vector3.ONE
 	_bobber.rotation = Vector3.ZERO
 	_float_surface_tracking = false
+	# Old fight impulses use the presentation clock. A new observation clock
+	# must never replay them later as false surface activity around this float.
+	_water_material.set_shader_parameter("impact_a", Vector4(0, 0, -100, 0))
+	_water_material.set_shader_parameter("impact_b", Vector4(0, 0, -100, 0))
 	var charge: float = clampf(session.charge, 0.0, _rod_visual_reach) if session else 0.5
 	_bobber_target = Vector3(-0.72 + charge * 0.5, 0.0, -7.0 - charge * 5.0)
 	_bobber.visible = false

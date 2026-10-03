@@ -139,7 +139,7 @@ func find_fixtures(record: Dictionary) -> Dictionary:
 				contact_time = trial.float_clock
 			var signature: String = trial.float_encounter.signature
 			var strong: bool = trial.float_lift > 0.74 if signature == "lift" else trial.float_dip > 0.75 if signature == "sink" else trial.float_drag.length() > 0.17 if signature == "travel" else trial.float_dip > 0.225 and trial.float_encounter.phase == "carry"
-			if strong:
+			if strong and trial.float_encounter.phase == "carry":
 				if not found.has(signature) and first_motion > 2.5 and contact_time > 2.5:
 					found[signature] = {"seed":seed_value, "peak_time":trial.float_clock, "contact_time":contact_time, "contact_peak":contact_peak}
 				break

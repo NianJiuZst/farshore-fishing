@@ -21,7 +21,7 @@ WAITING, NIBBLE and BITE share exactly the same camera transform and field of vi
 
 ## Verification
 
-- `game/tests/float_observation_tests.gd`:86/86 checks after the float material change. Covers exact observation-camera invariance, tip projection at both aspect ratios, real geometry, body below neutral waterline, lift/sink/lateral motion, submerged-tip attenuation, wave alignment, no presentation-clock wobble, no stationary wake, pause/resume, hidden fish, minimum/maximum landing framing and anatomical leader endpoints
+- `game/tests/float_observation_tests.gd`:87/87 checks after the float material change. Covers exact observation-camera invariance, tip projection at both aspect ratios, real geometry, body below neutral waterline, lift/sink/lateral motion, submerged-tip attenuation, wave alignment, no presentation-clock wobble, no stationary wake, pause/resume, obsolete-fight-wave reset, hidden fish, minimum/maximum landing framing and anatomical leader endpoints
 - `game/tests/camera_aspect_tests.gd`:531/531 mathematical projection checks
 - `tools/capture_float_presentation.gd` renders the real Main/Session/Stage with selected seeded common-carp encounters. It finds genuine lift, sink, lateral travel and soft-take sequences; captures quiet/wave/contact/held-motion views; records unchanged observation cameras; and can write8fps sampled frames with `--video`
 - Rain-lighting images hold a genuine encounter snapshot and change only the stage weather to isolate readability. They are not rain-encounter balance tests

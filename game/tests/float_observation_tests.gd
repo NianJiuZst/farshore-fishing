@@ -138,9 +138,12 @@ func run() -> void:
 	print("WINDUP_ROD_TIP_SCREEN: ", tip_screen)
 	session.line_wear = 0.88
 	check(stage._line_danger() > 0.9, "accumulated wear produces physical warning intensity")
+	stage._water_material.set_shader_parameter("impact_a", Vector4(1, 1, 12.0, 0.08))
+	stage._water_material.set_shader_parameter("impact_b", Vector4(1, 1, 14.0, 0.08))
 	session.reset()
 	session.start_charge()
 	session.cast({"species_id":"common_carp", "length_mm":700, "difficulty":0.4, "behavior":"steady"}, {})
+	check((stage._water_material.get_shader_parameter("impact_a") as Vector4).w == 0.0 and (stage._water_material.get_shader_parameter("impact_b") as Vector4).w == 0.0, "new observation clock cannot replay old fight splashes")
 	for frame: int in 90: advance(0.025)
 	session.set_state(Session.State.BITE)
 	advance(0.025)
