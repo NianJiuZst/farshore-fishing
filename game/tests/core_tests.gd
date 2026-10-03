@@ -507,12 +507,14 @@ func _test_main_integration() -> void:
 	_check(ui.session.state == Session.State.PAUSED and ui._screen == "pause", "background shows paused overlay")
 	ui._close_page()
 	_advance_to(ui.session, Session.State.ESCAPED)
-	_check(ui._screen == "escape" and fixture.total_count() == 0, "missed bite opens actual escape page without count")
+	_check(ui._screen == "escape" and fixture.total_count() == 0, "missed bite opens actual failure modal without count")
 	# Exercise the actual visible Back button, not the Android back shortcut.
-	var back: Button = _find_button(ui._overlay, "返回")
-	_check(back != null, "escape page has visible Back button")
+	var back: Button = _find_button(ui._overlay, "返回钓点")
+	_check(back != null and ui._overlay is FishingFailureModal,"failure modal has its visible return action")
 	if back: back.pressed.emit()
-	_check(ui.session.state == Session.State.IDLE and ui._screen == "", "escape visible Back restores playable idle")
+	await create_timer(0.22).timeout
+	await process_frame
+	_check(ui.session.state == Session.State.IDLE and ui._screen == "","failure return drains old input then restores playable idle")
 	ui._action_down()
 	for tick: int in 15: ui.session.step(0.05)
 	ui._action_up()
@@ -570,7 +572,7 @@ func _test_main_integration() -> void:
 	ui._show_catalog()
 	ui._search = "不存在的鱼种查找"
 	ui._fill_catalog()
-	_check(_has_label_fragment(ui._list, "没有符合条件"), "catalog search presents an empty-result hint independent of visual layout")
+	_check(_has_label_fragment(ui._list, "暂时没有鱼"), "catalog search presents an empty-result hint independent of visual layout")
 	ui._search = ""
 	ui._show_travel()
 	var old_spot: String = ui.spot_id
