@@ -6,6 +6,7 @@ const IconActionScript = preload("res://scripts/icon_action.gd")
 const ArtScript = preload("res://scripts/ui_art.gd")
 const Registry = preload("res://scripts/fish_3d_registry.gd")
 const Preview = preload("res://scripts/fish_art_view.gd")
+const FailureModalScript = preload("res://scripts/fishing_failure_modal.gd")
 const EXPECTED_ICONS: Array[String] = ["rod", "reel", "hook", "bag", "compass", "book", "heart", "coin", "badge", "pause", "settings", "sound", "back", "arrow", "sort", "search", "release", "worm", "grain", "shrimp", "lure", "sun", "dusk", "rain", "ruler", "sweetcorn", "dough", "cut_fish", "spinner", "rod_spinning", "rod_heavy"]
 const RETIRED_COPY: Array[String] = ["F A R S H O R E", "NATURAL HISTORY", "沿着水声，去往远岸", "把世界，钓成一本旅行手册", "风从远岸来", "停一会儿，风景还在", "把下一站，交给海风", "真实的相遇，是最好的旅行纪念", "水下还有一个未曾见过的身影"]
 const STATES: Array[String] = ["normal", "hover", "pressed", "hover_pressed", "focus", "disabled"]
@@ -69,7 +70,7 @@ func _run() -> void:
 	app._enter_fishery()
 	app.session.reset()
 	await _audit("fishing", app)
-	for pair: Array in [["旅行", "compass"], ["图鉴", "book"], ["收藏", "heart"], ["行囊", "bag"], ["鱼饵", app.bait_id], ["抛竿", "rod"]]:
+	for pair: Array in [["旅行", "compass"], ["图鉴", "book"], ["收藏", "heart"], ["行囊", "bag"], [app.catalog.bait_name(app.bait_id), app.bait_id], ["抛竿", "rod"]]:
 		var action: Button = _find_button(app, str(pair[0]))
 		_check(action != null, "main navigation exists: " + str(pair[0]))
 		if action != null:
@@ -177,7 +178,9 @@ func _walk(node: Node, route: String) -> void:
 	if node is Button:
 		_audit_button(node as Button, route)
 	elif node is PanelContainer:
-		_check(_transparent_style((node as PanelContainer).get_theme_stylebox("panel")), route + ": no card backplate at " + str(node.get_path()))
+		if node.name == "FailurePanel" and node.get_parent().get_script() == FailureModalScript:
+			_check(node.size.y <= 500 and node.size.x <= 620, route + ": explicit failure popup is compact, never a full-screen page")
+		else: _check(_transparent_style((node as PanelContainer).get_theme_stylebox("panel")), route + ": no card backplate at " + str(node.get_path()))
 	elif node is LineEdit:
 		var search: LineEdit = node as LineEdit
 		_check(search.size.x + 0.1 >= MIN_TARGET and search.size.y + 0.1 >= MIN_TARGET, route + ": search target >=96 logical units")
@@ -190,7 +193,9 @@ func _walk(node: Node, route: String) -> void:
 		_check(slider.size.x >= MIN_TARGET and slider.size.y >= MIN_TARGET, route + ": volume slider touch target >=96 logical units, actual=" + str(slider.size))
 	elif node is ColorRect:
 		var rect: ColorRect = node as ColorRect
-		_check(not (rect.color.a > 0.1 and rect.color.get_luminance() < 0.2 and rect.size.x > MIN_TARGET and rect.size.y > MIN_TARGET), route + ": no dark rectangular backplate at " + str(node.get_path()))
+		if rect.name == "FailureScrim" and rect.get_parent().get_script() == FailureModalScript:
+			_check(rect.color.a <= 0.35, route + ": requested modal scrim preserves the world")
+		else: _check(not (rect.color.a > 0.1 and rect.color.get_luminance() < 0.2 and rect.size.x > MIN_TARGET and rect.size.y > MIN_TARGET), route + ": no dark rectangular backplate at " + str(node.get_path()))
 	# Progress bars/sliders/rulers remain meaningful functional indicators. Their
 	# track/fill is deliberately not treated as a button or decorative backplate.
 	for child: Node in node.get_children():
@@ -210,13 +215,25 @@ func _audit_button(button: Button, route: String) -> void:
 		var arrow: Texture2D = button.get_theme_icon("arrow")
 		_check(arrow != null and arrow == ArtScript.scaled_texture("arrow", 24, true), label + " dropdown uses the generated arrow bitmap, not an inherited vector")
 		return
+	if button.has_meta("notebook_tile"):
+		var photos: Array[Node] = button.find_children("FishArtPreview","TextureRect",true,false)
+		_check(photos.size()==1 and photos[0].get_script()==Preview, label + " whole fish target contains its genuine specimen art")
+		_check(str(button.get_meta("fish_species_id","")) in app.catalog.fish, label + " whole target is bound to a real species")
+		if photos.size()==1: _check(photos[0].mouse_filter==Control.MOUSE_FILTER_IGNORE,label+" fish image leaves tap/drag to the native tile")
+		var title: Label = button.find_child("FishTileName",true,false) as Label
+		_check(title != null and title.text==button.text and title.mouse_filter==Control.MOUSE_FILTER_IGNORE,label+" whole tile has one readable nonblocking title")
+		return
 	_check(button.get_script() == IconActionScript, label + " uses the production borderless icon control")
 	if button.get_script() != IconActionScript: return
 	var icon: Control = button.get("_art") as Control
 	var caption: Label = button.get("_caption") as Label
 	_check(caption != null and caption.text == button.text, label + " visible caption mirrors its action")
 	if caption != null:
-		_check(caption.get_theme_constant("outline_size") > 0 or caption.get_theme_color("font_shadow_color").a > 0, label + " text legibility uses outline/shadow")
+		if bool(button.get("light_label")):
+			_check(caption.get_theme_constant("outline_size") > 0 or caption.get_theme_color("font_shadow_color").a > 0,label+" world text has restrained contrast support")
+		elif not button.disabled:
+			var fg: Color = caption.get_theme_color("font_color")
+			_check((app.PAPER.srgb_to_linear().get_luminance()+0.05)/(fg.srgb_to_linear().get_luminance()+0.05)>=4.5,label+" active paper text has readable contrast without a halo")
 		_check(caption.position.x >= -0.1 and caption.position.y >= -0.1 and caption.position.x + caption.size.x <= button.size.x + 0.1 and caption.position.y + caption.size.y <= button.size.y + 0.1, label + " caption stays inside target: " + str(caption.get_rect()))
 		_check(caption.get_line_count() * caption.get_line_height() <= caption.size.y + 2, label + " caption fits vertically")
 	var has_icon: bool = icon != null and icon.size.x > 0 and icon.size.y > 0 and str(button.get("icon_kind")) not in ["", "none"]
@@ -470,7 +487,7 @@ func _test_catalog_controls() -> void:
 	search.text = "no_species_matches_this_query"
 	search.text_changed.emit(search.text)
 	await _settle_layout()
-	_check(app._list.get_child_count() == 1 and app._list.get_child(0) is Label and "没有符合条件" in app._list.get_child(0).text, "active empty search displays its explanatory hint")
+	_check(app._list.get_child_count() == 1 and "暂时没有鱼" in _all_label_text(app._list), "active empty search displays its explanatory hint")
 	search.text = ""
 	search.text_changed.emit("")
 	var choices: Array[Node] = []
@@ -490,13 +507,13 @@ func _test_catalog_controls() -> void:
 		discovery.select(2)
 		discovery.item_selected.emit(2)
 		await _settle_layout()
-		_check(app._discovery_filter == 2 and app._list.get_child(0) is Label, "real undiscovered filter respects the complete discovered fixture")
+		_check(app._discovery_filter == 2 and "暂时没有鱼" in _all_label_text(app._list), "real undiscovered filter respects the complete discovered fixture")
 		discovery.select(1)
 		discovery.item_selected.emit(1)
 		await _settle_layout()
 		_check(app._list.get_child_count() == expected, "real discovered filter restores the exact region count")
 	var was_sorted_by_count: bool = app._sort_count
-	var sort_button: Button = _find_button(app._overlay, "数量" if was_sorted_by_count else "名称")
+	var sort_button: Button = _find_button(app._overlay, "按数量" if was_sorted_by_count else "按名称")
 	_check(sort_button != null, "real sort action exists")
 	if sort_button != null: sort_button.pressed.emit()
 	await _settle_layout()
@@ -563,7 +580,10 @@ func _test_pause_back_settings() -> void:
 		_check(back != null, "Settings has actual Back control")
 		if back != null: back.pressed.emit()
 		await _settle_layout()
-		_check(app._screen.is_empty() and app._overlay == null and app.session.state == active, "Settings Back resumes original live state: " + str(active))
+		_check(app._screen == "pause" and app.session.state == FishingSession.State.PAUSED,"Settings Back retains its pause origin: " + str(active))
+		app._handle_back()
+		await _settle_layout()
+		_check(app._screen.is_empty() and app._overlay == null and app.session.state == active,"pause Back explicitly resumes the original live state: " + str(active))
 		_check(app.session.session_id == identity and app.session.individual == individual and not app.session.reeling, "paused navigation preserves exact encounter without latched input: " + str(active))
 		if active == FishingSession.State.FIGHT:
 			_check(not app._nav_rail.is_visible_in_tree(), "resumed fight again hides nonessential navigation")

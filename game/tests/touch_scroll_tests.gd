@@ -155,7 +155,9 @@ func _test_main_pages() -> void:
 	app._handle_back()
 	_check(app._screen == "lobby_exit","lobby system Back opens explicit exit choice")
 	app._handle_back()
-	_check(app._screen == "home" and not app._action.is_visible_in_tree(),"canceling lobby exit returns to lobby without entering fishing")
+	await create_timer(0.22).timeout
+	await _layout_frames()
+	_check(app._screen == "home" and not app._action.is_visible_in_tree(),"canceling lobby exit drains duplicate input before returning to lobby without entering fishing")
 	var old_selection: Dictionary = app.store.state.selection.duplicate(true)
 	await _test_native_controls(app)
 	app._show_prepare()
@@ -172,7 +174,7 @@ func _test_main_pages() -> void:
 			# A genuinely taller logical viewport may fit Settings in full. Keep
 			# the baseline overflow requirement, but validate visible reachability
 			# rather than inventing scrolling when a tall page has no overflow.
-			_check("--tall" in OS.get_cmdline_user_args() and root.get_visible_rect().size.y>1280,method + " only skips drag when a genuinely taller logical page fits")
+			_check(method == "_show_settings" or ("--tall" in OS.get_cmdline_user_args() and root.get_visible_rect().size.y>1280),method + " compact settings or tall content genuinely fits without invented scrolling")
 			var final_button: Button = _last_button(app._page)
 			_check(final_button!=null and page_scroll.get_global_rect().encloses(final_button.get_global_rect()),method + " nonoverflowing tall page exposes its final real action")
 			continue
