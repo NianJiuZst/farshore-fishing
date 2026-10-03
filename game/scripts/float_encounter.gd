@@ -109,7 +109,9 @@ func _start_approach(first: bool) -> void:
 	_intake_speed = rng.randf_range(0.95, 1.55) * (1.32 if _behavior == "burst" else 0.9 if _bottom else 1.0) / _bait_bulk
 	_mouth_capacity = rng.randf_range(1.8, 3.3) * (1.2 if _bottom else 1.0) - 0.30 * _difficulty + (_bait_affinity - 1.0) * 0.18
 	_swim_speed = rng.randf_range(0.07, 0.14) * (1.25 if _behavior == "burst" else 1.0)
-	_contact_strength = rng.randf_range(0.18, 0.34)
+	# The displayed damped touch can briefly exceed a small genuine held take.
+	# This makes recovery/continuity informative instead of one magic amplitude.
+	_contact_strength = rng.randf_range(0.35, 0.95)
 	_committed = rng.randf() < _appetite
 	# Supporting a bottom shot can lift a float. A suspended bait or a fish
 	# swimming away loads the line instead. Species does not guarantee a cue.
@@ -200,7 +202,9 @@ func step(delta: float) -> void:
 	dip = maxf(0.0, _load)
 	lift = maxf(0.0, -_load)
 	drag = drag.lerp(_drag_target, 1.0 - exp(-delta * 8.0))
-	tilt = clampf(drag.length() * 0.9, 0.0, 0.38) * signf(_direction.x) + sin(clock * 1.1 + _ambient_phase) * 0.012 * _weather_strength
+	# Rendering obtains direction from the actual displacement. A sign flip in
+	# the fish's next desired heading must not snap the physical float upright.
+	tilt = clampf(drag.length() * 0.9, 0.0, 0.38) + sin(clock * 1.1 + _ambient_phase) * 0.012 * _weather_strength
 	activity = absf(_load_velocity) * 0.06 + drag.distance_to(_drag_target)
 
 func _begin_return() -> void:
