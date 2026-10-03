@@ -74,6 +74,10 @@ func run() -> void:
 	var projected_height: float = stage.camera.unproject_position(stage._bobber_target + Vector3.UP * Stage.FLOAT_TIP_TOP).distance_to(stage.camera.unproject_position(stage._bobber_target))
 	check(projected_height >= 36.0 and projected_height <= 55.0, "neutral antenna projects to36–55px at720px portrait width")
 	print("FLOAT_PROJECTED_HEIGHT_720: ", projected_height)
+	var width_point: Vector3 = stage._bobber_target + Vector3.UP * 0.09
+	var projected_width: float = stage.camera.unproject_position(width_point + Vector3.RIGHT * Stage.FLOAT_SIGHT_RADIUS).distance_to(stage.camera.unproject_position(width_point - Vector3.RIGHT * Stage.FLOAT_SIGHT_RADIUS))
+	check(projected_width * (450.0 / 720.0) >= 3.0 and projected_width * (450.0 / 720.0) <= 4.0, "painted sight tube retains3–4px width at450px viewport scale")
+	print("FLOAT_PROJECTED_WIDTH_450: ", projected_width * (450.0 / 720.0))
 	root.size = Vector2i(720, 1584)
 	stage._update_camera(0.0)
 	var tall_height: float = stage.camera.unproject_position(stage._bobber_target + Vector3.UP * Stage.FLOAT_TIP_TOP).distance_to(stage.camera.unproject_position(stage._bobber_target))

@@ -26,6 +26,7 @@ const FLOAT_VIEW_FOV: float = 43.0
 # All float dimensions are metres. Local y=0 is the shotted neutral waterline.
 # The 11.4cm sight tip projects to about 53px in the fixed 720px-wide water view.
 const FLOAT_TIP_TOP: float = 0.114
+const FLOAT_SIGHT_RADIUS: float = 0.0056
 const FLOAT_DIP_TRAVEL: float = 0.18
 const FLOAT_LIFT_TRAVEL: float = 0.09
 const FLOAT_LINE_EYE := Vector3(0, -0.161, 0.0015)
@@ -1127,12 +1128,12 @@ func _build_bobber() -> void:
 	_float_part("LacqueredBalsaBody", _float_profile_mesh(PackedVector2Array([
 		Vector2(-0.089, 0.0016), Vector2(-0.085, 0.004), Vector2(-0.077, 0.010),
 		Vector2(-0.064, 0.015), Vector2(-0.052, 0.0165), Vector2(-0.041, 0.0155),
-		Vector2(-0.031, 0.012), Vector2(-0.023, 0.007), Vector2(-0.018, 0.0035)
+		Vector2(-0.031, 0.012), Vector2(-0.023, 0.007), Vector2(-0.018, 0.0055)
 	])), lacquer)
 	_float_cylinder("CarbonKeel", -0.156, -0.086, 0.00125, carbon)
 	_float_cylinder("LowerFerrule", -0.091, -0.084, 0.0023, brass)
-	_float_cylinder("ShoulderFerrule", -0.020, -0.015, 0.0038, brass)
-	_float_cylinder("SightAntennaCore", -0.026, -0.016, 0.0033, ivory)
+	_float_cylinder("ShoulderFerrule", -0.020, -0.015, 0.0060, brass)
+	_float_cylinder("SightAntennaCore", -0.026, -0.016, 0.0053, ivory)
 	# Alternating paint bands are actual opaque cylindrical geometry. The lower
 	# cream/red bands are hidden at rest and appear as the fish unloads the shot.
 	var bands: Array[Dictionary] = [
@@ -1148,9 +1149,9 @@ func _build_bobber() -> void:
 		{"name":"OrangeTip", "bottom":0.083, "top":0.111, "mat":vermilion}
 	]
 	for band: Dictionary in bands:
-		_float_cylinder(str(band.name), float(band.bottom), float(band.top), 0.0036, band.mat)
+		_float_cylinder(str(band.name), float(band.bottom), float(band.top), FLOAT_SIGHT_RADIUS, band.mat)
 	var cap := SphereMesh.new()
-	cap.radius = 0.0036
+	cap.radius = FLOAT_SIGHT_RADIUS
 	cap.height = 0.006
 	cap.radial_segments = 16
 	cap.rings = 8
@@ -1252,7 +1253,7 @@ func _update_float_surface(delta: float, water_height: float) -> void:
 	var contact: bool = shaft_height < FLOAT_TIP_TOP and shaft_height > -0.089
 	_float_meniscus.visible = contact
 	_float_meniscus.position = surface_position
-	var radius: float = 0.0052 if shaft_height >= -0.018 else lerpf(0.006, 0.017, clampf((-shaft_height - 0.018) / 0.035, 0.0, 1.0))
+	var radius: float = 0.0068 if shaft_height >= -0.018 else lerpf(0.007, 0.017, clampf((-shaft_height - 0.018) / 0.035, 0.0, 1.0))
 	_float_meniscus.scale = Vector3(radius, 0.0018, radius)
 	var speed: float = velocity.length()
 	_float_wake.visible = contact and speed > 0.008

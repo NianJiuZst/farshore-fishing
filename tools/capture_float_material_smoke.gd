@@ -9,10 +9,10 @@ func _initialize() -> void: call_deferred("run")
 func run() -> void:
 	assert(DisplayServer.get_name() != "headless")
 	assert(OS.get_environment("XDG_DATA_HOME").begins_with("/tmp/farshore-"))
-	output = ProjectSettings.globalize_path("res://../build/float-material-smoke")
+	output = ProjectSettings.globalize_path("res://../build/float-width-smoke" if "--float-only" in OS.get_cmdline_user_args() else "res://../build/float-material-smoke")
 	DirAccess.make_dir_recursive_absolute(output)
 	for path: String in ["res://scripts/fishing_stage_3d.gd", "res://assets/shaders3d/float_lacquer.gdshader", "res://assets/3d/angler.glb"]: hashes[path] = FileAccess.get_sha256(path)
-	root.size = Vector2i(720,1280)
+	root.size = Vector2i(450,990) if "--float-only" in OS.get_cmdline_user_args() else Vector2i(720,1280)
 	DisplayServer.window_set_size(root.size)
 	app = MainScene.instantiate()
 	root.add_child(app)
@@ -27,7 +27,7 @@ func run() -> void:
 		await process_frame
 		await RenderingServer.frame_post_draw
 	tick(1.2)
-	await capture("human_lobby")
+	if not "--float-only" in OS.get_cmdline_user_args(): await capture("human_lobby")
 	app._show_prepare()
 	app._enter_fishery()
 	tick(2.0)
@@ -37,9 +37,9 @@ func run() -> void:
 	assert(app.session.cast(record,app.catalog.gear[2]))
 	app.store.begin_session(app.session.session_id)
 	tick(0.90)
-	await capture("human_cast_loading")
+	if not "--float-only" in OS.get_cmdline_user_args(): await capture("human_cast_loading")
 	tick(0.45)
-	await capture("human_cast_release")
+	if not "--float-only" in OS.get_cmdline_user_args(): await capture("human_cast_release")
 	tick(2.0)
 	app.session.float_dip = 0.0
 	app.session.float_lift = 0.0
@@ -49,6 +49,9 @@ func run() -> void:
 	app.scenery._process(0.0)
 	await capture("float_neutral_fixture")
 	var held_camera: Transform3D = app.scenery.camera.transform
+	app.session.float_dip = 0.24
+	app.scenery._process(0.0)
+	await capture("float_soft_fixture")
 	app.session.float_dip = 0.85
 	app.scenery._process(0.0)
 	await capture("float_sink_fixture")
@@ -61,7 +64,7 @@ func run() -> void:
 	var unchanged: bool = true
 	for path: String in hashes: unchanged = unchanged and hashes[path] == FileAccess.get_sha256(path)
 	var f := FileAccess.open(output.path_join("evidence.json"),FileAccess.WRITE)
-	f.store_string(JSON.stringify({"scope":"Actual desktop Godot4.6.3 Mobile software Vulkan; material/UV regression smoke; float geometry fixtures", "hashes":hashes,"sources_unchanged":unchanged,"normal_ready":true},"\t")+"\n")
+	f.store_string(JSON.stringify({"scope":"Actual desktop Godot4.6.3 Mobile software Vulkan; material/UV regression smoke; float geometry fixtures", "hashes":hashes,"sources_unchanged":unchanged,"normal_ready":true,"viewport":str(root.size)},"\t")+"\n")
 	f.close()
 	app.fish_art._textures.clear()
 	app.sound.ambience.stream = null

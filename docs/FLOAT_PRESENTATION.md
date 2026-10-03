@@ -5,7 +5,7 @@ The observation float is a modeled, shotted antenna float, built by `FishingStag
 ## Physical scale and signal mapping
 
 - Local y=0 is the neutral waterline. The sight tip reaches +0.114m; the balsa body occupies −0.089 to −0.018m; the carbon keel reaches −0.156m; the line eye is centered at −0.161m
-- The fixed observation view uses the existing 43° reference vertical field of view and the existing cast-camera offset. At 720px viewport width, the neutral antenna projects to 53.458px. The same horizontal field of view gives the same scale at720×1280 and720×1584
+- The fixed observation view uses the existing 43° reference vertical field of view and the existing cast-camera offset. At 720px viewport width, the neutral antenna projects to 53.458px. The11.2mm painted sight tube projects to3–4px width at450px display width, a deliberate visibility accommodation. The same horizontal field of view gives the same scale at720×1280 and720×1584
 - `float_lift` raises the float by up to 0.09m, revealing lower paint bands, the shoulder and part of the buoyant body
 - `float_dip` lowers it by up to 0.18m. A full dip puts the entire tip more than 4cm under the current waterline
 - `float_drag` and `float_current` move its water-plane position in meters. Travel turns the stem toward its direction and gradually tightens the real line. A small lit meniscus follows the actual shaft/surface intersection; a subtle wake follows measured lateral movement and stops when movement stops
@@ -21,7 +21,7 @@ WAITING, NIBBLE and BITE share exactly the same camera transform and field of vi
 
 ## Verification
 
-- `game/tests/float_observation_tests.gd`: 89/89 checks after the float material change. Covers exact observation-camera invariance, tip projection at both aspect ratios, real geometry, body below neutral waterline, lift/sink/lateral motion, submerged-tip attenuation, wave alignment, no presentation-clock wobble, no stationary wake, pause/resume, obsolete-fight-wave reset, hidden fish, minimum/maximum landing framing and anatomical leader endpoints
+- `game/tests/float_observation_tests.gd`: 90/90 checks after the float material change. Covers exact observation-camera invariance, tip projection at both aspect ratios, real geometry, body below neutral waterline, lift/sink/lateral motion, submerged-tip attenuation, wave alignment, no presentation-clock wobble, no stationary wake, pause/resume, obsolete-fight-wave reset, hidden fish, minimum/maximum landing framing and anatomical leader endpoints
 - `game/tests/camera_aspect_tests.gd`: 531/531 mathematical projection checks
 - `tools/capture_float_presentation.gd` renders the real Main/Session/Stage with selected seeded common-carp encounters. It finds genuine lift, sink, lateral travel and soft-take sequences; captures quiet/wave/contact/held-motion views; records unchanged observation cameras; and can write 20fps sampled 450×990 frames with `--video`
 - Rain-lighting images hold a genuine encounter snapshot and change only the stage weather to isolate readability. They are not rain-encounter balance tests
