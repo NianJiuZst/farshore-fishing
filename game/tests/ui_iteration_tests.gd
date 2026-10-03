@@ -47,6 +47,7 @@ func _run() -> void:
 	await _test_notebook_routes()
 	await _test_pending_result()
 	await _test_pause_settings()
+	await _test_float_guide()
 	await _test_home_readability()
 	await _test_lobby_exit_cancel()
 	var reloaded: SaveStore = Store.new()
@@ -267,6 +268,39 @@ func _test_home_readability() -> void:
 		_check(label.autowrap_mode == TextServer.AUTOWRAP_OFF and label.size.x >= label.get_minimum_size().x,"home progress stays single-line at full required width")
 	_check(progress.get_global_rect().end.x <= app.size.x-24,"home progress fits safe right edge")
 	journeys.append("home-progress-width")
+
+func _test_float_guide() -> void:
+	app._show_prepare()
+	await _layout()
+	await _tap(_button(app._page,"读漂与提竿"))
+	_check(app._screen == "float_guide" and _has_text(app._page,"小动作也可能是真口"),"preparation opens meaningful float guide by touch")
+	_check(_has_text(app._page,"没有一种动作能保证中鱼") and not _has_text(app._page,"下沉后提竿"),"guide does not promise one universal guaranteed bite direction")
+	app.notification(Node.NOTIFICATION_WM_GO_BACK_REQUEST)
+	await _layout()
+	_check(app._screen == "prepare","guide Back returns to preparation")
+	app._enter_fishery()
+	_start_cast()
+	_tick(2.35)
+	var sid: String = app.session.session_id
+	var float_clock: float = app.session.float_clock
+	var model_rng: int = app.session.float_encounter.rng.state
+	app._show_pause()
+	app._show_settings()
+	await _layout()
+	await _tap(_button(app._page,"读漂与提竿"))
+	_tick(12.0)
+	_check(app.session.session_id == sid and app.session.float_clock == float_clock and app.session.float_encounter.rng.state == model_rng,"reading guide freezes the actual encounter and its RNG")
+	app.notification(Node.NOTIFICATION_WM_GO_BACK_REQUEST)
+	await _layout()
+	_check(app._screen == "settings" and app.session.state == Session.State.PAUSED,"guide Back restores settings without unpausing")
+	app.notification(Node.NOTIFICATION_WM_GO_BACK_REQUEST)
+	await _layout()
+	_check(app._screen == "pause","settings retains its pause origin after guide visit")
+	app.notification(Node.NOTIFICATION_WM_GO_BACK_REQUEST)
+	await _layout()
+	_check(app._screen.is_empty() and app.session.session_id == sid and not app.session.reeling,"resume retains same cast and clears held input")
+	app._abandon_round()
+	journeys.append("preparation/pause-settings/float-guide/touch/Back/same-encounter")
 
 func _test_lobby_exit_cancel() -> void:
 	var before: Dictionary = app.store.state
