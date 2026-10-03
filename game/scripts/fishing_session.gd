@@ -18,7 +18,7 @@ var progress: float = 0.0
 var reeling: bool = false
 var elapsed: float = 0.0
 var fight_time: float = 0.0
-var wait_duration: float = 5.0
+var wait_duration: float = 0.0 # Diagnostic first approach only; never a hook window.
 var slack_time: float = 0.0
 var overload_time: float = 0.0
 var gear_power: float = 1.0
@@ -52,12 +52,6 @@ var _serial: int = 0
 var _pressed: bool = false
 var _accumulator: float = 0.0
 var _surface_time: float = 0.0
-var _nibble_duration: float = 2.0
-var _bite_duration: float = 2.0
-var _float_style: int = 0
-var _float_frequency: float = 1.0
-var _float_seed_phase: float = 0.0
-var _float_direction: Vector2 = Vector2.RIGHT
 var _behavior: String = "steady"
 var _difficulty: float = 0.4
 var _size: float = 0.3
@@ -119,15 +113,9 @@ func cast(fish: Dictionary, equipment: Dictionary) -> bool:
 	_giant = maxf(clampf((_size - 0.80) / 0.20, 0.0, 1.0), clampf((float(individual.get("weight_g", 0)) - 12000.0) / 40000.0, 0.0, 1.0))
 	_species_trait = float(absi(str(individual.get("species_id", "fish")).hash()) % 997) / 996.0
 	_endurance = (11.0 + 10.0 * _difficulty + 8.0 * _size + 48.0 * _giant) * lerpf(0.93, 1.08, _species_trait)
-	wait_duration = _rng.randf_range(3.8, 8.8)
-	_nibble_duration = _rng.randf_range(1.4, 3.1) * (1.12 if _behavior == "rest" else 1.0)
-	_bite_duration = _rng.randf_range(1.65, 2.35) - _difficulty * 0.35
-	_float_style = absi(str(individual.get("species_id", "fish")).hash()) % 3
-	_float_frequency = lerpf(2.0, 4.0, _species_trait) * (1.3 if _behavior == "burst" else 0.8 if _behavior == "rest" else 1.0)
-	_float_seed_phase = _rng.randf_range(0.0, TAU)
-	_float_direction = Vector2.from_angle(_rng.randf_range(0.0, TAU))
 	_surface_time = 0.0
-	float_encounter.configure(individual, int(_rng.state))
+	float_encounter.configure(individual, _rng.randi())
+	wait_duration = float_encounter.first_approach_seconds
 	_accumulator = 0.0
 	tension = 0.34
 	progress = 0.0

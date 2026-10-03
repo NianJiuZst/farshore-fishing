@@ -3,7 +3,9 @@ extends RefCounted
 ## A fish investigates and handles bait. The float reports transmitted load, not
 ## a countdown. No input-time random roll: a hook either occupies the mouth or it
 ## does not. This is a readable game abstraction, not a universal fishing rule.
-const BOTTOM_FEEDERS: Array[String] = ["common_carp", "crucian_carp", "tench", "common_bream", "wels_catfish", "channel_catfish", "blue_catfish", "flathead_catfish", "southern_catfish", "chinese_sturgeon", "olive_flounder", "european_plaice", "european_flounder", "atlantic_halibut"]
+# Automatic presentation weights for this game's mixed catalog; not a claim
+# that every member always feeds at the bottom or produces a lift indication.
+const BOTTOM_FEEDERS: Array[String] = ["common_carp", "crucian_carp", "tench", "common_bream", "channel_catfish", "flathead_catfish", "southern_catfish", "longsnout_catfish", "chinese_sturgeon", "olive_flounder", "european_plaice"]
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var phase: String = "approach"
 var clock: float = 0.0
@@ -22,6 +24,7 @@ var activity: float = 0.0
 var water_height: float = 0.0
 var current: Vector2 = Vector2.ZERO
 var possession_time: float = 0.0
+var first_approach_seconds: float = 0.0
 var successful_pickups: int = 0
 var rejected_pickups: int = 0
 var _behavior: String = "steady"
@@ -84,6 +87,7 @@ func configure(record: Dictionary, seed_value: int) -> void:
 	successful_pickups = 0
 	rejected_pickups = 0
 	_start_approach(true)
+	first_approach_seconds = _approach_distance / _approach_speed
 
 func _enter(value: String) -> void:
 	phase = value
@@ -151,6 +155,10 @@ func step(delta: float) -> void:
 			possession_time += delta
 			_irritation += delta * (0.85 + _difficulty * 0.35 + absf(_load) * 0.14)
 			var take: float = smoothstep(0.0, 0.38, age)
+			# A fish turns against the tether before travelling out of the fixed
+			# observation view. Preserve position/velocity; never clamp/teleport.
+			if _drag_target.length() > 0.42:
+				_direction = _direction.lerp(-_drag_target.normalized(), 1.0 - exp(-delta * 5.0)).normalized()
 			if signature == "lift":
 				_target_load = -0.82 * take
 				# Fish lifts the bottom shot, then moves while still holding bait.
@@ -182,6 +190,9 @@ func step(delta: float) -> void:
 					departed = true
 					_enter("departed")
 				else: _start_approach(false)
+	if phase != "carry":
+		# The weighted leader and shoreward line gently relax after release.
+		_drag_target = _drag_target.move_toward(Vector2.ZERO, delta * 0.04)
 	# Damped buoyancy. No abrupt teleport at phase boundaries and no synthetic
 	# lateral sine-wave wiggle. Signals all originate in the same bait load.
 	_load_velocity += ((_target_load - _load) * _line_response - _load_velocity * 19.0) * delta
