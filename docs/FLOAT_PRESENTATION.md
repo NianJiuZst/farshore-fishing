@@ -5,13 +5,13 @@ The observation float is a modeled, shotted antenna float, built by `FishingStag
 ## Physical scale and signal mapping
 
 - Local y=0 is the neutral waterline. The sight tip reaches +0.114m; the balsa body occupies −0.089 to −0.018m; the carbon keel reaches −0.156m; the line eye is centered at −0.161m
-- The fixed observation view uses the existing43° reference vertical field of view and the existing cast-camera offset. At720px viewport width, the neutral antenna projects to53.458px. The same horizontal field of view gives the same scale at720×1280 and720×1584
-- `float_lift` raises the float by up to0.09m, revealing lower paint bands, the shoulder and part of the buoyant body
-- `float_dip` lowers it by up to0.18m. A full dip puts the entire tip more than4cm under the current waterline
+- The fixed observation view uses the existing 43° reference vertical field of view and the existing cast-camera offset. At 720px viewport width, the neutral antenna projects to 53.458px. The same horizontal field of view gives the same scale at720×1280 and720×1584
+- `float_lift` raises the float by up to 0.09m, revealing lower paint bands, the shoulder and part of the buoyant body
+- `float_dip` lowers it by up to 0.18m. A full dip puts the entire tip more than 4cm under the current waterline
 - `float_drag` and `float_current` move its water-plane position in meters. Travel turns the stem toward its direction and gradually tightens the real line. A small lit meniscus follows the actual shaft/surface intersection; a subtle wake follows measured lateral movement and stops when movement stops
 - The line terminates at the lower modeled eye. A short leader continues from that eye to the anatomical mouth landmark during landing. The landing offset preserves clearance for the longer float and keeps the existing sturgeon snout guide
 
-`float_lacquer.gdshader` gives paint and wood physically lit roughness, metal and clearcoat responses. The fine markings fade through2–30mm of water and disappear below that, instead of remaining as a uniformly bright submerged silhouette through the existing transparent river. This is a narrow-object visibility approximation for the game, not a measured model of water turbidity. Cast and landing disable it and show the complete float.
+`float_lacquer.gdshader` gives paint and wood physically lit roughness, metal and clearcoat responses in the opaque depth-writing pipeline. Painted sections have no overlapping ivory core; this prevents transparent sorting from hiding their colors. The fine markings lose color contrast through 2–30mm of water and disappear below that, instead of remaining as a uniformly bright submerged silhouette through the existing transparent river. This is a narrow-object visibility approximation for the game, not a measured model of water turbidity. Cast and landing disable it and show the complete float.
 
 ## Determinism and camera contract
 
@@ -21,11 +21,11 @@ WAITING, NIBBLE and BITE share exactly the same camera transform and field of vi
 
 ## Verification
 
-- `game/tests/float_observation_tests.gd`:87/87 checks after the float material change. Covers exact observation-camera invariance, tip projection at both aspect ratios, real geometry, body below neutral waterline, lift/sink/lateral motion, submerged-tip attenuation, wave alignment, no presentation-clock wobble, no stationary wake, pause/resume, obsolete-fight-wave reset, hidden fish, minimum/maximum landing framing and anatomical leader endpoints
-- `game/tests/camera_aspect_tests.gd`:531/531 mathematical projection checks
-- `tools/capture_float_presentation.gd` renders the real Main/Session/Stage with selected seeded common-carp encounters. It finds genuine lift, sink, lateral travel and soft-take sequences; captures quiet/wave/contact/held-motion views; records unchanged observation cameras; and can write8fps sampled frames with `--video`
+- `game/tests/float_observation_tests.gd`: 89/89 checks after the float material change. Covers exact observation-camera invariance, tip projection at both aspect ratios, real geometry, body below neutral waterline, lift/sink/lateral motion, submerged-tip attenuation, wave alignment, no presentation-clock wobble, no stationary wake, pause/resume, obsolete-fight-wave reset, hidden fish, minimum/maximum landing framing and anatomical leader endpoints
+- `game/tests/camera_aspect_tests.gd`: 531/531 mathematical projection checks
+- `tools/capture_float_presentation.gd` renders the real Main/Session/Stage with selected seeded common-carp encounters. It finds genuine lift, sink, lateral travel and soft-take sequences; captures quiet/wave/contact/held-motion views; records unchanged observation cameras; and can write 20fps sampled 450×990 frames with `--video`
 - Rain-lighting images hold a genuine encounter snapshot and change only the stage weather to isolate readability. They are not rain-encounter balance tests
 
-The initial native render in `build/float-presentation/` was a provisional visual checkpoint. It predates the underwater attenuation and the final core/angler integration; its source hash check correctly reported changes during capture. It must not be used as final release evidence. Final native evidence is recorded separately after integration.
+The initial native render in `build/float-presentation/` was a provisional visual checkpoint. It predates the underwater attenuation and the final core/angler integration; its source hash check correctly reported changes during capture. It must not be used as final release evidence. The corrected material smoke in `build/float-material-smoke/` completed with unchanged source hashes: native pixels show all paint bands, a fully disappeared sunk tip, intact character materials and ready water normals. The smoke uses explicit float geometry fixtures. The longer genuine-encounter movie is recorded separately after integration.
 
-All native captures use actual Godot4.6.3 Mobile rendering with Mesa lavapipe Vulkan on the desktop. They are not Android-device, phone frame-rate, heat, battery or touch-feel certification.
+All native captures use actual Godot 4.6.3 Mobile rendering with Mesa lavapipe Vulkan on the desktop. They are not Android-device, phone frame-rate, heat, battery or touch-feel certification.

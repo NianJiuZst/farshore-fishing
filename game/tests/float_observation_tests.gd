@@ -97,6 +97,9 @@ func run() -> void:
 			check(material.shader == Stage.FLOAT_SHADER and not "EMISSION" in material.shader.code and not "unshaded" in material.shader.code, "float part has physically lit nonglowing material: " + child.name)
 			if child.name in ["LiftIvory", "LiftRed", "WaterlineBlack", "LowerIvory", "LowerBlack", "YellowSight", "UpperBlack", "UpperIvory", "TipBlack", "OrangeTip"]: painted_bands += 1
 	check(painted_bands == 10, "ten separate opaque paint bands remain inspectable geometry")
+	check(not "ALPHA =" in Stage.FLOAT_SHADER.code and "depth_draw_opaque" in Stage.FLOAT_SHADER.code, "float paint uses opaque depth writes so separate bands cannot sort through one another")
+	var antenna_core: MeshInstance3D = stage._bobber.get_node("SightAntennaCore")
+	check(antenna_core.position.y + antenna_core.mesh.get_aabb().end.y <= -0.0159, "inner antenna core cannot cover the colored sight bands")
 	session.float_dip = 1.0
 	stage._update_fishing(0.0)
 	var sunk_tip: Vector3 = stage._bobber.to_global(Vector3.UP * Stage.FLOAT_TIP_TOP)

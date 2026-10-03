@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode blend_mix, depth_prepass_alpha;
+render_mode depth_draw_opaque;
 
 uniform vec4 paint_color : source_color = vec4(1.0);
 uniform float paint_roughness : hint_range(0.0, 1.0) = 0.4;
@@ -21,11 +21,12 @@ void fragment() {
     if (visibility <= 0.001) {
         discard;
     }
-    ALBEDO = mix(paint_color.rgb, vec3(0.12, 0.25, 0.24), min(depth * 18.0, 0.52));
+    // Opaque depth writes keep the separate paint bands correctly occluded.
+    // Contrast falls through the water film; the existing river composites it.
+    ALBEDO = mix(vec3(0.12, 0.25, 0.24), paint_color.rgb, visibility);
     ROUGHNESS = paint_roughness;
     METALLIC = paint_metallic;
     SPECULAR = 0.5;
     CLEARCOAT = lacquer_amount;
     CLEARCOAT_ROUGHNESS = 0.22;
-    ALPHA = paint_color.a * visibility;
 }

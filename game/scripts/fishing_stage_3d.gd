@@ -1132,7 +1132,7 @@ func _build_bobber() -> void:
 	_float_cylinder("CarbonKeel", -0.156, -0.086, 0.00125, carbon)
 	_float_cylinder("LowerFerrule", -0.091, -0.084, 0.0023, brass)
 	_float_cylinder("ShoulderFerrule", -0.020, -0.015, 0.0038, brass)
-	_float_cylinder("SightAntennaCore", -0.026, 0.111, 0.0033, ivory)
+	_float_cylinder("SightAntennaCore", -0.026, -0.016, 0.0033, ivory)
 	# Alternating paint bands are actual opaque cylindrical geometry. The lower
 	# cream/red bands are hidden at rest and appear as the fish unloads the shot.
 	var bands: Array[Dictionary] = [
