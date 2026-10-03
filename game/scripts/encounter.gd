@@ -1,5 +1,6 @@
 class_name EncounterGenerator
 extends RefCounted
+const FloatModel = preload("res://scripts/float_encounter.gd")
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 func _init(fixed_seed: int = -1) -> void:
@@ -43,7 +44,26 @@ func generate(catalog: ContentCatalog, spot_id: String, bait: String, gear_id: i
 		if pick <= 0.0:
 			selected = item.fish
 			break
-	return make_individual(selected, spot_id, str(catalog.spots[spot_id].region_id), bait, gear_id, time, weather)
+	var record: Dictionary = make_individual(selected, spot_id, str(catalog.spots[spot_id].region_id), bait, gear_id, time, weather)
+	apply_float_presentation(record, catalog, cast_power)
+	return record
+
+func apply_float_presentation(record: Dictionary, catalog: ContentCatalog, cast_power: float = 0.6) -> void:
+	## Automatic game presentation, not a claim that one real float rig suits
+	## every depth/lure/species. It preserves the catalog's existing reach rules.
+	var spot: Dictionary = catalog.spots.get(str(record.get("spot_id", "")), {})
+	var fish: FishDefinition = catalog.fish.get(str(record.get("species_id", "")))
+	if spot.is_empty() or fish == null: return
+	var gear: Dictionary = catalog.gear[clampi(int(record.get("equipment", 0)), 0, catalog.gear.size() - 1)]
+	var shallow: float = maxf(0.5, float(spot.get("depth_min_m", 1.0)))
+	var deep: float = maxf(shallow, minf(float(spot.get("depth_max_m", 8.0)), float(gear.get("max_depth_m", 8.0))))
+	var water_depth: float = lerpf(shallow, deep, clampf(cast_power, 0.0, 1.0))
+	var bait: String = str(record.get("bait_id", "worm"))
+	var bottom_rig: bool = fish.species_id in FloatModel.BOTTOM_FEEDERS and water_depth <= 12.0 and bait not in ["spinner", "lure"]
+	record["water_depth_m"] = water_depth
+	record["bait_depth_m"] = maxf(0.3, water_depth - 0.12) if bottom_rig else clampf(maxf(float(fish.raw.get("depth_min_m", 0.5)), water_depth * 0.6), 0.3, water_depth)
+	record["float_rig"] = "near_bottom" if bottom_rig else "suspended"
+	record["bait_affinity"] = catalog.bait_weight(fish, bait)
 
 func make_individual(fish: FishDefinition, spot: String, region: String, bait: String, gear_id: int, time: String, weather: String) -> Dictionary:
 	# Right-skewed size distribution: big individuals are rarer; body condition changes gently.

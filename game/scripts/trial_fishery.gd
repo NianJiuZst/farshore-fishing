@@ -20,7 +20,7 @@ static func region() -> Dictionary:
 	return {"region_id": REGION_ID, "name": NAME, "subtitle": "两种鱼的3D体验", "scene": "res://assets/scenery/bayou_channel.png", "color": "#488c80", "spots": [SPOT_ID]}
 
 static func spot() -> Dictionary:
-	return {"spot_id": SPOT_ID, "region_id": REGION_ID, "name": SPOT_NAME, "habitat": "虚构的管理型河湾试钓场，不表示两种鱼在所有自然水域共同分布", "salinity": "fresh", "depth_min_m": 1.0, "depth_max_m": 8.0, "min_gear": 0, "foreground": "pier", "cast_hint": "长按蓄力、松手抛竿；浮漂下沉后提竿"}
+	return {"spot_id": SPOT_ID, "region_id": REGION_ID, "name": SPOT_NAME, "habitat": "虚构的管理型河湾试钓场，不表示两种鱼在所有自然水域共同分布", "salinity": "fresh", "depth_min_m": 1.0, "depth_max_m": 8.0, "min_gear": 0, "foreground": "pier", "cast_hint": "长按蓄力、松手抛竿；观察送漂、顿沉或定向横移后及时提竿"}
 
 static func generate(catalog: ContentCatalog, encounter: EncounterGenerator, bait_id: String, gear_id: int, cast_power: float, time_of_day: String, weather: String, target_species: String = "mixed") -> Dictionary:
 	if gear_id < 0 or gear_id >= catalog.gear.size() or not is_finite(cast_power):

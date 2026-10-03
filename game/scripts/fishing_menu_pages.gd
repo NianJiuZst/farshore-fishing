@@ -32,7 +32,7 @@ func populate_prepare(app: Control, page: VBoxContainer) -> void:
 	var names: Array[String] = []
 	for fish: FishDefinition in fish_here: names.append(fish.name)
 	page.add_child(app._text("、".join(names),22,MUTED))
-	page.add_child(app._text("抛竿后观察鱼漂，咬稳再收线",21,TEAL))
+	page.add_child(app._button("读漂与提竿",app._show_float_guide))
 	if not app._can_use_spot(app.spot_id): page.add_child(app._text("当前钓竿无法触及此钓点，请更换装备或钓点",22,GOLD))
 	var enter: Button = app._button("进入钓点",app._enter_fishery,true)
 	enter.icon_kind = "compass"
@@ -183,9 +183,25 @@ func populate_settings(app: Control, page: VBoxContainer) -> void:
 	page.add_child(app._button("待处理钓获 · %d 条" % pending,app._show_pending))
 	page.add_child(_rule())
 	_section(app,page,"游玩说明")
+	page.add_child(app._button("读漂与提竿",app._show_float_guide))
 	page.add_child(app._text("日间与黄昏每 2 分 30 秒切换，晴与微雨每 4 分钟切换。暂停时停止流转。",22,MUTED))
 	page.add_child(app._button("关于游戏与开源许可",app._show_about))
 	page.add_child(app._text("版本 "+str(ProjectSettings.get_setting("application/config/version","")),19,MUTED))
+
+func populate_float_guide(app: Control, page: VBoxContainer) -> void:
+	page.add_child(app._text("先看水线，再看变化",30,INK))
+	page.add_child(app._text("浮漂的彩色漂目是水线的参照。水波会托着浮漂一起起伏；鱼改变线组受力时，露出的漂目和运动方向才会改变。",24,MUTED))
+	page.add_child(_rule())
+	for pair: Array in [
+		["轻点后回位", "可能只是试探或碰线。留意后续变化，鱼也可能离开后再来。"],
+		["送漂、顿沉、定向横移", "含饵托起配重会送漂，带饵移动会下沉或横移。动作连贯并偏离水波节奏时，及时提竿。"],
+		["小动作也可能是真口", "漂目只变化一点、却停留在新水线，也可能值得提竿。不必等整支漂消失。"],
+		["回到原水线", "可能已经吐饵。继续观察或收回重抛；等得更久并不保证上钩。"]]:
+		page.add_child(app._text(str(pair[0]),27,INK))
+		page.add_child(app._text(str(pair[1]),23,MUTED))
+		page.add_child(_rule())
+	page.add_child(app._text("点按收线提竿，上鱼后按住收线、松手卸力。提竿只在钩饵仍被鱼含住时有效，不按固定秒数判定。",23,TEAL))
+	page.add_child(app._text("本游戏自动搭配并简化了水深、配重与钓组。现实漂相还受调漂、流水和饵料影响，没有一种动作能保证中鱼。",20,MUTED))
 
 func populate_about(app: Control, page: VBoxContainer) -> void:
 	_section(app,page,"远岸钓记",str(ProjectSettings.get_setting("application/config/version","")))

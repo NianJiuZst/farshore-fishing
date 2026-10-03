@@ -6,6 +6,7 @@ signal changed(state: int)
 signal ended(success: bool, record: Dictionary)
 signal cue(kind: String)
 enum State { IDLE, CHARGING, CASTING, WAITING, NIBBLE, BITE, FIGHT, CAUGHT, ESCAPED, PAUSED }
+const FloatModel = preload("res://scripts/float_encounter.gd")
 const FIXED_STEP: float = 1.0 / 120.0
 var state: int = State.IDLE
 var before_pause: int = State.IDLE
@@ -30,6 +31,10 @@ var float_lift: float = 0.0
 var float_drag: Vector2 = Vector2.ZERO
 var float_tilt: float = 0.0
 var float_activity: float = 0.0
+var float_water_height: float = 0.0
+var float_current: Vector2 = Vector2.ZERO
+var float_clock: float = 0.0
+var float_encounter: FloatEncounter = FloatModel.new()
 # Normalized fish energy/distance and physically signalled fight state.
 var fish_stamina: float = 1.0
 var fatigue: float = 0.0
@@ -122,6 +127,7 @@ func cast(fish: Dictionary, equipment: Dictionary) -> bool:
 	_float_seed_phase = _rng.randf_range(0.0, TAU)
 	_float_direction = Vector2.from_angle(_rng.randf_range(0.0, TAU))
 	_surface_time = 0.0
+	float_encounter.configure(individual, int(_rng.state))
 	_accumulator = 0.0
 	tension = 0.34
 	progress = 0.0
@@ -156,13 +162,14 @@ func press() -> void:
 	_pressed = true
 	match state:
 		State.IDLE: start_charge()
-		State.WAITING, State.NIBBLE:
-			_finish(false, "空竿收回，鱼还没有咬牢。下次再多观察一会儿浮漂")
-		State.BITE:
+		State.WAITING, State.NIBBLE, State.BITE:
+			# The hook's physical occupation of the mouth determines success.
+			# No elapsed-window lookup or success roll happens at this input edge.
+			if not float_encounter.can_hook():
+				_finish(false, "空竿收回，钩饵没有留在鱼嘴里。留意浮漂偏离水面节奏后的持续变化")
+				return
 			reeling = false
 			set_state(State.FIGHT)
-			# A genuine new bite press may continue as a held reel. A gesture
-			# held before the bite never reaches this branch; pause can cancel it.
 			if state == State.FIGHT and _pressed: reeling = true
 			cue.emit("hook")
 		State.FIGHT: reeling = true
@@ -234,19 +241,15 @@ func _step_fixed(delta: float) -> void:
 			charge = minf(1.0, charge + delta * 0.48)
 		State.CASTING:
 			if elapsed >= 0.85: set_state(State.WAITING)
-		State.WAITING:
+		State.WAITING, State.NIBBLE, State.BITE:
 			_surface_time += delta
+			float_encounter.step(delta)
 			_update_float()
-			if elapsed >= wait_duration: set_state(State.NIBBLE)
-		State.NIBBLE:
-			_surface_time += delta
-			_update_float()
-			if elapsed >= _nibble_duration: set_state(State.BITE)
-		State.BITE:
-			_surface_time += delta
-			_update_float()
-			if elapsed >= _bite_duration:
-				_finish(false, "浮漂又浮了回来，鱼已经松口游走了")
+			if float_encounter.departed:
+				_finish(false, "浮漂恢复了原来的水线，鱼已松口离开。可以重新抛竿")
+			elif float_encounter.can_hook(): set_state(State.BITE)
+			elif float_encounter.is_contacting(): set_state(State.NIBBLE)
+			else: set_state(State.WAITING)
 		State.FIGHT:
 			_step_fight(delta)
 
@@ -256,32 +259,19 @@ func _reset_float() -> void:
 	float_drag = Vector2.ZERO
 	float_tilt = 0.0
 	float_activity = 0.0
+	float_water_height = 0.0
+	float_current = Vector2.ZERO
+	float_clock = 0.0
 
 func _update_float() -> void:
-	var wave: float = sin(_surface_time * 1.65 + _float_seed_phase)
-	var twitch: float = pow(maxf(0.0, sin(elapsed * _float_frequency * TAU)), 5.0)
-	float_dip = 0.035 + wave * 0.025
-	float_lift = 0.0
-	float_drag = Vector2(sin(_surface_time * 0.7), cos(_surface_time * 0.93)) * 0.035
-	float_tilt = wave * 0.055
-	float_activity = 0.035
-	if state == State.NIBBLE:
-		var envelope: float = minf(1.0, elapsed * 2.0)
-		float_dip += twitch * envelope * (0.20 if _float_style == 1 else 0.32)
-		float_lift = twitch * envelope * (0.15 if _float_style == 1 else 0.0)
-		float_drag += _float_direction * sin(elapsed * 4.0) * 0.06 * envelope
-		float_tilt += twitch * 0.17 * signf(_float_direction.x)
-		float_activity += twitch * 0.18
-	elif state == State.BITE:
-		var take: float = smoothstep(0.0, 0.38, elapsed)
-		if _float_style == 1:
-			float_lift = take * (0.65 - 0.18 * sin(elapsed * 2.0))
-			float_dip += smoothstep(0.5, 1.2, elapsed) * 0.48
-		else:
-			float_dip += take * (0.71 + 0.13 * sin(elapsed * 4.0))
-		float_drag += _float_direction * take * elapsed * (0.34 if _float_style == 2 else 0.17)
-		float_tilt += take * (0.48 if _float_style == 2 else 0.24) * signf(_float_direction.x)
-		float_activity += take * 0.23
+	float_dip = float_encounter.dip
+	float_lift = float_encounter.lift
+	float_drag = float_encounter.drag
+	float_tilt = float_encounter.tilt
+	float_activity = float_encounter.activity
+	float_water_height = float_encounter.water_height
+	float_current = float_encounter.current
+	float_clock = float_encounter.clock
 
 func _surge_reset() -> void:
 	surge_strength = 0.0

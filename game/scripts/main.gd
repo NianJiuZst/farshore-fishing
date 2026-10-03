@@ -551,7 +551,7 @@ func _session_changed(value: int) -> void:
 			_action.text = "抛竿中"
 		Session.State.WAITING, Session.State.NIBBLE, Session.State.BITE:
 			_status.text = "观察鱼漂"
-			_hint.text = "观察鱼漂 · 按下收线，过早会空竿"
+			_hint.text = "观察漂相 · 点按提竿，按住收线"
 			_action.text = "收线"
 		Session.State.FIGHT:
 			_status.text = "控线遛鱼"
@@ -1198,10 +1198,15 @@ func _dispose_pending(id: String,action: String) -> void:
 
 func _show_settings() -> void:
 	if _screen == "pause": _settings_back = _show_pause
-	elif _screen not in ["settings","about","licenses"]: _settings_back = _close_page
+	elif _screen not in ["settings","about","licenses","float_guide"]: _settings_back = _close_page
 	if not _settings_back.is_valid(): _settings_back = _close_page
 	_open_page("settings","设置",_settings_back)
 	menu_pages.populate_settings(self,_page)
+
+func _show_float_guide() -> void:
+	var back: Callable = _show_prepare if _screen == "prepare" else _show_settings
+	_open_page("float_guide","读漂与提竿",back)
+	menu_pages.populate_float_guide(self,_page)
 
 func _show_licenses() -> void:
 	_open_page("licenses","开源许可",_show_settings)

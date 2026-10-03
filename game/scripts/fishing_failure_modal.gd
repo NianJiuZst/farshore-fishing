@@ -194,7 +194,7 @@ func _apply_copy() -> void:
 
 static func copy_for_reason(reason: String) -> Dictionary:
 	if reason.begins_with("空竿"):
-		return {"title":"空竿收回", "body":"鱼还没咬牢。下次多观察一会儿鱼漂。", "icon":"hook"}
+		return {"title":"空竿收回", "body":"提竿时钩饵不在鱼嘴里。留意漂相的连续变化，别只数秒或等黑漂。", "icon":"hook"}
 	if "磨损" in reason:
 		return {"title":"鱼线断了", "body":"鱼线磨损过重。下次把握收线与卸力的节奏。", "icon":"reel"}
 	if "断" in reason:
