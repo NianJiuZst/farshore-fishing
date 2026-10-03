@@ -69,6 +69,74 @@ def glb_contract(path, clips):
             'animations': sorted(animations), 'embedded_images': len(doc.get('images', []))}
 
 
+def angler_provenance_contract(project, runtime, textures):
+    """Bind the reviewed human GLB and all extracted images to their provenance."""
+    root = project.parent
+    provenance = root/'docs/ASSETS_3D_ANGLER_PROVENANCE.json'
+    assert provenance.is_file() and not provenance.is_symlink(), 'Missing angler provenance'
+    record = json.loads(provenance.read_text())
+    assert record.get('schema_version') == 1
+    assert record.get('runtime_contract') == runtime, 'Angler runtime differs from provenance'
+    glb_path = project/'assets/3d/angler.glb'
+    raw = glb_path.read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == runtime['sha256'] and len(raw) == runtime['bytes'], 'Angler GLB differs from runtime contract'
+    derived = [item for item in record.get('derived_files', []) if item.get('path') == 'game/assets/3d/angler.glb']
+    assert len(derived) == 1 and derived[0].get('sha256') == runtime['sha256'] and derived[0].get('bytes') == len(raw), 'Angler GLB differs from derived provenance'
+    size, kind = struct.unpack_from('<II', raw, 12)
+    assert kind == 0x4E4F534A
+    doc = json.loads(raw[20:20+size])
+    binary_size, binary_kind = struct.unpack_from('<II', raw, 20+size)
+    assert binary_kind == 0x004E4942
+    binary = raw[28+size:28+size+binary_size]
+    assert len(binary) == binary_size
+    solid = {'Human.body', 'Human.male_casualsuit05', 'Human.shoes02'}
+    cutout = {'Human.low-poly', 'Human.eyebrow001', 'Human.short02'}
+    materials = doc.get('materials', [])
+    names = [material.get('name') for material in materials]
+    assert len(names) == len(set(names)) and set(names) == solid | cutout, 'Unexpected angler materials'
+    material_report = []
+    for material in materials:
+        mode = material.get('alphaMode', 'OPAQUE')
+        assert mode in {'OPAQUE', 'MASK'}, 'Angler BLEND/unknown material is forbidden'
+        assert material['name'] not in solid or mode == 'OPAQUE', 'Angler body/suit/shoes must remain OPAQUE'
+        material_report.append({'name': material['name'], 'alpha_mode': mode,
+                                'alpha_cutoff': material.get('alphaCutoff'), 'depth_writing': True})
+    assert record.get('runtime_materials') == material_report, 'Angler materials differ from provenance'
+    images = doc.get('images', [])
+    assert len(images) == 7, 'Exactly seven embedded angler textures required'
+    embedded = {}
+    for image in images:
+        assert image.get('mimeType') == 'image/png'
+        name = image.get('name', '')
+        assert re.fullmatch('[a-z0-9_]+', name), 'Unsafe angler image name'
+        relative = f'assets/3d/angler_{name}.png'
+        assert relative not in embedded, 'Duplicate embedded angler image'
+        view = doc['bufferViews'][image['bufferView']]
+        assert view.get('buffer', 0) == 0
+        start, length = view.get('byteOffset', 0), view['byteLength']
+        payload = binary[start:start+length]
+        assert len(payload) == length
+        embedded[relative] = {'sha256': hashlib.sha256(payload).hexdigest(), 'bytes': length}
+    items = record.get('derived_texture_files', [])
+    paths = [item.get('path') for item in items]
+    assert len(paths) == 7 and len(set(paths)) == 7 and set(paths) == {'game/' + p for p in embedded}, 'Angler texture provenance must cover all seven extracted images once'
+    actual = {str(path.relative_to(project)) for path in (project/'assets/3d').glob('angler_*.png')}
+    assert actual == set(embedded), 'Missing or stale extracted angler texture'
+    verified = []
+    for item in items:
+        relative = item['path'].removeprefix('game/')
+        path = project/relative
+        assert path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(project.resolve()), 'Unsafe extracted angler texture'
+        assert relative in textures, 'Angler texture is missing from export contract'
+        expected = embedded[relative]
+        assert item.get('sha256') == expected['sha256'] and item.get('bytes') == expected['bytes'], 'Angler embedded texture differs from provenance'
+        assert path.stat().st_size == expected['bytes'] and sha256(path) == expected['sha256'], 'Extracted angler texture differs from embedded GLB/provenance'
+        assert item.get('license') and item.get('source_url'), 'Missing angler texture attribution'
+        verified.append({'path': relative, 'sha256': expected['sha256'], 'license': item['license'], 'source_url': item['source_url']})
+    return {'provenance_sha256': sha256(provenance), 'runtime_glb_sha256': runtime['sha256'],
+            'runtime_materials': material_report, 'textures': verified, 'embedded_images_match_extracted': True}
+
+
 def three_d_contract(project, catalog_ids):
     registry_path = project/'data/fish_3d.json'
     if not registry_path.exists():
@@ -106,6 +174,7 @@ def three_d_contract(project, catalog_ids):
     image_extensions = {'.png','.jpg','.jpeg','.webp','.hdr','.exr'}
     textures = sorted(str(p.relative_to(project)) for p in (project/'assets/3d').rglob('*') if p.is_file() and p.suffix.lower() in image_extensions)
     assert len(textures) >= 12, 'Expected fish base-color, normal and roughness texture imports'
+    angler_provenance = angler_provenance_contract(project, glbs['assets/3d/angler.glb'], textures)
     shaders = sorted(str(p.relative_to(project)) for p in (project/'assets/shaders3d').glob('*.gdshader'))
     assert len(shaders) >= 5, 'Missing water/foliage/ripple/wood/riverbank shaders'
     shader_hashes = {p: sha256(project/p) for p in shaders}
@@ -116,7 +185,7 @@ def three_d_contract(project, catalog_ids):
     authoring += sorted(str(p.relative_to(root)) for p in (root/'docs').glob('ASSETS_3D_*') if p.is_file())
     assert 'tools/art3d/fish_pipeline.py' in authoring
     assert len([p for p in authoring if p.startswith('tools/art3d/fish_profiles/')]) >= 42, 'Missing shared/profile authoring generators'
-    third_party = []
+    third_party = list(angler_provenance['textures'])
     notices = {}
     provenance = root/'docs/ASSETS_3D_ENVIRONMENT_CC0.json'
     if provenance.exists():
@@ -147,6 +216,7 @@ def three_d_contract(project, catalog_ids):
             'opengl_fallback_disabled': 'rendering_device/fallback_to_opengl3=false' in settings,
             'glb_models': glbs, 'texture_files': textures, 'shader_sha256': shader_hashes,
             'third_party_textures':third_party, 'notice_sha256':notices,
+            'angler_provenance': angler_provenance,
             'authoring_files_sha256': {p: sha256(root/p) for p in authoring},
             'provenance_scope': 'Editable Blender masters, original generators, and asset documentation with exact file hashes'}
 

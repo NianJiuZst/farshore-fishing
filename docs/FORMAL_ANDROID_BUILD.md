@@ -55,10 +55,20 @@ current asset digest returned by the
 [official 4.6.3 release API](https://api.github.com/repos/godotengine/godot-builds/releases/tags/4.6.3-stable).
 The original APK, derived APK, and all 114 unchanged members (including DEX and
 both ARM64 libraries) match the retained transformation proof. No template hash
-mismatch was found. The retained toolchain proof records the editor version but
-no editor-binary/archive checksum, so this check does not independently certify
-the installed desktop editor binary against an official download. No engine or
-template was replaced.
+mismatch was found.
+
+The editor provenance gap was subsequently closed by a read-only comparison with
+the [official Linux x86_64 editor archive](https://github.com/godotengine/godot-builds/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip).
+Its 71,806,687 bytes match the current GitHub release asset SHA256
+`d0bc2113065e481c9c2c2b2c37daa4e8be3fe9e27f0ab9ab0b6096e9a37907f3`.
+The decompressed official executable and installed `/usr/local/bin/godot` target
+are both 138,981,968 bytes and have identical SHA256
+`f64d4ed19fc9df9440321653fcc80df8c6e365ba7b6de0a29e2cfa9fa71bfeb3`.
+The installed editor is byte-identical to the verified official release binary;
+no engine integrity mismatch was found. The archive was held only in a disposable
+temporary directory, and its binary was hashed without installation or execution.
+The unresolved source-tag/version-suffix distinction above does not establish a
+binary mismatch. No engine or template was replaced.
 
 `game/data/android_build_identity.json` and `ANDROID_PREVIEW_IDENTITY.json` are
 identical public metadata. The latter keeps its filename to document the package
@@ -103,6 +113,15 @@ All existing art requirements remain active:
 
 The revised angler must retain the existing scene, master, and animation contract.
 New authoring inputs must be tracked and included before freezing the release.
+`content_3d_contract.py` also requires `ASSETS_3D_ANGLER_PROVENANCE.json` to match
+the runtime GLB contract and derived GLB hash/size. All seven extracted angler
+PNGs must occur exactly once in provenance and match both its hashes and the
+corresponding embedded GLB image bytes; missing, extra, stale, or substituted
+extractions fail. The seven textures are included in the third-party export
+registry. Raw GLB material checks reject BLEND: body, suit, and shoes must remain
+OPAQUE, while eyes, brows, and hair may use MASK. The independently read materials
+must also match the provenance record. Imported-node/runtime material checks
+remain separate native acceptance evidence.
 
 ## Retained toolchain and static Android gates
 
@@ -126,12 +145,15 @@ acceptance items. Desktop and static APK checks cannot certify those results.
 
 ## Preparation evidence
 
-`python3 tools/test_release_packaging.py` passed **17 tests with no skips** on
+`python3 tools/test_release_packaging.py` passed **20 tests with no skips** on
 2026-10-03. New regressions cover formal identity/package/certificate boundaries,
 the required float source, six invalid float export cases, strict lacquer-shader
 source/export hashes, and source-archive membership. The retained
 official-template, source archive reuse/corruption,
 Vulkan normalization, beta3 UI, and synthetic complete 44-species photo tests pass.
+Three angler regression groups cover the complete seven-image binding, ten
+missing/stale/duplicate provenance or extraction failures, and raw material
+violations even when provenance hashes are refreshed to match the modified GLB.
 This is preparation evidence, not a formal gameplay export.
 
 GitHub CLI authentication was verified with

@@ -16,6 +16,84 @@ import park_android_ndk as ndk
 import normalize_android_features as normalization
 import android_identity
 import content_fish_art_contract as photos
+import content_3d_contract as three_d
+
+
+class AnglerPackagingTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory(prefix='farshore-angler-contract-')
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name); self.project = self.root/'game'
+        (self.project/'assets/3d').mkdir(parents=True); (self.root/'docs').mkdir()
+        self.provenance = {'schema_version': 1, 'derived_texture_files': []}
+        self.doc = {'images': [], 'bufferViews': [], 'materials': []}
+        self.binary = b''; self.originals = {}
+        for index in range(7):
+            name = f'image_{index}'; raw = b'PNG fixture ' + bytes([index])
+            relative = f'assets/3d/angler_{name}.png'
+            self.originals[relative] = raw; (self.project/relative).write_bytes(raw)
+            self.doc['images'].append({'name': name, 'mimeType': 'image/png', 'bufferView': index})
+            self.doc['bufferViews'].append({'buffer': 0, 'byteOffset': len(self.binary), 'byteLength': len(raw)})
+            self.binary += raw
+            self.provenance['derived_texture_files'].append({'path': 'game/' + relative, 'bytes': len(raw),
+                'sha256': photos.sha256(raw), 'license': 'CC0-1.0', 'source_url': 'https://example.org/fixture'})
+        for name in ('Human.body', 'Human.male_casualsuit05', 'Human.shoes02', 'Human.low-poly', 'Human.eyebrow001', 'Human.short02'):
+            self.doc['materials'].append({'name': name, **({'alphaMode': 'MASK', 'alphaCutoff': .35} if len(self.doc['materials']) >= 3 else {})})
+        self.write_glb()
+
+    def write_glb(self):
+        document = json.dumps(self.doc).encode(); document += b' ' * (-len(document) % 4)
+        binary = self.binary + b'\0' * (-len(self.binary) % 4)
+        raw = struct.pack('<4sII', b'glTF', 2, 28 + len(document) + len(binary))
+        raw += struct.pack('<II', len(document), 0x4E4F534A) + document
+        raw += struct.pack('<II', len(binary), 0x004E4942) + binary
+        (self.project/'assets/3d/angler.glb').write_bytes(raw)
+        self.runtime = {'sha256': photos.sha256(raw), 'bytes': len(raw)}
+        self.provenance['runtime_contract'] = self.runtime.copy()
+        self.provenance['derived_files'] = [{'path': 'game/assets/3d/angler.glb', **self.runtime}]
+        self.provenance['runtime_materials'] = [{'name': m['name'], 'alpha_mode': m.get('alphaMode', 'OPAQUE'),
+            'alpha_cutoff': m.get('alphaCutoff'), 'depth_writing': m.get('alphaMode') != 'BLEND'} for m in self.doc['materials']]
+
+    def verify(self):
+        (self.root/'docs/ASSETS_3D_ANGLER_PROVENANCE.json').write_text(json.dumps(self.provenance))
+        return three_d.angler_provenance_contract(self.project, self.runtime, list(self.originals))
+
+    def test_angler_provenance_binds_glb_and_all_seven_extracted_images(self):
+        result = self.verify()
+        self.assertEqual(len(result['textures']), 7)
+        self.assertTrue(result['embedded_images_match_extracted'])
+        self.assertEqual(result['runtime_glb_sha256'], self.runtime['sha256'])
+
+    def test_angler_stale_or_incomplete_provenance_and_extraction_fail_closed(self):
+        valid = copy.deepcopy(self.provenance)
+        first = next(iter(self.originals)); path = self.project/first
+        for mutation in ('stale_runtime', 'stale_glb_record', 'missing_glb_record', 'missing_texture_record',
+                         'duplicate_texture_record', 'stale_texture_record', 'missing_extracted', 'stale_extracted', 'rehashed_stale_extracted', 'extra_extracted'):
+            self.provenance = copy.deepcopy(valid); path.write_bytes(self.originals[first])
+            extra = self.project/'assets/3d/angler_stale.png'
+            if extra.exists(): extra.unlink()
+            if mutation == 'stale_runtime': self.provenance['runtime_contract']['sha256'] = '0'*64
+            if mutation == 'stale_glb_record': self.provenance['derived_files'][0]['sha256'] = '0'*64
+            if mutation == 'missing_glb_record': self.provenance['derived_files'] = []
+            if mutation == 'missing_texture_record': self.provenance['derived_texture_files'].pop()
+            if mutation == 'duplicate_texture_record': self.provenance['derived_texture_files'][-1] = self.provenance['derived_texture_files'][0].copy()
+            if mutation == 'stale_texture_record': self.provenance['derived_texture_files'][0]['sha256'] = '0'*64
+            if mutation == 'missing_extracted': path.unlink()
+            if mutation in {'stale_extracted', 'rehashed_stale_extracted'}: path.write_bytes(b'stale extraction')
+            if mutation == 'rehashed_stale_extracted':
+                self.provenance['derived_texture_files'][0].update(sha256=photos.sha256(path.read_bytes()), bytes=path.stat().st_size)
+            if mutation == 'extra_extracted': extra.write_bytes(b'stale extra image')
+            with self.subTest(mutation=mutation), self.assertRaises(AssertionError): self.verify()
+
+    def test_angler_raw_material_policy_fails_even_with_updated_provenance(self):
+        original = copy.deepcopy(self.doc)
+        for name in ('Human.body', 'Human.male_casualsuit05', 'Human.shoes02', 'Human.low-poly', 'Human.eyebrow001', 'Human.short02'):
+            modes = ('MASK', 'BLEND') if name in {'Human.body', 'Human.male_casualsuit05', 'Human.shoes02'} else ('BLEND',)
+            for mode in modes:
+                self.doc = copy.deepcopy(original)
+                next(m for m in self.doc['materials'] if m['name'] == name)['alphaMode'] = mode
+                self.write_glb()
+                with self.subTest(material=name, mode=mode), self.assertRaises(AssertionError): self.verify()
 
 
 class PhotoPackagingTests(unittest.TestCase):
