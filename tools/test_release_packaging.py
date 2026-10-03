@@ -120,7 +120,46 @@ class PhotoPackagingTests(unittest.TestCase):
             self.write(resource, raw)
 
     def test_beta3_ui_export_remaps_payloads_and_source_hashes_fail_closed(self):
-        for resource in photos.BETA3_UI_RESOURCES:
+        self.assert_script_exports_fail_closed(photos.BETA3_UI_RESOURCES)
+
+    def test_formal_float_encounter_source_is_required(self):
+        required = ('scripts/float_encounter.gd',)
+        self.assertEqual(photos.FORMAL_GAMEPLAY_RESOURCES, required)
+        for resource in required:
+            self.assertIn(resource, self.contract['ui_resource_sha256'])
+            (self.project/resource).unlink()
+            with self.assertRaisesRegex(AssertionError, 'Missing/unsafe source'):
+                photos.photo_art_contract(self.project, self.catalog)
+
+    def test_formal_float_encounter_export_fails_closed(self):
+        self.assert_script_exports_fail_closed(photos.FORMAL_GAMEPLAY_RESOURCES)
+
+    def test_formal_float_shader_source_and_export_fail_closed(self):
+        required = ('assets/shaders3d/float_lacquer.gdshader',)
+        self.assertEqual(photos.FORMAL_SHADER_RESOURCES, required)
+        for resource in required:
+            self.assertIn(resource, self.contract['ui_resource_sha256'])
+            source_path = self.project/resource
+            original = source_path.read_bytes()
+            source_path.unlink()
+            with self.assertRaisesRegex(AssertionError, 'Missing/unsafe source'):
+                photos.photo_art_contract(self.project, self.catalog)
+            source_path.write_bytes(original)
+            for mutation in ('missing', 'changed', 'remapped'):
+                payloads = self.payloads.copy()
+                if mutation == 'missing': payloads.pop(resource)
+                if mutation == 'changed': payloads[resource] += b' changed shader'
+                if mutation == 'remapped':
+                    payloads.pop(resource)
+                    payloads[resource + '.remap'] = b'[remap]\npath="res://assets/fish_silhouette.gdshader"\n'
+                with self.subTest(resource=resource, mutation=mutation), self.assertRaises(AssertionError):
+                    self.verify(payloads)
+            result = self.verify()
+            self.assertEqual(result['static_ui_resources'][resource], resource)
+            self.assertEqual(result['static_ui_payload_sha256'][resource], photos.sha256(original))
+
+    def assert_script_exports_fail_closed(self, resources):
+        for resource in resources:
             target = str(Path(resource).with_suffix('.gdc'))
             for mutation in ('missing_remap', 'missing_payload', 'wrong_target', 'duplicate_target', 'invalid_bytecode', 'changed_source'):
                 payloads = self.payloads.copy()
@@ -211,7 +250,7 @@ class PhotoPackagingTests(unittest.TestCase):
         required = photos.require_photo_archive_members(self.root, files, contract)
         self.assertEqual(len(photos.photo_authoring_files(self.root, contract)), 135)
         self.assertIn('art_masters/fish_photoreal_v2/masters/fish_43.png', required)
-        for resource in photos.BETA3_UI_RESOURCES:
+        for resource in photos.BETA3_UI_RESOURCES + photos.FORMAL_GAMEPLAY_RESOURCES + photos.FORMAL_SHADER_RESOURCES:
             self.assertIn('game/' + resource, required)
             missing_ui = files.copy(); missing_ui.pop('game/' + resource)
             with self.subTest(resource=resource), self.assertRaisesRegex(AssertionError, 'omits required photo inputs'):
@@ -223,6 +262,30 @@ class PhotoPackagingTests(unittest.TestCase):
 
 
 class PackagingTests(unittest.TestCase):
+    def test_formal_identity_preserves_preview_package_and_certificate(self):
+        formal = {**android_identity.FORMAL, 'separate_installation': True}
+        self.assertEqual(android_identity.expected_identity({'android_identity': formal}), formal)
+        self.assertEqual(formal['android_package_name'], android_identity.PREVIEW['android_package_name'])
+        self.assertEqual(formal['certificate_sha256'], android_identity.PREVIEW['certificate_sha256'])
+        for field, invalid in [('android_package_name', 'org.farshore.fishing'),
+                               ('certificate_sha256', android_identity.LEGACY['certificate_sha256']),
+                               ('launcher_name', android_identity.PREVIEW['launcher_name']),
+                               ('application_version', '1.2.0-beta.3'),
+                               ('android_version_code', 5),
+                               ('separate_installation', False)]:
+            with self.subTest(field=field), self.assertRaises(AssertionError):
+                android_identity.validate_identity({**formal, field: invalid})
+        with tempfile.TemporaryDirectory(prefix='farshore-formal-identity-test-') as folder:
+            project = Path(folder); (project/'data').mkdir()
+            (project/'data/android_build_identity.json').write_text(json.dumps(formal))
+            presets = 'package/unique_name="org.farshore.fishing.preview"\npackage/name="远岸钓记"\n'
+            self.assertEqual(android_identity.project_identity(project, presets, '1.2.0', 6), formal)
+            for version, code in [('1.2.0-beta.3', 6), ('1.2.0', 5)]:
+                with self.subTest(version=version, code=code), self.assertRaises(AssertionError):
+                    android_identity.project_identity(project, presets, version, code)
+            with self.assertRaises(AssertionError):
+                android_identity.project_identity(project, presets.replace('远岸钓记', '远岸钓记·试钓版'), '1.2.0', 6)
+
     def test_exact_preview_identity_and_legacy_default(self):
         self.assertEqual(android_identity.expected_identity(),android_identity.LEGACY)
         preview={**android_identity.PREVIEW,'separate_installation':True,'application_version':'1.2.0-beta.3','android_version_code':5}

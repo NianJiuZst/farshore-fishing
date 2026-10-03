@@ -11,13 +11,16 @@ import re
 import struct
 
 MANIFEST = 'data/fish_art.json'
-# These native UI modules must be present in the frozen source, source archive,
+# These native modules must be present in the frozen source, source archive,
 # and exported resources. Godot compiles scripts to matching .gdc targets.
 BETA3_UI_RESOURCES = ('scripts/fish_notebook_ui.gd', 'scripts/fishing_menu_pages.gd',
                       'scripts/fishing_failure_modal.gd')
+FORMAL_GAMEPLAY_RESOURCES = ('scripts/float_encounter.gd',)
+FORMAL_SHADER_RESOURCES = ('assets/shaders3d/float_lacquer.gdshader',)
+# Keep the established evidence field name for the combined runtime-resource gate.
 UI_RESOURCES = ('scripts/fish_art_catalog.gd', 'scripts/fish_art_view.gd',
                 'scripts/measure_ruler.gd', 'scripts/main.gd',
-                'scenes/main.tscn', 'assets/fish_silhouette.gdshader') + BETA3_UI_RESOURCES
+                'scenes/main.tscn', 'assets/fish_silhouette.gdshader') + BETA3_UI_RESOURCES + FORMAL_GAMEPLAY_RESOURCES + FORMAL_SHADER_RESOURCES
 
 
 def sha256(raw):
@@ -214,7 +217,7 @@ def verify_exported_photo_art(archive, contract, report, prefix='assets/'):
             assert target.startswith('.godot/exported/') and target.endswith('-main.scn'), 'Unexpected main-scene target'
             assert read(target)[:4] in (b'RSRC', b'RSCC'), 'Invalid exported main scene'
         else:
-            raise AssertionError('Static silhouette shader must export byte-identical source')
+            raise AssertionError('Static shader must export byte-identical source: ' + resource)
         ui_payloads[resource] = target
         ui_payload_hashes[resource] = sha256(read(target))
     return {'species_count': 44, 'full_photos': 44, 'thumbnails': 44, 'texture_payloads': 88,

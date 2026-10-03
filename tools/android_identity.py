@@ -8,16 +8,20 @@ LEGACY = {'android_package_name': 'org.farshore.fishing', 'launcher_name': '远�
           'certificate_sha256': '1afefc3a71828393c0387e27053aa695b7c46aa3236caa5cb338bfeedb2e5281'}
 PREVIEW = {'android_package_name': 'org.farshore.fishing.preview', 'launcher_name': '远岸钓记·试钓版',
            'certificate_sha256': 'e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284'}
+FORMAL = {**PREVIEW, 'launcher_name': '远岸钓记',
+          'application_version': '1.2.0', 'android_version_code': 6}
 
 
 def validate_identity(identity):
     known = {p['android_package_name']: p for p in (LEGACY, PREVIEW)}
     assert identity.get('android_package_name') in known, 'Unapproved Android package'
     pinned = known[identity['android_package_name']]
+    if pinned == PREVIEW and identity.get('application_version') == FORMAL['application_version']:
+        pinned = FORMAL
     for field, expected in pinned.items():
         assert identity.get(field) == expected, 'Android identity mismatch: ' + field
-    if pinned == PREVIEW:
-        assert identity.get('separate_installation') is True, 'Preview must remain an independent app'
+    if identity['android_package_name'] == PREVIEW['android_package_name']:
+        assert identity.get('separate_installation') is True, 'Preview-package lineage must remain separate from the legacy app'
     return dict(identity)
 
 
