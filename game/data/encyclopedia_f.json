@@ -1,0 +1,1503 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "cobia",
+      "accepted_scientific_name": "Rachycentron canadum",
+      "taxonomy": {
+        "family_scientific": "Rachycentridae",
+        "family_zh": "军曹鱼科",
+        "genus_scientific": "Rachycentron",
+        "genus_zh": "军曹鱼属",
+        "note": "军曹鱼是军曹鱼属的现生代表。外形易与小鲨鱼或鮣鱼混淆，但它是有鳃盖的硬骨鱼，没有鮣鱼头顶的吸盘。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "博物馆列常见长度约50—120厘米，体重更常在23千克以内；这一描述未区分所有年龄组，不能视为成熟群体平均。地区、性别及季节会改变观察到的尺寸分布。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 200,
+        "length_type": "unspecified",
+        "record_label": "资料收录上限",
+        "text": "博物馆页面列最大200厘米，未注明全长或叉长。NOAA概述的6英尺约183厘米是另一种上限表达，本条保留较大汇编值并说明口径。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 61,
+        "record_label": "资料收录上限",
+        "text": "佛罗里达博物馆收录历史纪录135磅并四舍五入为61千克，页面未附纪录个体日期。本条称博物馆收录值，不把它冒充核验到2026年的实时世界纪录。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "属于近岸到外海的水层鱼，常接近浮标、桩柱、漂浮物和船只等结构，也会利用海湾及河口。与海底有联系的取食行为不意味着它是终日埋伏在底泥里的鱼。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "广布热带和亚热带海洋，NOAA综述明确指出中、东太平洋是重要例外。美国东岸可季节性南下或移向较暖外海；本作只选大西洋陆架代表相遇地点。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "生长快，雌雄成熟年龄和寿命因地区有差异。迁移期间能结群，产卵季节反复分批放卵。背部软鳍前方7—9根彼此分开的短硬棘是识别线索，不要把它画成连续高耸的鲨鱼背鳍。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "甲壳类特别是蟹很重要，也捕食鱼与头足类。它常整吞适口猎物，有时跟随鳐、鲨鱼和海龟，利用它们扰动或遗漏的食物；跟随大动物不等于依靠吸附生活。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "像鮣鱼，却没有吸盘",
+        "text": "军曹鱼经常让人第一眼想到鮣鱼：两者外形相近，也可能跟着大型海洋动物活动。NOAA把鮣鱼称为其近亲，博物馆则记录军曹鱼会拾取跟随对象留下的食物。然而军曹鱼头上没有鮣鱼的吸盘，必须靠自己游泳保持位置。看似同样的“搭便车”，背后却是不同的身体结构与行动方式；观察头部和独立背棘，比只看轮廓更可靠。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Cobia",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/cobia",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Cobia species profile",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cobia/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Shaffer & Nakamura (1989): Synopsis of Biological Data on the Cobia",
+          "publisher": "NOAA Technical Report NMFS 82",
+          "url": "https://repository.library.noaa.gov/view/noaa/5898/noaa_5898_DS1.pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸60—170厘米；低概率虚构巨物上端224厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "roosterfish",
+      "accepted_scientific_name": "Nematistius pectoralis",
+      "taxonomy": {
+        "family_scientific": "Nematistiidae",
+        "family_zh": "丝鳍鱼科",
+        "genus_scientific": "Nematistius",
+        "genus_zh": "丝鳍鱼属",
+        "note": "公鸡鱼是本作采用的常用名，对应 Nematistius pectoralis；不与淡水斗鱼或其他被称为鸡鱼的海鱼混用。分类采用Smithsonian的独立丝鳍鱼科处理。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见长度60厘米全长，但这不是经过统一抽样得到的全球成鱼均值。近岸幼鱼和少见巨型个体差异很大，163厘米叉长纪录也不能与60厘米全长直接作比例比较。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 191,
+        "length_type": "unspecified",
+        "record_label": "Smithsonian报告尺度",
+        "text": "Smithsonian条目称至少可长至191厘米，未标全长或叉长；FishBase另列163厘米叉长。两种长度口径不可直接互换，这里展示前者的资料上限，保留“至少”措辞。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 51.7,
+        "record_label": "Smithsonian收录上限",
+        "text": "Smithsonian列51.7千克，与FishBase汇编一致；页面未给单尾测量详情。本次采用资料收录值，不声称191厘米与51.7千克是同一个体。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "主要是靠近海岸的鱼，常在沙滩外缘与浅水中活动。Smithsonian列深度0—20米，本作因此把它放在太平洋近岸池，不把华丽长鳍当成深海生活的标志。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "东太平洋特有，范围从下加利福尼亚北部、加利福尼亚湾南部附近一直到秘鲁，也包括加拉帕戈斯及马尔佩洛。它不属于印度洋或大西洋的自然鱼群。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "游动时深叉尾提供推进，修长胸鳍和高高延伸的前背鳍形成独特轮廓。它是活跃的近岸捕食鱼；长鳍的具体展示功能仍需研究，不能凭像鸡冠的外形虚构求偶仪式。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "以硬骨鱼类为食，属于近岸肉食性鱼。Smithsonian没有给出各猎物比例，因此不编造某一种饵鱼占绝对多数；海岸猎物条件也不能直接套用于所有分布区。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "海岸明星，也有遗传学档案",
+        "text": "2021年的基因组调查使用哥斯达黎加尼科亚半岛附近采集的一尾公鸡鱼，估算基因组规模并寻找可用于后续研究的重复序列标记，原始测序数据进入公共档案。这样的工作为研究不同地点的种群联系准备工具，但单尾样本本身不能证明整片东太平洋只有一个种群。一个醒目的背鳍让它容易被认出，真正理解它的生活，还需要样本、数据和持续观察。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Nematistius pectoralis, Roosterfish",
+          "publisher": "Smithsonian Tropical Research Institute",
+          "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1223",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Nematistius pectoralis species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.org/summary/3550",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Baeza et al. (2021): Genome Survey Sequencing of an Iconic Trophy Sportfish, the Roosterfish",
+          "publisher": "Genes / Smithsonian-associated research",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8620147/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸50—150厘米；低概率虚构巨物上端214厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "red_snapper",
+      "accepted_scientific_name": "Lutjanus campechanus",
+      "taxonomy": {
+        "family_scientific": "Lutjanidae",
+        "family_zh": "笛鲷科",
+        "genus_scientific": "Lutjanus",
+        "genus_zh": "笛鲷属",
+        "note": "本条红笛鲷特指西大西洋的 Lutjanus campechanus。red snapper 是会被用于多种鱼的商品名，不能凭红色外观或市场标签替代学名鉴定。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "路易斯安那研究介绍中，5岁个体平均约25英寸（63.5厘米），但同龄鱼可从13到32英寸，差异很大。这是特定海区、年龄的研究尺度，不能当作全种成年常见区间。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 104.1,
+        "length_type": "unspecified",
+        "record_label": "1996年历史个体",
+        "text": "Louisiana Sea Grant记载1996年6月23日在路易斯安那外海钓获的纪录个体长41英寸，约104.1厘米，页面未标明长度类型；这是历史个体，不保证至今仍是最大。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 22.79,
+        "record_label": "1996年历史个体",
+        "text": "同一1996年个体重50.25磅，约22.79千克。此处长度和体重确实对应同一尾历史鱼，但“世界纪录”称呼只代表来源发布时的叙述，未核验实时纪录榜。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "幼鱼多在沙泥底成长，成鱼常见于大陆架礁石、岩架、洞穴及人工结构附近，也利用邻近软底。靠结构聚集不等于只吃结构上的动物，夜间可能离开庇护处到周围觅食。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "分布在西大西洋暖水区，包括墨西哥湾和北美洲东南岸，并向中美洲及南美洲北部延伸；卡罗来纳以北较少见。本作将它限定在大西洋陆架，不移植为印度洋红色笛鲷。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "能分批、多次产卵，繁殖季受地点影响。早期可开始成熟，部分个体仍能生存数十年；NOAA记录的高龄达到50年以上，因此“小到能繁殖”与“已经完成全部繁殖贡献”是两回事。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "吃鱼、虾、蟹、蠕虫和头足类等。随着年龄和栖息地改变，猎物来源也会变化；幼鱼还会被石斑鱼、鲹类及其他大型掠食者捕食，成年个体并非从小就处于同样的食物链位置。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "大鱼不一定更老",
+        "text": "Louisiana Sea Grant介绍的一尾53.6岁雌鱼只有33.5英寸、17.5磅，而1996年那尾重50.25磅的历史纪录鱼约20岁。科学家靠耳石切片中的生长带估龄，才发现尺寸与年龄不能简单画等号。长到相近长度的红笛鲷，可能已经度过非常不同的岁月；图鉴把长度、体重和年龄分开记，正是为了保留这份生命史差异。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Red Snapper",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/red-snapper",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Red Snapper",
+          "publisher": "Florida Fish and Wildlife Conservation Commission",
+          "url": "https://myfwc.com/wildlifehabitats/profiles/saltwater/snapper/red-snapper/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Red Snapper FAQs: Biology and Life History",
+          "publisher": "Louisiana State University / Louisiana Sea Grant",
+          "url": "https://www.seagrantfish.lsu.edu/faqs/redsnapper/biology.htm",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸35—85厘米；低概率虚构巨物上端117厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "giant_grouper",
+      "accepted_scientific_name": "Epinephelus lanceolatus",
+      "taxonomy": {
+        "family_scientific": "Epinephelidae",
+        "family_zh": "石斑鱼科",
+        "genus_scientific": "Epinephelus",
+        "genus_zh": "石斑鱼属",
+        "note": "现行分类采用石斑鱼科；旧资料常放在鮨科 Serranidae 的石斑鱼亚科。鞍带石斑鱼不等于大西洋大海鲈 Epinephelus itajara。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "来源把90—165厘米标准体长个体与180—250厘米标准体长巨型成鱼分别描述，但这些是体色阶段示例，不是普通成鱼的统计区间。养殖鱼、幼鱼和少见巨鱼的尺寸不宜混为平均。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 270,
+        "length_type": "TL",
+        "record_label": "澳大利亚鱼类志上限",
+        "text": "Fishes of Australia明确列上限270厘米全长。正文讨论体色时使用标准体长SL，不能把那些分段数值误当成同一种量法；本条最大值保留TL。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 400,
+        "record_label": "澳大利亚鱼类志上限",
+        "text": "Fishes of Australia列上限400千克，属于物种汇编值，未附单尾称量档案。它不等于本作虚构巨物的重量，也不能由270厘米用立方公式“证明”。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "利用浅海岩礁、洞穴、沉船、港湾、河口、潟湖与外礁。大个体可能在水层悬停，也会伏在底部；巨大身体并不意味着它只存在于极深海沟。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "自然范围主要是热带印度洋至西中太平洋，澳大利亚北部及东西海岸部分地区有记录，也见于东印度洋岛屿。本作太平洋与印度洋礁区是范围内多处生境的合成表现。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "通常独居，能长时间停留在有遮蔽的环境，繁殖时可能形成聚集。幼鱼黄黑相间，长大后逐渐转为褐灰斑驳；色彩改变伴随成长，不能把黄黑小鱼花纹直接放大成所有成年巨鱼。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "摄食龙虾、蟹及多种鱼，也有小型鲨鳐和幼海龟的食物记录。这反映大型个体口裂和猎物机会，不能理解成每尾鱼都以这些较大型动物为主要食物。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "同一种鱼，换过几套颜色",
+        "text": "小于15厘米标准体长的幼鱼，以黄色底和大块黑斑为主要图案；亚成鱼的黑色区域渐现浅色小斑，成年后又成为沉稳的灰褐色、鳍上细黑点。博物馆把这些阶段分别记录，说明“看起来完全不像”不一定代表两个物种。本作选择成年阶段建模，并将相遇设为虚拟保护观察：记录轮廓与斑纹后放归，不提供出售或现实捕捞许可。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Epinephelus lanceolatus taxon",
+          "publisher": "Ocean Biodiversity Information System / WoRMS",
+          "url": "https://obis.org/taxon/218224",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Queensland Groper, Epinephelus lanceolatus",
+          "publisher": "Fishes of Australia / Museums Victoria",
+          "url": "https://fishesofaustralia.net.au/home/species/4672",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Queensland Groper",
+          "publisher": "Australian Museum",
+          "url": "https://australian.museum/learn/animals/fishes/queensland-groper-epinephelus-lanceolatus-bloch-1790/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸90—225厘米；低概率虚构巨物上端303厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "dogtooth_tuna",
+      "accepted_scientific_name": "Gymnosarda unicolor",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Gymnosarda",
+        "genus_zh": "裸狐鲣属",
+        "note": "英文名虽有 tuna，本种属于裸狐鲣属而非金枪鱼属 Thunnus；大而明显的圆锥牙、波状侧线和鳍端白色是重要识别特征。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "印度2006—2010年研究使用550尾、32.5—162厘米叉长的样本，估计约69厘米叉长达到半数成熟。这个渔获样本同时含幼鱼和成鱼，不能把全范围叫作普通成年长度。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 248,
+        "length_type": "FL",
+        "record_label": "资料收录上限",
+        "text": "Fishes of Australia列248厘米叉长；2012年论文追溯到IGFA 2001收录的游钓记录。保留叉长，不写成全长，也不声称核验了当前实时纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 131,
+        "record_label": "资料收录上限",
+        "text": "2012年论文引用Collette与Nauen的既往资料给出131千克；与248厘米叉长出自不同引用，不能说它们属于同一条鱼。属于文献最大已报值。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "常在离岸礁体、礁坡与外海水层活动，Fishes of Australia列10—300米。印度研究亦记录岛链、海脊和海山附近的渔获，本作只选择礁坡上段的可达窗口。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "属于印度洋及太平洋热带、亚热带鱼类，印度安达曼—尼科巴、拉克沙群岛以及澳大利亚北部至西太平洋有可靠记录。不把研究文本中孤立的西大西洋转引当作稳定自然分布。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "是活跃的鱼食性掠食者。不同地区成熟和繁殖时序有差别：澳大利亚资料概述夏季产卵，印度研究见全年繁殖迹象，说明不能把一个地点的月份当作整个物种的统一日历。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "捕食成群的小鱼，如鲹类、刺尾鱼和乌尾鮗等。大圆锥牙适合抓住滑动的猎物；身形接近金枪鱼并不表示它的生态、洄游路线或食谱与所有 Thunnus 物种相同。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "生长曲线不是世界纪录",
+        "text": "2012年印度研究根据当地样本拟合生长模型，估算渐近长度约163.6厘米叉长，同时在文献回顾中列出248厘米叉长的大鱼。两者并不矛盾：渐近长度是某批样本和模型的种群参数，不是每尾鱼不可跨越的生理上限。研究也指出大型鱼缺乏会影响拟合。因此图鉴区分实测样本、模型参数和已发表最大值，游戏的巨物上限则另行标为虚构。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Gymnosarda unicolor",
+          "publisher": "Fishes of Australia / Museums Victoria",
+          "url": "https://fishesofaustralia.net.au/home/species/723",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Joshi et al. (2012): Fishery, biology and dynamics of dogtooth tuna exploited from Indian seas",
+          "publisher": "ICAR Central Marine Fisheries Research Institute",
+          "url": "https://eprints.cmfri.org.in/8990/1/Joshi_75-79.pdf",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Gymnosarda unicolor identification guide",
+          "publisher": "fishIDER / CSIRO-supported identification project",
+          "url": "https://fishider.org/id/guide/osteichthyes/scombridae/gymnosarda-unicolor",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸70—205厘米；低概率虚构巨物上端278厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "yellowtail_kingfish",
+      "accepted_scientific_name": "Seriola lalandi",
+      "taxonomy": {
+        "family_scientific": "Carangidae",
+        "family_zh": "鲹科",
+        "genus_scientific": "Seriola",
+        "genus_zh": "鰤属",
+        "note": "黄尾鰤属于鰤属；本条采用澳大利亚与新西兰等南半球资料，不将北太平洋其他黄尾鰤类历史上合并使用的旧记录自动并入。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "新南威尔士物种页称常见渔获中的较大个体可达1米、10—15千克。这是渔获上端的常见尺度，不是所有成鱼平均；博物馆同样以约1米说明常见长度。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 250,
+        "length_type": "TL",
+        "record_label": "澳大利亚鱼类志上限",
+        "text": "Fishes of Australia收录250厘米全长。NSW介绍约2米，区域评估约190厘米全长；资料尺度不同，本条采用前者汇编上限并保留差异，不把它们强行统一。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 96.8,
+        "record_label": "澳大利亚鱼类志上限",
+        "text": "Fishes of Australia列96.8千克，NSW物种页和区域评估约70千克。这里是前者的收录上限，不是本次确认的单尾全球认证纪录。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "常在沿岸岩礁、海岛、礁峰与近旁沙地上方活动，也利用港湾桩柱和外海漂浮物。通常可在较浅水层遇见，亦有超过300米记录；本作选择浅礁巡游阶段。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "本条重点对应澳大利亚南部、塔斯曼海及新西兰一带的南半球海域。遗传与标记研究显示澳大利亚东部与新西兰有联系，而澳大利亚西部种群具有分化；相同学名不等于整个大洋混成一群。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "小鱼常聚成大群，较大鱼可独游或小群活动，春夏繁殖。幼鱼会依靠漂浮藻类或碎屑；长成流线形的蓝背、银腹、黄尾成鱼后，仍会利用结构物周围的水层。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "积极追食小鱼、鱿鱼和甲壳类。锋利视觉、流线身体与深叉尾服务于游动捕食；游戏中的拟饵偏好只是调校，不意味着虾或头足类不在自然食谱中。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "同一片海，不一定同一群鱼",
+        "text": "NSW区域评估汇总基因分析与合作标记资料：澳大利亚东部黄尾鰤与新西兰的鱼较相近，标记鱼也曾在澳大利亚东岸、新西兰和豪勋爵岛之间移动；澳大利亚西部则表现出不同的遗传结构。海面看不到边界，鱼群却可能有自己的连接方式。研究因此要把迁移、繁殖和采样地点一起看，不能只因能游得远，就假定任何海域的鱼都能互相补充。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Seriola lalandi",
+          "publisher": "Fishes of Australia / Museums Victoria",
+          "url": "https://fishesofaustralia.net.au/home/species/1662",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Yellowtail Kingfish species profile",
+          "publisher": "New South Wales Department of Primary Industries and Regional Development",
+          "url": "https://www.dpird.nsw.gov.au/fishing/fish-species/species-list/yellowtail-kingfish",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "NSW Stock Status Summary 2021/22: Yellowtail Kingfish",
+          "publisher": "NSW Department of Primary Industries",
+          "url": "https://www.dpi.nsw.gov.au/__data/assets/pdf_file/0005/1553594/Stock-Status-Summary-2021-22-Yellowtail-Kingfish.pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸60—190厘米；低概率虚构巨物上端280厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "opah",
+      "accepted_scientific_name": "Lampris guttatus",
+      "taxonomy": {
+        "family_scientific": "Lampridae",
+        "family_zh": "月鱼科",
+        "genus_scientific": "Lampris",
+        "genus_zh": "月鱼属",
+        "note": "2018年分类修订将旧称全球广布的 L. guttatus 分为多个物种。本条保留狭义北大西洋月鱼；不把太平洋月鱼的体重纪录或生理实验直接冒认为本种专属数据。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "狭义本种尚缺可直接用于“普通成年”的可靠尺寸统计。NOAA分类比较图有118厘米全长个体，土耳其近海论文另记录50厘米全长、5千克的雄鱼；单尾例子不能替代成年均值。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ]
+      },
+      "max_length": {
+        "value_cm": null,
+        "length_type": "unspecified",
+        "record_label": "资料收录上限",
+        "text": "未核实分类拆分后适用于狭义本种的统一最大长度。FishBase引用2018年修订列约101厘米标准体长，NOAA图示另有118厘米全长标本；二者是不同量法，且不等于证明全种极限。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "资料收录上限",
+        "text": "旧资料常报270千克，但FishBase明确警告条目仍可能混有物种复合群其他成员信息。未将该历史数字确证归于狭义 Lampris guttatus，因此本项留空。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "是远离海岸的水层鱼，体形很深而侧扁，并非趴在底部的扁鱼。狭义物种的完整垂直活动资料仍有限；地中海有185米捕获记录，本作75—180米只表示虚拟可遇层段。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "distribution": {
+        "text": "分类修订后的范围为东北大西洋，含北海、爱尔兰海及地中海。旧书所画的全球分布大多对应拆分前的复合群；本作因此只放入大西洋蓝水池，且代表东北大西洋航段。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "月鱼靠强大的胸鳍摆动推进，外形虽然圆，仍能在开阔水层主动游动。旧文献中的日夜垂直迁移、产卵季和全身保温研究常涉及后来拆出的种，本条不把它们写成已验证的本种定律。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "记录与综述指向水层小鱼、鱿鱼等头足类及其他无脊椎动物。由于旧资料可能合并了多个种，本条只保留这一宽泛食性层次，不使用太平洋胃内容物样本推算北大西洋本种的食谱比例。",
+        "source_ids": [
+          "s1",
+          "s3",
+          "s4"
+        ]
+      },
+      "story": {
+        "title": "鱼市场里发现的分类线索",
+        "text": "檀香山鱼市的一位买家注意到，叫作“月鱼”的货物眼睛大小、斑点和颜色并不完全一样。研究者结合DNA、鳍和身体比例，最终在2018年修订中把旧的广布种拆开，恢复一个旧种并描述三个新种。这个故事发生在太平洋，但也重新划清了北大西洋 Lampris guttatus 的边界。图鉴宁可暂缺一个最大体重，也不把外形相似的另一种鱼的纪录借过来。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Underkoffler et al. (2018): A taxonomic review of Lampris guttatus",
+          "publisher": "Zootaxa",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29690102/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Clues At Fish Auction Reveal Several New Species Of Opah",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/feature-story/clues-fish-auction-reveal-several-new-species-opah",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Lampris guttatus species summary, taxonomic warning",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/1072",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Ergüden et al. (2019): First Record of Lampris guttatus in North-Eastern Mediterranean",
+          "publisher": "FishTaxa",
+          "url": "https://fishtaxa.com/index.php/FishTaxa/article/download/107/107",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸60—135厘米；低概率虚构巨物上端180厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "great_white_shark",
+      "accepted_scientific_name": "Carcharodon carcharias",
+      "taxonomy": {
+        "family_scientific": "Lamnidae",
+        "family_zh": "鼠鲨科",
+        "genus_scientific": "Carcharodon",
+        "genus_zh": "噬人鲨属",
+        "note": "属鼠鲨科噬人鲨属，通称大白鲨；部分中文资料把Lamnidae译作鲭鲨科。宽大的三角形锯齿牙与粗壮纺锤形身躯很有辨识度，不应与牙齿细长、体形更纤细的尖吻鲭鲨混淆。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "没有可代表全球成鱼的可靠平均体长。博物馆汇集的成熟长度约为雄鱼350—410厘米、雌鱼450—500厘米；它们是性成熟尺度而非成年平均值，雌鱼整体可长得更大。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": null,
+        "length_type": "TL",
+        "text": "本次未核实可追溯的统一实测最大长度，因此数值留空。博物馆依文献模型讨论约600厘米、可能640厘米的最大尺度；模型估计不是实测纪录，不能把它当成精确全长上限。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "实测物种最大长度未核实"
+      },
+      "max_weight": {
+        "value_kg": null,
+        "text": "已查官方资料说大型个体可超过4000磅，约1814千克，但未提供可核验的物种最大称重纪录，因此最大体重留空；不能把“超过”改写成精确上限。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "可靠最大值待核实"
+      },
+      "habitat": {
+        "text": "既利用浅近岸大陆架，也跨越远洋深水。幼鲨通常停留在较温暖的近岸浅水，随着体形和食谱改变，较大的个体会往返鳍足类聚居地与远洋生境，不能仅把它理解成海豹岛周围的常住者。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "广布全球温带和亚热带海域。北美太平洋侧可见于阿拉斯加至加利福尼亚、墨西哥及夏威夷一带；大西洋侧从缅因州延伸到墨西哥湾与加勒比。跨洋追踪显示，地图上相隔甚远的沿岸群体可以发生联系。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "身体部分组织能够保留代谢热，使其在较冷海水中仍保持较高活动能力。个体既会在沿岸巡游并重返熟悉地点，也能进行远距离迁移；这些不同尺度的活动共同构成生活史，不能用单一“独行猎手”概括。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "食谱随成长改变：幼鱼多吃底栖鱼、小型鲨鳐、群游鱼与鱿鱼；大个体常利用海豹、海狮聚居地，也会取食鲸尸。捕猎和食腐都已被记录，海洋哺乳动物并非各年龄阶段唯一食物。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "跨越印度洋后，再认出同一片背鳍",
+        "text": "2005年发表的追踪研究记录了一尾约380厘米的雌性白鲨：它从南非出发，用99天抵达西澳大利亚近岸，重建的去程约11100公里。它后来又回到南非，研究者利用背鳍缺口及色素斑纹确认身份。这不是根据两地都有白鲨作出的猜测，而是电子标记和照片互相印证的往返旅程。研究因此修正了雌性白鲨不跨洋移动的旧想法，也提醒人们：沿岸出现的一尾鲨，可能连接着整个洋盆。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "White Shark — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/white-shark/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "White Shark",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/white-shark",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Transoceanic migration, spatial dynamics, and population linkages of white sharks",
+          "publisher": "Bonfil et al. / Science (2005)",
+          "url": "https://whitesharkconservationtrust.org.nz/wp-content/uploads/2017/12/Transoceanic-Migration-Spatial-Dynamics-and-Population-Linkages-of-White-Sharks.-2005.-R.-Bonfil-M.-Meyer-M.-C.-Scholl-R.-Johnson-S.-OBrien-H.-Oosthuizen-S.-Swanson-D.-Kotze-M.-Paterson..pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸210—520厘米；低概率虚构巨物上端680厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "scalloped_hammerhead",
+      "accepted_scientific_name": "Sphyrna lewini",
+      "taxonomy": {
+        "family_scientific": "Sphyrnidae",
+        "family_zh": "双髻鲨科",
+        "genus_scientific": "Sphyrna",
+        "genus_zh": "双髻鲨属",
+        "note": "现行学名为Sphyrna lewini。宽阔头部前缘呈弧形，中部及两侧均有凹缺，是与无齿双髻鲨等近缘种区分的重要线索；中文双髻鲨、路氏双髻鲨等俗称不能代替学名。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见全长360厘米，但没有把它定义为全球成年平均。各海区、性别和采样方式得到的体型差异明显；成熟长度也不能冒充普通成鱼大小，因此这里只保留来源清楚的常见长度标签。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 430,
+        "length_type": "TL",
+        "text": "FishBase收录最大报告全长430厘米，博物馆也提到这一较大个体报告；这是文献汇录极值，未在此重新认证为当前垂钓或科学测量世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 152.4,
+        "text": "FishBase最大已发表体重字段为152.4千克，属于其文献收录范围；与430厘米长度来自不同引文，不表示同一尾鱼，更不能推算所有大型雌鱼的上限。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "利用大陆架、岛架及邻近深水，幼鱼可进入近岸湾区与河口；成年鱼活动范围更偏外海。旧图鉴列出的数百米深度并非生理极限，夏威夷研究已揭示它们会短时深入寒冷的深层水域。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "在全球热带及暖温带海域分布，兼具沿岸与半远洋生活。不同地区群体的成熟体型、近岸育幼场和离岸活动有差异，不能把某一海山常见的大群聚集景象当作所有海区都相同的生活方式。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "会形成明显群体，成鱼聚群常有性别分隔；部分地点白天聚集、夜间分散觅食。其横向展开的头部与广布感受器有助于搜寻猎物，另会到清洁站让小鱼移除皮肤和口部寄生生物。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "摄食多种硬骨鱼、鱿鱼等头足类，也取食其他小型软骨鱼。近岸幼鱼与进入深水的较大个体接触的猎物不同；夏威夷的深潜研究强调深海头足类这一食物来源，而非单纯在沙底寻找鳐鱼。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "一尾鱼也能暂时“屏住呼吸”",
+        "text": "2023年夏威夷研究为双髻鲨装上同时记录肌肉温度、深度、姿态和活动的仪器。它们潜入冷水时肌肉温度保持较高，接近上层时却突然下降；另有深水影像显示鳃裂紧闭。研究者结合模型解释：短时抑制鳃部通水，可以减少热量流失。研究中推断的平均屏息约17分钟，而在最深处平均仅停留约4分钟。这是一种有氧气代价的短时策略，并不是鲨鱼不需要呼吸，也不能据此认为它能无限期停在海底。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Scalloped Hammerhead — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/scalloped-hammerhead/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Sphyrna lewini — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Sphyrna_leweni.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Hammerhead sharks hold their breath on deep water hunts to stay warm",
+          "publisher": "University of Hawaiʻi at Mānoa / Royer et al. (2023)",
+          "url": "https://www.hawaii.edu/news/article.php?aId=12607",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸140—355厘米；低概率虚构巨物上端482厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "great_hammerhead",
+      "accepted_scientific_name": "Sphyrna mokarran",
+      "taxonomy": {
+        "family_scientific": "Sphyrnidae",
+        "family_zh": "双髻鲨科",
+        "genus_scientific": "Sphyrna",
+        "genus_zh": "双髻鲨属",
+        "note": "本种为无齿双髻鲨，俗称大锤头鲨；“无齿”这个中文名不表示没有牙齿。成鱼头前缘近乎平直，中央有浅凹缺，第一背鳍特别高而镰刀状，可与前缘明显弯曲的路氏双髻鲨区分。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase给出的常见全长为370厘米，未限定成年样本或全球平均。不同性别与地区体型差别很大；博物馆的概括性重量描述不适合作为精确成年均值，本条不为典型体重虚设数字。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 610,
+        "length_type": "TL",
+        "text": "最大全长610厘米为FishBase和博物馆引用的报告上限，是物种文献尺度；来源没有提供足以在这里复核的完整测量档案，不称为新认证世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 449.5,
+        "text": "FishBase收录最大已发表体重449.5千克；这是该数据库引用资料中的历史极值，不能等同于截至今日的垂钓世界纪录。最大长度和重量不配成同一个体。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "生活于热带和暖温带沿岸、大陆架及岛屿周围，也会进入外海。浅礁、沙底和较深坡缘都在其活动范围内；数据库列常见水深约1—100米，仍有更深记录，不能把这一带宽视为硬性边界。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "在大西洋、印度洋与太平洋暖海广布：包括西大西洋北卡罗来纳至乌拉圭、红海和印度洋诸海区，以及东太平洋下加利福尼亚至秘鲁。部分种群夏季向较高纬、较凉水域移动。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "通常不像路氏双髻鲨那样组成醒目的大群。它是活跃捕食者，也会季节性移动；野外标记研究发现，个体长时间侧倾游泳，可让巨大的背鳍参与产生升力，改变传统的“背鳍只负责稳定”印象。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "取食硬骨鱼、鲨鱼、鳐鱼和多类无脊椎动物；在适合的地区尤其利用魟类。头部腹面的电感受系统能感知猎物微弱电信号，埋在沙中的猎物也可能被发现；食谱仍会随地方供应改变。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "把高背鳍变成一片侧翼",
+        "text": "2016年的研究给野生大锤头鲨装上记录姿态的仪器，发现被追踪个体有时多达九成时间以约50—75度侧倾游动。研究者进一步做流体力学模拟：侧过身后，异常高大的第一背鳍也能像机翼一样帮助产生升力，模型中的移动成本比直立姿势约低一成。数字属于这项研究的观测与模拟范围，不是每尾鱼时时都能节省的固定比例。它说明一处看似夸张的外形，可以与一种特别的游姿共同发挥作用。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Great Hammerhead — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Sphyrna mokarran — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Sphyrna_mokarran.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Great hammerhead sharks swim on their side to reduce transport costs",
+          "publisher": "Payne et al. / Nature Communications (2016), James Cook University repository",
+          "url": "https://researchonline.jcu.edu.au/45487/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸190—500厘米；低概率虚构巨物上端684厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "blue_shark",
+      "accepted_scientific_name": "Prionace glauca",
+      "taxonomy": {
+        "family_scientific": "Carcharhinidae",
+        "family_zh": "真鲨科",
+        "genus_scientific": "Prionace",
+        "genus_zh": "大青鲨属",
+        "note": "现行采用Prionace glauca，属真鲨科大青鲨属。细长躯体、很长的窄胸鳍及靠后的第一背鳍比“蓝色”更可靠；尖吻鲭鲨也有蓝背，但尾鳍更近新月形、尾柄更有力，不能据体色混为一类。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见全长335厘米，未说明是成年统计平均；NOAA识别指南另给约380厘米的可达尺度，两者分别描述常见长度与上限。尚无可据这些资料推广到所有成鱼的典型体重。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 400,
+        "length_type": "TL",
+        "text": "FishBase收录最大报告全长400厘米；NOAA区域识别指南概括可达约380厘米。差异反映资料范围，400厘米按数据库文献报告值展示，而非把指南取整值当作精确纪录。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 205.9,
+        "text": "FishBase最大已发表体重为205.9千克，代表其所引文献收录的称重极值；不是本条重新查证的当前垂钓纪录，也不是400厘米个体的配对体重。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "典型远洋上层水域鲨鱼，偏好相对凉的水；在热带可能向更深处寻找合适温度。大陆架狭窄或大洋岛屿附近也能靠近岸边，垂直活动可延伸到数百米，不能把“远洋”理解成永不近岸。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "广布全球温带与热带海域：大西洋从纽芬兰、挪威一带延伸至南美和南非，印度—西太平洋从东非至日本、澳新，东太平洋见于阿拉斯加湾至智利。长距离移动让其跨越多个海区。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "会围绕鱼群聚集进食，夜间活跃但白天也能觅食。标记回收揭示跨大西洋移动；不同大小和性别的空间利用并非相同。长胸鳍、细体和非新月形尾鳍构成它有别于鼠鲨科高速体型的外观。",
+        "source_ids": [
+          "s1",
+          "s3",
+          "s4"
+        ]
+      },
+      "diet": {
+        "text": "常吃小型硬骨鱼及鱿鱼、墨鱼、远洋章鱼，也有小型鲨鱼、甲壳类和鲸类腐肉记录。它会利用临时聚集的猎物，不是只吃某一种鱼；发现胃中杂物也不应把垃圾误列为适宜天然食物。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一枚小标签连起大西洋两岸",
+        "text": "NOAA在2020年介绍更新的鲨鱼标记图集时，记录了一尾大青鲨的远行：它在纽约长岛附近被标记，八年多后于非洲外海的南大西洋再次被发现，标记点到回收点相距3997海里。这个数字是两次已知地点之间的距离，不是连续记录的真实总航程，中间绕行可能更多。许多渔民与科研人员持续回报普通标签，才让这种跨洋联系显现出来；单一研究船很难独自积累这样的时间与空间跨度。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Blue Shark — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-shark/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Prionace glauca — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/prionace-glauca",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Shark Identification for Cooperative Shark Tagging Program (A–B): Blue Shark",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/new-england-mid-atlantic/atlantic-highly-migratory-species/shark-identification-cooperative-shark",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Updated Shark Tagging Atlas Provides More Than 50 Years of Tagging and Recapture Data",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/feature-story/updated-shark-tagging-atlas-provides-more-50-years-tagging-and-recapture-data",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸130—330厘米；低概率虚构巨物上端448厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "shortfin_mako",
+      "accepted_scientific_name": "Isurus oxyrinchus",
+      "taxonomy": {
+        "family_scientific": "Lamnidae",
+        "family_zh": "鼠鲨科",
+        "genus_scientific": "Isurus",
+        "genus_zh": "鲭鲨属",
+        "note": "采用Isurus oxyrinchus，即尖吻鲭鲨，亦称短鳍鲭鲨；不与长鳍鲭鲨Isurus paucus合并。短胸鳍、较白的吻腹与口周、细长而无锯齿的牙，以及尾柄侧隆起，是形态辨别的重要组合。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "博物馆给成年雄鱼约200—215厘米、雌鱼约275—290厘米的概括性尺度，未提供全球统一抽样均值；FishBase常见全长270厘米也没有限定成熟阶段，两套数字保留各自适用范围。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 445,
+        "length_type": "TL",
+        "text": "FishBase收录最大报告全长445厘米；博物馆较旧简介用约400厘米概括最大尺度。本条采用前者作为数据库文献极值，不能把它解释为保证可达到的体形。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 505.8,
+        "text": "FishBase最大已发表体重为505.8千克，按该数据库的历史引用范围展示；没有据此宣称它仍是当前垂钓世界纪录，且与445厘米长度不是同一份个体测量。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "主要生活在温暖海洋的远洋水域，也可能接近大陆架较窄的海岸。既会在表层巡游，也会穿过温跃层进入冷水；区域性内温能力有助于维持部分组织温度，却不表示全身体温恒定。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "广见于全球温带和热带海域，包含大西洋及地中海、印度洋和太平洋广大区域；在北美附近，从开阔外海到部分沿岸均有记录。分布广不等于各地数量相同，迁移也会使季节性出现地点改变。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "体形与尾部适合持续巡游和短时加速，肌肉周围的血管逆流换热系统帮助留住代谢热。现代野外温度记录显示，升温和降温速度会随下潜阶段改变，个体间存在明显差异，不宜给出固定“永远比水暖几度”的口号。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "以硬骨鱼和头足类等为食，较大个体还能取食其他鲨鱼、大型鱼类及小型鲸豚。细长、平滑边缘的钩状牙帮助抓住猎物；食谱受体型与当地猎物组成影响，而不只对应某一种高速游鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "下潜前，肌肉先暖起来",
+        "text": "2025年研究给四尾尖吻鲭鲨装上记录深度与肌肉温度的仪器。两尾深潜个体在返回暖水时的升温速度，显著快于进入冷水时的降温速度；其中一尾还在深潜前把肌肉温度提高到周围海水之上，随后下降途中继续升温。研究者把这解释为可能的潜前热准备，并明确讨论了其他热源与样本量限制。鲭鲨的特别之处因此不只是“温暖”，还包括调节热量交换的能力；四尾鱼的结果也不能简单套成整种鱼的固定数值。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Shortfin Mako — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Isurus oxyrinchus — species summary",
+          "publisher": "FishBase",
+          "url": "https://fishbase.se/summary/752",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Enhanced thermoregulation abilities of shortfin mako sharks as the key adaptive significance of regional endothermy in fishes",
+          "publisher": "Functional Ecology (2025), full text in PubMed Central",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12586780/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸150—370厘米；低概率虚构巨物上端499厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "tiger_shark",
+      "accepted_scientific_name": "Galeocerdo cuvier",
+      "taxonomy": {
+        "family_scientific": "Galeocerdonidae",
+        "family_zh": "鼬鲨科",
+        "genus_scientific": "Galeocerdo",
+        "genus_zh": "鼬鲨属",
+        "note": "现行鱼类目录把Galeocerdo cuvier置于独立的鼬鲨科Galeocerdonidae；较旧资料常放在真鲨科。中文正式名常用鼬鲨，“虎鲨”是本作沿用俗称，不指虎鲨科Heterodontidae的其他鲨类。",
+        "source_ids": [
+          "s2",
+          "s5"
+        ]
+      },
+      "typical_size": {
+        "text": "没有可靠的全球成鱼平均。2014年夏威夷研究讨论本种多数最大尺度约380—450厘米，少数可达550厘米；这是极端体型范围，不是常见成鱼区间。该研究当地实捕最大个体为464厘米全长。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 550,
+        "length_type": "TL",
+        "text": "采用2014年研究综述明确提到的少数大型个体可达550厘米全长，范围为可靠文献中的大型尺度而非认证绝对上限。数据库所列750厘米历史报告缺乏本次可复核档案，未作确定纪录采用。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "record_label": "文献大型个体尺度"
+      },
+      "max_weight": {
+        "value_kg": 807.4,
+        "text": "FishBase最大已发表体重字段为807.4千克，按其文献汇录值展示，不宣称为现今所有记录的绝对上限。流传的数吨级说法未在本条核实，且重量不能与550厘米拼成同一个体。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "可利用大陆架、岛架、潟湖、珊瑚礁和港湾附近水域，也会跨越开阔海。常近水面或沿底部活动，栖息选择具有地区差异；巴哈马的标记研究显示，浅海海草床也是其重要活动环境。",
+        "source_ids": [
+          "s2",
+          "s4"
+        ]
+      },
+      "distribution": {
+        "text": "广布世界热带及部分亚热带水域，并可季节性进入温带。澳大利亚分布沿西澳西南部、热带北岸延至新南威尔士南部；夏威夷标记研究还记录了跨向加利福尼亚湾的远距离移动。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "活动范围既可能包括熟悉的岛屿浅海，也可能延伸很远。夏威夷长期标记再捕研究直接量出个体生长，显示仅凭未经验证的椎骨轮纹可能低估生长速度；同种鱼不同地点和年龄的生活方式不能一概而论。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "食谱很宽，包含海龟、海蛇、硬骨鱼、其他鲨鱼、甲壳类与头足类，也会食腐；博物馆还记有海鸟和海洋哺乳动物。宽吻与有缺刻的锯齿牙适合处理多样猎物，吞食杂物的记录不代表其没有食物选择。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "鲨鱼替研究者带回海草床的画面",
+        "text": "2022年发表的巴哈马研究，把遥感、潜水调查、沉积物样品以及装在鼬鲨身上的记录设备结合起来。鲨鱼活动资料和影像帮助研究者核对卫星图上的浅海底质，使一些人类不易长时间调查的海草区域得到地面验证。研究估计巴哈马浅滩海草生境至少约66000平方公里，最高估计约92000平方公里；这是多种方法合成的范围，不是单靠几尾鲨鱼“拍出”的精确面积。大型捕食者因此也成为理解蓝碳生态系统的一扇窗口。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Tiger Shark, Galeocerdo cuvier",
+          "publisher": "Australian Museum",
+          "url": "https://australian.museum/learn/animals/fishes/tiger-shark-galeocerdo-cuvier-pron-lesueur-1822/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Galeocerdo cuvier — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/886",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Growth and maximum size of tiger sharks (Galeocerdo cuvier) in Hawaii",
+          "publisher": "Meyer et al. / PLOS ONE (2014), PubMed abstract",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24416287/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Tiger sharks support the characterization of the world’s largest seagrass ecosystem",
+          "publisher": "Gallagher et al. / Nature Communications (2022)",
+          "url": "https://www.nature.com/articles/s41467-022-33926-1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s5",
+          "title": "Eschmeyer’s Catalog of Fishes: Galeocerdo",
+          "publisher": "California Academy of Sciences",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Galeocerdo&tbl=species",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸200—470厘米；低概率虚构巨物上端616厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "oceanic_whitetip_shark",
+      "accepted_scientific_name": "Carcharhinus longimanus",
+      "taxonomy": {
+        "family_scientific": "Carcharhinidae",
+        "family_zh": "真鲨科",
+        "genus_scientific": "Carcharhinus",
+        "genus_zh": "真鲨属",
+        "note": "现行学名Carcharhinus longimanus，中文常称长鳍真鲨或远洋白鳍鲨。它的第一背鳍圆阔，胸鳍长而像桨，白色斑块分布在鳍端；与体形细小、常在礁底休息的灰三齿鲨不是同一物种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见全长270厘米，未限定成鱼平均；NOAA简介以约11英尺描述可达长度。它们属于不同资料尺度，不能据此合成全球成鱼平均体长，也未查到可推广的典型成年体重。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 400,
+        "length_type": "TL",
+        "text": "FishBase收录最大报告全长400厘米；NOAA公开简介概括可达约11英尺，明显较保守。本条400厘米仅标作数据库文献报告上限，不视为本次认证的实测世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 167.4,
+        "text": "FishBase最大已发表体重为167.4千克，代表其所引文献的历史报告范围；没有证据表明这与400厘米极值来自同一尾鱼，也不将它改写为成年鱼的一般体重。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "典型暖水远洋鲨，主要在离岸海洋、外大陆架及大洋岛屿周围深水活动。通常利用水面至约200米的上层水柱，NOAA也记有超过千米的深潜；偶尔的极深记录与日常栖息深度须分开理解。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "广布全球热带和亚热带海洋，不局限在某一块珊瑚礁。它常见于海底很深、上层温暖的区域；开阔海中的移动将不同国家和远洋水域联系起来，分布面积广并不意味着种群数量或恢复能力充足。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "会在表层与深层之间垂直移动，水温过高时可进入更凉的水层；这种变化还与食物分布有关。它生长较慢、成熟较晚、繁殖输出有限，面对持续兼捕较难迅速恢复；本作仅设置虚构观察后放流事件。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "机会性取食硬骨鱼和头足类，远洋鱼类与鱿鱼是重要食物；也有海鸟、其他鲨鳐和海洋哺乳动物的取食报告。气候改变若影响猎物聚集和数量，鲨鱼也可能随之改变活动地点，而不是固定守在海面。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "暖海猎手也要寻找凉水",
+        "text": "NOAA对气候与鲨鱼生态的梳理指出，长鳍真鲨偏爱暖的表层海水，却仍是体温主要受环境影响的鱼。当表层太暖时，它可以向较深、较凉的水层移动，垂直往返同时受食物条件影响。其猎物依赖洋流与上升流输送的营养，海洋变暖因此可能同时改变“哪里舒适”和“哪里有食物”。这段故事强调的不是某个万能温度阈值，而是海洋捕食者如何在温度、食物和长距离移动之间不断调整；保护工作也需要理解整个水柱的变化。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Oceanic Whitetip Shark",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/oceanic-whitetip-shark",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Carcharhinus longimanus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/carcharhinus-longimanus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Sharks, Rays, and Climate Change: Impacts on Habitat, Prey Distribution, and Health",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/feature-story/sharks-rays-and-climate-change-impacts-habitat-prey-distribution-and-health",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸140—325厘米；低概率虚构巨物上端448厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "whitetip_reef_shark",
+      "accepted_scientific_name": "Triaenodon obesus",
+      "taxonomy": {
+        "family_scientific": "Carcharhinidae",
+        "family_zh": "真鲨科",
+        "genus_scientific": "Triaenodon",
+        "genus_zh": "三齿鲨属",
+        "note": "现行学名Triaenodon obesus，中文称灰三齿鲨或白鳍礁鲨。第一背鳍与尾鳍上叶的白尖、扁宽头和椭圆眼便于辨认；长鳍真鲨的桨状胸鳍、银鳍真鲨的广泛白鳍缘，都不是本种形态。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见全长160厘米；FAO图鉴指出成鱼超过160厘米很少。它们是常见尺度的资料描述，不能当作严格成年平均值；性成熟可在约一米左右发生，也不表示成鱼都只有一米。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 213,
+        "length_type": "TL",
+        "text": "FishBase收录最大报告全长213厘米，FAO图鉴原文对这一上限带有“据称”限定。本条保留报告性质，而非声称已有完整档案认证到厘米精度的最大个体。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 18.3,
+        "text": "FishBase最大已发表体重字段为18.3千克，按其引用文献范围展示。此数值与213厘米长度分开收录，不能拼成同一尾鱼，也不能代表所有成熟个体的典型重量。",
+        "source_ids": [
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "多在清澈热带浅海的珊瑚礁、礁洞、岩棚下和邻近沙底活动，常见深度约8—40米；也有远深于此的记录。它与底部关系密切，休息地点和夜间觅食路线共同构成其礁区生活范围。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "分布于印度—太平洋，从红海、东非沿岸延至南亚、东南亚、澳洲及太平洋诸岛；夏威夷也有记录。东太平洋包括科科斯岛、加拉帕戈斯及中美洲部分海岸，不是只存在于印度洋的礁鲨。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "白天常在洞穴或礁棚下休息，夜间活动增强，并可反复返回同一庇护处。它能主动泵水经过鳃，在静止时继续呼吸；多尾鱼可共同利用休息空间，不必把同处一洞误读为领地争斗或配偶关系。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ]
+      },
+      "diet": {
+        "text": "夜间搜寻洞隙和海底猎物，取食礁鱼、甲壳类及软体动物。柔长身体和头部形态有助于深入狭小缝隙，让它接触到其他大型鲨鱼不易够到的猎物；它并非凭白色鳍尖发光来引诱猎物。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "用“运动手环”读懂礁洞里的昼夜",
+        "text": "2007年研究把加速度记录仪用于圈养的灰三齿鲨，先验证仪器能区分静卧和摆尾游动，再分析昼夜节律。被研究个体白天游泳时间约占10%—24%，夜间约占42%—67%，支持夜间更活跃的判断。研究者也发现，刚安装记录仪后鲨鱼会异常活跃，因此剔除最初两天，避免把处理应激误当正常生活。这个故事不仅说明礁鲨会休息，也说明读懂动物行为需要给仪器干扰留出位置；圈养样本比例不能直接当作所有野生个体的作息表。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Whitetip Reef Shark — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Triaenodon obesus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Triaenodon-obesus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Sharks of the World: Triaenodon obesus",
+          "publisher": "FAO species catalogue, hosted by Naturalis Biodiversity Center",
+          "url": "https://sharks.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=74&id=62734",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Use of an acceleration data logger to measure diel activity patterns in captive whitetip reef sharks, Triaenodon obesus",
+          "publisher": "Whitney et al. / Aquatic Living Resources (2007), University of Hawaiʻi repository",
+          "url": "https://www.soest.hawaii.edu/PFRP/reprints/whitney_2007.pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸75—175厘米；低概率虚构巨物上端239厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    }
+  ]
+}

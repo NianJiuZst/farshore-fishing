@@ -1,0 +1,1506 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "atlantic_bluefin_tuna",
+      "accepted_scientific_name": "Thunnus thynnus",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Thunnus",
+        "genus_zh": "金枪鱼属（鲔属）",
+        "note": "本条仅指大西洋蓝鳍金枪鱼，不把太平洋蓝鳍金枪鱼 Thunnus orientalis 合并进来。早期“北方蓝鳍”资料曾混用两者；对跨洋分布、繁殖场及体型极值，必须先确认文献采用的物种范围。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 收录常见叉长约200厘米，这是资料汇编的常见长度，并不是随机抽样得到的全球成年平均值。蓝鳍鱼群常按体型分群，幼鱼、成熟鱼以及不同渔具的渔获，尺寸组成可能差别很大。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 458,
+        "length_type": "TL",
+        "text": "已发表极值（FishBase 物种条目汇编）：最大全长458厘米。TL 包括尾鳍末端，不能与常见尺寸的叉长 FL 直接相减比较；条目没有给出这一尾鱼的完整测量档案。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 684,
+        "text": "已发表极值（FishBase 汇编）：684千克。这里保留数据库的明确重量栏口径，不把另一些概述中的约900千克上限当成同一条捕获纪录，也不假定它与458厘米来自同一个体。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "以温带大洋中上层为主要活动空间，也会季节性接近海岸。表层活动不等于只能待在浅水：NOAA 的物种介绍记载它经常下潜至500—1000米，连接温暖表层与冷水深层的食物资源。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "天然分布集中在大西洋：西侧从拉布拉多、纽芬兰到墨西哥湾、加勒比及巴西附近；东侧从挪威附近延至加那利群岛，并进入地中海。它能够越过人为划定的东西部管理边界，不能把两岸视为互不往来的封闭水池。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "会作长距离洄游，并按大小组成鱼群，有时与其他金枪鱼混群。西大西洋大型成鱼生长和成熟较慢；繁殖时把卵与精子释放到水柱中。墨西哥湾和地中海是重要产卵区，但“仅有这两处”的老说法已不完整。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "幼鱼捕食小鱼、鱿鱼及甲壳类，成鱼常追逐鲱鱼、鲭鱼等成群饵料鱼。它处在食物网较高位置，却并非没有天敌：虎鲸、领航鲸、鲨鱼及其他大型捕食者也会利用蓝鳍，幼鱼还会遭受海鸟捕食。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "几千尾幼鱼改写产卵地图",
+        "text": "寻找巨型金枪鱼的出生地，关键线索竟来自微小的浮游幼鱼。NOAA 在2026年介绍一项整合1955—2021年调查的研究：科学家汇集超过35000次浮游生物拖网及近5000尾幼鱼资料，发现西大西洋产卵范围比过去想象更广，从加勒比西北部、巴哈马以北延至美国东北外海的陆坡海。南部产卵先在春季开始，较北水域随后接力。这说明海里的繁殖地图会随着长期证据而修订，不能把旧课本里的两处产卵场当作永远不变的边界。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Thunnus thynnus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Thunnus-thynnus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Western Atlantic Bluefin Tuna",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/western-atlantic-bluefin-tuna",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "New Research Reveals Broad Spawning Distribution for Bluefin Tuna",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/feature-story/new-research-reveals-broad-spawning-distribution-bluefin-tuna",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸90—340厘米；低概率虚构巨物上端513厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "pacific_bluefin_tuna",
+      "accepted_scientific_name": "Thunnus orientalis",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Thunnus",
+        "genus_zh": "金枪鱼属（鲔属）",
+        "note": "现行物种名为 Thunnus orientalis，中文也称东方金枪鱼或太平洋黑鲔。它曾被当作北方蓝鳍金枪鱼的太平洋亚种；本条按独立种处理，不把大西洋种的最大重量、产卵场或种群状态挪用过来。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "NOAA 用约150厘米、60千克概述成年个体；FishBase 则列常见叉长200厘米。两者来自不同资料口径，不宜拼成一个所谓全球平均值。本条保留这种差异，也提醒近岸渔获可能包含较小的年轻鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 300,
+        "length_type": "FL",
+        "text": "已发表极值（FishBase 汇编）：最大叉长300厘米，原文明确标为 FL。NOAA 也给出约3米的长度上限，但未在那段简介中标明测量类型，故此处采用可核对的叉长标签。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 450,
+        "text": "已报道重量上限：450千克，FishBase 的最大已发表重量与 NOAA 物种简介一致。它属于物种资料中的极端尺寸，不表示普通成鱼达到此重，也没有证明与300厘米记录是同一尾鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "主要生活在温带大洋中上层，也能进入热带水域和较凉的近岸海区；在部分季节会靠近陆岸。冷暖水团与饵料的变化形成不断移动的活动范围，不能仅凭“太平洋”三个字推定所有海区全年都有同样密度。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "核心分布在北太平洋两侧：西侧由鄂霍次克海南部、日本周边延至菲律宾北部，东侧由阿拉斯加湾到加利福尼亚和下加利福尼亚。南半球亦有零星记录；部分个体横渡太平洋，部分则长期留在西侧。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "会按大小结群并进行季节性洄游。标记研究显示，有的个体留在西太平洋，有的前往东太平洋觅食；最快的跨太平洋行程可短至约55天，这是观测到的快速个案，不能视为每尾鱼必须完成的固定路线。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "捕食沙丁鱼、鳀鱼、秋刀鱼、鲱鱼、鲭鱼和其他小型鱼类，也吃鱿鱼。机会合适时还会取食红蟹或磷虾。强壮的体型服务于广泛的追猎，并不意味着它只吃大鱼，随海区而变的密集小猎物同样重要。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一条鱼，需要跨洋共同照顾",
+        "text": "太平洋蓝鳍不会在国境线前停下，因此单一海岸的管理不足以解释整个种群的变化。NOAA 在2024年公布的评估报道指出，种群在2021年达到第二阶段重建目标，比计划提前约十年；背后是太平洋东西两侧国际渔业机构共同实施限制与持续的科学评估。这个案例值得记住的并非“从此可以无限捕捞”，而是同一种鱼会穿过多国海域，长期资料、共同规则与后续监测必须一起发挥作用。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Thunnus orientalis — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Thunnus-orientalis.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Pacific Bluefin Tuna",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/pacific-bluefin-tuna",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "From Overfished to Sustainable Harvests: Pacific Bluefin Tuna Rebound to New Highs",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/feature-story/overfished-sustainable-harvests-pacific-bluefin-tuna-rebound-new-highs",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸80—270厘米；低概率虚构巨物上端336厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "yellowfin_tuna",
+      "accepted_scientific_name": "Thunnus albacares",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Thunnus",
+        "genus_zh": "金枪鱼属（鲔属）",
+        "note": "黄鳍金枪鱼属于鲭科金枪鱼属，并非一种“长鳍金枪鱼”。大个体延长的是明亮的第二背鳍与臀鳍；幼鱼这些特征较不醒目，容易与大眼金枪鱼混淆，因此不能只看黄色小鳍便确定种类。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 列常见叉长约150厘米，而非成年平均身长。幼鱼常与鲣及大眼幼鱼混群，渔场和渔具会选择不同体型；成熟大鱼的长黄色背、臀鳍也比幼鱼明显，插画中的巨长镰刀鳍并不适用于所有年龄。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 239,
+        "length_type": "FL",
+        "text": "已发表极值（FishBase 汇编）：最大叉长239厘米。此处不采用部分旧网页的280厘米全长作为同一测量值；FL 与 TL 含义不同，不能把差异简单说成某个来源的鱼“长了41厘米”。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 200,
+        "text": "已发表极值（FishBase 汇编）：200千克。NOAA 的约400磅是简介中的概述尺寸，口径不同；本字段采用数据库明示的已发表重量，不把旧资料中缺少可追溯捕获细节的更大数字当作核实纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "偏好热带和亚热带开阔水域的上层，可在温跃层上下活动。它对低氧较敏感，热带地区通常较少在250米以下捕获。漂木、海草团等漂浮物附近常形成聚集，但聚集不等于其全部生活都依赖漂浮物。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "广布大西洋、印度洋与太平洋的热带、亚热带海域，通常不见于地中海。它是高度洄游鱼类，海区间的季节、食物及繁殖条件各不相同；“全球分布”描述的是物种范围，不代表所有海盆属于同一管理种群。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "结群时常以体型相近为条件，幼鱼可与鲣和大眼幼鱼一起活动。东热带太平洋大型黄鳍有与海豚伴游的现象。繁殖季分批产卵，在西大西洋不同海区有不同高峰，而低纬温暖水域的产卵期可以较长。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "食物主要是鱼、鱿鱼和甲壳类，属于活跃的中上层捕食者。与许多金枪鱼一样，既追逐成群小鱼，也利用随水团与漂浮物聚集的猎物；自身则成为鲨鱼及更大型鱼类的食物，幼鱼尤其处在多层捕食关系之中。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "海豚上方，金枪鱼下方",
+        "text": "东热带太平洋渔民曾利用一个生态线索寻找黄鳍：海豚出现在海面时，大型黄鳍有时就在下方。佛罗里达自然历史博物馆记录，20世纪50年代后期兴起的围网作业据此包围鱼群，也把海豚困入网中，造成严重兼捕。这段历史后来推动了减少海豚死亡的渔法与“海豚安全”讨论。重要的是，这种伴游关系具有海区背景；不能把它写成所有黄鳍在全球都跟着海豚，也不能把一个标签理解为捕捞没有其他生态影响。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Thunnus albacares — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Thunnus-albacares.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Atlantic Yellowfin Tuna",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/atlantic-yellowfin-tuna",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Yellowfin Tuna — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/yellowfin-tuna/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸60—210厘米；低概率虚构巨物上端268厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "bigeye_tuna",
+      "accepted_scientific_name": "Thunnus obesus",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Thunnus",
+        "genus_zh": "金枪鱼属（鲔属）",
+        "note": "大眼金枪鱼与黄鳍金枪鱼同属，外形尤其在幼鱼阶段容易混淆。大眼通常眼睛更大、身体更厚实，幼鱼胸鳍也可能很长；本条不会仅凭胸鳍长或黄色小鳍便把它误写成长鳍或黄鳍金枪鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 收录常见叉长180厘米，但这不是全球成年个体平均值。NOAA 简介给出的约5.5英尺长度属于概述而非最大纪录；不同海区、年龄和渔法造成的体型组成差异，不能用单一“标准成年尺寸”概括。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 250,
+        "length_type": "TL",
+        "text": "已发表极值（FishBase 汇编）：最大全长250厘米，标签为 TL。常见尺寸栏的180厘米采用 FL；两者测量终点不同，且并非同一尾个体，不能据此构造固定的长度转换比例。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 210,
+        "text": "已发表极值（FishBase 汇编）：210千克。此数值描述汇编所收录的最大已发表重量，不是常见成鱼体重，也不是本文另行认证的国际全钓具纪录；它与最长个体未被证明是同一条鱼。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "生活于热带、亚热带大洋，年轻鱼常在表层与其他金枪鱼结群，较大个体会利用更深水层。其活动空间随温跃层、氧条件和猎物改变；比起把它归为单纯表层鱼，理解为在多个水层间追踪食物更准确。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "分布于大西洋、印度洋和太平洋的热带及温暖温带水域，一般不进入地中海。西大西洋范围可由新斯科舍以南延至巴西。它能长途移动，但不同地区的昼夜潜水习惯并非完全相同，不能把一个渔场的观察机械外推到全球。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "典型模式是在夜间较浅处活动、白天向深处潜游，间或返回较温暖表层。电子标记也记录到整天较浅或深浅混合的日子；潜水并非一张固定时刻表，海区、季节和食物层的变化都会改变它出现的位置。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "吃多种鱼类、头足类与甲壳类，既可在白天也可在夜间摄食。深散射层中的中层鱼和鱿鱼是重要资源，但胃内容物及标记资料都提示它也利用浅层食物；称其为“只吃深海鱿鱼”的专家会过分简化食谱。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "一枚电子标签画出的三种日程",
+        "text": "2010年发表的中北太平洋研究把大眼金枪鱼的白天分成三类：主要停在200米以下的深潜日、主要在100米以内的浅水日，以及深浅交替的混合日。样本中深潜日最多，却远非每天如此。研究者把反复上浮解释为与体温调节及食物分布有关，而非鱼总沿着一条不变深度线巡逻。这也解释了一个渔业难题：同样数量的鱼，若当天待在鱼钩够不到的水层，渔获率就可能下降，未必等于海里突然没有鱼。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Thunnus obesus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Thunnus-obesus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Atlantic Bigeye Tuna",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/atlantic-bigeye-tuna",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Spatiotemporal variability in bigeye tuna dive behavior in the central North Pacific Ocean",
+          "publisher": "Howell et al., Progress in Oceanography / NOAA",
+          "url": "https://www.st.nmfs.noaa.gov/fate/documents/Publications/sdarticle.pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸70—215厘米；低概率虚构巨物上端280厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "albacore",
+      "accepted_scientific_name": "Thunnus alalunga",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Thunnus",
+        "genus_zh": "金枪鱼属（鲔属）",
+        "note": "长鳍金枪鱼是 Thunnus alalunga，北、南太平洋的管理种群都属同一个物种。胸鳍异常延长且尾鳍后缘发白是重要线索；幼年大眼金枪鱼也可能长胸鳍，因此鉴定仍需合看体型、眼睛和鳍端形态。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 列常见叉长100厘米，不能称为所有成年鱼的平均值。北太平洋渔业经常遇到仍未成熟的年轻鱼；FAO 的年龄、生长综述特别指出，地区和季节会改变体长与体重关系，不能把一条换算曲线当作普遍定律。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 140,
+        "length_type": "FL",
+        "text": "已发表极值（FishBase 汇编）：最大叉长140厘米。这里保留原文 FL 口径，而不是包含尾鳍末端的 TL；NOAA 简介中约47英寸的常规上限概述，不等于否定汇编中的更大个体。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 60.3,
+        "text": "已发表极值（FishBase 汇编）：60.3千克。极值表示被资料收录的罕见大鱼，不是北太平洋拖钓渔获的典型重量，也没有依据将它与140厘米长度配成同一个体的身长体重组合。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "偏好开阔海域，幼鱼常集中在温度明显变化的海洋锋面附近，较大鱼能进入更深水层。北太平洋表层渔场常与约15—19.4摄氏度海水关联，但标记研究也显示短暂下潜到更冷水体，温度不是一堵绝对边界。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "广布三大洋的热带至温带水域，也见于地中海；热带赤道附近并不总在表层出现。北太平洋年轻鱼可横渡日本与北美之间的海域，南太平洋另有不同洄游模式；地理上分开的管理种群不应被写成不同物种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "常按体型结群并随季节长途移动。北太平洋许多年轻鱼从日本附近向东，晚夏进入北美外海，随后又向西移动；实际时间和路程受海况影响。成熟鱼在较暖水域繁殖，卵漂浮在近表层水柱中发育。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要捕食沙丁鱼、鳀鱼等群游鱼类及鱿鱼，为持续游动的身体补充能量。锋面附近食物汇聚，是其集中的重要原因之一。它自身也会被大型金枪鱼、旗鱼类和鲨鱼捕食，属于远洋食物网中能量传递的重要一环。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "从日本放流，在北美重逢",
+        "text": "长鳍金枪鱼的跨洋路线并非只凭渔民经验猜出。FAO 收录的北太平洋综述记录，日本附近放流的带标幼鱼后来进入北美渔业；北美放流的鱼又在日本附近被重新发现，有些随后再次东行。这些小标签把相隔整个海盆的渔场连接起来，也表明一边捕到的鱼可能原本属于另一边渔民未来会遇到的群体。对这种旅者，海图上的远距离不代表生态上互不相干，管理必须把洄游和不同年龄阶段一起考虑。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Thunnus alalunga — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Thunnus-alalunga.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Pacific Albacore Tuna",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/pacific-albacore-tuna",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "A review of the biology and fisheries for North Pacific albacore",
+          "publisher": "FAO / Bartoo and Foreman",
+          "url": "https://www.fao.org/4/t1817e/T1817E09.htm",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸45—115厘米；低概率虚构巨物上端157厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "skipjack_tuna",
+      "accepted_scientific_name": "Katsuwonus pelamis",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Katsuwonus",
+        "genus_zh": "鲣属",
+        "note": "鲣也常称正鲣，属于鲭科鲣属，并非金枪鱼属 Thunnus 的成员，但在渔业和日常语境中通常归入金枪鱼类。下侧和腹部显眼的4—6条深色纵带，是区别它与多种同域鲭科鱼的重要外部特征。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 列常见叉长80厘米；这是汇编中的常见长度，而不是成年鱼平均值。鲣群常按大小形成，沿岸钓获、围网渔获及不同海区的个体组成会不同，因此不把罐头原料鱼或某次鱼群的大小当作全种标准。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 110,
+        "length_type": "FL",
+        "text": "已发表极值（FishBase 汇编）：最大叉长110厘米。佛罗里达博物馆旧简介列108厘米叉长，两者均显示米级罕见大鱼的量级；本条采用当前数据库的110厘米而不改写成全长。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 34.5,
+        "text": "已发表极值（FishBase 汇编）：34.5千克，佛罗里达博物馆亦列此上限。它远高于很多日常渔获，不能用这个数字描述“普通鲣”；长度和重量摘要未提供足够证据确认来自同一个体。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "是开阔海域的中上层鱼，常见于暖水表层，也会进入较深水层。漂浮物附近、海鸟聚集的觅食区及其他大型海洋动物周围都可能出现鲣群；这些线索指向食物和聚集行为，而不代表它以漂浮物本身为食。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "在全球热带和暖温带海域广泛分布，能够进行长距离移动。不同海盆都有重要种群与渔业；范围描述反映长期出现记录，鱼群当季的位置仍会受水温、洋流与饵料改变，不能把一张分布图读成全年稳定的密度地图。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "具有强烈结群倾向，可与其他金枪鱼混群，在水面形成跳跃和追饵的扰动。热带水域能长时间分批繁殖，繁殖活跃的雌鱼可近乎每天产卵；这是种群与阶段性的现象，不意味着每尾雌鱼全年每天都产卵。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "机会性取食小鱼、甲壳类、头足类及其他软体动物，有时也会吞食较小的同类。鲣既是猎手，也是大型金枪鱼、鲨鱼与旗鱼类的猎物；大量小个体把较低营养层的能量转移给更大的远洋捕食者。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "腹部条纹背后的熟悉食材",
+        "text": "这尾腹部带深色条纹的游泳者，可能比它的名字更常出现在餐桌上。佛罗里达自然历史博物馆介绍，鲣是重要罐装鱼原料，在日本也以 katsuo 为人熟知，并可加工成干燥的鲣节。它在海里却不是一块缓慢漂浮的“食材”：鲣没有鱼鳔，身体配有有利于高速游动的尾柄隆起与小鳍，还能通过逆流热交换保留部分身体热量。熟悉的罐头与汤底来源，原来是一位需要持续追逐猎物、也随时可能成为猎物的远洋居民。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Katsuwonus pelamis — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Katsuwonus-pelamis.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Atlantic Skipjack Tuna",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/atlantic-skipjack-tuna",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Skipjack Tuna — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/skipjack-tuna/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸30—90厘米；低概率虚构巨物上端124厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "mahi_mahi",
+      "accepted_scientific_name": "Coryphaena hippurus",
+      "taxonomy": {
+        "family_scientific": "Coryphaenidae",
+        "family_zh": "鲯鳅科",
+        "genus_scientific": "Coryphaena",
+        "genus_zh": "鲯鳅属",
+        "note": "鲯鳅的学名为 Coryphaena hippurus，英文 mahi-mahi、dolphinfish 都指鱼类，并非海豚。它与同属的小鲯鳅是不同物种；成年雄鱼额部较高而陡直，雌鱼较圆，但不能仅凭性别造成的头形差异便另分成种。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 收录常见全长100厘米，属于常见尺寸汇编，并未声明是全部成年鱼的平均。鲯鳅生长很快，雄雌体型及头形也有差异；一米级个体不一定就是高龄大鱼，判断年龄不能只看照片中的长度。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 210,
+        "length_type": "TL",
+        "text": "已发表极值（FishBase 汇编）：最大全长210厘米，测量标签为 TL。NOAA 以约7英尺描述大个体上限，两者的取整方式不同；本字段采用数据库的明确厘米值，不把近似英尺再伪装成精确纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 40,
+        "text": "已发表极值（FishBase 汇编）：40千克；NOAA 的约88磅与此量级相符。这是罕见大个体资料，不是常见重量，长度与重量栏也不能自动配成同一尾鱼的测量结果。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "主要在暖海近表层活动，常见于漂木、漂浮马尾藻团及其他漂浮物附近，也会靠近海岸。小鱼形成几尾到数十尾的鱼群，大鱼较常独行或成对；漂浮物周围的遮蔽和食物聚集，使一小片海面成为相遇热点。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "广布大西洋、印度洋与太平洋的热带及亚热带水域，亦见地中海。西北太平洋包括台湾、菲律宾和日本附近海区；海水转暖时出现范围可向较高纬度伸展，局部季节性出现不能与全年常驻混为一谈。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "白天在表层积极捕食，幼鱼倾向结群，较老个体多独行，并随水温变化作季节性移动。繁殖启动得很早，温暖条件下数月龄即可成熟；产卵季内可反复分批产卵，展现快速生长、较早繁殖的生活史。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "食谱宽广，包括小型远洋鱼、幼年金枪鱼、鲹类、鱿鱼及其他无脊椎动物，也会吃漂浮到外海的近岸鱼类幼体。活跃的捕食并不使它免于被吃：大型金枪鱼、枪鱼、旗鱼和剑鱼都可能捕食鲯鳅。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一年长成大鱼的彩色旅者",
+        "text": "看到一尾接近成人身高的鲯鳅，很容易把它想成历尽多年才长大的老鱼。NOAA 的介绍却指出，它第一年便可能超过4英尺，并可在4—5月龄开始繁殖，寿命通常远短于许多大型蓝鳍金枪鱼。鲜活时背部耀眼的蓝绿色、体侧金黄色与蓝斑，也会在离水死亡后迅速褪去，所以渔获照片和水下照片可能看起来很不同。体型大并不必然年老，颜色淡也不必然是另一种鱼，这两点让鲯鳅成为观察鱼类时很好的提醒。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Coryphaena hippurus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Coryphaena-hippurus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Pacific Mahimahi",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/pacific-mahimahi",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Dolphinfish — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/dolphinfish/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸55—170厘米；低概率虚构巨物上端236厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "wahoo",
+      "accepted_scientific_name": "Acanthocybium solandri",
+      "taxonomy": {
+        "family_scientific": "Scombridae",
+        "family_zh": "鲭科",
+        "genus_scientific": "Acanthocybium",
+        "genus_zh": "刺鲅属（棘鰆属）",
+        "note": "本种中文名为沙氏刺鲅，台湾资料称棘鰆，属于鲭科，不能因细长身体误认成梭鱼。学名采用 Acanthocybium solandri；NOAA 页面正文标题曾出现 solanderi 写法，但该页分类表和台湾鱼类数据库均支持这里的拼写。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ]
+      },
+      "typical_size": {
+        "text": "佛罗里达博物馆给出常见长度100—170厘米，未在该范围旁明确长度类型；FishBase 另列常见叉长170厘米。两者可用于认识常见体型量级，但不能拼成严格的全球成年平均值或同口径统计区间。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 250,
+        "length_type": "TL",
+        "text": "已发表极值（FishBase 与佛罗里达博物馆汇编）：最大全长250厘米，明确采用 TL。台湾数据库也列250厘米体长，但未标测量类型，故不以那一处资料单独决定 TL 标签。",
+        "source_ids": [
+          "s1",
+          "s3",
+          "s4"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 83,
+        "text": "已发表极值（FishBase 与佛罗里达博物馆汇编）：83千克。本字段不是当前 IGFA 全钓具纪录；旧博物馆网页的钓获纪录段另有磅、千克换算不一致，因此不引用那段矛盾换算作为重量证据。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "常在开阔海域近表层独行或形成松散小群，也会出现在海丘、浅滩、岛屿附近及漂浮残骸周围。它不像某些金枪鱼那样总形成紧密大群，海面上一片漂浮物附近出现数尾，并不表示下方藏着庞大的固定群体。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "分布于三大洋的热带与亚热带水域，也包括加勒比海和地中海；台湾各海区有记录，以东、南部较常见。温暖季节可进入较高纬海域，北大西洋部分地区的渔获因此表现出鲜明季节性。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "behavior": {
+        "text": "具有洄游性，随着季节进入较暖或较凉的水域；常独行或松散聚集。生长较快，约一龄前后即可开始成熟，热带地区可长时间分批产卵，较高纬地区则多在暖季繁殖，卵和幼鱼在水柱中漂浮。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要捕食鱼类，也吃鱿鱼；已记载猎物包括飞鱼、鲱鱼、鲹、小金枪鱼及鲯鳅。口内三角形、带细锯缘的牙齿适于切割；NOAA 把它能借此分割较大猎物的说法标为科学推测，本条不把这推测写成每次捕食都如此。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "像梭鱼，却是鲭科成员",
+        "text": "沙氏刺鲅修长的吻与利齿容易让人联想到梭鱼，但细看背后和腹后的两列小鳍、细窄尾柄及其隆起脊，就能看出另一套身体结构。台湾鱼类数据库把它明确列入鲭科刺鲅属，记载体侧约三十条深色带纹；这些条纹配上长身，形成近似竹节的视觉印象，也呼应“竹节鰆”这个地方名称。辨认鱼不能只抓最显眼的长嘴：把鳍的排列、尾柄与花纹一起看，才能从相似轮廓里找到真正的分类线索。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Acanthocybium solandri — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Acanthocybium-solandri.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Pacific Wahoo",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/pacific-wahoo",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Wahoo — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/wahoo/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Acanthocybium solandri (Cuvier, 1832)",
+          "publisher": "台湾鱼类数据库／中央研究院",
+          "url": "https://fishdb.sinica.edu.tw/taxon/382484-fishdb",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸70—210厘米；低概率虚构巨物上端280厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "swordfish",
+      "accepted_scientific_name": "Xiphias gladius",
+      "taxonomy": {
+        "family_scientific": "Xiphiidae",
+        "family_zh": "剑鱼科",
+        "genus_scientific": "Xiphias",
+        "genus_zh": "剑鱼属",
+        "note": "剑鱼属于剑鱼科剑鱼属，与旗鱼、枪鱼所在的旗鱼科分开。成鱼上颌延伸为扁平的“剑”，没有腹鳍；这些特征比笼统的“长嘴大鱼”更可靠。英文 billfish 是更宽泛的俗称分组，并不等于所有成员同属一科。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 列常见全长约300厘米；NOAA 另说北大西洋渔业中常捕个体约50—200磅，即23—91千克。后者是区域渔获尺寸范围，不是全球成年平均重量，更不能把这两组数值配成同一尾“标准剑鱼”。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 455,
+        "length_type": "FL",
+        "text": "已发表极值（FishBase 汇编）：455厘米，原文标签为 FL。本条照录叉长标记；该摘要没有说明前端测点，因此绝不把它改称下颌叉长 LJFL，也不当作包括尾鳍尖端的全长 TL。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 650,
+        "text": "已发表极值（FishBase 汇编）：650千克，属于文献汇编上限。另有 IGFA 明确记载的536.15千克竿钓全钓具纪录，两者的记录范围不同；650千克不应被介绍成已认证的钓鱼世界纪录。",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "主要生活在大洋水柱中，也会进入近岸和洋流交汇的锋面。它能利用表层与数百米深的冷水，活动温度范围较宽；眼部特殊组织和血管热交换有助于在冷暗水层保持头部功能，而非让整片海水变暖。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "广布大西洋、印度洋、太平洋的热带与温带海域，偶入更冷水域，并见于地中海等边缘海。通常随季节向较凉的夏季觅食海域移动，再回到较暖水域；广布的一个物种仍可能有不同区域种群。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "高度洄游，既作水平移动，也进行明显的垂直活动。捕食时能左右挥动扁平长吻击伤或扰乱猎物，而非一定用剑尖穿刺。暖水中的产卵可分多次进行，雌鱼的产卵量随体型差异很大。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以鱼类和鱿鱼等无脊椎动物为食，是机会性捕食者，能够利用从表层到较深水层的食物。长吻的横向扫击可帮助制服猎物，但最终仍由口吞食；幼年剑鱼也可能被鲨鱼及更大型掠食鱼捕食。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "给眼睛和脑保温的鱼",
+        "text": "剑鱼的长剑很抢眼，藏在眼睛旁的特殊组织却同样关键。佛罗里达自然历史博物馆介绍，这块与眼肌有关的组织能给头部供热，配合血管热交换，使鱼在垂直穿越冷暖水层时减少眼脑迅速降温。于是，剑鱼可以在较深、较暗的水中继续寻找猎物。这里需要区分“局部保温”与哺乳动物式全身恒温：特殊的是头部组织和热量保存方式，并不是剑鱼的每个器官在任何深度都保持同样温度。海洋里的适应往往是解决一个具体难题的精细结构。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Xiphias gladius — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Xiphias-gladius.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "North Atlantic Swordfish",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/north-atlantic-swordfish",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Swordfish — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/swordfish/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Top Swords: Incredible World Records for Broadbill Swordfish",
+          "publisher": "International Game Fish Association",
+          "url": "https://igfa.org/2021/11/26/top-swords-incredible-world-records-for-broadbill-swordfish/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸110—360厘米；低概率虚构巨物上端510厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "blue_marlin",
+      "accepted_scientific_name": "Makaira nigricans",
+      "taxonomy": {
+        "family_scientific": "Istiophoridae",
+        "family_zh": "旗鱼科",
+        "genus_scientific": "Makaira",
+        "genus_zh": "枪鱼属",
+        "note": "按 NOAA 采用的全球单种口径，蓝枪鱼学名为 Makaira nigricans，包括太平洋种群。FishBase 仍把印度太平洋的 M. mazara 分列，因此本条会标明其尺寸资料来自大西洋条目，避免把分类观点差异藏在统一名称之下。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 的大西洋蓝枪鱼条目列常见全长290厘米，并非全球成年平均。雌鱼能长得显著大于雄鱼；NOAA 记雄鱼可达约7英尺，而最大的蓝枪鱼多为雌鱼，因此用单一“普通成年体重”会掩盖强烈的雌雄差异。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 500,
+        "length_type": "TL",
+        "text": "已发表极值（FishBase 的大西洋蓝枪鱼条目汇编）：最大全长500厘米，标签为 TL。这一范围标签很重要，因为该数据库仍将太平洋蓝枪鱼另列；此数字不冒充本条全球口径下经过重新审核的最长纪录。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "FishBase大西洋条目"
+      },
+      "max_weight": {
+        "value_kg": 636,
+        "text": "已发表极值（FishBase 的大西洋条目汇编）：636千克。NOAA 对全球蓝枪鱼另给更高的概述上限，但并非同一纪录口径；这里保留来源范围明确的数字，不把它描述成所有海域绝对不可能超过的重量。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "FishBase大西洋条目"
+      },
+      "habitat": {
+        "text": "偏好温暖、混合较充分的大洋表层，经常在表层至约100米之间移动，低温和低氧都会限制深度利用。它并非只能待在浅层：卫星标签曾记录接近千米的短时潜游，极端下潜不能代替日常栖息深度。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "按本条单种处理，分布于大西洋、印度洋和太平洋的热带、亚热带海域。北大西洋标记研究显示东西两侧存在联系，也有个体长时间留在某一区域；“能跨洋”并不意味着每条鱼都按同一路线不停横渡。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "活跃的视觉捕食者，可在白天下潜后返回表层，夜间较多留在浅水。雌鱼比雄鱼长得更大且寿命较长；不同个体的水平活动范围也不同，既有远距离旅行者，也有在适宜海域停留数月的个体。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "捕食金枪鱼及其他开阔水域鱼类，也吃鲭鱼、鲯鳅与鱿鱼。胃内偶见深水鱼，提示其食物来源不局限于海面。长吻可能参与击打猎物，但不能把所有捕食描绘成“先刺穿再吃”的固定动作。",
+        "source_ids": [
+          "s2",
+          "s4"
+        ]
+      },
+      "story": {
+        "title": "偏爱暖水，也曾潜近千米",
+        "text": "2023年介绍的一项北大西洋研究利用66枚弹出式卫星标签，观察蓝枪鱼每天与季节间怎样使用海洋。总体上，鱼喜欢温暖表层，白天却会下潜到冷水后再上浮；其中一尾甚至到达984米。另一个体在巴哈马附近停留了203天，与那些远距离跨洋的同类形成鲜明对照。标签揭示的重点不是给蓝枪鱼颁发“深潜冠军”，而是同一种鱼能采取不同生活路线：一次破纪录下潜、一天的平均水层和几个月的活动范围，讲述的是三件不同的事。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Makaira nigricans — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Makaira-nigricans.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Pacific Blue Marlin",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/pacific-blue-marlin",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "New Publication on North Atlantic Blue Marlin",
+          "publisher": "International Game Fish Association / Stanford research collaboration",
+          "url": "https://igfa.org/2023/03/29/new-publication-on-north-atlantic-blue-marlin/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Blue Marlin — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-marlin/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸130—400厘米；低概率虚构巨物上端560厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "striped_marlin",
+      "accepted_scientific_name": "Kajikia audax",
+      "taxonomy": {
+        "family_scientific": "Istiophoridae",
+        "family_zh": "旗鱼科",
+        "genus_scientific": "Kajikia",
+        "genus_zh": "条纹枪鱼属",
+        "note": "现行学名采用 Kajikia audax，旧资料常写 Tetrapturus audax，因此中文也见“条纹四鳍旗鱼”。本条以现行属名为准；身侧明显蓝色竖纹和高而尖的第一背鳍，是与体形更粗壮的蓝枪鱼区分的重要线索。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 收录常见全长290厘米，这不是严格抽样的成年平均值。条纹枪鱼整体通常小于大型蓝枪鱼、黑枪鱼，但尺寸会随性别、年龄及区域而变；接近三米的常见长度资料仍应与罕见纪录个体分开阅读。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 420,
+        "length_type": "TL",
+        "text": "已发表极值（FishBase 汇编）：最大全长420厘米，采用 TL，包含延长的上颌和尾端。本字段不使用商业渔业常见的下颌叉长 LJFL；两种测法不能拿同一个数字互换。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "FishBase收录长度"
+      },
+      "max_weight": {
+        "value_kg": 224.1,
+        "text": "认证钓获纪录口径：IGFA 当前全钓具世界纪录224.1千克。FishBase 摘要另收录440千克的已发表上限，缺少本次可充分核对的个体细节；为避免混淆，这里明确采用可直接核实的钓获纪录，而非全物种绝对最大值。",
+        "source_ids": [
+          "s3",
+          "s1"
+        ],
+        "record_label": "IGFA全钓具历史纪录"
+      },
+      "habitat": {
+        "text": "主要利用热带、亚热带大洋的上层水域，偏好约20—25摄氏度水温。NOAA 引述声学遥测研究，观测个体约86%的时间位于温跃层上方；这个比例来自特定研究，不能断言每一条鱼每天都严格如此。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "主要分布在印度洋和太平洋，既见热带也见较温暖的温带海域。太平洋分布被概括为从西北侧经东部再到西南侧的马蹄形格局；墨西哥下加利福尼亚附近是重要出现区，季节移动会改变局部密度。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "具有洄游性，能在追逐饵料时聚集，捕食群中的个体并不总同时冲刺。无人机研究发现进攻前体侧条纹对比度增强、进攻后又减弱；可能与向同伴传递攻击意图有关，但这一功能仍属于研究解释。",
+        "source_ids": [
+          "s3",
+          "s4"
+        ]
+      },
+      "diet": {
+        "text": "机会性捕食沙丁鱼、鳀鱼、鲭鱼、秋刀鱼和飞鱼，也吃鱿鱼。南加利福尼亚附近常在表层追逐小型沿岸鱼和鱿鱼；成鱼虽是大型猎手，仍可能被大型远洋鲨鱼或齿鲸捕食。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "冲刺前，条纹先亮起来",
+        "text": "2024年《Current Biology》的一项研究用高分辨率无人机影像观察条纹枪鱼围猎太平洋沙丁鱼。研究者发现，准备冲入鱼群的个体会先提高身侧条纹的对比度，攻击结束后又迅速暗下来。他们提出，这可能向同伴传递“我要进攻”的信号，减少多尾带长吻的捕食者同时冲撞的风险。影片显示了颜色与攻击的时间联系，但尚不能把功能推测说成已经完全证实的“交通灯语言”；这正是观察结果与解释之间值得保留的一道界线。",
+        "source_ids": [
+          "s4"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Kajikia audax — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Kajikia-audax.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Striped Marlin",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/striped-marlin",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Marlin, striped — Game Fish Database",
+          "publisher": "International Game Fish Association",
+          "url": "https://igfa.org/game-fish-database/?search_term_1=164&search_type=SpeciesID",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Rapid color change in a group-hunting pelagic predator attacking schooling prey",
+          "publisher": "Burns et al., Current Biology / PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38412818/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸110—340厘米；低概率虚构巨物上端471厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "indo_pacific_sailfish",
+      "accepted_scientific_name": "Istiophorus platypterus",
+      "taxonomy": {
+        "family_scientific": "Istiophoridae",
+        "family_zh": "旗鱼科",
+        "genus_scientific": "Istiophorus",
+        "genus_zh": "旗鱼属",
+        "note": "保留游戏的印度太平洋旗鱼名称，聚焦该区域种群。2025年 ICCAT 分类综述支持全球旗鱼同属 Istiophorus platypterus，并将大西洋旧名 I. albicans 视为异名；FishBase 仍保留旧拆分，故不能据其区域标签宣称现行分类必为两个种。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 的印度太平洋条目收录常见全长270厘米，并非所有成鱼平均值。雌鱼通常可比雄鱼长得更大，海区和年龄组成也影响渔获尺寸；本条没有把大西洋某个港口的常见长度直接当成印度太平洋种群标准。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 348,
+        "length_type": "FL",
+        "text": "已发表极值（FishBase 印度太平洋条目）：348厘米，原标签为 FL。本摘要没有交代前端测点，故不能称为下颌叉长 LJFL，也不改称全长 TL；博物馆另有太平洋约340厘米 TL 概述，属于不同资料口径。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "max_weight": {
+        "value_kg": 100.2,
+        "text": "已发表極值（FishBase 印度太平洋条目汇编）：100.2千克。这里保留原数据库精度，描述的是已发表最大重量；并不把博物馆取整的约100千克或其大西洋段落里的矛盾换算拼接成新的精确纪录。",
+        "source_ids": [
+          "s1"
+        ],
+        "record_label": "资料收录上限"
+      },
+      "habitat": {
+        "text": "通常在温跃层上方的暖水中上层活动，相比某些枪鱼更常出现在海岸、岛屿及邻近深水区域。虽然帆形背鳍偶尔露出海面，它主要仍是在水中游泳；分布深度和靠岸程度会随食物、海温与当地海底地形改变。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "本条重点覆盖印度洋与太平洋的热带、亚热带及季节性暖温带海域，包括菲律宾、巴布亚新几内亚和夏威夷附近。按较新的全球单种观点，大西洋也有本种；“印度太平洋”在此标明区域群体，而不是为整个物种画下唯一边界。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "可按大小聚集，并进行与繁殖有关的季节移动。太平洋暖水中的产卵期较长，通常以当地夏季较活跃；繁殖时可见成对游动，或数尾雄鱼追随一尾雌鱼。长吻与帆形背鳍参与的捕食、展示行为仍需要具体观察解释。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "以鱼类和头足类为主，也摄食甲壳类。太平洋记录的鱼类猎物包括沙丁鱼、鳀鱼、鲹、鲯鳅与带鱼等。长吻能帮助击打或扰乱猎物，但吞食仍由口完成；加勒比研究中的精细动作不能未经说明就当作所有海区的相同习惯。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s4"
+        ]
+      },
+      "story": {
+        "title": "长枪的用法，不只是刺穿",
+        "text": "高速摄影把旗鱼的长吻变成了可以逐帧研究的工具。2014年研究发现，旗鱼能够先把吻伸入沙丁鱼群，再作轻触单尾猎物或大幅侧向挥击；后来对加勒比海群猎的观察又发现，个体轮流攻击，受伤猎物逐渐增多时，捕获率也上升。这里的故事来自大西洋种群，依据全球单种分类可作为旗鱼行为的区域案例，却不能假装是在印度洋实拍。它提醒我们，外形像长枪的器官，也可能是一把精细击打的工具，而非每次都用于穿刺。",
+        "source_ids": [
+          "s3",
+          "s4",
+          "s5"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Istiophorus platypterus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Istiophorus-platypterus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Sailfish — Discover Fishes",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/sailfish/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Istiophorus platypterus is the valid scientific name for the sailfish in the ICCAT area",
+          "publisher": "Di Natale et al., ICCAT SCRS/2025/021",
+          "url": "https://www.iccat.int/Documents/CVSP/CV082_2025/n_3/CV082030021.pdf",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "How sailfish use their bills to capture schooling prey",
+          "publisher": "Domenici et al., Proceedings of the Royal Society B / University of Plymouth",
+          "url": "https://pearl.plymouth.ac.uk/bms-research/120/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s5",
+          "title": "Proto-cooperation: group hunting sailfish improve hunting success by alternating attacks on grouping prey",
+          "publisher": "Herbert-Read et al., Proceedings of the Royal Society B / PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5124094/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸100—280厘米；低概率虚构巨物上端390厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "great_barracuda",
+      "accepted_scientific_name": "Sphyraena barracuda",
+      "taxonomy": {
+        "family_scientific": "Sphyraenidae",
+        "family_zh": "魣科",
+        "genus_scientific": "Sphyraena",
+        "genus_zh": "魣属",
+        "note": "大魣属于魣科，并不是淡水梭鱼或狗鱼。中文俗称常混用，本条始终以 Sphyraena barracuda 为物种边界。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "博物馆指出超过150厘米已属非常大的个体，并以约60厘米说明性成熟阶段；成熟长度不是成鱼平均长度。来源没有提供可用于整个分布区的成年常见体重分布，不能把50千克当成普通规格。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 200,
+        "length_type": "unspecified",
+        "record_label": "资料收录上限",
+        "text": "佛罗里达自然史博物馆汇总的可达上限为200厘米，未注明全长或叉长，也未附对应个体凭据；属于物种介绍中的上限，不能称为当前认证世界纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 50,
+        "record_label": "资料收录上限",
+        "text": "同一博物馆介绍给出的可达体重为50千克；FWC页面另列106磅（约48.1千克）。这是不同资料的概述，未证明最大长度和最大体重来自同一尾鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "幼鱼多借海草和红树林的遮蔽成长，较大个体转向礁缘与邻近开阔水层。它不是只能在水面生活的鱼，但本作选择近岸浅层相遇，并不照搬真实分布的完整水深范围。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "分布于热带及亚热带的大西洋、印度洋和西中太平洋。西大西洋包括加勒比海及墨西哥湾；东太平洋通常缺席或极少，不能因英文名含 barracuda 就把当地其他魣属鱼算作本种。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "主要靠视觉发现猎物，常悬停后短距离突袭；既可独游，也会形成小群。幼鱼与成鱼的体色斑纹不同，幼年侧面纵带随成长破碎成斑点，较大的口裂和前突下颌则始终显眼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以鱼类为主，也会摄食头足类和甲壳类。猎物随所处生境及体型变化；尖牙能固定猎物，较小鱼可整吞，较大猎物可能被分切。游戏中的饵料倍率不是野外摄食比例。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "长大以后，也要搬家",
+        "text": "2015年佛罗里达东南部研究把胃内容物与电子标记结合，发现大魣的食谱变化约从第二年开始，并与从红树林、海草带转向外海礁体的生活变化相联系。它不是一出生就站在礁区食物链的高处：幼鱼先需要浅水植被提供庇护，再逐渐利用更开阔的空间。这个案例提醒我们，保护成年鱼常去的礁石，也不能忽略它幼年依赖的海岸。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Great Barracuda species profile",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-barracuda/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Great Barracuda",
+          "publisher": "Florida Fish and Wildlife Conservation Commission",
+          "url": "https://myfwc.com/wildlifehabitats/profiles/saltwater/barracuda/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Hansen (2015): Feeding Ecology and Habitat Utilization of the Great Barracuda",
+          "publisher": "Nova Southeastern University",
+          "url": "https://nsuworks.nova.edu/occ_stuetd/32/",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸60—165厘米；低概率虚构巨物上端224厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "giant_trevally",
+      "accepted_scientific_name": "Caranx ignobilis",
+      "taxonomy": {
+        "family_scientific": "Carangidae",
+        "family_zh": "鲹科",
+        "genus_scientific": "Caranx",
+        "genus_zh": "鲹属",
+        "note": "浪人鲹也称珍鲹、牛港鲹，属于鲹属；不是鰤属的高体鰤或黄尾鰤。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase以100厘米全长作常见长度参考，但未给出统一成年抽样均值。近岸小群中的幼鱼与外礁大型个体差异很大，不能用大型垂钓照片推断每一群浪人鲹的普通体重。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 180,
+        "length_type": "TL",
+        "record_label": "澳大利亚鱼类志上限",
+        "text": "Fishes of Australia收录180厘米全长的上限；FishBase另列170厘米全长。这里明确采用前者的汇编口径，而非声称统一认证纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 86.6,
+        "record_label": "澳大利亚鱼类志上限",
+        "text": "Fishes of Australia列最大86.6千克，FishBase列80千克；不同数据库汇编范围有别。数值与长度独立，不能自动组成同一条纪录鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "常在岩区、珊瑚礁通道、礁坡落差和近岸沙坪上方巡游。幼鱼能利用沙质浅岸，成鱼则会巡查礁缘；它与礁区密切相关，却并不一直贴着海底或藏在洞里。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "主要分布于印度洋至西部、中部太平洋热带海域，包括红海、东非、南日本、澳大利亚北部和夏威夷附近。本作太平洋礁区代表其中的西中太平洋段，不将它写成所有太平洋海岸都常见。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼可独游，繁殖时也会在浅外礁及外海地形处聚集。高而弯曲的额部、强壮身体和尾柄棱鳞适合辨认；观察到大群并不等于它只过群居生活，生活阶段和活动目的都会影响群体形态。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "捕食底层和水层鱼类，也吃甲壳类及头足类。食物组成随地点变化，不能把某处拍到的特别猎食行为当作全物种日常主食；本作以鱼食性巡游猎手为表现重点。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "一厘米的小鱼，也会选方向",
+        "text": "2006年研究观察8—18毫米标准体长的浪人鲹幼体，发现游泳速度和耐力随体长增加；在海中约三分之二的个体表现出定向游泳。开阔海岸与海湾里的游动方向并不一致。幼鱼因此不是任海流搬运的被动小点，但实验室耐力也不能直接等同于实际迁徙距离：海流、方向选择和停留水深必须一起考虑。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Caranx ignobilis",
+          "publisher": "Fishes of Australia / Museums Victoria",
+          "url": "https://fishesofaustralia.net.au/home/species/4268",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Caranx ignobilis species summary",
+          "publisher": "FishBase",
+          "url": "https://fishbase.se/summary/Caranx-ignobilis",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Leis et al. (2006): Behavioral ontogeny in larvae and early juveniles of the giant trevally",
+          "publisher": "NOAA Fishery Bulletin / Australian Museum",
+          "url": "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/2006/1043/leis.pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸60—150厘米；低概率虚构巨物上端202厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    },
+    {
+      "species_id": "greater_amberjack",
+      "accepted_scientific_name": "Seriola dumerili",
+      "taxonomy": {
+        "family_scientific": "Carangidae",
+        "family_zh": "鲹科",
+        "genus_scientific": "Seriola",
+        "genus_zh": "鰤属",
+        "note": "高体鰤属于鰤属。英文 amberjack 可指多种相似鱼，辨种不能只凭个体大或身上有黄色。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "NOAA称通常遇到的成鱼可在40磅（约18千克）以内，同时说明雌鱼比雄鱼更大、更长寿。这是美国物种介绍的常见体重尺度，不是全物种成鱼均值，也不是每个年龄组的固定规格。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 182.9,
+        "length_type": "unspecified",
+        "record_label": "NOAA概述上限",
+        "text": "NOAA概述可长至6英尺，换算约182.9厘米；页面没有注明测量口径，保留为未指明，不擅自标注全长或叉长。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 90.7,
+        "record_label": "NOAA概述上限",
+        "text": "NOAA给出成鱼可达200磅，约90.7千克。这是物种概述上限，并非本次核实的单尾认证纪录；长度上限和体重上限不假定同源。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "常与大陆架及外海礁石、沉船等立体结构相伴，在其上方水层活动。幼鱼和成鱼利用的环境并不相同；本作选取大西洋陆架结构区，数值水深只是这个虚拟相遇窗口。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "见于大西洋和太平洋；西大西洋记录从新斯科舍到巴西，包括加勒比海与墨西哥湾。北段调查中的数量并不高，偶尔记录到某处不等于那里全年都有密集鱼群。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "约3—4岁成熟，NOAA介绍美国相关种群主要于3—6月在礁石和沉船附近繁殖。头部从吻端斜过眼睛的深色带在兴奋或摄食时更明显，单凭颜色深浅不能推断年龄。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "成鱼主要吃礁区鱼类、鱿鱼和蟹；较小个体也会成为其他大型掠食者的食物。它是主动捕食的鲹科鱼，游戏中的持续拉力表现属于手感设计，不是固定运动生理数据。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "大个子，未必就是高体鰤",
+        "text": "2012年NOAA调查捕获八尾异常大的鰤鱼，看大小很容易认成高体鰤。研究人员随后结合形态和基因确认，它们其实都是另一种小鰤 Seriola fasciata。后续对105尾调查标本的复核也发现，高体鰤最容易被误判。这个持续多年的鉴定故事说明：鱼的大小和俗名只是线索，可靠的纪录、分布和生长研究，首先必须把物种认对。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Greater Amberjack",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/greater-amberjack",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "An Amberjack by Any Other Name (2023)",
+          "publisher": "NOAA Fisheries / National Systematics Laboratory",
+          "url": "https://www.fisheries.noaa.gov/feature-story/amberjack-any-other-name-rethinking-identification-and-unlocking-historical-data-four",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸65—155厘米；低概率虚构巨物上端205厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
+    }
+  ]
+}

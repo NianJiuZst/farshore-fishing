@@ -1,0 +1,1132 @@
+[
+  {
+    "species_id": "cobia",
+    "name": "军曹鱼",
+    "scientific_name": "Rachycentron canadum",
+    "region_ids": [
+      "atlantic_ocean"
+    ],
+    "spot_ids": [
+      "atlantic_shelf"
+    ],
+    "art": "res://assets/fish/cobia.png",
+    "thumb": "res://assets/fish/cobia_thumb.png",
+    "description": "爱靠近漂浮物和立体结构的军曹鱼，平扁头部与独立背棘很有辨识度。",
+    "morphology": "头宽而扁，吻钝、下颌略突出；身长呈鱼雷形，背部7—9根独立短棘后接长第二背鳍；深褐体侧有纵带，成年尾鳍新月形。",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/cobia",
+        "title": "Cobia",
+        "supports": "分类与名称；长度上限及量法；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cobia/",
+        "title": "Cobia species profile",
+        "supports": "常见尺寸口径；长度上限及量法；体重上限范围；生境；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://repository.library.noaa.gov/view/noaa/5898/noaa_5898_DS1.pdf",
+        "title": "Shaffer & Nakamura (1989): Synopsis of Biological Data on the Cobia",
+        "supports": "生境；分布。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 600,
+    "normal_max_mm": 1700,
+    "max_mm": 2240,
+    "anchor_mm": 1100,
+    "anchor_g": 14500,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.72,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 0.15,
+      "grain": 0.02,
+      "shrimp": 2.0,
+      "lure": 1.5
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.32,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 80,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸60—170厘米；低概率虚构巨物上端224厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层从5米开始，抛投至少32%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "encounter_type": "fictional_fishing"
+  },
+  {
+    "species_id": "roosterfish",
+    "name": "公鸡鱼",
+    "scientific_name": "Nematistius pectoralis",
+    "region_ids": [
+      "pacific_ocean"
+    ],
+    "spot_ids": [
+      "pacific_reef"
+    ],
+    "art": "res://assets/fish/roosterfish.png",
+    "thumb": "res://assets/fish/roosterfish_thumb.png",
+    "description": "东太平洋沙岸的独特身影，高耸丝状背鳍像一束随水摆动的黑色羽冠。",
+    "morphology": "银蓝侧扁身、尖头、深叉尾；前背鳍多根极长黑色丝状鳍条如鸡冠，体侧两道宽斜黑带，胸鳍长而弯；侧线无棱鳞。",
+    "sources": [
+      {
+        "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1223",
+        "title": "Nematistius pectoralis, Roosterfish",
+        "supports": "分类与名称；长度上限及量法；体重上限范围；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.org/summary/3550",
+        "title": "Nematistius pectoralis species summary",
+        "supports": "常见尺寸口径；长度上限及量法；体重上限范围。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8620147/",
+        "title": "Baeza et al. (2021): Genome Survey Sequencing of an Iconic Trophy Sportfish, the Roosterfish",
+        "supports": "物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 500,
+    "normal_max_mm": 1500,
+    "max_mm": 2140,
+    "anchor_mm": 1000,
+    "anchor_g": 14500,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "burst",
+    "difficulty": 0.76,
+    "weight": 9,
+    "bait_weights": {
+      "worm": 0.12,
+      "grain": 0.02,
+      "shrimp": 1.35,
+      "lure": 2.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.3,
+    "max_cast": 1.0,
+    "depth_min_m": 2,
+    "depth_max_m": 20,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸50—150厘米；低概率虚构巨物上端214厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层从2米开始，抛投至少30%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。 群岛礁缘中的本条相遇代表东太平洋沙岸段，与西太平洋岛礁物种并非同一真实地点。",
+    "encounter_type": "fictional_fishing"
+  },
+  {
+    "species_id": "red_snapper",
+    "name": "红笛鲷",
+    "scientific_name": "Lutjanus campechanus",
+    "region_ids": [
+      "atlantic_ocean"
+    ],
+    "spot_ids": [
+      "atlantic_shelf"
+    ],
+    "art": "res://assets/fish/red_snapper.png",
+    "thumb": "res://assets/fish/red_snapper_thumb.png",
+    "description": "大西洋陆架上的红色笛鲷，岩架、沉船与沙底之间藏着它跨越数十年的生命故事。",
+    "morphology": "体侧扁、头呈长三角形，吻背线较陡；身体粉红到深红、腹较浅，红眼、大口犬齿；背鳍连续，臀鳍后缘尖，成年体侧无大黑斑。",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/red-snapper",
+        "title": "Red Snapper",
+        "supports": "分类与名称；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://myfwc.com/wildlifehabitats/profiles/saltwater/snapper/red-snapper/",
+        "title": "Red Snapper",
+        "supports": "食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.seagrantfish.lsu.edu/faqs/redsnapper/biology.htm",
+        "title": "Red Snapper FAQs: Biology and Life History",
+        "supports": "常见尺寸口径；长度上限及量法；体重上限范围；生境；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 350,
+    "normal_max_mm": 850,
+    "max_mm": 1170,
+    "anchor_mm": 600,
+    "anchor_g": 4200,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.6,
+    "weight": 15,
+    "bait_weights": {
+      "worm": 0.7,
+      "grain": 0.03,
+      "shrimp": 2.4,
+      "lure": 0.9
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.35
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.25,
+    "max_cast": 1.0,
+    "depth_min_m": 10,
+    "depth_max_m": 90,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸35—85厘米；低概率虚构巨物上端117厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层从10米开始，抛投至少25%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "encounter_type": "fictional_fishing"
+  },
+  {
+    "species_id": "giant_grouper",
+    "name": "鞍带石斑鱼",
+    "scientific_name": "Epinephelus lanceolatus",
+    "region_ids": [
+      "pacific_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "pacific_reef",
+      "indian_reef"
+    ],
+    "art": "res://assets/fish/giant_grouper.png",
+    "thumb": "res://assets/fish/giant_grouper_thumb.png",
+    "description": "礁洞与沉船旁的庞大石斑鱼。此处仅作虚拟保护观察，相遇后必须放归。",
+    "morphology": "成年鱼极粗壮、头大口阔、眼相对小；灰褐斑驳，鳍上细黑点；背鳍前棘后软连续，胸鳍宽圆，尾鳍圆。幼鱼黄黑大带不适用于成年巨物。",
+    "sources": [
+      {
+        "url": "https://obis.org/taxon/218224",
+        "title": "Epinephelus lanceolatus taxon",
+        "supports": "分类与名称。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/4672",
+        "title": "Queensland Groper, Epinephelus lanceolatus",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://australian.museum/learn/animals/fishes/queensland-groper-epinephelus-lanceolatus-bloch-1790/",
+        "title": "Queensland Groper",
+        "supports": "生境；分布；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 900,
+    "normal_max_mm": 2250,
+    "max_mm": 3030,
+    "anchor_mm": 1600,
+    "anchor_g": 100000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.87,
+    "weight": 4,
+    "bait_weights": {
+      "worm": 0.7,
+      "grain": 0.03,
+      "shrimp": 2.4,
+      "lure": 0.9
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.35
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.44,
+    "max_cast": 1.0,
+    "depth_min_m": 8,
+    "depth_max_m": 75,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸90—225厘米；低概率虚构巨物上端303厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从8米开始，抛投至少44%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "dogtooth_tuna",
+    "name": "裸狐鲣",
+    "scientific_name": "Gymnosarda unicolor",
+    "region_ids": [
+      "pacific_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "pacific_bluewater",
+      "indian_reef"
+    ],
+    "art": "res://assets/fish/dogtooth_tuna.png",
+    "thumb": "res://assets/fish/dogtooth_tuna_thumb.png",
+    "description": "礁坡外缘的大牙掠食者，波状侧线和白色鳍尖揭示它并非金枪鱼属成员。",
+    "morphology": "长纺锤形、背蓝黑腹银白，大口内大圆锥牙，侧线波状；第一背鳍前缘黑，第二背鳍与臀鳍尖端白，后有小离鳍，尾深叉。",
+    "sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/723",
+        "title": "Gymnosarda unicolor",
+        "supports": "分类与名称；长度上限及量法；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://eprints.cmfri.org.in/8990/1/Joshi_75-79.pdf",
+        "title": "Joshi et al. (2012): Fishery, biology and dynamics of dogtooth tuna exploited from Indian seas",
+        "supports": "常见尺寸口径；长度上限及量法；体重上限范围；生境；分布；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://fishider.org/id/guide/osteichthyes/scombridae/gymnosarda-unicolor",
+        "title": "Gymnosarda unicolor identification guide",
+        "supports": "食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 700,
+    "normal_max_mm": 2050,
+    "max_mm": 2780,
+    "anchor_mm": 1350,
+    "anchor_g": 40000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "burst",
+    "difficulty": 0.88,
+    "weight": 6,
+    "bait_weights": {
+      "worm": 0.12,
+      "grain": 0.02,
+      "shrimp": 1.35,
+      "lure": 2.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.48,
+    "max_cast": 1.0,
+    "depth_min_m": 20,
+    "depth_max_m": 150,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸70—205厘米；低概率虚构巨物上端278厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层从20米开始，抛投至少48%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "encounter_type": "fictional_fishing"
+  },
+  {
+    "species_id": "yellowtail_kingfish",
+    "name": "黄尾鰤",
+    "scientific_name": "Seriola lalandi",
+    "region_ids": [
+      "pacific_ocean"
+    ],
+    "spot_ids": [
+      "pacific_reef"
+    ],
+    "art": "res://assets/fish/yellowtail_kingfish.png",
+    "thumb": "res://assets/fish/yellowtail_kingfish_thumb.png",
+    "description": "蓝背银腹的黄尾巡游者，在南半球岩礁、海岛和漂浮物旁形成灵动鱼群。",
+    "morphology": "细长纺锤形、头修长；背深蓝绿，腹银白，黄色纵带从吻经眼延至黄色深叉尾；尾柄无浪人鲹那样的明显棱鳞。",
+    "sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/1662",
+        "title": "Seriola lalandi",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围；生境；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.dpird.nsw.gov.au/fishing/fish-species/species-list/yellowtail-kingfish",
+        "title": "Yellowtail Kingfish species profile",
+        "supports": "常见尺寸口径；长度上限及量法；体重上限范围；生境；习性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.dpi.nsw.gov.au/__data/assets/pdf_file/0005/1553594/Stock-Status-Summary-2021-22-Yellowtail-Kingfish.pdf",
+        "title": "NSW Stock Status Summary 2021/22: Yellowtail Kingfish",
+        "supports": "长度上限及量法；体重上限范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 600,
+    "normal_max_mm": 1900,
+    "max_mm": 2800,
+    "anchor_mm": 1100,
+    "anchor_g": 14000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.77,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 0.12,
+      "grain": 0.02,
+      "shrimp": 1.35,
+      "lure": 2.4
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.35,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 55,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸60—190厘米；低概率虚构巨物上端280厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层从5米开始，抛投至少35%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。 本条代表南太平洋岩礁段，不用北太平洋历史混种资料证明当地分布。",
+    "encounter_type": "fictional_fishing"
+  },
+  {
+    "species_id": "opah",
+    "name": "月鱼",
+    "scientific_name": "Lampris guttatus",
+    "region_ids": [
+      "atlantic_ocean"
+    ],
+    "spot_ids": [
+      "atlantic_bluewater"
+    ],
+    "art": "res://assets/fish/opah.png",
+    "thumb": "res://assets/fish/opah_thumb.png",
+    "description": "东北大西洋的斑点月鱼，圆盘般的身体以胸鳍推进；旧资料中的全球月鱼如今已分成数种。",
+    "morphology": "高而强烈侧扁的近圆盘体，钢蓝银色带浅圆斑，腹可泛玫瑰色；口小无显著大牙，红橙色长镰形胸腹鳍、前高后低背鳍和新月尾。",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29690102/",
+        "title": "Underkoffler et al. (2018): A taxonomic review of Lampris guttatus",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/feature-story/clues-fish-auction-reveal-several-new-species-opah",
+        "title": "Clues At Fish Auction Reveal Several New Species Of Opah",
+        "supports": "常见尺寸口径；长度上限及量法；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/1072",
+        "title": "Lampris guttatus species summary, taxonomic warning",
+        "supports": "长度上限及量法；体重上限范围；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://fishtaxa.com/index.php/FishTaxa/article/download/107/107",
+        "title": "Ergüden et al. (2019): First Record of Lampris guttatus in North-Eastern Mediterranean",
+        "supports": "常见尺寸口径；生境；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 600,
+    "normal_max_mm": 1350,
+    "max_mm": 1800,
+    "anchor_mm": 1000,
+    "anchor_g": 38000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.76,
+    "weight": 5,
+    "bait_weights": {
+      "worm": 0.15,
+      "grain": 0.02,
+      "shrimp": 2.0,
+      "lure": 1.5
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.52,
+    "max_cast": 1.0,
+    "depth_min_m": 75,
+    "depth_max_m": 180,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸60—135厘米；低概率虚构巨物上端180厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层从75米开始，抛投至少52%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。 本钓点代表东北大西洋航段；75—180米是游戏窗口，不表示所有月鱼只生活在此深度。",
+    "encounter_type": "fictional_fishing"
+  },
+  {
+    "species_id": "great_white_shark",
+    "name": "大白鲨",
+    "scientific_name": "Carcharodon carcharias",
+    "region_ids": [
+      "pacific_ocean",
+      "atlantic_ocean"
+    ],
+    "spot_ids": [
+      "pacific_bluewater",
+      "atlantic_shelf"
+    ],
+    "art": "res://assets/fish/great_white_shark.png",
+    "thumb": "res://assets/fish/great_white_shark_thumb.png",
+    "description": "灰背白腹的跨洋巡游者，兼具近岸育幼生活与广阔远洋行程。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "粗壮纺锤体；锥形吻；宽三角第一背鳍；强尾柄侧隆起与新月形异尾；灰黑背、清晰白腹；三角锯齿牙。",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/white-shark/",
+        "title": "White Shark — Discover Fishes",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/species/white-shark",
+        "title": "White Shark",
+        "supports": "分类与名称；体重上限范围；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://whitesharkconservationtrust.org.nz/wp-content/uploads/2017/12/Transoceanic-Migration-Spatial-Dynamics-and-Population-Linkages-of-White-Sharks.-2005.-R.-Bonfil-M.-Meyer-M.-C.-Scholl-R.-Johnson-S.-OBrien-H.-Oosthuizen-S.-Swanson-D.-Kotze-M.-Paterson..pdf",
+        "title": "Transoceanic migration, spatial dynamics, and population linkages of white sharks",
+        "supports": "分布；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 2100,
+    "normal_max_mm": 5200,
+    "max_mm": 6800,
+    "anchor_mm": 3800,
+    "anchor_g": 550000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.98,
+    "weight": 2,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.6,
+    "max_cast": 1.0,
+    "depth_min_m": 15,
+    "depth_max_m": 180,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸210—520厘米；低概率虚构巨物上端680厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从15米开始，抛投至少60%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "scalloped_hammerhead",
+    "name": "路氏双髻鲨",
+    "scientific_name": "Sphyrna lewini",
+    "region_ids": [
+      "pacific_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "pacific_bluewater",
+      "indian_reef"
+    ],
+    "art": "res://assets/fish/scalloped_hammerhead.png",
+    "thumb": "res://assets/fish/scalloped_hammerhead_thumb.png",
+    "description": "会在海山聚群、也能短暂探访寒冷深水的双髻鲨。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "中瘦体；宽弧形锤头前缘有中央及侧方扇贝状凹缺；第一背鳍中高；腹鳍后缘较直；眼位头两端。",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/scalloped-hammerhead/",
+        "title": "Scalloped Hammerhead — Discover Fishes",
+        "supports": "分类与名称；长度上限及量法；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/Sphyrna_leweni.html",
+        "title": "Sphyrna lewini — species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围；分布。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.hawaii.edu/news/article.php?aId=12607",
+        "title": "Hammerhead sharks hold their breath on deep water hunts to stay warm",
+        "supports": "生境；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 1400,
+    "normal_max_mm": 3550,
+    "max_mm": 4820,
+    "anchor_mm": 2500,
+    "anchor_g": 65000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.88,
+    "weight": 5,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.5,
+    "max_cast": 1.0,
+    "depth_min_m": 15,
+    "depth_max_m": 120,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸140—355厘米；低概率虚构巨物上端482厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从15米开始，抛投至少50%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "great_hammerhead",
+    "name": "无沟双髻鲨",
+    "scientific_name": "Sphyrna mokarran",
+    "region_ids": [
+      "atlantic_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "atlantic_shelf",
+      "indian_reef"
+    ],
+    "art": "res://assets/fish/great_hammerhead.png",
+    "thumb": "res://assets/fish/great_hammerhead_thumb.png",
+    "description": "以高背鳍和近乎平直的锤头辨认，能够侧倾巡游的巨型双髻鲨。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "粗壮体；成体锤头前缘近乎直线而中央浅凹；高耸镰刀形第一背鳍；第二背鳍及腹鳍更高、后缘深凹；远端眼。",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/",
+        "title": "Great Hammerhead — Discover Fishes",
+        "supports": "分类与名称；长度上限及量法；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/Sphyrna_mokarran.html",
+        "title": "Sphyrna mokarran — species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围；生境；分布。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://researchonline.jcu.edu.au/45487/",
+        "title": "Great hammerhead sharks swim on their side to reduce transport costs",
+        "supports": "习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 1900,
+    "normal_max_mm": 5000,
+    "max_mm": 6840,
+    "anchor_mm": 3500,
+    "anchor_g": 180000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.96,
+    "weight": 3,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.58,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 100,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸190—500厘米；低概率虚构巨物上端684厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从5米开始，抛投至少57%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "blue_shark",
+    "name": "大青鲨",
+    "scientific_name": "Prionace glauca",
+    "region_ids": [
+      "pacific_ocean",
+      "atlantic_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "pacific_bluewater",
+      "atlantic_bluewater",
+      "indian_bluewater"
+    ],
+    "art": "res://assets/fish/blue_shark.png",
+    "thumb": "res://assets/fish/blue_shark_thumb.png",
+    "description": "胸鳍像细长翼面展开、能横跨大西洋的蓝色巡游者。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "极细长体；长圆锥吻、大眼；特别长窄尖胸鳍；背鳍靠后；深蓝背、亮蓝侧、白腹；上叶较长的非新月形尾。",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-shark/",
+        "title": "Blue Shark — Discover Fishes",
+        "supports": "分类与名称；生境；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/prionace-glauca",
+        "title": "Prionace glauca — species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围；分布；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/new-england-mid-atlantic/atlantic-highly-migratory-species/shark-identification-cooperative-shark",
+        "title": "Shark Identification for Cooperative Shark Tagging Program (A–B): Blue Shark",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境；习性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/feature-story/updated-shark-tagging-atlas-provides-more-50-years-tagging-and-recapture-data",
+        "title": "Updated Shark Tagging Atlas Provides More Than 50 Years of Tagging and Recapture Data",
+        "supports": "习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 1300,
+    "normal_max_mm": 3300,
+    "max_mm": 4480,
+    "anchor_mm": 2300,
+    "anchor_g": 45000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.83,
+    "weight": 7,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.45,
+    "max_cast": 1.0,
+    "depth_min_m": 15,
+    "depth_max_m": 180,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸130—330厘米；低概率虚构巨物上端448厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从15米开始，抛投至少45%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "shortfin_mako",
+    "name": "尖吻鲭鲨",
+    "scientific_name": "Isurus oxyrinchus",
+    "region_ids": [
+      "pacific_ocean",
+      "atlantic_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "pacific_bluewater",
+      "atlantic_bluewater",
+      "indian_bluewater"
+    ],
+    "art": "res://assets/fish/shortfin_mako.png",
+    "thumb": "res://assets/fish/shortfin_mako_thumb.png",
+    "description": "把肌肉热量留在体内、在温跃层上下追寻猎物的敏捷巡游者。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "紧凑细长纺锤体，尖锥吻、黑眼；背部金属深蓝、吻底及口周白；细长钩状无锯齿牙；强尾柄侧脊、新月形异尾；第二背鳍及臀鳍很小。",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/",
+        "title": "Shortfin Mako — Discover Fishes",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境；分布；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://fishbase.se/summary/752",
+        "title": "Isurus oxyrinchus — species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围；分布；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12586780/",
+        "title": "Enhanced thermoregulation abilities of shortfin mako sharks as the key adaptive significance of regional endothermy in fishes",
+        "supports": "生境；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 1500,
+    "normal_max_mm": 3700,
+    "max_mm": 4990,
+    "anchor_mm": 2500,
+    "anchor_g": 100000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "burst",
+    "difficulty": 0.96,
+    "weight": 4,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.58,
+    "max_cast": 1.0,
+    "depth_min_m": 15,
+    "depth_max_m": 180,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸150—370厘米；低概率虚构巨物上端499厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从15米开始，抛投至少57%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "tiger_shark",
+    "name": "鼬鲨",
+    "scientific_name": "Galeocerdo cuvier",
+    "region_ids": [
+      "atlantic_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "atlantic_shelf",
+      "indian_reef"
+    ],
+    "art": "res://assets/fish/tiger_shark.png",
+    "thumb": "res://assets/fish/tiger_shark_thumb.png",
+    "description": "宽吻、暗条纹与多样食谱，使它成为暖海生态系统中醒目的大猎手。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "宽短钝吻，粗壮前躯；灰褐背浅腹，幼体网状斑转为竖条，超过约3米条纹可淡化；尾上叶长；鸡冠状有缺刻锯齿牙。",
+    "sources": [
+      {
+        "url": "https://australian.museum/learn/animals/fishes/tiger-shark-galeocerdo-cuvier-pron-lesueur-1822/",
+        "title": "Tiger Shark, Galeocerdo cuvier",
+        "supports": "分布；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/886",
+        "title": "Galeocerdo cuvier — species summary",
+        "supports": "分类与名称；长度上限及量法；体重上限范围；生境。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24416287/",
+        "title": "Growth and maximum size of tiger sharks (Galeocerdo cuvier) in Hawaii",
+        "supports": "常见尺寸口径；长度上限及量法；分布；习性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.nature.com/articles/s41467-022-33926-1",
+        "title": "Tiger sharks support the characterization of the world’s largest seagrass ecosystem",
+        "supports": "生境；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Galeocerdo&tbl=species",
+        "title": "Eschmeyer’s Catalog of Fishes: Galeocerdo",
+        "supports": "分类与名称。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 2000,
+    "normal_max_mm": 4700,
+    "max_mm": 6160,
+    "anchor_mm": 3300,
+    "anchor_g": 260000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.94,
+    "weight": 3,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.55,
+    "max_cast": 1.0,
+    "depth_min_m": 5,
+    "depth_max_m": 100,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸200—470厘米；低概率虚构巨物上端616厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从5米开始，抛投至少55%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "oceanic_whitetip_shark",
+    "name": "远洋白鳍鲨",
+    "scientific_name": "Carcharhinus longimanus",
+    "region_ids": [
+      "pacific_ocean",
+      "atlantic_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "pacific_bluewater",
+      "atlantic_bluewater",
+      "indian_bluewater"
+    ],
+    "art": "res://assets/fish/oceanic_whitetip_shark.png",
+    "thumb": "res://assets/fish/oceanic_whitetip_shark_thumb.png",
+    "description": "宽阔白端胸鳍张开，在热带外海水柱中巡游的长鳍真鲨。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "粗壮体、钝圆吻；很大圆顶第一背鳍、长宽圆桨状胸鳍；背胸尾鳍端不规则乳白斑；灰铜褐背、浅腹；有背鳍间脊。",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/oceanic-whitetip-shark",
+        "title": "Oceanic Whitetip Shark",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/carcharhinus-longimanus.html",
+        "title": "Carcharhinus longimanus — species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/feature-story/sharks-rays-and-climate-change-impacts-habitat-prey-distribution-and-health",
+        "title": "Sharks, Rays, and Climate Change: Impacts on Habitat, Prey Distribution, and Health",
+        "supports": "习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 1400,
+    "normal_max_mm": 3250,
+    "max_mm": 4480,
+    "anchor_mm": 2400,
+    "anchor_g": 65000,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.91,
+    "weight": 4,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.54,
+    "max_cast": 1.0,
+    "depth_min_m": 10,
+    "depth_max_m": 150,
+    "salinity": "salt",
+    "rarity": "稀有",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸140—325厘米；低概率虚构巨物上端448厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从10米开始，抛投至少54%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  },
+  {
+    "species_id": "whitetip_reef_shark",
+    "name": "灰三齿鲨",
+    "scientific_name": "Triaenodon obesus",
+    "region_ids": [
+      "pacific_ocean",
+      "indian_ocean"
+    ],
+    "spot_ids": [
+      "pacific_reef",
+      "indian_reef"
+    ],
+    "art": "res://assets/fish/whitetip_reef_shark.png",
+    "thumb": "res://assets/fish/whitetip_reef_shark_thumb.png",
+    "description": "白天在礁洞休息，入夜后穿行珊瑚缝隙的灰三齿鲨。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
+    "morphology": "小型细长、头宽扁吻钝圆；水平椭圆眼；第一背鳍靠后，第二背鳍较发达；第一背鳍及尾上叶白尖；窄胸鳍无大片桨状白端。",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+        "title": "Whitetip Reef Shark — Discover Fishes",
+        "supports": "分类与名称；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/Triaenodon-obesus.html",
+        "title": "Triaenodon obesus — species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限范围。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://sharks.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=74&id=62734",
+        "title": "Sharks of the World: Triaenodon obesus",
+        "supports": "常见尺寸口径；长度上限及量法；生境；分布。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.soest.hawaii.edu/PFRP/reprints/whitney_2007.pdf",
+        "title": "Use of an acceleration data logger to measure diel activity patterns in captive whitetip reef sharks, Triaenodon obesus",
+        "supports": "习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 750,
+    "normal_max_mm": 1750,
+    "max_mm": 2390,
+    "anchor_mm": 1300,
+    "anchor_g": 10500,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.72,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 0.06,
+      "grain": 0.01,
+      "shrimp": 2.5,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.35
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.05
+    },
+    "min_gear": 2,
+    "min_cast": 0.3,
+    "max_cast": 1.0,
+    "depth_min_m": 3,
+    "depth_max_m": 60,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；海域与钓点是跨地点、纬度及生境的虚构合辑，不代表现实单一群落或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸75—175厘米；低概率虚构巨物上端239厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": true,
+    "reachability_note": "虚拟可遇水层从3米开始，抛投至少30%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
+    "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
+    "encounter_type": "conservation_observation"
+  }
+]

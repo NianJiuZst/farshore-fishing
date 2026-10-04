@@ -10,14 +10,16 @@ PREVIEW = {'android_package_name': 'org.farshore.fishing.preview', 'launcher_nam
            'certificate_sha256': 'e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284'}
 FORMAL = {**PREVIEW, 'launcher_name': '远岸钓记',
           'application_version': '1.2.0', 'android_version_code': 6}
+OCEAN = {**FORMAL, 'application_version': '1.3.0', 'android_version_code': 7}
 
 
 def validate_identity(identity):
     known = {p['android_package_name']: p for p in (LEGACY, PREVIEW)}
     assert identity.get('android_package_name') in known, 'Unapproved Android package'
     pinned = known[identity['android_package_name']]
-    if pinned == PREVIEW and identity.get('application_version') == FORMAL['application_version']:
-        pinned = FORMAL
+    if pinned == PREVIEW:
+        if identity.get('application_version') == FORMAL['application_version']: pinned = FORMAL
+        elif identity.get('application_version') == OCEAN['application_version']: pinned = OCEAN
     for field, expected in pinned.items():
         assert identity.get(field) == expected, 'Android identity mismatch: ' + field
     if identity['android_package_name'] == PREVIEW['android_package_name']:
