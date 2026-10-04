@@ -3,6 +3,7 @@ render_mode cull_back;
 uniform vec4 leaf_color : source_color=vec4(0.17,0.29,0.13,1.0);
 uniform float motion_time=0.0;
 uniform float wind_strength=1.0;
+uniform bool clear_rock_station=false;
 varying float shade;
 varying vec3 leaf_world;
 float hash(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}
@@ -16,4 +17,16 @@ void vertex() {
     VERTEX.z+=cos(world.x*0.4+motion_time)*weight*0.04*wind_strength;
     shade=0.90+0.12*sin(world.x*1.31+world.z*1.71+world.y*1.22);
 }
-void fragment(){float fleck=noise(leaf_world*18.0);float clump=noise(leaf_world*3.1);ALBEDO=leaf_color.rgb*shade*(0.74+0.22*clump+0.16*fleck);ROUGHNESS=0.77; SPECULAR=0.35; BACKLIGHT=leaf_color.rgb*0.28;}
+void fragment(){
+    // Rock-bank cameras sit beneath authored trees. Prune only the near station's
+    // canopy corridor; the fixed clearing never moves with a float or encounter.
+    if(clear_rock_station && length(leaf_world.xz-vec2(-0.3,3.0))<7.0){discard;}
+    float distance_fade=1.0-smoothstep(10.0,42.0,length(leaf_world-CAMERA_POSITION_WORLD));
+    float fleck=mix(0.5,noise(leaf_world*18.0),distance_fade);
+    float clump=noise(leaf_world*0.85);
+    // Broad crown shading survives phone-size pixels; fine mottling fades into distance.
+    ALBEDO=leaf_color.rgb*shade*(0.77+0.21*clump+0.10*fleck);
+    ROUGHNESS=0.85;
+    SPECULAR=0.20;
+    BACKLIGHT=leaf_color.rgb*0.34;
+}

@@ -336,11 +336,19 @@ func _species_tile(app: Control, fish: FishDefinition, state: Dictionary, open_s
 	tile.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	tile.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	for style_name: String in ["normal", "disabled", "hover", "pressed", "hover_pressed", "focus"]:
-		tile.add_theme_stylebox_override(style_name, StyleBoxEmpty.new())
+		var color: Color=Color("fafbf3") if count>0 else Color("e7ece5")
+		if style_name=="hover":color=color.lightened(0.04)
+		if style_name=="pressed":color=color.darkened(0.04)
+		var surface: StyleBoxFlat=app._box(color,20,Color("c6d5c9"),1)
+		if style_name=="focus":
+			surface.bg_color=Color.TRANSPARENT
+			surface.border_color=TEAL
+			surface.set_border_width_all(2)
+		tile.add_theme_stylebox_override(style_name,surface)
 	tile.pressed.connect(open_species.bind(fish.species_id))
 	var margin: MarginContainer = MarginContainer.new()
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	for side: String in ["left", "right"]: margin.add_theme_constant_override("margin_" + side, 8)
+	for side: String in ["left", "right"]: margin.add_theme_constant_override("margin_" + side, 14)
 	margin.add_theme_constant_override("margin_top", 10)
 	margin.add_theme_constant_override("margin_bottom", 10)
 	tile.add_child(margin)

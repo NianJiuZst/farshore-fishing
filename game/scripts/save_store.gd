@@ -12,6 +12,11 @@ const MAX_COUNTER: int = 1000000000
 const MAX_CURRENCY: int = 1000000000000
 const PRIMARY_NAME: String = "save.json"
 const BACKUP_NAME: String = "save.backup.json"
+const PRE_IMPORT_NAME: String = "save.before-import.json"
+const TRANSFER_FORMAT: String = "farshore-fishing-backup"
+const TRANSFER_VERSION: int = 1
+# JSON escaping can double an existing save; leave bounded space for the envelope.
+const MAX_TRANSFER_BYTES: int = MAX_SAVE_BYTES * 2 + 4096
 
 var error_message: String = ""
 var status_message: String = ""
@@ -212,6 +217,8 @@ func _commit_locked(candidate: Dictionary) -> bool:
 		return _fail("存档正在写入，请稍后重试。")
 	if int(candidate.get("save_revision", -1)) != int(_state["save_revision"]):
 		return _fail("状态已更新，请重新读取当前状态后再保存。")
+	if int(_state["save_revision"]) >= MAX_COUNTER:
+		return _fail("存档修订次数已达安全上限，请导出备份并使用更新版本游戏。")
 	var checked: Dictionary = _normalize_state(candidate.duplicate(true))
 	if not bool(checked.get("ok", false)):
 		return _fail("存档状态不合法：%s" % str(checked.get("error", "未知错误")))
@@ -225,6 +232,203 @@ func _commit_locked(candidate: Dictionary) -> bool:
 	_state = committed
 	error_message = ""
 	return true
+
+## Portable text requires no Android storage permission. Keep it outside the app
+## before uninstalling: Android normally removes user:// together with the app.
+func export_save_text() -> Dictionary:
+	_mutex.lock()
+	var result: Dictionary
+	if not _initialized or read_only:
+		result = _transfer_error("当前存档未能完整读取或处于保护模式，无法导出。请保留原应用数据，勿卸载或清除数据。")
+	else:
+		result = _encode_transfer(_state)
+	_mutex.unlock()
+	return result
+
+## A preview never changes live state or writes a file. Legacy raw JSON is also
+## accepted; only the new envelope can detect accidental changes to the text.
+func inspect_save_text(text: String) -> Dictionary:
+	_mutex.lock()
+	var decoded: Dictionary = _decode_transfer(text)
+	var result: Dictionary = _transfer_summary(decoded)
+	_mutex.unlock()
+	return result
+
+## expected_revision is the current local revision when the preview is shown,
+## not the backup revision. Delayed confirmation cannot discard newer progress.
+func import_save_text(text: String, expected_revision: int) -> Dictionary:
+	_mutex.lock()
+	var decoded: Dictionary = _decode_transfer(text)
+	var result: Dictionary = _import_decoded_locked(decoded, expected_revision)
+	_mutex.unlock()
+	return result
+
+func has_previous_save() -> bool:
+	_mutex.lock()
+	var available: bool = not _root.is_empty() and bool(_read_save(_path(PRE_IMPORT_NAME)).get("ok", false))
+	_mutex.unlock()
+	return available
+
+func export_previous_save_text() -> Dictionary:
+	_mutex.lock()
+	var previous: Dictionary = _read_save(_path(PRE_IMPORT_NAME)) if not _root.is_empty() else {}
+	var result: Dictionary
+	if not bool(previous.get("ok", false)):
+		result = _transfer_error("尚无可读取的恢复前快照。")
+	else:
+		result = _encode_transfer(previous["state"])
+	_mutex.unlock()
+	return result
+
+## Undo uses the same transaction as import. The current state becomes the new
+## pre-import snapshot, so undo itself remains reversible.
+func restore_previous_save(expected_revision: int) -> Dictionary:
+	_mutex.lock()
+	var previous: Dictionary = _read_save(_path(PRE_IMPORT_NAME)) if not _root.is_empty() else {}
+	var result: Dictionary
+	if not bool(previous.get("ok", false)):
+		result = _transfer_error("恢复前快照不可用，当前进度未更改。")
+	else:
+		result = _import_decoded_locked(previous, expected_revision)
+	_mutex.unlock()
+	return result
+
+func _encode_transfer(value: Dictionary) -> Dictionary:
+	var payload: String = JSON.stringify(value, "", true, true)
+	if payload.to_utf8_buffer().size() > MAX_SAVE_BYTES:
+		return _transfer_error("存档超过安全大小限制，无法导出。")
+	var envelope: Dictionary = {
+		"format": TRANSFER_FORMAT, "format_version": TRANSFER_VERSION,
+		"created_at": Time.get_datetime_string_from_system(true),
+		"sha256": payload.sha256_text(), "payload": payload
+	}
+	var text: String = JSON.stringify(envelope, "", true, true)
+	if text.to_utf8_buffer().size() > MAX_TRANSFER_BYTES:
+		return _transfer_error("备份文本超过安全大小限制。")
+	error_message = ""
+	return {"ok": true, "error": "", "text": text}
+
+func _decode_transfer(text: String) -> Dictionary:
+	# Check characters first, before allocating a second, UTF-8-sized buffer.
+	if text.length() > MAX_TRANSFER_BYTES or text.to_utf8_buffer().size() > MAX_TRANSFER_BYTES:
+		return _transfer_error("备份文本过大，未读取或覆盖进度。")
+	var content: String = text.strip_edges()
+	if content.begins_with("\uFEFF"):
+		content = content.substr(1).strip_edges()
+	var parser: JSON = JSON.new()
+	if parser.parse(content) != OK or not parser.data is Dictionary:
+		return _transfer_error("备份不是有效的 JSON 文本，请完整复制后重试。")
+	var raw: Dictionary = parser.data
+	var verified: bool = false
+	if raw.has("format") or raw.has("format_version") or raw.has("payload") or raw.has("sha256"):
+		if str(raw.get("format", "")) != TRANSFER_FORMAT:
+			return _transfer_error("这不是远岸钓记的备份文本。")
+		var transfer_version: Variant = raw.get("format_version")
+		if _is_future_version(transfer_version, TRANSFER_VERSION):
+			return _transfer_error("备份来自较新版本游戏，请升级游戏后再恢复。")
+		if not _integer_in_range(transfer_version, 1, TRANSFER_VERSION):
+			return _transfer_error("备份格式版本无效。")
+		if not raw.get("payload") is String or not raw.get("sha256") is String:
+			return _transfer_error("备份缺少存档内容或完整性校验。")
+		var payload: String = raw["payload"]
+		if payload.length() > MAX_SAVE_BYTES or payload.to_utf8_buffer().size() > MAX_SAVE_BYTES:
+			return _transfer_error("备份内的存档超过安全大小限制。")
+		if str(raw["sha256"]).length() != 64 or payload.sha256_text() != str(raw["sha256"]).to_lower():
+			return _transfer_error("备份完整性校验失败，文本可能不完整或被修改；当前进度未更改。")
+		if parser.parse(payload) != OK or not parser.data is Dictionary:
+			return _transfer_error("备份中的存档内容无效。")
+		raw = parser.data
+		verified = true
+	elif content.to_utf8_buffer().size() > MAX_SAVE_BYTES:
+		return _transfer_error("旧版存档超过安全大小限制。")
+	# A random JSON object must never be interpreted as a fresh save and replace
+	# the player's progress merely because normalization supplies default fields.
+	if not raw.has("currency") or not raw.has("species_stats"):
+		return _transfer_error("文本缺少金币或图鉴字段，不是完整存档。")
+	var version: Variant = raw.get("schema_version", 1)
+	if _is_future_version(version, SCHEMA_VERSION):
+		return _transfer_error("存档来自较新版本游戏，当前版本不会覆盖它。")
+	var checked: Dictionary = _normalize_state(raw)
+	if not bool(checked.get("ok", false)):
+		return _transfer_error("存档校验失败：%s" % str(checked.get("error", "未知错误")))
+	checked["version"] = int(version)
+	checked["checksum_verified"] = verified
+	error_message = ""
+	return checked
+
+func _transfer_summary(decoded: Dictionary) -> Dictionary:
+	if not bool(decoded.get("ok", false)):
+		return decoded
+	var imported: Dictionary = decoded["state"]
+	var total: int = 0
+	var discovered: int = 0
+	for value: Variant in (imported["species_stats"] as Dictionary).values():
+		var count: int = int((value as Dictionary).get("catch_count", 0))
+		total += count
+		if count > 0:
+			discovered += 1
+	return {"ok": true, "error": "", "schema_version": int(decoded.get("version", SCHEMA_VERSION)),
+		"save_revision": int(imported["save_revision"]), "currency": int(imported["currency"]),
+		"catch_count": total, "discovered_count": discovered,
+		"pending_count": (imported["pending_catches"] as Dictionary).size(),
+		"checksum_verified": bool(decoded.get("checksum_verified", false)),
+		"state": imported.duplicate(true)}
+
+func _import_decoded_locked(decoded: Dictionary, expected_revision: int) -> Dictionary:
+	if not bool(decoded.get("ok", false)):
+		return decoded
+	if not _initialized or read_only:
+		return _transfer_error("当前存档处于保护模式，不能恢复或覆盖进度。")
+	if _writing or not _active_session.is_empty() or not _retry_record.is_empty():
+		return _transfer_error("请先结束当前钓鱼并保存钓获，再恢复备份。")
+	if expected_revision < 0 or expected_revision != int(_state["save_revision"]):
+		return _transfer_error("当前进度已变化，请重新预览备份后再确认恢复。")
+	if int(_state["save_revision"]) >= MAX_COUNTER:
+		return _transfer_error("存档修订次数已达安全上限，当前进度与恢复快照均未改动。")
+	# Never replace a file written by a newer game. Normal commits recheck the
+	# primary and rolling backup immediately before persistence as well.
+	for name: String in [PRIMARY_NAME, BACKUP_NAME, PRE_IMPORT_NAME]:
+		if bool(_read_save(_path(name)).get("future", false)):
+			return _transfer_error("发现更高版本存档或恢复快照，已保护原文件。")
+	var candidate: Dictionary = (decoded["state"] as Dictionary).duplicate(true)
+	# Revisions belong to this installation, not to the source backup.
+	candidate["save_revision"] = int(_state["save_revision"])
+	if not _preserve_before_import():
+		return {"ok": false, "error": error_message}
+	if not _commit_locked(candidate):
+		return {"ok": false, "error": error_message}
+	_active_session = ""
+	_retry_record = {}
+	status_message = "备份已恢复；恢复前的进度已另存，可在设置中撤销。"
+	var result: Dictionary = _transfer_summary(decoded)
+	result["save_revision"] = int(_state["save_revision"])
+	result["state"] = _state.duplicate(true)
+	return result
+
+func _preserve_before_import() -> bool:
+	var destination: String = _path(PRE_IMPORT_NAME)
+	var temp: String = _path("save.before-import.tmp.json")
+	var previous: Dictionary = _read_save(destination)
+	if bool(previous.get("future", false)):
+		return _fail("恢复前快照来自较新版本，未覆盖任何进度。")
+	if not _write_verified_json(temp, _state):
+		return false
+	if bool(previous.get("exists", false)) and not bool(previous.get("ok", false)):
+		if not _preserve_corrupt(destination):
+			return false
+	if not _replace_file(temp, destination):
+		return false
+	var verified: Dictionary = _read_save(destination)
+	if not bool(verified.get("ok", false)) or not _same_json(verified["state"], _state):
+		return _fail("恢复前快照验证失败，当前进度未替换。")
+	return true
+
+func _transfer_error(message: String) -> Dictionary:
+	error_message = message
+	return {"ok": false, "error": message}
+
+func _is_future_version(value: Variant, maximum: int) -> bool:
+	return (value is int or value is float) and is_finite(float(value)) and float(value) == floor(float(value)) and float(value) > maximum
 
 func total_count() -> int:
 	_mutex.lock()
@@ -365,10 +569,12 @@ func _normalize_state(raw: Dictionary) -> Dictionary:
 		return {"ok": false, "error": "不支持的版本"}
 	if not _json_safe(raw, 0):
 		return {"ok": false, "error": "数据类型或结构不合法"}
-	var result: Dictionary = default_state()
-	for key: String in result:
-		if raw.has(key):
-			result[key] = raw[key]
+	if not raw.has("currency") or not raw.has("species_stats"):
+		return {"ok": false, "error": "缺少金币或图鉴字段，不能视为空白存档"}
+	# Keep compatible extension fields when migrating or round-tripping backups.
+	# Defaults fill absent fields only; existing progress is never reset.
+	var result: Dictionary = raw.duplicate(true)
+	result.merge(default_state(), false)
 	result["schema_version"] = SCHEMA_VERSION
 	for key: String in ["save_revision", "currency", "gear"]:
 		if not _integer_in_range(result[key], 0, MAX_CURRENCY if key == "currency" else MAX_COUNTER):
@@ -413,6 +619,16 @@ func _normalize_state(raw: Dictionary) -> Dictionary:
 		return {"ok": false, "error": "音量无效"}
 	if float(settings["volume"]) < 0.0 or float(settings["volume"]) > 1.0:
 		return {"ok": false, "error": "音量超出范围"}
+	for key: String in ["ambience_volume", "effects_volume"]:
+		if settings.has(key):
+			if not settings[key] is int and not settings[key] is float:
+				return {"ok": false, "error": "声音设置无效：" + key}
+			if float(settings[key]) < 0.0 or float(settings[key]) > 1.0:
+				return {"ok": false, "error": "声音设置超出范围：" + key}
+	if settings.has("reduce_motion") and not settings["reduce_motion"] is bool:
+		return {"ok": false, "error": "动态效果设置无效"}
+	if settings.has("visual_quality") and (not settings["visual_quality"] is String or settings["visual_quality"] not in ["low", "balanced", "high"]):
+		return {"ok": false, "error": "画质设置无效"}
 	result["settings"] = settings
 	var selection: Dictionary = default_state()["selection"]
 	selection.merge(result["selection"], true)

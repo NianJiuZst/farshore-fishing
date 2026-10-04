@@ -1,11 +1,14 @@
 shader_type spatial;
-render_mode blend_mix, depth_draw_always, cull_disabled;
+render_mode blend_mix, depth_draw_always, cull_disabled, shadows_disabled;
 uniform vec3 deep_color : source_color = vec3(0.026,0.112,0.118);
 uniform vec3 shallow_color : source_color = vec3(0.10,0.26,0.21);
 uniform vec3 foam_color : source_color = vec3(0.67,0.75,0.56);
 uniform sampler2D normal_texture : hint_normal, filter_linear_mipmap, repeat_enable;
 uniform float motion_time = 0.0;
 uniform float wind_strength = 1.0;
+uniform float surface_detail : hint_range(0.0, 1.0) = 1.0;
+uniform float water_clarity : hint_range(0.0, 1.0) = 0.55;
+uniform float surface_roughness : hint_range(0.1, 0.5) = 0.21;
 uniform float shore_width = 9.8;
 uniform float shore_widen = 0.0;
 uniform vec4 shore_transform = vec4(1.0,0.0,0.0,0.0);
@@ -33,24 +36,40 @@ void fragment() {
     float e=0.035;
     float a=wave(p+vec2(e,0.0),motion_time)-wave(p-vec2(e,0.0),motion_time);
     float b=wave(p+vec2(0.0,e),motion_time)-wave(p-vec2(0.0,e),motion_time);
-    a+=(impact(p+vec2(e,0),impact_a)-impact(p-vec2(e,0),impact_a))*0.7;
-    b+=(impact(p+vec2(0,e),impact_a)-impact(p-vec2(0,e),impact_a))*0.7;
+    // Every impact must affect both displacement and its reflected normal.
+    a+=(impact(p+vec2(e,0),impact_a)-impact(p-vec2(e,0),impact_a)
+       +impact(p+vec2(e,0),impact_b)-impact(p-vec2(e,0),impact_b))*0.7;
+    b+=(impact(p+vec2(0,e),impact_a)-impact(p-vec2(0,e),impact_a)
+       +impact(p+vec2(0,e),impact_b)-impact(p-vec2(0,e),impact_b))*0.7;
+    float view_distance=length(world_pos-CAMERA_POSITION_WORLD);
+    float close_detail=1.0-smoothstep(8.0,48.0,view_distance);
     vec3 micro_a=texture(normal_texture,p*0.15+vec2(motion_time*0.013,-motion_time*0.008)).rgb*2.0-1.0;
-    vec3 micro_b=texture(normal_texture,p*0.41+vec2(-motion_time*0.009,motion_time*0.019)).rgb*2.0-1.0;
-    vec2 micro=(micro_a.xy*0.75+micro_b.xy*0.25)*0.30;
+    vec2 micro=micro_a.xy*0.17;
+    if (surface_detail>0.5) {
+        vec3 micro_b=texture(normal_texture,p*0.41+vec2(-motion_time*0.009,motion_time*0.019)).rgb*2.0-1.0;
+        micro+=micro_b.xy*0.052*close_detail;
+    }
+    // Distance filtering retains broad reflected shapes without sparkling pixels.
+    micro*=mix(0.36,1.0,close_detail);
     vec3 n=normalize(vec3((-a/(2.0*e)*0.5+micro.x)*wind_strength,1.0,(-b/(2.0*e)*0.5+micro.y)*wind_strength));
     NORMAL=normalize((VIEW_MATRIX*vec4(n,0.0)).xyz);
-    float fresnel=pow(1.0-clamp(dot(NORMAL,VIEW),0.0,1.0),4.0);
-    float variation=sin(p.x*0.3+p.y*0.12)*0.5+0.5;
-    vec3 base=mix(deep_color,shallow_color,variation*0.38);
-    float rip=max(abs(impact(p,impact_a)),abs(impact(p,impact_b)));
+    float fresnel=pow(1.0-clamp(dot(NORMAL,VIEW),0.0,1.0),5.0);
     vec2 shore_p=vec2(shore_transform.x*p.x+shore_transform.y*p.y,-shore_transform.y*p.x+shore_transform.x*p.y)+shore_transform.zw;
-    float shore=abs(abs(shore_p.x)-(shore_width+1.9*sin(shore_p.y*0.065)+1.4*cos(shore_p.y*0.14)+max(0.0,-shore_p.y)*shore_widen));
-    float shore_foam=(1.0-smoothstep(0.05,0.42,shore))*smoothstep(-0.2,0.9,sin(p.y*12.0+sin(p.x*6.0)+motion_time*0.7))*0.38;
-    float foam=smoothstep(0.012,0.044,rip)*0.42+shore_foam;
+    float shore_edge=shore_width+1.9*sin(shore_p.y*0.065)+1.4*cos(shore_p.y*0.14)+max(0.0,-shore_p.y)*shore_widen;
+    float bank_distance=shore_edge-abs(shore_p.x);
+    float shallows=1.0-smoothstep(0.2,7.0,max(bank_distance,0.0));
+    float current_bands=sin(p.x*0.31+p.y*0.12+sin(p.y*0.27))*0.5+0.5;
+    vec3 base=mix(deep_color,shallow_color,shallows*0.72+current_bands*0.055);
+    float rip=max(abs(impact(p,impact_a)),abs(impact(p,impact_b)));
+    float shore=abs(bank_distance);
+    float foam_breakup=smoothstep(0.05,0.82,sin(p.y*8.0+sin(p.x*4.0)+motion_time*0.65)*0.5+0.5);
+    float shore_foam=(1.0-smoothstep(0.06,0.40,shore))*foam_breakup*0.32;
+    float foam=smoothstep(0.012,0.044,rip)*0.40+shore_foam;
     ALBEDO=mix(base,foam_color,foam);
-    METALLIC=0.04;
-    ROUGHNESS=mix(0.19,0.095,fresnel)+foam*0.25;
-    SPECULAR=0.70;
-    ALPHA=mix(0.76,0.97,fresnel);
+    // Water is a dielectric. Sky/probe reflection supplies the horizon sheen.
+    METALLIC=0.0;
+    ROUGHNESS=clamp(surface_roughness-fresnel*0.06+(1.0-close_detail)*0.075+foam*0.26,0.12,0.45);
+    SPECULAR=0.5;
+    float transmission=shallows*water_clarity*0.32+water_clarity*0.07;
+    ALPHA=mix(1.0-transmission,0.985,fresnel);
 }

@@ -2,6 +2,7 @@ class_name FishingStage3D
 extends Node3D
 ## Presentation-only 3D fishery. Never changes inventory, rewards, or session outcomes.
 signal cast_presentation_finished
+signal cast_water_contact
 signal landing_finished(record: Dictionary)
 signal model_error(species_id: String, message: String)
 signal location_changed(region_id: String, spot_id: String)
@@ -60,6 +61,16 @@ const BIOME_VISUALS: Dictionary = {
 	"yangtze":{"deep":"3d5448","shallow":"76846a","bed":"4b4b32","leaf":"496f40","gold":"84925b","rock":"cac5ac","ground":"79825a","width":26.0,"widen":0.12,"fog":0.0019},
 }
 
+# A shared daylight model, with regional atmosphere and water readability.
+const BIOME_ATMOSPHERE: Dictionary = {
+	"lake": {"horizon":"bad0c8", "fog":"a3bfb6", "sky":"e2f0ee", "clarity":0.56, "roughness":0.22},
+	"japan": {"horizon":"c0d3db", "fog":"a6c1ce", "sky":"e8f1ff", "clarity":0.65, "roughness":0.20},
+	"norway": {"horizon":"b5c8dc", "fog":"9cb6cf", "sky":"dce8ff", "clarity":0.73, "roughness":0.24},
+	"med": {"horizon":"d4e1d4", "fog":"bccfc6", "sky":"fff3dc", "clarity":0.86, "roughness":0.19},
+	"bayou": {"horizon":"bbc9b1", "fog":"a4b59a", "sky":"eff0dc", "clarity":0.30, "roughness":0.25},
+	"yangtze": {"horizon":"d0cbbb", "fog":"bcb9a6", "sky":"f0eadb", "clarity":0.22, "roughness":0.27},
+}
+
 var session: FishingSession
 var camera: Camera3D
 var presentation_state: String = "lobby"
@@ -93,6 +104,7 @@ var _landing_record: Dictionary = {}
 var _landed_catch_id: String = ""
 var _water_material: ShaderMaterial
 var _foliage_materials: Array[ShaderMaterial] = []
+var _horizon_materials: Array[StandardMaterial3D] = []
 var _world: WorldEnvironment
 var _sun: DirectionalLight3D
 var _panorama: ShaderMaterial
@@ -114,6 +126,7 @@ var _rod_tip_radius: float = 0.004
 var _rod_flex_scale: float = 1.0
 var _rod_visual_reach: float = 1.0
 var _rod_tip: Vector3 = Vector3.ZERO
+var _rod_shape_key := Vector4(INF, INF, INF, INF)
 var _line: MeshInstance3D
 var _line_material: StandardMaterial3D
 var _bobber: Node3D
@@ -146,6 +159,13 @@ var _cast_finished_emitted: bool = false
 var _cast_impact_emitted: bool = false
 var _fishery_label: Label3D
 var _rain: GPUParticles3D
+var _portrait_fill: OmniLight3D
+var _reel_handle: Node3D
+var _reel_handle_speed: float = 0.0
+var _lighting_tween: Tween
+var _lighting_paused: bool = false
+var visual_quality: String = "balanced"
+var reduce_motion: bool = false
 
 func _ready() -> void:
 	process_priority = 100
@@ -153,6 +173,7 @@ func _ready() -> void:
 	_built = true
 	set_time_of_day(time_of_day)
 	set_weather(weather)
+	set_visual_quality(visual_quality)
 	set_mode(mode)
 	if session != null: bind_session(session)
 	RenderingServer.frame_pre_draw.connect(_sync_tackle_transform)
@@ -299,11 +320,13 @@ func _replace_location_geometry(region_value: String = "", spot_value: String = 
 		remove_child(_station_root)
 		_station_root.queue_free()
 	_foliage_materials.clear()
+	_horizon_materials.clear()
 	_environment_root = region_candidate as Node3D
 	_environment_root.name = "ActiveBiome_" + region_id
 	_environment_root.transform = _station_frame().affine_inverse()
 	add_child(_environment_root)
 	_apply_foliage(_environment_root)
+	_build_distant_landscape()
 	_station_root = station_candidate as Node3D
 	_station_root.name = "ActiveStation_" + _station_kind(str(_spot_definition.get("foreground", "pier")))
 	add_child(_station_root)
@@ -311,6 +334,55 @@ func _replace_location_geometry(region_value: String = "", spot_value: String = 
 	_location_built_key = region_id + ":" + spot_id
 	location_rebuild_count += 1
 	return true
+
+func _build_distant_landscape() -> void:
+	# Two low-cost opaque landforms make the foreground shore read against distance.
+	# Heights are regional: low floodplain, lake hills, coastal headlands and fjord peaks.
+	var heights: Dictionary = {"lake":24.0, "japan":31.0, "norway":84.0, "med":26.0, "bayou":8.5, "yangtze":30.0}
+	var coastal: bool = region_id in ["japan", "norway", "med"]
+	for layer: int in range(2):
+		var vertices := PackedVector3Array()
+		var colors := PackedColorArray()
+		var indices := PackedInt32Array()
+		var segments: int = 96
+		var radius: float = 143.0 + float(layer) * 66.0
+		var phase: float = float(layer) * 1.87 + float(BIOME_VISUALS.keys().find(region_id)) * 0.74
+		for ring: int in range(3):
+			for step: int in range(segments + 1):
+				var angle: float = float(step) / float(segments) * TAU
+				var rhythm: float = 0.48 + sin(angle * 3.0 + phase) * 0.19 + cos(angle * 7.0 - phase) * 0.13 + sin(angle * 13.0 + 0.7) * 0.055
+				var height: float = float(heights[region_id]) * rhythm * (1.0 + layer * 0.34)
+				# Keep the seaward channel open between the coastal headlands.
+				if coastal: height *= smoothstep(0.08, 0.66, absf(sin(angle)))
+				var ridge: float = height if ring == 1 else (-2.5 if ring == 0 else height * 0.44)
+				var distance: float = radius + float(ring) * 19.0
+				vertices.append(Vector3(sin(angle) * distance, ridge, -42.0 + cos(angle) * distance))
+				var shade: float = 0.87 + rhythm * 0.13 + float(ring) * 0.025
+				colors.append(Color(shade, shade, shade, 1.0))
+		for ring: int in range(2):
+			for step: int in range(segments):
+				var a: int = ring * (segments + 1) + step
+				var b: int = a + segments + 1
+				indices.append_array(PackedInt32Array([a, a + 1, b, b, a + 1, b + 1]))
+		var arrays: Array = []
+		arrays.resize(Mesh.ARRAY_MAX)
+		arrays[Mesh.ARRAY_VERTEX] = vertices
+		arrays[Mesh.ARRAY_COLOR] = colors
+		arrays[Mesh.ARRAY_INDEX] = indices
+		var mesh := ArrayMesh.new()
+		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+		var land := MeshInstance3D.new()
+		land.name = "DistantLandform_%d" % layer
+		land.mesh = mesh
+		land.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		var material := StandardMaterial3D.new()
+		material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		material.cull_mode = BaseMaterial3D.CULL_DISABLED
+		material.vertex_color_use_as_albedo = true
+		material.albedo_color = Color(str(BIOME_VISUALS[region_id].leaf)).lerp(Color(str(BIOME_ATMOSPHERE[region_id].fog)), 0.4 + layer * 0.2)
+		land.material_override = material
+		_horizon_materials.append(material)
+		_environment_root.add_child(land)
 
 func _hide_legacy_station(node: Node) -> void:
 	if node is MeshInstance3D and str(node.name) in ["DockHoney", "DockPale", "DockWeathered", "WoodEndgrain", "Iron", "Rope", "Enamel", "Canvas", "Paper"]:
@@ -324,6 +396,10 @@ func _configure_location_surfaces() -> void:
 	_water_material.set_shader_parameter("shallow_color", Color(str(biome.shallow)))
 	_water_material.set_shader_parameter("shore_width", float(biome.width))
 	_water_material.set_shader_parameter("shore_widen", float(biome.widen))
+	var atmosphere: Dictionary = BIOME_ATMOSPHERE[region_id]
+	_water_material.set_shader_parameter("water_clarity", float(atmosphere.clarity))
+	_water_material.set_shader_parameter("surface_roughness", float(atmosphere.roughness))
+	_water_material.set_shader_parameter("foam_color", Color("c6d7cd") if region_id in ["norway", "japan", "med"] else Color("b8c4aa"))
 	var station: Transform3D = _station_frame()
 	var angle: float = station.basis.get_euler().y
 	_water_material.set_shader_parameter("shore_transform", Vector4(cos(angle), sin(angle), station.origin.x, station.origin.z))
@@ -334,7 +410,7 @@ func _configure_location_surfaces() -> void:
 		_reflection_probe.size = Vector3(180, 150 if region_id == "norway" else 60, 220)
 		_reflection_probe.max_distance = 190.0
 		_reflection_probe.position.x = 0.002 if _reflection_probe.position.x < 0.001 else 0.0
-	if _sun: _sun.directional_shadow_max_distance = 90.0 if region_id == "norway" else 65.0
+	if _sun: _sun.directional_shadow_max_distance = 38.0 if visual_quality == "low" else (90.0 if region_id == "norway" else 65.0)
 	if _fishery_label:
 		_fishery_label.visible = _station_kind(str(_spot_definition.get("foreground", "pier"))) == "dock"
 		_fishery_label.text = str(_region_definition.get("name", region_id)) + "\n" + str(_spot_definition.get("name", spot_id))
@@ -421,31 +497,130 @@ func set_time_of_day(value: String) -> void:
 	if not _built: return
 	var lighting_key: String = value + ":" + weather + ":" + region_id
 	if lighting_key == _last_lighting_key: return
+	var immediate: bool = _last_lighting_key.is_empty()
 	_last_lighting_key = lighting_key
 	var night: bool = value in ["night", "夜晚"]
 	var dusk: bool = value in ["dusk", "evening", "黄昏"]
-	var overcast: bool = weather in ["rain", "storm"]
-	_sky.sky_top_color = Color("223b52") if night else Color("477c9f")
-	_sky.sky_horizon_color = Color("668483") if night else Color("91b3bf")
-	_sky.ground_bottom_color = Color("183834")
-	_sky.ground_horizon_color = _sky.sky_horizon_color
-	_sun.light_color = Color("b2ccdd") if night else (Color("ffc488") if dusk else Color("fff0d7"))
-	_sun.light_energy = 0.45 if night else (0.65 if overcast else 0.92)
-	_sun.rotation_degrees = Vector3(-28 if dusk else -58, -36, 0)
-	_world.environment.ambient_light_color = Color("809aaa") if not night else Color("547c91")
-	_world.environment.ambient_light_energy = 0.42 if not night else 0.22
+	var dawn: bool = value in ["dawn", "morning", "清晨", "早晨"]
+	var overcast: bool = weather in ["rain", "storm", "cloudy"]
+	var atmosphere: Dictionary = BIOME_ATMOSPHERE[region_id]
+	var horizon: Color = Color(str(atmosphere.horizon))
+	var fog: Color = Color(str(atmosphere.fog))
+	var tint: Color = Color(str(atmosphere.sky))
+	var sunlight: Color = Color("fff0d7")
+	var sunlight_energy: float = 1.02
+	var elevation: float = -54.0
+	var sky_energy: float = 0.92
+	var exposure: float = 0.96
+	var ambient: Color = Color("b8d2d8")
+	var ambient_energy: float = 0.38
+	var fog_density: float = float(BIOME_VISUALS[region_id].fog) * 1.30
+	if dawn or dusk:
+		horizon = Color("e6c1a0") if dawn else Color("e8b78d")
+		fog = Color("c0bdad") if dawn else Color("bba399")
+		tint = tint.lerp(Color("ffd5b5"), 0.30 if dawn else 0.46)
+		sunlight = Color("ffd7aa") if dawn else Color("ffbd82")
+		sunlight_energy = 0.88 if dawn else 0.91
+		elevation = -23.0 if dawn else -19.0
+		sky_energy = 0.82 if dawn else 0.76
+		ambient = Color("a5bfd2")
+		ambient_energy = 0.34
+		fog_density *= 1.5 if dawn else 1.25
+	elif night:
+		horizon = Color("3e596a")
+		fog = Color("3e5968")
+		sunlight = Color("b2cced")
+		sunlight_energy = 0.32
+		elevation = -38.0
+		ambient = Color("6485a3")
+		ambient_energy = 0.26
+		exposure = 0.90
+	if overcast:
+		horizon = horizon.lerp(Color("9aafb8"), 0.60)
+		fog = fog.lerp(Color("91a7ac"), 0.65)
+		tint = tint.lerp(Color("ccd8de"), 0.62)
+		sunlight_energy *= 0.56
+		sky_energy *= 0.73
+		fog_density = maxf(fog_density, 0.0042)
+		ambient_energy *= 1.13
+	_sky.sky_top_color = Color("172b48") if night else Color("477c9f")
+	_sky.sky_horizon_color = horizon
+	_sky.ground_bottom_color = Color("182c31") if night else Color("273b36")
+	_sky.ground_horizon_color = horizon
+	if _lighting_tween and _lighting_tween.is_valid(): _lighting_tween.kill()
+	_lighting_paused = false
+	_lighting_tween = create_tween().set_parallel(true)
+	var duration: float = 0.0 if immediate else 1.4
+	_lighting_tween.tween_property(_sun, "light_color", sunlight, duration)
+	_lighting_tween.tween_property(_sun, "light_energy", sunlight_energy, duration)
+	_lighting_tween.tween_property(_sun, "rotation_degrees", Vector3(elevation, -36, 0), duration)
+	var environment: Environment = _world.environment
+	_lighting_tween.tween_property(environment, "ambient_light_color", ambient, duration)
+	_lighting_tween.tween_property(environment, "ambient_light_energy", ambient_energy, duration)
+	_lighting_tween.tween_property(environment, "fog_light_color", fog, duration)
+	_lighting_tween.tween_property(environment, "fog_density", fog_density, duration)
+	_lighting_tween.tween_property(environment, "tonemap_exposure", exposure, duration)
+	for index: int in _horizon_materials.size():
+		var distance_color: Color = Color(str(BIOME_VISUALS[region_id].leaf)).lerp(fog, 0.36 + float(index) * 0.20)
+		if night: distance_color = fog * 0.52
+		distance_color.a = 1.0
+		_lighting_tween.tween_property(_horizon_materials[index], "albedo_color", distance_color, duration)
+	if _portrait_fill:
+		_lighting_tween.tween_property(_portrait_fill, "light_color", Color("c0d9ee") if night else Color("e9ede6"), duration)
+		_lighting_tween.tween_property(_portrait_fill, "light_energy", 0.32 if night else 0.43, duration)
 	if _panorama:
-		_world.environment.sky.sky_material = _sky if night else _panorama
-		_panorama.set_shader_parameter("energy", 0.82 if dusk else (0.72 if overcast else 1.0))
-	_world.environment.fog_light_color = Color("8faeae") if not night else Color("3a5b63")
-	_world.environment.fog_density = float(BIOME_VISUALS[region_id].fog) if not overcast else 0.0045
+		environment.sky.sky_material = _sky if night else _panorama
+		_tween_sky_parameter("energy", sky_energy, duration)
+		_tween_sky_parameter("horizon_color", horizon, duration)
+		_tween_sky_parameter("sky_tint", tint, duration)
+		_tween_sky_parameter("cloud_saturation", 0.45 if overcast else 0.92, duration)
+		_tween_sky_parameter("horizon_warmth", 0.80 if dusk else (0.45 if dawn else 0.0), duration)
+	_lighting_tween.chain().tween_callback(_refresh_reflection)
+	if _suspended:
+		_lighting_tween.pause()
+		_lighting_paused = true
+
+func _tween_sky_parameter(parameter: String, target: Variant, duration: float) -> void:
+	var initial: Variant = _panorama.get_shader_parameter(parameter)
+	if initial == null or duration <= 0.0:
+		_panorama.set_shader_parameter(parameter, target)
+		return
+	_lighting_tween.tween_method(func(value: Variant) -> void: _panorama.set_shader_parameter(parameter, value), initial, target, duration)
+
+func _refresh_reflection() -> void:
 	if _reflection_probe:
-		# UPDATE_ONCE recaptures on transform change after sky/light changes.
+		# Refresh only after lighting settles; never render six cubemap faces per frame.
 		_reflection_probe.position.x = 0.002 if _reflection_probe.position.x < 0.001 else 0.0
+
+func set_visual_quality(value: String) -> void:
+	visual_quality = value if value in ["low", "balanced", "high"] else "balanced"
+	if not _built: return
+	var economical: bool = visual_quality == "low"
+	var detailed: bool = visual_quality == "high"
+	# Keep native resolution and at least 2x MSAA: a float tip is a gameplay signal.
+	get_viewport().msaa_3d = Viewport.MSAA_2X if economical else Viewport.MSAA_4X
+	_water_material.set_shader_parameter("surface_detail", 0.0 if economical else 1.0)
+	_sun.directional_shadow_max_distance = 38.0 if economical else (90.0 if region_id == "norway" else 65.0)
+	_sun.directional_shadow_mode = DirectionalLight3D.SHADOW_ORTHOGONAL if economical else DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
+	_world.environment.glow_enabled = detailed
+	_world.environment.glow_intensity = 0.16
+	_world.environment.glow_bloom = 0.0
+	_world.environment.glow_hdr_threshold = 1.35
+	if _rain: _rain.amount_ratio = 0.45 if economical else (1.0 if detailed else 0.72)
+
+func set_reduce_motion(value: bool) -> void:
+	reduce_motion = value
 
 func suspend(value: bool) -> void:
 	if _suspended == value: return
 	_suspended = value
+	if _lighting_tween and _lighting_tween.is_valid():
+		if value and _lighting_tween.is_running():
+			_lighting_tween.pause()
+			_lighting_paused = true
+		elif not value and _lighting_paused:
+			_lighting_tween.play()
+			_lighting_paused = false
 	if _rain: _rain.speed_scale = 0.0 if value else 1.0
 	if _animator:
 		if value:
@@ -587,6 +762,7 @@ func _process(delta: float) -> void:
 	if _angler:
 		var facing: float = PI - 0.25 if mode == "lobby" else 0.0
 		_angler.rotation.y = lerp_angle(_angler.rotation.y, facing, 1.0 - exp(-delta * 4.0))
+	_update_character_motion(delta)
 	_update_rod()
 	if cast_in_progress: _update_cast(delta)
 	elif _landing_time >= 0.0: _update_landing(delta)
@@ -609,6 +785,7 @@ func _update_cast(delta: float) -> void:
 			# This remains separate from the unchanged breach/surge splashes.
 			_cast_impact_emitted = true
 			_spawn_ripple(_bobber_target, 0.10, 1.0, 0.28)
+			cast_water_contact.emit()
 	if _cast_time >= CAST_DURATION:
 		cast_in_progress = false
 		presentation_state = "waiting"
@@ -736,6 +913,9 @@ func _update_camera(delta: float) -> void:
 			position_goal = position_goal.lerp(close_position, close_mix)
 			target_goal = target_goal.lerp(_fish_root.position, close_mix)
 			fov_goal = lerpf(fov_goal, 36.0, close_mix)
+	if mode == "lobby" and presentation_state == "lobby" and not reduce_motion:
+		# A restrained portrait drift only in the lobby; observing a float stays locked.
+		position_goal += Vector3(sin(_time * 0.12) * 0.07, sin(_time * 0.16) * 0.025, 0)
 	var blend: float = 1.0 if observe_float or cast_in_progress else 1.0 - exp(-delta * (2.3 if presentation_state == "landing" else 1.5))
 	camera.position = camera.position.lerp(position_goal, blend)
 	_camera_target = _camera_target.lerp(target_goal, blend)
@@ -775,14 +955,15 @@ func _build_world() -> void:
 	sky.radiance_size = Sky.RADIANCE_SIZE_256
 	env.sky = sky
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
+	env.ambient_light_sky_contribution = 0.72
 	env.reflected_light_source = Environment.REFLECTION_SOURCE_SKY
 	env.tonemap_mode = Environment.TONE_MAPPER_ACES
-	env.tonemap_exposure = 0.92
+	env.tonemap_exposure = 0.96
 	env.adjustment_enabled = true
-	env.adjustment_saturation = 1.16
-	env.adjustment_contrast = 1.08
+	env.adjustment_saturation = 1.07
+	env.adjustment_contrast = 1.04
 	env.fog_enabled = true
-	env.fog_sky_affect = 0.08
+	env.fog_sky_affect = 0.18
 	env.fog_height = 0.0
 	env.fog_height_density = 0.0
 	_world.environment = env
@@ -796,10 +977,11 @@ func _build_world() -> void:
 	_sun.shadow_normal_bias = 1.2
 	add_child(_sun)
 	var bounce := OmniLight3D.new()
+	_portrait_fill = bounce
 	bounce.name = "AnglerPortraitFill"
 	bounce.position = Vector3(0.0, 2.5, 3.2)
 	bounce.light_color = Color("dce9e8")
-	bounce.light_energy = 0.58
+	bounce.light_energy = 0.43
 	bounce.omni_range = 5.5
 	bounce.omni_attenuation = 1.0
 	bounce.light_cull_mask = 4
@@ -814,7 +996,7 @@ func _build_world() -> void:
 	probe.size = Vector3(92, 35, 138)
 	probe.origin_offset = Vector3(0, 0, 0)
 	probe.cull_mask = 1
-	probe.intensity = 0.60
+	probe.intensity = 0.78
 	probe.max_distance = 120.0
 	probe.update_mode = ReflectionProbe.UPDATE_ONCE
 	probe.box_projection = true
@@ -825,7 +1007,7 @@ func _build_world() -> void:
 	camera.keep_aspect = Camera3D.KEEP_WIDTH
 	camera.fov = _reference_horizontal_fov(_camera_base_vertical_fov)
 	camera.near = 0.08
-	camera.far = 200.0
+	camera.far = 330.0
 	add_child(camera)
 	camera.current = true
 	camera.look_at(_camera_target)
@@ -872,6 +1054,7 @@ func _apply_foliage(node: Node) -> void:
 		var shader := ShaderMaterial.new()
 		shader.shader = FOLIAGE_SHADER
 		shader.set_shader_parameter("leaf_color", color)
+		shader.set_shader_parameter("clear_rock_station", _station_kind(str(_spot_definition.get("foreground", "pier"))) == "rock")
 		mesh_node.material_override = shader
 		_foliage_materials.append(shader)
 	elif node is MeshInstance3D and str(node.name) in ["Reed", "Cattail"]:
@@ -941,6 +1124,7 @@ func _build_water() -> void:
 	surface.position = Vector3(0, 0, -58)
 	surface.layers = 2
 	surface.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	surface.extra_cull_margin = 0.5
 	_water_material = ShaderMaterial.new()
 	_water_material.shader = WATER_SHADER
 	var noise := FastNoiseLite.new()
@@ -983,8 +1167,49 @@ func _load_character() -> void:
 		_angler.add_child(_rod_socket)
 
 func _mark_character_light_layer(node: Node) -> void:
-	if node is MeshInstance3D: (node as MeshInstance3D).layers |= 4
+	if node is MeshInstance3D:
+		var mesh_node := node as MeshInstance3D
+		mesh_node.layers |= 4
+		for surface: int in range(mesh_node.mesh.get_surface_count()):
+			var original := mesh_node.get_active_material(surface) as StandardMaterial3D
+			if original == null: continue
+			var material := original.duplicate() as StandardMaterial3D
+			var title: String = material.resource_name.to_lower()
+			# Keep the authored albedo, normal maps, depth modes and skin weights.
+			material.metallic = 0.0
+			if "body" in title:
+				material.roughness = 0.58
+				material.metallic_specular = 0.30
+			elif "low-poly" in title:
+				material.roughness = 0.24
+				material.metallic_specular = 0.48
+			elif "casualsuit" in title:
+				material.roughness = 0.86
+				material.metallic_specular = 0.22
+				material.normal_scale = 0.72
+			elif "short02" in title or "eyebrow" in title:
+				material.roughness = 0.79
+				material.metallic_specular = 0.24
+			elif "shoes" in title:
+				material.roughness = 0.69
+				material.metallic_specular = 0.30
+			mesh_node.set_surface_override_material(surface, material)
 	for child: Node in node.get_children(): _mark_character_light_layer(child)
+
+func _update_character_motion(delta: float) -> void:
+	if _animator:
+		var speed: float = 1.0
+		if presentation_state == "fight" and session:
+			# Releasing the control eases the retrieve rather than turning an idle reel.
+			speed = 0.98 + session.tension * 0.16 if session.reeling else 0.22
+		elif presentation_state in ["lobby", "ready"]:
+			speed = 0.82
+		# Authored cast timing is exact; never retime its release frame.
+		_animator.speed_scale = 1.0 if cast_in_progress else lerpf(_animator.speed_scale, speed, 1.0 - exp(-delta * 8.0))
+	if _reel_handle:
+		var target: float = 7.8 if presentation_state == "fight" and session and session.reeling else 0.0
+		_reel_handle_speed = lerpf(_reel_handle_speed, target, 1.0 - exp(-delta * 9.0))
+		_reel_handle.rotation.y += _reel_handle_speed * delta
 
 func _build_rod() -> void:
 	_rod = Node3D.new()
@@ -1020,6 +1245,7 @@ func _build_rod() -> void:
 	reel.rotation.z = PI * 0.5
 	reel.material_override = _material(Color("aeb5a0"), 0.3, 0.75)
 	_rod.add_child(reel)
+	_build_reel_details(reel)
 	for i in range(4):
 		var band := MeshInstance3D.new()
 		band.name = "BlankBinding_%d" % i
@@ -1034,6 +1260,57 @@ func _build_rod() -> void:
 		_rod_accents.append(band)
 	set_gear_profile(gear_profile)
 
+func _build_reel_details(reel: MeshInstance3D) -> void:
+	var dark_metal: StandardMaterial3D = _material(Color("3d4f54"), 0.30, 0.78)
+	var pale_metal: StandardMaterial3D = _material(Color("d6d4ba"), 0.27, 0.72)
+	for side: float in [-1.0, 1.0]:
+		var rim := MeshInstance3D.new()
+		rim.name = "SpoolFlange"
+		var ring := TorusMesh.new()
+		ring.inner_radius = 0.053
+		ring.outer_radius = 0.068
+		ring.rings = 20
+		ring.ring_segments = 6
+		rim.mesh = ring
+		rim.position.y = side * 0.029
+		rim.material_override = pale_metal
+		reel.add_child(rim)
+	for index: int in range(5):
+		var winding := MeshInstance3D.new()
+		winding.name = "LineWinding_%d" % index
+		var ring := TorusMesh.new()
+		ring.inner_radius = 0.063
+		ring.outer_radius = 0.065
+		ring.rings = 20
+		ring.ring_segments = 4
+		winding.mesh = ring
+		winding.position.y = -0.019 + float(index) * 0.0095
+		winding.material_override = _material(Color("d7d6bd"), 0.74)
+		reel.add_child(winding)
+	_reel_handle = Node3D.new()
+	_reel_handle.name = "WorkingReelHandle"
+	_reel_handle.position.y = -0.042
+	reel.add_child(_reel_handle)
+	var arm := MeshInstance3D.new()
+	arm.name = "HandleCrank"
+	var arm_mesh := BoxMesh.new()
+	arm_mesh.size = Vector3(0.078, 0.009, 0.011)
+	arm.mesh = arm_mesh
+	arm.position.x = 0.036
+	arm.material_override = dark_metal
+	_reel_handle.add_child(arm)
+	var knob := MeshInstance3D.new()
+	knob.name = "HandleCorkKnob"
+	var knob_mesh := CapsuleMesh.new()
+	knob_mesh.radius = 0.011
+	knob_mesh.height = 0.038
+	knob_mesh.radial_segments = 8
+	knob_mesh.rings = 3
+	knob.mesh = knob_mesh
+	knob.position = Vector3(0.071, -0.017, 0)
+	knob.material_override = _material(Color("74634a"), 0.84)
+	_reel_handle.add_child(knob)
+
 func _update_rod() -> void:
 	var flex: float = 0.025
 	var warning: float = session.surge_warning if presentation_state == "fight" and session else 0.0
@@ -1043,6 +1320,12 @@ func _update_rod() -> void:
 	elif cast_in_progress: flex = sin(clampf(_cast_time / CAST_DURATION, 0, 1) * PI) * 0.23
 	elif presentation_state == "landing": flex = 0.30
 	flex *= _rod_flex_scale
+	# Bone transforms can move twice in one frame; the blank's local shape need not
+	# be rebuilt twice. Always refresh its exact world endpoint before this cache.
+	_rod_tip = _rod.to_global(Vector3(lateral_flex, -flex, -_rod_length))
+	var shape_key := Vector4(flex, lateral_flex, _rod_length, _rod_radius)
+	if shape_key == _rod_shape_key and _rod_mesh.mesh != null: return
+	_rod_shape_key = shape_key
 	var points := PackedVector3Array()
 	var radii := PackedFloat32Array()
 	for i in range(19):
@@ -1328,7 +1611,8 @@ func _play_character(clip: String, loop: bool = true) -> void:
 	_last_anim = found
 	_last_loop = loop
 	_animator.get_animation(found).loop_mode = Animation.LOOP_LINEAR if loop else Animation.LOOP_NONE
-	_animator.play(found, 0.18)
+	_animator.speed_scale = 1.0 if clip in ["cast", "lift"] else _animator.speed_scale
+	_animator.play(found, 0.12 if clip == "cast" else 0.28)
 	if _suspended:
 		_character_was_playing = true
 		_animator.pause()
