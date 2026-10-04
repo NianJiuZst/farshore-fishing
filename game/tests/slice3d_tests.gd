@@ -38,6 +38,14 @@ func _run() -> void:
 	root.size = Vector2i(720,1584) if "--tall" in OS.get_cmdline_user_args() else Vector2i(720,1280)
 	app = MainScene.instantiate()
 	root.add_child(app)
+	# Native Main startup yields between loading stages; wait for its real completion.
+	var startup_deadline: int = Time.get_ticks_msec() + 120000
+	while not app._startup_complete and Time.get_ticks_msec() < startup_deadline:
+		await process_frame
+	if not app._startup_complete:
+		_check(false, "Main startup timed out before _startup_complete")
+		quit(1)
+		return
 	app.set_process(false)
 	app.scenery.set_process(false)
 	app.scenery._animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
@@ -131,7 +139,7 @@ func _test_configuration() -> void:
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method")) == "mobile", "native Mobile rendering is the production default")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method.mobile")) == "mobile", "Android retains Mobile rendering without a compatibility downgrade")
 	_check(app.catalog.fish.size() == 74 and app.catalog.regions.size() == 9 and app.catalog.spots.size() == 18, "complete original74 species, nine regions and eighteen spots")
-	_check(app.catalog.gear.size() == 5 and app.catalog.baits.size() == 8,"five rods and eight baits remain available")
+	_check(app.catalog.gear.size() == 5 and app.catalog.baits.size() == 12,"five rods and twelve baits remain available")
 	var errors: Array[String] = Registry.validate_catalog(app.catalog,true)
 	_check(errors.is_empty() and app._models_complete and app._content_ok,"full74 imported resources and real content gate ready: " + str(errors))
 	_check(not bool(ProjectSettings.get_setting("rendering/rendering_device/fallback_to_opengl3",true)),"production cannot silently downgrade Vulkan to OpenGL")
@@ -442,8 +450,12 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 	var fresh: SaveStore = Store.new()
 	_check(fresh.initialize(test_root) and fresh.state.pending_catches.has(catch_id), species + " process restart during landing can recover the exact pending catch")
 	var underwater_y: float = app.scenery._fish_root.position.y
+	var alongside: bool = float(record.length_mm) > 2800.0
 	_tick(0.55)
-	_check(app.scenery._fish_root.position.y > 0 and app.scenery._fish_root.position.y > underwater_y, species + " fish geometry breaches the actual world water plane")
+	if alongside:
+		_check(app.scenery._fish_root.position.y > -0.45 and app.scenery._fish_root.position.y < 0.08 and app.scenery._fish_root.position.z < -4.0, species + " true-sized giant rises gradually beside the boat rather than being thrown onto the angler")
+	else:
+		_check(app.scenery._fish_root.position.y > 0 and app.scenery._fish_root.position.y > underwater_y, species + " fish geometry breaches the actual world water plane")
 	if interruptions: await _interrupt_presentation("landing")
 	var count_snapshot: int = app.store.total_count()
 	var money_snapshot: int = int(app.store.state.currency)
@@ -459,7 +471,7 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 	_check_line_connected(species)
 	_tick(0.5)
 	_check(not app._landing_pending and app._screen == "result" and landing_events.size() == before_land_events+1, species + " finished landing exposes result exactly once")
-	_check(app.scenery._fish_root.position.y > 0.9, species + " landed fish is lifted to the character's presentation plane")
+	_check_final_landing_pose(species, int(record.length_mm))
 	app._fishing_ended(true,record)
 	_check(not app._landing_pending and app._screen == "result" and app.store.total_count() == count_snapshot, species + " repeated already-presented completion cannot re-arm a stuck landing")
 	for repeat: int in 3: app._handle_back()
@@ -525,7 +537,26 @@ func _check_landing_framing(species: String) -> void:
 			var point: Vector3 = mesh.global_transform * box.get_endpoint(corner)
 			sample_count += 1
 			if app.scenery.camera.is_position_behind(point) or not bounds.has_point(app.scenery.camera.unproject_position(point)): clipped += 1
-	_check(sample_count > 0 and clipped == 0, species + " lifted fish mesh bounds fit inside the portrait viewport; clipped=" + str(clipped))
+	_check(sample_count > 0 and clipped == 0, species + " presented fish mesh bounds fit inside the portrait viewport; clipped=" + str(clipped))
+
+func _check_final_landing_pose(species: String, length_mm: int) -> void:
+	var length_m: float = float(length_mm) / 1000.0
+	_check(app.scenery._fish.scale.is_equal_approx(Vector3.ONE * length_m), species + " presentation retains exact physical length without shrinking giants")
+	if length_mm <= 2800:
+		_check(app.scenery._fish_root.position.y > 0.9, species + " ordinary landed fish is lifted to the character's presentation plane")
+		return
+	_check(is_equal_approx(app.scenery._fish_root.position.y,0.08) and app.scenery._fish_root.position.z < -4.0, species + " giant final center stays at the water surface safely clear of the angler")
+	var meshes: Array[Node] = []
+	_find_all(app.scenery._fish,"MeshInstance3D",meshes)
+	var low: float = INF
+	var high: float = -INF
+	for mesh: MeshInstance3D in meshes:
+		if not mesh.visible or mesh.mesh == null: continue
+		for corner: int in 8:
+			var point: Vector3 = mesh.global_transform * mesh.get_aabb().get_endpoint(corner)
+			low = minf(low,point.y)
+			high = maxf(high,point.y)
+	_check(low < 0.0 and high > 0.0, species + " actual giant mesh spans the water plane for an alongside-boat observation")
 
 func _test_extreme_landing_framing() -> void:
 	var saved: Dictionary = app.store.state.duplicate(true)
@@ -545,6 +576,7 @@ func _test_extreme_landing_framing() -> void:
 			if app.scenery._fish_animator: app.scenery._fish_animator.advance(0.025)
 			app.scenery._process(0.025)
 		_check_landing_framing(species + " " + str(length_mm) + "mm")
+		_check_final_landing_pose(species + " " + str(length_mm) + "mm",length_mm)
 	app.scenery.cancel_landing()
 	_check(app.store.state == saved, "presentation-only framing checks cannot change saved catches or selection")
 

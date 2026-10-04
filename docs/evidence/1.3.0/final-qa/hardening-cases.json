@@ -1,0 +1,58 @@
+[
+  {
+    "case": "actual unmodified evidence",
+    "accepted": true,
+    "expected_accepted": true,
+    "test_passed": true,
+    "detail": "accepted"
+  },
+  {
+    "case": "missing core replaced with duplicate camera_aspect",
+    "accepted": false,
+    "expected_accepted": false,
+    "test_passed": true,
+    "detail": "AssertionError: Exact complete result names/order required; duplicates or omissions rejected"
+  },
+  {
+    "case": "missing binary_catalog renamed unrelated",
+    "accepted": false,
+    "expected_accepted": false,
+    "test_passed": true,
+    "detail": "AssertionError: Exact complete result names/order required; duplicates or omissions rejected"
+  },
+  {
+    "case": "core passed true despite errors and nonzero exit",
+    "accepted": false,
+    "expected_accepted": false,
+    "test_passed": true,
+    "detail": "AssertionError: Accepted rows must have successful exit and no errors"
+  },
+  {
+    "case": "style passed true despite nonzero exit",
+    "accepted": false,
+    "expected_accepted": false,
+    "test_passed": true,
+    "detail": "AssertionError: "
+  },
+  {
+    "case": "tall rerun missing binary",
+    "accepted": false,
+    "expected_accepted": false,
+    "test_passed": true,
+    "detail": "AssertionError: Exact rerun result names/order required"
+  },
+  {
+    "case": "another initially failed suite",
+    "accepted": false,
+    "expected_accepted": false,
+    "test_passed": true,
+    "detail": "AssertionError: Accepted rows must have successful exit and no errors"
+  },
+  {
+    "case": "extra source hash mismatch",
+    "accepted": false,
+    "expected_accepted": false,
+    "test_passed": true,
+    "detail": "AssertionError: Only the exact icon-expectation test may change; production/assets must remain byte-identical"
+  }
+]

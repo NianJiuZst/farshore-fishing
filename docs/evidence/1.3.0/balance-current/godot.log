@@ -1,0 +1,19 @@
+COMMAND: godot --headless --audio-driver Dummy --path /workspace/scratch/c16084497664/farshore-fishing-ocean/game --script res://tests/fishing_balance_tests.gd -- --output=/workspace/scratch/c16084497664/farshore-fishing-ocean/build/ocean-owner-final-fight/raw.json --quick
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+FLOAT_SCOPE: current possession model is verified separately by float_encounter_tests.gd; --historical-float retains beta2 diagnostics
+BALANCE PROGRESS routes=1/263 runs=15
+BALANCE PROGRESS routes=21/263 runs=315
+BALANCE PROGRESS routes=41/263 runs=615
+BALANCE PROGRESS routes=61/263 runs=915
+BALANCE PROGRESS routes=81/263 runs=1215
+BALANCE PROGRESS routes=101/263 runs=1515
+BALANCE PROGRESS routes=121/263 runs=1815
+BALANCE PROGRESS routes=141/263 runs=2115
+BALANCE PROGRESS routes=161/263 runs=2415
+BALANCE PROGRESS routes=181/263 runs=2715
+BALANCE PROGRESS routes=201/263 runs=3015
+BALANCE PROGRESS routes=221/263 runs=3315
+BALANCE PROGRESS routes=241/263 runs=3615
+BALANCE PROGRESS routes=261/263 runs=3915
+FISHING_BALANCE_TESTS: 70/70; simulations=4385; legal_routes=263

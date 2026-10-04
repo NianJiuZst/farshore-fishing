@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/ocean_landing_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+OCEAN_LANDING_TESTS: 921/921 passed; failures=0; 74 species x2 extreme lengths x2 portrait viewports; actual imported geometry

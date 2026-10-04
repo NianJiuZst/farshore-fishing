@@ -1,0 +1,25 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/ocean_save_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+OCEAN_SAVE_TEST_ROOT=/tmp/farshore-ocean-save-35-255033
+PASS GROUP historical identifiers and data-only catalog bindings
+PASS GROUP schema_2 retains old history and appends thirty fish/three regions
+PASS GROUP schema_1 retains old history and appends thirty fish/three regions
+PASS GROUP schema_1_implicit retains old history and appends thirty fish/three regions
+PASS GROUP historical pending/disposition/protection compatibility
+PASS GROUP backup export/checksum/preview/import/undo/redo/raw migration
+PASS GROUP malformed/checksum/future/version/semantic/size rejection
+PASS GROUP active/retry/stale/future-file/revision-limit import guards
+GROUP real import/undo write, validation and replacement failures
+ERROR: Failed to open '/tmp/farshore-ocean-save-35-255033/failed_snapshot_copy/save.before-import.json.does-not-exist'.
+   at: copy (core/io/dir_access.cpp:420)
+   GDScript backtrace (most recent call first):
+       [0] _copy_verified (res://scripts/save_store.gd:565)
+       [1] _copy_verified (res://tests/ocean_save_tests.gd:73)
+       [2] _import_decoded_locked (res://scripts/save_store.gd:425)
+       [3] restore_previous_save (res://scripts/save_store.gd:314)
+       [4] _test_failed_snapshot_copy_and_rollback (res://tests/ocean_save_tests.gd:557)
+       [5] _initialize (res://tests/ocean_save_tests.gd:120)
+PASS GROUP rollback copy failure and protected secondary rollback failure
+PASS GROUP corrupt/future saves fail closed or recover without destructive resets
+OCEAN_SAVE_TESTS: 1154/1154 passed; failures=0

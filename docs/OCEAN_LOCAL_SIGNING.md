@@ -21,7 +21,7 @@ python3 sign_ocean_apk_locally.py \
   --input '/path/to/Farshore-1.3.0-UNSIGNED-INTERNAL.apk' \
   --output '/path/to/Farshore-1.3.0-arm64.apk' \
   --build-tools "$HOME/Library/Android/sdk/build-tools/36.1.0" \
-  --keystore '/your/private/farshore-ocean-release.p12' \
+  --keystore '/your/private/farshore-ocean.p12' \
   --alias farshore-ocean \
   --expected-input-sha256 '公布的输入文件SHA256' \
   --expected-certificate-sha256 '用户本机生成的公钥证书SHA256' \

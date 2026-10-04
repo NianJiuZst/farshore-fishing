@@ -1,0 +1,22 @@
+[
+  {
+    "log": "/tmp/farshore-upstream-style-ZEQCLQ/after-fishing_failure_modal-normal/output.log",
+    "sha256": "3245decda588eec3f67d5c3c8b2b811a9b1d22b13e70af4eec99ca8be841f1ff",
+    "result": "FISHING_FAILURE_MODAL_TESTS: 89/89 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1280) logical=(720.0, 1280.0); not Android hardware testing"
+  },
+  {
+    "log": "/tmp/farshore-upstream-style-ZEQCLQ/after-fishing_failure_modal-tall/output.log",
+    "sha256": "f2c404de726bfe3fa8bf7778029d03ea791314411febe15ccd3ec221bb7db94e",
+    "result": "FISHING_FAILURE_MODAL_TESTS: 89/89 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1584) logical=(720.0, 1584.0); not Android hardware testing"
+  },
+  {
+    "log": "/tmp/farshore-upstream-style-ZEQCLQ/final-ui_style-normal/output.log",
+    "sha256": "602db6447936e3da62e2e7f875c1b3ecca870bef0c4c966b62bbe77488a1a5fc",
+    "result": "UI_STYLE_TESTS: 27748/27748 passed; failures=0; button visits=363; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+  },
+  {
+    "log": "/tmp/farshore-upstream-style-ZEQCLQ/final-ui_style-tall/output.log",
+    "sha256": "f0754b48de0947e7c33eb80d9a6a8b5501d850beb973af770432bab04e6446e9",
+    "result": "UI_STYLE_TESTS: 27748/27748 passed; failures=0; button visits=363; physical viewport=(720, 1584); logical viewport=(720.0, 1584.0)"
+  }
+]

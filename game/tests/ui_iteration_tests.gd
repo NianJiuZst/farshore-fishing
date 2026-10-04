@@ -24,6 +24,14 @@ func _run() -> void:
 	root.size = Vector2i(720,1584) if "--tall" in OS.get_cmdline_user_args() else Vector2i(720,1280)
 	app = Main.instantiate()
 	root.add_child(app)
+	# Native Main startup yields between loading stages; wait for its real completion.
+	var startup_deadline: int = Time.get_ticks_msec() + 120000
+	while not app._startup_complete and Time.get_ticks_msec() < startup_deadline:
+		await process_frame
+	if not app._startup_complete:
+		_check(false, "Main startup timed out before _startup_complete")
+		quit(1)
+		return
 	app.set_process(false)
 	app.scenery.set_process(false)
 	app.scenery._animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL

@@ -1,0 +1,4 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+FISHING_FAILURE_MODAL_TESTS: 89/89 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1584) logical=(720.0, 1584.0); not Android hardware testing
+TEST_EXIT_CODE=0

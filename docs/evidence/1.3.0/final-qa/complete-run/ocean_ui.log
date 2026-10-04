@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/ocean_ui_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+OCEAN_UI_TESTS: 836/836 passed; failures=0; physical=(720, 1280); actual Main/headless or desktop only

@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/float_encounter_tests.gd -- --regressions-only
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+FLOAT_ENCOUNTER_TESTS: 124/124 passed; failures=0; simulations=0; passive_traces=0

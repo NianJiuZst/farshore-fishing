@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/session_observation_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+SESSION_OBSERVATION_TESTS: 186/186 passed; failures=0

@@ -1,0 +1,49 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/ui_style_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+FAIL UI: production declares exactly31 required generated raster icons
+UI_BITMAP_ASSETS: 31/31 distinct HD RGBA PNGs checked
+LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification
+UI_STYLE_ROUTE lobby buttons=5
+UI_STYLE_ROUTE prepare buttons=5
+UI_STYLE_ROUTE fishing buttons=7
+UI_STYLE_ROUTE synthetic_insets/settings buttons=11
+SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing
+UI_STYLE_ROUTE starter/home buttons=5
+UI_STYLE_ROUTE starter/pause buttons=7
+UI_STYLE_ROUTE starter/travel buttons=16
+FAIL UI: starter/gear: icon is a required generated bitmap: large_fish_chunk
+FAIL UI: starter/gear: icon is a required generated bitmap: whole_mackerel
+FAIL UI: starter/gear: icon is a required generated bitmap: large_squid
+FAIL UI: starter/gear: icon is a required generated bitmap: large_surface_lure
+UI_STYLE_ROUTE starter/gear buttons=24
+UI_STYLE_ROUTE starter/catalog buttons=78
+UI_STYLE_ROUTE starter/favorites buttons=2
+UI_STYLE_ROUTE starter/settings buttons=11
+UI_STYLE_ROUTE starter/licenses buttons=1
+UI_STYLE_ROUTE starter/pending buttons=1
+UI_STYLE_ROUTE undiscovered_species buttons=9
+UI_STYLE_ROUTE discovered/travel buttons=16
+FAIL UI: discovered/gear: icon is a required generated bitmap: large_fish_chunk
+FAIL UI: discovered/gear: icon is a required generated bitmap: whole_mackerel
+FAIL UI: discovered/gear: icon is a required generated bitmap: large_squid
+FAIL UI: discovered/gear: icon is a required generated bitmap: large_surface_lure
+UI_STYLE_ROUTE discovered/gear buttons=22
+UI_STYLE_ROUTE discovered/catalog buttons=78
+UI_STYLE_ROUTE discovered/favorites buttons=8
+UI_STYLE_ROUTE discovered_species buttons=8
+UI_STYLE_ROUTE specimen_zoom buttons=1
+UI_STYLE_ROUTE catalog_active_filters buttons=12
+UI_STYLE_ROUTE catch/common_carp buttons=4
+UI_STYLE_ROUTE pending/common_carp buttons=3
+UI_STYLE_ROUTE catch/chinese_sturgeon buttons=3
+UI_STYLE_ROUTE pending/chinese_sturgeon buttons=2
+UI_STYLE_ROUTE charging buttons=7
+UI_STYLE_ROUTE float_observation_3 buttons=7
+UI_STYLE_ROUTE float_observation_4 buttons=7
+UI_STYLE_ROUTE float_observation_5 buttons=7
+UI_STYLE_ROUTE fight buttons=7
+UI_STYLE_ROUTE escape buttons=2
+UI_BITMAP_BINDINGS: ["coin", "book", "rod", "compass", "bag", "settings", "back", "arrow", "worm", "pause", "sun", "heart", "sound", "dusk", "rain", "lure", "rod_spinning", "rod_heavy", "grain", "shrimp", "sweetcorn", "dough", "cut_fish", "spinner", "large_fish_chunk", "whole_mackerel", "large_squid", "large_surface_lure", "search", "sort", "release", "reel"]
+UI_STYLE_ROUTES: lobby, prepare, fishing, synthetic_insets/settings, starter/home, starter/pause, starter/travel, starter/gear, starter/catalog, starter/favorites, starter/settings, starter/licenses, starter/pending, undiscovered_species, discovered/travel, discovered/gear, discovered/catalog, discovered/favorites, discovered_species, specimen_zoom, catalog_active_filters, catch/common_carp, pending/common_carp, catch/chinese_sturgeon, pending/chinese_sturgeon, charging, float_observation_3, float_observation_4, float_observation_5, fight, escape
+UI_STYLE_TESTS: 28689/28698 passed; failures=9; button visits=376; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)

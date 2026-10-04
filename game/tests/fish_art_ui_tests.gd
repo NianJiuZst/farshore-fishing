@@ -43,6 +43,14 @@ func _run() -> void:
 	root.disable_3d = true
 	app = Main.instantiate()
 	root.add_child(app)
+	# Native Main startup yields between loading stages; wait for its real completion.
+	var startup_deadline: int = Time.get_ticks_msec() + 120000
+	while not app._startup_complete and Time.get_ticks_msec() < startup_deadline:
+		await process_frame
+	if not app._startup_complete:
+		_check(false, "Main startup timed out before _startup_complete")
+		quit(1)
+		return
 	app.set_process(false)
 	app.scenery.set_process(false)
 	app.sound.apply({"sound":false,"vibration":false,"volume":0.0})

@@ -1,0 +1,17 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/ocean_float_save_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+OCEAN_FLOAT_SAVE_TEST_ROOT=/tmp/farshore-ocean-float-save-63-459998
+PASS MATRIX bait=worm profiles=74 records=222 elapsed_ms=3824
+PASS MATRIX bait=grain profiles=148 records=444 elapsed_ms=7534
+PASS MATRIX bait=shrimp profiles=222 records=666 elapsed_ms=11177
+PASS MATRIX bait=lure profiles=296 records=888 elapsed_ms=15056
+PASS MATRIX bait=sweetcorn profiles=370 records=1110 elapsed_ms=18684
+PASS MATRIX bait=dough profiles=444 records=1332 elapsed_ms=22245
+PASS MATRIX bait=cut_fish profiles=518 records=1554 elapsed_ms=26007
+PASS MATRIX bait=spinner profiles=592 records=1776 elapsed_ms=29770
+PASS MATRIX bait=large_fish_chunk profiles=666 records=1998 elapsed_ms=34571
+PASS MATRIX bait=whole_mackerel profiles=740 records=2220 elapsed_ms=40696
+PASS MATRIX bait=large_squid profiles=814 records=2442 elapsed_ms=44171
+PASS MATRIX bait=large_surface_lure profiles=888 records=2664 elapsed_ms=47367
+OCEAN_FLOAT_SAVE_TESTS: 41790/41790 passed; failures=0; generated records=2664; former false rejections=2

@@ -166,7 +166,7 @@
   ],
   "visual_audit": {
     "native_size_review": "Passed: each generated image inspected visually at full output size. Four distinct recognizable subjects, intact silhouettes, no text, no frame or opaque background, no blood or gore. Naturalist painted material shading matches the existing cut-fish, lure and shrimp family.",
-    "small_size_review": "Audit HTML prepared at 70, 96 and 224 CSS pixels on teal and cream backgrounds. A browser screenshot was not captured because local Chromium could not create its process socket and the cloud browser blocks file:// URLs. Final in-game small-size review belongs with parent UI validation.",
+    "small_size_review": "Audit HTML prepared at 70, 96 and 224 CSS pixels on teal and cream backgrounds. A browser screenshot was not captured because local Chromium could not create its process socket and the cloud browser blocks file:// URLs. Final native Godot small-size validation is recorded in docs/OCEAN_UI_VALIDATION.md.",
     "audit_html": "art_masters/ocean_bait_icons/readability_audit.html",
     "alpha_note": "All images are genuine RGBA and retain original generated alpha. Three have invisible alpha-1 pixels touching the outer edge; no thresholding or cleanup was applied. The mackerel visible tail is intact with about 8 px right margin at native 1254 px."
   }

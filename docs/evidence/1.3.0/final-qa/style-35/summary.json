@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "selected_suites": [
+    "ui_style"
+  ],
+  "representative_tall_layout": false,
+  "runtime_files": 1703,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "ui_style",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 59.01,
+      "log": "build/ocean-final-style-35/ui_style.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 28762/28762 passed; failures=0; button visits=376; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.33,
+      "log": "build/ocean-final-style-35/binary_catalog.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 74, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    }
+  ],
+  "scope": "Full74 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."
+}

@@ -143,6 +143,14 @@ func _test_main_pages() -> void:
 	var scene: PackedScene = load("res://scenes/main.tscn")
 	var app: Control = scene.instantiate()
 	root.add_child(app)
+	# Native Main startup yields between loading stages; wait for its real completion.
+	var startup_deadline: int = Time.get_ticks_msec() + 120000
+	while not app._startup_complete and Time.get_ticks_msec() < startup_deadline:
+		await process_frame
+	if not app._startup_complete:
+		_check(false, "Main startup timed out before _startup_complete")
+		quit(1)
+		return
 	app.set_process(false)
 	app.sound.suspend(true)
 	await _layout_frames()
@@ -236,7 +244,7 @@ func _test_main_pages() -> void:
 	await _layout_frames()
 	_check(app._screen == "prepare","bag Back returns to prepare context")
 	if not app._models_complete:
-		_check(not app._content_ok and not app._model_errors.is_empty(),"incomplete44 registry blocks gameplay without substitution")
+		_check(not app._content_ok and not app._model_errors.is_empty(),"incomplete74 registry blocks gameplay without substitution")
 		var entry: Button = _find_button(app._overlay,"进入钓点")
 		_check(entry!=null and entry.disabled,"partial-development preparation explicitly disables entry")
 		app._enter_fishery()
@@ -247,7 +255,7 @@ func _test_main_pages() -> void:
 		await process_frame
 		production_completed=true
 		return
-	print("TOUCH_SCOPE: complete44 registry; full gameplay assertions enabled")
+	print("TOUCH_SCOPE: complete74 registry; full gameplay assertions enabled")
 	app._enter_fishery()
 	await _layout_frames()
 	_check(app._overlay == null and app._action.is_visible_in_tree() and app._mode == "fishing","enter location reveals casting HUD")
@@ -463,7 +471,7 @@ func _test_expanded_tackle_controls(app: Control) -> void:
 			app._abandon_round()
 			app._return_to_lobby()
 		else:
-			_check(app._mode=="lobby" and app._overlay!=null and not app._content_ok,"borrowed rod cannot bypass incomplete44-model gate: "+str(id))
+			_check(app._mode=="lobby" and app._overlay!=null and not app._content_ok,"borrowed rod cannot bypass incomplete74-model gate: "+str(id))
 	app._clear_trial_gear()
 	_check(app._trial_gear_id==-1 and app._effective_gear_id()==int(snapshot.gear) and app.store.state==snapshot,"ending trial borrowing restores saved rod without fake unlocks")
 	app._page_context="prepare"

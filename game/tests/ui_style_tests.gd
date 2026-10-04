@@ -1,5 +1,6 @@
 extends SceneTree
-## Production-scene borderless UI contract. See docs/UI_STYLE_TESTS.md.
+## Production-scene rounded surface contract from upstream 1afda37.
+## See docs/OCEAN_UPSTREAM_TEST_ALIGNMENT.md for baseline evidence and scope.
 const MainScene = preload("res://scenes/main.tscn")
 const Store = preload("res://scripts/save_store.gd")
 const IconActionScript = preload("res://scripts/icon_action.gd")
@@ -7,7 +8,7 @@ const ArtScript = preload("res://scripts/ui_art.gd")
 const Registry = preload("res://scripts/fish_3d_registry.gd")
 const Preview = preload("res://scripts/fish_art_view.gd")
 const FailureModalScript = preload("res://scripts/fishing_failure_modal.gd")
-const EXPECTED_ICONS: Array[String] = ["rod", "reel", "hook", "bag", "compass", "book", "heart", "coin", "badge", "pause", "settings", "sound", "back", "arrow", "sort", "search", "release", "worm", "grain", "shrimp", "lure", "sun", "dusk", "rain", "ruler", "sweetcorn", "dough", "cut_fish", "spinner", "rod_spinning", "rod_heavy"]
+const EXPECTED_ICONS: Array[String] = ["rod", "reel", "hook", "bag", "compass", "book", "heart", "coin", "badge", "pause", "settings", "sound", "back", "arrow", "sort", "search", "release", "worm", "grain", "shrimp", "lure", "sun", "dusk", "rain", "ruler", "sweetcorn", "dough", "cut_fish", "spinner", "rod_spinning", "rod_heavy", "large_fish_chunk", "whole_mackerel", "large_squid", "large_surface_lure"]
 const RETIRED_COPY: Array[String] = ["F A R S H O R E", "NATURAL HISTORY", "沿着水声，去往远岸", "把世界，钓成一本旅行手册", "风从远岸来", "停一会儿，风景还在", "把下一站，交给海风", "真实的相遇，是最好的旅行纪念", "水下还有一个未曾见过的身影"]
 const STATES: Array[String] = ["normal", "hover", "pressed", "hover_pressed", "focus", "disabled"]
 const MIN_TARGET: float = 96.0
@@ -37,6 +38,14 @@ func _run() -> void:
 	root.size = Vector2i(720,1584) if "--tall" in OS.get_cmdline_user_args() else Vector2i(720,1280)
 	app = MainScene.instantiate()
 	root.add_child(app)
+	# Native Main startup yields between loading stages; wait for its real completion.
+	var startup_deadline: int = Time.get_ticks_msec() + 120000
+	while not app._startup_complete and Time.get_ticks_msec() < startup_deadline:
+		await process_frame
+	if not app._startup_complete:
+		_check(false, "Main startup timed out before _startup_complete")
+		quit(1)
+		return
 	app.set_process(false)
 	app.scenery.set_process(false)
 	app.scenery._animator.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
@@ -53,6 +62,7 @@ func _run() -> void:
 		quit(1)
 		return
 	_check(not app.store.read_only, "isolated startup save is writable")
+	_test_theme_contract()
 	logical_viewport_size = root.get_visible_rect().size
 	var expected_height: float = 1584.0 if "--tall" in OS.get_cmdline_user_args() and str(ProjectSettings.get_setting("display/window/stretch/aspect","keep"))=="expand" else 1280.0
 	_check(app.size.is_equal_approx(Vector2(720,expected_height)), "actual Main logical viewport follows the production stretch policy")
@@ -211,14 +221,13 @@ func _walk(node: Node, route: String) -> void:
 	elif node is PanelContainer:
 		if node.name == "FailurePanel" and node.get_parent().get_script() == FailureModalScript:
 			_check(node.size.y <= 500 and node.size.x <= 620, route + ": explicit failure popup is compact, never a full-screen page")
-		else: _check(_transparent_style((node as PanelContainer).get_theme_stylebox("panel")), route + ": no card backplate at " + str(node.get_path()))
+			_check_flat_style((node as PanelContainer).get_theme_stylebox("panel"), app.PAPER, Color(0.40,0.49,0.40,0.24), 1, 24, route + ": failure paper", 16, Color(0.02,0.07,0.08,0.20), Vector2(0,8))
+		else: _audit_card(node as PanelContainer, route)
 	elif node is LineEdit:
 		var search: LineEdit = node as LineEdit
 		_check(search.size.x + 0.1 >= MIN_TARGET and search.size.y + 0.1 >= MIN_TARGET, route + ": search target >=96 logical units")
-		for state: String in ["normal", "focus"]:
-			var style: StyleBox = search.get_theme_stylebox(state)
-			var underline_only: bool = style is StyleBoxFlat and (style as StyleBoxFlat).bg_color.a <= 0.001 and (style as StyleBoxFlat).border_width_top == 0 and (style as StyleBoxFlat).border_width_left == 0 and (style as StyleBoxFlat).border_width_right == 0
-			_check(_transparent_style(style) or underline_only, route + ": search has no filled backplate in " + state)
+		_audit_input_styles(search, route + ": search")
+		_check(_contrast(search.get_theme_color("font_color"), Color("fbfcf6")) >= 4.5, route + ": search text contrasts with its actual pale input surface")
 	elif node is HSlider:
 		var slider: HSlider = node as HSlider
 		_check(slider.size.x >= MIN_TARGET and slider.size.y >= MIN_TARGET, route + ": volume slider touch target >=96 logical units, actual=" + str(slider.size))
@@ -235,10 +244,14 @@ func _walk(node: Node, route: String) -> void:
 func _audit_button(button: Button, route: String) -> void:
 	buttons_checked += 1
 	var label: String = route + ": " + button.text + " [" + button.get_class() + "]"
-	for state: String in STATES:
-		# hover_pressed is not used by every button type, but an inherited opaque
-		# default still violates the visual contract if that state becomes active.
-		_check(_transparent_style(button.get_theme_stylebox(state)), label + " transparent " + state)
+	if button is OptionButton:
+		_audit_input_styles(button, label)
+	elif button.has_meta("notebook_tile"):
+		_audit_notebook_styles(button, label)
+	elif button.get_script() == IconActionScript:
+		_audit_icon_styles(button, label)
+	else:
+		_check(false, label + " has an explicitly supported surface contract")
 	_check(button.size.x + 0.1 >= MIN_TARGET and button.size.y + 0.1 >= MIN_TARGET, label + " target >=96 logical units, actual=" + str(button.size))
 	_check(not button.text.strip_edges().is_empty(), label + " has a text label")
 	_check(button.mouse_filter != Control.MOUSE_FILTER_IGNORE, label + " is a real interactive hit target")
@@ -254,30 +267,51 @@ func _audit_button(button: Button, route: String) -> void:
 		var title: Label = button.find_child("FishTileName",true,false) as Label
 		_check(title != null and title.text==button.text and title.mouse_filter==Control.MOUSE_FILTER_IGNORE,label+" whole tile has one readable nonblocking title")
 		return
-	_check(button.get_script() == IconActionScript, label + " uses the production borderless icon control")
+	_check(button.get_script() == IconActionScript, label + " uses the production rounded icon control")
 	if button.get_script() != IconActionScript: return
 	var icon: Control = button.get("_art") as Control
 	var caption: Label = button.get("_caption") as Label
 	_check(caption != null and caption.text == button.text, label + " visible caption mirrors its action")
 	if caption != null:
-		if bool(button.get("light_label")):
-			_check(caption.get_theme_constant("outline_size") > 0 or caption.get_theme_color("font_shadow_color").a > 0,label+" world text has restrained contrast support")
-		elif not button.disabled:
+		if not button.disabled:
 			var fg: Color = caption.get_theme_color("font_color")
-			_check((app.PAPER.srgb_to_linear().get_luminance()+0.05)/(fg.srgb_to_linear().get_luminance()+0.05)>=4.5,label+" active paper text has readable contrast without a halo")
+			var normal: StyleBoxFlat = button.get_theme_stylebox("normal") as StyleBoxFlat
+			if normal != null:
+				# Composite translucent world surfaces over white, the conservative
+				# bright-scene case. Large >=24 px captions use the 3:1 threshold.
+				var background: Color = Color.WHITE.blend(normal.bg_color) if bool(button.get("light_label")) or str(button.get("appearance")) == "glass" else app.PAPER.blend(normal.bg_color)
+				var minimum: float = 3.0 if caption.get_theme_font_size("font_size") >= 24 else 4.5
+				_check(_contrast(fg, background) >= minimum, label + " caption contrasts with its actual surface, ratio=" + str(_contrast(fg, background)))
+		_check(caption.get_theme_constant("outline_size") == 0, label + " rounded surfaces preserve the upstream unoutlined caption")
 		_check(caption.position.x >= -0.1 and caption.position.y >= -0.1 and caption.position.x + caption.size.x <= button.size.x + 0.1 and caption.position.y + caption.size.y <= button.size.y + 0.1, label + " caption stays inside target: " + str(caption.get_rect()))
 		_check(caption.get_line_count() * caption.get_line_height() <= caption.size.y + 2, label + " caption fits vertically")
 	var has_icon: bool = icon != null and icon.size.x > 0 and icon.size.y > 0 and str(button.get("icon_kind")) not in ["", "none"]
 	# A fish catalog entry legitimately uses its adjacent species illustration as
 	# its icon. Do not require a redundant second pictogram below the specimen.
 	if not has_icon: has_icon = _has_specimen_sibling(button)
-	_check(has_icon, label + " has an icon or its own adjacent specimen illustration")
+	var quality_selector: bool = _is_quality_selector(button)
+	_check(has_icon or quality_selector, label + " has an icon/specimen or is an exact upstream text-only quality selector")
+	if quality_selector:
+		var quality: String = str(app.store.state.settings.get("visual_quality", "balanced"))
+		var names: Dictionary = {"low":"省电", "balanced":"均衡", "high":"精致"}
+		var selected: bool = button.text == "✓ " + str(names[quality])
+		_check(button.appearance == ("primary" if selected else "surface") and button.label_color == (app.PAPER if selected else app.INK), label + " quality selection keeps its exact primary/surface contrast pair")
+		_check(caption != null and caption.horizontal_alignment == HORIZONTAL_ALIGNMENT_CENTER and caption.get_theme_font_size("font_size") == 23 and caption.position == Vector2.ZERO and caption.size == button.size and icon != null and icon.size == Vector2.ZERO, label + " quality selector intentionally centers text with no redundant pictogram")
 	if icon != null:
 		_check(icon.mouse_filter == Control.MOUSE_FILTER_IGNORE, label + " icon does not steal taps")
 	if caption != null:
 		_check(caption.mouse_filter == Control.MOUSE_FILTER_IGNORE, label + " caption does not steal taps")
 		if button.disabled:
-			_check(caption.modulate.a < 1 and icon != null and icon.modulate.a < 1, label + " disabled state changes icon/text rather than background")
+			_check(caption.modulate.a < 1 and icon != null and icon.modulate.a < 1, label + " disabled state dims both icon and text")
+
+func _is_quality_selector(button: Button) -> bool:
+	if app._screen != "settings" or button.icon_extent != 0 or not button.get_parent() is HBoxContainer or button.get_parent().get_child_count() != 3: return false
+	var names: Dictionary = {"省电":"low", "均衡":"balanced", "精致":"high"}
+	var caption: String = button.text.trim_prefix("✓ ")
+	if not names.has(caption): return false
+	for connection: Dictionary in button.pressed.get_connections():
+		if connection.callable == Callable(app, "_set_quality").bind(str(names[caption])): return true
+	return false
 
 func _test_active_feedback() -> void:
 	app._show_settings()
@@ -296,7 +330,7 @@ func _test_active_feedback() -> void:
 	root.push_input(move, true)
 	await _settle_layout()
 	_check(button.is_hovered(), "native input hovers actual production target")
-	_check(icon.modulate != resting_icon or caption.get_theme_color("font_color") != resting_label, "actual hover changes icon/text rather than background")
+	_check(icon.modulate != resting_icon or caption.get_theme_color("font_color") != resting_label, "actual hover changes icon/text alongside the hover surface")
 	var press: InputEventMouseButton = InputEventMouseButton.new()
 	press.position = point
 	press.global_position = point
@@ -305,12 +339,104 @@ func _test_active_feedback() -> void:
 	root.push_input(press, true)
 	await _settle_layout()
 	_check(button.button_pressed, "native press holds actual production target")
-	_check(_transparent_style(button.get_theme_stylebox("hover_pressed")), "held hover stays borderless")
+	_audit_icon_styles(button, "native held Back")
+	_check((button.get_theme_stylebox("hover_pressed") as StyleBoxFlat).bg_color != (button.get_theme_stylebox("normal") as StyleBoxFlat).bg_color, "held hover visibly darkens the production surface")
+	_check(button.has_focus(), "native press focuses the real production control")
 	var release: InputEventMouseButton = press.duplicate()
 	release.pressed = false
 	root.push_input(release, true)
 	await _settle_layout()
 	_check(app._overlay == null, "native release invokes actual Back callback")
+
+# Explicit constants below were read from upstream 1afda37, not obtained by
+# invoking the same production style builder that is being tested.
+func _test_theme_contract() -> void:
+	for state: String in STATES:
+		_check(app.theme.get_stylebox(state, "Button") is StyleBoxEmpty, "base Button theme intentionally stays clear in " + state)
+	for type_name: String in ["LineEdit", "TextEdit", "OptionButton"]:
+		_check_flat_style(app.theme.get_stylebox("normal", type_name), Color("fbfcf6"), Color("c3d1c7"), 1, 16, type_name + " theme normal")
+		_check_flat_style(app.theme.get_stylebox("hover", type_name), Color("f1f6ee"), Color("b3cabe"), 1, 16, type_name + " theme hover")
+		_check_flat_style(app.theme.get_stylebox("focus", type_name), Color(0,0,0,0), Color("256b63"), 2, 16, type_name + " theme clear focus overlay")
+	_check_flat_style(app.theme.get_stylebox("panel", "PopupMenu"), Color("edf1e5"), Color(0,0,0,0), 0, 0, "popup paper")
+	for primary: bool in [false, true]:
+		var sample: Button = app._button("返回", func() -> void: pass, primary)
+		_check(sample.appearance == ("primary" if primary else "surface") and sample.label_color == (app.PAPER if primary else app.INK), "Main button factory selects the exact upstream surface and ink pair")
+		sample.free()
+
+func _audit_input_styles(control: Control, label: String) -> void:
+	for state: String in STATES:
+		match state:
+			"normal": _check_flat_style(control.get_theme_stylebox(state), Color("fbfcf6"), Color("c3d1c7"), 1, 16, label + " " + state)
+			"hover": _check_flat_style(control.get_theme_stylebox(state), Color("f1f6ee"), Color("b3cabe"), 1, 16, label + " " + state)
+			"focus": _check_flat_style(control.get_theme_stylebox(state), Color(0,0,0,0), Color("256b63"), 2, 16, label + " clear focus overlay")
+			_: _check(control.get_theme_stylebox(state) is StyleBoxEmpty and _transparent_style(control.get_theme_stylebox(state)), label + " intentionally clear inherited " + state)
+
+func _audit_icon_styles(button: Button, label: String) -> void:
+	var appearance: String = str(button.get("appearance"))
+	var light: bool = bool(button.get("light_label"))
+	_check(appearance in ["surface", "primary", "glass", "subtle"], label + " uses a known upstream surface variant")
+	var base: Color = Color("e8eeea")
+	if appearance == "primary": base = Color("28675e")
+	elif appearance == "glass" or light: base = Color(0.035,0.12,0.15,0.82)
+	elif appearance == "subtle": base = Color(0.85,0.90,0.86,0.35)
+	for state: String in STATES:
+		var fill: Color = base
+		var border: Color = Color(0.75,0.88,0.80,0.20) if light or appearance == "primary" else Color(0.17,0.34,0.31,0.12)
+		var width: int = 1
+		if state == "hover": fill = base.lightened(0.06)
+		if state in ["pressed", "hover_pressed"]: fill = base.darkened(0.12)
+		if state == "disabled": fill = Color(base,0.25)
+		if state == "focus":
+			fill = Color.TRANSPARENT
+			border = Color("d0ad64")
+			width = 3
+		_check_flat_style(button.get_theme_stylebox(state), fill, border, width, 22 if appearance == "primary" else 18, label + " " + state)
+
+func _audit_notebook_styles(button: Button, label: String) -> void:
+	var species: String = str(button.get_meta("fish_species_id", ""))
+	var count: int = app._count(species)
+	var base: Color = Color("fafbf3") if count > 0 else Color("e7ece5")
+	for state: String in STATES:
+		var fill: Color = base
+		var border: Color = Color("c6d5c9")
+		var width: int = 1
+		if state == "hover": fill = base.lightened(0.04)
+		if state == "pressed": fill = base.darkened(0.04)
+		if state == "focus":
+			fill = Color.TRANSPARENT
+			border = Color("256b63")
+			width = 2
+		_check_flat_style(button.get_theme_stylebox(state), fill, border, width, 20, label + " notebook " + state)
+
+func _audit_card(card: PanelContainer, route: String) -> void:
+	var style: StyleBox = card.get_theme_stylebox("panel")
+	var label: String = route + ": paper/glass card at " + str(card.get_path())
+	_check(style is StyleBoxFlat, label + " uses the upstream flat surface")
+	if not style is StyleBoxFlat: return
+	var flat: StyleBoxFlat = style as StyleBoxFlat
+	var fills: Array[Color] = [Color("fffcf4"), Color("e8ecd9"), Color(0.035,0.13,0.17,0.88), Color(0.05,0.17,0.21,0.9)]
+	var variant: int = fills.find(flat.bg_color)
+	_check(variant >= 0, label + " uses an explicit upstream card fill")
+	if variant < 0: return
+	_check_flat_style(flat, fills[variant], Color(0.30,0.43,0.38,0.12), 1, 22, label)
+	var margins: Array = [[18.0], [18.0,20.0], [10.0], [8.0]][variant]
+	_check(flat.content_margin_left in margins and flat.content_margin_top == flat.content_margin_left and flat.content_margin_right == flat.content_margin_left and flat.content_margin_bottom == flat.content_margin_left, label + " preserves its upstream content insets")
+
+func _check_flat_style(style: StyleBox, fill: Color, border: Color, width: int, radius: int, label: String, shadow_size: int = 0, shadow: Color = Color(0,0,0,0.6), shadow_offset: Vector2 = Vector2.ZERO) -> void:
+	_check(style is StyleBoxFlat, label + " is StyleBoxFlat")
+	if not style is StyleBoxFlat: return
+	var flat: StyleBoxFlat = style as StyleBoxFlat
+	_check(flat.draw_center and flat.bg_color.is_equal_approx(fill), label + " exact upstream fill")
+	_check(flat.border_color.is_equal_approx(border) and flat.border_width_left == width and flat.border_width_top == width and flat.border_width_right == width and flat.border_width_bottom == width, label + " exact upstream border")
+	_check(flat.corner_radius_top_left == radius and flat.corner_radius_top_right == radius and flat.corner_radius_bottom_left == radius and flat.corner_radius_bottom_right == radius, label + " exact upstream corner radius")
+	_check(flat.shadow_size == shadow_size and flat.shadow_offset.is_equal_approx(shadow_offset) and (shadow_size == 0 or flat.shadow_color.is_equal_approx(shadow)), label + " no unrequested shadow")
+	if fill.a == 0 and width > 0:
+		_check(border.a == 1.0 and width >= 2 and flat.bg_color.a == 0.0, label + " opaque visible focus ring leaves the underlying surface clear")
+
+func _contrast(foreground: Color, background: Color) -> float:
+	var a: float = foreground.srgb_to_linear().get_luminance()
+	var b: float = background.srgb_to_linear().get_luminance()
+	return (maxf(a,b)+0.05)/(minf(a,b)+0.05)
 
 func _transparent_style(style: StyleBox) -> bool:
 	if style is StyleBoxEmpty: return true
@@ -403,7 +529,7 @@ func _audit_catch(species_id: String) -> void:
 	_check(app._overlay == null and app._last_record.is_empty(), species_id + " real release clears result")
 
 func _test_raster_assets() -> void:
-	_check(ArtScript.REQUIRED_ICONS.size() == 31, "production declares exactly31 required generated raster icons")
+	_check(ArtScript.REQUIRED_ICONS.size() == 35, "production declares exactly35 required generated raster icons")
 	var hashes: Dictionary = {}
 	for kind: String in EXPECTED_ICONS:
 		_check(kind in ArtScript.REQUIRED_ICONS, "production manifest contains " + kind)
@@ -444,7 +570,7 @@ func _test_raster_assets() -> void:
 	_check("draw_texture_rect(" in renderer_source, "runtime art renderer actually paints its loaded texture")
 	for forbidden: String in ["draw_line(", "draw_polyline(", "draw_polygon(", "draw_colored_polygon(", "draw_circle(", "draw_arc(", "draw_rect(", ".svg", "GradientTexture", "load_svg"]:
 		_check(not forbidden in renderer_source, "icon renderer has no primitive/vector fallback: " + forbidden)
-	print("UI_BITMAP_ASSETS: ", hashes.size(), "/31 distinct HD RGBA PNGs checked")
+	print("UI_BITMAP_ASSETS: ", hashes.size(), "/35 distinct HD RGBA PNGs checked")
 
 func _check_action_position(state_name: String, expected_icon: String) -> void:
 	_check(app._action.get_global_rect().is_equal_approx(idle_action_rect), state_name + ": primary action does not move between fishing states")

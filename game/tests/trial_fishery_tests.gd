@@ -36,7 +36,7 @@ func _run() -> void:
 					var fish: FishDefinition = catalog.fish[record.species_id]
 					_check(record.length_mm >= fish.min_mm and record.length_mm <= fish.max_mm and record.weight_g > 0, "real specimen range retained")
 					seen[record.species_id] = true
-	_check(catalog.gear.size() == 5 and catalog.baits.size() == 8, "five rods and eight baits present")
+	_check(catalog.gear.size() == 5 and catalog.baits.size() == 12, "five rods and twelve baits present")
 	for species_id: String in Trial.PLAYABLE_SPECIES:
 		for original_bait: String in ["worm", "grain", "shrimp", "lure"]:
 			_check(is_equal_approx(Trial.bait_weight(catalog.fish[species_id], original_bait), catalog.fish[species_id].weight_for("bait_weights", original_bait)), "original bait balance unchanged")

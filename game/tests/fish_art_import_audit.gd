@@ -1,5 +1,5 @@
 extends SceneTree
-## Run after importing the final canonical all44 PNGs. Source-art metadata keeps
+## Run after importing the final canonical all74 PNGs. Source-art metadata keeps
 ## its master SHA-256; this audit adds Godot's decoded-image hashes so the same
 ## integrity contract can be checked when Android contains imported .ctex only.
 ## Never makes an incomplete artist manifest complete and never changes the
@@ -68,5 +68,5 @@ func _run() -> void:
 		return
 	file.store_string(JSON.stringify(data,"\t",true,true)+"\n")
 	file.close()
-	print("FISH_ART_IMPORT_AUDIT: complete44 master/thumbnail source hashes, decoded-image hashes, alpha bounds and anatomical landmarks passed: ",output_path)
+	print("FISH_ART_IMPORT_AUDIT: complete74 master/thumbnail source hashes, decoded-image hashes, alpha bounds and anatomical landmarks passed: ",output_path)
 	quit(0)

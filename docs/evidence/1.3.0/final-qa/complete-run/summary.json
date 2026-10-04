@@ -1,0 +1,493 @@
+{
+  "passed": false,
+  "selected_suites": [
+    "camera_aspect",
+    "save",
+    "ocean_save",
+    "ocean_fresh_profile",
+    "ocean_float_save",
+    "giant_bait",
+    "ocean_landing",
+    "ocean_balance",
+    "ocean_ui",
+    "core",
+    "session_observation",
+    "float_encounter",
+    "hazard_boundary",
+    "guard_trace",
+    "float_observation",
+    "fast_recast",
+    "fish_art",
+    "fish_art_ui",
+    "failure_modal",
+    "notebook_ui",
+    "natural_history",
+    "ui_iteration",
+    "tackle",
+    "bait_balance",
+    "registry",
+    "fish_preview",
+    "main_travel",
+    "slice3d",
+    "ui_style",
+    "touch",
+    "historical_trial",
+    "angler_anatomy"
+  ],
+  "representative_tall_layout": false,
+  "runtime_files": 1703,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "camera_aspect",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.87,
+      "log": "build/ocean-final-fixed-qa/camera_aspect.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CAMERA_ASPECT_TESTS: 531/531 passed; failures=0; mathematical desktop projection, not device certification"
+      ]
+    },
+    {
+      "name": "save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 31.93,
+      "log": "build/ocean-final-fixed-qa/save.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "SAVE_TESTS: 314/314 passed; failures=0"
+      ]
+    },
+    {
+      "name": "ocean_save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 41.62,
+      "log": "build/ocean-final-fixed-qa/ocean_save.log",
+      "errors": [],
+      "expected_fault_injection_errors": [
+        "ERROR: Failed to open '/tmp/farshore-ocean-save-35-255033/failed_snapshot_copy/save.before-import.json.does-not-exist'."
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_SAVE_TESTS: 1154/1154 passed; failures=0"
+      ]
+    },
+    {
+      "name": "ocean_fresh_profile",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.12,
+      "log": "build/ocean-final-fixed-qa/ocean_fresh_profile.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_FRESH_PROFILE_TESTS: 423/423 passed; failures=0"
+      ]
+    },
+    {
+      "name": "ocean_float_save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 48.66,
+      "log": "build/ocean-final-fixed-qa/ocean_float_save.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_FLOAT_SAVE_TESTS: 41790/41790 passed; failures=0; generated records=2664; former false rejections=2"
+      ]
+    },
+    {
+      "name": "giant_bait",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 101.68,
+      "log": "build/ocean-final-fixed-qa/giant_bait.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "GIANT_BAIT_TESTS: 7187620/7187620; failures=0; bait/species routes=888/888; size samples=2368000"
+      ]
+    },
+    {
+      "name": "ocean_landing",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 27.1,
+      "log": "build/ocean-final-fixed-qa/ocean_landing.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_LANDING_TESTS: 921/921 passed; failures=0; 74 species x2 extreme lengths x2 portrait viewports; actual imported geometry"
+      ]
+    },
+    {
+      "name": "ocean_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 15.91,
+      "log": "build/ocean-final-fixed-qa/ocean_balance.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_BALANCE_TESTS: 2960374/2960374 passed; failures=0; samples=1480000; giants=144632; extended=27059"
+      ]
+    },
+    {
+      "name": "ocean_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 84.55,
+      "log": "build/ocean-final-fixed-qa/ocean_ui.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_UI_TESTS: 836/836 passed; failures=0; physical=(720, 1280); actual Main/headless or desktop only"
+      ]
+    },
+    {
+      "name": "core",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 108.26,
+      "log": "build/ocean-final-fixed-qa/core.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "CORE_TESTS: 368247/368247 passed; failures=0"
+      ]
+    },
+    {
+      "name": "session_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.1,
+      "log": "build/ocean-final-fixed-qa/session_observation.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "SESSION_OBSERVATION_TESTS: 186/186 passed; failures=0"
+      ]
+    },
+    {
+      "name": "float_encounter",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.48,
+      "log": "build/ocean-final-fixed-qa/float_encounter.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_ENCOUNTER_TESTS: 124/124 passed; failures=0; simulations=0; passive_traces=0"
+      ]
+    },
+    {
+      "name": "hazard_boundary",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.88,
+      "log": "build/ocean-final-fixed-qa/hazard_boundary.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_HAZARD_BOUNDARY_TESTS: 28/28; cases=7"
+      ]
+    },
+    {
+      "name": "guard_trace",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 5.57,
+      "log": "build/ocean-final-fixed-qa/guard_trace.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_GUARD_TRACE_TESTS: 1304/1304 passed; formal_fight_cases=360; unchanged_functions=7; historical_video_not_revalidated=true"
+      ]
+    },
+    {
+      "name": "float_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.3,
+      "log": "build/ocean-final-fixed-qa/float_observation.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_OBSERVATION_TESTS: 90/90 passed; failures=0; presentation fixtures, not phone performance"
+      ]
+    },
+    {
+      "name": "fast_recast",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 14.95,
+      "log": "build/ocean-final-fixed-qa/fast_recast.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FAST_RECAST_CAMERA_TESTS: 12/12 passed; failures=0; actual Main flow, desktop geometry projection"
+      ]
+    },
+    {
+      "name": "fish_art",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.33,
+      "log": "build/ocean-final-fixed-qa/fish_art.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_ART_TESTS: 34/34 passed; prototype geometry and release gate, not 74 finished art or Android validation"
+      ]
+    },
+    {
+      "name": "fish_art_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 77.28,
+      "log": "build/ocean-final-fixed-qa/fish_art_ui.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "PHOTO_UI_SCOPE: canonical-photoreal-74; production native pages; no release gate override; not Android validation",
+        "FISH_ART_UI_TESTS: 1962/1962 passed; canonical-photoreal-74; (720, 1280) desktop layout"
+      ]
+    },
+    {
+      "name": "failure_modal",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.61,
+      "log": "build/ocean-final-fixed-qa/failure_modal.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_FAILURE_MODAL_TESTS: 89/89 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1280) logical=(720.0, 1280.0); not Android hardware testing"
+      ]
+    },
+    {
+      "name": "notebook_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 105.22,
+      "log": "build/ocean-final-fixed-qa/notebook_ui.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_NOTEBOOK_UI_TESTS: 493/493 passed; (720, 1280); actual Main + Viewport touch, no Android claim"
+      ]
+    },
+    {
+      "name": "natural_history",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 38.54,
+      "log": "build/ocean-final-fixed-qa/natural_history.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "NATURAL_HISTORY_TESTS: 1502/1502 passed; (720, 1280); isolated Main + Viewport input; browser never opened"
+      ]
+    },
+    {
+      "name": "ui_iteration",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 22.21,
+      "log": "build/ocean-final-fixed-qa/ui_iteration.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "UI_ITERATION_TESTS: 93/93 passed; failures=0; physical=(720, 1280) logical=(720.0, 1280.0); production Main + viewport touch; not Android hardware"
+      ]
+    },
+    {
+      "name": "tackle",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 10.01,
+      "log": "build/ocean-final-fixed-qa/tackle.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TACKLE_TESTS: 833/833 passed; failures=0"
+      ]
+    },
+    {
+      "name": "bait_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.37,
+      "log": "build/ocean-final-fixed-qa/bait_balance.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "BAIT_BALANCE_TESTS: 67505/67505; reachable_species=74/74"
+      ]
+    },
+    {
+      "name": "registry",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.72,
+      "log": "build/ocean-final-fixed-qa/registry.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_3D_REGISTRY_TESTS: 158/158; imported models=74/74; release_gate=true"
+      ]
+    },
+    {
+      "name": "fish_preview",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.98,
+      "log": "build/ocean-final-fixed-qa/fish_preview.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_PREVIEW_TESTS: 25/25 passed"
+      ]
+    },
+    {
+      "name": "main_travel",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 11.46,
+      "log": "build/ocean-final-fixed-qa/main_travel.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "MAIN_TRAVEL_TESTS: 24/24 passed; failures=0; boundary tests only, no readiness override"
+      ]
+    },
+    {
+      "name": "slice3d",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 248.25,
+      "log": "build/ocean-final-fixed-qa/slice3d.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 8047/8047 passed; failures=0; cast events=78; landing events=75; species=74; spots=18"
+      ]
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 1,
+      "passed": false,
+      "seconds": 66.78,
+      "log": "build/ocean-final-fixed-qa/ui_style.log",
+      "errors": [
+        "FAIL UI: production declares exactly31 required generated raster icons",
+        "FAIL UI: starter/gear: icon is a required generated bitmap: large_fish_chunk",
+        "FAIL UI: starter/gear: icon is a required generated bitmap: whole_mackerel",
+        "FAIL UI: starter/gear: icon is a required generated bitmap: large_squid",
+        "FAIL UI: starter/gear: icon is a required generated bitmap: large_surface_lure",
+        "FAIL UI: discovered/gear: icon is a required generated bitmap: large_fish_chunk",
+        "FAIL UI: discovered/gear: icon is a required generated bitmap: whole_mackerel",
+        "FAIL UI: discovered/gear: icon is a required generated bitmap: large_squid",
+        "FAIL UI: discovered/gear: icon is a required generated bitmap: large_surface_lure"
+      ],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 28689/28698 passed; failures=9; button visits=376; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ]
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 34.66,
+      "log": "build/ocean-final-fixed-qa/touch.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete74 registry; full gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 148/148 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ]
+    },
+    {
+      "name": "historical_trial",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.28,
+      "log": "build/ocean-final-fixed-qa/historical_trial.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "TRIAL_FISHERY_TESTS: 53112/53112 passed; failures=0"
+      ]
+    },
+    {
+      "name": "angler_anatomy",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.82,
+      "log": "build/ocean-final-fixed-qa/angler_anatomy.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "ANGLER_ANATOMY_TESTS: 6368/6368 passed; failures=0"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 5.0,
+      "log": "build/ocean-final-fixed-qa/binary_catalog.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 74, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    }
+  ],
+  "scope": "Full74 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."
+}

@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/ocean_balance_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+OCEAN_BALANCE_TESTS: 2960374/2960374 passed; failures=0; samples=1480000; giants=144632; extended=27059

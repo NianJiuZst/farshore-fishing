@@ -21,6 +21,10 @@ SUITES = [
     ("camera_aspect", "camera_aspect_tests.gd", []),
     ("save", "save_tests.gd", []),
     ("ocean_save", "ocean_save_tests.gd", []),
+    ("ocean_fresh_profile", "ocean_fresh_profile_tests.gd", []),
+    ("ocean_float_save", "ocean_float_save_tests.gd", []),
+    ("giant_bait", "giant_bait_tests.gd", []),
+    ("ocean_landing", "ocean_landing_tests.gd", []),
     ("ocean_balance", "ocean_balance_tests.gd", []),
     ("ocean_ui", "ocean_ui_tests.gd", []),
     ("core", "core_tests.gd", []),
@@ -110,6 +114,7 @@ def main() -> int:
     parser.add_argument("--suites", help="Optional comma-separated suite names; summary explicitly records the narrowed scope")
     parser.add_argument("--skip-import", action="store_true", help="Use assets already imported by the coordinated producer")
     parser.add_argument("--render", action="store_true", help="Also run strict slice3d, UI style and touch through private Mobile/Vulkan software renderer")
+    parser.add_argument("--suite-timeout", type=float, default=900, help="Per-suite headless budget; the real74-species cast/fight/landing flow exceeds the previous300-second budget")
     parser.add_argument("--render-timeout", type=float, default=1200, help="Per-suite software renderer budget; full74,4x MSAA,tall frames and full license scrolling exceed the old180s budget")
     args = parser.parse_args()
     output = (ROOT / args.output).resolve()
@@ -144,7 +149,7 @@ def main() -> int:
         command = [godot, "--headless", "--audio-driver", "Dummy", "--path", "game", "--script", "res://tests/"+script]
         if extra:
             command += ["--", *extra]
-        results.append(execute(name, command, output))
+        results.append(execute(name, command, output, args.suite_timeout))
     results.append(execute("binary_catalog", ["python3", "tools/audit_fish_catalog_3d.py", "--require-all", "--output", str(output / "binary_catalog.json")], output))
     if args.render:
         for name, script, original_extra in [row for row in selected if row[0] in ["slice3d", "ui_style", "touch"]]:

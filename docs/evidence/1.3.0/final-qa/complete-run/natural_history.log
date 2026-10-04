@@ -1,0 +1,4 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/natural_history_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+NATURAL_HISTORY_TESTS: 1502/1502 passed; (720, 1280); isolated Main + Viewport input; browser never opened

@@ -1,0 +1,10 @@
+COMMAND: godot --headless --audio-driver Dummy --path game --script res://tests/fast_recast_camera_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+RECAST_PROBE failure-dismiss charge=0.05 torso_visible=true behind=false screen=(186.7201, 707.4649) camera=(1.1, 3.7, 6.2) origin=(1.1, 3.7, 6.2)
+RECAST_PROBE failure-dismiss windup0.8 charge=0.05 torso_visible=true behind=false screen=(186.7201, 707.4649) camera=(1.1, 3.7, 6.2) origin=(1.1, 3.7, 6.2)
+RECAST_PROBE failure-dismiss charge=0.15 torso_visible=true behind=false screen=(186.7201, 707.4649) camera=(1.1, 3.7, 6.2) origin=(1.1, 3.7, 6.2)
+RECAST_PROBE failure-dismiss windup0.8 charge=0.15 torso_visible=true behind=false screen=(186.7201, 707.4649) camera=(1.1, 3.7, 6.2) origin=(1.1, 3.7, 6.2)
+RECAST_PROBE catch-result dispose/recast charge=0.05 torso_visible=true behind=false screen=(186.7201, 707.4649) camera=(1.1, 3.7, 6.2) origin=(1.1, 3.7, 6.2)
+RECAST_PROBE catch-result windup0.8 charge=0.05 torso_visible=true behind=false screen=(186.7201, 707.4649) camera=(1.1, 3.7, 6.2) origin=(1.1, 3.7, 6.2)
+FAST_RECAST_CAMERA_TESTS: 12/12 passed; failures=0; actual Main flow, desktop geometry projection

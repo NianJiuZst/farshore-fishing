@@ -1,0 +1,70 @@
+{
+  "scope": "Selected exact final native UI evidence; all54 original PNGs remain in build/ocean-ui-final for full validation ZIP",
+  "store_sha256": "900a7ae2f9b5d30f7b32737c14b9411c588947bba12dd7ff67d91dae08f43660",
+  "native_checks_per_aspect": 902,
+  "capture_audit_checks": 462,
+  "adapter": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "not_android_device_or_fps_validation": true,
+  "files": [
+    {
+      "file": "native-720x1280.log",
+      "source": "build/ocean-ui-final/native-720x1280.log",
+      "sha256": "474a44f9be82a05c25d25bee2a7de6b76ac57dbd1abe439671e9964c3a504e0d",
+      "bytes": 466
+    },
+    {
+      "file": "native-720x1584.log",
+      "source": "build/ocean-ui-final/native-720x1584.log",
+      "sha256": "07cb31b045d587fa743f8ba2d90c5ae145af47528195328328bd26b062716cd0",
+      "bytes": 466
+    },
+    {
+      "file": "native-720x1280.manifest.json",
+      "source": "build/ocean-ui-final/native-720x1280/manifest.json",
+      "sha256": "6278b00f35670c012b6c3db96ce25dd5a0bbe000e16df48487d2074ee3139b19",
+      "bytes": 12034
+    },
+    {
+      "file": "native-720x1584.manifest.json",
+      "source": "build/ocean-ui-final/native-720x1584/manifest.json",
+      "sha256": "6a9f3b2f46c21007a6e687ff5436bec678520bf664b6e9abe551882990605c67",
+      "bytes": 12034
+    },
+    {
+      "file": "capture_audit.json",
+      "source": "build/ocean-ui-final/capture_audit.json",
+      "sha256": "7c33481af3791129479088e3f5cf8b34bcf91dde19004c1bcb63990ea54436ec",
+      "bytes": 32734
+    },
+    {
+      "file": "audit_ocean_ui_captures.py",
+      "source": "tools/audit_ocean_ui_captures.py",
+      "sha256": "7b796fdf7c074655ada9109a23b6e8699189ef6b66529ebb5dca8036c40f2909",
+      "bytes": 5490
+    },
+    {
+      "file": "fresh_profile_lobby_720x1280.png",
+      "source": "build/ocean-ui-final/native-720x1280/fresh_profile_lobby.png",
+      "sha256": "34d5f7cdef3986d12f3e9268b4c92fc326a1ee15e6eee12876be6a03f32c0ad3",
+      "bytes": 591442
+    },
+    {
+      "file": "great_white_detail_720x1584.png",
+      "source": "build/ocean-ui-final/native-720x1584/species_great_white_shark.png",
+      "sha256": "6a825a421979d7dee0ff903451ebe9290943108f92579aa0faa336a8b6cb4146",
+      "bytes": 300291
+    },
+    {
+      "file": "ocean_boat_720x1584.png",
+      "source": "build/ocean-ui-final/native-720x1584/fishing_indian_reef.png",
+      "sha256": "58c61a1c76a6da11aa06e2b6af4000cb71e6fa8fe691a9bc6c639238e6bcde6c",
+      "bytes": 1099219
+    },
+    {
+      "file": "twelve_baits_720x1280.png",
+      "source": "build/ocean-ui-final/native-720x1280/gear_twelve_baits_bottom.png",
+      "sha256": "0ab9e8615014e6f539f7896b66155214fff89856aec39ff8b5471fd557c71d1f",
+      "bytes": 166277
+    }
+  ]
+}

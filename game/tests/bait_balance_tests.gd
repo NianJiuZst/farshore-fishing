@@ -11,7 +11,7 @@ func check(ok: bool, detail: String) -> void:
 func _initialize() -> void:
 	var catalog: ContentCatalog = Catalog.new()
 	check(catalog.load_all(false), "catalog loads")
-	check(catalog.gear.size() == 5 and catalog.baits.size() == 8, "five rods/eight bait definitions")
+	check(catalog.gear.size() == 5 and catalog.baits.size() == 12, "five rods/twelve bait definitions")
 	for fish: FishDefinition in catalog.fish.values():
 		for original: String in ["worm", "grain", "shrimp", "lure"]:
 			check(is_equal_approx(catalog.bait_weight(fish, original), fish.weight_for("bait_weights", original)), "legacy attraction preserved " + fish.species_id + "/" + original)
@@ -39,5 +39,5 @@ func _initialize() -> void:
 								check(float(candidate.weight) > 0 and is_finite(float(candidate.weight)), "valid encounter weight")
 								reachable[fish.species_id] = true
 	for id: String in catalog.fish: check(reachable.has(id), "species remains reachable " + id)
-	print("BAIT_BALANCE_TESTS: ", checks-failures, "/", checks, "; reachable_species=", reachable.size(), "/44")
+	print("BAIT_BALANCE_TESTS: ", checks-failures, "/", checks, "; reachable_species=", reachable.size(), "/", catalog.fish.size())
 	quit(0 if failures == 0 else 1)

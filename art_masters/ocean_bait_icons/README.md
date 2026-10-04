@@ -7,6 +7,6 @@ Four original built-in imagegen illustrations generated on 2026-10-04. The PNGs 
 - `large_squid.png`: complete rose-speckled ivory mantle, fins, head and spread arms
 - `large_surface_lure.png`: thick teal/silver/amber hard popper with red-orange cupped mouth and two visible hook assemblies
 
-`generation_records.json` preserves exact prompts, source output paths, tool identity, SHA-256 hashes, alpha measurements and validation notes. `readability_audit.html` is a local inspection page comparing existing and new art at 70, 96 and 224 pixels on dark teal and cream. Open it in a normal browser or use the in-game UI audit. Native-size visual review passed. Small-size in-game validation is coordinated with the parent UI work; no completed browser screenshot is claimed.
+`generation_records.json` preserves exact prompts, source output paths, tool identity, SHA-256 hashes, alpha measurements and validation notes. `readability_audit.html` is a local inspection page comparing existing and new art at 70, 96 and 224 pixels on dark teal and cream. Open it in a normal browser or use the in-game UI audit. Native-size visual review passed. Small-size presentation is covered by the completed native Godot UI validation; no browser-rendering result is claimed.
 
-No Godot import, scene, resource mapping, or commit was performed by the asset worker. The parent owns runtime integration and final packaging.
+Runtime imports, small-size icon presentation and final integration are documented in [the ocean UI validation](../../docs/OCEAN_UI_VALIDATION.md).

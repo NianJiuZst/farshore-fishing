@@ -1,0 +1,16 @@
+test_cleanup_requires_exact_owned_identity_and_internal_name (test_unsigned_handoff.UnsignedHandoffTests.test_cleanup_requires_exact_owned_identity_and_internal_name) ... ok
+test_external_paths_reject_primary_ancestors_existing_and_symlinks (test_unsigned_handoff.UnsignedHandoffTests.test_external_paths_reject_primary_ancestors_existing_and_symlinks) ... ok
+test_frozen_bytes_and_symlink_changes_rejected (test_unsigned_handoff.UnsignedHandoffTests.test_frozen_bytes_and_symlink_changes_rejected) ... ok
+test_isolated_settings_use_inert_existing_text_and_remove_signing_env (test_unsigned_handoff.UnsignedHandoffTests.test_isolated_settings_use_inert_existing_text_and_remove_signing_env) ... ok
+test_null_boolean_nul_and_old_signers_rejected (test_unsigned_handoff.UnsignedHandoffTests.test_null_boolean_nul_and_old_signers_rejected) ... ok
+test_optimized_python_is_explicitly_refused_before_any_action (test_unsigned_handoff.UnsignedHandoffTests.test_optimized_python_is_explicitly_refused_before_any_action) ... ok
+test_pending_identity_cannot_use_source_qa_exception (test_unsigned_handoff.UnsignedHandoffTests.test_pending_identity_cannot_use_source_qa_exception) ... ok
+test_preset_changes_only_enable_reviewed_prebuilt_unsigned_route (test_unsigned_handoff.UnsignedHandoffTests.test_preset_changes_only_enable_reviewed_prebuilt_unsigned_route) ... ok
+test_public_pin_roundtrip_and_exact_identity (test_unsigned_handoff.UnsignedHandoffTests.test_public_pin_roundtrip_and_exact_identity) ... ok
+test_runnable_signed_credential_and_escaped_presets_fail_closed (test_unsigned_handoff.UnsignedHandoffTests.test_runnable_signed_credential_and_escaped_presets_fail_closed) ... ok
+test_unsigned_verifier_retains_signature_absence_and_public_pin_gates (test_unsigned_handoff.UnsignedHandoffTests.test_unsigned_verifier_retains_signature_absence_and_public_pin_gates) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.183s
+
+OK

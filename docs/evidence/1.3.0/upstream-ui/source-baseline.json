@@ -1,0 +1,69 @@
+[
+  {
+    "path": "game/scripts/main.gd",
+    "function": "_apply_theme",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "c27d18ee68d0958a44184b98b8cbf98c51e302c9c690d371a5b8435e1e157172"
+  },
+  {
+    "path": "game/scripts/main.gd",
+    "function": "_box",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "b4dcfc92d2a677b5999d4d801314f7591193347c6e014ca77068a8396ba957ad"
+  },
+  {
+    "path": "game/scripts/main.gd",
+    "function": "_button",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "7c77dfd7ad75ec61253c211b458fab0d35e54c55178a4891d5ed8d8b275e2011"
+  },
+  {
+    "path": "game/scripts/main.gd",
+    "function": "_card",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "45288dceedfc5cd191e5c6045cacb666c379ce6dbe36ac6f474308f34c0d0174"
+  },
+  {
+    "path": "game/scripts/icon_action.gd",
+    "function": "_apply_surface",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "02c5d481dd74d0b08301bc7801d75976abdc0ce026a2bfd04142de10f7462b5f"
+  },
+  {
+    "path": "game/scripts/fish_notebook_ui.gd",
+    "function": "_species_tile",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "20f21587ea7e8343831342b4e398d39fd425981b6fd62c9bbe30690e06b190cf"
+  },
+  {
+    "path": "game/scripts/icon_action.gd",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "b58f038422a98a6605217c3ee4963cb16e61297084e977a62204f169c69d50aa"
+  },
+  {
+    "path": "game/scripts/fishing_failure_modal.gd",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "5677f014186e8afdb87e356593df950747d27ed6788db639bce2a7de14f282b2"
+  },
+  {
+    "path": "game/scripts/fishing_menu_pages.gd",
+    "function": "populate_settings",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "d82b53344f9e6d4a6791b71d5d4ee3dfae1bb49d71a65695b4b6f440be19ff6c"
+  },
+  {
+    "path": "game/scripts/main.gd",
+    "baseline": "1afda37",
+    "matches": true,
+    "sha256": "d699f11a34fca21d29d57e3b7b467dac3ca2bd26d80aba0fffc5ad39b2210e6a"
+  }
+]

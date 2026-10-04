@@ -1,0 +1,1232 @@
+{
+  "scope": "exact unchanged PNG/native-source audit; no Android or FPS claim",
+  "checks": 462,
+  "passed": 462,
+  "failures": [],
+  "captures": [
+    {
+      "run": "native-720x1280",
+      "label": "fresh_profile_lobby",
+      "sha256": "34d5f7cdef3986d12f3e9268b4c92fc326a1ee15e6eee12876be6a03f32c0ad3",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fresh_oceans_locked",
+      "sha256": "e56292fc2f93e25d982c0537d6d286e68dc46b380309c3644934cf84c018f60c",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "catalog_top",
+      "sha256": "00bd4fe42eae6426a7fe9480cba1b8722d837678fb11a50f81409caca41ec0b8",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "catalog_bottom",
+      "sha256": "33f58d4df44c6ab7bd38e44e98682675a4ca9d06d21ed28257610dc966ad1fae",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "species_great_white_shark",
+      "sha256": "898f4ebc955e26eb3d0d895756f6a28fdbe8aab0d39da2bd60d9d6bbdd8fdd24",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "species_great_white_sources",
+      "sha256": "393928c2f1ed0f03307dc60c1d1e881a9bb81e417fdad84648ae5f3972891afd",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "species_great_hammerhead",
+      "sha256": "10eb90a83ea4978d3364d30357df2b06ec4883770b654821cbf2d87262136a36",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "species_atlantic_bluefin_tuna",
+      "sha256": "1cd4b225f17f9196d35083e4157f60c836c551009998cfe32c77d504b1e1e4a8",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "species_active_after_lru",
+      "sha256": "898f4ebc955e26eb3d0d895756f6a28fdbe8aab0d39da2bd60d9d6bbdd8fdd24",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "prepare_wolffish_blocked_90m",
+      "sha256": "c4b0e9eff3a7897a1d45504c6ac8fc543a1d6632f92f2d0fbedb6b950122895c",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "prepare_wolffish_available_180m",
+      "sha256": "c36398053a1ced064ac51725eb997353dc14d193e6216f0844335dfbae715319",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "gear_bottom",
+      "sha256": "486ff0162557c32f215233402e76d7e2a9574e7dd550eff6fda981562e18b20e",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_bait_large_fish_chunk",
+      "sha256": "358b0a58bea9d88f94f16e4b55c558d8cf8dbc95a9cbbdd608c6439810a19a58",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_bait_whole_mackerel",
+      "sha256": "cf7e91bde26e693dc794b071e562ce5e302cab2a4781cfc0c7310402f4e7f022",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_bait_large_squid",
+      "sha256": "3ae707f5209f56f5602c9e6deefdcfc8f7e4bec56254284c782fbe37689e0916",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_bait_large_surface_lure",
+      "sha256": "b7e7d8b08465adc351f77b01e7860ecac0045b4a55c9ffd92ffc400ac028daec",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "gear_twelve_baits_bottom",
+      "sha256": "0ab9e8615014e6f539f7896b66155214fff89856aec39ff8b5471fd557c71d1f",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "travel_pacific_ocean",
+      "sha256": "629f23547c732dceb2d1239d55c62bc38220b4b9a6151716007fd03bf1174718",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_pacific_reef",
+      "sha256": "b39c09c86abfce49b494841fe85f792bd868249c9efd7331fb3d41e681107df6",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_pacific_bluewater",
+      "sha256": "6d6d8d092f13797458116225ed3d91fc2cafdcc97acae62ddef3e338f78fca94",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "travel_atlantic_ocean",
+      "sha256": "25b48e8111aad2fb18637ae83c3895347f75c4b54a04e4c377b06c1f809f65cd",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_atlantic_shelf",
+      "sha256": "526e7149c46b4601fd75431e99a940ed52eeb3edcdbf55fa54bb93e965ba78b9",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_atlantic_bluewater",
+      "sha256": "c2802019ce1f4ea1629a7fcfdbacbf43687aba845a6e9ac4b5633bed6194b4da",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "travel_indian_ocean",
+      "sha256": "4a15e3142928a4e30e95d3376ea5a09e08cd49f6a7084142b7cac7c2ee0acafd",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_indian_reef",
+      "sha256": "fa8a1656c5a0c96209984625b0263a739f4f30664d508440337f49af551c8945",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "fishing_indian_bluewater",
+      "sha256": "c5d95e8324fa44fa4138af39d57aa0ccdfe41c2cb031c706fde8cb16a9ab1a0e",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1280",
+      "label": "travel_bottom",
+      "sha256": "8695ce0f8d1d9f706eb1a8e7c0a84588356cab5617b12a2f59774ff696e011db",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fresh_profile_lobby",
+      "sha256": "c086ddd7a16594a771cdb68129b3d9166b7211503ac8410194ea4f61df88f6e7",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fresh_oceans_locked",
+      "sha256": "5f769bc697644b7dbecb41acfb0fa71e4167d07a332cfe97695def9971f4258a",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "catalog_top",
+      "sha256": "0cb170c7824337c59837dc8fc69232d82b05aebb32dab3be578e7a6b3dc5f573",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "catalog_bottom",
+      "sha256": "1dc4d011fa990c6d64c2a863f7ee32bfbc33fc86deb5341aa5e2347589c7996c",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "species_great_white_shark",
+      "sha256": "6a825a421979d7dee0ff903451ebe9290943108f92579aa0faa336a8b6cb4146",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "species_great_white_sources",
+      "sha256": "0ed9e6153d1dd58f133390e919773a55bcd89bf51e3ea4d2b13120e3b010f135",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "species_great_hammerhead",
+      "sha256": "991278fe0bdb275848c3d952f89ca94c757348d423b4dac219aabeace47d2ff2",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "species_atlantic_bluefin_tuna",
+      "sha256": "3e9e07f5fa2d70da58494c96ff8328f8e2512681771519c0704fa104830b90cc",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "species_active_after_lru",
+      "sha256": "6a825a421979d7dee0ff903451ebe9290943108f92579aa0faa336a8b6cb4146",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "prepare_wolffish_blocked_90m",
+      "sha256": "77a4baffc4535868d26239c076d9eaccb012aeab1b130f7843e6f0684ea96c19",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "prepare_wolffish_available_180m",
+      "sha256": "65419e81bef1ca2f04555adeb53203be15d8e165799030a81d251843ceb7a774",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "gear_bottom",
+      "sha256": "be2ebc434df6e1500eb5dd4c494726124ca6a2efc364934b156dec4e3062dbf8",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_bait_large_fish_chunk",
+      "sha256": "b8c990db739d2dc654e12af68327e65a4ce605f6c5e6a1bd7fff50907defe9bf",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_bait_whole_mackerel",
+      "sha256": "aaed0f52f220365e7a3e42b3d81b67dbd709241a47faba3b5740330d893827f2",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_bait_large_squid",
+      "sha256": "cdca01ca79dc315945c72cc87af38f8e39c9f7dd63da2e1efbddbd018659ad21",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_bait_large_surface_lure",
+      "sha256": "bf453371b7e92ef7eb92b99d0536f0f4d65d21a11b0fcbf76a0a9489c74dae1b",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "gear_twelve_baits_bottom",
+      "sha256": "326ba6a9c0602fef7a456610684d1a109ed419b0dc6004b35fae332850650385",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "travel_pacific_ocean",
+      "sha256": "62f3c3ea700b3de14b648ecfe4d204fcdb7ceb8b1b03bf0b7883452409d1366f",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_pacific_reef",
+      "sha256": "d46bde01f2b1ecb4bd0d58a7c4e00018119f9131c3c0db42c507325c646ebfe6",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_pacific_bluewater",
+      "sha256": "69d636f8ce3943a39fab883e7e379225ac303eb82804757d4237844b2d46aa61",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "travel_atlantic_ocean",
+      "sha256": "f716fb3b6fa4873f5beb89a004afb5c1e0fb8945e656f05b59e9ef661c5042d9",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_atlantic_shelf",
+      "sha256": "b9f8825fb19b566d73077375e914cab102b0f5d914dfc3196fb9db539d87e886",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_atlantic_bluewater",
+      "sha256": "e8bebf551b071e1f03c3a0b1c20420ab79505c458e18eff93b4c294369f73b92",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "travel_indian_ocean",
+      "sha256": "be57d504e735c3938e9e1111f6d6157da020c2e842d71394ae911251a5678b1a",
+      "hud_regions": {}
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_indian_reef",
+      "sha256": "58c61a1c76a6da11aa06e2b6af4000cb71e6fa8fe691a9bc6c639238e6bcde6c",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "fishing_indian_bluewater",
+      "sha256": "a731003e438225df9befa40a22d2cbace1953ae70395431b35960d719acce95d",
+      "hud_regions": {
+        "wallet_text": {
+          "bounds": [
+            513,
+            60,
+            580,
+            99
+          ],
+          "mask": "light",
+          "pixels": 321,
+          "sha256": "f30a92fd796b9105a338f3757ac77928e9638239cffb9844021ccee8ad5191d7"
+        },
+        "coin_icon": {
+          "bounds": [
+            478,
+            59,
+            514,
+            98
+          ],
+          "mask": "gold",
+          "pixels": 524,
+          "sha256": "9f5351b3fc32b67e43512e714077f72786d9972129f6704060a81299be0ca204"
+        },
+        "pause_caption": {
+          "bounds": [
+            616,
+            94,
+            672,
+            126
+          ],
+          "mask": "light",
+          "pixels": 255,
+          "sha256": "770343c9d00fa2c1d83c439ae1dd6ebd84c9e49dbd368868c1d3fa8d7614aac5"
+        },
+        "pause_icon": {
+          "bounds": [
+            618,
+            37,
+            669,
+            93
+          ],
+          "mask": "gold",
+          "pixels": 375,
+          "sha256": "ac1b9a50e228007fe63bfd99705e1d576db5b0673b6f2b16430756eb5da14930"
+        }
+      }
+    },
+    {
+      "run": "native-720x1584",
+      "label": "travel_bottom",
+      "sha256": "7b202e68feb5a582c841415d39f998257ddca5e1898d82cf41834add2b503f7f",
+      "hud_regions": {}
+    }
+  ]
+}

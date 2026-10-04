@@ -1,0 +1,7 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+OCEAN_UI_TESTS: 902/902 passed; failures=0; physical=(720, 1280); actual Main/headless or desktop only
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

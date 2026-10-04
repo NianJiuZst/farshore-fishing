@@ -1,8 +1,8 @@
 # 远岸钓记 1.3.0 · 远洋图鉴
 
-> 1.3.0 正在进行完整集成验收，尚未发布新的 APK。原签名私钥当前不可用，覆盖安装被阻止；不能以更换签名或卸载旧应用来声称保留进度。当前正式下载仍为 GitHub Releases 中的 1.2.0。新代码基于用户最新提交 `1afda37`，保留其 [画面、交互与存档优化](docs/LOCAL_OPTIMIZATION.md)。阶段结果见 [海洋扩展记录](docs/OCEAN_EXPANSION.md)。
+> 1.3.0发行源码。已签名APK及最终签名/资源校验文件以[GitHub Releases](https://github.com/NianJiuZst/farshore-fishing/releases)为准；源码或标有UNSIGNED-INTERNAL的签名输入不是手机安装交付物。新应用与旧版并存，新档补齐原六地区及1500旅币。代码基于用户更新的`1afda37`，保留其[画面、交互与存档优化](docs/LOCAL_OPTIMIZATION.md)。[完整源码验收](docs/OCEAN_RELEASE_VALIDATION.md)。
 
-简体中文、竖屏、完全离线的 Godot 原生3D钓鱼游戏。本轮在原44种鱼上新增30种，计划合计74种独立鱼类、9个水域和18个钓点；既有5款鱼竿、8类无限补给鱼饵和全部旧物种标识保留。开发中源码位于 `ocean-expansion` 分支，未经最终验收的阶段提交不能当成手机发行包。
+简体中文、竖屏、完全离线的 Godot 原生3D钓鱼游戏。本轮在原44种鱼上新增30种，合计74种独立鱼类、9个水域和18个钓点；5款鱼竿、12类无限补给鱼饵，全部旧物种和原8饵标识保留。仓库保存完整运行资源、可编辑美术主文件和公开签名指纹；手机安装请选择已签名的ARM64发布APK。
 
 ## 1.3.0 新内容
 
@@ -12,20 +12,23 @@
 - 巨物抽取比例从约6.51%提高至约9.76%；原44种鱼平均长度约增5.5%—10.7%。常规尺寸之外有罕见的虚构极端个体，不改写百科中的真实文献纪录
 - 准备页按当前鱼竿的探深/距离与鱼饵显示实际可遇见列表，明确说明狼鱼等深水鱼的装备限制；图鉴列出抛投和探深条件
 - 大于2.8米的巨物按实际游戏尺寸在船侧展示，镜头拉远；不将大鱼压缩到旧5.5米的显示上限
+- 新增大块鱼肉、整尾鲭鱼、大只鱿鱼和巨物波扒；分别偏向不同鱼群，单物种巨物概率约14.7%—16.5%，不保证咬钩或钓获。原8饵随机序列保持不变
 - 高清原图按需加载，缓存保留最近4张；已显示图片继续保有完整分辨率。74种鱼的缩略图不受此限制
-- 保留用户增加的分阶段加载、灯光、水体、环境音和画质选项；新海域使用海风和水声。修复备份撤销失败时可能覆盖恢复目标的事务问题
+- 保留用户增加的分阶段加载、灯光、水体、环境音和画质选项；新海域使用海风和水声。修复备份撤销失败时可能覆盖恢复目标的事务问题，以及少数真实钓获浮点字段在JSON复读时被误判为保存失败的问题
 
 完整30鱼来源与量法：[来源地图](docs/OCEAN_SPECIES_SOURCES.md)、[独立复核](docs/OCEAN_SPECIES_INDEPENDENT_REVIEW.md)。存档测试和失败恢复：[存档验收](docs/OCEAN_SAVE_VALIDATION.md)。
 
 ## 1.3.0 安装与旧进度
 
-计划包名仍为 `org.farshore.fishing.preview`，版本1.3.0 / versionCode7，证书必须保持 `e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284`。schema2、schema1迁移、原用户目录、存档文件名以及旧鱼/地区/装备标识均保留。
+新包名 `org.farshore.fishing.ocean`，显示名“远岸钓鱼·海洋”，版本1.3.0 / versionCode7。与旧版 `org.farshore.fishing.preview` 独立并存，不覆盖旧应用、不自动读取旧应用的私人数据，也不宣称迁移了原纪录。不要卸载旧版或清除数据。
 
-原签名尚未恢复，当前不能制作满足覆盖更新条件的发行APK。不要卸载旧版本，也不要清除应用数据。用户最新源码中的手动导出功能尚未随1.2.0发布，因此不能据此假定已安装的旧应用能导出进度。没有Android真机覆盖安装、帧率、触控或温度验证；桌面Mobile/Vulkan和无窗口回归的通过不能代替这些验收。
+仅新建档案获得1500旅币，并解锁雾林湖、汐见港、松湾峡湾、琥珀海岸、密西西比、长江流域六地区的旅行进度。12个原钓点仍保留原有鱼竿/探深条件，可用旅币购买合适装备；初始竿不额外升级，也不伪造钓获。3个新海域仍按原设定的发现数和旅币解锁。载入或手动导入已有合法存档不重复发放补偿，不改写其余额与解锁。
+
+用户在自己的Mac生成并私密备份新签名；云端只接收公开证书指纹及签名后的APK。私钥和口令不进入GitHub或聊天。[本机签名流程](docs/OCEAN_LOCAL_SIGNING.md)。尚无Android真机运行、帧率、触控、温度或安装验证；桌面Mobile/Vulkan与逻辑回归不能替代这些验收。
 
 ## 开发和验证
 
-使用官方Godot4.6.3 stable，继续原生Mobile/Vulkan、ARM64、minSDK29/targetSDK36，不静默降为OpenGL。新增资料为 `fish_e/f.json`、`encyclopedia_e/f.json`；原44鱼自然资料保持不变。新美术来源和主文件在 `art_masters/fish_photoreal_ocean/`，模型源在 `art_masters/3d/` 和 `tools/art3d/fish_profiles/`。构建工具继续强制先验证独立源码备份，再从隔离副本导出，并核验原证书；不会自动生成新签名。
+使用官方Godot4.6.3 stable，继续原生Mobile/Vulkan、ARM64、minSDK29/targetSDK36，不静默降为OpenGL。新增资料为 `fish_e/f.json`、`encyclopedia_e/f.json`；原44鱼自然资料保持不变。新美术来源和主文件在 `art_masters/fish_photoreal_ocean/`，模型源在 `art_masters/3d/` 和 `tools/art3d/fish_profiles/`。构建工具继续强制先验证独立源码备份，再从隔离副本导出，并核验本次明确固定的公钥证书；不会自动生成签名。
 
 可以运行 `python3 tools/run_full_catalog_qa.py --output build/ocean-qa` 验证当前完整集成；`--render` 提供桌面软件Vulkan检查。使用新的空输出目录和隔离测试数据。新的 `ocean_save_tests.gd`、`ocean_balance_tests.gd`、`ocean_ui_tests.gd` 分别覆盖旧进度、尺寸分布和扩展界面。
 

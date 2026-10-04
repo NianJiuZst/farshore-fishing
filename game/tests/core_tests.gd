@@ -60,7 +60,7 @@ func _test_catalog_and_reachability() -> void:
 	var art_check: bool = "--check-art" in OS.get_cmdline_user_args()
 	_check(catalog.load_all(art_check), "catalog load: " + str(catalog.errors))
 	_check(catalog.fish.size() == EXPECTED_SPECIES and catalog.spots.size() == EXPECTED_SPOTS, "74 unique fish and eighteen spots")
-	_check(catalog.regions.size() == EXPECTED_REGIONS and catalog.gear.size() == 5 and catalog.baits.size() == 8, "nine regions, five rods, eight baits")
+	_check(catalog.regions.size() == EXPECTED_REGIONS and catalog.gear.size() == 5 and catalog.baits.size() == 12, "nine regions, five rods, twelve baits")
 	var scientific_names: Dictionary = {}
 	var region_counts: Dictionary = {}
 	var protected_ids: Array[String] = []
@@ -386,7 +386,7 @@ func _test_protected_observation() -> void:
 	_check(reload.initialize(root_path) and _same_json(reload.state, before), "actual protected metadata survives JSON roundtrip")
 	_check(not bool(reload.dispose_catch(catch_id, "sold").get("ok", false)) and _same_json(reload.state, before), "reloaded actual protected record cannot be sold")
 	_check(bool(reload.dispose_catch(catch_id, "released").get("ok", false)), "actual protected observation can be released")
-	_check(reload.total_count() == 1 and reload.discovered_count() == 1 and int(reload.state.currency) == 153, "protected release preserves one discovery with ordinary rewards only")
+	_check(reload.total_count() == 1 and reload.discovered_count() == 1 and int(reload.state.currency) == 1533, "protected release preserves one discovery with ordinary rewards only")
 	_check(_same_json(reload.state.species_stats, before.species_stats) and (reload.state.pending_catches as Dictionary).is_empty(), "protected release retains immutable historical record and clears pending")
 	before = reload.state
 	_check(not bool(reload.dispose_catch(catch_id, "released").get("ok", false)) and reload.state == before, "actual protected release is idempotent")
@@ -410,10 +410,15 @@ func _test_growth() -> void:
 	_check(store.initialize(test_root.path_join("growth")), "growth fixture initializes")
 	var state: Dictionary = store.state
 	state.currency = 0
-	_check(store.commit_state(state), "zero-currency starting scenario")
+	# Keep the historical zero-start challenge independent of the new fresh-save compensation.
+	state.unlocked_regions = ["lake"]
+	state.gear = 0
+	state.owned_gear = [0]
+	_check(store.commit_state(state), "explicit uncompensated zero-currency/lake-only starting scenario")
 	for bait: Dictionary in catalog.baits: _check(int(bait.price) == 0, "basic bait always free: " + str(bait.bait_id))
 	var generator: EncounterGenerator = Encounter.new(9357)
 	var catches: int = 0
+	var missed_attempts: int = 0
 	var spent: int = 0
 	var unlock_history: Array[String] = []
 	# 160 exceeds all mandatory costs / the 33-coin round reward plus 74 discoveries.
@@ -432,9 +437,17 @@ func _test_growth() -> void:
 		var record: Dictionary = generator.make_individual(route.fish, route.spot, route.region, route.bait, int(state.gear), "day", "clear")
 		var session: FishingSession = _launch(record, int(state.gear))
 		store.begin_session(session.session_id)
-		_advance_to(session, Session.State.BITE)
+		_advance_to(session, Session.State.BITE, 4800)
 		_fight(session)
-		_check(session.state == Session.State.CAUGHT and bool(store.settle_catch(session.individual).get("ok",false)), "progression catches only a fish actually available on current gear")
+		if session.state != Session.State.CAUGHT:
+			# New large baits retain contact-only departures and difficult fights.
+			# A failed attempt must never count as a paid catch in this growth model.
+			missed_attempts += 1
+			_check(session.state == Session.State.ESCAPED, "progression failed attempt reaches a genuine terminal state within the explicit time budget")
+			_check(_same_json(store.state,state), "unsuccessful growth attempt gives no money, discovery or pending catch")
+			print("GROWTH_MISS species=",selected," bait=",route.bait," gear=",state.gear," fraction=",record.size_fraction," state=",session.state," cause=",session.escape_reason)
+			continue
+		_check(bool(store.settle_catch(session.individual).get("ok",false)), "progression settles only a genuinely landed available fish")
 		_check(bool(store.dispose_catch(str(session.individual.catch_id),"released").get("ok",false)), "release-only progression yields nonconsumable income")
 		catches += 1
 		state = store.state
@@ -456,16 +469,24 @@ func _test_growth() -> void:
 				_check(store.commit_state(state), "earned regional unlock commits: " + str(region.region_id))
 				unlock_history.append("%s discoveries=%d cost=%d" % [region.region_id, store.discovered_count(), region.unlock_cost])
 		_check(int(store.state.currency) == catches * 33 - spent and int(store.state.currency) >= 0, "growth never spends unearned currency or creates a negative balance")
-		if store.discovered_count() == EXPECTED_SPECIES: break
+		if store.discovered_count() == EXPECTED_SPECIES and (store.state.unlocked_regions as Array).size() == EXPECTED_REGIONS: break
 	_check(store.discovered_count() == EXPECTED_SPECIES and (store.state.unlocked_regions as Array).size() == EXPECTED_REGIONS and int(store.state.gear) == 4, "zero-currency release-only route reaches all 74 species/nine regions/gear without resource cycle")
 	_check(spent == 4870 and (store.state.owned_gear as Array).size() == 5, "full collection pays exact twelve configured purchases totaling 4870")
 	var restart: Store = Store.new()
-	_check(restart.initialize(test_root.path_join("growth")) and _same_json(restart.state, store.state) and restart.discovered_count() == EXPECTED_SPECIES, "expanded collection, all unlocks and exact economy survive restart")
-	print("PASS GROUP zero-start release-only growth: ", catches, " real encounters, discovered=", store.discovered_count(), ", balance=", store.state.currency, "; purchases=", spent, "; unlocks=", unlock_history)
+	_check(restart.initialize(test_root.path_join("growth")) and _persisted_expected_matches(restart.state, store.state) and restart.discovered_count() == EXPECTED_SPECIES, "expanded collection, all unlocks and exact economy survive restart")
+	print("PASS GROUP zero-start release-only growth: ", catches, " real encounters, discovered=", store.discovered_count(), ", balance=", store.state.currency, "; purchases=", spent, "; failed unpaid attempts=",missed_attempts, "; unlocks=", unlock_history)
 
 func _test_main_integration() -> void:
 	var ui = Main.new()
 	root.add_child(ui)
+	# Native Main startup yields between loading stages; wait for its real completion.
+	var startup_deadline: int = Time.get_ticks_msec() + 120000
+	while not ui._startup_complete and Time.get_ticks_msec() < startup_deadline:
+		await process_frame
+	if not ui._startup_complete:
+		_check(false, "Main startup timed out before _startup_complete")
+		quit(1)
+		return
 	ui.set_process(false)
 	ui.scenery.set_process(false)
 	await process_frame
@@ -761,3 +782,26 @@ func _has_label_fragment(node: Node, fragment: String) -> bool:
 
 func _same_json(left: Variant, right: Variant) -> bool:
 	return JSON.parse_string(JSON.stringify(left, "", true, true)) == JSON.parse_string(JSON.stringify(right, "", true, true))
+
+# Independent test-side readback expectation: parse the original exactly once.
+# Numeric int/float normalization is allowed, but values are compared exactly;
+# do not parse already-read floats a second time or call the production comparator.
+func _persisted_expected_matches(readback: Dictionary, expected: Dictionary) -> bool:
+	return _exact_json_values(readback, JSON.parse_string(JSON.stringify(expected,"",true,true)))
+
+func _exact_json_values(left: Variant, right: Variant) -> bool:
+	if (left is int or left is float) and (right is int or right is float):
+		if left is int and right is int: return left == right
+		return float(left) == float(right)
+	if typeof(left) != typeof(right): return false
+	if left is Dictionary:
+		if left.size() != right.size(): return false
+		for key: Variant in left:
+			if not right.has(key) or not _exact_json_values(left[key],right[key]): return false
+		return true
+	if left is Array:
+		if left.size() != right.size(): return false
+		for index: int in left.size():
+			if not _exact_json_values(left[index],right[index]): return false
+		return true
+	return left == right

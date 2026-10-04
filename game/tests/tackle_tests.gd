@@ -25,7 +25,7 @@ func _run() -> void:
 	print("TACKLE_TESTS: ",checks-failures,"/",checks," passed; failures=",failures)
 	quit(0 if failures == 0 else 1)
 func _test_data_and_legacy_weights() -> void:
-	_check(catalog.gear.size()==5 and catalog.baits.size()==8,"five rods and eight baits ship")
+	_check(catalog.gear.size()==5 and catalog.baits.size()==12,"five rods and twelve baits ship")
 	_check(catalog.fish.size()==74 and catalog.regions.size()==9 and catalog.spots.size()==18,"all legacy fish/world entries remain")
 	for id: int in range(3):
 		_check(catalog.gear[id]==OLD_GEAR[id],"original rod entirely unchanged: "+str(id))
@@ -127,7 +127,7 @@ func _test_saves() -> void:
 		_check(bool(restart.settle_catch(record).ok),"new catch persists original selected bait and gear4: "+str(bait.bait_id))
 		_check(str(restart.state.pending_catches[record.catch_id].bait_id)==str(bait.bait_id) and int(restart.state.pending_catches[record.catch_id].equipment)==4,"catch snapshot keeps actual tackle IDs: "+str(bait.bait_id))
 		_check(bool(restart.dispose_catch(record.catch_id,"released").ok),"new tackle catch disposes transactionally: "+str(bait.bait_id))
-	_check(restart.total_count()==52 and restart.discovered_count()==44,"eight new records add to44 histories, without resetting discovery")
+	_check(restart.total_count()==56 and restart.discovered_count()==44,"twelve new records add to44 histories, without resetting discovery")
 func _check(ok: bool,label: String) -> void:
 	checks+=1
 	if not ok:
