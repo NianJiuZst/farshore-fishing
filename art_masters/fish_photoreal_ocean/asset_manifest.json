@@ -1,0 +1,1723 @@
+{
+  "format_version": 1,
+  "generated_on": "2026-10-04",
+  "generator": "OpenAI built-in imagegen",
+  "purpose": "Photorealistic illustrative fish encyclopedia and catch-card assets, not actual wildlife photographs or diagnostic scientific plates.",
+  "orientation": "Head left, tail right; hammerhead cephalofoils have natural slight visible foreshortening.",
+  "variants": "Full runtime PNGs are byte-identical to accepted generated masters. Lossless RGBA PNG thumbnails use ImageMagick Lanczos to maximum 512 pixels. No procedural fish drawing, recoloring, upscaling or species-reuse substitution.",
+  "coordinate_system": "Normalized coordinates are relative to full original canvas. Bboxes [left,top,right,bottom] have exclusive right/bottom edges. Ruler spans foremost anatomical nose/bill to farthest natural tail tip; no whisker extension.",
+  "complete": true,
+  "asset_count": 30,
+  "assets": [
+    {
+      "species_id": "albacore",
+      "name": "长鳍金枪鱼",
+      "scientific_name": "Thunnus alalunga",
+      "master": "masters/albacore.png",
+      "runtime": "runtime/albacore.png",
+      "thumb": "thumbs/albacore_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        3,
+        36,
+        509,
+        224
+      ],
+      "thumb_sha256": "dabc7820ad078c80f5aa716e9a06222b7e257b2e30808d50003f392ebda83b78",
+      "subject_bbox_px": [
+        11,
+        125,
+        1764,
+        776
+      ],
+      "subject_bbox_normalized": [
+        0.0062006764374295375,
+        0.14092446448703494,
+        0.9943630214205186,
+        0.874859075535513
+      ],
+      "nose_normalized": [
+        0.0062006764374295375,
+        0.5197294250281849
+      ],
+      "tail_normalized": [
+        0.9937993235625705,
+        0.8060879368658399
+      ],
+      "ruler_extent_normalized": [
+        0.0062006764374295375,
+        0.9937993235625705
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "abe3852ccd9e72697725bdfcb1f3c06d9e3dde9e432c7ae07f1658476b7516fe",
+      "transparent_fraction": 0.6828738803892883,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "纺锤体，极长胸鳍明显向后超过第二背鳍，背深金属蓝腹银白，尾鳍后缘白，小鳍列明显。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/north-atlantic-albacore-tuna/seafood",
+          "title": "NOAA Fisheries: North Atlantic Albacore Tuna",
+          "supports": "Exceptionally long pectoral fins, nearly half the body length.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/s3/dam-migration/identification-of-atlantic-tunas.pdf",
+          "title": "NOAA: Identification of Atlantic Tunas",
+          "supports": "Pectoral extends beyond anal fin base; ventral finlets silver or dark.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_bluefin_tuna",
+      "name": "大西洋蓝鳍金枪鱼",
+      "scientific_name": "Thunnus thynnus",
+      "master": "masters/atlantic_bluefin_tuna.png",
+      "runtime": "runtime/atlantic_bluefin_tuna.png",
+      "thumb": "thumbs/atlantic_bluefin_tuna_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        4,
+        15,
+        508,
+        238
+      ],
+      "thumb_sha256": "e567cfe83fb853a349bedc17df76c51dd1b3c7b841a78c434c33388d51634ac0",
+      "subject_bbox_px": [
+        16,
+        53,
+        1760,
+        825
+      ],
+      "subject_bbox_normalized": [
+        0.009019165727170236,
+        0.05975197294250282,
+        0.992108229988726,
+        0.9301014656144306
+      ],
+      "nose_normalized": [
+        0.009019165727170236,
+        0.5366403607666291
+      ],
+      "tail_normalized": [
+        0.9915445321307779,
+        0.8015783540022547
+      ],
+      "ruler_extent_normalized": [
+        0.009019165727170236,
+        0.9915445321307779
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "8a74b52cd09e776cc1fa2c18a678b3fb85fed52091fd2b0cfd0de3f5611931cb",
+      "transparent_fraction": 0.6150382132493781,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "极粗壮纺锤体，短胸鳍不到第二背鳍，蓝黑背与银白腹，第二背鳍红褐，黄黑缘小鳍，细尾柄及新月尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/western-atlantic-bluefin-tuna/resources",
+          "title": "NOAA Fisheries: Western Atlantic Bluefin Tuna",
+          "supports": "Stocky torpedo body, color pattern, short pectoral and reddish-brown second dorsal.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "bigeye_tuna",
+      "name": "大眼金枪鱼",
+      "scientific_name": "Thunnus obesus",
+      "master": "masters/bigeye_tuna.png",
+      "runtime": "runtime/bigeye_tuna.png",
+      "thumb": "thumbs/bigeye_tuna_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        9,
+        508,
+        236
+      ],
+      "thumb_sha256": "c71f3501eaaa550b44290c05e4ab682c98f02d671c6e869fc3d718e24b76b404",
+      "subject_bbox_px": [
+        20,
+        31,
+        1761,
+        816
+      ],
+      "subject_bbox_normalized": [
+        0.011273957158962795,
+        0.03494926719278467,
+        0.9926719278466741,
+        0.9199549041713642
+      ],
+      "nose_normalized": [
+        0.011273957158962795,
+        0.5332581736189402
+      ],
+      "tail_normalized": [
+        0.992108229988726,
+        0.8432919954904171
+      ],
+      "ruler_extent_normalized": [
+        0.011273957158962795,
+        0.992108229988726
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "5246307eb22ec1a0dea3f57db75bf45e48bfeff5e1f1ae0456993216f2d4f0c8",
+      "transparent_fraction": 0.614124349078319,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "厚实纺锤体，大眼与较大头，胸鳍中长，第二背鳍及臀鳍浅黄但不极端延长，小鳍亮黄黑边。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-bigeye-tuna",
+          "title": "NOAA Fisheries: Pacific Bigeye Tuna",
+          "supports": "Large eyes, dark metallic-blue and white color, yellow/dark-edged fins.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/s3/dam-migration/guide-to-tunas-of-the-western-atlantic-ocean.pdf",
+          "title": "NOAA: Guide to Tunas of the Western Atlantic Ocean",
+          "supports": "Stocky body, large eye, pectoral reach, shorter dorsal/anal fins and absence of body markings.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "blue_marlin",
+      "name": "蓝枪鱼",
+      "scientific_name": "Makaira nigricans",
+      "master": "masters/blue_marlin.png",
+      "runtime": "runtime/blue_marlin.png",
+      "thumb": "thumbs/blue_marlin_thumb.png",
+      "width": 1918,
+      "height": 820,
+      "thumb_width": 512,
+      "thumb_height": 219,
+      "thumb_subject_bbox_px": [
+        5,
+        8,
+        509,
+        209
+      ],
+      "thumb_sha256": "97b28901cceb602fabdad0deade9a889d3feadf1a3cb56f2364078f2248df948",
+      "subject_bbox_px": [
+        19,
+        30,
+        1906,
+        785
+      ],
+      "subject_bbox_normalized": [
+        0.009906152241918665,
+        0.036585365853658534,
+        0.9937434827945777,
+        0.9573170731707317
+      ],
+      "nose_normalized": [
+        0.009906152241918665,
+        0.41341463414634144
+      ],
+      "tail_normalized": [
+        0.9932221063607924,
+        0.14146341463414633
+      ],
+      "ruler_extent_normalized": [
+        0.009906152241918665,
+        0.9932221063607924
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "24d68372907380331fa21f689bb1f36f3deeaaaae5613b266b249c149769c5b3",
+      "transparent_fraction": 0.7363418449095857,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "粗壮延长身，圆截面枪形上颌，第一背鳍前段高而后低但不呈巨大帆，细腹鳍，钴蓝背银白腹与淡蓝竖纹。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-blue-marlin",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "blue_shark",
+      "name": "大青鲨",
+      "scientific_name": "Prionace glauca",
+      "master": "masters/blue_shark.png",
+      "runtime": "runtime/blue_shark.png",
+      "thumb": "thumbs/blue_shark_thumb.png",
+      "width": 1947,
+      "height": 808,
+      "thumb_width": 512,
+      "thumb_height": 212,
+      "thumb_subject_bbox_px": [
+        3,
+        24,
+        509,
+        192
+      ],
+      "thumb_sha256": "07773579fe2e53a2e0de9930bcd109bcfa07a15f0761d5636ba733c4132ead42",
+      "subject_bbox_px": [
+        13,
+        91,
+        1935,
+        730
+      ],
+      "subject_bbox_normalized": [
+        0.00667693888032871,
+        0.11262376237623763,
+        0.9938366718027735,
+        0.9034653465346535
+      ],
+      "nose_normalized": [
+        0.00667693888032871,
+        0.40594059405940597
+      ],
+      "tail_normalized": [
+        0.9933230611196713,
+        0.12747524752475248
+      ],
+      "ruler_extent_normalized": [
+        0.00667693888032871,
+        0.9933230611196713
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "b45e87cd9b5bbc638d579f11bef3cb9e67c70ac77a8bafe8704cb9de9770ae74",
+      "transparent_fraction": 0.7456152394900507,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "极细长体；长圆锥吻、大眼；特别长窄尖胸鳍；背鳍靠后；深蓝背、亮蓝侧、白腹；上叶较长的非新月形尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-shark/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "cobia",
+      "name": "军曹鱼",
+      "scientific_name": "Rachycentron canadum",
+      "master": "masters/cobia.png",
+      "runtime": "runtime/cobia.png",
+      "thumb": "thumbs/cobia_thumb.png",
+      "width": 1915,
+      "height": 821,
+      "thumb_width": 512,
+      "thumb_height": 220,
+      "thumb_subject_bbox_px": [
+        6,
+        26,
+        504,
+        183
+      ],
+      "thumb_sha256": "c7a174cf27f22a7e452dc76c84348d3c9c4a3a0caa2ac2d7a3012c646c69a73b",
+      "subject_bbox_px": [
+        24,
+        97,
+        1886,
+        683
+      ],
+      "subject_bbox_normalized": [
+        0.012532637075718016,
+        0.11814859926918392,
+        0.9848563968668407,
+        0.8319123020706456
+      ],
+      "nose_normalized": [
+        0.012532637075718016,
+        0.5188794153471377
+      ],
+      "tail_normalized": [
+        0.9843342036553525,
+        0.8258221680876979
+      ],
+      "ruler_extent_normalized": [
+        0.012532637075718016,
+        0.9843342036553525
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "3a66901e94891d22445611e559f9375020c35cf41cd53bc953bd3597dcd0a7a1",
+      "transparent_fraction": 0.6347306189039031,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "头宽而扁，吻钝、下颌略突出；身长呈鱼雷形，背部7—9根独立短棘后接长第二背鳍；深褐体侧有纵带，成年尾鳍新月形。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cobia/",
+          "title": "Florida Museum species profile",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "dogtooth_tuna",
+      "name": "裸狐鲣",
+      "scientific_name": "Gymnosarda unicolor",
+      "master": "masters/dogtooth_tuna.png",
+      "runtime": "runtime/dogtooth_tuna.png",
+      "thumb": "thumbs/dogtooth_tuna_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        3,
+        27,
+        511,
+        215
+      ],
+      "thumb_sha256": "b5d3c2ec6c7c41a1f7d465b4ae4fbf508ff843c3d9dc7aab7b2f4d7eb9ef2466",
+      "subject_bbox_px": [
+        13,
+        96,
+        1770,
+        745
+      ],
+      "subject_bbox_normalized": [
+        0.007328072153325817,
+        0.10822998872604284,
+        0.9977452085682075,
+        0.8399098083427283
+      ],
+      "nose_normalized": [
+        0.007328072153325817,
+        0.5479143179255919
+      ],
+      "tail_normalized": [
+        0.9971815107102593,
+        0.20969560315670802
+      ],
+      "ruler_extent_normalized": [
+        0.007328072153325817,
+        0.9971815107102593
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "c4d6111f1fd737c024389f9f7f87d821f9326a6b3221f3b56ca88fae4fa3bd9d",
+      "transparent_fraction": 0.6454232436712681,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "长纺锤形、背蓝黑腹银白，大口内大圆锥牙，侧线波状；第一背鳍前缘黑，第二背鳍与臀鳍尖端白，后有小离鳍，尾深叉。",
+      "fact_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/723",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "giant_grouper",
+      "name": "鞍带石斑鱼",
+      "scientific_name": "Epinephelus lanceolatus",
+      "master": "masters/giant_grouper.png",
+      "runtime": "runtime/giant_grouper.png",
+      "thumb": "thumbs/giant_grouper_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        2,
+        10,
+        510,
+        243
+      ],
+      "thumb_sha256": "06548b93a3c23fa80b77422889311ad5c38cf81c5fd2d3dc9d8f96541399f70b",
+      "subject_bbox_px": [
+        10,
+        36,
+        1765,
+        842
+      ],
+      "subject_bbox_normalized": [
+        0.005636978579481398,
+        0.040586245772266064,
+        0.9949267192784668,
+        0.9492671927846674
+      ],
+      "nose_normalized": [
+        0.005636978579481398,
+        0.5388951521984217
+      ],
+      "tail_normalized": [
+        0.9943630214205186,
+        0.5062006764374295
+      ],
+      "ruler_extent_normalized": [
+        0.005636978579481398,
+        0.9943630214205186
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "e1447cb8d254f4233c6bc8976c23cf392cbe242bc189847a9cd01d7c8bf09fc9",
+      "transparent_fraction": 0.4411097793634472,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "成年鱼极粗壮、头大口阔、眼相对小；灰褐斑驳，鳍上细黑点；背鳍前棘后软连续，胸鳍宽圆，尾鳍圆。幼鱼黄黑大带不适用于成年巨物。",
+      "fact_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/4672",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "giant_trevally",
+      "name": "浪人鲹",
+      "scientific_name": "Caranx ignobilis",
+      "master": "masters/giant_trevally.png",
+      "runtime": "runtime/giant_trevally.png",
+      "thumb": "thumbs/giant_trevally_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        10,
+        13,
+        504,
+        242
+      ],
+      "thumb_sha256": "8eb6626c8ba4353ed9390d2c8fd17a1e464d0998735eb3d9a44476aaa2e015c8",
+      "subject_bbox_px": [
+        36,
+        47,
+        1748,
+        837
+      ],
+      "subject_bbox_normalized": [
+        0.020293122886133032,
+        0.05298759864712514,
+        0.9853438556933484,
+        0.943630214205186
+      ],
+      "nose_normalized": [
+        0.020293122886133032,
+        0.6223224351747464
+      ],
+      "tail_normalized": [
+        0.9847801578354002,
+        0.8162344983089064
+      ],
+      "ruler_extent_normalized": [
+        0.020293122886133032,
+        0.9847801578354002
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "b01f45b1ac522495c880b507ce82de42c1258268b286178dba5c5f72c946cf90",
+      "transparent_fraction": 0.569580779110514,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "厚实高体、额头陡峭，银灰至炭黑，腹部较浅；第二背鳍和臀鳍前端呈镰形，尾柄细，深叉尾；侧线后部有棱鳞，鳃盖后缘无显著黑斑。",
+      "fact_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/4268",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "great_barracuda",
+      "name": "大魣",
+      "scientific_name": "Sphyraena barracuda",
+      "master": "masters/great_barracuda.png",
+      "runtime": "runtime/great_barracuda.png",
+      "thumb": "thumbs/great_barracuda_thumb.png",
+      "width": 1881,
+      "height": 836,
+      "thumb_width": 512,
+      "thumb_height": 228,
+      "thumb_subject_bbox_px": [
+        7,
+        41,
+        506,
+        178
+      ],
+      "thumb_sha256": "f1faac7f21741219cddf239112031a900447089ba1913304f3464e3807ee2d33",
+      "subject_bbox_px": [
+        26,
+        148,
+        1859,
+        652
+      ],
+      "subject_bbox_normalized": [
+        0.013822434875066455,
+        0.17703349282296652,
+        0.9883040935672515,
+        0.7799043062200957
+      ],
+      "nose_normalized": [
+        0.013822434875066455,
+        0.5035885167464115
+      ],
+      "tail_normalized": [
+        0.987772461456672,
+        0.24162679425837322
+      ],
+      "ruler_extent_normalized": [
+        0.013822434875066455,
+        0.987772461456672
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "106839aae475e4a6173d43b4c8594da1f9545bc4fc7b06ff65c03455e91f3f51",
+      "transparent_fraction": 0.7149078292367137,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "细长近圆筒形身体；长吻、大口、下颌前突，牙尖；两枚背鳍相距很远。背部灰蓝，腹部银白，体侧下方不规则黑斑，尾鳍双凹形、鳍叶尖端浅色且鳍端浅色。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-barracuda/",
+          "title": "Florida Museum species profile",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "great_hammerhead",
+      "name": "无沟双髻鲨",
+      "scientific_name": "Sphyrna mokarran",
+      "master": "masters/great_hammerhead.png",
+      "runtime": "runtime/great_hammerhead.png",
+      "thumb": "thumbs/great_hammerhead_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        4,
+        6,
+        510,
+        250
+      ],
+      "thumb_sha256": "82403ebbfc5e21b9d2b0c8670e762ae0226653e3ea35da6f66552db58fa169bf",
+      "subject_bbox_px": [
+        14,
+        23,
+        1767,
+        864
+      ],
+      "subject_bbox_normalized": [
+        0.007891770011273957,
+        0.02593010146561443,
+        0.996054114994363,
+        0.9740698985343855
+      ],
+      "nose_normalized": [
+        0.007891770011273957,
+        0.5140924464487034
+      ],
+      "tail_normalized": [
+        0.9954904171364148,
+        0.24351747463359638
+      ],
+      "ruler_extent_normalized": [
+        0.007891770011273957,
+        0.9954904171364148
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "a0c0d53d6a5424b85ae5acd8656c948a973e499c8b58abf7bc4cc0aa4cd0fae3",
+      "transparent_fraction": 0.7025251376198096,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "粗壮体；成体锤头前缘近乎直线而中央浅凹；高耸镰刀形第一背鳍；第二背鳍及腹鳍更高、后缘深凹；远端眼。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "great_white_shark",
+      "name": "大白鲨",
+      "scientific_name": "Carcharodon carcharias",
+      "master": "masters/great_white_shark.png",
+      "runtime": "runtime/great_white_shark.png",
+      "thumb": "thumbs/great_white_shark_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        25,
+        506,
+        229
+      ],
+      "thumb_sha256": "2c9e818b237fb71ee774e9a77924d1ec9fce93345bb13be5dbb6b8af6fff8053",
+      "subject_bbox_px": [
+        20,
+        89,
+        1754,
+        793
+      ],
+      "subject_bbox_normalized": [
+        0.011273957158962795,
+        0.10033821871476889,
+        0.9887260428410372,
+        0.8940248027057497
+      ],
+      "nose_normalized": [
+        0.011273957158962795,
+        0.45208568207440814
+      ],
+      "tail_normalized": [
+        0.9881623449830891,
+        0.2322435174746336
+      ],
+      "ruler_extent_normalized": [
+        0.011273957158962795,
+        0.9881623449830891
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "316d513ecabd7448e87d8749407be8161cafa450be1bbe1f3572c2c2a2d00311",
+      "transparent_fraction": 0.6676152720811318,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "粗壮纺锤体；锥形吻；宽三角第一背鳍；强尾柄侧隆起与新月形异尾；灰黑背、清晰白腹；三角锯齿牙。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/white-shark/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "greater_amberjack",
+      "name": "高体鰤",
+      "scientific_name": "Seriola dumerili",
+      "master": "masters/greater_amberjack.png",
+      "runtime": "runtime/greater_amberjack.png",
+      "thumb": "thumbs/greater_amberjack_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        4,
+        27,
+        508,
+        229
+      ],
+      "thumb_sha256": "d324f6f3828d25bf0264c97a33c080edfade24097972e1d706483e72845865f4",
+      "subject_bbox_px": [
+        15,
+        93,
+        1759,
+        793
+      ],
+      "subject_bbox_normalized": [
+        0.008455467869222097,
+        0.10484780157835401,
+        0.9915445321307779,
+        0.8940248027057497
+      ],
+      "nose_normalized": [
+        0.008455467869222097,
+        0.5625704622322435
+      ],
+      "tail_normalized": [
+        0.9909808342728298,
+        0.7869222096956031
+      ],
+      "ruler_extent_normalized": [
+        0.008455467869222097,
+        0.9909808342728298
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "eecbb0166e6c409706faf0a1e2f3c5cf4dc89248cd023328ba5481a9d7d8d070",
+      "transparent_fraction": 0.6216303641856759,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "延长纺锤形身，背部蓝灰至褐色，腹银白；体侧有琥珀色横带，吻至眼再到第一背鳍有斜深色带；尾深叉。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/greater-amberjack",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "indo_pacific_sailfish",
+      "name": "印度太平洋旗鱼",
+      "scientific_name": "Istiophorus platypterus",
+      "master": "masters/indo_pacific_sailfish.png",
+      "runtime": "runtime/indo_pacific_sailfish.png",
+      "thumb": "thumbs/indo_pacific_sailfish_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        5,
+        507,
+        246
+      ],
+      "thumb_sha256": "cf0f12f1b1e9b829156756f2e561289df838f7d062b93a775285374554accf7c",
+      "subject_bbox_px": [
+        18,
+        15,
+        1756,
+        852
+      ],
+      "subject_bbox_normalized": [
+        0.010146561443066516,
+        0.016910935738444193,
+        0.9898534385569335,
+        0.9605411499436303
+      ],
+      "nose_normalized": [
+        0.010146561443066516,
+        0.4577226606538895
+      ],
+      "tail_normalized": [
+        0.9892897406989853,
+        0.23675310033821872
+      ],
+      "ruler_extent_normalized": [
+        0.010146561443066516,
+        0.9892897406989853
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "ef2139853b0bc2f238486126e174905b1441980743eaf07e5a8f08a6c46bf4a8",
+      "transparent_fraction": 0.7193019806321804,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "长而侧扁身，细长圆截面枪嘴，极高大帆形第一背鳍遍布暗斑，约20条蓝点构成竖纹，细长腹鳍可收进腹侧槽。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Istiophorus-platypterus.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "mahi_mahi",
+      "name": "鲯鳅",
+      "scientific_name": "Coryphaena hippurus",
+      "master": "masters/mahi_mahi.png",
+      "runtime": "runtime/mahi_mahi.png",
+      "thumb": "thumbs/mahi_mahi_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        18,
+        507,
+        215
+      ],
+      "thumb_sha256": "9896e90b6c7229b1440827ee9f893c5d32d54dbe61cf999e0e0b5764cc626c62",
+      "subject_bbox_px": [
+        20,
+        65,
+        1755,
+        746
+      ],
+      "subject_bbox_normalized": [
+        0.011273957158962795,
+        0.07328072153325817,
+        0.9892897406989853,
+        0.8410372040586246
+      ],
+      "nose_normalized": [
+        0.011273957158962795,
+        0.5343855693348365
+      ],
+      "tail_normalized": [
+        0.9887260428410372,
+        0.17925591882750846
+      ],
+      "ruler_extent_normalized": [
+        0.011273957158962795,
+        0.9887260428410372
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "acb4a89217e6890802af4dbf2aee6f15a9dfeabcb0ccd5ab845c10b4293c410b",
+      "transparent_fraction": 0.590838607011715,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "长而侧扁的体形，成年雄鱼额头高陡近方，连续长背鳍从眼上方至近尾，背电蓝绿、侧金黄、蓝斑点，深叉尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Coryphaena-hippurus.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "oceanic_whitetip_shark",
+      "name": "远洋白鳍鲨",
+      "scientific_name": "Carcharhinus longimanus",
+      "master": "masters/oceanic_whitetip_shark.png",
+      "runtime": "runtime/oceanic_whitetip_shark.png",
+      "thumb": "thumbs/oceanic_whitetip_shark_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        4,
+        15,
+        508,
+        241
+      ],
+      "thumb_sha256": "fc64c7e955a0458a520cb21e5ed80c48930d8651c746d4daf5ae63d980ee041b",
+      "subject_bbox_px": [
+        15,
+        54,
+        1759,
+        835
+      ],
+      "subject_bbox_normalized": [
+        0.008455467869222097,
+        0.060879368658399095,
+        0.9915445321307779,
+        0.9413754227733935
+      ],
+      "nose_normalized": [
+        0.008455467869222097,
+        0.48027057497181513
+      ],
+      "tail_normalized": [
+        0.9909808342728298,
+        0.19165727170236754
+      ],
+      "ruler_extent_normalized": [
+        0.008455467869222097,
+        0.9909808342728298
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "45695c3a042adea338d0b1cc34b238feb703461c8f1ad63cc6f733c5080869b0",
+      "transparent_fraction": 0.674451459068672,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "粗壮体、钝圆吻；很大圆顶第一背鳍、长宽圆桨状胸鳍；背胸尾鳍端不规则乳白斑；灰铜褐背、浅腹；有背鳍间脊。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/oceanic-whitetip-shark",
+          "title": "NOAA Fisheries: Oceanic Whitetip Shark",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "opah",
+      "name": "月鱼",
+      "scientific_name": "Lampris guttatus",
+      "master": "masters/opah.png",
+      "runtime": "runtime/opah.png",
+      "thumb": "thumbs/opah_thumb.png",
+      "width": 1536,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 341,
+      "thumb_subject_bbox_px": [
+        7,
+        2,
+        511,
+        333
+      ],
+      "thumb_sha256": "4d4c8ecc09eeab44251f703326d06c4d404f31811d840d8316229c742cc8aae3",
+      "subject_bbox_px": [
+        22,
+        6,
+        1534,
+        1000
+      ],
+      "subject_bbox_normalized": [
+        0.014322916666666666,
+        0.005859375,
+        0.9986979166666666,
+        0.9765625
+      ],
+      "nose_normalized": [
+        0.014322916666666666,
+        0.455078125
+      ],
+      "tail_normalized": [
+        0.998046875,
+        0.755859375
+      ],
+      "ruler_extent_normalized": [
+        0.014322916666666666,
+        0.998046875
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "591b07d7eca861fbbdcce3aaf48ae3f709e32aca9ae8d7a1d0c207395cc7e95b",
+      "transparent_fraction": 0.5321458180745443,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "高而强烈侧扁的近圆盘体，钢蓝银色带浅圆斑，腹可泛玫瑰色；口小无显著大牙，红橙色长镰形胸腹鳍、前高后低背鳍和新月尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/feature-story/clues-fish-auction-reveal-several-new-species-opah",
+          "title": "NOAA Fisheries species account",
+          "supports": "Species-complex split and North Atlantic Lampris guttatus identity, not exact anatomy.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fishbase.se/summary/Lampris-guttatus.html",
+          "title": "FishBase: Lampris guttatus (taxonomic caveat retained)",
+          "supports": "Deep body, pale spots, vermillion fins, lunate tail and similar falcate pectoral/pelvic fins; older complex information cautioned by source.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "pacific_bluefin_tuna",
+      "name": "太平洋蓝鳍金枪鱼",
+      "scientific_name": "Thunnus orientalis",
+      "master": "masters/pacific_bluefin_tuna.png",
+      "runtime": "runtime/pacific_bluefin_tuna.png",
+      "thumb": "thumbs/pacific_bluefin_tuna_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        6,
+        23,
+        508,
+        225
+      ],
+      "thumb_sha256": "11d7e64d1d4b14228d2bb1bbee47d3604d1fa1b4fe07d231fe056a29fca66c96",
+      "subject_bbox_px": [
+        22,
+        78,
+        1759,
+        779
+      ],
+      "subject_bbox_normalized": [
+        0.012401352874859075,
+        0.08793686583990981,
+        0.9915445321307779,
+        0.8782412626832018
+      ],
+      "nose_normalized": [
+        0.012401352874859075,
+        0.5434047350620068
+      ],
+      "tail_normalized": [
+        0.9909808342728298,
+        0.22209695603156707
+      ],
+      "ruler_extent_normalized": [
+        0.012401352874859075,
+        0.9909808342728298
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "9a5df73c91fb4d391043935467835eae1cb3dfca60595e3bf8c958cb807a3991",
+      "transparent_fraction": 0.642027710802027,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "粗壮纺锤体，胸鳍短且不及第二背鳍，小眼，背深蓝黑带灰绿色虹彩，腹银白，黄色黑缘小鳍，新月尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-bluefin-tuna/seafood",
+          "title": "NOAA Fisheries: Pacific Bluefin Tuna",
+          "supports": "Dark blue/gray-green iridescence, small eye, short pectoral, yellow black-edged finlets and spotted silver belly.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "red_snapper",
+      "name": "红笛鲷",
+      "scientific_name": "Lutjanus campechanus",
+      "master": "masters/red_snapper.png",
+      "runtime": "runtime/red_snapper.png",
+      "thumb": "thumbs/red_snapper_thumb.png",
+      "width": 1672,
+      "height": 941,
+      "thumb_width": 512,
+      "thumb_height": 288,
+      "thumb_subject_bbox_px": [
+        7,
+        23,
+        508,
+        261
+      ],
+      "thumb_sha256": "a82870dd7a7903e2625051a39946cfe646af6ecc45a3394f902e9ce6852b7df0",
+      "subject_bbox_px": [
+        25,
+        74,
+        1660,
+        852
+      ],
+      "subject_bbox_normalized": [
+        0.014952153110047847,
+        0.07863974495217853,
+        0.992822966507177,
+        0.9054197662061636
+      ],
+      "nose_normalized": [
+        0.014952153110047847,
+        0.5717321997874601
+      ],
+      "tail_normalized": [
+        0.9922248803827751,
+        0.7757704569606801
+      ],
+      "ruler_extent_normalized": [
+        0.014952153110047847,
+        0.9922248803827751
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "fb27c70070a56921ce1982121833e34a684968c98fc5bf95435a3cd7d3b1b41c",
+      "transparent_fraction": 0.5584586284569505,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "体侧扁、头呈长三角形，吻背线较陡；身体粉红到深红、腹较浅，红眼、大口犬齿；背鳍连续，臀鳍后缘尖，成年体侧无大黑斑。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/red-snapper",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "roosterfish",
+      "name": "公鸡鱼",
+      "scientific_name": "Nematistius pectoralis",
+      "master": "masters/roosterfish.png",
+      "runtime": "runtime/roosterfish.png",
+      "thumb": "thumbs/roosterfish_thumb.png",
+      "width": 1536,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 341,
+      "thumb_subject_bbox_px": [
+        8,
+        4,
+        510,
+        329
+      ],
+      "thumb_sha256": "d5d7dfda4cb552a793ead5b447328e0b0aa62501a3876607a64f6d898ad6192e",
+      "subject_bbox_px": [
+        26,
+        13,
+        1531,
+        990
+      ],
+      "subject_bbox_normalized": [
+        0.016927083333333332,
+        0.0126953125,
+        0.9967447916666666,
+        0.966796875
+      ],
+      "nose_normalized": [
+        0.016927083333333332,
+        0.623046875
+      ],
+      "tail_normalized": [
+        0.99609375,
+        0.37890625
+      ],
+      "ruler_extent_normalized": [
+        0.016927083333333332,
+        0.99609375
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "456dab4396602bf038933645a7739fca4cc7a7b41e7e1c09c3be846b337d4b53",
+      "transparent_fraction": 0.6398207346598307,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "银蓝侧扁身、尖头、深叉尾；前背鳍多根极长黑色丝状鳍条如鸡冠，体侧两道宽斜黑带，胸鳍长而弯；侧线无棱鳞。",
+      "fact_sources": [
+        {
+          "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1223",
+          "title": "Smithsonian Tropical Research Institute species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "scalloped_hammerhead",
+      "name": "路氏双髻鲨",
+      "scientific_name": "Sphyrna lewini",
+      "master": "masters/scalloped_hammerhead.png",
+      "runtime": "runtime/scalloped_hammerhead.png",
+      "thumb": "thumbs/scalloped_hammerhead_thumb.png",
+      "width": 1817,
+      "height": 866,
+      "thumb_width": 512,
+      "thumb_height": 244,
+      "thumb_subject_bbox_px": [
+        9,
+        34,
+        505,
+        211
+      ],
+      "thumb_sha256": "1c37b9b426b28ee337b6b4a7aa74d68d8e9a30397cd57dcf549c3edb87405e30",
+      "subject_bbox_px": [
+        33,
+        121,
+        1792,
+        746
+      ],
+      "subject_bbox_normalized": [
+        0.018161805173362685,
+        0.1397228637413395,
+        0.9862410566868465,
+        0.8614318706697459
+      ],
+      "nose_normalized": [
+        0.018161805173362685,
+        0.5034642032332564
+      ],
+      "tail_normalized": [
+        0.9856906989543203,
+        0.20092378752886836
+      ],
+      "ruler_extent_normalized": [
+        0.018161805173362685,
+        0.9856906989543203
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "4e0f26454ec3c36f535d2a6c18b98134183d17f847cd0a9bbd68ee288309fc84",
+      "transparent_fraction": 0.7656626345230636,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "中瘦体；宽弧形锤头前缘有中央及侧方扇贝状凹缺；第一背鳍中高；腹鳍后缘较直；眼位头两端。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/scalloped-hammerhead/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "shortfin_mako",
+      "name": "尖吻鲭鲨",
+      "scientific_name": "Isurus oxyrinchus",
+      "master": "masters/shortfin_mako.png",
+      "runtime": "runtime/shortfin_mako.png",
+      "thumb": "thumbs/shortfin_mako_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        37,
+        507,
+        217
+      ],
+      "thumb_sha256": "257364295eb4229782a27b12b1b386d9cda18566d15c3b871e6d3080d57a3337",
+      "subject_bbox_px": [
+        17,
+        129,
+        1757,
+        753
+      ],
+      "subject_bbox_normalized": [
+        0.009582863585118376,
+        0.14543404735062007,
+        0.9904171364148816,
+        0.8489289740698985
+      ],
+      "nose_normalized": [
+        0.009582863585118376,
+        0.48027057497181513
+      ],
+      "tail_normalized": [
+        0.9898534385569335,
+        0.20293122886133033
+      ],
+      "ruler_extent_normalized": [
+        0.009582863585118376,
+        0.9898534385569335
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "cd70db4d2a36cf5877fbf6fe1722c77b82cd7426042296aa77d3235b2b4c12d1",
+      "transparent_fraction": 0.7316969784015385,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "紧凑细长纺锤体，尖锥吻、黑眼；背部金属深蓝、吻底及口周白；细长钩状无锯齿牙；强尾柄侧脊、新月形异尾；第二背鳍及臀鳍很小。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "skipjack_tuna",
+      "name": "鲣",
+      "scientific_name": "Katsuwonus pelamis",
+      "master": "masters/skipjack_tuna.png",
+      "runtime": "runtime/skipjack_tuna.png",
+      "thumb": "thumbs/skipjack_tuna_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        2,
+        22,
+        510,
+        234
+      ],
+      "thumb_sha256": "90d019e5a208a2be4777b7a4e1d8caf8d60939aeb814db7f945a0f49750f3692",
+      "subject_bbox_px": [
+        7,
+        77,
+        1767,
+        809
+      ],
+      "subject_bbox_normalized": [
+        0.003945885005636978,
+        0.08680947012401354,
+        0.996054114994363,
+        0.9120631341600902
+      ],
+      "nose_normalized": [
+        0.003945885005636978,
+        0.5422773393461104
+      ],
+      "tail_normalized": [
+        0.9954904171364148,
+        0.20969560315670802
+      ],
+      "ruler_extent_normalized": [
+        0.003945885005636978,
+        0.9954904171364148
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "39391eb78f1f26778aaa53fbad08f1fbd49ad0f285778d56928e6b55e31bff7c",
+      "transparent_fraction": 0.6397519475220809,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "中小型粗壮纺锤体，背紫蓝腹银，腹和下侧4—6条明显深色纵带，短胸鳍，月牙尾与小鳍。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/atlantic-skipjack-tuna",
+          "title": "NOAA Fisheries: Atlantic Skipjack Tuna",
+          "supports": "Mostly scaleless body, dark purplish blue back, four to six dark longitudinal bands on lower sides.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://myfwc.com/wildlifehabitats/profiles/saltwater/tuna/skipjack-tuna/",
+          "title": "FWC: Skipjack Tuna",
+          "supports": "Lower flank bands, short pectoral fins.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "striped_marlin",
+      "name": "条纹四鳍旗鱼",
+      "scientific_name": "Kajikia audax",
+      "master": "masters/striped_marlin.png",
+      "runtime": "runtime/striped_marlin.png",
+      "thumb": "thumbs/striped_marlin_thumb.png",
+      "width": 1855,
+      "height": 848,
+      "thumb_width": 512,
+      "thumb_height": 234,
+      "thumb_subject_bbox_px": [
+        5,
+        4,
+        508,
+        215
+      ],
+      "thumb_sha256": "9c27b9c8dafb5da07ce46de3beecae042edb56549aee2dc05afee74cab9cf0a8",
+      "subject_bbox_px": [
+        17,
+        15,
+        1839,
+        779
+      ],
+      "subject_bbox_normalized": [
+        0.009164420485175202,
+        0.01768867924528302,
+        0.9913746630727763,
+        0.9186320754716981
+      ],
+      "nose_normalized": [
+        0.009164420485175202,
+        0.45990566037735847
+      ],
+      "tail_normalized": [
+        0.9908355795148248,
+        0.20872641509433962
+      ],
+      "ruler_extent_normalized": [
+        0.009164420485175202,
+        0.9908355795148248
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "6c6405387115cc0ec53f3126e8147f3e374429aaa4dc76c1f948b4e10344c170",
+      "transparent_fraction": 0.7491392463001576,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "延长侧扁身，圆长枪嘴，高尖第一背鳍约等于或超过体高，约20条明显钴蓝竖纹，尖而可折胸鳍。",
+      "fact_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/striped-marlin",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "swordfish",
+      "name": "剑鱼",
+      "scientific_name": "Xiphias gladius",
+      "master": "masters/swordfish.png",
+      "runtime": "runtime/swordfish.png",
+      "thumb": "thumbs/swordfish_thumb.png",
+      "width": 1850,
+      "height": 850,
+      "thumb_width": 512,
+      "thumb_height": 235,
+      "thumb_subject_bbox_px": [
+        8,
+        8,
+        504,
+        223
+      ],
+      "thumb_sha256": "8b4082313dde8179c609107b92eec2dcc904c2cca3c0deda5a24e051b5decfe1",
+      "subject_bbox_px": [
+        29,
+        29,
+        1821,
+        807
+      ],
+      "subject_bbox_normalized": [
+        0.015675675675675675,
+        0.03411764705882353,
+        0.9843243243243244,
+        0.9494117647058824
+      ],
+      "nose_normalized": [
+        0.015675675675675675,
+        0.47294117647058825
+      ],
+      "tail_normalized": [
+        0.9837837837837838,
+        0.25529411764705884
+      ],
+      "ruler_extent_normalized": [
+        0.015675675675675675,
+        0.9837837837837838
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "f1cb1271c4d2dc4c4593d30203e2dfc7a2e3e8974ecbf109de5b7ef70192e595",
+      "transparent_fraction": 0.7919230524642289,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "粗圆流线身，大眼，宽扁剑状上颌，高镰刀第一背鳍和小第二背鳍，无腹鳍，成鱼无鳞，深褐背浅腹，新月尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Xiphias-gladius.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "tiger_shark",
+      "name": "鼬鲨",
+      "scientific_name": "Galeocerdo cuvier",
+      "master": "masters/tiger_shark.png",
+      "runtime": "runtime/tiger_shark.png",
+      "thumb": "thumbs/tiger_shark_thumb.png",
+      "width": 1883,
+      "height": 835,
+      "thumb_width": 512,
+      "thumb_height": 227,
+      "thumb_subject_bbox_px": [
+        4,
+        10,
+        508,
+        213
+      ],
+      "thumb_sha256": "f471b413fc0840a5cbc1af57e73979a67b4ae30de9497bebd2ea58d175aeaa30",
+      "subject_bbox_px": [
+        17,
+        38,
+        1866,
+        784
+      ],
+      "subject_bbox_normalized": [
+        0.009028146574614976,
+        0.045508982035928146,
+        0.9909718534253851,
+        0.9389221556886228
+      ],
+      "nose_normalized": [
+        0.009028146574614976,
+        0.525748502994012
+      ],
+      "tail_normalized": [
+        0.9904407859798194,
+        0.15209580838323353
+      ],
+      "ruler_extent_normalized": [
+        0.009028146574614976,
+        0.9904407859798194
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "57f62760d769a525f23a376089b69edd84f4cd777c9693e4545ca4f34ded2b7a",
+      "transparent_fraction": 0.6460247852674894,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "宽短钝吻，粗壮前躯；灰褐背浅腹，幼体网状斑转为竖条，超过约3米条纹可淡化；尾上叶长；鸡冠状有缺刻锯齿牙。",
+      "fact_sources": [
+        {
+          "url": "https://australian.museum/learn/animals/fishes/tiger-shark-galeocerdo-cuvier-pron-lesueur-1822/",
+          "title": "Australian Museum: Tiger Shark",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "wahoo",
+      "name": "沙氏刺鲅",
+      "scientific_name": "Acanthocybium solandri",
+      "master": "masters/wahoo.png",
+      "runtime": "runtime/wahoo.png",
+      "thumb": "thumbs/wahoo_thumb.png",
+      "width": 1935,
+      "height": 812,
+      "thumb_width": 512,
+      "thumb_height": 215,
+      "thumb_subject_bbox_px": [
+        5,
+        51,
+        507,
+        165
+      ],
+      "thumb_sha256": "9971cb5fec96a5849900a1b4c537231c449623fd81fac740a1f3ac8ba702f843",
+      "subject_bbox_px": [
+        20,
+        195,
+        1916,
+        621
+      ],
+      "subject_bbox_normalized": [
+        0.0103359173126615,
+        0.24014778325123154,
+        0.9901808785529715,
+        0.7647783251231527
+      ],
+      "nose_normalized": [
+        0.0103359173126615,
+        0.5270935960591133
+      ],
+      "tail_normalized": [
+        0.9896640826873385,
+        0.2413793103448276
+      ],
+      "ruler_extent_normalized": [
+        0.0103359173126615,
+        0.9896640826873385
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "da36e06e565eb7136a1cd1c2791bfa7f5d90f2bea5cab855c08b220e25353cfe",
+      "transparent_fraction": 0.7422938862794516,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "极细长略侧扁身形，尖长颌具三角利齿，第一背鳍长而低，后方小背鳍及两列小鳍，侧24—30条钴蓝竖带。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Acanthocybium-solandri.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "whitetip_reef_shark",
+      "name": "灰三齿鲨",
+      "scientific_name": "Triaenodon obesus",
+      "master": "masters/whitetip_reef_shark.png",
+      "runtime": "runtime/whitetip_reef_shark.png",
+      "thumb": "thumbs/whitetip_reef_shark_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        9,
+        58,
+        504,
+        203
+      ],
+      "thumb_sha256": "df435bbb830fb9cd2bad550bb917a23bd85ed4b8d9b5fd0672685c64d35cf690",
+      "subject_bbox_px": [
+        33,
+        201,
+        1746,
+        701
+      ],
+      "subject_bbox_normalized": [
+        0.018602029312288614,
+        0.2266065388951522,
+        0.9842164599774521,
+        0.790304396843292
+      ],
+      "nose_normalized": [
+        0.018602029312288614,
+        0.5388951521984217
+      ],
+      "tail_normalized": [
+        0.9836527621195039,
+        0.23562570462232243
+      ],
+      "ruler_extent_normalized": [
+        0.018602029312288614,
+        0.9836527621195039
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "6f85ac5e6af4631171c168ccd1aec36b14f2224fd11ee95513724c2e087608a0",
+      "transparent_fraction": 0.7867766777796278,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "小型细长、头宽扁吻钝圆；水平椭圆眼；第一背鳍靠后，第二背鳍较发达；第一背鳍及尾上叶白尖；相对短的三角形胸鳍，无远洋白鳍鲨那样的宽圆桨状白端无大片桨状白端。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "yellowfin_tuna",
+      "name": "黄鳍金枪鱼",
+      "scientific_name": "Thunnus albacares",
+      "master": "masters/yellowfin_tuna.png",
+      "runtime": "runtime/yellowfin_tuna.png",
+      "thumb": "thumbs/yellowfin_tuna_thumb.png",
+      "width": 1795,
+      "height": 876,
+      "thumb_width": 512,
+      "thumb_height": 250,
+      "thumb_subject_bbox_px": [
+        3,
+        5,
+        509,
+        243
+      ],
+      "thumb_sha256": "1d923e3d2e4057328cae4a941aa32e99dc381dd94de57ad302eddb3b37d30bd2",
+      "subject_bbox_px": [
+        12,
+        19,
+        1783,
+        851
+      ],
+      "subject_bbox_normalized": [
+        0.006685236768802228,
+        0.021689497716894976,
+        0.9933147632311977,
+        0.9714611872146118
+      ],
+      "nose_normalized": [
+        0.006685236768802228,
+        0.5205479452054794
+      ],
+      "tail_normalized": [
+        0.992757660167131,
+        0.8664383561643836
+      ],
+      "ruler_extent_normalized": [
+        0.006685236768802228,
+        0.992757660167131
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "d79df845c9fceea63d7e079e583f75e42ef483d02f32a58f043928ff618bc27c",
+      "transparent_fraction": 0.6361061294056295,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "较修长纺锤体，小眼，成鱼第二背鳍和臀鳍延长为亮黄色镰刀，体侧黄带，黄色小鳍黑缘，月牙尾。",
+      "fact_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/yellowfin-tuna/",
+          "title": "Florida Museum: Yellowfin Tuna",
+          "supports": "Long adult second dorsal/anal fins, body shape and difference from bigeye.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/s3/dam-migration/identification-of-atlantic-tunas.pdf",
+          "title": "NOAA: Identification of Atlantic Tunas",
+          "supports": "Yellowfin pectoral reach, yellow finlets and belly line/dot pattern.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "yellowtail_kingfish",
+      "name": "黄尾鰤",
+      "scientific_name": "Seriola lalandi",
+      "master": "masters/yellowtail_kingfish.png",
+      "runtime": "runtime/yellowtail_kingfish.png",
+      "thumb": "thumbs/yellowtail_kingfish_thumb.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "thumb_subject_bbox_px": [
+        5,
+        34,
+        509,
+        219
+      ],
+      "thumb_sha256": "7a88d583d651c04834930468c149dc8c1ab6e8e1862beadf145edf7045c5dd7d",
+      "subject_bbox_px": [
+        19,
+        118,
+        1762,
+        757
+      ],
+      "subject_bbox_normalized": [
+        0.010710259301014656,
+        0.133032694475761,
+        0.9932356257046223,
+        0.8534385569334837
+      ],
+      "nose_normalized": [
+        0.010710259301014656,
+        0.5411499436302142
+      ],
+      "tail_normalized": [
+        0.9926719278466741,
+        0.7835400225479143
+      ],
+      "ruler_extent_normalized": [
+        0.010710259301014656,
+        0.9926719278466741
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "3c1d08e826736dd66ee1b7f002a53d5edf290ddf60400e43131997ff4d9acfa7",
+      "transparent_fraction": 0.6417754131136331,
+      "orientation": "head_left_tail_right",
+      "morphology_reference": "细长纺锤形、头修长；背深蓝绿，腹银白，黄色纵带从吻经眼延至黄色深叉尾；尾柄无浪人鲹那样的明显棱鳞。",
+      "fact_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/1662",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    }
+  ]
+}

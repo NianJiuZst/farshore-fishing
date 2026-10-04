@@ -1,0 +1,535 @@
+{
+  "generator": "OpenAI built-in imagegen",
+  "generated_date": "2026-10-04",
+  "generation_type": "30 separate species-specific original generations plus targeted imagegen revisions; no atlas, reused different-species image or procedural replacement.",
+  "originals_preserved": true,
+  "copyright_provenance": "New AI-generated artwork created for Farshore Fishing. No third-party fish photograph was downloaded or embedded. Biological sources inform species morphology and make no image licensing claim. No Creative Commons or public-domain status asserted.",
+  "image_source_note": "Accepted generated PNG bytes preserved in masters and runtime. Prompts, biological references, revision originals and SHA256 identities are recorded. Private provider paths/output hints are not distributed.",
+  "assets": [
+    {
+      "species_id": "albacore",
+      "master_path": "masters/albacore.png",
+      "master_sha256": "abe3852ccd9e72697725bdfcb1f3c06d9e3dde9e432c7ae07f1658476b7516fe",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: ALBACORE, Thunnus alalunga. Streamlined spindle-shaped mature tuna with metallic dark blue dorsum, lustrous silvery-white sides/belly, moderately large eye and pointed conical snout. Defining extremely LONG narrow scythe-shaped dark PECTORAL FIN extending from behind gill cover far backward beyond the second dorsal and beyond anal fin base, almost half body length. Two compact dorsals; small yellowish dorsal finlets, dusky or silver ventral finlets, narrow keeled tail base, deeply crescent forked tail with fine pale trailing edge. No yellowfin elongated dorsal/anal sickles, no skipjack belly stripes.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/north-atlantic-albacore-tuna/seafood",
+          "title": "NOAA Fisheries: North Atlantic Albacore Tuna",
+          "supports": "Exceptionally long pectoral fins, nearly half the body length.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/s3/dam-migration/identification-of-atlantic-tunas.pdf",
+          "title": "NOAA: Identification of Atlantic Tunas",
+          "supports": "Pectoral extends beyond anal fin base; ventral finlets silver or dark.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "atlantic_bluefin_tuna",
+      "master_path": "masters/atlantic_bluefin_tuna.png",
+      "master_sha256": "8a74b52cd09e776cc1fa2c18a678b3fb85fed52091fd2b0cfd0de3f5611931cb",
+      "prompt": "Use case: scientific-educational. Production fish encyclopedia and catch-card cutout for Farshore Fishing. Generate ONE exceptionally detailed photorealistic healthy adult ATLANTIC BLUEFIN TUNA, Thunnus thynnus. Strict lateral SIDE PROFILE facing LEFT, head LEFT and tail RIGHT, straight horizontal full body and every fin visible; centered with safe clear margins all around. Natural stocky powerful torpedo body nearly circular in cross section, dark blue-black back with restrained gray-green iridescence, silvery white lower flanks and belly with faint rows of pale spots and bars. Small eye, conical snout and closed mouth. Short triangular pectoral fin ends clearly before second dorsal origin. Two distinct dorsal fins, second dorsal reddish brown, dark anal fin faint yellow, tiny yellow black-edged finlets along rear upper and lower body, narrow keeled tail base, crescent tail. Accurate mature Atlantic bluefin anatomy, no yellowfin elongated sickle fins. Genuine wet wildlife specimen macro-photography aesthetic, minute skin and scale irregularities, glossy eye tiny highlight, translucent membranes and crisp fin rays, neutral soft daylight upper left, restrained real coloration, sharp focus throughout. TRUE TRANSPARENT RGBA BACKGROUND with preserved alpha, no checkerboard painted in pixels. Highest practical resolution landscape 2048 pixels wide or more, minimum 1536 wide. No water, scenery, human, hook, floor, cast shadow, text, labels, scale, props, border, multiple panels or stylization. AI-generated photorealistic illustrative asset, not a claimed actual wildlife photograph.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/western-atlantic-bluefin-tuna/resources",
+          "title": "NOAA Fisheries: Western Atlantic Bluefin Tuna",
+          "supports": "Stocky torpedo body, color pattern, short pectoral and reddish-brown second dorsal.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "bigeye_tuna",
+      "master_path": "masters/bigeye_tuna.png",
+      "master_sha256": "5246307eb22ec1a0dea3f57db75bf45e48bfeff5e1f1ae0456993216f2d4f0c8",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: BIGEYE TUNA, Thunnus obesus. Stocky deep robust adult tuna with proportionally distinctly LARGE eye, thick rounded body tapering to narrow keeled caudal peduncle and strong crescent tail. Metallic dark blue dorsum and silvery-white lower flank, restrained subtle blue lateral iridescence, no conspicuous belly stripes/dots. Moderately long pectoral reaching approximately origin of second dorsal. First dorsal dark golden yellow, compact modest second dorsal and anal fins yellow-brown with narrow dark edge, NOT long yellowfin sickles. Tiny yellow black-edged rear finlets above and below. Distinct large eye, mature deep-bodied fish.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-bigeye-tuna",
+          "title": "NOAA Fisheries: Pacific Bigeye Tuna",
+          "supports": "Large eyes, dark metallic-blue and white color, yellow/dark-edged fins.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/s3/dam-migration/guide-to-tunas-of-the-western-atlantic-ocean.pdf",
+          "title": "NOAA: Guide to Tunas of the Western Atlantic Ocean",
+          "supports": "Stocky body, large eye, pectoral reach, shorter dorsal/anal fins and absence of body markings.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "blue_marlin",
+      "master_path": "masters/blue_marlin.png",
+      "master_sha256": "24d68372907380331fa21f689bb1f36f3deeaaaae5613b266b249c149769c5b3",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: BLUE MARLIN, Makaira nigricans. Large powerful robust elongated billfish with round-section long pointed spear upper jaw, cobalt blue back and silvery-white belly, subtle faint pale-blue vertical bars. First dorsal begins behind head with tall triangular front lobe LOWER THAN body depth and slopes to long low rear membrane, followed by tiny second dorsal near tail. Long pointed pectoral, thin narrow paired pelvic fins present, two anal fins, caudal keels and enormous crescent tail. This is blue marlin, not sailfish: no large sail, no sword-flat bill, no exaggerated striped marlin high dorsal.",
+      "revision_prompts": [
+        "Use case: precise-object-edit. This is a blue marlin portrait (Makaira nigricans). Correct ONLY the anatomy of its rear tail base: REMOVE all the tiny tuna-like finlets/spines along both the top and bottom of the caudal peduncle between the small second dorsal/anal fins and the crescent tail. Replace those few tiny protrusions with smooth natural skin silhouette. Keep the small second dorsal and small second anal fins themselves, and the horizontal caudal keels. Preserve every other detail, bill/head, pectoral/pelvic fins, full body silhouette, blue/silver colors, restrained stripes, wet photorealistic texture, head LEFT orientation, transparent alpha, resolution and framing. No other alteration; this species never has tuna finlets. No background, glow, text, extra objects."
+      ],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-blue-marlin",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "blue_shark",
+      "master_path": "masters/blue_shark.png",
+      "master_sha256": "b45e87cd9b5bbc638d579f11bef3cb9e67c70ac77a8bafe8704cb9de9770ae74",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: BLUE SHARK, Prionace glauca. Exceptionally slender elegant shark with long narrow rounded-pointed snout and large round eye. Brilliant natural cobalt-indigo back, bright blue flanks grading sharply white on underside. Exceptionally LONG NARROW blade-like pectoral fins, triangular FIRST DORSAL SET WELL BACK behind pectoral tips' origin, small second dorsal, long upper caudal lobe and much smaller lower lobe (not tuna-like symmetrical crescent). Five lateral gill slits, small ventral mouth, fine smooth denticle skin, no scales, no gill cover and no rayed fish fins. Straight body full length, long near pectoral angled gently down-back visible entirely.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-shark/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "cobia",
+      "master_path": "masters/cobia.png",
+      "master_sha256": "3a66901e94891d22445611e559f9375020c35cf41cd53bc953bd3597dcd0a7a1",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: COBIA, Rachycentron canadum. Long strong spindle-bodied fish with broad flattened head and protruding lower jaw, dark chocolate-brown upper body, broad darker longitudinal flank stripe bordered by pale silver cream lines, white underside. SEVEN to NINE discrete short stiff dorsal spines well separated before a long soft second dorsal fin; long low anal fin, long pointed pectoral, adult lunate crescent tail. Smooth tiny scales, not a shark, no gill slits or remora sucker, ordinary single bony-fish gill cover.",
+      "revision_prompts": [
+        "Use case: precise-object-edit. This is a cobia portrait, Rachycentron canadum. Correct ONLY its short anterior dorsal spines: replace the membraned front dorsal section with EIGHT individual short stout black-gray spines arising independently from the back, with open TRANSPARENT gaps between them and no web membrane connecting adjacent spines. Keep them much lower than the rear soft dorsal. The long soft second dorsal behind them remains exactly as is. Preserve everything else: broad flattened head, stripes, all other fins, crescent tail, natural photoreal wet texture, head LEFT, full body and framing/resolution. Background remains truly transparent RGBA, no glow or shadows/text.",
+        "Use case: precise-object-edit. Correct only the NUMBER and size of separate anterior dorsal spines in this cobia: replace the existing six conspicuous spikes with exactly EIGHT separate SHORT slender stiff spines, no connecting web membrane, each with transparent gap between it and the next. Count eight; the first and last may be slightly smaller but clearly visible. Keep their entire row in the same front-back span so they are closer together. Cobia has 7–9 dorsal spines, six is wrong. The long soft second dorsal behind this row stays untouched. Preserve all fish anatomy/colors/stripes/texture/transparent background/left-facing composition/resolution; no other changes."
+      ],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cobia/",
+          "title": "Florida Museum species profile",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "dogtooth_tuna",
+      "master_path": "masters/dogtooth_tuna.png",
+      "master_sha256": "c4d6111f1fd737c024389f9f7f87d821f9326a6b3221f3b56ca88fae4fa3bd9d",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: DOGTOOTH TUNA, Gymnosarda unicolor. Powerful elongated torpedo fish, dark blue-green back and bright silver-white belly, big pointed head with large jaw gently parted enough to show a few prominent conical doglike TEETH. Slightly undulating lateral line. Two dorsals with long low first dorsal, white tips on second soft dorsal and anal fins; small dark rear finlets above and below; short pectoral, narrow keeled caudal peduncle and large dark crescent tail. Smooth mostly scaleless body, no yellowfin sickles, no colorful tuna finlets.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/723",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "giant_grouper",
+      "master_path": "masters/giant_grouper.png",
+      "master_sha256": "e1447cb8d254f4233c6bc8976c23cf392cbe242bc189847a9cd01d7c8bf09fc9",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: GIANT GROUPER, Epinephelus lanceolatus. Very large mature adult giant grouper, extremely bulky barrel-shaped brown-gray body, disproportionately HUGE broad mouth with thick fleshy lips and lower jaw, small eye set high in heavy broad head. Subtle irregular mottled gray-brown patches and fine speckling; NO juvenile vivid yellow and black bars. Continuous dorsal fin with short spines merging rounded soft rear, rounded massive pectoral fins, rounded anal, broad ROUNDED caudal fin. Thick fleshy naturally irregular proportions, no forked tail.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/4672",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "giant_trevally",
+      "master_path": "masters/giant_trevally.png",
+      "master_sha256": "b01f45b1ac522495c880b507ce82de42c1258268b286178dba5c5f72c946cf90",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: GIANT TREVALLY, Caranx ignobilis. Large powerfully deep-bodied adult silver-gray jack with a VERY STEEP convex forehead and thick muscular body, blunt head and strong terminal jaw, modest eye. Dark gunmetal upper half fading silvery below, no invented black gill-cover spot. Two dorsal fins, second with pronounced pointed leading lobe; long sickle-shaped pectoral; rear straight lateral line with visible bony scutes; narrow muscular tail peduncle and strongly forked dark gray tail. No yellowtail stripe and no tuna finlets.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/4268",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "great_barracuda",
+      "master_path": "masters/great_barracuda.png",
+      "master_sha256": "106839aae475e4a6173d43b4c8594da1f9545bc4fc7b06ff65c03455e91f3f51",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: GREAT BARRACUDA, Sphyraena barracuda. Long slender nearly cylindrical silver fish, olive-gray upper back, large elongated pointed head, strongly projecting lower jaw and a slightly parted mouth revealing a few long sharp teeth. TWO widely separated short dorsal fins, first spiny, second soft opposite short anal fin. Irregular black blotches on LOWER rear sides, faint dark oblique bars above; short pectoral and pelvic, deep forked dark tail with pale terminal tips. No tuna finlets, no continuous dorsal, no pike rounded tail.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-barracuda/",
+          "title": "Florida Museum species profile",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "great_hammerhead",
+      "master_path": "masters/great_hammerhead.png",
+      "master_sha256": "a0c0d53d6a5424b85ae5acd8656c948a973e499c8b58abf7bc4cc0aa4cd0fae3",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: GREAT HAMMERHEAD SHARK, Sphyrna mokarran. Robust adult gray-brown shark, pale whitish belly. Broad flattened transverse cephalofoil hammer head with NEARLY STRAIGHT broad anterior edge and shallow central notch, squared lateral tips, eyes at lateral ends, NOT rounded scalloped head. Strict lateral body, head naturally foreshortened so hammer form remains legible. Defining VERY TALL strongly FALCATE sickle-shaped FIRST DORSAL fin with concave rear edge, conspicuous compared with scalloped hammerhead. Pelvic fins also curved falcate with concave posterior margins. Long pectorals, much smaller second dorsal, strongly asymmetrical tail with elongated upper lobe. Five gill slits and ventral mouth, no gill cover, finely textured denticle skin, no scales/rayed fins. Entire hammer and tall dorsal uncropped.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "great_white_shark",
+      "master_path": "masters/great_white_shark.png",
+      "master_sha256": "316d513ecabd7448e87d8749407be8161cafa450be1bbe1f3572c2c2a2d00311",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: GREAT WHITE SHARK, Carcharodon carcharias. Very robust muscular torpedo-shaped white shark, broad conical snout, small dark eye, five clearly visible vertical GILL SLITS behind head, NO bony operculum. Broad triangular first dorsal, much smaller second dorsal, strong triangular swept pectoral fins, small pelvic/anal fins, strong caudal keel and powerful near-symmetrical crescent heterocercal tail. Crisp natural boundary between slate gray upper body and white belly. Mouth gently open enough to suggest broad triangular serrated teeth, no exaggerated snarl, no blood. Fine realistic wet sandpaper denticle skin, no fish scales or fin rays; credible mature great white proportions.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/white-shark/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "greater_amberjack",
+      "master_path": "masters/greater_amberjack.png",
+      "master_sha256": "eecbb0166e6c409706faf0a1e2f3c5cf4dc89248cd023328ba5481a9d7d8d070",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: GREATER AMBERJACK, Seriola dumerili. Robust elongated but moderately deep-bodied silver jack, blue-brown olive dorsum, diffuse amber-gold band along midflank, characteristic dark oblique stripe from snout THROUGH EYE diagonally upward toward first dorsal origin. Short first spiny dorsal and longer low second dorsal with raised front; shorter pectorals than giant trevally; matching anal fin and deeply forked brown-golden caudal. Head relatively long and sloping, no very steep giant-trevally forehead, no large bony scute armor.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/greater-amberjack",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "indo_pacific_sailfish",
+      "master_path": "masters/indo_pacific_sailfish.png",
+      "master_sha256": "ef2139853b0bc2f238486126e174905b1441980743eaf07e5a8f08a6c46bf4a8",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: INDO-PACIFIC SAILFISH, Istiophorus platypterus. Slender elongated laterally compressed billfish, extremely long thin round pointed spear bill, silver lower flanks with rows of small iridescent blue spots forming delicate vertical bars. Giant erect first dorsal SAIL, dark cobalt-blue with many small dark spots, rises well above body depth and extends along most of the back; all sail rays and membrane visible, naturally undulating high edge. Tiny second dorsal near tail, long threadlike pelvic fins, slender pectoral, deeply forked dark crescent tail, no finlets. Include whole bill, full sail and long pelvic tips in canvas with margins. IMPORTANT: billfish have NO TUNA FINLETS. Between second dorsal/second anal and caudal tail there is a smooth bare narrow tail base, absolutely no row of little finlets or spines.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Istiophorus-platypterus.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "mahi_mahi",
+      "master_path": "masters/mahi_mahi.png",
+      "master_sha256": "acb4a89217e6890802af4dbf2aee6f15a9dfeabcb0ccd5ab845c10b4293c410b",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: MAHI-MAHI, Coryphaena hippurus. Adult male dolphinfish with a distinctively tall steep squared forehead, small mouth, long laterally compressed body. Living colors electric turquoise-blue/green back, golden yellow flanks, bright pale silver belly and numerous tiny blue spots. ONE long continuous high dorsal fin beginning above the eye and extending virtually to the tail, dark cobalt membrane, no separate spiny dorsal mound. Small curved pectoral, long low anal fin, deep yellow forked tail on narrow peduncle. No tuna finlets.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Coryphaena-hippurus.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "oceanic_whitetip_shark",
+      "master_path": "masters/oceanic_whitetip_shark.png",
+      "master_sha256": "45695c3a042adea338d0b1cc34b238feb703461c8f1ad63cc6f733c5080869b0",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: OCEANIC WHITETIP SHARK, Carcharhinus longimanus. Stocky gray-bronze open-ocean shark with a short broad rounded snout, five gill slits, white underside. Defining HUGE BROAD LONG PADDLE-LIKE PECTORAL FINS with smoothly rounded tips, and a broad rounded first dorsal; conspicuous mottled chalk-WHITE terminal patches on first dorsal and pectoral tips. Pectoral is rounded paddle, NEVER sharp narrow blade. Small second dorsal/anal; elongated upper caudal lobe, white mottled caudal tips. Fine wet denticle skin, no fish scales/fin rays or operculum. Keep entire broad pectoral down-back within canvas. Smooth bare tail base between second dorsal/anal and tail, absolutely no tuna finlets or spines.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/oceanic-whitetip-shark",
+          "title": "NOAA Fisheries: Oceanic Whitetip Shark",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "opah",
+      "master_path": "masters/opah.png",
+      "master_sha256": "591b07d7eca861fbbdcce3aaf48ae3f709e32aca9ae8d7a1d0c207395cc7e95b",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: OPAH, Lampris guttatus (North Atlantic opah). Extremely deep almost circular oval laterally compressed body, dark steel-blue upper surface grading to lustrous silver lower sides with many ROUND small white pale spots, large eye with bright orange-red surround, small protruding toothless mouth. All fins saturated natural red-orange: long falcate pectoral, high narrow front of dorsal with long lower rear continuation, long low anal, deeply forked red tail on short narrow peduncle. Correct tall round opah silhouette, not elongated tuna, full very long pectoral and tall dorsal uncropped.",
+      "revision_prompts": [
+        "Use case: precise-object-edit. Anatomical correction of this Opah, Lampris guttatus. Keep the deep round spotted silver-blue fish, red-orange fins, head LEFT and lifelike wet texture. Correct the SHORT VENTRAL PELVIC FIN below the belly: opah pelvic fins are long, narrow and falcate, similar in shape to the pectoral fins and slightly LONGER. Lengthen the visible red pelvic fin smoothly down and rearward, originating from the existing ventral pelvic base beneath the body, so its whole narrow tapering tip remains visible, distinct from the large pectoral in front. Do not add extra fins or merge the pelvic with the anal. Keep other anatomy unchanged. Expand transparent canvas as needed to give generous margins below both long fin tips; still at least 1536 pixels wide, no stretching, no cropping. TRUE transparent RGBA alpha background, no glow, no scenery, no text or props.",
+        "Use case: precise-object-edit. Fix the opah fin proportions. The very large orange PECTORAL fin attached just behind the gill on the middle of the body is anatomically overlong. SHORTEN THAT PECTORAL FIN TO HALF its current length. Keep its attachment behind the gill at the same position, but the new pointed tip should end over the lower-middle flank, well above the belly, rather than far below the fish. Make it a natural short-to-moderately-long falcate tapered opah pectoral. The separate red PELVIC fin attached beneath the belly stays as currently drawn; it should now be slightly longer than the pectoral. Do not shorten the pelvic fin. Do not change round body, spots, head, dorsal/anal/tail, colors, transparency, left-facing orientation or overall framing. This is a precise single fin reduction by 50 percent, not a restyle. Preserve at least1536px wide genuine RGBA cutout.",
+        "Use case: background-extraction. Remove this image's entire dark gray/red glow background, leaving ONLY the opah fish itself on genuinely TRANSPARENT RGBA alpha. Set all background completely transparent, including every outer edge and corner and the spaces around/between fins. Preserve the fish pixels, corrected short pectoral, longer ventral pelvic, full body, round spotted sides, red-orange fins and head-left pose. Fish opaque; only natural fin edge antialiasing translucent. Do not reproduce the glow, do not use a checkerboard picture, do not add shadows. Complete fish uncropped, at least1536pixels wide."
+      ],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/feature-story/clues-fish-auction-reveal-several-new-species-opah",
+          "title": "NOAA Fisheries species account",
+          "supports": "Species-complex split and North Atlantic Lampris guttatus identity, not exact anatomy.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fishbase.se/summary/Lampris-guttatus.html",
+          "title": "FishBase: Lampris guttatus (taxonomic caveat retained)",
+          "supports": "Deep body, pale spots, vermillion fins, lunate tail and similar falcate pectoral/pelvic fins; older complex information cautioned by source.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "pacific_bluefin_tuna",
+      "master_path": "masters/pacific_bluefin_tuna.png",
+      "master_sha256": "9a5df73c91fb4d391043935467835eae1cb3dfca60595e3bf8c958cb807a3991",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: PACIFIC BLUEFIN TUNA, Thunnus orientalis. Robust streamlined mature bluefin with deep dark navy back showing subtle gray-green iridescence, bright silver flanks with a few delicate gray pale spots/bands on lower flank. Proportionally small eye, compact conical head. Short dark pectoral fin clearly ending BEFORE origin of second dorsal. Two dorsal fins, compact brownish second dorsal and anal fins (not long yellow sickles), series of tiny yellow black-edged finlets on upper and lower rear body, narrow strong tail keel and dark deeply forked lunate tail. Distinct separately generated adult specimen with slightly longer more streamlined body than a giant Atlantic bluefin, without inventing a false bold unique color marking.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-bluefin-tuna/seafood",
+          "title": "NOAA Fisheries: Pacific Bluefin Tuna",
+          "supports": "Dark blue/gray-green iridescence, small eye, short pectoral, yellow black-edged finlets and spotted silver belly.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "red_snapper",
+      "master_path": "masters/red_snapper.png",
+      "master_sha256": "fb27c70070a56921ce1982121833e34a684968c98fc5bf95435a3cd7d3b1b41c",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: RED SNAPPER, Lutjanus campechanus. Natural adult rosy scarlet-red back and upper sides fading pinkish silver belly, red iris, triangular sloping head with pointed snout and strong mouth with subtle canine teeth. Moderately deep compressed body, a continuous dorsal with spiny raised front and softer rounded rear, angular pointed anal, medium long pointed pectoral, moderately forked red tail. Rich natural irregular red scales, no black juvenile side spot in this adult, no tropical yellowtail or grouper round tail.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/red-snapper",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "roosterfish",
+      "master_path": "masters/roosterfish.png",
+      "master_sha256": "456dab4396602bf038933645a7739fca4cc7a7b41e7e1c09c3be846b337d4b53",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: ROOSTERFISH, Nematistius pectoralis. Deeply compressed handsome silver-blue fish with sloping forehead, long curved pectoral fins, TWO broad dark oblique stripes sweeping across the flank, narrow tail base and deeply forked tail. Distinctive rooster comb of SEVEN extremely elongated black threadlike anterior DORSAL rays sweeping upward and back, each ray separate with fine connecting membranes only at base; following second dorsal short. No lateral-line scutes. All tall comb tips included with generous transparent margin.",
+      "revision_prompts": [
+        "Use case: background-extraction. Edit this roosterfish portrait only by removing EVERY background pixel, including the dark blue-gray glow, to genuine clean RGBA transparency. Preserve the entire fish and each of its seven long thin dorsal filaments, natural translucent fin edges, wet silver skin, two dark bars, orientation head LEFT, anatomy, colors, full resolution and framing. Do not add any shadow, glow, painted checkerboard, background color, labels, text or objects. The fish itself must remain fully opaque except naturally translucent fin edges. Output a clean transparent cutout, not a low-opacity entire image. Preserve size, minimum 1536 px wide."
+      ],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1223",
+          "title": "Smithsonian Tropical Research Institute species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "scalloped_hammerhead",
+      "master_path": "masters/scalloped_hammerhead.png",
+      "master_sha256": "4e0f26454ec3c36f535d2a6c18b98134183d17f847cd0a9bbd68ee288309fc84",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: SCALLOPED HAMMERHEAD SHARK, Sphyrna lewini. Slender-to-moderate bronze gray body, white underside and a true broad flattened transverse HAMMER cephalofoil. Head leading edge naturally broadly ARCHED with central notch and two distinct side scallops; near eye on lateral tip of hammer, no eye on central snout. Strict side body profile with head cephalofoil foreshortened naturally enough to show characteristic scalloped leading contour, not round shark head and not a literal tool. Moderately tall curved triangular first dorsal, ordinary straight posterior pelvic edges, long narrow pectorals, small second dorsal, upper caudal lobe much longer than lower. Five gill slits, no gill cover, small ventral mouth. Natural gray denticle skin no scales, no fin rays. Anatomically distinct from great hammerhead: less tall dorsal, arched scalloped rather than near straight hammer.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/scalloped-hammerhead/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "shortfin_mako",
+      "master_path": "masters/shortfin_mako.png",
+      "master_sha256": "cd70db4d2a36cf5877fbf6fe1722c77b82cd7426042296aa77d3235b2b4c12d1",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: SHORTFIN MAKO SHARK, Isurus oxyrinchus. Lean athletic sharply streamlined torpedo shark with distinctly LONG POINTED CONICAL SNOUT, large dark eye, metallic deep indigo-blue back and white underside including WHITE underside around mouth. Five clear gill slits, narrow sharp triangular first dorsal, short pointed pectoral fins, tiny second dorsal/anal, strong caudal keel and powerful crescent tail. Slightly parted ventral mouth reveals a few long slender smooth-edged needle/hook teeth, NOT broad serrated great-white triangles. Much sleeker than great white, fine glossy wet denticle skin, no scales, no gill cover, no rayed bony fish fins.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "skipjack_tuna",
+      "master_path": "masters/skipjack_tuna.png",
+      "master_sha256": "39391eb78f1f26778aaa53fbad08f1fbd49ad0f285778d56928e6b55e31bff7c",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: SKIPJACK TUNA, Katsuwonus pelamis. Compact small tuna with streamlined fusiform body, purplish dark navy back and shiny silver sides/belly. Defining FIVE dark continuous horizontal longitudinal bands along LOWER flanks and belly from behind head toward tail, no striped upper back. Mostly smooth nearly scaleless skin except subtle corselet behind head, short broad dark pectoral, two discrete dorsals, tiny dusky rear finlets upper/lower, slender keeled caudal peduncle and forked crescent tail. Accurate compact skipjack proportions, no yellow sickle fins.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/atlantic-skipjack-tuna",
+          "title": "NOAA Fisheries: Atlantic Skipjack Tuna",
+          "supports": "Mostly scaleless body, dark purplish blue back, four to six dark longitudinal bands on lower sides.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://myfwc.com/wildlifehabitats/profiles/saltwater/tuna/skipjack-tuna/",
+          "title": "FWC: Skipjack Tuna",
+          "supports": "Lower flank bands, short pectoral fins.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "striped_marlin",
+      "master_path": "masters/striped_marlin.png",
+      "master_sha256": "6c6405387115cc0ec53f3126e8147f3e374429aaa4dc76c1f948b4e10344c170",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: STRIPED MARLIN, Kajikia audax. Streamlined laterally compressed slender billfish, long round spear bill, vivid cobalt blue back and silvery sides bearing approximately 20 distinct bright blue VERTICAL stripes. First dorsal anterior lobe very tall, its height about the BODY DEPTH OR GREATER, gracefully tapering into low long back membrane; tiny separate second dorsal. Long falcate pectoral, slender narrow pelvic fins present; two anal fins, slender keeled tail base and deeply forked crescent tail. No sailfish fan and no flat swordfish bill. IMPORTANT: billfish have NO TUNA FINLETS. Between second dorsal/second anal and caudal tail there is a smooth bare narrow tail base, absolutely no row of little finlets or spines.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/striped-marlin",
+          "title": "NOAA Fisheries species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "swordfish",
+      "master_path": "masters/swordfish.png",
+      "master_sha256": "f1cb1271c4d2dc4c4593d30203e2dfc7a2e3e8974ecbf109de5b7ef70192e595",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: SWORDFISH, Xiphias gladius. Adult broadbill with long visibly FLATTENED broad sword-shaped upper bill in front of a large eye, heavy smooth scaleless dark charcoal-brown blue upper body and silver belly. Sword approximately one third total length, not round marlin spear. Tall sickle-shaped FIRST dorsal fin with sharply reduced separated second dorsal far back; strong low-set sickle pectoral, NO PELVIC FINS at all. Two separated anal fins, narrow keeled caudal peduncle, broad crescent tail. Entire sword tip and tail visible, straight horizontal body.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Xiphias-gladius.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "tiger_shark",
+      "master_path": "masters/tiger_shark.png",
+      "master_sha256": "57f62760d769a525f23a376089b69edd84f4cd777c9693e4545ca4f34ded2b7a",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: TIGER SHARK, Galeocerdo cuvier. Stout broad-headed subadult/young adult shark with characteristically very BLUNT SHORT WIDE snout, large mouth, dark eye, five gill slits. Gray olive-brown upper body and pale cream belly, realistic irregular dark vertical bars and blotches over back/flanks, subdued natural contrast, not orange tiger fur. Large broad first dorsal, short broad pectorals, small second dorsal/anal, long strongly unequal heterocercal tail with long upper lobe and defined subterminal notch. Low ridges along caudal peduncle. Broad flat head and stout front-heavy body, fine denticle skin no scales/fin rays or operculum.",
+      "revision_prompts": [
+        "Use case: precise-object-edit. This is a tiger shark portrait, Galeocerdo cuvier. Correct ONLY the top silhouette of its tail base: remove the three/four tiny spiky finlet-like bumps between the small second dorsal and the start of the upper tail lobe. It must be one smooth bare continuous skin contour there, as real sharks have no tuna finlets. Preserve the second dorsal itself, both tail lobes and ALL other anatomy, five gill slits, broad blunt head, dark tiger stripes, skin texture, fins, colors, left-facing full-body framing and genuine transparent alpha. No other changes; no background, glow, objects, text."
+      ],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://australian.museum/learn/animals/fishes/tiger-shark-galeocerdo-cuvier-pron-lesueur-1822/",
+          "title": "Australian Museum: Tiger Shark",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "wahoo",
+      "master_path": "masters/wahoo.png",
+      "master_sha256": "da36e06e565eb7136a1cd1c2791bfa7f5d90f2bea5cab855c08b220e25353cfe",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: WAHOO, Acanthocybium solandri. Extremely elongated slender near-cylindrical torpedo body, long pointed jaws with subtle sharp triangular teeth, very long head, silvery sides crossed by about 25 cobalt-blue VERTICAL bars, dark iridescent blue back. Long low spiny FIRST dorsal followed by separate small second dorsal, posterior dorsal/anal finlets and crescent deeply forked caudal. Short pectoral and small pelvic; streamlined lean fish, never thick tuna body.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Acanthocybium-solandri.html",
+          "title": "FishBase species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "whitetip_reef_shark",
+      "master_path": "masters/whitetip_reef_shark.png",
+      "master_sha256": "6f85ac5e6af4631171c168ccd1aec36b14f2224fd11ee95513724c2e087608a0",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute shark-skin denticle irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, natural smooth shark fins with fine leathery skin texture, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: WHITETIP REEF SHARK, Triaenodon obesus. Slender small gray-brown reef shark, broad flattened short rounded snout, oval catlike eye, visible nasal flaps, five gill slits. First dorsal relatively small and set noticeably FAR BACK, with brilliant clean WHITE TIP; conspicuous white terminal tip on the long upper caudal lobe. Narrow pectoral fins ordinary pointed shape WITHOUT huge white oceanic-whitetip paddles. Fairly large second dorsal, low slender body, long asymmetrical upper tail, pale belly and scattered tiny dark speckles. Mouth small ventral, fine wet denticle skin, no scales/fin rays/gill cover. Clearly different from bulky oceanic whitetip. Smooth bare tail base between second dorsal/anal and tail, absolutely no tuna finlets or spines.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+          "title": "Florida Museum shark species profile",
+          "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "yellowfin_tuna",
+      "master_path": "masters/yellowfin_tuna.png",
+      "master_sha256": "d79df845c9fceea63d7e079e583f75e42ef483d02f32a58f043928ff618bc27c",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: YELLOWFIN TUNA, Thunnus albacares. Sleek strong adult torpedo body, metallic midnight-blue back, bronze-yellow subtle lateral sheen, silvery belly with delicate alternating pale dotted and broken vertical lines. The SECOND DORSAL and ANAL fin are long elegant bright golden-yellow curved sickles sweeping rearward almost toward tail, unmistakably yellowfin. First dorsal is separate, lower triangular yellow-gray; moderately long pointed pectoral reaches beyond second dorsal origin. Bright small yellow black-edged finlets above/below rear body, extremely narrow keeled tail base, crescent dark-gray tail. No oversized bigeye eye, no long albacore pectoral.",
+      "revision_prompts": [
+        "Use case: precise-object-edit. Correct only the pectoral fin of this adult yellowfin tuna, Thunnus albacares. Lengthen the visible dark pectoral fin backward so its natural pointed tip reaches clearly PAST the vertical line through the origin of the long yellow second dorsal fin, ending about halfway beneath that dorsal's base. Current pectoral is too short. Keep its natural shape, origin and downward edge; do not turn it into the extremely long albacore fin. Preserve all other details, long yellow dorsal/anal sickles, body markings, bill-free head, tail, true transparent alpha, full-body head LEFT framing, high resolution and wet photoreal style. No other changes."
+      ],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/yellowfin-tuna/",
+          "title": "Florida Museum: Yellowfin Tuna",
+          "supports": "Long adult second dorsal/anal fins, body shape and difference from bigeye.",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/s3/dam-migration/identification-of-atlantic-tunas.pdf",
+          "title": "NOAA: Identification of Atlantic Tunas",
+          "supports": "Yellowfin pectoral reach, yellow finlets and belly line/dot pattern.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "species_id": "yellowtail_kingfish",
+      "master_path": "masters/yellowtail_kingfish.png",
+      "master_sha256": "3c1d08e826736dd66ee1b7f002a53d5edf290ddf60400e43131997ff4d9acfa7",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore Fishing encyclopedia/catch-card portrait. Generate ONE exceptionally detailed PHOTOREALISTIC living healthy adult fish. Exact lateral SIDE PROFILE facing LEFT, head LEFT tail RIGHT, straight relaxed horizontal body; full animal and ALL fins uncropped, centered with safe clear margin surrounding every extremity. Natural anatomically correct proportions. Authentic minute skin/scale irregularities, realistic glossy wet eye tiny highlight, restrained moist iridescence, delicate translucent fins with individually resolved rays, soft broad neutral daylight upper LEFT, sharp focus throughout. True TRANSPARENT RGBA background with preserved alpha, NO checkerboard painted into pixels. Highest practical landscape resolution approximately 2048 pixels wide or larger, MINIMUM 1536 wide. No water, scenery, hands, hooks, text, labels, scale bars, borders, floor, cast shadows, props, panels, plastic model or painting. AI-generated photorealistic illustrative game asset, not a claimed actual wildlife photograph. Subject and required anatomy: YELLOWTAIL KINGFISH, Seriola lalandi. Lean elongated streamlined adult amberjack, blue-green upper body silver-white flanks/belly, clear thin golden YELLOW longitudinal stripe from eye to tail, bright yellow deeply forked caudal fin. Moderately sloped head, shorter first spiny dorsal and long second dorsal with modest pointed anterior lobe, no scutes, small curved pectoral and matching yellow-gray anal. No heavy giant trevally forehead, no greater amberjack dark diagonal eye bar, no tuna finlets.",
+      "revision_prompts": [],
+      "anatomy_review": "Generated full-body output visually reviewed for orientation, silhouette, species-specific head/fins/tail/color and safe framing; alpha inspected numerically and on #edf0e4 review composites. Coordinates selected at alpha-extremal anatomical nose/bill and tail tissue after visual review. Illustrative review, not scientific certification.",
+      "biological_reference_sources": [
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/1662",
+          "title": "Fishes of Australia species account",
+          "supports": "Verified species identity and diagnostic morphology described in prompt.",
+          "checked_on": "2026-10-04"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "revisions": [
+    {
+      "species_id": "blue_marlin",
+      "path": "revision_history/blue_marlin_initial.png",
+      "sha256": "c1716b358ee07b6e51471216aab78e76c7ffb467b8ae13e49edeb77606d967a8",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "24d68372907380331fa21f689bb1f36f3deeaaaae5613b266b249c149769c5b3"
+    },
+    {
+      "species_id": "cobia",
+      "path": "revision_history/cobia_initial.png",
+      "sha256": "5293b76ce340ce13fc56bf085223278b58048945cfbc5555c8984ad529d2f005",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "3a66901e94891d22445611e559f9375020c35cf41cd53bc953bd3597dcd0a7a1"
+    },
+    {
+      "species_id": "cobia",
+      "path": "revision_history/cobia_revision_1.png",
+      "sha256": "1cb762b71bfe84e733f3bee8abc1249af3013752567909c019a16f144a25e46f",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "3a66901e94891d22445611e559f9375020c35cf41cd53bc953bd3597dcd0a7a1"
+    },
+    {
+      "species_id": "opah",
+      "path": "revision_history/opah_initial.png",
+      "sha256": "282af0c18f5e85c9533d1f7cd076369d1aa650c1881fccab07a0d25f5b99ce3e",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "591b07d7eca861fbbdcce3aaf48ae3f709e32aca9ae8d7a1d0c207395cc7e95b"
+    },
+    {
+      "species_id": "opah",
+      "path": "revision_history/opah_revision_1.png",
+      "sha256": "6eded55c46b2f5bbdc8f9e1036cdbb5837d117846d738867f838d196cf54c973",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "591b07d7eca861fbbdcce3aaf48ae3f709e32aca9ae8d7a1d0c207395cc7e95b"
+    },
+    {
+      "species_id": "opah",
+      "path": "revision_history/opah_revision_2.png",
+      "sha256": "b6b2b895d13f4c5a000d22507a65074fdfff61d53724dc245255b72ab770a9f2",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "591b07d7eca861fbbdcce3aaf48ae3f709e32aca9ae8d7a1d0c207395cc7e95b"
+    },
+    {
+      "species_id": "roosterfish",
+      "path": "revision_history/roosterfish_initial.png",
+      "sha256": "c6f8fca4a825883491e4515007222be209a333d2458756f4b276951fea4982a0",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "456dab4396602bf038933645a7739fca4cc7a7b41e7e1c09c3be846b337d4b53"
+    },
+    {
+      "species_id": "tiger_shark",
+      "path": "revision_history/tiger_shark_initial.png",
+      "sha256": "2c56c8cc0f7aec6c879bff726aeb323053eb5e11b5ad8bf37e619e97e7c911af",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "57f62760d769a525f23a376089b69edd84f4cd777c9693e4545ca4f34ded2b7a"
+    },
+    {
+      "species_id": "yellowfin_tuna",
+      "path": "revision_history/yellowfin_tuna_initial.png",
+      "sha256": "875a367b9fc3b4288309c6cac3af28f0e1288bf048f09b207a61948c956c5ba7",
+      "status": "superseded_not_for_runtime",
+      "final_master_sha256": "d79df845c9fceea63d7e079e583f75e42ef483d02f32a58f043928ff618bc27c"
+    }
+  ]
+}

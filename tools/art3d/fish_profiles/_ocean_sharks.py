@@ -28,29 +28,23 @@ def shark_skin(back, side, belly, tiger=False):
 
 
 def _fin(f,name,roots,edge,parent='spine_mid',bone=None,white=False,white_span=(.26,.62)):
-    mat=f.mats['fin']
+    # Color the actual membrane/ray faces, rather than floating overlays that can
+    # intersect the independently tessellated curved fin on the opposite side.
+    import build_fish as core
+    before=len(core.MESHES);mat=f.mats['fin']
     ob=f.fin(name,roots,edge,parent=parent,bone=bone,rays=14,material=mat,ray_material=mat)
     if white:
-        # The patch shares the fin's UV-dependent weights, so it follows its deformation.
-        import build_fish as core
-        rr=core.resample(roots,41);ee=core.resample(edge,41)
-        inds=[i for i in range(41) if white_span[0] <= i/40 <= white_span[1]]
-        if len(inds)<2:return ob
-        vertices=[];faces=[];uv=[]
-        for i in inds:
-            # Break up an otherwise artificial straight paint boundary.
-            begin=.74+.05*math.sin(i*.83)
-            for j,t in enumerate(np.linspace(begin,1,5)):
-                p=rr[i].lerp(ee[i],float(t))
-                p.y+=math.sin(math.pi*t)*.003*math.sin(i*math.pi/40)
-                tangent=ee[min(i+1,40)]-ee[max(i-1,0)]
-                normal=(ee[i]-rr[i]).cross(tangent).normalized()
-                p+=normal*.0008
-                vertices.append(p);uv.append((i/40,float(t)))
-        for i in range(len(inds)-1):
-            for j in range(4):
-                a=i*5+j;faces.append((a,a+5,a+6,a+1))
-        f.mesh(name+'_IvoryTip',vertices,faces,f.material('NaturalWhiteFinTips',(.84,.85,.78),.51),uv,('fin',bone or name.lower()))
+        ivory=f.material('NaturalWhiteFinTips',(.84,.85,.78),.51)
+        for item_index,item in enumerate(core.MESHES[before:]):
+            item.data.materials.append(ivory);slot=len(item.data.materials)-1
+            uvs=item.data.uv_layers.active.data
+            for poly in item.data.polygons:
+                v=sum(float(uvs[li].uv.y) for li in poly.loop_indices)/len(poly.loop_indices)
+                u=(sum(float(uvs[li].uv.x) for li in poly.loop_indices)/len(poly.loop_indices)
+                   if item_index==0 else (item_index-1)/13)
+                boundary=.74+.05*math.sin(u*40*.83)
+                if white_span[0]<=u<=white_span[1] and v>=boundary:
+                    poly.material_index=slot
     return ob
 
 

@@ -1,0 +1,362 @@
+{
+  "atlantic_bluefin_tuna": {
+    "morphology": "Large stocky torpedo body; short pectoral ending before second dorsal; dark blue-black back, silver belly with subdued pale spotting; reddish-brown second dorsal, yellow dark-edged finlets and lunate tail.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/western-atlantic-bluefin-tuna/resources",
+        "title": "NOAA Fisheries: Western Atlantic Bluefin Tuna",
+        "supports": "Stocky torpedo body, color pattern, short pectoral and reddish-brown second dorsal.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "pacific_bluefin_tuna": {
+    "morphology": "PACIFIC BLUEFIN TUNA, Thunnus orientalis. Robust streamlined mature bluefin with deep dark navy back showing subtle gray-green iridescence, bright silver flanks with a few delicate gray pale spots/bands on lower flank. Proportionally small eye, compact conical head. Short dark pectoral fin clearly ending BEFORE origin of second dorsal. Two dorsal fins, compact brownish second dorsal and anal fins (not long yellow sickles), series of tiny yellow black-edged finlets on upper and lower rear body, narrow strong tail keel and dark deeply forked lunate tail. Distinct separately generated adult specimen with slightly longer more streamlined body than a giant Atlantic bluefin, without inventing a false bold unique color marking.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/pacific-bluefin-tuna/seafood",
+        "title": "NOAA Fisheries: Pacific Bluefin Tuna",
+        "supports": "Dark blue/gray-green iridescence, small eye, short pectoral, yellow black-edged finlets and spotted silver belly.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "yellowfin_tuna": {
+    "morphology": "YELLOWFIN TUNA, Thunnus albacares. Sleek strong adult torpedo body, metallic midnight-blue back, bronze-yellow subtle lateral sheen, silvery belly with delicate alternating pale dotted and broken vertical lines. The SECOND DORSAL and ANAL fin are long elegant bright golden-yellow curved sickles sweeping rearward almost toward tail, unmistakably yellowfin. First dorsal is separate, lower triangular yellow-gray; moderately long pointed pectoral reaches beyond second dorsal origin. Bright small yellow black-edged finlets above/below rear body, extremely narrow keeled tail base, crescent dark-gray tail. No oversized bigeye eye, no long albacore pectoral.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/yellowfin-tuna/",
+        "title": "Florida Museum: Yellowfin Tuna",
+        "supports": "Long adult second dorsal/anal fins, body shape and difference from bigeye.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/s3/dam-migration/identification-of-atlantic-tunas.pdf",
+        "title": "NOAA: Identification of Atlantic Tunas",
+        "supports": "Yellowfin pectoral reach, yellow finlets and belly line/dot pattern.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "bigeye_tuna": {
+    "morphology": "BIGEYE TUNA, Thunnus obesus. Stocky deep robust adult tuna with proportionally distinctly LARGE eye, thick rounded body tapering to narrow keeled caudal peduncle and strong crescent tail. Metallic dark blue dorsum and silvery-white lower flank, restrained subtle blue lateral iridescence, no conspicuous belly stripes/dots. Moderately long pectoral reaching approximately origin of second dorsal. First dorsal dark golden yellow, compact modest second dorsal and anal fins yellow-brown with narrow dark edge, NOT long yellowfin sickles. Tiny yellow black-edged rear finlets above and below. Distinct large eye, mature deep-bodied fish.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/pacific-bigeye-tuna",
+        "title": "NOAA Fisheries: Pacific Bigeye Tuna",
+        "supports": "Large eyes, dark metallic-blue and white color, yellow/dark-edged fins.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/s3/dam-migration/guide-to-tunas-of-the-western-atlantic-ocean.pdf",
+        "title": "NOAA: Guide to Tunas of the Western Atlantic Ocean",
+        "supports": "Stocky body, large eye, pectoral reach, shorter dorsal/anal fins and absence of body markings.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "albacore": {
+    "morphology": "ALBACORE, Thunnus alalunga. Streamlined spindle-shaped mature tuna with metallic dark blue dorsum, lustrous silvery-white sides/belly, moderately large eye and pointed conical snout. Defining extremely LONG narrow scythe-shaped dark PECTORAL FIN extending from behind gill cover far backward beyond the second dorsal and beyond anal fin base, almost half body length. Two compact dorsals; small yellowish dorsal finlets, dusky or silver ventral finlets, narrow keeled tail base, deeply crescent forked tail with fine pale trailing edge. No yellowfin elongated dorsal/anal sickles, no skipjack belly stripes.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/north-atlantic-albacore-tuna/seafood",
+        "title": "NOAA Fisheries: North Atlantic Albacore Tuna",
+        "supports": "Exceptionally long pectoral fins, nearly half the body length.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/s3/dam-migration/identification-of-atlantic-tunas.pdf",
+        "title": "NOAA: Identification of Atlantic Tunas",
+        "supports": "Pectoral extends beyond anal fin base; ventral finlets silver or dark.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "skipjack_tuna": {
+    "morphology": "SKIPJACK TUNA, Katsuwonus pelamis. Compact small tuna with streamlined fusiform body, purplish dark navy back and shiny silver sides/belly. Defining FIVE dark continuous horizontal longitudinal bands along LOWER flanks and belly from behind head toward tail, no striped upper back. Mostly smooth nearly scaleless skin except subtle corselet behind head, short broad dark pectoral, two discrete dorsals, tiny dusky rear finlets upper/lower, slender keeled caudal peduncle and forked crescent tail. Accurate compact skipjack proportions, no yellow sickle fins.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/atlantic-skipjack-tuna",
+        "title": "NOAA Fisheries: Atlantic Skipjack Tuna",
+        "supports": "Mostly scaleless body, dark purplish blue back, four to six dark longitudinal bands on lower sides.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://myfwc.com/wildlifehabitats/profiles/saltwater/tuna/skipjack-tuna/",
+        "title": "FWC: Skipjack Tuna",
+        "supports": "Lower flank bands, short pectoral fins.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "mahi_mahi": {
+    "morphology": "MAHI-MAHI, Coryphaena hippurus. Adult male dolphinfish with a distinctively tall steep squared forehead, small mouth, long laterally compressed body. Living colors electric turquoise-blue/green back, golden yellow flanks, bright pale silver belly and numerous tiny blue spots. ONE long continuous high dorsal fin beginning above the eye and extending virtually to the tail, dark cobalt membrane, no separate spiny dorsal mound. Small curved pectoral, long low anal fin, deep yellow forked tail on narrow peduncle. No tuna finlets.",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Coryphaena-hippurus.html",
+        "title": "FishBase species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "wahoo": {
+    "morphology": "WAHOO, Acanthocybium solandri. Extremely elongated slender near-cylindrical torpedo body, long pointed jaws with subtle sharp triangular teeth, very long head, silvery sides crossed by about 25 cobalt-blue VERTICAL bars, dark iridescent blue back. Long low spiny FIRST dorsal followed by separate small second dorsal, posterior dorsal/anal finlets and crescent deeply forked caudal. Short pectoral and small pelvic; streamlined lean fish, never thick tuna body.",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Acanthocybium-solandri.html",
+        "title": "FishBase species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "swordfish": {
+    "morphology": "SWORDFISH, Xiphias gladius. Adult broadbill with long visibly FLATTENED broad sword-shaped upper bill in front of a large eye, heavy smooth scaleless dark charcoal-brown blue upper body and silver belly. Sword approximately one third total length, not round marlin spear. Tall sickle-shaped FIRST dorsal fin with sharply reduced separated second dorsal far back; strong low-set sickle pectoral, NO PELVIC FINS at all. Two separated anal fins, narrow keeled caudal peduncle, broad crescent tail. Entire sword tip and tail visible, straight horizontal body.",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Xiphias-gladius.html",
+        "title": "FishBase species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "blue_marlin": {
+    "morphology": "BLUE MARLIN, Makaira nigricans. Large powerful robust elongated billfish with round-section long pointed spear upper jaw, cobalt blue back and silvery-white belly, subtle faint pale-blue vertical bars. First dorsal begins behind head with tall triangular front lobe LOWER THAN body depth and slopes to long low rear membrane, followed by tiny second dorsal near tail. Long pointed pectoral, thin narrow paired pelvic fins present, two anal fins, caudal keels and enormous crescent tail. This is blue marlin, not sailfish: no large sail, no sword-flat bill, no exaggerated striped marlin high dorsal.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/pacific-blue-marlin",
+        "title": "NOAA Fisheries species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "striped_marlin": {
+    "morphology": "STRIPED MARLIN, Kajikia audax. Streamlined laterally compressed slender billfish, long round spear bill, vivid cobalt blue back and silvery sides bearing approximately 20 distinct bright blue VERTICAL stripes. First dorsal anterior lobe very tall, its height about the BODY DEPTH OR GREATER, gracefully tapering into low long back membrane; tiny separate second dorsal. Long falcate pectoral, slender narrow pelvic fins present; two anal fins, slender keeled tail base and deeply forked crescent tail. No sailfish fan and no flat swordfish bill.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/striped-marlin",
+        "title": "NOAA Fisheries species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "indo_pacific_sailfish": {
+    "morphology": "INDO-PACIFIC SAILFISH, Istiophorus platypterus. Slender elongated laterally compressed billfish, extremely long thin round pointed spear bill, silver lower flanks with rows of small iridescent blue spots forming delicate vertical bars. Giant erect first dorsal SAIL, dark cobalt-blue with many small dark spots, rises well above body depth and extends along most of the back; all sail rays and membrane visible, naturally undulating high edge. Tiny second dorsal near tail, long threadlike pelvic fins, slender pectoral, deeply forked dark crescent tail, no finlets. Include whole bill, full sail and long pelvic tips in canvas with margins.",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Istiophorus-platypterus.html",
+        "title": "FishBase species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "great_barracuda": {
+    "morphology": "GREAT BARRACUDA, Sphyraena barracuda. Long slender nearly cylindrical silver fish, olive-gray upper back, large elongated pointed head, strongly projecting lower jaw and a slightly parted mouth revealing a few long sharp teeth. TWO widely separated short dorsal fins, first spiny, second soft opposite short anal fin. Irregular black blotches on LOWER rear sides, faint dark oblique bars above; short pectoral and pelvic, deep forked dark tail with pale terminal tips. No tuna finlets, no continuous dorsal, no pike rounded tail.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-barracuda/",
+        "title": "Florida Museum species profile",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "giant_trevally": {
+    "morphology": "GIANT TREVALLY, Caranx ignobilis. Large powerfully deep-bodied adult silver-gray jack with a VERY STEEP convex forehead and thick muscular body, blunt head and strong terminal jaw, modest eye. Dark gunmetal upper half fading silvery below, no invented black gill-cover spot. Two dorsal fins, second with pronounced pointed leading lobe; long sickle-shaped pectoral; rear straight lateral line with visible bony scutes; narrow muscular tail peduncle and strongly forked dark gray tail. No yellowtail stripe and no tuna finlets.",
+    "sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/4268",
+        "title": "Fishes of Australia species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "greater_amberjack": {
+    "morphology": "GREATER AMBERJACK, Seriola dumerili. Robust elongated but moderately deep-bodied silver jack, blue-brown olive dorsum, diffuse amber-gold band along midflank, characteristic dark oblique stripe from snout THROUGH EYE diagonally upward toward first dorsal origin. Short first spiny dorsal and longer low second dorsal with raised front; shorter pectorals than giant trevally; matching anal fin and deeply forked brown-golden caudal. Head relatively long and sloping, no very steep giant-trevally forehead, no large bony scute armor.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/greater-amberjack",
+        "title": "NOAA Fisheries species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "cobia": {
+    "morphology": "COBIA, Rachycentron canadum. Long strong spindle-bodied fish with broad flattened head and protruding lower jaw, dark chocolate-brown upper body, broad darker longitudinal flank stripe bordered by pale silver cream lines, white underside. SEVEN to NINE discrete short stiff dorsal spines well separated before a long soft second dorsal fin; long low anal fin, long pointed pectoral, adult lunate crescent tail. Smooth tiny scales, not a shark, no gill slits or remora sucker, ordinary single bony-fish gill cover.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cobia/",
+        "title": "Florida Museum species profile",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "roosterfish": {
+    "morphology": "ROOSTERFISH, Nematistius pectoralis. Deeply compressed handsome silver-blue fish with sloping forehead, long curved pectoral fins, TWO broad dark oblique stripes sweeping across the flank, narrow tail base and deeply forked tail. Distinctive rooster comb of SEVEN extremely elongated black threadlike anterior DORSAL rays sweeping upward and back, each ray separate with fine connecting membranes only at base; following second dorsal short. No lateral-line scutes. All tall comb tips included with generous transparent margin.",
+    "sources": [
+      {
+        "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1223",
+        "title": "Smithsonian Tropical Research Institute species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "red_snapper": {
+    "morphology": "RED SNAPPER, Lutjanus campechanus. Natural adult rosy scarlet-red back and upper sides fading pinkish silver belly, red iris, triangular sloping head with pointed snout and strong mouth with subtle canine teeth. Moderately deep compressed body, a continuous dorsal with spiny raised front and softer rounded rear, angular pointed anal, medium long pointed pectoral, moderately forked red tail. Rich natural irregular red scales, no black juvenile side spot in this adult, no tropical yellowtail or grouper round tail.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/red-snapper",
+        "title": "NOAA Fisheries species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "giant_grouper": {
+    "morphology": "GIANT GROUPER, Epinephelus lanceolatus. Very large mature adult giant grouper, extremely bulky barrel-shaped brown-gray body, disproportionately HUGE broad mouth with thick fleshy lips and lower jaw, small eye set high in heavy broad head. Subtle irregular mottled gray-brown patches and fine speckling; NO juvenile vivid yellow and black bars. Continuous dorsal fin with short spines merging rounded soft rear, rounded massive pectoral fins, rounded anal, broad ROUNDED caudal fin. Thick fleshy naturally irregular proportions, no forked tail.",
+    "sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/4672",
+        "title": "Fishes of Australia species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "dogtooth_tuna": {
+    "morphology": "DOGTOOTH TUNA, Gymnosarda unicolor. Powerful elongated torpedo fish, dark blue-green back and bright silver-white belly, big pointed head with large jaw gently parted enough to show a few prominent conical doglike TEETH. Slightly undulating lateral line. Two dorsals with long low first dorsal, white tips on second soft dorsal and anal fins; small dark rear finlets above and below; short pectoral, narrow keeled caudal peduncle and large dark crescent tail. Smooth mostly scaleless body, no yellowfin sickles, no colorful tuna finlets.",
+    "sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/723",
+        "title": "Fishes of Australia species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "yellowtail_kingfish": {
+    "morphology": "YELLOWTAIL KINGFISH, Seriola lalandi. Lean elongated streamlined adult amberjack, blue-green upper body silver-white flanks/belly, clear thin golden YELLOW longitudinal stripe from eye to tail, bright yellow deeply forked caudal fin. Moderately sloped head, shorter first spiny dorsal and long second dorsal with modest pointed anterior lobe, no scutes, small curved pectoral and matching yellow-gray anal. No heavy giant trevally forehead, no greater amberjack dark diagonal eye bar, no tuna finlets.",
+    "sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/1662",
+        "title": "Fishes of Australia species account",
+        "supports": "Verified species identity and diagnostic morphology described in prompt.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "opah": {
+    "morphology": "OPAH, Lampris guttatus (North Atlantic opah). Extremely deep almost circular oval laterally compressed body, dark steel-blue upper surface grading to lustrous silver lower sides with many ROUND small white pale spots, large eye with bright orange-red surround, small protruding toothless mouth. All fins saturated natural red-orange: long falcate pectoral, high narrow front of dorsal with long lower rear continuation, long low anal, deeply forked red tail on short narrow peduncle. Correct tall round opah silhouette, not elongated tuna, full very long pectoral and tall dorsal uncropped.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/feature-story/clues-fish-auction-reveal-several-new-species-opah",
+        "title": "NOAA Fisheries species account",
+        "supports": "Species-complex split and North Atlantic Lampris guttatus identity, not exact anatomy.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/Lampris-guttatus.html",
+        "title": "FishBase: Lampris guttatus (taxonomic caveat retained)",
+        "supports": "Deep body, pale spots, vermillion fins, lunate tail and similar falcate pectoral/pelvic fins; older complex information cautioned by source.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "great_white_shark": {
+    "morphology": "GREAT WHITE SHARK, Carcharodon carcharias. Very robust muscular torpedo-shaped white shark, broad conical snout, small dark eye, five clearly visible vertical GILL SLITS behind head, NO bony operculum. Broad triangular first dorsal, much smaller second dorsal, strong triangular swept pectoral fins, small pelvic/anal fins, strong caudal keel and powerful near-symmetrical crescent heterocercal tail. Crisp natural boundary between slate gray upper body and white belly. Mouth gently open enough to suggest broad triangular serrated teeth, no exaggerated snarl, no blood. Fine realistic wet sandpaper denticle skin, no fish scales or fin rays; credible mature great white proportions.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/white-shark/",
+        "title": "Florida Museum shark species profile",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "scalloped_hammerhead": {
+    "morphology": "SCALLOPED HAMMERHEAD SHARK, Sphyrna lewini. Slender-to-moderate bronze gray body, white underside and a true broad flattened transverse HAMMER cephalofoil. Head leading edge naturally broadly ARCHED with central notch and two distinct side scallops; near eye on lateral tip of hammer, no eye on central snout. Strict side body profile with head cephalofoil foreshortened naturally enough to show characteristic scalloped leading contour, not round shark head and not a literal tool. Moderately tall curved triangular first dorsal, ordinary straight posterior pelvic edges, long narrow pectorals, small second dorsal, upper caudal lobe much longer than lower. Five gill slits, no gill cover, small ventral mouth. Natural gray denticle skin no scales, no fin rays. Anatomically distinct from great hammerhead: less tall dorsal, arched scalloped rather than near straight hammer.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/scalloped-hammerhead/",
+        "title": "Florida Museum shark species profile",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "great_hammerhead": {
+    "morphology": "GREAT HAMMERHEAD SHARK, Sphyrna mokarran. Robust adult gray-brown shark, pale whitish belly. Broad flattened transverse cephalofoil hammer head with NEARLY STRAIGHT broad anterior edge and shallow central notch, squared lateral tips, eyes at lateral ends, NOT rounded scalloped head. Strict lateral body, head naturally foreshortened so hammer form remains legible. Defining VERY TALL strongly FALCATE sickle-shaped FIRST DORSAL fin with concave rear edge, conspicuous compared with scalloped hammerhead. Pelvic fins also curved falcate with concave posterior margins. Long pectorals, much smaller second dorsal, strongly asymmetrical tail with elongated upper lobe. Five gill slits and ventral mouth, no gill cover, finely textured denticle skin, no scales/rayed fins. Entire hammer and tall dorsal uncropped.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/",
+        "title": "Florida Museum shark species profile",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "blue_shark": {
+    "morphology": "BLUE SHARK, Prionace glauca. Exceptionally slender elegant shark with long narrow rounded-pointed snout and large round eye. Brilliant natural cobalt-indigo back, bright blue flanks grading sharply white on underside. Exceptionally LONG NARROW blade-like pectoral fins, triangular FIRST DORSAL SET WELL BACK behind pectoral tips' origin, small second dorsal, long upper caudal lobe and much smaller lower lobe (not tuna-like symmetrical crescent). Five lateral gill slits, small ventral mouth, fine smooth denticle skin, no scales, no gill cover and no rayed fish fins. Straight body full length, long near pectoral angled gently down-back visible entirely.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-shark/",
+        "title": "Florida Museum shark species profile",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "shortfin_mako": {
+    "morphology": "SHORTFIN MAKO SHARK, Isurus oxyrinchus. Lean athletic sharply streamlined torpedo shark with distinctly LONG POINTED CONICAL SNOUT, large dark eye, metallic deep indigo-blue back and white underside including WHITE underside around mouth. Five clear gill slits, narrow sharp triangular first dorsal, short pointed pectoral fins, tiny second dorsal/anal, strong caudal keel and powerful crescent tail. Slightly parted ventral mouth reveals a few long slender smooth-edged needle/hook teeth, NOT broad serrated great-white triangles. Much sleeker than great white, fine glossy wet denticle skin, no scales, no gill cover, no rayed bony fish fins.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/",
+        "title": "Florida Museum shark species profile",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "tiger_shark": {
+    "morphology": "TIGER SHARK, Galeocerdo cuvier. Stout broad-headed subadult/young adult shark with characteristically very BLUNT SHORT WIDE snout, large mouth, dark eye, five gill slits. Gray olive-brown upper body and pale cream belly, realistic irregular dark vertical bars and blotches over back/flanks, subdued natural contrast, not orange tiger fur. Large broad first dorsal, short broad pectorals, small second dorsal/anal, long strongly unequal heterocercal tail with long upper lobe and defined subterminal notch. Low ridges along caudal peduncle. Broad flat head and stout front-heavy body, fine denticle skin no scales/fin rays or operculum.",
+    "sources": [
+      {
+        "url": "https://australian.museum/learn/animals/fishes/tiger-shark-galeocerdo-cuvier-pron-lesueur-1822/",
+        "title": "Australian Museum: Tiger Shark",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "oceanic_whitetip_shark": {
+    "morphology": "OCEANIC WHITETIP SHARK, Carcharhinus longimanus. Stocky gray-bronze open-ocean shark with a short broad rounded snout, five gill slits, white underside. Defining HUGE BROAD LONG PADDLE-LIKE PECTORAL FINS with smoothly rounded tips, and a broad rounded first dorsal; conspicuous mottled chalk-WHITE terminal patches on first dorsal and pectoral tips. Pectoral is rounded paddle, NEVER sharp narrow blade. Small second dorsal/anal; elongated upper caudal lobe, white mottled caudal tips. Fine wet denticle skin, no fish scales/fin rays or operculum. Keep entire broad pectoral down-back within canvas.",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/oceanic-whitetip-shark",
+        "title": "NOAA Fisheries: Oceanic Whitetip Shark",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  },
+  "whitetip_reef_shark": {
+    "morphology": "WHITETIP REEF SHARK, Triaenodon obesus. Slender small gray-brown reef shark, broad flattened short rounded snout, oval catlike eye, visible nasal flaps, five gill slits. First dorsal relatively small and set noticeably FAR BACK, with brilliant clean WHITE TIP; conspicuous white terminal tip on the long upper caudal lobe. Narrow pectoral fins ordinary pointed shape WITHOUT huge white oceanic-whitetip paddles. Fairly large second dorsal, low slender body, long asymmetrical upper tail, pale belly and scattered tiny dark speckles. Mouth small ventral, fine wet denticle skin, no scales/fin rays/gill cover. Clearly different from bulky oceanic whitetip.",
+    "sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+        "title": "Florida Museum shark species profile",
+        "supports": "Verified species-specific head, fins, tail, color pattern and shark anatomy.",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  }
+}

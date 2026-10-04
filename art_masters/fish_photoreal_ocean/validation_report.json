@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "asset_count": 30,
+  "production_png_count": 90,
+  "superseded_png_count": 9,
+  "minimum_master_width": 1536,
+  "maximum_master_width": 1947,
+  "source_manifest_sha256": "6946ffafc0587024804186b9a3e23d23d30dc053209d78c2cfe6af7122e9c893",
+  "isolated_import_engine": "Godot4.6.3.stable.official.7d41c59c4",
+  "isolated_import_texture_count": 60,
+  "import_parameters_match_existing_v2": true,
+  "previous44_runtime_entries_unchanged": true,
+  "checks": {
+    "archive_checks_passed": 374,
+    "archive_checks_total": 374,
+    "accepted_source_pngs_byte_preserved": true,
+    "genuine_transparent_alpha": true,
+    "full_canvas_landmarks_on_subject": true,
+    "runtime_copies_byte_identical": true,
+    "lossless_512wide_thumbnails": true,
+    "separate_species_generations": 30,
+    "imagegen_revision_calls": 9
+  },
+  "visual_review": "All generated outputs and final paper-background contact sheet inspected. Targeted revisions recorded. Illustrative anatomy review, not biological diagnostic certification.",
+  "release_scope_note": "This report covers authored2D assets and imported pixel hashes only; no target-device performance or release claims.",
+  "final_exact_source_byte_sync": true,
+  "all60_imported_hashes_stable_after_byte_sync": true,
+  "old44_full_and_thumb_png_hashes_unchanged": true
+}

@@ -1,0 +1,302 @@
+{
+  "albacore": {
+    "nose": [
+      11,
+      461
+    ],
+    "tail": [
+      1763,
+      715
+    ]
+  },
+  "atlantic_bluefin_tuna": {
+    "nose": [
+      16,
+      476
+    ],
+    "tail": [
+      1759,
+      711
+    ]
+  },
+  "bigeye_tuna": {
+    "nose": [
+      20,
+      473
+    ],
+    "tail": [
+      1760,
+      748
+    ]
+  },
+  "blue_marlin": {
+    "nose": [
+      19,
+      339
+    ],
+    "tail": [
+      1905,
+      116
+    ]
+  },
+  "blue_shark": {
+    "nose": [
+      13,
+      328
+    ],
+    "tail": [
+      1934,
+      103
+    ]
+  },
+  "cobia": {
+    "nose": [
+      24,
+      426
+    ],
+    "tail": [
+      1885,
+      678
+    ]
+  },
+  "dogtooth_tuna": {
+    "nose": [
+      13,
+      486
+    ],
+    "tail": [
+      1769,
+      186
+    ]
+  },
+  "giant_grouper": {
+    "nose": [
+      10,
+      478
+    ],
+    "tail": [
+      1764,
+      449
+    ]
+  },
+  "giant_trevally": {
+    "nose": [
+      36,
+      552
+    ],
+    "tail": [
+      1747,
+      724
+    ]
+  },
+  "great_barracuda": {
+    "nose": [
+      26,
+      421
+    ],
+    "tail": [
+      1858,
+      202
+    ]
+  },
+  "great_hammerhead": {
+    "nose": [
+      14,
+      456
+    ],
+    "tail": [
+      1766,
+      216
+    ]
+  },
+  "great_white_shark": {
+    "nose": [
+      20,
+      401
+    ],
+    "tail": [
+      1753,
+      206
+    ]
+  },
+  "greater_amberjack": {
+    "nose": [
+      15,
+      499
+    ],
+    "tail": [
+      1758,
+      698
+    ]
+  },
+  "indo_pacific_sailfish": {
+    "nose": [
+      18,
+      406
+    ],
+    "tail": [
+      1755,
+      210
+    ]
+  },
+  "mahi_mahi": {
+    "nose": [
+      20,
+      474
+    ],
+    "tail": [
+      1754,
+      159
+    ]
+  },
+  "oceanic_whitetip_shark": {
+    "nose": [
+      15,
+      426
+    ],
+    "tail": [
+      1758,
+      170
+    ]
+  },
+  "opah": {
+    "nose": [
+      22,
+      466
+    ],
+    "tail": [
+      1533,
+      774
+    ]
+  },
+  "pacific_bluefin_tuna": {
+    "nose": [
+      22,
+      482
+    ],
+    "tail": [
+      1758,
+      197
+    ]
+  },
+  "red_snapper": {
+    "nose": [
+      25,
+      538
+    ],
+    "tail": [
+      1659,
+      730
+    ]
+  },
+  "roosterfish": {
+    "nose": [
+      26,
+      638
+    ],
+    "tail": [
+      1530,
+      388
+    ]
+  },
+  "scalloped_hammerhead": {
+    "nose": [
+      33,
+      436
+    ],
+    "tail": [
+      1791,
+      174
+    ]
+  },
+  "shortfin_mako": {
+    "nose": [
+      17,
+      426
+    ],
+    "tail": [
+      1756,
+      180
+    ]
+  },
+  "skipjack_tuna": {
+    "nose": [
+      7,
+      481
+    ],
+    "tail": [
+      1766,
+      186
+    ]
+  },
+  "striped_marlin": {
+    "nose": [
+      17,
+      390
+    ],
+    "tail": [
+      1838,
+      177
+    ]
+  },
+  "swordfish": {
+    "nose": [
+      29,
+      402
+    ],
+    "tail": [
+      1820,
+      217
+    ]
+  },
+  "tiger_shark": {
+    "nose": [
+      17,
+      439
+    ],
+    "tail": [
+      1865,
+      127
+    ]
+  },
+  "wahoo": {
+    "nose": [
+      20,
+      428
+    ],
+    "tail": [
+      1915,
+      196
+    ]
+  },
+  "whitetip_reef_shark": {
+    "nose": [
+      33,
+      478
+    ],
+    "tail": [
+      1745,
+      209
+    ]
+  },
+  "yellowfin_tuna": {
+    "nose": [
+      12,
+      456
+    ],
+    "tail": [
+      1782,
+      759
+    ]
+  },
+  "yellowtail_kingfish": {
+    "nose": [
+      19,
+      480
+    ],
+    "tail": [
+      1761,
+      695
+    ]
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "albacore.png": {
+    "height": 887,
+    "image_sha256": "f7e8f01fe506db3758124afb1d3faf7c8aff633a446e95eeb39a9212147222e4",
+    "width": 1774
+  },
+  "albacore_thumb.png": {
+    "height": 256,
+    "image_sha256": "301bbd4ed961f494b421d0c6412e5d79e9fee325694ae601318346106936c341",
+    "width": 512
+  },
+  "atlantic_bluefin_tuna.png": {
+    "height": 887,
+    "image_sha256": "510c87678f2a882a3346ca625663c72a325029cf40788f255dda6b5840f389be",
+    "width": 1774
+  },
+  "atlantic_bluefin_tuna_thumb.png": {
+    "height": 256,
+    "image_sha256": "108ac54861259401bd8f32ccd278cc113fdac078b7eb1293fbeb2314d14dbc01",
+    "width": 512
+  },
+  "bigeye_tuna.png": {
+    "height": 887,
+    "image_sha256": "acade15dd5f2299e620ae39488c15ff0d282c5ae386dc3a0637265ac18611eaa",
+    "width": 1774
+  },
+  "bigeye_tuna_thumb.png": {
+    "height": 256,
+    "image_sha256": "9f0fe6afd186eab715c1bb9782d204e789fadebab6a2688e1da7e9001f733951",
+    "width": 512
+  },
+  "blue_marlin.png": {
+    "height": 820,
+    "image_sha256": "8f0ea7d9b11f2b3095fd0631fd939c38167f5bba06c34570ec33add0efa9954a",
+    "width": 1918
+  },
+  "blue_marlin_thumb.png": {
+    "height": 219,
+    "image_sha256": "8d74848b142b480d0e0f0267e614cb011206b98f40ffc99d9f94435d57ce3ed7",
+    "width": 512
+  },
+  "blue_shark.png": {
+    "height": 808,
+    "image_sha256": "8d4642fbd83c0844e24b34a57588c5019aa1de2f8ed7d583e0c3a26501648b4b",
+    "width": 1947
+  },
+  "blue_shark_thumb.png": {
+    "height": 212,
+    "image_sha256": "514d03f49204ac6bacaae9f259543883e44b22c80fc719eb5394fbbdadda68fc",
+    "width": 512
+  },
+  "cobia.png": {
+    "height": 821,
+    "image_sha256": "f8c823e1141dac9a473b616da542f69b49f884a6f69f3a5dd6d7cfdb2d13be7a",
+    "width": 1915
+  },
+  "cobia_thumb.png": {
+    "height": 220,
+    "image_sha256": "f0416add2f3ce061afdc0f729441e902cca424d00ce56cc3a5749af8652a2176",
+    "width": 512
+  },
+  "dogtooth_tuna.png": {
+    "height": 887,
+    "image_sha256": "3a5db07415747f46a4bcd1bf5232017077dd0ffeedbfae09a269e54f31f2700f",
+    "width": 1774
+  },
+  "dogtooth_tuna_thumb.png": {
+    "height": 256,
+    "image_sha256": "29aa0002f4cc84b0a53b2c14c19b659856c4ed404e779189c333795b91fb0ee5",
+    "width": 512
+  },
+  "giant_grouper.png": {
+    "height": 887,
+    "image_sha256": "3d78799f23c4a9e6eab46d73810d558efc6ca8f1b68064ce7694f614b4e3760c",
+    "width": 1774
+  },
+  "giant_grouper_thumb.png": {
+    "height": 256,
+    "image_sha256": "009b72f01fe8b46550afceff5b2b1668dac683ae5f8313960e6d4fae9a3462e3",
+    "width": 512
+  },
+  "giant_trevally.png": {
+    "height": 887,
+    "image_sha256": "d25b9c00cea5b5fee8f78317152733c7e8c0c699d56962e10d6234d084cd5b3b",
+    "width": 1774
+  },
+  "giant_trevally_thumb.png": {
+    "height": 256,
+    "image_sha256": "90c399fb7cb86dee7f6f12cd717c4660806700e906c1a3503b89025d619464df",
+    "width": 512
+  },
+  "great_barracuda.png": {
+    "height": 836,
+    "image_sha256": "ea1e97e570a6b2ea92857e5d5b9d9ef9b9f901a6186d81cae32b26b9d3b803ea",
+    "width": 1881
+  },
+  "great_barracuda_thumb.png": {
+    "height": 228,
+    "image_sha256": "c80d56eb24404a1fb4d3197ab6d26645c42696a3d2ccdfb7c2b3a59d823964bc",
+    "width": 512
+  },
+  "great_hammerhead.png": {
+    "height": 887,
+    "image_sha256": "d21e9c747924094b0ff055f118b4ba740c07f7ae4716f154de1d66113986be81",
+    "width": 1774
+  },
+  "great_hammerhead_thumb.png": {
+    "height": 256,
+    "image_sha256": "050983ad1b105252762a797cd0601efe736035fd7f848020365c2fd42c6c0d38",
+    "width": 512
+  },
+  "great_white_shark.png": {
+    "height": 887,
+    "image_sha256": "9e48aa18016add04eb134e061cede2c200f212d3036eb3de7b7c6e55bf6f04d2",
+    "width": 1774
+  },
+  "great_white_shark_thumb.png": {
+    "height": 256,
+    "image_sha256": "75e0180d99710c363f795526bd97cf0fa4234b1a9e30d75ab652e7ab1ac4c17e",
+    "width": 512
+  },
+  "greater_amberjack.png": {
+    "height": 887,
+    "image_sha256": "9a24c02b7b8a61a67ab3e96afc2280f72ff689cc3f1bcd44aaf28eb5b8df60be",
+    "width": 1774
+  },
+  "greater_amberjack_thumb.png": {
+    "height": 256,
+    "image_sha256": "69d7ab84d6ef589c57ed8438045512a2fe04b724eaf99ac0bf4564ed0faa9f77",
+    "width": 512
+  },
+  "indo_pacific_sailfish.png": {
+    "height": 887,
+    "image_sha256": "a1e368103fcc3892715165685fd0a3d3380753acaead4f7a94c4d6ff6e0ce6e2",
+    "width": 1774
+  },
+  "indo_pacific_sailfish_thumb.png": {
+    "height": 256,
+    "image_sha256": "aa27585778f290cd4364670e200cd2a492a975cd454529d97ddec6463e7909a3",
+    "width": 512
+  },
+  "mahi_mahi.png": {
+    "height": 887,
+    "image_sha256": "5c6d3e2abe69e14d8d96b3ec487b986f5c59085fd658c44d26bbf1c789d24252",
+    "width": 1774
+  },
+  "mahi_mahi_thumb.png": {
+    "height": 256,
+    "image_sha256": "d67be8ac6385d1c3cd1919ce15df4d1204b5db18831329124b6c98b8df948650",
+    "width": 512
+  },
+  "oceanic_whitetip_shark.png": {
+    "height": 887,
+    "image_sha256": "9adf5068275d5fc61b623ee39fa8df7b27c9de7a59659e80096a3d01efa7dcb7",
+    "width": 1774
+  },
+  "oceanic_whitetip_shark_thumb.png": {
+    "height": 256,
+    "image_sha256": "a6c05ee20d8287dc318b8e1e6924cd610cc2ece8cd6356f8f98e893db1acccba",
+    "width": 512
+  },
+  "opah.png": {
+    "height": 1024,
+    "image_sha256": "83037fe768f6fb5819970b87f1e5919926860e338d853ea6f657a2dd104ca440",
+    "width": 1536
+  },
+  "opah_thumb.png": {
+    "height": 341,
+    "image_sha256": "c1b7e3fddceb7448e2ab962a6f72b44cee71d5bf87a7616eb4ff1d184f396784",
+    "width": 512
+  },
+  "pacific_bluefin_tuna.png": {
+    "height": 887,
+    "image_sha256": "e602baa47e502bc78ff74300fac1597548996903d28c21afcd45556a416dd2c0",
+    "width": 1774
+  },
+  "pacific_bluefin_tuna_thumb.png": {
+    "height": 256,
+    "image_sha256": "906f6848daede86e36e5bee6653a283cc55738806aec2481f14f97041cc4a20e",
+    "width": 512
+  },
+  "red_snapper.png": {
+    "height": 941,
+    "image_sha256": "29df426df8815a67a2e5c7580edb6d0eaf17156992d3b68df8c0dd8ff5c6f54e",
+    "width": 1672
+  },
+  "red_snapper_thumb.png": {
+    "height": 288,
+    "image_sha256": "2c29b1809ee8250e9467f3670aff32588801fa0e710ed65282e6746da6f2d828",
+    "width": 512
+  },
+  "roosterfish.png": {
+    "height": 1024,
+    "image_sha256": "1efdd304cb902e29ba26476875dbeebce8f9adc5d31822821bcd62cca1a58899",
+    "width": 1536
+  },
+  "roosterfish_thumb.png": {
+    "height": 341,
+    "image_sha256": "003c765f06744aa060f461924c2d312e46487ce170f30b1f902d6baddfcb9c3d",
+    "width": 512
+  },
+  "scalloped_hammerhead.png": {
+    "height": 866,
+    "image_sha256": "1a36b450c97c32db0e6d5bb083155e5017d527f465e0d963cda1579a9af54576",
+    "width": 1817
+  },
+  "scalloped_hammerhead_thumb.png": {
+    "height": 244,
+    "image_sha256": "a0804570e9f584317902b127a3022261ca2701b13131d93fd58ad1a4392e69c2",
+    "width": 512
+  },
+  "shortfin_mako.png": {
+    "height": 887,
+    "image_sha256": "36fa878e88c6778a6ca90aefd7e256aafc3893a554cf01cbb759102d5441f659",
+    "width": 1774
+  },
+  "shortfin_mako_thumb.png": {
+    "height": 256,
+    "image_sha256": "e627e5d91fee31639111c58291a01058c31a6c4bca4ce1e4e426c07894d55c8a",
+    "width": 512
+  },
+  "skipjack_tuna.png": {
+    "height": 887,
+    "image_sha256": "9061097fba8335044acd66b6a06452dcdf76b4ef203836fe92471162519e8266",
+    "width": 1774
+  },
+  "skipjack_tuna_thumb.png": {
+    "height": 256,
+    "image_sha256": "554932c1532560c04bad6b4193ceaff4ce4734a6de3b8d00649ef3d06d098697",
+    "width": 512
+  },
+  "striped_marlin.png": {
+    "height": 848,
+    "image_sha256": "4ae7e8989de22f61d2f919f2b5dcbbc6cecd18ae3a5ff6e4573ba355912a8533",
+    "width": 1855
+  },
+  "striped_marlin_thumb.png": {
+    "height": 234,
+    "image_sha256": "03fff7dac03b8d35cc16906952760fd8cb8801fe2bc95a4ea5283905b1cde859",
+    "width": 512
+  },
+  "swordfish.png": {
+    "height": 850,
+    "image_sha256": "287fbd2e8c167eefd063cfd836129ea0024ce201dac36e58bf49ccd8d94e7ee8",
+    "width": 1850
+  },
+  "swordfish_thumb.png": {
+    "height": 235,
+    "image_sha256": "5b7d1a438ae567ee05eaf2e499caed74923f56fd5377945c4a54b756030c6e79",
+    "width": 512
+  },
+  "tiger_shark.png": {
+    "height": 835,
+    "image_sha256": "684c9d5a5a58027ff142057cf674c31d98f0f70c59aca929a84be808fea3cdfb",
+    "width": 1883
+  },
+  "tiger_shark_thumb.png": {
+    "height": 227,
+    "image_sha256": "73de342592dd769a989c0550c8a27652b0177d22e751c827c87ffde73fc8d067",
+    "width": 512
+  },
+  "wahoo.png": {
+    "height": 812,
+    "image_sha256": "d0a4f3d736cd50a60877a1673985628431cfa791ab64ea7dd779da1e70020923",
+    "width": 1935
+  },
+  "wahoo_thumb.png": {
+    "height": 215,
+    "image_sha256": "e952b41449fad6e8ee54a67fe0639f892f5704ef4f6b6348f29d57a832da60ad",
+    "width": 512
+  },
+  "whitetip_reef_shark.png": {
+    "height": 887,
+    "image_sha256": "9a9ad5162a3725019263c8c9e0a22a419c589fddb7454ea256238987a3fbedc5",
+    "width": 1774
+  },
+  "whitetip_reef_shark_thumb.png": {
+    "height": 256,
+    "image_sha256": "c41908d653929bf251236d1368ca57dbb0b5029aba40cd61f3a7895b6e1ff5c4",
+    "width": 512
+  },
+  "yellowfin_tuna.png": {
+    "height": 876,
+    "image_sha256": "8f0b66549c2512f2b7480afa41a01f57394a3705894481c50646412f8e066c31",
+    "width": 1795
+  },
+  "yellowfin_tuna_thumb.png": {
+    "height": 250,
+    "image_sha256": "6a97cae56c8889c17b111ff38458bbd63985c1f29acc30a76fe0ca326ebae3c2",
+    "width": 512
+  },
+  "yellowtail_kingfish.png": {
+    "height": 887,
+    "image_sha256": "68154ea6126f33fc7a2b4c3471a78f66f644968311f94f9a31375ae632189d54",
+    "width": 1774
+  },
+  "yellowtail_kingfish_thumb.png": {
+    "height": 256,
+    "image_sha256": "36a823ebbb07be25aae4b92efc9de25d80279329f1cc9275e639dced8c18ddd0",
+    "width": 512
+  }
+}
