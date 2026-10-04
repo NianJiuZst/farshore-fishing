@@ -1,0 +1,17 @@
+{
+  "rendering_method": "mobile",
+  "rendering_driver": "vulkan",
+  "isolated_project": "/tmp/farshore-whale-ui-k1kq_ctj/project",
+  "player_save_access": false,
+  "inherited_home_removed": true,
+  "exit_code": 0,
+  "captures": [
+    "01-link.png",
+    "02-current.png",
+    "03-resonance.png",
+    "04-success.png",
+    "05-save-retry.png",
+    "06-paused.png",
+    "07-failed.png"
+  ]
+}

@@ -33,6 +33,8 @@ var _state: Dictionary = {}
 var _root: String = ""
 var _active_session: String = ""
 var _retry_record: Dictionary = {}
+var _active_whale_session: String = ""
+var _whale_retry_record: Dictionary = {}
 var _initialized: bool = false
 var _writing: bool = false
 var _mutex: Mutex = Mutex.new()
@@ -47,7 +49,9 @@ static func default_state() -> Dictionary:
 		"favorites": [], "pending_catches": {}, "recent_ids": [],
 		"settings": {"sound": true, "vibration": true, "volume": 0.6},
 		"selection": {"region_id": "lake", "spot_id": "lake_shore", "bait_id": "worm"},
-		"game_clock": 0.0
+		"game_clock": 0.0,
+		"whale_challenge": {"completion_count": 0, "notebook_unlocked": false,
+			"first": {}, "last": {}, "best": {}, "recent_ids": []}
 	}
 
 static func fresh_state() -> Dictionary:
@@ -72,6 +76,8 @@ func _initialize_locked(optional_root: String) -> bool:
 	_initialized = false
 	_active_session = ""
 	_retry_record = {}
+	_active_whale_session = ""
+	_whale_retry_record = {}
 	_state = default_state()
 	_root = ProjectSettings.globalize_path(optional_root).simplify_path()
 	if not _root.is_absolute_path():
@@ -122,6 +128,8 @@ func begin_session(session_id: String) -> void:
 		_fail("存档不可写，无法开始新的钓鱼结算。")
 	elif not _valid_id(session_id):
 		_fail("钓鱼会话标识不合法。")
+	elif not _active_whale_session.is_empty():
+		_fail("请先结束鲸影挑战，再开始新的钓鱼结算。")
 	elif not _retry_record.is_empty() and session_id != _active_session:
 		_fail("上一条钓获尚未保存，请先重试或明确放弃该会话。")
 	else:
@@ -135,6 +143,76 @@ func abandon_session(session_id: String) -> void:
 		_active_session = ""
 		_retry_record = {}
 	_mutex.unlock()
+
+func begin_whale_challenge(challenge_id: String) -> bool:
+	_mutex.lock()
+	var success: bool = false
+	if not _initialized or read_only:
+		_fail("存档不可写，无法开始鲸影挑战。")
+	elif not _valid_id(challenge_id):
+		_fail("鲸影挑战标识不合法。")
+	elif not _active_session.is_empty():
+		_fail("请先结束或处理当前钓获，再开始鲸影挑战。")
+	elif not _whale_retry_record.is_empty() and challenge_id != _active_whale_session:
+		_fail("上次鲸影纪录尚未保存，请先重试或明确放弃。")
+	else:
+		_active_whale_session = challenge_id
+		error_message = ""
+		success = true
+	_mutex.unlock()
+	return success
+
+func abandon_whale_challenge(challenge_id: String) -> void:
+	_mutex.lock()
+	if challenge_id == _active_whale_session:
+		_active_whale_session = ""
+		_whale_retry_record = {}
+	_mutex.unlock()
+
+func settle_whale_challenge(record: Dictionary) -> Dictionary:
+	_mutex.lock()
+	var result: Dictionary = _settle_whale_locked(record)
+	_mutex.unlock()
+	return result
+
+func _settle_whale_locked(record: Dictionary) -> Dictionary:
+	var failure: Dictionary = {"ok": false, "error": "", "duplicate": false, "new_best": false}
+	if not _initialized or read_only:
+		return _result_error(failure, "存档不可写；鲸影纪录尚未保存。")
+	var challenge_id: String = str(record.get("challenge_id", ""))
+	var previous: Dictionary = _state["whale_challenge"]
+	if (previous["recent_ids"] as Array).has(challenge_id):
+		failure["duplicate"] = true
+		return _result_error(failure, "鲸影纪录已保存，不会重复计数。")
+	if _active_whale_session.is_empty() or challenge_id != _active_whale_session:
+		return _result_error(failure, "鲸影挑战已结束或过期，旧结果未结算。")
+	if not _valid_whale_record(record):
+		return _result_error(failure, "鲸影挑战纪录不合法。")
+	if not _whale_retry_record.is_empty() and _whale_retry_record != record:
+		return _result_error(failure, "保存重试必须使用同一条鲸影纪录。")
+	if int(previous["completion_count"]) >= MAX_COUNTER:
+		return _result_error(failure, "鲸影挑战次数已达安全上限。")
+	var candidate: Dictionary = _state.duplicate(true)
+	var whale: Dictionary = candidate["whale_challenge"]
+	var snapshot: Dictionary = _normalize_whale_record(record)
+	var best: Dictionary = whale["best"]
+	var new_best: bool = best.is_empty() or int(snapshot["duration_ms"]) < int(best["duration_ms"])
+	whale["completion_count"] = int(whale["completion_count"]) + 1
+	whale["notebook_unlocked"] = true
+	if (whale["first"] as Dictionary).is_empty(): whale["first"] = snapshot.duplicate(true)
+	whale["last"] = snapshot.duplicate(true)
+	if new_best: whale["best"] = snapshot.duplicate(true)
+	(whale["recent_ids"] as Array).append(challenge_id)
+	while (whale["recent_ids"] as Array).size() > MAX_RECENT_IDS: (whale["recent_ids"] as Array).pop_front()
+	# Use the existing verified primary/backup transaction. No fish statistics,
+	# pending inventory, currency, equipment or unlock rewards are written here.
+	_whale_retry_record = record.duplicate(true)
+	if not _commit_locked(candidate):
+		failure["error"] = error_message
+		return failure
+	_active_whale_session = ""
+	_whale_retry_record = {}
+	return {"ok": true, "error": "", "duplicate": false, "new_best": new_best}
 
 func settle_catch(record: Dictionary) -> Dictionary:
 	_mutex.lock()
@@ -214,6 +292,8 @@ func _dispose_locked(catch_id: String, action: String) -> Dictionary:
 		failure["duplicate"] = true
 		return _result_error(failure, "该鱼已处理或不存在，不会重复发放收益。")
 	var record: Dictionary = pending[catch_id]
+	if str(record.get("species_id", "")) == "blue_whale" or str(record.get("animal_kind", "")) == "mammal" or str(record.get("encounter_type", "")) == "fantasy_challenge":
+		return _result_error(failure, "蓝鲸挑战不属于钓获库存，不能出售或放生结算。")
 	# Enforce conservation in the transaction layer, even for stale/forged UI calls.
 	if action == "sold" and bool(record.get("release_only", false)):
 		return _result_error(failure, "保护观察物种不可出售，请放归；图鉴与历史纪录会保留。")
@@ -384,7 +464,9 @@ func _transfer_summary(decoded: Dictionary) -> Dictionary:
 	var imported: Dictionary = decoded["state"]
 	var total: int = 0
 	var discovered: int = 0
-	for value: Variant in (imported["species_stats"] as Dictionary).values():
+	for species: String in imported["species_stats"]:
+		if species == "blue_whale": continue
+		var value: Variant = imported["species_stats"][species]
 		var count: int = int((value as Dictionary).get("catch_count", 0))
 		total += count
 		if count > 0:
@@ -393,6 +475,7 @@ func _transfer_summary(decoded: Dictionary) -> Dictionary:
 		"save_revision": int(imported["save_revision"]), "currency": int(imported["currency"]),
 		"catch_count": total, "discovered_count": discovered,
 		"pending_count": (imported["pending_catches"] as Dictionary).size(),
+		"whale_completion_count": int((imported["whale_challenge"] as Dictionary)["completion_count"]),
 		"checksum_verified": bool(decoded.get("checksum_verified", false)),
 		"state": imported.duplicate(true)}
 
@@ -401,8 +484,8 @@ func _import_decoded_locked(decoded: Dictionary, expected_revision: int) -> Dict
 		return decoded
 	if not _initialized or read_only:
 		return _transfer_error("当前存档处于保护模式，不能恢复或覆盖进度。")
-	if _writing or not _active_session.is_empty() or not _retry_record.is_empty():
-		return _transfer_error("请先结束当前钓鱼并保存钓获，再恢复备份。")
+	if _writing or not _active_session.is_empty() or not _retry_record.is_empty() or not _active_whale_session.is_empty() or not _whale_retry_record.is_empty():
+		return _transfer_error("请先结束当前钓鱼或鲸影挑战并保存纪录，再恢复备份。")
 	if expected_revision < 0 or expected_revision != int(_state["save_revision"]):
 		return _transfer_error("当前进度已变化，请重新预览备份后再确认恢复。")
 	if int(_state["save_revision"]) >= MAX_COUNTER:
@@ -440,6 +523,8 @@ func _import_decoded_locked(decoded: Dictionary, expected_revision: int) -> Dict
 		DirAccess.remove_absolute(rollback_path)
 	_active_session = ""
 	_retry_record = {}
+	_active_whale_session = ""
+	_whale_retry_record = {}
 	status_message = "备份已恢复；恢复前的进度已另存，可在设置中撤销。"
 	var result: Dictionary = _transfer_summary(decoded)
 	result["save_revision"] = int(_state["save_revision"])
@@ -486,7 +571,9 @@ func _is_future_version(value: Variant, maximum: int) -> bool:
 func total_count() -> int:
 	_mutex.lock()
 	var total: int = 0
-	for item: Variant in (_state.get("species_stats", {}) as Dictionary).values():
+	for species: String in _state.get("species_stats", {}):
+		if species == "blue_whale": continue
+		var item: Variant = _state["species_stats"][species]
 		total += int((item as Dictionary).get("catch_count", 0))
 	_mutex.unlock()
 	return total
@@ -494,7 +581,9 @@ func total_count() -> int:
 func discovered_count() -> int:
 	_mutex.lock()
 	var count: int = 0
-	for item: Variant in (_state.get("species_stats", {}) as Dictionary).values():
+	for species: String in _state.get("species_stats", {}):
+		if species == "blue_whale": continue
+		var item: Variant = _state["species_stats"][species]
 		if int((item as Dictionary).get("catch_count", 0)) > 0:
 			count += 1
 	_mutex.unlock()
@@ -640,7 +729,7 @@ func _normalize_state(raw: Dictionary) -> Dictionary:
 	for key: String in ["owned_gear", "unlocked_regions", "favorites", "recent_ids"]:
 		if not result[key] is Array:
 			return {"ok": false, "error": "列表字段无效：" + key}
-	for key: String in ["species_stats", "pending_catches", "settings", "selection"]:
+	for key: String in ["species_stats", "pending_catches", "settings", "selection", "whale_challenge"]:
 		if not result[key] is Dictionary:
 			return {"ok": false, "error": "映射字段无效：" + key}
 	if (result["owned_gear"] as Array).is_empty() or (result["owned_gear"] as Array).size() > 32:
@@ -689,6 +778,9 @@ func _normalize_state(raw: Dictionary) -> Dictionary:
 		if not selection[key] is String or not _valid_id(str(selection[key])):
 			return {"ok": false, "error": "选点标识无效"}
 	result["selection"] = selection
+	var whale_checked: Dictionary = _normalize_whale_state(result["whale_challenge"])
+	if not bool(whale_checked.get("ok", false)): return whale_checked
+	result["whale_challenge"] = whale_checked["state"]
 	var species_stats: Dictionary = result["species_stats"]
 	if species_stats.size() > 4096:
 		return {"ok": false, "error": "物种统计超过安全限制"}
@@ -741,6 +833,9 @@ func _normalize_state(raw: Dictionary) -> Dictionary:
 	return {"ok": true, "state": result.duplicate(true)}
 
 func _valid_catch(record: Dictionary) -> bool:
+	# Guard the transaction API even if a stale UI or a forged normal encounter
+	# tries to sell/award a whale. A whale completion has its own record contract.
+	if str(record.get("species_id", "")) == "blue_whale" or str(record.get("animal_kind", "")) == "mammal" or str(record.get("encounter_type", "")) == "fantasy_challenge": return false
 	if not _json_safe(record, 0) or record.size() > 32:
 		return false
 	for key: String in ["catch_id", "session_id", "species_id", "region_id", "spot_id", "bait_id"]:
@@ -759,6 +854,47 @@ func _valid_catch(record: Dictionary) -> bool:
 	if not record.has("equipment"):
 		return false
 	return _integer_in_range(record.get("reward", 25), 0, 1000000) and _integer_in_range(record.get("sale_value", 20), 0, 1000000)
+
+func _valid_whale_record(record: Dictionary) -> bool:
+	if not _json_safe(record, 0) or record.size() > 16: return false
+	if str(record.get("species_id", "")) != "blue_whale" or str(record.get("animal_kind", "")) != "mammal" or str(record.get("encounter_type", "")) != "fantasy_challenge": return false
+	if str(record.get("region_id", "")) != "pacific_ocean" or str(record.get("spot_id", "")) != "pacific_bluewater": return false
+	if not record.get("challenge_id") is String or not _valid_id(str(record["challenge_id"])): return false
+	if not record.get("completed_at") is String or str(record["completed_at"]).is_empty() or str(record["completed_at"]).length() > 64: return false
+	if not _integer_in_range(record.get("duration_ms"), 18000, 90000): return false
+	if not _integer_in_range(record.get("body_length_mm"), 26000, 26000) or not _integer_in_range(record.get("links"), 3, 3): return false
+	if not _integer_in_range(record.get("current_sync_ms"), 10000, 28000) or not _integer_in_range(record.get("resonance_sync_ms"), 8000, 24000): return false
+	if not record.get("game_time") is float and not record.get("game_time") is int: return false
+	return is_finite(float(record["game_time"])) and float(record["game_time"]) >= 0.0
+
+func _normalize_whale_record(record: Dictionary) -> Dictionary:
+	var result: Dictionary = record.duplicate(true)
+	for key: String in ["duration_ms", "body_length_mm", "links", "current_sync_ms", "resonance_sync_ms"]:
+		if result.has(key): result[key] = int(result[key])
+	return result
+
+func _normalize_whale_state(raw: Dictionary) -> Dictionary:
+	var result: Dictionary = raw.duplicate(true)
+	result.merge(default_state()["whale_challenge"], false)
+	if not _integer_in_range(result["completion_count"], 0, MAX_COUNTER) or not result["notebook_unlocked"] is bool:
+		return {"ok": false, "error": "鲸影挑战统计无效"}
+	result["completion_count"] = int(result["completion_count"])
+	for key: String in ["first", "last", "best"]:
+		if not result[key] is Dictionary or (not (result[key] as Dictionary).is_empty() and not _valid_whale_record(result[key])):
+			return {"ok": false, "error": "鲸影挑战纪录无效：" + key}
+		result[key] = _normalize_whale_record(result[key])
+	if not result["recent_ids"] is Array or (result["recent_ids"] as Array).size() > MAX_RECENT_IDS:
+		return {"ok": false, "error": "鲸影挑战标识列表无效"}
+	var seen: Dictionary = {}
+	for id: Variant in result["recent_ids"]:
+		if not id is String or not _valid_id(str(id)) or seen.has(id): return {"ok": false, "error": "鲸影挑战标识无效或重复"}
+		seen[id] = true
+	var completed: bool = int(result["completion_count"]) > 0
+	if completed != bool(result["notebook_unlocked"]): return {"ok": false, "error": "鲸影图鉴解锁与次数不一致"}
+	for key: String in ["first", "last", "best"]:
+		if completed == (result[key] as Dictionary).is_empty(): return {"ok": false, "error": "鲸影次数与纪录不一致"}
+	if completed and not seen.has(str((result["last"] as Dictionary)["challenge_id"])): return {"ok": false, "error": "鲸影最近纪录缺少事务标识"}
+	return {"ok": true, "state": result}
 
 func _valid_snapshot(value: Variant) -> bool:
 	if not value is Dictionary:

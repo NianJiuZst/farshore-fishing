@@ -42,7 +42,7 @@ func _run() -> void:
 	app.sound.ambience.stream = null
 	app.sound.effect.stop()
 	app.sound.effect.stream = null
-	_check(app._content_ok and app.natural_history.complete, "actual Main loads all74 validated natural histories")
+	_check(app._content_ok and app.natural_history.complete, "actual Main loads 110 fish and one mammal natural history")
 	save = Store.new()
 	_check(save.initialize(isolated.path_join("natural-%s" % Time.get_ticks_usec())), "isolated SaveStore fixture")
 	app.store = save
@@ -69,7 +69,8 @@ func _test_content() -> void:
 	_check(catalog.load_all(false), "base catalog validates")
 	var history: FishNaturalHistory = HistoryData.new()
 	_check(history.load_all(catalog), "natural-history load validates: " + str(history.errors))
-	_check(history.complete and history.entries.size() == 74 and catalog.fish.size() == 74, "exact74 coverage without extra/missing identities")
+	_check(history.complete and history.entries.size() == 111 and catalog.fish.size() == 111, "exact111 animal histories without extra/missing identities")
+	_check(catalog.fish_species_count() == 110 and not catalog.is_fishing_species(catalog.fish["blue_whale"]), "natural history retains blue whale as a mammal outside the 110 fishing species")
 	var seen: Dictionary = {}
 	for path: String in HistoryData.FILES:
 		var envelope: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
@@ -145,6 +146,9 @@ func _test_all_details() -> void:
 		app._show_species(id)
 		await _layout()
 		var entry: Dictionary = app.natural_history.get_entry(id)
+		if not app.catalog.is_fishing_species(app.catalog.fish[id]):
+			_test_mammal_history(id, entry)
+			continue
 		_check(_text_contains(app._page, str(entry.accepted_scientific_name)), "accepted name in actual detail: " + id)
 		for field: String in ["typical_size", "habitat", "distribution", "behavior", "diet", "story"]:
 			var paragraph: Label = app._page.find_child("Natural_" + field, true, false) as Label
@@ -158,7 +162,24 @@ func _test_all_details() -> void:
 			var bindings: Array = button.pressed.get_connections()
 			_check(bindings.size() == 1 and bindings[0].callable.get_object() == app and bindings[0].callable.get_method() == "_open_species_source" and bindings[0].callable.get_bound_arguments() == [button.get_meta("source_url")], "source binding matches explicit guarded Main action: " + id + "/" + str(source_count))
 		_check(source_count == entry.sources.size(), "every reference has one source button: " + id)
-	_check(before == save.state and save.total_count() == 0, "reading all74 never changes player state or discovers fish")
+	_check(before == save.state and save.total_count() == 0 and save.discovered_count() == 0, "reading all111 animal histories never changes player state or discovers fish")
+
+func _test_mammal_history(id: String, entry: Dictionary) -> void:
+	_check(id == "blue_whale" and app._screen == "whale_notebook" and app._page.name == "WhaleNaturalHistory", "mammal history opens its independent production page: " + id)
+	_check(_text_contains(app._page, str(entry.accepted_scientific_name)) and _text_contains(app._page, "哺乳纲") and _text_contains(app._page, str(entry.taxonomy.family_zh)), "whale page identifies the accepted species and mammal family")
+	for field: String in ["typical_size", "max_length", "max_weight", "habitat", "distribution", "behavior", "diet", "story"]:
+		_check(_text_contains(app._page, str(entry[field].text)), "complete offline mammal paragraph: " + field)
+	_check(app._page.find_child("CatchRecordSummary", true, false) == null and app._page.find_child("CatchCount", true, false) == null, "whale history has no fish-catch summary")
+	_check(_text_contains(app._page, "不使用鱼饵") and _text_contains(app._page, "不拉上岸"), "whale page explains its independent fantasy observation challenge")
+	var source_count: int = 0
+	for button: BaseButton in _buttons(app._page):
+		for binding: Dictionary in button.pressed.get_connections():
+			var action: Callable = binding.callable
+			if action.get_object() != app or action.get_method() != "_open_species_source": continue
+			source_count += 1
+			var arguments: Array = action.get_bound_arguments()
+			_check(arguments.size() == 1 and HistoryData.safe_source_url(str(arguments[0])), "whale source uses the guarded explicit HTTPS action")
+	_check(source_count == entry.sources.size(), "every whale reference has one source button")
 
 func _test_records_and_sections() -> void:
 	app._show_species("common_carp")

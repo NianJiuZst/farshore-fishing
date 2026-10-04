@@ -1,0 +1,256 @@
+{
+  "checked_on": "2026-10-04",
+  "passed": true,
+  "asset_count": 16,
+  "game_assets": 32,
+  "master_size": [
+    2048,
+    1024
+  ],
+  "thumb_size": [
+    512,
+    256
+  ],
+  "checks": [
+    "Scope first sixteen species IDs match",
+    "All master/runtime bytes identical",
+    "All source bytes and RGBA hashes verified",
+    "Original generated pixels preserved after transparent padding",
+    "All RGBA images and alpha thresholds verified",
+    "All silhouettes inside canvas with transparent corners",
+    "All snout/caudal coordinates inside bounds",
+    "Queen angelfish ruler excludes elongated dorsal/anal fin tips",
+    "Unique artwork for each species",
+    "Final names, morphology, and source citations match fish_g/h JSON",
+    "All rejected originals retained and hashes verified",
+    "No pre-import hash mislabeled as Godot imported hash"
+  ],
+  "visual_qa": "Every selected generated source individually viewed at original resolution; three targeted built-in ImageGen revisions retained with prompts and provenance.",
+  "remaining_integration": "Root must add Godot-imported decoded RGBA hashes and merge this independent manifest into fish_art.json.",
+  "assets": [
+    {
+      "species_id": "california_sheephead",
+      "scientific_name": "Bodianus pulcher",
+      "passed": true,
+      "master_sha256": "6b4cd95ed650c9635ba492d07e7958c34b612e320ffbc69ec573620ef4c5cfb9",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        194,
+        127,
+        1853,
+        896
+      ]
+    },
+    {
+      "species_id": "lingcod",
+      "scientific_name": "Ophiodon elongatus",
+      "passed": true,
+      "master_sha256": "562eca155e03b486abd4fbeb92303c437a1b47bac62d75521d3fe6c3104db6a7",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        160,
+        221,
+        1887,
+        813
+      ]
+    },
+    {
+      "species_id": "cabezon",
+      "scientific_name": "Scorpaenichthys marmoratus",
+      "passed": true,
+      "master_sha256": "0596084c60b6d73e7dc18ba3b836c781068488967b55c5cbe4e86b58420b0696",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        176,
+        160,
+        1874,
+        870
+      ]
+    },
+    {
+      "species_id": "garibaldi",
+      "scientific_name": "Hypsypops rubicundus",
+      "passed": true,
+      "master_sha256": "ab06f7b81b098e6bb557e7d6caed6564281b1fdfe2b6500c7ba72e7d3b478c4e",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        299,
+        87,
+        1784,
+        934
+      ]
+    },
+    {
+      "species_id": "kelp_greenling",
+      "scientific_name": "Hexagrammos decagrammus",
+      "passed": true,
+      "master_sha256": "d88b6446d84d26cfd7f24569c074402660eacf61c50faef347043e6a3d4f648a",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        180,
+        202,
+        1872,
+        836
+      ]
+    },
+    {
+      "species_id": "yellow_tang",
+      "scientific_name": "Zebrasoma flavescens",
+      "passed": true,
+      "master_sha256": "e716d47c60025e634935872430c06ba2cd423ff7bb616cd1d64bbfccd5bdb375",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        345,
+        92,
+        1746,
+        932
+      ]
+    },
+    {
+      "species_id": "pacific_halibut",
+      "scientific_name": "Hippoglossus stenolepis",
+      "passed": true,
+      "master_sha256": "f13606ec2815bc2a281849e47fb9abf13d94a9ae220f19e34688448806219d1a",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        195,
+        136,
+        1861,
+        889
+      ]
+    },
+    {
+      "species_id": "barreleye",
+      "scientific_name": "Macropinna microstoma",
+      "passed": true,
+      "master_sha256": "f6be6847d19b9429154892bdade7398faba9e26b979fa8ad4115ebfca80dd51e",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        221,
+        150,
+        1862,
+        816
+      ]
+    },
+    {
+      "species_id": "turbot",
+      "scientific_name": "Scophthalmus maximus",
+      "passed": true,
+      "master_sha256": "faff303ab86049106df9aab252861f668050973718bfaf7b73fd0435dd8d9cd4",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        443,
+        78,
+        1617,
+        945
+      ]
+    },
+    {
+      "species_id": "john_dory",
+      "scientific_name": "Zeus faber",
+      "passed": true,
+      "master_sha256": "c4ce2cbc679106b66361ce087b4ba8802bb7aa8b454b74a6cfd1ea5a21de59cd",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        472,
+        111,
+        1604,
+        933
+      ]
+    },
+    {
+      "species_id": "grey_gurnard",
+      "scientific_name": "Eutrigla gurnardus",
+      "passed": true,
+      "master_sha256": "7e5688fed7a43f1ba3fa56df128f0f58810c24420230bad5fa3172bb973a064c",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        158,
+        117,
+        1872,
+        875
+      ]
+    },
+    {
+      "species_id": "queen_angelfish",
+      "scientific_name": "Holacanthus ciliaris",
+      "passed": true,
+      "master_sha256": "547c90635c8612de3dd87a31344130f938ef1fd4fde5f0ffa463f9d4ed45c825",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        371,
+        128,
+        1817,
+        891
+      ]
+    },
+    {
+      "species_id": "stoplight_parrotfish",
+      "scientific_name": "Sparisoma viride",
+      "passed": true,
+      "master_sha256": "08cc94327cf7b4ebfeff13d807364e91f2595cdd7cf075118c2de9ee58f9d8f9",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        161,
+        121,
+        1901,
+        900
+      ]
+    },
+    {
+      "species_id": "atlantic_flyingfish",
+      "scientific_name": "Cheilopogon melanurus",
+      "passed": true,
+      "master_sha256": "7603dad210f69f36fc8d38c7c914a8c200901b10ccccf329f164087197d77b88",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        184,
+        88,
+        1876,
+        930
+      ]
+    },
+    {
+      "species_id": "atlantic_tarpon",
+      "scientific_name": "Megalops atlanticus",
+      "passed": true,
+      "master_sha256": "dc0f403809d09812829fa4f3ff1d0493ac1f467c576d1182a2e67e6a052bc356",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        162,
+        220,
+        1897,
+        810
+      ]
+    },
+    {
+      "species_id": "black_scabbardfish",
+      "scientific_name": "Aphanopus carbo",
+      "passed": true,
+      "master_sha256": "f921e40d32c8a75ac6a6bfa1c28bd5173964375961f5916a8826fbf7bfe462e7",
+      "source_pixels_preserved": true,
+      "transparent_corners": true,
+      "subject_bbox_px": [
+        166,
+        383,
+        1882,
+        625
+      ]
+    }
+  ]
+}

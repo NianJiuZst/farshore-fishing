@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "selected_suites": [
+    "fishing_balance"
+  ],
+  "representative_tall_layout": false,
+  "runtime_files": 2397,
+  "runtime_unchanged": true,
+  "runtime_changes": [],
+  "existing_files_changed_during_import": [],
+  "source_changes_during_import": [],
+  "results": [
+    {
+      "name": "fishing_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 16.65,
+      "log": "build/ocean-diversity-targeted-balance/fishing_balance.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_SCOPE: current possession model is verified separately by float_encounter_tests.gd; --historical-float retains beta2 diagnostics",
+        "FISHING_BALANCE_TESTS: 70/70; simulations=0; legal_routes=494"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 5.55,
+      "log": "build/ocean-diversity-targeted-balance/binary_catalog.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 111, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    }
+  ],
+  "scope": "Canonical110-fish/one-mammal production integration, save compatibility and optional desktop software-render checks. Android export/device certification and publication remain separate."
+}

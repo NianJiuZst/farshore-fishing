@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/art3d/test_review_gate.py", line 9, in <module>
+    from audit_fish_catalog import VIEWS, visual_review_status
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/art3d/audit_fish_catalog.py", line 5, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'

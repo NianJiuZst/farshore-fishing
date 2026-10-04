@@ -532,6 +532,490 @@
         -0.013453,
         0.0
       ]
+    },
+    "california_sheephead": {
+      "scene": "res://assets/3d/california_sheephead.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4958976440340899,
+        -0.01538383487216295,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "lingcod": {
+      "scene": "res://assets/3d/lingcod.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.49592873646130237,
+        -0.023409765347511595,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "benthic"
+    },
+    "cabezon": {
+      "scene": "res://assets/3d/cabezon.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4958948928253229,
+        -0.023604366254393737,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "benthic"
+    },
+    "garibaldi": {
+      "scene": "res://assets/3d/garibaldi.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4958855882412123,
+        -0.004114411758787689,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "kelp_greenling": {
+      "scene": "res://assets/3d/kelp_greenling.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959322313714242,
+        -0.005084710785719726,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "benthic"
+    },
+    "pacific_halibut": {
+      "scene": "res://assets/3d/pacific_halibut.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": true,
+      "mouth_offset_normalized": [
+        0.49592445792515705,
+        -0.007132198630975067,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "flatfish",
+      "eyed_side": "right"
+    },
+    "yellow_tang": {
+      "scene": "res://assets/3d/yellow_tang.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959179528595374,
+        0.009184606066041013,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "barreleye": {
+      "scene": "res://assets/3d/barreleye.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.48374146671188956,
+        -0.004335608876829431,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "turbot": {
+      "scene": "res://assets/3d/turbot.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": true,
+      "mouth_offset_normalized": [
+        0.4959534642082266,
+        -0.0030349018438300137,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "flatfish",
+      "eyed_side": "left"
+    },
+    "john_dory": {
+      "scene": "res://assets/3d/john_dory.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959436559810628,
+        0.004056344018937155,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "grey_gurnard": {
+      "scene": "res://assets/3d/grey_gurnard.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959121526438624,
+        -0.005109809195172035,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "benthic"
+    },
+    "queen_angelfish": {
+      "scene": "res://assets/3d/queen_angelfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4958953033699441,
+        -0.0010261741575139812,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "stoplight_parrotfish": {
+      "scene": "res://assets/3d/stoplight_parrotfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.47281161477872347,
+        -0.02517443076044128,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "atlantic_flyingfish": {
+      "scene": "res://assets/3d/atlantic_flyingfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959420273007153,
+        -0.007101452223748301,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "pelagic"
+    },
+    "atlantic_tarpon": {
+      "scene": "res://assets/3d/atlantic_tarpon.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959571014185557,
+        -0.0040428985814442925,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "pelagic"
+    },
+    "black_scabbardfish": {
+      "scene": "res://assets/3d/black_scabbardfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.49599159664372294,
+        -0.013027310907900299,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "ribbon"
+    },
+    "humphead_wrasse": {
+      "scene": "res://assets/3d/humphead_wrasse.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4924098181997293,
+        -0.04048096960144416,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "emperor_angelfish": {
+      "scene": "res://assets/3d/emperor_angelfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959079817500833,
+        -0.0040920182499166674,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "leaf_scorpionfish": {
+      "scene": "res://assets/3d/leaf_scorpionfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.49588181646486273,
+        -0.030886376513529455,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "benthic"
+    },
+    "bluespotted_ribbontail_ray": {
+      "scene": "res://assets/3d/bluespotted_ribbontail_ray.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.41091143547678993,
+        -0.02602587278206136,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "ray"
+    },
+    "giant_moray": {
+      "scene": "res://assets/3d/giant_moray.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959686474409732,
+        -0.017133248375863896,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "anguilliform"
+    },
+    "collare_butterflyfish": {
+      "scene": "res://assets/3d/collare_butterflyfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959276760290795,
+        0.0010180809927301181,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "longhorn_cowfish": {
+      "scene": "res://assets/3d/longhorn_cowfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959330292718359,
+        -0.0101674268204103,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "boxfish"
+    },
+    "russells_oarfish": {
+      "scene": "res://assets/3d/russells_oarfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959758551307847,
+        -0.0030181086519114686,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "ribbon"
+    },
+    "red_sea_clownfish": {
+      "scene": "res://assets/3d/red_sea_clownfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959143692491573,
+        -0.003064223063132049,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "red_sea_bannerfish": {
+      "scene": "res://assets/3d/red_sea_bannerfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.49590659653221114,
+        0.002046701733894425,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "masked_butterflyfish": {
+      "scene": "res://assets/3d/masked_butterflyfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959449906842662,
+        0.0010137523289334472,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "sohal_surgeonfish": {
+      "scene": "res://assets/3d/sohal_surgeonfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959410375324406,
+        0.001014740616889845,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "arabian_picassotriggerfish": {
+      "scene": "res://assets/3d/arabian_picassotriggerfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959620871981355,
+        -0.014132694806525492,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "klunzingers_wrasse": {
+      "scene": "res://assets/3d/klunzingers_wrasse.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.49596301555813166,
+        -0.004036984441868314,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "red_sea_goatfish": {
+      "scene": "res://assets/3d/red_sea_goatfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959421017945233,
+        -0.011159220065061008,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "benthic"
+    },
+    "crocodile_flathead": {
+      "scene": "res://assets/3d/crocodile_flathead.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959562865371886,
+        -0.00505464182851429,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "benthic"
+    },
+    "bluespotted_cornetfish": {
+      "scene": "res://assets/3d/bluespotted_cornetfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.497248975952122,
+        0.004126536071817001,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "pelagic"
+    },
+    "yellowbar_angelfish": {
+      "scene": "res://assets/3d/yellowbar_angelfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959373128049843,
+        -0.0030470153962617957,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "blackspotted_sweetlips": {
+      "scene": "res://assets/3d/blackspotted_sweetlips.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4929249352125894,
+        -0.01617157665693846,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "orbicular_batfish": {
+      "scene": "res://assets/3d/orbicular_batfish.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.4959283744756351,
+        -0.009161157429820968,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "reef"
+    },
+    "blue_whale": {
+      "scene": "res://assets/3d/blue_whale.glb",
+      "rest_length_m": 1.0,
+      "asymmetric_flatfish": false,
+      "mouth_offset_normalized": [
+        0.49091620243139983,
+        -0.021195527660067052,
+        0
+      ],
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "motion_style": "rorqual_dorsoventral",
+      "presentation_type": "aquatic_giant_mammal"
     }
   }
 }

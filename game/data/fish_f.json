@@ -4,10 +4,13 @@
     "name": "军曹鱼",
     "scientific_name": "Rachycentron canadum",
     "region_ids": [
-      "atlantic_ocean"
+      "atlantic_ocean",
+      "indian_ocean"
     ],
     "spot_ids": [
-      "atlantic_shelf"
+      "atlantic_shelf",
+      "indian_reef",
+      "indian_bluewater"
     ],
     "art": "res://assets/fish/cobia.png",
     "thumb": "res://assets/fish/cobia_thumb.png",
@@ -68,7 +71,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少32%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "roosterfish",
@@ -139,7 +143,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从2米开始，抛投至少30%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。 群岛礁缘中的本条相遇代表东太平洋沙岸段，与西太平洋岛礁物种并非同一真实地点。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "red_snapper",
@@ -210,19 +215,21 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从10米开始，抛投至少25%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "giant_grouper",
     "name": "鞍带石斑鱼",
     "scientific_name": "Epinephelus lanceolatus",
     "region_ids": [
-      "pacific_ocean",
-      "indian_ocean"
+      "indian_ocean",
+      "red_sea"
     ],
     "spot_ids": [
-      "pacific_reef",
-      "indian_reef"
+      "indian_reef",
+      "red_sea_wall",
+      "red_sea_bluehole"
     ],
     "art": "res://assets/fish/giant_grouper.png",
     "thumb": "res://assets/fish/giant_grouper_thumb.png",
@@ -284,18 +291,17 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从8米开始，抛投至少44%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "dogtooth_tuna",
     "name": "裸狐鲣",
     "scientific_name": "Gymnosarda unicolor",
     "region_ids": [
-      "pacific_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
       "indian_reef"
     ],
     "art": "res://assets/fish/dogtooth_tuna.png",
@@ -357,7 +363,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从20米开始，抛投至少48%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "yellowtail_kingfish",
@@ -428,7 +435,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少35%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。 本条代表南太平洋岩礁段，不用北太平洋历史混种资料证明当地分布。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "opah",
@@ -505,7 +513,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从75米开始，抛投至少52%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。 本钓点代表东北大西洋航段；75—180米是游戏窗口，不表示所有月鱼只生活在此深度。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "great_white_shark",
@@ -579,19 +588,18 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从15米开始，抛投至少60%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "scalloped_hammerhead",
     "name": "路氏双髻鲨",
     "scientific_name": "Sphyrna lewini",
     "region_ids": [
-      "pacific_ocean",
-      "indian_ocean"
+      "pacific_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "indian_reef"
+      "pacific_bluewater"
     ],
     "art": "res://assets/fish/scalloped_hammerhead.png",
     "thumb": "res://assets/fish/scalloped_hammerhead_thumb.png",
@@ -653,19 +661,18 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从15米开始，抛投至少50%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "great_hammerhead",
     "name": "无沟双髻鲨",
     "scientific_name": "Sphyrna mokarran",
     "region_ids": [
-      "atlantic_ocean",
-      "indian_ocean"
+      "atlantic_ocean"
     ],
     "spot_ids": [
-      "atlantic_shelf",
-      "indian_reef"
+      "atlantic_shelf"
     ],
     "art": "res://assets/fish/great_hammerhead.png",
     "thumb": "res://assets/fish/great_hammerhead_thumb.png",
@@ -727,7 +734,8 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少57%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "blue_shark",
@@ -735,13 +743,11 @@
     "scientific_name": "Prionace glauca",
     "region_ids": [
       "pacific_ocean",
-      "atlantic_ocean",
-      "indian_ocean"
+      "atlantic_ocean"
     ],
     "spot_ids": [
       "pacific_bluewater",
-      "atlantic_bluewater",
-      "indian_bluewater"
+      "atlantic_bluewater"
     ],
     "art": "res://assets/fish/blue_shark.png",
     "thumb": "res://assets/fish/blue_shark_thumb.png",
@@ -809,21 +815,18 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从15米开始，抛投至少45%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "shortfin_mako",
     "name": "尖吻鲭鲨",
     "scientific_name": "Isurus oxyrinchus",
     "region_ids": [
-      "pacific_ocean",
-      "atlantic_ocean",
-      "indian_ocean"
+      "pacific_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "atlantic_bluewater",
-      "indian_bluewater"
+      "pacific_bluewater"
     ],
     "art": "res://assets/fish/shortfin_mako.png",
     "thumb": "res://assets/fish/shortfin_mako_thumb.png",
@@ -885,18 +888,17 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从15米开始，抛投至少57%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "tiger_shark",
     "name": "鼬鲨",
     "scientific_name": "Galeocerdo cuvier",
     "region_ids": [
-      "atlantic_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
-      "atlantic_shelf",
       "indian_reef"
     ],
     "art": "res://assets/fish/tiger_shark.png",
@@ -971,20 +973,17 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少55%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "oceanic_whitetip_shark",
     "name": "远洋白鳍鲨",
     "scientific_name": "Carcharhinus longimanus",
     "region_ids": [
-      "pacific_ocean",
-      "atlantic_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "atlantic_bluewater",
       "indian_bluewater"
     ],
     "art": "res://assets/fish/oceanic_whitetip_shark.png",
@@ -1047,19 +1046,20 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从10米开始，抛投至少54%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "whitetip_reef_shark",
     "name": "灰三齿鲨",
     "scientific_name": "Triaenodon obesus",
     "region_ids": [
-      "pacific_ocean",
-      "indian_ocean"
+      "indian_ocean",
+      "red_sea"
     ],
     "spot_ids": [
-      "pacific_reef",
-      "indian_reef"
+      "indian_reef",
+      "red_sea_wall"
     ],
     "art": "res://assets/fish/whitetip_reef_shark.png",
     "thumb": "res://assets/fish/whitetip_reef_shark_thumb.png",
@@ -1127,6 +1127,7 @@
     "release_only": true,
     "reachability_note": "虚拟可遇水层从3米开始，抛投至少30%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "conservation_note": "保护观察：仅限游戏虚拟互动，结束后必须放归且不可出售；不代表现实法律、钓捕许可或安全操作建议。",
-    "encounter_type": "conservation_observation"
+    "encounter_type": "conservation_observation",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   }
 ]

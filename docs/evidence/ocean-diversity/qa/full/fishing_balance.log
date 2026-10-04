@@ -1,0 +1,8 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/fishing_balance_tests.gd -- --regressions-only
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+FAIL FISHING BALANCE: explicit output path provided
+FLOAT_SCOPE: current possession model is verified separately by float_encounter_tests.gd; --historical-float retains beta2 diagnostics
+FAIL: cannot write evidence output 

@@ -6,7 +6,7 @@ const Main = preload("res://scenes/main.tscn")
 const Store = preload("res://scripts/save_store.gd")
 const Session = preload("res://scripts/fishing_session.gd")
 const GIANT_BAITS: Array[String] = ["large_fish_chunk", "whole_mackerel", "large_squid", "large_surface_lure"]
-const FEATURED: Array[String] = ["great_white_shark", "great_hammerhead", "scalloped_hammerhead", "atlantic_bluefin_tuna", "pacific_bluefin_tuna", "yellowfin_tuna", "bigeye_tuna", "albacore", "skipjack_tuna", "dogtooth_tuna"]
+const FEATURED: Array[String] = ["great_white_shark", "great_hammerhead", "atlantic_bluefin_tuna", "california_sheephead", "barreleye", "pacific_halibut", "turbot", "grey_gurnard", "atlantic_flyingfish", "humphead_wrasse", "bluespotted_ribbontail_ray", "russells_oarfish", "red_sea_clownfish", "sohal_surgeonfish", "bluespotted_cornetfish"]
 var app: Control
 var checks: int = 0
 var failures: Array[String] = []
@@ -53,7 +53,7 @@ func _run() -> void:
 	while not app._startup_complete and Time.get_ticks_msec() < deadline:
 		await process_frame
 	check(app._startup_complete, "real staged Main startup completes")
-	check(app._content_ok and app._models_complete and app.fish_art.complete, "all74 real models/photos/histories accepted by unchanged strict gate")
+	check(app._content_ok and app._models_complete and app.fish_art.complete, "all111 real models/illustrations/histories accepted by the strict gate")
 	if not app._startup_complete or not app._content_ok or not app._models_complete or not app.fish_art.complete:
 		printerr("OCEAN_UI_STARTUP_ERRORS: ", app.catalog.errors)
 		await _finish()
@@ -62,7 +62,7 @@ func _run() -> void:
 	app.scenery.set_process(false)
 	app.sound.apply({"sound": false, "vibration": false, "volume": 0.0})
 	app.sound.suspend(true)
-	check(app.catalog.regions.size() == 9 and app.catalog.spots.size() == 18 and app.catalog.fish.size() == 74, "complete9-region/18-spot/74-species catalog")
+	check(app.catalog.regions.size() == 10 and app.catalog.spots.size() == 21 and app.catalog.fish.size() == 111 and app.catalog.fish_species_count() == 110 and app.catalog.gear.size() == 6, "complete10-region/21-spot catalog with 110 fish, one mammal and six rods")
 	check(root.get_visible_rect().size == Vector2(root.size) and app.size == Vector2(root.size), "production Main and logical viewport fill requested physical aspect")
 	if DisplayServer.get_name() != "headless":
 		check(RenderingServer.get_current_rendering_method() == "mobile" and RenderingServer.get_current_rendering_driver_name() == "vulkan", "native QA uses production Mobile/Vulkan renderer")
@@ -104,7 +104,7 @@ func _test_fresh_profile() -> void:
 	for region: Dictionary in app.catalog.regions:
 		if str(region.region_id) in regions: available_spots += region.spots.size()
 	check(available_spots == 12, "fresh regional progression includes twelve earlier spots without changing rod gates")
-	for id: String in ["pacific_ocean", "atlantic_ocean", "indian_ocean"]:
+	for id: String in ["pacific_ocean", "atlantic_ocean", "indian_ocean", "red_sea"]:
 		check(id not in fresh.unlocked_regions, "new ocean stays locked on a fresh profile " + id)
 	check(int(fresh.gear) == 0 and fresh.owned_gear == [0], "fresh starter gear ownership remains unchanged")
 	check(app.store.total_count() == 0 and app.store.discovered_count() == 0 and fresh.pending_catches.is_empty(), "fresh progress has zero real or pending catches")
@@ -125,7 +125,7 @@ func _test_fresh_profile() -> void:
 		if child is Button and child.text.begins_with("解锁水域"):
 			unlock_controls += 1
 			check(child.disabled, "each actual fresh ocean unlock button is discovery-gated")
-	check(unlock_controls == 3, "actual fresh travel page contains exactly three remaining region unlock controls")
+	check(unlock_controls == 4, "actual fresh travel page contains exactly four remaining region unlock controls")
 	await _bottom_reachable("fresh travel and locked oceans")
 	await _capture("fresh_oceans_locked")
 	await _back()
@@ -183,10 +183,12 @@ func _test_catalog_and_details(store: SaveStore) -> void:
 	app._catalog_scroll = 0
 	app._show_catalog()
 	await _layout()
-	check(app._page.name == "FishNotebookCatalog" and app._list.get_child_count() == 74, "real notebook exposes all74 whole-tile species buttons")
+	check(app._page.name == "FishNotebookCatalog" and app._list.get_child_count() == 110, "real notebook exposes all110 whole-tile fish buttons")
+	check(_tile("blue_whale") == null, "blue whale stays outside the ordinary fish grid")
 	var regions: OptionButton = app._page.find_child("NotebookRegionFilter", true, false)
-	check(regions != null and regions.item_count == 10, "region filter contains all9 regions and all-regions option")
+	check(regions != null and regions.item_count == 11, "region filter contains all10 regions and all-regions option")
 	for id: String in app.catalog.fish:
+		if not app.catalog.is_fishing_species(app.catalog.fish[id]): continue
 		var tile: Button = _tile(id)
 		check(tile != null and tile.text == app.catalog.fish[id].name, "actual catalog tile names correct species " + id)
 		var photo: TextureRect = tile.find_child("FishArtPreview", true, false) if tile != null else null
@@ -295,11 +297,12 @@ func _test_travel(store: SaveStore) -> void:
 			check(target != null and not target.disabled, "actual travel control available " + sid)
 			if target == null or target.disabled: continue
 			await _reveal(target)
-			if rid.ends_with("_ocean") and sid == str(region.spots[0]): await _capture("travel_" + rid)
+			var sea_region: bool = rid.ends_with("_ocean") or rid == "red_sea"
+			if sea_region and sid == str(region.spots[0]): await _capture("travel_" + rid)
 			await _tap(target.get_global_rect().get_center())
 			check(app.region_id == rid and app.spot_id == sid and app.scenery.region_id == rid and app.scenery.spot_id == sid and str(store.state.selection.spot_id) == sid, "travel commits Main/save/actual scene together " + sid)
 			check(app._screen == "prepare" and contains(app._page, str(app.catalog.spots[sid].name)), "travel returns matching production preparation " + sid)
-			if rid.ends_with("_ocean"):
+			if sea_region:
 				check(app.scenery._ocean_horizon_water.visible and not app.scenery._reflection_probe.visible, "ocean uses distant water/skylight " + sid)
 				app.sound.set_environment(sid, "clear", "day")
 				check(is_equal_approx(app.sound._water_gain, 0.4) and is_zero_approx(app.sound._current_gain), "ocean uses sea ambience rather than river " + sid)
@@ -324,11 +327,11 @@ func _test_travel(store: SaveStore) -> void:
 					check(app._screen == "home" and app._mode == "lobby", "actual return action leaves ocean safely " + sid)
 					oceans += 1
 			visited += 1
-	check(visited == 18 and oceans == 6, "all18 travel spots and all6 ocean Enter/Back/return flows exercised")
+	check(visited == 21 and oceans == 9, "all21 travel spots and all9 ocean/Red Sea Enter/Back/return flows exercised")
 	app._show_prepare()
 	app._show_travel()
 	await _layout()
-	await _bottom_reachable("all9-region travel page")
+	await _bottom_reachable("all10-region travel page")
 	await _capture("travel_bottom")
 	await _back()
 	check(app._screen == "prepare", "Back from long travel returns to preparation")
@@ -482,6 +485,8 @@ func _capture(label: String) -> void:
 func _source_hashes() -> Dictionary:
 	var result: Dictionary = {}
 	for path: String in ["res://project.godot", "res://scenes/main.tscn", "res://scripts/main.gd", "res://scripts/ui_art.gd", "res://scripts/icon_action.gd", "res://scripts/catalog.gd", "res://scripts/encounter.gd", "res://scripts/fish_art_catalog.gd", "res://scripts/fish_art_view.gd", "res://scripts/fish_notebook_ui.gd", "res://scripts/fishing_menu_pages.gd", "res://scripts/touch_scroll.gd", "res://scripts/audio_manager.gd", "res://scripts/fishing_stage_3d.gd", "res://scripts/save_store.gd", "res://data/fish_art.json", "res://data/fish_3d.json", "res://data/world.json", "res://data/fish_a.json", "res://data/fish_b.json", "res://data/fish_c.json", "res://data/fish_d.json", "res://data/fish_e.json", "res://data/fish_f.json", "res://data/encyclopedia_a.json", "res://data/encyclopedia_b.json", "res://data/encyclopedia_c.json", "res://data/encyclopedia_d.json", "res://data/encyclopedia_e.json", "res://data/encyclopedia_f.json"]:
+		result[path] = FileAccess.get_sha256(path)
+	for path: String in ["res://data/fish_g.json", "res://data/fish_h.json", "res://data/fish_whale.json", "res://data/encyclopedia_g.json", "res://data/encyclopedia_h.json", "res://data/encyclopedia_whale.json", "res://scripts/blue_whale_challenge.gd"]:
 		result[path] = FileAccess.get_sha256(path)
 	for id: String in GIANT_BAITS:
 		var path: String = "res://assets/ui/icons/" + id + ".png"

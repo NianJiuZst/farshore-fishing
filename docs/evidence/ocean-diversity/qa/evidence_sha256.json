@@ -1,0 +1,340 @@
+{
+  "scope": "Byte-identical evidence copies; canonical full run and two exact independent harness corrections remain intact; original build-relative paths retained in copied reports",
+  "copied_files": [
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/before_import_sha256.json",
+      "bytes": 307191,
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/binary_catalog.json",
+      "bytes": 127952,
+      "sha256": "442596b7077900940bdf66d963828c9e0ce3c79a75f8964e6043bd73725291d7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/binary_catalog.log",
+      "bytes": 308,
+      "sha256": "9c4047a570350456b21ea0fa6f79e02985672e7e90501ce3afaf600f73ff2703"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/fishing_balance.log",
+      "bytes": 748,
+      "sha256": "b65583fe75edd5256b14c026f6a7a2b901203fbf44f69c1176575711892dfa63"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/fishing_balance_evidence.json",
+      "bytes": 98171,
+      "sha256": "82b7a8f866de0b436697588f9e856bdf7fe118c2687fbb0f18472b6dcd5d4726"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/runtime_after_sha256.json",
+      "bytes": 307191,
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/runtime_before_sha256.json",
+      "bytes": 307191,
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/balance/summary.json",
+      "bytes": 1601,
+      "sha256": "bbc62147b0654b7d96eeb2d93fe557841692ecc88ec423efd65633ae9b590588"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/float-save/before_import_sha256.json",
+      "bytes": 307191,
+      "sha256": "08a949e51935217216ba4fa487ac0eb174841151a22d9a76a1091f488b8d0a18"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/float-save/binary_catalog.json",
+      "bytes": 127952,
+      "sha256": "442596b7077900940bdf66d963828c9e0ce3c79a75f8964e6043bd73725291d7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/float-save/binary_catalog.log",
+      "bytes": 311,
+      "sha256": "60f3daa7a1b2f9bb05f917c425f964b91a29b665a6ba434e74ab08d1f9969200"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/float-save/ocean_float_save.log",
+      "bytes": 1400,
+      "sha256": "68910c46f6ed6ee11eb84439b94dd1a3f0e05313a94001226f7eb3e01c787ef1"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/float-save/runtime_after_sha256.json",
+      "bytes": 307191,
+      "sha256": "08a949e51935217216ba4fa487ac0eb174841151a22d9a76a1091f488b8d0a18"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/float-save/runtime_before_sha256.json",
+      "bytes": 307191,
+      "sha256": "08a949e51935217216ba4fa487ac0eb174841151a22d9a76a1091f488b8d0a18"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/float-save/summary.json",
+      "bytes": 1508,
+      "sha256": "01fdf9a62132961e0f2f1e89d61066f29670322904caf2ef89beff7111a13c4f"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/angler_anatomy.log",
+      "bytes": 635,
+      "sha256": "84d9c207fdd1b5125b187815f00ddac33c6ece1589b6780794a68cea00eb1610"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/bait_balance.log",
+      "bytes": 443,
+      "sha256": "ed71cb279edc18bc58fd348a963bf471121dcc106efc42d22292817e37e45d16"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/before_import_sha256.json",
+      "bytes": 307078,
+      "sha256": "37626b14c50be770659680f215e64f51d3302d345b82b961560ef7fcfe12ab11"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/binary_catalog.json",
+      "bytes": 127952,
+      "sha256": "442596b7077900940bdf66d963828c9e0ce3c79a75f8964e6043bd73725291d7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/binary_catalog.log",
+      "bytes": 300,
+      "sha256": "973f210c4c0eb563e2b0f429a76f62d55d7adb834840fe74d1863e1715ebc642"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/blue_whale_challenge.log",
+      "bytes": 570,
+      "sha256": "d2d275bbbfbf22b4d327d3c4507c370e3c01b23b7e798ce173f7f40760df1ef2"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/blue_whale_main.log",
+      "bytes": 500,
+      "sha256": "ed7ab6e1fca684627c831203d4b33373fe3cf5570dedaf0ad5f47f04ba28e0a1"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/blue_whale_ui.log",
+      "bytes": 429,
+      "sha256": "931731837e69ceed6eedc8eaf960e63e3b09cbb8e18b21ac48889a0681d00157"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/camera_aspect.log",
+      "bytes": 490,
+      "sha256": "b77e2ddb7e03072e6fcb2516e6b99a7bbce525183f7dc6c959fd45a514c6fa00"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/core.log",
+      "bytes": 2900,
+      "sha256": "cd9ec72f5435d8154a16b71fbc740a42a531e790117acae3fdcaf74424671ed0"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/failure_modal.log",
+      "bytes": 619,
+      "sha256": "dd380935cb53eb2c3c034f06266383fcf542656b3086f7c01dd318ea0999d45b"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/fast_recast.log",
+      "bytes": 1407,
+      "sha256": "810d94c6a4e535b4e14dde2d28eced6b15771affdcf1edad6bf501bc93210866"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/fish_art.log",
+      "bytes": 520,
+      "sha256": "94d27b6bb926b5092ade170d8793399726cfbd2a0591cd54019f72bd83b498ea"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/fish_art_ui.log",
+      "bytes": 595,
+      "sha256": "06f97c9b956aeebb8f3970260ff883ebdeccebdd54531936900cac322acc24e9"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/fish_preview.log",
+      "bytes": 415,
+      "sha256": "f4a17b4715337bb3f5f108369eb228b49aea9bb2e4787d8290e53fbbdd018233"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/fishing_balance.log",
+      "bytes": 630,
+      "sha256": "f90af8502ec208d326c51cfb4de9de6f8617da37cd346495bc8e4fe94445f973"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/float_encounter.log",
+      "bytes": 490,
+      "sha256": "723b458cbcc4959b8da94d62bc7910f3e8b8dc3d48930259fc4735b3f0ead566"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/float_observation.log",
+      "bytes": 615,
+      "sha256": "39fea090903f23d2d0e63b4e686251b45d225a92f8e7fc8cb76a333d81a7bd01"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/giant_bait.log",
+      "bytes": 788,
+      "sha256": "51bf58ef7d685985e8efdcc1793bdb50d38c17b89a36b9192696742acaad83b7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/guard_trace.log",
+      "bytes": 519,
+      "sha256": "c974f1122f6cafef14c1c8d13f4c0b1d3468e9a07cac8fd20001786eeeb91748"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/hazard_boundary.log",
+      "bytes": 439,
+      "sha256": "d865244b829ed4d92451ab3735cd1327863149bc1f80e11ac0582a878116fbb8"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/historical_trial.log",
+      "bytes": 559,
+      "sha256": "98749f4b987a023bbab5c7b595889a75abda619d86e2d91c9bc76ff394f2f80d"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/import.log",
+      "bytes": 6380,
+      "sha256": "e6921d49cd195d91a43cf752ad6be50a0b11490e48e0e3abf1c94c14fb2bd545"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/main_travel.log",
+      "bytes": 469,
+      "sha256": "cebacdf7180ba5d50a4779add4eed6e119668cee3330c02eac5dd41b5695cf7a"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/natural_history.log",
+      "bytes": 492,
+      "sha256": "9860c48d50e1c8c62f8f00adeef36abf3f8a9b910988c9e241f442d57a9dbcf7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/notebook_ui.log",
+      "bytes": 486,
+      "sha256": "b59232c76fef4208bad0e9dce594e48d246a25fc47866bfca29c0d6945ff89fd"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ocean_balance.log",
+      "bytes": 487,
+      "sha256": "4dea595ba6cbad13e7e127b029bc7f82ced60d4dfe0bbbff2c5342f47684d2ea"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ocean_diversity.log",
+      "bytes": 489,
+      "sha256": "d01b682f14585656d5c7d2993b8e67efff52ffe3034039b32da14cb3e2e20a1a"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ocean_float_save.log",
+      "bytes": 614,
+      "sha256": "87522a2ac6bde28b61dce4d3d2cc48a20c0a8264ad42a5178ed5f8a06feb5b39"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ocean_fresh_profile.log",
+      "bytes": 512,
+      "sha256": "c4aad0e2005421b21bc58e3be2ce0297517207443fff2d6888381f8f037a9ed6"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ocean_landing.log",
+      "bytes": 546,
+      "sha256": "8498d70ffcf87871d05fa33eeba5fe989174a13121d6af375d9b3b3220cd2cec"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ocean_save.log",
+      "bytes": 1916,
+      "sha256": "e6817ef68f0f34209b978b6a5a43f9a06a80d53384e058d64c834ff12e6aed20"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ocean_ui.log",
+      "bytes": 483,
+      "sha256": "ef0a3752363606e66f7e6deb0d0f29a9001089d52d90f632c7e5b791fbbe0bfc"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/registry.log",
+      "bytes": 502,
+      "sha256": "7b414bd43270758ceec9d151f2e01f6bcecff8f647a6457de1e5a86a8e3e52cc"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/runtime_after_sha256.json",
+      "bytes": 307191,
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/runtime_before_sha256.json",
+      "bytes": 307191,
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/save.log",
+      "bytes": 1123,
+      "sha256": "db069ec2f182bfe2adb499f0b6f34a7a8cf11309d0cb51cae514abc9d4aff094"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/session_observation.log",
+      "bytes": 443,
+      "sha256": "74a4374e099c255c42307ba132fe5bf0865c2ee8d3ad61e199d35fa76799430e"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/slice3d.log",
+      "bytes": 43450,
+      "sha256": "5782df8e8b712d53cc1c180356b4bec95f4a6d7fd294ca5ea9f03e202371e5f9"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/summary.json",
+      "bytes": 21846,
+      "sha256": "a1ae10e0562994e3a91ebb4fbbbed8ae1ee3ff3e7eb24de611bf9ba9bd4148d5"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/tackle.log",
+      "bytes": 553,
+      "sha256": "559840400cde7032ccda9c04f031d1658e09df68af7186a8fd1db8268d351a6a"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/touch.log",
+      "bytes": 1388,
+      "sha256": "477deb86734c97b8f6306b60d3a99c25504159469d22b380b286e64b77b1ab84"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ui_iteration.log",
+      "bytes": 872,
+      "sha256": "2926db796809829b51928dafe340d0643d5d83be9b12c4a1fba7860eb7e6aeae"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/full/ui_style.log",
+      "bytes": 3050,
+      "sha256": "9f8253e9a2f6f30b153e81ebb051be4fcaa830536fb59fd7a0d62b33c9b3eaaf"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/legacy-preservation.json",
+      "bytes": 325,
+      "sha256": "532ef98ae79c18a7da9ff443e227ecdf22239fe2767777da070f74377ab54b33"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/native-720.log",
+      "bytes": 659,
+      "sha256": "5eceb98fe1940fd7dbea947bff83b6f43429e50f68572a072b34c69606404b37"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/native-tall.log",
+      "bytes": 659,
+      "sha256": "fd157b3b7eba47b5c4f994d6638878831119955bd4cca2e01a76748679a767c3"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/optional-legacy-model-gate-unavailable.log",
+      "bytes": 424,
+      "sha256": "63fefbfe58d852a9f170ee062c0ed808b8b15623ee8270d4a84a2611179fdc50"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/python-original-temp-alias-failure.log",
+      "bytes": 4875,
+      "sha256": "03eef1008ec0d0305ebe5bad910abbdd797b1954555259d7c348f6c04bdb3815"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/python-tests.log",
+      "bytes": 170,
+      "sha256": "082ee264fd59a6570dd4f8670eb84a4a1518a791b997eba97d40eddbf6fa6d66"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/source-contract.json",
+      "bytes": 388825,
+      "sha256": "b813f25333ba2db9f4c639020d4e91d112b064b1b72b4768038b36e205dfcc20"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/qa/summary.json",
+      "bytes": 32289,
+      "sha256": "c246ffd495adf8eb2acc0818e27e8bb2036f2cd4b5e0df6ce9f6e4df5b39f2af"
+    }
+  ]
+}

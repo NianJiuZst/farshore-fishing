@@ -17,10 +17,12 @@ func _init(fixed_seed: int = -1) -> void:
 
 func candidates(catalog: ContentCatalog, spot_id: String, bait: String, gear_id: int, cast_power: float, time: String, weather: String) -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
-	if not catalog.spots.has(spot_id):
+	if not catalog.spots.has(spot_id) or gear_id < 0 or gear_id >= catalog.gear.size():
 		return result
 	var spot: Dictionary = catalog.spots[spot_id]
 	var max_depth: float = minf(float(spot.depth_max_m), float(catalog.gear[gear_id].max_depth_m))
+	if max_depth < float(spot.depth_min_m):
+		return result
 	for fish: FishDefinition in catalog.fish_at(spot_id):
 		var data: Dictionary = fish.raw
 		if int(data.get("min_gear", 0)) > gear_id:
@@ -39,6 +41,8 @@ func candidates(catalog: ContentCatalog, spot_id: String, bait: String, gear_id:
 func preparation_status(catalog: ContentCatalog, fish: FishDefinition, spot_id: String, bait: String, gear_id: int) -> Dictionary:
 	# Read-only preview of the same hard gates used by candidates(). A rod with
 	# more fighting power may have less depth, so numeric gear tier is not enough.
+	if not catalog.is_fishing_species(fish):
+		return {"available":false,"reason":"通过专用幻想巨物挑战相遇"}
 	if not catalog.spots.has(spot_id) or gear_id < 0 or gear_id >= catalog.gear.size():
 		return {"available":false,"reason":"装备或钓点不可用"}
 	var spot: Dictionary = catalog.spots[spot_id]
@@ -47,6 +51,8 @@ func preparation_status(catalog: ContentCatalog, fish: FishDefinition, spot_id: 
 	var reason: String = ""
 	if int(data.get("min_gear", 0)) > gear_id:
 		reason = "需要旅行或探深装备"
+	elif float(gear.max_depth_m) < float(spot.depth_min_m):
+		reason = "钓竿需探深至少 %d m" % ceili(float(spot.depth_min_m))
 	elif float(data.get("depth_min_m", 0)) > minf(float(spot.depth_max_m), float(gear.max_depth_m)):
 		reason = "钓竿需探深至少 %d m" % ceili(float(data.get("depth_min_m", 0)))
 	elif float(data.get("depth_max_m", 999)) < float(spot.depth_min_m) or str(data.get("salinity", spot.salinity)) != str(spot.salinity):
@@ -87,14 +93,22 @@ func apply_float_presentation(record: Dictionary, catalog: ContentCatalog, cast_
 	var shallow: float = maxf(0.5, float(spot.get("depth_min_m", 1.0)))
 	var deep: float = maxf(shallow, minf(float(spot.get("depth_max_m", 8.0)), float(gear.get("max_depth_m", 8.0))))
 	var water_depth: float = lerpf(shallow, deep, clampf(cast_power, 0.0, 1.0))
+	var fish_shallow: float = maxf(shallow, float(fish.raw.get("depth_min_m", 0.5)))
+	var fish_deep: float = minf(deep, float(fish.raw.get("depth_max_m", 999.0)))
+	# The ground can be deeper than a pelagic fish, but its presented bait layer
+	# must stay inside the species/spot/rod intersection used by candidates().
+	water_depth = maxf(water_depth, fish_shallow)
 	var bait: String = str(record.get("bait_id", "worm"))
 	var bottom_rig: bool = fish.species_id in FloatModel.BOTTOM_FEEDERS and water_depth <= 12.0 and bait not in ["spinner", "lure", "large_surface_lure"]
 	record["water_depth_m"] = water_depth
-	record["bait_depth_m"] = maxf(0.3, water_depth - 0.12) if bottom_rig else clampf(maxf(float(fish.raw.get("depth_min_m", 0.5)), water_depth * 0.6), 0.3, water_depth)
+	var presented_depth: float = maxf(0.3, water_depth - 0.12) if bottom_rig else water_depth * 0.6
+	record["bait_depth_m"] = clampf(presented_depth, fish_shallow, minf(fish_deep, water_depth))
 	record["float_rig"] = "near_bottom" if bottom_rig else "suspended"
 	record["bait_affinity"] = catalog.bait_weight(fish, bait)
 
 func make_individual(fish: FishDefinition, spot: String, region: String, bait: String, gear_id: int, time: String, weather: String) -> Dictionary:
+	if str(fish.raw.get("animal_kind", "fish")) != "fish" or not bool(fish.raw.get("fishing_enabled", true)):
+		return {}
 	# Keep the ordinary population close to its old range. Only a small explicit
 	# tail uses the new fictional extreme, so a record does not become the mean.
 	var normal_max: float = clampf(float(fish.raw.get("normal_max_mm", fish.max_mm)), float(fish.min_mm), float(fish.max_mm))

@@ -244,18 +244,18 @@ func _test_main_pages() -> void:
 	await _layout_frames()
 	_check(app._screen == "prepare","bag Back returns to prepare context")
 	if not app._models_complete:
-		_check(not app._content_ok and not app._model_errors.is_empty(),"incomplete74 registry blocks gameplay without substitution")
+		_check(not app._content_ok and not app._model_errors.is_empty(),"incomplete111-model registry blocks gameplay without substitution")
 		var entry: Button = _find_button(app._overlay,"进入钓点")
 		_check(entry!=null and entry.disabled,"partial-development preparation explicitly disables entry")
 		app._enter_fishery()
-		_check(app._mode=="lobby" and app._overlay!=null,"direct entry callback cannot bypass strict44 gate")
-		if "--require-full" in OS.get_cmdline_user_args(): _check(false,"release run requires all44 real models; gameplay assertions not run")
+		_check(app._mode=="lobby" and app._overlay!=null,"direct entry callback cannot bypass strict111-model gate")
+		if "--require-full" in OS.get_cmdline_user_args(): _check(false,"release run requires all111 real models; gameplay assertions not run")
 		print("TOUCH_SCOPE: partial development; full gameplay assertions deferred, no readiness override")
 		app.queue_free()
 		await process_frame
 		production_completed=true
 		return
-	print("TOUCH_SCOPE: complete74 registry; full gameplay assertions enabled")
+	print("TOUCH_SCOPE: complete111-model registry; ordinary fish gameplay assertions enabled")
 	app._enter_fishery()
 	await _layout_frames()
 	_check(app._overlay == null and app._action.is_visible_in_tree() and app._mode == "fishing","enter location reveals casting HUD")
@@ -265,6 +265,7 @@ func _test_main_pages() -> void:
 	_check(app.session.state == FishingSession.State.CASTING and app.scenery.cast_in_progress,"real cast starts stage presentation")
 	_check(str(app.session.individual.region_id)==app.region_id and str(app.session.individual.spot_id)==app.spot_id,"real Encounter records the selected historical region and spot")
 	var encounter_species: FishDefinition = app.catalog.fish[str(app.session.individual.species_id)]
+	_check(app.catalog.is_fishing_species(encounter_species),"ordinary cast cannot select a whale challenge animal")
 	_check(app.spot_id in encounter_species.spots(),"real Encounter honors full-catalog species location eligibility")
 	var elapsed: float = app.session.elapsed
 	for iteration: int in range(20): app._process(0.05)
@@ -434,13 +435,14 @@ func _swipe_to_control(scroll: ScrollContainer, control: Control) -> void:
 
 func _test_expanded_tackle_controls(app: Control) -> void:
 	var starting_currency: int = int(app.store.state.currency)
+	_check(app.catalog.gear.size() == 6 and app.catalog.baits.size() == 12,"production tackle page contains six rods and twelve baits")
 	for bait: Dictionary in app.catalog.baits:
 		app._show_gear()
 		await _layout_frames()
 		var id: String = str(bait.bait_id)
 		var label: String = ("已选 · " if app.bait_id == id else "")+str(bait.name)
 		var button: Button = _find_button(app._page,label)
-		_check(button!=null,"all8 bait controls exist: "+id)
+		_check(button!=null,"all12 bait controls exist: "+id)
 		if button==null: continue
 		var bag: ScrollContainer = app._page.get_parent()
 		await _swipe_to_control(bag,button)
@@ -454,9 +456,9 @@ func _test_expanded_tackle_controls(app: Control) -> void:
 		await _layout_frames()
 		_check(app.bait_id==id and app.store.state.selection.bait_id==id and int(app.store.state.save_revision)==revision+1,"actual touch selects and persists bait exactly once: "+id)
 		_check(app._bait_control.icon_kind==id,"HUD reflects actual selected bait bitmap: "+id)
-	_check(int(app.store.state.currency)==starting_currency,"all8 unlimited baits cost no currency")
+	_check(int(app.store.state.currency)==starting_currency,"all12 unlimited baits cost no currency")
 	var snapshot: Dictionary = app.store.state.duplicate(true)
-	for id: int in range(5):
+	for id: int in range(app.catalog.gear.size()):
 		app._borrow_gear(id)
 		await _layout_frames()
 		_check(app._effective_gear_id()==id and app.store.state==snapshot,"temporary rod selection leaves save/ownership/currency untouched: "+str(id))
@@ -471,14 +473,14 @@ func _test_expanded_tackle_controls(app: Control) -> void:
 			app._abandon_round()
 			app._return_to_lobby()
 		else:
-			_check(app._mode=="lobby" and app._overlay!=null and not app._content_ok,"borrowed rod cannot bypass incomplete74-model gate: "+str(id))
+			_check(app._mode=="lobby" and app._overlay!=null and not app._content_ok,"borrowed rod cannot bypass incomplete111-model gate: "+str(id))
 	app._clear_trial_gear()
 	_check(app._trial_gear_id==-1 and app._effective_gear_id()==int(snapshot.gear) and app.store.state==snapshot,"ending trial borrowing restores saved rod without fake unlocks")
 	app._page_context="prepare"
 
 func _test_preview_factory() -> void:
 	var factory: Control = load("res://scripts/main.gd").new()
-	_check(factory.catalog.load_all(true) and factory.fish_art.load_all(factory.catalog),"preview factory requires all44 canonical photos")
+	_check(factory.catalog.load_all(true) and factory.fish_art.load_all(factory.catalog),"preview factory requires all111 canonical illustrations")
 	var preview: TextureRect = factory._fish_image(factory.catalog.fish["common_carp"],false,false,300)
 	preview.position=Vector2(60,140)
 	preview.size=Vector2(600,300)

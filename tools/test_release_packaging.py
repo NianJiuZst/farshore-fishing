@@ -267,7 +267,7 @@ class IsolatedStagingTests(unittest.TestCase):
     def test_default_and_external_staging_create_and_owned_cleanup(self):
         with tempfile.TemporaryDirectory(prefix='farshore-staging-test-') as folder:
             root = Path(folder)/'repo'; root.mkdir()
-            self.assertEqual(prebuilt.checked_staging_parent(root), Path('/tmp'))
+            self.assertEqual(prebuilt.checked_staging_parent(root), Path('/tmp').resolve())
             parent = Path(folder)/'external/builds'
             work, identity = prebuilt.create_staging_work(root, '1.2.0', parent)
             self.assertEqual(work.parent, parent)
@@ -694,9 +694,9 @@ class PackagingTests(unittest.TestCase):
             project=Path(folder); (project/'data').mkdir()
             (project/'data/android_build_identity.json').write_text(json.dumps(ocean))
             presets='package/unique_name="org.farshore.fishing.ocean"\npackage/name="远岸钓鱼·海洋"\n'
-            self.assertEqual(android_identity.project_identity(project, presets, '1.3.0', 7), ocean)
+            self.assertEqual(android_identity.project_identity(project, presets, ocean['application_version'], ocean['android_version_code']), ocean)
             with self.assertRaises(AssertionError):
-                android_identity.project_identity(project, presets.replace('.ocean', '.preview'), '1.3.0', 7)
+                android_identity.project_identity(project, presets.replace('.ocean', '.preview'), ocean['application_version'], ocean['android_version_code'])
 
     def test_exact_preview_identity_and_legacy_default(self):
         self.assertEqual(android_identity.expected_identity(),android_identity.LEGACY)

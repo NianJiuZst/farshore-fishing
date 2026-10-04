@@ -15,7 +15,7 @@ static var _bait_sizes_loaded: bool = false
 func load_all(check_art: bool = true) -> bool:
 	fish.clear()
 	errors.clear()
-	for file_name: String in ["fish_a.json", "fish_b.json", "fish_c.json", "fish_d.json", "fish_e.json", "fish_f.json"]:
+	for file_name: String in ["fish_a.json", "fish_b.json", "fish_c.json", "fish_d.json", "fish_e.json", "fish_f.json", "fish_g.json", "fish_h.json", "fish_whale.json"]:
 		var entries: Variant = _json("res://data/" + file_name)
 		if entries is not Array:
 			continue
@@ -126,9 +126,18 @@ func region(id: String) -> Dictionary:
 func fish_at(spot_id: String) -> Array[FishDefinition]:
 	var result: Array[FishDefinition] = []
 	for value: FishDefinition in fish.values():
-		if spot_id in value.spots():
+		if is_fishing_species(value) and spot_id in value.spots():
 			result.append(value)
 	return result
+
+func is_fishing_species(value: FishDefinition) -> bool:
+	return str(value.raw.get("animal_kind", "fish")) == "fish" and bool(value.raw.get("fishing_enabled", true))
+
+func fish_species_count() -> int:
+	var count: int = 0
+	for value: FishDefinition in fish.values():
+		if is_fishing_species(value): count += 1
+	return count
 
 func bait_name(id: String) -> String:
 	for value: Dictionary in baits:

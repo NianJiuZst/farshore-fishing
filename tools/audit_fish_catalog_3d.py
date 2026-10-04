@@ -30,7 +30,10 @@ def accessor(doc,binary,index):
         rows=[tuple(v/maximum for v in row) for row in rows]
     return rows
 
-def audit(path,clips):
+LEGACY_DURATIONS = {'swim':2.0,'struggle':1.2,'breach':1.4,'landed':3.0}
+OCEAN_DIVERSITY_DURATIONS = {'swim':1.8,'struggle':1.2,'breach':1.6,'landed':3.0}
+
+def audit(path,clips,expected_durations=None):
     summary=glb_contract(path,clips); doc,binary=unpack_glb(path)
     geometry=hashlib.sha256(); weights=[]; triangles=0
     for mesh in doc['meshes']:
@@ -56,28 +59,48 @@ def audit(path,clips):
             assert all(math.isfinite(t) for t in times) and all(a<=b for a,b in zip(times,times[1:]))
             ends.append(times[-1]-times[0])
         durations[animation['name']]=max(ends)
-    for name,duration in {'swim':2.0,'struggle':1.2,'breach':1.4,'landed':3.0}.items():
+    expected_durations = LEGACY_DURATIONS if expected_durations is None else expected_durations
+    for name,duration in expected_durations.items():
         assert abs(durations[name]-duration)<0.04,f'Unexpected {name} duration'
-    summary.update(geometry_sha256=geometry.hexdigest(),triangles=triangles,weight_sum_min=min(weights),weight_sum_max=max(weights),clip_seconds=durations)
+    summary.update(geometry_sha256=geometry.hexdigest(),triangles=triangles,weight_sum_min=min(weights),weight_sum_max=max(weights),clip_seconds=durations,expected_clip_seconds=expected_durations)
     return summary
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--project',type=Path,default=Path('game'));ap.add_argument('--output',type=Path,required=True);ap.add_argument('--require-all',action='store_true');args=ap.parse_args()
-    manifest=json.loads((args.project/'data/fish_3d.json').read_text()); catalog={}
-    for p in sorted((args.project/'data').glob('fish_[abcdef].json')):
-        catalog.update({x['species_id']:x for x in json.loads(p.read_text())})
-    assert set(catalog)==set(manifest['models']) and len(catalog)==74
-    report={'required_species':74,'full_release_gate':args.require_all,'models':{},'missing':[],'failures':[],'scope':'Independent binary geometry, weighted skin, animation sampling and duplicate-geometry audit; anatomy and rendered appearance require separate visual review.'}
+    manifest=json.loads((args.project/'data/fish_3d.json').read_text()); catalog={}; legacy_ids=set()
+    for p in sorted((args.project/'data').glob('fish_*.json')):
+        entries=json.loads(p.read_text())
+        if not isinstance(entries,list):continue
+        for x in entries:
+            assert x['species_id'] not in catalog,f'Duplicate catalog species: {x["species_id"]}'
+            catalog[x['species_id']]=x
+            if p.stem in {'fish_a','fish_b','fish_c','fish_d','fish_e','fish_f'}:legacy_ids.add(x['species_id'])
+    profile_path=args.project.parent/'tools/art3d/ocean_profiles.json'
+    profiles=json.loads(profile_path.read_text())['species']
+    new_profiles={p['id']:p for p in profiles}
+    assert len(legacy_ids)==74,'Legacy 74 species roster must remain complete'
+    assert len(profiles)==len(new_profiles)==37,'Expected 36 new fish plus one blue whale'
+    assert not legacy_ids.intersection(new_profiles),'New profile replaces an existing species ID'
+    expected_ids=legacy_ids.union(new_profiles)
+    assert set(catalog)==set(manifest['models'])==expected_ids,'Catalog/registry/original and new model scope mismatch'
+    required_count=len(expected_ids)
+    report={'required_species':required_count,'ordinary_fish_count':required_count-1,'mammal_entries':['blue_whale'],'legacy_species_count':len(legacy_ids),'new_model_count':len(new_profiles),'full_release_gate':args.require_all,'models':{},'missing':[],'failures':[],'scope':'Independent binary geometry, weighted skin, animation sampling and duplicate-geometry audit; anatomy and rendered appearance require separate visual review.'}
     seen={}
     for id,info in manifest['models'].items():
         path=args.project/info['scene'].removeprefix('res://')
         if not path.is_file():report['missing'].append(id);continue
         try:
-            result=audit(path,manifest['required_animation_clips']);digest=result['geometry_sha256']
+            expected=LEGACY_DURATIONS
+            if id in new_profiles:
+                assert info.get('authoring_source')=='tools/art3d/ocean_profiles.json',f'Missing exact editable new profile: {id}'
+                assert info.get('generator_source')=='tools/art3d/build_ocean_diversity.py',f'Missing exact new generator: {id}'
+                expected=OCEAN_DIVERSITY_DURATIONS.copy()
+                if new_profiles[id]['kind']=='whale':expected['swim']=2.4
+            result=audit(path,manifest['required_animation_clips'],expected);digest=result['geometry_sha256']
             assert digest not in seen,f'Geometry identical to {seen.get(digest)}'
             seen[digest]=id;report['models'][id]=result
         except Exception as exc:report['failures'].append({'species':id,'reason':str(exc)})
-    report['full_catalog_complete']=not report['missing'] and not report['failures'] and len(report['models'])==74
+    report['full_catalog_complete']=not report['missing'] and not report['failures'] and len(report['models'])==required_count
     args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'checked_models':len(report['models']),'missing':len(report['missing']),'failures':report['failures'],'full_catalog_complete':report['full_catalog_complete'],'full_release_gate':args.require_all}))
     return int(bool(report['failures']) or (args.require_all and not report['full_catalog_complete']))

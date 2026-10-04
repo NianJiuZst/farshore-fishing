@@ -1,0 +1,1636 @@
+{
+  "format_version": 1,
+  "asset_count": 16,
+  "complete": true,
+  "fragment_scope": "Eight Pacific Ocean and eight Atlantic Ocean new portraits; merge into final catalog only after Godot decoded import audit.",
+  "generator": "OpenAI built-in image_gen.imagegen",
+  "generated_on": "2026-10-04",
+  "purpose": "Photorealistic illustrative encyclopedia and catch-card assets. Not actual wild photographs or diagnostic scientific plates.",
+  "coordinate_system": "Normalized values refer to full runtime/master canvas. Bboxes [left,top,right,bottom], right/bottom exclusive. Nose and tail x landmarks span biological snout to final caudal tip.",
+  "rgba_hash_note": "source_rgba8_sha256 and thumb_source_rgba8_sha256 are pre-import PNG decoded RGBA8 digests. Godot may repair transparent RGB; root must add imported image_sha256 and thumb_image_sha256 after canonical import audit.",
+  "variants": "Original generated PNG bytes retained under sources/. Master/runtime are identical PNG bytes after only transparent canvas padding. Thumbnails use Pillow Lanczos at max512px. No artwork was drawn or species substituted procedurally.",
+  "assets": [
+    {
+      "species_id": "california_sheephead",
+      "name": "加州羊头鱼",
+      "scientific_name": "Bodianus pulcher",
+      "master": "california_sheephead.png",
+      "source": "sources/california_sheephead.png",
+      "runtime": "res://assets/fish/california_sheephead.png",
+      "thumb": "res://assets/fish/california_sheephead_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        194,
+        127,
+        1853,
+        896
+      ],
+      "subject_bbox_normalized": [
+        0.0947265625,
+        0.1240234375,
+        0.90478515625,
+        0.875
+      ],
+      "thumb_subject_bbox_px": [
+        48,
+        32,
+        464,
+        224
+      ],
+      "nose_normalized": [
+        0.0947265625,
+        0.5146484375
+      ],
+      "tail_normalized": [
+        0.904296875,
+        0.4609375
+      ],
+      "ruler_extent_normalized": [
+        0.0947265625,
+        0.904296875
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "6b4cd95ed650c9635ba492d07e7958c34b612e320ffbc69ec573620ef4c5cfb9",
+      "thumb_sha256": "0b6b5a86a4f5f6c4a4a51d70441ebc2caadad723adcc58f831c4c9a87e30becf",
+      "source_generated_sha256": "512251e1bedd0d066eb8ae02f2d147bfa6d5c3a62497f517f5e52dc867de712e",
+      "source_rgba8_sha256": "ca6f64c7d966f7d9073afc4c7d0ac5c99a897d25cfa1368e739bdad9d18e223a",
+      "thumb_source_rgba8_sha256": "7781458bd96d33942efba7d77a46fa93ce0eb3b8a2af030c29d52aa7c1d6f1a1",
+      "generated_rgba8_sha256": "c4205b13d0daf23d9dce96595f6fe80863937de18012c513c183a1fd4e240d3c",
+      "transparent_fraction": 0.6236491203308105,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "成熟雄鱼头部和尾段近黑，中段红橙，白下巴、红眼与隆起额头突出；犬齿外露，身体厚实，连续背鳍；雌鱼较小且多为粉红色。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Semicossyphus-pulcher.html",
+          "title": "Bodianus pulcher — species summary",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；食性；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/california-sheephead",
+          "title": "California sheephead",
+          "supports": "常见尺寸口径；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://caseagrant.ucsd.edu/seafood-profiles/california-sheephead",
+          "title": "California Sheephead",
+          "supports": "分类与名称；常见尺寸口径；生境与栖深；习性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: a new Farshore fish encyclopedia portrait, photorealistic illustrative cutout, not a wildlife photograph. Subject: one adult male California sheephead, Semicossyphus pulcher, full animal head facing left and tail facing right, horizontal true lateral side profile. Species anatomy: robust wrasse body with a high forehead and thick fleshy lips, black head and black rear third/tail separated by the broad brick-red middle body, white lower jaw/chin, long continuous spiny/soft dorsal fin, broad rounded pectoral fin, modest rounded-square tail. Fine natural scales, subtle wet surface, accurate adult male coloring, no female or juvenile markings. Composition: landscape 2048 x 1024 canvas, entire fish plus all fin tips visibly inside the frame with at least 8 percent safe transparent margin on every edge. One fish, calm extended fins in natural swimming pose; no objects, no hooks, no bait, no scenery, no shadow under the fish. Style/medium: premium scientifically informed PBR photoreal illustration, neutral soft studio lighting, sharp crisp anatomy and scale detail, natural colors. Actual transparent alpha background, no white matte, no checkerboard drawn into the pixels. No text, letters, labels, logos, watermark, border. Do not crop any part or invent extra fins.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      },
+      "scientific_name_note": "Prompt used the synonym Semicossyphus pulcher; final accepted name Bodianus pulcher denotes the same species and unchanged species ID."
+    },
+    {
+      "species_id": "lingcod",
+      "name": "长蛇齿单线鱼",
+      "scientific_name": "Ophiodon elongatus",
+      "master": "lingcod.png",
+      "source": "sources/lingcod.png",
+      "runtime": "res://assets/fish/lingcod.png",
+      "thumb": "res://assets/fish/lingcod_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        160,
+        221,
+        1887,
+        813
+      ],
+      "subject_bbox_normalized": [
+        0.078125,
+        0.2158203125,
+        0.92138671875,
+        0.7939453125
+      ],
+      "thumb_subject_bbox_px": [
+        40,
+        55,
+        472,
+        204
+      ],
+      "nose_normalized": [
+        0.078125,
+        0.49755859375
+      ],
+      "tail_normalized": [
+        0.9208984375,
+        0.47488839285714285
+      ],
+      "ruler_extent_normalized": [
+        0.078125,
+        0.9208984375
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "562eca155e03b486abd4fbeb92303c437a1b47bac62d75521d3fe6c3104db6a7",
+      "thumb_sha256": "4d721d56cf2901a1a867ba06785aef143eecda83fa39a3285c605229ccba9f49",
+      "source_generated_sha256": "062fa671ae3e0ebab01bb45c3af0d3152c35ae6fde64e0a6a8ab7243d2a326cf",
+      "source_rgba8_sha256": "3ad601a30f79d75cde87129b514522252ef84bae0ba3483bdc8746c327242bfd",
+      "thumb_source_rgba8_sha256": "2b40b378fd9d977bbf24edf1dfd7d62c77662648b1de30d95b570aab552694ee",
+      "generated_rgba8_sha256": "50ebdfe5a2a5430d7cf8e228815bd2bc751af82011a5235f2dd5682d382107df",
+      "transparent_fraction": 0.728907585144043,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "长身、宽大头与深口裂，颌上大小尖齿交错；眼上短皮瓣，棕灰或铜褐底色带不规则深斑，长连续背鳍与宽胸鳍，尾端近截形。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Ophiodon-elongatus",
+          "title": "Ophiodon elongatus — species summary",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=lingcod.printerfriendly",
+          "title": "Lingcod species profile",
+          "supports": "常见尺寸口径；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/MFR/mfr551/mfr5513.pdf",
+          "title": "Submersible Observations on Lingcod Nests",
+          "supports": "物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore fish encyclopedia portrait, a new photorealistic illustrative cutout, not a wildlife photograph. One species and one animal only. Composition: true lateral side profile, head left and tail right, whole fish perfectly visible including every fin tip, horizontal 2048 x 1024 landscape with broad transparent safe margins around the animal. Style: premium biologically informed PBR photoreal illustration, natural scale/skin and fin ray texture, crisp focus, gentle neutral studio lighting, no exaggerated stylization. Actual transparent alpha background, no matte, no checkerboard pixels, no ground shadow, no scenery. No hooks, fishing line, bait or supporting objects. No text, labels, logo, watermark, border. Do not crop the fish or invent fins. Subject anatomy: One adult lingcod, Ophiodon elongatus. A long robust tapering fish, very large angular head, large toothed mouth, jaw reaching back past the eye, small fleshy eyebrow cirrus, mottled olive-brown and grey body with lighter belly, NOT a cod with chin barbels. Broad fanlike pectoral fins; long dorsal fin with a noticeable shallow notch separating spiny front from softer rear, long low anal fin, broad squared-off slightly rounded caudal tail. Fine modest scales on the body, rough scaleless head, natural copper-brown mottling. Mouth slightly open to show a few canine-like teeth; do not make it monster-like.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "cabezon",
+      "name": "巨头杜父鱼",
+      "scientific_name": "Scorpaenichthys marmoratus",
+      "master": "cabezon.png",
+      "source": "sources/cabezon.png",
+      "runtime": "res://assets/fish/cabezon.png",
+      "thumb": "res://assets/fish/cabezon_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        176,
+        160,
+        1874,
+        870
+      ],
+      "subject_bbox_normalized": [
+        0.0859375,
+        0.15625,
+        0.9150390625,
+        0.849609375
+      ],
+      "thumb_subject_bbox_px": [
+        44,
+        40,
+        469,
+        218
+      ],
+      "nose_normalized": [
+        0.0859375,
+        0.53271484375
+      ],
+      "tail_normalized": [
+        0.91455078125,
+        0.50830078125
+      ],
+      "ruler_extent_normalized": [
+        0.0859375,
+        0.91455078125
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "0596084c60b6d73e7dc18ba3b836c781068488967b55c5cbe4e86b58420b0696",
+      "thumb_sha256": "c29c7eb998603eecc3e1a7c70e2e7aecb5ee3abe00566406ea20caa56d815d34",
+      "source_generated_sha256": "7657e661e11d9bf3d9d622d8bec41b05e109ab72c50de8179abff61719e2bebd",
+      "source_rgba8_sha256": "0a16c57f676f550bccab7ab135088750108d0bb7f78d00020a20172b70ee9051",
+      "thumb_source_rgba8_sha256": "b880b06e4268d0e874a8eed1e81b99333b5e9c3fba00f122a956e5dd9d4834e4",
+      "generated_rgba8_sha256": "7f50b276f502e0a4af8d519231c76d3f8ae6613bb8147ead52a280197824f695",
+      "transparent_fraction": 0.6516790390014648,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "头部非常宽大、口阔，皮肤无鳞；眼后和吻部具肉质皮瓣，宽扇形胸鳍；褐、绿或红色底上有深色斑驳，尾端微圆，贴底轮廓厚重。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Scorpaenichthys-marmoratus.html",
+          "title": "Scorpaenichthys marmoratus — species summary",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://caseagrant.ucsd.edu/seafood-profiles/cabezon",
+          "title": "Cabezon",
+          "supports": "常见尺寸口径；长度上限及量法；生境与栖深；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: Farshore fish encyclopedia portrait, a new photorealistic illustrative cutout, not a wildlife photograph. One species and one animal only. Composition: true lateral side profile, head left and tail right, whole fish perfectly visible including every fin tip, horizontal 2048 x 1024 landscape with broad transparent safe margins around the animal. Style: premium biologically informed PBR photoreal illustration, natural scale/skin and fin ray texture, crisp focus, gentle neutral studio lighting, no exaggerated stylization. Actual transparent alpha background, no matte, no checkerboard pixels, no ground shadow, no scenery. No hooks, fishing line, bait or supporting objects. No text, labels, logo, watermark, border. Do not crop the fish or invent fins. Subject anatomy: One adult cabezon, Scorpaenichthys marmoratus. Stocky sculpin with a massively broad blunt bony head, broad cheeks, very large fan-shaped pectoral fins and body tapering sharply from head to broad rounded tail. Irregular mottled olive-brown, grey, and rusty maroon camouflage with pale underside; textured mostly scaleless skin, not regular large fish scales. Short fleshy cirri above the eyes and paired nasal cirri on snout, modest spiny dorsal front continuous with a taller soft dorsal rear. Visible realistic mouth, large pectorals and pelvic fins, all complete. It must look distinctly like a large sculpin, not a grouper, lionfish, or lingcod.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "garibaldi",
+      "name": "加里波第鱼",
+      "scientific_name": "Hypsypops rubicundus",
+      "master": "garibaldi.png",
+      "source": "sources/garibaldi.png",
+      "runtime": "res://assets/fish/garibaldi.png",
+      "thumb": "res://assets/fish/garibaldi_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        299,
+        87,
+        1784,
+        934
+      ],
+      "subject_bbox_normalized": [
+        0.14599609375,
+        0.0849609375,
+        0.87109375,
+        0.912109375
+      ],
+      "thumb_subject_bbox_px": [
+        74,
+        21,
+        446,
+        234
+      ],
+      "nose_normalized": [
+        0.14599609375,
+        0.52294921875
+      ],
+      "tail_normalized": [
+        0.87060546875,
+        0.35791015625
+      ],
+      "ruler_extent_normalized": [
+        0.14599609375,
+        0.87060546875
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "ab06f7b81b098e6bb557e7d6caed6564281b1fdfe2b6500c7ba72e7d3b478c4e",
+      "thumb_sha256": "36d81a3febd491adaad18c2e2519d8dd2cbc45d74067db51b8a1a137fbc94215",
+      "source_generated_sha256": "54d39d795c6ea798528b2fd69b2efc9bb9ad0df84be401f01ede2e2f3c6d671b",
+      "source_rgba8_sha256": "5943e513adaa047537ff0ea633de0e9196f72056aaaf0cac888d9de4dcfb15dc",
+      "thumb_source_rgba8_sha256": "7e8bc8bdcd505671f5f5f91bb5bea7fa6b498a38688ff5d118e0f5e633da864d",
+      "generated_rgba8_sha256": "e219fff4085a59d5a70e1978d1f562e72b22c01290f2dc5d25331c284ccf5f74",
+      "transparent_fraction": 0.6346378326416016,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "短而高的侧扁椭圆体，成鱼通体鲜橙，连续背鳍，尾鳍浅凹近心形；幼鱼带电蓝点与蓝鳍缘，模型以无蓝点成鱼为准。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Hypsypops-rubicundus.html",
+          "title": "Hypsypops rubicundus — species summary",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/garibaldi",
+          "title": "Garibaldi",
+          "supports": "常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: a new Farshore encyclopedia portrait, photorealistic illustrative cutout, not an actual wild photograph. One fish only, no other animals or props. Framing: exact lateral side view, head to the left and tail to the right, horizontal 2048 x 1024 landscape canvas with at least 8 percent genuinely transparent safe margins; show full fish with every fin and tail tip uncut. Natural gentle extended-fin swimming pose. Premium scientifically informed PBR illustration, lifelike skin and scale detail, natural accurate colors, soft neutral studio light and crisp focus. Real transparent alpha background; no scenery, floor or shadows. No text, labels, logos, watermark, border, hook, bait, or line. Never crop or invent fins. Subject: One mature Garibaldi damselfish, Hypsypops rubicundus. Deep oval laterally compressed body, high rounded forehead, small thick mouth, entirely intense natural orange adult skin and orange fins, subtle large scale texture, dark round eye. Long single dorsal fin with visible front spines and soft rounded rear, pointed pelvic fins, modest fan pectoral fin, distinctly heart-shaped caudal fin with a shallow central notch. Adult only: NO electric-blue juvenile spots or blue fin trim. Not a goldfish, no flowing ornamental fins.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "kelp_greenling",
+      "name": "斑点六线鱼",
+      "scientific_name": "Hexagrammos decagrammus",
+      "master": "kelp_greenling.png",
+      "source": "sources/kelp_greenling.png",
+      "runtime": "res://assets/fish/kelp_greenling.png",
+      "thumb": "res://assets/fish/kelp_greenling_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        180,
+        202,
+        1872,
+        836
+      ],
+      "subject_bbox_normalized": [
+        0.087890625,
+        0.197265625,
+        0.9140625,
+        0.81640625
+      ],
+      "thumb_subject_bbox_px": [
+        45,
+        50,
+        468,
+        209
+      ],
+      "nose_normalized": [
+        0.087890625,
+        0.548828125
+      ],
+      "tail_normalized": [
+        0.91357421875,
+        0.5221819196428571
+      ],
+      "ruler_extent_normalized": [
+        0.087890625,
+        0.91357421875
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "d88b6446d84d26cfd7f24569c074402660eacf61c50faef347043e6a3d4f648a",
+      "thumb_sha256": "a9eac79c918af60d1ecab98f7c12257cf14b5cb145f7d549812187410c4b274a",
+      "source_generated_sha256": "d5c26112bffb38b3167d74846e7027c2dc97503b74dbb4cd16a2e7fe8a05c754",
+      "source_rgba8_sha256": "128b28bc66268ebdfe8f1e07658af9da1369cd877ee68fab82db3ca7cab7d9d7",
+      "thumb_source_rgba8_sha256": "c1abc87971330f41ee8e395f99d44445959dcba1f2c05cab8676f3b05310d4df",
+      "generated_rgba8_sha256": "f035ba309bd88d501fb0b75d1f7d4ff7d8e6b5ba375d90dc1c1d7d96307111b1",
+      "transparent_fraction": 0.6926689147949219,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "修长纺锤体、长连续背鳍，眼上肉质小皮瓣，尾鳍圆至截形；雄鱼灰褐底有不规则蓝点及褐缘，雌鱼金褐点更密、鳍偏橙黄；模型选雄鱼蓝点型。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Hexagrammos-decagrammus",
+          "title": "Hexagrammos decagrammus — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://wdfw.wa.gov/species-habitats/species/hexagrammos-decagrammus",
+          "title": "Kelp greenling",
+          "supports": "常见尺寸口径；长度上限及量法；体重上限；习性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: a new Farshore encyclopedia portrait, photorealistic illustrative cutout, not an actual wild photograph. One fish only, no other animals or props. Framing: exact lateral side view, head to the left and tail to the right, horizontal 2048 x 1024 landscape canvas with at least 8 percent genuinely transparent safe margins; show full fish with every fin and tail tip uncut. Natural gentle extended-fin swimming pose. Premium scientifically informed PBR illustration, lifelike skin and scale detail, natural accurate colors, soft neutral studio light and crisp focus. Real transparent alpha background; no scenery, floor or shadows. No text, labels, logos, watermark, border, hook, bait, or line. Never crop or invent fins. Subject: One adult male kelp greenling, Hexagrammos decagrammus. Elongated but moderately deep olive-brown to grey body, small terminal mouth, rounded head with small single fleshy cirrus above the eye. Several irregular muted blue patches on the forward half of the body, each surrounded by a ring of small rust-brown dots; subtly pale belly, natural patterned dusky fins. Long dorsal fin with an obvious notch between spiny anterior and soft posterior portions, long low anal fin, broad rounded pectoral fin, modest rounded-truncate tail. Five subtle lateral line canals on the flank, delicate small scales. Do NOT give it a lingcod's large toothed head, a wrasse's big lips, tropical neon colors, or huge fins.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "yellow_tang",
+      "name": "黄高鳍刺尾鱼",
+      "scientific_name": "Zebrasoma flavescens",
+      "master": "yellow_tang.png",
+      "source": "sources/yellow_tang.png",
+      "runtime": "res://assets/fish/yellow_tang.png",
+      "thumb": "res://assets/fish/yellow_tang_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        345,
+        92,
+        1746,
+        932
+      ],
+      "subject_bbox_normalized": [
+        0.16845703125,
+        0.08984375,
+        0.8525390625,
+        0.91015625
+      ],
+      "thumb_subject_bbox_px": [
+        86,
+        23,
+        437,
+        233
+      ],
+      "nose_normalized": [
+        0.16845703125,
+        0.5810546875
+      ],
+      "tail_normalized": [
+        0.85205078125,
+        0.4751551011029412
+      ],
+      "ruler_extent_normalized": [
+        0.16845703125,
+        0.85205078125
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "e716d47c60025e634935872430c06ba2cd423ff7bb616cd1d64bbfccd5bdb375",
+      "thumb_sha256": "e311084d60dae9efaebacccc6a4e3b37b588a3151c6efa1997191c3a0a716a96",
+      "source_generated_sha256": "b1c179bc84816b362defff5767aac989edca4f2d17e56152d9e8d0667986a5e3",
+      "source_rgba8_sha256": "1b3cfd5b44985996b55e1d8345c869d380c5cd7bbe368a65d0c43170cf2d7db2",
+      "thumb_source_rgba8_sha256": "f6f7bd9eb5b5c5b329672add6d5beae4c62ef2b5486f57b9f928709ddc2d7ffb",
+      "generated_rgba8_sha256": "9f512a72431a62cfab453970dc903eeac6e0a8004467d12be75197c07e0652e7",
+      "transparent_fraction": 0.6792559623718262,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "通体明黄、侧扁高身，背鳍与臀鳍撑开成帆，吻略尖、小口；尾柄两侧白色刀状刺，尾鳍浅凹，不能画成黄蓝混色的拟刺尾鱼。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Zebrasoma-flavescens.html",
+          "title": "Zebrasoma flavescens — species summary",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://repository.library.noaa.gov/view/noaa/32596",
+          "title": "Size at maturity for yellow tang from the Oahu aquarium fishery",
+          "supports": "常见尺寸口径；体重上限；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: a new Farshore encyclopedia portrait, photorealistic illustrative cutout, not an actual wild photograph. One fish only, no other animals or props. Framing: exact lateral side view, head to the left and tail to the right, horizontal 2048 x 1024 landscape canvas with at least 8 percent genuinely transparent safe margins; show full fish with every fin and tail tip uncut. Natural gentle extended-fin swimming pose. Premium scientifically informed PBR illustration, lifelike skin and scale detail, natural accurate colors, soft neutral studio light and crisp focus. Real transparent alpha background; no scenery, floor or shadows. No text, labels, logos, watermark, border, hook, bait, or line. Never crop or invent fins. Subject: One mature yellow tang, Zebrasoma flavescens. Highly laterally flattened disk-shaped deep body, vivid even lemon-yellow including all fins, small dark eye and characteristically long narrow pointed projecting snout with a tiny mouth. Very tall triangular sail-like dorsal fin and matching large anal fin creating a rounded diamond silhouette; small transparent-yellow pectoral fin; narrow tail peduncle with a short clear white scalpel spine on the flank near the tail; broad slightly rounded truncate tail. Precise delicate scale and fin ray detail. Do not render a generic oval yellow fish or a butterflyfish with round snout.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "pacific_halibut",
+      "name": "太平洋庸鲽",
+      "scientific_name": "Hippoglossus stenolepis",
+      "master": "pacific_halibut.png",
+      "source": "sources/pacific_halibut.png",
+      "runtime": "res://assets/fish/pacific_halibut.png",
+      "thumb": "res://assets/fish/pacific_halibut_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        195,
+        136,
+        1861,
+        889
+      ],
+      "subject_bbox_normalized": [
+        0.09521484375,
+        0.1328125,
+        0.90869140625,
+        0.8681640625
+      ],
+      "thumb_subject_bbox_px": [
+        48,
+        34,
+        465,
+        222
+      ],
+      "nose_normalized": [
+        0.09521484375,
+        0.5458984375
+      ],
+      "tail_normalized": [
+        0.908203125,
+        0.70751953125
+      ],
+      "ruler_extent_normalized": [
+        0.09521484375,
+        0.908203125
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "f13606ec2815bc2a281849e47fb9abf13d94a9ae220f19e34688448806219d1a",
+      "thumb_sha256": "bd82fe01e41d301d93cf8bdee6bcd73fc61c4195f28dc22be8223aba2f56fad0",
+      "source_generated_sha256": "ed62954193340e3bf8b79291339dfb337d973026147eed90adb5fb367ef7fda5",
+      "source_rgba8_sha256": "eeae2527c1c9bea04ff66f5259d17a04498de885b0bff4133d7b95d1acbcd699",
+      "thumb_source_rgba8_sha256": "eda5e7f0ddd597d446d77250bc0f689b124a698d9c4d3ae9f85dc40a9d18664a",
+      "generated_rgba8_sha256": "36eec27a6d3bf21e65c5a286c30a7eade32fca88f3e2514c903d107a1567430b",
+      "transparent_fraction": 0.6753840446472168,
+      "orientation": "head_left_tail_right",
+      "view": "right_pigmented_eye_side_broadside",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "极侧扁的菱形扁体，两眼在右侧；有眼面灰褐斑驳、盲面白，背臀鳍沿两侧形成长边，口大、胸鳍较小，尾鳍略呈月弧。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Hippoglossus-stenolepis.html",
+          "title": "Hippoglossus stenolepis — species summary",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-halibut",
+          "title": "Pacific Halibut",
+          "supports": "常见尺寸口径；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: a new Farshore fish encyclopedia portrait, photorealistic scientific illustration cutout, not an actual wildlife photograph. One adult Pacific halibut, Hippoglossus stenolepis. Show the complete broad pigmented RIGHT EYE SIDE of this flatfish, orthogonal eye-side view as if looking down onto the fish resting flat, but no ground. Its head is at the LEFT and tail at the RIGHT. Anatomical flatfish asymmetry is critical: both eyes MUST be together on the same visible mottled brown-grey upper face near the left head, the mouth is asymmetric; do NOT create a symmetrical round fish with one eye on each side. Long flattened diamond/elongated-rhombus body with subtly angular tapered head, relatively large mouth, fine smooth embedded scales, grey-olive dark-brown camouflage mottling, long fine-ray dorsal fin around the upper body margin and long anal fin around the lower margin, small pectoral fin on eye side, slender tail peduncle and concave lunate not deeply forked caudal fin. Tail and all marginal fin rays complete and natural. High quality natural PBR photoreal illustration with soft neutral lighting, accurate life textures, subdued colors, no blood, clean individual specimen. Horizontal landscape 2048 x 1024 canvas; entire animal centered with at least 8 percent safe genuinely transparent margin on every edge. Real alpha-transparent background, no white matte or baked checkerboard, no shadow, no scenery, no sand, no fishing objects, no labels/text/watermark/border. It should look flattened broadside, NOT thin edge-on and NOT an ordinary upright fish.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "barreleye",
+      "name": "管眼鱼",
+      "scientific_name": "Macropinna microstoma",
+      "master": "barreleye.png",
+      "source": "sources/barreleye.png",
+      "runtime": "res://assets/fish/barreleye.png",
+      "thumb": "res://assets/fish/barreleye_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        221,
+        150,
+        1862,
+        816
+      ],
+      "subject_bbox_normalized": [
+        0.10791015625,
+        0.146484375,
+        0.9091796875,
+        0.796875
+      ],
+      "thumb_subject_bbox_px": [
+        55,
+        37,
+        466,
+        204
+      ],
+      "nose_normalized": [
+        0.10791015625,
+        0.60595703125
+      ],
+      "tail_normalized": [
+        0.90869140625,
+        0.4341796875
+      ],
+      "ruler_extent_normalized": [
+        0.10791015625,
+        0.90869140625
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "f6be6847d19b9429154892bdade7398faba9e26b979fa8ad4115ebfca80dd51e",
+      "thumb_sha256": "663c6aa7c612867fc30ad7d1720b98450d53e8d1c08f2ec79504e1a127498b2e",
+      "source_generated_sha256": "dae4c4202a7a7095abb2234ebb85f82b245af24a62dbb4988e88d3a68739ea84",
+      "source_rgba8_sha256": "88fd07b1f47aebc88fe62c125ef0b1b4303b64d8171e0b9b8cd6b92a86dcb9be",
+      "thumb_source_rgba8_sha256": "4bd1d77f235ae19c11ae631e7921f4fad893e47422ed8ff02e304bcd5fb05b59",
+      "generated_rgba8_sha256": "a581c02d06a5f9049a815d586a7a0944d807432b23386f3256f2914f4889afe7",
+      "transparent_fraction": 0.6607308387756348,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile_slight_elevated_view",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "短小深褐身、透明充液头罩，头内一对绿色管状眼可向上或前方转动；吻前两黑点是嗅孔而非眼，口很小；宽透明胸鳍支持悬停。",
+      "fact_sources": [
+        {
+          "url": "https://fishbase.se/summary/2704",
+          "title": "Macropinna microstoma — species summary",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.mbari.org/animal/barreleye-fish/",
+          "title": "Barreleye fish",
+          "supports": "常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.mbari.org/news/researchers-solve-mystery-of-deep-sea-fish-with-tubular-eyes-and-transparent-head/",
+          "title": "Researchers solve mystery of deep-sea fish with tubular eyes and transparent head",
+          "supports": "常见尺寸口径；生境与栖深；习性；食性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: a new Farshore fish encyclopedia portrait, photorealistic scientifically informed illustration cutout, not an actual wildlife photograph. Exactly one real adult barreleye fish, Macropinna microstoma. Entire animal including all its delicate transparent fins, head facing LEFT, tail RIGHT, nearly lateral profile with only a very slight elevated three-quarter angle to make the two internal eyes discernible. Critical diagnostic anatomy: compact brown-black barrel-like body and a relatively short blunt snout with a tiny mouth. Over the anterior skull is a thin clear fluid-filled transparent DOME shield, biologically flexible and NOT a detached glass ball or helmet. Inside this transparent head shield are the pair of distinct luminous natural GREEN upward-oriented TUBULAR eyes, their green lens ends visible high inside the dome, with the dark eye tubes extending down into the skull. The little dark paired depressions on the FRONT of the face above the tiny mouth are OLFACTORY organs, not external eyeballs. DO NOT place ordinary goldfish eyes outside the shield. Large delicate see-through fan pectoral fins for hovering, small translucent dorsal and anal fins set back, and a small translucent forked to shallowly emarginate tail. Natural compact real species proportions, no teeth, no tentacles, no glowing fantasy markings. Use MBARI Macropinna living anatomy as conceptual biological guide, without copying a photograph. Neutral soft studio light illuminating the internal eyes and membranous dome, crisp natural fine texture; premium realistic PBR illustration. Horizontal 2048 x 1024 transparent canvas, whole fish centered and no cropping with at least 8 percent margin on every side. Real alpha transparency behind the fish and fins, no scene or water or white matte, no checkerboard, no shadow, no text/logo/labels/watermark/border.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "turbot",
+      "name": "大菱鲆",
+      "scientific_name": "Scophthalmus maximus",
+      "master": "turbot.png",
+      "source": "sources/turbot.png",
+      "runtime": "res://assets/fish/turbot.png",
+      "thumb": "res://assets/fish/turbot_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        443,
+        78,
+        1617,
+        945
+      ],
+      "subject_bbox_normalized": [
+        0.21630859375,
+        0.076171875,
+        0.78955078125,
+        0.9228515625
+      ],
+      "thumb_subject_bbox_px": [
+        111,
+        19,
+        404,
+        236
+      ],
+      "nose_normalized": [
+        0.21630859375,
+        0.48095703125
+      ],
+      "tail_normalized": [
+        0.7890625,
+        0.501171875
+      ],
+      "ruler_extent_normalized": [
+        0.21630859375,
+        0.7890625
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "faff303ab86049106df9aab252861f668050973718bfaf7b73fd0435dd8d9cd4",
+      "thumb_sha256": "8e2b1fb3a8f1f22330570f25d728219744defc06ec39e7047f8d4045b0eebf5f",
+      "source_generated_sha256": "e588fcaccc4a9e2714d16042ed0ad1c6ccbcaf808c2401c03e47168988559021",
+      "source_rgba8_sha256": "3f50bca5410a178fc66038e35bbe2196346f5fc9256e487a322b50c154c01606",
+      "thumb_source_rgba8_sha256": "11a92d94dfdb8bf8fa4f13f8e165b3a8f279a494cf80184faf6f7071549dfd47",
+      "generated_rgba8_sha256": "0e62b7aa7dff3d6454d34358a40a104bd78e57e7f03f78cbd9564ffe9bc91940",
+      "transparent_fraction": 0.7068219184875488,
+      "orientation": "head_left_tail_right",
+      "view": "left_pigmented_eye_side_broadside",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "近圆盘形侧扁体，两眼在左侧、右侧卧底；有眼面沙褐至灰色细斑、散生骨瘤，盲面白；背鳍从吻前起，背臀鳍沿体缘但不连至尾下，尾鳍短而密斑。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Scophthalmus-maximus.html",
+          "title": "Scophthalmus maximus — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/1917",
+          "title": "Turbot",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境与栖深；现实分布；习性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: a new Farshore fish encyclopedia portrait, premium photorealistic illustrative cutout, not an actual photograph. Subject: exactly one adult turbot, Scophthalmus maximus. Orthogonal view of the broad pigmented LEFT EYE SIDE, as seen from above a flatfish lying on its unpigmented blind side, no ground. Head faces LEFT, tail RIGHT. Critical anatomy: BOTH eyes together on this same upper visible side near the asymmetric head; short asymmetrical mouth. Very deep broad almost round diamond-shaped flat body, much broader and more circular than a halibut, short tail peduncle, moderately broad rounded/truncate tail. Mottled sand-brown, tan, charcoal camouflage, many scattered small raised bony tubercles over the eye-side skin instead of regular fish scales, no orange spots. Long delicate dorsal fin and anal fin follow the entire upper and lower body margins as a continuous fringed disk, small pectoral fin on eye side. Every fin and both eyes visible, full caudal fin and all fin tips inside frame. Scientifically informed PBR with realistic muted texture and fine fin rays, soft neutral studio lighting, crisp detailed animal. One fish only. Landscape 2048 x 1024 composition with broad safe transparent margins. Genuine alpha transparency, no sand, water or other scenery, no floor shadow, no white background, no baked checkerboard, no labels/text/logos/watermark/border/props, no hook or line. Do not render a symmetrical upright fish; don't confuse it with an elongated halibut or a plaice.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "john_dory",
+      "name": "海鲂",
+      "scientific_name": "Zeus faber",
+      "master": "john_dory.png",
+      "source": "sources/john_dory.png",
+      "runtime": "res://assets/fish/john_dory.png",
+      "thumb": "res://assets/fish/john_dory_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        472,
+        111,
+        1604,
+        933
+      ],
+      "subject_bbox_normalized": [
+        0.23046875,
+        0.1083984375,
+        0.783203125,
+        0.9111328125
+      ],
+      "thumb_subject_bbox_px": [
+        118,
+        27,
+        401,
+        233
+      ],
+      "nose_normalized": [
+        0.23046875,
+        0.58154296875
+      ],
+      "tail_normalized": [
+        0.78271484375,
+        0.591796875
+      ],
+      "ruler_extent_normalized": [
+        0.23046875,
+        0.78271484375
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "c4ce2cbc679106b66361ce087b4ba8802bb7aa8b454b74a6cfd1ea5a21de59cd",
+      "thumb_sha256": "2cff7c565aad5c29e0893fa2d9ac7b8d5b2671207fecf99a79cbdc6057e65402",
+      "source_generated_sha256": "5f8a4265b0ef06fa7f1b236ddf55d75ec1b7f78c69bf6200932b522a97238cb1",
+      "source_rgba8_sha256": "18fbe22134df45038492d762f06d24174b185ba6e12b1c7c62033ff9367f1d58",
+      "thumb_source_rgba8_sha256": "18326f9c5e86f951b7dfab2a813db10a67f4d839883a7614f508c33786a5e055",
+      "generated_rgba8_sha256": "3ee1407f2b08db76139b142c6cf2f61e03c2b647b1575148675ef63afe1eb88f",
+      "transparent_fraction": 0.793632984161377,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "极侧扁高身，橄榄黄至银褐体侧有浅圈围绕的蓝黑圆斑；口大且能前伸，长背棘及高出棘端的膜丝，背臀鳍基部骨盾，胸鳍较小，尾鳍圆至微截形。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Zeus-faber.html",
+          "title": "Zeus faber — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/1492",
+          "title": "John Dory",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Edit this John Dory encyclopedia illustration ONLY to improve framing and complete the longest upper dorsal filament tips. Preserve the same single adult Zeus faber, its olive-grey metallic body, large black circular flank spot with a pale ring, facial shape, natural scales, left-facing pose, small rounded tail and realistic fine fin rays. Keep head LEFT and tail RIGHT. Show every long dorsal spine/filament from base to its thin natural pointed tip, including the longest first ones currently too near the upper edge, and every narrow pelvic fin tip. Use a 1536 x 1024 landscape transparent canvas, zoom OUT so the ENTIRE fish INCLUDING the dorsal and pelvic filaments occupies at most 70 percent of canvas HEIGHT and at most 70 percent of canvas WIDTH. Large completely empty transparent margin on top and bottom is mandatory. All dorsal filaments must end naturally within the canvas and none may continue out of frame. No cropping, no cut-off rays. Do not change species, pose, colors, spot, anatomy, or photorealistic scientific illustration style. Real alpha transparency, no matte, checkerboard, scenery, shadow, text, logo, watermark or border.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1536,
+          1024
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          256,
+          0
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      },
+      "generation_history": [
+        {
+          "prompt": "Use case: scientific-educational. Asset type: new Farshore fish encyclopedia premium photorealistic illustrative cutout, not an actual wildlife photograph. Subject: exactly one adult John Dory, Zeus faber. Entire fish true left-facing lateral profile, head LEFT tail RIGHT. Very deep oval body strongly compressed from side to side, large head, relatively large forward-set eye, sloping forehead, very large protrusible oblique mouth with realistic slightly projecting closed jaws. Dull natural metallic olive-yellow, grey-gold sides and pale belly. One very conspicuous round BLACK spot surrounded by a thin pale yellow-white ring in the middle of the flank. Front dorsal fin has tall individual stiff spines with long trailing thin membrane filaments, rear dorsal is a separate broad lower soft fin; long pointed narrow dark pelvic fins, broad low anal fin, small pectoral fins and small rounded to truncate caudal tail, NOT a deeply forked tuna tail. A little bony scute texture along dorsal/anal fin bases. All slender dorsal filaments and pelvic fin tips must fit inside the frame with no clipping. Lifelike natural skin and fine fin-ray detail, scientifically informed PBR illustration, soft neutral studio illumination, sharp crisp detail, no scary fantasy styling. Horizontal 2048 x 1024 transparent landscape with generous margin on every edge; animal centered and complete. Real alpha background, no scenery, sand, water, ground shadow, white matte, checkerboard pixels, no text, letters, labels, logos, watermark, border, hook or line.",
+          "generated_source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-936624a2-7785-485d-8a7a-3d4ecb5b8ac4.png",
+          "decision": "Not selected: dorsal filament tips too near source canvas edge; edited with built-in imagegen to show full natural tips and wider margins.",
+          "source": "sources/john_dory-rejected-1.png",
+          "source_generated_sha256": "8324721d3bcccc10ce82ea9b996f458e03e66593bc3b1c91bd7534d708d4c329"
+        }
+      ],
+      "edit_referenced_image_paths": [
+        "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-936624a2-7785-485d-8a7a-3d4ecb5b8ac4.png"
+      ],
+      "edit_referenced_source_artifacts": [
+        "sources/john_dory-rejected-1.png"
+      ]
+    },
+    {
+      "species_id": "grey_gurnard",
+      "name": "灰鲂鮄",
+      "scientific_name": "Eutrigla gurnardus",
+      "master": "grey_gurnard.png",
+      "source": "sources/grey_gurnard-v2.png",
+      "runtime": "res://assets/fish/grey_gurnard.png",
+      "thumb": "res://assets/fish/grey_gurnard_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        158,
+        117,
+        1872,
+        875
+      ],
+      "subject_bbox_normalized": [
+        0.0771484375,
+        0.1142578125,
+        0.9140625,
+        0.8544921875
+      ],
+      "thumb_subject_bbox_px": [
+        39,
+        29,
+        468,
+        219
+      ],
+      "nose_normalized": [
+        0.0771484375,
+        0.513671875
+      ],
+      "tail_normalized": [
+        0.91357421875,
+        0.3966796875
+      ],
+      "ruler_extent_normalized": [
+        0.0771484375,
+        0.91357421875
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "7e5688fed7a43f1ba3fa56df128f0f58810c24420230bad5fa3172bb973a064c",
+      "thumb_sha256": "0be3f3e1c5a4f7a685211ae4183e3c10f177837a4cceb92558db1b3d1ca5ec9d",
+      "source_generated_sha256": "fab784f7eca6533caac36793d4b03cf7a90e31f899675e0137cde61fea7d7d38",
+      "source_rgba8_sha256": "236771acb57fed54c9b43dca51080cd98cf1ee143e024284d3d2c88f2ec5d49b",
+      "thumb_source_rgba8_sha256": "1c37b633cc9055e5ae56eaed1ad032139cb64c31c58050de5b99ee3c0a3786cc",
+      "generated_rgba8_sha256": "1e75dc0216a328b12b46e30ae5ace1c9e4bf66b31904208f96400bea32c32ce3",
+      "transparent_fraction": 0.7569007873535156,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "头大且额部斜陡，体向尾渐细；灰褐略带红、白色小点、腹面乳白；前背鳍小且带大黑斑，后背鳍长；短胸鳍下三根独立肉质鳍条，侧线鳞隆起带刺，尾近截形。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Eutrigla-gurnardus.html",
+          "title": "Eutrigla gurnardus — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/162",
+          "title": "Grey gurnard",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境与栖深；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://researchportal.ulisboa.pt/en/publications/ontogeny-of-acoustic-and-feeding-behaviour-in-the-grey-gurnard-eu/",
+          "title": "Ontogeny of acoustic and feeding behaviour in the grey gurnard",
+          "supports": "习性；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Precise anatomy correction of the provided single GREY gurnard, Eutrigla gurnardus, scientific encyclopedia illustration. Change ONLY the caudal TAIL FIN anatomy: the current tail is too deeply forked. A grey gurnard has a SHORT TRUNCATE caudal fin, with a nearly straight or very shallowly indented rear edge, modest rounded corners, grey-brown translucent membrane and fine natural fin rays. Replace the current large deep V-fork tail with this correctly short broad truncate tail. Do NOT make it a long triangle, swallowtail, or deeply concave fork. Preserve the same complete left-facing fish, its grey-brown mottling, white underside, angular plated head, TWO separate dorsal fins including the black patch on the first dorsal, short webbed pectoral fin and EXACTLY THREE fleshy detached lower pectoral rays. Do not alter any other body anatomy, color pattern, pose or illustration style. Whole fish including every free pectoral ray and final tail fin must remain within a horizontal 2048 x 1024 canvas with generous safe transparent margin. Real alpha transparent background, no scene, water, glow, shadow, white matte, checkerboard, text, logo, label, watermark, border, hook or line. Premium natural photorealistic PBR scientific illustration, not a wildlife photograph.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      },
+      "generation_history": [
+        {
+          "prompt": "Use case: scientific-educational. Asset type: a new Farshore fish encyclopedia portrait, photorealistic scientifically informed illustration cutout, not an actual wildlife photograph. Exactly one adult GREY gurnard, Eutrigla gurnardus, complete left-facing lateral side profile; head LEFT tail RIGHT. Species anatomy: long tapering grey-brown body with pale belly and little pale speckling, disproportionately angular bony triangular head with ridged plated cheeks, a short blunt split/spade-like snout and small low-set mouth. Two distinctly separate dorsal fins: triangular spiny first dorsal showing a dark BLACK blotch on the upper half, followed by long low soft second dorsal, corresponding low anal fin, forked caudal fin. Normal modest pectoral fin, NOT giant rainbow-blue wings. Crucial gurnard feature: show exactly THREE separate finger-like free lower pectoral rays below the front body on the visible side, gently curved down/forward like walking feelers, separate from the webbed fan pectoral fin. Fine bony scales along the lateral line can make a subtle herringbone ridge. Muted grey-tan color with faint rusty tones is natural, no bright red tub gurnard coloring. High-quality natural PBR texture, delicate fin ray membranes, neutral soft studio illumination, crisp focus. Horizontal 2048 x 1024 landscape, whole fish and all six fins including the three free rays centered with generous truly transparent safe margins. Real alpha background, no scenery, sand, shadow, floor, water, white matte or checkerboard pixels. No text/labels/logo/watermark/border/hook/line/props. Do not crop rays or replace them with legs.",
+          "generated_source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-fb1e3312-09af-4240-baf8-3d19b9b29cfa.png",
+          "decision": "Not selected: tail was too deeply forked. Built-in imagegen edit corrected to short truncate caudal fin, preserving three free pectoral rays.",
+          "source": "sources/grey_gurnard-rejected-1.png",
+          "source_generated_sha256": "450902ebde34382e979c21f8506f880be5094cbf41cc58b02a78d3f4b7b5b8f2"
+        }
+      ],
+      "edit_referenced_image_paths": [
+        "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-fb1e3312-09af-4240-baf8-3d19b9b29cfa.png"
+      ],
+      "edit_referenced_source_artifacts": [
+        "sources/grey_gurnard-rejected-1.png"
+      ]
+    },
+    {
+      "species_id": "queen_angelfish",
+      "name": "蓝额刺盖鱼",
+      "scientific_name": "Holacanthus ciliaris",
+      "master": "queen_angelfish.png",
+      "source": "sources/queen_angelfish.png",
+      "runtime": "res://assets/fish/queen_angelfish.png",
+      "thumb": "res://assets/fish/queen_angelfish_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        371,
+        128,
+        1817,
+        891
+      ],
+      "subject_bbox_normalized": [
+        0.18115234375,
+        0.125,
+        0.88720703125,
+        0.8701171875
+      ],
+      "thumb_subject_bbox_px": [
+        92,
+        32,
+        454,
+        223
+      ],
+      "nose_normalized": [
+        0.18115234375,
+        0.5302734375
+      ],
+      "tail_normalized": [
+        0.8095703125,
+        0.504638671875
+      ],
+      "ruler_extent_normalized": [
+        0.18115234375,
+        0.8095703125
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "547c90635c8612de3dd87a31344130f938ef1fd4fde5f0ffa463f9d4ed45c825",
+      "thumb_sha256": "40a084fc879c9d96b2afe2fb77871299bdefe55591cd137b63465089eeaae90c",
+      "source_generated_sha256": "2bdf1539e1219043988ac6d013d883754a82c20bbe1535aec177a2f2bbb8fea1",
+      "source_rgba8_sha256": "042370e7c2f0f9d7eb8577f0d8c5000eecae355fa77b74a33364b0f7874015ce",
+      "thumb_source_rgba8_sha256": "dc1f2d82a0c4c00b32d69299d3b60f7bc1924b652874c63b4bef5dc7b5e398fc",
+      "generated_rgba8_sha256": "de26e560ce993b152acc4d877eca7c0b1f8f23731c4a24aaedb2dae6a01924fb",
+      "transparent_fraction": 0.689445972442627,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Actual caudal extremum individually audited in source PNG at x1521, mean y448.75. Upper/lower trailing dorsal/anal tips are excluded from the ruler.",
+      "morphology_reference": "高身侧扁椭圆体、圆钝头、小刷状齿口，连续背鳍和臀鳍后端拖长；蓝绿底带黄橙鳞缘，额头黑斑有亮蓝环与点，尾鳍和胸鳍黄；模型用成鱼，不保留幼鱼蓝竖带。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Holacanthus-ciliaris.html",
+          "title": "Holacanthus ciliaris — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/queen-angelfish/",
+          "title": "Queen Angelfish",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: new Farshore fish encyclopedia portrait, premium photorealistic illustrative cutout, not an actual wildlife photograph. Exactly one mature QUEEN angelfish, Holacanthus ciliaris. Whole animal head LEFT tail RIGHT, true lateral side profile. Natural deep oval laterally compressed body, small pointed mouth, blue-green to royal-blue body with warm yellow-gold edging on individual large scales making a delicate natural network. Blue face with yellow around small lips, curved electric-blue gill edge, a distinctive dark blue-black forehead CROWN spot bordered by bright cobalt and containing a few small blue speckles: this diagnostic crown is mandatory and distinguishes a queen angelfish from a plain blue angelfish. Bright yellow caudal tail and yellow pectoral fins, elongated posterior tips on the tall dorsal and anal fins flowing slightly backward, blue-gold fin edges, narrow pelvic fins. Natural adult proportions, no juvenile vertical white stripes, no emperor angelfish horizontal stripes, no invented patterns. Fine crisp life-like scales and fin rays, scientifically informed photoreal PBR, gentle neutral studio lighting, realistic iridescence without neon glow. Entire fish and dorsal/anal trailing tips inside 2048 x 1024 transparent horizontal canvas, very generous safe margins with the animal occupying at most 75 percent of the height. Real alpha transparency, no backdrop/matte/checkerboard, no scenery, water, coral, shadow or other animals. No text, labels, logos, watermark, border, hook, bait or line.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "stoplight_parrotfish",
+      "name": "绿鹦嘴鱼",
+      "scientific_name": "Sparisoma viride",
+      "master": "stoplight_parrotfish.png",
+      "source": "sources/stoplight_parrotfish-v2.png",
+      "runtime": "res://assets/fish/stoplight_parrotfish.png",
+      "thumb": "res://assets/fish/stoplight_parrotfish_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        161,
+        121,
+        1901,
+        900
+      ],
+      "subject_bbox_normalized": [
+        0.07861328125,
+        0.1181640625,
+        0.92822265625,
+        0.87890625
+      ],
+      "thumb_subject_bbox_px": [
+        40,
+        30,
+        475,
+        225
+      ],
+      "nose_normalized": [
+        0.07861328125,
+        0.53515625
+      ],
+      "tail_normalized": [
+        0.927734375,
+        0.73388671875
+      ],
+      "ruler_extent_normalized": [
+        0.07861328125,
+        0.927734375
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "08cc94327cf7b4ebfeff13d807364e91f2595cdd7cf075118c2de9ee58f9d8f9",
+      "thumb_sha256": "1b4542b97fc871686201384fb15466323d9674b4c7299d1aa56fbcf61cf64575",
+      "source_generated_sha256": "7a1b5a2e042eea2f81797b257bf0d9cd7f5d39d364fb754020824770d5380427",
+      "source_rgba8_sha256": "5470018a273577faafb3fcde7a392418ae55c04f6b933e817af28e6ef4b111d1",
+      "thumb_source_rgba8_sha256": "be14fa520036bcb8d701a1732ade318ea4ef9e994eb5e74628061a9145db7e54",
+      "generated_rgba8_sha256": "ae59309651efa8af89318fdabea3e44a02d609effa0efb66db94195594ed3db2",
+      "transparent_fraction": 0.62237548828125,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "厚实中高侧扁体、大鳞、前吻鹦嘴状融合齿板；模型用终末相雄鱼：绿头绿身，颊部紫条、鳃盖上黄点、粉红蓝缘背臀鳍，尾基黄斑且尾鳍有黄色月弧，成鱼尾缘凹。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Sparisoma-viride.html",
+          "title": "Sparisoma viride — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；习性；食性；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/3926",
+          "title": "Stoplight Parrotfish",
+          "supports": "分类与名称；长度上限及量法；生境与栖深；现实分布；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Precise species coloration correction of the provided single adult TERMINAL-PHASE male stoplight parrotfish, Sparisoma viride, photorealistic scientific encyclopedia illustration. Preserve its full left-facing pose, green-turquoise body, large scales, fused whitish dental beak, rounded head and the existing yellow spot at upper gill cover and yellow blotch at the caudal base. Correct the TAIL FIN: green tail membrane with a clearly visible natural YELLOW CRESCENT band a little inward from the concave rear edge, extending continuously from upper corner to lower corner like a moon-shaped band; keep a thin BLUE-GREEN outer rear margin. The crescent is painted natural pigmentation ON the fin, not a separate object, glow, aura or full yellow tail. Retain mature male concave/lunate tail shape. Correct the long DORSAL and ANAL fin membranes and narrow PELVIC fins to muted coral-pink with thin blue edges, as characteristic of the terminal phase; do not turn the green body pink. Subtly shift existing cheek stripes toward muted pink-purple if needed, preserving their shape. Do not alter the species, body anatomy, pose, scale texture, background or photographic illustration quality. Every fin and tail tip fully visible with generous transparent safe margin in a 2048 x 1024 horizontal canvas, head LEFT tail RIGHT. Genuine alpha-transparent background, no scenery, water, ground shadow, glow, matte, checkerboard, text, logo, labels, watermark, border, hook or line. Scientifically informed PBR illustrative cutout, not an actual wildlife photograph.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      },
+      "generation_history": [
+        {
+          "prompt": "Use case: scientific-educational. Asset type: new Farshore fish encyclopedia portrait, premium photorealistic scientifically informed illustration cutout, not an actual wildlife photograph. Exactly one adult male STOPLIGHT parrotfish, Sparisoma viride, in natural TERMINAL phase. Whole fish head LEFT tail RIGHT, true lateral side profile. Broad robust elongated oval body, blunt rounded head, distinctive small pale whitish fused dental BEAK inside reddish-coral fleshy lips, NOT a bird's hooked beak and not separate exposed canine teeth. Large regular natural scales over predominantly turquoise-green / emerald adult body. Diagnostic terminal-phase colors: a conspicuous small bright YELLOW spot just above/behind the pectoral fin base near the rear of the gill cover, plus a YELLOW patch/saddle on the UPPER base of the tail peduncle. Subtle coral-pink curved markings on the face and around the lips/eye; blue-green fins with muted coral-pink edging. Single long dorsal fin with low spiny front and soft rear, corresponding low anal fin, broad translucent green pectoral fin, modest pelvic fins, broad slightly emarginate tail with rounded/pointed corners. Natural real adult proportions. No female initial-phase red belly; no juvenile stripes; no neon rainbow invention. Crisp natural PBR scales and fine fin membranes, neutral soft studio illumination with restrained realistic iridescence. 2048 x 1024 transparent landscape, entire animal and every fin fully visible with broad safe margins. Real alpha transparency, no scenery or water, no objects, floor shadow, white matte or baked checkerboard, no text/labels/logo/watermark/border, no hook/line/bait.",
+          "generated_source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-aaaaf206-4c8a-4817-a941-ddb2fbc9b98c.png",
+          "decision": "Not selected: terminal-phase tail lacked yellow crescent and fin membrane colors needed correction. Built-in imagegen edit added species-specific yellow tail crescent and coral-pink fins with blue edges.",
+          "source": "sources/stoplight_parrotfish-rejected-1.png",
+          "source_generated_sha256": "226dee806aee1dc98bf1fa72c0d59d66246c7af12731c60844ec0a939b6db9b2"
+        }
+      ],
+      "edit_referenced_image_paths": [
+        "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-aaaaf206-4c8a-4817-a941-ddb2fbc9b98c.png"
+      ],
+      "edit_referenced_source_artifacts": [
+        "sources/stoplight_parrotfish-rejected-1.png"
+      ]
+    },
+    {
+      "species_id": "atlantic_flyingfish",
+      "name": "大西洋飞鱼",
+      "scientific_name": "Cheilopogon melanurus",
+      "master": "atlantic_flyingfish.png",
+      "source": "sources/atlantic_flyingfish.png",
+      "runtime": "res://assets/fish/atlantic_flyingfish.png",
+      "thumb": "res://assets/fish/atlantic_flyingfish_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        184,
+        88,
+        1876,
+        930
+      ],
+      "subject_bbox_normalized": [
+        0.08984375,
+        0.0859375,
+        0.916015625,
+        0.908203125
+      ],
+      "thumb_subject_bbox_px": [
+        46,
+        22,
+        469,
+        233
+      ],
+      "nose_normalized": [
+        0.08984375,
+        0.49609375
+      ],
+      "tail_normalized": [
+        0.91552734375,
+        0.8291015625
+      ],
+      "ruler_extent_normalized": [
+        0.08984375,
+        0.91552734375
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "7603dad210f69f36fc8d38c7c914a8c200901b10ccccf329f164087197d77b88",
+      "thumb_sha256": "8787cef846e7ec7199cda55c35e94625ece4bea5f300d55f79ab34d314548769",
+      "source_generated_sha256": "dc9750baac54356dd4fab813838f3f00089b0febaa24d567da4b4dd26ae53082",
+      "source_rgba8_sha256": "06161ef90da4eea8a6f4ca5ebf4f8135621543dfbbd168685c2e6bd57b493e94",
+      "thumb_source_rgba8_sha256": "24840e7bb251a39324e2c163ebe417d8c018a75036757395013f65a81fbf82d9",
+      "generated_rgba8_sha256": "d2e96c094940ee3c0805b237ff5d82caf83a63fdb5bb361a744227a0937b2c36",
+      "transparent_fraction": 0.7500362396240234,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile_slight_elevated_view",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "修长近矩形截面的银色体，上暗下白、小钝头小口；胸鳍极长、腹鳍也长，形成四翼轮廓；胸鳍灰有淡三角横带与透明窄缘，腹鳍透明，背鳍低短；深叉尾下叶明显长于上叶。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Cheilopogon-melanurus.html",
+          "title": "Cheilopogon melanurus — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/3334",
+          "title": "Atlantic Flyingfish",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: new Farshore fish encyclopedia portrait, premium photorealistic scientific illustration cutout, not an actual wild photograph. Exactly one adult Atlantic flyingfish, Cheilopogon melanurus, the Atlantic FOUR-WING flyingfish. Entire fish head LEFT tail RIGHT in a mainly lateral profile with a slight elevated three-quarter angle sufficient to show expanded paired fins. Long slender streamlined body with metallic dark blue-grey back and silvery sides/belly, small blunt somewhat squared snout, small mouth, large dark eye. Crucial anatomy: very elongated winglike pectoral fins expanded laterally, translucent smoky grey with natural dark patches and fine visible radial rays, extending backwards nearly to the tail. Enlarged pelvic fins also spread as the smaller hind 'wings' below/behind midbody. These are actual fin membranes, NOT bird wings, feathers or arms. Small ordinary soft dorsal and anal fins toward rear. Deeply forked caudal tail with the LOWER tail lobe conspicuously longer than the upper lobe, a real flyingfish propulsion trait; not a symmetric fork. Show all pectoral and pelvic wing edges fully and the complete longer lower tail tip. One fish only and no airborne background, droplets or splash. Natural life-like small scales, subtle silver reflectance, precise membrane texture, gentle neutral studio light, crisp scientifically informed PBR. 2048 x 1024 horizontal transparent composition with at least 10 percent safe margin and full wing/tail span inside canvas. Actual alpha transparency, no scenery, shadows, matte or baked checkerboard, no text/labels/logo/watermark/border/hook/line/bait. Do not crop a wing tip.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "atlantic_tarpon",
+      "name": "大海鲢",
+      "scientific_name": "Megalops atlanticus",
+      "master": "atlantic_tarpon.png",
+      "source": "sources/atlantic_tarpon.png",
+      "runtime": "res://assets/fish/atlantic_tarpon.png",
+      "thumb": "res://assets/fish/atlantic_tarpon_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        162,
+        220,
+        1897,
+        810
+      ],
+      "subject_bbox_normalized": [
+        0.0791015625,
+        0.21484375,
+        0.92626953125,
+        0.791015625
+      ],
+      "thumb_subject_bbox_px": [
+        40,
+        55,
+        474,
+        203
+      ],
+      "nose_normalized": [
+        0.0791015625,
+        0.46240234375
+      ],
+      "tail_normalized": [
+        0.92578125,
+        0.74560546875
+      ],
+      "ruler_extent_normalized": [
+        0.0791015625,
+        0.92578125
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "dc0f403809d09812829fa4f3ff1d0493ac1f467c576d1182a2e67e6a052bc356",
+      "thumb_sha256": "75919a515275310d98352f09ef088309f6dec0e1fcc2f5234ea402dbf46235c5",
+      "source_generated_sha256": "6850cc92261f12d9bf5e244dcecbe4dcf03ff11fc61128ea29238ccc681eff38",
+      "source_rgba8_sha256": "4b7ad9f9d4a68791b27d8752a0bbd9717cf3ef14720f35332cd0f95f45641bf8",
+      "thumb_source_rgba8_sha256": "6bef9caa290e4dc553f27a11491806e4b711ef46dd678d40c412f13f9937a8aa",
+      "generated_rgba8_sha256": "3480a60d26e526e93434db132c9e91cb0af970d30811dcf11f50026bc3424d34",
+      "transparent_fraction": 0.777977466583252,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "粗壮修长侧扁体、非常大的银鳞，背深蓝绿黑、腹侧亮银；大口向上、下颌突出，单背鳍末条拉成长丝，尾深叉两叶近等长，鳍灰暗且无硬棘。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/1079",
+          "title": "Megalops atlanticus — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/tarpon/",
+          "title": "Tarpon",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: new Farshore fish encyclopedia portrait, premium photorealistic scientific illustration cutout, not an actual wildlife photograph. Exactly one adult Atlantic tarpon, Megalops atlanticus. Whole fish in a calm natural left-facing lateral swimming profile; head LEFT tail RIGHT. Long robust silvery body with very large brilliant reflective plate-like overlapping scales on the sides, dark blue-green to slate back and bright silver belly. Very large upturned oblique mouth with the projecting lower jaw forming its iconic bucket-like scoop, large dark eye with restrained golden rim, high straight forehead. Diagnostic short single dorsal fin above midbody with its LAST dorsal ray extended into a long slender natural filament trailing backward almost toward the tail. This dorsal filament must be visible in full and pointed, not clipped. Modest pointed pectoral and pelvic fins, low posterior anal fin, deeply forked dark-silver caudal tail and narrow tail peduncle. No adipose fin, no chin barbels, no tuna finlets, no salmon spots. Natural mature tarpon proportions and all fins shown. Fine lifelike scale relief and membrane rays, neutral soft studio light creating convincing but restrained metallic silver shine, crisp PBR illustration. Horizontal 2048 x 1024 transparent canvas, entire complete animal centered with broad safe margins, including dorsal filament and both tail lobes. Actual alpha-transparent background, no white matte, checkerboard, scenery, water splash, floor shadow or props. No text, letters, labels, logo, watermark, border, hook, line or bait.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    },
+    {
+      "species_id": "black_scabbardfish",
+      "name": "黑带鱼",
+      "scientific_name": "Aphanopus carbo",
+      "master": "black_scabbardfish.png",
+      "source": "sources/black_scabbardfish.png",
+      "runtime": "res://assets/fish/black_scabbardfish.png",
+      "thumb": "res://assets/fish/black_scabbardfish_thumb.png",
+      "width": 2048,
+      "height": 1024,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        166,
+        383,
+        1882,
+        625
+      ],
+      "subject_bbox_normalized": [
+        0.0810546875,
+        0.3740234375,
+        0.9189453125,
+        0.6103515625
+      ],
+      "thumb_subject_bbox_px": [
+        41,
+        96,
+        471,
+        156
+      ],
+      "nose_normalized": [
+        0.0810546875,
+        0.54052734375
+      ],
+      "tail_normalized": [
+        0.91845703125,
+        0.4580078125
+      ],
+      "ruler_extent_normalized": [
+        0.0810546875,
+        0.91845703125
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "f921e40d32c8a75ac6a6bfa1c28bd5173964375961f5916a8826fbf7bfe462e7",
+      "thumb_sha256": "533dea3aa593e55daab5c28cc4ce94313167791a088f829cb203512a37a61e02",
+      "source_generated_sha256": "ff25ec62943d03fa715f1c3dde6a7f7e93281ea615c4729f4e030bb25d3af005",
+      "source_rgba8_sha256": "baf5f2492f00e068ff22cedc0ca909ed4369e6e3f9f83452043debf5aef5f25d",
+      "thumb_source_rgba8_sha256": "2caabc3868db7e654da59664b8a2f722cda143b12898c03ef393ffd11a43934b",
+      "generated_rgba8_sha256": "2d4d6010bf4f2dfbec7d8f89c2d874eeec95f002bbb66ef1dc26605a2824c2cc",
+      "transparent_fraction": 0.8849730491638184,
+      "orientation": "head_left_tail_right",
+      "view": "lateral_profile",
+      "landmark_note": "Snout and caudal tip visually verified at silhouette extremities; x extent excludes no anterior whisker or tail extension.",
+      "morphology_reference": "极长且侧扁的带状体，宽长吻和外露尖獠牙；皮肤铜黑带虹彩、口腔和鳃腔黑，长低背鳍与臀鳍、尾鳍分叉；成年完全无腹鳍，幼鱼才有单棘，不能画成常见白银带鱼的尖细无尾末端。",
+      "fact_sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Aphanopus-carbo.html",
+          "title": "Aphanopus carbo — species summary",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        },
+        {
+          "url": "https://museubiodiversidade.uevora.pt/elenco-de-especies/biodiversidade-actual/animais/aphanopus-carbo/",
+          "title": "Peixe-espada-preto / Aphanopus carbo",
+          "supports": "分类与名称；体重上限；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。",
+          "checked_on": "2026-10-04"
+        }
+      ],
+      "generator": "OpenAI built-in image_gen.imagegen",
+      "generated_on": "2026-10-04",
+      "prompt": "Use case: scientific-educational. Asset type: new Farshore fish encyclopedia portrait, premium photorealistic scientifically informed illustration cutout, not an actual wildlife photograph. Exactly one adult BLACK SCABBARDFISH, Aphanopus carbo. Whole animal head LEFT tail RIGHT in a true lateral horizontal side profile. Very long slender laterally compressed ribbon-like body, about 8 to 10 times longer than its greatest body depth, tapered gradually toward a thin peduncle, dark charcoal-brown to nearly BLACK with restrained bronze-violet metallic highlights on the living skin, not shiny silver cutlassfish. Relatively short angular pointed head, very large dark eye, large oblique mouth with the lower jaw projecting slightly and several long sharply pointed fang-like teeth in the front; mouth partly open naturally, not a monster grimace. A very LONG continuous low dorsal fin runs from just behind the head almost to the tail, with a spiny front portion and fine soft-rayed rear portion. Low anal fin along the posterior half only. Small pointed pectoral fin near the gill. Adult has NO pelvic fins. Crucially, finish the body with a SMALL distinct narrow FORKED caudal fin, NOT a whip tip and NOT an eel's continuous tail. Fin membranes charcoal-grey, fine subtle minute scale/skin relief. The entire elongated body and complete tiny forked tail must be visible and not bent into a coil. Natural precise real species proportions, premium PBR illustration with soft neutral studio light and crisp anatomically detailed dark surfaces. Horizontal 2048 x 1024 transparent canvas, fish centered with at least 10 percent safe margins left and right and generous empty space above and below. Genuine alpha transparency, no matte/checkerboard, shadows, scenery, water, objects, text, letters, labels, logos, watermark, border, hook, line or bait. Do not turn it into a black moray eel, an oarfish, or silver Trichiurus.",
+      "transparent_background_requested": true,
+      "postprocess": {
+        "operation": "lossless transparent canvas padding only; Lanczos thumbnail",
+        "generated_size": [
+          1774,
+          887
+        ],
+        "canvas_size": [
+          2048,
+          1024
+        ],
+        "padding_offset_px": [
+          137,
+          68
+        ],
+        "generated_pixels_preserved_without_resampling": true
+      },
+      "visual_qa": {
+        "checked_on": "2026-10-04",
+        "method": "individual view_image of generated source at original resolution",
+        "full_body_and_all_fins_visible": true,
+        "one_species_only": true,
+        "head_left_tail_right": true,
+        "no_text_or_watermark": true
+      }
+    }
+  ]
+}

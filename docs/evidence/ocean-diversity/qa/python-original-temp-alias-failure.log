@@ -1,0 +1,60 @@
+.................FF.............s...............FF.........
+======================================================================
+FAIL: test_default_and_external_staging_create_and_owned_cleanup (test_release_packaging.IsolatedStagingTests.test_default_and_external_staging_create_and_owned_cleanup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/test_release_packaging.py", line 272, in test_default_and_external_staging_create_and_owned_cleanup
+    work, identity = prebuilt.create_staging_work(root, '1.2.0', parent)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/android_prebuilt_build.py", line 65, in create_staging_work
+    parent = checked_staging_parent(root, staging_parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/android_prebuilt_build.py", line 57, in checked_staging_parent
+    assert not part.is_symlink(), 'Staging parent and ancestors must not be symlinks'
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Staging parent and ancestors must not be symlinks
+
+======================================================================
+FAIL: test_unsafe_staging_and_replaced_cleanup_targets_fail_closed (test_release_packaging.IsolatedStagingTests.test_unsafe_staging_and_replaced_cleanup_targets_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/test_release_packaging.py", line 289, in test_unsafe_staging_and_replaced_cleanup_targets_fail_closed
+    work, identity = prebuilt.create_staging_work(root, '1.2.0', parent)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/android_prebuilt_build.py", line 65, in create_staging_work
+    parent = checked_staging_parent(root, staging_parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/android_prebuilt_build.py", line 57, in checked_staging_parent
+    assert not part.is_symlink(), 'Staging parent and ancestors must not be symlinks'
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Staging parent and ancestors must not be symlinks
+
+======================================================================
+FAIL: test_cleanup_requires_exact_owned_identity_and_internal_name (test_unsigned_handoff.UnsignedHandoffTests.test_cleanup_requires_exact_owned_identity_and_internal_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/test_unsigned_handoff.py", line 138, in test_cleanup_requires_exact_owned_identity_and_internal_name
+    handoff.owned_cleanup(self.root, work, owner)
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/android_unsigned_handoff.py", line 180, in owned_cleanup
+    external_path(root, work)
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/android_unsigned_handoff.py", line 52, in external_path
+    assert all(not p.is_symlink() for p in (path, *path.parents)), 'Symlinked output/ancestor refused'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Symlinked output/ancestor refused
+
+======================================================================
+FAIL: test_external_paths_reject_primary_ancestors_existing_and_symlinks (test_unsigned_handoff.UnsignedHandoffTests.test_external_paths_reject_primary_ancestors_existing_and_symlinks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/test_unsigned_handoff.py", line 87, in test_external_paths_reject_primary_ancestors_existing_and_symlinks
+    self.assertEqual(handoff.external_path(self.root, wanted, absent=True), wanted)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/tools/android_unsigned_handoff.py", line 52, in external_path
+    assert all(not p.is_symlink() for p in (path, *path.parents)), 'Symlinked output/ancestor refused'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Symlinked output/ancestor refused
+
+----------------------------------------------------------------------
+Ran 59 tests in 4.008s
+
+FAILED (failures=4, skipped=1)

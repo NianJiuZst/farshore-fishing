@@ -134,6 +134,16 @@ func _json(value: Variant) -> String:
 func _same(left: Variant, right: Variant) -> bool:
 	return JSON.parse_string(_json(left)) == JSON.parse_string(_json(right))
 
+func _expected_runtime(value: Dictionary) -> Dictionary:
+	# Legacy fixture files intentionally have no whale namespace. The current
+	# reader adds this empty independent progress field in memory; all historical
+	# fields and original disk bytes must still compare exactly.
+	var result: Dictionary = value.duplicate(true)
+	if not result.has("whale_challenge"):
+		result["whale_challenge"] = {"completion_count": 0, "notebook_unlocked": false,
+			"first": {}, "last": {}, "best": {}, "recent_ids": []}
+	return result
+
 func _without_revision(value: Dictionary) -> Dictionary:
 	var result: Dictionary = value.duplicate(true)
 	result.erase("save_revision")
@@ -251,7 +261,7 @@ func _settle(store: Store, record: Dictionary) -> Dictionary:
 func _test_historical_catalog_bindings() -> void:
 	_check(Store.SCHEMA_VERSION == 2, "expansion keeps installed release schema 2")
 	_check(HISTORICAL_SPECIES.size() == 44 and OCEAN_SPECIES.size() == 30, "independent 44 + 30 literal identities")
-	_check(catalog.fish.size() == 74 and catalog.regions.size() == 9, "catalog has 74 fish and nine regions")
+	_check(catalog.fish.size() == 111 and catalog.fish_species_count() == 110 and catalog.regions.size() == 10 and catalog.spots.size() == 21 and catalog.gear.size() == 6, "current catalog keeps 110 fish, one mammal, ten regions, 21 spots and six rods")
 	for row: Array in HISTORICAL_SPECIES:
 		_check(catalog.fish.has(row[0]), "historical fish identity remains: " + str(row[0]))
 		_check(catalog.spots.has(row[2]) and str(catalog.spots[row[2]]["region_id"]) == row[1], "historical location remains: " + str(row[2]))
@@ -268,10 +278,11 @@ func _test_historical_expansion(schema: int, implicit_schema: bool) -> void:
 	var label: String = "schema_%d%s" % [schema, "_implicit" if implicit_schema else ""]
 	var root_path: String = test_root.path_join(label)
 	var raw: Dictionary = _historical_fixture(schema, implicit_schema)
+	_check(not raw.has("whale_challenge"), label + " raw historical fixture has no invented whale progress")
 	var original_bytes: String = _seed(root_path, raw)
 	var store: Store = Store.new()
 	_check(store.initialize(root_path), label + " loads literal 44-species fixture: " + store.error_message)
-	var expected: Dictionary = _historical_fixture()
+	var expected: Dictionary = _expected_runtime(_historical_fixture())
 	if implicit_schema:
 		expected["save_revision"] = 0
 		expected["settings"]["vibration"] = true
@@ -357,8 +368,9 @@ func _envelope(value: Dictionary) -> String:
 
 func _test_transfer_roundtrip() -> void:
 	var source_root: String = test_root.path_join("transfer_source")
-	var expected: Dictionary = _expanded_fixture()
-	_seed(source_root, expected)
+	var raw_source: Dictionary = _expanded_fixture()
+	var expected: Dictionary = _expected_runtime(raw_source)
+	_seed(source_root, raw_source)
 	var source: Store = Store.new()
 	_check(source.initialize(source_root), "expanded transfer source initializes")
 	var source_files: Dictionary = _files(source_root)
@@ -501,7 +513,7 @@ func _test_import_guards() -> void:
 		future["schema_version"] = 3
 		_write(future_root.path_join(name), _json(future))
 		var files_before: Dictionary = _files(future_root)
-		_check(not bool(current.import_save_text(text, 417).get("ok", false)) and _same(current.state, _historical_fixture()) and _files(future_root) == files_before, name + " introduced future file prevents import without touching any file")
+		_check(not bool(current.import_save_text(text, 417).get("ok", false)) and _same(current.state, _expected_runtime(_historical_fixture())) and _files(future_root) == files_before, name + " introduced future file prevents import without touching any file")
 	var max_root: String = test_root.path_join("revision_limit")
 	var at_limit: Dictionary = _historical_fixture()
 	at_limit["save_revision"] = Store.MAX_COUNTER
@@ -509,7 +521,7 @@ func _test_import_guards() -> void:
 	var limit: Store = Store.new()
 	_check(limit.initialize(max_root), "maximum revision readable")
 	before_files = _files(max_root)
-	_check(not bool(limit.import_save_text(text, Store.MAX_COUNTER).get("ok", false)) and _same(limit.state, at_limit) and _files(max_root) == before_files, "revision limit cannot replace state or undo snapshot")
+	_check(not bool(limit.import_save_text(text, Store.MAX_COUNTER).get("ok", false)) and _same(limit.state, _expected_runtime(at_limit)) and _files(max_root) == before_files, "revision limit cannot replace state or undo snapshot")
 	print("PASS GROUP active/retry/stale/future-file/revision-limit import guards")
 
 func _test_failed_imports_and_undo() -> void:
@@ -528,7 +540,7 @@ func _test_failed_imports_and_undo() -> void:
 		var reload: Store = Store.new()
 		_check(reload.initialize(root_path) and _same(reload.state, before), mode + " failed import restarts original progress")
 		_check(bool(store.import_save_text(_envelope(_expanded_fixture()), 417).get("ok", false)), mode + " same import can be retried successfully")
-		var expanded: Dictionary = _expanded_fixture()
+		var expanded: Dictionary = _expected_runtime(_expanded_fixture())
 		expanded["save_revision"] = 418
 		_check(_same(store.state, expanded), mode + " retried import exact, revision increments once")
 		# Failed undo must retain BOTH the current save and the target snapshot so
@@ -558,7 +570,7 @@ func _test_failed_snapshot_copy_and_rollback() -> void:
 	_check(_same(store.state, before) and _files(root_path) == before_files, "failed rollback copy retains current progress and all original bytes")
 	var restart: Store = Store.new()
 	_check(restart.initialize(root_path) and _same(restart.state, before), "failed rollback copy restarts unchanged")
-	_check(bool(store.restore_previous_save(418).get("ok", false)) and _same(_without_revision(store.state), _without_revision(_historical_fixture())), "failed rollback copy retries to the correct historical target")
+	_check(bool(store.restore_previous_save(418).get("ok", false)) and _same(_without_revision(store.state), _without_revision(_expected_runtime(_historical_fixture()))), "failed rollback copy retries to the correct historical target")
 	_check(bool(store.restore_previous_save(419).get("ok", false)), "redo remains available after copy-failure retry")
 	before = store.state
 	before_files = _files(root_path)
@@ -602,7 +614,7 @@ func _test_corruption_and_future_saves() -> void:
 	var legacy_bytes: String = _seed(recovery_root, valid)
 	_write(recovery_root.path_join(Store.PRIMARY_NAME), "{corrupt primary from interruption")
 	var recovery: Store = Store.new()
-	_check(recovery.initialize(recovery_root) and _same(recovery.state, valid), "corrupt primary recovers all 44 species from valid backup")
+	_check(recovery.initialize(recovery_root) and _same(recovery.state, _expected_runtime(valid)), "corrupt primary recovers all 44 species from valid backup")
 	_check(_read(recovery_root.path_join(Store.PRIMARY_NAME)) == "{corrupt primary from interruption" and _read(recovery_root.path_join(Store.BACKUP_NAME)) == legacy_bytes, "recovery itself preserves both original file bytes")
 	_check(bool(_settle(recovery, _ocean_record(0)).get("ok", false)), "recovered historical save may append ocean discovery")
 	var found_archive: bool = false

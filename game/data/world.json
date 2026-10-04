@@ -258,6 +258,21 @@
       "rod_length": 2.58,
       "rod_radius": 0.018,
       "tolerance": 1.75
+    },
+    {
+      "id": 5,
+      "name": "深蓝 · 垂降探海竿",
+      "price": 540,
+      "max_depth_m": 700,
+      "power": 1.35,
+      "tolerance": 1.45,
+      "reach": 0.92,
+      "description": "700米虚拟垂降，探访管眼鱼和黑带鱼；战斗强度接近探深竿。游戏自动搭配垂降钓组，不将真实深海调查描绘成岸边浮漂钓法。",
+      "rod_length": 2.3,
+      "rod_radius": 0.017,
+      "rod_color": "174f67",
+      "reel_color": "a8b9c5",
+      "grip_color": "283d4b"
     }
   ],
   "regions": [
@@ -385,6 +400,21 @@
       "spots": [
         "indian_reef",
         "indian_bluewater"
+      ]
+    },
+    {
+      "region_id": "red_sea",
+      "name": "赭岸红海",
+      "subtitle": "红海 · 沙漠海岸与珊瑚壁",
+      "description": "赭色山岸环绕清透礁湖，蝶鱼、炮弹鱼与长吻海鱼穿过珊瑚壁。这里将红海多处生态环境组合成旅行航段；图鉴保留每种生物的真实分布。",
+      "scene": "res://assets/scenery/red_sea.png",
+      "color": "#53b9bd",
+      "unlock_count": 30,
+      "unlock_cost": 550,
+      "spots": [
+        "red_sea_lagoon",
+        "red_sea_wall",
+        "red_sea_bluehole"
       ]
     }
   ],
@@ -555,12 +585,12 @@
       "spot_id": "pacific_bluewater",
       "region_id": "pacific_ocean",
       "name": "远洋巡游",
-      "habitat": "太平洋大陆坡外侧与开放水层的虚构航段",
+      "habitat": "太平洋大陆坡外侧与开放水层的虚构航段；专用垂降装备可进入700米以内的深水观察航段",
       "salinity": "salt",
       "depth_min_m": 10,
-      "depth_max_m": 180,
+      "depth_max_m": 700,
       "min_gear": 2,
-      "cast_hint": "中远抛探索金枪鱼与旗鱼，巨物相遇不等于必定钓获",
+      "cast_hint": "中远抛探索金枪鱼与旗鱼，巨物相遇不等于必定钓获；深海物种需专用垂降竿，非浅水随机刷出",
       "foreground": "boat",
       "scene": "res://assets/scenery/pacific_ocean.png",
       "hide_region_foreground": true
@@ -571,7 +601,7 @@
       "name": "海崖陆架",
       "habitat": "西大西洋陆架、礁体与温带岸外的虚构合辑",
       "salinity": "salt",
-      "depth_min_m": 5,
+      "depth_min_m": 0.5,
       "depth_max_m": 90,
       "min_gear": 2,
       "cast_hint": "虾饵、鱼肉块与拟饵各有所长；大型鲨鱼只作保护观察",
@@ -583,12 +613,12 @@
       "spot_id": "atlantic_bluewater",
       "region_id": "atlantic_ocean",
       "name": "北辰蓝水",
-      "habitat": "大西洋不同纬度的外海虚构航段；月鱼条目以北大西洋为准",
+      "habitat": "大西洋不同纬度的外海虚构航段；月鱼条目以北大西洋为准；专用垂降装备可进入700米以内的深水观察航段",
       "salinity": "salt",
       "depth_min_m": 15,
-      "depth_max_m": 180,
+      "depth_max_m": 700,
       "min_gear": 2,
-      "cast_hint": "探深竿覆盖全部水层，强力竿仍需注意90米探深限制",
+      "cast_hint": "探深竿覆盖全部水层，强力竿仍需注意90米探深限制；深海物种需专用垂降竿，非浅水随机刷出",
       "foreground": "boat",
       "scene": "res://assets/scenery/atlantic_ocean.png",
       "hide_region_foreground": true
@@ -611,15 +641,51 @@
       "spot_id": "indian_bluewater",
       "region_id": "indian_ocean",
       "name": "季风外海",
-      "habitat": "印度洋热带至温带开放水域的虚构旅行航段",
+      "habitat": "印度洋热带至温带开放水域的虚构旅行航段；专用垂降装备可进入700米以内的深水观察航段",
       "salinity": "salt",
       "depth_min_m": 10,
-      "depth_max_m": 180,
+      "depth_max_m": 700,
       "min_gear": 2,
-      "cast_hint": "拟饵与鱼肉块吸引巡游掠食鱼，实际距离条件见图鉴",
+      "cast_hint": "拟饵与鱼肉块吸引巡游掠食鱼，实际距离条件见图鉴；深海物种需专用垂降竿，非浅水随机刷出",
       "foreground": "boat",
       "scene": "res://assets/scenery/indian_ocean.png",
       "hide_region_foreground": true
+    },
+    {
+      "spot_id": "red_sea_lagoon",
+      "region_id": "red_sea",
+      "name": "海葵礁湖",
+      "habitat": "1—22米清澈潟湖、海葵、小型珊瑚礁与沙底",
+      "depth_min_m": 1,
+      "depth_max_m": 22,
+      "min_gear": 0,
+      "foreground": "rocks",
+      "salinity": "salt",
+      "cast_hint": "轻装近抛找小丑鱼、蝶鱼；贴礁慢收留意鳄形鲬"
+    },
+    {
+      "spot_id": "red_sea_wall",
+      "region_id": "red_sea",
+      "name": "赭岸珊瑚壁",
+      "habitat": "10—100米珊瑚壁浅肩、礁台、清水礁坡与外缘巡游区",
+      "depth_min_m": 10,
+      "depth_max_m": 100,
+      "min_gear": 1,
+      "foreground": "boat",
+      "salinity": "salt",
+      "cast_hint": "中程沿礁壁探访箱形、圆盘与长吻鱼；一号旅行竿也能覆盖浅肩"
+    },
+    {
+      "spot_id": "red_sea_bluehole",
+      "region_id": "red_sea",
+      "name": "蓝洞外缘",
+      "habitat": "30—180米蓝洞外海航段；礁鱼仅在其真实可利用的浅肩水层列入",
+      "depth_min_m": 30,
+      "depth_max_m": 180,
+      "min_gear": 1,
+      "foreground": "boat",
+      "salinity": "salt",
+      "cast_hint": "从30米浅肩到深蓝外缘；列表按所持钓竿的实际探深筛选"
     }
   ]
 }

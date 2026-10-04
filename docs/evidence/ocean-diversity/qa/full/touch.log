@@ -1,0 +1,21 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/touch_scroll_tests.gd -- --production --require-full
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only
+PRODUCTION_TOUCH _show_gear offset=315 maximum=3011.0
+PRODUCTION_TOUCH_BOTTOM offset=3011 maximum=3011
+PRODUCTION_TOUCH _show_travel offset=315 maximum=3837.0
+PRODUCTION_TOUCH_BOTTOM offset=3837 maximum=3837
+PRODUCTION_TOUCH _show_catalog offset=315 maximum=18350.0
+PRODUCTION_TOUCH_BOTTOM offset=18350 maximum=18350
+PRODUCTION_TOUCH _show_settings offset=315 maximum=647.0
+PRODUCTION_TOUCH_BOTTOM offset=647 maximum=647
+PRODUCTION_TOUCH _show_licenses offset=315 maximum=102888.0
+PRODUCTION_TOUCH_BOTTOM offset=102888 maximum=102888
+PRODUCTION_TOUCH_BOTTOM offset=3011 maximum=3011
+PRODUCTION_TOUCH_BOTTOM offset=3011 maximum=3011
+PREVIEW_TOUCH_RANGE maximum=3133.0 offset=209 completed_drags=1
+TOUCH_SCOPE: complete111-model registry; ordinary fish gameplay assertions enabled
+TOUCH_SCROLL_TESTS: 153/153 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag

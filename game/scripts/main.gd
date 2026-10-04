@@ -14,6 +14,9 @@ const NotebookUI = preload("res://scripts/fish_notebook_ui.gd")
 const MenuPages = preload("res://scripts/fishing_menu_pages.gd")
 const FailureModal = preload("res://scripts/fishing_failure_modal.gd")
 const Audio = preload("res://scripts/audio_manager.gd")
+const WhaleChallenge = preload("res://scripts/blue_whale_challenge.gd")
+const WhaleUI = preload("res://scripts/whale_challenge_ui.gd")
+const WhaleStage = preload("res://scripts/whale_challenge_stage_3d.gd")
 const INK: Color = Color("213c41")
 const NAVY: Color = Color("102f3b")
 const GOLD: Color = Color("95601e")
@@ -103,6 +106,13 @@ var _backup_edit: TextEdit
 var _backup_candidate: String = ""
 var _backup_revision: int = -1
 var _condition_key: String = ""
+var whale_challenge: BlueWhaleChallenge = WhaleChallenge.new()
+var _whale_view: WhaleChallengeUI
+var _whale_navigation: Button
+var _whale_origin_mode: String = "lobby"
+var _whale_record: Dictionary = {}
+var _whale_save_ok: bool = false
+var _whale_new_best: bool = false
 
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
@@ -150,6 +160,7 @@ func _ready() -> void:
 	session.changed.connect(_session_changed)
 	session.ended.connect(_fishing_ended)
 	session.cue.connect(sound.cue)
+	whale_challenge.ended.connect(_whale_ended)
 	if not _refresh_location(): _content_ok = false
 	_update_conditions()
 	_apply_preferences()
@@ -376,6 +387,12 @@ func _build_fishing_screen() -> void:
 		navigation.icon_extent=52
 		navigation.add_theme_font_size_override("font_size",21)
 		edge.add_child(navigation)
+	_whale_navigation = _navigation("鲸影","compass",_show_whale_briefing)
+	_whale_navigation.name = "WhaleChallengeEntry"
+	_whale_navigation.custom_minimum_size = Vector2(102,100)
+	_whale_navigation.icon_extent = 52
+	_whale_navigation.add_theme_font_size_override("font_size",21)
+	edge.add_child(_whale_navigation)
 	_toast=_text("",23,PAPER)
 	_toast.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	_toast.add_theme_stylebox_override("normal",_box(Color(0.025,0.09,0.12,0.92),16))
@@ -495,6 +512,10 @@ func _safe_area() -> void:
 
 func _process(delta: float) -> void:
 	if not _startup_complete: return
+	if _mode == "whale":
+		whale_challenge.step(delta)
+		if whale_challenge.is_active() and whale_challenge.state != WhaleChallenge.State.PAUSED: game_clock += delta
+		return
 	if _mode == "fishing" and not scenery.cast_in_progress and not _landing_pending:
 		session.step(delta)
 	if _mode == "fishing" and session.state != Session.State.PAUSED:
@@ -546,10 +567,11 @@ func _refresh_location_labels() -> void:
 	if scenery.has_method("set_gear_profile"): scenery.set_gear_profile(catalog.gear[_effective_gear_id()])
 	if session.state in [Session.State.IDLE,Session.State.CHARGING,Session.State.CASTING]: _action.icon_kind = _current_rod_icon()
 	_update_wallet()
+	if _whale_navigation: _whale_navigation.visible = spot_id == "pacific_bluewater" and not _active_round()
 
 func _update_wallet() -> void:
 	_wallet.text = str(int(store.state.get("currency",0)))
-	if _collection: _collection.text="图鉴 %d / %d" % [store.discovered_count(),catalog.fish.size()]
+	if _collection: _collection.text="鱼类 %d / %d" % [store.discovered_count(),catalog.fish_species_count()]
 
 func _action_down() -> void:
 	if _mode != "fishing" or _overlay != null or _landing_pending or store.read_only or not _content_ok: return
@@ -580,6 +602,7 @@ func _session_changed(value: int) -> void:
 	# float itself can reveal a committed bite, never the control or HUD.
 	_action.icon_kind="reel" if value in [Session.State.WAITING,Session.State.NIBBLE,Session.State.BITE,Session.State.FIGHT] else _current_rod_icon()
 	_nav_rail.visible=value not in [Session.State.FIGHT,Session.State.CAUGHT]
+	if _whale_navigation: _whale_navigation.visible = spot_id == "pacific_bluewater" and value == Session.State.IDLE
 	_bait_control.disabled=value==Session.State.CAUGHT
 	_charge.visible = value == Session.State.CHARGING
 	_bars.visible = value == Session.State.FIGHT
@@ -742,6 +765,7 @@ func _remove_overlay() -> void:
 	_screen = ""
 
 func _close_page() -> void:
+	if _mode == "whale": return
 	if _screen == "result" and (not _save_ok or store.state.get("pending_catches",{}).has(str(_last_record.get("catch_id","")))):
 		_toast_message("请先出售、放生，或保存失败时重试")
 		return
@@ -758,6 +782,7 @@ func _close_page() -> void:
 	if _result_waiting and not _last_record.is_empty(): _show_result()
 
 func _show_home() -> void:
+	if _mode == "whale": return
 	if not _last_record.is_empty() and not _save_ok:
 		_show_result()
 		return
@@ -801,7 +826,7 @@ func _show_home() -> void:
 	progress.custom_minimum_size.x = 140
 	progress.size_flags_horizontal = Control.SIZE_SHRINK_END
 	home_head.add_child(progress)
-	for pair: Array in [["coin",str(int(store.state.currency))],["book","%d / %d" % [store.discovered_count(),catalog.fish.size()]]]:
+	for pair: Array in [["coin",str(int(store.state.currency))],["book","%d / %d" % [store.discovered_count(),catalog.fish_species_count()]]]:
 		var row: HBoxContainer = HBoxContainer.new()
 		row.alignment = BoxContainer.ALIGNMENT_END
 		row.add_child(_icon(str(pair[0]),32))
@@ -832,6 +857,11 @@ func _show_home() -> void:
 	start.add_theme_font_size_override("font_size",30)
 	start.disabled=store.read_only or not _content_ok
 	_page.add_child(start)
+	if spot_id == "pacific_bluewater":
+		var whale_entry: Button = _button("鲸影共鸣 · 蓝鲸挑战",_show_whale_briefing)
+		whale_entry.name = "LobbyWhaleEntry"
+		whale_entry.custom_minimum_size.y = 96
+		_page.add_child(whale_entry)
 	var actions: HBoxContainer = HBoxContainer.new()
 	_page.add_child(actions)
 	for entry: Array in [["旅行","compass",_show_travel],["行囊","bag",_show_gear],["图鉴","book",_show_catalog],["设置","settings",_show_settings]]:
@@ -866,11 +896,16 @@ func _show_lobby_exit(message: String = "现在退出游戏？") -> void:
 	add_child(modal)
 
 func _show_prepare() -> void:
+	if _mode == "whale": return
 	_page_context = "prepare"
 	_open_page("prepare","准备出发",_show_home)
 	menu_pages.populate_prepare(self,_page)
+	if spot_id == "pacific_bluewater":
+		_section("海洋巨兽 · 独立挑战","蓝鲸是哺乳动物，鲸影玩法使用幻想光线")
+		_page.add_child(_button("鲸影共鸣 · 蓝鲸挑战",_show_whale_briefing))
 
 func _enter_fishery() -> void:
+	if _mode == "whale": return
 	if store.read_only or not _content_ok or not _can_use_spot(spot_id) or region_id not in store.state.get("unlocked_regions",[]): return
 	if not _last_record.is_empty():
 		_show_result()
@@ -893,6 +928,7 @@ func _enter_fishery() -> void:
 	sound.suspend(false)
 
 func _return_to_lobby() -> void:
+	if _mode == "whale": return
 	if not _last_record.is_empty():
 		_landing_pending = false
 		scenery.cancel_landing()
@@ -904,6 +940,7 @@ func _return_to_lobby() -> void:
 	_show_home()
 
 func _show_pause() -> void:
+	if _mode == "whale": _pause_whale(); return
 	var active_state: int = session.before_pause if session.state == Session.State.PAUSED else session.state
 	if active_state == Session.State.CAUGHT and not _last_record.is_empty() and not _landing_pending:
 		_show_result()
@@ -930,6 +967,7 @@ func _abandon_round() -> void:
 	_close_page()
 
 func _exit_game() -> void:
+	if _mode == "whale": _pause_whale(); return
 	if not _last_record.is_empty() and not _save_ok:
 		_show_result()
 		return
@@ -939,10 +977,12 @@ func _exit_game() -> void:
 	get_tree().quit()
 
 func _show_travel() -> void:
+	if _mode == "whale": return
 	_open_page("travel","旅行")
 	menu_pages.populate_travel(self,_page)
 
 func _unlock_region(id: String) -> void:
+	if _mode == "whale": return
 	if catalog.region(id).is_empty(): return
 	var region: Dictionary = catalog.region(id)
 	var candidate: Dictionary = store.state.duplicate(true)
@@ -958,6 +998,8 @@ func _can_use_spot(sid: String) -> bool:
 	return _effective_gear_id() >= int(spot.min_gear) and float(gear.max_depth_m) >= float(spot.depth_min_m)
 
 func _choose_spot(rid: String,sid: String) -> void:
+	# A deferred ordinary travel callback cannot change the independent challenge.
+	if _mode == "whale": return
 	# Travel buttons can have queued callbacks after CAUGHT, which is not an
 	# active round. Neither landing nor an unresolved result may change location.
 	if _landing_pending or not _last_record.is_empty():
@@ -998,6 +1040,7 @@ func _active_round() -> bool:
 	return value not in [Session.State.IDLE,Session.State.CAUGHT,Session.State.ESCAPED]
 
 func _show_gear() -> void:
+	if _mode == "whale": return
 	if _screen == "gear": _gear_scroll = _current_scroll()
 	else: _gear_scroll = 0
 	_open_page("gear","行囊")
@@ -1014,18 +1057,21 @@ func _current_rod_icon() -> String:
 	return str(catalog.gear[_effective_gear_id()].get("icon","rod"))
 
 func _borrow_gear(id: int) -> void:
+	if _mode == "whale": return
 	if id < 0 or id >= catalog.gear.size() or _active_round(): return
 	_trial_gear_id = id
 	_refresh_location()
 	_show_gear()
 
 func _clear_trial_gear() -> void:
+	if _mode == "whale": return
 	if _active_round(): return
 	_trial_gear_id = -1
 	_refresh_location()
 	_show_prepare()
 
 func _equip(id: int) -> void:
+	if _mode == "whale": return
 	if id < 0 or id >= catalog.gear.size(): return
 	if _active_round():
 		_toast_message("请在这一竿结束后更换装备")
@@ -1043,6 +1089,7 @@ func _equip(id: int) -> void:
 		_show_gear()
 
 func _set_bait(id: String) -> void:
+	if _mode == "whale": return
 	if catalog.bait_definition(id).is_empty(): return
 	if _active_round():
 		_toast_message("这一竿的鱼饵与鱼已经确定，下次抛竿前再换")
@@ -1055,7 +1102,12 @@ func _set_bait(id: String) -> void:
 	_bait_control.text=catalog.bait_name(bait_id)
 
 func _show_catalog() -> void:
+	if _mode == "whale": return
 	_open_page("catalog","图鉴")
+	var whale: Dictionary = store.state.get("whale_challenge",{})
+	var whale_entry: Button = _button("海洋巨兽 · 蓝鲸" + (" · 已解锁" if bool(whale.get("notebook_unlocked",false)) else " · 挑战后解锁"),_show_whale_notebook)
+	whale_entry.name = "WhaleNotebookEntry"
+	_page.add_child(whale_entry)
 	_list = notebook.populate_catalog(self,_page,_fill_catalog)
 	_fill_catalog()
 	_restore_page_scroll(_overlay,_catalog_scroll)
@@ -1069,12 +1121,15 @@ func _count(id: String) -> int:
 	return int(stats.get("catch_count",0))
 
 func _show_species(id: String) -> void:
+	if _mode == "whale" and id != "blue_whale": return
+	if id == "blue_whale": _show_whale_notebook(); return
 	if not catalog.fish.has(id): return
 	_active_species_id = id
 	_open_page("species",catalog.fish[id].name,_return_to_fish_list)
 	notebook.populate_species(self,_page,id,_show_zoom,_favorite)
 
 func _show_zoom(id: String) -> void:
+	if _mode == "whale": return
 	var fish: FishDefinition=catalog.fish[id]
 	_open_page("zoom",fish.name+" · 细看",_show_species.bind(id))
 	var plate: PanelContainer=_card(Color("e8ecd9"),18)
@@ -1259,6 +1314,7 @@ func _dispose_pending(id: String,action: String) -> void:
 	else: _page.add_child(_text(str(result.get("error",store.error_message)),24,CORAL))
 
 func _show_settings() -> void:
+	if _mode == "whale": return
 	if _screen == "pause": _settings_back = _show_pause
 	elif _screen not in ["settings","about","licenses","float_guide","backup","backup_confirm"]: _settings_back = _close_page
 	if not _settings_back.is_valid(): _settings_back = _close_page
@@ -1310,6 +1366,10 @@ func _notification(what: int) -> void:
 	if not _startup_complete: return
 	if not is_node_ready(): return
 	if what in [NOTIFICATION_APPLICATION_FOCUS_OUT,NOTIFICATION_APPLICATION_PAUSED]:
+		if _mode == "whale":
+			_pause_whale()
+			_save_selection()
+			return
 		session.cancel_input()
 		session.pause()
 		sound.suspend(true)
@@ -1317,12 +1377,16 @@ func _notification(what: int) -> void:
 		_save_selection()
 		if _overlay==null: call_deferred("_show_pause")
 	elif what in [NOTIFICATION_APPLICATION_FOCUS_IN,NOTIFICATION_APPLICATION_RESUMED]:
+		if _mode == "whale" and not whale_challenge.is_active():
+			_resume_whale()
+			return
 		if _mode == "lobby" and _screen == "home":
 			scenery.suspend(false)
 			sound.suspend(false)
 	elif what == NOTIFICATION_WM_GO_BACK_REQUEST:
 		_handle_back()
 	elif what == NOTIFICATION_WM_CLOSE_REQUEST:
+		if _mode == "whale": _pause_whale(); return
 		if _screen == "result": _show_result()
 		elif _screen == "home": _show_lobby_exit()
 		else: _show_pause()
@@ -1334,6 +1398,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 func _handle_back() -> void:
 	if not _startup_complete: return
+	if _mode == "whale":
+		if whale_challenge.is_active() and whale_challenge.state != WhaleChallenge.State.PAUSED: _pause_whale()
+		else: _leave_whale_challenge()
+		return
 	match _screen:
 		"": _show_pause()
 		"result": _show_result()
@@ -1501,6 +1569,7 @@ func _set_quality(value: String) -> void:
 		_restore_page_scroll(_overlay,_settings_scroll)
 
 func _show_backup() -> void:
+	if _mode == "whale": return
 	_backup_candidate=""
 	_backup_revision=-1
 	_open_page("backup","存档备份与恢复",_show_settings)
@@ -1604,6 +1673,7 @@ func _backup_content_error(candidate: Dictionary) -> String:
 	return ""
 
 func _confirm_backup() -> void:
+	if _mode == "whale": return
 	if _screen!="backup_confirm" or _backup_candidate.is_empty():return
 	if _active_round() or _landing_pending or _result_waiting:return
 	var result: Dictionary=store.import_save_text(_backup_candidate,_backup_revision)
@@ -1626,3 +1696,177 @@ func _confirm_backup() -> void:
 	_last_record={}
 	_show_home()
 	_toast_message("进度已恢复" if _content_ok else "进度已恢复，但当前游戏资源无法载入，请保留存档并检查游戏文件")
+
+func _whale_location_available() -> bool:
+	return region_id == "pacific_ocean" and spot_id == "pacific_bluewater" and region_id in store.state.get("unlocked_regions",[])
+
+func _show_whale_briefing() -> void:
+	if _mode == "whale": return
+	if _landing_pending or not _last_record.is_empty():
+		_toast_message("请先处理当前钓获，再进入鲸影挑战")
+		return
+	if _active_round():
+		_toast_message("请先结束这一竿，再进入鲸影挑战")
+		return
+	_open_page("whale_briefing","鲸影共鸣",_show_prepare if _mode == "lobby" else _close_page)
+	if catalog.fish.has("blue_whale"):
+		_page.add_child(_fish_image(catalog.fish["blue_whale"],false,false,240))
+	_page.add_child(_text("26 米鲸影 · 可以完成的幻想巨物挑战",28,TEAL))
+	_page.add_child(_text("你挑战的是幻海中的蓝鲸影。光线连接鲸影前方的光环，依次完成调谐、跟流与控线，随后在水中见证全身共鸣。",24))
+	_section("三个操作阶段")
+	_page.add_child(_text("1. 按住 / 松手：把光脉冲留在绿带，连起三道光环。\n2. 按住左 / 右：跟随移动绿带，累计同步 10 秒。\n3. 按住 / 松手：把能量张力留在绿带，累计共鸣 8 秒。",23))
+	_page.add_child(_text("每阶段显示绿带、进度和剩余时间；幻线失稳可以重试，也可随时退出。挑战不消耗鱼饵或金币，完成纪录独立保存。",21,MUTED))
+	_section("真实蓝鲸 · 哺乳动物")
+	_page.add_child(_text("蓝鲸（Balaenoptera musculus）是须鲸，主要滤食磷虾，需要到水面呼吸。NOAA列其受保护；现实观鲸应保持距离，不喂食、不触摸或追逐。近距离船侧画面与能量连线均属于游戏幻想。",21,MUTED))
+	_page.add_child(_button("蓝鲸自然图鉴",_show_whale_notebook))
+	var start: Button = _button("开始鲸影挑战",_start_whale_challenge,true)
+	start.name = "StartWhaleChallenge"
+	start.disabled = not _whale_location_available() or store.read_only or not _content_ok or not WhaleStage.model_available()
+	_page_footer.add_child(start)
+	_page_footer.visible = true
+	if not _whale_location_available(): _page.add_child(_text("前往太平洋 · 远洋蓝水航线后可开始。",22,GOLD))
+	elif not WhaleStage.model_available(): _page.add_child(_text("蓝鲸专用模型尚未就绪，暂不能开始。",22,GOLD))
+
+func _start_whale_challenge() -> void:
+	# Reject queued or repeated start/retry callbacks before touching the current
+	# transaction. PAUSED also retains an active challenge and its exact save id.
+	if whale_challenge.is_active(): return
+	if not _whale_location_available() or store.read_only or not _content_ok or not WhaleStage.model_available(): return
+	if _active_round() or _landing_pending or not _last_record.is_empty(): return
+	if not _whale_record.is_empty() and not _whale_save_ok:
+		_toast_message("请先重试保存或明确放弃本次鲸影纪录")
+		return
+	if _mode != "whale": _whale_origin_mode = _mode
+	store.abandon_whale_challenge(whale_challenge.challenge_id)
+	if not whale_challenge.start(game_clock): return
+	if not store.begin_whale_challenge(whale_challenge.challenge_id):
+		whale_challenge.cancel()
+		_toast_message(store.error_message)
+		return
+	_remove_overlay()
+	if is_instance_valid(_whale_view):
+		remove_child(_whale_view)
+		_whale_view.queue_free()
+	_whale_record = {}
+	_whale_save_ok = false
+	_whale_new_best = false
+	_mode = "whale"
+	_screen = "whale_challenge"
+	_safe.visible = false
+	session.cancel_input()
+	session.pause()
+	scenery.suspend(true)
+	scenery.visible = false
+	sound.suspend(false)
+	_whale_view = WhaleUI.new()
+	_whale_view.configure(whale_challenge,Vector4(_safe.get_theme_constant("margin_left"),_safe.get_theme_constant("margin_top"),_safe.get_theme_constant("margin_right"),_safe.get_theme_constant("margin_bottom")))
+	_whale_view.exit_requested.connect(_leave_whale_challenge)
+	_whale_view.retry_requested.connect(_start_whale_challenge)
+	_whale_view.save_retry_requested.connect(_settle_whale_challenge)
+	_whale_view.discard_requested.connect(_discard_whale_result)
+	_whale_view.notebook_requested.connect(_open_completed_whale_notebook)
+	_whale_view.pause_requested.connect(_pause_whale)
+	_whale_view.resume_requested.connect(_resume_whale)
+	add_child(_whale_view)
+
+func _whale_ended(success: bool, record: Dictionary) -> void:
+	if _mode != "whale" or bool(record.get("cancelled",false)): return
+	if str(record.get("challenge_id","")) != whale_challenge.challenge_id: return
+	if success:
+		_whale_record = record.duplicate(true)
+		_settle_whale_challenge()
+	else:
+		store.abandon_whale_challenge(whale_challenge.challenge_id)
+
+func _settle_whale_challenge() -> void:
+	if _whale_record.is_empty(): return
+	if not _whale_save_ok:
+		var result: Dictionary = store.settle_whale_challenge(_whale_record)
+		_whale_save_ok = bool(result.get("ok",false))
+		_whale_new_best = bool(result.get("new_best",false))
+	if is_instance_valid(_whale_view): _whale_view.set_settlement(_whale_save_ok,store.error_message,_whale_new_best)
+	if _whale_save_ok: _update_wallet()
+
+func _pause_whale() -> void:
+	whale_challenge.pause()
+	if is_instance_valid(_whale_view): _whale_view.stage.suspend(true)
+	sound.suspend(true)
+
+func _resume_whale() -> void:
+	if _mode != "whale": return
+	whale_challenge.resume()
+	if is_instance_valid(_whale_view): _whale_view.stage.suspend(false)
+	sound.suspend(false)
+
+func _discard_whale_result() -> void:
+	store.abandon_whale_challenge(whale_challenge.challenge_id)
+	_whale_record = {}
+	_leave_whale_challenge()
+
+func _leave_whale_challenge() -> void:
+	if not _whale_record.is_empty() and not _whale_save_ok:
+		if is_instance_valid(_whale_view): _whale_view.set_settlement(false,"先重试保存，或点击明确放弃未保存纪录")
+		return
+	whale_challenge.cancel()
+	store.abandon_whale_challenge(whale_challenge.challenge_id)
+	_whale_record = {}
+	if is_instance_valid(_whale_view):
+		remove_child(_whale_view)
+		_whale_view.queue_free()
+	_whale_view = null
+	_mode = _whale_origin_mode
+	_screen = ""
+	scenery.visible = true
+	if _mode == "lobby":
+		_show_prepare()
+	else:
+		session.reset()
+		_safe.visible = true
+		scenery.set_mode("fishing")
+		scenery.suspend(false)
+		sound.suspend(false)
+	_update_wallet()
+	_save_selection()
+
+func _open_completed_whale_notebook() -> void:
+	if not _whale_save_ok: return
+	_leave_whale_challenge()
+	_show_whale_notebook()
+
+func _show_whale_notebook() -> void:
+	if _mode == "whale":
+		if not _whale_save_ok: return
+		_leave_whale_challenge()
+	_open_page("whale_notebook","海洋巨兽 · 蓝鲸")
+	_page.name = "WhaleNaturalHistory"
+	var whale: Dictionary = store.state.get("whale_challenge",{})
+	var known: bool = bool(whale.get("notebook_unlocked",false))
+	_page.add_child(_text("Balaenoptera musculus · 哺乳纲 · 须鲸科",22,TEAL))
+	if catalog.fish.has("blue_whale"):
+		_page.add_child(_fish_image(catalog.fish["blue_whale"],false,not known,280))
+	_page.add_child(_text("鲸影共鸣已解锁 · 独立鲸类纪录" if known else "完成鲸影共鸣后解锁完整插画与鲸类纪录",22,TEAL if known else GOLD))
+	if known:
+		_section("我的鲸影挑战纪录","完成 %d 次" % int(whale.get("completion_count",0)))
+		for pair: Array in [["最快完成","best"],["首次完成","first"],["最近完成","last"]]:
+			var record: Dictionary = whale.get(pair[1],{})
+			if not record.is_empty(): _page.add_child(_text("%s · %.1f 秒 · %s" % [pair[0],float(record.get("duration_ms",0))/1000.0,str(record.get("completed_at","")).replace("T"," ")],21))
+		_page.add_child(_text("挑战体长 26 米是固定的游戏展示尺度；最快完成计时不是野生鲸类测量纪录。鲸类完成次数不计入鱼类发现、钓获数量或出售库存。",20,MUTED))
+	var biology: Dictionary = natural_history.get_entry("blue_whale")
+	for pair: Array in [["分类与身份","taxonomy"],["常见尺度","typical_size"],["资料长度上限","max_length"],["资料体重上限","max_weight"],["生境与水层","habitat"],["现实分布","distribution"],["生活习性","behavior"],["真实食性","diet"],["保护与观察","conservation"]]:
+		var field: Dictionary = biology.get(pair[1],{})
+		var text: String = str(field.get("text",field.get("note","")))
+		if not text.is_empty():
+			_section(str(pair[0]))
+			_page.add_child(_text(text,22))
+	var story: Dictionary = biology.get("story",{})
+	if not story.is_empty():
+		_section(str(story.get("title","鲸类故事")))
+		_page.add_child(_text(str(story.get("text","")),22))
+	_section("游戏幻想说明")
+	_page.add_child(_text("鲸影不使用鱼饵，不钩刺嘴部，不拉上岸；你操控的是外侧光环与能量线。近距离并行、三阶段共鸣和固定 26 米模型都是美术与玩法改编。真实蓝鲸应保持距离，遵守当地观鲸规则。",21,MUTED))
+	_section("资料来源")
+	for source: Dictionary in biology.get("sources",[]):
+		var url: String = str(source.get("url",""))
+		_page.add_child(_button(str(source.get("publisher",""))+" · "+str(source.get("title","")),_open_species_source.bind(url)))
+	if _whale_location_available(): _page.add_child(_button("前往鲸影挑战",_show_whale_briefing,true))
+	else: _page.add_child(_text("挑战地点 · 太平洋 / 远洋蓝水航线",21,GOLD))

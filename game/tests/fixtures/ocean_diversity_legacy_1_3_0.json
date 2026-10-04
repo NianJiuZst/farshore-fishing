@@ -1,0 +1,3131 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "7b406cccaf57c9ca213693f75860443a118ed656",
+  "provenance": "Frozen with git show HEAD from the installed 1.3.0 main commit. Old fish_a..d raw bytes remain exact. E/F IDs, existing presentation paths and non-route balance fields stay stable; ocean routes may change.",
+  "legacy_source_sha256": {
+    "res://data/fish_a.json": "9a825e8e31ab3670e0deb8a6d9cfc7f7447c51bb2ce96e69a60aee1ccdc8c266",
+    "res://data/fish_b.json": "50be48a1a8c9f45faab89aa5b834b10f73b3ef48460a8611ea572841a04d821c",
+    "res://data/fish_c.json": "b42fa7ece36d7b1cb1c83d3d70da6c0ddc75a5ead7dfa9960cb159fe31f44715",
+    "res://data/fish_d.json": "19518b05cb1c6d3c0eca83867c50f52d2fa343331469f081bf8763702dacea6d"
+  },
+  "legacy_species": [
+    {
+      "species_id": "common_carp",
+      "name": "鲤鱼",
+      "scientific_name": "Cyprinus carpio",
+      "art": "res://assets/fish/common_carp.png",
+      "thumb": "res://assets/fish/common_carp_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 900,
+      "max_mm": 1450,
+      "anchor_mm": 450,
+      "anchor_g": 1500,
+      "behavior": "steady",
+      "difficulty": 0.45,
+      "weight": 12,
+      "bait_weights": {
+        "worm": 1.2,
+        "grain": 2.0,
+        "shrimp": 0.3,
+        "lure": 0.15
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "crucian_carp",
+      "name": "欧洲鲫",
+      "scientific_name": "Carassius carassius",
+      "art": "res://assets/fish/crucian_carp.png",
+      "thumb": "res://assets/fish/crucian_carp_thumb.png",
+      "min_mm": 120,
+      "normal_max_mm": 400,
+      "max_mm": 720,
+      "anchor_mm": 230,
+      "anchor_g": 280,
+      "behavior": "rest",
+      "difficulty": 0.18,
+      "weight": 15,
+      "bait_weights": {
+        "worm": 1.5,
+        "grain": 1.8,
+        "shrimp": 0.3,
+        "lure": 0.1
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.1
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "roach",
+      "name": "拟鲤",
+      "scientific_name": "Rutilus rutilus",
+      "art": "res://assets/fish/roach.png",
+      "thumb": "res://assets/fish/roach_thumb.png",
+      "min_mm": 100,
+      "normal_max_mm": 380,
+      "max_mm": 570,
+      "anchor_mm": 220,
+      "anchor_g": 160,
+      "behavior": "rest",
+      "difficulty": 0.15,
+      "weight": 16,
+      "bait_weights": {
+        "worm": 1.5,
+        "grain": 1.6,
+        "shrimp": 0.3,
+        "lure": 0.2
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.1
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "rudd",
+      "name": "红眼鱼",
+      "scientific_name": "Scardinius erythrophthalmus",
+      "art": "res://assets/fish/rudd.png",
+      "thumb": "res://assets/fish/rudd_thumb.png",
+      "min_mm": 100,
+      "normal_max_mm": 400,
+      "max_mm": 700,
+      "anchor_mm": 240,
+      "anchor_g": 240,
+      "behavior": "burst",
+      "difficulty": 0.24,
+      "weight": 12,
+      "bait_weights": {
+        "worm": 1.5,
+        "grain": 1.7,
+        "shrimp": 0.2,
+        "lure": 0.3
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "european_perch",
+      "name": "河鲈",
+      "scientific_name": "Perca fluviatilis",
+      "art": "res://assets/fish/european_perch.png",
+      "thumb": "res://assets/fish/european_perch_thumb.png",
+      "min_mm": 120,
+      "normal_max_mm": 480,
+      "max_mm": 680,
+      "anchor_mm": 280,
+      "anchor_g": 330,
+      "behavior": "burst",
+      "difficulty": 0.42,
+      "weight": 11,
+      "bait_weights": {
+        "worm": 1.3,
+        "grain": 0.15,
+        "shrimp": 1.0,
+        "lure": 1.8
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.1,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "northern_pike",
+      "name": "白斑狗鱼",
+      "scientific_name": "Esox lucius",
+      "art": "res://assets/fish/northern_pike.png",
+      "thumb": "res://assets/fish/northern_pike_thumb.png",
+      "min_mm": 300,
+      "normal_max_mm": 1100,
+      "max_mm": 1690,
+      "anchor_mm": 600,
+      "anchor_g": 1600,
+      "behavior": "burst",
+      "difficulty": 0.72,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.3,
+        "grain": 0.05,
+        "shrimp": 0.6,
+        "lure": 2.5
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.35,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "common_bream",
+      "name": "欧鳊",
+      "scientific_name": "Abramis brama",
+      "art": "res://assets/fish/common_bream.png",
+      "thumb": "res://assets/fish/common_bream_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 700,
+      "max_mm": 920,
+      "anchor_mm": 420,
+      "anchor_g": 1000,
+      "behavior": "steady",
+      "difficulty": 0.38,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 1.8,
+        "grain": 1.6,
+        "shrimp": 0.5,
+        "lure": 0.1
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.15,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "tench",
+      "name": "丁鱥",
+      "scientific_name": "Tinca tinca",
+      "art": "res://assets/fish/tench.png",
+      "thumb": "res://assets/fish/tench_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 600,
+      "max_mm": 950,
+      "anchor_mm": 360,
+      "anchor_g": 750,
+      "behavior": "steady",
+      "difficulty": 0.44,
+      "weight": 7,
+      "bait_weights": {
+        "worm": 2.0,
+        "grain": 1.5,
+        "shrimp": 0.4,
+        "lure": 0.1
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.05,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "japanese_horse_mackerel",
+      "name": "日本竹荚鱼",
+      "scientific_name": "Trachurus japonicus",
+      "art": "res://assets/fish/japanese_horse_mackerel.png",
+      "thumb": "res://assets/fish/japanese_horse_mackerel_thumb.png",
+      "min_mm": 120,
+      "normal_max_mm": 380,
+      "max_mm": 560,
+      "anchor_mm": 240,
+      "anchor_g": 150,
+      "behavior": "burst",
+      "difficulty": 0.35,
+      "weight": 14,
+      "bait_weights": {
+        "worm": 0.5,
+        "grain": 0.1,
+        "shrimp": 1.8,
+        "lure": 1.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.1,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "chub_mackerel",
+      "name": "日本鲭",
+      "scientific_name": "Scomber japonicus",
+      "art": "res://assets/fish/chub_mackerel.png",
+      "thumb": "res://assets/fish/chub_mackerel_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 500,
+      "max_mm": 720,
+      "anchor_mm": 320,
+      "anchor_g": 350,
+      "behavior": "burst",
+      "difficulty": 0.5,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.2,
+        "grain": 0.05,
+        "shrimp": 1.4,
+        "lure": 2.0
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.3,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "red_seabream",
+      "name": "真鲷",
+      "scientific_name": "Pagrus major",
+      "art": "res://assets/fish/red_seabream.png",
+      "thumb": "res://assets/fish/red_seabream_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 700,
+      "max_mm": 1120,
+      "anchor_mm": 380,
+      "anchor_g": 900,
+      "behavior": "steady",
+      "difficulty": 0.58,
+      "weight": 6,
+      "bait_weights": {
+        "worm": 0.8,
+        "grain": 0.1,
+        "shrimp": 2.3,
+        "lure": 0.9
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.35,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "black_seabream",
+      "name": "黑鲷",
+      "scientific_name": "Acanthopagrus schlegelii",
+      "art": "res://assets/fish/black_seabream.png",
+      "thumb": "res://assets/fish/black_seabream_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 480,
+      "max_mm": 560,
+      "anchor_mm": 330,
+      "anchor_g": 600,
+      "behavior": "steady",
+      "difficulty": 0.52,
+      "weight": 8,
+      "bait_weights": {
+        "worm": 1.2,
+        "grain": 0.2,
+        "shrimp": 2.0,
+        "lure": 0.6
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.15,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "japanese_seabass",
+      "name": "日本花鲈",
+      "scientific_name": "Lateolabrax japonicus",
+      "art": "res://assets/fish/japanese_seabass.png",
+      "thumb": "res://assets/fish/japanese_seabass_thumb.png",
+      "min_mm": 250,
+      "normal_max_mm": 900,
+      "max_mm": 1150,
+      "anchor_mm": 520,
+      "anchor_g": 1500,
+      "behavior": "burst",
+      "difficulty": 0.68,
+      "weight": 5,
+      "bait_weights": {
+        "worm": 0.3,
+        "grain": 0.05,
+        "shrimp": 1.1,
+        "lure": 2.5
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.25,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "japanese_whiting",
+      "name": "日本沙鮻",
+      "scientific_name": "Sillago japonica",
+      "art": "res://assets/fish/japanese_whiting.png",
+      "thumb": "res://assets/fish/japanese_whiting_thumb.png",
+      "min_mm": 100,
+      "normal_max_mm": 290,
+      "max_mm": 340,
+      "anchor_mm": 200,
+      "anchor_g": 70,
+      "behavior": "rest",
+      "difficulty": 0.2,
+      "weight": 15,
+      "bait_weights": {
+        "worm": 2.2,
+        "grain": 0.1,
+        "shrimp": 1.7,
+        "lure": 0.3
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.1
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "marbled_rockfish",
+      "name": "褐菖鲉",
+      "scientific_name": "Sebastiscus marmoratus",
+      "art": "res://assets/fish/marbled_rockfish.png",
+      "thumb": "res://assets/fish/marbled_rockfish_thumb.png",
+      "min_mm": 120,
+      "normal_max_mm": 330,
+      "max_mm": 410,
+      "anchor_mm": 230,
+      "anchor_g": 250,
+      "behavior": "rest",
+      "difficulty": 0.42,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 1.0,
+        "grain": 0.05,
+        "shrimp": 2.0,
+        "lure": 1.2
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.1
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.1,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "olive_flounder",
+      "name": "牙鲆",
+      "scientific_name": "Paralichthys olivaceus",
+      "art": "res://assets/fish/olive_flounder.png",
+      "thumb": "res://assets/fish/olive_flounder_thumb.png",
+      "min_mm": 220,
+      "normal_max_mm": 850,
+      "max_mm": 1160,
+      "anchor_mm": 480,
+      "anchor_g": 1100,
+      "behavior": "rest",
+      "difficulty": 0.61,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.6,
+        "grain": 0.05,
+        "shrimp": 1.6,
+        "lure": 2.0
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.1
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.35,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "atlantic_cod",
+      "name": "大西洋鳕",
+      "scientific_name": "Gadus morhua",
+      "art": "res://assets/fish/atlantic_cod.png",
+      "thumb": "res://assets/fish/atlantic_cod_thumb.png",
+      "min_mm": 250,
+      "normal_max_mm": 1050,
+      "max_mm": 2240,
+      "anchor_mm": 650,
+      "anchor_g": 2600,
+      "behavior": "steady",
+      "difficulty": 0.67,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.9,
+        "grain": 0.05,
+        "shrimp": 1.5,
+        "lure": 1.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.15,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "pollack",
+      "name": "青鳕",
+      "scientific_name": "Pollachius pollachius",
+      "art": "res://assets/fish/pollack.png",
+      "thumb": "res://assets/fish/pollack_thumb.png",
+      "min_mm": 220,
+      "normal_max_mm": 900,
+      "max_mm": 1460,
+      "anchor_mm": 550,
+      "anchor_g": 1700,
+      "behavior": "burst",
+      "difficulty": 0.58,
+      "weight": 11,
+      "bait_weights": {
+        "worm": 0.6,
+        "grain": 0.05,
+        "shrimp": 1.2,
+        "lure": 2.0
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.1,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "saithe",
+      "name": "绿青鳕",
+      "scientific_name": "Pollachius virens",
+      "art": "res://assets/fish/saithe.png",
+      "thumb": "res://assets/fish/saithe_thumb.png",
+      "min_mm": 200,
+      "normal_max_mm": 1000,
+      "max_mm": 1460,
+      "anchor_mm": 600,
+      "anchor_g": 2200,
+      "behavior": "burst",
+      "difficulty": 0.63,
+      "weight": 12,
+      "bait_weights": {
+        "worm": 0.5,
+        "grain": 0.05,
+        "shrimp": 1.3,
+        "lure": 2.1
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.15,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "haddock",
+      "name": "黑线鳕",
+      "scientific_name": "Melanogrammus aeglefinus",
+      "art": "res://assets/fish/haddock.png",
+      "thumb": "res://assets/fish/haddock_thumb.png",
+      "min_mm": 280,
+      "normal_max_mm": 600,
+      "max_mm": 1260,
+      "anchor_mm": 420,
+      "anchor_g": 900,
+      "behavior": "rest",
+      "difficulty": 0.52,
+      "weight": 8,
+      "bait_weights": {
+        "worm": 1.5,
+        "grain": 0.05,
+        "shrimp": 1.6,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 0.95
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.25,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "atlantic_mackerel",
+      "name": "大西洋鲭",
+      "scientific_name": "Scomber scombrus",
+      "art": "res://assets/fish/atlantic_mackerel.png",
+      "thumb": "res://assets/fish/atlantic_mackerel_thumb.png",
+      "min_mm": 200,
+      "normal_max_mm": 500,
+      "max_mm": 680,
+      "anchor_mm": 350,
+      "anchor_g": 500,
+      "behavior": "burst",
+      "difficulty": 0.42,
+      "weight": 16,
+      "bait_weights": {
+        "worm": 0.3,
+        "grain": 0.05,
+        "shrimp": 0.8,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "atlantic_herring",
+      "name": "大西洋鲱",
+      "scientific_name": "Clupea harengus",
+      "art": "res://assets/fish/atlantic_herring.png",
+      "thumb": "res://assets/fish/atlantic_herring_thumb.png",
+      "min_mm": 170,
+      "normal_max_mm": 380,
+      "max_mm": 510,
+      "anchor_mm": 270,
+      "anchor_g": 230,
+      "behavior": "burst",
+      "difficulty": 0.3,
+      "weight": 15,
+      "bait_weights": {
+        "worm": 0.15,
+        "grain": 0.05,
+        "shrimp": 1.1,
+        "lure": 1.8
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "european_plaice",
+      "name": "欧洲鲽",
+      "scientific_name": "Pleuronectes platessa",
+      "art": "res://assets/fish/european_plaice.png",
+      "thumb": "res://assets/fish/european_plaice_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 550,
+      "max_mm": 1120,
+      "anchor_mm": 350,
+      "anchor_g": 650,
+      "behavior": "rest",
+      "difficulty": 0.37,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 2.2,
+        "grain": 0.05,
+        "shrimp": 1.5,
+        "lure": 0.2
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 0.95
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0.05,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "atlantic_wolffish",
+      "name": "大西洋狼鱼",
+      "scientific_name": "Anarhichas lupus",
+      "art": "res://assets/fish/atlantic_wolffish.png",
+      "thumb": "res://assets/fish/atlantic_wolffish_thumb.png",
+      "min_mm": 400,
+      "normal_max_mm": 1100,
+      "max_mm": 1690,
+      "anchor_mm": 750,
+      "anchor_g": 4000,
+      "behavior": "steady",
+      "difficulty": 0.86,
+      "weight": 5,
+      "bait_weights": {
+        "worm": 0.4,
+        "grain": 0.05,
+        "shrimp": 2.4,
+        "lure": 0.3
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 2,
+      "min_cast": 0.45,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "european_seabass",
+      "name": "欧洲海鲈",
+      "scientific_name": "Dicentrarchus labrax",
+      "art": "res://assets/fish/european_seabass.png",
+      "thumb": "res://assets/fish/european_seabass_thumb.png",
+      "min_mm": 250,
+      "normal_max_mm": 800,
+      "max_mm": 1160,
+      "anchor_mm": 450,
+      "anchor_g": 1100,
+      "behavior": "burst",
+      "difficulty": 0.65,
+      "weight": 9,
+      "bait_weights": {
+        "worm": 0.5,
+        "grain": 0.05,
+        "shrimp": 1.4,
+        "lure": 2.2
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.15,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "gilthead_seabream",
+      "name": "金头鲷",
+      "scientific_name": "Sparus aurata",
+      "art": "res://assets/fish/gilthead_seabream.png",
+      "thumb": "res://assets/fish/gilthead_seabream_thumb.png",
+      "min_mm": 220,
+      "normal_max_mm": 650,
+      "max_mm": 790,
+      "anchor_mm": 380,
+      "anchor_g": 1100,
+      "behavior": "steady",
+      "difficulty": 0.64,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 1.3,
+        "grain": 0.1,
+        "shrimp": 2.4,
+        "lure": 0.2
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.1,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "saddled_seabream",
+      "name": "黑尾海鲷",
+      "scientific_name": "Oblada melanura",
+      "art": "res://assets/fish/saddled_seabream.png",
+      "thumb": "res://assets/fish/saddled_seabream_thumb.png",
+      "min_mm": 120,
+      "normal_max_mm": 300,
+      "max_mm": 410,
+      "anchor_mm": 220,
+      "anchor_g": 210,
+      "behavior": "burst",
+      "difficulty": 0.35,
+      "weight": 15,
+      "bait_weights": {
+        "worm": 1.0,
+        "grain": 0.25,
+        "shrimp": 1.8,
+        "lure": 0.8
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "white_seabream",
+      "name": "白海鲷",
+      "scientific_name": "Diplodus sargus",
+      "art": "res://assets/fish/white_seabream.png",
+      "thumb": "res://assets/fish/white_seabream_thumb.png",
+      "min_mm": 150,
+      "normal_max_mm": 420,
+      "max_mm": 510,
+      "anchor_mm": 270,
+      "anchor_g": 450,
+      "behavior": "steady",
+      "difficulty": 0.48,
+      "weight": 13,
+      "bait_weights": {
+        "worm": 1.8,
+        "grain": 0.1,
+        "shrimp": 2.0,
+        "lure": 0.3
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0.05,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "annular_seabream",
+      "name": "环尾海鲷",
+      "scientific_name": "Diplodus annularis",
+      "art": "res://assets/fish/annular_seabream.png",
+      "thumb": "res://assets/fish/annular_seabream_thumb.png",
+      "min_mm": 100,
+      "normal_max_mm": 250,
+      "max_mm": 320,
+      "anchor_mm": 160,
+      "anchor_g": 110,
+      "behavior": "rest",
+      "difficulty": 0.24,
+      "weight": 18,
+      "bait_weights": {
+        "worm": 1.8,
+        "grain": 0.15,
+        "shrimp": 1.5,
+        "lure": 0.2
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 0.95
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "red_mullet",
+      "name": "红须鲷",
+      "scientific_name": "Mullus barbatus",
+      "art": "res://assets/fish/red_mullet.png",
+      "thumb": "res://assets/fish/red_mullet_thumb.png",
+      "min_mm": 120,
+      "normal_max_mm": 300,
+      "max_mm": 430,
+      "anchor_mm": 210,
+      "anchor_g": 160,
+      "behavior": "rest",
+      "difficulty": 0.32,
+      "weight": 12,
+      "bait_weights": {
+        "worm": 2.0,
+        "grain": 0.05,
+        "shrimp": 1.8,
+        "lure": 0.15
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 0.95
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0.1,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "painted_comber",
+      "name": "字纹鮨",
+      "scientific_name": "Serranus scriba",
+      "art": "res://assets/fish/painted_comber.png",
+      "thumb": "res://assets/fish/painted_comber_thumb.png",
+      "min_mm": 100,
+      "normal_max_mm": 280,
+      "max_mm": 410,
+      "anchor_mm": 180,
+      "anchor_g": 130,
+      "behavior": "burst",
+      "difficulty": 0.43,
+      "weight": 11,
+      "bait_weights": {
+        "worm": 0.7,
+        "grain": 0.05,
+        "shrimp": 1.8,
+        "lure": 1.5
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 0,
+      "min_cast": 0.05,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "common_pandora",
+      "name": "绯小鲷",
+      "scientific_name": "Pagellus erythrinus",
+      "art": "res://assets/fish/common_pandora.png",
+      "thumb": "res://assets/fish/common_pandora_thumb.png",
+      "min_mm": 160,
+      "normal_max_mm": 450,
+      "max_mm": 680,
+      "anchor_mm": 280,
+      "anchor_g": 450,
+      "behavior": "steady",
+      "difficulty": 0.51,
+      "weight": 8,
+      "bait_weights": {
+        "worm": 1.6,
+        "grain": 0.05,
+        "shrimp": 2.0,
+        "lure": 0.3
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.2,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "alligator_gar",
+      "name": "鳄雀鳝",
+      "scientific_name": "Atractosteus spatula",
+      "art": "res://assets/fish/alligator_gar.png",
+      "thumb": "res://assets/fish/alligator_gar_thumb.png",
+      "min_mm": 650,
+      "normal_max_mm": 2400,
+      "max_mm": 3420,
+      "anchor_mm": 1400,
+      "anchor_g": 22000,
+      "behavior": "steady",
+      "difficulty": 0.9,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.2,
+        "grain": 0.02,
+        "shrimp": 0.5,
+        "lure": 1.9
+      },
+      "time_weights": {
+        "day": 1,
+        "dusk": 1.25
+      },
+      "weather_weights": {
+        "clear": 1,
+        "rain": 1.1
+      },
+      "min_gear": 2,
+      "min_cast": 0.55,
+      "max_cast": 1,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "longnose_gar",
+      "name": "长吻雀鳝",
+      "scientific_name": "Lepisosteus osseus",
+      "art": "res://assets/fish/longnose_gar.png",
+      "thumb": "res://assets/fish/longnose_gar_thumb.png",
+      "min_mm": 450,
+      "normal_max_mm": 1500,
+      "max_mm": 2240,
+      "anchor_mm": 900,
+      "anchor_g": 3500,
+      "behavior": "burst",
+      "difficulty": 0.7,
+      "weight": 8,
+      "bait_weights": {
+        "worm": 0.35,
+        "grain": 0.02,
+        "shrimp": 0.6,
+        "lure": 1.9
+      },
+      "time_weights": {
+        "day": 1,
+        "dusk": 1.3
+      },
+      "weather_weights": {
+        "clear": 1,
+        "rain": 1.05
+      },
+      "min_gear": 1,
+      "min_cast": 0.25,
+      "max_cast": 1,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "bowfin",
+      "name": "弓鳍鱼",
+      "scientific_name": "Amia ocellicauda",
+      "art": "res://assets/fish/bowfin.png",
+      "thumb": "res://assets/fish/bowfin_thumb.png",
+      "min_mm": 280,
+      "normal_max_mm": 850,
+      "max_mm": 1040,
+      "anchor_mm": 500,
+      "anchor_g": 1500,
+      "behavior": "burst",
+      "difficulty": 0.65,
+      "weight": 9,
+      "bait_weights": {
+        "worm": 1,
+        "grain": 0.05,
+        "shrimp": 0.9,
+        "lure": 1.7
+      },
+      "time_weights": {
+        "day": 0.9,
+        "dusk": 1.45
+      },
+      "weather_weights": {
+        "clear": 1,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.1,
+      "max_cast": 1,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "largemouth_bass",
+      "name": "大口黑鲈",
+      "scientific_name": "Micropterus nigricans",
+      "art": "res://assets/fish/largemouth_bass.png",
+      "thumb": "res://assets/fish/largemouth_bass_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 650,
+      "max_mm": 750,
+      "anchor_mm": 400,
+      "anchor_g": 1200,
+      "behavior": "burst",
+      "difficulty": 0.57,
+      "weight": 13,
+      "bait_weights": {
+        "worm": 1.1,
+        "grain": 0.05,
+        "shrimp": 1,
+        "lure": 2.1
+      },
+      "time_weights": {
+        "day": 1,
+        "dusk": 1.4
+      },
+      "weather_weights": {
+        "clear": 1,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.05,
+      "max_cast": 1,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "channel_catfish",
+      "name": "斑点叉尾鮰",
+      "scientific_name": "Ictalurus punctatus",
+      "art": "res://assets/fish/channel_catfish.png",
+      "thumb": "res://assets/fish/channel_catfish_thumb.png",
+      "min_mm": 250,
+      "normal_max_mm": 1000,
+      "max_mm": 1480,
+      "anchor_mm": 550,
+      "anchor_g": 2000,
+      "behavior": "steady",
+      "difficulty": 0.55,
+      "weight": 13,
+      "bait_weights": {
+        "worm": 1.8,
+        "grain": 0.3,
+        "shrimp": 1.9,
+        "lure": 0.25
+      },
+      "time_weights": {
+        "day": 0.9,
+        "dusk": 1.45
+      },
+      "weather_weights": {
+        "clear": 1,
+        "rain": 1.15
+      },
+      "min_gear": 1,
+      "min_cast": 0.1,
+      "max_cast": 1,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "flathead_catfish",
+      "name": "扁头鲶",
+      "scientific_name": "Pylodictis olivaris",
+      "art": "res://assets/fish/flathead_catfish.png",
+      "thumb": "res://assets/fish/flathead_catfish_thumb.png",
+      "min_mm": 350,
+      "normal_max_mm": 1350,
+      "max_mm": 1740,
+      "anchor_mm": 750,
+      "anchor_g": 8000,
+      "behavior": "rest",
+      "difficulty": 0.82,
+      "weight": 6,
+      "bait_weights": {
+        "worm": 0.65,
+        "grain": 0.02,
+        "shrimp": 1.1,
+        "lure": 1.5
+      },
+      "time_weights": {
+        "day": 0.8,
+        "dusk": 1.6
+      },
+      "weather_weights": {
+        "clear": 1,
+        "rain": 1.1
+      },
+      "min_gear": 2,
+      "min_cast": 0.35,
+      "max_cast": 1,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "chinese_sturgeon",
+      "name": "中华鲟",
+      "scientific_name": "Sinosturio sinensis",
+      "art": "res://assets/fish/chinese_sturgeon.png",
+      "thumb": "res://assets/fish/chinese_sturgeon_thumb.png",
+      "min_mm": 800,
+      "normal_max_mm": 2400,
+      "max_mm": 5610,
+      "anchor_mm": 1400,
+      "anchor_g": 18000,
+      "behavior": "steady",
+      "difficulty": 0.67,
+      "weight": 3,
+      "bait_weights": {
+        "worm": 1.0,
+        "grain": 0.1,
+        "shrimp": 1.8,
+        "lure": 0.3
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "release_only": true,
+      "min_gear": 1,
+      "min_cast": 0.2,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "mandarin_fish",
+      "name": "鳜",
+      "scientific_name": "Siniperca chuatsi",
+      "art": "res://assets/fish/mandarin_fish.png",
+      "thumb": "res://assets/fish/mandarin_fish_thumb.png",
+      "min_mm": 180,
+      "normal_max_mm": 650,
+      "max_mm": 790,
+      "anchor_mm": 360,
+      "anchor_g": 900,
+      "behavior": "burst",
+      "difficulty": 0.55,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.3,
+        "grain": 0.05,
+        "shrimp": 1.3,
+        "lure": 2.2
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.08,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "northern_snakehead",
+      "name": "乌鳢",
+      "scientific_name": "Channa argus",
+      "art": "res://assets/fish/northern_snakehead.png",
+      "thumb": "res://assets/fish/northern_snakehead_thumb.png",
+      "min_mm": 200,
+      "normal_max_mm": 800,
+      "max_mm": 1120,
+      "anchor_mm": 450,
+      "anchor_g": 1000,
+      "behavior": "burst",
+      "difficulty": 0.61,
+      "weight": 8,
+      "bait_weights": {
+        "worm": 0.6,
+        "grain": 0.05,
+        "shrimp": 1.0,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.12,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "yellowcheek",
+      "name": "鳡",
+      "scientific_name": "Elopichthys bambusa",
+      "art": "res://assets/fish/yellowcheek.png",
+      "thumb": "res://assets/fish/yellowcheek_thumb.png",
+      "min_mm": 350,
+      "normal_max_mm": 1200,
+      "max_mm": 2240,
+      "anchor_mm": 700,
+      "anchor_g": 3500,
+      "behavior": "burst",
+      "difficulty": 0.79,
+      "weight": 5,
+      "bait_weights": {
+        "worm": 0.2,
+        "grain": 0.05,
+        "shrimp": 0.8,
+        "lure": 2.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.28,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "southern_catfish",
+      "name": "南方鲇",
+      "scientific_name": "Silurus meridionalis",
+      "art": "res://assets/fish/southern_catfish.png",
+      "thumb": "res://assets/fish/southern_catfish_thumb.png",
+      "min_mm": 300,
+      "normal_max_mm": 1200,
+      "max_mm": 1380,
+      "anchor_mm": 650,
+      "anchor_g": 2500,
+      "behavior": "steady",
+      "difficulty": 0.71,
+      "weight": 6,
+      "bait_weights": {
+        "worm": 1.3,
+        "grain": 0.05,
+        "shrimp": 2.0,
+        "lure": 0.8
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 1,
+      "min_cast": 0.22,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "longsnout_catfish",
+      "name": "长吻鮠",
+      "scientific_name": "Rhinobagrus dumerili",
+      "art": "res://assets/fish/longsnout_catfish.png",
+      "thumb": "res://assets/fish/longsnout_catfish_thumb.png",
+      "min_mm": 220,
+      "normal_max_mm": 750,
+      "max_mm": 910,
+      "anchor_mm": 450,
+      "anchor_g": 1100,
+      "behavior": "rest",
+      "difficulty": 0.43,
+      "weight": 11,
+      "bait_weights": {
+        "worm": 1.6,
+        "grain": 0.1,
+        "shrimp": 2.1,
+        "lure": 0.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.2
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.1
+      },
+      "min_gear": 0,
+      "min_cast": 0.1,
+      "max_cast": 1.0,
+      "salinity": "fresh"
+    },
+    {
+      "species_id": "atlantic_bluefin_tuna",
+      "name": "大西洋蓝鳍金枪鱼",
+      "scientific_name": "Thunnus thynnus",
+      "art": "res://assets/fish/atlantic_bluefin_tuna.png",
+      "thumb": "res://assets/fish/atlantic_bluefin_tuna_thumb.png",
+      "min_mm": 900,
+      "normal_max_mm": 3400,
+      "max_mm": 5130,
+      "anchor_mm": 1800,
+      "anchor_g": 130000,
+      "behavior": "steady",
+      "difficulty": 0.92,
+      "weight": 3,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.56,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "pacific_bluefin_tuna",
+      "name": "太平洋蓝鳍金枪鱼",
+      "scientific_name": "Thunnus orientalis",
+      "art": "res://assets/fish/pacific_bluefin_tuna.png",
+      "thumb": "res://assets/fish/pacific_bluefin_tuna_thumb.png",
+      "min_mm": 800,
+      "normal_max_mm": 2700,
+      "max_mm": 3360,
+      "anchor_mm": 1600,
+      "anchor_g": 80000,
+      "behavior": "steady",
+      "difficulty": 0.9,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.54,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "yellowfin_tuna",
+      "name": "黄鳍金枪鱼",
+      "scientific_name": "Thunnus albacares",
+      "art": "res://assets/fish/yellowfin_tuna.png",
+      "thumb": "res://assets/fish/yellowfin_tuna_thumb.png",
+      "min_mm": 600,
+      "normal_max_mm": 2100,
+      "max_mm": 2680,
+      "anchor_mm": 1300,
+      "anchor_g": 42000,
+      "behavior": "burst",
+      "difficulty": 0.81,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.4,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "bigeye_tuna",
+      "name": "大眼金枪鱼",
+      "scientific_name": "Thunnus obesus",
+      "art": "res://assets/fish/bigeye_tuna.png",
+      "thumb": "res://assets/fish/bigeye_tuna_thumb.png",
+      "min_mm": 700,
+      "normal_max_mm": 2150,
+      "max_mm": 2800,
+      "anchor_mm": 1400,
+      "anchor_g": 60000,
+      "behavior": "steady",
+      "difficulty": 0.85,
+      "weight": 7,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.48,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "albacore",
+      "name": "长鳍金枪鱼",
+      "scientific_name": "Thunnus alalunga",
+      "art": "res://assets/fish/albacore.png",
+      "thumb": "res://assets/fish/albacore_thumb.png",
+      "min_mm": 450,
+      "normal_max_mm": 1150,
+      "max_mm": 1570,
+      "anchor_mm": 850,
+      "anchor_g": 12000,
+      "behavior": "steady",
+      "difficulty": 0.66,
+      "weight": 12,
+      "bait_weights": {
+        "worm": 0.1,
+        "grain": 0.02,
+        "shrimp": 1.1,
+        "lure": 2.5
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.35,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "skipjack_tuna",
+      "name": "鲣",
+      "scientific_name": "Katsuwonus pelamis",
+      "art": "res://assets/fish/skipjack_tuna.png",
+      "thumb": "res://assets/fish/skipjack_tuna_thumb.png",
+      "min_mm": 300,
+      "normal_max_mm": 900,
+      "max_mm": 1240,
+      "anchor_mm": 600,
+      "anchor_g": 5500,
+      "behavior": "burst",
+      "difficulty": 0.54,
+      "weight": 16,
+      "bait_weights": {
+        "worm": 0.1,
+        "grain": 0.02,
+        "shrimp": 1.1,
+        "lure": 2.5
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.28,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "mahi_mahi",
+      "name": "鲯鳅",
+      "scientific_name": "Coryphaena hippurus",
+      "art": "res://assets/fish/mahi_mahi.png",
+      "thumb": "res://assets/fish/mahi_mahi_thumb.png",
+      "min_mm": 550,
+      "normal_max_mm": 1700,
+      "max_mm": 2360,
+      "anchor_mm": 1100,
+      "anchor_g": 13000,
+      "behavior": "burst",
+      "difficulty": 0.71,
+      "weight": 12,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.32,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "wahoo",
+      "name": "沙氏刺鲅",
+      "scientific_name": "Acanthocybium solandri",
+      "art": "res://assets/fish/wahoo.png",
+      "thumb": "res://assets/fish/wahoo_thumb.png",
+      "min_mm": 700,
+      "normal_max_mm": 2100,
+      "max_mm": 2800,
+      "anchor_mm": 1400,
+      "anchor_g": 25000,
+      "behavior": "burst",
+      "difficulty": 0.8,
+      "weight": 8,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.42,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "swordfish",
+      "name": "剑鱼",
+      "scientific_name": "Xiphias gladius",
+      "art": "res://assets/fish/swordfish.png",
+      "thumb": "res://assets/fish/swordfish_thumb.png",
+      "min_mm": 1100,
+      "normal_max_mm": 3600,
+      "max_mm": 5100,
+      "anchor_mm": 2300,
+      "anchor_g": 120000,
+      "behavior": "burst",
+      "difficulty": 0.93,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.56,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "blue_marlin",
+      "name": "蓝枪鱼",
+      "scientific_name": "Makaira nigricans",
+      "art": "res://assets/fish/blue_marlin.png",
+      "thumb": "res://assets/fish/blue_marlin_thumb.png",
+      "min_mm": 1300,
+      "normal_max_mm": 4000,
+      "max_mm": 5600,
+      "anchor_mm": 2500,
+      "anchor_g": 180000,
+      "behavior": "burst",
+      "difficulty": 0.96,
+      "weight": 3,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.6,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "striped_marlin",
+      "name": "条纹四鳍旗鱼",
+      "scientific_name": "Kajikia audax",
+      "art": "res://assets/fish/striped_marlin.png",
+      "thumb": "res://assets/fish/striped_marlin_thumb.png",
+      "min_mm": 1100,
+      "normal_max_mm": 3400,
+      "max_mm": 4710,
+      "anchor_mm": 2200,
+      "anchor_g": 95000,
+      "behavior": "burst",
+      "difficulty": 0.88,
+      "weight": 6,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.5,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "indo_pacific_sailfish",
+      "name": "印度太平洋旗鱼",
+      "scientific_name": "Istiophorus platypterus",
+      "art": "res://assets/fish/indo_pacific_sailfish.png",
+      "thumb": "res://assets/fish/indo_pacific_sailfish_thumb.png",
+      "min_mm": 1000,
+      "normal_max_mm": 2800,
+      "max_mm": 3900,
+      "anchor_mm": 2100,
+      "anchor_g": 45000,
+      "behavior": "burst",
+      "difficulty": 0.86,
+      "weight": 7,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.47,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "great_barracuda",
+      "name": "大魣",
+      "scientific_name": "Sphyraena barracuda",
+      "art": "res://assets/fish/great_barracuda.png",
+      "thumb": "res://assets/fish/great_barracuda_thumb.png",
+      "min_mm": 600,
+      "normal_max_mm": 1650,
+      "max_mm": 2240,
+      "anchor_mm": 1100,
+      "anchor_g": 11000,
+      "behavior": "burst",
+      "difficulty": 0.7,
+      "weight": 11,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.3,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "giant_trevally",
+      "name": "浪人鲹",
+      "scientific_name": "Caranx ignobilis",
+      "art": "res://assets/fish/giant_trevally.png",
+      "thumb": "res://assets/fish/giant_trevally_thumb.png",
+      "min_mm": 600,
+      "normal_max_mm": 1500,
+      "max_mm": 2020,
+      "anchor_mm": 1050,
+      "anchor_g": 23000,
+      "behavior": "burst",
+      "difficulty": 0.8,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.38,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "greater_amberjack",
+      "name": "高体鰤",
+      "scientific_name": "Seriola dumerili",
+      "art": "res://assets/fish/greater_amberjack.png",
+      "thumb": "res://assets/fish/greater_amberjack_thumb.png",
+      "min_mm": 650,
+      "normal_max_mm": 1550,
+      "max_mm": 2050,
+      "anchor_mm": 1100,
+      "anchor_g": 19000,
+      "behavior": "steady",
+      "difficulty": 0.77,
+      "weight": 11,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.38,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "cobia",
+      "name": "军曹鱼",
+      "scientific_name": "Rachycentron canadum",
+      "art": "res://assets/fish/cobia.png",
+      "thumb": "res://assets/fish/cobia_thumb.png",
+      "min_mm": 600,
+      "normal_max_mm": 1700,
+      "max_mm": 2240,
+      "anchor_mm": 1100,
+      "anchor_g": 14500,
+      "behavior": "steady",
+      "difficulty": 0.72,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.15,
+        "grain": 0.02,
+        "shrimp": 2.0,
+        "lure": 1.5
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.32,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "roosterfish",
+      "name": "公鸡鱼",
+      "scientific_name": "Nematistius pectoralis",
+      "art": "res://assets/fish/roosterfish.png",
+      "thumb": "res://assets/fish/roosterfish_thumb.png",
+      "min_mm": 500,
+      "normal_max_mm": 1500,
+      "max_mm": 2140,
+      "anchor_mm": 1000,
+      "anchor_g": 14500,
+      "behavior": "burst",
+      "difficulty": 0.76,
+      "weight": 9,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.3,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "red_snapper",
+      "name": "红笛鲷",
+      "scientific_name": "Lutjanus campechanus",
+      "art": "res://assets/fish/red_snapper.png",
+      "thumb": "res://assets/fish/red_snapper_thumb.png",
+      "min_mm": 350,
+      "normal_max_mm": 850,
+      "max_mm": 1170,
+      "anchor_mm": 600,
+      "anchor_g": 4200,
+      "behavior": "rest",
+      "difficulty": 0.6,
+      "weight": 15,
+      "bait_weights": {
+        "worm": 0.7,
+        "grain": 0.03,
+        "shrimp": 2.4,
+        "lure": 0.9
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.35
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.25,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "giant_grouper",
+      "name": "鞍带石斑鱼",
+      "scientific_name": "Epinephelus lanceolatus",
+      "art": "res://assets/fish/giant_grouper.png",
+      "thumb": "res://assets/fish/giant_grouper_thumb.png",
+      "min_mm": 900,
+      "normal_max_mm": 2250,
+      "max_mm": 3030,
+      "anchor_mm": 1600,
+      "anchor_g": 100000,
+      "behavior": "rest",
+      "difficulty": 0.87,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.7,
+        "grain": 0.03,
+        "shrimp": 2.4,
+        "lure": 0.9
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.35
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.44,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "dogtooth_tuna",
+      "name": "裸狐鲣",
+      "scientific_name": "Gymnosarda unicolor",
+      "art": "res://assets/fish/dogtooth_tuna.png",
+      "thumb": "res://assets/fish/dogtooth_tuna_thumb.png",
+      "min_mm": 700,
+      "normal_max_mm": 2050,
+      "max_mm": 2780,
+      "anchor_mm": 1350,
+      "anchor_g": 40000,
+      "behavior": "burst",
+      "difficulty": 0.88,
+      "weight": 6,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.48,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "yellowtail_kingfish",
+      "name": "黄尾鰤",
+      "scientific_name": "Seriola lalandi",
+      "art": "res://assets/fish/yellowtail_kingfish.png",
+      "thumb": "res://assets/fish/yellowtail_kingfish_thumb.png",
+      "min_mm": 600,
+      "normal_max_mm": 1900,
+      "max_mm": 2800,
+      "anchor_mm": 1100,
+      "anchor_g": 14000,
+      "behavior": "steady",
+      "difficulty": 0.77,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.12,
+        "grain": 0.02,
+        "shrimp": 1.35,
+        "lure": 2.4
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.35,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "opah",
+      "name": "月鱼",
+      "scientific_name": "Lampris guttatus",
+      "art": "res://assets/fish/opah.png",
+      "thumb": "res://assets/fish/opah_thumb.png",
+      "min_mm": 600,
+      "normal_max_mm": 1350,
+      "max_mm": 1800,
+      "anchor_mm": 1000,
+      "anchor_g": 38000,
+      "behavior": "steady",
+      "difficulty": 0.76,
+      "weight": 5,
+      "bait_weights": {
+        "worm": 0.15,
+        "grain": 0.02,
+        "shrimp": 2.0,
+        "lure": 1.5
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": false,
+      "min_gear": 2,
+      "min_cast": 0.52,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "great_white_shark",
+      "name": "大白鲨",
+      "scientific_name": "Carcharodon carcharias",
+      "art": "res://assets/fish/great_white_shark.png",
+      "thumb": "res://assets/fish/great_white_shark_thumb.png",
+      "min_mm": 2100,
+      "normal_max_mm": 5200,
+      "max_mm": 6800,
+      "anchor_mm": 3800,
+      "anchor_g": 550000,
+      "behavior": "steady",
+      "difficulty": 0.98,
+      "weight": 2,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.6,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "scalloped_hammerhead",
+      "name": "路氏双髻鲨",
+      "scientific_name": "Sphyrna lewini",
+      "art": "res://assets/fish/scalloped_hammerhead.png",
+      "thumb": "res://assets/fish/scalloped_hammerhead_thumb.png",
+      "min_mm": 1400,
+      "normal_max_mm": 3550,
+      "max_mm": 4820,
+      "anchor_mm": 2500,
+      "anchor_g": 65000,
+      "behavior": "steady",
+      "difficulty": 0.88,
+      "weight": 5,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.5,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "great_hammerhead",
+      "name": "无沟双髻鲨",
+      "scientific_name": "Sphyrna mokarran",
+      "art": "res://assets/fish/great_hammerhead.png",
+      "thumb": "res://assets/fish/great_hammerhead_thumb.png",
+      "min_mm": 1900,
+      "normal_max_mm": 5000,
+      "max_mm": 6840,
+      "anchor_mm": 3500,
+      "anchor_g": 180000,
+      "behavior": "steady",
+      "difficulty": 0.96,
+      "weight": 3,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.58,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "blue_shark",
+      "name": "大青鲨",
+      "scientific_name": "Prionace glauca",
+      "art": "res://assets/fish/blue_shark.png",
+      "thumb": "res://assets/fish/blue_shark_thumb.png",
+      "min_mm": 1300,
+      "normal_max_mm": 3300,
+      "max_mm": 4480,
+      "anchor_mm": 2300,
+      "anchor_g": 45000,
+      "behavior": "steady",
+      "difficulty": 0.83,
+      "weight": 7,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.45,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "shortfin_mako",
+      "name": "尖吻鲭鲨",
+      "scientific_name": "Isurus oxyrinchus",
+      "art": "res://assets/fish/shortfin_mako.png",
+      "thumb": "res://assets/fish/shortfin_mako_thumb.png",
+      "min_mm": 1500,
+      "normal_max_mm": 3700,
+      "max_mm": 4990,
+      "anchor_mm": 2500,
+      "anchor_g": 100000,
+      "behavior": "burst",
+      "difficulty": 0.96,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.58,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "tiger_shark",
+      "name": "鼬鲨",
+      "scientific_name": "Galeocerdo cuvier",
+      "art": "res://assets/fish/tiger_shark.png",
+      "thumb": "res://assets/fish/tiger_shark_thumb.png",
+      "min_mm": 2000,
+      "normal_max_mm": 4700,
+      "max_mm": 6160,
+      "anchor_mm": 3300,
+      "anchor_g": 260000,
+      "behavior": "steady",
+      "difficulty": 0.94,
+      "weight": 3,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.55,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "oceanic_whitetip_shark",
+      "name": "远洋白鳍鲨",
+      "scientific_name": "Carcharhinus longimanus",
+      "art": "res://assets/fish/oceanic_whitetip_shark.png",
+      "thumb": "res://assets/fish/oceanic_whitetip_shark_thumb.png",
+      "min_mm": 1400,
+      "normal_max_mm": 3250,
+      "max_mm": 4480,
+      "anchor_mm": 2400,
+      "anchor_g": 65000,
+      "behavior": "steady",
+      "difficulty": 0.91,
+      "weight": 4,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.15
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.54,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    },
+    {
+      "species_id": "whitetip_reef_shark",
+      "name": "灰三齿鲨",
+      "scientific_name": "Triaenodon obesus",
+      "art": "res://assets/fish/whitetip_reef_shark.png",
+      "thumb": "res://assets/fish/whitetip_reef_shark_thumb.png",
+      "min_mm": 750,
+      "normal_max_mm": 1750,
+      "max_mm": 2390,
+      "anchor_mm": 1300,
+      "anchor_g": 10500,
+      "behavior": "rest",
+      "difficulty": 0.72,
+      "weight": 10,
+      "bait_weights": {
+        "worm": 0.06,
+        "grain": 0.01,
+        "shrimp": 2.5,
+        "lure": 0.7
+      },
+      "time_weights": {
+        "day": 1.0,
+        "dusk": 1.35
+      },
+      "weather_weights": {
+        "clear": 1.0,
+        "rain": 1.05
+      },
+      "release_only": true,
+      "min_gear": 2,
+      "min_cast": 0.3,
+      "max_cast": 1.0,
+      "salinity": "salt"
+    }
+  ],
+  "legacy_baits": [
+    {
+      "bait_id": "worm",
+      "hint": "湖泊鱼与近底觅食鱼的温和选择",
+      "name": "蚯蚓",
+      "price": 0.0
+    },
+    {
+      "bait_id": "grain",
+      "hint": "鲤、鲫、丁鱥等淡水鱼更感兴趣",
+      "name": "谷物",
+      "price": 0.0
+    },
+    {
+      "bait_id": "shrimp",
+      "hint": "海底鱼与鲷科鱼的旅行常备",
+      "name": "虾饵",
+      "price": 0.0
+    },
+    {
+      "bait_id": "lure",
+      "hint": "掠食鱼和水层巡游鱼更易追逐",
+      "name": "拟饵",
+      "price": 0.0
+    },
+    {
+      "bait_id": "sweetcorn",
+      "hint": "甜香颗粒，更吸引鲤鱼、鲫鱼与丁鱥",
+      "legacy_category": "grain",
+      "name": "甜玉米",
+      "price": 0,
+      "species_weights": {
+        "common_carp": 2.4,
+        "alligator_gar": 0.05,
+        "crucian_carp": 2.5,
+        "common_bream": 2.1,
+        "tench": 2.4,
+        "roach": 1.8,
+        "rudd": 2.0
+      }
+    },
+    {
+      "bait_id": "dough",
+      "hint": "柔软慢散，更适合鳊鱼、鲫鱼与鲤鱼",
+      "legacy_category": "grain",
+      "name": "面团饵",
+      "price": 0,
+      "species_weights": {
+        "common_carp": 2.1,
+        "alligator_gar": 0.06,
+        "crucian_carp": 2.0,
+        "common_bream": 2.4,
+        "tench": 2.0,
+        "roach": 2.1,
+        "rudd": 1.7
+      }
+    },
+    {
+      "bait_id": "cut_fish",
+      "hint": "切块荤饵，更吸引雀鳝、鲶鱼与大型掠食鱼",
+      "legacy_category": "shrimp",
+      "name": "鱼肉块",
+      "price": 0,
+      "species_weights": {
+        "common_carp": 0.06,
+        "alligator_gar": 2.6,
+        "northern_pike": 2.2,
+        "largemouth_bass": 2.1,
+        "bowfin": 2.25,
+        "yellowcheek": 2.5,
+        "channel_catfish": 2.3,
+        "flathead_catfish": 2.3,
+        "southern_catfish": 2.3,
+        "longsnout_catfish": 2.3
+      }
+    },
+    {
+      "bait_id": "spinner",
+      "hint": "旋转反光，更吸引河鲈、狗鱼与鲈鱼",
+      "legacy_category": "lure",
+      "name": "旋转亮片",
+      "price": 0,
+      "species_weights": {
+        "common_carp": 0.09,
+        "alligator_gar": 2.05,
+        "european_perch": 2.2,
+        "northern_pike": 2.35,
+        "largemouth_bass": 2.2,
+        "mandarin_fish": 2.1
+      }
+    },
+    {
+      "bait_id": "large_fish_chunk",
+      "name": "大块鱼肉",
+      "hint": "偏向鲶鱼、雀鳝与巨型石斑；更常遇到同种大个体，仍需观察鱼口（游戏设定）",
+      "price": 0,
+      "legacy_category": "shrimp",
+      "fallback_weight_scale": 0.14,
+      "size_exponent": 0.88,
+      "species_weights": {
+        "alligator_gar": 3.8,
+        "longnose_gar": 3.3,
+        "channel_catfish": 3.6,
+        "flathead_catfish": 4.0,
+        "southern_catfish": 3.7,
+        "longsnout_catfish": 3.4,
+        "giant_grouper": 4.2,
+        "red_snapper": 1.6,
+        "bowfin": 1.5,
+        "northern_pike": 1.2,
+        "yellowcheek": 1.3
+      }
+    },
+    {
+      "bait_id": "whole_mackerel",
+      "name": "整尾鲭鱼",
+      "hint": "偏向大型海洋掠食鱼与鲨类；同种巨物机会提高，钓竿与水深限制不变（游戏设定）",
+      "price": 0,
+      "legacy_category": "shrimp",
+      "fallback_weight_scale": 0.1,
+      "size_exponent": 0.84,
+      "species_weights": {
+        "atlantic_bluefin_tuna": 2.8,
+        "pacific_bluefin_tuna": 2.7,
+        "yellowfin_tuna": 2.5,
+        "bigeye_tuna": 2.2,
+        "wahoo": 3.6,
+        "great_barracuda": 3.5,
+        "greater_amberjack": 2.7,
+        "cobia": 2.8,
+        "giant_grouper": 2.1,
+        "dogtooth_tuna": 3.0,
+        "yellowtail_kingfish": 2.6,
+        "great_white_shark": 4.0,
+        "scalloped_hammerhead": 3.4,
+        "great_hammerhead": 3.8,
+        "blue_shark": 3.0,
+        "shortfin_mako": 3.8,
+        "tiger_shark": 3.6,
+        "oceanic_whitetip_shark": 3.5,
+        "whitetip_reef_shark": 2.7
+      }
+    },
+    {
+      "bait_id": "large_squid",
+      "name": "大只鱿鱼",
+      "hint": "偏向剑鱼、大眼金枪鱼与月鱼等深水游鱼；提高同种巨物机会，仍需合适探深（游戏设定）",
+      "price": 0,
+      "legacy_category": "shrimp",
+      "fallback_weight_scale": 0.12,
+      "size_exponent": 0.8,
+      "species_weights": {
+        "swordfish": 4.2,
+        "bigeye_tuna": 4.0,
+        "opah": 4.1,
+        "albacore": 2.5,
+        "atlantic_bluefin_tuna": 2.4,
+        "pacific_bluefin_tuna": 2.3,
+        "yellowfin_tuna": 2.2,
+        "blue_shark": 2.9,
+        "shortfin_mako": 2.6,
+        "oceanic_whitetip_shark": 2.7,
+        "dogtooth_tuna": 2.5,
+        "greater_amberjack": 2.3,
+        "atlantic_cod": 1.7,
+        "giant_grouper": 1.6
+      }
+    },
+    {
+      "bait_id": "large_surface_lure",
+      "name": "巨物波扒",
+      "hint": "大型水面拟饵，偏向金枪鱼、巨鲹与旗鱼；更常遇到同种大个体，不保证中钩或遛鱼成功（游戏设定）",
+      "price": 0,
+      "legacy_category": "lure",
+      "fallback_weight_scale": 0.1,
+      "size_exponent": 0.92,
+      "species_weights": {
+        "atlantic_bluefin_tuna": 3.1,
+        "pacific_bluefin_tuna": 3.2,
+        "yellowfin_tuna": 3.8,
+        "bigeye_tuna": 1.5,
+        "albacore": 2.7,
+        "skipjack_tuna": 2.8,
+        "mahi_mahi": 3.0,
+        "wahoo": 2.6,
+        "blue_marlin": 3.9,
+        "striped_marlin": 3.7,
+        "indo_pacific_sailfish": 4.0,
+        "giant_trevally": 4.3,
+        "roosterfish": 3.5,
+        "great_barracuda": 2.7,
+        "dogtooth_tuna": 2.6,
+        "yellowtail_kingfish": 3.1,
+        "greater_amberjack": 2.2
+      }
+    }
+  ],
+  "legacy_gear": [
+    {
+      "description": "宽容的初次相遇，适合湖岸与小港",
+      "id": 0.0,
+      "max_depth_m": 10.0,
+      "name": "溪风 · 入门竿",
+      "power": 1.0,
+      "price": 0.0,
+      "reach": 0.75,
+      "tolerance": 1.0
+    },
+    {
+      "description": "更远的落点、更稳的控鱼，开启礁岸",
+      "id": 1.0,
+      "max_depth_m": 60.0,
+      "name": "海旅 · 旅行竿",
+      "power": 1.18,
+      "price": 180.0,
+      "reach": 1.0,
+      "tolerance": 1.25
+    },
+    {
+      "description": "前往峡湾深水，面对更大的身影",
+      "id": 2.0,
+      "max_depth_m": 180.0,
+      "name": "远岸 · 探深竿",
+      "power": 1.35,
+      "price": 480.0,
+      "reach": 1.0,
+      "tolerance": 1.5
+    },
+    {
+      "description": "轻量快收，控线更灵敏；张力高时需及时卸力",
+      "grip_color": "c2a77a",
+      "icon": "rod_spinning",
+      "id": 3,
+      "max_depth_m": 25,
+      "name": "轻岚 · 灵敏纺车竿",
+      "power": 1.24,
+      "price": 100,
+      "reach": 0.9,
+      "reel_color": "c5cdd0",
+      "rod_color": "315b83",
+      "rod_length": 1.86,
+      "rod_radius": 0.0105,
+      "tolerance": 1.08
+    },
+    {
+      "description": "强力稳控大鱼；抛投距离和探深仍有取舍",
+      "grip_color": "362c29",
+      "icon": "rod_heavy",
+      "id": 4,
+      "max_depth_m": 90,
+      "name": "重潮 · 巨物枪柄竿",
+      "power": 1.52,
+      "price": 320,
+      "reach": 0.92,
+      "reel_color": "bb9452",
+      "rod_color": "632b38",
+      "rod_length": 2.58,
+      "rod_radius": 0.018,
+      "tolerance": 1.75
+    }
+  ],
+  "legacy_regions": [
+    {
+      "color": "#81aa9a",
+      "description": "晨雾散开，芦苇轻响。第一段旅程，从一枚小小的浮漂开始。",
+      "name": "雾林湖",
+      "region_id": "lake",
+      "scene": "res://assets/scenery/lake.png",
+      "spots": [
+        "lake_shore",
+        "lake_bay"
+      ],
+      "subtitle": "欧洲 · 林间淡水",
+      "unlock_cost": 0.0,
+      "unlock_count": 0.0
+    },
+    {
+      "color": "#72a4b6",
+      "description": "沿着防波堤听海风，远处的灯塔亮起。礁石与沙底之间藏着新的相遇。",
+      "name": "汐见港",
+      "region_id": "japan",
+      "scene": "res://assets/scenery/japan.png",
+      "spots": [
+        "japan_harbor",
+        "japan_reef"
+      ],
+      "subtitle": "日本 · 西北太平洋",
+      "unlock_cost": 140.0,
+      "unlock_count": 3.0
+    },
+    {
+      "color": "#6e8eaa",
+      "description": "山影落入深蓝色的海。登上小船，探访峡湾更深的水层。",
+      "name": "松湾峡湾",
+      "region_id": "norway",
+      "scene": "res://assets/scenery/norway.png",
+      "spots": [
+        "norway_harbor",
+        "norway_boat"
+      ],
+      "subtitle": "挪威 · 东北大西洋",
+      "unlock_cost": 300.0,
+      "unlock_count": 8.0
+    },
+    {
+      "color": "#81bdbe",
+      "description": "石墙、橄榄树与透亮的海水。把一段慢下来的午后，收藏进旅行手册。",
+      "name": "琥珀海岸",
+      "region_id": "med",
+      "scene": "res://assets/scenery/med.png",
+      "spots": [
+        "med_pier",
+        "med_boat"
+      ],
+      "subtitle": "地中海 · 岩岸与小港",
+      "unlock_cost": 500.0,
+      "unlock_count": 14.0
+    },
+    {
+      "region_id": "bayou",
+      "name": "密西西比",
+      "subtitle": "美国 · 河流与湿地",
+      "description": "从柏树低垂的温暖湿地，到上游开阔河湾。长吻与巨影，在芦苇边缓缓游过。",
+      "scene": "res://assets/scenery/bayou.png",
+      "color": "#56867b",
+      "unlock_count": 20,
+      "unlock_cost": 450,
+      "spots": [
+        "bayou_backwater",
+        "bayou_channel"
+      ]
+    },
+    {
+      "region_id": "yangtze",
+      "name": "长江流域",
+      "subtitle": "中国 · 江河与入海口",
+      "description": "顺着江流探访水下的生命。猛鱼藏在洲滩边，中华鲟的相遇留作保护观察。",
+      "scene": "res://assets/scenery/yangtze.png",
+      "color": "#5e9d9e",
+      "unlock_count": 28,
+      "unlock_cost": 600,
+      "spots": [
+        "yangtze_river",
+        "yangtze_estuary"
+      ]
+    },
+    {
+      "region_id": "pacific_ocean",
+      "name": "苍蓝太平洋",
+      "subtitle": "太平洋 · 礁缘与远洋",
+      "description": "越过礁缘驶向辽阔的蓝色水面。本水域是横跨太平洋不同海区的虚构旅行合辑，并非同一座岛的物种调查。",
+      "scene": "res://assets/scenery/pacific_ocean.png",
+      "color": "#428fab",
+      "unlock_count": 20,
+      "unlock_cost": 450,
+      "spots": [
+        "pacific_reef",
+        "pacific_bluewater"
+      ]
+    },
+    {
+      "region_id": "atlantic_ocean",
+      "name": "北辰大西洋",
+      "subtitle": "大西洋 · 陆架与蓝水",
+      "description": "冷暖洋流沿陆架交汇，远处只剩海与天。这里汇集不同纬度的虚构观察航段，不将鱼种名单当作一处真实渔场。",
+      "scene": "res://assets/scenery/atlantic_ocean.png",
+      "color": "#517e9b",
+      "unlock_count": 28,
+      "unlock_cost": 600,
+      "spots": [
+        "atlantic_shelf",
+        "atlantic_bluewater"
+      ]
+    },
+    {
+      "region_id": "indian_ocean",
+      "name": "珊瑚印度洋",
+      "subtitle": "印度洋 · 环礁与外海",
+      "description": "浅色环礁外侧，浪花进入深蓝。各钓点为印度洋多地环境的虚构合辑；保护观察只发生在游戏中。",
+      "scene": "res://assets/scenery/indian_ocean.png",
+      "color": "#47a8ac",
+      "unlock_count": 36,
+      "unlock_cost": 750,
+      "spots": [
+        "indian_reef",
+        "indian_bluewater"
+      ]
+    }
+  ],
+  "legacy_spot_ids": [
+    "lake_shore",
+    "lake_bay",
+    "japan_harbor",
+    "japan_reef",
+    "norway_harbor",
+    "norway_boat",
+    "med_pier",
+    "med_boat",
+    "bayou_backwater",
+    "bayou_channel",
+    "yangtze_river",
+    "yangtze_estuary",
+    "pacific_reef",
+    "pacific_bluewater",
+    "atlantic_shelf",
+    "atlantic_bluewater",
+    "indian_reef",
+    "indian_bluewater"
+  ],
+  "legacy_spots_original_six_regions": [
+    {
+      "cast_hint": "短抛贴近芦苇，长抛探向草床边缘",
+      "depth_max_m": 5.0,
+      "depth_min_m": 0.5,
+      "foreground": "reeds",
+      "habitat": "芦苇、草床与软底浅水",
+      "min_gear": 0.0,
+      "name": "芦苇浅岸",
+      "region_id": "lake",
+      "salinity": "fresh",
+      "spot_id": "lake_shore"
+    },
+    {
+      "cast_hint": "中远距离覆盖湖湾，也有巡游的掠食鱼",
+      "depth_max_m": 12.0,
+      "depth_min_m": 2.0,
+      "foreground": "pier",
+      "habitat": "湖湾、开阔水面与较深软底",
+      "min_gear": 0.0,
+      "name": "林影湖湾",
+      "region_id": "lake",
+      "salinity": "fresh",
+      "spot_id": "lake_bay"
+    },
+    {
+      "cast_hint": "短抛寻沙底鱼，远抛试港池中的鱼群",
+      "depth_max_m": 12.0,
+      "depth_min_m": 1.0,
+      "foreground": "pier",
+      "habitat": "防波堤内侧、浅沙底与港池",
+      "min_gear": 0.0,
+      "name": "港内木栈桥",
+      "region_id": "japan",
+      "salinity": "salt",
+      "spot_id": "japan_harbor"
+    },
+    {
+      "cast_hint": "中远抛可达礁边沙底，需旅行装备",
+      "depth_max_m": 40.0,
+      "depth_min_m": 5.0,
+      "foreground": "rocks",
+      "habitat": "礁岸外缘、岩缝与邻近沙底",
+      "min_gear": 1.0,
+      "name": "灯塔礁岸",
+      "region_id": "japan",
+      "salinity": "salt",
+      "spot_id": "japan_reef"
+    },
+    {
+      "cast_hint": "留意近岸水层中的巡游鱼群",
+      "depth_max_m": 25.0,
+      "depth_min_m": 3.0,
+      "foreground": "pier",
+      "habitat": "峡湾港口、岩沙混合底与上层水",
+      "min_gear": 1.0,
+      "name": "红屋港湾",
+      "region_id": "norway",
+      "salinity": "salt",
+      "spot_id": "norway_harbor"
+    },
+    {
+      "cast_hint": "探深装备覆盖深水，狼鱼与黑线鳕藏在这里",
+      "depth_max_m": 180.0,
+      "depth_min_m": 10.0,
+      "foreground": "boat",
+      "habitat": "峡湾船钓、深水岩底与沙泥底",
+      "min_gear": 2.0,
+      "name": "深蓝船钓",
+      "region_id": "norway",
+      "salinity": "salt",
+      "spot_id": "norway_boat"
+    },
+    {
+      "cast_hint": "虾饵适合石堤附近的鲷科鱼",
+      "depth_max_m": 15.0,
+      "depth_min_m": 1.0,
+      "foreground": "rocks",
+      "habitat": "石质港堤、海草边缘和沙底",
+      "min_gear": 1.0,
+      "name": "石港小码头",
+      "region_id": "med",
+      "salinity": "salt",
+      "spot_id": "med_pier"
+    },
+    {
+      "cast_hint": "在浅底与水层之间寻找更多物种",
+      "depth_max_m": 60.0,
+      "depth_min_m": 5.0,
+      "foreground": "boat",
+      "habitat": "近岸船钓、海草床边缘与沙泥底",
+      "min_gear": 1.0,
+      "name": "碧水近岸船",
+      "region_id": "med",
+      "salinity": "salt",
+      "spot_id": "med_boat"
+    },
+    {
+      "spot_id": "bayou_backwater",
+      "region_id": "bayou",
+      "name": "柏影湿地",
+      "habitat": "美国路易斯安那下游温暖水草回水区",
+      "salinity": "fresh",
+      "depth_min_m": 1,
+      "depth_max_m": 8,
+      "min_gear": 1,
+      "cast_hint": "拟饵探水草边，鳄雀鳝只出现在温暖的下游湿地",
+      "foreground": "reeds"
+    },
+    {
+      "spot_id": "bayou_channel",
+      "region_id": "bayou",
+      "name": "上游河湾",
+      "habitat": "上密西西比流域有草带的河湾与较深河槽",
+      "salinity": "fresh",
+      "depth_min_m": 2,
+      "depth_max_m": 20,
+      "min_gear": 2,
+      "cast_hint": "近草带可遇狗鱼，河槽是大型鲶鱼的舞台",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/bayou_channel.png",
+      "hide_region_foreground": true
+    },
+    {
+      "spot_id": "yangtze_river",
+      "region_id": "yangtze",
+      "name": "洲滩江湾",
+      "habitat": "长江中游洲滩、通江湖泊与河槽",
+      "salinity": "fresh",
+      "depth_min_m": 1,
+      "depth_max_m": 35,
+      "min_gear": 1,
+      "cast_hint": "拟饵寻找掠食鱼；虾饵也适合近底觅食者",
+      "foreground": "rocks"
+    },
+    {
+      "spot_id": "yangtze_estuary",
+      "region_id": "yangtze",
+      "name": "江海观察站",
+      "habitat": "长江口外侧近岸海域与沙泥底",
+      "salinity": "salt",
+      "depth_min_m": 5,
+      "depth_max_m": 40,
+      "min_gear": 2,
+      "cast_hint": "中华鲟为虚拟保护观察对象，相遇后必须放归",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/yangtze_estuary.png",
+      "hide_region_foreground": true
+    }
+  ],
+  "new_fish_ids": [
+    "california_sheephead",
+    "lingcod",
+    "cabezon",
+    "garibaldi",
+    "kelp_greenling",
+    "pacific_halibut",
+    "yellow_tang",
+    "barreleye",
+    "turbot",
+    "john_dory",
+    "grey_gurnard",
+    "queen_angelfish",
+    "stoplight_parrotfish",
+    "atlantic_flyingfish",
+    "atlantic_tarpon",
+    "black_scabbardfish",
+    "humphead_wrasse",
+    "emperor_angelfish",
+    "leaf_scorpionfish",
+    "bluespotted_ribbontail_ray",
+    "giant_moray",
+    "collare_butterflyfish",
+    "longhorn_cowfish",
+    "russells_oarfish",
+    "red_sea_clownfish",
+    "red_sea_bannerfish",
+    "masked_butterflyfish",
+    "sohal_surgeonfish",
+    "arabian_picassotriggerfish",
+    "klunzingers_wrasse",
+    "red_sea_goatfish",
+    "crocodile_flathead",
+    "bluespotted_cornetfish",
+    "yellowbar_angelfish",
+    "blackspotted_sweetlips",
+    "orbicular_batfish"
+  ],
+  "new_region_assignments": {
+    "california_sheephead": "pacific_ocean",
+    "lingcod": "pacific_ocean",
+    "cabezon": "pacific_ocean",
+    "garibaldi": "pacific_ocean",
+    "kelp_greenling": "pacific_ocean",
+    "pacific_halibut": "pacific_ocean",
+    "yellow_tang": "pacific_ocean",
+    "barreleye": "pacific_ocean",
+    "turbot": "atlantic_ocean",
+    "john_dory": "atlantic_ocean",
+    "grey_gurnard": "atlantic_ocean",
+    "queen_angelfish": "atlantic_ocean",
+    "stoplight_parrotfish": "atlantic_ocean",
+    "atlantic_flyingfish": "atlantic_ocean",
+    "atlantic_tarpon": "atlantic_ocean",
+    "black_scabbardfish": "atlantic_ocean",
+    "humphead_wrasse": "indian_ocean",
+    "emperor_angelfish": "indian_ocean",
+    "leaf_scorpionfish": "indian_ocean",
+    "bluespotted_ribbontail_ray": "indian_ocean",
+    "giant_moray": "indian_ocean",
+    "collare_butterflyfish": "indian_ocean",
+    "longhorn_cowfish": "indian_ocean",
+    "russells_oarfish": "indian_ocean",
+    "red_sea_clownfish": "red_sea",
+    "red_sea_bannerfish": "red_sea",
+    "masked_butterflyfish": "red_sea",
+    "sohal_surgeonfish": "red_sea",
+    "arabian_picassotriggerfish": "red_sea",
+    "klunzingers_wrasse": "red_sea",
+    "red_sea_goatfish": "red_sea",
+    "crocodile_flathead": "red_sea",
+    "bluespotted_cornetfish": "red_sea",
+    "yellowbar_angelfish": "red_sea",
+    "blackspotted_sweetlips": "red_sea",
+    "orbicular_batfish": "red_sea"
+  },
+  "morphology_representatives": [
+    "pacific_halibut",
+    "barreleye",
+    "atlantic_flyingfish",
+    "giant_moray",
+    "longhorn_cowfish",
+    "bluespotted_cornetfish",
+    "crocodile_flathead",
+    "orbicular_batfish"
+  ]
+}

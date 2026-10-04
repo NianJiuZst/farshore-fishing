@@ -1,12 +1,12 @@
 class_name FishArtCatalog
 extends RefCounted
-## Final source requires all74 generated masters, derivatives and imported
+## Final source requires 110 fish and one mammal master, derivatives and imported
 ## image hashes. Explicit false arguments are reserved for isolated tests.
 ## A missing/incomplete/mismatched final manifest blocks play rather than
 ## silently showing another species or falling back to a coarse 3D preview.
 const REQUIRE_PHOTOREAL: bool = true
 const MANIFEST_PATH: String = "res://data/fish_art.json"
-const EXPECTED_COUNT: int = 74
+const EXPECTED_COUNT: int = 111
 const FULL_TEXTURE_CACHE_LIMIT: int = 4
 var errors: Array[String] = []
 var complete: bool = false
@@ -48,7 +48,7 @@ func load_manifest(data: Dictionary, catalog: ContentCatalog, require_complete: 
 		return false
 	if int(data.get("asset_count",-1)) != assets.size(): errors.append("写实鱼图数量与清单不符")
 	if strict and (not bool(data.get("complete",false)) or assets.size() != EXPECTED_COUNT or catalog.fish.size() != EXPECTED_COUNT):
-		errors.append("写实鱼图尚未完整覆盖74种鱼")
+		errors.append("写实图尚未完整覆盖110种鱼及蓝鲸")
 	for value: Variant in assets:
 		if not value is Dictionary:
 			errors.append("写实鱼图条目无效")

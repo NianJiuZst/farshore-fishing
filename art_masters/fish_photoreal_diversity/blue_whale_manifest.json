@@ -1,0 +1,57 @@
+{
+  "assets": [
+    {
+      "species_id": "blue_whale",
+      "name": "蓝鲸",
+      "scientific_name": "Balaenoptera musculus",
+      "runtime": "res://assets/fish/blue_whale.png",
+      "thumb": "res://assets/fish/blue_whale_thumb.png",
+      "master": "art_masters/fish_photoreal_diversity/blue_whale.png",
+      "width": 1774,
+      "height": 887,
+      "thumb_width": 512,
+      "thumb_height": 256,
+      "subject_bbox_px": [
+        17,
+        165,
+        1763,
+        763
+      ],
+      "thumb_subject_bbox_px": [
+        5,
+        48,
+        509,
+        220
+      ],
+      "subject_bbox_normalized": [
+        0.009582863585118376,
+        0.18602029312288612,
+        0.9937993235625705,
+        0.8602029312288614
+      ],
+      "nose_normalized": [
+        0.010146561443066516,
+        0.3810597519729425
+      ],
+      "tail_normalized": [
+        0.9937993235625705,
+        0.26944757609921083
+      ],
+      "ruler_extent_normalized": [
+        0.010146561443066516,
+        0.9937993235625705
+      ],
+      "alpha_threshold_for_bbox": 24,
+      "sha256": "dcb999b4f44eb9006bf9068e2f05ab3641259bb17ced91e7774195987ef485bc",
+      "thumb_sha256": "3ddadafb9da9eb65e11b33922f0e6a0d6fe3da5271a45df0400db1506a87ff84",
+      "transparent_fraction": 0.7108128307038025,
+      "generator": "builtin image_gen",
+      "generated_on": "2026-10-04",
+      "visual_review": "Complete blue-gray adult whale, U-shaped rostrum, paired blowholes, small posterior dorsal fin, long flippers, ventral pleats, horizontal flukes. Generated naturalistic illustration, not a wildlife photograph.",
+      "morphology_reference": "长而渐细的蓝灰斑驳身体，宽扁U形吻、成对气孔、小而靠后的背鳍、喉腹褶沟及水平尾叶。",
+      "fact_sources": [],
+      "source_rgba8_sha256": "9e5cf5c8dd59441522a596f9c9af3acc4bec1cdaf3e177082942801f116f2a2f",
+      "thumb_source_rgba8_sha256": "26980351e5e5df8454575dc92e5f2a91dc337b501871349206c31f8c411724ae"
+    }
+  ]
+}

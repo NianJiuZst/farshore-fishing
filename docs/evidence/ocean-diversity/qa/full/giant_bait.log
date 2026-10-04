@@ -1,0 +1,10 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/giant_bait_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+GIANT BAIT SIZE: large_fish_chunk probability=0.15215681818182 samples=880000
+GIANT BAIT SIZE: whole_mackerel probability=0.15815113636364 samples=880000
+GIANT BAIT SIZE: large_squid probability=0.16437613636364 samples=880000
+GIANT BAIT SIZE: large_surface_lure probability=0.14683409090909 samples=880000
+GIANT_BAIT_TESTS: 10683930/10683930; failures=0; bait/species routes=1320/1320; size samples=3520000

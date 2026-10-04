@@ -1,0 +1,341 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/slice3d_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware
+3D_RIG angler meshes=17 skinned=1 weighted_vertices=40216 clips=["cast", "idle", "lift", "reel", "wait"]
+3D_RIG common_carp meshes=9 skinned=9 weighted_vertices=15168 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG crucian_carp meshes=11 skinned=11 weighted_vertices=15390 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG roach meshes=12 skinned=12 weighted_vertices=14554 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG rudd meshes=12 skinned=12 weighted_vertices=14642 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG european_perch meshes=13 skinned=13 weighted_vertices=17617 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG northern_pike meshes=10 skinned=10 weighted_vertices=16894 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG common_bream meshes=11 skinned=11 weighted_vertices=15478 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG tench meshes=11 skinned=11 weighted_vertices=15770 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG japanese_horse_mackerel meshes=13 skinned=13 weighted_vertices=18116 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG chub_mackerel meshes=12 skinned=12 weighted_vertices=17562 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_seabream meshes=11 skinned=11 weighted_vertices=16800 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG black_seabream meshes=11 skinned=11 weighted_vertices=16888 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG japanese_seabass meshes=11 skinned=11 weighted_vertices=17709 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG japanese_whiting meshes=11 skinned=11 weighted_vertices=16461 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG marbled_rockfish meshes=11 skinned=11 weighted_vertices=18205 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG olive_flounder meshes=10 skinned=10 weighted_vertices=26980 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_cod meshes=12 skinned=12 weighted_vertices=20131 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG pollack meshes=13 skinned=13 weighted_vertices=20338 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG saithe meshes=12 skinned=12 weighted_vertices=20203 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG haddock meshes=12 skinned=12 weighted_vertices=19989 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_mackerel meshes=12 skinned=12 weighted_vertices=17650 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_herring meshes=12 skinned=12 weighted_vertices=15652 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG european_plaice meshes=12 skinned=12 weighted_vertices=29887 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_wolffish meshes=13 skinned=13 weighted_vertices=22960 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG european_seabass meshes=11 skinned=11 weighted_vertices=17237 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG gilthead_seabream meshes=11 skinned=11 weighted_vertices=17240 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG saddled_seabream meshes=11 skinned=11 weighted_vertices=17491 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG white_seabream meshes=12 skinned=12 weighted_vertices=16976 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG annular_seabream meshes=12 skinned=12 weighted_vertices=16726 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_mullet meshes=12 skinned=12 weighted_vertices=15892 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG painted_comber meshes=12 skinned=12 weighted_vertices=17221 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG common_pandora meshes=11 skinned=11 weighted_vertices=16976 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG alligator_gar meshes=9 skinned=9 weighted_vertices=16582 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG longnose_gar meshes=10 skinned=10 weighted_vertices=14976 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG bowfin meshes=11 skinned=11 weighted_vertices=17407 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG largemouth_bass meshes=11 skinned=11 weighted_vertices=17525 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG channel_catfish meshes=12 skinned=12 weighted_vertices=16958 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG flathead_catfish meshes=13 skinned=13 weighted_vertices=15868 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG chinese_sturgeon meshes=12 skinned=12 weighted_vertices=18204 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG mandarin_fish meshes=11 skinned=11 weighted_vertices=17913 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG northern_snakehead meshes=10 skinned=10 weighted_vertices=17667 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG yellowcheek meshes=11 skinned=11 weighted_vertices=15468 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG southern_catfish meshes=12 skinned=12 weighted_vertices=17912 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG longsnout_catfish meshes=12 skinned=12 weighted_vertices=15104 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_bluefin_tuna meshes=16 skinned=16 weighted_vertices=22297 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG pacific_bluefin_tuna meshes=16 skinned=16 weighted_vertices=21769 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG yellowfin_tuna meshes=16 skinned=16 weighted_vertices=24937 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG bigeye_tuna meshes=16 skinned=16 weighted_vertices=21769 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG albacore meshes=17 skinned=17 weighted_vertices=21799 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG skipjack_tuna meshes=16 skinned=16 weighted_vertices=21769 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG mahi_mahi meshes=12 skinned=12 weighted_vertices=18743 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG wahoo meshes=13 skinned=13 weighted_vertices=20845 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG swordfish meshes=14 skinned=14 weighted_vertices=16257 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG blue_marlin meshes=14 skinned=14 weighted_vertices=18779 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG striped_marlin meshes=14 skinned=14 weighted_vertices=18779 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG indo_pacific_sailfish meshes=14 skinned=14 weighted_vertices=19175 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG great_barracuda meshes=13 skinned=13 weighted_vertices=17031 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG giant_trevally meshes=13 skinned=13 weighted_vertices=18127 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG greater_amberjack meshes=12 skinned=12 weighted_vertices=17951 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG cobia meshes=12 skinned=12 weighted_vertices=17595 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG roosterfish meshes=13 skinned=13 weighted_vertices=22151 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_snapper meshes=13 skinned=13 weighted_vertices=18043 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG giant_grouper meshes=12 skinned=12 weighted_vertices=18185 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG dogtooth_tuna meshes=18 skinned=18 weighted_vertices=22671 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG yellowtail_kingfish meshes=12 skinned=12 weighted_vertices=17951 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG opah meshes=11 skinned=11 weighted_vertices=18347 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG great_white_shark meshes=12 skinned=12 weighted_vertices=16703 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG scalloped_hammerhead meshes=10 skinned=10 weighted_vertices=16506 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG great_hammerhead meshes=10 skinned=10 weighted_vertices=16466 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG blue_shark meshes=10 skinned=10 weighted_vertices=16446 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG shortfin_mako meshes=12 skinned=12 weighted_vertices=16703 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG tiger_shark meshes=10 skinned=10 weighted_vertices=17678 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG oceanic_whitetip_shark meshes=10 skinned=10 weighted_vertices=16747 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG whitetip_reef_shark meshes=10 skinned=10 weighted_vertices=16531 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG california_sheephead meshes=1 skinned=1 weighted_vertices=14948 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG lingcod meshes=1 skinned=1 weighted_vertices=18450 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG cabezon meshes=1 skinned=1 weighted_vertices=19227 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG garibaldi meshes=1 skinned=1 weighted_vertices=14852 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG kelp_greenling meshes=1 skinned=1 weighted_vertices=16157 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG pacific_halibut meshes=1 skinned=1 weighted_vertices=13676 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG yellow_tang meshes=1 skinned=1 weighted_vertices=15045 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG barreleye meshes=1 skinned=1 weighted_vertices=15012 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG turbot meshes=1 skinned=1 weighted_vertices=18215 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG john_dory meshes=1 skinned=1 weighted_vertices=15799 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG grey_gurnard meshes=1 skinned=1 weighted_vertices=17848 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG queen_angelfish meshes=1 skinned=1 weighted_vertices=15437 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG stoplight_parrotfish meshes=1 skinned=1 weighted_vertices=16286 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_flyingfish meshes=1 skinned=1 weighted_vertices=16922 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG atlantic_tarpon meshes=1 skinned=1 weighted_vertices=14256 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG black_scabbardfish meshes=1 skinned=1 weighted_vertices=17478 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG humphead_wrasse meshes=1 skinned=1 weighted_vertices=16292 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG emperor_angelfish meshes=1 skinned=1 weighted_vertices=15707 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG leaf_scorpionfish meshes=1 skinned=1 weighted_vertices=16230 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG bluespotted_ribbontail_ray meshes=1 skinned=1 weighted_vertices=12367 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG giant_moray meshes=1 skinned=1 weighted_vertices=17969 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG collare_butterflyfish meshes=1 skinned=1 weighted_vertices=14987 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG longhorn_cowfish meshes=1 skinned=1 weighted_vertices=13302 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG russells_oarfish meshes=1 skinned=1 weighted_vertices=17042 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_sea_clownfish meshes=1 skinned=1 weighted_vertices=15302 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_sea_bannerfish meshes=1 skinned=1 weighted_vertices=15257 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG masked_butterflyfish meshes=1 skinned=1 weighted_vertices=15032 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG sohal_surgeonfish meshes=1 skinned=1 weighted_vertices=14910 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG arabian_picassotriggerfish meshes=1 skinned=1 weighted_vertices=13860 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG klunzingers_wrasse meshes=1 skinned=1 weighted_vertices=14987 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG red_sea_goatfish meshes=1 skinned=1 weighted_vertices=14867 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG crocodile_flathead meshes=1 skinned=1 weighted_vertices=18695 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG bluespotted_cornetfish meshes=1 skinned=1 weighted_vertices=14340 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG yellowbar_angelfish meshes=1 skinned=1 weighted_vertices=15752 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG blackspotted_sweetlips meshes=1 skinned=1 weighted_vertices=15842 clips=["breach", "landed", "struggle", "swim"]
+3D_RIG orbicular_batfish meshes=1 skinned=1 weighted_vertices=16382 clips=["breach", "landed", "struggle", "swim"]
+FULL74_RECIPE common_carp {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":13,"species":"common_carp","spot":"lake_shore"}
+FULL74_REAL_TAKE common_carp clock=15.1499999999998 attempt=3 session=1791128211.64372-21998783--9223371998149737005-4
+FULL74_RECIPE crucian_carp {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":1,"species":"crucian_carp","spot":"lake_shore"}
+FULL74_REAL_TAKE crucian_carp clock=12.3999999999999 attempt=2 session=1791128212.4529-22807958--9223371998149737005-5
+FULL74_RECIPE roach {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":1,"species":"roach","spot":"lake_bay"}
+FULL74_REAL_TAKE roach clock=8.92500000000013 attempt=1 session=1791128213.12482-23479880--9223371998149737005-6
+FULL74_RECIPE rudd {"bait":"worm","charge":0.46,"gear":4,"region":"lake","seed":18,"species":"rudd","spot":"lake_shore"}
+FULL74_REAL_TAKE rudd clock=2.77499999999999 attempt=1 session=1791128213.72828-24083337--9223371998149737005-7
+FULL74_RECIPE european_perch {"bait":"worm","charge":0.51,"gear":4,"region":"lake","seed":33,"species":"european_perch","spot":"lake_shore"}
+FULL74_REAL_TAKE european_perch clock=11.925 attempt=2 session=1791128214.32332-24678377--9223371998149737005-8
+FULL74_RECIPE northern_pike {"bait":"worm","charge":0.635,"gear":4,"region":"bayou","seed":274,"species":"northern_pike","spot":"bayou_channel"}
+FULL74_REAL_TAKE northern_pike clock=5.72500000000007 attempt=1 session=1791128215.32968-25684740--9223371998149737005-9
+FULL74_RECIPE common_bream {"bait":"worm","charge":0.535,"gear":4,"region":"lake","seed":18,"species":"common_bream","spot":"lake_bay"}
+FULL74_EXTENDED_ENCOUNTER common_bream clock=20.0249999999995 phase=mouth attempt=3 ready=false
+FULL74_REAL_TAKE common_bream clock=20.1499999999995 attempt=3 session=1791128216.23676-26591813--9223371998149737005-10
+FULL74_RECIPE tench {"bait":"worm","charge":0.485,"gear":4,"region":"lake","seed":14,"species":"tench","spot":"lake_shore"}
+FULL74_REAL_TAKE tench clock=7.32500000000015 attempt=1 session=1791128217.05176-27406819--9223371998149737005-11
+FULL74_RECIPE japanese_horse_mackerel {"bait":"worm","charge":0.51,"gear":4,"region":"japan","seed":13,"species":"japanese_horse_mackerel","spot":"japan_harbor"}
+FULL74_REAL_TAKE japanese_horse_mackerel clock=9.20000000000012 attempt=2 session=1791128217.97809-28333147--9223371998149737005-12
+FULL74_RECIPE chub_mackerel {"bait":"worm","charge":0.61,"gear":4,"region":"japan","seed":124,"species":"chub_mackerel","spot":"japan_reef"}
+FULL74_REAL_TAKE chub_mackerel clock=10.2000000000001 attempt=1 session=1791128218.72966-29084714--9223371998149737005-13
+FULL74_RECIPE red_seabream {"bait":"worm","charge":0.635,"gear":4,"region":"japan","seed":1,"species":"red_seabream","spot":"japan_reef"}
+FULL74_REAL_TAKE red_seabream clock=5.62500000000007 attempt=1 session=1791128219.51657-29871622--9223371998149737005-14
+FULL74_RECIPE black_seabream {"bait":"worm","charge":0.535,"gear":4,"region":"yangtze","seed":1,"species":"black_seabream","spot":"yangtze_estuary"}
+FULL74_REAL_TAKE black_seabream clock=4.75000000000003 attempt=1 session=1791128220.47756-30832615--9223371998149737005-15
+FULL74_RECIPE japanese_seabass {"bait":"worm","charge":0.585,"gear":4,"region":"japan","seed":1,"species":"japanese_seabass","spot":"japan_harbor"}
+FULL74_REAL_TAKE japanese_seabass clock=10.2750000000001 attempt=2 session=1791128221.54803-31903084--9223371998149737005-16
+FULL74_RECIPE japanese_whiting {"bait":"worm","charge":0.46,"gear":4,"region":"japan","seed":3,"species":"japanese_whiting","spot":"japan_harbor"}
+FULL74_REAL_TAKE japanese_whiting clock=4.02499999999999 attempt=1 session=1791128222.33531-32690363--9223371998149737005-17
+FULL74_RECIPE marbled_rockfish {"bait":"worm","charge":0.51,"gear":4,"region":"japan","seed":24,"species":"marbled_rockfish","spot":"japan_reef"}
+FULL74_REAL_TAKE marbled_rockfish clock=3.47499999999999 attempt=1 session=1791128223.09339-33448443--9223371998149737005-18
+FULL74_RECIPE olive_flounder {"bait":"worm","charge":0.635,"gear":4,"region":"japan","seed":14,"species":"olive_flounder","spot":"japan_reef"}
+FULL74_REAL_TAKE olive_flounder clock=10.775 attempt=2 session=1791128223.92062-34275667--9223371998149737005-19
+FULL74_RECIPE atlantic_cod {"bait":"worm","charge":0.535,"gear":4,"region":"norway","seed":13,"species":"atlantic_cod","spot":"norway_harbor"}
+FULL74_REAL_TAKE atlantic_cod clock=9.90000000000008 attempt=1 session=1791128225.04657-35401619--9223371998149737005-20
+FULL74_RECIPE pollack {"bait":"worm","charge":0.51,"gear":4,"region":"norway","seed":38,"species":"pollack","spot":"norway_boat"}
+FULL74_REAL_TAKE pollack clock=2.74999999999999 attempt=1 session=1791128225.91512-36270167--9223371998149737005-21
+FULL74_RECIPE saithe {"bait":"worm","charge":0.535,"gear":4,"region":"norway","seed":1,"species":"saithe","spot":"norway_harbor"}
+FULL74_REAL_TAKE saithe clock=10.5 attempt=1 session=1791128226.76058-37115630--9223371998149737005-22
+FULL74_RECIPE haddock {"bait":"worm","charge":0.585,"gear":4,"region":"norway","seed":3,"species":"haddock","spot":"norway_boat"}
+FULL74_REAL_TAKE haddock clock=4.97500000000004 attempt=1 session=1791128227.69724-38052285--9223371998149737005-23
+FULL74_RECIPE atlantic_mackerel {"bait":"worm","charge":0.46,"gear":4,"region":"med","seed":60,"species":"atlantic_mackerel","spot":"med_boat"}
+FULL74_REAL_TAKE atlantic_mackerel clock=16.2249999999997 attempt=3 session=1791128228.70635-39061392--9223371998149737005-24
+FULL74_RECIPE atlantic_herring {"bait":"worm","charge":0.46,"gear":4,"region":"norway","seed":18,"species":"atlantic_herring","spot":"norway_boat"}
+FULL74_REAL_TAKE atlantic_herring clock=9.25000000000012 attempt=2 session=1791128229.88345-40238488--9223371998149737005-25
+FULL74_RECIPE european_plaice {"bait":"worm","charge":0.485,"gear":4,"region":"norway","seed":14,"species":"european_plaice","spot":"norway_harbor"}
+FULL74_REAL_TAKE european_plaice clock=7.62500000000017 attempt=1 session=1791128230.81571-41170751--9223371998149737005-26
+FULL74_RECIPE atlantic_wolffish {"bait":"worm","charge":0.685,"gear":5,"region":"norway","seed":14,"species":"atlantic_wolffish","spot":"norway_boat"}
+FULL74_REAL_TAKE atlantic_wolffish clock=8.50000000000016 attempt=1 session=1791128231.82889-42183928--9223371998149737005-27
+FULL74_RECIPE european_seabass {"bait":"worm","charge":0.535,"gear":4,"region":"med","seed":60,"species":"european_seabass","spot":"med_pier"}
+FULL74_REAL_TAKE european_seabass clock=17.9249999999996 attempt=3 session=1791128233.01435-43369394--9223371998149737005-28
+FULL74_RECIPE gilthead_seabream {"bait":"worm","charge":0.51,"gear":4,"region":"med","seed":13,"species":"gilthead_seabream","spot":"med_pier"}
+FULL74_REAL_TAKE gilthead_seabream clock=18.4249999999996 attempt=3 session=1791128234.09149-44446528--9223371998149737005-29
+FULL74_RECIPE saddled_seabream {"bait":"worm","charge":0.46,"gear":4,"region":"med","seed":1,"species":"saddled_seabream","spot":"med_pier"}
+FULL74_REAL_TAKE saddled_seabream clock=5.57500000000007 attempt=1 session=1791128235.13662-45491658--9223371998149737005-30
+FULL74_RECIPE white_seabream {"bait":"worm","charge":0.485,"gear":4,"region":"med","seed":3,"species":"white_seabream","spot":"med_pier"}
+FULL74_REAL_TAKE white_seabream clock=4.85000000000003 attempt=1 session=1791128236.11679-46471830--9223371998149737005-31
+FULL74_RECIPE annular_seabream {"bait":"worm","charge":0.46,"gear":4,"region":"med","seed":18,"species":"annular_seabream","spot":"med_pier"}
+FULL74_REAL_TAKE annular_seabream clock=7.07500000000014 attempt=1 session=1791128237.15277-47507801--9223371998149737005-32
+FULL74_RECIPE red_mullet {"bait":"worm","charge":0.51,"gear":4,"region":"med","seed":24,"species":"red_mullet","spot":"med_boat"}
+FULL74_REAL_TAKE red_mullet clock=7.62500000000017 attempt=1 session=1791128238.44175-48796787--9223371998149737005-33
+FULL74_RECIPE painted_comber {"bait":"worm","charge":0.485,"gear":4,"region":"med","seed":14,"species":"painted_comber","spot":"med_pier"}
+FULL74_REAL_TAKE painted_comber clock=14.2749999999998 attempt=2 session=1791128239.46259-49817626--9223371998149737005-34
+FULL74_RECIPE common_pandora {"bait":"worm","charge":0.56,"gear":4,"region":"med","seed":14,"species":"common_pandora","spot":"med_boat"}
+FULL74_REAL_TAKE common_pandora clock=4.92500000000003 attempt=1 session=1791128240.84106-51196089--9223371998149737005-35
+FULL74_RECIPE alligator_gar {"bait":"worm","charge":0.735,"gear":4,"region":"bayou","seed":60,"species":"alligator_gar","spot":"bayou_backwater"}
+FULL74_REAL_TAKE alligator_gar clock=7.55000000000017 attempt=1 session=1791128242.2286-52583633--9223371998149737005-36
+FULL74_RECIPE longnose_gar {"bait":"worm","charge":0.585,"gear":4,"region":"bayou","seed":13,"species":"longnose_gar","spot":"bayou_backwater"}
+FULL74_REAL_TAKE longnose_gar clock=6.80000000000013 attempt=1 session=1791128243.74649-54101519--9223371998149737005-37
+FULL74_RECIPE bowfin {"bait":"worm","charge":0.51,"gear":4,"region":"bayou","seed":13,"species":"bowfin","spot":"bayou_backwater"}
+FULL74_REAL_TAKE bowfin clock=3.47499999999999 attempt=1 session=1791128244.87489-55229916--9223371998149737005-38
+FULL74_RECIPE largemouth_bass {"bait":"worm","charge":0.485,"gear":4,"region":"bayou","seed":1,"species":"largemouth_bass","spot":"bayou_backwater"}
+FULL74_REAL_TAKE largemouth_bass clock=17.2249999999997 attempt=2 session=1791128245.99353-56348555--9223371998149737005-39
+FULL74_RECIPE channel_catfish {"bait":"worm","charge":0.51,"gear":4,"region":"bayou","seed":18,"species":"channel_catfish","spot":"bayou_backwater"}
+FULL74_REAL_TAKE channel_catfish clock=4.95000000000004 attempt=1 session=1791128247.24852-57603540--9223371998149737005-40
+FULL74_RECIPE flathead_catfish {"bait":"worm","charge":0.635,"gear":4,"region":"bayou","seed":14,"species":"flathead_catfish","spot":"bayou_backwater"}
+FULL74_REAL_TAKE flathead_catfish clock=12.05 attempt=1 session=1791128248.42929-58784305--9223371998149737005-41
+FULL74_RECIPE chinese_sturgeon {"bait":"worm","charge":0.56,"gear":4,"region":"yangtze","seed":14,"species":"chinese_sturgeon","spot":"yangtze_estuary"}
+FULL74_REAL_TAKE chinese_sturgeon clock=7.30000000000015 attempt=1 session=1791128249.85693-60211940--9223371998149737005-42
+FULL74_RECIPE mandarin_fish {"bait":"worm","charge":0.5,"gear":4,"region":"yangtze","seed":1,"species":"mandarin_fish","spot":"yangtze_river"}
+FULL74_REAL_TAKE mandarin_fish clock=9.5250000000001 attempt=1 session=1791128251.34106-61696072--9223371998149737005-43
+FULL74_RECIPE northern_snakehead {"bait":"worm","charge":0.52,"gear":4,"region":"yangtze","seed":15,"species":"northern_snakehead","spot":"yangtze_river"}
+FULL74_REAL_TAKE northern_snakehead clock=10.7 attempt=2 session=1791128252.58911-62944123--9223371998149737005-44
+FULL74_RECIPE yellowcheek {"bait":"worm","charge":0.6,"gear":4,"region":"yangtze","seed":107,"species":"yellowcheek","spot":"yangtze_river"}
+FULL74_REAL_TAKE yellowcheek clock=11.3 attempt=1 session=1791128253.93137-64286379--9223371998149737005-45
+FULL74_RECIPE southern_catfish {"bait":"worm","charge":0.57,"gear":4,"region":"yangtze","seed":3,"species":"southern_catfish","spot":"yangtze_river"}
+FULL74_REAL_TAKE southern_catfish clock=6.62500000000012 attempt=2 session=1791128255.24327-65598277--9223371998149737005-46
+FULL74_RECIPE longsnout_catfish {"bait":"worm","charge":0.51,"gear":4,"region":"yangtze","seed":14,"species":"longsnout_catfish","spot":"yangtze_river"}
+FULL74_REAL_TAKE longsnout_catfish clock=4.50000000000001 attempt=1 session=1791128256.47333-66828337--9223371998149737005-47
+FULL74_RECIPE atlantic_bluefin_tuna {"bait":"worm","charge":0.74,"gear":4,"region":"atlantic_ocean","seed":13,"species":"atlantic_bluefin_tuna","spot":"atlantic_bluewater"}
+FULL74_REAL_TAKE atlantic_bluefin_tuna clock=5.15000000000005 attempt=1 session=1791128257.977-68332004--9223371998149737005-48
+FULL74_RECIPE pacific_bluefin_tuna {"bait":"worm","charge":0.73,"gear":4,"region":"pacific_ocean","seed":60,"species":"pacific_bluefin_tuna","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE pacific_bluefin_tuna clock=3.49999999999999 attempt=1 session=1791128259.94913-70304131--9223371998149737005-49
+FULL74_RECIPE yellowfin_tuna {"bait":"worm","charge":0.66,"gear":4,"region":"indian_ocean","seed":13,"species":"yellowfin_tuna","spot":"indian_bluewater"}
+FULL74_REAL_TAKE yellowfin_tuna clock=8.37500000000017 attempt=1 session=1791128262.02728-72382275--9223371998149737005-50
+FULL74_RECIPE bigeye_tuna {"bait":"worm","charge":0.7,"gear":4,"region":"atlantic_ocean","seed":38,"species":"bigeye_tuna","spot":"atlantic_bluewater"}
+FULL74_REAL_TAKE bigeye_tuna clock=11.175 attempt=2 session=1791128263.87147-74226468--9223371998149737005-51
+FULL74_RECIPE albacore {"bait":"worm","charge":0.635,"gear":4,"region":"pacific_ocean","seed":1,"species":"albacore","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE albacore clock=13.0249999999999 attempt=2 session=1791128266.01981-76374798--9223371998149737005-52
+FULL74_RECIPE skipjack_tuna {"bait":"worm","charge":0.6,"gear":4,"region":"indian_ocean","seed":38,"species":"skipjack_tuna","spot":"indian_bluewater"}
+FULL74_REAL_TAKE skipjack_tuna clock=6.37500000000011 attempt=1 session=1791128267.46036-77815350--9223371998149737005-53
+FULL74_RECIPE mahi_mahi {"bait":"worm","charge":0.62,"gear":4,"region":"pacific_ocean","seed":3,"species":"mahi_mahi","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE mahi_mahi clock=3.14999999999999 attempt=1 session=1791128269.11328-79468264--9223371998149737005-54
+FULL74_RECIPE wahoo {"bait":"worm","charge":0.67,"gear":4,"region":"atlantic_ocean","seed":3,"species":"wahoo","spot":"atlantic_bluewater"}
+FULL74_REAL_TAKE wahoo clock=8.62500000000015 attempt=1 session=1791128270.48352-80838499--9223371998149737005-55
+FULL74_RECIPE swordfish {"bait":"worm","charge":0.74,"gear":4,"region":"atlantic_ocean","seed":24,"species":"swordfish","spot":"atlantic_bluewater"}
+FULL74_REAL_TAKE swordfish clock=12.2749999999999 attempt=1 session=1791128271.94183-82296810--9223371998149737005-56
+FULL74_RECIPE blue_marlin {"bait":"worm","charge":0.76,"gear":4,"region":"atlantic_ocean","seed":33,"species":"blue_marlin","spot":"atlantic_bluewater"}
+FULL74_REAL_TAKE blue_marlin clock=10.925 attempt=1 session=1791128273.77876-84133742--9223371998149737005-57
+FULL74_RECIPE striped_marlin {"bait":"worm","charge":0.71,"gear":4,"region":"pacific_ocean","seed":84,"species":"striped_marlin","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE striped_marlin clock=12.5499999999999 attempt=2 session=1791128275.93453-86289509--9223371998149737005-58
+FULL74_RECIPE indo_pacific_sailfish {"bait":"worm","charge":0.695,"gear":4,"region":"indian_ocean","seed":3,"species":"indo_pacific_sailfish","spot":"indian_bluewater"}
+FULL74_REAL_TAKE indo_pacific_sailfish clock=2.67499999999999 attempt=1 session=1791128278.11464-88469616--9223371998149737005-59
+FULL74_RECIPE great_barracuda {"bait":"worm","charge":0.61,"gear":4,"region":"atlantic_ocean","seed":209,"species":"great_barracuda","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE great_barracuda clock=5.25000000000005 attempt=1 session=1791128279.89741-90252388--9223371998149737005-60
+FULL74_RECIPE giant_trevally {"bait":"worm","charge":0.65,"gear":4,"region":"pacific_ocean","seed":209,"species":"giant_trevally","spot":"pacific_reef"}
+FULL74_REAL_TAKE giant_trevally clock=11.525 attempt=1 session=1791128281.48522-91840192--9223371998149737005-61
+FULL74_RECIPE greater_amberjack {"bait":"worm","charge":0.65,"gear":4,"region":"atlantic_ocean","seed":60,"species":"greater_amberjack","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE greater_amberjack clock=16.0999999999997 attempt=2 session=1791128283.23414-93589112--9223371998149737005-62
+FULL74_RECIPE cobia {"bait":"worm","charge":0.62,"gear":4,"region":"indian_ocean","seed":60,"species":"cobia","spot":"indian_reef"}
+FULL74_REAL_TAKE cobia clock=6.42500000000011 attempt=1 session=1791128284.94232-95297287--9223371998149737005-63
+FULL74_RECIPE roosterfish {"bait":"worm","charge":0.61,"gear":4,"region":"pacific_ocean","seed":60,"species":"roosterfish","spot":"pacific_reef"}
+FULL74_REAL_TAKE roosterfish clock=9.62500000000009 attempt=2 session=1791128286.83726-97192223--9223371998149737005-64
+FULL74_RECIPE red_snapper {"bait":"worm","charge":0.585,"gear":4,"region":"atlantic_ocean","seed":13,"species":"red_snapper","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE red_snapper clock=6.2000000000001 attempt=1 session=1791128288.43504-98790005--9223371998149737005-65
+FULL74_RECIPE giant_grouper {"bait":"worm","charge":0.68,"gear":4,"region":"red_sea","seed":213,"species":"giant_grouper","spot":"red_sea_wall"}
+FULL74_REAL_TAKE giant_grouper clock=15.7499999999997 attempt=2 session=1791128290.09378-100448740--9223371998149737005-66
+FULL74_RECIPE dogtooth_tuna {"bait":"worm","charge":0.7,"gear":4,"region":"indian_ocean","seed":540,"species":"dogtooth_tuna","spot":"indian_reef"}
+FULL74_REAL_TAKE dogtooth_tuna clock=4.95000000000004 attempt=1 session=1791128292.55794-102912897--9223371998149737005-67
+FULL74_RECIPE yellowtail_kingfish {"bait":"worm","charge":0.635,"gear":4,"region":"pacific_ocean","seed":213,"species":"yellowtail_kingfish","spot":"pacific_reef"}
+FULL74_REAL_TAKE yellowtail_kingfish clock=5.82500000000008 attempt=1 session=1791128294.72361-105078566--9223371998149737005-68
+FULL74_RECIPE opah {"bait":"worm","charge":0.72,"gear":4,"region":"atlantic_ocean","seed":67,"species":"opah","spot":"atlantic_bluewater"}
+FULL74_REAL_TAKE opah clock=11.8 attempt=2 session=1791128296.57422-106929175--9223371998149737005-69
+FULL74_RECIPE great_white_shark {"bait":"worm","charge":0.76,"gear":4,"region":"pacific_ocean","seed":168,"species":"great_white_shark","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE great_white_shark clock=11.175 attempt=2 session=1791128298.38189-108736844--9223371998149737005-70
+FULL74_RECIPE scalloped_hammerhead {"bait":"worm","charge":0.71,"gear":4,"region":"pacific_ocean","seed":18,"species":"scalloped_hammerhead","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE scalloped_hammerhead clock=12.3749999999999 attempt=2 session=1791128300.82497-111179922--9223371998149737005-71
+FULL74_RECIPE great_hammerhead {"bait":"worm","charge":0.75,"gear":4,"region":"atlantic_ocean","seed":1966,"species":"great_hammerhead","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE great_hammerhead clock=8.05000000000018 attempt=2 session=1791128303.81385-114168800--9223371998149737005-72
+FULL74_RECIPE blue_shark {"bait":"worm","charge":0.685,"gear":4,"region":"pacific_ocean","seed":145,"species":"blue_shark","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE blue_shark clock=10.3750000000001 attempt=1 session=1791128306.28686-116641807--9223371998149737005-73
+FULL74_RECIPE shortfin_mako {"bait":"worm","charge":0.75,"gear":4,"region":"pacific_ocean","seed":36,"species":"shortfin_mako","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE shortfin_mako clock=8.55000000000016 attempt=1 session=1791128308.31357-118668517--9223371998149737005-74
+FULL74_RECIPE tiger_shark {"bait":"worm","charge":0.735,"gear":4,"region":"indian_ocean","seed":2036,"species":"tiger_shark","spot":"indian_reef"}
+FULL74_REAL_TAKE tiger_shark clock=8.20000000000018 attempt=1 session=1791128311.29319-121648134--9223371998149737005-75
+FULL74_RECIPE oceanic_whitetip_shark {"bait":"worm","charge":0.73,"gear":4,"region":"indian_ocean","seed":24,"species":"oceanic_whitetip_shark","spot":"indian_bluewater"}
+FULL74_REAL_TAKE oceanic_whitetip_shark clock=9.27500000000011 attempt=2 session=1791128313.68732-124042261--9223371998149737005-76
+FULL74_RECIPE whitetip_reef_shark {"bait":"worm","charge":0.61,"gear":4,"region":"indian_ocean","seed":13,"species":"whitetip_reef_shark","spot":"indian_reef"}
+FULL74_REAL_TAKE whitetip_reef_shark clock=15.8499999999997 attempt=2 session=1791128315.66806-126022993--9223371998149737005-77
+FULL74_RECIPE california_sheephead {"bait":"worm","charge":0.585,"gear":4,"region":"pacific_ocean","seed":13,"species":"california_sheephead","spot":"pacific_reef"}
+FULL74_REAL_TAKE california_sheephead clock=12.05 attempt=2 session=1791128317.7734-128128331--9223371998149737005-78
+FULL74_RECIPE lingcod {"bait":"worm","charge":0.61,"gear":4,"region":"pacific_ocean","seed":38,"species":"lingcod","spot":"pacific_reef"}
+FULL74_REAL_TAKE lingcod clock=4.325 attempt=1 session=1791128319.57211-129927043--9223371998149737005-79
+FULL74_RECIPE cabezon {"bait":"worm","charge":0.585,"gear":4,"region":"pacific_ocean","seed":95,"species":"cabezon","spot":"pacific_reef"}
+FULL74_REAL_TAKE cabezon clock=10.45 attempt=1 session=1791128321.40566-131760593--9223371998149737005-80
+FULL74_RECIPE garibaldi {"bait":"worm","charge":0.56,"gear":4,"region":"pacific_ocean","seed":1,"species":"garibaldi","spot":"pacific_reef"}
+FULL74_REAL_TAKE garibaldi clock=2.34999999999999 attempt=1 session=1791128323.24508-133600007--9223371998149737005-81
+FULL74_RECIPE kelp_greenling {"bait":"worm","charge":0.585,"gear":4,"region":"pacific_ocean","seed":18,"species":"kelp_greenling","spot":"pacific_reef"}
+FULL74_REAL_TAKE kelp_greenling clock=4.85000000000003 attempt=1 session=1791128324.97098-135325910--9223371998149737005-82
+FULL74_RECIPE pacific_halibut {"bait":"worm","charge":0.65,"gear":4,"region":"pacific_ocean","seed":14,"species":"pacific_halibut","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE pacific_halibut clock=12.15 attempt=2 session=1791128326.7678-137122727--9223371998149737005-83
+FULL74_RECIPE yellow_tang {"bait":"worm","charge":0.56,"gear":4,"region":"pacific_ocean","seed":14,"species":"yellow_tang","spot":"pacific_reef"}
+FULL74_REAL_TAKE yellow_tang clock=15.2999999999998 attempt=2 session=1791128328.68097-139035890--9223371998149737005-84
+FULL74_RECIPE barreleye {"bait":"worm","charge":0.585,"gear":5,"region":"pacific_ocean","seed":14,"species":"barreleye","spot":"pacific_bluewater"}
+FULL74_REAL_TAKE barreleye clock=5.05000000000004 attempt=1 session=1791128330.54516-140900084--9223371998149737005-85
+FULL74_RECIPE turbot {"bait":"worm","charge":0.585,"gear":4,"region":"atlantic_ocean","seed":38,"species":"turbot","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE turbot clock=3.84999999999999 attempt=1 session=1791128332.45295-142807869--9223371998149737005-86
+FULL74_RECIPE john_dory {"bait":"worm","charge":0.585,"gear":4,"region":"atlantic_ocean","seed":124,"species":"john_dory","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE john_dory clock=7.30000000000015 attempt=1 session=1791128334.38641-144741324--9223371998149737005-87
+FULL74_RECIPE grey_gurnard {"bait":"worm","charge":0.585,"gear":4,"region":"atlantic_ocean","seed":1,"species":"grey_gurnard","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE grey_gurnard clock=4.85000000000003 attempt=1 session=1791128336.26204-146616958--9223371998149737005-88
+FULL74_RECIPE queen_angelfish {"bait":"worm","charge":0.56,"gear":4,"region":"atlantic_ocean","seed":18,"species":"queen_angelfish","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE queen_angelfish clock=5.70000000000007 attempt=1 session=1791128338.16193-148516847--9223371998149737005-89
+FULL74_RECIPE stoplight_parrotfish {"bait":"worm","charge":0.56,"gear":4,"region":"atlantic_ocean","seed":24,"species":"stoplight_parrotfish","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE stoplight_parrotfish clock=5.97500000000009 attempt=1 session=1791128340.11776-150472670--9223371998149737005-90
+FULL74_RECIPE atlantic_flyingfish {"bait":"worm","charge":0.61,"gear":4,"region":"atlantic_ocean","seed":21,"species":"atlantic_flyingfish","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE atlantic_flyingfish clock=13.3999999999999 attempt=1 session=1791128342.13367-152488578--9223371998149737005-91
+FULL74_RECIPE atlantic_tarpon {"bait":"worm","charge":0.635,"gear":4,"region":"atlantic_ocean","seed":14,"species":"atlantic_tarpon","spot":"atlantic_shelf"}
+FULL74_REAL_TAKE atlantic_tarpon clock=9.35000000000011 attempt=2 session=1791128344.10091-154455815--9223371998149737005-92
+FULL74_RECIPE black_scabbardfish {"bait":"worm","charge":0.61,"gear":5,"region":"atlantic_ocean","seed":14,"species":"black_scabbardfish","spot":"atlantic_bluewater"}
+FULL74_REAL_TAKE black_scabbardfish clock=8.27500000000017 attempt=1 session=1791128346.12538-156480285--9223371998149737005-93
+FULL74_RECIPE humphead_wrasse {"bait":"worm","charge":0.61,"gear":4,"region":"indian_ocean","seed":150,"species":"humphead_wrasse","spot":"indian_reef"}
+FULL74_REAL_TAKE humphead_wrasse clock=15.1499999999998 attempt=3 session=1791128348.17849-158533396--9223371998149737005-94
+FULL74_RECIPE emperor_angelfish {"bait":"worm","charge":0.56,"gear":4,"region":"indian_ocean","seed":38,"species":"emperor_angelfish","spot":"indian_reef"}
+FULL74_REAL_TAKE emperor_angelfish clock=6.52500000000011 attempt=1 session=1791128350.47343-160828331--9223371998149737005-95
+FULL74_RECIPE leaf_scorpionfish {"bait":"worm","charge":0.55,"gear":4,"region":"indian_ocean","seed":1,"species":"leaf_scorpionfish","spot":"indian_reef"}
+FULL74_REAL_TAKE leaf_scorpionfish clock=7.77500000000018 attempt=1 session=1791128352.54776-162902661--9223371998149737005-96
+FULL74_RECIPE bluespotted_ribbontail_ray {"bait":"worm","charge":0.56,"gear":4,"region":"indian_ocean","seed":3,"species":"bluespotted_ribbontail_ray","spot":"indian_reef"}
+FULL74_REAL_TAKE bluespotted_ribbontail_ray clock=4.35000000000001 attempt=1 session=1791128354.62609-164980988--9223371998149737005-97
+FULL74_RECIPE giant_moray {"bait":"worm","charge":0.61,"gear":4,"region":"indian_ocean","seed":168,"species":"giant_moray","spot":"indian_reef"}
+FULL74_REAL_TAKE giant_moray clock=4.275 attempt=1 session=1791128356.66475-167019644--9223371998149737005-98
+FULL74_RECIPE collare_butterflyfish {"bait":"worm","charge":0.55,"gear":4,"region":"indian_ocean","seed":18,"species":"collare_butterflyfish","spot":"indian_reef"}
+FULL74_REAL_TAKE collare_butterflyfish clock=7.07500000000014 attempt=1 session=1791128358.75778-169112671--9223371998149737005-99
+FULL74_RECIPE longhorn_cowfish {"bait":"worm","charge":0.56,"gear":4,"region":"indian_ocean","seed":14,"species":"longhorn_cowfish","spot":"indian_reef"}
+FULL74_REAL_TAKE longhorn_cowfish clock=12.4749999999999 attempt=2 session=1791128360.83019-171185087--9223371998149737005-100
+FULL74_RECIPE russells_oarfish {"bait":"worm","charge":0.635,"gear":4,"region":"indian_ocean","seed":14,"species":"russells_oarfish","spot":"indian_bluewater"}
+FULL74_REAL_TAKE russells_oarfish clock=6.00000000000009 attempt=1 session=1791128362.97793-173332824--9223371998149737005-101
+FULL74_RECIPE red_sea_clownfish {"bait":"worm","charge":0.365,"gear":4,"region":"red_sea","seed":13,"species":"red_sea_clownfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE red_sea_clownfish clock=7.30000000000015 attempt=1 session=1791128365.3405-175695383--9223371998149737005-102
+FULL74_RECIPE red_sea_bannerfish {"bait":"worm","charge":0.47,"gear":4,"region":"red_sea","seed":38,"species":"red_sea_bannerfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE red_sea_bannerfish clock=5.72500000000007 attempt=1 session=1791128367.52215-177877033--9223371998149737005-103
+FULL74_RECIPE masked_butterflyfish {"bait":"worm","charge":0.375,"gear":4,"region":"red_sea","seed":1,"species":"masked_butterflyfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE masked_butterflyfish clock=3.44999999999999 attempt=1 session=1791128369.68309-180037976--9223371998149737005-104
+FULL74_RECIPE sohal_surgeonfish {"bait":"worm","charge":0.52,"gear":4,"region":"red_sea","seed":65,"species":"sohal_surgeonfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE sohal_surgeonfish clock=4.07499999999999 attempt=1 session=1791128371.91489-182269773--9223371998149737005-105
+FULL74_RECIPE arabian_picassotriggerfish {"bait":"worm","charge":0.35,"gear":4,"region":"red_sea","seed":15,"species":"arabian_picassotriggerfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE arabian_picassotriggerfish clock=11.375 attempt=2 session=1791128374.06413-184419010--9223371998149737005-106
+FULL74_RECIPE klunzingers_wrasse {"bait":"worm","charge":0.44,"gear":4,"region":"red_sea","seed":3,"species":"klunzingers_wrasse","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE klunzingers_wrasse clock=9.65000000000009 attempt=1 session=1791128376.30311-186657989--9223371998149737005-107
+FULL74_RECIPE red_sea_goatfish {"bait":"worm","charge":0.475,"gear":4,"region":"red_sea","seed":24,"species":"red_sea_goatfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE red_sea_goatfish clock=4.37500000000001 attempt=1 session=1791128378.51215-188867021--9223371998149737005-108
+FULL74_RECIPE crocodile_flathead {"bait":"worm","charge":0.4,"gear":4,"region":"red_sea","seed":94,"species":"crocodile_flathead","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE crocodile_flathead clock=13.9999999999998 attempt=2 session=1791128380.72492-191079796--9223371998149737005-109
+FULL74_RECIPE bluespotted_cornetfish {"bait":"worm","charge":0.635,"gear":4,"region":"red_sea","seed":95,"species":"bluespotted_cornetfish","spot":"red_sea_bluehole"}
+FULL74_REAL_TAKE bluespotted_cornetfish clock=9.5250000000001 attempt=2 session=1791128383.32451-193679380--9223371998149737005-110
+FULL74_RECIPE yellowbar_angelfish {"bait":"worm","charge":0.535,"gear":4,"region":"red_sea","seed":245,"species":"yellowbar_angelfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE yellowbar_angelfish clock=11.525 attempt=3 session=1791128385.92759-196282460--9223371998149737005-111
+FULL74_RECIPE blackspotted_sweetlips {"bait":"worm","charge":0.6,"gear":4,"region":"red_sea","seed":94,"species":"blackspotted_sweetlips","spot":"red_sea_wall"}
+FULL74_REAL_TAKE blackspotted_sweetlips clock=9.30000000000011 attempt=1 session=1791128388.48437-198839234--9223371998149737005-112
+FULL74_RECIPE orbicular_batfish {"bait":"worm","charge":0.56,"gear":4,"region":"red_sea","seed":14,"species":"orbicular_batfish","spot":"red_sea_lagoon"}
+FULL74_REAL_TAKE orbicular_batfish clock=16.0499999999997 attempt=3 session=1791128391.10232-201457187--9223371998149737005-113
+FULL74_RECIPE alligator_gar {"bait":"worm","charge":0.735,"gear":4,"region":"bayou","seed":60,"species":"alligator_gar","spot":"bayou_backwater"}
+FULL74_REAL_TAKE alligator_gar clock=5.40000000000006 attempt=1 session=1791128394.00382-204358676--9223371998149737005-114
+SLICE3D_TESTS: 10799/10799 passed; failures=0; cast events=114; landing events=111; species=110; spots=21

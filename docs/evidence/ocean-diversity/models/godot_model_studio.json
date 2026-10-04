@@ -1,0 +1,3641 @@
+{
+  "engine": {
+    "build": "official",
+    "hash": "7d41c59c457bd5a245092b4e7eb2d833e3b3f8c3",
+    "hex": 263683,
+    "major": 4,
+    "minor": 6,
+    "patch": 3,
+    "status": "stable",
+    "string": "4.6.3-stable (official)",
+    "timestamp": 0
+  },
+  "errors": [],
+  "model_count": 37,
+  "models": {
+    "arabian_picassotriggerfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "softdorsal",
+        "anal",
+        "lockingtrigger"
+      ],
+      "bones": 17,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.201564371585846,
+          -0.076345831155777
+        ],
+        "size": [
+          1.0,
+          0.465953707695007,
+          0.152691662311554
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 17
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 17
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 17
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 17
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_swim.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_breach.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_landed.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_top.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "arabian_picassotriggerfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "atlantic_flyingfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoralwings_r",
+        "pectoralwings_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "dorsal",
+        "anal",
+        "pelvicwings_r",
+        "pelvicwings_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.142522290349007,
+          -0.33466050028801
+        ],
+        "size": [
+          1.0,
+          0.227542072534561,
+          0.669321000576019
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_swim.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_breach.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_landed.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_top.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_flyingfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "atlantic_tarpon": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.147969186306,
+          -0.116904482245445
+        ],
+        "size": [
+          1.0,
+          0.319813847541809,
+          0.233808964490891
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_swim.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_struggle.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_breach.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_landed.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_top.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "atlantic_tarpon_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "barreleye": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "dorsal",
+        "anal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.109460882842541,
+          -0.191056117415428
+        ],
+        "size": [
+          1.0,
+          0.28722083568573,
+          0.382112234830856
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/barreleye_swim.png",
+        "ownbuild/ocean-model-review/renders/barreleye_struggle.png",
+        "ownbuild/ocean-model-review/renders/barreleye_breach.png",
+        "ownbuild/ocean-model-review/renders/barreleye_landed.png",
+        "ownbuild/ocean-model-review/renders/barreleye_top.png",
+        "ownbuild/ocean-model-review/renders/barreleye_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "barreleye_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "barreleye_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "barreleye_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "barreleye_green_eye"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "barreleye_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "barreleye_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "barreleye_glass"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "black_scabbardfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "smallforkedcaudal",
+        "lowanal",
+        "continuousdorsal"
+      ],
+      "bones": 16,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0794437304139137,
+          -0.050165917724371
+        ],
+        "size": [
+          1.0,
+          0.192149594426155,
+          0.100331835448742
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 16
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_swim.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_breach.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_landed.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_top.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "black_scabbardfish_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "blackspotted_sweetlips": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.178069710731506,
+          -0.144851788878441
+        ],
+        "size": [
+          1.0,
+          0.401574522256851,
+          0.289703577756882
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_swim.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_struggle.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_breach.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_landed.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_top.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blackspotted_sweetlips_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "blue_whale": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "horizontalfluke_r",
+        "horizontalfluke_l",
+        "dorsal",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "bones": 14,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.138190746307373,
+          -0.1317418217659
+        ],
+        "size": [
+          1.0,
+          0.216606944799423,
+          0.263483643531799
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 13
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 13
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 13
+        },
+        "swim": {
+          "length": 2.40000009536743,
+          "tracks": 13
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/blue_whale_swim.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_struggle.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_breach.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_landed.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_top.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "blue_whale_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blue_whale_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blue_whale_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blue_whale_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blue_whale_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "blue_whale_ray"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "bluespotted_cornetfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "posteriordorsal",
+        "posterioranal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0419153422117233,
+          -0.0317588858306408
+        ],
+        "size": [
+          1.0,
+          0.0830828621983528,
+          0.0635177716612816
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_swim.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_breach.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_landed.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_top.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_cornetfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "bluespotted_ribbontail_ray": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "pelvic_r",
+        "pelvic_l",
+        "diskwing_l",
+        "diskwing_r"
+      ],
+      "bones": 13,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0325918942689896,
+          -0.275870144367218
+        ],
+        "size": [
+          1.0,
+          0.0849314033985138,
+          0.551740288734436
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 13
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 13
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 13
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 13
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_swim.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_struggle.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_breach.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_landed.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_top.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_ribbontail_ray_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_ribbontail_ray_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_ribbontail_ray_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_ribbontail_ray_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_ribbontail_ray_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_ribbontail_ray_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "bluespotted_ribbontail_ray_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "cabezon": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "softdorsal",
+        "anal",
+        "spinydorsal",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 19,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.123193509876728,
+          -0.252200216054916
+        ],
+        "size": [
+          1.0,
+          0.291174203157425,
+          0.504400432109833
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 19
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 19
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 19
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 19
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/cabezon_swim.png",
+        "ownbuild/ocean-model-review/renders/cabezon_struggle.png",
+        "ownbuild/ocean-model-review/renders/cabezon_breach.png",
+        "ownbuild/ocean-model-review/renders/cabezon_landed.png",
+        "ownbuild/ocean-model-review/renders/cabezon_top.png",
+        "ownbuild/ocean-model-review/renders/cabezon_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "cabezon_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "california_sheephead": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.162494793534279,
+          -0.166496217250824
+        ],
+        "size": [
+          1.0,
+          0.363095760345459,
+          0.332992434501648
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/california_sheephead_swim.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_struggle.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_breach.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_landed.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_top.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "california_sheephead_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "collare_butterflyfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.243313565850258,
+          -0.0947870388627052
+        ],
+        "size": [
+          1.0,
+          0.525371909141541,
+          0.18957407772541
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_swim.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_breach.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_landed.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_top.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "collare_butterflyfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "crocodile_flathead": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "softdorsal",
+        "anal",
+        "spinydorsal",
+        "pelvic_r",
+        "pelvic_l",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "bones": 19,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0689314231276512,
+          -0.20894955098629
+        ],
+        "size": [
+          1.0,
+          0.212515473365784,
+          0.41789910197258
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 19
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 19
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 19
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 19
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_swim.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_struggle.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_breach.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_landed.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_top.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "crocodile_flathead_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "emperor_angelfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.279475033283234,
+          -0.104303643107414
+        ],
+        "size": [
+          1.0,
+          0.57636821269989,
+          0.208607286214828
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_swim.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_breach.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_landed.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_top.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "emperor_angelfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "garibaldi": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.233490213751793,
+          -0.134061321616173
+        ],
+        "size": [
+          1.0,
+          0.480905532836914,
+          0.268122643232346
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/garibaldi_swim.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_struggle.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_breach.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_landed.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_top.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "garibaldi_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "giant_moray": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "continuousanal",
+        "continuousdorsal"
+      ],
+      "bones": 13,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0780775398015976,
+          -0.0586756430566311
+        ],
+        "size": [
+          1.0,
+          0.190481886267662,
+          0.117351286113262
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 13
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 13
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 13
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 13
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/giant_moray_swim.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_struggle.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_breach.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_landed.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_top.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "giant_moray_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "grey_gurnard": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "softdorsal",
+        "anal",
+        "spinydorsal",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 19,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.125989526510239,
+          -0.242257967591286
+        ],
+        "size": [
+          1.0,
+          0.316835105419159,
+          0.484515935182571
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 19
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 19
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 19
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 19
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/grey_gurnard_swim.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_struggle.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_breach.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_landed.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_top.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "grey_gurnard_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "humphead_wrasse": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.204550430178642,
+          -0.189804002642632
+        ],
+        "size": [
+          1.0,
+          0.454754590988159,
+          0.379608005285263
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_swim.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_struggle.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_breach.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_landed.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_top.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "humphead_wrasse_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "john_dory": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "softdorsal",
+        "anal",
+        "elongatespinydorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 19,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.304561018943787,
+          -0.0796690136194229
+        ],
+        "size": [
+          1.0,
+          0.691451251506805,
+          0.159338027238846
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 19
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 19
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 19
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 19
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/john_dory_swim.png",
+        "ownbuild/ocean-model-review/renders/john_dory_struggle.png",
+        "ownbuild/ocean-model-review/renders/john_dory_breach.png",
+        "ownbuild/ocean-model-review/renders/john_dory_landed.png",
+        "ownbuild/ocean-model-review/renders/john_dory_top.png",
+        "ownbuild/ocean-model-review/renders/john_dory_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "john_dory_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "kelp_greenling": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0923527777194977,
+          -0.119518272578716
+        ],
+        "size": [
+          1.0,
+          0.210730254650116,
+          0.239036545157433
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/kelp_greenling_swim.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_struggle.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_breach.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_landed.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_top.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "kelp_greenling_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "klunzingers_wrasse": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.105526886880398,
+          -0.0849912092089653
+        ],
+        "size": [
+          1.0,
+          0.229973927140236,
+          0.169982418417931
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_swim.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_struggle.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_breach.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_landed.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_top.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "klunzingers_wrasse_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "leaf_scorpionfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "leafspinydorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.185732439160347,
+          -0.188620522618294
+        ],
+        "size": [
+          1.0,
+          0.489683032035828,
+          0.377241045236588
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_swim.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_breach.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_landed.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_top.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "leaf_scorpionfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "lingcod": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "softdorsal",
+        "anal",
+        "spinydorsal",
+        "pectoral_r",
+        "pectoral_l",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 19,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.114176690578461,
+          -0.178186908364296
+        ],
+        "size": [
+          1.0,
+          0.267038315534592,
+          0.356373816728592
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 19
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 19
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 19
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 19
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/lingcod_swim.png",
+        "ownbuild/ocean-model-review/renders/lingcod_struggle.png",
+        "ownbuild/ocean-model-review/renders/lingcod_breach.png",
+        "ownbuild/ocean-model-review/renders/lingcod_landed.png",
+        "ownbuild/ocean-model-review/renders/lingcod_top.png",
+        "ownbuild/ocean-model-review/renders/lingcod_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "lingcod_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "longhorn_cowfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "posteriordorsal",
+        "posterioranal",
+        "pectoral_r",
+        "pectoral_l"
+      ],
+      "bones": 16,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.122562304139137,
+          -0.154973700642586
+        ],
+        "size": [
+          1.0,
+          0.297749519348145,
+          0.309947401285172
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 16
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_swim.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_breach.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_landed.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_top.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "longhorn_cowfish_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "masked_butterflyfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.259722799062729,
+          -0.0996671840548515
+        ],
+        "size": [
+          1.0,
+          0.537926852703094,
+          0.199334368109703
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_swim.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_breach.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_landed.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_top.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "masked_butterflyfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "orbicular_batfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "roundeddorsal",
+        "roundedanal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.463801711797714,
+          -0.130220919847488
+        ],
+        "size": [
+          1.0,
+          0.935637474060059,
+          0.260441839694977
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_swim.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_breach.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_landed.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_top.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "orbicular_batfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "pacific_halibut": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "ocularpectoral_r",
+        "ocularpectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal"
+      ],
+      "bones": 16,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0717545077204704,
+          -0.234321489930153
+        ],
+        "size": [
+          1.0,
+          0.143509015440941,
+          0.468116939067841
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 16
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/pacific_halibut_swim.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_struggle.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_breach.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_landed.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_top.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "pacific_halibut_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "pacific_halibut_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "pacific_halibut_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "pacific_halibut_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "pacific_halibut_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "pacific_halibut_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "pacific_halibut_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "queen_angelfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.282383680343628,
+          -0.103416413068771
+        ],
+        "size": [
+          1.0,
+          0.596279621124268,
+          0.206832826137543
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/queen_angelfish_swim.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_breach.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_landed.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_top.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "queen_angelfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "red_sea_bannerfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "pennantdorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.285633057355881,
+          -0.0934250503778458
+        ],
+        "size": [
+          1.0,
+          0.893384218215942,
+          0.186850100755692
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_swim.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_breach.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_landed.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_top.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_bannerfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "red_sea_clownfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.178085759282112,
+          -0.121891230344772
+        ],
+        "size": [
+          1.0,
+          0.385417282581329,
+          0.243782460689545
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_swim.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_breach.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_landed.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_top.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_clownfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "red_sea_goatfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "softdorsal",
+        "anal",
+        "spinydorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 19,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.143355041742325,
+          -0.104605786502361
+        ],
+        "size": [
+          1.0,
+          0.336830735206604,
+          0.209211573004723
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 19
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 19
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 19
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 19
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_swim.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_breach.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_landed.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_top.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "red_sea_goatfish_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "russells_oarfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "continuousreddorsal"
+      ],
+      "bones": 14,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.166239976882935,
+          -0.0332325734198093
+        ],
+        "size": [
+          1.0,
+          0.357481092214584,
+          0.0664651468396187
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 14
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 14
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 14
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 14
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/russells_oarfish_swim.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_breach.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_landed.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_top.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "russells_oarfish_red"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "sohal_surgeonfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.195096462965012,
+          -0.0922686234116554
+        ],
+        "size": [
+          1.0,
+          0.417144656181335,
+          0.184537246823311
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_swim.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_breach.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_landed.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_top.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "sohal_surgeonfish_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "stoplight_parrotfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.159543961286545,
+          -0.16056264936924
+        ],
+        "size": [
+          1.0,
+          0.336127400398254,
+          0.32112529873848
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_swim.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_breach.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_landed.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_top.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "stoplight_parrotfish_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "turbot": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "ocularpectoral_r",
+        "ocularpectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "dorsal",
+        "anal"
+      ],
+      "bones": 16,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.0741197094321251,
+          -0.297814697027206
+        ],
+        "size": [
+          1.0,
+          0.14823941886425,
+          0.593365550041199
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 16
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 16
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 16
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 16
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/turbot_swim.png",
+        "ownbuild/ocean-model-review/renders/turbot_struggle.png",
+        "ownbuild/ocean-model-review/renders/turbot_breach.png",
+        "ownbuild/ocean-model-review/renders/turbot_landed.png",
+        "ownbuild/ocean-model-review/renders/turbot_top.png",
+        "ownbuild/ocean-model-review/renders/turbot_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "turbot_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "turbot_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "turbot_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "turbot_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "turbot_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "turbot_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "turbot_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "yellow_tang": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.305161952972412,
+          -0.0918267071247101
+        ],
+        "size": [
+          1.0,
+          0.630414962768555,
+          0.18365341424942
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/yellow_tang_swim.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_struggle.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_breach.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_landed.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_top.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_lip"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellow_tang_ivory"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    },
+    "yellowbar_angelfish": {
+      "bone_names": [
+        "root",
+        "head",
+        "jaw",
+        "gill_L",
+        "gill_R",
+        "pectoral_r",
+        "pectoral_l",
+        "spine_front",
+        "spine_mid",
+        "spine_rear",
+        "tail_base",
+        "tail_mid",
+        "tail_tip",
+        "caudal",
+        "anal",
+        "dorsal",
+        "pelvic_r",
+        "pelvic_l"
+      ],
+      "bones": 18,
+      "bounds": {
+        "position": [
+          -0.5,
+          -0.273626357316971,
+          -0.111147746443748
+        ],
+        "size": [
+          1.0,
+          0.570371031761169,
+          0.222295492887497
+        ]
+      },
+      "clips": {
+        "breach": {
+          "length": 1.60000002384186,
+          "tracks": 18
+        },
+        "landed": {
+          "length": 3.0,
+          "tracks": 18
+        },
+        "struggle": {
+          "length": 1.20000004768372,
+          "tracks": 18
+        },
+        "swim": {
+          "length": 1.79999995231628,
+          "tracks": 18
+        }
+      },
+      "frames": [
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_swim.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_breach.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_landed.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_top.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_underside.png"
+      ],
+      "materials": [
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_skin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_fin"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_ray"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_crease"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_iris"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_pupil"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_glint"
+        },
+        {
+          "class": "StandardMaterial3D",
+          "name": "yellowbar_angelfish_lip"
+        }
+      ],
+      "meshes": 1,
+      "skeletons": 1,
+      "skinned_meshes": 1
+    }
+  },
+  "rendering_driver": "vulkan",
+  "rendering_method": "mobile",
+  "scope": "Godot imported rig/material structure and native GPU model studio; does not claim Android device QA"
+}

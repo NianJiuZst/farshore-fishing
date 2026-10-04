@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "blue_whale",
+      "accepted_scientific_name": "Balaenoptera musculus",
+      "animal_kind": "mammal",
+      "encounter_type": "fantasy_challenge",
+      "taxonomy": {
+        "family_scientific": "Balaenopteridae",
+        "family_zh": "须鲸科",
+        "genus_scientific": "Balaenoptera",
+        "genus_zh": "须鲸属",
+        "note": "蓝鲸属于哺乳纲须鲸科，不是鱼；鲸须用于滤食。",
+        "source_ids": ["s1"]
+      },
+      "typical_size": {
+        "text": "NOAA没有给出全球成年均值；不同亚种、性别和海域的体型有差异。本作固定26米鲸影是展示尺度。",
+        "source_ids": ["s1"]
+      },
+      "max_length": {
+        "value_cm": 3352.8,
+        "length_type": "unspecified",
+        "record_label": "NOAA概述上限",
+        "text": "NOAA列最长约110英尺，换算约33.5米；这是概述上限，非本作测量纪录。",
+        "source_ids": ["s1"]
+      },
+      "max_weight": {
+        "value_kg": 149700,
+        "record_label": "NOAA概述上限",
+        "text": "NOAA列上端约330,000磅，折合约150吨；不把概述值当作实时核验的单头世界纪录。",
+        "source_ids": ["s1"]
+      },
+      "habitat": {
+        "text": "生活在海洋，分布受到磷虾资源影响。本条来源未提供统一栖深区间；0—5米仅是游戏鲸影展示水层。",
+        "source_ids": ["s1"]
+      },
+      "distribution": {
+        "text": "除北冰洋外的各大洋均有分布；美国西岸夏季是东部北太平洋蓝鲸的重要觅食区域。游戏仅将入口放在太平洋。",
+        "source_ids": ["s1"]
+      },
+      "behavior": {
+        "text": "常单独或成对出现，许多个体季节性迁移。蓝灰色斑纹可用于辨认个体。",
+        "source_ids": ["s1"]
+      },
+      "diet": {
+        "text": "主要用鲸须滤食磷虾。游戏不给蓝鲸鱼饵，也不把幻想共鸣写成真实捕食。",
+        "source_ids": ["s1"]
+      },
+      "conservation": {
+        "text": "NOAA列其为ESA濒危、MMPA受保护；船撞和渔具缠绕是威胁。现实观鲸需遵守当地规则，NOAA一般建议至少100码（约91米），不喂食、不触摸、不追逐。游戏船侧鲸影不是现实观鲸方法。",
+        "source_ids": ["s1", "s2"]
+      },
+      "story": {
+        "title": "体型巨大，也需要留出空间",
+        "text": "完整鲸影在船旁显现是本作的幻想奖励。现实中NOAA建议从足够距离观察大鲸，并避免用船追赶、包围或挡住去路；让鲸继续自由游动，才有机会读懂它自己的节奏。",
+        "source_ids": ["s2"]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Blue Whale",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Marine Life Viewing Guidelines",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/topic/marine-life-viewing-guidelines",
+          "accessed": "2026-10-04"
+        }
+      ]
+    }
+  ]
+}

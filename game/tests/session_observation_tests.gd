@@ -131,6 +131,7 @@ func _test_float_observation() -> void:
 	var direct_takes: int = 0
 	var rejected_casts: int = 0
 	for id: String in catalog.fish:
+		if not catalog.is_fishing_species(catalog.fish[id]): continue
 		var visible_held: bool = false
 		var maximum_step: float = 0.0
 		for seed_value: int in [793,1491,9277]:

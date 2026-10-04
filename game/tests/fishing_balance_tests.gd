@@ -46,7 +46,8 @@ func _run() -> void:
 		printerr("FAIL: cannot write evidence output ", output)
 		quit(2)
 		return
-	file.store_string(JSON.stringify({"scope": "Quick 30fps grid" if quick else "All legal species/gear routes; min/mid/max endpoints; 16/30/60 fps; paired seeds; independently sampled random individuals", "legal_routes": routes, "float_cases": float_cases, "wear_cases": wear_cases, "regressions": {"checks": checks, "failed": failed}, "runs": runs}, "\t"))
+	var scope: String = "Regressions only; all 110 ordinary species have legal routes; battle matrix not run" if "--regressions-only" in args else ("Quick 30fps grid" if quick else "All legal species/gear routes; min/mid/max endpoints; 16/30/60 fps; paired seeds; independently sampled random individuals")
+	file.store_string(JSON.stringify({"scope": scope, "legal_routes": routes, "float_cases": float_cases, "wear_cases": wear_cases, "regressions": {"checks": checks, "failed": failed}, "runs": runs}, "\t"))
 	file.close()
 	print("FISHING_BALANCE_TESTS: ", checks-failed.size(), "/", checks, "; simulations=", runs.size(), "; legal_routes=", routes.size())
 	quit(0 if failed.is_empty() else 1)
@@ -72,7 +73,7 @@ func _build_routes() -> void:
 									routes.append({"species": fish.species_id, "gear": gear_id, "spot": spot_id, "region": spot.region_id, "bait": bait.bait_id, "cast_power": cast_power, "time": time, "weather": weather})
 	var seen: Dictionary = {}
 	for route: Dictionary in routes: seen[route.species] = true
-	_check(seen.size() == 74, "74 species have legal candidate routes")
+	_check(seen.size() == 110 and seen.size() == catalog.fish_species_count() and not seen.has("blue_whale"), "110 fishing species have legal candidate routes; mammal challenge is separate")
 
 func _specimen(route: Dictionary, seed_value: int, fraction: float = -1.0) -> Dictionary:
 	var fish: FishDefinition = catalog.fish[route.species]
@@ -288,6 +289,7 @@ func _float_regressions(_route_value: Dictionary, _record: Dictionary) -> void:
 	var missed_strikes: int = 0
 	var signatures: Dictionary = {}
 	for species: String in catalog.fish:
+		if not catalog.is_fishing_species(catalog.fish[species]): continue
 		var route: Dictionary = _route(species)
 		for seed_value: int in [372, 991]:
 			for fps: int in frame_rates:

@@ -7,6 +7,88 @@ const Controller = preload("res://tests/fishing_test_controller.gd")
 const LEGACY_IDS: Array[String] = ["worm", "grain", "shrimp", "lure", "sweetcorn", "dough", "cut_fish", "spinner"]
 const LARGE_IDS: Array[String] = ["large_fish_chunk", "whole_mackerel", "large_squid", "large_surface_lure"]
 const SAMPLE_COUNT: int = 8000
+# Canonical JSON signatures of installed 1.3.0 E/F with exactly three route fields omitted.
+const LEGACY_OCEAN_PROJECTED_SHA256: Dictionary = {
+	"res://data/fish_e.json": "397715a6bf3d11256262639ba5a8888ab6ca28debf0aa58dedb528825d4514e7",
+	"res://data/fish_f.json": "5220e037668007567eb7cd42a4c734cb6502a5a6ce84d297f87385bc9cd3f3ed",
+}
+# Frozen first routes from installed 1.3.0, only for the unchanged 74-species RNG trace.
+const LEGACY_FIRST_ROUTES: Dictionary = {
+	"common_carp": ["lake_shore","lake"],
+	"crucian_carp": ["lake_shore","lake"],
+	"roach": ["lake_shore","lake"],
+	"rudd": ["lake_shore","lake"],
+	"european_perch": ["lake_shore","lake"],
+	"northern_pike": ["lake_bay","lake"],
+	"common_bream": ["lake_bay","lake"],
+	"tench": ["lake_shore","lake"],
+	"japanese_horse_mackerel": ["japan_harbor","japan"],
+	"chub_mackerel": ["japan_reef","japan"],
+	"red_seabream": ["japan_reef","japan"],
+	"black_seabream": ["japan_harbor","japan"],
+	"japanese_seabass": ["japan_harbor","japan"],
+	"japanese_whiting": ["japan_harbor","japan"],
+	"marbled_rockfish": ["japan_reef","japan"],
+	"olive_flounder": ["japan_reef","japan"],
+	"atlantic_cod": ["norway_harbor","norway"],
+	"pollack": ["norway_harbor","norway"],
+	"saithe": ["norway_harbor","norway"],
+	"haddock": ["norway_boat","norway"],
+	"atlantic_mackerel": ["norway_harbor","norway"],
+	"atlantic_herring": ["norway_boat","norway"],
+	"european_plaice": ["norway_harbor","norway"],
+	"atlantic_wolffish": ["norway_boat","norway"],
+	"european_seabass": ["med_pier","med"],
+	"gilthead_seabream": ["med_pier","med"],
+	"saddled_seabream": ["med_pier","med"],
+	"white_seabream": ["med_pier","med"],
+	"annular_seabream": ["med_pier","med"],
+	"red_mullet": ["med_boat","med"],
+	"painted_comber": ["med_pier","med"],
+	"common_pandora": ["med_boat","med"],
+	"alligator_gar": ["bayou_backwater","bayou"],
+	"longnose_gar": ["bayou_backwater","bayou"],
+	"bowfin": ["bayou_backwater","bayou"],
+	"largemouth_bass": ["bayou_backwater","bayou"],
+	"channel_catfish": ["bayou_backwater","bayou"],
+	"flathead_catfish": ["bayou_backwater","bayou"],
+	"chinese_sturgeon": ["yangtze_estuary","yangtze"],
+	"mandarin_fish": ["yangtze_river","yangtze"],
+	"northern_snakehead": ["yangtze_river","yangtze"],
+	"yellowcheek": ["yangtze_river","yangtze"],
+	"southern_catfish": ["yangtze_river","yangtze"],
+	"longsnout_catfish": ["yangtze_river","yangtze"],
+	"atlantic_bluefin_tuna": ["atlantic_bluewater","atlantic_ocean"],
+	"pacific_bluefin_tuna": ["pacific_bluewater","pacific_ocean"],
+	"yellowfin_tuna": ["pacific_bluewater","pacific_ocean"],
+	"bigeye_tuna": ["pacific_bluewater","pacific_ocean"],
+	"albacore": ["pacific_bluewater","pacific_ocean"],
+	"skipjack_tuna": ["pacific_bluewater","pacific_ocean"],
+	"mahi_mahi": ["pacific_bluewater","pacific_ocean"],
+	"wahoo": ["pacific_bluewater","pacific_ocean"],
+	"swordfish": ["pacific_bluewater","pacific_ocean"],
+	"blue_marlin": ["pacific_bluewater","pacific_ocean"],
+	"striped_marlin": ["pacific_bluewater","pacific_ocean"],
+	"indo_pacific_sailfish": ["pacific_bluewater","pacific_ocean"],
+	"great_barracuda": ["atlantic_shelf","atlantic_ocean"],
+	"giant_trevally": ["pacific_reef","pacific_ocean"],
+	"greater_amberjack": ["atlantic_shelf","atlantic_ocean"],
+	"cobia": ["atlantic_shelf","atlantic_ocean"],
+	"roosterfish": ["pacific_reef","pacific_ocean"],
+	"red_snapper": ["atlantic_shelf","atlantic_ocean"],
+	"giant_grouper": ["pacific_reef","pacific_ocean"],
+	"dogtooth_tuna": ["pacific_bluewater","pacific_ocean"],
+	"yellowtail_kingfish": ["pacific_reef","pacific_ocean"],
+	"opah": ["atlantic_bluewater","atlantic_ocean"],
+	"great_white_shark": ["pacific_bluewater","pacific_ocean"],
+	"scalloped_hammerhead": ["pacific_bluewater","pacific_ocean"],
+	"great_hammerhead": ["atlantic_shelf","atlantic_ocean"],
+	"blue_shark": ["pacific_bluewater","pacific_ocean"],
+	"shortfin_mako": ["pacific_bluewater","pacific_ocean"],
+	"tiger_shark": ["atlantic_shelf","atlantic_ocean"],
+	"oceanic_whitetip_shark": ["pacific_bluewater","pacific_ocean"],
+	"whitetip_reef_shark": ["pacific_reef","pacific_ocean"],
+}
 var catalog: ContentCatalog = Catalog.new()
 var checks: int = 0
 var failures: Array[String] = []
@@ -29,7 +111,7 @@ func _run() -> void:
 	for bait: Dictionary in world.baits:
 		check(Catalog.bait_size_exponent(str(bait.bait_id),Encounter.SIZE_EXPONENT) == float(bait.get("size_exponent",Encounter.SIZE_EXPONENT)),"cold configured size lookup: "+str(bait.bait_id))
 	check(catalog.load_all(false),"catalog loads: "+str(catalog.errors))
-	check(catalog.baits.size()==12 and catalog.fish.size()==74 and catalog.regions.size()==9 and catalog.spots.size()==18,"12 baits / 74 species / 9 regions / 18 spots")
+	check(catalog.baits.size()==12 and catalog.fish.size()==111 and catalog.fish_species_count()==110 and catalog.regions.size()==10 and catalog.spots.size()==21 and catalog.gear.size()==6,"12 baits / 110 fish + one mammal / 10 regions / 21 spots / 6 rods")
 	_legacy_regression(world)
 	_configuration_validation()
 	_legal_routes()
@@ -44,16 +126,35 @@ func _run() -> void:
 		report["checks"] = checks
 		report["failures"] = failures
 		if output: output.store_string(JSON.stringify(report,"  ",true)+"\n")
-	print("GIANT_BAIT_TESTS: %d/%d; failures=%d; bait/species routes=%d/888; size samples=%d" % [checks-failures.size(),checks,failures.size(),routes.size(),catalog.fish.size()*LARGE_IDS.size()*SAMPLE_COUNT])
+	print("GIANT_BAIT_TESTS: %d/%d; failures=%d; bait/species routes=%d/%d; size samples=%d" % [checks-failures.size(),checks,failures.size(),routes.size(),catalog.fish_species_count()*catalog.baits.size(),catalog.fish_species_count()*LARGE_IDS.size()*SAMPLE_COUNT])
 	quit(0 if failures.is_empty() else 1)
 
 func _legacy_regression(world: Dictionary) -> void:
 	var fixture: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://tests/fixtures/giant_bait_legacy_baseline.json"))
 	for path: String in fixture.source_sha256:
-		check(FileAccess.get_sha256(path)==str(fixture.source_sha256[path]),"fish/natural-history source frozen: "+path)
+		if LEGACY_OCEAN_PROJECTED_SHA256.has(path):
+			var historical_ocean: Array = JSON.parse_string(FileAccess.get_file_as_string(path))
+			for entry: Dictionary in historical_ocean:
+				for route_field: String in ["region_ids","spot_ids","travel_route_note"]: entry.erase(route_field)
+			check(JSON.stringify(historical_ocean,"",true).sha256_text()==str(LEGACY_OCEAN_PROJECTED_SHA256[path]),"all historical ocean fields frozen outside exactly three authorized route fields: "+path)
+		else:
+			check(FileAccess.get_sha256(path)==str(fixture.source_sha256[path]),"fish/natural-history source frozen: "+path)
 	world = world.duplicate(true)
 	world.erase("baits")
-	check(JSON.stringify(world,"",true).sha256_text()==str(fixture.world_without_baits_sha256),"all non-bait world data remains exact")
+	# Reconstruct the old projection for its original immutable world signature.
+	# Appended region/rod/spots and explicitly expanded ocean depths have their
+	# own current-catalog checks; original regions, equipment and twelve spots stay exact.
+	world.gear.resize(5)
+	world.regions.resize(9)
+	world.spots.resize(18)
+	for spot: Dictionary in world.spots:
+		if str(spot.spot_id) in ["pacific_bluewater","atlantic_bluewater","indian_bluewater"]:
+			spot.depth_max_m = 180.0
+			spot.habitat = str(spot.habitat).replace("；专用垂降装备可进入700米以内的深水观察航段", "")
+			spot.cast_hint = str(spot.cast_hint).replace("；深海物种需专用垂降竿，非浅水随机刷出", "")
+		elif str(spot.spot_id) == "atlantic_shelf": spot.depth_min_m = 5.0
+	check(JSON.stringify(world,"",true).sha256_text()==str(fixture.world_without_baits_sha256),"original world projection retains exact frozen non-bait signature")
+	check(LEGACY_FIRST_ROUTES.size()==74 and fixture.attraction_weights.size()==74,"legacy RNG trace remains exactly the original 74 species")
 	for index: int in LEGACY_IDS.size():
 		var id: String = LEGACY_IDS[index]
 		check(catalog.baits[index]==fixture.legacy_baits[index] and str(catalog.baits[index].bait_id)==id,"legacy bait definition/order preserved: "+id)
@@ -61,15 +162,17 @@ func _legacy_regression(world: Dictionary) -> void:
 		var g: EncounterGenerator = Encounter.new(int(fixture.seed))
 		var hash_context: HashingContext = HashingContext.new()
 		hash_context.start(HashingContext.HASH_SHA256)
-		for fish: FishDefinition in catalog.fish.values():
+		for species_id: String in LEGACY_FIRST_ROUTES:
+			var fish: FishDefinition = catalog.fish[species_id]
+			var historical_route: Array = LEGACY_FIRST_ROUTES[species_id]
 			check(catalog.bait_weight(fish,id)==float(fixture.attraction_weights[fish.species_id][index]),"legacy weight exact: "+id+"/"+fish.species_id)
 			for sample: int in int(fixture.samples_per_species_per_bait):
-				var record: Dictionary = g.make_individual(fish,str(fish.spots()[0]),str(fish.regions()[0]),id,2,"day","clear")
+				var record: Dictionary = g.make_individual(fish,str(historical_route[0]),str(historical_route[1]),id,2,"day","clear")
 				record.erase("caught_at")
 				hash_context.update(JSON.stringify(record,"",true).to_utf8_buffer())
 		check(hash_context.finish().hex_encode()==str(fixture.legacy_rng_signatures[id].records_sha256),"all seeded record fields exact: "+id)
 		check(str(g.rng.state)==str(fixture.legacy_rng_signatures[id].rng_state),"RNG sequence unchanged: "+id)
-	report["legacy_records_verified"] = LEGACY_IDS.size()*catalog.fish.size()*int(fixture.samples_per_species_per_bait)
+	report["legacy_records_verified"] = LEGACY_IDS.size()*LEGACY_FIRST_ROUTES.size()*int(fixture.samples_per_species_per_bait)
 
 func _configuration_validation() -> void:
 	for index: int in LARGE_IDS.size():
@@ -80,6 +183,7 @@ func _configuration_validation() -> void:
 		check(str(bait.name).length()<=4,"concise name fits existing HUD caption: "+id)
 		check(Catalog.bait_tuning_errors(bait).is_empty(),"valid bait tuning: "+id)
 		for fish: FishDefinition in catalog.fish.values():
+			if not catalog.is_fishing_species(fish): continue
 			check(is_finite(catalog.bait_weight(fish,id)) and catalog.bait_weight(fish,id)>0.0,"finite positive weight: "+id+"/"+fish.species_id)
 	for value: Variant in [0.0,-1.0,0.74,2.01,INF,NAN,"0.88",null,{},[]]:
 		check(not Catalog.bait_tuning_errors({"bait_id":"invalid","size_exponent":value}).is_empty(),"invalid size exponent rejected: "+str(value))
@@ -114,6 +218,7 @@ func _legal_routes() -> void:
 	var largest_wait: int = 0
 	for bait: Dictionary in catalog.baits:
 		for fish: FishDefinition in catalog.fish.values():
+			if not catalog.is_fishing_species(fish): continue
 			var key: String = str(bait.bait_id)+"/"+fish.species_id
 			check(routes.has(key),"legal candidates route: "+key)
 			if not routes.has(key): continue
@@ -134,6 +239,7 @@ func _legal_routes() -> void:
 			draws+=count
 			largest_wait=maxi(largest_wait,count)
 	report["legal_bait_species_pairs"] = routes.size()
+	check(routes.size()==catalog.fish_species_count()*catalog.baits.size(),"all 1320 ordinary species/bait pairs have legal routes")
 	report["reachability_draws"] = draws
 	report["maximum_draws_to_reach_species"] = largest_wait
 	for id: String in LARGE_IDS:
@@ -185,6 +291,7 @@ func _size_distribution() -> void:
 		var total_extended: int = 0
 		var total_small: int = 0
 		for fish: FishDefinition in catalog.fish.values():
+			if not catalog.is_fishing_species(fish): continue
 			var route: Dictionary = routes[id+"/"+fish.species_id]
 			var g: EncounterGenerator = Encounter.new(752411+int(fish.species_id.hash() & 65535))
 			var baseline: EncounterGenerator = Encounter.new(752411+int(fish.species_id.hash() & 65535))
@@ -221,7 +328,7 @@ func _size_distribution() -> void:
 			total_giants+=giants
 			total_extended+=extended
 			total_small+=small
-		var samples: int = catalog.fish.size()*SAMPLE_COUNT
+		var samples: int = catalog.fish_species_count()*SAMPLE_COUNT
 		var aggregate_rate: float = float(total_giants)/samples
 		check(aggregate_rate>=0.14 and aggregate_rate<=0.18 and absf(aggregate_rate-expected_giant_probability)<0.003,"aggregate giant rate is bounded and accurate: "+id)
 		summary.append({"bait":id,"size_exponent":exponent,"samples":samples,"expected_giant_probability":expected_giant_probability,"observed_giant_probability":aggregate_rate,"extended_rate":float(total_extended)/samples,"small_rate":float(total_small)/samples})

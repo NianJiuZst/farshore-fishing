@@ -25,8 +25,8 @@ func _run() -> void:
 	print("TACKLE_TESTS: ",checks-failures,"/",checks," passed; failures=",failures)
 	quit(0 if failures == 0 else 1)
 func _test_data_and_legacy_weights() -> void:
-	_check(catalog.gear.size()==5 and catalog.baits.size()==12,"five rods and twelve baits ship")
-	_check(catalog.fish.size()==74 and catalog.regions.size()==9 and catalog.spots.size()==18,"all legacy fish/world entries remain")
+	_check(catalog.gear.size()==6 and catalog.baits.size()==12,"six rods and twelve baits ship")
+	_check(catalog.fish.size()==111 and catalog.fish_species_count()==110 and catalog.regions.size()==10 and catalog.spots.size()==21,"expanded inventory preserves legacy fish/world entries")
 	for id: int in range(3):
 		_check(catalog.gear[id]==OLD_GEAR[id],"original rod entirely unchanged: "+str(id))
 	for index: int in range(4):
@@ -38,6 +38,7 @@ func _test_data_and_legacy_weights() -> void:
 		_check(catalog.bait_category(id)==BASE_CATEGORIES[index],"explicit legacy bait category: "+id)
 		var overrides: Dictionary=catalog.bait_definition(id).get("species_weights",{})
 		for fish: FishDefinition in catalog.fish.values():
+			if not catalog.is_fishing_species(fish): continue
 			var expected_weight: float=float(overrides.get(fish.species_id,fish.weight_for("bait_weights",BASE_CATEGORIES[index])))
 			_check(is_equal_approx(catalog.bait_weight(fish,id),expected_weight),"new bait uses explicit species weight or unchanged category fallback: "+fish.species_id+"/"+id)
 		for spot: String in catalog.spots:
@@ -50,6 +51,7 @@ func _test_data_and_legacy_weights() -> void:
 			_check(correct,"real encounter consumes exact new bait weighting: "+spot+"/"+id)
 	for bait_id: String in ["worm","grain","shrimp","lure"]:
 		for fish: FishDefinition in catalog.fish.values():
+			if not catalog.is_fishing_species(fish): continue
 			_check(is_equal_approx(catalog.bait_weight(fish,bait_id),fish.weight_for("bait_weights",bait_id)),"original four bait weights unchanged across44: "+bait_id+"/"+fish.species_id)
 	_check(float(catalog.gear[3].power)>float(catalog.gear[1].power) and float(catalog.gear[3].tolerance)<float(catalog.gear[1].tolerance),"light spinning has genuine speed/control tradeoff")
 	_check(float(catalog.gear[4].power)>float(catalog.gear[2].power) and float(catalog.gear[4].reach)<float(catalog.gear[2].reach) and float(catalog.gear[4].max_depth_m)<float(catalog.gear[2].max_depth_m),"heavy casting does not invalidate old deep rod's reach/depth")
@@ -59,7 +61,7 @@ func _test_actual_gear_mechanics() -> void:
 	base_record.difficulty=0.55
 	base_record.behavior="steady"
 	var times: Array[float] = []
-	for id: int in range(5):
+	for id: int in range(catalog.gear.size()):
 		var session: FishingSession = Session.new(2468)
 		session.start_charge()
 		_check(session.cast(base_record,catalog.gear[id]),"real Session accepts rod "+str(id))
@@ -113,19 +115,20 @@ func _test_saves() -> void:
 	var extended: Dictionary = store.state
 	extended.owned_gear.append(3)
 	extended.owned_gear.append(4)
-	extended.gear=4
+	extended.owned_gear.append(5)
+	extended.gear=5
 	extended.selection.bait_id="spinner"
-	_check(store.commit_state(extended),"existing SaveStore accepts gear4 and new bait IDs without schema bump")
+	_check(store.commit_state(extended),"existing SaveStore accepts gear5 and new bait IDs without schema bump")
 	var restart: SaveStore = Store.new()
-	_check(restart.initialize(path) and restart.state.gear==4 and restart.state.owned_gear==[0,1,2,3,4] and restart.state.selection.bait_id=="spinner","five-rod/eight-bait choices persist after restart")
+	_check(restart.initialize(path) and restart.state.gear==5 and restart.state.owned_gear==[0,1,2,3,4,5] and restart.state.selection.bait_id=="spinner","six-rod choices persist after restart")
 	_check(_same(restart.state.species_stats,original.species_stats) and restart.state.favorites==original.favorites and restart.state.unlocked_regions==original.unlocked_regions,"extension never wipes archival stats/favorites/unlocks")
 	for bait: Dictionary in catalog.baits:
-		var record: Dictionary = encounter.make_individual(catalog.fish["common_carp"],"lake_shore","lake",str(bait.bait_id),4,"day","clear")
+		var record: Dictionary = encounter.make_individual(catalog.fish["common_carp"],"lake_shore","lake",str(bait.bait_id),5,"day","clear")
 		record["session_id"]="new_tackle_session_"+str(bait.bait_id)
 		record["catch_id"]="new_tackle_catch_"+str(bait.bait_id)
 		restart.begin_session(record.session_id)
-		_check(bool(restart.settle_catch(record).ok),"new catch persists original selected bait and gear4: "+str(bait.bait_id))
-		_check(str(restart.state.pending_catches[record.catch_id].bait_id)==str(bait.bait_id) and int(restart.state.pending_catches[record.catch_id].equipment)==4,"catch snapshot keeps actual tackle IDs: "+str(bait.bait_id))
+		_check(bool(restart.settle_catch(record).ok),"new catch persists original selected bait and gear5: "+str(bait.bait_id))
+		_check(str(restart.state.pending_catches[record.catch_id].bait_id)==str(bait.bait_id) and int(restart.state.pending_catches[record.catch_id].equipment)==5,"catch snapshot keeps actual tackle IDs: "+str(bait.bait_id))
 		_check(bool(restart.dispose_catch(record.catch_id,"released").ok),"new tackle catch disposes transactionally: "+str(bait.bait_id))
 	_check(restart.total_count()==56 and restart.discovered_count()==44,"twelve new records add to44 histories, without resetting discovery")
 func _check(ok: bool,label: String) -> void:

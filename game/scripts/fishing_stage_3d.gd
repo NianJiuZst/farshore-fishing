@@ -42,6 +42,7 @@ const GEAR_VISUALS: Array[Dictionary] = [
 	{"rod_length":2.42, "rod_radius":0.016, "rod_color":"273744", "reel_color":"96b8be", "grip_color":"66513c", "flex_scale":0.85},
 	{"rod_length":1.86, "rod_radius":0.0105, "rod_color":"315b83", "reel_color":"c5cdd0", "grip_color":"c2a77a", "flex_scale":1.13},
 	{"rod_length":2.58, "rod_radius":0.018, "rod_color":"632b38", "reel_color":"bb9452", "grip_color":"362c29", "flex_scale":0.72},
+	{"rod_length":2.30, "rod_radius":0.017, "rod_color":"174f67", "reel_color":"a8b9c5", "grip_color":"283d4b", "flex_scale":0.86},
 ]
 
 # Rest-pose mouth landmarks measured from final normalized rigs. Godot +X
@@ -62,6 +63,7 @@ const BIOME_VISUALS: Dictionary = {
 	"pacific_ocean":{"deep":"073d63","shallow":"28a6a6","bed":"516965","leaf":"255b42","gold":"799752","rock":"abc1ba","ground":"aaae87","width":2000.0,"widen":0.0,"fog":0.00042},
 	"atlantic_ocean":{"deep":"102f50","shallow":"497f91","bed":"354858","leaf":"52675c","gold":"7b8765","rock":"a2b2bd","ground":"818d7c","width":2000.0,"widen":0.0,"fog":0.00070},
 	"indian_ocean":{"deep":"066d80","shallow":"43c3bc","bed":"909577","leaf":"376c42","gold":"9ba863","rock":"e1d6b1","ground":"d1ca9e","width":2000.0,"widen":0.0,"fog":0.00034},
+	"red_sea":{"deep":"074c79","shallow":"32b6b9","bed":"b5a777","leaf":"b18c67","gold":"cfb480","rock":"dbad81","ground":"c6ad80","width":2000.0,"widen":0.0,"fog":0.00032},
 }
 
 # A shared daylight model, with regional atmosphere and water readability.
@@ -75,6 +77,7 @@ const BIOME_ATMOSPHERE: Dictionary = {
 	"pacific_ocean": {"horizon":"b6d6df", "fog":"8db7c9", "sky":"d7edff", "clarity":0.80, "roughness":0.23},
 	"atlantic_ocean": {"horizon":"b4c5d4", "fog":"91adbf", "sky":"dfe8f7", "clarity":0.72, "roughness":0.25},
 	"indian_ocean": {"horizon":"c4e4dc", "fog":"98c9cb", "sky":"e8f5e7", "clarity":0.90, "roughness":0.20},
+	"red_sea": {"horizon":"d7d4bb", "fog":"bcdad1", "sky":"f8f1dc", "clarity":0.94, "roughness":0.19},
 }
 
 var session: FishingSession
@@ -284,6 +287,9 @@ func _station_frame() -> Transform3D:
 		"pacific_reef": anchor = Vector3(-6, 0, -22)
 		"atlantic_shelf": anchor = Vector3(7, 0, -15)
 		"indian_reef": anchor = Vector3(6, 0, -18)
+		"red_sea_lagoon": anchor = Vector3(-9, 0, -24)
+		"red_sea_wall": anchor = Vector3(4, 0, -92)
+		"red_sea_bluehole": anchor = Vector3(6, 0, -285)
 		"japan_reef", "yangtze_river":
 			var z: float = -42.0 if region_id == "japan" else -12.0
 			var biome: Dictionary = BIOME_VISUALS[region_id]
@@ -349,7 +355,7 @@ func _replace_location_geometry(region_value: String = "", spot_value: String = 
 func _build_distant_landscape() -> void:
 	# Ocean GLBs contain discrete islands; a surrounding mountain ring would
 	# turn the open sea into another river or lake.
-	if region_id.ends_with("_ocean"): return
+	if (region_id.ends_with("_ocean") or region_id == "red_sea"): return
 	# Two low-cost opaque landforms make the foreground shore read against distance.
 	# Heights are regional: low floodplain, lake hills, coastal headlands and fjord peaks.
 	var heights: Dictionary = {"lake":24.0, "japan":31.0, "norway":84.0, "med":26.0, "bayou":8.5, "yangtze":30.0}
@@ -406,9 +412,9 @@ func _hide_legacy_station(node: Node) -> void:
 func _configure_location_surfaces() -> void:
 	if _water_material == null: return
 	var biome: Dictionary = BIOME_VISUALS[region_id]
-	var ocean: bool = region_id.ends_with("_ocean")
+	var ocean: bool = (region_id.ends_with("_ocean") or region_id == "red_sea")
 	if camera: camera.far = 12000.0 if ocean else 330.0
-	var near_reef: bool = spot_id.ends_with("_reef")
+	var near_reef: bool = (spot_id.ends_with("_reef") or spot_id in ["red_sea_lagoon", "red_sea_wall"])
 	_water_material.set_shader_parameter("deep_color", Color(str(biome.deep)).lerp(Color(str(biome.shallow)),0.24 if near_reef else 0.0))
 	_water_material.set_shader_parameter("ocean_mode", ocean)
 	if _ocean_horizon_water: _ocean_horizon_water.visible = ocean
@@ -1201,7 +1207,7 @@ func _build_water() -> void:
 	_ocean_horizon_water.material_override = _water_material
 	_ocean_horizon_water.layers = 2
 	_ocean_horizon_water.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	_ocean_horizon_water.visible = region_id.ends_with("_ocean")
+	_ocean_horizon_water.visible = (region_id.ends_with("_ocean") or region_id == "red_sea")
 	add_child(_ocean_horizon_water)
 
 func _load_character() -> void:
@@ -1631,7 +1637,7 @@ func _update_float_surface(delta: float, water_height: float) -> void:
 func _ensure_fish(record: Dictionary) -> bool:
 	var id: String = str(record.get("species_id", record.get("id", "")))
 	var millimeters: float = float(record.get("length_mm", float(record.get("length_cm", record.get("length", 72.0))) * 10.0))
-	_fish_length = clampf(millimeters / 1000.0, 0.04, 30.0)
+	_fish_length = clampf(millimeters / 1000.0, 0.001, 30.0)
 	if id != _fish_id or _fish == null:
 		if _fish:
 			_fish.visible = false

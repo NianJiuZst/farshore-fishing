@@ -16,7 +16,8 @@ func _meshes(node: Node, found: Array[MeshInstance3D]) -> void:
 	for child: Node in node.get_children(): _meshes(child,found)
 func _run() -> void:
 	var catalog = Catalog.new()
-	_check(catalog.load_all(false),"real74 catalog loads without using UI assets")
+	_check(catalog.load_all(false),"current catalog loads without using UI assets")
+	_check(catalog.fish_species_count() == 110,"ordinary landing suite covers exactly 110 fishing species")
 	var stage = Stage.new()
 	root.add_child(stage)
 	stage.set_process(false)
@@ -26,6 +27,7 @@ func _run() -> void:
 		await process_frame
 		for id: String in catalog.fish:
 			var fish: FishDefinition = catalog.fish[id]
+			if not catalog.is_fishing_species(fish): continue
 			for length_mm: int in [fish.min_mm,fish.max_mm]:
 				stage.cancel_landing()
 				stage.suspend(false)
@@ -61,5 +63,5 @@ func _run() -> void:
 					_check(stage._fish_root.position.y>0.9,label+" ordinary fish retains lifted presentation")
 	stage.queue_free()
 	await process_frame
-	print("OCEAN_LANDING_TESTS: ",checks-failures,"/",checks," passed; failures=",failures,"; 74 species x2 extreme lengths x2 portrait viewports; actual imported geometry")
+	print("OCEAN_LANDING_TESTS: ",checks-failures,"/",checks," passed; failures=",failures,"; 110 fish x2 extreme lengths x2 portrait viewports; actual imported geometry; mammal challenge tested separately")
 	quit(0 if failures==0 else 1)

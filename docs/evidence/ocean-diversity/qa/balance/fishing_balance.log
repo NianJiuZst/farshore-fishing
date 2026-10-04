@@ -1,0 +1,7 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/fishing_balance_tests.gd -- --regressions-only --output=/Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/build/ocean-diversity-targeted-balance/fishing_balance_evidence.json
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+FLOAT_SCOPE: current possession model is verified separately by float_encounter_tests.gd; --historical-float retains beta2 diagnostics
+FISHING_BALANCE_TESTS: 70/70; simulations=0; legal_routes=494

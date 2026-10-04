@@ -1,0 +1,6 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/fish_3d_registry_tests.gd -- --require-all
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+FISH_3D_REGISTRY_TESTS: 234/234; imported models=111/111 (110 fish + one whale); release_gate=true

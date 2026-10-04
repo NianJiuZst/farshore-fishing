@@ -1,0 +1,23 @@
+{
+  "asset_count": 20,
+  "scope_matches": true,
+  "indian_count": 8,
+  "red_sea_count": 12,
+  "unique_generated_png_hashes": 20,
+  "master_count": 20,
+  "runtime_png_count": 20,
+  "thumbnail_count": 20,
+  "all_original_png_bytes_preserved": true,
+  "all_alpha_transparent": true,
+  "all_canvas_uncropped_at_alpha24": true,
+  "all_manual_ruler_endpoints_inside_bbox": true,
+  "all_source_references_present": true,
+  "all_individually_viewed": true,
+  "source_dimensions_counts": {
+    "1536x1024": 18,
+    "1774x887": 2
+  },
+  "total_deliverable_png_bytes": 86802852,
+  "remaining_integration": "Parent merges manifest and computes Godot imported RGBA8 image_sha256/thumb_image_sha256.",
+  "all_manual_ruler_endpoints_on_alpha24_silhouette": true
+}

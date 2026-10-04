@@ -1,0 +1,937 @@
+{
+  "passed": true,
+  "accepted_utc": "2026-10-04T15:44:07.261562+00:00",
+  "scope": "37 canonical Godot source suites, actual imported resources and binary audit; stable final production; only two exact harness failures replaced by passing independent reruns",
+  "android_device_or_export_claim": false,
+  "publication_or_signing": false,
+  "production_inputs_unchanged": true,
+  "unchanged_input_files": 2396,
+  "test_only_changes": [
+    {
+      "path": "game/tests/ocean_float_save_tests.gd",
+      "before_sha256": "715e5cd6044fd10ca4272de9980e05eb06b46632df259dadae68c1c06d904482",
+      "after_sha256": "cd3d27f0e19ddc6aa72ae140d0fb81c80cfa62e86db47d1165591e033f72209b"
+    }
+  ],
+  "selected_suites": [
+    "ocean_diversity",
+    "blue_whale_challenge",
+    "blue_whale_ui",
+    "blue_whale_main",
+    "fishing_balance",
+    "camera_aspect",
+    "save",
+    "ocean_save",
+    "ocean_fresh_profile",
+    "ocean_float_save",
+    "giant_bait",
+    "ocean_landing",
+    "ocean_balance",
+    "ocean_ui",
+    "core",
+    "session_observation",
+    "float_encounter",
+    "hazard_boundary",
+    "guard_trace",
+    "float_observation",
+    "fast_recast",
+    "fish_art",
+    "fish_art_ui",
+    "failure_modal",
+    "notebook_ui",
+    "natural_history",
+    "ui_iteration",
+    "tackle",
+    "bait_balance",
+    "registry",
+    "fish_preview",
+    "main_travel",
+    "slice3d",
+    "ui_style",
+    "touch",
+    "historical_trial",
+    "angler_anatomy"
+  ],
+  "results": [
+    {
+      "name": "import",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 5.29,
+      "log": "build/ocean-diversity-final-qa/import.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": []
+    },
+    {
+      "name": "ocean_diversity",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 22.82,
+      "log": "build/ocean-diversity-final-qa/ocean_diversity.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_DIVERSITY_TESTS: 85721/85721; failures=0; combos=70368; candidates=343440; ordinary witnesses=110"
+      ]
+    },
+    {
+      "name": "blue_whale_challenge",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.92,
+      "log": "build/ocean-diversity-final-qa/blue_whale_challenge.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "BLUE_WHALE_CHALLENGE_TESTS: 89/89 passed; failures=0"
+      ]
+    },
+    {
+      "name": "blue_whale_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.82,
+      "log": "build/ocean-diversity-final-qa/blue_whale_ui.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "BLUE_WHALE_UI_TESTS: 50/50 passed; failures=0"
+      ]
+    },
+    {
+      "name": "blue_whale_main",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 18.09,
+      "log": "build/ocean-diversity-final-qa/blue_whale_main.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "BLUE_WHALE_MAIN_TESTS: 53/53 passed; failures=0"
+      ]
+    },
+    {
+      "name": "fishing_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 16.65,
+      "log": "build/ocean-diversity-targeted-balance/fishing_balance.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_SCOPE: current possession model is verified separately by float_encounter_tests.gd; --historical-float retains beta2 diagnostics",
+        "FISHING_BALANCE_TESTS: 70/70; simulations=0; legal_routes=494"
+      ],
+      "original_failure": {
+        "name": "fishing_balance",
+        "exit_code": 2,
+        "passed": false,
+        "seconds": 21.81,
+        "log": "build/ocean-diversity-final-qa/fishing_balance.log",
+        "errors": [
+          "FAIL FISHING BALANCE: explicit output path provided",
+          "FAIL: cannot write evidence output "
+        ],
+        "expected_fault_injection_errors": [],
+        "platform_diagnostics": [
+          "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+        ],
+        "warnings": [],
+        "summary_lines": [
+          "FLOAT_SCOPE: current possession model is verified separately by float_encounter_tests.gd; --historical-float retains beta2 diagnostics"
+        ]
+      },
+      "acceptance": "exact independent harness repair"
+    },
+    {
+      "name": "camera_aspect",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.53,
+      "log": "build/ocean-diversity-final-qa/camera_aspect.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "CAMERA_ASPECT_TESTS: 531/531 passed; failures=0; mathematical desktop projection, not device certification"
+      ]
+    },
+    {
+      "name": "save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 27.37,
+      "log": "build/ocean-diversity-final-qa/save.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "SAVE_TESTS: 314/314 passed; failures=0"
+      ]
+    },
+    {
+      "name": "ocean_save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 27.26,
+      "log": "build/ocean-diversity-final-qa/ocean_save.log",
+      "errors": [],
+      "expected_fault_injection_errors": [
+        "ERROR: Failed to open '/tmp/farshore-ocean-save-28971-158047/failed_snapshot_copy/save.before-import.json.does-not-exist'."
+      ],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_SAVE_TESTS: 1157/1157 passed; failures=0"
+      ]
+    },
+    {
+      "name": "ocean_fresh_profile",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.56,
+      "log": "build/ocean-diversity-final-qa/ocean_fresh_profile.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_FRESH_PROFILE_TESTS: 423/423 passed; failures=0"
+      ]
+    },
+    {
+      "name": "ocean_float_save",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 58.52,
+      "log": "build/ocean-diversity-targeted-float-save/ocean_float_save.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_FLOAT_SAVE_TESTS: 62094/62094 passed; failures=0; generated records=3960; former false rejections=2"
+      ],
+      "original_failure": {
+        "name": "ocean_float_save",
+        "exit_code": 1,
+        "passed": false,
+        "seconds": 0.38,
+        "log": "build/ocean-diversity-final-qa/ocean_float_save.log",
+        "errors": [
+          "FAIL: matrix contains twelve baits and seventy-four species"
+        ],
+        "expected_fault_injection_errors": [],
+        "platform_diagnostics": [
+          "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+        ],
+        "warnings": [],
+        "summary_lines": [
+          "OCEAN_FLOAT_SAVE_TESTS: 51/52 passed; failures=1; generated records=0; former false rejections=0"
+        ]
+      },
+      "acceptance": "exact independent harness repair"
+    },
+    {
+      "name": "giant_bait",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 518.58,
+      "log": "build/ocean-diversity-final-qa/giant_bait.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "GIANT_BAIT_TESTS: 10683930/10683930; failures=0; bait/species routes=1320/1320; size samples=3520000"
+      ]
+    },
+    {
+      "name": "ocean_landing",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 25.89,
+      "log": "build/ocean-diversity-final-qa/ocean_landing.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_LANDING_TESTS: 1362/1362 passed; failures=0; 110 fish x2 extreme lengths x2 portrait viewports; actual imported geometry; mammal challenge tested separately"
+      ]
+    },
+    {
+      "name": "ocean_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 187.63,
+      "log": "build/ocean-diversity-final-qa/ocean_balance.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_BALANCE_TESTS: 4400555/4400555 passed; failures=0; samples=2200000; giants=215089; extended=39796"
+      ]
+    },
+    {
+      "name": "ocean_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 59.09,
+      "log": "build/ocean-diversity-final-qa/ocean_ui.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "OCEAN_UI_TESTS: 1122/1122 passed; failures=0; physical=(720, 1280); actual Main/headless or desktop only"
+      ]
+    },
+    {
+      "name": "core",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 98.23,
+      "log": "build/ocean-diversity-final-qa/core.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "CORE_TESTS: 583237/583237 passed; failures=0"
+      ]
+    },
+    {
+      "name": "session_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.3,
+      "log": "build/ocean-diversity-final-qa/session_observation.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "SESSION_OBSERVATION_TESTS: 258/258 passed; failures=0"
+      ]
+    },
+    {
+      "name": "float_encounter",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.01,
+      "log": "build/ocean-diversity-final-qa/float_encounter.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_ENCOUNTER_TESTS: 160/160 passed; failures=0; simulations=0; passive_traces=0"
+      ]
+    },
+    {
+      "name": "hazard_boundary",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.4,
+      "log": "build/ocean-diversity-final-qa/hazard_boundary.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_HAZARD_BOUNDARY_TESTS: 28/28; cases=7"
+      ]
+    },
+    {
+      "name": "guard_trace",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.01,
+      "log": "build/ocean-diversity-final-qa/guard_trace.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_GUARD_TRACE_TESTS: 1304/1304 passed; formal_fight_cases=360; unchanged_functions=7; historical_video_not_revalidated=true"
+      ]
+    },
+    {
+      "name": "float_observation",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.27,
+      "log": "build/ocean-diversity-final-qa/float_observation.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FLOAT_OBSERVATION_TESTS: 90/90 passed; failures=0; presentation fixtures, not phone performance"
+      ]
+    },
+    {
+      "name": "fast_recast",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 14.94,
+      "log": "build/ocean-diversity-final-qa/fast_recast.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FAST_RECAST_CAMERA_TESTS: 12/12 passed; failures=0; actual Main flow, desktop geometry projection"
+      ]
+    },
+    {
+      "name": "fish_art",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.66,
+      "log": "build/ocean-diversity-final-qa/fish_art.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_ART_TESTS: 35/35 passed; synthetic geometry and release-gate rejection tests; full111-art acceptance and Android validation are separate"
+      ]
+    },
+    {
+      "name": "fish_art_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 65.59,
+      "log": "build/ocean-diversity-final-qa/fish_art_ui.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "PHOTO_UI_SCOPE: canonical-photoreal-110-fish; production native pages; no release gate override; not Android validation",
+        "FISH_ART_UI_TESTS: 2899/2899 passed; canonical-photoreal-110-fish; (720, 1280) desktop layout"
+      ]
+    },
+    {
+      "name": "failure_modal",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.67,
+      "log": "build/ocean-diversity-final-qa/failure_modal.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FISHING_FAILURE_MODAL_TESTS: 89/89 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1280) logical=(720.0, 1280.0); not Android hardware testing"
+      ]
+    },
+    {
+      "name": "notebook_ui",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 54.74,
+      "log": "build/ocean-diversity-final-qa/notebook_ui.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_NOTEBOOK_UI_TESTS: 711/711 passed; (720, 1280); actual Main + Viewport touch, no Android claim"
+      ]
+    },
+    {
+      "name": "natural_history",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 29.63,
+      "log": "build/ocean-diversity-final-qa/natural_history.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "NATURAL_HISTORY_TESTS: 2150/2150 passed; (720, 1280); isolated Main + Viewport input; browser never opened"
+      ]
+    },
+    {
+      "name": "ui_iteration",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 20.18,
+      "log": "build/ocean-diversity-final-qa/ui_iteration.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "UI_ITERATION_TESTS: 93/93 passed; failures=0; physical=(720, 1280) logical=(720.0, 1280.0); production Main + viewport touch; not Android hardware"
+      ]
+    },
+    {
+      "name": "tackle",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 6.11,
+      "log": "build/ocean-diversity-final-qa/tackle.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "TACKLE_TESTS: 1136/1136 passed; failures=0"
+      ]
+    },
+    {
+      "name": "bait_balance",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.99,
+      "log": "build/ocean-diversity-final-qa/bait_balance.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "BAIT_BALANCE_TESTS: 103446/103446; reachable_species=110/110"
+      ]
+    },
+    {
+      "name": "registry",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 0.38,
+      "log": "build/ocean-diversity-final-qa/registry.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_3D_REGISTRY_TESTS: 234/234; imported models=111/111 (110 fish + one whale); release_gate=true"
+      ]
+    },
+    {
+      "name": "fish_preview",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 3.14,
+      "log": "build/ocean-diversity-final-qa/fish_preview.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "FISH_PREVIEW_TESTS: 25/25 passed"
+      ]
+    },
+    {
+      "name": "main_travel",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 13.42,
+      "log": "build/ocean-diversity-final-qa/main_travel.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "MAIN_TRAVEL_TESTS: 24/24 passed; failures=0; boundary tests only, no readiness override"
+      ]
+    },
+    {
+      "name": "slice3d",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 219.92,
+      "log": "build/ocean-diversity-final-qa/slice3d.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only, not phone hardware",
+        "SLICE3D_TESTS: 10799/10799 passed; failures=0; cast events=114; landing events=111; species=110; spots=21"
+      ]
+    },
+    {
+      "name": "ui_style",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 56.09,
+      "log": "build/ocean-diversity-final-qa/ui_style.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout, not Android safe-area or hardware certification",
+        "SAFE_AREA_SCOPE: 104px top/80px bottom injected solely for layout testing; actual Android cutouts still require device testing",
+        "UI_STYLE_TESTS: 34530/34530 passed; failures=0; button visits=463; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ]
+    },
+    {
+      "name": "touch",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 23.02,
+      "log": "build/ocean-diversity-final-qa/touch.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "LAYOUT_SCOPE: physical=(720, 1280) logical=(720.0, 1280.0) aspect=expand; representative desktop layout only",
+        "TOUCH_SCOPE: complete111-model registry; ordinary fish gameplay assertions enabled",
+        "TOUCH_SCROLL_TESTS: 153/153 passed; failures=0; actual Viewport ScreenTouch/ScreenDrag"
+      ]
+    },
+    {
+      "name": "historical_trial",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 2.08,
+      "log": "build/ocean-diversity-final-qa/historical_trial.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "TRIAL_FISHERY_TESTS: 62149/62149 passed; failures=0"
+      ]
+    },
+    {
+      "name": "angler_anatomy",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 1.99,
+      "log": "build/ocean-diversity-final-qa/angler_anatomy.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [
+        "ERROR: Condition \"ret != noErr\" is true. Returning: \"\""
+      ],
+      "warnings": [],
+      "summary_lines": [
+        "ANGLER_ANATOMY_TESTS: 6368/6368 passed; failures=0"
+      ]
+    },
+    {
+      "name": "binary_catalog",
+      "exit_code": 0,
+      "passed": true,
+      "seconds": 4.84,
+      "log": "build/ocean-diversity-final-qa/binary_catalog.log",
+      "errors": [],
+      "expected_fault_injection_errors": [],
+      "platform_diagnostics": [],
+      "warnings": [],
+      "summary_lines": [
+        "{\"checked_models\": 111, \"missing\": 0, \"failures\": [], \"full_catalog_complete\": true, \"full_release_gate\": true}"
+      ]
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "build/ocean-diversity-final-qa/summary.json",
+      "sha256": "a1ae10e0562994e3a91ebb4fbbbed8ae1ee3ff3e7eb24de611bf9ba9bd4148d5"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/runtime_before_sha256.json",
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/runtime_after_sha256.json",
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/import.log",
+      "sha256": "e6921d49cd195d91a43cf752ad6be50a0b11490e48e0e3abf1c94c14fb2bd545"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ocean_diversity.log",
+      "sha256": "d01b682f14585656d5c7d2993b8e67efff52ffe3034039b32da14cb3e2e20a1a"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/blue_whale_challenge.log",
+      "sha256": "d2d275bbbfbf22b4d327d3c4507c370e3c01b23b7e798ce173f7f40760df1ef2"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/blue_whale_ui.log",
+      "sha256": "931731837e69ceed6eedc8eaf960e63e3b09cbb8e18b21ac48889a0681d00157"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/blue_whale_main.log",
+      "sha256": "ed7ab6e1fca684627c831203d4b33373fe3cf5570dedaf0ad5f47f04ba28e0a1"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/fishing_balance.log",
+      "sha256": "f90af8502ec208d326c51cfb4de9de6f8617da37cd346495bc8e4fe94445f973"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/camera_aspect.log",
+      "sha256": "b77e2ddb7e03072e6fcb2516e6b99a7bbce525183f7dc6c959fd45a514c6fa00"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/save.log",
+      "sha256": "db069ec2f182bfe2adb499f0b6f34a7a8cf11309d0cb51cae514abc9d4aff094"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ocean_save.log",
+      "sha256": "e6817ef68f0f34209b978b6a5a43f9a06a80d53384e058d64c834ff12e6aed20"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ocean_fresh_profile.log",
+      "sha256": "c4aad0e2005421b21bc58e3be2ce0297517207443fff2d6888381f8f037a9ed6"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ocean_float_save.log",
+      "sha256": "87522a2ac6bde28b61dce4d3d2cc48a20c0a8264ad42a5178ed5f8a06feb5b39"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/giant_bait.log",
+      "sha256": "51bf58ef7d685985e8efdcc1793bdb50d38c17b89a36b9192696742acaad83b7"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ocean_landing.log",
+      "sha256": "8498d70ffcf87871d05fa33eeba5fe989174a13121d6af375d9b3b3220cd2cec"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ocean_balance.log",
+      "sha256": "4dea595ba6cbad13e7e127b029bc7f82ced60d4dfe0bbbff2c5342f47684d2ea"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ocean_ui.log",
+      "sha256": "ef0a3752363606e66f7e6deb0d0f29a9001089d52d90f632c7e5b791fbbe0bfc"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/core.log",
+      "sha256": "cd9ec72f5435d8154a16b71fbc740a42a531e790117acae3fdcaf74424671ed0"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/session_observation.log",
+      "sha256": "74a4374e099c255c42307ba132fe5bf0865c2ee8d3ad61e199d35fa76799430e"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/float_encounter.log",
+      "sha256": "723b458cbcc4959b8da94d62bc7910f3e8b8dc3d48930259fc4735b3f0ead566"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/hazard_boundary.log",
+      "sha256": "d865244b829ed4d92451ab3735cd1327863149bc1f80e11ac0582a878116fbb8"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/guard_trace.log",
+      "sha256": "c974f1122f6cafef14c1c8d13f4c0b1d3468e9a07cac8fd20001786eeeb91748"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/float_observation.log",
+      "sha256": "39fea090903f23d2d0e63b4e686251b45d225a92f8e7fc8cb76a333d81a7bd01"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/fast_recast.log",
+      "sha256": "810d94c6a4e535b4e14dde2d28eced6b15771affdcf1edad6bf501bc93210866"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/fish_art.log",
+      "sha256": "94d27b6bb926b5092ade170d8793399726cfbd2a0591cd54019f72bd83b498ea"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/fish_art_ui.log",
+      "sha256": "06f97c9b956aeebb8f3970260ff883ebdeccebdd54531936900cac322acc24e9"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/failure_modal.log",
+      "sha256": "dd380935cb53eb2c3c034f06266383fcf542656b3086f7c01dd318ea0999d45b"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/notebook_ui.log",
+      "sha256": "b59232c76fef4208bad0e9dce594e48d246a25fc47866bfca29c0d6945ff89fd"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/natural_history.log",
+      "sha256": "9860c48d50e1c8c62f8f00adeef36abf3f8a9b910988c9e241f442d57a9dbcf7"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ui_iteration.log",
+      "sha256": "2926db796809829b51928dafe340d0643d5d83be9b12c4a1fba7860eb7e6aeae"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/tackle.log",
+      "sha256": "559840400cde7032ccda9c04f031d1658e09df68af7186a8fd1db8268d351a6a"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/bait_balance.log",
+      "sha256": "ed71cb279edc18bc58fd348a963bf471121dcc106efc42d22292817e37e45d16"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/registry.log",
+      "sha256": "7b414bd43270758ceec9d151f2e01f6bcecff8f647a6457de1e5a86a8e3e52cc"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/fish_preview.log",
+      "sha256": "f4a17b4715337bb3f5f108369eb228b49aea9bb2e4787d8290e53fbbdd018233"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/main_travel.log",
+      "sha256": "cebacdf7180ba5d50a4779add4eed6e119668cee3330c02eac5dd41b5695cf7a"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/slice3d.log",
+      "sha256": "5782df8e8b712d53cc1c180356b4bec95f4a6d7fd294ca5ea9f03e202371e5f9"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/ui_style.log",
+      "sha256": "9f8253e9a2f6f30b153e81ebb051be4fcaa830536fb59fd7a0d62b33c9b3eaaf"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/touch.log",
+      "sha256": "477deb86734c97b8f6306b60d3a99c25504159469d22b380b286e64b77b1ab84"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/historical_trial.log",
+      "sha256": "98749f4b987a023bbab5c7b595889a75abda619d86e2d91c9bc76ff394f2f80d"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/angler_anatomy.log",
+      "sha256": "84d9c207fdd1b5125b187815f00ddac33c6ece1589b6780794a68cea00eb1610"
+    },
+    {
+      "path": "build/ocean-diversity-final-qa/binary_catalog.log",
+      "sha256": "973f210c4c0eb563e2b0f429a76f62d55d7adb834840fe74d1863e1715ebc642"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-balance/summary.json",
+      "sha256": "bbc62147b0654b7d96eeb2d93fe557841692ecc88ec423efd65633ae9b590588"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-balance/runtime_before_sha256.json",
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-balance/runtime_after_sha256.json",
+      "sha256": "b8ead27c671fed75f66016d3540e33d7b837b24e47164703a5d55bcb4f9e47a7"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-balance/fishing_balance.log",
+      "sha256": "b65583fe75edd5256b14c026f6a7a2b901203fbf44f69c1176575711892dfa63"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-balance/binary_catalog.log",
+      "sha256": "9c4047a570350456b21ea0fa6f79e02985672e7e90501ce3afaf600f73ff2703"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-float-save/summary.json",
+      "sha256": "01fdf9a62132961e0f2f1e89d61066f29670322904caf2ef89beff7111a13c4f"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-float-save/runtime_before_sha256.json",
+      "sha256": "08a949e51935217216ba4fa487ac0eb174841151a22d9a76a1091f488b8d0a18"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-float-save/runtime_after_sha256.json",
+      "sha256": "08a949e51935217216ba4fa487ac0eb174841151a22d9a76a1091f488b8d0a18"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-float-save/ocean_float_save.log",
+      "sha256": "68910c46f6ed6ee11eb84439b94dd1a3f0e05313a94001226f7eb3e01c787ef1"
+    },
+    {
+      "path": "build/ocean-diversity-targeted-float-save/binary_catalog.log",
+      "sha256": "60f3daa7a1b2f9bb05f917c425f964b91a29b665a6ba434e74ab08d1f9969200"
+    }
+  ],
+  "additional_desktop_native_visual_evidence": "docs/evidence/ocean-diversity/native/",
+  "platform_diagnostics": "Exact macOS public-system-CA diagnostic retained in each offline headless log; unrelated errors fail acceptance"
+}

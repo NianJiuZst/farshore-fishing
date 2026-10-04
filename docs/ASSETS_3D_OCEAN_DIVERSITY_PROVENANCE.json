@@ -1,0 +1,2184 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-04T15:07:07.720746+00:00",
+  "asset_origin": "Original Farshore procedural authorship; no third-party mesh, inherited fish geometry, old texture sampling, or fallback model",
+  "source_master_format": "Editable per-species JSON profiles plus original Python generator; no Blender master claimed for these additions",
+  "model_count": 37,
+  "new_fish_count": 36,
+  "new_mammal_count": 1,
+  "retained_legacy_manifest_entries": 74,
+  "full_registry_animals": 111,
+  "full_registry_fish": 110,
+  "normalized_coordinate_contract": {
+    "nose": "+X",
+    "up": "+Y",
+    "rest_x_bounds": [
+      -0.5,
+      0.5
+    ]
+  },
+  "native_review": {
+    "engine": {
+      "build": "official",
+      "hash": "7d41c59c457bd5a245092b4e7eb2d833e3b3f8c3",
+      "hex": 263683,
+      "major": 4,
+      "minor": 6,
+      "patch": 3,
+      "status": "stable",
+      "string": "4.6.3-stable (official)",
+      "timestamp": 0
+    },
+    "rendering_method": "mobile",
+    "rendering_driver": "vulkan",
+    "gpu": "Apple M5 / Vulkan 1.2.283",
+    "imported_rigs": 37,
+    "actual_gpu_frames": 222,
+    "android_device_claim": false,
+    "save_or_signing_key_access": false,
+    "nonblocking_diagnostic": "Disposable user:// shader-cache directory unavailable; native rendering completed"
+  },
+  "tooling": [
+    {
+      "path": "tools/art3d/ocean_profiles.json",
+      "sha256": "3f4327682cad5d7bc92afeb3bf8712af0c69668ddf989e263895b0d3ea0eefad"
+    },
+    {
+      "path": "tools/art3d/build_ocean_diversity.py",
+      "sha256": "b5b3ca3250c11582d67865a9abcebe7fccbd634289a7c068f99185835a78cde8"
+    },
+    {
+      "path": "tools/art3d/audit_ocean_models.py",
+      "sha256": "4561349c17924cd45d7e5cb8babacde6fed2203e83cfa3d0ba5663fcabc81edb"
+    },
+    {
+      "path": "tools/art3d/capture_ocean_models.gd",
+      "sha256": "9818891ac992a235f31e9fae70ef4b23909f6f51d5272f35cf04349fd59752b3"
+    },
+    {
+      "path": "tools/art3d/run_ocean_model_review.py",
+      "sha256": "c2f8045e44921d1fcb9a27876c8d249f84ede00f2b3c17a45a3bab94e1ae20aa"
+    },
+    {
+      "path": "tools/art3d/check_ocean_reproducibility.py",
+      "sha256": "13d227628d9290ed9df60670242864f56b97a676a08fc2d1580c77aeaf73cf23"
+    },
+    {
+      "path": "tools/art3d/package_ocean_model_evidence.py",
+      "sha256": "747c69f5fe1fd24120b1e8154af88695d7fbdc81971e9905031d69969094c946"
+    },
+    {
+      "path": "tools/audit_fish_catalog_3d.py",
+      "sha256": "81c278e9871f8283312a515f0fc291f23d65f273c662000bf9a3ff875e92c69a"
+    }
+  ],
+  "execution_commands": [
+    "python3 tools/art3d/audit_ocean_models.py",
+    "python3 tools/audit_fish_catalog_3d.py --output ownbuild/ocean-model-review/all_111_binary_audit.json --require-all",
+    "python3 tools/art3d/check_ocean_reproducibility.py --species all --output ownbuild/ocean-model-review/reproducibility.json",
+    "python3 tools/art3d/run_ocean_model_review.py --godot ../toolchain/Godot.app/Contents/MacOS/Godot --output ownbuild/ocean-model-review/renders",
+    "python3 tools/art3d/package_ocean_model_evidence.py"
+  ],
+  "evidence_files": [
+    {
+      "path": "docs/evidence/ocean-diversity/models/all_111_binary_audit.json",
+      "sha256": "442596b7077900940bdf66d963828c9e0ce3c79a75f8964e6043bd73725291d7"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/all_37_side_top.png",
+      "sha256": "c27aa9ddf8760fc183c9a2435829475d898a55578770158fcc12caa5a8f7533e"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/binary_audit.json",
+      "sha256": "20a6ea25b0fb59a875c3fee95edb96bd98c068a608a76da395c7591f4335c113"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/blue_whale.png",
+      "sha256": "a78f34983ca3f4310aa2534756ba826890fa99f27c65287b83ad738d0e0de752"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/capture_sha256.json",
+      "sha256": "043134124ceb84c5d84959033b52e9f0159fb2a5e04b21bbeb0aae617b41b90d"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/eyes_horns_wings.png",
+      "sha256": "48ac1ef41ea9c038c084ae56718b293d66c8db8f99fe233564fce7093d6db356"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/flatfish_ray.png",
+      "sha256": "77c5572881de5822f34b76053320078d69f1678d5b849a1a81c4b760d9202b28"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/godot_model_studio.json",
+      "sha256": "c232b89037e88b9aba28474329590b180a959b6571af97ca8f7af6b292290b5c"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/native_gpu_stdout.txt",
+      "sha256": "c8482b02d8887197201eaf072e4446e0621dc216b286571ff268accbbd5ad0c5"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/native_run.json",
+      "sha256": "87c61dfe45df62f64ed67c09fb1f3e04e51b84839cadec9b3d6cbc3db9ddd78b"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/reproducibility.json",
+      "sha256": "040ce233d941e7307deb8437c39b5ad58ff65beb529b29eb21c66a72a3faf45a"
+    },
+    {
+      "path": "docs/evidence/ocean-diversity/models/ribbon_eel_tube.png",
+      "sha256": "be30679bd10158184f21a125aa84c08180170b68995106821fe09f1d02407e3e"
+    }
+  ],
+  "models": [
+    {
+      "species_id": "california_sheephead",
+      "glb_sha256": "2cb5abddbc562b47c42b31ccf2a85f7ec5f9897b0c86c21bb70d2af7fcade0a9",
+      "geometry_sha256": "8dff2e4de06d18fb5af445ad37ba2b8b2eae55577881d41006c5c9c15e929c40",
+      "profile_sha256": "610d067fe0f7304959f1a826105d17e204e03e79c9fa0c2279cade879b59f2cc",
+      "vertices": 14966,
+      "triangles": 25586,
+      "weighted_vertices": 14966,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.3630957454442978,
+        0.33299243450164795
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2425976,
+      "path": "game/assets/3d/california_sheephead.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "california_sheephead",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "成熟雄鱼头部和尾段近黑，中段红橙，白下巴、红眼与隆起额头突出；犬齿外露，身体厚实，连续背鳍；雌鱼较小且多为粉红色。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Semicossyphus-pulcher.html",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；食性；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/california-sheephead",
+          "supports": "常见尺寸口径；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://caseagrant.ucsd.edu/seafood-profiles/california-sheephead",
+          "supports": "分类与名称；常见尺寸口径；生境与栖深；习性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/california_sheephead_swim.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_struggle.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_breach.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_landed.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_top.png",
+        "ownbuild/ocean-model-review/renders/california_sheephead_underside.png"
+      ]
+    },
+    {
+      "species_id": "lingcod",
+      "glb_sha256": "c1a1f22a6c21cbb48649ce3378e1aabfe5639ba084b26db31a81a30cae0bfbce",
+      "geometry_sha256": "f3f7b99ccb0d4defb358bf4ca70354ebcc9d0e03ce0708f02011832ff57a1d0f",
+      "profile_sha256": "78d009ffc4a1bcf28a49a83d5dec9b1d0fc0abefaeb4fba1ccbfd8b8eba078ac",
+      "vertices": 18468,
+      "triangles": 31288,
+      "weighted_vertices": 18468,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.2670383155345917,
+        0.3563738167285919
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2862836,
+      "path": "game/assets/3d/lingcod.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "lingcod",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "长身、宽大头与深口裂，颌上大小尖齿交错；眼上短皮瓣，棕灰或铜褐底色带不规则深斑，长连续背鳍与宽胸鳍，尾端近截形。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Ophiodon-elongatus",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=lingcod.printerfriendly",
+          "supports": "常见尺寸口径；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/MFR/mfr551/mfr5513.pdf",
+          "supports": "物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/lingcod_swim.png",
+        "ownbuild/ocean-model-review/renders/lingcod_struggle.png",
+        "ownbuild/ocean-model-review/renders/lingcod_breach.png",
+        "ownbuild/ocean-model-review/renders/lingcod_landed.png",
+        "ownbuild/ocean-model-review/renders/lingcod_top.png",
+        "ownbuild/ocean-model-review/renders/lingcod_underside.png"
+      ]
+    },
+    {
+      "species_id": "cabezon",
+      "glb_sha256": "5c6394d364b22061361b7e8869f43faade4c5c94a53c43637841a88bfe2040f7",
+      "geometry_sha256": "06b4d55eaed9694fdb80a1e58302d6fed624be3cd0c5c3fd99089b3194e619e1",
+      "profile_sha256": "e21873aaa4d387298e6c3a8beb6520035240ca9b0f9f10d4e1476ca270ac76fe",
+      "vertices": 19289,
+      "triangles": 32080,
+      "weighted_vertices": 19289,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.29117419570684433,
+        0.5044004321098328
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2575112,
+      "path": "game/assets/3d/cabezon.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "cabezon",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "头部非常宽大、口阔，皮肤无鳞；眼后和吻部具肉质皮瓣，宽扇形胸鳍；褐、绿或红色底上有深色斑驳，尾端微圆，贴底轮廓厚重。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Scorpaenichthys-marmoratus.html",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://caseagrant.ucsd.edu/seafood-profiles/cabezon",
+          "supports": "常见尺寸口径；长度上限及量法；生境与栖深；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/cabezon_swim.png",
+        "ownbuild/ocean-model-review/renders/cabezon_struggle.png",
+        "ownbuild/ocean-model-review/renders/cabezon_breach.png",
+        "ownbuild/ocean-model-review/renders/cabezon_landed.png",
+        "ownbuild/ocean-model-review/renders/cabezon_top.png",
+        "ownbuild/ocean-model-review/renders/cabezon_underside.png"
+      ]
+    },
+    {
+      "species_id": "garibaldi",
+      "glb_sha256": "d5569e62706b86bcf0433daee88c53992e83f047a330dff77b35b4947b582880",
+      "geometry_sha256": "3a04d7e25366abcef5467d2c1f99b6652f065d3bd9c933915e8ae0f9b7db84cf",
+      "profile_sha256": "319d380d4cb39a42632e6771216b4b47b843d6e855fafcd4bab621b206f8bcf5",
+      "vertices": 14870,
+      "triangles": 25442,
+      "weighted_vertices": 14870,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.48090554773807526,
+        0.2681226432323456
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2751128,
+      "path": "game/assets/3d/garibaldi.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "garibaldi",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "短而高的侧扁椭圆体，成鱼通体鲜橙，连续背鳍，尾鳍浅凹近心形；幼鱼带电蓝点与蓝鳍缘，模型以无蓝点成鱼为准。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Hypsypops-rubicundus.html",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/garibaldi",
+          "supports": "常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/garibaldi_swim.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_struggle.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_breach.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_landed.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_top.png",
+        "ownbuild/ocean-model-review/renders/garibaldi_underside.png"
+      ]
+    },
+    {
+      "species_id": "kelp_greenling",
+      "glb_sha256": "df1206bf55bb84cab7c85e0748d79f287b6fd20ecbeec1951f86bbe46b4aa1fa",
+      "geometry_sha256": "be64d430b505316d39551869f954bed5861cf5ce30a46a825fab77f6c17ea367",
+      "profile_sha256": "21032c9afefa955a8e2e3cc7e256934875d72f95053b8a52be15f91b1f429b8f",
+      "vertices": 16175,
+      "triangles": 27530,
+      "weighted_vertices": 16175,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.21073024719953537,
+        0.23903654515743256
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2834060,
+      "path": "game/assets/3d/kelp_greenling.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "kelp_greenling",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "修长纺锤体、长连续背鳍，眼上肉质小皮瓣，尾鳍圆至截形；雄鱼灰褐底有不规则蓝点及褐缘，雌鱼金褐点更密、鳍偏橙黄；模型选雄鱼蓝点型。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Hexagrammos-decagrammus",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://wdfw.wa.gov/species-habitats/species/hexagrammos-decagrammus",
+          "supports": "常见尺寸口径；长度上限及量法；体重上限；习性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/kelp_greenling_swim.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_struggle.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_breach.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_landed.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_top.png",
+        "ownbuild/ocean-model-review/renders/kelp_greenling_underside.png"
+      ]
+    },
+    {
+      "species_id": "pacific_halibut",
+      "glb_sha256": "dd9b999f463afa832df7337480cfd5951bb0d7422db4d75157158c0f2b019648",
+      "geometry_sha256": "e1e353504fc8172860d0044b20c3fba04360376bd08cdd7fd0ef6ce5499b9587",
+      "profile_sha256": "b829961f9f0af271e9fd0a26beef0edf53128e4d1a65102133571a9a07ca8f84",
+      "vertices": 13690,
+      "triangles": 23518,
+      "weighted_vertices": 13690,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 15,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 14
+      },
+      "dimensions_m": [
+        1.0,
+        0.14350901544094086,
+        0.46811695396900177
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2439300,
+      "path": "game/assets/3d/pacific_halibut.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "pacific_halibut",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "极侧扁的菱形扁体，两眼在右侧；有眼面灰褐斑驳、盲面白，背臀鳍沿两侧形成长边，口大、胸鳍较小，尾鳍略呈月弧。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Hippoglossus-stenolepis.html",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/species/pacific-halibut",
+          "supports": "常见尺寸口径；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/pacific_halibut_swim.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_struggle.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_breach.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_landed.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_top.png",
+        "ownbuild/ocean-model-review/renders/pacific_halibut_underside.png"
+      ]
+    },
+    {
+      "species_id": "yellow_tang",
+      "glb_sha256": "a14539388779350cb76946fd9ddc1398912205c935831451e123e897525c70b5",
+      "geometry_sha256": "ec30879054ca7d1050347818b4672bd6131a3331df70047b3f958a7e92446c86",
+      "profile_sha256": "51bad22a72f2d054bf5f20d41c8cdd3e2281b06f90984aa9e4b9171af9489ed0",
+      "vertices": 15063,
+      "triangles": 25754,
+      "weighted_vertices": 15063,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.6304149925708771,
+        0.18365341424942017
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2666264,
+      "path": "game/assets/3d/yellow_tang.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "yellow_tang",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "通体明黄、侧扁高身，背鳍与臀鳍撑开成帆，吻略尖、小口；尾柄两侧白色刀状刺，尾鳍浅凹，不能画成黄蓝混色的拟刺尾鱼。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Zebrasoma-flavescens.html",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://repository.library.noaa.gov/view/noaa/32596",
+          "supports": "常见尺寸口径；体重上限；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/yellow_tang_swim.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_struggle.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_breach.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_landed.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_top.png",
+        "ownbuild/ocean-model-review/renders/yellow_tang_underside.png"
+      ]
+    },
+    {
+      "species_id": "barreleye",
+      "glb_sha256": "97469dcd8b0864644d7be0115c7eb998e7d0308b50a6d23a699647f7084c038d",
+      "geometry_sha256": "bd088d2a3c44b7d697d86049f4102bdbfe046c431310c62affb41fd502c92800",
+      "profile_sha256": "87a2eb590c3da0d9b450e4df8bdf3f8480ce76e9fdb665fea8c55ad593f48c6a",
+      "vertices": 15026,
+      "triangles": 25886,
+      "weighted_vertices": 15026,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.2872208431363106,
+        0.3821122348308563
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2460856,
+      "path": "game/assets/3d/barreleye.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "barreleye",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "短小深褐身、透明充液头罩，头内一对绿色管状眼可向上或前方转动；吻前两黑点是嗅孔而非眼，口很小；宽透明胸鳍支持悬停。",
+      "sources": [
+        {
+          "url": "https://fishbase.se/summary/2704",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.mbari.org/animal/barreleye-fish/",
+          "supports": "常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.mbari.org/news/researchers-solve-mystery-of-deep-sea-fish-with-tubular-eyes-and-transparent-head/",
+          "supports": "常见尺寸口径；生境与栖深；习性；食性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/barreleye_swim.png",
+        "ownbuild/ocean-model-review/renders/barreleye_struggle.png",
+        "ownbuild/ocean-model-review/renders/barreleye_breach.png",
+        "ownbuild/ocean-model-review/renders/barreleye_landed.png",
+        "ownbuild/ocean-model-review/renders/barreleye_top.png",
+        "ownbuild/ocean-model-review/renders/barreleye_underside.png"
+      ]
+    },
+    {
+      "species_id": "turbot",
+      "glb_sha256": "dae8d788f72efa1faca47ebcfe7c81b2d2398ab80aa097b6d5cb9924c8ed56f9",
+      "geometry_sha256": "cfad58898c0fa464d81a1d96eb7aaa76fc110faf9f831b83a349b62431c48bd5",
+      "profile_sha256": "e0b87e1a5c548b71770f62c5e0fc229edf8e8da3190d7bd8e9375428e38c70ca",
+      "vertices": 18331,
+      "triangles": 29638,
+      "weighted_vertices": 18331,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 15,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 14
+      },
+      "dimensions_m": [
+        1.0,
+        0.14823941886425018,
+        0.5933655500411987
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2313060,
+      "path": "game/assets/3d/turbot.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "turbot",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "近圆盘形侧扁体，两眼在左侧、右侧卧底；有眼面沙褐至灰色细斑、散生骨瘤，盲面白；背鳍从吻前起，背臀鳍沿体缘但不连至尾下，尾鳍短而密斑。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Scophthalmus-maximus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/1917",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境与栖深；现实分布；习性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/turbot_swim.png",
+        "ownbuild/ocean-model-review/renders/turbot_struggle.png",
+        "ownbuild/ocean-model-review/renders/turbot_breach.png",
+        "ownbuild/ocean-model-review/renders/turbot_landed.png",
+        "ownbuild/ocean-model-review/renders/turbot_top.png",
+        "ownbuild/ocean-model-review/renders/turbot_underside.png"
+      ]
+    },
+    {
+      "species_id": "john_dory",
+      "glb_sha256": "c44740228a9db91125aeed1f5d0b97165ebe284f822636d024f1e2ea5a33d5ef",
+      "geometry_sha256": "9e9b8bc2669c0d2d236a5b4b9e14e41d44374cff0124265459cf89e8300f4474",
+      "profile_sha256": "6d86e9decceda36bc4bc8fe305b822702e0b05e07581f8d2a181dc4f8edb70a0",
+      "vertices": 15817,
+      "triangles": 26944,
+      "weighted_vertices": 15817,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.6914512515068054,
+        0.15933802723884583
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2575936,
+      "path": "game/assets/3d/john_dory.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "john_dory",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "极侧扁高身，橄榄黄至银褐体侧有浅圈围绕的蓝黑圆斑；口大且能前伸，长背棘及高出棘端的膜丝，背臀鳍基部骨盾，胸鳍较小，尾鳍圆至微截形。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Zeus-faber.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/1492",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/john_dory_swim.png",
+        "ownbuild/ocean-model-review/renders/john_dory_struggle.png",
+        "ownbuild/ocean-model-review/renders/john_dory_breach.png",
+        "ownbuild/ocean-model-review/renders/john_dory_landed.png",
+        "ownbuild/ocean-model-review/renders/john_dory_top.png",
+        "ownbuild/ocean-model-review/renders/john_dory_underside.png"
+      ]
+    },
+    {
+      "species_id": "grey_gurnard",
+      "glb_sha256": "57e562eda0dfc0eb592f48d635f384439c879569cf70cf0a699ee77b03db73d9",
+      "geometry_sha256": "7624c8dc9f5eeebddf0f84ade00e0930efd045bfe3d75008ea42886b109c29cc",
+      "profile_sha256": "0255efc679c709fd4a6f2b39ba955fe9ad44baeeef3472be482ddbc12955212f",
+      "vertices": 17866,
+      "triangles": 30376,
+      "weighted_vertices": 17866,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.31683512032032013,
+        0.4845159351825714
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2990004,
+      "path": "game/assets/3d/grey_gurnard.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "grey_gurnard",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "头大且额部斜陡，体向尾渐细；灰褐略带红、白色小点、腹面乳白；前背鳍小且带大黑斑，后背鳍长；短胸鳍下三根独立肉质鳍条，侧线鳞隆起带刺，尾近截形。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Eutrigla-gurnardus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.marlin.ac.uk/species/detail/162",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境与栖深；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://researchportal.ulisboa.pt/en/publications/ontogeny-of-acoustic-and-feeding-behaviour-in-the-grey-gurnard-eu/",
+          "supports": "习性；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/grey_gurnard_swim.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_struggle.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_breach.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_landed.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_top.png",
+        "ownbuild/ocean-model-review/renders/grey_gurnard_underside.png"
+      ]
+    },
+    {
+      "species_id": "queen_angelfish",
+      "glb_sha256": "64d1716f07a26897b4ddec0605be7c0fe4d0c06bef8415badd8977352ab4397c",
+      "geometry_sha256": "098d82f6fedf4155c74f8424f42433ef586a73c910fd00af766373eaab4cfc6e",
+      "profile_sha256": "4ccaadb660644a36e6725ccf888a20e6b61640f21f643c05e6e88c771bff3246",
+      "vertices": 15455,
+      "triangles": 26378,
+      "weighted_vertices": 15455,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5962796211242676,
+        0.20683282613754272
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2682120,
+      "path": "game/assets/3d/queen_angelfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "queen_angelfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "高身侧扁椭圆体、圆钝头、小刷状齿口，连续背鳍和臀鳍后端拖长；蓝绿底带黄橙鳞缘，额头黑斑有亮蓝环与点，尾鳍和胸鳍黄；模型用成鱼，不保留幼鱼蓝竖带。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Holacanthus-ciliaris.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/queen-angelfish/",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/queen_angelfish_swim.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_breach.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_landed.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_top.png",
+        "ownbuild/ocean-model-review/renders/queen_angelfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "stoplight_parrotfish",
+      "glb_sha256": "e7e0c4fe1598e011722f5224ed73aab45657bbde89e2ab5b4008d52d5593acc7",
+      "geometry_sha256": "bfee3ccf48ec5270d2476f7f727cd6f63439d8d0a747de23496843d14585955d",
+      "profile_sha256": "410fb3f206a833b8c68b546e221dd4cbd8d8f08f800277e4fdaeed1d086f2bd3",
+      "vertices": 16308,
+      "triangles": 27758,
+      "weighted_vertices": 16308,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.3361274003982544,
+        0.3211252987384796
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2841292,
+      "path": "game/assets/3d/stoplight_parrotfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "stoplight_parrotfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "厚实中高侧扁体、大鳞、前吻鹦嘴状融合齿板；模型用终末相雄鱼：绿头绿身，颊部紫条、鳃盖上黄点、粉红蓝缘背臀鳍，尾基黄斑且尾鳍有黄色月弧，成鱼尾缘凹。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Sparisoma-viride.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；习性；食性；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/3926",
+          "supports": "分类与名称；长度上限及量法；生境与栖深；现实分布；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_swim.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_breach.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_landed.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_top.png",
+        "ownbuild/ocean-model-review/renders/stoplight_parrotfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "atlantic_flyingfish",
+      "glb_sha256": "244137bf9185c7be2a6905b4bc35aa60b462caa6efbadef0f6c19b842441f92f",
+      "geometry_sha256": "a21aa7676177e7b6cc5af59840d969939ab42b1f389f0b940d490c33257986b9",
+      "profile_sha256": "3688758e7c789fd79de427c55468742956f105af7302059e924218d8dc79156d",
+      "vertices": 16940,
+      "triangles": 28754,
+      "weighted_vertices": 16940,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.22754206508398056,
+        0.6693210005760193
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2926916,
+      "path": "game/assets/3d/atlantic_flyingfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "atlantic_flyingfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "修长近矩形截面的银色体，上暗下白、小钝头小口；胸鳍极长、腹鳍也长，形成四翼轮廓；胸鳍灰有淡三角横带与透明窄缘，腹鳍透明，背鳍低短；深叉尾下叶明显长于上叶。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Cheilopogon-melanurus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/3334",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_swim.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_breach.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_landed.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_top.png",
+        "ownbuild/ocean-model-review/renders/atlantic_flyingfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "atlantic_tarpon",
+      "glb_sha256": "eaccb4b63bb1cadae83672ba5fe4c9ce331e801a0ebe5d8a749e7c6336d1fb2d",
+      "geometry_sha256": "ec6f1ccd1c3d1cf7144ce7d18997d89ce7e3b551e428873433ca78e436795b49",
+      "profile_sha256": "a93931ed0766d60a833359f373aec787d437a856504070998d0502fb6e7df0e0",
+      "vertices": 14274,
+      "triangles": 24490,
+      "weighted_vertices": 14274,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.3198138475418091,
+        0.2338089644908905
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2701404,
+      "path": "game/assets/3d/atlantic_tarpon.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "atlantic_tarpon",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "粗壮修长侧扁体、非常大的银鳞，背深蓝绿黑、腹侧亮银；大口向上、下颌突出，单背鳍末条拉成长丝，尾深叉两叶近等长，鳍灰暗且无硬棘。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/1079",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/tarpon/",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_swim.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_struggle.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_breach.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_landed.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_top.png",
+        "ownbuild/ocean-model-review/renders/atlantic_tarpon_underside.png"
+      ]
+    },
+    {
+      "species_id": "black_scabbardfish",
+      "glb_sha256": "93999a190bb2ca3e77ac459097056f1e92c11712df01943001faeb31e08147bd",
+      "geometry_sha256": "b44bf5ff9bbeeaa5ccb080e8386f89279f272f66c89144b7fb0054cd0f2db967",
+      "profile_sha256": "5c6877777929d3df25dfc952ad364db006cc66c57fad62381c5a0a38ad9f57cf",
+      "vertices": 17496,
+      "triangles": 30550,
+      "weighted_vertices": 17496,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 16,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 15
+      },
+      "dimensions_m": [
+        1.0,
+        0.1921495944261551,
+        0.10033183544874191
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2213804,
+      "path": "game/assets/3d/black_scabbardfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "black_scabbardfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "极长且侧扁的带状体，宽长吻和外露尖獠牙；皮肤铜黑带虹彩、口腔和鳃腔黑，长低背鳍与臀鳍、尾鳍分叉；成年完全无腹鳍，幼鱼才有单棘，不能画成常见白银带鱼的尖细无尾末端。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Aphanopus-carbo.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://museubiodiversidade.uevora.pt/elenco-de-especies/biodiversidade-actual/animais/aphanopus-carbo/",
+          "supports": "分类与名称；体重上限；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.fishbase.se/physiology/Aphanopus_carbo",
+          "supports": "FAO morphology: forked caudal, no adult pelvic fins, compressed eel-like body"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_swim.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_breach.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_landed.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_top.png",
+        "ownbuild/ocean-model-review/renders/black_scabbardfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "humphead_wrasse",
+      "glb_sha256": "66dbd7fa4bb010f527503224f20dc53909af1ad16350b50d7247916f2ec4c27e",
+      "geometry_sha256": "462bdade96fddb38555be349561a70b70be210782a62c57bcf1c3a5e99154dcc",
+      "profile_sha256": "7c14178ad410fcb11d778ee9d8da40fceda01709f7f11be8034b1ec28c756b9b",
+      "vertices": 16310,
+      "triangles": 27746,
+      "weighted_vertices": 16310,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.4547546058893204,
+        0.37960800528526306
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2881324,
+      "path": "game/assets/3d/humphead_wrasse.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "humphead_wrasse",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "厚实高身，成年大鱼额部有明显肉质隆起，厚唇、犬齿与圆尾；橄榄绿鳞片带深竖纹，头部蓝绿色弯曲线纹、眼后两条暗线；幼鱼额头不夸张，模型选大型成鱼。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Cheilinus-undulatus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.nearlab.org/uploads/1/3/3/7/133700440/199_near_et_al2025wrasse_taxonomy.pdf",
+          "supports": "分类与名称；习性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.marinespecies.org/aphia.php?id=218945&p=taxdetails",
+          "supports": "分类与名称；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_swim.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_struggle.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_breach.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_landed.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_top.png",
+        "ownbuild/ocean-model-review/renders/humphead_wrasse_underside.png"
+      ]
+    },
+    {
+      "species_id": "emperor_angelfish",
+      "glb_sha256": "47cb421dcd4038621f18568dad05c4e909d31250df4e0665c409f11068e11ce1",
+      "geometry_sha256": "972d98efcadc3bd00e094085fcef6e960ba39ca6518cd667ab9b9b653738c616",
+      "profile_sha256": "12b26a599ea9061fb47216ef005a5652dee25f8f781238bba43720c959ecc96c",
+      "vertices": 15725,
+      "triangles": 26810,
+      "weighted_vertices": 15725,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5763681828975677,
+        0.2086072862148285
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2595784,
+      "path": "game/assets/3d/emperor_angelfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "emperor_angelfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "高身侧扁椭圆体、额部陡、口小；成鱼蓝底密集黄横纹，黑色眼罩带浅缘，胸鳍基后另有深色竖带，黄尾；幼鱼为深蓝底蓝白同心弧环，模型保留成鱼横纹。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Pomacanthus-imperator.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/653",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_swim.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_breach.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_landed.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_top.png",
+        "ownbuild/ocean-model-review/renders/emperor_angelfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "leaf_scorpionfish",
+      "glb_sha256": "4bff1ee30b04b100880bfd8ac69890522aa1fc41f0f85e5eac56ac108f93fdca",
+      "geometry_sha256": "5e1bdb286a433fcbdfb8886a82592f6a03373573a875bae8f82c49b7b407497c",
+      "profile_sha256": "4716b2eefdd6377fa7c920c2715527a918e7cd5976db00a35b97c38c2a596ee5",
+      "vertices": 16248,
+      "triangles": 27650,
+      "weighted_vertices": 16248,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.48968304693698883,
+        0.3772410452365875
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2592840,
+      "path": "game/assets/3d/leaf_scorpionfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "leaf_scorpionfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "体小且强烈侧扁，长基底高背鳍以第三、四硬棘突出，背鳍软部连到尾鳍；皮肤无鳞而有细小突起、嘴周细皮瓣，尾小；颜色可黄、白、红或褐，模型选黄褐落叶色，保留细口裂与眼。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Taenianotus-triacanthus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/3342",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_swim.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_breach.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_landed.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_top.png",
+        "ownbuild/ocean-model-review/renders/leaf_scorpionfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "bluespotted_ribbontail_ray",
+      "glb_sha256": "cc5f41565ed52d645cb467a57f866d0f2b6e5214a033d42adf1e6493edc7080c",
+      "geometry_sha256": "bceef9076cbc5c8970f2506e1ad17f862a1b3fd77178c23f887bc90beb79d42e",
+      "profile_sha256": "d021bd82a973ec14c7a322aa979475702a8d1806bfca267a537c51046a7f1b39",
+      "vertices": 12383,
+      "triangles": 21388,
+      "weighted_vertices": 12383,
+      "bones": 13,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 12,
+        "struggle": 13,
+        "breach": 13,
+        "landed": 11
+      },
+      "dimensions_m": [
+        1.0,
+        0.0849314033985138,
+        0.551740288734436
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 1835456,
+      "path": "game/assets/3d/bluespotted_ribbontail_ray.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "bluespotted_ribbontail_ray",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "椭圆盘形身体，背黄褐至橄榄色、亮蓝圆点，腹白；眼较大且后方具喷水孔，嘴和五对鳃孔在腹面；尾短粗渐细、两侧蓝条、尾下宽鳍褶延伸到末端，中后段尾刺；不加普通鱼的背鳍与扇形尾鳍。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Taeniura-lymma.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bluespotted-ribbontail-ray/",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_swim.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_struggle.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_breach.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_landed.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_top.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_ribbontail_ray_underside.png"
+      ]
+    },
+    {
+      "species_id": "giant_moray",
+      "glb_sha256": "e4c21d09819b1a0eb8926128a436bca8c9f46c4b657f510b52dddb3461d06ae1",
+      "geometry_sha256": "b76ac11f5cc1eb918db81cd91a58a6ed0722c99c946edb571eee79b3516062b6",
+      "profile_sha256": "1fe2b3a42ee080fbdc1e24e379e0b8292cf5a544970a5377f0547cc575c013ac",
+      "vertices": 17991,
+      "triangles": 31692,
+      "weighted_vertices": 17991,
+      "bones": 13,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 13,
+        "struggle": 13,
+        "breach": 13,
+        "landed": 13
+      },
+      "dimensions_m": [
+        1.0,
+        0.19048188626766205,
+        0.11735128611326218
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2385832,
+      "path": "game/assets/3d/giant_moray.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "giant_moray",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "粗壮长鳗体、宽大颌与尖牙，小眼、窄圆鳃孔并有醒目黑斑；黄褐底，成年体侧大豹斑、头部细点；背臀尾鳍连成边缘，胸鳍与腹鳍缺失，不能添普通海鱼的成对侧鳍。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Gymnothorax-javanicus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/2041",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；生境与栖深；现实分布；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040431",
+          "supports": "习性；食性；物种故事。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/giant_moray_swim.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_struggle.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_breach.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_landed.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_top.png",
+        "ownbuild/ocean-model-review/renders/giant_moray_underside.png"
+      ]
+    },
+    {
+      "species_id": "collare_butterflyfish",
+      "glb_sha256": "6a33d876e4db30f68e9cd22278032ea1c267c88566da5fa7610304ab5e91fbac",
+      "geometry_sha256": "b89113c30dcfc096e177e129c4b0f3668147b2558b447f4dfbd75e094e6d89a2",
+      "profile_sha256": "b33e015f7a91653132691887441edd8b4c2dd96704813c19814c8cc69060eb98",
+      "vertices": 15005,
+      "triangles": 25658,
+      "weighted_vertices": 15005,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5253718942403793,
+        0.18957407772541046
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2714844,
+      "path": "game/assets/3d/collare_butterflyfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "collare_butterflyfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "高身近圆侧扁体，短尖吻、陡额；深褐体带细淡斜网纹，头后明显白色宽带至胸，眼部黑带前缘白，吻与下颌黑白相间；尾红、近外缘黑带、最外缘白，背臀鳍连续而有深浅缘。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Chaetodon-collare.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://marinebiodiversity.org.bd/species/chaetodon-collare/",
+          "supports": "分类与名称；常见尺寸口径；体重上限；生境与栖深；现实分布；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_swim.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_breach.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_landed.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_top.png",
+        "ownbuild/ocean-model-review/renders/collare_butterflyfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "longhorn_cowfish",
+      "glb_sha256": "8c8ebbabb3b45b2b3f388ea2e6850cc42616e62bbe8700f6b0a711ab5a305401",
+      "geometry_sha256": "14967d17a6e323635f64099466a8c04a15ea25c34049c54ed0b601fe4f1146bb",
+      "profile_sha256": "2184ca026f371ba37d463cc716d8e9addfd29f0dce898e98ec692dffb040b47b",
+      "vertices": 13320,
+      "triangles": 23014,
+      "weighted_vertices": 13320,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 15,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 14
+      },
+      "dimensions_m": [
+        1.0,
+        0.29774951934814453,
+        0.3099474012851715
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2631100,
+      "path": "game/assets/3d/longhorn_cowfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "longhorn_cowfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "硬质近四棱箱形躯壳，头前一对向前伸长角，躯壳后下方另一对长刺；绿橄榄、黄至橙底带蓝点，小口、小胸鳍，短背臀鳍靠后、尾柄伸出壳外；模型不能只给普通鱼额头装两根角。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Lactoria-cornuta.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://fishesofaustralia.net.au/home/species/837",
+          "supports": "分类与名称；长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_swim.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_breach.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_landed.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_top.png",
+        "ownbuild/ocean-model-review/renders/longhorn_cowfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "russells_oarfish",
+      "glb_sha256": "923d4511ab81ac5cbd5a59b23e8308cc8ea53db1483e19b76cc266ad392fa2f7",
+      "geometry_sha256": "9c5bc0d91d8c52e2e6f80f6ab101c4e76c5b0b708bc40ead171f4dee22b0bde6",
+      "profile_sha256": "633ca7032c82da4d3458062c736f905861fbac98a4b7471756f8606e229853d9",
+      "vertices": 17060,
+      "triangles": 30448,
+      "weighted_vertices": 17060,
+      "bones": 14,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 14,
+        "struggle": 14,
+        "breach": 14,
+        "landed": 13
+      },
+      "dimensions_m": [
+        1.0,
+        0.35748109221458435,
+        0.06646514683961868
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2358260,
+      "path": "game/assets/3d/russells_oarfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "russells_oarfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "极长且强烈侧扁的银色带身，斜暗条、短横纹或圆斑，头蓝黑；红色背鳍从头顶一直延到尾端，前方两个鳍冠，第一冠为数条膜连鳍条、第二为一根独立长条；腹鳍为极长单鳍条且有皮瓣；没有臀鳍，成年通常没有尾鳍；胸鳍小而披针状、近头下方，不加扇形尾鳍。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Regalecus-russelii.html",
+          "supports": "分类与名称；长度上限及量法；体重上限。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/5806",
+          "supports": "长度上限及量法；体重上限；生境与栖深；现实分布；习性；食性；形态；保护信息。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/393566216_First_record_of_oarfish_Regalecus_russellii_Actinopterygii_Lampriformes_Regalecidae_from_Sri_Lankan_waters_Indian_Ocean",
+          "supports": "分类与名称；常见尺寸口径；现实分布；习性；物种故事；形态。现实资料不支持游戏抽样、装备、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/russells_oarfish_swim.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_breach.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_landed.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_top.png",
+        "ownbuild/ocean-model-review/renders/russells_oarfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "red_sea_clownfish",
+      "glb_sha256": "818d3d6d230620af7c161b7390b0247478b9a621b5877c82a0e08814e6800898",
+      "geometry_sha256": "e282891ac7c865959bc9eb5c49ed88933211dbed8b0279d177505c4548588593",
+      "profile_sha256": "d4a0ad60533f720df59014e5c340b4564fbe85f26c11478f26b0ee09bc7b3dba",
+      "vertices": 15320,
+      "triangles": 26162,
+      "weighted_vertices": 15320,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.38541729748249054,
+        0.24378246068954468
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2636120,
+      "path": "game/assets/3d/red_sea_clownfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "red_sea_clownfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "短而高、侧扁的橙黄至棕色身体；头后和身体中部各一条黑边白色竖带，橙黄圆尾与圆润软鳍。只有两条白带，不画成三带的公子小丑鱼。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Amphiprion-bicinctus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_4_text.pdf#page=131",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.fishbase.se/TrophicEco/FoodItemsList.php?genus=Amphiprion&species=bicinctus&vstockcode=12163",
+          "supports": "食性。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_swim.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_breach.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_landed.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_top.png",
+        "ownbuild/ocean-model-review/renders/red_sea_clownfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "red_sea_bannerfish",
+      "glb_sha256": "8472cda8e9cad0b3ca0ae6af960b3e7477bfbc23610d8c98676a867d1c796328",
+      "geometry_sha256": "9d99b1ffa086e77b0b9af3b47ce2e008dc59a99a39a1f16a96d3eea94080c451",
+      "profile_sha256": "03c0da9616badd92b1f1731bc167b35a7d60c55d49793de9f09b36ffbba1e261",
+      "vertices": 15275,
+      "triangles": 26090,
+      "weighted_vertices": 15275,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.8933842480182648,
+        0.18685010075569153
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2583348,
+      "path": "game/assets/3d/red_sea_bannerfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "red_sea_bannerfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "高而强侧扁的黄白身体，两道宽黑斜竖带，其中前带触及眼后；第四背鳍棘延伸成长白丝，黄色尾鳍及后软鳍、黑腹鳍，额部轻微突起。不是镰鱼 Zanclus cornutus。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Heniochus-intermedius.html",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=470",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://ciesm.org/atlas/fishes_2nd_edition/Heniochus_intermedius.pdf",
+          "supports": "常见尺寸口径；长度上限及量法；分布；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_swim.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_breach.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_landed.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_top.png",
+        "ownbuild/ocean-model-review/renders/red_sea_bannerfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "masked_butterflyfish",
+      "glb_sha256": "b76122e1cab48e01e62d69b9e4402f24dcafe9ae069294b32a6243106d81cede",
+      "geometry_sha256": "a3c3b5f4faa439e4f0f2829ff540360451718a885aaebe9341329cc266aa30ca",
+      "profile_sha256": "603bcc45a95813e011d3dcf8bd6425e0e5556fae4d204fe659c77d31723f4b32",
+      "vertices": 15050,
+      "triangles": 25730,
+      "weighted_vertices": 15050,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5379268527030945,
+        0.19933436810970306
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2804716,
+      "path": "game/assets/3d/masked_butterflyfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "masked_butterflyfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "高圆盘状侧扁身体和小尖吻；全身金黄，体侧有细橙红竖纹，眼后有明显蓝灰方形面罩，黄色尾和软鳍。没有贯穿全身的黑色眼带。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Chaetodon-semilarvatus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=465",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_swim.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_breach.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_landed.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_top.png",
+        "ownbuild/ocean-model-review/renders/masked_butterflyfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "sohal_surgeonfish",
+      "glb_sha256": "a28083f4c1cd6d8cb64ac22f2251a23f5a8af7d862c71a0150c65566d57352ef",
+      "geometry_sha256": "37cd14fc84de684672a247501c27b509112006b153094ddf1a79a1bbd2ad3081",
+      "profile_sha256": "4f383582f48e0e6b2ade9a896dd22b7f9d411f3cec23ebe7cae5adddec56341d",
+      "vertices": 14928,
+      "triangles": 25538,
+      "weighted_vertices": 14928,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.41714467108249664,
+        0.18453724682331085
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2639988,
+      "path": "game/assets/3d/sohal_surgeonfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "sohal_surgeonfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "椭圆高身强侧扁，灰绿身体密布细黑横纹，前胸侧有橙色斑；尾柄的可竖起棘呈橙色，深色背、臀和腹鳍带亮蓝边，成年尾鳍新月形。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Acanthurus-sohal.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=232",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_swim.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_breach.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_landed.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_top.png",
+        "ownbuild/ocean-model-review/renders/sohal_surgeonfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "arabian_picassotriggerfish",
+      "glb_sha256": "227db3190b300718095893625a092bae400f15007687f78c6db37438407e8508",
+      "geometry_sha256": "92a93d82a09fcad9c4d06504fa0d17e43f5aa8b7e745e379d83cb17163adaf30",
+      "profile_sha256": "626f07256c195ae9a89af039455a674e1b7c27b7b128ba90d2e7a70ddb429d85",
+      "vertices": 13878,
+      "triangles": 23868,
+      "weighted_vertices": 13878,
+      "bones": 17,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 16,
+        "struggle": 17,
+        "breach": 17,
+        "landed": 15
+      },
+      "dimensions_m": [
+        1.0,
+        0.4659537076950073,
+        0.15269166231155396
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2510928,
+      "path": "game/assets/3d/arabian_picassotriggerfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "arabian_picassotriggerfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "紧凑侧扁菱形身体，浅褐背和白腹；蓝黑线条穿过眼额、黄色线条连向鳃区，肛门附近有橙边黑斑，尾柄三行小棘，体色分区清晰。与黑胸更明显的叉斑锉鳞鲀区分。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Rhinecanthus-assasi.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=427",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_swim.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_breach.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_landed.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_top.png",
+        "ownbuild/ocean-model-review/renders/arabian_picassotriggerfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "klunzingers_wrasse",
+      "glb_sha256": "1e7c47dcee6609147671d2f9b4e47203173a3eee604fc099956a57bc5ed54549",
+      "geometry_sha256": "f4d9c6d7691c02716457474167a2a893135678a8f003796bd07550b970332d2a",
+      "profile_sha256": "c205722a22f48ac417c3c310f4dd634d0ae98470803a4e2a98f4937eff93a4f6",
+      "vertices": 15005,
+      "triangles": 25658,
+      "weighted_vertices": 15005,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.2299739271402359,
+        0.1699824184179306
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2738272,
+      "path": "game/assets/3d/klunzingers_wrasse.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "klunzingers_wrasse",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "细长侧扁身体、短尖吻；初始相上半淡绿、下半白至浅蓝绿，有不规则橙粉纵带和细洋红竖纹，头上弯曲粉红条纹；终末雄相偏蓝绿、纹带减少，黄绿软鳍与弯月尾更突出。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Thalassoma-rueppellii.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_4_text.pdf#page=265",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_swim.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_struggle.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_breach.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_landed.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_top.png",
+        "ownbuild/ocean-model-review/renders/klunzingers_wrasse_underside.png"
+      ]
+    },
+    {
+      "species_id": "red_sea_goatfish",
+      "glb_sha256": "191923d5278dd308eb851d59f8f3a3404d7846b6109f21a3597bc6f75b38501f",
+      "geometry_sha256": "ccf1ba78347bcfe6b3ffd16436d1cd0c7d599f52b27c6b3ef3f06ef6a3c82c34",
+      "profile_sha256": "efa5f9f662849edafc8cf077f565d5506d3eae12e2acddcfa20124c40bc37dd3",
+      "vertices": 14885,
+      "triangles": 25456,
+      "weighted_vertices": 14885,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.336830735206604,
+        0.2092115730047226
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2709504,
+      "path": "game/assets/3d/red_sea_goatfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "red_sea_goatfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "长身、低位口、两根可折起的长下颏须，两枚分离背鳍；从上唇穿眼延伸到第二背鳍后方的宽黑侧带，黄色尾柄另有黑斑，黄色深叉尾，白腹。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Parupeneus-forsskali.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；食性。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=365",
+          "supports": "分类与名称；长度上限及量法；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_swim.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_breach.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_landed.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_top.png",
+        "ownbuild/ocean-model-review/renders/red_sea_goatfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "crocodile_flathead",
+      "glb_sha256": "dd00bd3fa3fca191165281e2a58f3982198e209ef50f1fd00f533be3bfd8f9ff",
+      "geometry_sha256": "97654b9aff024f17197eb27d5eefaaf80c216afc1ad0b635b06c3d206c721af6",
+      "profile_sha256": "7d5a29f281968470368a8c532a644834804c83f5fddf0c1151f8afb087ddbe78",
+      "vertices": 18745,
+      "triangles": 31288,
+      "weighted_vertices": 18745,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.2125154808163643,
+        0.41789910197257996
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2969860,
+      "path": "game/assets/3d/crocodile_flathead.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "crocodile_flathead",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "宽而扁的长头、眼位高并带指状分枝虹膜瓣，身体渐细、褐绿背和白腹；两枚分离背鳍，胸鳍宽展，各鳍有深斑，尾上3—4行深色斑点。不是牛尾鱼式三条黑色纵尾带。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Papilloculiceps-longiceps.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_2_text.pdf#page=594",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://ciesm.org/atlas/fishes_2nd_edition/Papilloculiceps_longiceps.pdf",
+          "supports": "生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_swim.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_struggle.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_breach.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_landed.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_top.png",
+        "ownbuild/ocean-model-review/renders/crocodile_flathead_underside.png"
+      ]
+    },
+    {
+      "species_id": "bluespotted_cornetfish",
+      "glb_sha256": "11fe9ec40f11513453ea86f9f7e72cc88e791554844327aca7ee6c937693b647",
+      "geometry_sha256": "995881140080bc44033e9bc73e0e6f0ffabbcb7866bfeaa8c56e05d1069fef8d",
+      "profile_sha256": "ba2079cb9795038ef61f3b8b816deded4551c3bf6c05b3ee82e4b09c3598d1b7",
+      "vertices": 14358,
+      "triangles": 25034,
+      "weighted_vertices": 14358,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.08308286219835281,
+        0.06351777166128159
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2164612,
+      "path": "game/assets/3d/bluespotted_cornetfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "bluespotted_cornetfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "身体极长、背腹扁平，管状长吻和小口；橄榄绿至褐色背有蓝绿斑点或纵列，白腹，小背鳍与臀鳍位于近尾端，叉尾后接长白尾丝。背部中线无红烟管鱼式骨板。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Fistularia-commersonii.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_2_text.pdf#page=503",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_swim.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_breach.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_landed.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_top.png",
+        "ownbuild/ocean-model-review/renders/bluespotted_cornetfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "yellowbar_angelfish",
+      "glb_sha256": "11df925d1e3fd109c9b8772f3eda3922ebda60245b3120900a5161bbe32fc129",
+      "geometry_sha256": "38088765caa826e9fe5b1d8941447664260df5fb2e89e49414aadbbc34cd5fc5",
+      "profile_sha256": "570b4e08540ed482f9417364130c945fa0f8c765bc06ed203f8a0fede711f86c",
+      "vertices": 15770,
+      "triangles": 26882,
+      "weighted_vertices": 15770,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5703710615634918,
+        0.22229549288749695
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2727732,
+      "path": "game/assets/3d/yellowbar_angelfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "yellowbar_angelfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "高而侧扁的深蓝身体，体侧后半段有宽黄色斑块，尾鳍淡黄；成年背、臀软鳍端有延长丝，幼魚则黑蓝底色配弯曲白蓝竖纹，约6—7厘米标准长时黄斑开始出现。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Pomacanthus-maculosus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=444",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.fishbase.se/Ecology/FishEcologySummary.php?GenusName=Pomacanthus&SpeciesName=maculosus&StockCode=8214",
+          "supports": "生境；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_swim.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_breach.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_landed.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_top.png",
+        "ownbuild/ocean-model-review/renders/yellowbar_angelfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "blackspotted_sweetlips",
+      "glb_sha256": "f2b6aa2ee3d95340c84b91c819b0a9f854e79066a5b963acc1d9e2ee6cba272c",
+      "geometry_sha256": "895ba7e16bc5f186060d6816e5bec9baba5373c2b4ce6291fc8bd472685982e7",
+      "profile_sha256": "94148e5a46c0ad983d18e72d1592b64e87be25ab9f26f794a39fc3e77ef3ba94",
+      "vertices": 15860,
+      "triangles": 27026,
+      "weighted_vertices": 15860,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.4015745222568512,
+        0.2897035777568817
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2826792,
+      "path": "game/assets/3d/blackspotted_sweetlips.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "blackspotted_sweetlips",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "银白中高身体密布黑圆点，灰黑头、厚黄色唇，黄色背臀尾鳍也有黑斑；幼鱼不足约12厘米时呈5—6道纵黑纹，成长后才散成圆点。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Plectorhinchus-gaterinus.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=276",
+          "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://www.fishbase.se/Ecology/FishEcologySummary.php?GenusName=Plectorhinchus&SpeciesName=gaterinus&StockCode=8012",
+          "supports": "生境；食性。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_swim.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_struggle.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_breach.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_landed.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_top.png",
+        "ownbuild/ocean-model-review/renders/blackspotted_sweetlips_underside.png"
+      ]
+    },
+    {
+      "species_id": "orbicular_batfish",
+      "glb_sha256": "46bfe45b1a4f6d099d84b5524d0f832d46088c075e4792a2b3f9cf0de169cae0",
+      "geometry_sha256": "55892626fad3372a0933d20be469e077227484226e60053647797a1ef5283169",
+      "profile_sha256": "920ede0d3ecc46b1cc45e669d4f20a81966b06eb24673a1802f6718e343d0292",
+      "vertices": 16400,
+      "triangles": 27890,
+      "weighted_vertices": 16400,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.935637503862381,
+        0.2604418396949768
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2686396,
+      "path": "game/assets/3d/orbicular_batfish.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "orbicular_batfish",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "成年身体高而近圆、强侧扁，银灰身有淡暗竖带穿眼及头后，黄色或银黄鳍带深边，腹鳍黑尖；幼鱼红褐底色带深斑与小白眼状点，高背臀鳍形成叶形轮廓。",
+      "sources": [
+        {
+          "url": "https://www.fishbase.se/summary/Platax-orbicularis.html",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。"
+        },
+        {
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=209",
+          "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_swim.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_struggle.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_breach.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_landed.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_top.png",
+        "ownbuild/ocean-model-review/renders/orbicular_batfish_underside.png"
+      ]
+    },
+    {
+      "species_id": "blue_whale",
+      "glb_sha256": "867f7fa17b29a514febc25818b393f600491d7777ed5bd5966ab8f688c13bb7c",
+      "geometry_sha256": "2a188b4cb39a73726eb2779af1d8c9ebb1b2739d3685a774e9840a54212aebcb",
+      "profile_sha256": "9a180c4f7e2545c7717e5faeb4ea652f2cea4fe8d5201758e781852c0875064e",
+      "vertices": 20724,
+      "triangles": 36930,
+      "weighted_vertices": 20724,
+      "bones": 14,
+      "clips_seconds": {
+        "swim": 2.4000000953674316,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 12,
+        "struggle": 13,
+        "breach": 13,
+        "landed": 11
+      },
+      "dimensions_m": [
+        1.0,
+        0.21660695225000381,
+        0.2634836435317993
+      ],
+      "surfaces": 6,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2319656,
+      "path": "game/assets/3d/blue_whale.glb",
+      "authoring_source": "tools/art3d/ocean_profiles.json",
+      "profile_id": "blue_whale",
+      "generator_source": "tools/art3d/build_ocean_diversity.py",
+      "morphology_reference": "蓝灰色斑驳长躯干、宽钝U形头、腹面纵向喉沟、细小靠后的背鳍、修长胸鳍与水平尾叶；鲸尾上下摆动，与鱼类左右摆尾不同。",
+      "sources": [
+        {
+          "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+          "supports": "学名、哺乳纲分类、形态、真实分布、食性与保护状态；不支持游戏连线、抽样或近距离船侧挑战。"
+        },
+        {
+          "url": "https://www.fisheries.noaa.gov/topic/marine-life-viewing-guidelines",
+          "supports": "现实保持距离、不喂食、不触摸、不追逐的观鲸说明；本作近距离鲸影完全是幻想。"
+        }
+      ],
+      "actual_native_review_frames": [
+        "ownbuild/ocean-model-review/renders/blue_whale_swim.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_struggle.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_breach.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_landed.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_top.png",
+        "ownbuild/ocean-model-review/renders/blue_whale_underside.png"
+      ]
+    }
+  ]
+}

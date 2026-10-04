@@ -1,0 +1,636 @@
+[
+  {
+    "species_id": "humphead_wrasse",
+    "name": "波纹唇鱼",
+    "scientific_name": "Cheilinus undulatus",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-a8b48bd9-ced7-4f7e-a7fb-d5d2236766ec.png",
+    "prompt": "Use case: scientific-educational\nAsset type: Farshore fish encyclopedia photorealistic illustration, individual transparent PNG cutout.\nSubject: exactly one adult male humphead wrasse (Cheilinus undulatus, Napoleon wrasse), anatomically faithful complete specimen. Huge bulbous forehead, exceptionally thick fleshy lips, robust tall oval blue-green body, rounded caudal fin, continuous low dorsal and anal fins, two darker lines behind the eye, intricate fine undulating yellow-green facial lines, clearly resolved overlapping scales. Mature male, no juvenile pattern.\nStyle: premium natural-history photorealistic digital illustration, realistic wet skin and translucent fin rays, subtle soft studio light with accurate blue-green pigment, no caricature.\nComposition: landscape canvas 1536 x 1024, complete left-facing lateral profile, head at left and tail at right, straight horizontal relaxed swimming pose; centered with 10 percent transparent safe margin around every fin and the mouth. Genuinely transparent alpha background; isolated fish only. Do not crop any part. No shadow, aquarium, water, reef, plants, equipment, text, label, watermark, extra fish, border or checkered background.",
+    "morphology_reference": "成年雄鱼：明显额隆起、厚唇、蓝绿高体、圆尾、眼后两条暗线与细波纹。",
+    "fact_sources": [
+      {
+        "url": "https://aqua.org/explore/animals/humphead-wrasse",
+        "title": "National Aquarium: Humphead Wrasse",
+        "supports": "Adult forehead hump, thick lips and variable blue-green adult coloration.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.georgiaaquarium.org/animal/humphead-wrasse/",
+        "title": "Georgia Aquarium: Humphead Wrasse",
+        "supports": "Bulbous forehead, blue-green adult and irregular yellow facial lines.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "nose_px": [
+      33,
+      601
+    ],
+    "tail_px": [
+      1507,
+      535
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Complete fins, thick fleshy lips, rounded caudal, both post-eye lines and mature male forehead visible. Alpha threshold 24 subject bounds within canvas."
+  },
+  {
+    "species_id": "emperor_angelfish",
+    "name": "主刺盖鱼",
+    "scientific_name": "Pomacanthus imperator",
+    "details": "Subject: adult emperor angelfish Pomacanthus imperator. Deep laterally compressed oval body; many fine parallel yellow horizontal-to-diagonal stripes on vivid blue body; rounded solid yellow tail; pale light-blue snout; curved dark navy eye mask bordered by bright blue; yellow-green nape and dark throat region. Tall dorsal and anal fins, small preopercular spine. Adult stripes, absolutely no juvenile concentric circles.",
+    "morphology_reference": "成鱼蓝色高体布满细黄色平行条纹，黑色眼罩、浅蓝吻、黄色圆尾；不使用幼鱼同心圈。",
+    "fact_sources": [
+      {
+        "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=2294",
+        "title": "USGS: Emperor Angelfish",
+        "supports": "Adult yellow-blue flank stripes, dark mask, light blue snout and yellow caudal.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore encyclopedia photorealistic digital natural-history illustration, not a wildlife photograph. Exactly one anatomically faithful fish. Landscape 1536x1024, complete left-facing lateral profile, nose left tail right, all fins and tail visible, 8 percent transparent padding around the entire subject. Soft even studio light, realistic wet scales and delicate translucent fin rays. Transparent alpha background, isolated clean cutout. No shadow, reef, aquarium, water, hook, equipment, text, watermark, border or extra animals. Subject: adult emperor angelfish Pomacanthus imperator. Deep laterally compressed oval body; many fine parallel yellow horizontal-to-diagonal stripes on vivid blue body; rounded solid yellow tail; pale light-blue snout; curved dark navy eye mask bordered by bright blue; yellow-green nape and dark throat region. Tall dorsal and anal fins, small preopercular spine. Adult stripes, absolutely no juvenile concentric circles.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-e2e76d1f-04e1-40d4-9ff2-3ef85833717e.png",
+    "nose_px": [
+      45,
+      542
+    ],
+    "tail_px": [
+      1497,
+      481
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Adult parallel stripes, curved eye mask, pale snout, rounded yellow tail and complete dorsal/anal fins visible; no juvenile circles."
+  },
+  {
+    "species_id": "leaf_scorpionfish",
+    "name": "叶须鲉",
+    "scientific_name": "Taenianotus triacanthus",
+    "details": "Subject: leaf scorpionfish Taenianotus triacanthus, pale cream-yellow individual with subtle pink-brown mottling. Extremely laterally compressed thin leaf-like body, dramatically tall sail-shaped continuous spiny dorsal fin, low angular head with upturned small mouth, tiny fleshy beard filaments around mouth, short rounded tail, broad pectoral fins held beside the body like small feet. An elegant irregular leaf outline; body much smaller than dorsal sail, not a bulky rockfish. Preserve all dorsal spines and mouth tassels.",
+    "morphology_reference": "非常侧扁的叶片体形，高帆状背鳍、口周细须；选乳黄带少量粉褐色斑的自然变色型。",
+    "fact_sources": [
+      {
+        "url": "https://australian.museum/learn/animals/fishes/leaf-scorpionfish-taenianotus-triacanthus/",
+        "title": "Australian Museum: Leaf Scorpionfish",
+        "supports": "Compressed body, sail-like dorsal fin, variable mouth beard and variable white-pink-red-green coloration.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore encyclopedia photorealistic digital natural-history illustration, not a wildlife photograph. Exactly one anatomically faithful fish. Landscape 1536x1024, complete left-facing lateral profile, nose left tail right, all fins and tail visible, 8 percent transparent padding around the entire subject. Soft even studio light, realistic wet scales and delicate translucent fin rays. Transparent alpha background, isolated clean cutout. No shadow, reef, aquarium, water, hook, equipment, text, watermark, border or extra animals. Subject: leaf scorpionfish Taenianotus triacanthus, pale cream-yellow individual with subtle pink-brown mottling. Extremely laterally compressed thin leaf-like body, dramatically tall sail-shaped continuous spiny dorsal fin, low angular head with upturned small mouth, tiny fleshy beard filaments around mouth, short rounded tail, broad pectoral fins held beside the body like small feet. An elegant irregular leaf outline; body much smaller than dorsal sail, not a bulky rockfish. Preserve all dorsal spines and mouth tassels.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-b12e68b8-53d9-4946-8b13-2b287b6ce6dd.png",
+    "nose_px": [
+      61,
+      643
+    ],
+    "tail_px": [
+      1506,
+      654
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Leaf silhouette, tall sail dorsal, mouth filaments and all fins present; pale mottled coloration is one variable natural color form."
+  },
+  {
+    "species_id": "bluespotted_ribbontail_ray",
+    "name": "蓝点鳐",
+    "scientific_name": "Taeniura lymma",
+    "details": "A single adult bluespotted ribbontail ray Taeniura lymma in dorsal TOP-DOWN view, head toward left and tail extending horizontally right. Smooth oval rounded pectoral disk, NOT pointed diamond-shaped, blunt rounded snout, two bulging eyes and spiracles behind them. Sandy tan to olive-yellow upper disk covered with clearly spaced electric cobalt-blue round spots. Short moderately thick tapering tail less than twice disk length, two bright blue stripes running along its sides, broad fleshy lower finfold; subtle sting spines visible on tail. Broad disk fully unfolded and tail nearly straight so all features are unobscured. Realistic ray anatomy, not a manta. Complete head, disk and tail, fill only 80 percent of canvas width.",
+    "morphology_reference": "俯视圆椭圆光滑鳍盘、钝吻、凸眼，橄榄黄底上电蓝斑点，较粗短尾和尾侧蓝线/下尾褶。",
+    "fact_sources": [
+      {
+        "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bluespotted-ribbontail-ray/",
+        "title": "Florida Museum: Bluespotted Ribbontail Ray",
+        "supports": "Rounded oval disc, bright blue spots, stout tapering tail, blue tail stripes and lower caudal finfold.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "orientation": "dorsal_head_left_tail_right",
+    "prompt": "Use case: scientific-educational. Asset type: premium fish encyclopedia photorealistic digital illustration, an accurate illustration rather than a photograph. Landscape 1536x1024. Natural soft studio illumination and detailed skin texture; genuine transparent alpha background, clean isolated cutout with no shadow. Exactly one specimen. No reef, water, plants, aquarium, equipment, text, labels, logos, watermark or extra animals. A single adult bluespotted ribbontail ray Taeniura lymma in dorsal TOP-DOWN view, head toward left and tail extending horizontally right. Smooth oval rounded pectoral disk, NOT pointed diamond-shaped, blunt rounded snout, two bulging eyes and spiracles behind them. Sandy tan to olive-yellow upper disk covered with clearly spaced electric cobalt-blue round spots. Short moderately thick tapering tail less than twice disk length, two bright blue stripes running along its sides, broad fleshy lower finfold; subtle sting spines visible on tail. Broad disk fully unfolded and tail nearly straight so all features are unobscured. Realistic ray anatomy, not a manta. Complete head, disk and tail, fill only 80 percent of canvas width.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-3eaaa57a-7557-4e86-b278-b0c8f4f265e3.png",
+    "nose_px": [
+      29,
+      483
+    ],
+    "tail_px": [
+      1508,
+      500
+    ],
+    "review_note": "Top-down oval rounded disk, protruding eyes and adjacent spiracles, blue disk spots, paired blue tail stripes and complete tapering tail visible; dorsal view intentional."
+  },
+  {
+    "species_id": "giant_moray",
+    "name": "爪哇裸胸鳝",
+    "scientific_name": "Gymnothorax javanicus",
+    "details": "A single adult giant moray Gymnothorax javanicus, left-facing full lateral view, long thick muscular eel body gently undulating horizontally but not tightly coiled. Large yellow-brown head, brown body with irregular dark brown leopard-like mottling and spots, characteristic dark black patch surrounding the small round gill opening. Moderate mouth slightly open exposing a few pointed teeth, no fantasy fangs. Dorsal, caudal and anal fins form one low continuous fin fringe around the rear body and tapering tail. NO pectoral or pelvic fins, no separate forked tail, no scales or whiskers. Entire tail tip and continuous fins visible, 12 percent transparent margins.",
+    "morphology_reference": "褐色斑驳粗长鳝体、黄褐头及黑色鳃孔斑；无胸腹鳍，背尾臀鳍连续成缘。",
+    "fact_sources": [
+      {
+        "url": "https://australian.museum/learn/animals/fishes/giant-moray-gymnothorax-javanicus-bleeker-1859/",
+        "title": "Australian Museum: Giant Moray",
+        "supports": "Brown body with dark brown spots, yellow-brown head and black blotch around the gill opening.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "orientation": "head_left_tail_right",
+    "prompt": "Use case: scientific-educational. Asset type: premium fish encyclopedia photorealistic digital illustration, an accurate illustration rather than a photograph. Landscape 1536x1024. Natural soft studio illumination and detailed skin texture; genuine transparent alpha background, clean isolated cutout with no shadow. Exactly one specimen. No reef, water, plants, aquarium, equipment, text, labels, logos, watermark or extra animals. A single adult giant moray Gymnothorax javanicus, left-facing full lateral view, long thick muscular eel body gently undulating horizontally but not tightly coiled. Large yellow-brown head, brown body with irregular dark brown leopard-like mottling and spots, characteristic dark black patch surrounding the small round gill opening. Moderate mouth slightly open exposing a few pointed teeth, no fantasy fangs. Dorsal, caudal and anal fins form one low continuous fin fringe around the rear body and tapering tail. NO pectoral or pelvic fins, no separate forked tail, no scales or whiskers. Entire tail tip and continuous fins visible, 12 percent transparent margins.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-e35fea2d-873c-4501-8aaf-918fe06178e6.png",
+    "nose_px": [
+      19,
+      438
+    ],
+    "tail_px": [
+      1522,
+      608
+    ],
+    "review_note": "No paired pectoral/pelvic fins; continuous dorsal-caudal-anal fringe, yellow-brown head, spotted body and dark gill-opening patch visible; entire undulating body uncropped."
+  },
+  {
+    "species_id": "collare_butterflyfish",
+    "name": "红尾蝴蝶鱼",
+    "scientific_name": "Chaetodon collare",
+    "details": "Adult redtail or collare butterflyfish Chaetodon collare, full left-facing lateral specimen. Deep rounded laterally compressed dark chocolate-brown body with dense fine pale golden scale centers creating a delicate dotted honeycomb pattern. Distinct broad vertical clean white collar immediately behind the black eye band and a narrower white band in front of the eye; short pointed snout. The short rounded tail has a rich bright RED base, then a black vertical band, with translucent diffuse whitish outer edge. Dorsal and anal fins follow rounded body, edged golden-orange; not a yellow butterflyfish. Do not add blue bars or an eyespot.",
+    "morphology_reference": "褐黑侧扁高体、浅色鳞心细网点、眼前细白带与眼后宽白领；红色尾基、黑带和白色尾缘。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Chaetodon-collare.html",
+        "title": "FishBase: Chaetodon collare",
+        "supports": "Compressed deep body and species identity/reference photograph.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.liveaquaria.com/products/pakistan-butterflyfish",
+        "title": "LiveAquaria: Pakistan Butterflyfish",
+        "supports": "Dark body with light spotted scales, two white head bands and red-black-white tail bands.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore photorealistic digital fish encyclopedia illustration. Exactly one complete anatomically accurate fish, head left tail right on landscape 1536x1024 canvas. Soft neutral studio light, realistic skin, scales and translucent fins. Fish occupies 80 percent canvas width; all horns and fins inside generous transparent safety margins. Genuine transparent alpha background, clean cutout; no backdrop, shadow, water, reef, aquarium, text, logos, watermark, border or extra animal. Adult redtail or collare butterflyfish Chaetodon collare, full left-facing lateral specimen. Deep rounded laterally compressed dark chocolate-brown body with dense fine pale golden scale centers creating a delicate dotted honeycomb pattern. Distinct broad vertical clean white collar immediately behind the black eye band and a narrower white band in front of the eye; short pointed snout. The short rounded tail has a rich bright RED base, then a black vertical band, with translucent diffuse whitish outer edge. Dorsal and anal fins follow rounded body, edged golden-orange; not a yellow butterflyfish. Do not add blue bars or an eyespot.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-d63156ad-2f28-4629-a29f-015c5696ef1c.png",
+    "nose_px": [
+      71,
+      599
+    ],
+    "tail_px": [
+      1505,
+      553
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Two white head bands around dark eye band, fine pale scale dots, broad red tail base with black band and diffuse white fin edge; complete silhouette."
+  },
+  {
+    "species_id": "longhorn_cowfish",
+    "name": "牛角箱鲀",
+    "scientific_name": "Lactoria cornuta",
+    "details": "Adult longhorn cowfish Lactoria cornuta in mostly true left-facing side profile with a tiny three-quarter angle sufficient to see BOTH long slender forward/upward-pointing horns over the eyes. Rigid box-shaped triangular yellow-ochre carapace with fine hexagonal fused armor plates and small scattered pale white/blue spots; blunt low protruding puckered mouth. Small fluttering translucent pectoral fin and small dorsal/anal fins toward the rear, no pelvic fins. Narrow long caudal peduncle ending in long fan-shaped yellow translucent tail. Also the short backward horn at the lower rear body corner visible. Not a puffer, no round inflated body, no fantasy giant horns; anatomical mineralized head horns and complete tail.",
+    "morphology_reference": "黄色箱体三角甲壳、细六边形骨板、眼前成对长角及后角、低位小口，尾柄长、无腹鳍。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Lactoria-cornuta.html",
+        "title": "FishBase: Lactoria cornuta",
+        "supports": "Short deep boxfish body, variable olive-orange color and blue spots, species identity/reference photograph.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.liveaquaria.com/products/longhorn-cowfish-expert-only",
+        "title": "LiveAquaria: Longhorn Cowfish",
+        "supports": "Tan-yellow body with white and blue dots; separate species from Ostracion cubicus.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore photorealistic digital fish encyclopedia illustration. Exactly one complete anatomically accurate fish, head left tail right on landscape 1536x1024 canvas. Soft neutral studio light, realistic skin, scales and translucent fins. Fish occupies 80 percent canvas width; all horns and fins inside generous transparent safety margins. Genuine transparent alpha background, clean cutout; no backdrop, shadow, water, reef, aquarium, text, logos, watermark, border or extra animal. Adult longhorn cowfish Lactoria cornuta in mostly true left-facing side profile with a tiny three-quarter angle sufficient to see BOTH long slender forward/upward-pointing horns over the eyes. Rigid box-shaped triangular yellow-ochre carapace with fine hexagonal fused armor plates and small scattered pale white/blue spots; blunt low protruding puckered mouth. Small fluttering translucent pectoral fin and small dorsal/anal fins toward the rear, no pelvic fins. Narrow long caudal peduncle ending in long fan-shaped yellow translucent tail. Also the short backward horn at the lower rear body corner visible. Not a puffer, no round inflated body, no fantasy giant horns; anatomical mineralized head horns and complete tail.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-e2525b59-ebcd-4c03-9501-05c7b54ab04a.png",
+    "nose_px": [
+      86,
+      557
+    ],
+    "tail_px": [
+      1520,
+      473
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Both forward head horns visible, triangular armored box body, posterior horn, small fins and long caudal peduncle/fan tail intact; body not inflated."
+  },
+  {
+    "species_id": "russells_oarfish",
+    "name": "拉氏皇带鱼",
+    "scientific_name": "Regalecus russellii",
+    "details": "One complete adult Russell's oarfish Regalecus russelii, pure left-facing lateral profile, extremely long thin strongly laterally compressed SILVER RIBBON body: total length roughly 18 times body height, gently almost straight horizontal ribbon tapering gradually to a slender finless tail tip at the far right. Small blue-grey head on left, small eye and small toothless protrusible mouth. Crimson-red dorsal fin runs continuously from top of head almost to tail; front dorsal rays form TWO separate delicate upright crimson CRESTS, first crest a group of 3-6 joined rays, second a single independent red ray. Pair of highly elongated crimson pelvic fin rays descend behind the head, both with tiny paddle-like flaps; small pectoral. Silvery scaleless sheen with a few dark oblique bars and dashes. Adult has NO anal fin and NO caudal fan or fork. No huge teeth, eel skin, side scales, sword snout or snake coils. Entire body, both red crest tips and long pelvic rays visible with generous transparent margin. Panoramic 2048x1024 canvas, body uses 85 percent width; leave ample transparent area above and below for the red crests and rays.",
+    "morphology_reference": "Smithsonian：极狭长侧扁银色缎带，暗斜条，红色全长背鳍及前双冠；长腹鳍条、成鱼无臀鳍与尾鳍。",
+    "fact_sources": [
+      {
+        "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/5806",
+        "title": "Smithsonian STRI: Regalecus russelii",
+        "supports": "Ribbon-shaped scaleless adult; paired front dorsal crests, crimson dorsal/pelvics, absent adult anal/caudal fins and silvery dark-marked body.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.marinespecies.org/aphia.php?id=400491&p=taxdetails",
+        "title": "WoRMS: Regalecus russellii",
+        "supports": "Accepted taxonomic name spelling; artwork depicts the same Russell's oarfish species.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "orientation": "head_left_tail_right",
+    "prompt": "Use case: scientific-educational. Asset type: premium photorealistic digital fish encyclopedia illustration for Farshore. Exactly one anatomically faithful fish in natural swimming pose, clean isolated cutout. Accurate natural coloration and fine skin/fin texture, soft even lighting. Genuine transparent alpha background; no background or drop shadow; no water, reef, plant, aquarium, equipment, text, labels, watermark or other fish. One complete adult Russell's oarfish Regalecus russelii, pure left-facing lateral profile, extremely long thin strongly laterally compressed SILVER RIBBON body: total length roughly 18 times body height, gently almost straight horizontal ribbon tapering gradually to a slender finless tail tip at the far right. Small blue-grey head on left, small eye and small toothless protrusible mouth. Crimson-red dorsal fin runs continuously from top of head almost to tail; front dorsal rays form TWO separate delicate upright crimson CRESTS, first crest a group of 3-6 joined rays, second a single independent red ray. Pair of highly elongated crimson pelvic fin rays descend behind the head, both with tiny paddle-like flaps; small pectoral. Silvery scaleless sheen with a few dark oblique bars and dashes. Adult has NO anal fin and NO caudal fan or fork. No huge teeth, eel skin, side scales, sword snout or snake coils. Entire body, both red crest tips and long pelvic rays visible with generous transparent margin. Panoramic 2048x1024 canvas, body uses 85 percent width; leave ample transparent area above and below for the red crests and rays.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-fa2a543f-1713-4a11-a216-2ca29175b28b.png",
+    "nose_px": [
+      24,
+      444
+    ],
+    "tail_px": [
+      1750,
+      451
+    ],
+    "review_note": "Complete elongated ribbon body, distinct multiple-ray first crest and separate second crest, crimson full dorsal and paired long pelvic rays; no adult caudal fan or anal fin. Built-in returned 1774x887 rather than requested 2048x1024; original pixels preserved.",
+    "taxonomy_note": "Scope/provisional prompt spelling Regalecus russelii; WoRMS accepted spelling Regalecus russellii. Stable species_id is preserved."
+  },
+  {
+    "species_id": "red_sea_clownfish",
+    "name": "双带小丑鱼",
+    "scientific_name": "Amphiprion bicinctus",
+    "details": "One adult Red Sea twoband anemonefish Amphiprion bicinctus, full head-left tail-right lateral profile. Deep short oval yellow-orange to amber-brown body, bright yellow-orange snout and fins, ONLY TWO broad clean white vertical bands edged narrowly dark black: first just behind head, second at middle body starting where the spiny dorsal meets soft dorsal and reaching abdomen. No third white band at tail peduncle. Rounded yellow tail, orange dorsal fin with subtle black edge, warm brown back and amber belly. Realistic fine scale texture, natural healthy adult, no cartoon eyes. Complete fins and tail, landscape 1536x1024 with 10 percent transparent margins.",
+    "morphology_reference": "黄橙至琥珀褐侧扁短高体，恰好两条黑缘白横带（头后、背鳍缺刻处），黄色圆尾，无第三尾柄白带。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Amphiprion-bicinctus.html",
+        "title": "FishBase: Twoband Anemonefish",
+        "supports": "Yellow-orange adult with two black-edged white bands behind head and at dorsal-fin notch.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "orientation": "head_left_tail_right",
+    "prompt": "Use case: scientific-educational. Asset type: premium photorealistic digital fish encyclopedia illustration for Farshore. Exactly one anatomically faithful fish in natural swimming pose, clean isolated cutout. Accurate natural coloration and fine skin/fin texture, soft even lighting. Genuine transparent alpha background; no background or drop shadow; no water, reef, plant, aquarium, equipment, text, labels, watermark or other fish. One adult Red Sea twoband anemonefish Amphiprion bicinctus, full head-left tail-right lateral profile. Deep short oval yellow-orange to amber-brown body, bright yellow-orange snout and fins, ONLY TWO broad clean white vertical bands edged narrowly dark black: first just behind head, second at middle body starting where the spiny dorsal meets soft dorsal and reaching abdomen. No third white band at tail peduncle. Rounded yellow tail, orange dorsal fin with subtle black edge, warm brown back and amber belly. Realistic fine scale texture, natural healthy adult, no cartoon eyes. Complete fins and tail, landscape 1536x1024 with 10 percent transparent margins.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-6fb9ea19-eba1-4daf-9016-8748da604df8.png",
+    "nose_px": [
+      78,
+      509
+    ],
+    "tail_px": [
+      1491,
+      463
+    ],
+    "review_note": "Exactly two white vertical bands with dark borders, yellow-orange face/fins and adult brown-amber body; no third tail band; complete fins."
+  },
+  {
+    "species_id": "red_sea_bannerfish",
+    "name": "红海马夫鱼",
+    "scientific_name": "Heniochus intermedius",
+    "details": "Subject: adult Red Sea bannerfish Heniochus intermedius, pure lateral left-facing profile. Deep strongly compressed tall triangular body; white upper head and back transitioning to soft lemon-yellow lower body. Exactly two broad dark charcoal oblique bands: forward band starts at forehead/dorsal origin and passes near eye down toward black pelvic fin, second band crosses rear body diagonally to posterior anal fin. Rounded lemon-yellow tail, yellow soft dorsal and anal. Signature enormously long slender WHITE pennant-like fourth dorsal spine extending upward then trailing gracefully right, fully inside the frame. Short pointed snout, dark eye. No tubular snout, no Moorish-idol yellow saddle, no long trailing tail. Full fish with complete delicate dorsal pennant, generous blank margins above.",
+    "morphology_reference": "高侧扁体、白至淡黄底及两条斜黑带，黄尾和后背/臀鳍、黑腹鳍、极长白色背鳍旗丝。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Heniochus-intermedius.html",
+        "title": "FishBase: Red Sea Bannerfish",
+        "supports": "Species identity and deep body; Muséum-Aquarium de Nancy reference photograph.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.liveaquaria.com/products/red-sea-bannerfish",
+        "title": "LiveAquaria: Red Sea Bannerfish",
+        "supports": "White dorsal filament, white base, two wide black stripes and yellow soft dorsal/caudal.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore encyclopedia premium photorealistic natural-history digital illustration, not a wildlife photograph. One anatomically accurate adult fish in full head-left tail-right side profile; 1536x1024 landscape canvas, subject centered, every fin/appendage uncropped with 10 percent alpha safety padding. Soft neutral studio light, accurate natural color, wet scales, transparent fin rays. Genuine transparent alpha background, isolated clean cutout; no glow, shadow, water, reef, aquarium, plants, text, label, logo, watermark, border or extra animal. Subject: adult Red Sea bannerfish Heniochus intermedius, pure lateral left-facing profile. Deep strongly compressed tall triangular body; white upper head and back transitioning to soft lemon-yellow lower body. Exactly two broad dark charcoal oblique bands: forward band starts at forehead/dorsal origin and passes near eye down toward black pelvic fin, second band crosses rear body diagonally to posterior anal fin. Rounded lemon-yellow tail, yellow soft dorsal and anal. Signature enormously long slender WHITE pennant-like fourth dorsal spine extending upward then trailing gracefully right, fully inside the frame. Short pointed snout, dark eye. No tubular snout, no Moorish-idol yellow saddle, no long trailing tail. Full fish with complete delicate dorsal pennant, generous blank margins above.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-2eb2ec35-b879-4f89-98f4-2e3450381e02.png",
+    "nose_px": [
+      125,
+      603
+    ],
+    "tail_px": [
+      1209,
+      606
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Complete white dorsal pennant, two broad oblique body bands plus dark eye marking, yellow soft fins/tail and dark pelvics. Ruler tail is actual caudal fin, excludes farther-right dorsal filament."
+  },
+  {
+    "species_id": "masked_butterflyfish",
+    "name": "金蝴蝶鱼",
+    "scientific_name": "Chaetodon semilarvatus",
+    "details": "Subject: adult bluecheek/golden masked butterflyfish Chaetodon semilarvatus, complete left-facing pure lateral profile. Beautiful disk-like deep round compressed golden-yellow body and yellow dorsal/anal/rounded caudal fins. Fine subtle vertical orange-gold narrow lines on the golden flanks. Characteristic DARK NAVY BLUE crescent cheek patch immediately BEHIND the eye, covering the rear operculum; it is a cheek mask, not a black vertical stripe across the whole head. Small dark eye, short pointed pale yellow snout, tiny lips, detailed realistic fine scales. No broad black body bars, no tail eyespot, no blue horizontal emperor-angelfish stripes. Complete rays and body with safe transparent margins.",
+    "morphology_reference": "金黄色圆形侧扁体与黄色鳍，细浅橙竖纹；眼后海军蓝颊斑，不套用贯眼黑带或刺盖鱼横纹。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Chaetodon-semilarvatus.html",
+        "title": "FishBase: Bluecheek Butterflyfish",
+        "supports": "Species identity and reference photograph for golden body/blue cheek pattern.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.liveaquaria.com/products/golden-semilarvatus-butterflyfish",
+        "title": "LiveAquaria: Golden Semilarvatus Butterflyfish",
+        "supports": "Yellow-orange coloration and dark cheek patch of adult.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore encyclopedia premium photorealistic natural-history digital illustration, not a wildlife photograph. One anatomically accurate adult fish in full head-left tail-right side profile; 1536x1024 landscape canvas, subject centered, every fin/appendage uncropped with 10 percent alpha safety padding. Soft neutral studio light, accurate natural color, wet scales, transparent fin rays. Genuine transparent alpha background, isolated clean cutout; no glow, shadow, water, reef, aquarium, plants, text, label, logo, watermark, border or extra animal. Subject: adult bluecheek/golden masked butterflyfish Chaetodon semilarvatus, complete left-facing pure lateral profile. Beautiful disk-like deep round compressed golden-yellow body and yellow dorsal/anal/rounded caudal fins. Fine subtle vertical orange-gold narrow lines on the golden flanks. Characteristic DARK NAVY BLUE crescent cheek patch immediately BEHIND the eye, covering the rear operculum; it is a cheek mask, not a black vertical stripe across the whole head. Small dark eye, short pointed pale yellow snout, tiny lips, detailed realistic fine scales. No broad black body bars, no tail eyespot, no blue horizontal emperor-angelfish stripes. Complete rays and body with safe transparent margins.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-b54dec69-e347-42e3-b2a3-1f319813cfa7.png",
+    "nose_px": [
+      88,
+      612
+    ],
+    "tail_px": [
+      1502,
+      552
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Golden deep body, fine orange vertical flank marks, large blue cheek patch behind eye, yellow fins and rounded caudal; no unrelated black body bars."
+  },
+  {
+    "species_id": "arabian_picassotriggerfish",
+    "name": "阿拉伯炮弹鱼",
+    "scientific_name": "Rhinecanthus assasi",
+    "details": "Adult Arabian Picasso triggerfish Rhinecanthus assasi, complete left-facing lateral profile. Sturdy rhomboid laterally compressed triggerfish, large pointed angular head tapering to a small low mouth, eye high on head. Upper back muted tan-grey and lower belly cream white. Intricate faithful angular mask pattern: yellow diagonal cheek stripe from mouth toward pectoral base, several narrow cobalt-blue lines between and below the eyes against a dark band, orange rim around dark eye. Rear flank has sweeping charcoal-black curved/diagonal geometric bands with small cyan blue touches; tail peduncle pale with dark blue-edged angular band. Small erect first trigger dorsal spine near forehead; separate broad translucent soft dorsal and matching anal fin toward rear, short truncate translucent tail. Natural pattern of R. assasi, not clown triggerfish with white polka dots, not humuhumunukunukuapuaa giant black wedge. No invented red or purple scales.",
+    "morphology_reference": "菱形扁炮弹体、高位眼与扳机背刺，褐灰背乳白腹、蓝色眼周线及黄色斜颊线，后体黑色弧斜纹，短截尾。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Rhinecanthus-assasi.html",
+        "title": "FishBase: Picasso Triggerfish",
+        "supports": "Species identity and reference photograph.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Pez_ballesta_picasso_ar%C3%A1bigo_(Rhinecanthus_assasi),_mar_Rojo,_Egipto,_2023-04-18,_DD_21.jpg",
+        "title": "Diego Delso: Arabian Picasso Triggerfish, Red Sea 2023",
+        "supports": "Primary underwater reference photograph for tan-white body, eye mask, cobalt-blue lines and yellow/black angular markings; original photo not incorporated into generated art.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: premium photorealistic digital natural-history illustration for fish encyclopedia, not a photograph. Exactly one anatomically accurate adult fish, complete full head-left tail-right lateral profile on landscape 1536x1024 transparent canvas. Entire fins, spine and tail inside frame with generous safe alpha padding. Soft natural studio illumination, realistic scales/wet texture and fine translucent fin rays. Genuine transparent alpha background, clean cutout; no shadow, water, aquarium, reef, extra animals, equipment, text, logo, watermark or border. Adult Arabian Picasso triggerfish Rhinecanthus assasi, complete left-facing lateral profile. Sturdy rhomboid laterally compressed triggerfish, large pointed angular head tapering to a small low mouth, eye high on head. Upper back muted tan-grey and lower belly cream white. Intricate faithful angular mask pattern: yellow diagonal cheek stripe from mouth toward pectoral base, several narrow cobalt-blue lines between and below the eyes against a dark band, orange rim around dark eye. Rear flank has sweeping charcoal-black curved/diagonal geometric bands with small cyan blue touches; tail peduncle pale with dark blue-edged angular band. Small erect first trigger dorsal spine near forehead; separate broad translucent soft dorsal and matching anal fin toward rear, short truncate translucent tail. Natural pattern of R. assasi, not clown triggerfish with white polka dots, not humuhumunukunukuapuaa giant black wedge. No invented red or purple scales.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-57896d56-f833-45d8-9d18-960561bb5488.png",
+    "nose_px": [
+      36,
+      527
+    ],
+    "tail_px": [
+      1508,
+      532
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Angular tan-white body, high eye, trigger spine, blue/yellow eye-mouth mask, rear black curved/oblique bands and separate soft dorsal/anal complete; no clown-trigger polka dots."
+  },
+  {
+    "species_id": "sohal_surgeonfish",
+    "name": "索氏刺尾鱼",
+    "scientific_name": "Acanthurus sohal",
+    "details": "An adult Sohal surgeonfish Acanthurus sohal, full left-facing pure side profile. Elongated oval compressed body covered in many fine alternating dark brown/black and silver-white horizontal stripes from head to tail peduncle, with warm bronze tones on lower belly. Slightly protruding small grazing mouth, eye set high. Dorsal, anal and pelvic fins dark charcoal BLACK with thin electric-blue margins; bright orange patch at base of yellowish pectoral fin; characteristic ORANGE scalpel-like spine patch on caudal peduncle. Lunate dark tail with thin blue edges, moderately pointed upper/lower lobes. Fine scales and realistic fin rays. No vertical bands, unicorn horn, yellow whole body, massive tuna tail or blue-whale shape.",
+    "morphology_reference": "细密黑白水平条纹、腹下古铜色，黑鳍配电蓝缘、胸鳍基橙斑与尾柄橙色刺片、月形尾。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Acanthurus-sohal.html",
+        "title": "FishBase: Sohal Surgeonfish",
+        "supports": "Species identity and morphological reference photograph.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://coralandfishstore.nl/zeeaquarium-vissen/doktersvissen/acanthurus-sohal-m.html",
+        "title": "Coral and Fish Store: Acanthurus sohal",
+        "supports": "Observed reference profile of fine horizontal black-white stripes, blue fin margins and orange markings.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: premium photorealistic digital natural-history illustration for fish encyclopedia, not a photograph. Exactly one anatomically accurate adult fish, complete full head-left tail-right lateral profile on landscape 1536x1024 transparent canvas. Entire fins, spine and tail inside frame with generous safe alpha padding. Soft natural studio illumination, realistic scales/wet texture and fine translucent fin rays. Genuine transparent alpha background, clean cutout; no shadow, water, aquarium, reef, extra animals, equipment, text, logo, watermark or border. An adult Sohal surgeonfish Acanthurus sohal, full left-facing pure side profile. Elongated oval compressed body covered in many fine alternating dark brown/black and silver-white horizontal stripes from head to tail peduncle, with warm bronze tones on lower belly. Slightly protruding small grazing mouth, eye set high. Dorsal, anal and pelvic fins dark charcoal BLACK with thin electric-blue margins; bright orange patch at base of yellowish pectoral fin; characteristic ORANGE scalpel-like spine patch on caudal peduncle. Lunate dark tail with thin blue edges, moderately pointed upper/lower lobes. Fine scales and realistic fin rays. No vertical bands, unicorn horn, yellow whole body, massive tuna tail or blue-whale shape.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-598f240e-df2a-4798-b2d8-a1fbd8c80e6d.png",
+    "nose_px": [
+      34,
+      525
+    ],
+    "tail_px": [
+      1523,
+      748
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Fine horizontal stripes, bronze lower belly, dark blue-edged fins, orange pectoral base and orange caudal-peduncle scalpel patch visible; tail lunate and entire tips intact."
+  },
+  {
+    "species_id": "red_sea_goatfish",
+    "name": "福氏副绯鲤",
+    "scientific_name": "Parupeneus forsskali",
+    "details": "Adult Red Sea goatfish Parupeneus forsskali, left-facing true lateral profile. Elongated white-silver body, brown-grey-green back, broad dark brown/black longitudinal stripe from upper lip THROUGH the eye to just below the end of second dorsal fin. Separate large rounded BLACK SPOT on upper caudal peduncle beyond stripe; yellow tail peduncle and forked yellow caudal fin. TWO visibly distinct long slender ivory-yellow CHIN BARBELS emerge from lower jaw, extending forward/downward and curving apart; both fully inside canvas and readable, not catfish whiskers around the upper mouth. Pointed sloping head, low small mouth, large scales. Two clearly separate dorsal fins, first triangular spinous and second soft; translucent yellowish pectoral, blue/yellow faint narrow bands on second dorsal and anal. No red whole body, no third barbel, no tail stripes.",
+    "morphology_reference": "长体尖吻、两根下颌须、穿眼深色纵带至第二背鳍后端，下方银白背褐灰；尾柄黑斑、黄叉尾、双分离背鳍。",
+    "fact_sources": [
+      {
+        "url": "https://ciesm.org/atlas/fishes_2nd_edition/Parupeneus_forsskali.pdf",
+        "title": "CIESM Atlas: Parupeneus forsskali, 2021",
+        "supports": "Pointed head, two long chin barbels, two separate dorsals, forked tail, white/brown body with dark lateral stripe and tail-peduncle spot.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore premium photorealistic digital natural-history fish illustration, not a wildlife photograph. Exactly one complete adult in head-left tail-right pure lateral profile on landscape 1536x1024 canvas, every fin and appendage uncropped with generous transparent safety padding. Soft neutral studio light, detailed realistic wet scales and fine translucent fins. Genuine transparent alpha background, isolated clean cutout, no glow, shadow, water, reef, aquarium, plants, equipment, labels, text, watermark, border or extra animals. Adult Red Sea goatfish Parupeneus forsskali, left-facing true lateral profile. Elongated white-silver body, brown-grey-green back, broad dark brown/black longitudinal stripe from upper lip THROUGH the eye to just below the end of second dorsal fin. Separate large rounded BLACK SPOT on upper caudal peduncle beyond stripe; yellow tail peduncle and forked yellow caudal fin. TWO visibly distinct long slender ivory-yellow CHIN BARBELS emerge from lower jaw, extending forward/downward and curving apart; both fully inside canvas and readable, not catfish whiskers around the upper mouth. Pointed sloping head, low small mouth, large scales. Two clearly separate dorsal fins, first triangular spinous and second soft; translucent yellowish pectoral, blue/yellow faint narrow bands on second dorsal and anal. No red whole body, no third barbel, no tail stripes.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-8debf5fd-7bdd-4221-a406-5b3268dac006.png",
+    "nose_px": [
+      56,
+      562
+    ],
+    "tail_px": [
+      1520,
+      722
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Two clearly separate chin barbels, mouth-through-eye lateral stripe, separate caudal peduncle spot, two separated dorsals and yellow forked tail; ruler excludes barbels."
+  },
+  {
+    "species_id": "klunzingers_wrasse",
+    "name": "克氏锦鱼",
+    "scientific_name": "Thalassoma rueppellii",
+    "details": "Adult Klunzinger's or Ruppell's wrasse Thalassoma rueppellii (also called Thalassoma klunzingeri), show the colorful adult form. Slender elongated compressed wrasse with pointed small mouth and smooth rounded green head. Vibrant emerald-to-turquoise green body with irregular pink-red vertical short bars/zigzags along the flanks and a thin warm reddish-pink longitudinal accent; head carries delicate irregular pink-red/blue-green facial scribbles and green around the dark eye. Long low green dorsal and anal fins with fine pink/blue edges, small translucent pectoral, broad slightly crescent tail with muted yellow-green center and blue-green edges. Natural realistic reef wrasse, no hump forehead, no giant lips, no tuna finlets, no horizontal black-white surgeonfish stripes. Complete nose to tail profile, fine small scales.",
+    "morphology_reference": "细长锦鱼体型，绿至蓝绿底、红粉色侧面短竖纹/波纹与头部细纹；低连续背臀鳍及稍月形尾。色型个体不同。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Thalassoma-rueppellii.html",
+        "title": "FishBase: Klunzinger's Wrasse",
+        "supports": "Accepted name, Red Sea species identity and reference photograph.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.qualitymarine.com/quality-marine/fish/wrasses/thalassoma/klunzinger-33544/",
+        "title": "Quality Marine: Klunzinger's Wrasse",
+        "supports": "Observed reference profile: slender green body, pink head marks and reddish flank accent.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore premium photorealistic digital natural-history fish illustration, not a wildlife photograph. Exactly one complete adult in head-left tail-right pure lateral profile on landscape 1536x1024 canvas, every fin and appendage uncropped with generous transparent safety padding. Soft neutral studio light, detailed realistic wet scales and fine translucent fins. Genuine transparent alpha background, isolated clean cutout, no glow, shadow, water, reef, aquarium, plants, equipment, labels, text, watermark, border or extra animals. Adult Klunzinger's or Ruppell's wrasse Thalassoma rueppellii (also called Thalassoma klunzingeri), show the colorful adult form. Slender elongated compressed wrasse with pointed small mouth and smooth rounded green head. Vibrant emerald-to-turquoise green body with irregular pink-red vertical short bars/zigzags along the flanks and a thin warm reddish-pink longitudinal accent; head carries delicate irregular pink-red/blue-green facial scribbles and green around the dark eye. Long low green dorsal and anal fins with fine pink/blue edges, small translucent pectoral, broad slightly crescent tail with muted yellow-green center and blue-green edges. Natural realistic reef wrasse, no hump forehead, no giant lips, no tuna finlets, no horizontal black-white surgeonfish stripes. Complete nose to tail profile, fine small scales.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-d1b71ae2-5c59-4b83-9a2a-a42ad59d60c5.png",
+    "nose_px": [
+      34,
+      534
+    ],
+    "tail_px": [
+      1513,
+      726
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Slender green/turquoise wrasse, pink-red facial marks and irregular flank bars, small mouth and low dorsal/anal fins; adult color form, no forehead hump."
+  },
+  {
+    "species_id": "crocodile_flathead",
+    "name": "长头鳄形鲬",
+    "scientific_name": "Papilloculiceps longiceps",
+    "details": "An adult crocodile flathead Papilloculiceps longiceps. Wide dorsoventrally flattened elongated wedge-shaped crocodile-like fish head, very broad fish mouth and projecting lower jaw, bulging top-facing eyes with intricate lacy branched iris lappets over the pupils. Fish body long, low and tapered, olive-brown grey and sand camouflage with irregular brown dark patches and faint bars, pale beige belly; mottled realistic skin. Two entirely separate dorsal fins: tall triangular first spiny dorsal, then longer soft second dorsal; large broad semi-spread fan pectoral fins, small pelvic and anal fin; broad rounded caudal fin bearing four dark vertical bands. Lateral profile with slight upper three-quarter perspective sufficient to see the broad flat head and both top eyes. Complete fish tail, fins, eye fringes, mouth all visible, no sand or ground. It is a true flathead fish not an actual crocodile, no legs, no scales like a reptile, not a shark nor a salmon. Preserve flat bottom-hugging head, about one third of fish length, low tapering body.",
+    "morphology_reference": "极宽扁楔状长头、朝上的凸眼及分枝虹膜瓣；低长体、两枚分离背鳍、宽胸鳍，圆尾有深色竖带。",
+    "fact_sources": [
+      {
+        "url": "https://ciesm.org/atlas/fishes_2nd_edition/Papilloculiceps_longiceps.pdf",
+        "title": "CIESM Atlas: Papilloculiceps longiceps",
+        "supports": "Species reference photograph, Red Sea distribution, sandy-bottom ambush habitat and ecology.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/Papilloculiceps-longiceps.html",
+        "title": "FishBase: Crocodile flathead",
+        "supports": "Taxonomic identity, morphological reference photograph.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "canvas": "1536x1024",
+    "view": "head-left tail-right nearly lateral, slightly from above",
+    "prompt": "Use case: scientific-educational. Asset type: Farshore premium photorealistic digital natural-history fish illustration, not a wildlife photograph. Exactly one complete adult in head-left tail-right nearly lateral, slightly from above on landscape 1536x1024 canvas, every fin and appendage uncropped with generous transparent safety padding. Soft neutral studio light, detailed realistic skin and fine translucent fins. Genuine transparent alpha background, isolated clean cutout, no glow, shadow, water, reef, aquarium, plants, equipment, labels, text, watermark, border or extra animals. An adult crocodile flathead Papilloculiceps longiceps. Wide dorsoventrally flattened elongated wedge-shaped crocodile-like fish head, very broad fish mouth and projecting lower jaw, bulging top-facing eyes with intricate lacy branched iris lappets over the pupils. Fish body long, low and tapered, olive-brown grey and sand camouflage with irregular brown dark patches and faint bars, pale beige belly; mottled realistic skin. Two entirely separate dorsal fins: tall triangular first spiny dorsal, then longer soft second dorsal; large broad semi-spread fan pectoral fins, small pelvic and anal fin; broad rounded caudal fin bearing four dark vertical bands. Lateral profile with slight upper three-quarter perspective sufficient to see the broad flat head and both top eyes. Complete fish tail, fins, eye fringes, mouth all visible, no sand or ground. It is a true flathead fish not an actual crocodile, no legs, no scales like a reptile, not a shark nor a salmon. Preserve flat bottom-hugging head, about one third of fish length, low tapering body.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-e3bfc53d-b217-4b16-a2d6-8376e5718cb8.png",
+    "nose_px": [
+      15,
+      614
+    ],
+    "tail_px": [
+      1524,
+      424
+    ],
+    "orientation": "head_left_tail_right_slightly_dorsal",
+    "review_note": "Complete wide flattened crocodile-flathead silhouette, broad mouth and lacy top-facing eye fringes, two separated dorsal fins, broad pectoral and barred round tail; no clipped fins."
+  },
+  {
+    "species_id": "bluespotted_cornetfish",
+    "name": "鳞烟管鱼",
+    "scientific_name": "Fistularia commersonii",
+    "details": "Adult bluespotted cornetfish / smooth flutemouth Fistularia commersonii. Extremely long, thin, slightly flattened fish, pipe-like tubular snout ending in tiny mouth, head and tubular snout occupy roughly one quarter body length. Large eye near the base of the long snout with forward-elongated pupil. Smooth scaleless greenish-grey to brown upper skin, silver-white underside, two fine blue wavy stripes/rows of small blue dashes along upper flank, no bony back plates. Single small soft dorsal fin and corresponding similar anal fin only far behind on rear body, both orange-tipped; tiny pectoral and pelvic fins. Distinct forked caudal fin plus a long very fine WHITE filament extending from the CENTER of the tail, trailing straight to the right. Entire tube mouth, very slim body, rear dorsal/anal, forked tail and full filament completely inside canvas. Natural body and head including snout is about 13 times its body height; long white tail filament adds additional 30 percent overall length. No chin barbel, no broad leaf fins, no sword blade or needlefish jaw, no scales, no eel fins. Preserve exceptionally elongated silhouette, not chunky generic fish.",
+    "morphology_reference": "狭长管吻、小口大眼，绿色至灰褐背、银腹与蓝线/蓝点；无鳞/无下颌须，背臀鳍在体后相对，叉尾中央延出长白丝。",
+    "fact_sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/1507",
+        "title": "Fishes of Australia: Smooth Flutemouth",
+        "supports": "Detailed identification, coloration including white caudal filament, Red Sea distribution and morphology.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://australian.museum/learn/animals/fishes/smooth-flutemouth-fistularia-commersonii/",
+        "title": "Australian Museum: Smooth Flutemouth",
+        "supports": "Very elongate shape, tail sensory filament, absence of dorsal bony plates, blue markings.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "canvas": "2048x1024",
+    "view": "head-left tail-right pure lateral profile",
+    "prompt": "Use case: scientific-educational. Asset type: Farshore premium photorealistic digital natural-history fish illustration, not a wildlife photograph. Exactly one complete adult in head-left tail-right pure lateral profile on landscape 2048x1024 canvas, every fin and appendage uncropped with generous transparent safety padding. Soft neutral studio light, detailed realistic skin and fine translucent fins. Genuine transparent alpha background, isolated clean cutout, no glow, shadow, water, reef, aquarium, plants, equipment, labels, text, watermark, border or extra animals. Adult bluespotted cornetfish / smooth flutemouth Fistularia commersonii. Extremely long, thin, slightly flattened fish, pipe-like tubular snout ending in tiny mouth, head and tubular snout occupy roughly one quarter body length. Large eye near the base of the long snout with forward-elongated pupil. Smooth scaleless greenish-grey to brown upper skin, silver-white underside, two fine blue wavy stripes/rows of small blue dashes along upper flank, no bony back plates. Single small soft dorsal fin and corresponding similar anal fin only far behind on rear body, both orange-tipped; tiny pectoral and pelvic fins. Distinct forked caudal fin plus a long very fine WHITE filament extending from the CENTER of the tail, trailing straight to the right. Entire tube mouth, very slim body, rear dorsal/anal, forked tail and full filament completely inside canvas. Natural body and head including snout is about 13 times its body height; long white tail filament adds additional 30 percent overall length. No chin barbel, no broad leaf fins, no sword blade or needlefish jaw, no scales, no eel fins. Preserve exceptionally elongated silhouette, not chunky generic fish.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-4a153e59-0b4a-472b-bd1d-f986e6b2224f.png",
+    "nose_px": [
+      20,
+      469
+    ],
+    "tail_px": [
+      1752,
+      460
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Very slender tube snout and smooth green-silver body with blue dashes, rear opposing small dorsal/anal, forked caudal and complete white central filament. Native image returned 1774x887 from 2048x1024 prompt; original preserved."
+  },
+  {
+    "species_id": "yellowbar_angelfish",
+    "name": "黄带刺盖鱼",
+    "scientific_name": "Pomacanthus maculosus",
+    "details": "Adult yellowbar / halfmoon angelfish Pomacanthus maculosus, NOT a juvenile. Tall laterally compressed marine angelfish body, rounded head and small thick fish lips, realistic vivid violet-blue to deep blue body. ONE large broad irregular lemon-yellow vertical crescent/blotch located near middle of flank, beginning at the back and tapering toward the belly, it does not run continuously into tail; dark-edged small blue scales across forehead and nape, subtle blue speckles on cheek. Long continuous dorsal and anal fins end in slender trailing filaments toward right, blue fins with fine electric-light-blue markings and some yellow patches; caudal tail pale yellow with fine light-blue markings, softly rounded to truncated. Small yellow-blue pectoral fin, blue pelvic fins. Preserve the distinguishing isolated yellow midbody mark, violet-blue ground, trailing dorsal/anal points and full actual caudal fin. No horizontal yellow stripes, no black eye mask, no multiple white juvenile bands, no solid black body, no generic clownfish pattern.",
+    "morphology_reference": "蓝紫成鱼体色，中部一块宽黄斑；头颈小鳞深边，背臀鳍末端丝状延伸，尾鳍带黄和浅蓝纹。",
+    "fact_sources": [
+      {
+        "url": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=2297",
+        "title": "USGS NAS: Yellowbar Angelfish",
+        "supports": "Adult coloration, isolated yellow body blotch, dorsal/anal filaments, juvenile/adult distinction and native Arabian range.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.marinespecies.org/aphia.php?id=220005&p=taxdetails",
+        "title": "WoRMS: Pomacanthus maculosus",
+        "supports": "Accepted taxonomic name.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore premium photorealistic digital natural-history fish illustration, not a wildlife photograph. Exactly one complete adult in head-left tail-right pure lateral profile on landscape 1536x1024 canvas, every fin and appendage uncropped with generous transparent safety padding. For tall fish keep the whole dorsal, anal and pelvic fins inside the canvas even if the fish occupies less horizontal width. Soft neutral studio light, detailed realistic small scales and fine translucent fins. Genuine transparent alpha background, isolated clean cutout, no glow, shadow, water, reef, aquarium, plants, equipment, labels, text, watermark, border or extra animals. Adult yellowbar / halfmoon angelfish Pomacanthus maculosus, NOT a juvenile. Tall laterally compressed marine angelfish body, rounded head and small thick fish lips, realistic vivid violet-blue to deep blue body. ONE large broad irregular lemon-yellow vertical crescent/blotch located near middle of flank, beginning at the back and tapering toward the belly, it does not run continuously into tail; dark-edged small blue scales across forehead and nape, subtle blue speckles on cheek. Long continuous dorsal and anal fins end in slender trailing filaments toward right, blue fins with fine electric-light-blue markings and some yellow patches; caudal tail pale yellow with fine light-blue markings, softly rounded to truncated. Small yellow-blue pectoral fin, blue pelvic fins. Preserve the distinguishing isolated yellow midbody mark, violet-blue ground, trailing dorsal/anal points and full actual caudal fin. No horizontal yellow stripes, no black eye mask, no multiple white juvenile bands, no solid black body, no generic clownfish pattern.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-a22050c5-9225-4358-ac42-7ff2cfde62e1.png",
+    "nose_px": [
+      65,
+      549
+    ],
+    "tail_px": [
+      1470,
+      513
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Complete adult blue-violet angelfish with one yellow midbody blotch, yellow/light-blue marked caudal and long dorsal/anal trailing filaments; ruler tail is actual caudal edge, excluding dorsal/anal filaments."
+  },
+  {
+    "species_id": "blackspotted_sweetlips",
+    "name": "黑斑胡椒鲷",
+    "scientific_name": "Plectorhinchus gaterinus",
+    "details": "An adult blackspotted rubberlip / sweetlips Plectorhinchus gaterinus. Robust moderately deep and elongated fish, gently arching grey-green forehead with dark eye, small fleshy YELLOW lips not monstrously swollen. Body silvery-light-grey with pale yellow underside and rows of numerous distinct small DARK BLACK round spots on flank and head, well separated, not giant blotches. Golden yellow caudal, anal, pelvic and pectoral fins, fin membranes bearing orderly black dot rows. Long single dorsal with low spiny front transitioning into a taller rounded soft rear section, yellowish fins with many black dots. Yellow pelvic fins longer than pectorals. Medium short tail peduncle and broad shallow-forked/slightly emarginate yellow caudal tail. Realistic tiny scales and fine fin rays. Show adult SPOTS not juvenile longitudinal stripes. No orange clownfish bands, no salmon red flesh, no zebra horizontal stripes, no grouper big camouflage blotches. Complete profile from yellow lips to yellow spotted caudal.",
+    "morphology_reference": "成鱼银灰底密列黑色小圆点、黄唇黄鳍；长连续背鳍及稍凹尾，腹鳍较长，不采用幼鱼横条纹色型。",
+    "fact_sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Plectorhinchus-gaterinus",
+        "title": "FishBase: Blackspotted rubberlip",
+        "supports": "Adult silvery spotted pattern, juvenile stripes, dorsal/anal morphology and Red Sea/western Indian Ocean distribution.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://marinebiodiversity.org.bd/species/plectorhinchus-gaterinus/",
+        "title": "Marine Biodiversity Portal of Bangladesh: Plectorhinchus gaterinus",
+        "supports": "Silvery adult body black spots with yellow lips/fins and grey forehead; species photograph reference.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore premium photorealistic digital natural-history fish illustration, not a wildlife photograph. Exactly one complete adult in head-left tail-right pure lateral profile on landscape 1536x1024 canvas, every fin and appendage uncropped with generous transparent safety padding. For tall fish keep the whole dorsal, anal and pelvic fins inside the canvas even if the fish occupies less horizontal width. Soft neutral studio light, detailed realistic small scales and fine translucent fins. Genuine transparent alpha background, isolated clean cutout, no glow, shadow, water, reef, aquarium, plants, equipment, labels, text, watermark, border or extra animals. An adult blackspotted rubberlip / sweetlips Plectorhinchus gaterinus. Robust moderately deep and elongated fish, gently arching grey-green forehead with dark eye, small fleshy YELLOW lips not monstrously swollen. Body silvery-light-grey with pale yellow underside and rows of numerous distinct small DARK BLACK round spots on flank and head, well separated, not giant blotches. Golden yellow caudal, anal, pelvic and pectoral fins, fin membranes bearing orderly black dot rows. Long single dorsal with low spiny front transitioning into a taller rounded soft rear section, yellowish fins with many black dots. Yellow pelvic fins longer than pectorals. Medium short tail peduncle and broad shallow-forked/slightly emarginate yellow caudal tail. Realistic tiny scales and fine fin rays. Show adult SPOTS not juvenile longitudinal stripes. No orange clownfish bands, no salmon red flesh, no zebra horizontal stripes, no grouper big camouflage blotches. Complete profile from yellow lips to yellow spotted caudal.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-bd6b8db8-860a-49ca-af2c-18d72c40f03d.png",
+    "nose_px": [
+      32,
+      565
+    ],
+    "tail_px": [
+      1509,
+      316
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Adult silvery body with distinct separate black spots, yellow lips and spotted yellow fins, long dorsal and slightly emarginate broad tail; no juvenile horizontal bands."
+  },
+  {
+    "species_id": "orbicular_batfish",
+    "name": "圆眼燕鱼",
+    "scientific_name": "Platax orbicularis",
+    "details": "Adult orbicular round batfish Platax orbicularis, not a juvenile and not a flying bat animal. Very tall, almost circular disk-shaped, strongly laterally compressed SILVERY-GREY fish body, so dorsal-to-anal height nearly equals nose-to-tail length; short rounded forehead gently concave above short blunt snout, dark eye, tiny forward mouth. A dark charcoal vertical bar passes through eye and a second broad dark vertical band just BEHIND head across pectoral base; subtle few scattered tiny dark spots can be present but no large black round spot at belly. Soft tall ROUND dorsal and anal fins that continue the rounded disk outline with muted golden-yellow membranes and defined black outer/posterior edges, black pelvic fins with a yellow front edge. Small short yellowish pectoral. Short narrow caudal peduncle and pale yellow-grey broad shallow fan tail, dark margin and tail-base band. Fin rays translucent and detailed, metallic soft small scales; preserve very high circular body, comparatively short tail and characteristic dark head/front-body bars. No extremely long juvenile triangular dorsal/anal blades; no elongate generic fish, no angelfish stripes, no butterfly false eyespot.",
+    "morphology_reference": "成鱼高度侧扁近圆盘体型，银黄至灰色，穿眼与头后深带，圆背臀鳍黄调黑边、黑腹鳍；不用落叶拟态幼鱼长鳍形态。",
+    "fact_sources": [
+      {
+        "url": "https://fishesofaustralia.net.au/home/species/2208",
+        "title": "Fishes of Australia: Round Batfish",
+        "supports": "Deep compressed adult body, color bands, round dark-edged fins, juvenile distinction and ecology.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/5790",
+        "title": "Smithsonian STRI: Orbicular Batfish",
+        "supports": "Adult compressed disc profile, short mouth, fin anatomy and dark front-body bands.",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/summary/platax-orbicularis",
+        "title": "FishBase: Orbicular batfish",
+        "supports": "Adult pattern and Red Sea natural distribution.",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "prompt": "Use case: scientific-educational. Asset type: Farshore premium photorealistic digital natural-history fish illustration, not a wildlife photograph. Exactly one complete adult in head-left tail-right pure lateral profile on landscape 1536x1024 canvas, every fin and appendage uncropped with generous transparent safety padding. For tall fish keep the whole dorsal, anal and pelvic fins inside the canvas even if the fish occupies less horizontal width. Soft neutral studio light, detailed realistic small scales and fine translucent fins. Genuine transparent alpha background, isolated clean cutout, no glow, shadow, water, reef, aquarium, plants, equipment, labels, text, watermark, border or extra animals. Adult orbicular round batfish Platax orbicularis, not a juvenile and not a flying bat animal. Very tall, almost circular disk-shaped, strongly laterally compressed SILVERY-GREY fish body, so dorsal-to-anal height nearly equals nose-to-tail length; short rounded forehead gently concave above short blunt snout, dark eye, tiny forward mouth. A dark charcoal vertical bar passes through eye and a second broad dark vertical band just BEHIND head across pectoral base; subtle few scattered tiny dark spots can be present but no large black round spot at belly. Soft tall ROUND dorsal and anal fins that continue the rounded disk outline with muted golden-yellow membranes and defined black outer/posterior edges, black pelvic fins with a yellow front edge. Small short yellowish pectoral. Short narrow caudal peduncle and pale yellow-grey broad shallow fan tail, dark margin and tail-base band. Fin rays translucent and detailed, metallic soft small scales; preserve very high circular body, comparatively short tail and characteristic dark head/front-body bars. No extremely long juvenile triangular dorsal/anal blades; no elongate generic fish, no angelfish stripes, no butterfly false eyespot.",
+    "source_path": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/generated_images/exec-f7fe6170-8356-42b3-ad9f-fa90686f0a18.png",
+    "nose_px": [
+      196,
+      548
+    ],
+    "tail_px": [
+      1409,
+      545
+    ],
+    "orientation": "head_left_tail_right",
+    "review_note": "Complete very deep circular adult body, silver-yellow ground, eye/front body bands, rounded golden dark-edged dorsal/anal and black pelvic fins; no tall triangular juvenile blades or teira-batfish belly blotch."
+  }
+]

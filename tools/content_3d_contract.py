@@ -4,12 +4,17 @@ import gzip
 import hashlib
 import json
 import re
+import shutil
 import struct
+import subprocess
 
 
 def sha256(path):
     with path.open('rb') as stream:
-        return hashlib.file_digest(stream, 'sha256').hexdigest()
+        digest = hashlib.sha256()
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+        return digest.hexdigest()
 
 
 def glb_contract(path, clips):
@@ -145,7 +150,8 @@ def three_d_contract(project, catalog_ids):
     registry = json.loads(registry_path.read_text())
     assert registry['schema_version'] == 1
     playable = sorted(registry['models'])
-    assert set(playable) == set(catalog_ids) and len(playable) == 74, 'Every one of the 74 catalog species needs its own runtime model'
+    expected_count = 111 if 'blue_whale' in catalog_ids else 74
+    assert set(playable) == set(catalog_ids) and len(playable) == expected_count, 'Every catalog animal needs its own runtime model'
     fish_clips = registry['required_animation_clips']
     assert set(fish_clips) == {'swim','struggle','breach','landed'}
     for species, entry in registry['models'].items():
@@ -153,7 +159,8 @@ def three_d_contract(project, catalog_ids):
         assert entry['rest_length_m'] == 1.0
     world = json.loads((project/'data/world.json').read_text())
     region_ids = sorted(r['region_id'] for r in world['regions'])
-    assert len(region_ids) == 9 and len(world['spots']) == 18
+    expected_world = (10, 21) if expected_count == 111 else (9, 18)
+    assert (len(region_ids), len(world['spots'])) == expected_world
     assert all(spot['region_id'] in region_ids for spot in world['spots'])
     station_kinds = sorted({'boat' if spot['foreground'] == 'boat' else ('rock' if spot['foreground'] == 'rocks' else 'dock') for spot in world['spots']})
     assert station_kinds == ['boat','dock','rock']
@@ -180,7 +187,20 @@ def three_d_contract(project, catalog_ids):
     assert len(shaders) >= 5, 'Missing water/foliage/ripple/wood/riverbank shaders'
     shader_hashes = {p: sha256(project/p) for p in shaders}
     root = project.parent
-    authoring = [f'art_masters/3d/{name}.blend' for name in ['angler', *playable]]
+    authoring = ['art_masters/3d/angler.blend']
+    for name in playable:
+        entry = registry['models'][name]
+        if entry.get('authoring_source'):
+            profile = entry['authoring_source']
+            generator = entry.get('generator_source', '')
+            assert profile.startswith('tools/art3d/') and profile.endswith('.json'), 'Missing editable species profile: ' + name
+            assert generator.startswith('tools/art3d/') and generator.endswith('.py'), 'Missing species generator: ' + name
+            profile_data = json.loads((project.parent/profile).read_text())
+            matching = [item for item in profile_data.get('species', []) if item.get('id') == name]
+            assert profile_data.get('species_id') == name or len(matching) == 1, 'Authoring profile identity mismatch: ' + name
+            authoring.extend([profile, generator])
+        else:
+            authoring.append(f'art_masters/3d/{name}.blend')
     authoring += sorted(str(p.relative_to(root)) for p in (root/'tools/art3d').rglob('*.py'))
     authoring += sorted(str(p.relative_to(root)) for p in (root/'art_masters/3d').rglob('*.blend') if str(p.relative_to(root)) not in authoring)
     authoring += sorted(str(p.relative_to(root)) for p in (root/'docs').glob('ASSETS_3D_*') if p.is_file())
@@ -207,10 +227,25 @@ def three_d_contract(project, catalog_ids):
             with path.open('rb') as stream:
                 header = stream.read(7)
                 if header[:4] == b'\x28\xb5\x2f\xfd':
-                    import zstandard
-                    stream.seek(0)
-                    with zstandard.ZstdDecompressor().stream_reader(stream) as decoded:
-                        header = decoded.read(7)
+                    try:
+                        import zstandard
+                    except ImportError:
+                        decoder = shutil.which('zstd')
+                        assert decoder, 'zstandard Python module or zstd CLI required to inspect compressed Blender master'
+                        # Only inspect the same seven-byte format signature. The
+                        # entire original file is independently hash-bound below.
+                        process = subprocess.Popen([decoder, '-q', '-d', '-c', str(path)], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+                        try:
+                            header = process.stdout.read(7)
+                        finally:
+                            process.stdout.close()
+                            if process.poll() is None:
+                                process.terminate()
+                            process.wait(timeout=5)
+                    else:
+                        stream.seek(0)
+                        with zstandard.ZstdDecompressor().stream_reader(stream) as decoded:
+                            header = decoded.read(7)
                 elif header[:2] == b'\x1f\x8b':
                     stream.seek(0)
                     with gzip.GzipFile(fileobj=stream) as decoded:
@@ -229,7 +264,7 @@ def three_d_contract(project, catalog_ids):
             'third_party_textures':third_party, 'notice_sha256':notices,
             'angler_provenance': angler_provenance,
             'authoring_files_sha256': {p: sha256(root/p) for p in authoring},
-            'provenance_scope': 'Editable Blender masters, original generators, and asset documentation with exact file hashes'}
+            'provenance_scope': 'Retained editable Blender masters; new independent editable JSON profiles and original generators; asset documentation with exact file hashes'}
 
 
 if __name__ == '__main__':

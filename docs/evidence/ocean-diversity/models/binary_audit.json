@@ -1,0 +1,1158 @@
+{
+  "schema_version": 1,
+  "source_profile_file": "tools/art3d/ocean_profiles.json",
+  "source_profile_file_sha256": "3f4327682cad5d7bc92afeb3bf8712af0c69668ddf989e263895b0d3ea0eefad",
+  "generator_file": "tools/art3d/build_ocean_diversity.py",
+  "generator_file_sha256": "b5b3ca3250c11582d67865a9abcebe7fccbd634289a7c068f99185835a78cde8",
+  "models": [
+    {
+      "species_id": "california_sheephead",
+      "glb_sha256": "2cb5abddbc562b47c42b31ccf2a85f7ec5f9897b0c86c21bb70d2af7fcade0a9",
+      "geometry_sha256": "8dff2e4de06d18fb5af445ad37ba2b8b2eae55577881d41006c5c9c15e929c40",
+      "profile_sha256": "610d067fe0f7304959f1a826105d17e204e03e79c9fa0c2279cade879b59f2cc",
+      "vertices": 14966,
+      "triangles": 25586,
+      "weighted_vertices": 14966,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.3630957454442978,
+        0.33299243450164795
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2425976
+    },
+    {
+      "species_id": "lingcod",
+      "glb_sha256": "c1a1f22a6c21cbb48649ce3378e1aabfe5639ba084b26db31a81a30cae0bfbce",
+      "geometry_sha256": "f3f7b99ccb0d4defb358bf4ca70354ebcc9d0e03ce0708f02011832ff57a1d0f",
+      "profile_sha256": "78d009ffc4a1bcf28a49a83d5dec9b1d0fc0abefaeb4fba1ccbfd8b8eba078ac",
+      "vertices": 18468,
+      "triangles": 31288,
+      "weighted_vertices": 18468,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.2670383155345917,
+        0.3563738167285919
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2862836
+    },
+    {
+      "species_id": "cabezon",
+      "glb_sha256": "5c6394d364b22061361b7e8869f43faade4c5c94a53c43637841a88bfe2040f7",
+      "geometry_sha256": "06b4d55eaed9694fdb80a1e58302d6fed624be3cd0c5c3fd99089b3194e619e1",
+      "profile_sha256": "e21873aaa4d387298e6c3a8beb6520035240ca9b0f9f10d4e1476ca270ac76fe",
+      "vertices": 19289,
+      "triangles": 32080,
+      "weighted_vertices": 19289,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.29117419570684433,
+        0.5044004321098328
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2575112
+    },
+    {
+      "species_id": "garibaldi",
+      "glb_sha256": "d5569e62706b86bcf0433daee88c53992e83f047a330dff77b35b4947b582880",
+      "geometry_sha256": "3a04d7e25366abcef5467d2c1f99b6652f065d3bd9c933915e8ae0f9b7db84cf",
+      "profile_sha256": "319d380d4cb39a42632e6771216b4b47b843d6e855fafcd4bab621b206f8bcf5",
+      "vertices": 14870,
+      "triangles": 25442,
+      "weighted_vertices": 14870,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.48090554773807526,
+        0.2681226432323456
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2751128
+    },
+    {
+      "species_id": "kelp_greenling",
+      "glb_sha256": "df1206bf55bb84cab7c85e0748d79f287b6fd20ecbeec1951f86bbe46b4aa1fa",
+      "geometry_sha256": "be64d430b505316d39551869f954bed5861cf5ce30a46a825fab77f6c17ea367",
+      "profile_sha256": "21032c9afefa955a8e2e3cc7e256934875d72f95053b8a52be15f91b1f429b8f",
+      "vertices": 16175,
+      "triangles": 27530,
+      "weighted_vertices": 16175,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.21073024719953537,
+        0.23903654515743256
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2834060
+    },
+    {
+      "species_id": "pacific_halibut",
+      "glb_sha256": "dd9b999f463afa832df7337480cfd5951bb0d7422db4d75157158c0f2b019648",
+      "geometry_sha256": "e1e353504fc8172860d0044b20c3fba04360376bd08cdd7fd0ef6ce5499b9587",
+      "profile_sha256": "b829961f9f0af271e9fd0a26beef0edf53128e4d1a65102133571a9a07ca8f84",
+      "vertices": 13690,
+      "triangles": 23518,
+      "weighted_vertices": 13690,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 15,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 14
+      },
+      "dimensions_m": [
+        1.0,
+        0.14350901544094086,
+        0.46811695396900177
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2439300
+    },
+    {
+      "species_id": "yellow_tang",
+      "glb_sha256": "a14539388779350cb76946fd9ddc1398912205c935831451e123e897525c70b5",
+      "geometry_sha256": "ec30879054ca7d1050347818b4672bd6131a3331df70047b3f958a7e92446c86",
+      "profile_sha256": "51bad22a72f2d054bf5f20d41c8cdd3e2281b06f90984aa9e4b9171af9489ed0",
+      "vertices": 15063,
+      "triangles": 25754,
+      "weighted_vertices": 15063,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.6304149925708771,
+        0.18365341424942017
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2666264
+    },
+    {
+      "species_id": "barreleye",
+      "glb_sha256": "97469dcd8b0864644d7be0115c7eb998e7d0308b50a6d23a699647f7084c038d",
+      "geometry_sha256": "bd088d2a3c44b7d697d86049f4102bdbfe046c431310c62affb41fd502c92800",
+      "profile_sha256": "87a2eb590c3da0d9b450e4df8bdf3f8480ce76e9fdb665fea8c55ad593f48c6a",
+      "vertices": 15026,
+      "triangles": 25886,
+      "weighted_vertices": 15026,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.2872208431363106,
+        0.3821122348308563
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2460856
+    },
+    {
+      "species_id": "turbot",
+      "glb_sha256": "dae8d788f72efa1faca47ebcfe7c81b2d2398ab80aa097b6d5cb9924c8ed56f9",
+      "geometry_sha256": "cfad58898c0fa464d81a1d96eb7aaa76fc110faf9f831b83a349b62431c48bd5",
+      "profile_sha256": "e0b87e1a5c548b71770f62c5e0fc229edf8e8da3190d7bd8e9375428e38c70ca",
+      "vertices": 18331,
+      "triangles": 29638,
+      "weighted_vertices": 18331,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 15,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 14
+      },
+      "dimensions_m": [
+        1.0,
+        0.14823941886425018,
+        0.5933655500411987
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2313060
+    },
+    {
+      "species_id": "john_dory",
+      "glb_sha256": "c44740228a9db91125aeed1f5d0b97165ebe284f822636d024f1e2ea5a33d5ef",
+      "geometry_sha256": "9e9b8bc2669c0d2d236a5b4b9e14e41d44374cff0124265459cf89e8300f4474",
+      "profile_sha256": "6d86e9decceda36bc4bc8fe305b822702e0b05e07581f8d2a181dc4f8edb70a0",
+      "vertices": 15817,
+      "triangles": 26944,
+      "weighted_vertices": 15817,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.6914512515068054,
+        0.15933802723884583
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2575936
+    },
+    {
+      "species_id": "grey_gurnard",
+      "glb_sha256": "57e562eda0dfc0eb592f48d635f384439c879569cf70cf0a699ee77b03db73d9",
+      "geometry_sha256": "7624c8dc9f5eeebddf0f84ade00e0930efd045bfe3d75008ea42886b109c29cc",
+      "profile_sha256": "0255efc679c709fd4a6f2b39ba955fe9ad44baeeef3472be482ddbc12955212f",
+      "vertices": 17866,
+      "triangles": 30376,
+      "weighted_vertices": 17866,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.31683512032032013,
+        0.4845159351825714
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2990004
+    },
+    {
+      "species_id": "queen_angelfish",
+      "glb_sha256": "64d1716f07a26897b4ddec0605be7c0fe4d0c06bef8415badd8977352ab4397c",
+      "geometry_sha256": "098d82f6fedf4155c74f8424f42433ef586a73c910fd00af766373eaab4cfc6e",
+      "profile_sha256": "4ccaadb660644a36e6725ccf888a20e6b61640f21f643c05e6e88c771bff3246",
+      "vertices": 15455,
+      "triangles": 26378,
+      "weighted_vertices": 15455,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5962796211242676,
+        0.20683282613754272
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2682120
+    },
+    {
+      "species_id": "stoplight_parrotfish",
+      "glb_sha256": "e7e0c4fe1598e011722f5224ed73aab45657bbde89e2ab5b4008d52d5593acc7",
+      "geometry_sha256": "bfee3ccf48ec5270d2476f7f727cd6f63439d8d0a747de23496843d14585955d",
+      "profile_sha256": "410fb3f206a833b8c68b546e221dd4cbd8d8f08f800277e4fdaeed1d086f2bd3",
+      "vertices": 16308,
+      "triangles": 27758,
+      "weighted_vertices": 16308,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.3361274003982544,
+        0.3211252987384796
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2841292
+    },
+    {
+      "species_id": "atlantic_flyingfish",
+      "glb_sha256": "244137bf9185c7be2a6905b4bc35aa60b462caa6efbadef0f6c19b842441f92f",
+      "geometry_sha256": "a21aa7676177e7b6cc5af59840d969939ab42b1f389f0b940d490c33257986b9",
+      "profile_sha256": "3688758e7c789fd79de427c55468742956f105af7302059e924218d8dc79156d",
+      "vertices": 16940,
+      "triangles": 28754,
+      "weighted_vertices": 16940,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.22754206508398056,
+        0.6693210005760193
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2926916
+    },
+    {
+      "species_id": "atlantic_tarpon",
+      "glb_sha256": "eaccb4b63bb1cadae83672ba5fe4c9ce331e801a0ebe5d8a749e7c6336d1fb2d",
+      "geometry_sha256": "ec6f1ccd1c3d1cf7144ce7d18997d89ce7e3b551e428873433ca78e436795b49",
+      "profile_sha256": "a93931ed0766d60a833359f373aec787d437a856504070998d0502fb6e7df0e0",
+      "vertices": 14274,
+      "triangles": 24490,
+      "weighted_vertices": 14274,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.3198138475418091,
+        0.2338089644908905
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2701404
+    },
+    {
+      "species_id": "black_scabbardfish",
+      "glb_sha256": "93999a190bb2ca3e77ac459097056f1e92c11712df01943001faeb31e08147bd",
+      "geometry_sha256": "b44bf5ff9bbeeaa5ccb080e8386f89279f272f66c89144b7fb0054cd0f2db967",
+      "profile_sha256": "5c6877777929d3df25dfc952ad364db006cc66c57fad62381c5a0a38ad9f57cf",
+      "vertices": 17496,
+      "triangles": 30550,
+      "weighted_vertices": 17496,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 16,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 15
+      },
+      "dimensions_m": [
+        1.0,
+        0.1921495944261551,
+        0.10033183544874191
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2213804
+    },
+    {
+      "species_id": "humphead_wrasse",
+      "glb_sha256": "66dbd7fa4bb010f527503224f20dc53909af1ad16350b50d7247916f2ec4c27e",
+      "geometry_sha256": "462bdade96fddb38555be349561a70b70be210782a62c57bcf1c3a5e99154dcc",
+      "profile_sha256": "7c14178ad410fcb11d778ee9d8da40fceda01709f7f11be8034b1ec28c756b9b",
+      "vertices": 16310,
+      "triangles": 27746,
+      "weighted_vertices": 16310,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.4547546058893204,
+        0.37960800528526306
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2881324
+    },
+    {
+      "species_id": "emperor_angelfish",
+      "glb_sha256": "47cb421dcd4038621f18568dad05c4e909d31250df4e0665c409f11068e11ce1",
+      "geometry_sha256": "972d98efcadc3bd00e094085fcef6e960ba39ca6518cd667ab9b9b653738c616",
+      "profile_sha256": "12b26a599ea9061fb47216ef005a5652dee25f8f781238bba43720c959ecc96c",
+      "vertices": 15725,
+      "triangles": 26810,
+      "weighted_vertices": 15725,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5763681828975677,
+        0.2086072862148285
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2595784
+    },
+    {
+      "species_id": "leaf_scorpionfish",
+      "glb_sha256": "4bff1ee30b04b100880bfd8ac69890522aa1fc41f0f85e5eac56ac108f93fdca",
+      "geometry_sha256": "5e1bdb286a433fcbdfb8886a82592f6a03373573a875bae8f82c49b7b407497c",
+      "profile_sha256": "4716b2eefdd6377fa7c920c2715527a918e7cd5976db00a35b97c38c2a596ee5",
+      "vertices": 16248,
+      "triangles": 27650,
+      "weighted_vertices": 16248,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.48968304693698883,
+        0.3772410452365875
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2592840
+    },
+    {
+      "species_id": "bluespotted_ribbontail_ray",
+      "glb_sha256": "cc5f41565ed52d645cb467a57f866d0f2b6e5214a033d42adf1e6493edc7080c",
+      "geometry_sha256": "bceef9076cbc5c8970f2506e1ad17f862a1b3fd77178c23f887bc90beb79d42e",
+      "profile_sha256": "d021bd82a973ec14c7a322aa979475702a8d1806bfca267a537c51046a7f1b39",
+      "vertices": 12383,
+      "triangles": 21388,
+      "weighted_vertices": 12383,
+      "bones": 13,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 12,
+        "struggle": 13,
+        "breach": 13,
+        "landed": 11
+      },
+      "dimensions_m": [
+        1.0,
+        0.0849314033985138,
+        0.551740288734436
+      ],
+      "surfaces": 7,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 1835456
+    },
+    {
+      "species_id": "giant_moray",
+      "glb_sha256": "e4c21d09819b1a0eb8926128a436bca8c9f46c4b657f510b52dddb3461d06ae1",
+      "geometry_sha256": "b76ac11f5cc1eb918db81cd91a58a6ed0722c99c946edb571eee79b3516062b6",
+      "profile_sha256": "1fe2b3a42ee080fbdc1e24e379e0b8292cf5a544970a5377f0547cc575c013ac",
+      "vertices": 17991,
+      "triangles": 31692,
+      "weighted_vertices": 17991,
+      "bones": 13,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 13,
+        "struggle": 13,
+        "breach": 13,
+        "landed": 13
+      },
+      "dimensions_m": [
+        1.0,
+        0.19048188626766205,
+        0.11735128611326218
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2385832
+    },
+    {
+      "species_id": "collare_butterflyfish",
+      "glb_sha256": "6a33d876e4db30f68e9cd22278032ea1c267c88566da5fa7610304ab5e91fbac",
+      "geometry_sha256": "b89113c30dcfc096e177e129c4b0f3668147b2558b447f4dfbd75e094e6d89a2",
+      "profile_sha256": "b33e015f7a91653132691887441edd8b4c2dd96704813c19814c8cc69060eb98",
+      "vertices": 15005,
+      "triangles": 25658,
+      "weighted_vertices": 15005,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5253718942403793,
+        0.18957407772541046
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2714844
+    },
+    {
+      "species_id": "longhorn_cowfish",
+      "glb_sha256": "8c8ebbabb3b45b2b3f388ea2e6850cc42616e62bbe8700f6b0a711ab5a305401",
+      "geometry_sha256": "14967d17a6e323635f64099466a8c04a15ea25c34049c54ed0b601fe4f1146bb",
+      "profile_sha256": "2184ca026f371ba37d463cc716d8e9addfd29f0dce898e98ec692dffb040b47b",
+      "vertices": 13320,
+      "triangles": 23014,
+      "weighted_vertices": 13320,
+      "bones": 16,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 15,
+        "struggle": 16,
+        "breach": 16,
+        "landed": 14
+      },
+      "dimensions_m": [
+        1.0,
+        0.29774951934814453,
+        0.3099474012851715
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2631100
+    },
+    {
+      "species_id": "russells_oarfish",
+      "glb_sha256": "923d4511ab81ac5cbd5a59b23e8308cc8ea53db1483e19b76cc266ad392fa2f7",
+      "geometry_sha256": "9c5bc0d91d8c52e2e6f80f6ab101c4e76c5b0b708bc40ead171f4dee22b0bde6",
+      "profile_sha256": "633ca7032c82da4d3458062c736f905861fbac98a4b7471756f8606e229853d9",
+      "vertices": 17060,
+      "triangles": 30448,
+      "weighted_vertices": 17060,
+      "bones": 14,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 14,
+        "struggle": 14,
+        "breach": 14,
+        "landed": 13
+      },
+      "dimensions_m": [
+        1.0,
+        0.35748109221458435,
+        0.06646514683961868
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2358260
+    },
+    {
+      "species_id": "red_sea_clownfish",
+      "glb_sha256": "818d3d6d230620af7c161b7390b0247478b9a621b5877c82a0e08814e6800898",
+      "geometry_sha256": "e282891ac7c865959bc9eb5c49ed88933211dbed8b0279d177505c4548588593",
+      "profile_sha256": "d4a0ad60533f720df59014e5c340b4564fbe85f26c11478f26b0ee09bc7b3dba",
+      "vertices": 15320,
+      "triangles": 26162,
+      "weighted_vertices": 15320,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.38541729748249054,
+        0.24378246068954468
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2636120
+    },
+    {
+      "species_id": "red_sea_bannerfish",
+      "glb_sha256": "8472cda8e9cad0b3ca0ae6af960b3e7477bfbc23610d8c98676a867d1c796328",
+      "geometry_sha256": "9d99b1ffa086e77b0b9af3b47ce2e008dc59a99a39a1f16a96d3eea94080c451",
+      "profile_sha256": "03c0da9616badd92b1f1731bc167b35a7d60c55d49793de9f09b36ffbba1e261",
+      "vertices": 15275,
+      "triangles": 26090,
+      "weighted_vertices": 15275,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.8933842480182648,
+        0.18685010075569153
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2583348
+    },
+    {
+      "species_id": "masked_butterflyfish",
+      "glb_sha256": "b76122e1cab48e01e62d69b9e4402f24dcafe9ae069294b32a6243106d81cede",
+      "geometry_sha256": "a3c3b5f4faa439e4f0f2829ff540360451718a885aaebe9341329cc266aa30ca",
+      "profile_sha256": "603bcc45a95813e011d3dcf8bd6425e0e5556fae4d204fe659c77d31723f4b32",
+      "vertices": 15050,
+      "triangles": 25730,
+      "weighted_vertices": 15050,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5379268527030945,
+        0.19933436810970306
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2804716
+    },
+    {
+      "species_id": "sohal_surgeonfish",
+      "glb_sha256": "a28083f4c1cd6d8cb64ac22f2251a23f5a8af7d862c71a0150c65566d57352ef",
+      "geometry_sha256": "37cd14fc84de684672a247501c27b509112006b153094ddf1a79a1bbd2ad3081",
+      "profile_sha256": "4f383582f48e0e6b2ade9a896dd22b7f9d411f3cec23ebe7cae5adddec56341d",
+      "vertices": 14928,
+      "triangles": 25538,
+      "weighted_vertices": 14928,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.41714467108249664,
+        0.18453724682331085
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2639988
+    },
+    {
+      "species_id": "arabian_picassotriggerfish",
+      "glb_sha256": "227db3190b300718095893625a092bae400f15007687f78c6db37438407e8508",
+      "geometry_sha256": "92a93d82a09fcad9c4d06504fa0d17e43f5aa8b7e745e379d83cb17163adaf30",
+      "profile_sha256": "626f07256c195ae9a89af039455a674e1b7c27b7b128ba90d2e7a70ddb429d85",
+      "vertices": 13878,
+      "triangles": 23868,
+      "weighted_vertices": 13878,
+      "bones": 17,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 16,
+        "struggle": 17,
+        "breach": 17,
+        "landed": 15
+      },
+      "dimensions_m": [
+        1.0,
+        0.4659537076950073,
+        0.15269166231155396
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2510928
+    },
+    {
+      "species_id": "klunzingers_wrasse",
+      "glb_sha256": "1e7c47dcee6609147671d2f9b4e47203173a3eee604fc099956a57bc5ed54549",
+      "geometry_sha256": "f4d9c6d7691c02716457474167a2a893135678a8f003796bd07550b970332d2a",
+      "profile_sha256": "c205722a22f48ac417c3c310f4dd634d0ae98470803a4e2a98f4937eff93a4f6",
+      "vertices": 15005,
+      "triangles": 25658,
+      "weighted_vertices": 15005,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.2299739271402359,
+        0.1699824184179306
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2738272
+    },
+    {
+      "species_id": "red_sea_goatfish",
+      "glb_sha256": "191923d5278dd308eb851d59f8f3a3404d7846b6109f21a3597bc6f75b38501f",
+      "geometry_sha256": "ccf1ba78347bcfe6b3ffd16436d1cd0c7d599f52b27c6b3ef3f06ef6a3c82c34",
+      "profile_sha256": "efa5f9f662849edafc8cf077f565d5506d3eae12e2acddcfa20124c40bc37dd3",
+      "vertices": 14885,
+      "triangles": 25456,
+      "weighted_vertices": 14885,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.336830735206604,
+        0.2092115730047226
+      ],
+      "surfaces": 9,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2709504
+    },
+    {
+      "species_id": "crocodile_flathead",
+      "glb_sha256": "dd00bd3fa3fca191165281e2a58f3982198e209ef50f1fd00f533be3bfd8f9ff",
+      "geometry_sha256": "97654b9aff024f17197eb27d5eefaaf80c216afc1ad0b635b06c3d206c721af6",
+      "profile_sha256": "7d5a29f281968470368a8c532a644834804c83f5fddf0c1151f8afb087ddbe78",
+      "vertices": 18745,
+      "triangles": 31288,
+      "weighted_vertices": 18745,
+      "bones": 19,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 19,
+        "struggle": 19,
+        "breach": 19,
+        "landed": 18
+      },
+      "dimensions_m": [
+        1.0,
+        0.2125154808163643,
+        0.41789910197257996
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2969860
+    },
+    {
+      "species_id": "bluespotted_cornetfish",
+      "glb_sha256": "11fe9ec40f11513453ea86f9f7e72cc88e791554844327aca7ee6c937693b647",
+      "geometry_sha256": "995881140080bc44033e9bc73e0e6f0ffabbcb7866bfeaa8c56e05d1069fef8d",
+      "profile_sha256": "ba2079cb9795038ef61f3b8b816deded4551c3bf6c05b3ee82e4b09c3598d1b7",
+      "vertices": 14358,
+      "triangles": 25034,
+      "weighted_vertices": 14358,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 18,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 17
+      },
+      "dimensions_m": [
+        1.0,
+        0.08308286219835281,
+        0.06351777166128159
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2164612
+    },
+    {
+      "species_id": "yellowbar_angelfish",
+      "glb_sha256": "11df925d1e3fd109c9b8772f3eda3922ebda60245b3120900a5161bbe32fc129",
+      "geometry_sha256": "38088765caa826e9fe5b1d8941447664260df5fb2e89e49414aadbbc34cd5fc5",
+      "profile_sha256": "570b4e08540ed482f9417364130c945fa0f8c765bc06ed203f8a0fede711f86c",
+      "vertices": 15770,
+      "triangles": 26882,
+      "weighted_vertices": 15770,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.5703710615634918,
+        0.22229549288749695
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2727732
+    },
+    {
+      "species_id": "blackspotted_sweetlips",
+      "glb_sha256": "f2b6aa2ee3d95340c84b91c819b0a9f854e79066a5b963acc1d9e2ee6cba272c",
+      "geometry_sha256": "895ba7e16bc5f186060d6816e5bec9baba5373c2b4ce6291fc8bd472685982e7",
+      "profile_sha256": "94148e5a46c0ad983d18e72d1592b64e87be25ab9f26f794a39fc3e77ef3ba94",
+      "vertices": 15860,
+      "triangles": 27026,
+      "weighted_vertices": 15860,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.4015745222568512,
+        0.2897035777568817
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2826792
+    },
+    {
+      "species_id": "orbicular_batfish",
+      "glb_sha256": "46bfe45b1a4f6d099d84b5524d0f832d46088c075e4792a2b3f9cf0de169cae0",
+      "geometry_sha256": "55892626fad3372a0933d20be469e077227484226e60053647797a1ef5283169",
+      "profile_sha256": "920ede0d3ecc46b1cc45e669d4f20a81966b06eb24673a1802f6718e343d0292",
+      "vertices": 16400,
+      "triangles": 27890,
+      "weighted_vertices": 16400,
+      "bones": 18,
+      "clips_seconds": {
+        "swim": 1.7999999523162842,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 17,
+        "struggle": 18,
+        "breach": 18,
+        "landed": 16
+      },
+      "dimensions_m": [
+        1.0,
+        0.935637503862381,
+        0.2604418396949768
+      ],
+      "surfaces": 8,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2686396
+    },
+    {
+      "species_id": "blue_whale",
+      "glb_sha256": "867f7fa17b29a514febc25818b393f600491d7777ed5bd5966ab8f688c13bb7c",
+      "geometry_sha256": "2a188b4cb39a73726eb2779af1d8c9ebb1b2739d3685a774e9840a54212aebcb",
+      "profile_sha256": "9a180c4f7e2545c7717e5faeb4ea652f2cea4fe8d5201758e781852c0875064e",
+      "vertices": 20724,
+      "triangles": 36930,
+      "weighted_vertices": 20724,
+      "bones": 14,
+      "clips_seconds": {
+        "swim": 2.4000000953674316,
+        "struggle": 1.2000000476837158,
+        "breach": 1.600000023841858,
+        "landed": 3.0
+      },
+      "moving_tracks": {
+        "swim": 12,
+        "struggle": 13,
+        "breach": 13,
+        "landed": 11
+      },
+      "dimensions_m": [
+        1.0,
+        0.21660695225000381,
+        0.2634836435317993
+      ],
+      "surfaces": 6,
+      "embedded_pbr_images": 6,
+      "unused_pole_vertices": 0,
+      "bytes": 2319656
+    }
+  ],
+  "errors": [],
+  "scope": "Binary structure, geometry, skin binding, animated joint data, anatomical presence and centered rest length. Imported Godot and GPU rendering are separate evidence."
+}

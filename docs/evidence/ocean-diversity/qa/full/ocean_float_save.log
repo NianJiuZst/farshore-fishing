@@ -1,0 +1,8 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/ocean_float_save_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+OCEAN_FLOAT_SAVE_TEST_ROOT=/tmp/farshore-ocean-float-save-29111-152384
+FAIL: matrix contains twelve baits and seventy-four species
+OCEAN_FLOAT_SAVE_TESTS: 51/52 passed; failures=1; generated records=0; former false rejections=0

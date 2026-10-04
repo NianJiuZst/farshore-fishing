@@ -12,6 +12,7 @@ import secrets
 import socket
 import struct
 import subprocess
+import sys
 import tempfile
 import time
 
@@ -27,6 +28,21 @@ def main():
     args = options.args[1:] if options.args[:1] == ["--"] else options.args
     if not args:
         parser.error("provide Godot command arguments after --")
+    if sys.platform == 'darwin':
+        # Reuse the already installed native Vulkan runtime. Do not download a
+        # virtual display, alter system configuration, or use a player profile.
+        with tempfile.TemporaryDirectory(prefix='farshore-render-',dir='/tmp') as temp:
+            base = Path(temp)
+            env = os.environ.copy()
+            for key, leaf in [('HOME','home'),('XDG_CACHE_HOME','cache'),('XDG_CONFIG_HOME','config'),('XDG_RUNTIME_DIR','runtime')]:
+                directory = base/leaf
+                directory.mkdir(mode=0o700)
+                env[key] = str(directory)
+            data = base/'home/Library/Application Support'
+            data.mkdir(parents=True,mode=0o700)
+            env['XDG_DATA_HOME'] = str(data)
+            print('DESKTOP_NATIVE_RENDER: macOS Mobile/Vulkan; isolated data; not Android hardware',flush=True)
+            return subprocess.run([os.environ.get('GODOT','godot'),'--audio-driver','Dummy',*args],cwd=ROOT,env=env,timeout=options.timeout).returncode
     xvfb = PACKAGES / "usr/bin/Xvfb"
     driver = PACKAGES / "usr/share/vulkan/icd.d/lvp_icd.json"
     if not xvfb.is_file() or not driver.is_file():

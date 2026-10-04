@@ -1,0 +1,55 @@
+[
+  {
+    "species_id": "blue_whale",
+    "name": "蓝鲸",
+    "scientific_name": "Balaenoptera musculus",
+    "animal_kind": "mammal",
+    "fishing_enabled": false,
+    "encounter_type": "fantasy_challenge",
+    "region_ids": ["pacific_ocean"],
+    "spot_ids": ["pacific_bluewater"],
+    "art": "res://assets/fish/blue_whale.png",
+    "thumb": "res://assets/fish/blue_whale_thumb.png",
+    "description": "海洋巨兽的独立鲸影共鸣挑战：连起光环、跟随潮流、稳住能量线，完成后在水中见证26米鲸影。",
+    "morphology": "蓝灰色斑驳长躯干、宽钝U形头、腹面纵向喉沟、细小靠后的背鳍、修长胸鳍与水平尾叶；鲸尾上下摆动，与鱼类左右摆尾不同。",
+    "min_mm": 20000,
+    "normal_max_mm": 26000,
+    "max_mm": 30000,
+    "anchor_mm": 26000,
+    "anchor_g": 120000000,
+    "weight_model_note": "兼容动物资源定义的尺寸字段不参与鱼类抽样或体重计算。鲸影挑战固定展示26米体长，不抽样体重、不形成鱼获或真实鲸类测量纪录。",
+    "behavior": "steady",
+    "difficulty": 0.0,
+    "weight": 1,
+    "bait_weights": {"worm": 0.0, "grain": 0.0, "shrimp": 0.0, "lure": 0.0},
+    "time_weights": {"day": 1.0, "dusk": 1.0},
+    "weather_weights": {"clear": 1.0, "rain": 1.0},
+    "min_gear": 0,
+    "min_cast": 0.0,
+    "max_cast": 1.0,
+    "depth_min_m": 0,
+    "depth_max_m": 5,
+    "salinity": "salt",
+    "rarity": "独立鲸类挑战",
+    "release_only": true,
+    "conservation_note": "蓝鲸是受保护的海洋哺乳动物；现实中不得喂食、触摸或追逐。游戏挑战使用幻想鲸影与外侧能量光环，没有鱼钩或捕鱼结算。",
+    "balance_note": "fishing_enabled=false且animal_kind=mammal，普通鱼类候选、装备筛选和钓获事务均排除蓝鲸。游戏太平洋入口不表示现实独有；近水面、船侧镜头和共鸣操作是明确幻想。",
+    "gameplay_note": "独立三阶段可操作挑战，在太平洋远洋蓝水航线主动开始；完成记录仅包含共鸣计时，不耗饵、不发币、不进库存、不出售、不拉上岸。",
+    "reachability_note": "蓝鲸不参加普通抛投。太平洋蓝水航线解锁后点击鲸影入口，装备不改变挑战难度，三阶段均有明确操作、失败重试和取消。",
+    "research_status": "reviewed_2026-10-04",
+    "sources": [
+      {
+        "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+        "title": "Blue Whale",
+        "supports": "学名、哺乳纲分类、形态、真实分布、食性与保护状态；不支持游戏连线、抽样或近距离船侧挑战。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fisheries.noaa.gov/topic/marine-life-viewing-guidelines",
+        "title": "Marine Life Viewing Guidelines",
+        "supports": "现实保持距离、不喂食、不触摸、不追逐的观鲸说明；本作近距离鲸影完全是幻想。",
+        "checked_on": "2026-10-04"
+      }
+    ]
+  }
+]

@@ -23,6 +23,7 @@ func _run() -> void:
 	var total_extended: int = 0
 	var sample_count: int = 20000
 	for fish in catalog.fish.values():
+		if not catalog.is_fishing_species(fish): continue
 		var normal: int = int(fish.raw.get("normal_max_mm",fish.max_mm))
 		check(fish.min_mm < normal and normal < fish.max_mm,"separate ordinary and fictional extreme ranges: "+fish.species_id)
 		var sum_length: float = 0.0
@@ -51,6 +52,7 @@ func _run() -> void:
 	if not path.is_empty():
 		var file = FileAccess.open(path,FileAccess.WRITE)
 		check(file!=null,"report opens")
-		if file: file.store_string(JSON.stringify({"species":summary,"total_samples":catalog.fish.size()*sample_count,"giants":total_giants,"extended":total_extended,"old_giant_probability":1.0-pow(.88,1.0/1.9),"new_giant_probability":.02+.98*(1.0-pow(.88,1.0/1.55)),"failures":failures},"  "))
-	print("OCEAN_BALANCE_TESTS: %d/%d passed; failures=%d; samples=%d; giants=%d; extended=%d" % [checks-failures,checks,failures,catalog.fish.size()*sample_count,total_giants,total_extended])
+		if file: file.store_string(JSON.stringify({"species":summary,"total_samples":catalog.fish_species_count()*sample_count,"giants":total_giants,"extended":total_extended,"old_giant_probability":1.0-pow(.88,1.0/1.9),"new_giant_probability":.02+.98*(1.0-pow(.88,1.0/1.55)),"failures":failures},"  "))
+	check(summary.size() == 110 and summary.size() == catalog.fish_species_count(), "all 110 ordinary fish sampled")
+	print("OCEAN_BALANCE_TESTS: %d/%d passed; failures=%d; samples=%d; giants=%d; extended=%d" % [checks-failures,checks,failures,catalog.fish_species_count()*sample_count,total_giants,total_extended])
 	quit(0 if failures==0 else 1)

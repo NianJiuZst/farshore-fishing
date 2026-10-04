@@ -1,0 +1,19 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/ocean_float_save_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+OCEAN_FLOAT_SAVE_TEST_ROOT=/tmp/farshore-ocean-float-save-36862-381611
+PASS MATRIX bait=worm profiles=110 records=330 elapsed_ms=4690
+PASS MATRIX bait=grain profiles=220 records=660 elapsed_ms=9612
+PASS MATRIX bait=shrimp profiles=330 records=990 elapsed_ms=14409
+PASS MATRIX bait=lure profiles=440 records=1320 elapsed_ms=19103
+PASS MATRIX bait=sweetcorn profiles=550 records=1650 elapsed_ms=23857
+PASS MATRIX bait=dough profiles=660 records=1980 elapsed_ms=28647
+PASS MATRIX bait=cut_fish profiles=770 records=2310 elapsed_ms=33466
+PASS MATRIX bait=spinner profiles=880 records=2640 elapsed_ms=38355
+PASS MATRIX bait=large_fish_chunk profiles=990 records=2970 elapsed_ms=43186
+PASS MATRIX bait=whole_mackerel profiles=1100 records=3300 elapsed_ms=48073
+PASS MATRIX bait=large_squid profiles=1210 records=3630 elapsed_ms=52896
+PASS MATRIX bait=large_surface_lure profiles=1320 records=3960 elapsed_ms=57646
+OCEAN_FLOAT_SAVE_TESTS: 62094/62094 passed; failures=0; generated records=3960; former false rejections=2

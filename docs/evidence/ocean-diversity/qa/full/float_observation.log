@@ -1,0 +1,9 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/float_observation_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+FLOAT_PROJECTED_HEIGHT_720: 53.4581909179688
+FLOAT_PROJECTED_WIDTH_450: 3.4808886051178
+WINDUP_ROD_TIP_SCREEN: (221.4322, 341.8732)
+FLOAT_OBSERVATION_TESTS: 90/90 passed; failures=0; presentation fixtures, not phone performance

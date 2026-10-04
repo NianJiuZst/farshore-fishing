@@ -1,0 +1,229 @@
+{
+  "scope": "Canonical-byte reproducibility from current editable profiles and generator in disposable /tmp",
+  "models": [
+    {
+      "species_id": "california_sheephead",
+      "rebuilt_sha256": "2cb5abddbc562b47c42b31ccf2a85f7ec5f9897b0c86c21bb70d2af7fcade0a9",
+      "canonical_sha256": "2cb5abddbc562b47c42b31ccf2a85f7ec5f9897b0c86c21bb70d2af7fcade0a9",
+      "identical": true
+    },
+    {
+      "species_id": "lingcod",
+      "rebuilt_sha256": "c1a1f22a6c21cbb48649ce3378e1aabfe5639ba084b26db31a81a30cae0bfbce",
+      "canonical_sha256": "c1a1f22a6c21cbb48649ce3378e1aabfe5639ba084b26db31a81a30cae0bfbce",
+      "identical": true
+    },
+    {
+      "species_id": "cabezon",
+      "rebuilt_sha256": "5c6394d364b22061361b7e8869f43faade4c5c94a53c43637841a88bfe2040f7",
+      "canonical_sha256": "5c6394d364b22061361b7e8869f43faade4c5c94a53c43637841a88bfe2040f7",
+      "identical": true
+    },
+    {
+      "species_id": "garibaldi",
+      "rebuilt_sha256": "d5569e62706b86bcf0433daee88c53992e83f047a330dff77b35b4947b582880",
+      "canonical_sha256": "d5569e62706b86bcf0433daee88c53992e83f047a330dff77b35b4947b582880",
+      "identical": true
+    },
+    {
+      "species_id": "kelp_greenling",
+      "rebuilt_sha256": "df1206bf55bb84cab7c85e0748d79f287b6fd20ecbeec1951f86bbe46b4aa1fa",
+      "canonical_sha256": "df1206bf55bb84cab7c85e0748d79f287b6fd20ecbeec1951f86bbe46b4aa1fa",
+      "identical": true
+    },
+    {
+      "species_id": "pacific_halibut",
+      "rebuilt_sha256": "dd9b999f463afa832df7337480cfd5951bb0d7422db4d75157158c0f2b019648",
+      "canonical_sha256": "dd9b999f463afa832df7337480cfd5951bb0d7422db4d75157158c0f2b019648",
+      "identical": true
+    },
+    {
+      "species_id": "yellow_tang",
+      "rebuilt_sha256": "a14539388779350cb76946fd9ddc1398912205c935831451e123e897525c70b5",
+      "canonical_sha256": "a14539388779350cb76946fd9ddc1398912205c935831451e123e897525c70b5",
+      "identical": true
+    },
+    {
+      "species_id": "barreleye",
+      "rebuilt_sha256": "97469dcd8b0864644d7be0115c7eb998e7d0308b50a6d23a699647f7084c038d",
+      "canonical_sha256": "97469dcd8b0864644d7be0115c7eb998e7d0308b50a6d23a699647f7084c038d",
+      "identical": true
+    },
+    {
+      "species_id": "turbot",
+      "rebuilt_sha256": "dae8d788f72efa1faca47ebcfe7c81b2d2398ab80aa097b6d5cb9924c8ed56f9",
+      "canonical_sha256": "dae8d788f72efa1faca47ebcfe7c81b2d2398ab80aa097b6d5cb9924c8ed56f9",
+      "identical": true
+    },
+    {
+      "species_id": "john_dory",
+      "rebuilt_sha256": "c44740228a9db91125aeed1f5d0b97165ebe284f822636d024f1e2ea5a33d5ef",
+      "canonical_sha256": "c44740228a9db91125aeed1f5d0b97165ebe284f822636d024f1e2ea5a33d5ef",
+      "identical": true
+    },
+    {
+      "species_id": "grey_gurnard",
+      "rebuilt_sha256": "57e562eda0dfc0eb592f48d635f384439c879569cf70cf0a699ee77b03db73d9",
+      "canonical_sha256": "57e562eda0dfc0eb592f48d635f384439c879569cf70cf0a699ee77b03db73d9",
+      "identical": true
+    },
+    {
+      "species_id": "queen_angelfish",
+      "rebuilt_sha256": "64d1716f07a26897b4ddec0605be7c0fe4d0c06bef8415badd8977352ab4397c",
+      "canonical_sha256": "64d1716f07a26897b4ddec0605be7c0fe4d0c06bef8415badd8977352ab4397c",
+      "identical": true
+    },
+    {
+      "species_id": "stoplight_parrotfish",
+      "rebuilt_sha256": "e7e0c4fe1598e011722f5224ed73aab45657bbde89e2ab5b4008d52d5593acc7",
+      "canonical_sha256": "e7e0c4fe1598e011722f5224ed73aab45657bbde89e2ab5b4008d52d5593acc7",
+      "identical": true
+    },
+    {
+      "species_id": "atlantic_flyingfish",
+      "rebuilt_sha256": "244137bf9185c7be2a6905b4bc35aa60b462caa6efbadef0f6c19b842441f92f",
+      "canonical_sha256": "244137bf9185c7be2a6905b4bc35aa60b462caa6efbadef0f6c19b842441f92f",
+      "identical": true
+    },
+    {
+      "species_id": "atlantic_tarpon",
+      "rebuilt_sha256": "eaccb4b63bb1cadae83672ba5fe4c9ce331e801a0ebe5d8a749e7c6336d1fb2d",
+      "canonical_sha256": "eaccb4b63bb1cadae83672ba5fe4c9ce331e801a0ebe5d8a749e7c6336d1fb2d",
+      "identical": true
+    },
+    {
+      "species_id": "black_scabbardfish",
+      "rebuilt_sha256": "93999a190bb2ca3e77ac459097056f1e92c11712df01943001faeb31e08147bd",
+      "canonical_sha256": "93999a190bb2ca3e77ac459097056f1e92c11712df01943001faeb31e08147bd",
+      "identical": true
+    },
+    {
+      "species_id": "humphead_wrasse",
+      "rebuilt_sha256": "66dbd7fa4bb010f527503224f20dc53909af1ad16350b50d7247916f2ec4c27e",
+      "canonical_sha256": "66dbd7fa4bb010f527503224f20dc53909af1ad16350b50d7247916f2ec4c27e",
+      "identical": true
+    },
+    {
+      "species_id": "emperor_angelfish",
+      "rebuilt_sha256": "47cb421dcd4038621f18568dad05c4e909d31250df4e0665c409f11068e11ce1",
+      "canonical_sha256": "47cb421dcd4038621f18568dad05c4e909d31250df4e0665c409f11068e11ce1",
+      "identical": true
+    },
+    {
+      "species_id": "leaf_scorpionfish",
+      "rebuilt_sha256": "4bff1ee30b04b100880bfd8ac69890522aa1fc41f0f85e5eac56ac108f93fdca",
+      "canonical_sha256": "4bff1ee30b04b100880bfd8ac69890522aa1fc41f0f85e5eac56ac108f93fdca",
+      "identical": true
+    },
+    {
+      "species_id": "bluespotted_ribbontail_ray",
+      "rebuilt_sha256": "cc5f41565ed52d645cb467a57f866d0f2b6e5214a033d42adf1e6493edc7080c",
+      "canonical_sha256": "cc5f41565ed52d645cb467a57f866d0f2b6e5214a033d42adf1e6493edc7080c",
+      "identical": true
+    },
+    {
+      "species_id": "giant_moray",
+      "rebuilt_sha256": "e4c21d09819b1a0eb8926128a436bca8c9f46c4b657f510b52dddb3461d06ae1",
+      "canonical_sha256": "e4c21d09819b1a0eb8926128a436bca8c9f46c4b657f510b52dddb3461d06ae1",
+      "identical": true
+    },
+    {
+      "species_id": "collare_butterflyfish",
+      "rebuilt_sha256": "6a33d876e4db30f68e9cd22278032ea1c267c88566da5fa7610304ab5e91fbac",
+      "canonical_sha256": "6a33d876e4db30f68e9cd22278032ea1c267c88566da5fa7610304ab5e91fbac",
+      "identical": true
+    },
+    {
+      "species_id": "longhorn_cowfish",
+      "rebuilt_sha256": "8c8ebbabb3b45b2b3f388ea2e6850cc42616e62bbe8700f6b0a711ab5a305401",
+      "canonical_sha256": "8c8ebbabb3b45b2b3f388ea2e6850cc42616e62bbe8700f6b0a711ab5a305401",
+      "identical": true
+    },
+    {
+      "species_id": "russells_oarfish",
+      "rebuilt_sha256": "923d4511ab81ac5cbd5a59b23e8308cc8ea53db1483e19b76cc266ad392fa2f7",
+      "canonical_sha256": "923d4511ab81ac5cbd5a59b23e8308cc8ea53db1483e19b76cc266ad392fa2f7",
+      "identical": true
+    },
+    {
+      "species_id": "red_sea_clownfish",
+      "rebuilt_sha256": "818d3d6d230620af7c161b7390b0247478b9a621b5877c82a0e08814e6800898",
+      "canonical_sha256": "818d3d6d230620af7c161b7390b0247478b9a621b5877c82a0e08814e6800898",
+      "identical": true
+    },
+    {
+      "species_id": "red_sea_bannerfish",
+      "rebuilt_sha256": "8472cda8e9cad0b3ca0ae6af960b3e7477bfbc23610d8c98676a867d1c796328",
+      "canonical_sha256": "8472cda8e9cad0b3ca0ae6af960b3e7477bfbc23610d8c98676a867d1c796328",
+      "identical": true
+    },
+    {
+      "species_id": "masked_butterflyfish",
+      "rebuilt_sha256": "b76122e1cab48e01e62d69b9e4402f24dcafe9ae069294b32a6243106d81cede",
+      "canonical_sha256": "b76122e1cab48e01e62d69b9e4402f24dcafe9ae069294b32a6243106d81cede",
+      "identical": true
+    },
+    {
+      "species_id": "sohal_surgeonfish",
+      "rebuilt_sha256": "a28083f4c1cd6d8cb64ac22f2251a23f5a8af7d862c71a0150c65566d57352ef",
+      "canonical_sha256": "a28083f4c1cd6d8cb64ac22f2251a23f5a8af7d862c71a0150c65566d57352ef",
+      "identical": true
+    },
+    {
+      "species_id": "arabian_picassotriggerfish",
+      "rebuilt_sha256": "227db3190b300718095893625a092bae400f15007687f78c6db37438407e8508",
+      "canonical_sha256": "227db3190b300718095893625a092bae400f15007687f78c6db37438407e8508",
+      "identical": true
+    },
+    {
+      "species_id": "klunzingers_wrasse",
+      "rebuilt_sha256": "1e7c47dcee6609147671d2f9b4e47203173a3eee604fc099956a57bc5ed54549",
+      "canonical_sha256": "1e7c47dcee6609147671d2f9b4e47203173a3eee604fc099956a57bc5ed54549",
+      "identical": true
+    },
+    {
+      "species_id": "red_sea_goatfish",
+      "rebuilt_sha256": "191923d5278dd308eb851d59f8f3a3404d7846b6109f21a3597bc6f75b38501f",
+      "canonical_sha256": "191923d5278dd308eb851d59f8f3a3404d7846b6109f21a3597bc6f75b38501f",
+      "identical": true
+    },
+    {
+      "species_id": "crocodile_flathead",
+      "rebuilt_sha256": "dd00bd3fa3fca191165281e2a58f3982198e209ef50f1fd00f533be3bfd8f9ff",
+      "canonical_sha256": "dd00bd3fa3fca191165281e2a58f3982198e209ef50f1fd00f533be3bfd8f9ff",
+      "identical": true
+    },
+    {
+      "species_id": "bluespotted_cornetfish",
+      "rebuilt_sha256": "11fe9ec40f11513453ea86f9f7e72cc88e791554844327aca7ee6c937693b647",
+      "canonical_sha256": "11fe9ec40f11513453ea86f9f7e72cc88e791554844327aca7ee6c937693b647",
+      "identical": true
+    },
+    {
+      "species_id": "yellowbar_angelfish",
+      "rebuilt_sha256": "11df925d1e3fd109c9b8772f3eda3922ebda60245b3120900a5161bbe32fc129",
+      "canonical_sha256": "11df925d1e3fd109c9b8772f3eda3922ebda60245b3120900a5161bbe32fc129",
+      "identical": true
+    },
+    {
+      "species_id": "blackspotted_sweetlips",
+      "rebuilt_sha256": "f2b6aa2ee3d95340c84b91c819b0a9f854e79066a5b963acc1d9e2ee6cba272c",
+      "canonical_sha256": "f2b6aa2ee3d95340c84b91c819b0a9f854e79066a5b963acc1d9e2ee6cba272c",
+      "identical": true
+    },
+    {
+      "species_id": "orbicular_batfish",
+      "rebuilt_sha256": "46bfe45b1a4f6d099d84b5524d0f832d46088c075e4792a2b3f9cf0de169cae0",
+      "canonical_sha256": "46bfe45b1a4f6d099d84b5524d0f832d46088c075e4792a2b3f9cf0de169cae0",
+      "identical": true
+    },
+    {
+      "species_id": "blue_whale",
+      "rebuilt_sha256": "867f7fa17b29a514febc25818b393f600491d7777ed5bd5966ab8f688c13bb7c",
+      "canonical_sha256": "867f7fa17b29a514febc25818b393f600491d7777ed5bd5966ab8f688c13bb7c",
+      "identical": true
+    }
+  ],
+  "checked": 37,
+  "failures": []
+}

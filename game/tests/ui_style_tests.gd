@@ -53,9 +53,9 @@ func _run() -> void:
 	app.sound.apply({"sound": false, "vibration": false, "volume": 0.0})
 	app.sound.suspend(true)
 	var errors: Array[String] = Registry.validate_catalog(app.catalog,true)
-	_check(app._content_ok and app._models_complete and errors.is_empty(), "actual Main requires all44 models, catalog and textures: " + str(errors))
+	_check(app._content_ok and app._models_complete and errors.is_empty(), "actual Main requires all111 models, catalog and textures: " + str(errors))
 	if not app._content_ok or not app._models_complete:
-		print("UI_STYLE_SCOPE: full production pages NOT RUN; actual44 dependency failed, no readiness override")
+		print("UI_STYLE_SCOPE: full production pages NOT RUN; actual111-model dependency failed, no readiness override")
 		app.queue_free()
 		await process_frame
 		print("UI_STYLE_TESTS: ",checks-failures,"/",checks," passed; failures=",failures,"; incomplete dependency, not acceptance")
@@ -463,6 +463,7 @@ func _find_button(node: Node, text: String) -> Button:
 func _seed_collection(fixture: SaveStore) -> bool:
 	var index: int = 0
 	for species: FishDefinition in app.catalog.fish.values():
+		if not app.catalog.is_fishing_species(species): continue
 		var sid: String = str(species.spots()[0])
 		var rid: String = str(app.catalog.spots[sid].region_id)
 		var record: Dictionary = app.encounter.make_individual(species, sid, rid, "worm", 2, "day", "clear")
@@ -498,7 +499,7 @@ func _audit_catch(species_id: String) -> void:
 	_check(hooked,species_id + " result art fixture reaches fight through a real held-bait hook")
 	if not hooked: return
 	# Result-page content is an explicit settled UI fixture; full fight and
-	# landing success across all44 species is exercised by slice3d_tests.
+	# Imported geometry for all110 ordinary fish is exercised by ocean_landing_tests.
 	app.session._finish(true, "")
 	_check(app._save_ok and app._landing_pending and app._screen != "result", species_id + " catch is saved before its 3D landing finishes")
 	for tick: int in 90: app.scenery._process(0.05)
@@ -665,7 +666,7 @@ func _test_catalog_controls() -> void:
 		var rid: String = str(app.catalog.regions[1].region_id)
 		var expected: int = 0
 		for fish: FishDefinition in app.catalog.fish.values():
-			if rid in fish.regions(): expected += 1
+			if app.catalog.is_fishing_species(fish) and rid in fish.regions(): expected += 1
 		_check(app._region_filter == rid and app._list.get_child_count() == expected, "real region selection callback filters the production fish set")
 		discovery.select(2)
 		discovery.item_selected.emit(2)

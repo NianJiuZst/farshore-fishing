@@ -1,0 +1,345 @@
+{
+  "adapter": "Apple M5",
+  "captures": [
+    {
+      "height": 1584,
+      "label": "fresh_profile_lobby",
+      "main_viewport_3d_disabled": false,
+      "path": "fresh_profile_lobby.png",
+      "screen": "home",
+      "sha256": "ea3b9c7889fff95252ad15b6c3e084c4e2316e0299f6165445d278868fcc9bf3",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fresh_oceans_locked",
+      "main_viewport_3d_disabled": true,
+      "path": "fresh_oceans_locked.png",
+      "screen": "travel",
+      "sha256": "65a2075baf1117c6d938f6ebef6f28f908f335706c234caf19a2ccfe70c4c678",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "catalog_top",
+      "main_viewport_3d_disabled": true,
+      "path": "catalog_top.png",
+      "screen": "catalog",
+      "sha256": "1472131570b5e8827a61ed1fc7c9981e7e531b707405eb21f204b1f3d07031e8",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "catalog_bottom",
+      "main_viewport_3d_disabled": true,
+      "path": "catalog_bottom.png",
+      "screen": "catalog",
+      "sha256": "26c210b706fdb94597bfd3e3b3315306c502e0d5174b54193871f8cf80c99a9a",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "species_great_white_shark",
+      "main_viewport_3d_disabled": true,
+      "path": "species_great_white_shark.png",
+      "screen": "species",
+      "sha256": "fd5f0a3eaa9464f107b1cc958b852b68b3a36b98cd4cb1691b2d39ee23a17462",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "species_great_white_sources",
+      "main_viewport_3d_disabled": true,
+      "path": "species_great_white_sources.png",
+      "screen": "species",
+      "sha256": "aba0d48dbc876db261c33ba6bf754dbff3ab1c1510bdee1ee0eb65ddd67cfba1",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "species_great_hammerhead",
+      "main_viewport_3d_disabled": true,
+      "path": "species_great_hammerhead.png",
+      "screen": "species",
+      "sha256": "695184d17140668f5df62c0811c342c6044c5529310797c37154f624f08646bc",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "species_atlantic_bluefin_tuna",
+      "main_viewport_3d_disabled": true,
+      "path": "species_atlantic_bluefin_tuna.png",
+      "screen": "species",
+      "sha256": "6e2dadf412b7ca6d3c879731bd9d500ac68dea84a9dac2af04c1553c536446b2",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "species_active_after_lru",
+      "main_viewport_3d_disabled": true,
+      "path": "species_active_after_lru.png",
+      "screen": "species",
+      "sha256": "fd5f0a3eaa9464f107b1cc958b852b68b3a36b98cd4cb1691b2d39ee23a17462",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "prepare_wolffish_blocked_90m",
+      "main_viewport_3d_disabled": true,
+      "path": "prepare_wolffish_blocked_90m.png",
+      "screen": "prepare",
+      "sha256": "e088ecaacb38a4e3296ab959a46fa4675f5ddbcce73e1137b6afdd6c3a7bf287",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "prepare_wolffish_available_180m",
+      "main_viewport_3d_disabled": true,
+      "path": "prepare_wolffish_available_180m.png",
+      "screen": "prepare",
+      "sha256": "c67de11e6493732575c6fd49d52cb79a80bee84d2210419e00453694690a15d7",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "gear_bottom",
+      "main_viewport_3d_disabled": true,
+      "path": "gear_bottom.png",
+      "screen": "gear",
+      "sha256": "37d0a9443c812e66932e94a10291b153b4ab29767a80adf58688de8429180952",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_bait_large_fish_chunk",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_bait_large_fish_chunk.png",
+      "screen": "",
+      "sha256": "6e7d0b8fbcef38cb406fe2105b903ab57cc45cbd9c4f8023bcd825cd9d1c16c5",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_bait_whole_mackerel",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_bait_whole_mackerel.png",
+      "screen": "",
+      "sha256": "833d1c4459662866edaa90ffe4060b291bab68f6773f35be1045ee2e22c19239",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_bait_large_squid",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_bait_large_squid.png",
+      "screen": "",
+      "sha256": "c209e947c03f46461d23af344beb100774e7db295884d8c9e328cd89a42f4488",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_bait_large_surface_lure",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_bait_large_surface_lure.png",
+      "screen": "",
+      "sha256": "c9d7d5648c55f8c0175078bd47992efd1a6afa3fe103e899e81c136f8012bb0d",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "gear_twelve_baits_bottom",
+      "main_viewport_3d_disabled": true,
+      "path": "gear_twelve_baits_bottom.png",
+      "screen": "gear",
+      "sha256": "a6cfc41d578e9e4099e83c8aa67f130a66b9964cd613e0dd5c8d483f72c072f2",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "travel_pacific_ocean",
+      "main_viewport_3d_disabled": true,
+      "path": "travel_pacific_ocean.png",
+      "screen": "travel",
+      "sha256": "2dfa3ba4dbcd78e81cac48eb49d6ae3d643454daa72c903dadbea73919bced76",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_pacific_reef",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_pacific_reef.png",
+      "screen": "",
+      "sha256": "0a0353fbb30c37816196804908aa60fd1570c04eb26cf5fe0f388b20b55b23d5",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_pacific_bluewater",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_pacific_bluewater.png",
+      "screen": "",
+      "sha256": "f207671de2b583a605b8e554e041038b03d98d8f980b0a7e92cec1538f43b5a9",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "travel_atlantic_ocean",
+      "main_viewport_3d_disabled": true,
+      "path": "travel_atlantic_ocean.png",
+      "screen": "travel",
+      "sha256": "07873f938e206065c30cb10a2b32babc8dd33e8bd243a54f760ecb4f8dd93c44",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_atlantic_shelf",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_atlantic_shelf.png",
+      "screen": "",
+      "sha256": "cb3de3f9f9e8f871c70b63ef10097e3249dab035285383655e3b97e8df8ad65d",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_atlantic_bluewater",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_atlantic_bluewater.png",
+      "screen": "",
+      "sha256": "e5e2e588c59e76187df22d1bbe83820367446b465fb5a8f5c174377f676df35e",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "travel_indian_ocean",
+      "main_viewport_3d_disabled": true,
+      "path": "travel_indian_ocean.png",
+      "screen": "travel",
+      "sha256": "dadcbf2aae8e50074fcf0c6d5eb01da29fde6a9939fb3476829e236494a9f594",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_indian_reef",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_indian_reef.png",
+      "screen": "",
+      "sha256": "55d2b849cb631fd34618347957b9661fa113c2d5c69d4d04bfaaca4e7dcffbf8",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_indian_bluewater",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_indian_bluewater.png",
+      "screen": "",
+      "sha256": "dd7245a0dfbef396f73bcd480eaae3d969a9f4bf6b13dc13dcf76a23283bb9fd",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "travel_red_sea",
+      "main_viewport_3d_disabled": true,
+      "path": "travel_red_sea.png",
+      "screen": "travel",
+      "sha256": "b611c24090b31ef52a0c203ece961b18eca114706f5bf736a5f676a9f39c5cec",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_red_sea_lagoon",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_red_sea_lagoon.png",
+      "screen": "",
+      "sha256": "8a8901f5a79b6e847a70a6fc7711b7339745f21db2208ae6e20b41b1581bed28",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_red_sea_wall",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_red_sea_wall.png",
+      "screen": "",
+      "sha256": "0fb22b85860e52b49ac7147757c0876b3252d968704c30eec70af420ae1df426",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "fishing_red_sea_bluehole",
+      "main_viewport_3d_disabled": false,
+      "path": "fishing_red_sea_bluehole.png",
+      "screen": "",
+      "sha256": "75d63f4e8915ed053ab3c7cc0a9d3d8c861fab1ab23106ae021ccc426f0a53ed",
+      "width": 720
+    },
+    {
+      "height": 1584,
+      "label": "travel_bottom",
+      "main_viewport_3d_disabled": true,
+      "path": "travel_bottom.png",
+      "screen": "travel",
+      "sha256": "a2d1ef231669f2741f23d1aab9abaf417fceae6b42bc8aebfa834a60600715e2",
+      "width": 720
+    }
+  ],
+  "checks": 1199,
+  "display_server": "macOS",
+  "duration_seconds": 61.908,
+  "failures": [],
+  "logical_size": [
+    720.0,
+    1584.0
+  ],
+  "not_android_device_or_fps_validation": true,
+  "passed": 1199,
+  "physical_size": [
+    720,
+    1584
+  ],
+  "rendering_driver": "vulkan",
+  "rendering_method": "mobile",
+  "scope": "production Main UI; strict asset gates; isolated test save",
+  "source_sha256": {
+    "res://assets/ui/icons/large_fish_chunk.png": "34e688e97d53bf5d648e6164fb32730915404f3e1daa4b1c3a3d2f155b081947",
+    "res://assets/ui/icons/large_squid.png": "bc20975549e45e34155c60a3870331e440c3f4c92f518b7e353348158d6230ad",
+    "res://assets/ui/icons/large_surface_lure.png": "9e7fcaa26e6aa02adb320ae872399daa116e0d7a39aad38271be446f9cfe47d7",
+    "res://assets/ui/icons/whole_mackerel.png": "369b385b5f2ec314d260e95f485048113de944db347479f6dad45df532d8dfc7",
+    "res://data/encyclopedia_a.json": "bf982fc91eec83da1cc80102e8810c6767811ddfd539de20387e3a58f1d00705",
+    "res://data/encyclopedia_b.json": "6d9838fbb6c626d9f8b8a2ab8e2e895fbb725b80b52d04a204b55e484527ce89",
+    "res://data/encyclopedia_c.json": "a13d2e359e4d8a76306b3519b0e005e46d493458bb92b0c616bceef8c34a4004",
+    "res://data/encyclopedia_d.json": "c82621e614f30353befc4e726dcf8795cd9bfdee1b6a3946df693a21276c38ad",
+    "res://data/encyclopedia_e.json": "3aac98bb54bcbc208f686a1eb90e364ac95cba64471ccd38055ed3688293e3d4",
+    "res://data/encyclopedia_f.json": "92c6d7472438749e162982edfe0ad9d3700c807c6a06abdd7878c1033e8c1740",
+    "res://data/encyclopedia_g.json": "8f8580548832397dd893ff8a1e7080088684e178a60370f0b18b1e0b84d879ba",
+    "res://data/encyclopedia_h.json": "8cb4332bdb9bb60b90a1114a207112e9f076f5a11ce33de14629544f6f70fec5",
+    "res://data/encyclopedia_whale.json": "6652ebc7a2255eeebee5a428250042c888e16436ccb38ed044ea8e423a0cba62",
+    "res://data/fish_3d.json": "0e6e69e192509ca524bb16b01a86f3b6b613ffa3d9111f56b2c73612320259a2",
+    "res://data/fish_a.json": "9a825e8e31ab3670e0deb8a6d9cfc7f7447c51bb2ce96e69a60aee1ccdc8c266",
+    "res://data/fish_art.json": "fcd43f1e301c7da610a1919acbb8b2c7d7477699c80e5790a6607cedf74a7895",
+    "res://data/fish_b.json": "50be48a1a8c9f45faab89aa5b834b10f73b3ef48460a8611ea572841a04d821c",
+    "res://data/fish_c.json": "b42fa7ece36d7b1cb1c83d3d70da6c0ddc75a5ead7dfa9960cb159fe31f44715",
+    "res://data/fish_d.json": "19518b05cb1c6d3c0eca83867c50f52d2fa343331469f081bf8763702dacea6d",
+    "res://data/fish_e.json": "aa22ccdf7ef4ae4f5dd29eb61be2950530e5bf9686353ff66897447d915133c5",
+    "res://data/fish_f.json": "9fa4135d635382b9a0ff3a0a5ef7fb08990e179f7ccddaf4efc5c678ff32877b",
+    "res://data/fish_g.json": "3acd57ed8f71ea95f6427c919f7fb416d64c354706c32abda0dd2679b0d89f8e",
+    "res://data/fish_h.json": "dce42846f2e9060818b027906d54ddd5fb3c964a3c74fdfeb14ab6066cc1a27d",
+    "res://data/fish_whale.json": "f5424867c4b35b61167974b68c0c5288e8f557f880ffa46878935380f17e9e09",
+    "res://data/world.json": "d6a88c9050a38019b01dc78edc27bc2ce0fea715c50c8fe7b2e3e24182691093",
+    "res://project.godot": "ba7cb66f8dc840c4c35a6a0a46eaec8baba2012d0c267687d494b0fd7ddeb479",
+    "res://scenes/main.tscn": "7c48265512473f604b3fae59a3c4e467abe6f50c4b8b2fe0e194191f1323ad84",
+    "res://scripts/audio_manager.gd": "66ec25e1a74801cceb858244d16bfffdf050bde231eb8b70966f31fad44a2b2c",
+    "res://scripts/blue_whale_challenge.gd": "a2cedb89e8b3b48f5b2cc510cbba1463eee0b4ff1d4a4d1f79e273767de6b4e3",
+    "res://scripts/catalog.gd": "b44bc478847a683185317cc98823ce44d6c1e7691bd93695675e2d3d7977f5d8",
+    "res://scripts/encounter.gd": "55c7fa10afa7f3dcf989d2adb3e5c7fd7935a90eaa648807e5038f9e8859e0c2",
+    "res://scripts/fish_art_catalog.gd": "9bebefe12496219afe3516d8955c28e37ef71c9d5789c81c63a62f4d3cb5bb63",
+    "res://scripts/fish_art_view.gd": "2787da62d8d7f008945261590a4885edf2ce34703c9d785846273d3254e224e5",
+    "res://scripts/fish_notebook_ui.gd": "d3e119a22904d594607dd1673545ed139e92ae940579f4873e2555abcc98d636",
+    "res://scripts/fishing_menu_pages.gd": "421cdc985368a0c5b98343fa642227c208953e5eb214d82bb01d4081edfc3ad5",
+    "res://scripts/fishing_stage_3d.gd": "3fddd137d8d51701e702396977d8fb2c040435fd3aad2188852c99c5264a35f0",
+    "res://scripts/icon_action.gd": "b58f038422a98a6605217c3ee4963cb16e61297084e977a62204f169c69d50aa",
+    "res://scripts/main.gd": "95f93293e8f9652bb0102c629ac382472aa5d7d4ffa2abd4ba9cac7c9d7c027d",
+    "res://scripts/save_store.gd": "df3750b7b62f38f9f60e2dc83b87c2d57ad2b2ca3c3f6533a297b6fcc486d9a9",
+    "res://scripts/touch_scroll.gd": "4b2ebb26851627a45b51fd232caa527586d1ab664b111ae7c44337b18c15f2c2",
+    "res://scripts/ui_art.gd": "e7939a0fafcb9c42a4b202d01ab207296ec3c90ca432c43a9bcc3693dbfbe2d9"
+  },
+  "test_optimization": "Suppress main viewport3D only behind a verified fullscreen alpha1 gradient; restore whenever world can be visible; retain actual imported resources and independent SubViewports"
+}

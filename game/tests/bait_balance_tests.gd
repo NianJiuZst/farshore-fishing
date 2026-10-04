@@ -11,8 +11,9 @@ func check(ok: bool, detail: String) -> void:
 func _initialize() -> void:
 	var catalog: ContentCatalog = Catalog.new()
 	check(catalog.load_all(false), "catalog loads")
-	check(catalog.gear.size() == 5 and catalog.baits.size() == 12, "five rods/twelve bait definitions")
+	check(catalog.gear.size() == 6 and catalog.baits.size() == 12, "six rods/twelve bait definitions")
 	for fish: FishDefinition in catalog.fish.values():
+		if not catalog.is_fishing_species(fish): continue
 		for original: String in ["worm", "grain", "shrimp", "lure"]:
 			check(is_equal_approx(catalog.bait_weight(fish, original), fish.weight_for("bait_weights", original)), "legacy attraction preserved " + fish.species_id + "/" + original)
 		for bait: Dictionary in catalog.baits:
@@ -38,6 +39,8 @@ func _initialize() -> void:
 								var fish: FishDefinition = candidate.fish
 								check(float(candidate.weight) > 0 and is_finite(float(candidate.weight)), "valid encounter weight")
 								reachable[fish.species_id] = true
-	for id: String in catalog.fish: check(reachable.has(id), "species remains reachable " + id)
-	print("BAIT_BALANCE_TESTS: ", checks-failures, "/", checks, "; reachable_species=", reachable.size(), "/", catalog.fish.size())
+	for id: String in catalog.fish:
+		if catalog.is_fishing_species(catalog.fish[id]): check(reachable.has(id), "species remains reachable " + id)
+	check(reachable.size() == 110 and not reachable.has("blue_whale"), "all fishing species reachable without mammal bait encounters")
+	print("BAIT_BALANCE_TESTS: ", checks-failures, "/", checks, "; reachable_species=", reachable.size(), "/", catalog.fish_species_count())
 	quit(0 if failures == 0 else 1)

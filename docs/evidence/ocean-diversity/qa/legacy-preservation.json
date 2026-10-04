@@ -1,0 +1,14 @@
+{
+  "fish_art": {
+    "legacy_entries_unchanged": 74,
+    "new_entries": 37
+  },
+  "fish_3d": {
+    "legacy_entries_unchanged": 74,
+    "new_entries": 37
+  },
+  "personal_changes_ancestor": "1afda37",
+  "build_ocean_fish.py": {
+    "unchanged_sha256": "f23101ad6e829db7099e5254c89774fec5b2cc3729ff9e7e8905925a7da7cba2"
+  }
+}

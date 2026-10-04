@@ -1,0 +1,18 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/core_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+CORE_TEST_ROOT=/tmp/farshore-core-33225-414109
+PASS GROUP catalog/reachability: 88992 legal combinations; 7440 intentionally possible empty combinations; fish=110; art=false
+PASS GROUP reproducible RNG and 17600 real individual samples, including conservation metadata
+PASS GROUP real charge → cast → wait → nibble → bite → fight → success
+PASS GROUP pause invariance across five live states and canceled input
+PASS GROUP missed bite, overload, slack and terminal idempotence
+BALANCE common_bream gear=0 fraction=0.362 difficulty=0.447 fight=37.41s; common_bream gear=1 fraction=0.362 difficulty=0.447 fight=30.56s; common_bream gear=2 fraction=0.362 difficulty=0.447 fight=29.19s; common_bream gear=3 fraction=0.362 difficulty=0.447 fight=31.21s; common_bream gear=4 fraction=0.362 difficulty=0.447 fight=24.16s; common_bream gear=5 fraction=0.362 difficulty=0.447 fight=28.89s; rudd gear=0 fraction=0.362 difficulty=0.349 fight=35.48s; rudd gear=1 fraction=0.362 difficulty=0.349 fight=28.23s; rudd gear=2 fraction=0.362 difficulty=0.349 fight=24.07s; rudd gear=3 fraction=0.362 difficulty=0.349 fight=29.81s; rudd gear=4 fraction=0.362 difficulty=0.349 fight=22.99s; rudd gear=5 fraction=0.362 difficulty=0.349 fight=23.67s; roach gear=0 fraction=0.362 difficulty=0.286 fight=35.23s; roach gear=1 fraction=0.362 difficulty=0.286 fight=29.02s; roach gear=2 fraction=0.362 difficulty=0.286 fight=27.77s; roach gear=3 fraction=0.362 difficulty=0.286 fight=28.84s; roach gear=4 fraction=0.362 difficulty=0.286 fight=22.07s; roach gear=5 fraction=0.362 difficulty=0.286 fight=27.48s
+PASS GROUP actual sessions → save → retry → sale/release → restart
+PASS GROUP actual protected observation → production session → save → sale refusal → reload → release
+PASS GROUP zero-start release-only growth: 194 real encounters, discovered=110, balance=442; purchases=5960; failed unpaid attempts=0; unlocks=["japan discoveries=5 cost=140", "norway discoveries=16 cost=300", "bayou discoveries=21 cost=450", "pacific_ocean discoveries=30 cost=450", "med discoveries=45 cost=500", "red_sea discoveries=58 cost=550", "yangtze discoveries=73 cost=600", "atlantic_ocean discoveries=79 cost=600", "indian_ocean discoveries=97 cost=750"]
+PASS GROUP Main expanded discovery/currency/gear gates, failed unlock retry, protected result and reloaded pending controls
+PASS GROUP Main controls, full-world navigation, background, escaped/result flows and failed selection writes
+CORE_TESTS: 583237/583237 passed; failures=0

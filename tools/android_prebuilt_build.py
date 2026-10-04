@@ -49,7 +49,9 @@ def command(args, env, log):
 
 
 def checked_staging_parent(root, staging_parent=None):
-    parent = Path('/tmp') if staging_parent is None else Path(staging_parent)
+    # macOS /tmp is the OS-owned alias of /private/tmp. Canonicalize only this
+    # built-in default; caller-supplied symlinked staging paths still fail closed.
+    parent = Path('/tmp').resolve() if staging_parent is None else Path(staging_parent)
     assert parent.is_absolute(), 'Staging parent must be an absolute external directory'
     for part in (parent, *parent.parents):
         assert not part.is_symlink(), 'Staging parent and ancestors must not be symlinks'

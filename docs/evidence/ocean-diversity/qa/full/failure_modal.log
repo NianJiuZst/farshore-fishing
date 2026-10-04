@@ -1,0 +1,6 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/fishing_failure_modal_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+FISHING_FAILURE_MODAL_TESTS: 89/89 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1280) logical=(720.0, 1280.0); not Android hardware testing

@@ -1,0 +1,2422 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "california_sheephead",
+      "accepted_scientific_name": "Bodianus pulcher",
+      "taxonomy": {
+        "family_scientific": "Labridae",
+        "family_zh": "隆头鱼科",
+        "genus_scientific": "Bodianus",
+        "genus_zh": "普提鱼属",
+        "note": "采用 FishBase 与 California Sea Grant 当前名 Bodianus pulcher；旧文献常用 Semicossyphus pulcher，为同一物种，ID 不变。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "雌雄体型及颜色差异很大。来源没有提供整个分布区通用的成年平均长度或体重，不能把大雄鱼上限当普通规格。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "多在岩礁与巨藻林活动，常见 3—30 米；FishBase 另收录至 150 米的范围。游戏浅窗取常见礁区，并未压低所有现实记录。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "东中太平洋，从加州蒙特雷湾沿岸至下加利福尼亚与加利福尼亚湾。分布北段较少见；本作太平洋礁缘合辑包括东岸巨藻林。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "白天积极觅食，夜间进入洞隙休息。属于可由雌转雄的序列雌雄同体鱼，转换时间会随种群环境改变，不是所有个体在同一年龄变性。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "吃海胆、软体动物、蟹与龙虾等硬壳动物；前方犬齿撬取猎物，颌与咽部结构再处理硬壳。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 91,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录全长 91 厘米；这是资料汇编上限，不是本次认证的世界纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 16,
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录最大已发表体重 16 千克；长度与体重独立收录，不推断同一尾鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "啃海胆的海藻林邻居",
+        "text": "加州羊头鱼的大牙并非装饰：它能从礁石上撬取硬壳猎物。对海胆的捕食把它与海藻林联系起来；California Sea Grant 将它视为能限制海胆取食藻林的关键捕食者。礁鱼是否充足，会影响的不只是这条鱼自身。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Bodianus pulcher — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Semicossyphus-pulcher.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "California sheephead",
+          "publisher": "Monterey Bay Aquarium",
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/california-sheephead",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "California Sheephead",
+          "publisher": "California Sea Grant / UC San Diego",
+          "url": "https://caseagrant.ucsd.edu/seafood-profiles/california-sheephead",
+          "id": "s3",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "白天用虾饵探 3—30 米礁缘；持续控线，保护观察完成后放归。 普通游戏尺寸 25—70 厘米，低概率虚构巨物上端 100 厘米；数值与真实自然史资料分开。",
+      "conservation": {
+        "text": "FishBase 与 California Sea Grant 引述 IUCN 易危（VU）评估。本作采用保护观察，结束后必须放归、不可出售；该设计不替代现实地区法律。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "morphology": {
+        "text": "成熟雄鱼头部和尾段近黑，中段红橙，白下巴、红眼与隆起额头突出；犬齿外露，身体厚实，连续背鳍；雌鱼较小且多为粉红色。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      }
+    },
+    {
+      "species_id": "lingcod",
+      "accepted_scientific_name": "Ophiodon elongatus",
+      "taxonomy": {
+        "family_scientific": "Hexagrammidae",
+        "family_zh": "六线鱼科",
+        "genus_scientific": "Ophiodon",
+        "genus_zh": "蛇齿单线鱼属",
+        "note": "英文 lingcod 并非鳕鱼；属六线鱼科。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "雌鱼在约四岁后生长通常快于雄鱼，体型随性别、年龄与地点变化；本次来源没有通用的成年均值。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "成鱼常在近岸岩礁，阿拉斯加介绍的常见约 9—101 米；FishBase 全部记录范围为潮间带至 475 米，幼鱼可用浅湾软底。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "东北太平洋，阿拉斯加湾与阿拉斯加半岛附近南至墨西哥下加利福尼亚。沿北美西岸分布，不把本种当作全球深海鳕鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "许多个体活动范围集中在其家礁附近。雌鱼产卵后离开，雄鱼守护礁缝中的卵块，直到孵化。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "成鱼以鱼类为主，也吃甲壳类、章鱼和鱿鱼；幼体初期摄食桡足类等小型浮游生物。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 152,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大报告全长 152 厘米，属数据库汇编上限。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 59.1,
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大已发表体重字段为 59.1 千克；阿拉斯加介绍的磅与千克换算存在差异，本条不把它们拼成新纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "下潜看守卵的父亲",
+        "text": "1993 年潜水器研究看到深至 97 米的卵巢，至 126 米仍可见典型守卵雄鱼的暗色与行为。守卵并非只发生在潜水者容易到达的浅礁；研究同时提示，观察不到卵块也不等于没有亲鱼在守护。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Ophiodon elongatus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Ophiodon-elongatus",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Lingcod species profile",
+          "publisher": "Alaska Department of Fish and Game",
+          "url": "https://www.adfg.alaska.gov/index.cfm?adfg=lingcod.printerfriendly",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Submersible Observations on Lingcod Nests",
+          "publisher": "O’Connell / NOAA Marine Fisheries Review (1993)",
+          "url": "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/MFR/mfr551/mfr5513.pdf",
+          "id": "s3",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "拟饵沿礁区 10—60 米搜寻；突然冲刺时及时放松，再在停顿中收线。 普通游戏尺寸 40—115 厘米，低概率虚构巨物上端 165 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "长身、宽大头与深口裂，颌上大小尖齿交错；眼上短皮瓣，棕灰或铜褐底色带不规则深斑，长连续背鳍与宽胸鳍，尾端近截形。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "cabezon",
+      "accepted_scientific_name": "Scorpaenichthys marmoratus",
+      "taxonomy": {
+        "family_scientific": "Jordaniidae",
+        "family_zh": "长鳍杜父鱼科",
+        "genus_scientific": "Scorpaenichthys",
+        "genus_zh": "巨头杜父鱼属",
+        "note": "当前 FishBase 归于 Jordaniidae；旧资料可放在 Cottidae 或 Scorpaenichthyidae。俗称 sculpin，不是鲉科狮子鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "同龄雌鱼通常比雄鱼大，成年规格随年龄不同。Sea Grant 的约一米说明可达尺度，不是成年常见长度或体重。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "潮间带至约 200 米的岩礁、沙泥底与海藻林近底环境。成鱼常利用近岸立体结构伏击，并非必须住在洞穴。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "北美东太平洋，从阿拉斯加东南部锡特卡南至墨西哥下加利福尼亚中部。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "耐心伏击，猎物接近后以大口突袭。成鱼在浅礁硬结构上产卵，雄鱼守卵；仔鱼先漂游，数月后向潮池和礁区底部生活过渡。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "摄食甲壳类、软体动物和小鱼；海底与邻近水层的猎物都可进入其食谱。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 99,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录最大报告全长 99 厘米；Sea Grant 的约一米是取整介绍。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 14,
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录最大已发表体重 14 千克，独立于长度资料。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "大头，才是埋伏的工具",
+        "text": "其西班牙俗名意为“大头”。斑驳无鳞皮肤帮助它隐蔽，阔口则负责近距离突袭。Sea Grant 还提醒鱼卵有毒；外形和食用习惯都不能代替物种资料核查，本作不会把鱼卵当作奖励或食材。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Scorpaenichthys marmoratus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Scorpaenichthys-marmoratus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Cabezon",
+          "publisher": "California Sea Grant / UC San Diego",
+          "url": "https://caseagrant.ucsd.edu/seafood-profiles/cabezon",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "虾饵近中抛探底；停顿时收线，起身挣扎时留出余量。 普通游戏尺寸 20—70 厘米，低概率虚构巨物上端 108 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "头部非常宽大、口阔，皮肤无鳞；眼后和吻部具肉质皮瓣，宽扇形胸鳍；褐、绿或红色底上有深色斑驳，尾端微圆，贴底轮廓厚重。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "garibaldi",
+      "accepted_scientific_name": "Hypsypops rubicundus",
+      "taxonomy": {
+        "family_scientific": "Pomacentridae",
+        "family_zh": "雀鲷科",
+        "genus_scientific": "Hypsypops",
+        "genus_zh": "高身雀鲷属",
+        "note": "以 Hypsypops rubicundus 为界，英文 garibaldi 也指意大利历史人物，不是另外一个鱼属。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "成年与幼鱼的颜色明显不同，来源没有给出统一成年平均长度或体重；博物馆 35.6 厘米的介绍是可达尺度。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "清澈近岸岩礁与巨藻林，FishBase 记录深度 0—30 米；常靠礁缝与小洞活动。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "东中太平洋，加州蒙特雷湾至下加利福尼亚南部及瓜达卢佩岛附近。南加州较多，北段较少。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼守护岩礁领地；雄鱼清理并修整藻类巢面，守卵并以扇水为卵供氧。领地之外也会聚集，不能把所有相遇都解释成争斗。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "取食附着的无脊椎动物，如海绵、苔藓虫、小型贝类和管虫，也取食藻类。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 30,
+        "length_type": "SL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 上限为标准体长 SL 30 厘米；水族馆可达 35.6 厘米未注明量法，不能直接混为一个全长纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "核实的 FishBase 与水族馆页面没有可靠最大体重字段，保留空值，不从长度或游戏模型反推。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "会修剪花园的父亲",
+        "text": "繁殖季雄鱼把岩面上的残物清走，保留并修剪合适的红藻，营造卵的附着面。雌鱼检查巢址后才产卵，后续守护由雄鱼承担。鲜橙色只是最显眼的一面，岩礁上的小花园同样是它的生活。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Hypsypops rubicundus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Hypsypops-rubicundus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Garibaldi",
+          "publisher": "Monterey Bay Aquarium",
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/garibaldi",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "浅礁近抛，辨认橙色领地主；短促摆脱后再收线，完成观察自动放归。 普通游戏尺寸 10—28 厘米，低概率虚构巨物上端 39 厘米；数值与真实自然史资料分开。",
+      "conservation": {
+        "text": "蒙特雷湾水族馆介绍本种为加州受保护的州海鱼。在本作仅作虚拟保护观察，必须放归且不可出售；实际许可须遵循当地规定。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "morphology": {
+        "text": "短而高的侧扁椭圆体，成鱼通体鲜橙，连续背鳍，尾鳍浅凹近心形；幼鱼带电蓝点与蓝鳍缘，模型以无蓝点成鱼为准。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "kelp_greenling",
+      "accepted_scientific_name": "Hexagrammos decagrammus",
+      "taxonomy": {
+        "family_scientific": "Hexagrammidae",
+        "family_zh": "六线鱼科",
+        "genus_scientific": "Hexagrammos",
+        "genus_zh": "六线鱼属",
+        "note": "本条固定为 Hexagrammos decagrammus，不能因斑纹相近就混入同属岩六线鱼或大泷六线鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "来源给出可达大小，未提供跨地区成年均值；雌雄斑纹不同不能直接当作两种鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "近岸岩区与巨藻林，也见于沙底；FishBase 栖深上端约 46 米，浅端没有确定数值。本作 3—45 米是其中的虚拟窗口。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "东太平洋，阿留申群岛阿姆奇特卡岛南至加州拉霍亚一带，主要属北美西岸冷温带礁区。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "常在近岸结构区活动。雌雄斑点与鳍色不同；辨认时应同时看体形、眼上皮瓣和鳍，不能只看是否有蓝色。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "取食甲壳类、多毛类蠕虫、蛇尾、软体动物与小鱼；幼鱼本身也是鲑鱼等捕食者的食物。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 61,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 上限为全长 61 厘米，WDFW 页面概述可达 53 厘米；保留数据库量法及汇编范围，非认证纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 2.1,
+        "record_label": "资料收录上限",
+        "text": "FishBase 与 WDFW 均给出 2.1 千克可达重量，未证明与长度上限为同一鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "同一物种的两套斑点",
+        "text": "WDFW 的辨认资料区分雄鱼蓝点与雌鱼金褐点。海藻林中两尾色彩不一样的鱼，可能只是不同性别；收藏册以学名归并，外形差异则留给观察。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Hexagrammos decagrammus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Hexagrammos-decagrammus",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Kelp greenling",
+          "publisher": "Washington Department of Fish and Wildlife",
+          "url": "https://wdfw.wa.gov/species-habitats/species/hexagrammos-decagrammus",
+          "id": "s2",
+          "accessed": "2026-10-04",
+          "access_note": "机构页面的搜索索引可用于辨认资料；详情页本次工具请求返回 403，未把核查日期当作全文下载成功。"
+        }
+      ],
+      "gameplay_note": "虫饵浅礁中抛；利用休息段稳收，是分辨底层小鱼的好窗口。 普通游戏尺寸 17—43 厘米，低概率虚构巨物上端 65 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "修长纺锤体、长连续背鳍，眼上肉质小皮瓣，尾鳍圆至截形；雄鱼灰褐底有不规则蓝点及褐缘，雌鱼金褐点更密、鳍偏橙黄；模型选雄鱼蓝点型。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "pacific_halibut",
+      "accepted_scientific_name": "Hippoglossus stenolepis",
+      "taxonomy": {
+        "family_scientific": "Pleuronectidae",
+        "family_zh": "鲽科",
+        "genus_scientific": "Hippoglossus",
+        "genus_zh": "庸鲽属",
+        "note": "与大西洋庸鲽 Hippoglossus hippoglossus 为不同种；本条为北太平洋右眼鲽。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "雌鱼通常比雄鱼大，年龄和季节影响体型。NOAA 所说超过八英尺的“大门板”是巨大个体，不是常见成年平均值。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "利用多种底质，幼鱼在浅岸，随生长进入深水；成鱼夏季浅水取食、冬季向大陆坡深处产卵。FishBase 全部栖深记录可达 1200 米。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "北太平洋，日本北海道、鄂霍次克海至白令海，并沿北美西岸向南；NOAA 美国沿岸介绍范围为阿拉斯加诺姆至加州圣巴巴拉。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "幼体刚出生时两眼分处头部两侧，成长后左眼移向右侧，改为侧卧游泳和底栖生活。成鱼有季节性浅深水移动。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "幼体吃浮游动物；幼鱼吃小型甲壳类与底栖动物，成鱼捕食多种鱼类、章鱼、蟹和贝类，偶尔包括更小庸鲽。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 267,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大报告全长分列雄/性别不明 258 厘米与雌鱼 267 厘米，本条采用较大的雌鱼条目。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 363,
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大已发表重量字段为 363 千克，但本页该字段没有列出具体参考号；展示为数据库收录上限，不宣称独立认证纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "眼睛搬家后，世界翻了个方向",
+        "text": "庸鲽仔鱼起初对称游动，约六个月内经历变形，一只眼迁至另一侧，然后在浅底定居。NOAA 把这个变化与后来侧游的菱形大鱼联系起来：成鱼看似奇特的扁身，是一段完整发育过程的结果。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Hippoglossus stenolepis — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Hippoglossus-stenolepis.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Pacific Halibut",
+          "publisher": "NOAA Fisheries",
+          "url": "https://www.fisheries.noaa.gov/species/pacific-halibut",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "外海 30—180 米拟饵或鱼肉类饵寻底；宽扁身持续施力，留意大鱼张力。 普通游戏尺寸 55—190 厘米，低概率虚构巨物上端 285 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "极侧扁的菱形扁体，两眼在右侧；有眼面灰褐斑驳、盲面白，背臀鳍沿两侧形成长边，口大、胸鳍较小，尾鳍略呈月弧。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "yellow_tang",
+      "accepted_scientific_name": "Zebrasoma flavescens",
+      "taxonomy": {
+        "family_scientific": "Acanthuridae",
+        "family_zh": "刺尾鱼科",
+        "genus_scientific": "Zebrasoma",
+        "genus_zh": "高鳍刺尾鱼属",
+        "note": "Zebrasoma flavescens 并非夏威夷全球独有；属于刺尾鱼科高鳍刺尾鱼属。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "欧胡岛研究采样包含全长 5.5—11 厘米个体，是成熟研究的样本范围，并非整个物种的成年常见规格。这里不据此虚构成年均值。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "珊瑚丰富的潟湖与向海外礁，常见记录约 3—46 米；通常在岩礁上方取食藻类。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "太平洋琉球、马里亚纳、马绍尔、南鸟岛、威克与夏威夷等岛区。佛罗里达的报告不可当作大西洋本土普遍分布的证据。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "独游或松散小群，在水层中成对或群体产卵，资料记载生殖活动有月周期。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "主要刮食丝状藻类；谷物饵倍率只代表游戏植物饵分类，不表示野外以谷物为食。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 20,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录最大报告全长 20 厘米。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "核实的数据库与研究页面未提供可靠物种最大重量，保留空值；游戏体重锚点不能当作事实。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "“成熟”需要测量，而不是看颜色",
+        "text": "2021 年欧胡岛研究专门评估黄高鳍刺尾鱼的成熟大小；此前资料仍较初步。研究利用水族捕捞样本并限定长度范围，说明即使是常见鲜黄礁鱼，判断何时能繁殖也需要逐尾测量，而不能拿照片里的大鱼作答案。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Zebrasoma flavescens — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Zebrasoma-flavescens.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Size at maturity for yellow tang from the Oahu aquarium fishery",
+          "publisher": "Schemmel (2021) / Environmental Biology of Fishes / NOAA repository",
+          "url": "https://repository.library.noaa.gov/view/noaa/32596",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "谷物类游戏植物饵在浅礁近抛；小体型短促冲刺，轻收更稳。 普通游戏尺寸 7—18 厘米，低概率虚构巨物上端 26 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "通体明黄、侧扁高身，背鳍与臀鳍撑开成帆，吻略尖、小口；尾柄两侧白色刀状刺，尾鳍浅凹，不能画成黄蓝混色的拟刺尾鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      }
+    },
+    {
+      "species_id": "barreleye",
+      "accepted_scientific_name": "Macropinna microstoma",
+      "taxonomy": {
+        "family_scientific": "Opisthoproctidae",
+        "family_zh": "后肛鱼科",
+        "genus_scientific": "Macropinna",
+        "genus_zh": "大鳍后肛鱼属",
+        "note": "“管眼鱼”可泛指后肛鱼科；本条专指北太平洋 Macropinna microstoma，不把整科的三大洋分布套给本种。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "typical_size": {
+        "text": "MBARI 展示的观察个体约 14 厘米，机构页给出可达 15 厘米；小样本或上限都不等于成年平均长度。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "北太平洋深水中层。MBARI 加州 ROV 常见观察为 600—800 米；FishBase 汇总更宽的 16—1267 米记录。游戏 500—700 米为明确改编窗口，不能称 500 米是普遍典型栖深。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "北太平洋，从白令海到日本与墨西哥下加利福尼亚附近；本种并非有证据遍布三个大洋的全部管眼鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "宽平鳍帮助悬停，管状眼可在透明头罩内转动，搜索上方猎物后朝前聚焦。绿色来自眼内色素，不等于本种自行发光。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "吃小型漂游动物与胶质生物，网捕个体胃中发现胶质动物残片；在管水母触手间取食其捕获猎物是研究者的工作假说，不能写成已普遍证实的日常行为。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 15,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录全长 15 厘米；MBARI 同样以约 15 厘米介绍最大尺寸。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "本次核实来源未给可靠最大重量，保留空值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "头顶的眼睛，终于转向前方",
+        "text": "2008 年研究结合 ROV 影像与短暂船上观察，解释管状眼怎样从向上探测转到向前进食。旧网捕标本常丢失脆弱透明头罩，因此早期插图漏掉它。机器人先让科学家看见活体结构，再让这个半世纪的视觉谜题有了答案。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Macropinna microstoma — species summary",
+          "publisher": "FishBase",
+          "url": "https://fishbase.se/summary/2704",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Barreleye fish",
+          "publisher": "Monterey Bay Aquarium Research Institute (MBARI)",
+          "url": "https://www.mbari.org/animal/barreleye-fish/",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Researchers solve mystery of deep-sea fish with tubular eyes and transparent head",
+          "publisher": "MBARI / Robison and Reisenbichler (2008)",
+          "url": "https://www.mbari.org/news/researchers-solve-mystery-of-deep-sea-fish-with-tubular-eyes-and-transparent-head/",
+          "id": "s3",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "5 号深海竿探 500—700 米；600—700 米覆盖 MBARI 观察水层，低张力停顿控线后完成保护观察。 普通游戏尺寸 4.5—14 厘米，低概率虚构巨物上端 18 厘米；数值与真实自然史资料分开。",
+      "conservation": {
+        "text": "本作对脆弱深海鱼采用虚拟保护观察并必须放归，不代表现实可用钩线采集或可安全送回深水；透明头罩在捕捞后易损毁。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "morphology": {
+        "text": "短小深褐身、透明充液头罩，头内一对绿色管状眼可向上或前方转动；吻前两黑点是嗅孔而非眼，口很小；宽透明胸鳍支持悬停。",
+        "source_ids": [
+          "s3"
+        ]
+      }
+    },
+    {
+      "species_id": "turbot",
+      "accepted_scientific_name": "Scophthalmus maximus",
+      "taxonomy": {
+        "family_scientific": "Scophthalmidae",
+        "family_zh": "菱鲆科",
+        "genus_scientific": "Scophthalmus",
+        "genus_zh": "菱鲆属",
+        "note": "大菱鲆当前名 Scophthalmus maximus；Psetta maxima 为旧组合，黑海近缘种的旧亚种记录不混算。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见长度分列雄鱼或性别不明全长 50 厘米、雌鱼全长 70 厘米；MarLIN 的一般 50—80 厘米未注明量法。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "常在大陆架沙、砾或贝壳砾底，偶见泥底与混合岩沙底，也可入半咸水。FishBase 栖深 20—70 米，MarLIN 介绍约 20—80 米。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "东北大西洋，从挪威、冰岛北极圈附近沿欧洲沿岸至波罗的海、地中海；英国和爱尔兰沿岸也有。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼右侧卧底，可调整有眼面的颜色以接近底色；幼鱼可出现在近岸浪区与潮池，不能把成鱼大陆架窗口套给所有年龄。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要捕食底层鱼类，如沙鳗和虾虎鱼，也吃甲壳类与双壳类。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 100,
+        "length_type": "SL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 上限为标准体长 SL 100 厘米，不能同 MarLIN 未注明量法的一米介绍或游戏视觉长度直接换算。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 25,
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大已发表重量为 25 千克，独立于长度字段；不宣称为本次认证纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "粗糙背面的沙底伪装",
+        "text": "大菱鲆的背面并不是一张光滑“鱼毯”：无鳞皮肤上散生骨瘤，而颜色能随背景调整。MarLIN 同时列出骨瘤和侧线弧度作为辨认特征；沙底上的轮廓容易隐藏，摸得出的结构仍属于这个物种本身。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Scophthalmus maximus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Scophthalmus-maximus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Turbot",
+          "publisher": "Marine Biological Association / MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/1917",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "虾饵或拟饵探 20—70 米沙底；圆扁身持续抗线，稳住张力逐段收回。 普通游戏尺寸 20—80 厘米，低概率虚构巨物上端 115 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "近圆盘形侧扁体，两眼在左侧、右侧卧底；有眼面沙褐至灰色细斑、散生骨瘤，盲面白；背鳍从吻前起，背臀鳍沿体缘但不连至尾下，尾鳍短而密斑。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "john_dory",
+      "accepted_scientific_name": "Zeus faber",
+      "taxonomy": {
+        "family_scientific": "Zeidae",
+        "family_zh": "海鲂科",
+        "genus_scientific": "Zeus",
+        "genus_zh": "海鲂属",
+        "note": "本条为东北大西洋 Zeus faber；Fishes of Australia 提示部分南非、澳洲、日本旧记录涉及 Zeus japonicus，不能据旧同名记录声称全球同种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长约 40 厘米；澳洲机构页面可达 66 厘米是当地旧分类范围的上限，不当作大西洋成鱼均值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "近底生活，常靠大陆架底部活动；FishBase 记录 5—400 米、通常 50—150 米，游戏取原陆架可达的 50—90 米一段。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "本作选东北及东部大西洋、地中海的海鲂形态。旧资料列的印度—西太平洋与南非群体存在分类修订线索，不一概确认同种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "通常独游，缓慢从正面接近猎物，再前伸口部捕食；体侧眼斑可能扰乱捕食者判断，机构表述为推测。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要吃近底的小鱼，也吃甲壳类与头足类。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 90,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录最大全长 90 厘米。相关地理种群分类仍有修订问题，本条不把其他地区数值叠加成新纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 8,
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录最大已发表重量 8 千克。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "薄身和突然伸出的嘴",
+        "text": "从侧面看海鲂很宽，从猎物正面看却极薄。机构观察描述它缓慢靠近，随后前伸口部抓住小鱼；眼斑的传说很多，实际可观察的捕食结构已经足够特别。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Zeus faber — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Zeus-faber.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "John Dory",
+          "publisher": "Museums Victoria / Fishes of Australia / Bray 2025",
+          "url": "https://fishesofaustralia.net.au/home/species/1492",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "50—90 米陆架拟饵慢探；休息段收线，看到突袭摆身时暂缓。 普通游戏尺寸 16—65 厘米，低概率虚构巨物上端 98 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "极侧扁高身，橄榄黄至银褐体侧有浅圈围绕的蓝黑圆斑；口大且能前伸，长背棘及高出棘端的膜丝，背臀鳍基部骨盾，胸鳍较小，尾鳍圆至微截形。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "grey_gurnard",
+      "accepted_scientific_name": "Eutrigla gurnardus",
+      "taxonomy": {
+        "family_scientific": "Triglidae",
+        "family_zh": "鲂鮄科",
+        "genus_scientific": "Eutrigla",
+        "genus_zh": "真鲂鮄属",
+        "note": "当前名 Eutrigla gurnardus；旧组合 Trigla gurnardus、Chelidonichthys gurnardus 不另建收藏条目。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长 30 厘米；MarLIN 也介绍通常约 30 厘米。未给可靠普通成年平均重量。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "多在沙底，也见岩底和泥底；沿岸至约 140 米较常见，FishBase 另有伊奥尼亚海深至 340 米记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "东大西洋从冰岛、挪威、北海和南波罗的海至摩洛哥、马德拉附近，亦在地中海与黑海出现。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "会发出敲击和低咕噜声。2005 年受控竞争取食实验发现，声音频率与互动会随体型改变，不据此推断所有野外群体发声次数。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要摄食虾、岸蟹等甲壳类和小鱼，包括虾虎鱼、幼鲱鱼与沙鳗。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 60,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大全长 60 厘米；MarLIN 的一般上限 50 厘米未注明量法，保留不同资料口径。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 0.956,
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大已发表重量 956 克，换算为 0.956 千克；不是把厘米套公式估出的数值。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "抢饭时的咕噜声",
+        "text": "研究者同步录像与录音，比较不同体型灰鲂鮄竞争食物时的声音。大鱼发声速率更低、声音频率也更低；作者提出，小鱼更常用争夺方式，大鱼更有寻找和处理猎物的优势。鱼的声音有情境，不是每次都在唱求偶曲。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Eutrigla gurnardus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Eutrigla-gurnardus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Grey gurnard",
+          "publisher": "Marine Biological Association / MarLIN",
+          "url": "https://www.marlin.ac.uk/species/detail/162",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Ontogeny of acoustic and feeding behaviour in the grey gurnard",
+          "publisher": "Amorim and Hawkins (2005) / University of Lisbon / Ethology",
+          "url": "https://researchportal.ulisboa.pt/en/publications/ontogeny-of-acoustic-and-feeding-behaviour-in-the-grey-gurnard-eu/",
+          "id": "s3",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "虫或虾饵探 10—90 米沙泥底；小幅挣扎后利用停顿收线。 普通游戏尺寸 10—35 厘米，低概率虚构巨物上端 65 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "头大且额部斜陡，体向尾渐细；灰褐略带红、白色小点、腹面乳白；前背鳍小且带大黑斑，后背鳍长；短胸鳍下三根独立肉质鳍条，侧线鳞隆起带刺，尾近截形。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "queen_angelfish",
+      "accepted_scientific_name": "Holacanthus ciliaris",
+      "taxonomy": {
+        "family_scientific": "Pomacanthidae",
+        "family_zh": "刺盖鱼科",
+        "genus_scientific": "Holacanthus",
+        "genus_zh": "刺盖鱼属",
+        "note": "以 Holacanthus ciliaris 为准；相似蓝刺盖鱼 H. bermudensis 及杂交体不当作本种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长约 30 厘米；幼鱼颜色与成年明显不同，不能将不同色型当作不同物种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "近底珊瑚礁，常在海扇与珊瑚间独游或成对；由浅岸至约 70 米的深礁。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "热带西大西洋，以加勒比和佛罗里达、墨西哥湾至巴西海岸及岛礁为主，FishBase 另列圣保罗岩礁；并非印度洋神仙鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼常独游或成对；全年见到配对可能代表持久配偶关系，但机构只将其表述为推测。幼鱼可建立清洁站。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "成鱼主要吃海绵，也吃其他附着无脊椎动物和藻类；幼鱼啄取大型鱼身上的寄生物。虾、虫或谷物游戏倍率不代表其野外主食比例。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 45,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 全长上限 45 厘米，Florida Museum 也介绍可达约 45 厘米但未另注明量法。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 1.6,
+        "record_label": "资料收录上限",
+        "text": "两个核实来源均介绍可达约 1.6 千克，作为资料上限而非认证纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "幼鱼的清洁小店",
+        "text": "年轻蓝额刺盖鱼在领地内设置清洁站，较大的鱼会停住，让它清除体表甚至鳃旁的寄生物。Florida Museum 描述这段暂时休战：同一条鱼小时候提供清洁服务，成年后则主要取食海绵。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Holacanthus ciliaris — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Holacanthus-ciliaris.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Queen Angelfish",
+          "publisher": "Florida Museum of Natural History / Patton and Bester",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/queen-angelfish/",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "浅陆架礁区 5—65 米近中抛；平稳控线观察黄尾与皇冠斑。 普通游戏尺寸 9—35 厘米，低概率虚构巨物上端 52 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "高身侧扁椭圆体、圆钝头、小刷状齿口，连续背鳍和臀鳍后端拖长；蓝绿底带黄橙鳞缘，额头黑斑有亮蓝环与点，尾鳍和胸鳍黄；模型用成鱼，不保留幼鱼蓝竖带。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "stoplight_parrotfish",
+      "accepted_scientific_name": "Sparisoma viride",
+      "taxonomy": {
+        "family_scientific": "Labridae",
+        "family_zh": "隆头鱼科",
+        "genus_scientific": "Sparisoma",
+        "genus_zh": "绚鹦嘴鱼属",
+        "note": "FishBase 当前将鹦嘴鱼亚科 Scarinae 纳入 Labridae；旧图鉴常作 Scaridae。STRI 明确巴西姊妹种为 Sparisoma amplum，不能混入。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长 38 厘米；初始相和终末相色彩差异不等于不同鱼种。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "清水珊瑚礁；幼鱼亦在附近海草床。FishBase 常用 3—50 米，STRI 另汇总 0—107 米；游戏浅窗不覆盖全部记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "本条采用 STRI 的百慕大至加勒比南部范围；FishBase 旧宽描述中的巴西记录不全数采纳，巴西姊妹种为 S. amplum。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "日间取食，夜里在底部休息，可独游或成小群；有雌转雄的生殖系统，颜色相位并非所有个体都按统一年龄变化。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "主要刮食软藻，也被观察到刮取活珊瑚表面；融合齿板和持续生长的牙参与礁面生物侵蚀，不能概括为只吃珊瑚。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 64,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大全长 64 厘米；STRI 亦给 64 厘米但其展示未注明量法。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 1.6,
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大已发表重量 1.6 千克；本作偏大的游戏锚点和巨物不是自然纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "礁面刮食留下的细粒",
+        "text": "绿鹦嘴鱼强壮齿板在刮食时也磨下礁体颗粒，FishBase 将其列为能产生显著沉积物的生物侵蚀者。它并非专门“制造沙滩”的机器；日常摄食、牙齿更新和海底沉积，是同一段生态过程的不同环节。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Sparisoma viride — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Sparisoma-viride.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Stoplight Parrotfish",
+          "publisher": "Smithsonian Tropical Research Institute / Shorefishes of the Greater Caribbean",
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/3926",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "白天谷物类游戏植物饵探礁面 5—50 米；持续拉力中匀速收线。 普通游戏尺寸 14—46 厘米，低概率虚构巨物上端 72 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "厚实中高侧扁体、大鳞、前吻鹦嘴状融合齿板；模型用终末相雄鱼：绿头绿身，颊部紫条、鳃盖上黄点、粉红蓝缘背臀鳍，尾基黄斑且尾鳍有黄色月弧，成鱼尾缘凹。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "atlantic_flyingfish",
+      "accepted_scientific_name": "Cheilopogon melanurus",
+      "taxonomy": {
+        "family_scientific": "Exocoetidae",
+        "family_zh": "飞鱼科",
+        "genus_scientific": "Cheilopogon",
+        "genus_zh": "须唇飞鱼属",
+        "note": "本条为 Cheilopogon melanurus；飞鱼科其他同样“四翼”的物种不能仅凭飞行轮廓混认。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长约 25 厘米；来源没有通用成年平均体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "近岸和外海的表层游泳鱼；STRI 主要水层 0—5 米，FishBase 收录 0—20 米。0.5—12 米游戏窗口覆盖机构的近表层段并取 FishBase 较宽记录；浅钓时优先 0.5—5 米。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "大西洋东西两侧：西部墨西哥湾流近马萨诸塞至巴西南部及加勒比；东部有塞内加尔至利比里亚等记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "能跃出水面，用展开的鳍在水面上方滑翔；这里的“飞”是滑翔，不是像鸟持续拍翼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "STRI 物种报告列为浮游动物食者；不能由游戏虾饵倍率推断专吃大虾。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 32,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 上限为全长 32 厘米；STRI 可达 33 厘米未注明量法，不能把两者直接换算或叠加。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "核实的数据库页面没有可靠最大体重，保留 null；游戏小鱼锚点独立。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "四片翼，仍然是一条鱼",
+        "text": "展开的长胸鳍和长腹鳍形成四翼轮廓，深叉尾的下叶更长。FishBase 记录其跃水长距离滑翔能力；识别本种还需看灰色胸鳍的淡三角带，而不只是看到一条离开水面的鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Cheilopogon melanurus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Cheilopogon-melanurus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Atlantic Flyingfish",
+          "publisher": "Smithsonian Tropical Research Institute / Shorefishes of the Greater Caribbean",
+          "url": "https://biogeodb.stri.si.edu/caribbean/en/thefishes/species/3334",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "陆架近表层 0.5—12 米搜寻；短促冲刺时松线，停顿再收，留意四翼轮廓。 普通游戏尺寸 12—29 厘米，低概率虚构巨物上端 38 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "修长近矩形截面的银色体，上暗下白、小钝头小口；胸鳍极长、腹鳍也长，形成四翼轮廓；胸鳍灰有淡三角横带与透明窄缘，腹鳍透明，背鳍低短；深叉尾下叶明显长于上叶。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "atlantic_tarpon",
+      "accepted_scientific_name": "Megalops atlanticus",
+      "taxonomy": {
+        "family_scientific": "Megalopidae",
+        "family_zh": "大海鲢科",
+        "genus_scientific": "Megalops",
+        "genus_zh": "大海鲢属",
+        "note": "Megalops atlanticus 为大西洋大海鲢；印度—太平洋的 M. cyprinoides 为另一种，不为增加重叠而合并。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长 130 厘米；雌鱼可比雄鱼大，巨大雌鱼上限不代表普通成年规格。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "主要利用沿岸、海湾、河口、红树林潟湖，可进入淡水。FishBase 记录 0—40 米、通常 0—15 米；改造的鳔能帮助在缺氧水中呼吸空气。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "大西洋两侧的温暖沿岸：西部新斯科舍、百慕大至南美并遍及墨西哥湾和加勒比；东部西非沿岸。也曾越过巴拿马运河，不能当作印度洋普遍原生种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "上浮吞气，鳔通过与食道连接的通道获得空气；幼鱼尤其依赖空气呼吸。成鱼可结群并有向外海繁殖地移动的行为。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "成鱼主要捕食鱼类及虾蟹；幼体和小幼鱼食性不同，不能把成鱼食谱直接套给透明柳叶状仔鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 250,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大报告全长 250 厘米，Florida Museum 也介绍可超过约 2.5 米，非本次认证世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 161,
+        "record_label": "资料收录上限",
+        "text": "两来源介绍的物种可达重量约 161 千克，独立于游戏模型及特定钩线纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "银色鱼，也会向空气要氧",
+        "text": "大海鲢的鳔不只是浮力工具，内部特化组织让它利用上浮吞入的空气。Florida Museum 介绍幼鱼对空气呼吸的依赖；它能进入河口低氧水域，与这项结构适应有关，仍然通过鳃和水中环境生活。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Megalops atlanticus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/1079",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Tarpon",
+          "publisher": "Florida Museum of Natural History",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/tarpon/",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "浅陆架 5—30 米拟饵；银色巨体冲刺时放松，休息再收，观察完成必须放归。 普通游戏尺寸 50—220 厘米，低概率虚构巨物上端 295 厘米；数值与真实自然史资料分开。",
+      "conservation": {
+        "text": "FishBase 引述 IUCN 易危（VU）评估。本作采用保护观察，结束后必须放归、不可出售。博物馆网页包含较早时期的捕捞规则，未将其当作当前法规。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "morphology": {
+        "text": "粗壮修长侧扁体、非常大的银鳞，背深蓝绿黑、腹侧亮银；大口向上、下颌突出，单背鳍末条拉成长丝，尾深叉两叶近等长，鳍灰暗且无硬棘。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "black_scabbardfish",
+      "accepted_scientific_name": "Aphanopus carbo",
+      "taxonomy": {
+        "family_scientific": "Trichiuridae",
+        "family_zh": "带鱼科",
+        "genus_scientific": "Aphanopus",
+        "genus_zh": "无腹带鱼属",
+        "note": "固定 Aphanopus carbo；其他海区 Aphanopus 近缘种和白银带鱼不因带形而合并。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见标准体长 SL 70 厘米；其全长上限及游戏视觉长度是不同口径，不据常见长度反推体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "深水中层；FishBase 记录 200—2300 米、通常 700—1300 米。游戏 250—700 米只选较浅记录段，并非宣称通常生活在 250 米。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "北大西洋两侧及海底隆起，从丹麦海峡至佛得角附近；本条不把其他 Aphanopus 物种的印度—太平洋记录混入。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "幼鱼在中层水活动；可夜间向中层上移觅食，成熟个体还会向马德拉与加那利附近繁殖及育幼区水平移动。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "捕食甲壳类、头足类和鱼类，包括深水鳕形类和其他中深层鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 151,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 收录最大全长 151 厘米，有文献参考号；不把较旧 145 厘米介绍当成现行全种上限。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "FishBase 最大体重显示 0.00 克，属于无可用数值，不能解释为真实体重；本次没有核实可靠最大重量，保留 null。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "带鱼的尾巴，也能分叉",
+        "text": "Évora 大学生物多样性馆突出本种分叉尾鳍、铜黑虹彩和成年无腹鳍的组合。狭长身形很像一条暗带，却不是把近岸白银带鱼染黑：嘴里的长牙、黑色口腔和这些鳍的差别，共同描述其深水身体。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Aphanopus carbo — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Aphanopus-carbo.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Peixe-espada-preto / Aphanopus carbo",
+          "publisher": "Universidade de Évora / Museu Virtual da Biodiversidade",
+          "url": "https://museubiodiversidade.uevora.pt/elenco-de-especies/biodiversidade-actual/animais/aphanopus-carbo/",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "5 号深海竿探 250—700 米浅端深水记录；细长身持续拉线，700 米靠近资料通常水层的上缘。 普通游戏尺寸 45—135 厘米，低概率虚构巨物上端 175 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "极长且侧扁的带状体，宽长吻和外露尖獠牙；皮肤铜黑带虹彩、口腔和鳃腔黑，长低背鳍与臀鳍、尾鳍分叉；成年完全无腹鳍，幼鱼才有单棘，不能画成常见白银带鱼的尖细无尾末端。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "humphead_wrasse",
+      "accepted_scientific_name": "Cheilinus undulatus",
+      "taxonomy": {
+        "family_scientific": "Labridae",
+        "family_zh": "隆头鱼科",
+        "genus_scientific": "Cheilinus",
+        "genus_zh": "唇鱼属",
+        "note": "当前 FishBase 与 WoRMS 接受 Cheilinus undulatus。Near 等 2025 年分类研究提出 Crassilabrus undulatus 新组合；来源更新与处理尚未一致，不把该新组合宣称为统一接受名。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长约 60 厘米；较大成鱼的额部更突出，幼鱼与成鱼体型和颜色不同。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "成鱼常在陡峭外礁坡、航道与潟湖，活动于 2—60 米；资料全部范围 0—100 米。幼鱼可利用珊瑚枝、藻类和海草中的庇护。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "distribution": {
+        "text": "印度—太平洋，红海、东非与南非至土阿莫土群岛，北至琉球、南至新喀里多尼亚。印度洋游戏分配不表示其他海域不存在。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "behavior": {
+        "text": "可独游或成对，白天在礁区觅食，夜间退入洞穴或岩沿下。名称修订只影响分类组合，不改变本作物种 ID 和收藏记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "取食软体动物、海胆、甲壳类、鱼等；资料列其为能捕食棘冠海星的鱼之一，不能推成唯一天敌或生态救援万能工具。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 229,
+        "length_type": "SL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大报告标准体长 SL 为 229 厘米；与常见全长 TL 和游戏视觉长度分开，不能直接换算。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 191,
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大已发表重量 191 千克，与长度条目独立，不推断为同一尾鱼。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "新属名与同一尾隆额鱼",
+        "text": "2025 年隆头鱼分类研究将 Crassilabrus 从 Cheilinus 的异名处理中恢复，并给本种提出 Crassilabrus undulatus 新组合。主数据库目前仍接受 Cheilinus undulatus。分类会随研究更新；本作展示两个名称的关系，保持同一收藏 ID。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Cheilinus undulatus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Cheilinus-undulatus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Phylogenetic Taxonomy of Wrasses and Parrotfishes (Labridae)",
+          "publisher": "Near et al. (2025) / Bulletin of the Peabody Museum of Natural History / Yale University",
+          "url": "https://www.nearlab.org/uploads/1/3/3/7/133700440/199_near_et_al2025wrasse_taxonomy.pdf",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Cheilinus undulatus — taxon details",
+          "publisher": "World Register of Marine Species",
+          "url": "https://www.marinespecies.org/aphia.php?id=218945&p=taxdetails",
+          "id": "s3",
+          "accessed": "2026-10-04",
+          "access_note": "接受名使用 WoRMS 搜索索引与 FishBase 交叉核对；WoRMS 详情页返回 403，2025 年分类论文全文另已核读。"
+        }
+      ],
+      "gameplay_note": "礁坡 3—60 米虾饵慢探；隆额巨体持续拉线，完成保护观察后必须放归。 普通游戏尺寸 35—180 厘米，低概率虚构巨物上端 250 厘米；数值与真实自然史资料分开。",
+      "conservation": {
+        "text": "FishBase 引述 2024 年 IUCN 濒危（EN）评估与 CITES 附录 II。本作只提供保护观察，结束后必须放归、不可出售；国际贸易管理与当地捕捞规则不是同一个概念。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "morphology": {
+        "text": "厚实高身，成年大鱼额部有明显肉质隆起，厚唇、犬齿与圆尾；橄榄绿鳞片带深竖纹，头部蓝绿色弯曲线纹、眼后两条暗线；幼鱼额头不夸张，模型选大型成鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "emperor_angelfish",
+      "accepted_scientific_name": "Pomacanthus imperator",
+      "taxonomy": {
+        "family_scientific": "Pomacanthidae",
+        "family_zh": "刺盖鱼科",
+        "genus_scientific": "Pomacanthus",
+        "genus_zh": "刺盖鱼属",
+        "note": "Pomacanthus imperator 为本条接受名；幼鱼圆环和成鱼横纹属于同种的成长变化。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "机构介绍不同生长阶段的花纹，未给可靠跨分布区成年平均长度或体重；可达尺度不当普通规格。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "清澈潟湖、水道与向海礁坡，资料范围 1—100 米。幼鱼常在岩沿、洞隙下，成鱼利用珊瑚丰富的庇护结构。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "印度—太平洋，从红海和东非至莱恩、土阿莫土群岛，日本南部至澳洲与新喀里多尼亚；澳洲资料也列圣诞岛、科科斯群岛。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼可成对，大小个体也能替较大鱼清除寄生物。幼年圆环逐渐过渡为成鱼横纹，不应拆成两种收藏。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要啄食海绵和被囊动物，清洁行为也可涉及体表寄生物。虫、虾或谷物的游戏倍率不表示其真实主食比例。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 40,
+        "length_type": "SL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 上限为标准体长 SL 40 厘米；Fishes of Australia 介绍全长 TL 38 厘米。来源和量法不同，不能把差异拿来推导换算式。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "核实页面未给可靠最大体重，保留 null；游戏体重锚点不是实测资料。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "从同心圆换成水平线",
+        "text": "同一主刺盖鱼的幼年与成年像两幅不同图案：幼鱼蓝白圆环，成鱼蓝黄横纹和黑眼罩。Museums Victoria 用各阶段图像说明这一变化，辨认礁鱼时，单看颜色可能把成长误认成物种更替。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Pomacanthus imperator — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Pomacanthus-imperator.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Emperor Angelfish",
+          "publisher": "Museums Victoria / Fishes of Australia",
+          "url": "https://fishesofaustralia.net.au/home/species/653",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "礁缘 5—60 米慢探；平稳控线，注意成鱼横纹与幼鱼圆环的区别。 普通游戏尺寸 10—35 厘米，低概率虚构巨物上端 48 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "高身侧扁椭圆体、额部陡、口小；成鱼蓝底密集黄横纹，黑色眼罩带浅缘，胸鳍基后另有深色竖带，黄尾；幼鱼为深蓝底蓝白同心弧环，模型保留成鱼横纹。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "leaf_scorpionfish",
+      "accepted_scientific_name": "Taenianotus triacanthus",
+      "taxonomy": {
+        "family_scientific": "Scorpaenidae",
+        "family_zh": "鲉科",
+        "genus_scientific": "Taenianotus",
+        "genus_zh": "叶须鲉属",
+        "note": "Taenianotus triacanthus 是小型鲉科伏击鱼；不以枯叶轮廓混认鮟鱇鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "可达约 10 厘米的小型鱼；核实来源没有给通用成年平均值，不能把最大值当每尾规格。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "珊瑚礁上藻丛、海草及岩块间。FishBase 通常 5—20 米、全部范围 5—135 米；澳洲机构范围浅端为 1 米，游戏取两者常见交集。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "印度—太平洋，从东非到土阿莫土等岛群，北至琉球和夏威夷、南至澳洲；东太平洋亦有加拉帕戈斯记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "多独自静候，随潮流左右摇摆仿落叶。会定期蜕去表层皮肤，去掉附着藻类和小生物，蜕皮后体色也可改变。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以小型甲壳类及鱼类幼体等为食，近距离伏击；并非植物食者。背鳍棘具有毒性，真实操作不能按游戏方式照做。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 10,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大全长 10 厘米；机构页面也给可达 10 厘米，未另注明量法。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "核实来源没有可靠最大体重，保留 null，不根据几厘米体长猜测。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "落叶也会换一层皮",
+        "text": "礁上的“叶片”并不只是靠不动隐身。Fishes of Australia 介绍它随水摇摆，还定期脱去附着生物累积的表皮，有时连体色也会变化。这样的伪装依赖薄身、姿态和维护，不是单给普通小鱼涂黄。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Taenianotus triacanthus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Taenianotus-triacanthus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Leaf Scorpionfish",
+          "publisher": "Museums Victoria / Fishes of Australia",
+          "url": "https://fishesofaustralia.net.au/home/species/3342",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "虫或虾饵浅礁慢探；以落叶摇摆的停顿窗口收线，避免只等高速冲刺。 普通游戏尺寸 3—8.5 厘米，低概率虚构巨物上端 13 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "体小且强烈侧扁，长基底高背鳍以第三、四硬棘突出，背鳍软部连到尾鳍；皮肤无鳞而有细小突起、嘴周细皮瓣，尾小；颜色可黄、白、红或褐，模型选黄褐落叶色，保留细口裂与眼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "bluespotted_ribbontail_ray",
+      "accepted_scientific_name": "Taeniura lymma",
+      "taxonomy": {
+        "family_scientific": "Dasyatidae",
+        "family_zh": "魟科",
+        "genus_scientific": "Taeniura",
+        "genus_zh": "带尾魟属",
+        "note": "本种 Taeniura lymma 与蓝点为环状、常埋沙的其他魟鱼不同。盘宽 WD 与全长 TL 必须分别记录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "资料可达盘宽 30—35 厘米，包含尾部的全长可达约 70 厘米；盘宽不等于普通鱼体长，未给成年平均重量。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "浅珊瑚礁、近礁沙地及洞隙，FishBase 范围 0—20 米。退潮时常靠洞或岩沿庇护，资料称它很少埋入沙底。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "印度—西太平洋，从红海、东非和波斯湾至所罗门群岛，日本南部至澳洲北部。印度洋专属游戏分配不代表现实仅限印度洋。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "涨潮时可成群进入浅沙地觅食，退潮再分散藏入洞穴和岩沿。尾刺属于防御结构，不是捕食用毒针。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "摄食蠕虫、虾蟹、软体动物及小鱼等近底动物，沿沙地搜索；不是把大鱼拉到岸上的主动猎手。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 70,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 生物学说明与 Florida Museum 给出全长约 70 厘米；数据库最大长度字段的 35 厘米为盘宽 WD，不能误作 TL。FishBase 明确质疑 240 厘米旧值，本作不采用。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "核实页面未给可靠最大体重；不以盘宽或长尾反推重量，保留 null。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "跟着潮水进出的蓝点",
+        "text": "资料记录它在涨潮时结群进入浅沙地寻找底栖猎物，水位降低便分散回到礁缝和岩沿。蓝点与潮汐是可观察的特征；不同鳐鱼的“埋沙”印象，不能自动套给这一种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Taeniura lymma — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Taeniura-lymma.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Bluespotted Ribbontail Ray",
+          "publisher": "Florida Museum of Natural History / Bester",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bluespotted-ribbontail-ray/",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "虫或虾饵探浅礁沙地 3—20 米；鳐盘持续摆动，观察完成后放归。 普通游戏尺寸 28—70 厘米，低概率虚构巨物上端 100 厘米；数值与真实自然史资料分开。",
+      "conservation": {
+        "text": "FishBase 引述 2020 年 IUCN 无危（LC）评估。本作仍采用自愿保护观察并必须放归、不可出售；这是游戏设计，不宣称该物种全球濒危或普遍禁捕。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "morphology": {
+        "text": "椭圆盘形身体，背黄褐至橄榄色、亮蓝圆点，腹白；眼较大且后方具喷水孔，嘴和五对鳃孔在腹面；尾短粗渐细、两侧蓝条、尾下宽鳍褶延伸到末端，中后段尾刺；不加普通鱼的背鳍与扇形尾鳍。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "giant_moray",
+      "accepted_scientific_name": "Gymnothorax javanicus",
+      "taxonomy": {
+        "family_scientific": "Muraenidae",
+        "family_zh": "海鳝科",
+        "genus_scientific": "Gymnothorax",
+        "genus_zh": "裸胸鳝属",
+        "note": "Gymnothorax javanicus 为 giant moray，中文固定爪哇裸胸鳝；其他外形相近裸胸鳝不共用纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "幼鱼较均匀的深斑会过渡为成年豹斑；来源没有给通用成年平均长度或体重，可达三米并非日常平均。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "潟湖、向海珊瑚礁、礁坡与陡坎洞隙，范围 0—50 米；幼鱼也可进入潮间带。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "印度—太平洋，从红海、东非至马克萨斯、奥埃诺和皮特凯恩群岛，北至琉球与夏威夷，南至澳洲和新喀里多尼亚。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "常独自在礁洞中庇护与觅食。红海实地研究发现，部分巨海鳝会响应石斑鱼信号，利用不同捕猎方式共同追寻猎物；不能推成所有地点都会固定组队。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要吃鱼，偶尔取食甲壳类。合作追猎时猎物由抓获者整条吞下，研究未描述两者分食同一条鱼。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 300,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 与澳洲机构均介绍最大全长约 300 厘米，作为物种资料上限。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": 30,
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大已发表重量 30 千克；未与三米上限合并为同一尾记录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "洞里与洞外的合作猎手",
+        "text": "2006 年红海研究观察到石斑鱼向巨海鳝发出动作信号，再共同寻找藏在礁缝的鱼。石斑鱼擅长外侧追逐，海鳝能进入裂隙；作者发现不同捕食技能使双方受益。研究地点与参与物种明确，不能泛化成每条海鳝的固定伙伴。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Gymnothorax javanicus — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Gymnothorax-javanicus.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Giant Moray",
+          "publisher": "Museums Victoria / Fishes of Australia",
+          "url": "https://fishesofaustralia.net.au/home/species/2041",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Interspecific Communicative and Coordinated Hunting between Groupers and Giant Moray Eels in the Red Sea",
+          "publisher": "Bshary et al. (2006) / PLOS Biology",
+          "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0040431",
+          "id": "s3",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "拟饵沿 5—50 米礁洞边搜寻；长身突然冲刺时松线，停顿再收。 普通游戏尺寸 50—230 厘米，低概率虚构巨物上端 330 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "粗壮长鳗体、宽大颌与尖牙，小眼、窄圆鳃孔并有醒目黑斑；黄褐底，成年体侧大豹斑、头部细点；背臀尾鳍连成边缘，胸鳍与腹鳍缺失，不能添普通海鱼的成对侧鳍。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "collare_butterflyfish",
+      "accepted_scientific_name": "Chaetodon collare",
+      "taxonomy": {
+        "family_scientific": "Chaetodontidae",
+        "family_zh": "蝴蝶鱼科",
+        "genus_scientific": "Chaetodon",
+        "genus_zh": "蝴蝶鱼属",
+        "note": "接受名 Chaetodon collare；不能将相似白颈带的其他蝴蝶鱼或未接受拼写 C. collaris 合并为本种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "核实来源给出可达长度，没有整个分布区通用成年平均长度或重量；不能把 18 厘米上限当普通规格。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "浅珊瑚礁边缘与上部礁坡，范围 1—20 米；幼鱼可进入河口。孟加拉国资料在圣马丁岛珊瑚生态系统收录本种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "印度—西太平洋，从波斯湾、马尔代夫至日本、菲律宾与印度尼西亚；孟加拉国圣马丁岛记录支持孟加拉湾的出现，不据此宣称印度洋独有。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼可成对或聚集，繁殖时配对。资料没有支持所有个体终生保持同一配偶的结论。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "diet": {
+        "text": "主要啄食珊瑚水螅体；游戏虫、虾饵倍率属于虚构互动，不表示真实主要捕食大型虾。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 18,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大全长 18 厘米，作为资料收录上限。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "核实来源未给可靠最大体重，保留 null；游戏锚点不填补自然史缺值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "白领与红尾的组合",
+        "text": "孟加拉国海洋生物多样性资料把本种列在圣马丁岛珊瑚生态系统，同时描述头后白带和红色尾鳍的黑白外缘。浅礁的蝴蝶鱼常有相似眼带；把颈带、尾色与体形一起看，比只记一条黑线更可靠。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Chaetodon collare — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Chaetodon-collare.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Chaetodon collare — Redtail butterflyfish",
+          "publisher": "Aquatic Bioresource Research Lab / Sher-e-Bangla Agricultural University / Marine Biodiversity Portal of Bangladesh",
+          "url": "https://marinebiodiversity.org.bd/species/chaetodon-collare/",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "浅礁 3—20 米近抛；短促摆身后再收线，白颈带配红尾是辨认组合。 普通游戏尺寸 6.5—17 厘米，低概率虚构巨物上端 24 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "高身近圆侧扁体，短尖吻、陡额；深褐体带细淡斜网纹，头后明显白色宽带至胸，眼部黑带前缘白，吻与下颌黑白相间；尾红、近外缘黑带、最外缘白，背臀鳍连续而有深浅缘。",
+        "source_ids": [
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "longhorn_cowfish",
+      "accepted_scientific_name": "Lactoria cornuta",
+      "taxonomy": {
+        "family_scientific": "Ostraciidae",
+        "family_zh": "箱鲀科",
+        "genus_scientific": "Lactoria",
+        "genus_zh": "角箱鲀属",
+        "note": "以 Lactoria cornuta 为界，长前角与后下刺成对辨认；不把其他角箱鲀或普通河鲀混为本种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase 常见全长约 40 厘米；幼鱼可结小群，较大成鱼常独游，来源未给通用平均体重。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "沿岸沙泥底、港湾、河口及近礁有藻区；幼鱼也可进入河流和半咸水。范围 1—100 米，通常在 1—50 米。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "印度—太平洋，红海与东非至马克萨斯、土阿莫土群岛，日本南部至澳洲与豪勋爵岛。澳洲范围包括印度洋西岸，游戏分配不表示只有印度洋存在。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼多独游且较谨慎，幼魚可结小群；会从口喷出水流吹开砂层，寻找隐蔽猎物。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "取食底栖无脊椎动物，利用喷水揭开沙底。不是以牛角刺穿猎物，也不是把沙粒本身当主食。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 46,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大全长 46 厘米。澳洲机构页面将 46 cm TL 错置于 Max weight 标签，单位仍是长度，本作不把标签当作重量证据。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "FishBase 未给可靠最大体重；澳洲页面的 Max weight: 46 cm TL 是标签和单位不匹配，保留 null，不能虚构 46 千克。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "喷水找饭的硬壳鱼",
+        "text": "牛角箱鲀的角最先吸引目光，真正觅食时却靠小嘴喷水。澳洲机构介绍它向沙底吹出水流，露出底栖无脊椎动物。硬壳、成对长角、小鳍和喷沙行为，合起来才是完整的生活方式。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Lactoria cornuta — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Lactoria-cornuta.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Longhorn Cowfish",
+          "publisher": "Museums Victoria / Fishes of Australia",
+          "url": "https://fishesofaustralia.net.au/home/species/837",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "虫或虾饵沿浅礁沙地 3—50 米慢探；保持均匀张力，观察小鳍驱动的硬壳身。 普通游戏尺寸 10—40 厘米，低概率虚构巨物上端 56 厘米；数值与真实自然史资料分开。",
+      "morphology": {
+        "text": "硬质近四棱箱形躯壳，头前一对向前伸长角，躯壳后下方另一对长刺；绿橄榄、黄至橙底带蓝点，小口、小胸鳍，短背臀鳍靠后、尾柄伸出壳外；模型不能只给普通鱼额头装两根角。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "species_id": "russells_oarfish",
+      "accepted_scientific_name": "Regalecus russellii",
+      "taxonomy": {
+        "family_scientific": "Regalecidae",
+        "family_zh": "皇带鱼科",
+        "genus_scientific": "Regalecus",
+        "genus_zh": "皇带鱼属",
+        "note": "接受名采用当前 FishBase 与 2025 年研究的 Regalecus russellii（双 l）；STRI 页面及旧 URL 用 russelii 为历史拼写。本条与 Regalecus glesne 分开，固定 ID 不变。",
+        "source_ids": [
+          "s1",
+          "s3"
+        ]
+      },
+      "typical_size": {
+        "text": "没有可靠通用成年平均规格。2025 年论文报告斯里兰卡一尾实测全长 258 厘米标本，这只是该个体，不等于普通成年尺寸或最大值。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "habitat": {
+        "text": "上层至中层大洋水体；STRI 范围 15—1000 米、通常浅于 200 米。游戏 40—180 米取可靠资料可达段，不强行把全部皇带鱼压在六百米。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "STRI 将本种列为热带至亚热带印度—太平洋鱼。2025 年论文核实斯里兰卡西岸标本，补充稀少的印度洋记录；原描述地点在印度孟加拉湾。出现记录不代表任何海域常见或游戏点现实捕获率。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "大洋水层游泳，前方长鳍冠及单腹鳍条十分特别。斯里兰卡记录来自近表层网具发现，说明深水鱼名并不意味着从不接近表层；本作采用低权重保护观察。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "STRI 的食性分类包括浮游甲壳类、硬骨鱼与头足类；页面没有给野外胃含物比例或各年龄段食谱。游戏虾饵倍率不填补这些缺值。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 800,
+        "length_type": "TL",
+        "record_label": "资料收录上限",
+        "text": "FishBase 最大报告全长 800 厘米；STRI 也收录可达 800 厘米，但该页面未独立标量法。游戏十米虚构上端不改写资料八米上限。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "可靠上限未核实",
+        "text": "FishBase 未给可靠最大体重；STRI 写可达 272 千克但页面未展开原始个体、量法与文献详情，本次未独立核实该记录，保留 null。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "六张透视片拼出的身份",
+        "text": "2025 年斯里兰卡论文核实一尾 2021 年发现的 258 厘米标本，用六张重叠 X 光片和鳍条计数确认身份，并作为该海域首次详细记录。细长鱼身容易损伤，查验形态与保存标本比传说更能说明它来自哪里；论文 DOI 为 10.3897/aiep.55.148496。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Regalecus russellii — species summary",
+          "publisher": "FishBase",
+          "url": "https://www.fishbase.se/summary/Regalecus-russelii.html",
+          "id": "s1",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "Regalecus russelii — The Oarfish",
+          "publisher": "Smithsonian Tropical Research Institute / Shorefishes of the Eastern Pacific",
+          "url": "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/5806",
+          "id": "s2",
+          "accessed": "2026-10-04"
+        },
+        {
+          "title": "First record of oarfish Regalecus russellii from Sri Lankan waters, Indian Ocean",
+          "publisher": "Rathnasuriya and Hapuarachchi (2025) / Acta Ichthyologica et Piscatoria 55:145–150 / Ocean University of Sri Lanka",
+          "url": "https://www.researchgate.net/publication/393566216_First_record_of_oarfish_Regalecus_russellii_Actinopterygii_Lampriformes_Regalecidae_from_Sri_Lankan_waters_Indian_Ocean",
+          "id": "s3",
+          "accessed": "2026-10-04",
+          "access_note": "核读作者公开的论文全文镜像；原论文 DOI:10.3897/aiep.55.148496，非将 ResearchGate 自身当作物种数据库。"
+        }
+      ],
+      "gameplay_note": "2 号探深竿探外海 40—180 米；长鳍波动后留意休息窗口，完成巨带观察后放归。 普通游戏尺寸 150—600 厘米，低概率虚构巨物上端 1000 厘米；数值与真实自然史资料分开。",
+      "conservation": {
+        "text": "STRI 收录 IUCN 无危（LC）。本作因其脆弱长身采用自愿保护观察并必须放归、不可出售，不宣称全球禁捕或现实可用钩线安全操作。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "morphology": {
+        "text": "极长且强烈侧扁的银色带身，斜暗条、短横纹或圆斑，头蓝黑；红色背鳍从头顶一直延到尾端，前方两个鳍冠，第一冠为数条膜连鳍条、第二为一根独立长条；腹鳍为极长单鳍条且有皮瓣；没有臀鳍，成年通常没有尾鳍；胸鳍小而披针状、近头下方，不加扇形尾鳍。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      }
+    }
+  ]
+}

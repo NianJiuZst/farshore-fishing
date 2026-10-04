@@ -1,0 +1,75 @@
+{
+  "scope": "Actual Godot4.6.3 Mobile Vulkan development Mac captures; no raster edit; not Android performance certification",
+  "files": [
+    {
+      "source": "build/ocean-diversity-native-720-final/fishing_red_sea_lagoon.png",
+      "path": "docs/evidence/ocean-diversity/native/fishing_red_sea_lagoon.png",
+      "sha256": "5f3a509d516261c8e81438b66880c04246d6348af1b9c2f3c67a054963f1fa6d",
+      "bytes": 938105,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "build/ocean-diversity-native-720-final/fishing_red_sea_wall.png",
+      "path": "docs/evidence/ocean-diversity/native/fishing_red_sea_wall.png",
+      "sha256": "829f8d2935fd0ac64c3ec9879ec7cb8fadf259d5f75ff1f5271c02afd099c719",
+      "bytes": 895727,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "build/ocean-diversity-native-720-final/fishing_red_sea_bluehole.png",
+      "path": "docs/evidence/ocean-diversity/native/fishing_red_sea_bluehole.png",
+      "sha256": "3418b4df7f18556c533a2cd2446c3ffbddebdbd475e88e92de5137621539a1f6",
+      "bytes": 905432,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "build/ocean-diversity-native-720-final/travel_red_sea.png",
+      "path": "docs/evidence/ocean-diversity/native/travel_red_sea.png",
+      "sha256": "322109431e7dacadef51a5e508b9e84abae0ae11cf96a999607497364f69fb86",
+      "bytes": 463992,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/audit/blue-whale/frames/01-link.png",
+      "path": "docs/evidence/ocean-diversity/native/whale-01-link.png",
+      "sha256": "9417b04117bacfe36522066618c6634903778e8c9f23c206c0d04086a59b44fc",
+      "bytes": 264407,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/audit/blue-whale/frames/02-current.png",
+      "path": "docs/evidence/ocean-diversity/native/whale-02-current.png",
+      "sha256": "319c5fe68b6319479c575fb80b3c8a8c06116b0a4f09a444cbb6450e11528b81",
+      "bytes": 265565,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/audit/blue-whale/frames/03-resonance.png",
+      "path": "docs/evidence/ocean-diversity/native/whale-03-resonance.png",
+      "sha256": "678162d8985584a3b28b8c5293af0b5a8e83a4cfecd28e8906774c3d7bc7a36f",
+      "bytes": 267234,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "/Users/nianjiu/Documents/Codex/2026-10-04/task-2/audit/blue-whale/frames/04-success.png",
+      "path": "docs/evidence/ocean-diversity/native/whale-04-success.png",
+      "sha256": "c1ea9a4bf90eda7d91216ed9ba76395f319ce5f1fc3009cadf6e294c6f9324fb",
+      "bytes": 270026,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "build/ocean-diversity-native-tall-final/fishing_red_sea_lagoon.png",
+      "path": "docs/evidence/ocean-diversity/native/tall-fishing_red_sea_lagoon.png",
+      "sha256": "8a8901f5a79b6e847a70a6fc7711b7339745f21db2208ae6e20b41b1581bed28",
+      "bytes": 1210912,
+      "transform": "none; byte-identical capture"
+    },
+    {
+      "source": "build/ocean-diversity-native-tall-final/travel_red_sea.png",
+      "path": "docs/evidence/ocean-diversity/native/tall-travel_red_sea.png",
+      "sha256": "b611c24090b31ef52a0c203ece961b18eca114706f5bf736a5f676a9f39c5cec",
+      "bytes": 582836,
+      "transform": "none; byte-identical capture"
+    }
+  ]
+}

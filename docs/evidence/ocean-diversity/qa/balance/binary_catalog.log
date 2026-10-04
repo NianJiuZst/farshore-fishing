@@ -1,0 +1,2 @@
+COMMAND: python3 tools/audit_fish_catalog_3d.py --require-all --output /Users/nianjiu/Documents/Codex/2026-10-04/task-2/farshore-fishing/build/ocean-diversity-targeted-balance/binary_catalog.json
+{"checked_models": 111, "missing": 0, "failures": [], "full_catalog_complete": true, "full_release_gate": true}

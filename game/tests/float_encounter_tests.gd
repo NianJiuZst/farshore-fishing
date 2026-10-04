@@ -86,7 +86,7 @@ func _run() -> void:
 					for mode: String in MODES:
 						runs.append(_trial(record, int(route.gear), seed_value, fps, mode))
 			print("FLOAT_MATRIX_PROGRESS species=", route.species, " gear=", route.gear, " runs=", runs.size())
-	var evidence: Dictionary = {"scope":"Real production GDScript; seeded 74-species legal routes; observation-only pre-hook controls; unchanged fight controller; headless, no visual/device claim", "regressions":{"checks":checks,"failed":failed}, "routes":routes, "runs":runs, "traces":traces, "seed_sweep":seed_sweep, "controller_contract":{"inputs":["dip","lift","drag","tilt"],"reaction_seconds":0.18,"history_seconds":0.30,"sustained_seconds":0.35,"cancel_on_recovery":true,"vertical_threshold":0.22,"travel_speed_threshold":0.045,"oracle":"Separate validation control only; never evidence of readability"}}
+	var evidence: Dictionary = {"scope":"Real production GDScript; seeded 110-fish legal routes; observation-only pre-hook controls; unchanged fight controller; independent mammal challenge excluded; headless, no visual/device claim", "matrix_executed":"--regressions-only" not in args, "quick_matrix":"--quick" in args, "regressions":{"checks":checks,"failed":failed}, "routes":routes, "runs":runs, "traces":traces, "seed_sweep":seed_sweep, "controller_contract":{"inputs":["dip","lift","drag","tilt"],"reaction_seconds":0.18,"history_seconds":0.30,"sustained_seconds":0.35,"cancel_on_recovery":true,"vertical_threshold":0.22,"travel_speed_threshold":0.045,"oracle":"Separate validation control only; never evidence of readability"}}
 	if not output.is_empty():
 		var file: FileAccess = FileAccess.open(output, FileAccess.WRITE)
 		_check(file != null, "write evidence output")
@@ -101,6 +101,7 @@ func _build_routes() -> void:
 	var gen: EncounterGenerator = Generator.new(815)
 	for id: String in catalog.fish:
 		var fish: FishDefinition = catalog.fish[id]
+		if not catalog.is_fishing_species(fish): continue
 		var baits: Array = catalog.baits.duplicate()
 		baits.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return catalog.bait_weight(fish, str(a.bait_id)) > catalog.bait_weight(fish, str(b.bait_id)))
 		var legal: Array[Dictionary] = []
@@ -116,17 +117,17 @@ func _build_routes() -> void:
 							legal.append({"species":id,"gear":gear,"spot":spot,"region":catalog.spots[spot].region_id,"power":power,"baits":[baits[0].bait_id,baits[1].bait_id]})
 							found = true
 		_check(not legal.is_empty(), "legal equipment/spot/bait route: " + id)
-		# Starter/minimum, strongest legal equipment, and the distinct spinning
-		# rod where available. Deep-only species retain the legal deep rod.
+		# Starter/minimum, strongest legal equipment, spinning and heavy rods
+		# where available. Deep-only species retain their legal deep equipment.
 		for route: Dictionary in legal:
-			if route == legal[0] or route == legal.back() or int(route.gear) == 3: routes.append(route)
+			if route == legal[0] or route == legal.back() or int(route.gear) in [3,4]: routes.append(route)
 	var species: Dictionary = {}
 	var gears: Dictionary = {}
 	for route: Dictionary in routes:
 		species[route.species] = true
 		gears[route.gear] = true
-	_check(species.size() == 74, "matrix covers all 74 species")
-	_check(gears.size() == 5, "matrix includes all five equipment types where legal")
+	_check(species.size() == 110 and species.size() == catalog.fish_species_count() and not species.has("blue_whale"), "matrix covers all 110 ordinary fish")
+	_check(gears.size() == 6, "matrix includes all six equipment types where legal")
 
 func _record(route: Dictionary, seed_value: int, index: int = 0) -> Dictionary:
 	var generator: EncounterGenerator = Generator.new(seed_value)

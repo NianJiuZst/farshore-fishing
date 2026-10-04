@@ -61,4 +61,4 @@ func _run() -> void:
 	output.close()
 	for failure: String in failures: printerr(failure)
 	print("Imported photos: ", textures.size(), "; complete: ", art.complete, "; failures: ", failures.size())
-	quit(0 if failures.is_empty() and art.complete and textures.size() == 148 else 1)
+	quit(0 if failures.is_empty() and art.complete and textures.size() == int(contract.texture_count) else 1)

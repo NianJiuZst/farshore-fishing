@@ -68,7 +68,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从20米开始，抛投至少56%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "pacific_bluefin_tuna",
@@ -139,7 +140,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从15米开始，抛投至少54%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "yellowfin_tuna",
@@ -147,12 +149,10 @@
     "scientific_name": "Thunnus albacares",
     "region_ids": [
       "pacific_ocean",
-      "atlantic_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
       "pacific_bluewater",
-      "atlantic_bluewater",
       "indian_bluewater"
     ],
     "art": "res://assets/fish/yellowfin_tuna.png",
@@ -214,21 +214,18 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从10米开始，抛投至少40%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "bigeye_tuna",
     "name": "大眼金枪鱼",
     "scientific_name": "Thunnus obesus",
     "region_ids": [
-      "pacific_ocean",
-      "atlantic_ocean",
-      "indian_ocean"
+      "atlantic_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "atlantic_bluewater",
-      "indian_bluewater"
+      "atlantic_bluewater"
     ],
     "art": "res://assets/fish/bigeye_tuna.png",
     "thumb": "res://assets/fish/bigeye_tuna_thumb.png",
@@ -289,21 +286,18 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从35米开始，抛投至少48%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "albacore",
     "name": "长鳍金枪鱼",
     "scientific_name": "Thunnus alalunga",
     "region_ids": [
-      "pacific_ocean",
-      "atlantic_ocean",
-      "indian_ocean"
+      "pacific_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "atlantic_bluewater",
-      "indian_bluewater"
+      "pacific_bluewater"
     ],
     "art": "res://assets/fish/albacore.png",
     "thumb": "res://assets/fish/albacore_thumb.png",
@@ -364,20 +358,17 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从15米开始，抛投至少35%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "skipjack_tuna",
     "name": "鲣",
     "scientific_name": "Katsuwonus pelamis",
     "region_ids": [
-      "pacific_ocean",
-      "atlantic_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "atlantic_bluewater",
       "indian_bluewater"
     ],
     "art": "res://assets/fish/skipjack_tuna.png",
@@ -439,7 +430,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少28%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "mahi_mahi",
@@ -447,13 +439,11 @@
     "scientific_name": "Coryphaena hippurus",
     "region_ids": [
       "pacific_ocean",
-      "atlantic_ocean",
-      "indian_ocean"
+      "atlantic_ocean"
     ],
     "spot_ids": [
       "pacific_bluewater",
-      "atlantic_bluewater",
-      "indian_bluewater"
+      "atlantic_bluewater"
     ],
     "art": "res://assets/fish/mahi_mahi.png",
     "thumb": "res://assets/fish/mahi_mahi_thumb.png",
@@ -514,19 +504,18 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从2米开始，抛投至少32%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "wahoo",
     "name": "沙氏刺鲅",
     "scientific_name": "Acanthocybium solandri",
     "region_ids": [
-      "pacific_ocean",
       "atlantic_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
       "atlantic_bluewater",
       "indian_bluewater"
     ],
@@ -596,19 +585,18 @@
     "release_only": false,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少42%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
     "encounter_type": "fictional_fishing",
-    "taxonomy_note": "原候选表的棘鳞蛇鲭误指；按台湾鱼类资料库更正为沙氏刺鲅（又称棘鰆）。稳定ID wahoo不变。"
+    "taxonomy_note": "原候选表的棘鳞蛇鲭误指；按台湾鱼类资料库更正为沙氏刺鲅（又称棘鰆）。稳定ID wahoo不变。",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "swordfish",
     "name": "剑鱼",
     "scientific_name": "Xiphias gladius",
     "region_ids": [
-      "pacific_ocean",
       "atlantic_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
       "atlantic_bluewater",
       "indian_bluewater"
     ],
@@ -677,21 +665,18 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从30米开始，抛投至少56%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "blue_marlin",
     "name": "蓝枪鱼",
     "scientific_name": "Makaira nigricans",
     "region_ids": [
-      "pacific_ocean",
-      "atlantic_ocean",
-      "indian_ocean"
+      "atlantic_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "atlantic_bluewater",
-      "indian_bluewater"
+      "atlantic_bluewater"
     ],
     "art": "res://assets/fish/blue_marlin.png",
     "thumb": "res://assets/fish/blue_marlin_thumb.png",
@@ -758,19 +743,18 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从10米开始，抛投至少60%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "striped_marlin",
     "name": "条纹四鳍旗鱼",
     "scientific_name": "Kajikia audax",
     "region_ids": [
-      "pacific_ocean",
-      "indian_ocean"
+      "pacific_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
-      "indian_bluewater"
+      "pacific_bluewater"
     ],
     "art": "res://assets/fish/striped_marlin.png",
     "thumb": "res://assets/fish/striped_marlin_thumb.png",
@@ -837,18 +821,17 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少50%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "indo_pacific_sailfish",
     "name": "印度太平洋旗鱼",
     "scientific_name": "Istiophorus platypterus",
     "region_ids": [
-      "pacific_ocean",
       "indian_ocean"
     ],
     "spot_ids": [
-      "pacific_bluewater",
       "indian_bluewater"
     ],
     "art": "res://assets/fish/indo_pacific_sailfish.png",
@@ -922,17 +905,21 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从5米开始，抛投至少47%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "great_barracuda",
     "name": "大魣",
     "scientific_name": "Sphyraena barracuda",
     "region_ids": [
-      "atlantic_ocean"
+      "atlantic_ocean",
+      "red_sea"
     ],
     "spot_ids": [
-      "atlantic_shelf"
+      "atlantic_shelf",
+      "red_sea_wall",
+      "red_sea_bluehole"
     ],
     "art": "res://assets/fish/great_barracuda.png",
     "thumb": "res://assets/fish/great_barracuda_thumb.png",
@@ -993,7 +980,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从2米开始，抛投至少30%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "giant_trevally",
@@ -1001,11 +989,14 @@
     "scientific_name": "Caranx ignobilis",
     "region_ids": [
       "pacific_ocean",
-      "indian_ocean"
+      "indian_ocean",
+      "red_sea"
     ],
     "spot_ids": [
       "pacific_reef",
-      "indian_reef"
+      "indian_reef",
+      "red_sea_wall",
+      "red_sea_bluehole"
     ],
     "art": "res://assets/fish/giant_trevally.png",
     "thumb": "res://assets/fish/giant_trevally_thumb.png",
@@ -1066,7 +1057,8 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从10米开始，抛投至少38%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   },
   {
     "species_id": "greater_amberjack",
@@ -1131,6 +1123,7 @@
     "research_status": "reviewed_2026-10-04",
     "release_only": false,
     "reachability_note": "虚拟可遇水层从15米开始，抛投至少38%；现有远岸探深竿与重潮巨物竿均能覆盖至少一个相遇窗口。",
-    "encounter_type": "fictional_fishing"
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "1.4.0 游戏旅行路线精选：仅在列出的航段出现，以减少各海域的重复。这里的名单不代表现实独有、绝对缺席或捕捞许可；真实全球分布见自然图鉴。旧物种 ID、历史钓获地点和个人纪录均保留。"
   }
 ]

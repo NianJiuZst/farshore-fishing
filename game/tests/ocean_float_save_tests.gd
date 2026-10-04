@@ -41,7 +41,7 @@ func _initialize() -> void:
 	_check(DirAccess.make_dir_recursive_absolute(test_root) == OK, "isolated test root created")
 	print("OCEAN_FLOAT_SAVE_TEST_ROOT=",test_root)
 	_check(catalog.load_all(false), "data-only catalog loads: " + str(catalog.errors))
-	_check(catalog.baits.size() == 12 and catalog.fish.size() == 74, "matrix contains twelve baits and seventy-four species")
+	_check(catalog.baits.size() == 12 and catalog.fish.size() == 111 and catalog.fish_species_count() == 110, "matrix contains twelve baits,110 fish and one excluded mammal")
 	_test_exact_float_regression()
 	_test_strict_readback_and_bytes()
 	if failures == 0: _test_generated_matrix()
@@ -161,8 +161,9 @@ func _draw_extremes(fish: FishDefinition,bait_id: String,seed_value: int) -> Arr
 	var spot_id: String = str(fish.spots()[0])
 	var region_id: String = str(catalog.spots[spot_id]["region_id"])
 	var normal_max: int = int(fish.raw["normal_max_mm"])
+	var gear_id: int = 5 if float(fish.raw.get("depth_min_m",0.0)) > float(catalog.gear[4].get("max_depth_m",180.0)) else 4
 	for attempt: int in 10000:
-		var record: Dictionary = generator.make_individual(fish,spot_id,region_id,bait_id,4,"day","clear")
+		var record: Dictionary = generator.make_individual(fish,spot_id,region_id,bait_id,gear_id,"day","clear")
 		var fraction: float = float(record["size_fraction"])
 		if fraction < 0.05 and not found.has("small"): found["small"] = record
 		if fraction > 0.95 and fraction < 1.0 and not found.has("large"): found["large"] = record
@@ -178,6 +179,7 @@ func _test_generated_matrix() -> void:
 	for bait: Dictionary in catalog.baits:
 		var bait_id: String = str(bait["bait_id"])
 		for fish: FishDefinition in catalog.fish.values():
+			if not catalog.is_fishing_species(fish): continue
 			matrix_index += 1
 			var root_path: String = test_root.path_join("matrix_%04d"%matrix_index)
 			var store: SaveStore = Store.new()
@@ -210,5 +212,5 @@ func _test_generated_matrix() -> void:
 				store = Store.new()
 				_check(store.initialize(root_path) and store.state == _decoded_expected(restarted,restarted.state), "matrix second reload preserves complete historical snapshots")
 		print("PASS MATRIX bait=",bait_id," profiles=",matrix_index," records=",records_saved," elapsed_ms=",Time.get_ticks_msec()-start)
-	_check(matrix_index == 888 and records_saved == 2664, "all twelve baits by seventy-four species by three size classes persisted and reloaded twice")
+	_check(matrix_index == 1320 and records_saved == 3960, "all twelve baits by110 fish by three size classes persisted and reloaded twice; whale excluded")
 	_check(former_false_rejections > 0, "matrix includes actual generated metadata affected by former extra parsing")

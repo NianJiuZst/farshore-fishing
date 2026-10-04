@@ -1,0 +1,7 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/tackle_tests.gd
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+TACKLE_REAL_FIGHT_SECONDS [37.6749999999985, 30.7916666666656, 28.7416666666657, 36.0166666666653, 24.2749999999993, 29.099999999999]
+TACKLE_TESTS: 1136/1136 passed; failures=0

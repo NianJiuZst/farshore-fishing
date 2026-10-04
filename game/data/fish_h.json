@@ -1,0 +1,845 @@
+[
+  {
+    "species_id": "red_sea_clownfish",
+    "name": "双带小丑鱼",
+    "scientific_name": "Amphiprion bicinctus",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon"
+    ],
+    "art": "res://assets/fish/red_sea_clownfish.png",
+    "thumb": "res://assets/fish/red_sea_clownfish_thumb.png",
+    "description": "两条白带缠着橙黄身体，在海葵附近小幅往返，是红海浅礁的轻竿小目标。",
+    "morphology": "短而高、侧扁的橙黄至棕色身体；头后和身体中部各一条黑边白色竖带，橙黄圆尾与圆润软鳍。只有两条白带，不画成三带的公子小丑鱼。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Amphiprion-bicinctus.html",
+        "title": "Amphiprion bicinctus species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_4_text.pdf#page=131",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 4, Amphiprion bicinctus, pp. 127",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/TrophicEco/FoodItemsList.php?genus=Amphiprion&species=bicinctus&vstockcode=12163",
+        "title": "Food items reported for Amphiprion bicinctus",
+        "supports": "食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 45,
+    "normal_max_mm": 120,
+    "max_mm": 150,
+    "anchor_mm": 90,
+    "anchor_g": 18,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.24,
+    "weight": 22,
+    "bait_weights": {
+      "worm": 0.9,
+      "grain": 0.7,
+      "shrimp": 1.8,
+      "lure": 0.25
+    },
+    "time_weights": {
+      "day": 1.15,
+      "dusk": 1.0
+    },
+    "weather_weights": {
+      "clear": 1.05,
+      "rain": 0.95
+    },
+    "min_gear": 0,
+    "min_cast": 0.08,
+    "max_cast": 0.65,
+    "depth_min_m": 1,
+    "depth_max_m": 18,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸4.5—12厘米；低概率虚构巨物上端15厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：短抛到浅礁，虾饵容易吸引；它会停顿再短促挣扎，停顿时轻收，张力升高时松线。小体型适合练习节奏。",
+    "strategy_note": "玩法：短抛到浅礁，虾饵容易吸引；它会停顿再短促挣扎，停顿时轻收，张力升高时松线。小体型适合练习节奏。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层1—18米，抛投8%—65%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "red_sea_bannerfish",
+    "name": "红海马夫鱼",
+    "scientific_name": "Heniochus intermedius",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon",
+      "red_sea_wall"
+    ],
+    "art": "res://assets/fish/red_sea_bannerfish.png",
+    "thumb": "res://assets/fish/red_sea_bannerfish_thumb.png",
+    "description": "长长白色背鳍丝像一面旗，两道黑斜带划过黄白身躯；沿珊瑚外缘缓慢巡游。",
+    "morphology": "高而强侧扁的黄白身体，两道宽黑斜竖带，其中前带触及眼后；第四背鳍棘延伸成长白丝，黄色尾鳍及后软鳍、黑腹鳍，额部轻微突起。不是镰鱼 Zanclus cornutus。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Heniochus-intermedius.html",
+        "title": "Heniochus intermedius species summary",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=470",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Heniochus intermedius, pp. 466–467",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://ciesm.org/atlas/fishes_2nd_edition/Heniochus_intermedius.pdf",
+        "title": "Heniochus intermedius, Atlas of Exotic Fishes in the Mediterranean Sea (2021), pp. 182–183",
+        "supports": "常见尺寸口径；长度上限及量法；分布；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 65,
+    "normal_max_mm": 160,
+    "max_mm": 195,
+    "anchor_mm": 125,
+    "anchor_g": 55,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.32,
+    "weight": 17,
+    "bait_weights": {
+      "worm": 1.1,
+      "grain": 0.18,
+      "shrimp": 1.75,
+      "lure": 0.35
+    },
+    "time_weights": {
+      "day": 0.95,
+      "dusk": 1.3
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 0,
+    "min_cast": 0.12,
+    "max_cast": 0.82,
+    "depth_min_m": 3,
+    "depth_max_m": 45,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸6.5—16厘米；低概率虚构巨物上端19.5厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虾饵或虫饵、浅礁中距离抛投；它以平稳持续拉力为主，维持安全张力并连续小段收线，比猛拉更容易成功。",
+    "strategy_note": "玩法：虾饵或虫饵、浅礁中距离抛投；它以平稳持续拉力为主，维持安全张力并连续小段收线，比猛拉更容易成功。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层3—45米，抛投12%—82%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "masked_butterflyfish",
+    "name": "金蝴蝶鱼",
+    "scientific_name": "Chaetodon semilarvatus",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon"
+    ],
+    "art": "res://assets/fish/masked_butterflyfish.png",
+    "thumb": "res://assets/fish/masked_butterflyfish_thumb.png",
+    "description": "金黄圆盘身体配一块蓝灰眼罩，常在桌形珊瑚下悬停，浅水就能寻找。",
+    "morphology": "高圆盘状侧扁身体和小尖吻；全身金黄，体侧有细橙红竖纹，眼后有明显蓝灰方形面罩，黄色尾和软鳍。没有贯穿全身的黑色眼带。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Chaetodon-semilarvatus.html",
+        "title": "Chaetodon semilarvatus species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=465",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Chaetodon semilarvatus, pp. 461",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 70,
+    "normal_max_mm": 205,
+    "max_mm": 250,
+    "anchor_mm": 150,
+    "anchor_g": 105,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.28,
+    "weight": 19,
+    "bait_weights": {
+      "worm": 1.25,
+      "grain": 0.2,
+      "shrimp": 1.65,
+      "lure": 0.2
+    },
+    "time_weights": {
+      "day": 0.9,
+      "dusk": 1.3
+    },
+    "weather_weights": {
+      "clear": 1.05,
+      "rain": 0.95
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 0.65,
+    "depth_min_m": 3,
+    "depth_max_m": 20,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸7—20.5厘米；低概率虚构巨物上端25厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：把虾饵或虫饵留在浅礁短抛窗口；它的间歇停顿适合收线，恢复拉力时及时松线，入门竿也能练到。",
+    "strategy_note": "玩法：把虾饵或虫饵留在浅礁短抛窗口；它的间歇停顿适合收线，恢复拉力时及时松线，入门竿也能练到。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层3—20米，抛投10%—65%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "sohal_surgeonfish",
+    "name": "索氏刺尾鱼",
+    "scientific_name": "Acanthurus sohal",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon",
+      "red_sea_wall"
+    ],
+    "art": "res://assets/fish/sohal_surgeonfish.png",
+    "thumb": "res://assets/fish/sohal_surgeonfish_thumb.png",
+    "description": "细密横纹、橙色尾柄与蓝色鳍边组成鲜明轮廓；守护礁缘的它会突然加速。",
+    "morphology": "椭圆高身强侧扁，灰绿身体密布细黑横纹，前胸侧有橙色斑；尾柄的可竖起棘呈橙色，深色背、臀和腹鳍带亮蓝边，成年尾鳍新月形。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Acanthurus-sohal.html",
+        "title": "Acanthurus sohal species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=232",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 5, Acanthurus sohal, pp. 228",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 100,
+    "normal_max_mm": 340,
+    "max_mm": 450,
+    "anchor_mm": 220,
+    "anchor_g": 230,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "burst",
+    "difficulty": 0.49,
+    "weight": 14,
+    "bait_weights": {
+      "worm": 0.55,
+      "grain": 1.6,
+      "shrimp": 0.75,
+      "lure": 0.65
+    },
+    "time_weights": {
+      "day": 1.25,
+      "dusk": 0.85
+    },
+    "weather_weights": {
+      "clear": 1.05,
+      "rain": 0.95
+    },
+    "min_gear": 0,
+    "min_cast": 0.22,
+    "max_cast": 0.82,
+    "depth_min_m": 1,
+    "depth_max_m": 20,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸10—34厘米；低概率虚构巨物上端45厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：面团是本作为藻食形象设置的有效游戏饵；中距离抛投，遇到突然冲刺先松线，冲刺过后再收。游戏饵不代表现实面团钓法。",
+    "strategy_note": "玩法：面团是本作为藻食形象设置的有效游戏饵；中距离抛投，遇到突然冲刺先松线，冲刺过后再收。游戏饵不代表现实面团钓法。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层1—20米，抛投22%—82%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "arabian_picassotriggerfish",
+    "name": "阿拉伯炮弹鱼",
+    "scientific_name": "Rhinecanthus assasi",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon"
+    ],
+    "art": "res://assets/fish/arabian_picassotriggerfish.png",
+    "thumb": "res://assets/fish/arabian_picassotriggerfish_thumb.png",
+    "description": "蓝黑几何面纹像抽象画，紧凑菱形身体在碎珊瑚边缘小幅转向与停顿。",
+    "morphology": "紧凑侧扁菱形身体，浅褐背和白腹；蓝黑线条穿过眼额、黄色线条连向鳃区，肛门附近有橙边黑斑，尾柄三行小棘，体色分区清晰。与黑胸更明显的叉斑锉鳞鲀区分。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Rhinecanthus-assasi.html",
+        "title": "Rhinecanthus assasi species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=427",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 5, Rhinecanthus assasi, pp. 423–424",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 85,
+    "normal_max_mm": 260,
+    "max_mm": 340,
+    "anchor_mm": 180,
+    "anchor_g": 160,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.39,
+    "weight": 15,
+    "bait_weights": {
+      "worm": 0.85,
+      "grain": 0.12,
+      "shrimp": 2.15,
+      "lure": 0.4
+    },
+    "time_weights": {
+      "day": 1.1,
+      "dusk": 1.0
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 0,
+    "min_cast": 0.08,
+    "max_cast": 0.62,
+    "depth_min_m": 1,
+    "depth_max_m": 18,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸8.5—26厘米；低概率虚构巨物上端34厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：短抛到碎珊瑚浅区，虾饵优先；停顿时能积累收线进度，恢复挣扎后减少收线，控制反复升落的张力。",
+    "strategy_note": "玩法：短抛到碎珊瑚浅区，虾饵优先；停顿时能积累收线进度，恢复挣扎后减少收线，控制反复升落的张力。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层1—18米，抛投8%—62%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "klunzingers_wrasse",
+    "name": "克氏锦鱼",
+    "scientific_name": "Thalassoma rueppellii",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon",
+      "red_sea_wall"
+    ],
+    "art": "res://assets/fish/klunzingers_wrasse.png",
+    "thumb": "res://assets/fish/klunzingers_wrasse_thumb.png",
+    "description": "粉红头纹和绿蓝细长身在礁缘一闪而过；好奇扰动底沙的敏捷小锦鱼。",
+    "morphology": "细长侧扁身体、短尖吻；初始相上半淡绿、下半白至浅蓝绿，有不规则橙粉纵带和细洋红竖纹，头上弯曲粉红条纹；终末雄相偏蓝绿、纹带减少，黄绿软鳍与弯月尾更突出。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Thalassoma-rueppellii.html",
+        "title": "Thalassoma rueppellii species summary (accepted name)",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_4_text.pdf#page=265",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 4, Thalassoma rueppellii, pp. 261–262",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 65,
+    "normal_max_mm": 175,
+    "max_mm": 225,
+    "anchor_mm": 120,
+    "anchor_g": 30,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "burst",
+    "difficulty": 0.35,
+    "weight": 19,
+    "bait_weights": {
+      "worm": 1.5,
+      "grain": 0.1,
+      "shrimp": 1.8,
+      "lure": 0.7
+    },
+    "time_weights": {
+      "day": 1.3,
+      "dusk": 0.9
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 0.78,
+    "depth_min_m": 1,
+    "depth_max_m": 25,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸6.5—17.5厘米；低概率虚构巨物上端22.5厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虫饵、虾饵都有效，浅礁和礁缘均有机会；短促冲刺较频繁，先放过冲刺再收线，轻竿也能完成。",
+    "strategy_note": "玩法：虫饵、虾饵都有效，浅礁和礁缘均有机会；短促冲刺较频繁，先放过冲刺再收线，轻竿也能完成。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层1—25米，抛投10%—78%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "red_sea_goatfish",
+    "name": "福氏副绯鲤",
+    "scientific_name": "Parupeneus forsskali",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon",
+      "red_sea_wall"
+    ],
+    "art": "res://assets/fish/red_sea_goatfish.png",
+    "thumb": "res://assets/fish/red_sea_goatfish_thumb.png",
+    "description": "两根下巴触须扫过底沙，黑色侧带与黄色尾柄上的圆斑清晰可辨。",
+    "morphology": "长身、低位口、两根可折起的长下颏须，两枚分离背鳍；从上唇穿眼延伸到第二背鳍后方的宽黑侧带，黄色尾柄另有黑斑，黄色深叉尾，白腹。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Parupeneus-forsskali.html",
+        "title": "Parupeneus forsskali species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=365",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Parupeneus forsskali, pp. 361; Mullidae overview p. 355",
+        "supports": "分类与名称；长度上限及量法；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 100,
+    "normal_max_mm": 245,
+    "max_mm": 305,
+    "anchor_mm": 180,
+    "anchor_g": 120,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.3,
+    "weight": 21,
+    "bait_weights": {
+      "worm": 1.65,
+      "grain": 0.08,
+      "shrimp": 2.0,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 0,
+    "min_cast": 0.1,
+    "max_cast": 0.85,
+    "depth_min_m": 1,
+    "depth_max_m": 35,
+    "salinity": "salt",
+    "rarity": "常见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸10—24.5厘米；低概率虚构巨物上端30.5厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虫饵或虾饵、浅水中短距离落点；沿底觅食的形象对应停顿型节奏，在它休息的窗口小段收线。",
+    "strategy_note": "玩法：虫饵或虾饵、浅水中短距离落点；沿底觅食的形象对应停顿型节奏，在它休息的窗口小段收线。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层1—35米，抛投10%—85%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "crocodile_flathead",
+    "name": "长头鳄形鲬",
+    "scientific_name": "Papilloculiceps longiceps",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon"
+    ],
+    "art": "res://assets/fish/crocodile_flathead.png",
+    "thumb": "res://assets/fish/crocodile_flathead_thumb.png",
+    "description": "宽扁鳄形头、顶部眼睛与斑驳棕绿身隐在底沙中，浅潟湖也藏着伏击型目标。",
+    "morphology": "宽而扁的长头、眼位高并带指状分枝虹膜瓣，身体渐细、褐绿背和白腹；两枚分离背鳍，胸鳍宽展，各鳍有深斑，尾上3—4行深色斑点。不是牛尾鱼式三条黑色纵尾带。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Papilloculiceps-longiceps.html",
+        "title": "Papilloculiceps longiceps species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_2_text.pdf#page=594",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 2, Papilloculiceps longiceps, pp. 588–589",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://ciesm.org/atlas/fishes_2nd_edition/Papilloculiceps_longiceps.pdf",
+        "title": "Papilloculiceps longiceps, Atlas of Exotic Fishes in the Mediterranean Sea (2021), p. 279",
+        "supports": "生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 220,
+    "normal_max_mm": 620,
+    "max_mm": 760,
+    "anchor_mm": 450,
+    "anchor_g": 700,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.45,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 0.9,
+      "grain": 0.02,
+      "shrimp": 1.55,
+      "lure": 1.8
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.15
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 0,
+    "min_cast": 0.08,
+    "max_cast": 0.72,
+    "depth_min_m": 1,
+    "depth_max_m": 15,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸22—62厘米；低概率虚构巨物上端76厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：短抛浅沙底，虾饵和拟饵有效；它会经历长停顿和突然挣扎，留出张力余量再利用停顿收线，入门竿仍有遭遇机会。",
+    "strategy_note": "玩法：短抛浅沙底，虾饵和拟饵有效；它会经历长停顿和突然挣扎，留出张力余量再利用停顿收线，入门竿仍有遭遇机会。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层1—15米，抛投8%—72%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "bluespotted_cornetfish",
+    "name": "鳞烟管鱼",
+    "scientific_name": "Fistularia commersonii",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_wall",
+      "red_sea_bluehole"
+    ],
+    "art": "res://assets/fish/bluespotted_cornetfish.png",
+    "thumb": "res://assets/fish/bluespotted_cornetfish_thumb.png",
+    "description": "细长管状吻、青蓝斑点和尾后白丝连成独特剪影，在礁墙外侧追逐小猎物。",
+    "morphology": "身体极长、背腹扁平，管状长吻和小口；橄榄绿至褐色背有蓝绿斑点或纵列，白腹，小背鳍与臀鳍位于近尾端，叉尾后接长白尾丝。背部中线无红烟管鱼式骨板。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Fistularia-commersonii.html",
+        "title": "Fistularia commersonii species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_2_text.pdf#page=503",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 2, Fistularia commersonii, pp. 497",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 450,
+    "normal_max_mm": 1300,
+    "max_mm": 1760,
+    "anchor_mm": 900,
+    "anchor_g": 650,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "burst",
+    "difficulty": 0.56,
+    "weight": 9,
+    "bait_weights": {
+      "worm": 0.2,
+      "grain": 0.02,
+      "shrimp": 1.3,
+      "lure": 2.4
+    },
+    "time_weights": {
+      "day": 1.05,
+      "dusk": 1.2
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 1,
+    "min_cast": 0.35,
+    "max_cast": 1.0,
+    "depth_min_m": 15,
+    "depth_max_m": 120,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸45—130厘米；低概率虚构巨物上端176厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：换旅行或探深竿，拟饵优先，抛到礁墙外侧；长距离冲刺阶段松线，平静段再收。蓝洞30—120米的相遇窗口要求竿能探到相应水层。",
+    "strategy_note": "玩法：换旅行或探深竿，拟饵优先，抛到礁墙外侧；长距离冲刺阶段松线，平静段再收。蓝洞30—120米的相遇窗口要求竿能探到相应水层。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层15—120米，抛投35%—100%；旅行竿可覆盖浅段；蓝洞从30米开始，需具备对应探深能力的竿。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "yellowbar_angelfish",
+    "name": "黄带刺盖鱼",
+    "scientific_name": "Pomacanthus maculosus",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon",
+      "red_sea_wall"
+    ],
+    "art": "res://assets/fish/yellowbar_angelfish.png",
+    "thumb": "res://assets/fish/yellowbar_angelfish_thumb.png",
+    "description": "深蓝大圆盘上有醒目黄斑，随着长大，黑蓝白纹幼鱼会换上截然不同的成年花纹。",
+    "morphology": "高而侧扁的深蓝身体，体侧后半段有宽黄色斑块，尾鳍淡黄；成年背、臀软鳍端有延长丝，幼魚则黑蓝底色配弯曲白蓝竖纹，约6—7厘米标准长时黄斑开始出现。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Pomacanthus-maculosus.html",
+        "title": "Pomacanthus maculosus species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=444",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Pomacanthus maculosus, pp. 440; Pomacanthus overview p. 438",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/Ecology/FishEcologySummary.php?GenusName=Pomacanthus&SpeciesName=maculosus&StockCode=8214",
+        "title": "Ecology summary – Pomacanthus maculosus",
+        "supports": "生境；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 100,
+    "normal_max_mm": 400,
+    "max_mm": 560,
+    "anchor_mm": 240,
+    "anchor_g": 430,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.46,
+    "weight": 12,
+    "bait_weights": {
+      "worm": 0.6,
+      "grain": 1.0,
+      "shrimp": 1.5,
+      "lure": 0.25
+    },
+    "time_weights": {
+      "day": 1.15,
+      "dusk": 0.95
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 0,
+    "min_cast": 0.15,
+    "max_cast": 0.92,
+    "depth_min_m": 4,
+    "depth_max_m": 60,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸10—40厘米；低概率虚构巨物上端56厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虾饵或面团是本作提供的两种相遇选择，浅潟湖轻竿可遇、礁墙扩大深度；持续拉力下维持安全张力，分段收线。",
+    "strategy_note": "玩法：虾饵或面团是本作提供的两种相遇选择，浅潟湖轻竿可遇、礁墙扩大深度；持续拉力下维持安全张力，分段收线。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层4—60米，抛投15%—92%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "blackspotted_sweetlips",
+    "name": "黑斑胡椒鲷",
+    "scientific_name": "Plectorhinchus gaterinus",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_wall",
+      "red_sea_bluehole"
+    ],
+    "art": "res://assets/fish/blackspotted_sweetlips.png",
+    "thumb": "res://assets/fish/blackspotted_sweetlips_thumb.png",
+    "description": "黄色厚唇、白银身体与散布各鳍的黑圆点，在礁壁阴影处形成成群的醒目图案。",
+    "morphology": "银白中高身体密布黑圆点，灰黑头、厚黄色唇，黄色背臀尾鳍也有黑斑；幼鱼不足约12厘米时呈5—6道纵黑纹，成长后才散成圆点。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Plectorhinchus-gaterinus.html",
+        "title": "Plectorhinchus gaterinus species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=276",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Plectorhinchus gaterinus, pp. 272–273",
+        "supports": "分类与名称；长度上限及量法；体重上限资料范围；生境；分布；习性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://www.fishbase.se/Ecology/FishEcologySummary.php?GenusName=Plectorhinchus&SpeciesName=gaterinus&StockCode=8012",
+        "title": "Ecology summary – Plectorhinchus gaterinus",
+        "supports": "生境；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 150,
+    "normal_max_mm": 430,
+    "max_mm": 580,
+    "anchor_mm": 300,
+    "anchor_g": 600,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "rest",
+    "difficulty": 0.53,
+    "weight": 10,
+    "bait_weights": {
+      "worm": 1.3,
+      "grain": 0.04,
+      "shrimp": 2.3,
+      "lure": 0.3
+    },
+    "time_weights": {
+      "day": 0.85,
+      "dusk": 1.3
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 1,
+    "min_cast": 0.28,
+    "max_cast": 0.95,
+    "depth_min_m": 12,
+    "depth_max_m": 80,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸15—43厘米；低概率虚构巨物上端58厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：旅行或探深竿搭配虾饵，落点偏礁墙；张力低的停顿段收线，恢复挣扎时松线。蓝洞可遇水层为30—80米。",
+    "strategy_note": "玩法：旅行或探深竿搭配虾饵，落点偏礁墙；张力低的停顿段收线，恢复挣扎时松线。蓝洞可遇水层为30—80米。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层12—80米，抛投28%—95%；旅行竿可覆盖浅段；蓝洞从30米开始，需具备对应探深能力的竿。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  },
+  {
+    "species_id": "orbicular_batfish",
+    "name": "圆眼燕鱼",
+    "scientific_name": "Platax orbicularis",
+    "region_ids": [
+      "red_sea"
+    ],
+    "spot_ids": [
+      "red_sea_lagoon",
+      "red_sea_wall",
+      "red_sea_bluehole"
+    ],
+    "art": "res://assets/fish/orbicular_batfish.png",
+    "thumb": "res://assets/fish/orbicular_batfish_thumb.png",
+    "description": "高圆银灰身像一块大圆盘；幼年会像褐色落叶漂浮，成鱼则沿礁肩缓慢巡游。",
+    "morphology": "成年身体高而近圆、强侧扁，银灰身有淡暗竖带穿眼及头后，黄色或银黄鳍带深边，腹鳍黑尖；幼鱼红褐底色带深斑与小白眼状点，高背臀鳍形成叶形轮廓。",
+    "sources": [
+      {
+        "url": "https://www.fishbase.se/summary/Platax-orbicularis.html",
+        "title": "Platax orbicularis species summary",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      },
+      {
+        "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=209",
+        "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 5, Platax orbicularis, pp. 205–206",
+        "supports": "分类与名称；常见尺寸口径；长度上限及量法；体重上限资料范围；生境；分布；习性；食性；物种故事；形态识别。现实资料不支持游戏抽样、饵料或体重调校。",
+        "checked_on": "2026-10-04"
+      }
+    ],
+    "min_mm": 120,
+    "normal_max_mm": 520,
+    "max_mm": 680,
+    "anchor_mm": 350,
+    "anchor_g": 1500,
+    "weight_model_note": "游戏专用尺寸与体重模型：视觉长度为抽象全长风格数值，采用锚点立方缩放及体况扰动，不是实测关系式。normal_max_mm控制普通抽样上端，max_mm属于低概率虚构巨物，可超出现实资料尺度；不与百科TL、FL、SL等量法作数值换算，也不作为纪录。",
+    "behavior": "steady",
+    "difficulty": 0.5,
+    "weight": 11,
+    "bait_weights": {
+      "worm": 0.8,
+      "grain": 0.55,
+      "shrimp": 1.75,
+      "lure": 0.45
+    },
+    "time_weights": {
+      "day": 1.0,
+      "dusk": 1.1
+    },
+    "weather_weights": {
+      "clear": 1.0,
+      "rain": 1.0
+    },
+    "min_gear": 0,
+    "min_cast": 0.2,
+    "max_cast": 1.0,
+    "depth_min_m": 3,
+    "depth_max_m": 60,
+    "salinity": "salt",
+    "rarity": "少见",
+    "balance_note": "遭遇权重、稀有度、抛投、水层、鱼饵、时段、天气和遛鱼行为均为游戏设计；红海航区是跨地点和生境的虚构合辑，不代表现实单一群落、全部物种红海独有或捕捞许可。",
+    "gameplay_note": "普通抽样尺寸12—52厘米；低概率虚构巨物上端68厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虾饵、中距离抛投，浅潟湖能用轻竿相遇；圆盘大个体持续拉力更强，旅行竿可探到礁墙和蓝洞30—60米窗口，平稳分段收线。",
+    "strategy_note": "玩法：虾饵、中距离抛投，浅潟湖能用轻竿相遇；圆盘大个体持续拉力更强，旅行竿可探到礁墙和蓝洞30—60米窗口，平稳分段收线。",
+    "research_status": "reviewed_2026-10-04",
+    "release_only": false,
+    "reachability_note": "虚拟可遇水层3—60米，抛投20%—100%；浅水部分可由入门竿覆盖，换探深竿能扩大相遇窗口。",
+    "encounter_type": "fictional_fishing",
+    "travel_route_note": "本作红海航区的精选相遇名单用于旅行差异化；不宣称所有展示种现实中只在红海存在。真实分布和各地引入记录见自然图鉴。"
+  }
+]

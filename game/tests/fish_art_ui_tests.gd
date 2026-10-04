@@ -56,15 +56,20 @@ func _run() -> void:
 	app.sound.apply({"sound":false,"vibration":false,"volume":0.0})
 	app.sound.suspend(true)
 	_check(app._content_ok and app._models_complete,"production catalog and real3D assets remain valid")
-	_check(ArtCatalog.REQUIRE_PHOTOREAL and app.fish_art.complete,"production final gate requires all74 validated photo masters and thumbnails")
+	_check(ArtCatalog.REQUIRE_PHOTOREAL and app.fish_art.complete,"production final gate requires all111 validated illustrative masters and thumbnails")
+	_check(app.catalog.fish_species_count() == 110,"ordinary catch art covers 110 fishing species")
 	var save: SaveStore = Store.new()
 	_check(save.initialize(isolated.path_join("photo-ui-%s" % Time.get_ticks_usec())),"isolated legitimate save fixture")
 	app.store=save
 	app.encounter.rng.seed=20261002
 	if not manifest_path.is_empty(): _load_photo_fixtures()
-	var ids: Array[String] = fixture_ids.duplicate()
+	var ids: Array[String] = []
+	for id: String in fixture_ids:
+		if app.catalog.is_fishing_species(app.catalog.fish[id]): ids.append(id)
 	if ids.is_empty():
-		if app.fish_art.complete: ids.assign(app.catalog.fish.keys())
+		if app.fish_art.complete:
+			for fish: FishDefinition in app.catalog.fish.values():
+				if app.catalog.is_fishing_species(fish): ids.append(fish.species_id)
 		else: ids.assign(["common_carp","alligator_gar","chinese_sturgeon","olive_flounder"])
 	if not selected_ids.is_empty(): ids=selected_ids.duplicate()
 	for id: String in ids:
@@ -73,12 +78,17 @@ func _run() -> void:
 			app.free()
 			quit(2)
 			return
-	var scope: String = "external-photo-fixtures-%d" % fixture_ids.size() if not fixture_ids.is_empty() else ("canonical-photoreal-74" if app.fish_art.complete else "canonical-legacy-art")
+		if not app.catalog.is_fishing_species(app.catalog.fish[id]):
+			printerr("PHOTO_UI: requested species requires its independent mammal page, not a catch fixture ",id)
+			app.free()
+			quit(2)
+			return
+	var scope: String = "external-photo-fixtures-%d" % fixture_ids.size() if not fixture_ids.is_empty() else ("canonical-photoreal-110-fish" if app.fish_art.complete else "canonical-legacy-art")
 	print("PHOTO_UI_SCOPE: ",scope,"; production native pages; no release gate override; not Android validation")
 	app._show_catalog()
 	await _layout()
 	var grid_views: Array[FishArtView] = _photos(app._overlay)
-	_check(grid_views.size()==74,"undiscovered catalog contains all74 native fish textures")
+	_check(grid_views.size()==110,"undiscovered catalog contains all110 native fish textures")
 	for view: FishArtView in grid_views:
 		_check(view.silhouette and view.material is ShaderMaterial,"undiscovered grid retains a static discovery mask: "+view.species_id)
 	app._show_species(ids[0])
@@ -168,6 +178,7 @@ func _run() -> void:
 	call_deferred("quit",0 if failures==0 else 1)
 
 func _load_photo_fixtures() -> void:
+	var complete_before: bool = app.fish_art.complete
 	var data: Variant=JSON.parse_string(FileAccess.get_file_as_string(manifest_path))
 	_check(data is Dictionary and data.get("assets") is Array,"external fixture manifest parses")
 	if not data is Dictionary or not data.get("assets") is Array: return
@@ -195,7 +206,7 @@ func _load_photo_fixtures() -> void:
 		fixture_ids.append(id)
 	# This fixture only injects explicit textures into the test instance. It
 	# does not write game/assets, install a manifest, or mark final art complete.
-	_check(not app.fish_art.complete or fixture_ids.size()==74,"external fixture cannot turn partial coverage into production completion")
+	_check(app.fish_art.complete == complete_before,"external fixture cannot alter validated production completeness")
 
 func _photos(node: Node) -> Array[FishArtView]:
 	var result: Array[FishArtView]=[]

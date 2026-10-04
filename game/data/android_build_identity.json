@@ -3,12 +3,15 @@
   "android_package_name": "org.farshore.fishing.ocean",
   "launcher_name": "远岸钓鱼·海洋",
   "certificate_sha256": "a1996b606b1de5ec3ffd52edff64ec60b0434099d414c8893fa93b585c6ad716",
-  "application_version": "1.3.0",
-  "android_version_code": 7,
+  "application_version": "1.4.0",
+  "android_version_code": 8,
   "separate_installation": true,
   "signing_status": "owner_local_key_public_certificate_pinned",
-  "update_boundary": "Separate installation explicitly authorized on2026-10-04. Does not overwrite org.farshore.fishing.preview or access its saved data. Fresh profile receives1500 currency and six original regions through Yangtze; ocean unlock rules remain. Owner generated and separately backed up the signing key on their Mac; only this public certificate pin is shared.",
+  "update_boundary": "Same org.farshore.fishing.ocean package and owner certificate as1.3.0/versionCode7. Update preserves schema2 saves, all74 old species IDs, original region/gear IDs, inventory and personal records. Fresh-profile1500 currency/six-original-region bootstrap is not reapplied to an existing save. Signing uses only the owner existing key; password entry stays manual. Local development changes are not publication authorization.",
   "signing_algorithm": "RSA-3072",
   "authorized_utc": "2026-10-04T10:11:23Z",
-  "public_certificate_verified_utc": "2026-10-04T10:26:19Z"
+  "public_certificate_verified_utc": "2026-10-04T10:26:19Z",
+  "compatible_ocean_versions": [
+    "1.3.0"
+  ]
 }

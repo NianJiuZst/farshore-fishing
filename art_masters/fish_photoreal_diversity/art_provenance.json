@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "generated_on": "2026-10-04",
+  "generator": "OpenAI built-in image_gen",
+  "scope": {
+    "new_fish": 36,
+    "new_mammals": 1,
+    "reused_legacy_images": 0
+  },
+  "source_fragments": [
+    {
+      "path": "pacific_atlantic_manifest.json",
+      "sha256": "820646e9a8a9a487a1192229af60872554bff4eaa77cb22d1c996bae2a337d5c"
+    },
+    {
+      "path": "indian_red_manifest.json",
+      "sha256": "41879ebbb4028406dece9a87f29862fe08b23cd54dd800a473af08d4a582b964"
+    },
+    {
+      "path": "blue_whale_manifest.json",
+      "sha256": "56b8a7a46e100bf896e9f30531e8a30cea609512793e72f1012751076e6c83cd"
+    }
+  ],
+  "processing": "Original PNGs retained; Pacific/Atlantic transparent canvas padding preserves all source pixels; only thumbnails use Lanczos resampling.",
+  "anatomy_review": "Each generated image inspected visually. Prompts, corrections, references and landmarks are retained in fragment/merged manifests.",
+  "disclaimer": "Photorealistic generated illustrations support game presentation; scientific facts are separately sourced in encyclopedia entries.",
+  "background": {
+    "file": "red_sea_background.png",
+    "sha256": "18dca2c6c5b6abc1d4f8d88d69fb480d04a87c8051d2e9786a1910f2a654e5c6",
+    "prompt_summary": "Warm Red Sea desert headlands surrounding a clear turquoise reef lagoon and small fishing jetty; premium naturalistic landscape illustration, no people or text."
+  }
+}

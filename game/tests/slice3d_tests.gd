@@ -56,9 +56,10 @@ func _run() -> void:
 	# Equipment/travel fixture only: catches and progression are earned by the
 	# real generated sessions below, not fabricated collection records.
 	var setup: Dictionary = fixture.state
-	setup.gear = 4
-	setup.owned_gear = [0,1,2,3,4]
-	setup.unlocked_regions = ["lake","japan","norway","med","bayou","yangtze","pacific_ocean","atlantic_ocean","indian_ocean"]
+	setup.gear = app.catalog.gear.size() - 1
+	setup.owned_gear = range(app.catalog.gear.size())
+	setup.unlocked_regions = []
+	for region: Dictionary in app.catalog.regions: setup.unlocked_regions.append(str(region.region_id))
 	_check(fixture.commit_state(setup), "explicit full-world equipment/travel fixture has zero fabricated catches")
 	app.store = fixture
 	app.encounter.rng.seed = 20261002
@@ -69,7 +70,7 @@ func _run() -> void:
 	print("LAYOUT_SCOPE: physical=",root.size," logical=",root.get_visible_rect().size," aspect=",ProjectSettings.get_setting("display/window/stretch/aspect","keep"),"; representative desktop layout only, not phone hardware")
 	_test_configuration()
 	if not app._models_complete or not app._content_ok:
-		print("SLICE3D_SCOPE: full74 gameplay NOT RUN; actual asset/content dependency failed, no readiness override")
+		print("SLICE3D_SCOPE: full110 gameplay NOT RUN; actual asset/content dependency failed, no readiness override")
 		await _finish()
 		return
 	await _test_world_and_rigs()
@@ -79,14 +80,15 @@ func _run() -> void:
 	await _test_empty_strikes()
 	await _test_contact_only_departure()
 	for species: String in app.catalog.fish:
+		if not app.catalog.is_fishing_species(app.catalog.fish[species]): continue
 		await _test_species_flow(species, species in ["common_carp","chinese_sturgeon"])
 	for spot: String in app.catalog.spots:
 		if visited_spots.has(spot): continue
 		var recipe: Dictionary = _find_recipe("",spot)
 		_check(not recipe.is_empty(),"each original spot has a reproducible ordinary encounter: " + spot)
 		if not recipe.is_empty(): await _test_species_flow(str(recipe.species),false,recipe)
-	_check(caught_species.size() == 74 and app.store.discovered_count() == 74,"all74 species caught through ordinary Main Encounter and real Session flow")
-	_check(visited_spots.size() == 18,"all eighteen spots across nine regions finish an actual cast/fight/landing/disposition")
+	_check(caught_species.size() == 110 and app.store.discovered_count() == 110 and not caught_species.has("blue_whale"),"all110 fish caught through ordinary Main Encounter and real Session flow; mammal challenge excluded")
+	_check(visited_spots.size() == 21,"all twenty-one spots across ten regions finish an actual cast/fight/landing/disposition")
 	await _test_species_flow("alligator_gar",false,{},true)
 	_test_restart_pending()
 	_test_extreme_landing_framing()
@@ -100,7 +102,7 @@ func _finish() -> void:
 	app.queue_free()
 	await process_frame
 	await process_frame
-	_check(completed,"full74 integration reached its explicit completion marker")
+	_check(completed,"full110 integration reached its explicit completion marker")
 	print("SLICE3D_TESTS: ", checks-failures, "/", checks, " passed; failures=", failures, "; cast events=", cast_events.size(), "; landing events=", landing_events.size(), "; species=",caught_species.size(),"; spots=",visited_spots.size())
 	quit(0 if failures == 0 else 1)
 
@@ -138,10 +140,10 @@ func _test_configuration() -> void:
 	_check(app.scenery.camera.keep_aspect==Camera3D.KEEP_WIDTH,"actual world camera preserves authored horizontal coverage at every aspect")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method")) == "mobile", "native Mobile rendering is the production default")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method.mobile")) == "mobile", "Android retains Mobile rendering without a compatibility downgrade")
-	_check(app.catalog.fish.size() == 74 and app.catalog.regions.size() == 9 and app.catalog.spots.size() == 18, "complete original74 species, nine regions and eighteen spots")
-	_check(app.catalog.gear.size() == 5 and app.catalog.baits.size() == 12,"five rods and twelve baits remain available")
+	_check(app.catalog.fish.size() == 111 and app.catalog.fish_species_count() == 110 and app.catalog.regions.size() == 10 and app.catalog.spots.size() == 21, "110 fish plus one mammal, ten regions and twenty-one spots")
+	_check(app.catalog.gear.size() == 6 and app.catalog.baits.size() == 12,"six rods and twelve baits remain available")
 	var errors: Array[String] = Registry.validate_catalog(app.catalog,true)
-	_check(errors.is_empty() and app._models_complete and app._content_ok,"full74 imported resources and real content gate ready: " + str(errors))
+	_check(errors.is_empty() and app._models_complete and app._content_ok,"full111 imported resources and real content gate ready: " + str(errors))
 	_check(not bool(ProjectSettings.get_setting("rendering/rendering_device/fallback_to_opengl3",true)),"production cannot silently downgrade Vulkan to OpenGL")
 
 func _test_world_and_rigs() -> void:
@@ -160,6 +162,7 @@ func _test_world_and_rigs() -> void:
 	_check(cast != null and is_equal_approx(cast.length,Stage.CAST_DURATION), "cast presentation duration matches the loaded character clip")
 	_check(Stage.RELEASE_TIME > 0 and Stage.RELEASE_TIME < Stage.CAST_DURATION, "release event occurs inside the authored cast clip")
 	for species: String in Registry.species_ids():
+		if not app.catalog.is_fishing_species(app.catalog.fish[species]): continue
 		app.scenery._ensure_fish({"species_id":species,"length_mm":850})
 		_audit_rig(app.scenery._fish,species,["swim","struggle","breach","landed"],6)
 		_check(app.scenery._fish_id == species, "live fish switches to the actual species mesh: " + species)
@@ -311,7 +314,7 @@ func _find_recipe(species: String, required_spot: String = "") -> Dictionary:
 		var spot: Dictionary = app.catalog.spots[sid]
 		# Higher ID does not imply greater depth: the heavy rod reaches90m while
 		# the original deep rod reaches180m, which Atlantic wolffish requires.
-		for gear_id: int in [4,2,1,3,0]:
+		for gear_id: int in [4,5,2,1,3,0]:
 			var gear: Dictionary = app.catalog.gear[gear_id]
 			if gear_id < int(spot.min_gear) or float(gear.max_depth_m) < float(spot.depth_min_m): continue
 			var charge: float = minf(0.55,float(gear.reach))
@@ -563,6 +566,7 @@ func _test_extreme_landing_framing() -> void:
 	var extremes: Array[Array] = []
 	for id: String in app.catalog.fish:
 		var fish: FishDefinition = app.catalog.fish[id]
+		if not app.catalog.is_fishing_species(fish): continue
 		extremes.append([id,fish.min_mm])
 		extremes.append([id,fish.max_mm])
 	for row: Array in extremes:

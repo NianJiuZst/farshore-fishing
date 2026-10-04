@@ -1,0 +1,9 @@
+DESKTOP_NATIVE_RENDER: macOS Mobile/Vulkan; isolated data; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.2.283 - Forward Mobile - Using Device #0: Apple - Apple M5
+
+[mvk-error] VK_INCOMPLETE: Error writing pipeline cache data: Failed to write 4 bytes to output stream! Wrote 0
+[mvk-error] VK_INCOMPLETE: Error writing pipeline cache data: Failed to write 4 bytes to output stream! Wrote 0
+OCEAN_UI_TESTS: 1199/1199 passed; failures=0; physical=(720, 1280); actual Main/headless or desktop only
+WARNING: 7 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:7505)

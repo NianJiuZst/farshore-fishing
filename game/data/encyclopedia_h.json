@@ -1,0 +1,1151 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "species_id": "red_sea_clownfish",
+      "accepted_scientific_name": "Amphiprion bicinctus",
+      "taxonomy": {
+        "family_scientific": "Pomacentridae",
+        "family_zh": "雀鲷科",
+        "genus_scientific": "Amphiprion",
+        "genus_zh": "双锯鱼属",
+        "note": "本作使用“双带小丑鱼”俗名，对应双带双锯鱼 Amphiprion bicinctus；不是所有橙色小丑鱼的统称。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "已核实来源列可达14厘米全长，但未提供适用于所有成年群体的平均或常见尺寸；不能将这个上限当作成年均值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 14,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase和SAIAB地区志均收录14厘米全长上限；这是资料尺度，不是核验到2026年的认证世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "潟湖与外礁中生活的海葵鱼，资料水深1—30米。可与奶嘴海葵、串珠海葵、革海葵、公主海葵及巨大列指海葵等宿主关联；宿主名单并非每片礁都同时具备。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "西印度洋物种，SAIAB列苏伊士湾、红海、亚丁湾、塞舌尔和查戈斯；FishBase摘要采用较简短的红海—查戈斯表述。红海展示并不等于全球只在红海存在。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "繁殖时配对，卵附着在水底基质上，雄鱼守护并扇动鳍为卵供水。与海葵的共居及有限的活动范围，与远洋洄游鱼有明显区别。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "FishBase食物条目收录底栖藻类和浮游动物；条目未给它们在各地食谱中的统一比例。游戏中的虾饵、面团权重也不等于野外食物占比。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "海葵旁的育儿值班",
+        "text": "海葵附近不仅是躲藏地点，也是它们生活的小天地。双带小丑鱼的卵黏在基质上，雄鱼会守护并扇水，因此“在家附近活动”还包括照料下一代。画面里的两道白带是辨认身份的线索；有三道白带的常见小丑鱼不能直接替代这个物种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Amphiprion bicinctus species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Amphiprion-bicinctus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 4, Amphiprion bicinctus, pp. 127",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_4_text.pdf#page=131",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Food items reported for Amphiprion bicinctus",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/TrophicEco/FoodItemsList.php?genus=Amphiprion&species=bicinctus&vstockcode=12163",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸4.5—12厘米；低概率虚构巨物上端15厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：短抛到浅礁，虾饵容易吸引；它会停顿再短促挣扎，停顿时轻收，张力升高时松线。小体型适合练习节奏。"
+    },
+    {
+      "species_id": "red_sea_bannerfish",
+      "accepted_scientific_name": "Heniochus intermedius",
+      "taxonomy": {
+        "family_scientific": "Chaetodontidae",
+        "family_zh": "蝴蝶鱼科",
+        "genus_scientific": "Heniochus",
+        "genus_zh": "马夫鱼属",
+        "note": "红海马夫鱼属于蝴蝶鱼科；与外形相似但分类不同的镰鱼区别在身体比例、黑带位置和鳍形。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "CIESM图鉴列常见尺度10—18厘米；未统一标出量法和成年群体抽样范围，本条只把它当图鉴给出的常见尺度。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "max_length": {
+        "value_cm": 18,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase与SAIAB列18厘米全长。CIESM另列最大20厘米但未注明量法；不把这两个数值混作同一个经过认证的纪录。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "珊瑚礁相关，FishBase列3—50米并记幼鱼可在礁基附近结群；SAIAB另记幼鱼独游，成鱼白天常在大珊瑚下成对、入夜后更积极取食。幼鱼群聚记录不统一，可能反映观察情境，不能断言每一群都固定如此。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "自然范围主要为红海及亚丁湾；已有经苏伊士通道进入地中海的记录，CIESM汇录土耳其等地目击和采样，不能将“红海”俗名解释成绝对地域边界。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "成鱼可独游、成对或偶见群聚。FishBase描述幼鱼较易结群，SAIAB地区志则记幼鱼独游，这些资料差异在此并列保留。长白背鳍丝是外形特征，不据此编造额外器官功能或求偶仪式。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "取食浮游动物与底栖无脊椎动物；地区志还列多毛类、珊瑚虫、蟹及小型甲壳类等。不同地点的食谱可能变化，不假定全部依赖珊瑚。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "红海的旗帜，也能越过海界",
+        "text": "红海马夫鱼的白色背鳍丝远远就像一面旗。它的原生范围较窄，却已经在地中海留下记录；连接两片海的苏伊士通道让一些红海鱼跨过了旧有边界。图鉴上的原生范围与后来出现的地点需要分开理解，游戏中的旅行名单更只是精选相遇路线。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Heniochus intermedius species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Heniochus-intermedius.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Heniochus intermedius, pp. 466–467",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=470",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Heniochus intermedius, Atlas of Exotic Fishes in the Mediterranean Sea (2021), pp. 182–183",
+          "publisher": "CIESM Publishers",
+          "url": "https://ciesm.org/atlas/fishes_2nd_edition/Heniochus_intermedius.pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸6.5—16厘米；低概率虚构巨物上端19.5厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虾饵或虫饵、浅礁中距离抛投；它以平稳持续拉力为主，维持安全张力并连续小段收线，比猛拉更容易成功。"
+    },
+    {
+      "species_id": "masked_butterflyfish",
+      "accepted_scientific_name": "Chaetodon semilarvatus",
+      "taxonomy": {
+        "family_scientific": "Chaetodontidae",
+        "family_zh": "蝴蝶鱼科",
+        "genus_scientific": "Chaetodon",
+        "genus_zh": "蝴蝶鱼属",
+        "note": "“金蝴蝶鱼”在本作专指 Chaetodon semilarvatus；不把全部黄色蝴蝶鱼并作同一种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见长度15厘米全长；这是资料汇录的常见值，不是全球成鱼平均，地区与年龄结构会改变观测结果。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 23,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase列最大23厘米全长。地区志采用相同尺度；作为资料收录上限展示。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "资料列3—20米的珊瑚礁环境，常见于珊瑚较丰富处，也会在大型桌形轴孔珊瑚的遮蔽下悬停。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "主要见红海和亚丁湾；SAIAB还记载阿曼南部的报告。不是印度洋每片珊瑚礁都会自然出现的通用黄色蝴蝶鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "常成对，也可能组成小群，FishBase汇录约20尾的群体观察。珊瑚下近乎静止的悬停不等于永远不取食；SAIAB记其主要在夜间觅食。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以石珊瑚的珊瑚虫为重要食物，也取食一些多毛类与线虫。没有资料支持把游戏中虾饵最容易遇见解释成天然主食比例。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "金色圆盘的珊瑚屋檐",
+        "text": "桌形珊瑚的平展枝板像一道屋檐，金蝴蝶鱼可能成对或成群在下面悬停。蓝灰面罩与整身金黄色让它们十分醒目，而夜间取食记录提醒我们：白天看见的安静姿态，只是一天生活中的一个片段。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Chaetodon semilarvatus species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Chaetodon-semilarvatus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Chaetodon semilarvatus, pp. 461",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=465",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸7—20.5厘米；低概率虚构巨物上端25厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：把虾饵或虫饵留在浅礁短抛窗口；它的间歇停顿适合收线，恢复拉力时及时松线，入门竿也能练到。"
+    },
+    {
+      "species_id": "sohal_surgeonfish",
+      "accepted_scientific_name": "Acanthurus sohal",
+      "taxonomy": {
+        "family_scientific": "Acanthuridae",
+        "family_zh": "刺尾鱼科",
+        "genus_scientific": "Acanthurus",
+        "genus_zh": "刺尾鱼属",
+        "note": "尾柄棘和独特鳍形是刺尾鱼的识别线索；本作的中文俗名对应 Acanthurus sohal。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "已核实物种摘要列40厘米全长上限，未给统一的常见成鱼均值；不能把40厘米直接标为“正常成年平均”。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 40,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase与SAIAB均列可达40厘米全长，属于汇编尺度而非本次核验的单尾认证纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "多见于受到浪涌影响的外缘裙礁。FishBase列常见水层0—20米，但实际总深度范围的上端未明确；不把20米写成绝对生理极限。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "原生范围从红海延伸到阿拉伯湾／波斯湾；本作只在红海精选池中展示，不据此否认其他真实分布。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "具有鲜明领地行为，在礁缘维护取食范围，可能驱赶邻近鱼。身体图案包括橙色侧斑与尾柄棘、密集细横纹和亮蓝鳍边。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要啃食藻类，FishBase列马尾藻和细丝状绿藻；具有尾柄棘不意味着它以肉食为主。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "尾巴上的小刀，礁上的草食者",
+        "text": "刺尾鱼的橙色尾柄棘十分显眼，可它的餐桌主要是藻类。索氏刺尾鱼的领地性让礁边的一块取食地值得守护。“有刀”与“吃肉”不是同一件事；辨认这条鱼时，细横纹、蓝色鳍边和橙色棘比单看体型更有用。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Acanthurus sohal species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Acanthurus-sohal.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 5, Acanthurus sohal, pp. 228",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=232",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸10—34厘米；低概率虚构巨物上端45厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：面团是本作为藻食形象设置的有效游戏饵；中距离抛投，遇到突然冲刺先松线，冲刺过后再收。游戏饵不代表现实面团钓法。"
+    },
+    {
+      "species_id": "arabian_picassotriggerfish",
+      "accepted_scientific_name": "Rhinecanthus assasi",
+      "taxonomy": {
+        "family_scientific": "Balistidae",
+        "family_zh": "鳞鲀科",
+        "genus_scientific": "Rhinecanthus",
+        "genus_zh": "锉鳞鲀属",
+        "note": "“阿拉伯炮弹鱼”是本作俗名，对应 Rhinecanthus assasi；不是其他带毕加索俗名的近似物种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "已核实摘要列最大30厘米全长，未给统一的常见长度或成年均值；不以这个上限替代常见尺寸。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 30,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase和SAIAB地区志列可达30厘米全长，属于资料收录尺度。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "浅海珊瑚礁附近的沙底及碎珊瑚地，幼鱼也见于礁坪。本次物种来源没有足够明确的统一数值水深；游戏1—18米是可达性设计，不是野外分布极限。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "西印度洋北部，包括红海、阿曼湾及阿拉伯湾／波斯湾；不是所有热带海洋都有的同一种毕加索炮弹鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "偏向近底栖息，幼鱼与成年活动地可有差异。粗壮的前背棘和紧凑身体属于鳞鲀类形态；不把游戏停顿挣扎描述成已测量到的物种拉力模式。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "FishBase记为取食底栖无脊椎动物。具体猎物比例在本次条目中不明确，因此不编造虾、蟹各占多少，也不据游戏权重推断天然食谱。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "story": {
+        "title": "毕加索是外号，不是学名",
+        "text": "蓝黑面纹、黄色细线与浅色腹部，让阿拉伯炮弹鱼像一幅几何画。人们的“毕加索”称呼来自这种观感；FishBase所解释的 assasi 却关联地方阿拉伯名称。俗名有助记忆，学名才让我们避免把几种画风相似的炮弹鱼混在一起。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Rhinecanthus assasi species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Rhinecanthus-assasi.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 5, Rhinecanthus assasi, pp. 423–424",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=427",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸8.5—26厘米；低概率虚构巨物上端34厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：短抛到碎珊瑚浅区，虾饵优先；停顿时能积累收线进度，恢复挣扎后减少收线，控制反复升落的张力。"
+    },
+    {
+      "species_id": "klunzingers_wrasse",
+      "accepted_scientific_name": "Thalassoma rueppellii",
+      "taxonomy": {
+        "family_scientific": "Labridae",
+        "family_zh": "隆头鱼科",
+        "genus_scientific": "Thalassoma",
+        "genus_zh": "锦鱼属",
+        "note": "接受学名采用 Thalassoma rueppellii；旧名 Thalassoma klunzingeri 作为同物异名保留在说明中。species_id 仍为 klunzingers_wrasse，避免资源与记录换号。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase和地区志分别收录20厘米、17厘米全长的可达尺度，未给统一常见值；不能把较小的17厘米当作平均。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 20,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase列20厘米全长，SAIAB地区志列17厘米全长。这里采用数据库的汇录上限并保留地区志差异，不称实时世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "生活于珊瑚礁、礁缘、向海外坡与邻近底质。FishBase列通常1—30米、总范围上端未知，SAIAB概述到约20米；这些均不代表一个统一的绝对深度边界。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "SAIAB把该接受物种列为红海特有，FishBase也列红海；本作按此资料范围展示。这个结论仅针对克氏锦鱼，不能推广成其余11种均红海独有。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "相对不怕潜水者，能被翻动底质的扰动吸引。初始相和终末雄相体色、尾鳍不同，不能将不同生长或性相误判为几种独立的新鱼。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以底栖无脊椎动物为主，偶尔取食小鱼；追近翻动的底质可获得被扰起的小型食物。地区志没有提供统一猎物占比。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "同一条锦鱼，名字有过迁移",
+        "text": "这条红海锦鱼曾广泛以 Thalassoma klunzingeri 出现在资料中；本次采用地区志和FishBase一致使用的 Thalassoma rueppellii。名字更新不意味着发现了另一个可叠加的新物种，所以游戏仍沿用 klunzingers_wrasse 资源与记录编号。识别时还要考虑性相：终末雄鱼与初始相鱼的纹带和尾形本就不同。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Thalassoma rueppellii species summary (accepted name)",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Thalassoma-rueppellii.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 4, Thalassoma rueppellii, pp. 261–262",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_4_text.pdf#page=265",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸6.5—17.5厘米；低概率虚构巨物上端22.5厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虫饵、虾饵都有效，浅礁和礁缘均有机会；短促冲刺较频繁，先放过冲刺再收线，轻竿也能完成。"
+    },
+    {
+      "species_id": "red_sea_goatfish",
+      "accepted_scientific_name": "Parupeneus forsskali",
+      "taxonomy": {
+        "family_scientific": "Mullidae",
+        "family_zh": "绯鲤科",
+        "genus_scientific": "Parupeneus",
+        "genus_zh": "副绯鲤属",
+        "note": "本作“福氏副绯鲤”对应 Parupeneus forsskali。下颏的一对触须及黑带与尾柄黑斑，是区别相似副绯鲤的要点。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见长度25厘米全长；地区志另以标准长描述，不能把全长与标准长直接互换。常见值也不是所有地点成年群体的均值。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 28,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase列最大28厘米全长，SAIAB列可达22厘米标准长。两种量法未做换算，也不据22厘米标准长否认28厘米全长汇录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "FishBase虽汇录275.30克，但本次未复核原始样本、测量及该汇录适用范围；暂不将它作为可靠体重极值，留空而不把游戏锚点冒充野外纪录。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "habitat": {
+        "text": "浅海珊瑚礁邻近沙底常见，SAIAB列1—30米，FishBase列1—45米；本作在浅礁和礁墙配置相遇窗口，不把其中某个数值当成全球绝对水深上限。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "原生于红海、亚丁湾和索科特拉一带；两套资料亦记其经苏伊士通道进入地中海。故“红海”相遇池不是现实中绝对只在红海存在的声明。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "绯鲤科的下颏须是感觉器官，能折入下颌间的沟，也可用于扫动或探入底质觅食。个体颜色与群聚可能随生长和情境变化；科级观察不等于每尾福氏副绯鲤都固定如此。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "以底栖无脊椎动物为食。SAIAB科级概述包括小型甲壳类和各种蠕虫，并描述用触须探底觅食；本条不把科级猎物种类当成这一个物种的统一胃含物比例。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "胡须是底沙里的探测器",
+        "text": "福氏副绯鲤的两根下巴触须不是装饰：绯鲤科用这种感觉器官寻找底质中的食物，也能把它们收进下颌沟。黑色侧带与黄色尾柄上的独立黑斑，则让它在很多同样“长胡须”的鱼中显得不同。触须功能来自科级概述，具体捕食比例仍需物种调查。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Parupeneus forsskali species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Parupeneus-forsskali.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Parupeneus forsskali, pp. 361; Mullidae overview p. 355",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=365",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸10—24.5厘米；低概率虚构巨物上端30.5厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虫饵或虾饵、浅水中短距离落点；沿底觅食的形象对应停顿型节奏，在它休息的窗口小段收线。"
+    },
+    {
+      "species_id": "crocodile_flathead",
+      "accepted_scientific_name": "Papilloculiceps longiceps",
+      "taxonomy": {
+        "family_scientific": "Platycephalidae",
+        "family_zh": "鲬科",
+        "genus_scientific": "Papilloculiceps",
+        "genus_zh": "鳄形鲬属（本作译名）",
+        "note": "本作使用“长头鳄形鲬”俗名，对应 Papilloculiceps longiceps；属级识别包括分枝虹膜瓣和大的鳃盖间瓣，不与其他鲬混用。 中文属名在本作作为译名提示，分类身份以拉丁属名为准。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase汇录常见长度50厘米全长；这是资料常见尺度，而非全部地区成年鱼平均。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 70,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase与SAIAB列可达70厘米全长；本条不声称已核验这一上限的单尾纪录、时间和体重。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "在珊瑚礁邻近沙底、碎屑底活动，FishBase列1—15米、地区志约到15米；CIESM也汇录到20米。不同地区观测范围并列保留，不合成绝对极限。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "西印度洋：红海、阿曼湾、东非沿岸到南非、马达加斯加等地；SAIAB还列塞舌尔。地中海有移入记录，不是红海独有。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "behavior": {
+        "text": "CIESM记它常埋在沙中，伺机伏击经过的生物。宽扁头部、顶部眼睛与斑驳颜色有利于在底栖环境中观察猎物；“有利”是基于形态和伏击记录的解释，而非本次量化实验结论。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "CIESM物种条目列主要取食甲壳类和鱼，不把同页另一个鲬种的幼鱼水深或夜间迁移记录移植到本种。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "一张露在沙外的鳄形脸",
+        "text": "它能在浅水沙底藏起身体、等待猎物，宽扁头部和高位眼睛便成为最容易露出的轮廓。SAIAB还描述眼部的指状分枝虹膜瓣。棕绿斑驳身体与这类伏击生活相吻合；游戏中的突然挣扎只是玩法改编，不是它在野外会为垂钓者表演的固定动作。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Papilloculiceps longiceps species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Papilloculiceps-longiceps.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 2, Papilloculiceps longiceps, pp. 588–589",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_2_text.pdf#page=594",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Papilloculiceps longiceps, Atlas of Exotic Fishes in the Mediterranean Sea (2021), p. 279",
+          "publisher": "CIESM Publishers",
+          "url": "https://ciesm.org/atlas/fishes_2nd_edition/Papilloculiceps_longiceps.pdf",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸22—62厘米；低概率虚构巨物上端76厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：短抛浅沙底，虾饵和拟饵有效；它会经历长停顿和突然挣扎，留出张力余量再利用停顿收线，入门竿仍有遭遇机会。"
+    },
+    {
+      "species_id": "bluespotted_cornetfish",
+      "accepted_scientific_name": "Fistularia commersonii",
+      "taxonomy": {
+        "family_scientific": "Fistulariidae",
+        "family_zh": "烟管鱼科",
+        "genus_scientific": "Fistularia",
+        "genus_zh": "烟管鱼属",
+        "note": "鳞烟管鱼对应 Fistularia commersonii，与红烟管鱼 F. petimba 的背中线骨板等特征不同。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见100厘米全长。长吻与长尾丝使身体量法尤其重要，不能把图像中的尾丝随意折入标准长。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 160,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase列160厘米全长，SAIAB列150厘米标准长；两种量法不能直接排序或互换，这里展示数据库全长汇录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "常在珊瑚礁附近和邻近沙底活动，避开强烈浪涌区；FishBase收录0—132米，SAIAB记至少到约120米。不是只有深水才会出现的鱼。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "自然广布印度—太平洋，也在东太平洋有分布；已经由苏伊士通道进入地中海。红海只代表本作选定的相遇舞台，不是现实独有宣言。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "可单独或成小群，在礁附近搜寻小猎物。极长管吻、靠后的背臀鳍和细长尾丝共同构成轮廓；不是把一条普通鱼等比拉长就能准确表示的形态。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "主要取食小鱼，也吃虾类和鱿鱼等；长管状口部的形态与捕食小型游动物有关，不能说它靠啃食珊瑚长大。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "海里的长管，不是鳗鱼",
+        "text": "烟管鱼的身体很细，前端却延伸出一根管状吻，尾后又拖着白色丝状延长部。背鳍与臀鳍集中在靠近尾端的位置，使它与鳗鱼或普通纺锤形鱼的轮廓截然不同。它在礁边追逐小鱼，也能出现在较深水层；本作因此把它安排为礁墙和蓝洞浅肩的长身目标。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Fistularia commersonii species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Fistularia-commersonii.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 2, Fistularia commersonii, pp. 497",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_2_text.pdf#page=503",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸45—130厘米；低概率虚构巨物上端176厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：换旅行或探深竿，拟饵优先，抛到礁墙外侧；长距离冲刺阶段松线，平静段再收。蓝洞30—120米的相遇窗口要求竿能探到相应水层。"
+    },
+    {
+      "species_id": "yellowbar_angelfish",
+      "accepted_scientific_name": "Pomacanthus maculosus",
+      "taxonomy": {
+        "family_scientific": "Pomacanthidae",
+        "family_zh": "刺盖鱼科",
+        "genus_scientific": "Pomacanthus",
+        "genus_zh": "刺盖鱼属",
+        "note": "本作“黄带刺盖鱼”对应 Pomacanthus maculosus；幼鱼和成鱼图案变化大，不与阿拉伯刺盖鱼 P. asfur 的相似黄色斑带混用。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见20厘米全长；这个常见值不能与50厘米标准长上限作未经换算的比例比较。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 50,
+        "length_type": "SL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase最大50厘米标为标准长，SAIAB相同数值标为全长。这里保留FishBase的50厘米标准长及口径差异，不做TL／SL换算，不将它宣称为认证世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "珊瑚礁和岩底，也见于较宁静、含泥沙的礁区，资料收录4—60米；幼鱼可利用潮间带与近岸浅岩区。不是只在无泥沙、最清澈珊瑚区生存的鱼。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "西印度洋：红海、阿曼、阿拉伯湾／波斯湾至巴基斯坦，东非肯尼亚到莫桑比克北部等地；已有地中海移入记录。其他远离原生区的出现记录不应混作连续自然分布。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "可独处或成对。幼鱼深蓝底和弯曲白蓝纹，与成鱼的蓝身黄斑差别显著；地区志记约6—7厘米标准长时黄斑开始出现，成长变化不是新物种。",
+        "source_ids": [
+          "s2",
+          "s3"
+        ]
+      },
+      "diet": {
+        "text": "主要取食海绵和藻类，也记有海鞘；幼鱼还会取食小甲壳类。海绵属于动物，不能因为它固着生长就把这一食谱全部称作吃植物。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "长大后的新衣服",
+        "text": "幼鱼的黑蓝底色上弯着白蓝线条，成年鱼却以深蓝身体和一块宽黄斑出名。SAIAB记载黄斑在约6—7厘米标准长时开始出现，因此一张幼鱼照片不应被当作成年配色模板。看图鉴时把尺寸和生命阶段一起考虑，才能认出它们其实是同一种鱼。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Pomacanthus maculosus species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Pomacanthus-maculosus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Pomacanthus maculosus, pp. 440; Pomacanthus overview p. 438",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=444",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Ecology summary – Pomacanthus maculosus",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/Ecology/FishEcologySummary.php?GenusName=Pomacanthus&SpeciesName=maculosus&StockCode=8214",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸10—40厘米；低概率虚构巨物上端56厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虾饵或面团是本作提供的两种相遇选择，浅潟湖轻竿可遇、礁墙扩大深度；持续拉力下维持安全张力，分段收线。"
+    },
+    {
+      "species_id": "blackspotted_sweetlips",
+      "accepted_scientific_name": "Plectorhinchus gaterinus",
+      "taxonomy": {
+        "family_scientific": "Haemulidae",
+        "family_zh": "石鲈科",
+        "genus_scientific": "Plectorhinchus",
+        "genus_zh": "胡椒鲷属",
+        "note": "黑斑胡椒鲷属于石鲈科而非通常所说鲷科；“sweetlips／rubberlips”俗名与其厚唇有关。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "FishBase列常见35厘米全长；成鱼与带纵纹的幼鱼在尺寸、图案上均有差异，常见值不是每个群体均值。",
+        "source_ids": [
+          "s1"
+        ]
+      },
+      "max_length": {
+        "value_cm": 50,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase与SAIAB列50厘米全长，属于地区志／数据库资料尺度，不附会单尾世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "沿岸珊瑚礁、岩礁、沙滩外缘及近河口，亦有海草床记录。SAIAB记珊瑚礁到30米，FishBase摘要列55—80米的较深记录，生态表也称浅水沿岸种。两套观测范围并列，不能把它锁成仅55米以下的深海鱼。",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "distribution": {
+        "text": "西印度洋，阿拉伯湾／波斯湾、阿曼、红海到南非索德瓦纳湾，以及马达加斯加、科摩罗、毛里求斯等地。塞舌尔记录在FishBase中有争议，因此本条不列为确认分布。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "白天常在岩棚下或珊瑚坡附近聚群，对潜水者可能警惕。幼魚纵纹随着成长碎裂成圆斑，不能用成年黑点花纹代替所有生命阶段。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "FishBase生态表列无脊椎动物、蟹、虾、海生蠕虫，也有鱼类食物记录；不声称某一个猎物在全部地区占固定比例。",
+        "source_ids": [
+          "s3"
+        ]
+      },
+      "story": {
+        "title": "长大后，条纹变成胡椒粒",
+        "text": "不足约12厘米的幼鱼有五到六道纵向深色条纹，长大后这些纹带分成一颗颗黑圆斑，延伸到黄色鳍上。成年鱼的黄色厚唇与黑点像“撒了胡椒”的衣服，而幼鱼看起来却像另一款花纹。生命阶段的改变，比单纯换个颜色更能解释同种鱼的差异。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Plectorhinchus gaterinus species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Plectorhinchus-gaterinus.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 3, Plectorhinchus gaterinus, pp. 272–273",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_3_text.pdf#page=276",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s3",
+          "title": "Ecology summary – Plectorhinchus gaterinus",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/Ecology/FishEcologySummary.php?GenusName=Plectorhinchus&SpeciesName=gaterinus&StockCode=8012",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸15—43厘米；低概率虚构巨物上端58厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：旅行或探深竿搭配虾饵，落点偏礁墙；张力低的停顿段收线，恢复挣扎时松线。蓝洞可遇水层为30—80米。"
+    },
+    {
+      "species_id": "orbicular_batfish",
+      "accepted_scientific_name": "Platax orbicularis",
+      "taxonomy": {
+        "family_scientific": "Ephippidae",
+        "family_zh": "白鲳科",
+        "genus_scientific": "Platax",
+        "genus_zh": "燕鱼属",
+        "note": "圆眼燕鱼对应 Platax orbicularis；“蝙蝠鱼”是俗称，不属于鮟鱇类蝙蝠鱼科 Ogcocephalidae，也不与其他白鲳科圆盘鱼混用。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "typical_size": {
+        "text": "本次摘要和地区志未给适用于各年龄群体的常见成鱼长度；幼鱼的长鳍及成年圆盘身会改变视觉比例，不能用单张图片推算均值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_length": {
+        "value_cm": 60,
+        "length_type": "TL",
+        "record_label": "资料收录上限（非实时世界纪录）",
+        "text": "FishBase列最大60厘米全长，SAIAB列可达50厘米全长。这里保留数据库汇录上限与地区志差异，不将任一个写成已认证的实时世界纪录。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "max_weight": {
+        "value_kg": null,
+        "record_label": "尚未取得可靠上限",
+        "text": "本次核实的物种摘要和地区志未提供可核对的体重上限，故留空；不从体长、近亲或游戏锚点推算自然极值。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "habitat": {
+        "text": "幼鱼利用红树林和近岸浅水，成年鱼常在礁区、沉船附近。FishBase摘要列0—30米，而SAIAB明确列成年10—60米；本作蓝洞30—60米窗口基于后者，不把红树林幼鱼生态套在蓝洞成鱼上。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "distribution": {
+        "text": "自然广布印度—太平洋，红海和东非以东到土阿莫土，北达日本南部、南达澳大利亚北部及新喀里多尼亚。佛罗里达等原生范围外报告不能改写成天然大西洋物种。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "behavior": {
+        "text": "幼鱼呈褐色叶片形，可侧身在红树林附近漂浮，模拟漂落叶片；成鱼银灰圆盘身与幼鱼不同，可在礁区和沉船附近单独或结群。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "diet": {
+        "text": "杂食性，取食藻类、小鱼、浮游动物及底栖无脊椎动物。食物范围不代表每个地点都有相同比例，也不是游戏虾饵权重的科学依据。",
+        "source_ids": [
+          "s1",
+          "s2"
+        ]
+      },
+      "story": {
+        "title": "从漂落的叶片到银色圆盘",
+        "text": "圆眼燕鱼的幼鱼能像褐色落叶一样侧身漂浮：颜色、斑纹和细长高鳍共同构成这种外观。长大后，它换成银灰色、近圆的高身体，在礁区与沉船旁活动。幼年叶片与成年圆盘属于同一物种，所以展示成年模型时不应简单把幼鱼的长鳍和褐色外观无限放大。",
+        "source_ids": [
+          "s2"
+        ]
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Platax orbicularis species summary",
+          "publisher": "FishBase Consortium",
+          "url": "https://www.fishbase.se/summary/Platax-orbicularis.html",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s2",
+          "title": "Coastal Fishes of the Western Indian Ocean (2022), vol. 5, Platax orbicularis, pp. 205–206",
+          "publisher": "NRF–South African Institute for Aquatic Biodiversity (SAIAB)",
+          "url": "https://saiab.ac.za/wp-content/uploads/2022/11/1._wiof_volume_5_text.pdf#page=209",
+          "accessed": "2026-10-04"
+        }
+      ],
+      "gameplay_note": "普通抽样尺寸12—52厘米；低概率虚构巨物上端68厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。 玩法：虾饵、中距离抛投，浅潟湖能用轻竿相遇；圆盘大个体持续拉力更强，旅行竿可探到礁墙和蓝洞30—60米窗口，平稳分段收线。"
+    }
+  ]
+}

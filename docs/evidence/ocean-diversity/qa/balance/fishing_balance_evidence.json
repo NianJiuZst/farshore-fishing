@@ -1,0 +1,5113 @@
+{
+	"float_cases": [],
+	"legal_routes": [
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 0,
+			"region": "lake",
+			"species": "common_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 0,
+			"region": "lake",
+			"species": "crucian_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 0,
+			"region": "lake",
+			"species": "roach",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 0,
+			"region": "lake",
+			"species": "rudd",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 0,
+			"region": "lake",
+			"species": "tench",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "lake",
+			"species": "european_perch",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "lake",
+			"species": "common_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "lake",
+			"species": "crucian_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "lake",
+			"species": "roach",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "lake",
+			"species": "rudd",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "lake",
+			"species": "tench",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "lake",
+			"species": "european_perch",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "lake",
+			"species": "common_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "lake",
+			"species": "crucian_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "lake",
+			"species": "roach",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "lake",
+			"species": "rudd",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "lake",
+			"species": "tench",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "lake",
+			"species": "european_perch",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "lake",
+			"species": "common_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "lake",
+			"species": "crucian_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "lake",
+			"species": "roach",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "lake",
+			"species": "rudd",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "lake",
+			"species": "tench",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "lake",
+			"species": "european_perch",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "lake",
+			"species": "common_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "lake",
+			"species": "crucian_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "lake",
+			"species": "roach",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "lake",
+			"species": "rudd",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "lake",
+			"species": "tench",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "lake",
+			"species": "european_perch",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "lake",
+			"species": "common_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "lake",
+			"species": "crucian_carp",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "lake",
+			"species": "roach",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "lake",
+			"species": "rudd",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "lake",
+			"species": "tench",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "lake",
+			"species": "european_perch",
+			"spot": "lake_shore",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 0,
+			"region": "lake",
+			"species": "common_bream",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "lake",
+			"species": "common_bream",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 1,
+			"region": "lake",
+			"species": "northern_pike",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "lake",
+			"species": "common_bream",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "lake",
+			"species": "northern_pike",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "lake",
+			"species": "common_bream",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "lake",
+			"species": "northern_pike",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "lake",
+			"species": "common_bream",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "lake",
+			"species": "northern_pike",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "lake",
+			"species": "common_bream",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "lake",
+			"species": "northern_pike",
+			"spot": "lake_bay",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 0,
+			"region": "japan",
+			"species": "japanese_whiting",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "japan",
+			"species": "japanese_horse_mackerel",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "japan",
+			"species": "japanese_whiting",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "japan",
+			"species": "japanese_horse_mackerel",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "japan",
+			"species": "black_seabream",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 1,
+			"region": "japan",
+			"species": "japanese_seabass",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "japan",
+			"species": "japanese_whiting",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "japan",
+			"species": "japanese_horse_mackerel",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "japan",
+			"species": "black_seabream",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "japan",
+			"species": "japanese_seabass",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "japan",
+			"species": "japanese_whiting",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "japan",
+			"species": "japanese_horse_mackerel",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "japan",
+			"species": "black_seabream",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "japan",
+			"species": "japanese_seabass",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "japan",
+			"species": "japanese_whiting",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "japan",
+			"species": "japanese_horse_mackerel",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "japan",
+			"species": "black_seabream",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "japan",
+			"species": "japanese_seabass",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "japan",
+			"species": "japanese_whiting",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "japan",
+			"species": "japanese_horse_mackerel",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "japan",
+			"species": "black_seabream",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "japan",
+			"species": "japanese_seabass",
+			"spot": "japan_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "japan",
+			"species": "marbled_rockfish",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 1,
+			"region": "japan",
+			"species": "chub_mackerel",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 1,
+			"region": "japan",
+			"species": "red_seabream",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 1,
+			"region": "japan",
+			"species": "olive_flounder",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "japan",
+			"species": "marbled_rockfish",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "japan",
+			"species": "chub_mackerel",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "japan",
+			"species": "red_seabream",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "japan",
+			"species": "olive_flounder",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "japan",
+			"species": "marbled_rockfish",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "japan",
+			"species": "chub_mackerel",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "japan",
+			"species": "red_seabream",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "japan",
+			"species": "olive_flounder",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "japan",
+			"species": "marbled_rockfish",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "japan",
+			"species": "chub_mackerel",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "japan",
+			"species": "red_seabream",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "japan",
+			"species": "olive_flounder",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "japan",
+			"species": "marbled_rockfish",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "japan",
+			"species": "chub_mackerel",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "japan",
+			"species": "red_seabream",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "japan",
+			"species": "olive_flounder",
+			"spot": "japan_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "norway",
+			"species": "atlantic_mackerel",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "norway",
+			"species": "european_plaice",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "norway",
+			"species": "pollack",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "norway",
+			"species": "atlantic_cod",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "norway",
+			"species": "saithe",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "norway",
+			"species": "atlantic_mackerel",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "norway",
+			"species": "european_plaice",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "norway",
+			"species": "pollack",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "norway",
+			"species": "atlantic_cod",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "norway",
+			"species": "saithe",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "norway",
+			"species": "atlantic_mackerel",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "norway",
+			"species": "european_plaice",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "norway",
+			"species": "pollack",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "norway",
+			"species": "atlantic_cod",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "norway",
+			"species": "saithe",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "norway",
+			"species": "atlantic_mackerel",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "norway",
+			"species": "european_plaice",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "norway",
+			"species": "pollack",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "norway",
+			"species": "atlantic_cod",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "norway",
+			"species": "saithe",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "norway",
+			"species": "atlantic_mackerel",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "norway",
+			"species": "european_plaice",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "norway",
+			"species": "pollack",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "norway",
+			"species": "atlantic_cod",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "norway",
+			"species": "saithe",
+			"spot": "norway_harbor",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "norway",
+			"species": "atlantic_herring",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "norway",
+			"species": "haddock",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 2,
+			"region": "norway",
+			"species": "atlantic_wolffish",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "norway",
+			"species": "atlantic_herring",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "norway",
+			"species": "atlantic_herring",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "norway",
+			"species": "haddock",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "norway",
+			"species": "atlantic_herring",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "norway",
+			"species": "haddock",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 5,
+			"region": "norway",
+			"species": "atlantic_wolffish",
+			"spot": "norway_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "med",
+			"species": "saddled_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "med",
+			"species": "white_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "med",
+			"species": "annular_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "med",
+			"species": "painted_comber",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "med",
+			"species": "gilthead_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "med",
+			"species": "european_seabass",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "med",
+			"species": "saddled_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "med",
+			"species": "white_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "med",
+			"species": "annular_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "med",
+			"species": "painted_comber",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "med",
+			"species": "gilthead_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "med",
+			"species": "european_seabass",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "med",
+			"species": "saddled_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "med",
+			"species": "white_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "med",
+			"species": "annular_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "med",
+			"species": "painted_comber",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "med",
+			"species": "gilthead_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "med",
+			"species": "european_seabass",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "med",
+			"species": "saddled_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "med",
+			"species": "white_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "med",
+			"species": "annular_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "med",
+			"species": "painted_comber",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "med",
+			"species": "gilthead_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "med",
+			"species": "european_seabass",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "med",
+			"species": "saddled_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "med",
+			"species": "white_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "med",
+			"species": "annular_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "med",
+			"species": "painted_comber",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "med",
+			"species": "gilthead_seabream",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "med",
+			"species": "european_seabass",
+			"spot": "med_pier",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "med",
+			"species": "red_mullet",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 1,
+			"region": "med",
+			"species": "common_pandora",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "med",
+			"species": "red_mullet",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "med",
+			"species": "common_pandora",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "med",
+			"species": "red_mullet",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "med",
+			"species": "common_pandora",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "med",
+			"species": "red_mullet",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "med",
+			"species": "common_pandora",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "med",
+			"species": "red_mullet",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "med",
+			"species": "common_pandora",
+			"spot": "med_boat",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 1,
+			"region": "bayou",
+			"species": "largemouth_bass",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "bayou",
+			"species": "bowfin",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "bayou",
+			"species": "channel_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 1,
+			"region": "bayou",
+			"species": "longnose_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 2,
+			"region": "bayou",
+			"species": "largemouth_bass",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "bayou",
+			"species": "bowfin",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "bayou",
+			"species": "channel_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "bayou",
+			"species": "longnose_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "bayou",
+			"species": "flathead_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 2,
+			"region": "bayou",
+			"species": "alligator_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 3,
+			"region": "bayou",
+			"species": "largemouth_bass",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "bayou",
+			"species": "bowfin",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "bayou",
+			"species": "channel_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "bayou",
+			"species": "longnose_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "bayou",
+			"species": "flathead_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 3,
+			"region": "bayou",
+			"species": "alligator_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 4,
+			"region": "bayou",
+			"species": "largemouth_bass",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "bayou",
+			"species": "bowfin",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "bayou",
+			"species": "channel_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "bayou",
+			"species": "longnose_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "bayou",
+			"species": "flathead_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 4,
+			"region": "bayou",
+			"species": "alligator_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.05,
+			"gear": 5,
+			"region": "bayou",
+			"species": "largemouth_bass",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "bayou",
+			"species": "bowfin",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "bayou",
+			"species": "channel_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "bayou",
+			"species": "longnose_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "bayou",
+			"species": "flathead_catfish",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 5,
+			"region": "bayou",
+			"species": "alligator_gar",
+			"spot": "bayou_backwater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "yangtze",
+			"species": "mandarin_fish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "yangtze",
+			"species": "longsnout_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "yangtze",
+			"species": "northern_snakehead",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 1,
+			"region": "yangtze",
+			"species": "southern_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 1,
+			"region": "yangtze",
+			"species": "yellowcheek",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "yangtze",
+			"species": "mandarin_fish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "yangtze",
+			"species": "longsnout_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "yangtze",
+			"species": "northern_snakehead",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "yangtze",
+			"species": "southern_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "yangtze",
+			"species": "yellowcheek",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "yangtze",
+			"species": "mandarin_fish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "yangtze",
+			"species": "longsnout_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "yangtze",
+			"species": "northern_snakehead",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "yangtze",
+			"species": "southern_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "yangtze",
+			"species": "yellowcheek",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "yangtze",
+			"species": "mandarin_fish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "yangtze",
+			"species": "longsnout_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "yangtze",
+			"species": "northern_snakehead",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "yangtze",
+			"species": "southern_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "yangtze",
+			"species": "yellowcheek",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "yangtze",
+			"species": "mandarin_fish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "yangtze",
+			"species": "longsnout_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "yangtze",
+			"species": "northern_snakehead",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "yangtze",
+			"species": "southern_catfish",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "yangtze",
+			"species": "yellowcheek",
+			"spot": "yangtze_river",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "yangtze",
+			"species": "chinese_sturgeon",
+			"spot": "yangtze_estuary",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "yangtze",
+			"species": "chinese_sturgeon",
+			"spot": "yangtze_estuary",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "yangtze",
+			"species": "chinese_sturgeon",
+			"spot": "yangtze_estuary",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "yangtze",
+			"species": "chinese_sturgeon",
+			"spot": "yangtze_estuary",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "garibaldi",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "yellow_tang",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "california_sheephead",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "cabezon",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "kelp_greenling",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "roosterfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "lingcod",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "yellowtail_kingfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "giant_trevally",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "garibaldi",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "yellow_tang",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "california_sheephead",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "cabezon",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "kelp_greenling",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "roosterfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "lingcod",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "yellowtail_kingfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "giant_trevally",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "garibaldi",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "yellow_tang",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "california_sheephead",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "cabezon",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "kelp_greenling",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "roosterfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "lingcod",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "yellowtail_kingfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "giant_trevally",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "garibaldi",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "yellow_tang",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "california_sheephead",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "cabezon",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "kelp_greenling",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "roosterfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "lingcod",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "yellowtail_kingfish",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "giant_trevally",
+			"spot": "pacific_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "albacore",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "mahi_mahi",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "yellowfin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "pacific_halibut",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "blue_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "striped_marlin",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "scalloped_hammerhead",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "pacific_bluefin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "great_white_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 2,
+			"region": "pacific_ocean",
+			"species": "shortfin_mako",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "albacore",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "mahi_mahi",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "yellowfin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "blue_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "striped_marlin",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "scalloped_hammerhead",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "pacific_bluefin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "great_white_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 3,
+			"region": "pacific_ocean",
+			"species": "shortfin_mako",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "albacore",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "mahi_mahi",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "yellowfin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "pacific_halibut",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "blue_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "striped_marlin",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "scalloped_hammerhead",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "pacific_bluefin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "great_white_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 4,
+			"region": "pacific_ocean",
+			"species": "shortfin_mako",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "barreleye",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "albacore",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "mahi_mahi",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "yellowfin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "pacific_halibut",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "blue_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "striped_marlin",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "scalloped_hammerhead",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "pacific_bluefin_tuna",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "great_white_shark",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 5,
+			"region": "pacific_ocean",
+			"species": "shortfin_mako",
+			"spot": "pacific_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "queen_angelfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "stoplight_parrotfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "red_snapper",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "turbot",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "john_dory",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "grey_gurnard",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "great_barracuda",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "atlantic_flyingfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "cobia",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "atlantic_tarpon",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "greater_amberjack",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "great_hammerhead",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "queen_angelfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "stoplight_parrotfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "red_snapper",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "turbot",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "grey_gurnard",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "great_barracuda",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "atlantic_flyingfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "cobia",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "atlantic_tarpon",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "greater_amberjack",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "great_hammerhead",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "queen_angelfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "stoplight_parrotfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "red_snapper",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "turbot",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "john_dory",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "grey_gurnard",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "great_barracuda",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "atlantic_flyingfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "cobia",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "atlantic_tarpon",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "greater_amberjack",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "great_hammerhead",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "queen_angelfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "stoplight_parrotfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "red_snapper",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "turbot",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "john_dory",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "grey_gurnard",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "great_barracuda",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "atlantic_flyingfish",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "cobia",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "atlantic_tarpon",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.4,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "greater_amberjack",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "great_hammerhead",
+			"spot": "atlantic_shelf",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "wahoo",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "bigeye_tuna",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "opah",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "atlantic_bluefin_tuna",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "swordfish",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 2,
+			"region": "atlantic_ocean",
+			"species": "blue_marlin",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "wahoo",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "atlantic_bluefin_tuna",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 3,
+			"region": "atlantic_ocean",
+			"species": "blue_marlin",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "wahoo",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "bigeye_tuna",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "opah",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "atlantic_bluefin_tuna",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "swordfish",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 4,
+			"region": "atlantic_ocean",
+			"species": "blue_marlin",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "black_scabbardfish",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "wahoo",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "bigeye_tuna",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "opah",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "atlantic_bluefin_tuna",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "swordfish",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.6,
+			"gear": 5,
+			"region": "atlantic_ocean",
+			"species": "blue_marlin",
+			"spot": "atlantic_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "emperor_angelfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "leaf_scorpionfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "bluespotted_ribbontail_ray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "collare_butterflyfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "longhorn_cowfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "whitetip_reef_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "humphead_wrasse",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "giant_moray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "giant_grouper",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "dogtooth_tuna",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "tiger_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "emperor_angelfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "leaf_scorpionfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "bluespotted_ribbontail_ray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "collare_butterflyfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "longhorn_cowfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "whitetip_reef_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "humphead_wrasse",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "giant_moray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "giant_grouper",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "dogtooth_tuna",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "tiger_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "emperor_angelfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "leaf_scorpionfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "bluespotted_ribbontail_ray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "collare_butterflyfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "longhorn_cowfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "whitetip_reef_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "humphead_wrasse",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "giant_moray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "giant_grouper",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "dogtooth_tuna",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "tiger_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "emperor_angelfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "leaf_scorpionfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "bluespotted_ribbontail_ray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "collare_butterflyfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "longhorn_cowfish",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "whitetip_reef_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "humphead_wrasse",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "giant_moray",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.45,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "giant_grouper",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "dogtooth_tuna",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "tiger_shark",
+			"spot": "indian_reef",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "skipjack_tuna",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "russells_oarfish",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "indo_pacific_sailfish",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 2,
+			"region": "indian_ocean",
+			"species": "oceanic_whitetip_shark",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "skipjack_tuna",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "indo_pacific_sailfish",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 3,
+			"region": "indian_ocean",
+			"species": "oceanic_whitetip_shark",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "skipjack_tuna",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "russells_oarfish",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "indo_pacific_sailfish",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 4,
+			"region": "indian_ocean",
+			"species": "oceanic_whitetip_shark",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "skipjack_tuna",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "russells_oarfish",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.5,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "indo_pacific_sailfish",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.55,
+			"gear": 5,
+			"region": "indian_ocean",
+			"species": "oceanic_whitetip_shark",
+			"spot": "indian_bluewater",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "red_sea_clownfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "masked_butterflyfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "arabian_picassotriggerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "klunzingers_wrasse",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "red_sea_goatfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "crocodile_flathead",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "red_sea_bannerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "yellowbar_angelfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "orbicular_batfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 0,
+			"region": "red_sea",
+			"species": "sohal_surgeonfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "red_sea_clownfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "masked_butterflyfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "arabian_picassotriggerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "klunzingers_wrasse",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "red_sea_goatfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "crocodile_flathead",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "red_sea_bannerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "yellowbar_angelfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "orbicular_batfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "sohal_surgeonfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "red_sea_clownfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "masked_butterflyfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "arabian_picassotriggerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "klunzingers_wrasse",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "red_sea_goatfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "crocodile_flathead",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "red_sea_bannerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "yellowbar_angelfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "orbicular_batfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "sohal_surgeonfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "red_sea_clownfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "masked_butterflyfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "arabian_picassotriggerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "klunzingers_wrasse",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "red_sea_goatfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "crocodile_flathead",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "red_sea_bannerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "yellowbar_angelfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "orbicular_batfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "sohal_surgeonfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "red_sea_clownfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "masked_butterflyfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "arabian_picassotriggerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "klunzingers_wrasse",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "red_sea_goatfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "crocodile_flathead",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "red_sea_bannerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "yellowbar_angelfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "orbicular_batfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "sohal_surgeonfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "red_sea_clownfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "masked_butterflyfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "arabian_picassotriggerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "klunzingers_wrasse",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "red_sea_goatfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.1,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "crocodile_flathead",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "red_sea_bannerfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.15,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "yellowbar_angelfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.2,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "orbicular_batfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.25,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "sohal_surgeonfish",
+			"spot": "red_sea_lagoon",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "blackspotted_sweetlips",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 1,
+			"region": "red_sea",
+			"species": "bluespotted_cornetfish",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "blackspotted_sweetlips",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 2,
+			"region": "red_sea",
+			"species": "bluespotted_cornetfish",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "blackspotted_sweetlips",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 3,
+			"region": "red_sea",
+			"species": "bluespotted_cornetfish",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "blackspotted_sweetlips",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 4,
+			"region": "red_sea",
+			"species": "bluespotted_cornetfish",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.3,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "blackspotted_sweetlips",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		},
+		{
+			"bait": "worm",
+			"cast_power": 0.35,
+			"gear": 5,
+			"region": "red_sea",
+			"species": "bluespotted_cornetfish",
+			"spot": "red_sea_wall",
+			"time": "day",
+			"weather": "clear"
+		}
+	],
+	"regressions": {
+		"checks": 70,
+		"failed": []
+	},
+	"runs": [],
+	"scope": "Regressions only; all 110 ordinary species have legal routes; battle matrix not run",
+	"wear_cases": [
+		{
+			"fight_seconds": 128.967,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 0,
+			"warning_at": 69.017,
+			"warning_lead": 59.95,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 118.617,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 1,
+			"warning_at": 68.967,
+			"warning_lead": 49.65,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 243.808,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 2,
+			"warning_at": 69.067,
+			"warning_lead": 174.742,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 238.167,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 3,
+			"warning_at": 69.083,
+			"warning_lead": 169.083,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 443.975,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 4,
+			"warning_at": 69.083,
+			"warning_lead": 374.892,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 98.55,
+			"line_wear": 0.930412101791366,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 5,
+			"warning_at": 68.983,
+			"warning_lead": 29.567,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 339.433,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 6,
+			"warning_at": 69.05,
+			"warning_lead": 270.383,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 154.675,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 7,
+			"warning_at": 68.917,
+			"warning_lead": 85.758,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 127.342,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 8,
+			"warning_at": 69.033,
+			"warning_lead": 58.308,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 166.3,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 9,
+			"warning_at": 69.05,
+			"warning_lead": 97.25,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 116.983,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 10,
+			"warning_at": 68.933,
+			"warning_lead": 48.05,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 139.692,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 11,
+			"warning_at": 69.067,
+			"warning_lead": 70.625,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 149.783,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 12,
+			"warning_at": 68.95,
+			"warning_lead": 80.833,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 145.85,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 13,
+			"warning_at": 69.0,
+			"warning_lead": 76.85,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 213.292,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 14,
+			"warning_at": 69.067,
+			"warning_lead": 144.225,
+			"wear_break": true
+		},
+		{
+			"fight_seconds": 176.775,
+			"line_wear": 1.0,
+			"ongoing_at_horizon": false,
+			"reason": "僵持后的鱼线磨损越来越重，终于断开了",
+			"seed": 15,
+			"warning_at": 69.0,
+			"warning_lead": 107.775,
+			"wear_break": true
+		}
+	]
+}

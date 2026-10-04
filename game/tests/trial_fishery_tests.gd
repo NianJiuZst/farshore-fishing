@@ -36,7 +36,7 @@ func _run() -> void:
 					var fish: FishDefinition = catalog.fish[record.species_id]
 					_check(record.length_mm >= fish.min_mm and record.length_mm <= fish.max_mm and record.weight_g > 0, "real specimen range retained")
 					seen[record.species_id] = true
-	_check(catalog.gear.size() == 5 and catalog.baits.size() == 12, "five rods and twelve baits present")
+	_check(catalog.gear.size() == 6 and catalog.baits.size() == 12, "six rods and twelve baits present")
 	for species_id: String in Trial.PLAYABLE_SPECIES:
 		for original_bait: String in ["worm", "grain", "shrimp", "lure"]:
 			_check(is_equal_approx(Trial.bait_weight(catalog.fish[species_id], original_bait), catalog.fish[species_id].weight_for("bait_weights", original_bait)), "original bait balance unchanged")
@@ -58,7 +58,7 @@ func _run() -> void:
 	_check(Trial.generate(catalog, encounter, "worm", -1, 0.5, "day", "clear").is_empty(), "invalid gear rejected")
 	_check(JSON.stringify({"regions": catalog.regions, "spots": catalog.spots, "gear": catalog.gear}) == original_world, "legacy world unchanged")
 	for id: String in catalog.fish: _check(JSON.stringify(catalog.fish[id].raw) == original_species[id], "legacy species unchanged " + id)
-	_check(catalog.fish.size() == 74 and catalog.regions.size() == 9 and catalog.spots.size() == 18, "original collection inventory intact")
+	_check(catalog.fish.size() == 111 and catalog.fish_species_count() == 110 and catalog.regions.size() == 10 and catalog.spots.size() == 21, "expanded collection inventory intact after trial generation")
 	var directory: String = "/tmp/farshore-trial-save-" + str(OS.get_process_id()) + "-" + str(Time.get_ticks_usec())
 	var store: SaveStore = Store.new()
 	_check(store.initialize(directory), "isolated store initializes")

@@ -14,7 +14,7 @@ func populate_catalog(app: Control, page: VBoxContainer, refill: Callable) -> Gr
 	page.add_theme_constant_override("separation", 16)
 	var totals: HBoxContainer = HBoxContainer.new()
 	page.add_child(totals)
-	totals.add_child(_label(app, "已发现 %d / %d 种" % [app.store.discovered_count(), app.catalog.fish.size()], 24, INK))
+	totals.add_child(_label(app, "已发现 %d / %d 种鱼" % [app.store.discovered_count(), app.catalog.fish_species_count()], 24, INK))
 	var count: Label = _label(app, "累计 %d 条" % app.store.total_count(), 21, MUTED)
 	count.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	totals.add_child(count)
@@ -94,6 +94,7 @@ func fill_catalog(app: Control, grid: GridContainer, open_species: Callable) -> 
 	if sort == null: sort = grid.get_parent().find_child("NotebookSort", true, false) as Button
 	if sort != null: sort.text = "按数量" if app._sort_count else "按名称"
 	for fish: FishDefinition in values:
+		if not app.catalog.is_fishing_species(fish): continue
 		var known: bool = _count(state, fish.species_id) > 0
 		if app._region_filter != "all" and app._region_filter not in fish.regions(): continue
 		if app._discovery_filter == 1 and not known: continue

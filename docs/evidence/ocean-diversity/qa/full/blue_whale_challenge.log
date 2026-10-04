@@ -1,0 +1,8 @@
+COMMAND: /Users/nianjiu/Documents/Codex/2026-10-04/task-2/toolchain/Godot.app/Contents/MacOS/Godot --headless --audio-driver Dummy --path game --script res://tests/blue_whale_challenge_tests.gd -- --require-whale-model
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Condition "ret != noErr" is true. Returning: ""
+   at: get_system_ca_certificates (platform/macos/os_macos.mm:1028)
+BLUE_WHALE_TEST_ROOT=/tmp/farshore-whale-tests-28632-271618
+BLUE_WHALE_OBSERVABLE_INPUT_TIME_MS=25400
+BLUE_WHALE_CHALLENGE_TESTS: 89/89 passed; failures=0

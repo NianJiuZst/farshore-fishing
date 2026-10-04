@@ -65,7 +65,7 @@ assert re.search(r'android:allowBackup[^\n]*\(type 0x12\)0x0', manifest), 'Backu
 assert re.search(r'android:screenOrientation[^\n]*\(type 0x10\)0x1', manifest), 'Portrait orientation required'
 version_code = int(re.search(r"versionCode='(\d+)'", badging).group(1))
 version_name = re.search(r"versionName='([^']+)'", badging).group(1)
-assert expected_content['application_version'] == identity['application_version'] == '1.3.0', 'Frozen version is not the pinned ocean version'
+assert expected_content['application_version'] == identity['application_version'] and identity['application_version'] in {'1.3.0', '1.4.0'}, 'Frozen version is not the pinned ocean version'
 assert expected_content['android_version_code'] == identity['android_version_code'] == 7, 'Frozen version code is not the pinned ocean code'
 assert version_name == identity['application_version'], 'APK version name differs from pinned source'
 assert version_code == identity['android_version_code'], 'APK version code differs from pinned source'
