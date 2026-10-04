@@ -1,0 +1,30 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+SAVE_TEST_ROOT=/tmp/farshore-save-tests-1791109118_35261-36-450812
+FAIL: catch reward exactly three times
+FAIL: sale/release retain count and exact rewards
+PASS GROUP stats, independent records, dispositions, favorites, restart
+PASS GROUP duplicate and stale-session rejection
+FAIL: write retry rewards once
+FAIL: validation retry rewards once
+FAIL: backup_replace retry rewards once
+FAIL: primary_replace retry rewards once
+FAIL: sale retry grants only once
+PASS GROUP real I/O error injection and transactional retries
+FAIL: write protected observation counts and rewards exactly once
+FAIL: write protected release grants only ordinary release bonus and retains history
+FAIL: validation protected observation counts and rewards exactly once
+FAIL: validation protected release grants only ordinary release bonus and retains history
+FAIL: backup_replace protected observation counts and rewards exactly once
+FAIL: backup_replace protected release grants only ordinary release bonus and retains history
+FAIL: primary_replace protected observation counts and rewards exactly once
+FAIL: primary_replace protected release grants only ordinary release bonus and retains history
+FAIL: ordinary sales preserve exact legacy economics and historical count
+PASS GROUP protected observation sale guard, four settlement/release I/O failures, exact retries, restart and schema 2 compatibility
+PASS GROUP corruption fallback and preservation
+PASS GROUP unknown higher schema protection
+PASS GROUP schema migration, defaults, validation and new content
+PASS GROUP pending cap preserves unprocessed catches
+FAIL: 10k exact catch and release rewards
+PASS GROUP 10,000 catches: 5436 bytes, 37856 ms; memory adapter replaces I/O only, final disk roundtrip verified
+SAVE_TESTS: 297/314 passed; failures=17

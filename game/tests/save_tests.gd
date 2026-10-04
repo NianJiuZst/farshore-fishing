@@ -3,6 +3,9 @@ extends SceneTree
 ## All fixtures live in a fresh /tmp directory, never the player's user://.
 
 const Store = preload("res://scripts/save_store.gd")
+# Fresh profiles in the separate ocean app receive this one-time initial balance.
+# Literal old-save fixture currency below remains independent and unchanged.
+const FRESH_CURRENCY: int = 1500
 
 class FailingStore extends "res://scripts/save_store.gd":
 	var fail_once: String = ""
@@ -91,11 +94,11 @@ func _test_stats_transactions_restart() -> void:
 	_check(_same(stats["first"], fish_one) and _same(stats["last"], fish_three), "first and last full snapshots")
 	_check(_same(stats["max_length"], fish_one) and _same(stats["max_weight"], fish_two), "length and weight refer to independent real fish")
 	_check(stats["regions"] == {"lake": 2, "med": 1}, "cross-region catches merge globally with subcounts")
-	_check(int(store.state["currency"]) == 195, "catch reward exactly three times")
+	_check(int(store.state["currency"]) == FRESH_CURRENCY + 75, "catch reward exactly three times")
 	_check(bool(store.dispose_catch("catch_1", "sold")["ok"]), "sale saves")
 	_check(bool(store.dispose_catch("catch_2", "released")["ok"]), "release saves")
 	var balance: int = int(store.state["currency"])
-	_check(balance == 223 and store.total_count() == 3, "sale/release retain count and exact rewards")
+	_check(balance == FRESH_CURRENCY + 103 and store.total_count() == 3, "sale/release retain count and exact rewards")
 	_check(not bool(store.dispose_catch("catch_1", "sold")["ok"]), "repeat sale rejected")
 	_check(not bool(store.dispose_catch("catch_2", "sold")["ok"]), "sale after release rejected")
 	_check(int(store.state["currency"]) == balance and store.total_count() == 3, "repeated disposition has no side effects")
@@ -172,14 +175,14 @@ func _test_write_failure_and_retry() -> void:
 		_check(not store.error_message.is_empty(), failure + " prevents replacing an unsaved result")
 		_check(bool(store.settle_catch(record)["ok"]), failure + " exact result retry succeeds")
 		_check(store.total_count() == int((index - 20) + 1), failure + " retry counts once")
-		_check(int(store.state["currency"]) == 120 + 25 * (index - 19), failure + " retry rewards once")
+		_check(int(store.state["currency"]) == FRESH_CURRENCY + 25 * (index - 19), failure + " retry rewards once")
 		_check(not bool(store.settle_catch(record)["ok"]), failure + " successful retry is subsequently deduplicated")
 	var before_sale: Dictionary = store.state
 	store.fail_once = "write"
 	_check(not bool(store.dispose_catch("catch_20", "sold")["ok"]), "sale write failure is visible")
 	_check(store.state == before_sale, "failed sale keeps pending fish and balance")
 	_check(bool(store.dispose_catch("catch_20", "sold")["ok"]), "sale can be retried")
-	_check(int(store.state["currency"]) == 240 and store.total_count() == 4, "sale retry grants only once")
+	_check(int(store.state["currency"]) == FRESH_CURRENCY + 120 and store.total_count() == 4, "sale retry grants only once")
 	print("PASS GROUP real I/O error injection and transactional retries")
 
 func _test_release_only_protection() -> void:
@@ -203,7 +206,7 @@ func _test_release_only_protection() -> void:
 		changed["release_only"] = false
 		_check(not bool(store.settle_catch(changed)["ok"]), failure + " retry cannot remove protection metadata")
 		_check(bool(store.settle_catch(record)["ok"]), failure + " original protected settlement retries successfully")
-		_check(store.total_count() == 1 and store.discovered_count() == 1 and int(store.state["currency"]) == 145, failure + " protected observation counts and rewards exactly once")
+		_check(store.total_count() == 1 and store.discovered_count() == 1 and int(store.state["currency"]) == FRESH_CURRENCY + 25, failure + " protected observation counts and rewards exactly once")
 		_check(_same(store.state["pending_catches"][record["catch_id"]], record), failure + " full pending protection snapshot preserved")
 		for key: String in ["first", "last", "max_length", "max_weight"]:
 			_check(_same(store.state["species_stats"]["chinese_sturgeon"][key], record), failure + " full protected historical snapshot: " + key)
@@ -225,7 +228,7 @@ func _test_release_only_protection() -> void:
 		_check(failed_reload.initialize(root_path) and _same(failed_reload.state, before), failure + " failed protected release reloads unchanged primary")
 		_check(not bool(reload.dispose_catch(str(record["catch_id"]), "sold")["ok"]), failure + " failed release cannot be retried as a sale")
 		_check(bool(reload.dispose_catch(str(record["catch_id"]), "released")["ok"]), failure + " protected release retries successfully")
-		_check(int(reload.state["currency"]) == 153 and reload.total_count() == 1 and reload.discovered_count() == 1, failure + " protected release grants only ordinary release bonus and retains history")
+		_check(int(reload.state["currency"]) == FRESH_CURRENCY + 33 and reload.total_count() == 1 and reload.discovered_count() == 1, failure + " protected release grants only ordinary release bonus and retains history")
 		_check(_same(reload.state["species_stats"], before["species_stats"]) and (reload.state["pending_catches"] as Dictionary).is_empty(), failure + " protected release removes only pending entry and preserves all historical snapshots")
 		before = reload.state
 		for action: String in ["released", "sold"]:
@@ -247,7 +250,7 @@ func _test_release_only_protection() -> void:
 	_check(not (legacy_reload.state["pending_catches"]["catch_2100"] as Dictionary).has("release_only"), "missing optional field remains absent without destructive migration")
 	_check(legacy_reload.state["pending_catches"]["catch_2101"]["release_only"] is bool and not bool(legacy_reload.state["pending_catches"]["catch_2101"]["release_only"]), "false protection flag preserves its JSON boolean type")
 	_check(bool(legacy_reload.dispose_catch("catch_2100", "sold")["ok"]) and bool(legacy_reload.dispose_catch("catch_2101", "sold")["ok"]), "legacy and explicitly ordinary catches both remain sellable")
-	_check(int(legacy_reload.state["currency"]) == 210 and legacy_reload.total_count() == 2, "ordinary sales preserve exact legacy economics and historical count")
+	_check(int(legacy_reload.state["currency"]) == FRESH_CURRENCY + 90 and legacy_reload.total_count() == 2, "ordinary sales preserve exact legacy economics and historical count")
 	print("PASS GROUP protected observation sale guard, four settlement/release I/O failures, exact retries, restart and schema 2 compatibility")
 
 func _test_corruption_recovery() -> void:
@@ -355,7 +358,7 @@ func _test_ten_thousand() -> void:
 			break
 	_check(all_success, "10,000 real settlements and dispositions succeed")
 	_check(store.total_count() == 10000 and store.discovered_count() == 1, "10k exact count without separate global counter")
-	_check(int(store.state["currency"]) == 330120, "10k exact catch and release rewards")
+	_check(int(store.state["currency"]) == FRESH_CURRENCY + 330000, "10k exact catch and release rewards")
 	_check((store.state["recent_ids"] as Array).size() == Store.MAX_RECENT_IDS and (store.state["pending_catches"] as Dictionary).is_empty(), "10k dedupe and pending data bounded")
 	var serialized_bytes: int = JSON.stringify(store.state).to_utf8_buffer().size()
 	_check(serialized_bytes < 15000, "10k save stays below 15KB, no full event log")

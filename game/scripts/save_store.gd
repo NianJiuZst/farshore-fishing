@@ -38,6 +38,8 @@ var _writing: bool = false
 var _mutex: Mutex = Mutex.new()
 
 static func default_state() -> Dictionary:
+	# Historical normalization defaults, not new-install compensation. Legacy
+	# saves/imports with absent optional fields must keep their original meaning.
 	return {
 		"schema_version": SCHEMA_VERSION, "save_revision": 0,
 		"currency": 120, "gear": 0, "owned_gear": [0],
@@ -47,6 +49,15 @@ static func default_state() -> Dictionary:
 		"selection": {"region_id": "lake", "spot_id": "lake_shore", "bait_id": "worm"},
 		"game_clock": 0.0
 	}
+
+static func fresh_state() -> Dictionary:
+	# The separate ocean release starts a genuinely new profile with the six
+	# original destinations and 1,500 coins. Never apply this during normalization,
+	# migration, import, backup recovery or undo; persisted progress is authoritative.
+	var result: Dictionary = default_state()
+	result["currency"] = 1500
+	result["unlocked_regions"] = ["lake", "japan", "norway", "med", "bayou", "yangtze"]
+	return result
 
 func initialize(optional_root: String = "user://") -> bool:
 	_mutex.lock()
@@ -97,9 +108,11 @@ func _initialize_locked(optional_root: String) -> bool:
 	if bool(primary["exists"]) or bool(backup["exists"]):
 		read_only = true
 		return _fail("主存档和备份均不可用，已保留原文件，未创建空白存档。请保留应用数据并寻求恢复。")
-	_initialized = true
-	if not _persist_candidate(_state):
+	var initial: Dictionary = fresh_state()
+	if not _persist_candidate(initial):
 		return false
+	_state = initial
+	_initialized = true
 	status_message = "已创建本地存档。"
 	return true
 
@@ -459,7 +472,7 @@ func _preserve_before_import() -> bool:
 	if not _replace_file(temp, destination):
 		return false
 	var verified: Dictionary = _read_save(destination)
-	if not bool(verified.get("ok", false)) or not _same_json(verified["state"], _state):
+	if not bool(verified.get("ok", false)) or not _matches_persisted_state(verified["state"], _state):
 		return _fail("恢复前快照验证失败，当前进度未替换。")
 	return true
 
@@ -522,7 +535,7 @@ func _persist_candidate(candidate: Dictionary) -> bool:
 	if not _replace_file(temp_path, primary_path):
 		return false
 	var verify: Dictionary = _read_save(primary_path)
-	if not bool(verify.get("ok", false)) or not _same_json(verify["state"], candidate):
+	if not bool(verify.get("ok", false)) or not _matches_persisted_state(verify["state"], candidate):
 		read_only = true
 		return _fail("存档替换后的校验失败，结果不确定。已停止继续写入，请重启后核对，勿清除应用数据。")
 	return true
@@ -544,7 +557,7 @@ func _write_verified_json(path: String, value: Dictionary) -> bool:
 	if not bool(file_text.get("ok", false)) or str(file_text.get("text", "")) != text:
 		return _fail("临时存档读取校验失败；原存档未替换。")
 	var check: Dictionary = _read_save(path)
-	if not bool(check.get("ok", false)) or not _same_json(check["state"], value):
+	if not bool(check.get("ok", false)) or not _matches_persisted_state(check["state"], value):
 		return _fail("临时存档内容校验失败（%s）；原存档未替换。" % str(check.get("error", "内容不一致")))
 	return true
 
@@ -808,8 +821,17 @@ func _result_error(result: Dictionary, message: String) -> Dictionary:
 	result["error"] = message
 	return result
 
-func _same_json(left: Variant, right: Variant) -> bool:
-	return JSON.parse_string(JSON.stringify(left, "", true, true)) == JSON.parse_string(JSON.stringify(right, "", true, true))
+func _matches_persisted_state(readback: Dictionary, expected: Dictionary) -> bool:
+	# Readback already passed through JSON and normalization. Parsing it again
+	# can move an informational float by another ULP in Godot's decimal parser,
+	# falsely rejecting a byte-perfect write. Apply the identical single roundtrip
+	# only to the expected state, then compare every normalized value exactly.
+	# No epsilon/tolerance is used; integers, IDs and even float tampering stay strict.
+	var parsed: Variant = JSON.parse_string(JSON.stringify(expected, "", true, true))
+	if not parsed is Dictionary:
+		return false
+	var normalized: Dictionary = _normalize_state(parsed)
+	return bool(normalized.get("ok", false)) and readback == normalized["state"]
 
 func _normalize_record(record: Dictionary) -> Dictionary:
 	var normalized: Dictionary = record.duplicate(true)

@@ -1,0 +1,5 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+DIAGNOSTIC_ROOT=/tmp/farshore-save-growth-diagnose-7-720246
+FAIL: expanded collection, all unlocks and exact economy survive restart
+PASS GROUP zero-start release-only growth: 148 real encounters, discovered=74, balance=14; purchases=4870; failed unpaid attempts=0; unlocks=["japan discoveries=5 cost=140", "norway discoveries=16 cost=300", "bayou discoveries=21 cost=450", "pacific_ocean discoveries=30 cost=450", "med discoveries=45 cost=500", "yangtze discoveries=60 cost=600", "atlantic_ocean discoveries=66 cost=600", "indian_ocean discoveries=74 cost=750"]
