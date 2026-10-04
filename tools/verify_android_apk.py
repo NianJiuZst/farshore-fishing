@@ -18,7 +18,7 @@ expected_snapshot = json.loads(Path(sys.argv[5]).read_text()) if len(sys.argv) >
 expected_content = expected_snapshot.get('content')
 identity = expected_identity(expected_content)
 if identity.get('separate_installation'):
-    assert expected_content and expected_content.get('photo_art'), 'Preview APK requires the frozen all44 photo contract'
+    assert expected_content and expected_content.get('photo_art'), 'Preview APK requires the frozen all74 photo contract'
 out.mkdir(parents=True, exist_ok=True)
 
 def run(args, filename):

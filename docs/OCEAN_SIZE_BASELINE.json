@@ -1,0 +1,314 @@
+{
+  "base_commit": "1afda37fa9fd8be23ff6d5cef1790a008a44f5f6",
+  "note": "Existing natural-history records unchanged; these are fictional game limits, not converted scientific records. FL/SL/unspecified record values are numerical inspiration only, not equivalent TL measurements.",
+  "legacy_species": [
+    {
+      "species_id": "common_carp",
+      "previous_max_mm": 900,
+      "game_max_mm": 1450,
+      "source_max_cm": 129,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "crucian_carp",
+      "previous_max_mm": 400,
+      "game_max_mm": 720,
+      "source_max_cm": 64,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "roach",
+      "previous_max_mm": 380,
+      "game_max_mm": 570,
+      "source_max_cm": 50.2,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "rudd",
+      "previous_max_mm": 400,
+      "game_max_mm": 700,
+      "source_max_cm": 61.7,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "european_perch",
+      "previous_max_mm": 480,
+      "game_max_mm": 680,
+      "source_max_cm": 60,
+      "source_length_type": "SL"
+    },
+    {
+      "species_id": "northern_pike",
+      "previous_max_mm": 1100,
+      "game_max_mm": 1690,
+      "source_max_cm": 150,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "common_bream",
+      "previous_max_mm": 700,
+      "game_max_mm": 920,
+      "source_max_cm": 82,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "tench",
+      "previous_max_mm": 600,
+      "game_max_mm": 950,
+      "source_max_cm": 84,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "japanese_horse_mackerel",
+      "previous_max_mm": 380,
+      "game_max_mm": 560,
+      "source_max_cm": 50,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "chub_mackerel",
+      "previous_max_mm": 500,
+      "game_max_mm": 720,
+      "source_max_cm": 64,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "red_seabream",
+      "previous_max_mm": 700,
+      "game_max_mm": 1120,
+      "source_max_cm": 100,
+      "source_length_type": "SL"
+    },
+    {
+      "species_id": "black_seabream",
+      "previous_max_mm": 480,
+      "game_max_mm": 560,
+      "source_max_cm": 50,
+      "source_length_type": "SL"
+    },
+    {
+      "species_id": "japanese_seabass",
+      "previous_max_mm": 900,
+      "game_max_mm": 1150,
+      "source_max_cm": 102,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "japanese_whiting",
+      "previous_max_mm": 290,
+      "game_max_mm": 340,
+      "source_max_cm": 30,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "marbled_rockfish",
+      "previous_max_mm": 330,
+      "game_max_mm": 410,
+      "source_max_cm": 36.2,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "olive_flounder",
+      "previous_max_mm": 850,
+      "game_max_mm": 1160,
+      "source_max_cm": 103,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "atlantic_cod",
+      "previous_max_mm": 1050,
+      "game_max_mm": 2240,
+      "source_max_cm": 200,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "pollack",
+      "previous_max_mm": 900,
+      "game_max_mm": 1460,
+      "source_max_cm": 130,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "saithe",
+      "previous_max_mm": 1000,
+      "game_max_mm": 1460,
+      "source_max_cm": 130,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "haddock",
+      "previous_max_mm": 600,
+      "game_max_mm": 1260,
+      "source_max_cm": 112,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "atlantic_mackerel",
+      "previous_max_mm": 500,
+      "game_max_mm": 680,
+      "source_max_cm": 60,
+      "source_length_type": "FL"
+    },
+    {
+      "species_id": "atlantic_herring",
+      "previous_max_mm": 380,
+      "game_max_mm": 510,
+      "source_max_cm": 45,
+      "source_length_type": "SL"
+    },
+    {
+      "species_id": "european_plaice",
+      "previous_max_mm": 550,
+      "game_max_mm": 1120,
+      "source_max_cm": 100,
+      "source_length_type": "SL"
+    },
+    {
+      "species_id": "atlantic_wolffish",
+      "previous_max_mm": 1100,
+      "game_max_mm": 1690,
+      "source_max_cm": 150,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "european_seabass",
+      "previous_max_mm": 800,
+      "game_max_mm": 1160,
+      "source_max_cm": 103,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "gilthead_seabream",
+      "previous_max_mm": 650,
+      "game_max_mm": 790,
+      "source_max_cm": 70,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "saddled_seabream",
+      "previous_max_mm": 300,
+      "game_max_mm": 410,
+      "source_max_cm": 36.6,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "white_seabream",
+      "previous_max_mm": 420,
+      "game_max_mm": 510,
+      "source_max_cm": 45,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "annular_seabream",
+      "previous_max_mm": 250,
+      "game_max_mm": 320,
+      "source_max_cm": 28,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "red_mullet",
+      "previous_max_mm": 300,
+      "game_max_mm": 430,
+      "source_max_cm": 38.2,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "painted_comber",
+      "previous_max_mm": 280,
+      "game_max_mm": 410,
+      "source_max_cm": 36,
+      "source_length_type": "SL"
+    },
+    {
+      "species_id": "common_pandora",
+      "previous_max_mm": 450,
+      "game_max_mm": 680,
+      "source_max_cm": 60,
+      "source_length_type": "SL"
+    },
+    {
+      "species_id": "alligator_gar",
+      "previous_max_mm": 2400,
+      "game_max_mm": 3420,
+      "source_max_cm": 304.8,
+      "source_length_type": "unspecified"
+    },
+    {
+      "species_id": "longnose_gar",
+      "previous_max_mm": 1500,
+      "game_max_mm": 2240,
+      "source_max_cm": 200,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "bowfin",
+      "previous_max_mm": 850,
+      "game_max_mm": 1040,
+      "source_max_cm": 92.7,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "largemouth_bass",
+      "previous_max_mm": 650,
+      "game_max_mm": 750,
+      "source_max_cm": 61,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "channel_catfish",
+      "previous_max_mm": 1000,
+      "game_max_mm": 1480,
+      "source_max_cm": 132,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "flathead_catfish",
+      "previous_max_mm": 1350,
+      "game_max_mm": 1740,
+      "source_max_cm": 155,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "chinese_sturgeon",
+      "previous_max_mm": 2400,
+      "game_max_mm": 5610,
+      "source_max_cm": 500,
+      "source_length_type": "unspecified"
+    },
+    {
+      "species_id": "mandarin_fish",
+      "previous_max_mm": 650,
+      "game_max_mm": 790,
+      "source_max_cm": 70,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "northern_snakehead",
+      "previous_max_mm": 800,
+      "game_max_mm": 1120,
+      "source_max_cm": 100,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "yellowcheek",
+      "previous_max_mm": 1200,
+      "game_max_mm": 2240,
+      "source_max_cm": 200,
+      "source_length_type": "TL"
+    },
+    {
+      "species_id": "southern_catfish",
+      "previous_max_mm": 1200,
+      "game_max_mm": 1380,
+      "source_max_cm": null,
+      "source_length_type": "unspecified"
+    },
+    {
+      "species_id": "longsnout_catfish",
+      "previous_max_mm": 750,
+      "game_max_mm": 910,
+      "source_max_cm": 80.4,
+      "source_length_type": "TL"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 """Inspect the complete runtime 3D registry, worlds, rigs and authoring sources."""
 from pathlib import Path
+import gzip
+import io
 import hashlib
 import json
 import re
@@ -144,7 +146,7 @@ def three_d_contract(project, catalog_ids):
     registry = json.loads(registry_path.read_text())
     assert registry['schema_version'] == 1
     playable = sorted(registry['models'])
-    assert set(playable) == set(catalog_ids) and len(playable) == 44, 'Every one of the 44 catalog species needs its own runtime model'
+    assert set(playable) == set(catalog_ids) and len(playable) == 74, 'Every one of the 74 catalog species needs its own runtime model'
     fish_clips = registry['required_animation_clips']
     assert set(fish_clips) == {'swim','struggle','breach','landed'}
     for species, entry in registry['models'].items():
@@ -152,7 +154,7 @@ def three_d_contract(project, catalog_ids):
         assert entry['rest_length_m'] == 1.0
     world = json.loads((project/'data/world.json').read_text())
     region_ids = sorted(r['region_id'] for r in world['regions'])
-    assert len(region_ids) == 6 and len(world['spots']) == 12
+    assert len(region_ids) == 9 and len(world['spots']) == 18
     assert all(spot['region_id'] in region_ids for spot in world['spots'])
     station_kinds = sorted({'boat' if spot['foreground'] == 'boat' else ('rock' if spot['foreground'] == 'rocks' else 'dock') for spot in world['spots']})
     assert station_kinds == ['boat','dock','rock']
@@ -204,7 +206,17 @@ def three_d_contract(project, catalog_ids):
         assert path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(root.resolve()), f'Missing original authoring source: {name}'
         if path.suffix == '.blend':
             with path.open('rb') as stream:
-                assert stream.read(7) == b'BLENDER', f'Invalid Blender master: {name}'
+                header = stream.read(7)
+                if header[:4] == b'\x28\xb5\x2f\xfd':
+                    import zstandard
+                    stream.seek(0)
+                    with zstandard.ZstdDecompressor().stream_reader(stream) as decoded:
+                        header = decoded.read(7)
+                elif header[:2] == b'\x1f\x8b':
+                    stream.seek(0)
+                    with gzip.GzipFile(fileobj=stream) as decoded:
+                        header = decoded.read(7)
+                assert header == b'BLENDER', f'Invalid Blender master: {name}' 
     return {'playable_species': playable, 'playable_species_count': len(playable),
             'playable_regions':len(region_ids), 'playable_locations':len(world['spots']),
             'all_catalog_species_have_3d_models':True,

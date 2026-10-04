@@ -7,9 +7,9 @@ const TestController = preload("res://tests/fishing_test_controller.gd")
 const Store = preload("res://scripts/save_store.gd")
 const Main = preload("res://scripts/main.gd")
 const Registry = preload("res://scripts/fish_3d_registry.gd")
-const EXPECTED_SPECIES: int = 44
-const EXPECTED_REGIONS: int = 6
-const EXPECTED_SPOTS: int = 12
+const EXPECTED_SPECIES: int = 74
+const EXPECTED_REGIONS: int = 9
+const EXPECTED_SPOTS: int = 18
 
 class FailingStore extends "res://scripts/save_store.gd":
 	var fail_once: bool = false
@@ -59,8 +59,8 @@ func _check(value: bool, label: String) -> void:
 func _test_catalog_and_reachability() -> void:
 	var art_check: bool = "--check-art" in OS.get_cmdline_user_args()
 	_check(catalog.load_all(art_check), "catalog load: " + str(catalog.errors))
-	_check(catalog.fish.size() == EXPECTED_SPECIES and catalog.spots.size() == EXPECTED_SPOTS, "44 unique fish and twelve spots")
-	_check(catalog.regions.size() == EXPECTED_REGIONS and catalog.gear.size() == 5 and catalog.baits.size() == 8, "six regions, five rods, eight baits")
+	_check(catalog.fish.size() == EXPECTED_SPECIES and catalog.spots.size() == EXPECTED_SPOTS, "74 unique fish and eighteen spots")
+	_check(catalog.regions.size() == EXPECTED_REGIONS and catalog.gear.size() == 5 and catalog.baits.size() == 8, "nine regions, five rods, eight baits")
 	var scientific_names: Dictionary = {}
 	var region_counts: Dictionary = {}
 	var protected_ids: Array[String] = []
@@ -77,7 +77,7 @@ func _test_catalog_and_reachability() -> void:
 			region_counts[rid] = int(region_counts.get(rid, 0)) + 1
 	for region: Dictionary in catalog.regions:
 		_check(int(region_counts.get(str(region.region_id), 0)) >= 8, "at least eight species per region: " + str(region.region_id))
-	_check(protected_ids == ["chinese_sturgeon"], "exactly Chinese sturgeon is the protected virtual observation")
+	_check("chinese_sturgeon" in protected_ids and "great_white_shark" in protected_ids and "great_hammerhead" in protected_ids, "Chinese sturgeon and ocean sharks remain protected virtual observations")
 	_check(int(catalog.region("bayou").get("unlock_count", -1)) == 20 and int(catalog.region("bayou").get("unlock_cost", -1)) == 450, "Mississippi discovery and currency gate remains 20 / 450")
 	_check(int(catalog.region("yangtze").get("unlock_count", -1)) == 28 and int(catalog.region("yangtze").get("unlock_cost", -1)) == 600, "Yangtze discovery and currency gate remains 28 / 600")
 	var generator: EncounterGenerator = Encounter.new(42)
@@ -109,7 +109,7 @@ func _test_catalog_and_reachability() -> void:
 								spot_seen[fish.species_id] = true
 								_check(float(item.weight) > 0.0 and spot_id in fish.spots() and region_id in fish.regions() and int(fish.raw.get("min_gear", 0)) <= gear_id and str(fish.raw.get("salinity", spot.salinity)) == str(spot.salinity), "candidate valid membership, salinity, gear and positive weight")
 		_check(not spot_seen.is_empty(), "each legal spot has real candidates: " + spot_id)
-	_check(reachable.size() == EXPECTED_SPECIES and reachable.size() == catalog.fish.size(), "all 44 fish reachable across legal gear/cast/bait/time/weather combinations")
+	_check(reachable.size() == EXPECTED_SPECIES and reachable.size() == catalog.fish.size(), "all 74 fish reachable across legal gear/cast/bait/time/weather combinations")
 	for region: Dictionary in catalog.regions:
 		_check((reachable_by_region.get(str(region.region_id), {}) as Dictionary).size() >= 8, "at least eight actually reachable species per region: " + str(region.region_id))
 	_check(generator.generate(catalog, "not_a_spot", "worm", 0, 0.5, "day", "clear").is_empty(), "unknown spot explicitly returns no encounter")
@@ -416,8 +416,8 @@ func _test_growth() -> void:
 	var catches: int = 0
 	var spent: int = 0
 	var unlock_history: Array[String] = []
-	# 160 exceeds all mandatory costs / the 33-coin round reward plus 44 discoveries.
-	for iteration: int in 160:
+	# 160 exceeds all mandatory costs / the 33-coin round reward plus 74 discoveries.
+	for iteration: int in 240:
 		state = store.state
 		var available: Dictionary = _accessible(int(state.gear), state.unlocked_regions)
 		_check(not available.is_empty(), "growth always retains a free playable encounter")
@@ -457,8 +457,8 @@ func _test_growth() -> void:
 				unlock_history.append("%s discoveries=%d cost=%d" % [region.region_id, store.discovered_count(), region.unlock_cost])
 		_check(int(store.state.currency) == catches * 33 - spent and int(store.state.currency) >= 0, "growth never spends unearned currency or creates a negative balance")
 		if store.discovered_count() == EXPECTED_SPECIES: break
-	_check(store.discovered_count() == EXPECTED_SPECIES and (store.state.unlocked_regions as Array).size() == EXPECTED_REGIONS and int(store.state.gear) == 4, "zero-currency release-only route reaches all 44 species/six regions/gear without resource cycle")
-	_check(spent == 3070 and (store.state.owned_gear as Array).size() == 5, "full collection pays exact nine configured purchases totaling 3070")
+	_check(store.discovered_count() == EXPECTED_SPECIES and (store.state.unlocked_regions as Array).size() == EXPECTED_REGIONS and int(store.state.gear) == 4, "zero-currency release-only route reaches all 74 species/nine regions/gear without resource cycle")
+	_check(spent == 4870 and (store.state.owned_gear as Array).size() == 5, "full collection pays exact twelve configured purchases totaling 4870")
 	var restart: Store = Store.new()
 	_check(restart.initialize(test_root.path_join("growth")) and _same_json(restart.state, store.state) and restart.discovered_count() == EXPECTED_SPECIES, "expanded collection, all unlocks and exact economy survive restart")
 	print("PASS GROUP zero-start release-only growth: ", catches, " real encounters, discovered=", store.discovered_count(), ", balance=", store.state.currency, "; purchases=", spent, "; unlocks=", unlock_history)
@@ -480,8 +480,8 @@ func _test_main_integration() -> void:
 	ui.encounter.rng.seed = 20261002
 	ui.session._rng.seed = 2468
 	var asset_errors: Array[String] = Registry.validate_catalog(catalog,true)
-	_check(asset_errors.is_empty(),"aggregate Main gameplay requires all44 species-specific imported resources: " + str(asset_errors))
-	_check(ui._models_complete == asset_errors.is_empty(),"Main readiness agrees with the actual full44 registry")
+	_check(asset_errors.is_empty(),"aggregate Main gameplay requires all74 species-specific imported resources: " + str(asset_errors))
+	_check(ui._models_complete == asset_errors.is_empty(),"Main readiness agrees with the actual full74 registry")
 	if not asset_errors.is_empty():
 		_check(not ui._content_ok,"partial assets keep content gate closed")
 		var start: Button = _find_button(ui._overlay,"开始钓鱼")
@@ -491,7 +491,7 @@ func _test_main_integration() -> void:
 		_check(enter != null and enter.disabled,"partial assets disable visible prepare entry")
 		ui._enter_fishery()
 		_check(ui._mode == "lobby" and ui._overlay != null,"direct callback cannot bypass missing-model gate")
-		print("MAIN_SCOPE: incomplete44 assets; full gameplay checks NOT RUN; no readiness override")
+		print("MAIN_SCOPE: incomplete74 assets; full gameplay checks NOT RUN; no readiness override")
 		await _free_main(ui)
 		# Reaching this explicit dependency result is not a full-suite pass: the
 		# strict asset assertion above fails. Avoid misleading cascade failures.

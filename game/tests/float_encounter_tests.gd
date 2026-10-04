@@ -86,7 +86,7 @@ func _run() -> void:
 					for mode: String in MODES:
 						runs.append(_trial(record, int(route.gear), seed_value, fps, mode))
 			print("FLOAT_MATRIX_PROGRESS species=", route.species, " gear=", route.gear, " runs=", runs.size())
-	var evidence: Dictionary = {"scope":"Real production GDScript; seeded 44-species legal routes; observation-only pre-hook controls; unchanged fight controller; headless, no visual/device claim", "regressions":{"checks":checks,"failed":failed}, "routes":routes, "runs":runs, "traces":traces, "seed_sweep":seed_sweep, "controller_contract":{"inputs":["dip","lift","drag","tilt"],"reaction_seconds":0.18,"history_seconds":0.30,"sustained_seconds":0.35,"cancel_on_recovery":true,"vertical_threshold":0.22,"travel_speed_threshold":0.045,"oracle":"Separate validation control only; never evidence of readability"}}
+	var evidence: Dictionary = {"scope":"Real production GDScript; seeded 74-species legal routes; observation-only pre-hook controls; unchanged fight controller; headless, no visual/device claim", "regressions":{"checks":checks,"failed":failed}, "routes":routes, "runs":runs, "traces":traces, "seed_sweep":seed_sweep, "controller_contract":{"inputs":["dip","lift","drag","tilt"],"reaction_seconds":0.18,"history_seconds":0.30,"sustained_seconds":0.35,"cancel_on_recovery":true,"vertical_threshold":0.22,"travel_speed_threshold":0.045,"oracle":"Separate validation control only; never evidence of readability"}}
 	if not output.is_empty():
 		var file: FileAccess = FileAccess.open(output, FileAccess.WRITE)
 		_check(file != null, "write evidence output")
@@ -125,7 +125,7 @@ func _build_routes() -> void:
 	for route: Dictionary in routes:
 		species[route.species] = true
 		gears[route.gear] = true
-	_check(species.size() == 44, "matrix covers all 44 species")
+	_check(species.size() == 74, "matrix covers all 74 species")
 	_check(gears.size() == 5, "matrix includes all five equipment types where legal")
 
 func _record(route: Dictionary, seed_value: int, index: int = 0) -> Dictionary:

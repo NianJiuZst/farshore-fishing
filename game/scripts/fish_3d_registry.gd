@@ -47,6 +47,14 @@ static func validate_catalog(catalog: ContentCatalog, require_assets: bool = tru
 		var info: Dictionary = models[id]
 		if str(info.get("scene", "")) != "res://assets/3d/" + id + ".glb": errors.append("Non-species-specific 3D path: " + id)
 		if float(info.get("rest_length_m", 0)) != 1.0: errors.append("Invalid normalized model length: " + id)
+		if info.has("mouth_offset_normalized"):
+			var mouth: Variant = info.mouth_offset_normalized
+			if not mouth is Array or mouth.size() != 3:
+				errors.append("Invalid normalized mouth landmark: " + id)
+			else:
+				for coordinate: Variant in mouth:
+					if (not coordinate is int and not coordinate is float) or not is_finite(float(coordinate)) or absf(float(coordinate)) > 1.0:
+						errors.append("Invalid normalized mouth coordinate: " + id)
 		if require_assets and not is_available(id): errors.append("Missing 3D model: " + id)
 	for id: String in models:
 		if not catalog.fish.has(id): errors.append("Unknown 3D catalog species: " + id)

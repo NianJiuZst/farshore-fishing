@@ -34,7 +34,7 @@ func _run() -> void:
 	app.sound.ambience.stream = null
 	app.sound.effect.stop()
 	app.sound.effect.stream = null
-	_check(app._content_ok and app.natural_history.complete, "actual Main loads all44 validated natural histories")
+	_check(app._content_ok and app.natural_history.complete, "actual Main loads all74 validated natural histories")
 	save = Store.new()
 	_check(save.initialize(isolated.path_join("natural-%s" % Time.get_ticks_usec())), "isolated SaveStore fixture")
 	app.store = save
@@ -61,7 +61,7 @@ func _test_content() -> void:
 	_check(catalog.load_all(false), "base catalog validates")
 	var history: FishNaturalHistory = HistoryData.new()
 	_check(history.load_all(catalog), "natural-history load validates: " + str(history.errors))
-	_check(history.complete and history.entries.size() == 44 and catalog.fish.size() == 44, "exact44 coverage without extra/missing identities")
+	_check(history.complete and history.entries.size() == 74 and catalog.fish.size() == 74, "exact74 coverage without extra/missing identities")
 	var seen: Dictionary = {}
 	for path: String in HistoryData.FILES:
 		var envelope: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
@@ -150,7 +150,7 @@ func _test_all_details() -> void:
 			var bindings: Array = button.pressed.get_connections()
 			_check(bindings.size() == 1 and bindings[0].callable.get_object() == app and bindings[0].callable.get_method() == "_open_species_source" and bindings[0].callable.get_bound_arguments() == [button.get_meta("source_url")], "source binding matches explicit guarded Main action: " + id + "/" + str(source_count))
 		_check(source_count == entry.sources.size(), "every reference has one source button: " + id)
-	_check(before == save.state and save.total_count() == 0, "reading all44 never changes player state or discovers fish")
+	_check(before == save.state and save.total_count() == 0, "reading all74 never changes player state or discovers fish")
 
 func _test_records_and_sections() -> void:
 	app._show_species("common_carp")

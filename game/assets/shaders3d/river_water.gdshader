@@ -11,6 +11,7 @@ uniform float water_clarity : hint_range(0.0, 1.0) = 0.55;
 uniform float surface_roughness : hint_range(0.1, 0.5) = 0.21;
 uniform float shore_width = 9.8;
 uniform float shore_widen = 0.0;
+uniform bool ocean_mode = false;
 uniform vec4 shore_transform = vec4(1.0,0.0,0.0,0.0);
 uniform vec4 impact_a = vec4(0.0,0.0,-100.0,0.0);
 uniform vec4 impact_b = vec4(0.0,0.0,-100.0,0.0);
@@ -71,5 +72,6 @@ void fragment() {
     ROUGHNESS=clamp(surface_roughness-fresnel*0.06+(1.0-close_detail)*0.075+foam*0.26,0.12,0.45);
     SPECULAR=0.5;
     float transmission=shallows*water_clarity*0.32+water_clarity*0.07;
+    if (ocean_mode) { transmission=0.0; }
     ALPHA=mix(1.0-transmission,0.985,fresnel);
 }

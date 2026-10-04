@@ -34,10 +34,10 @@
       }
     ],
     "min_mm": 800,
-    "max_mm": 2400,
+    "max_mm": 5610,
     "anchor_mm": 1400,
     "anchor_g": 18000,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "steady",
     "difficulty": 0.67,
     "weight": 3,
@@ -70,7 +70,8 @@
       "Acipenser sinensis"
     ],
     "encounter_type": "conservation_observation",
-    "reachability_note": "现实中华鲟可跨盐度洄游；当前数据仅在河口外近海盐水钓点设置保护观察，不把淡水产卵场与海水筛选混用。"
+    "reachability_note": "现实中华鲟可跨盐度洄游；当前数据仅在河口外近海盐水钓点设置保护观察，不把淡水产卵场与海水筛选混用。",
+    "normal_max_mm": 2400
   },
   {
     "species_id": "mandarin_fish",
@@ -101,10 +102,10 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 650,
+    "max_mm": 790,
     "anchor_mm": 360,
     "anchor_g": 900,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.55,
     "weight": 10,
@@ -130,7 +131,8 @@
     "salinity": "fresh",
     "rarity": "少见",
     "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 650
   },
   {
     "species_id": "northern_snakehead",
@@ -161,10 +163,10 @@
       }
     ],
     "min_mm": 200,
-    "max_mm": 800,
+    "max_mm": 1120,
     "anchor_mm": 450,
     "anchor_g": 1000,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.61,
     "weight": 8,
@@ -190,7 +192,8 @@
     "salinity": "fresh",
     "rarity": "少见",
     "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 800
   },
   {
     "species_id": "yellowcheek",
@@ -227,10 +230,10 @@
       }
     ],
     "min_mm": 350,
-    "max_mm": 1200,
+    "max_mm": 2240,
     "anchor_mm": 700,
     "anchor_g": 3500,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.79,
     "weight": 5,
@@ -256,7 +259,8 @@
     "salinity": "fresh",
     "rarity": "稀有",
     "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 1200
   },
   {
     "species_id": "southern_catfish",
@@ -287,10 +291,10 @@
       }
     ],
     "min_mm": 300,
-    "max_mm": 1200,
+    "max_mm": 1380,
     "anchor_mm": 650,
     "anchor_g": 2500,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "steady",
     "difficulty": 0.71,
     "weight": 6,
@@ -316,7 +320,8 @@
     "salinity": "fresh",
     "rarity": "少见",
     "balance_note": "数值深度为本作虚拟子生境；饵重、时段、天气、行为、尺寸、体重与稀有度均为游戏调校，不可用于推断现实捕捞许可。",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 1200
   },
   {
     "species_id": "longsnout_catfish",
@@ -365,10 +370,10 @@
       }
     ],
     "min_mm": 220,
-    "max_mm": 750,
+    "max_mm": 910,
     "anchor_mm": 450,
     "anchor_g": 1100,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并加入温和体况变化；不是实测科研系数，亦非物种纪录或现实捕捞标准。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "rest",
     "difficulty": 0.43,
     "weight": 11,
@@ -399,6 +404,7 @@
       "Leiocassis longirostris",
       "Tachysurus dumerili"
     ],
-    "taxonomy_note": "学名采用 Eschmeyer’s Catalog 2026-08 处理；国内渔业文献仍普遍沿用 Leiocassis longirostris。"
+    "taxonomy_note": "学名采用 Eschmeyer’s Catalog 2026-08 处理；国内渔业文献仍普遍沿用 Leiocassis longirostris。",
+    "normal_max_mm": 750
   }
 ]

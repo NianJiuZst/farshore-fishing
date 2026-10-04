@@ -75,7 +75,7 @@ def analyze(raw):
     rates = {r["strategy"]: r["success_rate"] for r in result["by_strategy"]}
     checks = []
     def check(ok, label): checks.append({"passed": bool(ok), "label": label})
-    check(len({r["species"] for r in rows}) == 44, "all 44 species simulated")
+    check(len({r["species"] for r in rows}) == 74, "all 74 species simulated")
     check(rates.get("behavior_aware", 0) >= .95, "observable reactive strategy wins at least 95%")
     check(not any(r["warning_time"] >= 0 for r in rows if r["strategy"] == "behavior_aware"), "active reactive fights never receive premature wear warning")
     check(rates.get("never_pull", 1) == 0, "never pulling cannot catch")

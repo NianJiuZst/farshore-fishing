@@ -190,11 +190,13 @@ func populate_species(app: Control, page: VBoxContainer, id: String, open_zoom: 
 	page.add_child(_rule())
 	_section(app, page, "游戏内寻鱼")
 	page.add_child(_label(app, "游戏尺寸设定 · " + app._length(fish.min_mm) + "—" + app._length(fish.max_mm), 21, TEAL))
-	page.add_child(_label(app, "这一范围用于游戏抽取，与上方自然界的文献尺寸分别记录。", 19, MUTED))
+	page.add_child(_label(app, "这是虚构的游戏范围，极少数巨物可超过已发表的自然尺寸纪录；不代表真实物种的新纪录。自然资料与个人钓获分别保留。", 19, MUTED))
+	page.add_child(_label(app, "常规尺寸上段 · " + app._length(int(fish.raw.get("normal_max_mm",fish.max_mm))) + "；极端尺寸属于额外巨物尾部", 19, MUTED))
 	for sid: String in fish.spots():
 		var spot: Dictionary = app.catalog.spots.get(sid, {})
 		var region: Dictionary = app.catalog.region(str(spot.get("region_id", "")))
 		page.add_child(_label(app, str(region.get("name", "")) + " · " + str(spot.get("name", sid)), 22, INK))
+		page.add_child(_label(app, "落点 %d%%–%d%% · 钓竿探深至少 %d m" % [ceili(float(fish.raw.get("min_cast",0))*100),floori(float(fish.raw.get("max_cast",1))*100),ceili(float(fish.raw.get("depth_min_m",0)))],19,MUTED))
 	_section(app, page, "游戏鱼饵线索")
 	var preferred: String = "worm"
 	var best: float = -1.0

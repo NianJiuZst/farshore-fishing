@@ -26,7 +26,7 @@ func _run() -> void:
 	quit(0 if failures == 0 else 1)
 func _test_data_and_legacy_weights() -> void:
 	_check(catalog.gear.size()==5 and catalog.baits.size()==8,"five rods and eight baits ship")
-	_check(catalog.fish.size()==44 and catalog.regions.size()==6 and catalog.spots.size()==12,"all legacy fish/world entries remain")
+	_check(catalog.fish.size()==74 and catalog.regions.size()==9 and catalog.spots.size()==18,"all legacy fish/world entries remain")
 	for id: int in range(3):
 		_check(catalog.gear[id]==OLD_GEAR[id],"original rod entirely unchanged: "+str(id))
 	for index: int in range(4):
@@ -91,7 +91,7 @@ func _test_saves() -> void:
 	var store: SaveStore = Store.new()
 	_check(store.initialize(path),"isolated existing-save fixture initializes")
 	var index: int = 0
-	for fish: FishDefinition in catalog.fish.values():
+	for fish: FishDefinition in catalog.fish.values().slice(0,44):
 		var spot: String = str(fish.spots()[0])
 		var record: Dictionary = encounter.make_individual(fish,spot,str(catalog.spots[spot].region_id),"shrimp",2,"day","clear")
 		record["session_id"]="old_tackle_session_"+str(index)

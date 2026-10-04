@@ -2,7 +2,7 @@ class_name FishNaturalHistory
 extends RefCounted
 ## Independent, offline natural-history facts. Never writes catches, inventory,
 ## gameplay size ranges or the historical species IDs used by saved records.
-const FILES: Array[String] = ["res://data/encyclopedia_a.json", "res://data/encyclopedia_b.json", "res://data/encyclopedia_c.json", "res://data/encyclopedia_d.json"]
+const FILES: Array[String] = ["res://data/encyclopedia_a.json", "res://data/encyclopedia_b.json", "res://data/encyclopedia_c.json", "res://data/encyclopedia_d.json", "res://data/encyclopedia_e.json", "res://data/encyclopedia_f.json"]
 const TEXT_FIELDS: Array[String] = ["typical_size", "habitat", "distribution", "behavior", "diet"]
 var entries: Dictionary = {}
 var errors: Array[String] = []

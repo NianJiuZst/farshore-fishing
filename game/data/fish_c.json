@@ -29,7 +29,7 @@
       }
     ],
     "min_mm": 650,
-    "max_mm": 2400,
+    "max_mm": 3420,
     "anchor_mm": 1400,
     "anchor_g": 22000,
     "behavior": "steady",
@@ -61,11 +61,12 @@
     ],
     "art": "res://assets/fish/alligator_gar.png",
     "thumb": "res://assets/fish/alligator_gar_thumb.png",
-    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
     "max_cast": 1,
     "salinity": "fresh",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 2400
   },
   {
     "species_id": "longnose_gar",
@@ -98,7 +99,7 @@
       }
     ],
     "min_mm": 450,
-    "max_mm": 1500,
+    "max_mm": 2240,
     "anchor_mm": 900,
     "anchor_g": 3500,
     "behavior": "burst",
@@ -129,11 +130,12 @@
     ],
     "art": "res://assets/fish/longnose_gar.png",
     "thumb": "res://assets/fish/longnose_gar_thumb.png",
-    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
     "max_cast": 1,
     "salinity": "fresh",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 1500
   },
   {
     "species_id": "bowfin",
@@ -160,7 +162,7 @@
       }
     ],
     "min_mm": 280,
-    "max_mm": 850,
+    "max_mm": 1040,
     "anchor_mm": 500,
     "anchor_g": 1500,
     "behavior": "burst",
@@ -192,11 +194,12 @@
     ],
     "art": "res://assets/fish/bowfin.png",
     "thumb": "res://assets/fish/bowfin_thumb.png",
-    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
     "max_cast": 1,
     "salinity": "fresh",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 850
   },
   {
     "species_id": "largemouth_bass",
@@ -235,7 +238,7 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 650,
+    "max_mm": 750,
     "anchor_mm": 400,
     "anchor_g": 1200,
     "behavior": "burst",
@@ -267,11 +270,12 @@
     ],
     "art": "res://assets/fish/largemouth_bass.png",
     "thumb": "res://assets/fish/largemouth_bass_thumb.png",
-    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
     "max_cast": 1,
     "salinity": "fresh",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 650
   },
   {
     "species_id": "channel_catfish",
@@ -298,7 +302,7 @@
       }
     ],
     "min_mm": 250,
-    "max_mm": 1000,
+    "max_mm": 1480,
     "anchor_mm": 550,
     "anchor_g": 2000,
     "behavior": "steady",
@@ -329,11 +333,12 @@
     ],
     "art": "res://assets/fish/channel_catfish.png",
     "thumb": "res://assets/fish/channel_catfish_thumb.png",
-    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
     "max_cast": 1,
     "salinity": "fresh",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 1000
   },
   {
     "species_id": "flathead_catfish",
@@ -360,7 +365,7 @@
       }
     ],
     "min_mm": 350,
-    "max_mm": 1350,
+    "max_mm": 1740,
     "anchor_mm": 750,
     "anchor_g": 8000,
     "behavior": "rest",
@@ -391,10 +396,11 @@
     ],
     "art": "res://assets/fish/flathead_catfish.png",
     "thumb": "res://assets/fish/flathead_catfish_thumb.png",
-    "weight_model_note": "游戏调校：长度为近似全长，min/max是可玩个体范围；按尺寸锚点立方缩放并加入温和体况变化，非实测科研回归系数、自然极限或世界纪录。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "balance_note": "尺寸抽样、体重锚点、饵重、昼昏/晴雨倍率、遭遇深度、稀有度、行为、抛竿与装备门槛均为游戏调校；自然生物学依据另列于sources。",
     "max_cast": 1,
     "salinity": "fresh",
-    "research_status": "reviewed_2026-10-02"
+    "research_status": "reviewed_2026-10-02",
+    "normal_max_mm": 1350
   }
 ]

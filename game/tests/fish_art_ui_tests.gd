@@ -48,7 +48,7 @@ func _run() -> void:
 	app.sound.apply({"sound":false,"vibration":false,"volume":0.0})
 	app.sound.suspend(true)
 	_check(app._content_ok and app._models_complete,"production catalog and real3D assets remain valid")
-	_check(ArtCatalog.REQUIRE_PHOTOREAL and app.fish_art.complete,"production final gate requires all44 validated photo masters and thumbnails")
+	_check(ArtCatalog.REQUIRE_PHOTOREAL and app.fish_art.complete,"production final gate requires all74 validated photo masters and thumbnails")
 	var save: SaveStore = Store.new()
 	_check(save.initialize(isolated.path_join("photo-ui-%s" % Time.get_ticks_usec())),"isolated legitimate save fixture")
 	app.store=save
@@ -65,12 +65,12 @@ func _run() -> void:
 			app.free()
 			quit(2)
 			return
-	var scope: String = "external-photo-fixtures-%d" % fixture_ids.size() if not fixture_ids.is_empty() else ("canonical-photoreal-44" if app.fish_art.complete else "canonical-legacy-art")
+	var scope: String = "external-photo-fixtures-%d" % fixture_ids.size() if not fixture_ids.is_empty() else ("canonical-photoreal-74" if app.fish_art.complete else "canonical-legacy-art")
 	print("PHOTO_UI_SCOPE: ",scope,"; production native pages; no release gate override; not Android validation")
 	app._show_catalog()
 	await _layout()
 	var grid_views: Array[FishArtView] = _photos(app._overlay)
-	_check(grid_views.size()==44,"undiscovered catalog contains all44 native fish textures")
+	_check(grid_views.size()==74,"undiscovered catalog contains all74 native fish textures")
 	for view: FishArtView in grid_views:
 		_check(view.silhouette and view.material is ShaderMaterial,"undiscovered grid retains a static discovery mask: "+view.species_id)
 	app._show_species(ids[0])
@@ -187,7 +187,7 @@ func _load_photo_fixtures() -> void:
 		fixture_ids.append(id)
 	# This fixture only injects explicit textures into the test instance. It
 	# does not write game/assets, install a manifest, or mark final art complete.
-	_check(not app.fish_art.complete or fixture_ids.size()==44,"external fixture cannot turn partial coverage into production completion")
+	_check(not app.fish_art.complete or fixture_ids.size()==74,"external fixture cannot turn partial coverage into production completion")
 
 func _photos(node: Node) -> Array[FishArtView]:
 	var result: Array[FishArtView]=[]

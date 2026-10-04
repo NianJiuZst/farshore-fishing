@@ -1,4 +1,4 @@
-"""Fail-closed source, imported-pixel and exported-byte contract for all44 photos.
+"""Fail-closed source, imported-pixel and exported-byte contract for all74 photos.
 
 Godot exports stripped .import remaps and .ctex payloads, not the original PNGs.
 The source hashes and decoded RGBA8 hashes therefore have separate proof chains.
@@ -62,11 +62,11 @@ def photo_art_contract(project, catalog):
     manifest = json.loads(raw)
     assert manifest.get('format_version') == 1 and manifest.get('complete') is True, 'Complete photo manifest required'
     entries = manifest.get('assets')
-    assert isinstance(entries, list) and len(entries) == manifest.get('asset_count') == 44, 'Exactly44 photograph entries required'
+    assert isinstance(entries, list) and len(entries) == manifest.get('asset_count') == 74, 'Exactly74 photograph entries required'
     fish = {entry['species_id']: entry for entry in catalog}
-    assert len(catalog) == len(fish) == 44, 'Exactly44 canonical catalog species required'
+    assert len(catalog) == len(fish) == 74, 'Exactly74 canonical catalog species required'
     ids = [entry['species_id'] for entry in entries]
-    assert len(set(ids)) == 44 and set(ids) == set(fish), 'Photo manifest must match all canonical species once'
+    assert len(set(ids)) == 74 and set(ids) == set(fish), 'Photo manifest must match all canonical species once'
     textures = {}
     for entry in entries:
         species = entry['species_id']
@@ -94,53 +94,72 @@ def photo_art_contract(project, catalog):
             textures[resource] = {'species_id': species, 'thumbnail': thumbnail, 'source_sha256': source_hash,
                                   'image_sha256': image_hash, 'width': width, 'height': height,
                                   'alpha_bounds': bounds, 'import_mapping_sha256': sha256(mapping), 'target': target}
-    assert len({v['target'] for v in textures.values()}) == 88, 'Photo imports must have88 distinct payloads'
+    assert len({v['target'] for v in textures.values()}) == 148, 'Photo imports must have148 distinct payloads'
     actual_pngs = {str(p.relative_to(project)) for p in (project/'assets/fish').glob('*.png')}
     assert actual_pngs == set(textures), 'Unexpected or absent canonical fish PNG'
     ui = {p: sha256(read_source(project, p)) for p in UI_RESOURCES}
     gate = read_source(project, 'scripts/fish_art_catalog.gd').decode()
     assert re.search(r'^const REQUIRE_PHOTOREAL: bool = true$', gate, re.M), 'Strict runtime photo gate is disabled'
-    assert 'const EXPECTED_COUNT: int = 44' in gate and 'res://' + MANIFEST in gate
+    assert 'const EXPECTED_COUNT: int = 74' in gate and 'res://' + MANIFEST in gate
     main = read_source(project, 'scripts/main.gd').decode()
     assert 'res://scripts/fish_art_catalog.gd' in main and 'res://scripts/fish_art_view.gd' in main
     assert 'if not fish_art.load_all(catalog):' in main and 'var rect: FishArtView = FishArtViewScript.new()' in main, 'Native photo UI is not wired to strict manifest'
     return {'format_version': 1, 'manifest': MANIFEST, 'manifest_sha256': sha256(raw),
-            'species_ids': sorted(ids), 'species_count': 44, 'texture_count': 88,
+            'species_ids': sorted(ids), 'species_count': 74, 'texture_count': 148,
             'textures': textures, 'ui_resource_sha256': ui,
-            'scope': '44 canonical full PNGs and44 thumbnails; exact source and decoded imported RGBA8 hashes'}
+            'scope': '74 canonical full PNGs and74 thumbnails; exact source and decoded imported RGBA8 hashes'}
 
 
 def photo_authoring_files(root, contract):
-    """Require every original/derivative, not merely the tracked-file inventory."""
+    """Require hash-bound original/derivative sets across retained and new art."""
     root = Path(root)
-    base = 'art_masters/fish_photoreal_v2/'
-    manifest_path = base + 'asset_manifest.json'
-    raw = read_source(root, manifest_path)
     runtime = json.loads(read_source(root, 'game/' + MANIFEST))
-    assert runtime.get('source_manifest_sha256') == sha256(raw), 'Artist manifest differs from canonical provenance hash'
-    artist = json.loads(raw)
-    assert artist.get('complete') is True and artist.get('format_version') == 1
-    entries = artist.get('assets', [])
-    assert len(entries) == artist.get('asset_count') == 44
-    ids = [entry['species_id'] for entry in entries]
-    assert len(set(ids)) == 44 and sorted(ids) == contract['species_ids'], 'Artist manifest must cover all44 species'
-    files = {manifest_path: sha256(raw)}
-    for entry in entries:
-        species = entry['species_id']
-        for field, expected_path, thumbnail in [('master', f'masters/{species}.png', False),
-                                               ('runtime', f'runtime/{species}.png', False),
-                                               ('thumb', f'thumbs/{species}_thumb.png', True)]:
-            assert entry.get(field) == expected_path, 'Noncanonical artist source path'
-            resource = f'assets/fish/{species}' + ('_thumb.png' if thumbnail else '.png')
-            expected = contract['textures'][resource]['source_sha256']
-            assert entry.get('thumb_sha256' if thumbnail else 'sha256') == expected, 'Artist/runtime manifest digest differs'
-            path = base + expected_path
-            actual = sha256(read_source(root, path))
-            assert actual == expected, 'Original photo/derivative differs from runtime: ' + path
-            files[path] = actual
-    for filename in ('build_asset_variants.py', 'art_provenance.json'):
-        path = base + filename
-        files[path] = sha256(read_source(root, path))
+    manifest_specs = runtime.get('source_manifests')
+    if manifest_specs is None:
+        # Synthetic regression fixtures retain the original single-manifest flow.
+        manifest_specs = [{'path': 'art_masters/fish_photoreal_v2/asset_manifest.json',
+                           'sha256': runtime.get('source_manifest_sha256')}]
+    assert isinstance(manifest_specs, list) and 1 <= len(manifest_specs) <= 2, 'Invalid photo source manifests'
+    allowed = {'art_masters/fish_photoreal_v2/asset_manifest.json',
+               'art_masters/fish_photoreal_ocean/asset_manifest.json'}
+    paths = [item.get('path') for item in manifest_specs if isinstance(item, dict)]
+    assert len(paths) == len(manifest_specs) and len(set(paths)) == len(paths) and set(paths).issubset(allowed), 'Unexpected source-art manifest path'
+    if len(paths) == 2:
+        assert set(paths) == allowed, 'Legacy and ocean artwork must both be archived'
+    files, ids = {}, []
+    for spec in manifest_specs:
+        manifest_path = spec['path']
+        base = str(PurePosixPath(manifest_path).parent) + '/'
+        raw = read_source(root, manifest_path)
+        assert spec.get('sha256') == sha256(raw), 'Artist manifest differs from canonical provenance hash'
+        if 'fish_photoreal_v2/' in manifest_path:
+            assert runtime.get('source_manifest_sha256') == sha256(raw), 'Legacy art provenance has changed'
+        artist = json.loads(raw)
+        assert artist.get('complete') is True and artist.get('format_version') == 1
+        entries = artist.get('assets', [])
+        assert isinstance(entries, list) and len(entries) == artist.get('asset_count') and entries
+        if len(paths) == 2:
+            assert len(entries) == (44 if 'fish_photoreal_v2/' in manifest_path else 30), 'Exactly44 retained and30 ocean artworks required'
+        files[manifest_path] = sha256(raw)
+        for entry in entries:
+            species = entry['species_id']
+            assert species not in ids and species in contract['species_ids'], 'Duplicate/unknown source-art identity'
+            ids.append(species)
+            for field, expected_path, thumbnail in [('master', f'masters/{species}.png', False),
+                                                   ('runtime', f'runtime/{species}.png', False),
+                                                   ('thumb', f'thumbs/{species}_thumb.png', True)]:
+                assert entry.get(field) == expected_path, 'Noncanonical artist source path'
+                resource = f'assets/fish/{species}' + ('_thumb.png' if thumbnail else '.png')
+                expected = contract['textures'][resource]['source_sha256']
+                assert entry.get('thumb_sha256' if thumbnail else 'sha256') == expected, 'Artist/runtime manifest digest differs'
+                path = base + expected_path
+                actual = sha256(read_source(root, path))
+                assert actual == expected, 'Original photo/derivative differs from runtime: ' + path
+                files[path] = actual
+        for filename in ('build_asset_variants.py', 'art_provenance.json'):
+            path = base + filename
+            files[path] = sha256(read_source(root, path))
+    assert len(ids) == 74 and sorted(ids) == contract['species_ids'], 'Artist manifests must cover all74 species'
     return files
 
 
@@ -170,7 +189,7 @@ def validate_import_audit(contract, report):
     assert report.get('failures') == [], 'Imported photograph audit failed'
     assert report.get('manifest_sha256') == contract['manifest_sha256'], 'Imported audit manifest differs'
     assert report.get('species_ids') == contract['species_ids'] and report.get('complete') is True
-    assert set(report.get('textures', {})) == set(contract['textures']), 'Imported audit must cover all88 textures'
+    assert set(report.get('textures', {})) == set(contract['textures']), 'Imported audit must cover all148 textures'
     for resource, expected in contract['textures'].items():
         actual = report['textures'][resource]
         for field in ('source_sha256', 'image_sha256', 'width', 'height', 'alpha_bounds', 'import_mapping_sha256', 'target'):
@@ -220,7 +239,7 @@ def verify_exported_photo_art(archive, contract, report, prefix='assets/'):
             raise AssertionError('Static shader must export byte-identical source: ' + resource)
         ui_payloads[resource] = target
         ui_payload_hashes[resource] = sha256(read(target))
-    return {'species_count': 44, 'full_photos': 44, 'thumbnails': 44, 'texture_payloads': 88,
+    return {'species_count': 74, 'full_photos': 74, 'thumbnails': 74, 'texture_payloads': 148,
             'manifest_sha256': contract['manifest_sha256'], 'exact_imported_texture_bytes': True,
             'decoded_rgba8_hashes_match_manifest': True, 'canonical_import_targets': True,
             'static_ui_resources': ui_payloads,
@@ -243,4 +262,4 @@ if __name__ == '__main__':
         with zipfile.ZipFile(args.archive) as archive:
             print(json.dumps(verify_exported_photo_art(archive, contract, report), indent=2))
     else:
-        print('PASS: 44 canonical photographs and44 thumbnails matched staged source/imported-pixel audit')
+        print('PASS: 74 canonical photographs and74 thumbnails matched staged source/imported-pixel audit')

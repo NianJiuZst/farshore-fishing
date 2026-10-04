@@ -1,4 +1,4 @@
-"""Bind all44 offline encyclopedia facts to frozen source and exported bytes.
+"""Bind all74 offline encyclopedia facts to frozen source and exported bytes.
 
 This is a schema, reference-integrity and packaging gate. It does not establish
 the scientific truth of cited claims or decompile exported GDScript.
@@ -13,7 +13,7 @@ from urllib.parse import urlsplit
 from content_fish_art_contract import local_resource, read_source, sha256
 
 MODULE = 'scripts/fish_natural_history.gd'
-DATA_FILES = tuple(f'data/encyclopedia_{part}.json' for part in 'abcd')
+DATA_FILES = tuple(f'data/encyclopedia_{part}.json' for part in 'abcdef')
 TEXT_FIELDS = ('typical_size', 'habitat', 'distribution', 'behavior', 'diet')
 
 
@@ -119,12 +119,12 @@ def canonical_species_ids(project):
 def natural_history_contract(project, species_ids=None):
     project = Path(project)
     ids = canonical_species_ids(project) if species_ids is None else species_ids
-    assert isinstance(ids, (list, tuple)) and all(isinstance(value, str) for value in ids) and len(ids) == len(set(ids)) == 44, 'Exactly44 canonical species IDs required for encyclopedia'
+    assert isinstance(ids, (list, tuple)) and all(isinstance(value, str) for value in ids) and len(ids) == len(set(ids)) == 74, 'Exactly74 canonical species IDs required for encyclopedia'
     module = read_source(project, MODULE)
     file_list = re.findall(r'^const FILES:\s*Array\[String\]\s*=\s*\[(.*?)\]', module.decode('utf-8'), re.M | re.S)
-    assert len(file_list) == 1 and re.findall(r'"([^"]+)"', file_list[0]) == ['res://' + path for path in DATA_FILES], 'Natural-history module must load exactly the four canonical encyclopedia files'
+    assert len(file_list) == 1 and re.findall(r'"([^"]+)"', file_list[0]) == ['res://' + path for path in DATA_FILES], 'Natural-history module must load exactly the six canonical encyclopedia files'
     actual_files = {str(path.relative_to(project)) for path in (project/'data').glob('encyclopedia_*.json')}
-    assert actual_files == set(DATA_FILES), 'Expected exactly four encyclopedia JSON files'
+    assert actual_files == set(DATA_FILES), 'Expected exactly six encyclopedia JSON files'
     hashes = {MODULE: sha256(module)}
     entries = []
     file_counts = {}
@@ -139,11 +139,11 @@ def natural_history_contract(project, species_ids=None):
         file_counts[relative] = len(payload['entries'])
         hashes[relative] = sha256(raw)
     actual_ids = [entry['species_id'] for entry in entries]
-    assert len(actual_ids) == len(set(actual_ids)) == 44 and set(actual_ids) == set(ids), 'Encyclopedia must cover exactly all44 canonical species once'
-    return {'schema_version': 1, 'species_count': 44, 'species_ids': sorted(ids),
+    assert len(actual_ids) == len(set(actual_ids)) == 74 and set(actual_ids) == set(ids), 'Encyclopedia must cover exactly all74 canonical species once'
+    return {'schema_version': 1, 'species_count': 74, 'species_ids': sorted(ids),
             'module': MODULE, 'data_files': list(DATA_FILES), 'file_entry_counts': file_counts,
             'resource_sha256': hashes,
-            'scope': 'All44 offline entries; schema, safe source URLs, field references and accepted-name/genus consistency; factual review and runtime evidence remain separate'}
+            'scope': 'All74 offline entries; schema, safe source URLs, field references and accepted-name/genus consistency; factual review and runtime evidence remain separate'}
 
 
 def require_natural_history_archive_members(root, files, contract=None):
@@ -168,7 +168,7 @@ def verify_exported_natural_history(archive, contract, prefix='assets/'):
     assert len(names) == len(set(names)), 'Duplicate archive members are forbidden'
     wanted = set(DATA_FILES)
     actual = {name[len(prefix):] for name in names if name.startswith(prefix) and re.fullmatch(r'data/encyclopedia_.*\.json(?:\.remap)?', name[len(prefix):])}
-    assert actual == wanted, 'Export must contain exactly four unremapped encyclopedia JSON payloads'
+    assert actual == wanted, 'Export must contain exactly six unremapped encyclopedia JSON payloads'
 
     def read(relative):
         assert prefix + relative in names, 'Missing exported encyclopedia resource: ' + relative
@@ -191,7 +191,7 @@ def verify_exported_natural_history(archive, contract, prefix='assets/'):
         target = local_resource(matches[0])
         assert target == str(PurePosixPath(MODULE).with_suffix('.gdc')), 'Unexpected encyclopedia module target'
         assert read(target).startswith(b'GDSC') and len(read(target)) > 4, 'Invalid compiled encyclopedia module'
-    return {'species_count': 44, 'data_files': list(DATA_FILES),
+    return {'species_count': 74, 'data_files': list(DATA_FILES),
             'data_payload_sha256': {path: hashes[path] for path in DATA_FILES},
             'module_resource': MODULE, 'module_export_target': target,
             'module_source_sha256': hashes[MODULE], 'module_payload_sha256': sha256(read(target)),

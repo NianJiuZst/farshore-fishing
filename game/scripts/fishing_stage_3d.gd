@@ -59,6 +59,9 @@ const BIOME_VISUALS: Dictionary = {
 	"med":{"deep":"0d4c61","shallow":"4ba298","bed":"797557","leaf":"516951","gold":"829071","rock":"f1d6a6","ground":"9a9365","width":15.0,"widen":0.26,"fog":0.0009},
 	"bayou":{"deep":"163e35","shallow":"4a7350","bed":"233a32","leaf":"355c37","gold":"637b42","rock":"b7bea6","ground":"617345","width":9.8,"widen":0.0,"fog":0.0020},
 	"yangtze":{"deep":"3d5448","shallow":"76846a","bed":"4b4b32","leaf":"496f40","gold":"84925b","rock":"cac5ac","ground":"79825a","width":26.0,"widen":0.12,"fog":0.0019},
+	"pacific_ocean":{"deep":"073d63","shallow":"28a6a6","bed":"516965","leaf":"255b42","gold":"799752","rock":"abc1ba","ground":"aaae87","width":2000.0,"widen":0.0,"fog":0.00042},
+	"atlantic_ocean":{"deep":"102f50","shallow":"497f91","bed":"354858","leaf":"52675c","gold":"7b8765","rock":"a2b2bd","ground":"818d7c","width":2000.0,"widen":0.0,"fog":0.00070},
+	"indian_ocean":{"deep":"066d80","shallow":"43c3bc","bed":"909577","leaf":"376c42","gold":"9ba863","rock":"e1d6b1","ground":"d1ca9e","width":2000.0,"widen":0.0,"fog":0.00034},
 }
 
 # A shared daylight model, with regional atmosphere and water readability.
@@ -69,6 +72,9 @@ const BIOME_ATMOSPHERE: Dictionary = {
 	"med": {"horizon":"d4e1d4", "fog":"bccfc6", "sky":"fff3dc", "clarity":0.86, "roughness":0.19},
 	"bayou": {"horizon":"bbc9b1", "fog":"a4b59a", "sky":"eff0dc", "clarity":0.30, "roughness":0.25},
 	"yangtze": {"horizon":"d0cbbb", "fog":"bcb9a6", "sky":"f0eadb", "clarity":0.22, "roughness":0.27},
+	"pacific_ocean": {"horizon":"b6d6df", "fog":"8db7c9", "sky":"d7edff", "clarity":0.80, "roughness":0.23},
+	"atlantic_ocean": {"horizon":"b4c5d4", "fog":"91adbf", "sky":"dfe8f7", "clarity":0.72, "roughness":0.25},
+	"indian_ocean": {"horizon":"c4e4dc", "fog":"98c9cb", "sky":"e8f5e7", "clarity":0.90, "roughness":0.20},
 }
 
 var session: FishingSession
@@ -91,6 +97,7 @@ var _region_definition: Dictionary = {}
 var _spot_definition: Dictionary = {}
 var _station_root: Node3D
 var _riverbed: MeshInstance3D
+var _ocean_horizon_water: MeshInstance3D
 var _built: bool = false
 var _suspended: bool = false
 var _character_was_playing: bool = false
@@ -273,6 +280,10 @@ func _station_frame() -> Transform3D:
 		"med_boat": anchor = Vector3(3, 0, -31)
 		"bayou_channel": anchor = Vector3(0, 0, -34)
 		"yangtze_estuary": anchor = Vector3(0, 0, -40)
+		"pacific_bluewater", "atlantic_bluewater", "indian_bluewater": anchor = Vector3(0, 0, -420)
+		"pacific_reef": anchor = Vector3(-6, 0, -22)
+		"atlantic_shelf": anchor = Vector3(7, 0, -15)
+		"indian_reef": anchor = Vector3(6, 0, -18)
 		"japan_reef", "yangtze_river":
 			var z: float = -42.0 if region_id == "japan" else -12.0
 			var biome: Dictionary = BIOME_VISUALS[region_id]
@@ -336,6 +347,9 @@ func _replace_location_geometry(region_value: String = "", spot_value: String = 
 	return true
 
 func _build_distant_landscape() -> void:
+	# Ocean GLBs contain discrete islands; a surrounding mountain ring would
+	# turn the open sea into another river or lake.
+	if region_id.ends_with("_ocean"): return
 	# Two low-cost opaque landforms make the foreground shore read against distance.
 	# Heights are regional: low floodplain, lake hills, coastal headlands and fjord peaks.
 	var heights: Dictionary = {"lake":24.0, "japan":31.0, "norway":84.0, "med":26.0, "bayou":8.5, "yangtze":30.0}
@@ -392,14 +406,19 @@ func _hide_legacy_station(node: Node) -> void:
 func _configure_location_surfaces() -> void:
 	if _water_material == null: return
 	var biome: Dictionary = BIOME_VISUALS[region_id]
-	_water_material.set_shader_parameter("deep_color", Color(str(biome.deep)))
+	var ocean: bool = region_id.ends_with("_ocean")
+	if camera: camera.far = 12000.0 if ocean else 330.0
+	var near_reef: bool = spot_id.ends_with("_reef")
+	_water_material.set_shader_parameter("deep_color", Color(str(biome.deep)).lerp(Color(str(biome.shallow)),0.24 if near_reef else 0.0))
+	_water_material.set_shader_parameter("ocean_mode", ocean)
+	if _ocean_horizon_water: _ocean_horizon_water.visible = ocean
 	_water_material.set_shader_parameter("shallow_color", Color(str(biome.shallow)))
 	_water_material.set_shader_parameter("shore_width", float(biome.width))
 	_water_material.set_shader_parameter("shore_widen", float(biome.widen))
 	var atmosphere: Dictionary = BIOME_ATMOSPHERE[region_id]
 	_water_material.set_shader_parameter("water_clarity", float(atmosphere.clarity))
 	_water_material.set_shader_parameter("surface_roughness", float(atmosphere.roughness))
-	_water_material.set_shader_parameter("foam_color", Color("c6d7cd") if region_id in ["norway", "japan", "med"] else Color("b8c4aa"))
+	_water_material.set_shader_parameter("foam_color", Color("d6e6e2") if ocean else (Color("c6d7cd") if region_id in ["norway", "japan", "med"] else Color("b8c4aa")))
 	var station: Transform3D = _station_frame()
 	var angle: float = station.basis.get_euler().y
 	_water_material.set_shader_parameter("shore_transform", Vector4(cos(angle), sin(angle), station.origin.x, station.origin.z))
@@ -407,6 +426,9 @@ func _configure_location_surfaces() -> void:
 		_riverbed.position.y = -minf(12.0, maxf(2.8, float(_spot_definition.get("depth_max_m", 8.0)) * 0.3))
 		(_riverbed.material_override as ShaderMaterial).set_shader_parameter("ground_color", Color(str(biome.bed)))
 	if _reflection_probe:
+		# A finite coastal probe causes a visible rectangular reflection edge on
+		# open water. Oceans use the continuous native sky reflection instead.
+		_reflection_probe.visible = not ocean
 		_reflection_probe.size = Vector3(180, 150 if region_id == "norway" else 60, 220)
 		_reflection_probe.max_distance = 190.0
 		_reflection_probe.position.x = 0.002 if _reflection_probe.position.x < 0.001 else 0.0
@@ -856,6 +878,12 @@ func _update_landing(delta: float) -> void:
 		_fish_root.rotation = Vector3(0, lerpf(1.18, -0.20, p), 0.10 + sin(_time * 5) * 0.04)
 	if bool(_fish_info.get("asymmetric_flatfish", false)):
 		_fish_root.rotation.x += 0.52
+	if _fish_length > 2.8:
+		# True-sized ocean giants are observed alongside the boat, rather than
+		# shrinking to fit a hand-held landing pose or intersecting the angler.
+		var reveal: float = smoothstep(0.0,1.0,minf(t / 2.5,1.0))
+		_fish_root.position = Vector3(-0.3,lerpf(-0.45,0.08,reveal),-3.3-_fish_length*0.25)
+		_fish_root.rotation = Vector3(0,lerpf(0.4,-0.16,reveal),sin(_time*2.0)*0.025)
 	_bobber.visible = true
 	_line.visible = true
 	_bobber.rotation = Vector3.ZERO
@@ -903,6 +931,9 @@ func _update_camera(delta: float) -> void:
 		position_goal = Vector3(0.15, 2.13, 4.7 + maxf(0.0, _fish_length - 1.1) * 1.45)
 		target_goal = Vector3(-0.30, 0.95 + p * 0.25, -0.25)
 		fov_goal = 46.0
+		if _fish_length > 2.8:
+			target_goal = _fish_root.position + Vector3(0,0.15,0)
+			position_goal = target_goal + Vector3(0.15,2.35,maxf(7.2,_fish_length*2.45))
 		# Small individuals keep exact physical scale. A late optical push-in makes
 		# them legible without turning every catch into a physically identical fish.
 		var small_factor: float = clampf((0.45 - _fish_length) / 0.40, 0.0, 1.0)
@@ -1142,6 +1173,36 @@ func _build_water() -> void:
 	_water_material.set_shader_parameter("normal_texture", normal_texture)
 	surface.material_override = _water_material
 	add_child(surface)
+	# Low-cost distant ocean ring preserves the finely subdivided near water
+	# and float motion while extending the horizon beyond the coastal patch.
+	_ocean_horizon_water = MeshInstance3D.new()
+	_ocean_horizon_water.name = "OpenOceanHorizonWater"
+	var ring_arrays: Array = []
+	ring_arrays.resize(Mesh.ARRAY_MAX)
+	var ring_vertices := PackedVector3Array()
+	var ring_normals := PackedVector3Array()
+	var ring_uvs := PackedVector2Array()
+	var ring_indices := PackedInt32Array()
+	var inner: Array[Vector3] = [Vector3(-77.5,0,-148),Vector3(77.5,0,-148),Vector3(77.5,0,32),Vector3(-77.5,0,32)]
+	var outer: Array[Vector3] = [Vector3(-4000,0,-4000),Vector3(4000,0,-4000),Vector3(4000,0,4000),Vector3(-4000,0,4000)]
+	for corner: int in range(4):
+		ring_vertices.append(inner[corner]); ring_vertices.append(outer[corner])
+		ring_normals.append(Vector3.UP); ring_normals.append(Vector3.UP)
+		ring_uvs.append(Vector2.ZERO); ring_uvs.append(Vector2.ONE)
+		var following: int = ((corner+1)%4)*2
+		ring_indices.append_array(PackedInt32Array([corner*2,following,corner*2+1,following,following+1,corner*2+1]))
+	ring_arrays[Mesh.ARRAY_VERTEX] = ring_vertices
+	ring_arrays[Mesh.ARRAY_NORMAL] = ring_normals
+	ring_arrays[Mesh.ARRAY_TEX_UV] = ring_uvs
+	ring_arrays[Mesh.ARRAY_INDEX] = ring_indices
+	var ring_mesh := ArrayMesh.new()
+	ring_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,ring_arrays)
+	_ocean_horizon_water.mesh = ring_mesh
+	_ocean_horizon_water.material_override = _water_material
+	_ocean_horizon_water.layers = 2
+	_ocean_horizon_water.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	_ocean_horizon_water.visible = region_id.ends_with("_ocean")
+	add_child(_ocean_horizon_water)
 
 func _load_character() -> void:
 	if ResourceLoader.exists("res://assets/3d/angler.glb"):
@@ -1361,6 +1422,9 @@ func _fish_mouth_world() -> Vector3:
 	# The 1 m normalized model has its mouth near +X. Scale the attachment
 	# offset with the actual specimen, rather than leaving a 3 cm gap on fry.
 	var normalized: Vector3 = FISH_MOUTH_OFFSETS.get(_fish_id, Vector3(0.49, 0.008, 0.0))
+	var supplied: Variant = _fish_info.get("mouth_offset_normalized",null)
+	if supplied is Array and supplied.size() == 3:
+		normalized = Vector3(float(supplied[0]),float(supplied[1]),float(supplied[2]))
 	return _fish_root.position + _fish_root.basis * (normalized * _fish_length)
 
 func _sturgeon_leader_guide_world() -> Vector3:
@@ -1567,7 +1631,7 @@ func _update_float_surface(delta: float, water_height: float) -> void:
 func _ensure_fish(record: Dictionary) -> bool:
 	var id: String = str(record.get("species_id", record.get("id", "")))
 	var millimeters: float = float(record.get("length_mm", float(record.get("length_cm", record.get("length", 72.0))) * 10.0))
-	_fish_length = clampf(millimeters / 1000.0, 0.04, 5.50)
+	_fish_length = clampf(millimeters / 1000.0, 0.04, 30.0)
 	if id != _fish_id or _fish == null:
 		if _fish:
 			_fish.visible = false

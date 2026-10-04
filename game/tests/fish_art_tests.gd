@@ -69,14 +69,14 @@ func _run() -> void:
 	invisible.fill(Color(1,1,1,0.02))
 	_check(ArtCatalog.alpha_bounds(invisible).is_empty(),"nonempty low-alpha bytes cannot masquerade as visible fish")
 	var catalog: ContentCatalog = Catalog.new()
-	_check(catalog.load_all(false),"unchanged canonical 44-species data loads")
+	_check(catalog.load_all(false),"unchanged canonical 74-species data loads")
 	var art: FishArtCatalog = ArtCatalog.new()
 	_check(not art.load_all(catalog,"res://data/not_a_manifest.json",true),"final gate rejects missing manifest")
 	_check(art.texture_for(catalog.fish["common_carp"]) == null,"failed gate never silently uses historical art")
-	_check(art.load_all(catalog,"res://data/not_a_manifest.json",false) and not art.complete,"prototype-only legacy path cannot claim all44 complete")
+	_check(art.load_all(catalog,"res://data/not_a_manifest.json",false) and not art.complete,"prototype-only legacy path cannot claim all74 complete")
 	_check(not art.load_manifest({"format_version":1,"complete":false,"asset_count":0,"assets":[]},catalog,true),"final gate rejects partial coverage")
-	_check(not art.load_manifest({"format_version":1,"complete":true,"asset_count":44,"assets":[]},catalog,false),"claimed completeness also enables strict coverage validation")
-	_check(not art.load_manifest({"format_version":1,"complete":true,"asset_count":44,"assets":{}},catalog,true),"malformed entry collection fails closed")
+	_check(not art.load_manifest({"format_version":1,"complete":true,"asset_count":74,"assets":[]},catalog,false),"claimed completeness also enables strict coverage validation")
+	_check(not art.load_manifest({"format_version":1,"complete":true,"asset_count":74,"assets":{}},catalog,true),"malformed entry collection fails closed")
 	var invalid: Dictionary = {"species_id":"common_carp","subject_bbox_normalized":"bad","subject_bbox_px":[],"nose_normalized":{},"tail_normalized":[]}
 	_check(not art.load_manifest({"format_version":1,"complete":false,"asset_count":1,"assets":[invalid]},catalog,false),"malformed geometry fails closed without crashing")
 	var meta: Dictionary = {"width":200,"height":100,"subject_bbox_normalized":[0.025,0.2,0.95,0.8],"subject_bbox_px":[5,20,190,80],"nose_normalized":[0.945,0.5],"tail_normalized":[0.2,0.5],"ruler_extent_normalized":[0.945,0.2],"alpha_threshold_for_bbox":24}
@@ -120,5 +120,5 @@ func _run() -> void:
 	_check(ArtCatalog.bounds_match([5,20,190,80],[5.0,20.0,190.0,80.0]),"JSON float arrays and integer alpha bounds compare numerically")
 	holder.free()
 	await process_frame
-	print("FISH_ART_TESTS: ",checks-failures,"/",checks," passed; prototype geometry and release gate, not 44 finished art or Android validation")
+	print("FISH_ART_TESTS: ",checks-failures,"/",checks," passed; prototype geometry and release gate, not 74 finished art or Android validation")
 	quit(0 if failures == 0 else 1)

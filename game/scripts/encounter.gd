@@ -1,6 +1,11 @@
 class_name EncounterGenerator
 extends RefCounted
 const FloatModel = preload("res://scripts/float_encounter.gd")
+# Game-only length tuning. The 2% extended tail can exceed published natural
+# records; those records remain untouched in the independent encyclopedia.
+const SIZE_EXPONENT: float = 1.55
+const EXTENDED_SIZE_CHANCE: float = 0.02
+const EXTENDED_SIZE_EXPONENT: float = 2.6
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 func _init(fixed_seed: int = -1) -> void:
@@ -29,6 +34,29 @@ func candidates(catalog: ContentCatalog, spot_id: String, bait: String, gear_id:
 		if weight > 0.0:
 			result.append({"fish":fish,"weight":weight})
 	return result
+
+func preparation_status(catalog: ContentCatalog, fish: FishDefinition, spot_id: String, bait: String, gear_id: int) -> Dictionary:
+	# Read-only preview of the same hard gates used by candidates(). A rod with
+	# more fighting power may have less depth, so numeric gear tier is not enough.
+	if not catalog.spots.has(spot_id) or gear_id < 0 or gear_id >= catalog.gear.size():
+		return {"available":false,"reason":"装备或钓点不可用"}
+	var spot: Dictionary = catalog.spots[spot_id]
+	var gear: Dictionary = catalog.gear[gear_id]
+	var data: Dictionary = fish.raw
+	var reason: String = ""
+	if int(data.get("min_gear", 0)) > gear_id:
+		reason = "需要旅行或探深装备"
+	elif float(data.get("depth_min_m", 0)) > minf(float(spot.depth_max_m), float(gear.max_depth_m)):
+		reason = "钓竿需探深至少 %d m" % ceili(float(data.get("depth_min_m", 0)))
+	elif float(data.get("depth_max_m", 999)) < float(spot.depth_min_m) or str(data.get("salinity", spot.salinity)) != str(spot.salinity):
+		reason = "此处水层不适合"
+	elif float(data.get("min_cast", 0)) > float(gear.reach):
+		reason = "钓竿需达到 %d%% 落点" % ceili(float(data.get("min_cast", 0)) * 100.0)
+	elif catalog.bait_weight(fish, bait) <= 0.0:
+		reason = "需要更换鱼饵"
+	return {"available":reason.is_empty(),"reason":reason,
+		"min_cast":float(data.get("min_cast",0.0)),
+		"max_cast":minf(float(data.get("max_cast",1.0)),float(gear.reach))}
 
 func generate(catalog: ContentCatalog, spot_id: String, bait: String, gear_id: int, cast_power: float, time: String, weather: String) -> Dictionary:
 	var available: Array[Dictionary] = candidates(catalog, spot_id, bait, gear_id, cast_power, time, weather)
@@ -66,9 +94,17 @@ func apply_float_presentation(record: Dictionary, catalog: ContentCatalog, cast_
 	record["bait_affinity"] = catalog.bait_weight(fish, bait)
 
 func make_individual(fish: FishDefinition, spot: String, region: String, bait: String, gear_id: int, time: String, weather: String) -> Dictionary:
-	# Right-skewed size distribution: big individuals are rarer; body condition changes gently.
-	var fraction: float = pow(rng.randf(), 1.9)
-	var length_mm: int = roundi(lerpf(float(fish.min_mm), float(fish.max_mm), fraction))
+	# Keep the ordinary population close to its old range. Only a small explicit
+	# tail uses the new fictional extreme, so a record does not become the mean.
+	var normal_max: float = clampf(float(fish.raw.get("normal_max_mm", fish.max_mm)), float(fish.min_mm), float(fish.max_mm))
+	var extended: bool = rng.randf() < EXTENDED_SIZE_CHANCE and normal_max < float(fish.max_mm)
+	var fraction: float = pow(rng.randf(), SIZE_EXPONENT)
+	var length_mm: int
+	if extended:
+		length_mm = roundi(lerpf(normal_max, float(fish.max_mm), pow(rng.randf(), EXTENDED_SIZE_EXPONENT)))
+		fraction = 1.0
+	else:
+		length_mm = roundi(lerpf(float(fish.min_mm), normal_max, fraction))
 	var weight_g: int = maxi(1, roundi(float(fish.anchor_g) * pow(float(length_mm) / float(fish.anchor_mm), 3.0) * rng.randf_range(0.91, 1.09)))
 	var size_class: String = "标准"
 	if fraction < 0.18: size_class = "小巧"

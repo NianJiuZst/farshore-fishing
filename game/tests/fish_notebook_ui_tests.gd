@@ -28,7 +28,7 @@ func _run() -> void:
 	app.scenery.set_process(false)
 	app.sound.apply({"sound": false, "vibration": false, "volume": 0.0})
 	app.sound.suspend(true)
-	_check(app._content_ok and app._models_complete and app.fish_art.complete, "production assets and all44 original photos are valid")
+	_check(app._content_ok and app._models_complete and app.fish_art.complete, "production assets and all74 original photos are valid")
 	save = Store.new()
 	_check(save.initialize(isolated.path_join("notebook-%s" % Time.get_ticks_usec())), "isolated production SaveStore fixture")
 	app.store = save
@@ -40,7 +40,7 @@ func _run() -> void:
 		app.queue_free()
 		quit(1)
 		return
-	_check(app._list.get_child_count() == 44, "all44 fish have native whole-tile targets")
+	_check(app._list.get_child_count() == 74, "all74 fish have native whole-tile targets")
 	await _capture("catalog_zero")
 	var before: Dictionary = save.state
 	# Touch each actual species image, including entries initially off screen.
@@ -63,7 +63,7 @@ func _run() -> void:
 		_check(app._screen == "species", "actual ScreenTouch on fish image opens details: " + id)
 		var latin: Label = app._page.find_child("SpeciesScientificName", true, false)
 		_check(latin != null and latin.text == app._scientific_name(app.catalog.fish[id]), "details match tapped Chinese and accepted Latin species: " + id)
-	_check(before == save.state and save.discovered_count() == 0, "browsing all44 unknown fish never creates catches or unlocks")
+	_check(before == save.state and save.discovered_count() == 0, "browsing all74 unknown fish never creates catches or unlocks")
 	app._show_species("common_carp")
 	await _layout()
 	_check(_metric_text("CatchCount") == "0 条" and _metric_text("MaxLength") == "—" and _metric_text("MaxWeight") == "—", "zero-catch summary uses honest count and missing-record dashes")

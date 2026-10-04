@@ -38,8 +38,8 @@ def main():
     parser.add_argument('--require-reviews',action='store_true',help='Also fail for absent, incomplete or stale hash-bound eight-view visual acceptance')
     args=parser.parse_args()
     ROOT=Path(__file__).resolve().parents[2]
-    ids=[r['species_id'] for letter in 'abcd' for r in json.loads((ROOT/f'game/data/fish_{letter}.json').read_text())]
-    assert len(ids)==44 and len(set(ids))==44
+    ids=[r['species_id'] for letter in 'abcdef' for r in json.loads((ROOT/f'game/data/fish_{letter}.json').read_text())]
+    assert len(ids)==74 and len(set(ids))==74
     rows=[];failures=[];geometry={}
     for species in ids:
         row={'species':species,'failures':[]};path=ROOT/'game/assets/3d'/f'{species}.glb';master=ROOT/'art_masters/3d'/f'{species}.blend';review=ROOT/'ownbuild/fish3d-catalog'/species
@@ -95,7 +95,7 @@ def main():
         if len(members)>1:failures.append('Duplicate exact geometry: '+', '.join(members))
     failures.extend(r['species']+': '+x for r in rows for x in r['failures'])
     review_failures=[r['species']+': '+x for r in rows for x in r.get('visual_review',{'failures':['Missing model review']})['failures']]
-    result={'expected':44,'generated':sum('glb_sha256' in r for r in rows),'artifact_contact_pass':sum(not r['failures'] for r in rows),'required_views_present_count':sum(len(r.get('required_views_present',[])) for r in rows),'required_views_total':352,'visual_review_pass':sum(r.get('visual_review',{}).get('passed',False) for r in rows),'visual_review_failures':review_failures,'review_gate_required':args.require_reviews,'maximum_attachment_distance_m':max(r.get('max_attachment_distance_m',0) for r in rows),'failures':failures,'species':rows}
+    result={'expected':74,'generated':sum('glb_sha256' in r for r in rows),'artifact_contact_pass':sum(not r['failures'] for r in rows),'required_views_present_count':sum(len(r.get('required_views_present',[])) for r in rows),'required_views_total':592,'visual_review_pass':sum(r.get('visual_review',{}).get('passed',False) for r in rows),'visual_review_failures':review_failures,'review_gate_required':args.require_reviews,'maximum_attachment_distance_m':max(r.get('max_attachment_distance_m',0) for r in rows),'failures':failures,'species':rows}
     out=ROOT/'ownbuild/fish3d-catalog/catalog_audit.json';out.write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k!='species'},indent=2))
     raise SystemExit(bool(failures or (args.require_reviews and review_failures)))
 

@@ -239,6 +239,48 @@
         "yangtze_river",
         "yangtze_estuary"
       ]
+    },
+    {
+      "region_id": "pacific_ocean",
+      "name": "苍蓝太平洋",
+      "subtitle": "太平洋 · 礁缘与远洋",
+      "description": "越过礁缘驶向辽阔的蓝色水面。本水域是横跨太平洋不同海区的虚构旅行合辑，并非同一座岛的物种调查。",
+      "scene": "res://assets/scenery/pacific_ocean.png",
+      "color": "#428fab",
+      "unlock_count": 20,
+      "unlock_cost": 450,
+      "spots": [
+        "pacific_reef",
+        "pacific_bluewater"
+      ]
+    },
+    {
+      "region_id": "atlantic_ocean",
+      "name": "北辰大西洋",
+      "subtitle": "大西洋 · 陆架与蓝水",
+      "description": "冷暖洋流沿陆架交汇，远处只剩海与天。这里汇集不同纬度的虚构观察航段，不将鱼种名单当作一处真实渔场。",
+      "scene": "res://assets/scenery/atlantic_ocean.png",
+      "color": "#517e9b",
+      "unlock_count": 28,
+      "unlock_cost": 600,
+      "spots": [
+        "atlantic_shelf",
+        "atlantic_bluewater"
+      ]
+    },
+    {
+      "region_id": "indian_ocean",
+      "name": "珊瑚印度洋",
+      "subtitle": "印度洋 · 环礁与外海",
+      "description": "浅色环礁外侧，浪花进入深蓝。各钓点为印度洋多地环境的虚构合辑；保护观察只发生在游戏中。",
+      "scene": "res://assets/scenery/indian_ocean.png",
+      "color": "#47a8ac",
+      "unlock_count": 36,
+      "unlock_cost": 750,
+      "spots": [
+        "indian_reef",
+        "indian_bluewater"
+      ]
     }
   ],
   "spots": [
@@ -388,6 +430,90 @@
       "cast_hint": "中华鲟为虚拟保护观察对象，相遇后必须放归",
       "foreground": "boat",
       "scene": "res://assets/scenery/yangtze_estuary.png",
+      "hide_region_foreground": true
+    },
+    {
+      "spot_id": "pacific_reef",
+      "region_id": "pacific_ocean",
+      "name": "群岛礁缘",
+      "habitat": "太平洋岛礁及东岸浅海的虚构合辑，不代表同一地点",
+      "salinity": "salt",
+      "depth_min_m": 2,
+      "depth_max_m": 60,
+      "min_gear": 2,
+      "cast_hint": "鱼肉块与拟饵寻找礁缘掠食鱼；留意图鉴中的抛投距离",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/pacific_ocean.png",
+      "hide_region_foreground": true
+    },
+    {
+      "spot_id": "pacific_bluewater",
+      "region_id": "pacific_ocean",
+      "name": "远洋巡游",
+      "habitat": "太平洋大陆坡外侧与开放水层的虚构航段",
+      "salinity": "salt",
+      "depth_min_m": 10,
+      "depth_max_m": 180,
+      "min_gear": 2,
+      "cast_hint": "中远抛探索金枪鱼与旗鱼，巨物相遇不等于必定钓获",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/pacific_ocean.png",
+      "hide_region_foreground": true
+    },
+    {
+      "spot_id": "atlantic_shelf",
+      "region_id": "atlantic_ocean",
+      "name": "海崖陆架",
+      "habitat": "西大西洋陆架、礁体与温带岸外的虚构合辑",
+      "salinity": "salt",
+      "depth_min_m": 5,
+      "depth_max_m": 90,
+      "min_gear": 2,
+      "cast_hint": "虾饵、鱼肉块与拟饵各有所长；大型鲨鱼只作保护观察",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/atlantic_ocean.png",
+      "hide_region_foreground": true
+    },
+    {
+      "spot_id": "atlantic_bluewater",
+      "region_id": "atlantic_ocean",
+      "name": "北辰蓝水",
+      "habitat": "大西洋不同纬度的外海虚构航段；月鱼条目以北大西洋为准",
+      "salinity": "salt",
+      "depth_min_m": 15,
+      "depth_max_m": 180,
+      "min_gear": 2,
+      "cast_hint": "探深竿覆盖全部水层，强力竿仍需注意90米探深限制",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/atlantic_ocean.png",
+      "hide_region_foreground": true
+    },
+    {
+      "spot_id": "indian_reef",
+      "region_id": "indian_ocean",
+      "name": "珊瑚环礁",
+      "habitat": "印度洋环礁外坡、礁沟与邻近水层的虚构合辑",
+      "salinity": "salt",
+      "depth_min_m": 3,
+      "depth_max_m": 75,
+      "min_gear": 2,
+      "cast_hint": "沿礁沟中远抛，观察浪人鲹、裸狐鲣与礁鲨的身影",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/indian_ocean.png",
+      "hide_region_foreground": true
+    },
+    {
+      "spot_id": "indian_bluewater",
+      "region_id": "indian_ocean",
+      "name": "季风外海",
+      "habitat": "印度洋热带至温带开放水域的虚构旅行航段",
+      "salinity": "salt",
+      "depth_min_m": 10,
+      "depth_max_m": 180,
+      "min_gear": 2,
+      "cast_hint": "拟饵与鱼肉块吸引巡游掠食鱼，实际距离条件见图鉴",
+      "foreground": "boat",
+      "scene": "res://assets/scenery/indian_ocean.png",
       "hide_region_foreground": true
     }
   ]

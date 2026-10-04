@@ -37,10 +37,10 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 900,
+    "max_mm": 1450,
     "anchor_mm": 450,
     "anchor_g": 1500,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "steady",
     "difficulty": 0.45,
     "weight": 12,
@@ -67,7 +67,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "欧洲低地静水，天然分布与历史引入均有记录；不声称教学湖是原生鲤保护点。"
+    "reachability_note": "欧洲低地静水，天然分布与历史引入均有记录；不声称教学湖是原生鲤保护点。",
+    "normal_max_mm": 900
   },
   {
     "species_id": "crucian_carp",
@@ -92,10 +93,10 @@
       }
     ],
     "min_mm": 120,
-    "max_mm": 400,
+    "max_mm": 720,
     "anchor_mm": 230,
     "anchor_g": 280,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "rest",
     "difficulty": 0.18,
     "weight": 15,
@@ -122,7 +123,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "草多的浅塘与湖岸为选择依据；来源深度表的不完整下限不当作浅水禁区。"
+    "reachability_note": "草多的浅塘与湖岸为选择依据；来源深度表的不完整下限不当作浅水禁区。",
+    "normal_max_mm": 400
   },
   {
     "species_id": "roach",
@@ -148,10 +150,10 @@
       }
     ],
     "min_mm": 100,
-    "max_mm": 380,
+    "max_mm": 570,
     "anchor_mm": 220,
     "anchor_g": 160,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "rest",
     "difficulty": 0.15,
     "weight": 16,
@@ -178,7 +180,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "文献正文记录滨岸和开阔湖水利用；数据库15–?m不是唯一可栖深度，不直接当硬下限。"
+    "reachability_note": "文献正文记录滨岸和开阔湖水利用；数据库15–?m不是唯一可栖深度，不直接当硬下限。",
+    "normal_max_mm": 380
   },
   {
     "species_id": "rudd",
@@ -203,10 +206,10 @@
       }
     ],
     "min_mm": 100,
-    "max_mm": 400,
+    "max_mm": 700,
     "anchor_mm": 240,
     "anchor_g": 240,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.24,
     "weight": 12,
@@ -233,7 +236,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "富营养且水草繁茂的静水与湖岸；具体1–5m为游戏子生境。"
+    "reachability_note": "富营养且水草繁茂的静水与湖岸；具体1–5m为游戏子生境。",
+    "normal_max_mm": 400
   },
   {
     "species_id": "european_perch",
@@ -259,10 +263,10 @@
       }
     ],
     "min_mm": 120,
-    "max_mm": 480,
+    "max_mm": 680,
     "anchor_mm": 280,
     "anchor_g": 330,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.42,
     "weight": 11,
@@ -289,7 +293,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源1–30m、常见3–4m；湖岸和湖湾均适合。"
+    "reachability_note": "来源1–30m、常见3–4m；湖岸和湖湾均适合。",
+    "normal_max_mm": 480
   },
   {
     "species_id": "northern_pike",
@@ -321,10 +326,10 @@
       }
     ],
     "min_mm": 300,
-    "max_mm": 1100,
+    "max_mm": 1690,
     "anchor_mm": 600,
     "anchor_g": 1600,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.72,
     "weight": 4,
@@ -351,7 +356,8 @@
     "rarity": "少见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源0–30m、通常1–5m；湖湾植被边缘可岸钓。一级装备是挑战调校，并非生态学限制。"
+    "reachability_note": "来源0–30m、通常1–5m；湖湾植被边缘可岸钓。一级装备是挑战调校，并非生态学限制。",
+    "normal_max_mm": 1100
   },
   {
     "species_id": "common_bream",
@@ -376,10 +382,10 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 700,
+    "max_mm": 920,
     "anchor_mm": 420,
     "anchor_g": 1000,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "steady",
     "difficulty": 0.38,
     "weight": 10,
@@ -406,7 +412,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源记载暖浅湖和缓流，可在较深湖湾的软底觅食区出现。"
+    "reachability_note": "来源记载暖浅湖和缓流，可在较深湖湾的软底觅食区出现。",
+    "normal_max_mm": 700
   },
   {
     "species_id": "tench",
@@ -432,10 +439,10 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 600,
+    "max_mm": 950,
     "anchor_mm": 360,
     "anchor_g": 750,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "steady",
     "difficulty": 0.44,
     "weight": 7,
@@ -462,7 +469,8 @@
     "rarity": "少见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "浅水、密草、泥底湖泊；1–8m是有限游戏水域。"
+    "reachability_note": "浅水、密草、泥底湖泊；1–8m是有限游戏水域。",
+    "normal_max_mm": 600
   },
   {
     "species_id": "japanese_horse_mackerel",
@@ -494,10 +502,10 @@
       }
     ],
     "min_mm": 120,
-    "max_mm": 380,
+    "max_mm": 560,
     "anchor_mm": 240,
     "anchor_g": 150,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.35,
     "weight": 14,
@@ -524,7 +532,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源广深度0–275m；只配置港湾/近岸的小中型群体，不能把岸钓理解为到达275m。"
+    "reachability_note": "来源广深度0–275m；只配置港湾/近岸的小中型群体，不能把岸钓理解为到达275m。",
+    "normal_max_mm": 380
   },
   {
     "species_id": "chub_mackerel",
@@ -549,10 +558,10 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 500,
+    "max_mm": 720,
     "anchor_mm": 320,
     "anchor_g": 350,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.5,
     "weight": 10,
@@ -579,7 +588,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源0–300m，常在更深陆架；外侧礁岸配置近岸上层群体，未配置300m底钓。"
+    "reachability_note": "来源0–300m，常在更深陆架；外侧礁岸配置近岸上层群体，未配置300m底钓。",
+    "normal_max_mm": 500
   },
   {
     "species_id": "red_seabream",
@@ -610,10 +620,10 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 700,
+    "max_mm": 1120,
     "anchor_mm": 380,
     "anchor_g": 900,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "steady",
     "difficulty": 0.58,
     "weight": 6,
@@ -640,7 +650,8 @@
     "rarity": "少见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源10–200m；限定外礁10–40m底部，兼有岩/砂底，未放入浅港。"
+    "reachability_note": "来源10–200m；限定外礁10–40m底部，兼有岩/砂底，未放入浅港。",
+    "normal_max_mm": 700
   },
   {
     "species_id": "black_seabream",
@@ -679,10 +690,10 @@
       }
     ],
     "min_mm": 180,
-    "max_mm": 480,
+    "max_mm": 560,
     "anchor_mm": 330,
     "anchor_g": 600,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "steady",
     "difficulty": 0.52,
     "weight": 8,
@@ -709,7 +720,8 @@
     "rarity": "少见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源3–50m，正文常见1–15m；港湾、堤防、礁沙混合区适配。"
+    "reachability_note": "来源3–50m，正文常见1–15m；港湾、堤防、礁沙混合区适配。",
+    "normal_max_mm": 480
   },
   {
     "species_id": "japanese_seabass",
@@ -741,10 +753,10 @@
       }
     ],
     "min_mm": 250,
-    "max_mm": 900,
+    "max_mm": 1150,
     "anchor_mm": 520,
     "anchor_g": 1500,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "burst",
     "difficulty": 0.68,
     "weight": 5,
@@ -771,7 +783,8 @@
     "rarity": "少见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "资料指近岸礁石与河口活动，JAMSTEC日本标本记录0–61m；未混入斑点花鲈。"
+    "reachability_note": "资料指近岸礁石与河口活动，JAMSTEC日本标本记录0–61m；未混入斑点花鲈。",
+    "normal_max_mm": 900
   },
   {
     "species_id": "japanese_whiting",
@@ -796,10 +809,10 @@
       }
     ],
     "min_mm": 100,
-    "max_mm": 290,
+    "max_mm": 340,
     "anchor_mm": 200,
     "anchor_g": 70,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "rest",
     "difficulty": 0.2,
     "weight": 15,
@@ -826,7 +839,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源0–30m、浅海湾沙底；必须出现在港内沙区而不是纯岩礁。"
+    "reachability_note": "来源0–30m、浅海湾沙底；必须出现在港内沙区而不是纯岩礁。",
+    "normal_max_mm": 290
   },
   {
     "species_id": "marbled_rockfish",
@@ -851,10 +865,10 @@
       }
     ],
     "min_mm": 120,
-    "max_mm": 330,
+    "max_mm": 410,
     "anchor_mm": 230,
     "anchor_g": 250,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "rest",
     "difficulty": 0.42,
     "weight": 10,
@@ -881,7 +895,8 @@
     "rarity": "常见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "来源明确日本沿岸岩底；1–30m是游戏设定，未把未知自然深度极限写成事实。"
+    "reachability_note": "来源明确日本沿岸岩底；1–30m是游戏设定，未把未知自然深度极限写成事实。",
+    "normal_max_mm": 330
   },
   {
     "species_id": "olive_flounder",
@@ -906,10 +921,10 @@
       }
     ],
     "min_mm": 220,
-    "max_mm": 850,
+    "max_mm": 1160,
     "anchor_mm": 480,
     "anchor_g": 1100,
-    "weight_model_note": "游戏调校：长度为近似全长，按尺寸锚点立方缩放并作轻微体况变化；非实测科研系数，也非世界纪录范围。",
+    "weight_model_note": "游戏调校：常规个体保留原尺寸区间并稍偏大，2%的抽取进入扩展巨物尾部；最大值允许超过文献记录。按游戏锚点立方缩放并加入体况变化，不是自然界体长—体重科研模型或世界纪录。",
     "behavior": "rest",
     "difficulty": 0.61,
     "weight": 4,
@@ -936,6 +951,7 @@
     "rarity": "少见",
     "balance_note": "稀有度、天气、时段、饵重、体重锚点和行为均为游戏调校，不主张是自然规律。",
     "research_status": "reviewed_2026-10-02",
-    "reachability_note": "NOAA报告西北太平洋沿岸、偏好10–100m；外礁沙区取10–40m可达部分。"
+    "reachability_note": "NOAA报告西北太平洋沿岸、偏好10–100m；外礁沙区取10–40m可达部分。",
+    "normal_max_mm": 850
   }
 ]

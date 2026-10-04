@@ -64,10 +64,10 @@ def audit(path,clips):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--project',type=Path,default=Path('game'));ap.add_argument('--output',type=Path,required=True);ap.add_argument('--require-all',action='store_true');args=ap.parse_args()
     manifest=json.loads((args.project/'data/fish_3d.json').read_text()); catalog={}
-    for p in sorted((args.project/'data').glob('fish_[abcd].json')):
+    for p in sorted((args.project/'data').glob('fish_[abcdef].json')):
         catalog.update({x['species_id']:x for x in json.loads(p.read_text())})
-    assert set(catalog)==set(manifest['models']) and len(catalog)==44
-    report={'required_species':44,'full_release_gate':args.require_all,'models':{},'missing':[],'failures':[],'scope':'Independent binary geometry, weighted skin, animation sampling and duplicate-geometry audit; anatomy and rendered appearance require separate visual review.'}
+    assert set(catalog)==set(manifest['models']) and len(catalog)==74
+    report={'required_species':74,'full_release_gate':args.require_all,'models':{},'missing':[],'failures':[],'scope':'Independent binary geometry, weighted skin, animation sampling and duplicate-geometry audit; anatomy and rendered appearance require separate visual review.'}
     seen={}
     for id,info in manifest['models'].items():
         path=args.project/info['scene'].removeprefix('res://')
@@ -77,7 +77,7 @@ def main():
             assert digest not in seen,f'Geometry identical to {seen.get(digest)}'
             seen[digest]=id;report['models'][id]=result
         except Exception as exc:report['failures'].append({'species':id,'reason':str(exc)})
-    report['full_catalog_complete']=not report['missing'] and not report['failures'] and len(report['models'])==44
+    report['full_catalog_complete']=not report['missing'] and not report['failures'] and len(report['models'])==74
     args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'checked_models':len(report['models']),'missing':len(report['missing']),'failures':report['failures'],'full_catalog_complete':report['full_catalog_complete'],'full_release_gate':args.require_all}))
     return int(bool(report['failures']) or (args.require_all and not report['full_catalog_complete']))

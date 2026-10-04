@@ -70,7 +70,7 @@ func _build_routes() -> void:
 									routes.append({"species": fish.species_id, "gear": gear_id, "spot": spot_id, "region": spot.region_id, "bait": bait.bait_id, "cast_power": cast_power, "time": time, "weather": weather})
 	var seen: Dictionary = {}
 	for route: Dictionary in routes: seen[route.species] = true
-	_check(seen.size() == 44, "44 species have legal candidate routes")
+	_check(seen.size() == 74, "74 species have legal candidate routes")
 
 func _specimen(route: Dictionary, seed_value: int, fraction: float = -1.0) -> Dictionary:
 	var fish: FishDefinition = catalog.fish[route.species]

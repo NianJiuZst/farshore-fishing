@@ -1,12 +1,12 @@
 class_name FishArtCatalog
 extends RefCounted
-## Final source requires all44 generated masters, derivatives and imported
+## Final source requires all74 generated masters, derivatives and imported
 ## image hashes. Explicit false arguments are reserved for isolated tests.
 ## A missing/incomplete/mismatched final manifest blocks play rather than
 ## silently showing another species or falling back to a coarse 3D preview.
 const REQUIRE_PHOTOREAL: bool = true
 const MANIFEST_PATH: String = "res://data/fish_art.json"
-const EXPECTED_COUNT: int = 44
+const EXPECTED_COUNT: int = 74
 var errors: Array[String] = []
 var complete: bool = false
 var _entries: Dictionary = {}
@@ -44,7 +44,7 @@ func load_manifest(data: Dictionary, catalog: ContentCatalog, require_complete: 
 		return false
 	if int(data.get("asset_count",-1)) != assets.size(): errors.append("写实鱼图数量与清单不符")
 	if strict and (not bool(data.get("complete",false)) or assets.size() != EXPECTED_COUNT or catalog.fish.size() != EXPECTED_COUNT):
-		errors.append("写实鱼图尚未完整覆盖44种鱼")
+		errors.append("写实鱼图尚未完整覆盖74种鱼")
 	for value: Variant in assets:
 		if not value is Dictionary:
 			errors.append("写实鱼图条目无效")
@@ -138,7 +138,7 @@ func _validate_texture(path: String, info: Dictionary, thumbnail: bool, strict: 
 	if source == null:
 		errors.append("鱼图无法加载: "+label)
 		return
-	# Validation does not retain all44 full-resolution GPU textures. Display
+	# Validation does not retain all74 full-resolution GPU textures. Display
 	# textures are loaded lazily by texture_for, after each image passes checks.
 	var pixels: Image = source.get_image()
 	if pixels == null or pixels.is_empty():

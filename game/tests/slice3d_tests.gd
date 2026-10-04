@@ -50,7 +50,7 @@ func _run() -> void:
 	var setup: Dictionary = fixture.state
 	setup.gear = 4
 	setup.owned_gear = [0,1,2,3,4]
-	setup.unlocked_regions = ["lake","japan","norway","med","bayou","yangtze"]
+	setup.unlocked_regions = ["lake","japan","norway","med","bayou","yangtze","pacific_ocean","atlantic_ocean","indian_ocean"]
 	_check(fixture.commit_state(setup), "explicit full-world equipment/travel fixture has zero fabricated catches")
 	app.store = fixture
 	app.encounter.rng.seed = 20261002
@@ -61,7 +61,7 @@ func _run() -> void:
 	print("LAYOUT_SCOPE: physical=",root.size," logical=",root.get_visible_rect().size," aspect=",ProjectSettings.get_setting("display/window/stretch/aspect","keep"),"; representative desktop layout only, not phone hardware")
 	_test_configuration()
 	if not app._models_complete or not app._content_ok:
-		print("SLICE3D_SCOPE: full44 gameplay NOT RUN; actual asset/content dependency failed, no readiness override")
+		print("SLICE3D_SCOPE: full74 gameplay NOT RUN; actual asset/content dependency failed, no readiness override")
 		await _finish()
 		return
 	await _test_world_and_rigs()
@@ -77,8 +77,8 @@ func _run() -> void:
 		var recipe: Dictionary = _find_recipe("",spot)
 		_check(not recipe.is_empty(),"each original spot has a reproducible ordinary encounter: " + spot)
 		if not recipe.is_empty(): await _test_species_flow(str(recipe.species),false,recipe)
-	_check(caught_species.size() == 44 and app.store.discovered_count() == 44,"all44 species caught through ordinary Main Encounter and real Session flow")
-	_check(visited_spots.size() == 12,"all twelve spots across six regions finish an actual cast/fight/landing/disposition")
+	_check(caught_species.size() == 74 and app.store.discovered_count() == 74,"all74 species caught through ordinary Main Encounter and real Session flow")
+	_check(visited_spots.size() == 18,"all eighteen spots across nine regions finish an actual cast/fight/landing/disposition")
 	await _test_species_flow("alligator_gar",false,{},true)
 	_test_restart_pending()
 	_test_extreme_landing_framing()
@@ -92,7 +92,7 @@ func _finish() -> void:
 	app.queue_free()
 	await process_frame
 	await process_frame
-	_check(completed,"full44 integration reached its explicit completion marker")
+	_check(completed,"full74 integration reached its explicit completion marker")
 	print("SLICE3D_TESTS: ", checks-failures, "/", checks, " passed; failures=", failures, "; cast events=", cast_events.size(), "; landing events=", landing_events.size(), "; species=",caught_species.size(),"; spots=",visited_spots.size())
 	quit(0 if failures == 0 else 1)
 
@@ -130,10 +130,10 @@ func _test_configuration() -> void:
 	_check(app.scenery.camera.keep_aspect==Camera3D.KEEP_WIDTH,"actual world camera preserves authored horizontal coverage at every aspect")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method")) == "mobile", "native Mobile rendering is the production default")
 	_check(str(ProjectSettings.get_setting("rendering/renderer/rendering_method.mobile")) == "mobile", "Android retains Mobile rendering without a compatibility downgrade")
-	_check(app.catalog.fish.size() == 44 and app.catalog.regions.size() == 6 and app.catalog.spots.size() == 12, "complete original44 species, six regions and twelve spots")
+	_check(app.catalog.fish.size() == 74 and app.catalog.regions.size() == 9 and app.catalog.spots.size() == 18, "complete original74 species, nine regions and eighteen spots")
 	_check(app.catalog.gear.size() == 5 and app.catalog.baits.size() == 8,"five rods and eight baits remain available")
 	var errors: Array[String] = Registry.validate_catalog(app.catalog,true)
-	_check(errors.is_empty() and app._models_complete and app._content_ok,"full44 imported resources and real content gate ready: " + str(errors))
+	_check(errors.is_empty() and app._models_complete and app._content_ok,"full74 imported resources and real content gate ready: " + str(errors))
 	_check(not bool(ProjectSettings.get_setting("rendering/rendering_device/fallback_to_opengl3",true)),"production cannot silently downgrade Vulkan to OpenGL")
 
 func _test_world_and_rigs() -> void:
@@ -378,7 +378,7 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 	_check(str(app.session.individual.get("species_id","")) == species and str(app.session.individual.get("region_id","")) == str(recipe.region) and str(app.session.individual.get("spot_id","")) == str(recipe.spot), species + " is reached through ordinary full-world Main generation")
 	if app.session.state != Session.State.CASTING or str(app.session.individual.get("species_id","")) != species: return
 	_check(app.spot_id in app.catalog.fish[species].spots(),species + " generated result obeys original species location eligibility")
-	print("FULL44_RECIPE ",species," ",JSON.stringify(recipe))
+	print("FULL74_RECIPE ",species," ",JSON.stringify(recipe))
 	var identity: String = app.session.session_id
 	var individual: Dictionary = app.session.individual.duplicate(true)
 	_tick(0.65)
@@ -401,7 +401,7 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 		_tick(0.025)
 		if not reported_long_encounter and app.session.float_clock >= 20.0:
 			reported_long_encounter = true
-			print("FULL44_EXTENDED_ENCOUNTER ",species," clock=",app.session.float_clock," phase=",app.session.float_encounter.phase," attempt=",app.session.float_encounter.attempt," ready=",app.session.float_encounter.can_hook())
+			print("FULL74_EXTENDED_ENCOUNTER ",species," clock=",app.session.float_clock," phase=",app.session.float_encounter.phase," attempt=",app.session.float_encounter.attempt," ready=",app.session.float_encounter.can_hook())
 	if app.session.float_encounter.departed:
 		_check(app._screen == "escape" and app.session.state == Session.State.PAUSED and app.session.before_pause == Session.State.ESCAPED,species + " contact-only cast uses the genuine terminal failure flow")
 		_check(app.store.total_count() == before_count and app.store.state.pending_catches.is_empty(),species + " non-taking cast cannot fabricate a catch or pending result")
@@ -410,13 +410,13 @@ func _test_species_flow(species: String, interruptions: bool, requested_recipe: 
 		_check(app.session.state == Session.State.IDLE and app._overlay == null,species + " retry begins only after the natural departure result is closed")
 		_check(retry < 5,species + " actual encounter retries are bounded")
 		if retry < 5:
-			print("FULL44_CONTACT_ONLY_RETRY ",species," previous_session=",identity," retry=",retry+1)
+			print("FULL74_CONTACT_ONLY_RETRY ",species," previous_session=",identity," retry=",retry+1)
 			await _test_species_flow(species,interruptions,recipe,keep_pending,retry+1)
 		return
 	var held_take: bool = app.session.state == Session.State.BITE and app.session.float_encounter.can_hook()
 	_check(held_take and not app.scenery._fish_root.visible, species + " real held take remains visually hidden except for continuous float movement")
 	if not held_take: return
-	print("FULL44_REAL_TAKE ",species," clock=",app.session.float_clock," attempt=",app.session.float_encounter.attempt," session=",identity)
+	print("FULL74_REAL_TAKE ",species," clock=",app.session.float_clock," attempt=",app.session.float_encounter.attempt," session=",identity)
 	_check(app.scenery.camera.global_transform != camera_before and app.scenery.camera.position.distance_to(camera_before.origin) > 0.25, species + " camera transition moves the actual 3D view")
 	_check(app.session.session_id == identity and app.session.individual == individual, species + " cast/wait/pause preserve the exact encounter")
 	app._action_down()

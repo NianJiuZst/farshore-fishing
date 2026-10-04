@@ -24,13 +24,13 @@ import android_prebuilt_build as prebuilt
 
 
 class NaturalHistoryPackagingTests(unittest.TestCase):
-    """Small synthetic all44 fixtures; no editor, APK build or signing access."""
+    """Small synthetic all74 fixtures; no editor, APK build or signing access."""
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix='farshore-encyclopedia-test-')
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)/'repo'
         self.project = self.root/'game'
-        self.ids = [f'fish_{index}' for index in range(44)]
+        self.ids = [f'fish_{index}' for index in range(74)]
         self.documents = {}
         entry = {'accepted_scientific_name': 'Micropterus nigricans',
                  'taxonomy': {'family_scientific': 'Centrarchidae', 'family_zh': '太阳鱼科',
@@ -42,7 +42,7 @@ class NaturalHistoryPackagingTests(unittest.TestCase):
                              {'id': 's2', 'title': 'Natural history', 'publisher': 'Reference Two', 'url': 'https://research.example.org/paper?version=1#results', 'accessed': '2026-10-03'}]}
         entry.update({key: {'text': 'Documented ' + key, 'source_ids': ['s1']} for key in natural.TEXT_FIELDS})
         for index, path in enumerate(natural.DATA_FILES):
-            self.documents[path] = {'schema_version': 1, 'entries': [{**copy.deepcopy(entry), 'species_id': species} for species in self.ids[index*11:(index+1)*11]]}
+            self.documents[path] = {'schema_version': 1, 'entries': [{**copy.deepcopy(entry), 'species_id': species} for species in self.ids[index::len(natural.DATA_FILES)]]}
         self.write('project.godot', b'[application]\nconfig/version="1.2.0"\n')
         self.write('scripts/catalog.gd', b'const FILES = ["fish_a.json"]\n')
         # The accepted name is independent of the saved identity/old catalog name.
@@ -81,7 +81,7 @@ class NaturalHistoryPackagingTests(unittest.TestCase):
         with zipfile.ZipFile(stream) as archive:
             return natural.verify_exported_natural_history(archive, self.contract, prefix)
 
-    def test_complete44_source_compiled_and_plain_export_roundtrip(self):
+    def test_complete74_source_compiled_and_plain_export_roundtrip(self):
         self.assertEqual(self.contract['species_ids'], sorted(self.ids))
         self.assertEqual(set(self.contract['resource_sha256']), {natural.MODULE, *natural.DATA_FILES})
         for prefix in ('assets/', ''):
@@ -111,7 +111,7 @@ class NaturalHistoryPackagingTests(unittest.TestCase):
         outside = Path(self.temp.name)/'outside.gd'; outside.write_bytes(self.module); module.symlink_to(outside)
         with self.assertRaisesRegex(AssertionError, 'Missing/unsafe source'): natural.natural_history_contract(self.project)
 
-    def test_schema_and_exact44_identity_fail_closed(self):
+    def test_schema_and_exact74_identity_fail_closed(self):
         original = copy.deepcopy(self.documents)
         for mutation in ('old_schema', 'boolean_schema', 'non_object', 'missing_entries', 'empty_file', 'non_entry', 'missing_species', 'duplicate_species', 'unknown_species'):
             self.documents = copy.deepcopy(original)
@@ -226,10 +226,10 @@ class NaturalHistoryPackagingTests(unittest.TestCase):
                     payloads.pop(self.target); payloads[natural.MODULE] += b'#drift'
             with self.subTest(mutation=mutation), self.assertRaises(AssertionError): self.verify(payloads)
 
-    def test_archive_requires_all_five_hashes_and_rejects_source_drift(self):
+    def test_archive_requires_all_seven_hashes_and_rejects_source_drift(self):
         files = self.files()
         required = natural.require_natural_history_archive_members(self.root, files)
-        self.assertEqual(len(required), 5)
+        self.assertEqual(len(required), 7)
         for path in required:
             for mutation in ('missing', 'changed', 'missing_digest'):
                 altered = copy.deepcopy(files)
@@ -374,7 +374,7 @@ class AnglerPackagingTests(unittest.TestCase):
 
 
 class PhotoPackagingTests(unittest.TestCase):
-    """Credential-free synthetic44 fixture, including stripped export remaps."""
+    """Credential-free synthetic74 fixture, including stripped export remaps."""
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix='farshore-photo-test-')
         self.addCleanup(self.temp.cleanup)
@@ -387,7 +387,7 @@ class PhotoPackagingTests(unittest.TestCase):
             def chunk(kind, raw):
                 return struct.pack('>I', len(raw)) + kind + raw + struct.pack('>I', zlib.crc32(kind + raw))
             return b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('>IIBBBBB', size, size, 8, 6, 0, 0, 0)) + chunk(b'IDAT', zlib.compress((b'\0' + bytes(color)*size)*size)) + chunk(b'IEND', b'')
-        for index in range(44):
+        for index in range(74):
             species = 'fish_' + str(index)
             entry = {'species_id': species, 'runtime': f'res://assets/fish/{species}.png',
                      'thumb': f'res://assets/fish/{species}_thumb.png', 'master': f'masters/{species}.png'}
@@ -410,11 +410,11 @@ class PhotoPackagingTests(unittest.TestCase):
             self.entries.append(entry)
         for resource in photos.UI_RESOURCES:
             self.write(resource, ('test static resource ' + resource).encode())
-        self.write('scripts/fish_art_catalog.gd', b'const REQUIRE_PHOTOREAL: bool = true\nconst EXPECTED_COUNT: int = 44\nconst MANIFEST_PATH = "res://data/fish_art.json"\n')
+        self.write('scripts/fish_art_catalog.gd', b'const REQUIRE_PHOTOREAL: bool = true\nconst EXPECTED_COUNT: int = 74\nconst MANIFEST_PATH = "res://data/fish_art.json"\n')
         self.write('scripts/main.gd', b'res://scripts/fish_art_catalog.gd\nres://scripts/fish_art_view.gd\nif not fish_art.load_all(catalog):\nvar rect: FishArtView = FishArtViewScript.new()\n')
         self.write('scripts/catalog.gd', b'"fish_a.json"\n')
         self.write('data/fish_a.json', json.dumps(self.catalog).encode())
-        self.manifest = {'format_version': 1, 'complete': True, 'asset_count': 44, 'assets': self.entries}
+        self.manifest = {'format_version': 1, 'complete': True, 'asset_count': 74, 'assets': self.entries}
         self.save_manifest()
         self.contract = photos.photo_art_contract(self.project, self.catalog)
         self.report = {'failures': [], 'complete': True, 'species_ids': self.contract['species_ids'],
@@ -453,13 +453,13 @@ class PhotoPackagingTests(unittest.TestCase):
             return photos.verify_exported_photo_art(archive, self.contract, self.report if report is None else report, prefix)
 
     def test_complete_source_import_and_stripped_export_roundtrip(self):
-        self.assertEqual(self.contract['texture_count'], 88)
+        self.assertEqual(self.contract['texture_count'], 148)
         exported = self.verify()
-        self.assertEqual(exported['texture_payloads'], 88)
+        self.assertEqual(exported['texture_payloads'], 148)
         self.assertEqual(set(exported['static_ui_payload_sha256']), set(photos.UI_RESOURCES))
         for resource, target in exported['static_ui_resources'].items():
             self.assertEqual(exported['static_ui_payload_sha256'][resource], photos.sha256(self.payloads[target]))
-        self.assertEqual(self.verify(prefix='')['species_count'], 44)
+        self.assertEqual(self.verify(prefix='')['species_count'], 74)
         self.assertFalse(any(n.endswith('.png') for n in self.payloads))
 
     def test_beta3_ui_sources_are_required(self):
@@ -585,7 +585,7 @@ class PhotoPackagingTests(unittest.TestCase):
             if mutation == 'wrong_optional_png': payloads[resource] = b'old PNG'
             with self.subTest(mutation=mutation), self.assertRaises(AssertionError): self.verify(payloads)
 
-    def test_archive_requires_all44_originals_and_derivatives(self):
+    def test_archive_requires_all74_originals_and_derivatives(self):
         base = self.root/'art_masters/fish_photoreal_v2'
         entries = copy.deepcopy(self.entries)
         for entry in entries:
@@ -597,13 +597,13 @@ class PhotoPackagingTests(unittest.TestCase):
                 suffix = '_thumb.png' if key == 'thumb' else '.png'
                 destination.write_bytes((self.project/f'assets/fish/{species}{suffix}').read_bytes())
         artist = base/'asset_manifest.json'
-        artist.write_text(json.dumps({'format_version': 1, 'complete': True, 'asset_count': 44, 'assets': entries}))
+        artist.write_text(json.dumps({'format_version': 1, 'complete': True, 'asset_count': 74, 'assets': entries}))
         for name in ('build_asset_variants.py', 'art_provenance.json'): (base/name).write_text('fixture')
         self.manifest['source_manifest_sha256'] = photos.sha256(artist.read_bytes()); self.save_manifest()
         contract = photos.photo_art_contract(self.project, self.catalog)
         files = {str(p.relative_to(self.root)): {'sha256': photos.sha256(p.read_bytes())} for p in self.root.rglob('*') if p.is_file()}
         required = photos.require_photo_archive_members(self.root, files, contract)
-        self.assertEqual(len(photos.photo_authoring_files(self.root, contract)), 135)
+        self.assertEqual(len(photos.photo_authoring_files(self.root, contract)), 225)
         self.assertIn('art_masters/fish_photoreal_v2/masters/fish_43.png', required)
         for resource in photos.BETA3_UI_RESOURCES + photos.FORMAL_GAMEPLAY_RESOURCES + photos.FORMAL_SHADER_RESOURCES:
             self.assertIn('game/' + resource, required)

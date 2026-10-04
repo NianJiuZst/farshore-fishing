@@ -58,7 +58,7 @@ func _run() -> void:
 	_check(Trial.generate(catalog, encounter, "worm", -1, 0.5, "day", "clear").is_empty(), "invalid gear rejected")
 	_check(JSON.stringify({"regions": catalog.regions, "spots": catalog.spots, "gear": catalog.gear}) == original_world, "legacy world unchanged")
 	for id: String in catalog.fish: _check(JSON.stringify(catalog.fish[id].raw) == original_species[id], "legacy species unchanged " + id)
-	_check(catalog.fish.size() == 44 and catalog.regions.size() == 6 and catalog.spots.size() == 12, "original collection inventory intact")
+	_check(catalog.fish.size() == 74 and catalog.regions.size() == 9 and catalog.spots.size() == 18, "original collection inventory intact")
 	var directory: String = "/tmp/farshore-trial-save-" + str(OS.get_process_id()) + "-" + str(Time.get_ticks_usec())
 	var store: SaveStore = Store.new()
 	_check(store.initialize(directory), "isolated store initializes")

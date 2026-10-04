@@ -28,10 +28,19 @@ func populate_prepare(app: Control, page: VBoxContainer) -> void:
 	if app._trial_gear_id >= 0: page.add_child(app._button("使用已装备钓竿",app._clear_trial_gear))
 	page.add_child(_rule())
 	var fish_here: Array[FishDefinition] = app.catalog.fish_at(app.spot_id)
-	_section(app,page,"可遇见的鱼","%d 种" % fish_here.size())
+	var encounter := EncounterGenerator.new(0)
 	var names: Array[String] = []
-	for fish: FishDefinition in fish_here: names.append(fish.name)
-	page.add_child(app._text("、".join(names),22,MUTED))
+	var blocked: Array[String] = []
+	for fish: FishDefinition in fish_here:
+		var status: Dictionary = encounter.preparation_status(app.catalog,fish,app.spot_id,app.bait_id,app._effective_gear_id())
+		if bool(status.available): names.append(fish.name)
+		else: blocked.append(fish.name+" · "+str(status.reason))
+	_section(app,page,"当前装备可遇见","%d / %d 种" % [names.size(),fish_here.size()])
+	page.add_child(app._text("、".join(names) if not names.is_empty() else "当前搭配尚无可遇见鱼，请调整鱼竿或鱼饵",22,MUTED))
+	page.add_child(app._text("已按钓竿探深、落点范围与鱼饵筛选；实际抛投仍需满足图鉴中的距离条件。时段和天气影响相遇机会。",19,MUTED))
+	if not blocked.is_empty():
+		_section(app,page,"调整装备后可遇见")
+		page.add_child(app._text("\n".join(blocked),20,GOLD))
 	page.add_child(app._button("读漂与提竿",app._show_float_guide))
 	if not app._can_use_spot(app.spot_id): page.add_child(app._text("当前钓竿无法触及此钓点，请更换装备或钓点",22,GOLD))
 	var enter: Button = app._button("进入钓点",app._enter_fishery,true)
@@ -221,7 +230,7 @@ func populate_float_guide(app: Control, page: VBoxContainer) -> void:
 
 func populate_about(app: Control, page: VBoxContainer) -> void:
 	_section(app,page,"远岸钓记",str(ProjectSettings.get_setting("application/config/version","")))
-	page.add_child(app._text("离线单机 · 44 种鱼 · 12 处钓点",25,INK))
+	page.add_child(app._text("离线单机 · 74 种鱼 · 18 处钓点",25,INK))
 	page.add_child(app._text("角色基础网格、服装、皮肤及配件：MakeHuman Community，CC0 1.0\n角色适配、权重调整与钓鱼动画：本项目制作\n鱼与场景几何及骨骼动画：本项目制作\n天空、木材与岩石纹理：Poly Haven，CC0\n高清鱼类插画与界面图标：图像生成模型制作并校对\n字体：Noto Sans CJK，SIL Open Font License\n音效：本项目程序合成\n引擎：Godot 4.6.3，MIT License",22,MUTED))
 	page.add_child(app._button("查看引擎、字体与素材许可",app._show_licenses))
 
