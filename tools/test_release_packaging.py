@@ -616,6 +616,41 @@ class PhotoPackagingTests(unittest.TestCase):
         with self.assertRaises(AssertionError): photos.require_photo_archive_members(self.root, files, contract)
 
 
+    def test_two_manifest_ocean_source_preserves_44_plus_30(self):
+        sources = []
+        for base_name, selected in [('fish_photoreal_v2', self.entries[:44]), ('fish_photoreal_ocean', self.entries[44:])]:
+            base = self.root/'art_masters'/base_name
+            entries = copy.deepcopy(selected)
+            for entry in entries:
+                species = entry['species_id']
+                entry['runtime'] = f'runtime/{species}.png'
+                entry['thumb'] = f'thumbs/{species}_thumb.png'
+                for key in ('master', 'runtime', 'thumb'):
+                    destination = base/entry[key]
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    suffix = '_thumb.png' if key == 'thumb' else '.png'
+                    destination.write_bytes((self.project/f'assets/fish/{species}{suffix}').read_bytes())
+            artist = base/'asset_manifest.json'
+            artist.write_text(json.dumps({'format_version': 1, 'complete': True, 'asset_count': len(entries), 'assets': entries}))
+            for name in ('build_asset_variants.py', 'art_provenance.json'):
+                (base/name).write_text('fixture')
+            sources.append({'path': str(artist.relative_to(self.root)), 'sha256': photos.sha256(artist.read_bytes())})
+        self.manifest['source_manifest_sha256'] = sources[0]['sha256']
+        self.manifest['source_manifests'] = sources
+        self.save_manifest()
+        contract = photos.photo_art_contract(self.project, self.catalog)
+        files = photos.photo_authoring_files(self.root, contract)
+        self.assertEqual(len(files), 228)
+        self.assertIn('art_masters/fish_photoreal_v2/masters/fish_43.png', files)
+        self.assertIn('art_masters/fish_photoreal_ocean/masters/fish_73.png', files)
+        self.manifest['source_manifests'][1]['sha256'] = '0'*64
+        self.save_manifest()
+        with self.assertRaisesRegex(AssertionError, 'provenance hash'):
+            photos.photo_authoring_files(self.root, contract)
+        self.manifest['source_manifests'][1]['sha256'] = sources[1]['sha256']
+
+
+
 class PackagingTests(unittest.TestCase):
     def test_formal_identity_preserves_preview_package_and_certificate(self):
         formal = {**android_identity.FORMAL, 'separate_installation': True}

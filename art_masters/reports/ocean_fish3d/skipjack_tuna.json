@@ -1,0 +1,475 @@
+{
+  "species": "skipjack_tuna",
+  "status": "passed",
+  "binary": {
+    "sha256": "beae5dee871a72558894d2aab16952d3377b89bb287a11f8ce641469ecd67312",
+    "bytes": 4791408,
+    "meshes": 16,
+    "geometry_sha256": "342a3e024711cde1fdab95fed364d7575494c2904a8f1629d25b21a9081e0b37",
+    "primitive_vertex_counts": [
+      408,
+      298,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      4224,
+      2944,
+      480,
+      396,
+      1584,
+      1584,
+      728,
+      4459,
+      1560
+    ],
+    "skins": 1,
+    "bones": 33,
+    "weighted_primitives": 16,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 41356,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/skipjack_tuna.blend",
+    "sha256": "ce665832f2896020d2dae2080312ad162f7569c090eb51de5fc36081ff650762",
+    "bytes": 4139841,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "skipjack_tuna",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 41356,
+    "vertices": 21524,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectoralr",
+      "pectorall",
+      "pelvicr",
+      "pelvicl",
+      "dorsalfinlet1",
+      "analfinlet1",
+      "dorsalfinlet2",
+      "analfinlet2",
+      "dorsalfinlet3",
+      "analfinlet3",
+      "dorsalfinlet4",
+      "analfinlet4",
+      "dorsalfinlet5",
+      "analfinlet5",
+      "dorsalfinlet6",
+      "analfinlet6",
+      "dorsalfinlet7",
+      "analfinlet7",
+      "dorsalfinlet8",
+      "analfinlet8",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 16,
+    "materials": 16,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Compact robust spindle and short pectorals",
+      "Four-to-six dark lengthwise stripes on lower flanks and belly, never vertical bars",
+      "Narrow peduncle with central keel and eight detached dorsal and ventral finlets",
+      "Dark back, clean upper flanks and forked crescent caudal"
+    ],
+    "sources": [
+      "https://www.fisheries.noaa.gov/species/atlantic-skipjack-tuna",
+      "https://www.fisheries.noaa.gov/resource/outreach-materials/atlantic-tunas-identification-guide"
+    ],
+    "glb_bytes": 4791408,
+    "glb_sha256": "beae5dee871a72558894d2aab16952d3377b89bb287a11f8ce641469ecd67312",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "skipjack_tuna",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06559553247848583,
+        "loop_seam_m": 7.966329389508379e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.256210355887594,
+        "loop_seam_m": 7.081179633150347e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17549335029808477,
+        "loop_seam_m": 4.9174857946618114e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.011563939470189353,
+        "loop_seam_m": 1.4604933508415697e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 32,
+          "ray_roots": 80,
+          "membrane_max_distance_m": 0.0007996566127985716,
+          "ray_max_distance_m": 0.0011883683037012815,
+          "max_distance_m": 0.0011883683037012815,
+          "rest_distance_m": 0.0011882786639034748,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0005388834397308528,
+          "ray_max_distance_m": 0.0007444008952006698,
+          "max_distance_m": 0.0007444008952006698,
+          "rest_distance_m": 0.0007306355400942266,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.000543454079888761,
+          "ray_max_distance_m": 0.0007229060283862054,
+          "max_distance_m": 0.0007229060283862054,
+          "rest_distance_m": 0.0007173646008595824,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "4": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007839014870114625,
+          "ray_max_distance_m": 0.0012703494867309928,
+          "max_distance_m": 0.0012703494867309928,
+          "rest_distance_m": 0.0012581644114106894,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007587093277834356,
+          "ray_max_distance_m": 0.001161467400379479,
+          "max_distance_m": 0.001161467400379479,
+          "rest_distance_m": 0.0011491168988868594,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007288829074241221,
+          "ray_max_distance_m": 0.001025686040520668,
+          "max_distance_m": 0.001025686040520668,
+          "rest_distance_m": 0.0010201334953308105,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007499193889088929,
+          "ray_max_distance_m": 0.0010084538953378797,
+          "max_distance_m": 0.0010084538953378797,
+          "rest_distance_m": 0.0010029911063611507,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "DorsalFinlet1",
+          "bone": "dorsalfinlet1",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006111463299021125,
+          "ray_max_distance_m": 0.0007763922912999988,
+          "max_distance_m": 0.0007763922912999988,
+          "rest_distance_m": 0.0007744953036308289,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "9": {
+          "name": "AnalFinlet1",
+          "bone": "analfinlet1",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006225258111953735,
+          "ray_max_distance_m": 0.0007961313822306693,
+          "max_distance_m": 0.0007961313822306693,
+          "rest_distance_m": 0.0007919894997030497,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "10": {
+          "name": "DorsalFinlet2",
+          "bone": "dorsalfinlet2",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006270899320952594,
+          "ray_max_distance_m": 0.0008067774469964206,
+          "max_distance_m": 0.0008067774469964206,
+          "rest_distance_m": 0.000787875265814364,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "11": {
+          "name": "AnalFinlet2",
+          "bone": "analfinlet2",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006374132353812456,
+          "ray_max_distance_m": 0.0008243932388722897,
+          "max_distance_m": 0.0008243932388722897,
+          "rest_distance_m": 0.0008066013688221574,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "12": {
+          "name": "DorsalFinlet3",
+          "bone": "dorsalfinlet3",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006266908021643758,
+          "ray_max_distance_m": 0.0007947136764414608,
+          "max_distance_m": 0.0007947136764414608,
+          "rest_distance_m": 0.0007941056974232197,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "13": {
+          "name": "AnalFinlet3",
+          "bone": "analfinlet3",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006367053720168769,
+          "ray_max_distance_m": 0.0008221183088608086,
+          "max_distance_m": 0.0008221183088608086,
+          "rest_distance_m": 0.0008198526338674128,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "14": {
+          "name": "DorsalFinlet4",
+          "bone": "dorsalfinlet4",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006370205082930624,
+          "ray_max_distance_m": 0.0008292605634778738,
+          "max_distance_m": 0.0008292605634778738,
+          "rest_distance_m": 0.0008152778027579188,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "15": {
+          "name": "AnalFinlet4",
+          "bone": "analfinlet4",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006519724847748876,
+          "ray_max_distance_m": 0.0008547820616513491,
+          "max_distance_m": 0.0008547820616513491,
+          "rest_distance_m": 0.0008377519552595913,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "16": {
+          "name": "DorsalFinlet5",
+          "bone": "dorsalfinlet5",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006576349842362106,
+          "ray_max_distance_m": 0.0008548692567273974,
+          "max_distance_m": 0.0008548692567273974,
+          "rest_distance_m": 0.0008399406215175986,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "17": {
+          "name": "AnalFinlet5",
+          "bone": "analfinlet5",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006655529723502696,
+          "ray_max_distance_m": 0.00087129813618958,
+          "max_distance_m": 0.00087129813618958,
+          "rest_distance_m": 0.0008566841715946794,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "18": {
+          "name": "DorsalFinlet6",
+          "bone": "dorsalfinlet6",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006707212305627763,
+          "ray_max_distance_m": 0.0011791695142164826,
+          "max_distance_m": 0.0011791695142164826,
+          "rest_distance_m": 0.0011721081100404263,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "19": {
+          "name": "AnalFinlet6",
+          "bone": "analfinlet6",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006758523522876203,
+          "ray_max_distance_m": 0.001189625938422978,
+          "max_distance_m": 0.001189625938422978,
+          "rest_distance_m": 0.0011817892082035542,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "20": {
+          "name": "DorsalFinlet7",
+          "bone": "dorsalfinlet7",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006731075118295848,
+          "ray_max_distance_m": 0.0011730450205504894,
+          "max_distance_m": 0.0011730450205504894,
+          "rest_distance_m": 0.0011676785070449114,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "21": {
+          "name": "AnalFinlet7",
+          "bone": "analfinlet7",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006792076164856553,
+          "ray_max_distance_m": 0.0011844811961054802,
+          "max_distance_m": 0.0011844811961054802,
+          "rest_distance_m": 0.0011786764953285456,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "22": {
+          "name": "DorsalFinlet8",
+          "bone": "dorsalfinlet8",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006819664849899709,
+          "ray_max_distance_m": 0.0011749080149456859,
+          "max_distance_m": 0.0011749080149456859,
+          "rest_distance_m": 0.0011553157819435,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "23": {
+          "name": "AnalFinlet8",
+          "bone": "analfinlet8",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006890121148899198,
+          "ray_max_distance_m": 0.0011858060024678707,
+          "max_distance_m": 0.0011858060024678707,
+          "rest_distance_m": 0.0011703446507453918,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "24": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007474247831851244,
+          "ray_max_distance_m": 0.0012859152629971504,
+          "max_distance_m": 0.0012859152629971504,
+          "rest_distance_m": 0.0012818872928619385,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999014735221863,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "beae5dee871a72558894d2aab16952d3377b89bb287a11f8ce641469ecd67312",
+    "master_sha256": "ce665832f2896020d2dae2080312ad162f7569c090eb51de5fc36081ff650762"
+  },
+  "visual_review": {
+    "species": "skipjack_tuna",
+    "status": "reviewed_pass",
+    "glb_sha256": "beae5dee871a72558894d2aab16952d3377b89bb287a11f8ce641469ecd67312",
+    "master_sha256": "ce665832f2896020d2dae2080312ad162f7569c090eb51de5fc36081ff650762",
+    "reviewed_views": {
+      "hero": "40b873d8472dc1d8b2288f7ea7266d8d203e8287d7502ff2266de4c48a172c95",
+      "side": "6681a6a2801f5057399e33464895d7bba15d74b4482438df4cc5f1a7ec03089d",
+      "top": "9a73b93a7c0ad83cb5efc52f261e0764003505beb5c5e3a7781f4e5371e6bf5b",
+      "underside": "ef9aaf73b601693e7808c1a4f54ec9165e8ec3e0c8aed9a483e5e6b7d311b8c4",
+      "pose_swim": "502dd58bdbc7ab57e6e8c078736a0d71eb324584ac0b842866d426d4f93edcb7",
+      "pose_struggle": "83827dd68864dc9452adfa2cbdd9a69141571bba6cdb0216ec11e83d0079ce8f",
+      "pose_breach": "42b73535ee93babf4a2b51fa4b53901b152194fc49bc0057c565e7c8eca01d95",
+      "pose_landed": "ff9629e78a2c0787be4085b946c5c8c507c2b81a3cc220bbe573efe8779db448"
+    },
+    "observations": [
+      "Eight views show compact stocky body, short pectorals, detached finlets and four-to-six lengthwise lower-flank stripes, not vertical bars.",
+      "Four clip poses retain attached fins and clean side-to-side skin deformation."
+    ],
+    "review_method": "Direct visual inspection of all eight rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/skipjack_tuna.jpg",
+    "sha256": "63b329c07fd40088a15efd3f408ebee15c327ea63ae86ffc4ed0831bc2fb1eb6"
+  },
+  "mouth_offset_normalized": [
+    0.4951363,
+    -0.0009727,
+    0.0
+  ]
+}

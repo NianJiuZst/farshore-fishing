@@ -1,0 +1,5 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+FAIL FISHING BALANCE: 200ms-latency visible-float detector hooks every species: 1
+FAIL FISHING BALANCE: float motion has visibly distinct species/seed patterns
+FISHING_BALANCE_TESTS: 163/165; simulations=0; legal_routes=176

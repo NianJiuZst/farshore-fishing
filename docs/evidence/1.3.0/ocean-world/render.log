@@ -1,0 +1,20 @@
+DESKTOP_SOFTWARE_RENDER: private X display; Mesa lavapipe Vulkan; not Android hardware
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+Vulkan 1.4.305 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 19.1.7, 256 bits)
+
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/assets/scenery/pacific_ocean.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/pacific_reef_1280.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/pacific_reef_1584.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/pacific_bluewater_1280.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/pacific_bluewater_1584.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/assets/scenery/atlantic_ocean.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/atlantic_shelf_1280.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/atlantic_shelf_1584.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/atlantic_bluewater_1280.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/atlantic_bluewater_1584.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/assets/scenery/indian_ocean.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/indian_reef_1280.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/indian_reef_1584.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/indian_bluewater_1280.png
+OCEAN_CAPTURE=/workspace/scratch/c16084497664/farshore-ocean-world-stage/game/../build/ocean-visual/indian_bluewater_1584.png
+OCEAN_VIEWS_COMPLETE:3region previews+12portrait views; desktop Mobile/Vulkan only

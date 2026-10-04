@@ -1,0 +1,263 @@
+{
+  "species": "red_snapper",
+  "status": "passed",
+  "binary": {
+    "sha256": "034b15b9420283a7a07d5c51738f5f6c4440a108bac7673a2f91804da95c0aab",
+    "bytes": 4637284,
+    "meshes": 13,
+    "geometry_sha256": "c5723262714b7e2497bc8649445766c7d09f9390f9b61ffe0300fd21b441d47d",
+    "primitive_vertex_counts": [
+      516,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2944,
+      480,
+      396,
+      28,
+      1946,
+      4459,
+      4170
+    ],
+    "skins": 1,
+    "bones": 17,
+    "weighted_primitives": 13,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 34272,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/red_snapper.blend",
+    "sha256": "3decd36c45c788666e90e1f578e2dd36178541588e04e4ff366b0f9628b3e067",
+    "bytes": 4126635,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "red_snapper",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 34272,
+    "vertices": 17798,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "spinydorsal",
+      "softdorsal",
+      "anal",
+      "longpectoralr",
+      "longpectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 13,
+    "materials": 13,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "High oval snapper body with triangular sloping forehead",
+      "Continuous spiny plus soft dorsal silhouette and pointed pectorals",
+      "Red iris, rosy-red scales and small upper-jaw canine teeth",
+      "Moderately forked red caudal and strong anal spines"
+    ],
+    "sources": [
+      "https://www.fisheries.noaa.gov/species/red-snapper"
+    ],
+    "glb_bytes": 4637284,
+    "glb_sha256": "034b15b9420283a7a07d5c51738f5f6c4440a108bac7673a2f91804da95c0aab",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "red_snapper",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06599892100943969,
+        "loop_seam_m": 7.71991393905797e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2581013585186486,
+        "loop_seam_m": 2.3159744237405366e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17688532357571998,
+        "loop_seam_m": 1.608315783559487e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.013309956871740983,
+        "loop_seam_m": 1.415317407639806e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SpinyDorsal",
+          "bone": "spinydorsal",
+          "membrane_roots": 54,
+          "ray_roots": 135,
+          "membrane_max_distance_m": 0.0005064342985861003,
+          "ray_max_distance_m": 0.0010557741625234485,
+          "max_distance_m": 0.0010557741625234485,
+          "rest_distance_m": 0.001053236541338265,
+          "worst_clip": "breach",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "SoftDorsal",
+          "bone": "softdorsal",
+          "membrane_roots": 46,
+          "ray_roots": 115,
+          "membrane_max_distance_m": 0.00045939034316688776,
+          "ray_max_distance_m": 0.000770019250921905,
+          "max_distance_m": 0.000770019250921905,
+          "rest_distance_m": 0.000765082600992173,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 34,
+          "ray_roots": 85,
+          "membrane_max_distance_m": 0.0004848117532674223,
+          "ray_max_distance_m": 0.0007519233040511608,
+          "max_distance_m": 0.0007519233040511608,
+          "rest_distance_m": 0.0007505330722779036,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "4": {
+          "name": "LongPectoralR",
+          "bone": "longpectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006805474404245615,
+          "ray_max_distance_m": 0.0011821105144917965,
+          "max_distance_m": 0.0011821105144917965,
+          "rest_distance_m": 0.00117050192784518,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "LongPectoralL",
+          "bone": "longpectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006766762817278504,
+          "ray_max_distance_m": 0.0011314944131299853,
+          "max_distance_m": 0.0011314944131299853,
+          "rest_distance_m": 0.0011304568033665419,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006545988726429641,
+          "ray_max_distance_m": 0.0009931790409609675,
+          "max_distance_m": 0.0009931790409609675,
+          "rest_distance_m": 0.0009801037376746535,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006820138078182936,
+          "ray_max_distance_m": 0.0009918243158608675,
+          "max_distance_m": 0.0009918243158608675,
+          "rest_distance_m": 0.0009779597166925669,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "8": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007005059742368758,
+          "ray_max_distance_m": 0.0011483633425086737,
+          "max_distance_m": 0.0011483633425086737,
+          "rest_distance_m": 0.0011341869831085205,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999025166034698,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "034b15b9420283a7a07d5c51738f5f6c4440a108bac7673a2f91804da95c0aab",
+    "master_sha256": "3decd36c45c788666e90e1f578e2dd36178541588e04e4ff366b0f9628b3e067"
+  },
+  "visual_review": {
+    "species": "red_snapper",
+    "status": "reviewed_pass",
+    "glb_sha256": "034b15b9420283a7a07d5c51738f5f6c4440a108bac7673a2f91804da95c0aab",
+    "master_sha256": "3decd36c45c788666e90e1f578e2dd36178541588e04e4ff366b0f9628b3e067",
+    "reviewed_views": {
+      "hero": "b19783bcdb895863067c4fe7a39963056a66f5c8e2255e86a1b14cdae7493ed4",
+      "side": "af3a3303a623fcfd44637d54b7f6184f243f368ab44badaffc5c3fffd59f6b56",
+      "top": "cef82b16108a162abc586b49d4b2a1fc2e7745cfa12269d6db2472c8fd2cbde9",
+      "underside": "f77b14f2818b5e94490b8c26809f2b4b5e18584fd42e1550fc681400603763d7",
+      "pose_swim": "88d9d4bd5bc4231519f803fd9729ae9727a467ae1388ad44aab8b90cec6d9fc7",
+      "pose_struggle": "91aca6f58cb408539d35863dc4ece9cba85d7b6bf5713cad0d6243d5241887ef",
+      "pose_breach": "56eeb0a8ade4fcc3e6f967734c775161ba8a896f722e334fa1b1cda1e4a42a52",
+      "pose_landed": "77c23d52645742f6b96867bb0e738d27b1da7cf6f1508925ef9e93e9a6f02d9a"
+    },
+    "observations": [
+      "Final eight views show a red scaled body/iris, sloped triangular forehead, visible dorsal spines, shaped soft dorsal, long pointed pectorals, small canine teeth and forked red tail.",
+      "Revised lower spinous contour and discrete dorsal spines persist in all four animated poses without attachment gaps."
+    ],
+    "review_method": "Direct visual inspection of final eight-view contact sheet, with 900x600 detail on revised fin shapes"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/red_snapper.jpg",
+    "sha256": "9d4971f9ddfa35567d5d87639aa3a14173b12deebde1fd49d33a2f1edae576a8"
+  },
+  "mouth_offset_normalized": [
+    0.495305,
+    -0.006573,
+    0.0
+  ]
+}

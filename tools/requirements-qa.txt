@@ -1,0 +1,5 @@
+# Python-side source/package/image audit utilities, not Android runtime deps.
+# Blender 4.3.2 supplies bpy/mathutils separately; Godot 4.6.3 is external.
+numpy==2.3.5
+Pillow==12.3.0
+zstandard==0.25.0

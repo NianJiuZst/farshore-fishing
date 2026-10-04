@@ -1,0 +1,262 @@
+{
+  "species": "greater_amberjack",
+  "status": "passed",
+  "binary": {
+    "sha256": "702bfd1f6acf23b1764a1e7ab9fea24f9663f8780a0bd1144ac1b86164ba8fc8",
+    "bytes": 4699688,
+    "meshes": 12,
+    "geometry_sha256": "402ea0ec7e72ef97879b8527e59fa82ecf052fc7cf96a44d52f12d5d8bf9721d",
+    "primitive_vertex_counts": [
+      408,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      1960,
+      4459,
+      2944,
+      480,
+      396,
+      4200
+    ],
+    "skins": 1,
+    "bones": 17,
+    "weighted_primitives": 12,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 34128,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/greater_amberjack.blend",
+    "sha256": "564e6205717923a11c55a105dc26d8ee5462cfc1f5b5fc04d9aa20dfe713bdf1",
+    "bytes": 4194701,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "greater_amberjack",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 34128,
+    "vertices": 17706,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "spinyfirstdorsal",
+      "longseconddorsal",
+      "longanal",
+      "sicklepectoralr",
+      "sicklepectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 12,
+    "materials": 12,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Streamlined moderately deep amberjack body with bluntly pointed snout",
+      "Shorter pectorals and long low soft dorsal/anal",
+      "Amber midlateral band and diagonal dark eye-to-dorsal band",
+      "Golden deeply forked tail without peduncle scutes"
+    ],
+    "sources": [
+      "https://www.fisheries.noaa.gov/species/greater-amberjack"
+    ],
+    "glb_bytes": 4699688,
+    "glb_sha256": "702bfd1f6acf23b1764a1e7ab9fea24f9663f8780a0bd1144ac1b86164ba8fc8",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "greater_amberjack",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06593458981045765,
+        "loop_seam_m": 7.74383948014704e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.25882684621876784,
+        "loop_seam_m": 6.883412503216397e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17742752626205782,
+        "loop_seam_m": 4.780146818203839e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.014447264136643774,
+        "loop_seam_m": 1.4197035136080842e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SpinyFirstDorsal",
+          "bone": "spinyfirstdorsal",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.0005694800056517124,
+          "ray_max_distance_m": 0.0009090097737498581,
+          "max_distance_m": 0.0009090097737498581,
+          "rest_distance_m": 0.0009008198394440114,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "LongSecondDorsal",
+          "bone": "longseconddorsal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005237398436293006,
+          "ray_max_distance_m": 0.0010637170635163784,
+          "max_distance_m": 0.0010637170635163784,
+          "rest_distance_m": 0.0010538854403421283,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "3": {
+          "name": "LongAnal",
+          "bone": "longanal",
+          "membrane_roots": 54,
+          "ray_roots": 135,
+          "membrane_max_distance_m": 0.0005228295340202749,
+          "ray_max_distance_m": 0.000920483551453799,
+          "max_distance_m": 0.000920483551453799,
+          "rest_distance_m": 0.0009176719468086958,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "4": {
+          "name": "SicklePectoralR",
+          "bone": "sicklepectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007075391476973891,
+          "ray_max_distance_m": 0.0011974155204370618,
+          "max_distance_m": 0.0011974155204370618,
+          "rest_distance_m": 0.0011885786661878228,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "SicklePectoralL",
+          "bone": "sicklepectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006929726805537939,
+          "ray_max_distance_m": 0.0011186015326529741,
+          "max_distance_m": 0.0011186015326529741,
+          "rest_distance_m": 0.0011084035504609346,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006782505661249161,
+          "ray_max_distance_m": 0.00101316103246063,
+          "max_distance_m": 0.00101316103246063,
+          "rest_distance_m": 0.001005599508062005,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007083124946802855,
+          "ray_max_distance_m": 0.0009983425261452794,
+          "max_distance_m": 0.0009983425261452794,
+          "rest_distance_m": 0.0009913814719766378,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007004308281466365,
+          "ray_max_distance_m": 0.0012043960159644485,
+          "max_distance_m": 0.0012043960159644485,
+          "rest_distance_m": 0.00119781494140625,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999001920223236,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "702bfd1f6acf23b1764a1e7ab9fea24f9663f8780a0bd1144ac1b86164ba8fc8",
+    "master_sha256": "564e6205717923a11c55a105dc26d8ee5462cfc1f5b5fc04d9aa20dfe713bdf1"
+  },
+  "visual_review": {
+    "species": "greater_amberjack",
+    "status": "reviewed_pass",
+    "glb_sha256": "702bfd1f6acf23b1764a1e7ab9fea24f9663f8780a0bd1144ac1b86164ba8fc8",
+    "master_sha256": "564e6205717923a11c55a105dc26d8ee5462cfc1f5b5fc04d9aa20dfe713bdf1",
+    "reviewed_views": {
+      "hero": "2263207764cab0406384e0a78d90d48e772cf23519e7070fe6c2a358d0185782",
+      "side": "ba5428fca63b732da819bda9eb29d31f65aab8fc85231c6213e89c9dd591ab88",
+      "top": "d42894992b3fbbb9a85852549a607b425dc53d42e144d3ffc51c3a72bdf7d36c",
+      "underside": "f4e28ed3046f254d6b598f7bf1b6c6e25f614f312afda67ab7d44b462ba2cb6b",
+      "pose_swim": "38826eed1353875f9030f3cef493daa9474125c56b85bf42c06b23a700247476",
+      "pose_struggle": "fd7df2c1dcd8d05b7a13d4a177611141106a081ef55f75d543cc3472b1e5cde2",
+      "pose_breach": "c1fa8f0933cffd6f8282012010c4621962da94d1beddb054559ae84dc93d3c1c",
+      "pose_landed": "afae3146392ba35e092968e1582544016a1e3c624694c7caf8888554180b44f0"
+    },
+    "observations": [
+      "Inspected all four anatomical views: streamlined body, amber lateral band, diagonal eye band, low median fins and golden forked tail visible.",
+      "Four animation views retain attached pectorals/median fins and unbroken body silhouette."
+    ],
+    "review_method": "Direct visual inspection of all eight rendered views at 1800x708 contact-sheet size, plus 900x600 hero/side detail"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/greater_amberjack.jpg",
+    "sha256": "c72a3d736e2c0de0028b47d1025966f022859c9fb406be69d8482ecbd962c41b"
+  },
+  "mouth_offset_normalized": [
+    0.4953086,
+    -0.0009383,
+    0.0
+  ]
+}

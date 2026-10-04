@@ -1,0 +1,271 @@
+{
+  "species": "whitetip_reef_shark",
+  "status": "passed",
+  "binary": {
+    "sha256": "5d823bff9d042f5775443f52c7f3a5f687c97615218d52abbd2decdae387d7c0",
+    "bytes": 6441240,
+    "meshes": 10,
+    "geometry_sha256": "18d145dc66bb69edbf743c81803a21f44c35c58ae8c3591076d3ed0e95581c88",
+    "primitive_vertex_counts": [
+      1140,
+      3566,
+      217,
+      396,
+      435,
+      435,
+      435,
+      435,
+      4861,
+      152,
+      4459
+    ],
+    "skins": 1,
+    "bones": 25,
+    "weighted_primitives": 11,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 31298,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/whitetip_reef_shark.blend",
+    "sha256": "ab9d53200ab8b936823869d463bf17cd3cf173685c8a26599e4c6a107362f1c8",
+    "bytes": 5941701,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "whitetip_reef_shark",
+    "pipeline_sha256": "139973de0cd2e5b4466f982dc27dcdfb9e2013bbfb9fd8125b81d5e9940da990",
+    "triangles": 31298,
+    "vertices": 16201,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "gill_GillSlitL1",
+      "gill_GillSlitL2",
+      "gill_GillSlitL3",
+      "gill_GillSlitL4",
+      "gill_GillSlitL5",
+      "gill_GillSlitR1",
+      "gill_GillSlitR2",
+      "gill_GillSlitR3",
+      "gill_GillSlitR4",
+      "gill_GillSlitR5",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectorall",
+      "pectoralr",
+      "pelvicl",
+      "pelvicr"
+    ],
+    "skinned_meshes": 10,
+    "materials": 11,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Small slender reef shark with wide flattened blunt head and relatively horizontally oval eyes",
+      "First dorsal origin distinctly behind pectoral free rear tips; second dorsal relatively substantial",
+      "Bright white tip on first dorsal and upper tail lobe; pectorals lack broad oceanic-white patches",
+      "No interdorsal ridge, rounded narrow pectorals and elongate heterocercal tail",
+      "Five curved gill slits and central underside mouth, a bottom-resting reef morphology"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",
+      "https://sharks.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=74&id=62734"
+    ],
+    "glb_bytes": 6441240,
+    "glb_sha256": "5d823bff9d042f5775443f52c7f3a5f687c97615218d52abbd2decdae387d7c0",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "whitetip_reef_shark",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.08120709879403336,
+        "loop_seam_m": 9.041699308236301e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.3003816512304294,
+        "loop_seam_m": 6.57578097784063e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.20466760634706835,
+        "loop_seam_m": 4.566514642380213e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.014269588109930922,
+        "loop_seam_m": 1.6576447086141975e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007521925726905465,
+          "ray_max_distance_m": 0.0010869597317650914,
+          "max_distance_m": 0.0010869597317650914,
+          "rest_distance_m": 0.0010851954575628042,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0006615943275392056,
+          "ray_max_distance_m": 0.0010994349140673876,
+          "max_distance_m": 0.0010994349140673876,
+          "rest_distance_m": 0.0010833278065547347,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005792907322756946,
+          "ray_max_distance_m": 0.001076744869351387,
+          "max_distance_m": 0.001076744869351387,
+          "rest_distance_m": 0.0010732709197327495,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005466429283842444,
+          "ray_max_distance_m": 0.0009716926724649966,
+          "max_distance_m": 0.0009716926724649966,
+          "rest_distance_m": 0.0009613664005883038,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005507527384907007,
+          "ray_max_distance_m": 0.000999433803372085,
+          "max_distance_m": 0.000999433803372085,
+          "rest_distance_m": 0.000989629770629108,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0004727829073090106,
+          "ray_max_distance_m": 0.0008538100519217551,
+          "max_distance_m": 0.0008538100519217551,
+          "rest_distance_m": 0.0008475420763716102,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005151655641384423,
+          "ray_max_distance_m": 0.0009011216461658478,
+          "max_distance_m": 0.0009011216461658478,
+          "rest_distance_m": 0.0008983996231108904,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "8": {
+          "name": "HeterocercalCaudal",
+          "bone": "caudal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0006928984075784683,
+          "ray_max_distance_m": 0.0010484813246876001,
+          "max_distance_m": 0.0010484813246876001,
+          "rest_distance_m": 0.0010453462600708008,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        }
+      }
+    },
+    "weight_sum_min": 0.9999042749404907,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "5d823bff9d042f5775443f52c7f3a5f687c97615218d52abbd2decdae387d7c0",
+    "master_sha256": "ab9d53200ab8b936823869d463bf17cd3cf173685c8a26599e4c6a107362f1c8"
+  },
+  "visual_review": {
+    "species": "whitetip_reef_shark",
+    "status": "reviewed_pass",
+    "glb_sha256": "5d823bff9d042f5775443f52c7f3a5f687c97615218d52abbd2decdae387d7c0",
+    "master_sha256": "ab9d53200ab8b936823869d463bf17cd3cf173685c8a26599e4c6a107362f1c8",
+    "reviewed_views": {
+      "hero": "aeb09129d0d7c7f30bb0c86fcf9a31ff14206931ecee09f5ea61540f1eaf83d3",
+      "side": "0e0fe83122b64084351365fac2fa8e8eb6be7e4decc7bde1736938204787dbc9",
+      "top": "4ebbea051c47d60b4f159c3e7505b0a93016658293768b97b776013e7660a7aa",
+      "underside": "707a580a4c8b42d637e3e7e601eb5ff2db2a2e2c62ee250b71e82e84d8ad23e1",
+      "pose_swim": "efc33187a450073f0fe37a636b0d7989623bd1e3741f78b75806b82906264180",
+      "pose_struggle": "49178ad96276fd0c1bde5d1188428509cda390afa692040018a425996be422bb",
+      "pose_breach": "66b66cc6ec607d97229e03dcc597a9498631940937cadc8fc32f623f5e6322b4",
+      "pose_landed": "18d20991957e7315c08370c5d190d48f4e854871f650b017d643e8e7a30f4d30"
+    },
+    "observations": [
+      "Final eight views show a slender reef body, broad flattened rounded snout, oval eyes, posterior first dorsal and substantial second dorsal.",
+      "White tips are confined to first dorsal and upper caudal; pectorals remain unmarked. Surface-assigned tip pigment stays attached and clean in all four action poses."
+    ],
+    "review_method": "Direct final eight-view contact-sheet inspection, plus full-resolution top/underside check of painted fin surfaces"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/whitetip_reef_shark.jpg",
+    "sha256": "0cbaab09d14f15ccca079cdb08825fc80ba3029fed943c725e4c2c414024baa6"
+  },
+  "mouth_offset_normalized": [
+    0.4499964,
+    -0.013453,
+    0.0
+  ]
+}

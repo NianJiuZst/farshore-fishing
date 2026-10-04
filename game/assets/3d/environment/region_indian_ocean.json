@@ -1,0 +1,9 @@
+{
+  "region_id": "indian_ocean",
+  "triangles": 41760,
+  "sha256": "d1d4838add3c80c6dd4cda174d6e6020c3aaff08d335c2b0d829c63d1399c421",
+  "authoring": "Original deterministic island, sea-stack, palm and reef geometry. Fictional composite ocean scenery, not a mapped real locality.",
+  "master": "art_masters/3d/region_indian_ocean.blend",
+  "up": "+Y",
+  "unit": "meter"
+}

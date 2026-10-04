@@ -1,0 +1,262 @@
+{
+  "species": "yellowtail_kingfish",
+  "status": "passed",
+  "binary": {
+    "sha256": "f347a61b51e98ad0826cd985627b438492c884faf479f0311d585e643b19e61b",
+    "bytes": 4681380,
+    "meshes": 12,
+    "geometry_sha256": "4ab4063cf69aa68c77f021e05116e3c37f94a9a2110d654a66f60345b8bcdb76",
+    "primitive_vertex_counts": [
+      408,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2944,
+      480,
+      396,
+      4200,
+      1960,
+      4459
+    ],
+    "skins": 1,
+    "bones": 17,
+    "weighted_primitives": 12,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 34128,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/yellowtail_kingfish.blend",
+    "sha256": "3b0e7c3652da9e6ff86c36865e94001b4d05fb07fdcfa350cb92608763ab7d45",
+    "bytes": 4171911,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "yellowtail_kingfish",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 34128,
+    "vertices": 17706,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "spinyfirstdorsal",
+      "longseconddorsal",
+      "longanal",
+      "sicklepectoralr",
+      "sicklepectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 12,
+    "materials": 12,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Long lean blue-green kingfish spindle with thin yellow eye-to-tail stripe",
+      "Bright yellow deeply forked caudal and short pointed pectorals",
+      "Low separated first dorsal and elongated second dorsal and anal",
+      "Lacks hard rear lateral-line scutes"
+    ],
+    "sources": [
+      "https://fishesofaustralia.net.au/home/species/1662"
+    ],
+    "glb_bytes": 4681380,
+    "glb_sha256": "f347a61b51e98ad0826cd985627b438492c884faf479f0311d585e643b19e61b",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "yellowtail_kingfish",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06587395901483684,
+        "loop_seam_m": 7.76566508919609e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.25809071004321826,
+        "loop_seam_m": 2.3296989493252665e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17689976307341937,
+        "loop_seam_m": 1.6178468985869424e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.014542715855785886,
+        "loop_seam_m": 1.4237052890999962e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SpinyFirstDorsal",
+          "bone": "spinyfirstdorsal",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.0005489100585691631,
+          "ray_max_distance_m": 0.000829844269901514,
+          "max_distance_m": 0.000829844269901514,
+          "rest_distance_m": 0.0008219830924645066,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "LongSecondDorsal",
+          "bone": "longseconddorsal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005175883416086435,
+          "ray_max_distance_m": 0.001035537221468985,
+          "max_distance_m": 0.001035537221468985,
+          "rest_distance_m": 0.0010251920903101563,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "3": {
+          "name": "LongAnal",
+          "bone": "longanal",
+          "membrane_roots": 54,
+          "ray_roots": 135,
+          "membrane_max_distance_m": 0.0005192369571886957,
+          "ray_max_distance_m": 0.0008932421915233135,
+          "max_distance_m": 0.0008932421915233135,
+          "rest_distance_m": 0.0008931237389333546,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "4": {
+          "name": "SicklePectoralR",
+          "bone": "sicklepectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006637404439970851,
+          "ray_max_distance_m": 0.001184588996693492,
+          "max_distance_m": 0.001184588996693492,
+          "rest_distance_m": 0.0011718879686668515,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "SicklePectoralL",
+          "bone": "sicklepectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006581050110980868,
+          "ray_max_distance_m": 0.001034190645441413,
+          "max_distance_m": 0.001034190645441413,
+          "rest_distance_m": 0.0010210820473730564,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006776575464755297,
+          "ray_max_distance_m": 0.001118763000704348,
+          "max_distance_m": 0.001118763000704348,
+          "rest_distance_m": 0.0011182227171957493,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007093856111168861,
+          "ray_max_distance_m": 0.0011313492432236671,
+          "max_distance_m": 0.0011313492432236671,
+          "rest_distance_m": 0.0011304777581244707,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0006998252356424928,
+          "ray_max_distance_m": 0.001193237374536693,
+          "max_distance_m": 0.001193237374536693,
+          "rest_distance_m": 0.001187443733215332,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999023079872131,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "f347a61b51e98ad0826cd985627b438492c884faf479f0311d585e643b19e61b",
+    "master_sha256": "3b0e7c3652da9e6ff86c36865e94001b4d05fb07fdcfa350cb92608763ab7d45"
+  },
+  "visual_review": {
+    "species": "yellowtail_kingfish",
+    "status": "reviewed_pass",
+    "glb_sha256": "f347a61b51e98ad0826cd985627b438492c884faf479f0311d585e643b19e61b",
+    "master_sha256": "3b0e7c3652da9e6ff86c36865e94001b4d05fb07fdcfa350cb92608763ab7d45",
+    "reviewed_views": {
+      "hero": "aea0b49260dac8037c4e233926b5dcc3f1ff186c6fcaca0cf2285f77070f2fec",
+      "side": "a1625807283fb3f1082bd110e7cecfd20dd8f35c12edb465fae9e0e385374679",
+      "top": "86c31a8ce47f3df1ab0cfceccd376e97bce4277ac5320e780c80df80ae014015",
+      "underside": "1e686397cffcd7aab161c3cf42a2faa299df28c8fe204f2aceb69498fa19c032",
+      "pose_swim": "bf8cacf00eaf512a7bb020b807619d8383e40d0e8791f137c6074c2ef97b74bd",
+      "pose_struggle": "9efdd8a2d1b3087fad7690dde2e980dd6d0e98dde464763757acfeb54130eb65",
+      "pose_breach": "c67d18ed9b5f76bc8fd4e23bdfa1fc31dda1ec77fa958ceaf0bc918541ec999e",
+      "pose_landed": "e833b56cfcf11fd411facc984957e98ac227612c1c3182edb5bd614a5df0c590"
+    },
+    "observations": [
+      "Four rest views show lean blue-green Seriola body, narrow yellow stripe, short pectorals, smooth unscuted caudal peduncle and yellow forked tail.",
+      "All four action poses retain unbroken skin and seated fins."
+    ],
+    "review_method": "Direct visual inspection of all eight rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/yellowtail_kingfish.jpg",
+    "sha256": "3922b7991de8f1f2f157466fa2fb6707c6a15e7766e3f8e484dfaf560ac43540"
+  },
+  "mouth_offset_normalized": [
+    0.4953134,
+    -0.0018747,
+    0.0
+  ]
+}

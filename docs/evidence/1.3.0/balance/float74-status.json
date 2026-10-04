@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 554.78,
+  "stable_inputs": true,
+  "changed_inputs": [],
+  "command": [
+    "godot",
+    "--headless",
+    "--audio-driver",
+    "Dummy",
+    "--path",
+    "/workspace/scratch/c16084497664/farshore-fishing-ocean/game",
+    "--script",
+    "res://tests/float_encounter_tests.gd",
+    "--",
+    "--output=/workspace/scratch/c16084497664/farshore-fishing-ocean/build/ocean-float74-final/raw.json",
+    "--seeds=4"
+  ]
+}

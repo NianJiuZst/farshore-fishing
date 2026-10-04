@@ -1,0 +1,249 @@
+{
+  "species": "opah",
+  "status": "passed",
+  "binary": {
+    "sha256": "487a86d2277119dad27751ba1411c7f9b508377145a05367e95121b2f271d2fe",
+    "bytes": 4629892,
+    "meshes": 11,
+    "geometry_sha256": "b9b6e2b3d1545407e9608e12ceb9f51d1e670686d510debc436f5cd9948703e7",
+    "primitive_vertex_counts": [
+      408,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2944,
+      480,
+      396,
+      4459,
+      6556
+    ],
+    "skins": 1,
+    "bones": 16,
+    "weighted_primitives": 11,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 3,
+    "triangles": 34888,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/opah.blend",
+    "sha256": "209a197a69af663ca1f0a07263c6e48d7ad0f1c99005fa87d7692a89034e4160",
+    "bytes": 4217080,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "opah",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 34888,
+    "vertices": 18102,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "highcurveddorsal",
+      "longcurvedanal",
+      "wingpectoralr",
+      "wingpectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 11,
+    "materials": 11,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Tall nearly circular strongly laterally compressed body",
+      "Long angular red dorsal and anal fins and winglike red pectorals",
+      "Large orange-rimmed eyes, small protruding terminal mouth",
+      "Pale round flank spots on steel-silver bronze body and red forked tail"
+    ],
+    "sources": [
+      "https://www.fisheries.noaa.gov/feature-story/clues-fish-auction-reveal-several-new-species-opah",
+      "https://www.fisheries.noaa.gov/species/opah"
+    ],
+    "glb_bytes": 4629892,
+    "glb_sha256": "487a86d2277119dad27751ba1411c7f9b508377145a05367e95121b2f271d2fe",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "opah",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.057522259968640806,
+        "loop_seam_m": 5.411581073743769e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.22663471352059086,
+        "loop_seam_m": 1.6234710076317818e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.15764408860645554,
+        "loop_seam_m": 1.127410796320219e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.016487822314759273,
+        "loop_seam_m": 9.92120461455066e-20
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "HighCurvedDorsal",
+          "bone": "highcurveddorsal",
+          "membrane_roots": 90,
+          "ray_roots": 225,
+          "membrane_max_distance_m": 0.0005489988252520561,
+          "ray_max_distance_m": 0.001149571966379881,
+          "max_distance_m": 0.001149571966379881,
+          "rest_distance_m": 0.001148815150372684,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "2": {
+          "name": "LongCurvedAnal",
+          "bone": "longcurvedanal",
+          "membrane_roots": 64,
+          "ray_roots": 160,
+          "membrane_max_distance_m": 0.0004950598231516778,
+          "ray_max_distance_m": 0.000850546348374337,
+          "max_distance_m": 0.000850546348374337,
+          "rest_distance_m": 0.0008459766977466643,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "WingPectoralR",
+          "bone": "wingpectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007990779704414308,
+          "ray_max_distance_m": 0.0012396700913086534,
+          "max_distance_m": 0.0012396700913086534,
+          "rest_distance_m": 0.001239527715370059,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "4": {
+          "name": "WingPectoralL",
+          "bone": "wingpectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007887317915447056,
+          "ray_max_distance_m": 0.0011814581230282784,
+          "max_distance_m": 0.0011814581230282784,
+          "rest_distance_m": 0.001169877708889544,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "5": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0005235905991867185,
+          "ray_max_distance_m": 0.001069328747689724,
+          "max_distance_m": 0.001069328747689724,
+          "rest_distance_m": 0.0010672608623281121,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0005507823661901057,
+          "ray_max_distance_m": 0.0010649152100086212,
+          "max_distance_m": 0.0010649152100086212,
+          "rest_distance_m": 0.0010619766544550657,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "7": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007437390740960836,
+          "ray_max_distance_m": 0.001234968425706029,
+          "max_distance_m": 0.001234968425706029,
+          "rest_distance_m": 0.001223444938659668,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999023079872131,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "487a86d2277119dad27751ba1411c7f9b508377145a05367e95121b2f271d2fe",
+    "master_sha256": "209a197a69af663ca1f0a07263c6e48d7ad0f1c99005fa87d7692a89034e4160"
+  },
+  "visual_review": {
+    "species": "opah",
+    "status": "reviewed_pass",
+    "glb_sha256": "487a86d2277119dad27751ba1411c7f9b508377145a05367e95121b2f271d2fe",
+    "master_sha256": "209a197a69af663ca1f0a07263c6e48d7ad0f1c99005fa87d7692a89034e4160",
+    "reviewed_views": {
+      "hero": "1a9ee05570f480555911b47a3f923d78751a3e4aace52d13f5477dd289756182",
+      "side": "efd86050c87814129aa058c277c823644edce43e89417ab6754c2cde1298aac9",
+      "top": "5d3a4caeed3e1e4d38242206d6429b465ebda2202793f3c78854ff677d42e1c3",
+      "underside": "f151dcbada2cbceee81578e73e9a3a93cbbfc068de357aa57b3e56df3c3b8a38",
+      "pose_swim": "30628dd7c7fc0de9cdcc966e950688aac79ea64d47d436de19ae10d42ab4dd26",
+      "pose_struggle": "7e53f269ca01c3812e17dc20e1d6e694016d0bf9f3af4f16bb0710a7778a07c9",
+      "pose_breach": "f093628cfb3de39b8dc90193849887a989041b0839651d933f04dd59a48dba41",
+      "pose_landed": "84fbec3ad5c8e563f939b7d130756f93661597abeb35a04a76a5bfddd86ba3e9"
+    },
+    "observations": [
+      "After revision, a continuous low posterior dorsal strip is visible above the round body in side, hero and all four action poses; initial body-edge intersection is resolved.",
+      "Disc-shaped compressed volume, red paired wings and median fins, pale flank spots and large red eye rim remain distinct and clean in all eight views."
+    ],
+    "review_method": "Direct visual inspection of final eight-view contact sheet plus 900x600 side detail"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/opah.jpg",
+    "sha256": "0d557ef7f890c49c9f2c01451db03247ee06a63ac4c8d7da46c46804cd8f48cf"
+  },
+  "mouth_offset_normalized": [
+    0.4950152,
+    -0.0079757,
+    0.0
+  ]
+}

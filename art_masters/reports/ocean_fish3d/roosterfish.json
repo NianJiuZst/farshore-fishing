@@ -1,0 +1,354 @@
+{
+  "species": "roosterfish",
+  "status": "passed",
+  "binary": {
+    "sha256": "def109fbffe122b6fa8d334bc83cb0c11c7d8ddcbe2f5351d97ec9035c151c0f",
+    "bytes": 5275320,
+    "meshes": 13,
+    "geometry_sha256": "ac567c99d0a56c446ccb9ee297c1678453916affbee74e345c462fc9a738027d",
+    "primitive_vertex_counts": [
+      408,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2944,
+      480,
+      396,
+      4200,
+      1960,
+      4459,
+      4200
+    ],
+    "skins": 1,
+    "bones": 24,
+    "weighted_primitives": 13,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 42192,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/roosterfish.blend",
+    "sha256": "45e02f3a1d4679bb22c5a2c5683aa4fcf75c364b973370f93a98ff8a5e02c4bb",
+    "bytes": 4651643,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "roosterfish",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 42192,
+    "vertices": 21906,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "spinyfirstdorsal",
+      "longseconddorsal",
+      "longanal",
+      "sicklepectoralr",
+      "sicklepectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL",
+      "roostercomb1",
+      "roostercomb2",
+      "roostercomb3",
+      "roostercomb4",
+      "roostercomb5",
+      "roostercomb6",
+      "roostercomb7"
+    ],
+    "skinned_meshes": 13,
+    "materials": 13,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Seven dramatically elongated dark anterior dorsal rays form a rooster comb",
+      "Compressed silver jack-like body with two broad oblique charcoal bands",
+      "Long curving pectorals and deeply forked caudal",
+      "Smooth lateral-line peduncle without trevally scutes"
+    ],
+    "sources": [
+      "https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1223"
+    ],
+    "glb_bytes": 5275320,
+    "glb_sha256": "def109fbffe122b6fa8d334bc83cb0c11c7d8ddcbe2f5351d97ec9035c151c0f",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "roosterfish",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06619353640548442,
+        "loop_seam_m": 7.647313252943118e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.26077105316277277,
+        "loop_seam_m": 2.294193702243585e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17880652137140846,
+        "loop_seam_m": 1.5931900550184756e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.01372946573687483,
+        "loop_seam_m": 1.4020075527550892e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SpinyFirstDorsal",
+          "bone": "spinyfirstdorsal",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.0007753665558993816,
+          "ray_max_distance_m": 0.001142539782449603,
+          "max_distance_m": 0.001142539782449603,
+          "rest_distance_m": 0.0011421781964600086,
+          "worst_clip": "breach",
+          "worst_frame": 27
+        },
+        "2": {
+          "name": "LongSecondDorsal",
+          "bone": "longseconddorsal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005685532814823091,
+          "ray_max_distance_m": 0.001090480131097138,
+          "max_distance_m": 0.001090480131097138,
+          "rest_distance_m": 0.0010829174425452948,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "3": {
+          "name": "LongAnal",
+          "bone": "longanal",
+          "membrane_roots": 54,
+          "ray_roots": 135,
+          "membrane_max_distance_m": 0.0005430169985629618,
+          "ray_max_distance_m": 0.0009199661435559392,
+          "max_distance_m": 0.0009199661435559392,
+          "rest_distance_m": 0.0009170619305223227,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "SicklePectoralR",
+          "bone": "sicklepectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0008108540205284953,
+          "ray_max_distance_m": 0.0012367068557068706,
+          "max_distance_m": 0.0012367068557068706,
+          "rest_distance_m": 0.0012320930836722255,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "SicklePectoralL",
+          "bone": "sicklepectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007961364462971687,
+          "ray_max_distance_m": 0.0011435289634391665,
+          "max_distance_m": 0.0011435289634391665,
+          "rest_distance_m": 0.0011388855054974556,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006348624592646956,
+          "ray_max_distance_m": 0.0009603057987987995,
+          "max_distance_m": 0.0009603057987987995,
+          "rest_distance_m": 0.0009498790604993701,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006666412809863687,
+          "ray_max_distance_m": 0.0009797338861972094,
+          "max_distance_m": 0.0009797338861972094,
+          "rest_distance_m": 0.0009696620982140303,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007026661769486964,
+          "ray_max_distance_m": 0.0012234596069902182,
+          "max_distance_m": 0.0012234596069902182,
+          "rest_distance_m": 0.001215904951095581,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "9": {
+          "name": "RoosterComb1",
+          "bone": "roostercomb1",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.00047293055104091763,
+          "ray_max_distance_m": 0.0006035674596205354,
+          "max_distance_m": 0.0006035674596205354,
+          "rest_distance_m": 0.0006013675010763109,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "10": {
+          "name": "RoosterComb2",
+          "bone": "roostercomb2",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.0004500522627495229,
+          "ray_max_distance_m": 0.0005398874636739492,
+          "max_distance_m": 0.0005398874636739492,
+          "rest_distance_m": 0.0005367649719119072,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "11": {
+          "name": "RoosterComb3",
+          "bone": "roostercomb3",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.00046698402729816735,
+          "ray_max_distance_m": 0.0011018282966688275,
+          "max_distance_m": 0.0011018282966688275,
+          "rest_distance_m": 0.0010971735464408994,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "12": {
+          "name": "RoosterComb4",
+          "bone": "roostercomb4",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.00046985168592073023,
+          "ray_max_distance_m": 0.0005152458907105029,
+          "max_distance_m": 0.0005152458907105029,
+          "rest_distance_m": 0.0005074825021438301,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "13": {
+          "name": "RoosterComb5",
+          "bone": "roostercomb5",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.0004774372500833124,
+          "ray_max_distance_m": 0.0005203134496696293,
+          "max_distance_m": 0.0005203134496696293,
+          "rest_distance_m": 0.0005177689017727971,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "14": {
+          "name": "RoosterComb6",
+          "bone": "roostercomb6",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.0004920816281810403,
+          "ray_max_distance_m": 0.0005484221619553864,
+          "max_distance_m": 0.0005484221619553864,
+          "rest_distance_m": 0.0005449912860058248,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "15": {
+          "name": "RoosterComb7",
+          "bone": "roostercomb7",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.0004788455262314528,
+          "ray_max_distance_m": 0.0005394137115217745,
+          "max_distance_m": 0.0005394137115217745,
+          "rest_distance_m": 0.0005389921134337783,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        }
+      }
+    },
+    "weight_sum_min": 0.9999012649059296,
+    "weight_sum_max": 1.0000000447034836,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "def109fbffe122b6fa8d334bc83cb0c11c7d8ddcbe2f5351d97ec9035c151c0f",
+    "master_sha256": "45e02f3a1d4679bb22c5a2c5683aa4fcf75c364b973370f93a98ff8a5e02c4bb"
+  },
+  "visual_review": {
+    "species": "roosterfish",
+    "status": "reviewed_pass",
+    "glb_sha256": "def109fbffe122b6fa8d334bc83cb0c11c7d8ddcbe2f5351d97ec9035c151c0f",
+    "master_sha256": "45e02f3a1d4679bb22c5a2c5683aa4fcf75c364b973370f93a98ff8a5e02c4bb",
+    "reviewed_views": {
+      "hero": "88149cdd069a3e26b8792af9fc7680290ac658865a595b9a4842d0622060b30e",
+      "side": "62f37fbd5e4c427033db712e2e25fe196c0cbfd64c5a6ff9b6a156044e11afdb",
+      "top": "779612dfb2f9f1f211badbe185d2311eb995f127c8a2adec60e5c8de5fd2a9ce",
+      "underside": "0e3387c4e903e548e3334f3b45c01fcc60c59a949441dafef0e6da67a5fc2f24",
+      "pose_swim": "8cf20ab09ff6d3a06c0975b378bd377f6878816f8a1981ef11abd3d9ec413c53",
+      "pose_struggle": "2befdb759ba982404ec0c6819b3db316930f12d67cfd14e7a2cfd13bf1a318bd",
+      "pose_breach": "99b7e6c2a3ddcf316567f7d2a69a878af8faccfd38dd3a2b6f67974506bf5aa0",
+      "pose_landed": "a8ba0c754ba5a1b860b023340b5796356a26887549a2af8d5a4dd38a67b0d7e6"
+    },
+    "observations": [
+      "Final eight views show seven separately tapered curved dorsal streamers above low basal webs, two broad oblique flank bands, long curved pectorals and smooth unscuted peduncle.",
+      "Initial blunt comb blades were replaced with flexible tapered geometry; all four poses keep streamers and fins seated."
+    ],
+    "review_method": "Direct visual inspection of all eight final rendered views; full-resolution hero/top/underside details additionally inspected for key shark anatomy"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/roosterfish.jpg",
+    "sha256": "254968ddba2557911af318be84a689855276414928e193e3b866f186b98cd57e"
+  },
+  "mouth_offset_normalized": [
+    0.4952946,
+    -0.0037643,
+    0.0
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "species": "great_barracuda",
+  "status": "passed",
+  "binary": {
+    "sha256": "80b391c5314d08c64e383b489c01ebe5fbb9b9ac6df419a48f94b0c71cba16fd",
+    "bytes": 4915728,
+    "meshes": 13,
+    "geometry_sha256": "5b793e5ebdbbddb81caba8946e17cb3e5449ecf6055b810576b1d1fbb6c963fa",
+    "primitive_vertex_counts": [
+      408,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      1568,
+      4459,
+      2944,
+      480,
+      396,
+      312,
+      3360
+    ],
+    "skins": 1,
+    "bones": 17,
+    "weighted_primitives": 13,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 32296,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/great_barracuda.blend",
+    "sha256": "e46f3b6e50c70e70fecd81ec9158386cd25ee883456240d6dba0aa00627ff798",
+    "bytes": 4422477,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "great_barracuda",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 32296,
+    "vertices": 16786,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "separatedfirstdorsal",
+      "posteriordorsal",
+      "posterioranal",
+      "pectoralr",
+      "pectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 13,
+    "materials": 13,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Long nearly cylindrical body and long pointed jaws with underslung lower-jaw tip",
+      "Two widely separated dorsals and opposed posterior anal",
+      "Conspicuous interlocking conical fangs, dark irregular upper bars and lower flank blotches",
+      "Deep-forked dusky caudal on robust peduncle"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-barracuda/"
+    ],
+    "glb_bytes": 4915728,
+    "glb_sha256": "80b391c5314d08c64e383b489c01ebe5fbb9b9ac6df419a48f94b0c71cba16fd",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "great_barracuda",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06332777684068393,
+        "loop_seam_m": 8.691364478323055e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.24649704685833865,
+        "loop_seam_m": 2.607409016739815e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.16888277948767874,
+        "loop_seam_m": 1.8107005898890023e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.011143477350641548,
+        "loop_seam_m": 1.5934166228610006e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SeparatedFirstDorsal",
+          "bone": "separatedfirstdorsal",
+          "membrane_roots": 24,
+          "ray_roots": 60,
+          "membrane_max_distance_m": 0.0004747502680402249,
+          "ray_max_distance_m": 0.0006598489126190543,
+          "max_distance_m": 0.0006598489126190543,
+          "rest_distance_m": 0.0006541693001054227,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "PosteriorDorsal",
+          "bone": "posteriordorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0004711184883490205,
+          "ray_max_distance_m": 0.0006816701497882605,
+          "max_distance_m": 0.0006816701497882605,
+          "rest_distance_m": 0.0006758659146726131,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "PosteriorAnal",
+          "bone": "posterioranal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0004733912064693868,
+          "ray_max_distance_m": 0.0010960741201415658,
+          "max_distance_m": 0.0010960741201415658,
+          "rest_distance_m": 0.0010956634068861604,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "4": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0006718802032992244,
+          "ray_max_distance_m": 0.0010800249874591827,
+          "max_distance_m": 0.0010800249874591827,
+          "rest_distance_m": 0.0010728240013122559,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007514239405281842,
+          "ray_max_distance_m": 0.0011408349964767694,
+          "max_distance_m": 0.0011408349964767694,
+          "rest_distance_m": 0.0011233219411224127,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "6": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007230160408653319,
+          "ray_max_distance_m": 0.001179198268800974,
+          "max_distance_m": 0.001179198268800974,
+          "rest_distance_m": 0.0011636540293693542,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006629024865105748,
+          "ray_max_distance_m": 0.000990136992186308,
+          "max_distance_m": 0.000990136992186308,
+          "rest_distance_m": 0.0009773846250027418,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "8": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007025718805380166,
+          "ray_max_distance_m": 0.0009334543137811124,
+          "max_distance_m": 0.0009334543137811124,
+          "rest_distance_m": 0.0009231068543158472,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        }
+      }
+    },
+    "weight_sum_min": 0.999908447265625,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "80b391c5314d08c64e383b489c01ebe5fbb9b9ac6df419a48f94b0c71cba16fd",
+    "master_sha256": "e46f3b6e50c70e70fecd81ec9158386cd25ee883456240d6dba0aa00627ff798"
+  },
+  "visual_review": {
+    "species": "great_barracuda",
+    "status": "reviewed_pass",
+    "glb_sha256": "80b391c5314d08c64e383b489c01ebe5fbb9b9ac6df419a48f94b0c71cba16fd",
+    "master_sha256": "e46f3b6e50c70e70fecd81ec9158386cd25ee883456240d6dba0aa00627ff798",
+    "reviewed_views": {
+      "hero": "ef59b2b9974da10acad44f2dd9b28b451d85eccf1f92d4f85dc8fbdefba9841b",
+      "side": "e839154fcf74078ed66b2574e5297c3e921ca672a028e6a82975bf5e685bcbed",
+      "top": "9a60f548cc85d571e45fd4237218fdb819e3a7b64e194b7786e4b11f7cfb6a28",
+      "underside": "d1c87fe6e3b5e67449e09def19a95b1a4c9c91cedeba3ae2dc7299866b6e8ec0",
+      "pose_swim": "a2ac4e2795967ef002011d444378f6498b77ed3457db8ea1d91ca3d596acfe6b",
+      "pose_struggle": "b48b8e24df0ad27bd8e9e415bb9eb5ad5517e76ba2bbd36f4779c3c5e26cc109",
+      "pose_breach": "11092d85831eb6e9c2aa8068125316b0b382d82596a8c2f3865a0f8fa5b9f969",
+      "pose_landed": "82eee8deccc30a58d26ff2a26bd3253d0106ccd96ec7f939d649143ce436b38e"
+    },
+    "observations": [
+      "Eight views show a long cylindrical torso, projecting narrow jaws with discrete conical teeth, widely separated dorsal fins and opposed rear anal, irregular flank bars/blotches and forked caudal.",
+      "Top/underside reveal full volume; four clip poses retain clean fin seating and skin."
+    ],
+    "review_method": "Direct visual inspection of final eight-view contact sheet, with 900x600 detail on revised fin shapes"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/great_barracuda.jpg",
+    "sha256": "b3fc0ef688b4ee465207dbcfae93ee5f976c22eddf635f47bf748e5b0aaf6569"
+  },
+  "mouth_offset_normalized": [
+    0.4954966,
+    -0.0090068,
+    0.0
+  ]
+}

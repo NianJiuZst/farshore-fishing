@@ -1,0 +1,270 @@
+{
+  "species": "tiger_shark",
+  "status": "passed",
+  "binary": {
+    "sha256": "771ba9dbf5e2127840b8497d1b2263c7134fad6fa323444fc2655231b17a7fdf",
+    "bytes": 6657432,
+    "meshes": 10,
+    "geometry_sha256": "be59882368ab54efa667902fe0d9b3167baa98229ed54d4a2b26671212d7146b",
+    "primitive_vertex_counts": [
+      1254,
+      4684,
+      217,
+      396,
+      435,
+      435,
+      435,
+      435,
+      4928,
+      4459
+    ],
+    "skins": 1,
+    "bones": 25,
+    "weighted_primitives": 10,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 33442,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/tiger_shark.blend",
+    "sha256": "bfae934080ee6ace20febc6de5878ac3c450cfe83d4bf89566f9933fd4cc42f0",
+    "bytes": 6111371,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "tiger_shark",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 33442,
+    "vertices": 17279,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "gill_GillSlitL1",
+      "gill_GillSlitL2",
+      "gill_GillSlitL3",
+      "gill_GillSlitL4",
+      "gill_GillSlitL5",
+      "gill_GillSlitR1",
+      "gill_GillSlitR2",
+      "gill_GillSlitR3",
+      "gill_GillSlitR4",
+      "gill_GillSlitR5",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectorall",
+      "pectoralr",
+      "pelvicl",
+      "pelvicr"
+    ],
+    "skinned_meshes": 10,
+    "materials": 10,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Broad bluntly rounded snout, heavy anterior body and relatively small lateral eyes",
+      "Dark irregular vertical flank bars fade toward ventrum and rear; realistic gray-brown base",
+      "Long upper tail lobe, low caudal keels and low interdorsal ridge",
+      "Moderately tall first dorsal and broad robust pectorals distinct from oceanic white paddle fins",
+      "Five curved gill slits, wide ventral mouth and small spiracles behind eyes"
+    ],
+    "sources": [
+      "https://australian.museum/learn/animals/fishes/tiger-shark-galeocerdo-cuvier-pron-lesueur-1822/",
+      "https://www.fishbase.se/summary/886"
+    ],
+    "glb_bytes": 6657432,
+    "glb_sha256": "771ba9dbf5e2127840b8497d1b2263c7134fad6fa323444fc2655231b17a7fdf",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "tiger_shark",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06735926827731162,
+        "loop_seam_m": 7.494620320812787e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2783304618356854,
+        "loop_seam_m": 6.570626480922736e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.19164359086723987,
+        "loop_seam_m": 4.562934646359515e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.01181717643898752,
+        "loop_seam_m": 1.3740137005524893e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007419297471642494,
+          "ray_max_distance_m": 0.0010664251167327166,
+          "max_distance_m": 0.0010664251167327166,
+          "rest_distance_m": 0.0010653497884050012,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0006701351376250386,
+          "ray_max_distance_m": 0.001084115239791572,
+          "max_distance_m": 0.001084115239791572,
+          "rest_distance_m": 0.0010681027779355645,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005481613334268332,
+          "ray_max_distance_m": 0.0010537301423028111,
+          "max_distance_m": 0.0010537301423028111,
+          "rest_distance_m": 0.001043668482452631,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005006624269299209,
+          "ray_max_distance_m": 0.0009835066739469767,
+          "max_distance_m": 0.0009835066739469767,
+          "rest_distance_m": 0.0009764381684362888,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.000506982090882957,
+          "ray_max_distance_m": 0.0010272546205669641,
+          "max_distance_m": 0.0010272546205669641,
+          "rest_distance_m": 0.0010232754284515977,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005186983034946024,
+          "ray_max_distance_m": 0.0008002739632502198,
+          "max_distance_m": 0.0008002739632502198,
+          "rest_distance_m": 0.0007765058544464409,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005039107636548579,
+          "ray_max_distance_m": 0.0008333207806572318,
+          "max_distance_m": 0.0008333207806572318,
+          "rest_distance_m": 0.000818477536085993,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "8": {
+          "name": "HeterocercalCaudal",
+          "bone": "caudal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0006658660713583231,
+          "ray_max_distance_m": 0.001089700497686863,
+          "max_distance_m": 0.001089700497686863,
+          "rest_distance_m": 0.0010848045349121094,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999046325683594,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "771ba9dbf5e2127840b8497d1b2263c7134fad6fa323444fc2655231b17a7fdf",
+    "master_sha256": "bfae934080ee6ace20febc6de5878ac3c450cfe83d4bf89566f9933fd4cc42f0"
+  },
+  "visual_review": {
+    "species": "tiger_shark",
+    "status": "reviewed_pass",
+    "glb_sha256": "771ba9dbf5e2127840b8497d1b2263c7134fad6fa323444fc2655231b17a7fdf",
+    "master_sha256": "bfae934080ee6ace20febc6de5878ac3c450cfe83d4bf89566f9933fd4cc42f0",
+    "reviewed_views": {
+      "hero": "09fb03148029892b9359a7c6cb87090faa45ba631338ef540deaf01fc69bd763",
+      "side": "10f56a81fc2697104de2236c7ba68b452520ca06cc745a00450c023bdfab7f4a",
+      "top": "a83bc1d4a2a2f128bf174c3c935989663fc1e1afc79b17f3d67c093f9f91211c",
+      "underside": "888d66c1e46f46656443c9332baec5b74956a922a98409c4ba0077fde82d7337",
+      "pose_swim": "775d61426cdf57113cec2dedcff2aa9f843b2457a526560dc655cb6d94c7e158",
+      "pose_struggle": "31973340c2c9da36a860f1aac148cf8b64a07ca239f09f964a35e3ced9f4a32a",
+      "pose_breach": "d5f3cb91fa7e22a8ec4340281cea554a88fedb20fa7b6b88f9dd9d14e44fb93a",
+      "pose_landed": "491f15bcb4134e76659ca11b2e6364c255348f172f952da2aedf8ddccad87eaa"
+    },
+    "observations": [
+      "Eight views show a broad blunt rounded head and thick forebody, irregular dark vertical upper-flank bars, five gills per side and upper-heavy caudal.",
+      "Top/ventral views confirm the broad flattened snout and curved underside mouth; all four poses retain attached fins and coherent deformation."
+    ],
+    "review_method": "Direct visual inspection of all eight final rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/tiger_shark.jpg",
+    "sha256": "438baae6576fbdf99258158c2537e931fca23c84504eebf0cebfce68be65b737"
+  },
+  "mouth_offset_normalized": [
+    0.4490323,
+    -0.0252486,
+    0.0
+  ]
+}

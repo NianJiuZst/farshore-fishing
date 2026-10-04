@@ -1,0 +1,263 @@
+{
+  "species": "giant_trevally",
+  "status": "passed",
+  "binary": {
+    "sha256": "f8d1a209511e4ed995aed85660feeffdadd1866917d1ab0464586aaf14960674",
+    "bytes": 4840368,
+    "meshes": 13,
+    "geometry_sha256": "b61569d370ff9f0b956881a7874a1da11235990edd74aa3443d8fd90f4d98e3f",
+    "primitive_vertex_counts": [
+      408,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      1960,
+      4459,
+      2944,
+      480,
+      396,
+      176,
+      4200
+    ],
+    "skins": 1,
+    "bones": 17,
+    "weighted_primitives": 13,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 34260,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/giant_trevally.blend",
+    "sha256": "e44f04b0035b6e1f29344fd132ac3533bd96a050cae1464d65cd3e4053f3d0b6",
+    "bytes": 4330780,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "giant_trevally",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 34260,
+    "vertices": 17882,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "spinyfirstdorsal",
+      "longseconddorsal",
+      "longanal",
+      "sicklepectoralr",
+      "sicklepectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 13,
+    "materials": 13,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Very deep powerful laterally compressed trunk with steep convex forehead",
+      "Long sickle pectorals and angular second dorsal/anal leading lobes",
+      "Raised posterior lateral-line scutes and narrow tail stalk",
+      "Adult silver-grey body with minute flank speckles and no opercular black spot"
+    ],
+    "sources": [
+      "https://fishesofaustralia.net.au/home/species/4268"
+    ],
+    "glb_bytes": 4840368,
+    "glb_sha256": "f8d1a209511e4ed995aed85660feeffdadd1866917d1ab0464586aaf14960674",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "giant_trevally",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06655341606574226,
+        "loop_seam_m": 7.519866841850745e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2642180599477373,
+        "loop_seam_m": 2.2559589195701612e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.18133723714865746,
+        "loop_seam_m": 1.5666383853294015e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.014304327370908964,
+        "loop_seam_m": 1.378642025528762e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SpinyFirstDorsal",
+          "bone": "spinyfirstdorsal",
+          "membrane_roots": 20,
+          "ray_roots": 50,
+          "membrane_max_distance_m": 0.000782937160693109,
+          "ray_max_distance_m": 0.0011513803619891405,
+          "max_distance_m": 0.0011513803619891405,
+          "rest_distance_m": 0.0011499999091029167,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "2": {
+          "name": "LongSecondDorsal",
+          "bone": "longseconddorsal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005826731212437153,
+          "ray_max_distance_m": 0.001125545590184629,
+          "max_distance_m": 0.001125545590184629,
+          "rest_distance_m": 0.0011147781042382121,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "3": {
+          "name": "LongAnal",
+          "bone": "longanal",
+          "membrane_roots": 54,
+          "ray_roots": 135,
+          "membrane_max_distance_m": 0.0005216402350924909,
+          "ray_max_distance_m": 0.000934037147089839,
+          "max_distance_m": 0.000934037147089839,
+          "rest_distance_m": 0.0009116456494666636,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "4": {
+          "name": "SicklePectoralR",
+          "bone": "sicklepectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0008491166518069804,
+          "ray_max_distance_m": 0.0012570928083732724,
+          "max_distance_m": 0.0012570928083732724,
+          "rest_distance_m": 0.0012463409220799804,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "SicklePectoralL",
+          "bone": "sicklepectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0008381488732993603,
+          "ray_max_distance_m": 0.0011895762290805578,
+          "max_distance_m": 0.0011895762290805578,
+          "rest_distance_m": 0.0011780280619859695,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006970561225898564,
+          "ray_max_distance_m": 0.0010212516644969583,
+          "max_distance_m": 0.0010212516644969583,
+          "rest_distance_m": 0.0010173293994739652,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007212906493805349,
+          "ray_max_distance_m": 0.0010190504835918546,
+          "max_distance_m": 0.0010190504835918546,
+          "rest_distance_m": 0.0010150941088795662,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.00070750288432464,
+          "ray_max_distance_m": 0.0012671169824898243,
+          "max_distance_m": 0.0012671169824898243,
+          "rest_distance_m": 0.0012562274932861328,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999004900455475,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "f8d1a209511e4ed995aed85660feeffdadd1866917d1ab0464586aaf14960674",
+    "master_sha256": "e44f04b0035b6e1f29344fd132ac3533bd96a050cae1464d65cd3e4053f3d0b6"
+  },
+  "visual_review": {
+    "species": "giant_trevally",
+    "status": "reviewed_pass",
+    "glb_sha256": "f8d1a209511e4ed995aed85660feeffdadd1866917d1ab0464586aaf14960674",
+    "master_sha256": "e44f04b0035b6e1f29344fd132ac3533bd96a050cae1464d65cd3e4053f3d0b6",
+    "reviewed_views": {
+      "hero": "e3586ca1340bb71146f17601706c6ac4b47795b522edf5fda175d885708bd8dd",
+      "side": "832907a0c13e1ab987b9a5c74165e6e74f84f3ca5d788b922d2c44b110243a4a",
+      "top": "640a7c795e82f3396ba3bc5835dec7a6e555b78f0fab59429d69ee48f64f4cec",
+      "underside": "df60fc0b8545101171aa0623b52f2ff428a061b20167ed84424101686ef8b250",
+      "pose_swim": "3669ddcaaa695a98e18214ee73ecab0ba51e0382ba858df6a36a81504ab4f393",
+      "pose_struggle": "01b6417d9ddc64fb3213786713a4425d720feeaf474d7bd03f3ebe3719ac0976",
+      "pose_breach": "817fd6635d1e759bf8553546e8a62be197fcf12027fda890e11acde346fffb6e",
+      "pose_landed": "7a42ef9ebf95bb422443500e52c0fc217afb2542251cfe41baba1b099b576c0f"
+    },
+    "observations": [
+      "Inspected hero, lateral, dorsal and ventral silhouettes: steep forehead, deep trunk, long falcate pectorals, rear scutes, narrow peduncle and forked tail read distinctly.",
+      "Inspected all four posed clips: continuous skin and attached fin roots; no exposed gaps, inverted membranes or material dropout."
+    ],
+    "review_method": "Direct visual inspection of all eight rendered views at 1800x708 contact-sheet size, plus 900x600 hero/side detail"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/giant_trevally.jpg",
+    "sha256": "cb8ecb521dc4f4ee35d8bc5775befba8a32f65626730a95f7ca362a714b4822b"
+  },
+  "mouth_offset_normalized": [
+    0.495262,
+    -0.004738,
+    0.0
+  ]
+}

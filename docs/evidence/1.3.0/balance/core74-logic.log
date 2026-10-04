@@ -1,0 +1,14 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+CORE_TEST_ROOT=/tmp/farshore-core-5-664069
+PASS GROUP catalog/reachability: 39456 legal combinations; 3104 intentionally possible empty combinations; fish=74; art=false
+PASS GROUP reproducible RNG and 11840 real individual samples, including conservation metadata
+PASS GROUP real charge → cast → wait → nibble → bite → fight → success
+PASS GROUP pause invariance across five live states and canceled input
+PASS GROUP missed bite, overload, slack and terminal idempotence
+BALANCE common_bream gear=0 fraction=0.362 difficulty=0.447 fight=37.41s; common_bream gear=1 fraction=0.362 difficulty=0.447 fight=30.56s; common_bream gear=2 fraction=0.362 difficulty=0.447 fight=29.19s; common_bream gear=3 fraction=0.362 difficulty=0.447 fight=31.21s; common_bream gear=4 fraction=0.362 difficulty=0.447 fight=24.16s; rudd gear=0 fraction=0.362 difficulty=0.349 fight=35.48s; rudd gear=1 fraction=0.362 difficulty=0.349 fight=28.23s; rudd gear=2 fraction=0.362 difficulty=0.349 fight=24.07s; rudd gear=3 fraction=0.362 difficulty=0.349 fight=29.81s; rudd gear=4 fraction=0.362 difficulty=0.349 fight=22.99s; roach gear=0 fraction=0.362 difficulty=0.286 fight=35.23s; roach gear=1 fraction=0.362 difficulty=0.286 fight=29.02s; roach gear=2 fraction=0.362 difficulty=0.286 fight=27.77s; roach gear=3 fraction=0.362 difficulty=0.286 fight=28.84s; roach gear=4 fraction=0.362 difficulty=0.286 fight=22.07s
+PASS GROUP actual sessions → save → retry → sale/release → restart
+PASS GROUP actual protected observation → production session → save → sale refusal → reload → release
+PASS GROUP zero-start release-only growth: 148 real encounters, discovered=74, balance=14; purchases=4870; unlocks=["japan discoveries=5 cost=140", "norway discoveries=16 cost=300", "bayou discoveries=21 cost=450", "pacific_ocean discoveries=30 cost=450", "med discoveries=45 cost=500", "yangtze discoveries=60 cost=600", "atlantic_ocean discoveries=66 cost=600", "indian_ocean discoveries=74 cost=750"]
+MAIN INTEGRATION SKIPPED: content-production logic-only run; not a complete suite
+CORE_TESTS: 261856/261856 passed; failures=0

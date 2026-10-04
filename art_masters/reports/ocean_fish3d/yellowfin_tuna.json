@@ -1,0 +1,501 @@
+{
+  "species": "yellowfin_tuna",
+  "status": "passed",
+  "binary": {
+    "sha256": "7c317814174f50e6f18cb70de60939d322841f62e8142eeec1206a4167b138e1",
+    "bytes": 4999844,
+    "meshes": 16,
+    "geometry_sha256": "db45ea8b944a1e58d606e09b65d3159506d14860edf26d9de59d338d671551ee",
+    "primitive_vertex_counts": [
+      408,
+      298,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      4752,
+      2944,
+      480,
+      396,
+      1584,
+      4224,
+      1560,
+      728,
+      4459
+    ],
+    "skins": 1,
+    "bones": 35,
+    "weighted_primitives": 16,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 47396,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/yellowfin_tuna.blend",
+    "sha256": "08fb9f94116dd0a22a965e9c1b74fb71ee2d521a1ebe12205b65cf8724afc90f",
+    "bytes": 4286207,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "yellowfin_tuna",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 47396,
+    "vertices": 24692,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectoralr",
+      "pectorall",
+      "pelvicr",
+      "pelvicl",
+      "dorsalfinlet1",
+      "analfinlet1",
+      "dorsalfinlet2",
+      "analfinlet2",
+      "dorsalfinlet3",
+      "analfinlet3",
+      "dorsalfinlet4",
+      "analfinlet4",
+      "dorsalfinlet5",
+      "analfinlet5",
+      "dorsalfinlet6",
+      "analfinlet6",
+      "dorsalfinlet7",
+      "analfinlet7",
+      "dorsalfinlet8",
+      "analfinlet8",
+      "dorsalfinlet9",
+      "analfinlet9",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 16,
+    "materials": 16,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Slender yellowfin spindle with bright gold midlateral band",
+      "Exceptionally extended falcate yellow second dorsal and anal fins curl posteriorly",
+      "Long pectorals, nine gold finlets and strong peduncle keel",
+      "Deeply lunate tail and pointed terminal snout"
+    ],
+    "sources": [
+      "https://www.fisheries.noaa.gov/species/atlantic-yellowfin-tuna",
+      "https://www.fisheries.noaa.gov/resource/outreach-materials/atlantic-tunas-identification-guide"
+    ],
+    "glb_bytes": 4999844,
+    "glb_sha256": "7c317814174f50e6f18cb70de60939d322841f62e8142eeec1206a4167b138e1",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "yellowfin_tuna",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06557523461965882,
+        "loop_seam_m": 7.964352279804179e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.25823534328608705,
+        "loop_seam_m": 7.079424554001232e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17698946481255218,
+        "loop_seam_m": 4.916266205045688e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.013054220558076025,
+        "loop_seam_m": 1.460131202245731e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 32,
+          "ray_roots": 80,
+          "membrane_max_distance_m": 0.0005797780468128622,
+          "ray_max_distance_m": 0.0010109548456966877,
+          "max_distance_m": 0.0010109548456966877,
+          "rest_distance_m": 0.0010052402503788471,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 96,
+          "ray_roots": 240,
+          "membrane_max_distance_m": 0.00047972050379030406,
+          "ray_max_distance_m": 0.000929632515180856,
+          "max_distance_m": 0.000929632515180856,
+          "rest_distance_m": 0.0009201700449921191,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 96,
+          "ray_roots": 240,
+          "membrane_max_distance_m": 0.0004896691534668207,
+          "ray_max_distance_m": 0.0008948697941377759,
+          "max_distance_m": 0.0008948697941377759,
+          "rest_distance_m": 0.000891559524461627,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "4": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.00085483054863289,
+          "ray_max_distance_m": 0.0012836524983868003,
+          "max_distance_m": 0.0012836524983868003,
+          "rest_distance_m": 0.001269352389499545,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0008422541432082653,
+          "ray_max_distance_m": 0.0012265484547242522,
+          "max_distance_m": 0.0012265484547242522,
+          "rest_distance_m": 0.0012128058588132262,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007352689863182604,
+          "ray_max_distance_m": 0.0010525562101975083,
+          "max_distance_m": 0.0010525562101975083,
+          "rest_distance_m": 0.001047792611643672,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007576270727440715,
+          "ray_max_distance_m": 0.0010346848284825683,
+          "max_distance_m": 0.0010346848284825683,
+          "rest_distance_m": 0.0010299813002347946,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "DorsalFinlet1",
+          "bone": "dorsalfinlet1",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006128360400907695,
+          "ray_max_distance_m": 0.0007807245710864663,
+          "max_distance_m": 0.0007807245710864663,
+          "rest_distance_m": 0.0007760817534290254,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "9": {
+          "name": "AnalFinlet1",
+          "bone": "analfinlet1",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006243862444534898,
+          "ray_max_distance_m": 0.0007993924664333463,
+          "max_distance_m": 0.0007993924664333463,
+          "rest_distance_m": 0.0007934659370221198,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "10": {
+          "name": "DorsalFinlet2",
+          "bone": "dorsalfinlet2",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006389155751094222,
+          "ray_max_distance_m": 0.001106875017285347,
+          "max_distance_m": 0.001106875017285347,
+          "rest_distance_m": 0.0011065094731748104,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "11": {
+          "name": "AnalFinlet2",
+          "bone": "analfinlet2",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006518806330859661,
+          "ray_max_distance_m": 0.0011694269487634301,
+          "max_distance_m": 0.0011694269487634301,
+          "rest_distance_m": 0.0011691893450915813,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "12": {
+          "name": "DorsalFinlet3",
+          "bone": "dorsalfinlet3",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006273038452491164,
+          "ray_max_distance_m": 0.0011563957668840885,
+          "max_distance_m": 0.0011563957668840885,
+          "rest_distance_m": 0.001151909353211522,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "13": {
+          "name": "AnalFinlet3",
+          "bone": "analfinlet3",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006435395334847271,
+          "ray_max_distance_m": 0.0011746973032131791,
+          "max_distance_m": 0.0011746973032131791,
+          "rest_distance_m": 0.0011732949642464519,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "14": {
+          "name": "DorsalFinlet4",
+          "bone": "dorsalfinlet4",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006439078715629876,
+          "ray_max_distance_m": 0.000826447329018265,
+          "max_distance_m": 0.000826447329018265,
+          "rest_distance_m": 0.000819539709482342,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "15": {
+          "name": "AnalFinlet4",
+          "bone": "analfinlet4",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.00066228216746822,
+          "ray_max_distance_m": 0.0008526744204573333,
+          "max_distance_m": 0.0008526744204573333,
+          "rest_distance_m": 0.0008422448881901801,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "16": {
+          "name": "DorsalFinlet5",
+          "bone": "dorsalfinlet5",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006490120431408286,
+          "ray_max_distance_m": 0.0008531829807907343,
+          "max_distance_m": 0.0008531829807907343,
+          "rest_distance_m": 0.0008413320174440742,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "17": {
+          "name": "AnalFinlet5",
+          "bone": "analfinlet5",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006690166192129254,
+          "ray_max_distance_m": 0.0008709403336979449,
+          "max_distance_m": 0.0008709403336979449,
+          "rest_distance_m": 0.0008578064735047519,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "18": {
+          "name": "DorsalFinlet6",
+          "bone": "dorsalfinlet6",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006709345616400242,
+          "ray_max_distance_m": 0.0008761524222791195,
+          "max_distance_m": 0.0008761524222791195,
+          "rest_distance_m": 0.0008680787868797779,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "19": {
+          "name": "AnalFinlet6",
+          "bone": "analfinlet6",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.000669589324388653,
+          "ray_max_distance_m": 0.0008839775109663606,
+          "max_distance_m": 0.0008839775109663606,
+          "rest_distance_m": 0.0008739354088902473,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "20": {
+          "name": "DorsalFinlet7",
+          "bone": "dorsalfinlet7",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006780551047995687,
+          "ray_max_distance_m": 0.0009052184177562594,
+          "max_distance_m": 0.0009052184177562594,
+          "rest_distance_m": 0.0008978492696769536,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "21": {
+          "name": "AnalFinlet7",
+          "bone": "analfinlet7",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006747143343091011,
+          "ray_max_distance_m": 0.0009058131254278123,
+          "max_distance_m": 0.0009058131254278123,
+          "rest_distance_m": 0.000897246936801821,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "22": {
+          "name": "DorsalFinlet8",
+          "bone": "dorsalfinlet8",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006922620232217014,
+          "ray_max_distance_m": 0.0009158828761428595,
+          "max_distance_m": 0.0009158828761428595,
+          "rest_distance_m": 0.0009144080686382949,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "23": {
+          "name": "AnalFinlet8",
+          "bone": "analfinlet8",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006906255148351192,
+          "ray_max_distance_m": 0.0009195099701173604,
+          "max_distance_m": 0.0009195099701173604,
+          "rest_distance_m": 0.000917823170311749,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "24": {
+          "name": "DorsalFinlet9",
+          "bone": "dorsalfinlet9",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0007039123447611928,
+          "ray_max_distance_m": 0.0011739482870325446,
+          "max_distance_m": 0.0011739482870325446,
+          "rest_distance_m": 0.0011645500781014562,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "25": {
+          "name": "AnalFinlet9",
+          "bone": "analfinlet9",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.000704904377926141,
+          "ray_max_distance_m": 0.001180734601803124,
+          "max_distance_m": 0.001180734601803124,
+          "rest_distance_m": 0.0011732602724805474,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "26": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.000744264165405184,
+          "ray_max_distance_m": 0.0012957194121554494,
+          "max_distance_m": 0.0012957194121554494,
+          "rest_distance_m": 0.0012906193733215332,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.999902069568634,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "7c317814174f50e6f18cb70de60939d322841f62e8142eeec1206a4167b138e1",
+    "master_sha256": "08fb9f94116dd0a22a965e9c1b74fb71ee2d521a1ebe12205b65cf8724afc90f"
+  },
+  "visual_review": {
+    "species": "yellowfin_tuna",
+    "status": "reviewed_pass",
+    "glb_sha256": "7c317814174f50e6f18cb70de60939d322841f62e8142eeec1206a4167b138e1",
+    "master_sha256": "08fb9f94116dd0a22a965e9c1b74fb71ee2d521a1ebe12205b65cf8724afc90f",
+    "reviewed_views": {
+      "hero": "ba7e69a3d88c27a728e0ab3ba3549f5d4d968277d1363d614ee4d881517d4bc3",
+      "side": "1c71100871e41a61a8553e606ce7c5917291b7d96f2e27c470ff6dc8114fd27c",
+      "top": "4a047b03f46d7e596bd728214eb2d6cc8e9de690bde66a2e4acaa9f0ff2168db",
+      "underside": "f4d64caf54b6012c7ead91b9429c79fa672347e652609487e806ed34e1031e44",
+      "pose_swim": "1a797e390f438afacaa6e6e382b24b58da2ccf8ac5ac420a54fba5368be94b29",
+      "pose_struggle": "9e3d3205dda518f56eb6f08d490b0f1f2e0496341035227dc154d166e186c6bb",
+      "pose_breach": "d4e6ea54a45afae4f4db59af0d3bc7c94e141ec13ec0f8d6f794fd35ce76322c",
+      "pose_landed": "e027182104412dbceab03374e7dee3f49dc159588994cdd33e0a65b3f33c2194"
+    },
+    "observations": [
+      "Final eight views show a slender yellowfin body and long rear-swept, tapered golden second dorsal/anal sickles; initial broad paddle shape was corrected and all views rerendered.",
+      "Gold lateral stripe, longer pectorals, separate finlets and strong tail keels visible; all four poses keep fins attached."
+    ],
+    "review_method": "Direct visual inspection of final eight-view contact sheet, with 900x600 detail on revised fin shapes"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/yellowfin_tuna.jpg",
+    "sha256": "ab080673651097458d8ec5c120db979e4d8bce7c8dd13220b7230c19e800428c"
+  },
+  "mouth_offset_normalized": [
+    0.4951563,
+    -0.0009687,
+    0.0
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "species": "albacore",
+  "status": "passed",
+  "binary": {
+    "sha256": "797533ed2ced26b82b99a9815cf9b0323324e6cdc013f7e357af1c231e9b8590",
+    "bytes": 4796424,
+    "meshes": 17,
+    "geometry_sha256": "c52a899bd9514c2e731ee2f8405722f575de6e4b797e020316bc098258ce888d",
+    "primitive_vertex_counts": [
+      728,
+      4459,
+      408,
+      298,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      4224,
+      2944,
+      480,
+      396,
+      30,
+      1584,
+      1584,
+      1560
+    ],
+    "skins": 1,
+    "bones": 33,
+    "weighted_primitives": 17,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 41412,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/albacore.blend",
+    "sha256": "5287d4e1182d512d12b25ab4dc05e1dc06b2473c0157dcc97f8fd6d86d7d81a5",
+    "bytes": 4144907,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "albacore",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 41412,
+    "vertices": 21554,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectoralr",
+      "pectorall",
+      "pelvicr",
+      "pelvicl",
+      "dorsalfinlet1",
+      "analfinlet1",
+      "dorsalfinlet2",
+      "analfinlet2",
+      "dorsalfinlet3",
+      "analfinlet3",
+      "dorsalfinlet4",
+      "analfinlet4",
+      "dorsalfinlet5",
+      "analfinlet5",
+      "dorsalfinlet6",
+      "analfinlet6",
+      "dorsalfinlet7",
+      "analfinlet7",
+      "dorsalfinlet8",
+      "analfinlet8",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 17,
+    "materials": 17,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Extraordinarily long sabre pectorals extend beyond second dorsal origin",
+      "Streamlined mid-depth body, large eye and slightly convex forehead",
+      "Dark caudal with a narrow pale trailing rim, low yellow-grey finlets",
+      "Separate low second dorsal/anal and paired caudal keels"
+    ],
+    "sources": [
+      "https://www.fisheries.noaa.gov/species/north-atlantic-albacore-tuna",
+      "https://repository.library.noaa.gov/view/noaa/23154/noaa_23154_DS1.pdf"
+    ],
+    "glb_bytes": 4796424,
+    "glb_sha256": "797533ed2ced26b82b99a9815cf9b0323324e6cdc013f7e357af1c231e9b8590",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "albacore",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06577709414805281,
+        "loop_seam_m": 7.892274939785335e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2582069720814495,
+        "loop_seam_m": 7.015354527303874e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17691512395196476,
+        "loop_seam_m": 4.871773745935431e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.01681715004779451,
+        "loop_seam_m": 1.446917230908138e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 32,
+          "ray_roots": 80,
+          "membrane_max_distance_m": 0.0005875686765648425,
+          "ray_max_distance_m": 0.0009822446154430509,
+          "max_distance_m": 0.0009822446154430509,
+          "rest_distance_m": 0.0009785369038581848,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.000516648346092552,
+          "ray_max_distance_m": 0.0007202781271189451,
+          "max_distance_m": 0.0007202781271189451,
+          "rest_distance_m": 0.0007073127198964357,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.000536393781658262,
+          "ray_max_distance_m": 0.0007137585198506713,
+          "max_distance_m": 0.0007137585198506713,
+          "rest_distance_m": 0.0007081176154315472,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "4": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0008844261174090207,
+          "ray_max_distance_m": 0.0012881116708740592,
+          "max_distance_m": 0.0012881116708740592,
+          "rest_distance_m": 0.0012847664766013622,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "5": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0008827093988656998,
+          "ray_max_distance_m": 0.0012604937655851245,
+          "max_distance_m": 0.0012604937655851245,
+          "rest_distance_m": 0.0012569145765155554,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007335914415307343,
+          "ray_max_distance_m": 0.0010177346412092447,
+          "max_distance_m": 0.0010177346412092447,
+          "rest_distance_m": 0.0010120779043063521,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007543000974692404,
+          "ray_max_distance_m": 0.0010012239217758179,
+          "max_distance_m": 0.0010012239217758179,
+          "rest_distance_m": 0.0009979353053495288,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "DorsalFinlet1",
+          "bone": "dorsalfinlet1",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006144260987639427,
+          "ray_max_distance_m": 0.0007823475752957165,
+          "max_distance_m": 0.0007823475752957165,
+          "rest_distance_m": 0.0007796749123372138,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "9": {
+          "name": "AnalFinlet1",
+          "bone": "analfinlet1",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006214446038939059,
+          "ray_max_distance_m": 0.0007976479246281087,
+          "max_distance_m": 0.0007976479246281087,
+          "rest_distance_m": 0.000792681414168328,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "10": {
+          "name": "DorsalFinlet2",
+          "bone": "dorsalfinlet2",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006394173833541572,
+          "ray_max_distance_m": 0.0008228833321481943,
+          "max_distance_m": 0.0008228833321481943,
+          "rest_distance_m": 0.0008009133161976933,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "11": {
+          "name": "AnalFinlet2",
+          "bone": "analfinlet2",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006423827144317329,
+          "ray_max_distance_m": 0.0008308353717438877,
+          "max_distance_m": 0.0008308353717438877,
+          "rest_distance_m": 0.0008097639656625688,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "12": {
+          "name": "DorsalFinlet3",
+          "bone": "dorsalfinlet3",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006300278473645449,
+          "ray_max_distance_m": 0.0008202857570722699,
+          "max_distance_m": 0.0008202857570722699,
+          "rest_distance_m": 0.0008151056827045977,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "13": {
+          "name": "AnalFinlet3",
+          "bone": "analfinlet3",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006355638615787029,
+          "ray_max_distance_m": 0.0008249636739492416,
+          "max_distance_m": 0.0008249636739492416,
+          "rest_distance_m": 0.0008216210408136249,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "14": {
+          "name": "DorsalFinlet4",
+          "bone": "dorsalfinlet4",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006530759856104851,
+          "ray_max_distance_m": 0.0008462296100333333,
+          "max_distance_m": 0.0008462296100333333,
+          "rest_distance_m": 0.0008325103553943336,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "15": {
+          "name": "AnalFinlet4",
+          "bone": "analfinlet4",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006583371432498097,
+          "ray_max_distance_m": 0.0008578862180002034,
+          "max_distance_m": 0.0008578862180002034,
+          "rest_distance_m": 0.00084229203639552,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "16": {
+          "name": "DorsalFinlet5",
+          "bone": "dorsalfinlet5",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006658522761426866,
+          "ray_max_distance_m": 0.000861310341861099,
+          "max_distance_m": 0.000861310341861099,
+          "rest_distance_m": 0.0008499635732732713,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "17": {
+          "name": "AnalFinlet5",
+          "bone": "analfinlet5",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006727969157509506,
+          "ray_max_distance_m": 0.0008743397193029523,
+          "max_distance_m": 0.0008743397193029523,
+          "rest_distance_m": 0.0008629208896309137,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "18": {
+          "name": "DorsalFinlet6",
+          "bone": "dorsalfinlet6",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006831293576397002,
+          "ray_max_distance_m": 0.0011952692875638604,
+          "max_distance_m": 0.0011952692875638604,
+          "rest_distance_m": 0.0011870322050526738,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "19": {
+          "name": "AnalFinlet6",
+          "bone": "analfinlet6",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006942524341866374,
+          "ray_max_distance_m": 0.0012088996591046453,
+          "max_distance_m": 0.0012088996591046453,
+          "rest_distance_m": 0.0011998731642961502,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "20": {
+          "name": "DorsalFinlet7",
+          "bone": "dorsalfinlet7",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006800426635891199,
+          "ray_max_distance_m": 0.0011885457206517458,
+          "max_distance_m": 0.0011885457206517458,
+          "rest_distance_m": 0.0011834028409793973,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "21": {
+          "name": "AnalFinlet7",
+          "bone": "analfinlet7",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006930807139724493,
+          "ray_max_distance_m": 0.001200870145112276,
+          "max_distance_m": 0.001200870145112276,
+          "rest_distance_m": 0.001195196178741753,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "22": {
+          "name": "DorsalFinlet8",
+          "bone": "dorsalfinlet8",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006907640490680933,
+          "ray_max_distance_m": 0.001178662059828639,
+          "max_distance_m": 0.001178662059828639,
+          "rest_distance_m": 0.0011637702118605375,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "23": {
+          "name": "AnalFinlet8",
+          "bone": "analfinlet8",
+          "membrane_roots": 12,
+          "ray_roots": 30,
+          "membrane_max_distance_m": 0.0006983409402891994,
+          "ray_max_distance_m": 0.0011837199563160539,
+          "max_distance_m": 0.0011837199563160539,
+          "rest_distance_m": 0.0011719822650775313,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "24": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007458307081833482,
+          "ray_max_distance_m": 0.0012902606977149844,
+          "max_distance_m": 0.0012902606977149844,
+          "rest_distance_m": 0.0012853741645812988,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.99990114569664,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "797533ed2ced26b82b99a9815cf9b0323324e6cdc013f7e357af1c231e9b8590",
+    "master_sha256": "5287d4e1182d512d12b25ab4dc05e1dc06b2473c0157dcc97f8fd6d86d7d81a5"
+  },
+  "visual_review": {
+    "species": "albacore",
+    "status": "reviewed_pass",
+    "glb_sha256": "797533ed2ced26b82b99a9815cf9b0323324e6cdc013f7e357af1c231e9b8590",
+    "master_sha256": "5287d4e1182d512d12b25ab4dc05e1dc06b2473c0157dcc97f8fd6d86d7d81a5",
+    "reviewed_views": {
+      "hero": "53311d4a5d9a9e9a079054e2a394adc0abb11c182219a5e4c83d9375211bc75c",
+      "side": "222c8fbb8b19dd7c56a036f75810c0055c6b299d6fd8a36c65c78b01ec210470",
+      "top": "e1cca070a9b17e1a21c464b9d39f09ec0c549af86ce89027c1260ec6c338351e",
+      "underside": "65eac2f6b0eafda3532f5c53e8435b2f8f781df25b0d9bd36a41402326cf6f3d",
+      "pose_swim": "e65ca1c3d7c427eae90be00bfb943575ca03a1b8f36d6a0407f9d8f60d0b79dd",
+      "pose_struggle": "022094dcbe17aa4b52a1c04d3344ed4097c992eb3e908add78c1d81abdcdc86f",
+      "pose_breach": "b7a6b292e65608e934726f66fc516d2a7dc44e395786c32ebc5f7433cbf0051e",
+      "pose_landed": "cc0c3fe9427695f800e254ad072bf72aa48df5c8e38998c4412e296f9829de23"
+    },
+    "observations": [
+      "Eight views show exceptionally long sabre pectorals, streamlined spindle, short median fins, caudal keels and thin pale trailing tail rim.",
+      "Top and ventral views confirm independent paired pectorals and full body volume; animated views retain seating."
+    ],
+    "review_method": "Direct visual inspection of all eight rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/albacore.jpg",
+    "sha256": "3005374ad594f0459a6e395fbb3c5e59a53b47fc13b7ba4e60835ae8bdc6d78e"
+  },
+  "mouth_offset_normalized": [
+    0.4951439,
+    -0.0009712,
+    0.0
+  ]
+}

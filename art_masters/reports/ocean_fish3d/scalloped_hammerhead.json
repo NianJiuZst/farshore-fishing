@@ -1,0 +1,271 @@
+{
+  "species": "scalloped_hammerhead",
+  "status": "passed",
+  "binary": {
+    "sha256": "a451bea500770b978a3a17d32a46fcade781c08cfc6bd03e4aa0b5e96341fd9a",
+    "bytes": 6369216,
+    "meshes": 10,
+    "geometry_sha256": "7983495f91e947bf7e5e86780ea0ce600d1951308ccd57abe706c46cb1093756",
+    "primitive_vertex_counts": [
+      1140,
+      435,
+      435,
+      435,
+      435,
+      3493,
+      150,
+      396,
+      4928,
+      4659
+    ],
+    "skins": 1,
+    "bones": 25,
+    "weighted_primitives": 10,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 31414,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/scalloped_hammerhead.blend",
+    "sha256": "5faba3966d802280d804b2cb28f8515c98504a40439d576c7b550590ae8c62d4",
+    "bytes": 5842874,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "scalloped_hammerhead",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 31414,
+    "vertices": 16261,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "gill_GillSlitL1",
+      "gill_GillSlitL2",
+      "gill_GillSlitL3",
+      "gill_GillSlitL4",
+      "gill_GillSlitL5",
+      "gill_GillSlitR1",
+      "gill_GillSlitR2",
+      "gill_GillSlitR3",
+      "gill_GillSlitR4",
+      "gill_GillSlitR5",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectorall",
+      "pectoralr",
+      "pelvicl",
+      "pelvicr"
+    ],
+    "skinned_meshes": 10,
+    "materials": 10,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Broad flattened real cephalofoil, arched leading margin with central and lateral scalloped indentations",
+      "Eyes at the distal head tips, compact central ventral mouth and five gill slits on each side",
+      "Moderately tall curved first dorsal distinct from great hammerhead sail-like dorsal",
+      "Pelvic fins with straighter rear margins, slender torso and upper-heavy heterocercal tail",
+      "Bronze-gray upper skin and pale underside with muted fin pigmentation"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/scalloped-hammerhead/",
+      "https://www.fishbase.se/summary/Sphyrna-lewini.html",
+      "https://www.nyt.sdnhm.org/oceanoasis/fieldguide/sphy-lew.html"
+    ],
+    "glb_bytes": 6369216,
+    "glb_sha256": "a451bea500770b978a3a17d32a46fcade781c08cfc6bd03e4aa0b5e96341fd9a",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "scalloped_hammerhead",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.07063006218351926,
+        "loop_seam_m": 7.0888583468262915e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.28295299052192296,
+        "loop_seam_m": 4.775651982195234e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.1942331114536972,
+        "loop_seam_m": 3.3164247579446334e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.012413126813915898,
+        "loop_seam_m": 1.2996239123645936e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007576009957119823,
+          "ray_max_distance_m": 0.001116866827942431,
+          "max_distance_m": 0.001116866827942431,
+          "rest_distance_m": 0.0011140364222228527,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007034667069092393,
+          "ray_max_distance_m": 0.0011226402129977942,
+          "max_distance_m": 0.0011226402129977942,
+          "rest_distance_m": 0.0011128205806016922,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005287709063850343,
+          "ray_max_distance_m": 0.001013902248814702,
+          "max_distance_m": 0.001013902248814702,
+          "rest_distance_m": 0.0010123320389539003,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005333469598554075,
+          "ray_max_distance_m": 0.0010898989858105779,
+          "max_distance_m": 0.0010898989858105779,
+          "rest_distance_m": 0.0010819442104548216,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005372753366827965,
+          "ray_max_distance_m": 0.0010686202440410852,
+          "max_distance_m": 0.0010686202440410852,
+          "rest_distance_m": 0.0010604214621707797,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005566889885812998,
+          "ray_max_distance_m": 0.0011390447616577148,
+          "max_distance_m": 0.0011390447616577148,
+          "rest_distance_m": 0.0011368119157850742,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005331436404958367,
+          "ray_max_distance_m": 0.0010432293638586998,
+          "max_distance_m": 0.0010432293638586998,
+          "rest_distance_m": 0.0010398472659289837,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "8": {
+          "name": "HeterocercalCaudal",
+          "bone": "caudal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.000701634562574327,
+          "ray_max_distance_m": 0.0011615954572334886,
+          "max_distance_m": 0.0011615954572334886,
+          "rest_distance_m": 0.0011580586433410645,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        }
+      }
+    },
+    "weight_sum_min": 0.999900221824646,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "a451bea500770b978a3a17d32a46fcade781c08cfc6bd03e4aa0b5e96341fd9a",
+    "master_sha256": "5faba3966d802280d804b2cb28f8515c98504a40439d576c7b550590ae8c62d4"
+  },
+  "visual_review": {
+    "species": "scalloped_hammerhead",
+    "status": "reviewed_pass",
+    "glb_sha256": "a451bea500770b978a3a17d32a46fcade781c08cfc6bd03e4aa0b5e96341fd9a",
+    "master_sha256": "5faba3966d802280d804b2cb28f8515c98504a40439d576c7b550590ae8c62d4",
+    "reviewed_views": {
+      "hero": "fdf27215ada660ad1bcb353dc28a035976cf595898897ee4327290d472b2597f",
+      "side": "782e5fb7622dcdfb36532c821524f0f45c9b1bb56e1715784a3f578db9d05b75",
+      "top": "de49bc54084301010b4d6b66d000b95d04782f0519107be1890510c6183353a0",
+      "underside": "ea5c6aa465b0323565007ae0303ce7eccae1e19688b5e62cfea353c08b1f4bfa",
+      "pose_swim": "d0a666351b3e539e45526ae8db282a0c9d325461d7853c98dcd1eeb11a9dcdff",
+      "pose_struggle": "ff94477f2f2a162ca36d49a5ce22414559b947bad06270ced1c1d7bcc310cba4",
+      "pose_breach": "23069378dd6bf5e82d276445321b4f0ef26b333a1013cf562df654671ac218bb",
+      "pose_landed": "4fcb37906a68d1a7005d183982d283391f1cc08346bcd4bc054ec08b4b633861"
+    },
+    "observations": [
+      "All eight views show a genuine closed flattened cephalofoil with arched scalloped leading edge, distal eyes, central ventral mouth, five gill slits per side and asymmetric upper caudal lobe.",
+      "Head width corrected to source-backed 24-30% total-length range, with moderate first dorsal and straighter pelvic rear margins distinct from great hammerhead. All posed views show clean skin/fin seating."
+    ],
+    "review_method": "Direct visual inspection of all eight final rendered views; full-resolution hero/top/underside details additionally inspected for key shark anatomy"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/scalloped_hammerhead.jpg",
+    "sha256": "2675bede1a4de4def807edfd0f7d78c0928b8a02889b1b13611a7a4d635dcd79"
+  },
+  "mouth_offset_normalized": [
+    0.441129,
+    -0.0174773,
+    0.0
+  ]
+}

@@ -39,7 +39,7 @@ def island(cx,cz,rx,rz,height,phase=0,atoll=False):
   for i in range(N):
    ang=i*math.tau/N;noise=1+.06*math.sin(ang*5+phase)+.035*math.cos(ang*9-phase)
    rad=.015+t
-   y=height*max(0,1-t*t)**1.6-.50*t+math.sin(ang*4+phase)*height*.065*(1-t)
+   y=height*max(0,1-t*t)**1.6-.50*t+math.sin(ang*4+phase)*height*.065*math.sin(t*math.pi)
    if atoll:y=height*math.sin(t*math.pi)**1.2-.6*(1-t)-.40*t
    vs.append((cx+math.cos(ang)*rx*rad*noise,y,cz+math.sin(ang)*rz*rad*noise))
  fs=[]
@@ -79,7 +79,7 @@ def palm(x,z,h,lean):
   for i in range(1,12):
    t=i/12;width=L*.19*math.sin(t*math.pi)**.65
    for sign in [-1,1]:
-    base=curve[i];tip=base+side*(width*sign)+heading*(L*.085)+Vector((0,-width*.28,0));ridge=(base+tip)/2+Vector((0,.035,0));w=heading*L*.032
+    base=curve[i];tip=base+side*(width*sign)+heading*(L*.085)+Vector((0,-width*.28,0));ridge=(base+tip)/2+Vector((0,.035,0));w=heading*L*.058
     mesh('Palm individual closed leaflet',[tuple(base-w),tuple(base+w),tuple(tip),tuple(ridge),tuple(ridge-Vector((0,.018,0)))],[(0,1,3),(1,2,3),(2,0,3),(1,0,4),(2,1,4),(0,2,4)],'FoliageSun' if j%3==0 else 'FoliageGreen')
 def scrub(x,y,z,scale):
  y=ground(x,z)-.15

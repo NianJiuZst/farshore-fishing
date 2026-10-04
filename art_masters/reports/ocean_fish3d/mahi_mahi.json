@@ -1,0 +1,250 @@
+{
+  "species": "mahi_mahi",
+  "status": "passed",
+  "binary": {
+    "sha256": "6c3d0f35c27030ff5774aaa375fffc7d5dc42cc66f791b0b10ff5507e7f25a54",
+    "bytes": 5202796,
+    "meshes": 12,
+    "geometry_sha256": "72ea7331ec9433b41b7871ef43315ffb0dd74e0026fa1efec7a5f3c4ad720ea0",
+    "primitive_vertex_counts": [
+      408,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2212,
+      4459,
+      2944,
+      480,
+      396,
+      4740
+    ],
+    "skins": 1,
+    "bones": 16,
+    "weighted_primitives": 12,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 35644,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/mahi_mahi.blend",
+    "sha256": "d78b3f555d9391debd2d78c89cbbba01971c9b773100836cd45ab14145b8d425",
+    "bytes": 4674563,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "mahi_mahi",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 35644,
+    "vertices": 18498,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "continuouscrestdorsal",
+      "longanal",
+      "pectoralr",
+      "pectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 12,
+    "materials": 12,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Adult male high blunt forehead with laterally compressed elongated body",
+      "Single tall continuous dorsal begins above eye and sweeps almost to caudal peduncle",
+      "Long anal base and strongly forked tail",
+      "Electric blue-green upper body, golden flanks and discrete blue speckles"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/dolphinfish/",
+      "https://www.fisheries.noaa.gov/species/pacific-mahimahi"
+    ],
+    "glb_bytes": 5202796,
+    "glb_sha256": "6c3d0f35c27030ff5774aaa375fffc7d5dc42cc66f791b0b10ff5507e7f25a54",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "mahi_mahi",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.08292029239234378,
+        "loop_seam_m": 8.176927439516054e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.26822808340672344,
+        "loop_seam_m": 2.4530779028200714e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.18355398083439378,
+        "loop_seam_m": 1.703526564157349e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.023575354368876453,
+        "loop_seam_m": 1.4991032959855462e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "ContinuousCrestDorsal",
+          "bone": "continuouscrestdorsal",
+          "membrane_roots": 102,
+          "ray_roots": 255,
+          "membrane_max_distance_m": 0.0004779600421898067,
+          "ray_max_distance_m": 0.0008619846194051206,
+          "max_distance_m": 0.0008619846194051206,
+          "rest_distance_m": 0.0008573317318223417,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "2": {
+          "name": "LongAnal",
+          "bone": "longanal",
+          "membrane_roots": 70,
+          "ray_roots": 175,
+          "membrane_max_distance_m": 0.0005142828449606895,
+          "ray_max_distance_m": 0.0008425123523920774,
+          "max_distance_m": 0.0008425123523920774,
+          "rest_distance_m": 0.0008354875608347356,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0008081703563220799,
+          "ray_max_distance_m": 0.0012169170659035444,
+          "max_distance_m": 0.0012169170659035444,
+          "rest_distance_m": 0.00120412721298635,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007836391450837255,
+          "ray_max_distance_m": 0.0011850356822833419,
+          "max_distance_m": 0.0011850356822833419,
+          "rest_distance_m": 0.0011730521218851209,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "5": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.000659989018458873,
+          "ray_max_distance_m": 0.0011412753956392407,
+          "max_distance_m": 0.0011412753956392407,
+          "rest_distance_m": 0.0011197100393474102,
+          "worst_clip": "struggle",
+          "worst_frame": 14
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006841460126452148,
+          "ray_max_distance_m": 0.0011127867037430406,
+          "max_distance_m": 0.0011127867037430406,
+          "rest_distance_m": 0.001091113081201911,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "7": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007025757222436368,
+          "ray_max_distance_m": 0.001239764504134655,
+          "max_distance_m": 0.001239764504134655,
+          "rest_distance_m": 0.0012350678443908691,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999043941497803,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "6c3d0f35c27030ff5774aaa375fffc7d5dc42cc66f791b0b10ff5507e7f25a54",
+    "master_sha256": "d78b3f555d9391debd2d78c89cbbba01971c9b773100836cd45ab14145b8d425"
+  },
+  "visual_review": {
+    "species": "mahi_mahi",
+    "status": "reviewed_pass",
+    "glb_sha256": "6c3d0f35c27030ff5774aaa375fffc7d5dc42cc66f791b0b10ff5507e7f25a54",
+    "master_sha256": "d78b3f555d9391debd2d78c89cbbba01971c9b773100836cd45ab14145b8d425",
+    "reviewed_views": {
+      "hero": "f70f28ae325e749dd3b610e64667a7c9a3e8cef08c123fce5cb1d67bab34c40f",
+      "side": "d3b7895b935040bd2082ffa51a218e04f4c0e14ee15a3266d40e200cd7472d2d",
+      "top": "51831072186b4ae1385b2911fdf4c4e71a3b4a132399f31d1b5a69b320d8bcf9",
+      "underside": "a82750599f957e7d41881bd6c2e76f94eb2f2d832474ed18301df10e98a3efd2",
+      "pose_swim": "b4956b31f121da96bee09dc5dfaa53fa94adf4941057e729b2dbb774c881fd4c",
+      "pose_struggle": "059095fe68958c4e94cac7bba612917df92269ddb3d944041b320558415a1bc9",
+      "pose_breach": "33ed7e6a6af1cc15c1a9ac46210bd28032b5b53e5315e2c54c6b4a88dacadc26",
+      "pose_landed": "264ed47a8b2291342daa40547b25d356c567d5c3806c6b83f98c1d960e78ecb0"
+    },
+    "observations": [
+      "All eight views show the adult male steep forehead, strongly compressed elongated body, uninterrupted long dorsal, long anal, blue-green/golden flank pigment and minute blue spots.",
+      "Body and fins remain contiguous across all four rendered clip poses."
+    ],
+    "review_method": "Direct visual inspection of all eight rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/mahi_mahi.jpg",
+    "sha256": "198449385048bb19750c0b74a60d204bd13e0d15cbda342bc45fb79d5a75dfdb"
+  },
+  "mouth_offset_normalized": [
+    0.4953069,
+    -0.0018772,
+    0.0
+  ]
+}

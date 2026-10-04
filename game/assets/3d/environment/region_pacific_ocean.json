@@ -1,0 +1,9 @@
+{
+  "region_id": "pacific_ocean",
+  "triangles": 34440,
+  "sha256": "929c73441afa4b645f60bd357211d327763ba64a150135f652b025e8a317d62f",
+  "authoring": "Original deterministic island, sea-stack, palm and reef geometry. Fictional composite ocean scenery, not a mapped real locality.",
+  "master": "art_masters/3d/region_pacific_ocean.blend",
+  "up": "+Y",
+  "unit": "meter"
+}

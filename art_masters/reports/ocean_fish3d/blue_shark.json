@@ -1,0 +1,270 @@
+{
+  "species": "blue_shark",
+  "status": "passed",
+  "binary": {
+    "sha256": "1885b04e6c8857231763291b709b0f930592818cc3f6028a13071160692de5aa",
+    "bytes": 6459856,
+    "meshes": 10,
+    "geometry_sha256": "15e3f5cc4255107a8da564eddcb7ca2e5e08d889bc4804d3373efeba15d74030",
+    "primitive_vertex_counts": [
+      1140,
+      4928,
+      4459,
+      3566,
+      217,
+      396,
+      435,
+      435,
+      435,
+      435
+    ],
+    "skins": 1,
+    "bones": 25,
+    "weighted_primitives": 10,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 31298,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/blue_shark.blend",
+    "sha256": "828a348cc173868d5e914ff78281bebae45d085dfc73dd80e1194d542d5ad742",
+    "bytes": 5971864,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "blue_shark",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 31298,
+    "vertices": 16201,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "gill_GillSlitL1",
+      "gill_GillSlitL2",
+      "gill_GillSlitL3",
+      "gill_GillSlitL4",
+      "gill_GillSlitL5",
+      "gill_GillSlitR1",
+      "gill_GillSlitR2",
+      "gill_GillSlitR3",
+      "gill_GillSlitR4",
+      "gill_GillSlitR5",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectorall",
+      "pectoralr",
+      "pelvicl",
+      "pelvicr"
+    ],
+    "skinned_meshes": 10,
+    "materials": 10,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Very slender long-bodied shark with rounded elongate snout and relatively large lateral eyes",
+      "Extremely long narrow pointed pectorals, first dorsal positioned well aft near pelvic region",
+      "Non-lunate heterocercal tail with long upper lobe and no strong lamnid-style lateral keel",
+      "Deep cobalt dorsal field, brighter blue lateral flanks and crisp pale belly",
+      "Five curved gill slits per side; ventral arched mouth and small second dorsal"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-shark/",
+      "https://www.fisheries.noaa.gov/new-england-mid-atlantic/atlantic-highly-migratory-species/shark-identification-cooperative-shark"
+    ],
+    "glb_bytes": 6459856,
+    "glb_sha256": "1885b04e6c8857231763291b709b0f930592818cc3f6028a13071160692de5aa",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "blue_shark",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.07920995142381447,
+        "loop_seam_m": 8.960591264057845e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2956733155837094,
+        "loop_seam_m": 6.668347128373851e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.2016379286983175,
+        "loop_seam_m": 4.6307961318031756e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.0157793114313823,
+        "loop_seam_m": 1.6427765367978492e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007160794921219349,
+          "ray_max_distance_m": 0.001112799858674407,
+          "max_distance_m": 0.001112799858674407,
+          "rest_distance_m": 0.0011057170340791345,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007142920512706041,
+          "ray_max_distance_m": 0.001119851367548108,
+          "max_distance_m": 0.001119851367548108,
+          "rest_distance_m": 0.0011028713779523969,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005741668283008039,
+          "ray_max_distance_m": 0.001082385191693902,
+          "max_distance_m": 0.001082385191693902,
+          "rest_distance_m": 0.0010663002030923963,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005770579446107149,
+          "ray_max_distance_m": 0.0010022077476605773,
+          "max_distance_m": 0.0010022077476605773,
+          "rest_distance_m": 0.000982125522568822,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005780269275419414,
+          "ray_max_distance_m": 0.0010522798402234912,
+          "max_distance_m": 0.0010522798402234912,
+          "rest_distance_m": 0.0010317937703803182,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005535859381780028,
+          "ray_max_distance_m": 0.0009282522951252759,
+          "max_distance_m": 0.0009282522951252759,
+          "rest_distance_m": 0.0009015437681227922,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005110017955303192,
+          "ray_max_distance_m": 0.0009113810956478119,
+          "max_distance_m": 0.0009113810956478119,
+          "rest_distance_m": 0.0008843633695505559,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "8": {
+          "name": "HeterocercalCaudal",
+          "bone": "caudal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.000722629192750901,
+          "ray_max_distance_m": 0.0011237774742767215,
+          "max_distance_m": 0.0011237774742767215,
+          "rest_distance_m": 0.0011211037635803223,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        }
+      }
+    },
+    "weight_sum_min": 0.9999017417430878,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "1885b04e6c8857231763291b709b0f930592818cc3f6028a13071160692de5aa",
+    "master_sha256": "828a348cc173868d5e914ff78281bebae45d085dfc73dd80e1194d542d5ad742"
+  },
+  "visual_review": {
+    "species": "blue_shark",
+    "status": "reviewed_pass",
+    "glb_sha256": "1885b04e6c8857231763291b709b0f930592818cc3f6028a13071160692de5aa",
+    "master_sha256": "828a348cc173868d5e914ff78281bebae45d085dfc73dd80e1194d542d5ad742",
+    "reviewed_views": {
+      "hero": "3d20091a122c5a4f8845f8fa3eda9bb0fd7e0388eff8ac1ba99bc6f8e5e06a29",
+      "side": "ebc92a1a13d1ccb9abd5c8700ee296c4598a7f3000947f374c96fcfbaa3be0c1",
+      "top": "dd89fff9d6408886d5108f5f6f174e3ddf0ce90617239cd58ab67c37fc07296e",
+      "underside": "b9e7e5eb7cbd272bd030dcb936da65aef8822428d656da3d4593f9435474cefb",
+      "pose_swim": "21a8edb9374e5e49948ced206111f374943423f67d839492392738696f3e9c66",
+      "pose_struggle": "0f091a765d59a99ae654db26be1b300957c66e4be524534fdf53417ac0b79e67",
+      "pose_breach": "d2d23f81e732cdc26f8bcf94d99ec0029f4b0b1a303f38a817adde2914065957",
+      "pose_landed": "49cb542306408c0190fa3bcfa434d98bb3149edf51d72b98f584bcb7e01eddf5"
+    },
+    "observations": [
+      "Eight views show an exceptionally slim blue body and long conical snout, large eyes, posterior first dorsal, extremely long narrow pectorals and upper-heavy caudal.",
+      "Top/underside distinguish long paired wings from mako/white; all posed clips preserve attached fins and clean skin."
+    ],
+    "review_method": "Direct visual inspection of all eight final rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/blue_shark.jpg",
+    "sha256": "926b99ff4128c154101c1a9830bd52740d1128a253dd6a9af22db109c04b5c84"
+  },
+  "mouth_offset_normalized": [
+    0.4397761,
+    -0.0116699,
+    0.0
+  ]
+}

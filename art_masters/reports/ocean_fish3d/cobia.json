@@ -1,0 +1,249 @@
+{
+  "species": "cobia",
+  "status": "passed",
+  "binary": {
+    "sha256": "47b84b4a3ef083ef24cbd2f7917327696c91d9c22bbeb877abbb87af18d6ee28",
+    "bytes": 4507872,
+    "meshes": 12,
+    "geometry_sha256": "48da83c8e245531682da9f89d4c24876c908a9c4b6fcb24ab3f472c13f662a3c",
+    "primitive_vertex_counts": [
+      492,
+      1364,
+      1820,
+      4459,
+      435,
+      435,
+      435,
+      435,
+      2944,
+      480,
+      396,
+      3900
+    ],
+    "skins": 1,
+    "bones": 16,
+    "weighted_primitives": 12,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 33432,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/cobia.blend",
+    "sha256": "dbdba99e325734e897a88cfd2701d8a3bd5bc04051c60179b32f168d50c10625",
+    "bytes": 4005566,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "cobia",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 33432,
+    "vertices": 17350,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "longsoftdorsal",
+      "longanal",
+      "broadpectoralr",
+      "broadpectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 12,
+    "materials": 12,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Broad dorsoventrally flattened head with protruding lower jaw",
+      "Seven isolated short dorsal spines preceding a long low soft dorsal",
+      "Dark longitudinal side stripe bordered by paler flank regions",
+      "Broad pectorals and crescent-shaped adult tail"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cobia/"
+    ],
+    "glb_bytes": 4507872,
+    "glb_sha256": "47b84b4a3ef083ef24cbd2f7917327696c91d9c22bbeb877abbb87af18d6ee28",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "cobia",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.0655161643982715,
+        "loop_seam_m": 7.998458723920443e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2514250033739304,
+        "loop_seam_m": 7.503744191619323e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.1720288724785349,
+        "loop_seam_m": 5.210932905863783e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.013978666034387294,
+        "loop_seam_m": 1.4663839345949283e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "LongSoftDorsal",
+          "bone": "longsoftdorsal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005501649575307965,
+          "ray_max_distance_m": 0.0008737127645872533,
+          "max_distance_m": 0.0008737127645872533,
+          "rest_distance_m": 0.0008564049494452775,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "2": {
+          "name": "LongAnal",
+          "bone": "longanal",
+          "membrane_roots": 54,
+          "ray_roots": 135,
+          "membrane_max_distance_m": 0.0005460908869281411,
+          "ray_max_distance_m": 0.0008632582612335682,
+          "max_distance_m": 0.0008632582612335682,
+          "rest_distance_m": 0.0008630616357550025,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "3": {
+          "name": "BroadPectoralR",
+          "bone": "broadpectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007676963577978313,
+          "ray_max_distance_m": 0.001114287064410746,
+          "max_distance_m": 0.001114287064410746,
+          "rest_distance_m": 0.0011142202420160174,
+          "worst_clip": "breach",
+          "worst_frame": 38
+        },
+        "4": {
+          "name": "BroadPectoralL",
+          "bone": "broadpectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007613557390868664,
+          "ray_max_distance_m": 0.0011672755936160684,
+          "max_distance_m": 0.0011672755936160684,
+          "rest_distance_m": 0.001166953006759286,
+          "worst_clip": "breach",
+          "worst_frame": 6
+        },
+        "5": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007704703020863235,
+          "ray_max_distance_m": 0.0010914779268205166,
+          "max_distance_m": 0.0010914779268205166,
+          "rest_distance_m": 0.001079578185454011,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007904733647592366,
+          "ray_max_distance_m": 0.0010006013326346874,
+          "max_distance_m": 0.0010006013326346874,
+          "rest_distance_m": 0.0009964269120246172,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0007438748143613338,
+          "ray_max_distance_m": 0.00121054716873914,
+          "max_distance_m": 0.00121054716873914,
+          "rest_distance_m": 0.001202404499053955,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999051690101624,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "47b84b4a3ef083ef24cbd2f7917327696c91d9c22bbeb877abbb87af18d6ee28",
+    "master_sha256": "dbdba99e325734e897a88cfd2701d8a3bd5bc04051c60179b32f168d50c10625"
+  },
+  "visual_review": {
+    "species": "cobia",
+    "status": "reviewed_pass",
+    "glb_sha256": "47b84b4a3ef083ef24cbd2f7917327696c91d9c22bbeb877abbb87af18d6ee28",
+    "master_sha256": "dbdba99e325734e897a88cfd2701d8a3bd5bc04051c60179b32f168d50c10625",
+    "reviewed_views": {
+      "hero": "2f7718dca60cde0e1019149bb8561140f823d4aedc75a9224fbbc83b464e497e",
+      "side": "5a67fc1c41a757a695a614a48d881e67fb8633029f84bd3d5a024e465c0762bb",
+      "top": "24b5a3e19a3c37716c06b78a4c1df72156641133795e2a26034f112dc44ccc0f",
+      "underside": "6cbc41e2369373578711d04d1b282b0417231e1b094d1f625d827086df8f1c73",
+      "pose_swim": "84d0799a94ee319c6132b4b8f5452447ec94d803c28ce0049821a58c01f8b906",
+      "pose_struggle": "4d8663b6ba2ef17c57e4ae67cf1f2856b7030d2d42070431dac44005fd98832d",
+      "pose_breach": "0d8b790d8cdf4f676ffe5fb8ceb4c97867879997296370e8fbc7ca9231155b19",
+      "pose_landed": "edb3cabe077adc6042581547ef5f80934ff8a59955e9eb2fc061ca83e2d4be28"
+    },
+    "observations": [
+      "Four rest views show broad flattened head, seven separate dorsal spines, long soft dorsal, dark horizontal flank stripe and broad paired pectorals.",
+      "Four pose views show clean body bending and fin seating without obvious tears or gaps."
+    ],
+    "review_method": "Direct visual inspection of all eight rendered views at 1800x708 contact-sheet size, plus 900x600 hero/side detail"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/cobia.jpg",
+    "sha256": "438bd1fe8d69b8a18105cbd7ed428cb66ce1623fec9a3d7159400cbf87fc1d7b"
+  },
+  "mouth_offset_normalized": [
+    0.4902712,
+    -0.0107017,
+    0.0
+  ]
+}

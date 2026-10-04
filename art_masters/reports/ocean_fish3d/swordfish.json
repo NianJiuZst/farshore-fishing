@@ -1,0 +1,252 @@
+{
+  "species": "swordfish",
+  "status": "passed",
+  "binary": {
+    "sha256": "75bba795d62a328a69f78e72422f54f481a3e79792af34ba38e16c26ded018d7",
+    "bytes": 2017672,
+    "meshes": 14,
+    "geometry_sha256": "8651ff7591db4d7202971540603daeb031b679f62703984ead2375ff3f2f25d8",
+    "primitive_vertex_counts": [
+      408,
+      10,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2944,
+      480,
+      396,
+      100,
+      2970,
+      1386,
+      4459
+    ],
+    "skins": 1,
+    "bones": 16,
+    "weighted_primitives": 14,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 30896,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/swordfish.blend",
+    "sha256": "85977366f300307019641fdfee3e3c25ac58ce3ef109ab77a00aae65f01b9a39",
+    "bytes": 1577941,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "swordfish",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 30896,
+    "vertices": 16012,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "sicklefirstdorsal",
+      "seconddorsal",
+      "firstanal",
+      "secondanal",
+      "pectoralr",
+      "pectorall",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 14,
+    "materials": 14,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Long broad flattened sword-shaped upper rostrum with no pelvic fins",
+      "Large eye and heavy cylindrical trunk; smooth adult scaleless skin",
+      "Tall curved isolated first dorsal, small separate rear dorsal and anal",
+      "Single dominant caudal keel and sweeping crescent tail"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/swordfish/",
+      "https://www.fishbase.se/summary/Xiphias-gladius.html"
+    ],
+    "glb_bytes": 2017672,
+    "glb_sha256": "75bba795d62a328a69f78e72422f54f481a3e79792af34ba38e16c26ded018d7",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "swordfish",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.042351553737129156,
+        "loop_seam_m": 1.2427946414129878e-18
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.178684177408038,
+        "loop_seam_m": 3.7283834912642596e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.12336415184759303,
+        "loop_seam_m": 2.589155136839554e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.0074620072423367025,
+        "loop_seam_m": 2.278456634850092e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SickleFirstDorsal",
+          "bone": "sicklefirstdorsal",
+          "membrane_roots": 46,
+          "ray_roots": 115,
+          "membrane_max_distance_m": 0.0005233839037828147,
+          "ray_max_distance_m": 0.0008372258162125945,
+          "max_distance_m": 0.0008372258162125945,
+          "rest_distance_m": 0.0008371956064365804,
+          "worst_clip": "swim",
+          "worst_frame": 31
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 22,
+          "ray_roots": 55,
+          "membrane_max_distance_m": 0.00038997409865260124,
+          "ray_max_distance_m": 0.0005779808852821589,
+          "max_distance_m": 0.0005779808852821589,
+          "rest_distance_m": 0.0005767815746366978,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "3": {
+          "name": "FirstAnal",
+          "bone": "firstanal",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.00040754047222435474,
+          "ray_max_distance_m": 0.0008224114426411688,
+          "max_distance_m": 0.0008224114426411688,
+          "rest_distance_m": 0.0008187798666767776,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "4": {
+          "name": "SecondAnal",
+          "bone": "secondanal",
+          "membrane_roots": 22,
+          "ray_roots": 55,
+          "membrane_max_distance_m": 0.000397708936361596,
+          "ray_max_distance_m": 0.0005925779696553946,
+          "max_distance_m": 0.0005925779696553946,
+          "rest_distance_m": 0.0005900788819417357,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006007237825542688,
+          "ray_max_distance_m": 0.000892593408934772,
+          "max_distance_m": 0.000892593408934772,
+          "rest_distance_m": 0.0008914843783713877,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "6": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0005898597883060575,
+          "ray_max_distance_m": 0.0009133481071330607,
+          "max_distance_m": 0.0009133481071330607,
+          "rest_distance_m": 0.0009122664341703057,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005497136153280735,
+          "ray_max_distance_m": 0.0009611491695977747,
+          "max_distance_m": 0.0009611491695977747,
+          "rest_distance_m": 0.0009565353393554688,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.999900758266449,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "75bba795d62a328a69f78e72422f54f481a3e79792af34ba38e16c26ded018d7",
+    "master_sha256": "85977366f300307019641fdfee3e3c25ac58ce3ef109ab77a00aae65f01b9a39"
+  },
+  "visual_review": {
+    "species": "swordfish",
+    "status": "reviewed_pass",
+    "glb_sha256": "75bba795d62a328a69f78e72422f54f481a3e79792af34ba38e16c26ded018d7",
+    "master_sha256": "85977366f300307019641fdfee3e3c25ac58ce3ef109ab77a00aae65f01b9a39",
+    "reviewed_views": {
+      "hero": "fd0104bd84fdd7cac00dbdbae9d86ac566c080209125baedf4a3b6a8eeb6d9b5",
+      "side": "d1dabef641ba88a44ee72bd6b6411b3b6f39f7388ce26f4da0fe712cd6a46719",
+      "top": "e82b095e0f3bb63a05ded9115e9783ce4928a9be200676f55aa40c6adecfd8d9",
+      "underside": "e0e0b65a528675ef52f259f51649415e4d0dd59b567701d168f32a585658193b",
+      "pose_swim": "5b2a3bfbf70c8ab1ad818a96dcf95a8311f8a67146c5f0649a645321b20703a0",
+      "pose_struggle": "2acd740176a6513ea67c5a9ca16db716925ba8b0e0413687a470a5188b340833",
+      "pose_breach": "3c1028d539d43b6de69c1135a25fd032c97a30705d3741cabc2be9791556679f",
+      "pose_landed": "7c5d4afe3113f52665af2fd7c6586762aa5740159b7a6d6fe870f542fb53e1c8"
+    },
+    "observations": [
+      "Final eight views show the long dorsoventrally flattened sword blade, cylindrical body, large eyes, high separate first dorsal, absence of pelvic fins, and a single strong keel on each side of the peduncle.",
+      "Bill is thin edge-on and broad from above; all four poses preserve rigid rostrum and deforming torso with attached fins."
+    ],
+    "review_method": "Direct visual inspection of final eight-view contact sheet, with 900x600 detail on revised fin shapes"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/swordfish.jpg",
+    "sha256": "3cb4af2c21420b08c5421157e30de79f3f24c074de2f84e2fd8deea1bc241252"
+  },
+  "mouth_offset_normalized": [
+    0.1520622,
+    -0.0064433,
+    0.0
+  ]
+}

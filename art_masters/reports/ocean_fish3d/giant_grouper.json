@@ -1,0 +1,262 @@
+{
+  "species": "giant_grouper",
+  "status": "passed",
+  "binary": {
+    "sha256": "df7699a54a556ed12c52eff4cb035895da3115a64ff6ed1fea9672a357eb7bdc",
+    "bytes": 3915788,
+    "meshes": 12,
+    "geometry_sha256": "7e54f57fc5dd0612d2978d940c1fab4f650843822035fa661660452e77f04f24",
+    "primitive_vertex_counts": [
+      730,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      1722,
+      4459,
+      2944,
+      1140,
+      396,
+      3690
+    ],
+    "skins": 1,
+    "bones": 17,
+    "weighted_primitives": 12,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 34648,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/giant_grouper.blend",
+    "sha256": "b38238c766cdd9782c6d4c53606f78bca816a182b9d57c5a4a406ec4b1115bb0",
+    "bytes": 3430891,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "giant_grouper",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 34648,
+    "vertices": 17940,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "spinydorsal",
+      "roundedsoftdorsal",
+      "roundedanal",
+      "broadroundedpectoralr",
+      "broadroundedpectorall",
+      "pelvicr",
+      "pelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 12,
+    "materials": 12,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Massive thick adult grouper body and enormous gape with thick maxillary lips",
+      "Rounded caudal and broad rounded pectoral, soft dorsal and anal fins",
+      "Coarse brown-grey mottling, avoiding yellow-black juvenile banding",
+      "Low separated spinous peaks merge into rounded soft dorsal"
+    ],
+    "sources": [
+      "https://fishesofaustralia.net.au/home/species/4672"
+    ],
+    "glb_bytes": 3915788,
+    "glb_sha256": "df7699a54a556ed12c52eff4cb035895da3115a64ff6ed1fea9672a357eb7bdc",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "giant_grouper",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.05946955397365858,
+        "loop_seam_m": 7.445741814002864e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.23709948619665083,
+        "loop_seam_m": 2.2337222430787214e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.1631762159585647,
+        "loop_seam_m": 1.5511959063142355e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.013366762280621603,
+        "loop_seam_m": 1.3650527190531403e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SpinyDorsal",
+          "bone": "spinydorsal",
+          "membrane_roots": 24,
+          "ray_roots": 60,
+          "membrane_max_distance_m": 0.0006078583537600935,
+          "ray_max_distance_m": 0.0008099006372503936,
+          "max_distance_m": 0.0008099006372503936,
+          "rest_distance_m": 0.0008091692579910159,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "2": {
+          "name": "RoundedSoftDorsal",
+          "bone": "roundedsoftdorsal",
+          "membrane_roots": 44,
+          "ray_roots": 110,
+          "membrane_max_distance_m": 0.00046116430894471705,
+          "ray_max_distance_m": 0.0007428128737956285,
+          "max_distance_m": 0.0007428128737956285,
+          "rest_distance_m": 0.000742232718039304,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "3": {
+          "name": "RoundedAnal",
+          "bone": "roundedanal",
+          "membrane_roots": 34,
+          "ray_roots": 85,
+          "membrane_max_distance_m": 0.0004800764436367899,
+          "ray_max_distance_m": 0.0007334908004850149,
+          "max_distance_m": 0.0007334908004850149,
+          "rest_distance_m": 0.0007244471344165504,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "BroadRoundedPectoralR",
+          "bone": "broadroundedpectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007559432997368276,
+          "ray_max_distance_m": 0.001072312006726861,
+          "max_distance_m": 0.001072312006726861,
+          "rest_distance_m": 0.0010707664769142866,
+          "worst_clip": "breach",
+          "worst_frame": 17
+        },
+        "5": {
+          "name": "BroadRoundedPectoralL",
+          "bone": "broadroundedpectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007458525360561907,
+          "ray_max_distance_m": 0.001051303232088685,
+          "max_distance_m": 0.001051303232088685,
+          "rest_distance_m": 0.001036695553921163,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "6": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007116753258742392,
+          "ray_max_distance_m": 0.0009321668767370284,
+          "max_distance_m": 0.0009321668767370284,
+          "rest_distance_m": 0.0009261476225219667,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.000725301040802151,
+          "ray_max_distance_m": 0.0009075141279026866,
+          "max_distance_m": 0.0009075141279026866,
+          "rest_distance_m": 0.0009000368299894035,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "8": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0006757114315405488,
+          "ray_max_distance_m": 0.0012688993010669947,
+          "max_distance_m": 0.0012688993010669947,
+          "rest_distance_m": 0.0012483596801757812,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.999901533126831,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "df7699a54a556ed12c52eff4cb035895da3115a64ff6ed1fea9672a357eb7bdc",
+    "master_sha256": "b38238c766cdd9782c6d4c53606f78bca816a182b9d57c5a4a406ec4b1115bb0"
+  },
+  "visual_review": {
+    "species": "giant_grouper",
+    "status": "reviewed_pass",
+    "glb_sha256": "df7699a54a556ed12c52eff4cb035895da3115a64ff6ed1fea9672a357eb7bdc",
+    "master_sha256": "b38238c766cdd9782c6d4c53606f78bca816a182b9d57c5a4a406ec4b1115bb0",
+    "reviewed_views": {
+      "hero": "f9cddfc4aa468c6dda552596f7091c8f720506777fa97732c5c8e79d8bb0cd6c",
+      "side": "7f6935563864b0285c51694d3a13b832fa81f9181b8a8abe12deb6306ee287ce",
+      "top": "24d78c74fb40c6e54850c1183d31c1042f37e7fcbf357261ac49fa867c45d31b",
+      "underside": "2ce52059691f0ae4e5cdfa6c7cf34643a893a15514dc003759b93c933972af6e",
+      "pose_swim": "6d19f4e0ba4d928daadec5fe0d2276ebbf7edf045d58fe93988f5697235a3ee0",
+      "pose_struggle": "1eb669f1c7336f1013f9a6c1b249ab06ab1e09607e4f4858c00411ba7a26020c",
+      "pose_breach": "941ce147a1b847acee7fabb53f14c1382d329a4e4f9d05f7673f10bce9c22697",
+      "pose_landed": "1963839d8a06dbb99ebc5ec34936111c9709cbe56f936877a09f870f7e0d4f9f"
+    },
+    "observations": [
+      "Final eight views show bulky mottled adult body, broad head and gape with heavy lips, rounded tail, low median fins, and revised broadly rounded pectorals.",
+      "Top/underside distinguish the stocky three-dimensional body from compressed jacks; four action poses keep appendages attached."
+    ],
+    "review_method": "Direct visual inspection of final eight-view contact sheet, with 900x600 detail on revised fin shapes"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/giant_grouper.jpg",
+    "sha256": "d37f4d447abbb2e6b9552e4435937774e5689fa6f8991122e96f075f25b3053d"
+  },
+  "mouth_offset_normalized": [
+    0.4908284,
+    -0.0201776,
+    0.0
+  ]
+}

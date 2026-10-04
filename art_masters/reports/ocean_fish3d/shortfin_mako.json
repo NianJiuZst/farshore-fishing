@@ -1,0 +1,272 @@
+{
+  "species": "shortfin_mako",
+  "status": "passed",
+  "binary": {
+    "sha256": "b805dff6bcd56380e6eef9780a0e71f03473bb7c2fe58e360a0e715a3e441d5b",
+    "bytes": 6483244,
+    "meshes": 12,
+    "geometry_sha256": "9c662b99a7d37f91e9ed695538b7c01c185f8980029282c460bc80c859e5ae8c",
+    "primitive_vertex_counts": [
+      1140,
+      224,
+      3566,
+      217,
+      396,
+      33,
+      435,
+      435,
+      435,
+      435,
+      4928,
+      4459
+    ],
+    "skins": 1,
+    "bones": 25,
+    "weighted_primitives": 12,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 31749,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/shortfin_mako.blend",
+    "sha256": "d941bb528114932a92956854fb64c7a37b55f92ed33b19ba0eb90a0177953995",
+    "bytes": 5987136,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "shortfin_mako",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 31749,
+    "vertices": 16458,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "gill_GillSlitL1",
+      "gill_GillSlitL2",
+      "gill_GillSlitL3",
+      "gill_GillSlitL4",
+      "gill_GillSlitL5",
+      "gill_GillSlitR1",
+      "gill_GillSlitR2",
+      "gill_GillSlitR3",
+      "gill_GillSlitR4",
+      "gill_GillSlitR5",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectorall",
+      "pectoralr",
+      "pelvicl",
+      "pelvicr"
+    ],
+    "skinned_meshes": 12,
+    "materials": 12,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Hydrodynamic spindle body slimmer than white shark with strongly pointed conical snout",
+      "Short pointed pectorals, tiny second dorsal and anal and prominent single lateral tail keel",
+      "Near-lunate tail with large lower lobe, but upper lobe subtly longer",
+      "Fine hooked smooth-edged teeth rather than white-shark triangular saw teeth",
+      "Metallic navy back and white belly including underside of snout and mouth"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/",
+      "https://fishbase.se/summary/752"
+    ],
+    "glb_bytes": 6483244,
+    "glb_sha256": "b805dff6bcd56380e6eef9780a0e71f03473bb7c2fe58e360a0e715a3e441d5b",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "shortfin_mako",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.05553325789741641,
+        "loop_seam_m": 6.702375672491516e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2397823711750714,
+        "loop_seam_m": 7.031998761181822e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.16595759008514854,
+        "loop_seam_m": 4.8833327832097906e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.009768612259439835,
+        "loop_seam_m": 1.2287726721116556e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005581308505497873,
+          "ray_max_distance_m": 0.0011285922955721617,
+          "max_distance_m": 0.0011285922955721617,
+          "rest_distance_m": 0.0011273915879428387,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0008006495772860944,
+          "ray_max_distance_m": 0.0011603962630033493,
+          "max_distance_m": 0.0011603962630033493,
+          "rest_distance_m": 0.001145336776971817,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0006641446379944682,
+          "ray_max_distance_m": 0.0011370230931788683,
+          "max_distance_m": 0.0011370230931788683,
+          "rest_distance_m": 0.0011239286977797747,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0006100654718466103,
+          "ray_max_distance_m": 0.001112516736611724,
+          "max_distance_m": 0.001112516736611724,
+          "rest_distance_m": 0.0011073467321693897,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005946383462287486,
+          "ray_max_distance_m": 0.0010955898324027658,
+          "max_distance_m": 0.0010955898324027658,
+          "rest_distance_m": 0.0010888292454183102,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005416068597696722,
+          "ray_max_distance_m": 0.0009895300026983023,
+          "max_distance_m": 0.0009895300026983023,
+          "rest_distance_m": 0.0009690866572782397,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005614184192381799,
+          "ray_max_distance_m": 0.0010211617918685079,
+          "max_distance_m": 0.0010211617918685079,
+          "rest_distance_m": 0.0009993421845138073,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "8": {
+          "name": "HeterocercalCaudal",
+          "bone": "caudal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007015805458649993,
+          "ray_max_distance_m": 0.0011930339969694614,
+          "max_distance_m": 0.0011930339969694614,
+          "rest_distance_m": 0.0011884868144989014,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999436065554619,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "b805dff6bcd56380e6eef9780a0e71f03473bb7c2fe58e360a0e715a3e441d5b",
+    "master_sha256": "d941bb528114932a92956854fb64c7a37b55f92ed33b19ba0eb90a0177953995"
+  },
+  "visual_review": {
+    "species": "shortfin_mako",
+    "status": "reviewed_pass",
+    "glb_sha256": "b805dff6bcd56380e6eef9780a0e71f03473bb7c2fe58e360a0e715a3e441d5b",
+    "master_sha256": "d941bb528114932a92956854fb64c7a37b55f92ed33b19ba0eb90a0177953995",
+    "reviewed_views": {
+      "hero": "3e2cbffb4498469097c7a21a8c37f98c4e8bd0b874679c229d1eaf5e62003aa9",
+      "side": "959d9d0a5fcfdceca8d3b72a46ceefbccdf7383828d93475fa27a8c876844d7f",
+      "top": "e45bce6057dc5eb513afbe728f10a02548d79ce0ce69df0f2c8c40a01002084a",
+      "underside": "2bef6e1c4d2c14ba862cff6a4aaa246b55950e26775be4dcac3e4dc07d288187",
+      "pose_swim": "06be239a2177566d11bf7e17d95bff9d3e1038309a8fa63249cd72d7a9abd94a",
+      "pose_struggle": "598de6d879ec85f7faf05e8c09f4da6403164f3be5a042dcbd697166631a4eed",
+      "pose_breach": "fafca87bbc65149d20b877f39702ff5d8aa0ee458aaf7974c4bdcc385dc032c4",
+      "pose_landed": "253641d539404735fb2d3e97ac6d2c53c094a4ca01d1f9d3ca042f0da8f38a79"
+    },
+    "observations": [
+      "Eight views show the lean lamnid torpedo, sharply pointed snout, short pectorals, strong caudal keel and near-lunate tail.",
+      "White snout underside and arched ventral mouth visible; substantially slimmer than white shark. All poses retain coherent skin and attachments."
+    ],
+    "review_method": "Direct visual inspection of all eight final rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/shortfin_mako.jpg",
+    "sha256": "aca32fde6c57cc097a16d467e0b65d2aa7f28929a42f06ca3d3e41ff095e0775"
+  },
+  "mouth_offset_normalized": [
+    0.4278569,
+    -0.0179771,
+    0.0
+  ]
+}

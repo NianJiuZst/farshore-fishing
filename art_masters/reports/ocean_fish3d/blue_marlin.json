@@ -1,0 +1,278 @@
+{
+  "species": "blue_marlin",
+  "status": "passed",
+  "binary": {
+    "sha256": "6086f152edfa6dc979f5e109fce8ff4859c4948177e84eb6ebca3184a2e771cf",
+    "bytes": 4984004,
+    "meshes": 14,
+    "geometry_sha256": "258117ee89eab24c623412118eb1744f959d78edbbd1d6318f3d87de225f8e13",
+    "primitive_vertex_counts": [
+      408,
+      2100,
+      4459,
+      288,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2944,
+      480,
+      396,
+      100,
+      4500
+    ],
+    "skins": 1,
+    "bones": 18,
+    "weighted_primitives": 14,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 35720,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/blue_marlin.blend",
+    "sha256": "5c6fc7524c1a705babb03ef935e96732203f948a4cf36a57f032d08aad75730b",
+    "bytes": 4449132,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "blue_marlin",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 35720,
+    "vertices": 18534,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "longfirstdorsal",
+      "seconddorsal",
+      "firstanal",
+      "secondanal",
+      "pectoralr",
+      "pectorall",
+      "threadlikepelvicr",
+      "threadlikepelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 14,
+    "materials": 14,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Robust round trunk and cylindrical pointed bill",
+      "Low trailing dorsal ridge with high rounded anterior lobe",
+      "Paired slender pelvic fins and folded sickle pectorals",
+      "Cobalt back, restrained pale-blue flank bars and strong forked tail"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-marlin/",
+      "https://www.fisheries.noaa.gov/species/pacific-blue-marlin"
+    ],
+    "glb_bytes": 4984004,
+    "glb_sha256": "6086f152edfa6dc979f5e109fce8ff4859c4948177e84eb6ebca3184a2e771cf",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "blue_marlin",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.04600765921200614,
+        "loop_seam_m": 1.110307381435134e-18
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.19410952121250394,
+        "loop_seam_m": 3.4232925374304646e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.13401385768743235,
+        "loop_seam_m": 2.3772865086616566e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.010042149077481069,
+        "loop_seam_m": 2.035563432276471e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "LongFirstDorsal",
+          "bone": "longfirstdorsal",
+          "membrane_roots": 76,
+          "ray_roots": 190,
+          "membrane_max_distance_m": 0.00055813102517277,
+          "ray_max_distance_m": 0.0009454366518184543,
+          "max_distance_m": 0.0009454366518184543,
+          "rest_distance_m": 0.0009379129041917622,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 22,
+          "ray_roots": 55,
+          "membrane_max_distance_m": 0.0004216994857415557,
+          "ray_max_distance_m": 0.0006313526537269354,
+          "max_distance_m": 0.0006313526537269354,
+          "rest_distance_m": 0.0006281758542172611,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "FirstAnal",
+          "bone": "firstanal",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0005270921974442899,
+          "ray_max_distance_m": 0.0009400020935572684,
+          "max_distance_m": 0.0009400020935572684,
+          "rest_distance_m": 0.0009365432779304683,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "4": {
+          "name": "SecondAnal",
+          "bone": "secondanal",
+          "membrane_roots": 22,
+          "ray_roots": 55,
+          "membrane_max_distance_m": 0.0004289961652830243,
+          "ray_max_distance_m": 0.0006483389879576862,
+          "max_distance_m": 0.0006483389879576862,
+          "rest_distance_m": 0.0006458037532866001,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.000668360386043787,
+          "ray_max_distance_m": 0.0009792738128453493,
+          "max_distance_m": 0.0009792738128453493,
+          "rest_distance_m": 0.000977944117039442,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "6": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006548574310727417,
+          "ray_max_distance_m": 0.0009884199826046824,
+          "max_distance_m": 0.0009884199826046824,
+          "rest_distance_m": 0.000987156410701573,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "ThreadlikePelvicR",
+          "bone": "threadlikepelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006987189990468323,
+          "ray_max_distance_m": 0.0010245031444355845,
+          "max_distance_m": 0.0010245031444355845,
+          "rest_distance_m": 0.0010234123328700662,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "8": {
+          "name": "ThreadlikePelvicL",
+          "bone": "threadlikepelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0006998484604991972,
+          "ray_max_distance_m": 0.000985151738859713,
+          "max_distance_m": 0.000985151738859713,
+          "rest_distance_m": 0.0009817426325753331,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "9": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005971864447928965,
+          "ray_max_distance_m": 0.001044154749251902,
+          "max_distance_m": 0.001044154749251902,
+          "rest_distance_m": 0.0010391175746917725,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999004602432251,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "6086f152edfa6dc979f5e109fce8ff4859c4948177e84eb6ebca3184a2e771cf",
+    "master_sha256": "5c6fc7524c1a705babb03ef935e96732203f948a4cf36a57f032d08aad75730b"
+  },
+  "visual_review": {
+    "species": "blue_marlin",
+    "status": "reviewed_pass",
+    "glb_sha256": "6086f152edfa6dc979f5e109fce8ff4859c4948177e84eb6ebca3184a2e771cf",
+    "master_sha256": "5c6fc7524c1a705babb03ef935e96732203f948a4cf36a57f032d08aad75730b",
+    "reviewed_views": {
+      "hero": "20cfd10469513b9e0fb1ad475aaf87d27f875e4ab23fe1d6e468d311a7f20f3c",
+      "side": "8b7dfc47fc93b493f9b8a204244bce851965f12228f057ce0c917ff047a352f0",
+      "top": "b1ea186a8aee87d44c20c3d7f078508af8ac35c36b7558b9cee9c81bacc1efe1",
+      "underside": "e0461a3b6822af2108a374a76904f8884929154bfe8a4ec62c886809c26f59a1",
+      "pose_swim": "1dc46a962709789cc969a6840816c98af0364d039cf96e009cf228683f4ccb58",
+      "pose_struggle": "62676becb8485184104d0046639de5f30e2435e8e3e56c761f830dc91bd98266",
+      "pose_breach": "3fef69087dd0ffd3a431fee7f374dc009893e73cabff74ae274b435b504044c0",
+      "pose_landed": "4289ede27a3d5777688f6b9ae8716a197d152741523b71f71b36f8b01247eca8"
+    },
+    "observations": [
+      "Final eight views show a robust cylindrical blue billfish body, round spear bill, lower anterior dorsal lobe with continuous low trailing section, subdued blue flank bars and double caudal keels.",
+      "Pelvic fins were narrowed to long fine blades; final top/underside and four posed views confirm clean attached fins and stable bill."
+    ],
+    "review_method": "Direct visual inspection of all eight final rendered views at 1800x708 contact-sheet size"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/blue_marlin.jpg",
+    "sha256": "d04c072484fc6ab5dd76b00929c6c3fff2c209b2b59cff3ab5bf117e45da3e90"
+  },
+  "mouth_offset_normalized": [
+    0.2083531,
+    -0.0069995,
+    0.0
+  ]
+}

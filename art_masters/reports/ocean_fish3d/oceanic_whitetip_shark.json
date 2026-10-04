@@ -1,0 +1,271 @@
+{
+  "species": "oceanic_whitetip_shark",
+  "status": "passed",
+  "binary": {
+    "sha256": "1869e3d4b2ae7ec8ad5231f6b2013e0c3c3d4f59439201a45bcf6429a8b94e4e",
+    "bytes": 6383236,
+    "meshes": 10,
+    "geometry_sha256": "567acdfb5dcb75b9e99779d2f26c4ff6d5e5b0d0d99928f8c9980888f593793c",
+    "primitive_vertex_counts": [
+      1254,
+      3566,
+      217,
+      396,
+      4781,
+      334,
+      4459,
+      435,
+      435,
+      435,
+      435
+    ],
+    "skins": 1,
+    "bones": 25,
+    "weighted_primitives": 11,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 31522,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/oceanic_whitetip_shark.blend",
+    "sha256": "b081e0edeafbd5f9e51385e90f52f9718035d7a81992fc96111fde9598b06b42",
+    "bytes": 5877634,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "oceanic_whitetip_shark",
+    "pipeline_sha256": "139973de0cd2e5b4466f982dc27dcdfb9e2013bbfb9fd8125b81d5e9940da990",
+    "triangles": 31522,
+    "vertices": 16315,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "gill_GillSlitL1",
+      "gill_GillSlitL2",
+      "gill_GillSlitL3",
+      "gill_GillSlitL4",
+      "gill_GillSlitL5",
+      "gill_GillSlitR1",
+      "gill_GillSlitR2",
+      "gill_GillSlitR3",
+      "gill_GillSlitR4",
+      "gill_GillSlitR5",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectorall",
+      "pectoralr",
+      "pelvicl",
+      "pelvicr"
+    ],
+    "skinned_meshes": 10,
+    "materials": 11,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Stocky open-ocean shark with broad long paddle-like pectorals and rounded first dorsal apex",
+      "Mottled ivory terminal patches on first dorsal, pectorals and upper caudal; no white stripe along entire fins",
+      "Blunt rounded snout, bronze-gray dorsal color and warm pale belly",
+      "Low interdorsal ridge, small second dorsal and asymmetric upper-heavy tail",
+      "Five gill slits each side and underside arched mouth distinguish shark face from teleost operculum"
+    ],
+    "sources": [
+      "https://www.fisheries.noaa.gov/species/oceanic-whitetip-shark",
+      "https://www.fishbase.se/summary/carcharhinus-longimanus.html"
+    ],
+    "glb_bytes": 6383236,
+    "glb_sha256": "1869e3d4b2ae7ec8ad5231f6b2013e0c3c3d4f59439201a45bcf6429a8b94e4e",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "oceanic_whitetip_shark",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.06581391604980612,
+        "loop_seam_m": 7.230992202599576e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.2721351667928537,
+        "loop_seam_m": 6.5180778618320894e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.18739462228286602,
+        "loop_seam_m": 4.526442310908303e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.012275812860930066,
+        "loop_seam_m": 1.3256817729718847e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005543241859413683,
+          "ray_max_distance_m": 0.001086791860871017,
+          "max_distance_m": 0.001086791860871017,
+          "rest_distance_m": 0.0010863770730793476,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.000766577257309109,
+          "ray_max_distance_m": 0.0011121726129204035,
+          "max_distance_m": 0.0011121726129204035,
+          "rest_distance_m": 0.0010972559684887528,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005701668560504913,
+          "ray_max_distance_m": 0.0010927417315542698,
+          "max_distance_m": 0.0010927417315542698,
+          "rest_distance_m": 0.0010804187040776014,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005349368439055979,
+          "ray_max_distance_m": 0.0009986914228647947,
+          "max_distance_m": 0.0009986914228647947,
+          "rest_distance_m": 0.0009979879250749946,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005361476796679199,
+          "ray_max_distance_m": 0.0009849329944700003,
+          "max_distance_m": 0.0009849329944700003,
+          "rest_distance_m": 0.0009843361331149936,
+          "worst_clip": "breach",
+          "worst_frame": 22
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0004878710606135428,
+          "ray_max_distance_m": 0.0008448931621387601,
+          "max_distance_m": 0.0008448931621387601,
+          "rest_distance_m": 0.0008219637093134224,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005178000428713858,
+          "ray_max_distance_m": 0.0008789785206317902,
+          "max_distance_m": 0.0008789785206317902,
+          "rest_distance_m": 0.0008787900442257524,
+          "worst_clip": "swim",
+          "worst_frame": 1
+        },
+        "8": {
+          "name": "HeterocercalCaudal",
+          "bone": "caudal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0006884546601213515,
+          "ray_max_distance_m": 0.0011206329800188541,
+          "max_distance_m": 0.0011206329800188541,
+          "rest_distance_m": 0.0011172294616699219,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999227523803711,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "1869e3d4b2ae7ec8ad5231f6b2013e0c3c3d4f59439201a45bcf6429a8b94e4e",
+    "master_sha256": "b081e0edeafbd5f9e51385e90f52f9718035d7a81992fc96111fde9598b06b42"
+  },
+  "visual_review": {
+    "species": "oceanic_whitetip_shark",
+    "status": "reviewed_pass",
+    "glb_sha256": "1869e3d4b2ae7ec8ad5231f6b2013e0c3c3d4f59439201a45bcf6429a8b94e4e",
+    "master_sha256": "b081e0edeafbd5f9e51385e90f52f9718035d7a81992fc96111fde9598b06b42",
+    "reviewed_views": {
+      "hero": "bf5446bed1915f3320d0b6acc0b3d71e1e2b83d0745984a12b76828686bdd324",
+      "side": "ea2b1e3ad1ced47bf7a216b43ec9aa4041c660bc121bdfdef8b0d5a0f997acbd",
+      "top": "867c70d93758a2f9ae9512709a9c2f808c44d99b64a64711e9f4e3d368b114b1",
+      "underside": "0a85be6159f4906fc186b69c0de3c06d57cc92245ebe415ba86b66f194ad8c3b",
+      "pose_swim": "b52d77e27c8e6dc6c07aa606b05ff3f495bc6ef0dcf31467a58aaa8505be0abf",
+      "pose_struggle": "99658f4c88247a10c01928a49ac47c993a2b0c6f1a91106cb148cc92254d3323",
+      "pose_breach": "2a4cbbc0a048a99152698d7b8b066ab72dbe1f4fd63e325df33714976271bb52",
+      "pose_landed": "84d987a92eb5a7f23f4a0b55be0252ad8962eaac1286b4d74fdf208bf9ca3896"
+    },
+    "observations": [
+      "Final eight views show a stocky blunt pelagic body, broad rounded paddle pectorals and rounded first dorsal, terminal ivory pigmentation, five gills per side and asymmetric caudal.",
+      "White areas are assigned to actual membrane and ray faces on both surfaces; final top/underside and all posed views confirm the earlier intersecting-overlay streak defect is resolved."
+    ],
+    "review_method": "Direct final eight-view contact-sheet inspection, plus full-resolution top/underside check of painted fin surfaces"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/oceanic_whitetip_shark.jpg",
+    "sha256": "b806ec932caa27f1e72d7d76ec7a5b5362ed02472cf0ada0ff637b0c4e7ca04e"
+  },
+  "mouth_offset_normalized": [
+    0.4449552,
+    -0.0207314,
+    0.0
+  ]
+}

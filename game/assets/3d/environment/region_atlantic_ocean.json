@@ -1,0 +1,9 @@
+{
+  "region_id": "atlantic_ocean",
+  "triangles": 89760,
+  "sha256": "887d443ac58b529266068bda40c2a96d569784b36564d7b4591aa694ea60566a",
+  "authoring": "Original deterministic island, sea-stack, palm and reef geometry. Fictional composite ocean scenery, not a mapped real locality.",
+  "master": "art_masters/3d/region_atlantic_ocean.blend",
+  "up": "+Y",
+  "unit": "meter"
+}

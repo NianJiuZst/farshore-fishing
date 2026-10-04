@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "scope": "Quick 30fps grid",
+  "regressions": {
+    "checks": 70,
+    "failed": []
+  },
+  "balance_checks": [
+    {
+      "passed": true,
+      "label": "all 74 species simulated"
+    },
+    {
+      "passed": true,
+      "label": "observable reactive strategy wins at least 95%"
+    },
+    {
+      "passed": true,
+      "label": "active reactive fights never receive premature wear warning"
+    },
+    {
+      "passed": true,
+      "label": "never pulling cannot catch"
+    },
+    {
+      "passed": true,
+      "label": "always pulling at least 35 percentage points worse than reactive"
+    },
+    {
+      "passed": true,
+      "label": "blind metronome at least 20 percentage points worse than reactive"
+    },
+    {
+      "passed": true,
+      "label": "median within-species max/min fight duration ratio at least 2"
+    },
+    {
+      "passed": true,
+      "label": "continuous hard pull cannot land maximum-size giants"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "always_pull",
+      "runs": 877,
+      "caught": 0,
+      "success_rate": 0.0,
+      "catch_seconds_p10": null,
+      "catch_seconds_p50": null,
+      "catch_seconds_p90": null,
+      "catch_seconds_max": null,
+      "failures": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 876,
+        "浮漂恢复了原来的水线，鱼已松口离开。可以重新抛竿": 1
+      }
+    },
+    {
+      "strategy": "behavior_aware",
+      "runs": 877,
+      "caught": 876,
+      "success_rate": 0.99886,
+      "catch_seconds_p10": 25.671,
+      "catch_seconds_p50": 37.642,
+      "catch_seconds_p90": 113.583,
+      "catch_seconds_max": 130.783,
+      "failures": {
+        "浮漂恢复了原来的水线，鱼已松口离开。可以重新抛竿": 1
+      }
+    },
+    {
+      "strategy": "metronome",
+      "runs": 877,
+      "caught": 254,
+      "success_rate": 0.28962,
+      "catch_seconds_p10": 36.411,
+      "catch_seconds_p50": 40.13,
+      "catch_seconds_p90": 96.939,
+      "catch_seconds_max": 242.933,
+      "failures": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 597,
+        "松手太久，鱼带着松线挣脱了": 23,
+        "僵持后的鱼线磨损越来越重，终于断开了": 2,
+        "浮漂恢复了原来的水线，鱼已松口离开。可以重新抛竿": 1
+      }
+    },
+    {
+      "strategy": "never_pull",
+      "runs": 877,
+      "caught": 0,
+      "success_rate": 0.0,
+      "catch_seconds_p10": null,
+      "catch_seconds_p50": null,
+      "catch_seconds_p90": null,
+      "catch_seconds_max": null,
+      "failures": {
+        "松手太久，鱼带着松线挣脱了": 876,
+        "浮漂恢复了原来的水线，鱼已松口离开。可以重新抛竿": 1
+      }
+    },
+    {
+      "strategy": "tension_only",
+      "runs": 877,
+      "caught": 735,
+      "success_rate": 0.83808,
+      "catch_seconds_p10": 30.083,
+      "catch_seconds_p50": 44.733,
+      "catch_seconds_p90": 136.697,
+      "catch_seconds_max": 164.133,
+      "failures": {
+        "迎着冲势猛拉，鱼线绷断了。留意鱼身转向和竿梢蓄力": 141,
+        "浮漂恢复了原来的水线，鱼已松口离开。可以重新抛竿": 1
+      }
+    }
+  ],
+  "giant_small_duration_ratio_p50": 3.759,
+  "giant_mid_duration_ratio_p50": 2.998,
+  "source_changes_during_run": []
+}

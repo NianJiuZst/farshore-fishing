@@ -2,7 +2,7 @@
 """Extract precise normalized mouth anchors from tagged canonical Blender body vertices.
 Transforms Blender author coordinates to runtime glTF/Godot coordinates; touches new entries only.
 """
-import bpy,sys,json,argparse
+import bpy,sys,json,argparse,os
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(Path(__file__).parent))
 from fish_pipeline import load_profile
@@ -26,5 +26,5 @@ for sid in a.species:
 if a.write:
  registry=ROOT/'game/data/fish_3d.json';doc=json.loads(registry.read_text())
  for sid,row in rows.items():doc['models'][sid]['mouth_offset_normalized']=row['mouth_offset_normalized']
- registry.write_text(json.dumps(doc,indent=2,ensure_ascii=False)+'\n')
+ temporary=registry.with_suffix('.json.tmp');temporary.write_text(json.dumps(doc,indent=2,ensure_ascii=False)+'\n');os.replace(temporary,registry)
 out=ROOT/'art_masters/reports/ocean_mouth_landmarks.json';out.parent.mkdir(exist_ok=True,parents=True);out.write_text(json.dumps(rows,indent=2));print(json.dumps(rows,indent=2))

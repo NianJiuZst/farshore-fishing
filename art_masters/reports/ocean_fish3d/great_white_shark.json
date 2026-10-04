@@ -1,0 +1,272 @@
+{
+  "species": "great_white_shark",
+  "status": "passed",
+  "binary": {
+    "sha256": "4dd0ef58a5d1e8b003ce1622c52323680cb514a818d568c260236f85155c9b6c",
+    "bytes": 6217228,
+    "meshes": 12,
+    "geometry_sha256": "0a0706b077ca3bc82d2e9fbbbb0cd4782f91cff0b3776cd30d19cd9b5ed68474",
+    "primitive_vertex_counts": [
+      1140,
+      224,
+      4928,
+      4459,
+      3566,
+      217,
+      396,
+      33,
+      435,
+      435,
+      435,
+      435
+    ],
+    "skins": 1,
+    "bones": 25,
+    "weighted_primitives": 12,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 31749,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/great_white_shark.blend",
+    "sha256": "1ebb512369f60fe3e3269b8bdc2d1f13ba305fcaa5d6421c3cbe1cd62fddae19",
+    "bytes": 5702480,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "great_white_shark",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 31749,
+    "vertices": 16458,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "gill_GillSlitL1",
+      "gill_GillSlitL2",
+      "gill_GillSlitL3",
+      "gill_GillSlitL4",
+      "gill_GillSlitL5",
+      "gill_GillSlitR1",
+      "gill_GillSlitR2",
+      "gill_GillSlitR3",
+      "gill_GillSlitR4",
+      "gill_GillSlitR5",
+      "firstdorsal",
+      "seconddorsal",
+      "anal",
+      "pectorall",
+      "pectoralr",
+      "pelvicl",
+      "pelvicr"
+    ],
+    "skinned_meshes": 12,
+    "materials": 12,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Stocky adult Carcharodon with conical pointed snout, broad shoulders and pronounced caudal keels",
+      "Broad triangular first dorsal, small second dorsal and anal, long but robust pectorals",
+      "Near-lunate heterocercal tail with strongly developed lower lobe",
+      "Five separate curved gill slits per side and ventral U-shaped mouth with broad triangular teeth",
+      "Distinct gray upper surface and clean white ventral boundary; fine placoid texture rather than bony scales"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/white-shark/",
+      "https://www.fisheries.noaa.gov/species/white-shark"
+    ],
+    "glb_bytes": 6217228,
+    "glb_sha256": "4dd0ef58a5d1e8b003ce1622c52323680cb514a818d568c260236f85155c9b6c",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "great_white_shark",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.05626656340701032,
+        "loop_seam_m": 6.413751500644409e-19
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.24651687299392908,
+        "loop_seam_m": 6.729179668769656e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.17077806729608197,
+        "loop_seam_m": 4.67304184962019e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.010361382971520925,
+        "loop_seam_m": 1.1758538122875162e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "FirstDorsal",
+          "bone": "firstdorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.000676055671647191,
+          "ray_max_distance_m": 0.0011350121349096298,
+          "max_distance_m": 0.0011350121349096298,
+          "rest_distance_m": 0.0011328257387503982,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007382601615972817,
+          "ray_max_distance_m": 0.0011509917676448822,
+          "max_distance_m": 0.0011509917676448822,
+          "rest_distance_m": 0.0011410958832129836,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "3": {
+          "name": "Anal",
+          "bone": "anal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005455430946312845,
+          "ray_max_distance_m": 0.0011247893562540412,
+          "max_distance_m": 0.0011247893562540412,
+          "rest_distance_m": 0.0011241594329476357,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "4": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005484457360580564,
+          "ray_max_distance_m": 0.0010982720414176583,
+          "max_distance_m": 0.0010982720414176583,
+          "rest_distance_m": 0.0010880486806854606,
+          "worst_clip": "struggle",
+          "worst_frame": 1
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005450670141726732,
+          "ray_max_distance_m": 0.0010369679657742381,
+          "max_distance_m": 0.0010369679657742381,
+          "rest_distance_m": 0.0010274904780089855,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "6": {
+          "name": "PelvicL",
+          "bone": "pelvicl",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005190155352465808,
+          "ray_max_distance_m": 0.0008518713293597102,
+          "max_distance_m": 0.0008518713293597102,
+          "rest_distance_m": 0.0008508441387675703,
+          "worst_clip": "breach",
+          "worst_frame": 6
+        },
+        "7": {
+          "name": "PelvicR",
+          "bone": "pelvicr",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0005619342555291951,
+          "ray_max_distance_m": 0.0008839170914143324,
+          "max_distance_m": 0.0008839170914143324,
+          "rest_distance_m": 0.0008833131869323552,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "8": {
+          "name": "HeterocercalCaudal",
+          "bone": "caudal",
+          "membrane_roots": 28,
+          "ray_roots": 70,
+          "membrane_max_distance_m": 0.0007013808353804052,
+          "ray_max_distance_m": 0.0012114796554669738,
+          "max_distance_m": 0.0012114796554669738,
+          "rest_distance_m": 0.001205146312713623,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999126344919205,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "4dd0ef58a5d1e8b003ce1622c52323680cb514a818d568c260236f85155c9b6c",
+    "master_sha256": "1ebb512369f60fe3e3269b8bdc2d1f13ba305fcaa5d6421c3cbe1cd62fddae19"
+  },
+  "visual_review": {
+    "species": "great_white_shark",
+    "status": "reviewed_pass",
+    "glb_sha256": "4dd0ef58a5d1e8b003ce1622c52323680cb514a818d568c260236f85155c9b6c",
+    "master_sha256": "1ebb512369f60fe3e3269b8bdc2d1f13ba305fcaa5d6421c3cbe1cd62fddae19",
+    "reviewed_views": {
+      "hero": "1c760ea31a859cdc71a90cfc63b6d4fc400fbb39d8247fe9b2d03b5e52f68834",
+      "side": "de870433340d05b3b99050c68dbce0f343651c5c5722e5f5bb049957d7d236f6",
+      "top": "87ec61cd7f4a703b5157c527a14fd4873825038937297667c62331c660480a84",
+      "underside": "893ae67ab4852f3883cc857eb18d698de5decd5dcc3d771da47fcb5d88be109f",
+      "pose_swim": "7b31edc99f3407f1f3157644caace7be2a309120b94406e2587c9c46b6e9976c",
+      "pose_struggle": "49fac34e74935a08734862d9f42f6a0486d3a0820074694c45929998b36b64a6",
+      "pose_breach": "ffb61d05c0e9ca18627a85d782fc2bc56e66273136f4aa38947720cc77bb4793",
+      "pose_landed": "67df5871547db806fd41a8e39317c25a8f95d6ac404d342070233f63b8dbdc17"
+    },
+    "observations": [
+      "Final eight views show stocky conical forebody, five gill slits per side, broad triangular first dorsal, near-lunate heterocercal caudal and lateral keels.",
+      "Revised dark slate dorsum now contrasts clearly with the irregular white ventral boundary. Ventral view shows U-shaped mouth; four poses retain attached fins and coherent skin."
+    ],
+    "review_method": "Direct visual inspection of all eight final rendered views; full-resolution hero/top/underside details additionally inspected for key shark anatomy"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/great_white_shark.jpg",
+    "sha256": "2b832de0b797e24e0df4fb2237ccf32acb117795c610750091272a8197966abe"
+  },
+  "mouth_offset_normalized": [
+    0.4342746,
+    -0.0264644,
+    0.0
+  ]
+}

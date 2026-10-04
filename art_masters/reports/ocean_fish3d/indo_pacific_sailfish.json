@@ -1,0 +1,278 @@
+{
+  "species": "indo_pacific_sailfish",
+  "status": "passed",
+  "binary": {
+    "sha256": "2c44a2f879c465f8f9aa5f362198b1044f266b7abc07b762f9ca9cca1ea961cd",
+    "bytes": 4891684,
+    "meshes": 14,
+    "geometry_sha256": "999e4f15305a6902836104d0d330ece98e9b48c6c41a139c55fdea95ef3cf30e",
+    "primitive_vertex_counts": [
+      408,
+      288,
+      1364,
+      435,
+      435,
+      435,
+      435,
+      2226,
+      4459,
+      2944,
+      480,
+      396,
+      100,
+      4770
+    ],
+    "skins": 1,
+    "bones": 18,
+    "weighted_primitives": 14,
+    "required_clips": [
+      "swim",
+      "struggle",
+      "breach",
+      "landed"
+    ],
+    "animations": [
+      "breach",
+      "landed",
+      "struggle",
+      "swim"
+    ],
+    "embedded_images": 6,
+    "triangles": 36476,
+    "weight_sum_min": 0.9999999403953552,
+    "weight_sum_max": 1.0000000894069672,
+    "clip_seconds": {
+      "breach": 1.399999976158142,
+      "landed": 3.0,
+      "struggle": 1.2000000476837158,
+      "swim": 2.0
+    }
+  },
+  "authoring_master": {
+    "path": "art_masters/3d/indo_pacific_sailfish.blend",
+    "sha256": "c2478071dc0cf40a3a4cd98c16e8c066c1ede7b3050c7e630fda5dba09af1fb6",
+    "bytes": 4358353,
+    "compression": "Blender native zstd"
+  },
+  "manifest": {
+    "species": "indo_pacific_sailfish",
+    "pipeline_sha256": "86bf591001f7133e9f8f4f9bd03e4efb9efaf3c90b0bf146aabcf20b72671087",
+    "triangles": 36476,
+    "vertices": 18930,
+    "bones": [
+      "root",
+      "head",
+      "spine_front",
+      "spine_mid",
+      "spine_rear",
+      "tail",
+      "caudal",
+      "jaw",
+      "spectacularsail",
+      "seconddorsal",
+      "firstanal",
+      "secondanal",
+      "pectoralr",
+      "pectorall",
+      "threadlikepelvicr",
+      "threadlikepelvicl",
+      "gill_OperculumR",
+      "gill_OperculumL"
+    ],
+    "skinned_meshes": 14,
+    "materials": 14,
+    "forward": "+X",
+    "godot_up": "+Y",
+    "rest_length_m": 1,
+    "morphology": [
+      "Enormous high continuous sail dorsal with dark scattered spots",
+      "Very slender laterally compressed trunk and long round bill",
+      "Light blue spots in vertical flank rows",
+      "Extremely long thin pelvic fins, paired keel ridges and deeply forked tail"
+    ],
+    "sources": [
+      "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/sailfish/",
+      "https://www.fishbase.se/summary/Istiophorus-platypterus.html"
+    ],
+    "glb_bytes": 4891684,
+    "glb_sha256": "2c44a2f879c465f8f9aa5f362198b1044f266b7abc07b762f9ca9cca1ea961cd",
+    "flatfish": false,
+    "ocular_side": "bilateral"
+  },
+  "evaluated_animation_and_attachment_validation": {
+    "species": "indo_pacific_sailfish",
+    "clips": {
+      "swim": {
+        "seconds": 2.0,
+        "max_skin_displacement_m": 0.04579396883002624,
+        "loop_seam_m": 1.1180509240513427e-18
+      },
+      "struggle": {
+        "seconds": 1.2,
+        "max_skin_displacement_m": 0.19320795573723334,
+        "loop_seam_m": 3.4073930963483683e-18
+      },
+      "breach": {
+        "seconds": 1.4,
+        "max_skin_displacement_m": 0.13339141412512515,
+        "loop_seam_m": 2.3662448685485823e-18
+      },
+      "landed": {
+        "seconds": 3.0,
+        "max_skin_displacement_m": 0.012820542458202815,
+        "loop_seam_m": 2.0497599147027767e-19
+      }
+    },
+    "failures": [],
+    "attachments": {
+      "tolerance_m": 0.004,
+      "samples_per_clip": 9,
+      "groups": {
+        "1": {
+          "name": "SpectacularSail",
+          "bone": "spectacularsail",
+          "membrane_roots": 94,
+          "ray_roots": 235,
+          "membrane_max_distance_m": 0.00039172760443761945,
+          "ray_max_distance_m": 0.0005940243136137724,
+          "max_distance_m": 0.0005940243136137724,
+          "rest_distance_m": 0.0005906008882448077,
+          "worst_clip": "struggle",
+          "worst_frame": 32
+        },
+        "2": {
+          "name": "SecondDorsal",
+          "bone": "seconddorsal",
+          "membrane_roots": 22,
+          "ray_roots": 55,
+          "membrane_max_distance_m": 0.00042407179716974497,
+          "ray_max_distance_m": 0.000624107604380697,
+          "max_distance_m": 0.000624107604380697,
+          "rest_distance_m": 0.0006226434488780797,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "3": {
+          "name": "FirstAnal",
+          "bone": "firstanal",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.00040965413791127503,
+          "ray_max_distance_m": 0.000808287994004786,
+          "max_distance_m": 0.000808287994004786,
+          "rest_distance_m": 0.000803774397354573,
+          "worst_clip": "struggle",
+          "worst_frame": 19
+        },
+        "4": {
+          "name": "SecondAnal",
+          "bone": "secondanal",
+          "membrane_roots": 22,
+          "ray_roots": 55,
+          "membrane_max_distance_m": 0.00042793963802978396,
+          "ray_max_distance_m": 0.0006354598444886506,
+          "max_distance_m": 0.0006354598444886506,
+          "rest_distance_m": 0.0006325604626908898,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        },
+        "5": {
+          "name": "PectoralR",
+          "bone": "pectoralr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0005967607721686363,
+          "ray_max_distance_m": 0.000986907514743507,
+          "max_distance_m": 0.000986907514743507,
+          "rest_distance_m": 0.0009861078578978777,
+          "worst_clip": "struggle",
+          "worst_frame": 24
+        },
+        "6": {
+          "name": "PectoralL",
+          "bone": "pectorall",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0005879285163246095,
+          "ray_max_distance_m": 0.0009675616747699678,
+          "max_distance_m": 0.0009675616747699678,
+          "rest_distance_m": 0.0009667418780736625,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "7": {
+          "name": "ThreadlikePelvicR",
+          "bone": "threadlikepelvicr",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007098587229847908,
+          "ray_max_distance_m": 0.0010309522040188313,
+          "max_distance_m": 0.0010309522040188313,
+          "rest_distance_m": 0.0010307598859071732,
+          "worst_clip": "struggle",
+          "worst_frame": 10
+        },
+        "8": {
+          "name": "ThreadlikePelvicL",
+          "bone": "threadlikepelvicl",
+          "membrane_roots": 36,
+          "ray_roots": 90,
+          "membrane_max_distance_m": 0.0007107277633622289,
+          "ray_max_distance_m": 0.0009744685958139598,
+          "max_distance_m": 0.0009744685958139598,
+          "rest_distance_m": 0.0009734015329740942,
+          "worst_clip": "struggle",
+          "worst_frame": 6
+        },
+        "9": {
+          "name": "Caudal",
+          "bone": "caudal",
+          "membrane_roots": 62,
+          "ray_roots": 155,
+          "membrane_max_distance_m": 0.0005943854339420795,
+          "ray_max_distance_m": 0.001039286726154387,
+          "max_distance_m": 0.001039286726154387,
+          "rest_distance_m": 0.0010342895984649658,
+          "worst_clip": "struggle",
+          "worst_frame": 28
+        }
+      }
+    },
+    "weight_sum_min": 0.9999000132083893,
+    "weight_sum_max": 1.0000000298023224,
+    "max_influences": 3,
+    "attachment_tag_version": 1,
+    "glb_sha256": "2c44a2f879c465f8f9aa5f362198b1044f266b7abc07b762f9ca9cca1ea961cd",
+    "master_sha256": "c2478071dc0cf40a3a4cd98c16e8c066c1ede7b3050c7e630fda5dba09af1fb6"
+  },
+  "visual_review": {
+    "species": "indo_pacific_sailfish",
+    "status": "reviewed_pass",
+    "glb_sha256": "2c44a2f879c465f8f9aa5f362198b1044f266b7abc07b762f9ca9cca1ea961cd",
+    "master_sha256": "c2478071dc0cf40a3a4cd98c16e8c066c1ede7b3050c7e630fda5dba09af1fb6",
+    "reviewed_views": {
+      "hero": "dabdd1e3ad7216df5e76d5ff00bceed69d000990357c06834f2d0b1a8252c2cf",
+      "side": "6b19748c5cc307d2789595da1c08e9b5e32769a69d9bae30b3eba9b6b5c31966",
+      "top": "cda6a53d28c91281fdfece69158a8288abc21b703453def54074d1d86b359207",
+      "underside": "41a79a53694b74976eee35844fa86f44ac7da729e089481b94722c71f06397a3",
+      "pose_swim": "4f7a506a88556a4d92bf102b7a6c748bf287d2e5ad5af17e80137fa9e7bad189",
+      "pose_struggle": "d826e29a082784afa47a7a080625decb409cbd0e5cf52240cc429d417a8a6fa2",
+      "pose_breach": "81f903285f76807459575e3d2d3adfc64cf1250bae882c70fd94a7272ea78aa1",
+      "pose_landed": "682e79d79e0dc57fa222f2306de34c4de510438fd4bc79b5789fd0cbeef9555c"
+    },
+    "observations": [
+      "Final eight views show a very large tall spotted sail, slim compressed body, long round bill, fine blue flank dot rows, forked caudal and long narrow pelvic blades.",
+      "Final pelvic-fin revision removes the earlier broad-blade silhouette; all four poses retain the continuous sail base and attached paired fins without skin gaps."
+    ],
+    "review_method": "Direct visual inspection of all final eight-view contact-sheet panels"
+  },
+  "contact_sheet": {
+    "path": "art_masters/reports/ocean_contact_sheets/indo_pacific_sailfish.jpg",
+    "sha256": "ab96043cc8ba318a40a0f3fd732c7aa0d10d791a041ce75c5f7ff3ea191aa3b6"
+  },
+  "mouth_offset_normalized": [
+    0.205063,
+    -0.006967,
+    0.0
+  ]
+}

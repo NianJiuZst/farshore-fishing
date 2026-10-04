@@ -21,3 +21,8 @@ for sid in a.species:
  record={'species':sid,'status':'awaiting_visual_review','glb_sha256':hashlib.sha256((ROOT/'game/assets/3d'/f'{sid}.glb').read_bytes()).hexdigest(),'master_sha256':hashlib.sha256((ROOT/'art_masters/3d'/f'{sid}.blend').read_bytes()).hexdigest(),'view_hashes':hashes}
  (review/'review_candidate.json').write_text(json.dumps(record,indent=2))
  print(sid)
+if len(a.species)==30 and all((ROOT/'ownbuild/fish3d-catalog'/sid/'hero.png').is_file() for sid in a.species):
+ overview=Image.new('RGB',(1800,1640),(18,29,37));draw=ImageDraw.Draw(overview);draw.text((20,12),'FARSHORE | 30 OCEAN SPECIES | ORIGINAL ANIMATED 3D MODELS',font=title,fill=(233,241,243))
+ for i,sid in enumerate(a.species):
+  im=Image.open(ROOT/'ownbuild/fish3d-catalog'/sid/'hero.png').convert('RGB');im.thumbnail((358,238));x=(i%5)*360;y=55+(i//5)*263;overview.paste(im,(x,y));draw.text((x+7,y+240),sid.replace('_',' '),font=font,fill=(223,236,239))
+ overview.save(ROOT/'art_masters/reports/ocean_species_overview.jpg',quality=94)
