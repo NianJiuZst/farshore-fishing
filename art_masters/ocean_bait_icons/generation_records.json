@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "asset_set": "Farshore large ocean bait icons",
+  "generation_date_utc": "2026-10-04",
+  "generation_mode": "Built-in image_gen, four independent original generation calls, no CLI or API-key fallback",
+  "source_style_references": [
+    "game/assets/ui/icons/cut_fish.png",
+    "game/assets/ui/icons/lure.png",
+    "game/assets/ui/icons/shrimp.png"
+  ],
+  "runtime_processing": "None. Master and runtime PNGs are byte-for-byte copies of each selected original generated image. No resizing, cropping, masking, repainting, recoloring, or alpha replacement.",
+  "license_caveat": "Original AI-generated illustrations. No third-party stock artwork is incorporated. This provenance is not a copyright registration or warranty of exclusivity; usage is subject to applicable OpenAI terms and local law.",
+  "assets": [
+    {
+      "name": "large_fish_chunk",
+      "exact_prompt": "Use case: stylized-concept. Asset type: final original hand-painted inventory bait icon for Farshore Fishing, square 1024 by 1024 or larger with genuine transparent alpha. Subject: ONE single large hefty clean skin-on fish meat chunk, a substantial wedge-shaped bait portion, shown three-quarter view. Broad pale ivory and warm peach cut face with natural fine curved muscle grain, thick arched steel-blue silver scaled skin on the top and far side. Intact clean food-like cut, no blood, no wound, no bones, no gore. Make it visibly one massive meaty wedge, NOT a pair of small fish steaks, not a whole fish, no hooks. Match premium detailed naturalist game illustration: realistic painterly watercolor and gouache with tiny colored-pencil surface detail, tactile dimensional materials, controlled crisp object silhouette, soft upper-left illumination and self-shading. Object centered, full chunky silhouette occupying roughly 76 percent canvas width, at least 10 percent transparent exterior padding on all sides, strong recognition at 70 and 96 pixel UI sizes. Freestanding isolated object only. No background or paper rectangle, tile, button, container, decorative backplate, ground, shadow outside the object, vignette, halo, water, scenery, lettering, numbers, logo, watermark, or checkerboard. Preserve genuinely transparent background.",
+      "tool": "OpenAI built-in image_gen.imagegen",
+      "transparent_background": true,
+      "tool_output_hint": "Generated images are saved to /workspace/scratch/c16084497664/generated_images as /workspace/scratch/c16084497664/generated_images/exec-a89bf6ad-00ba-4c73-8fee-82061297bfa7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/workspace/scratch/c16084497664/generated_images/exec-a89bf6ad-00ba-4c73-8fee-82061297bfa7.png",
+      "master_path": "art_masters/ocean_bait_icons/large_fish_chunk.png",
+      "runtime_path": "game/assets/ui/icons/large_fish_chunk.png",
+      "source_bytes": 1836120,
+      "sha256": "34e688e97d53bf5d648e6164fb32730915404f3e1daa4b1c3a3d2f155b081947",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "alpha_zero_pixels": 812839,
+      "alpha_partial_pixels": 759393,
+      "alpha_opaque_pixels": 284,
+      "alpha_nonzero_bbox": [
+        0,
+        21,
+        1226,
+        1254
+      ],
+      "alpha_at_least_8_bbox": [
+        46,
+        168,
+        1216,
+        1124
+      ],
+      "outermost_edge_max_alpha": 1,
+      "runtime_identical_to_master": true
+    },
+    {
+      "name": "whole_mackerel",
+      "exact_prompt": "Use case: stylized-concept. Asset type: final original hand-painted inventory bait icon for Farshore Fishing, square 1024 by 1024 or larger with genuine transparent alpha. Subject: ONE complete whole mackerel baitfish, clear left-facing lateral side view, head on left and deeply forked tail on right, body on a slight diagonal from lower left to upper right. Slender torpedo body, blue-teal back with distinctive dark wavy transverse stripes, bright silver flank and pale silvery belly, small natural eye, two separated dorsal fins and tiny rear finlets. It is an intact fresh whole fish suitable as large sea-fishing bait, no injury, no blood, no hook, no line, no board. Keep the body bold enough to read at small icon size. Match premium detailed naturalist game illustration: realistic painterly watercolor and gouache with tiny colored-pencil surface detail, tactile dimensional materials, controlled crisp object silhouette, soft upper-left illumination and self-shading. Cohesive with refined painted shrimp and silver-blue cut-fish inventory icons. Entire subject centered and fully visible, full silhouette occupying roughly 76 percent canvas width and height, at least 10 percent transparent exterior padding on all sides, strong recognition at 70 and 96 pixel UI sizes. Freestanding isolated object only. No background or paper rectangle, tile, button, container, decorative backplate, ground, shadow outside the object, vignette, halo, water, scenery, lettering, numbers, logo, watermark, or checkerboard. Preserve genuinely transparent background.",
+      "tool": "OpenAI built-in image_gen.imagegen",
+      "transparent_background": true,
+      "tool_output_hint": "Generated images are saved to /workspace/scratch/c16084497664/generated_images as /workspace/scratch/c16084497664/generated_images/exec-3dfa6b9d-bf11-4e58-b30c-b894daac342b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/workspace/scratch/c16084497664/generated_images/exec-3dfa6b9d-bf11-4e58-b30c-b894daac342b.png",
+      "master_path": "art_masters/ocean_bait_icons/whole_mackerel.png",
+      "runtime_path": "game/assets/ui/icons/whole_mackerel.png",
+      "source_bytes": 938220,
+      "sha256": "369b385b5f2ec314d260e95f485048113de944db347479f6dad45df532d8dfc7",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "alpha_zero_pixels": 1243964,
+      "alpha_partial_pixels": 327970,
+      "alpha_opaque_pixels": 582,
+      "alpha_nonzero_bbox": [
+        0,
+        19,
+        1254,
+        1227
+      ],
+      "alpha_at_least_8_bbox": [
+        26,
+        215,
+        1246,
+        1006
+      ],
+      "outermost_edge_max_alpha": 1,
+      "runtime_identical_to_master": true
+    },
+    {
+      "name": "large_squid",
+      "exact_prompt": "Use case: stylized-concept. Asset type: final original hand-painted inventory bait icon for Farshore Fishing, square 1024 by 1024 or larger with genuine transparent alpha. Subject: ONE whole recognizable large squid bait, complete animal with long tapered ivory mantle, two small triangular fins near the upper tip, small head with two natural dark eyes, eight clearly articulated short arms and two longer gently curled tentacles. Arrange diagonally from mantle at upper right toward splayed arms at lower left, with distinct gaps between arm shapes and compact elegant full silhouette. Creamy pearl-white mantle with subtle warm rose and copper freckling, muted dusty terracotta undersides and tiny refined sucker details, darker contour accents for readability. Natural squid, NOT an octopus, no bulbous octopus head, no shell, no hooks, no injury or blood. Match premium detailed naturalist game illustration: realistic painterly watercolor and gouache with tiny colored-pencil surface detail, tactile dimensional materials, controlled crisp object silhouette, soft upper-left illumination and self-shading. Cohesive with refined painted shrimp and silver-blue cut-fish inventory icons. Entire subject centered and fully visible, full silhouette occupying roughly 76 percent canvas width and height, at least 10 percent transparent exterior padding on all sides, strong recognition at 70 and 96 pixel UI sizes. Freestanding isolated object only. No background or paper rectangle, tile, button, container, decorative backplate, ground, shadow outside the object, vignette, halo, water, scenery, lettering, numbers, logo, watermark, or checkerboard. Preserve genuinely transparent background.",
+      "tool": "OpenAI built-in image_gen.imagegen",
+      "transparent_background": true,
+      "tool_output_hint": "Generated images are saved to /workspace/scratch/c16084497664/generated_images as /workspace/scratch/c16084497664/generated_images/exec-1e859786-71b3-4cb3-9550-0436a20086b2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/workspace/scratch/c16084497664/generated_images/exec-1e859786-71b3-4cb3-9550-0436a20086b2.png",
+      "master_path": "art_masters/ocean_bait_icons/large_squid.png",
+      "runtime_path": "game/assets/ui/icons/large_squid.png",
+      "source_bytes": 1053105,
+      "sha256": "bc20975549e45e34155c60a3870331e440c3f4c92f518b7e353348158d6230ad",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "alpha_zero_pixels": 1193987,
+      "alpha_partial_pixels": 377667,
+      "alpha_opaque_pixels": 862,
+      "alpha_nonzero_bbox": [
+        49,
+        19,
+        1220,
+        1220
+      ],
+      "alpha_at_least_8_bbox": [
+        52,
+        64,
+        1218,
+        1212
+      ],
+      "outermost_edge_max_alpha": 0,
+      "runtime_identical_to_master": true
+    },
+    {
+      "name": "large_surface_lure",
+      "exact_prompt": "Use case: stylized-concept. Asset type: final original hand-painted inventory bait icon for Farshore Fishing, square 1024 by 1024 or larger with genuine transparent alpha. Subject: ONE oversized premium saltwater surface popper hardbait, robust short cigar-shaped painted wooden or resin body angled from lower left blunt cupped mouth toward upper right tapering tail. Very visible deep concave red-orange circular popper mouth, deep teal-blue back, silver-cream side with subtle painterly scale texture, warm amber belly, one small realistic glossy lure eye. Two sturdy dark gunmetal fishing hooks on short metal split-ring hangers: one belly hook and one tail hook, completely visible and distinct. Clearly an artificial heavy surface popper, NO living fish fins, NO soft-plastic tail, NO dangling fishing line, NO packaging. Make the bold cupped popper mouth and robust silhouette distinguish it from an ordinary slender fish-shaped lure. Match premium detailed naturalist game illustration: realistic painterly watercolor and gouache with tiny colored-pencil surface detail, tactile dimensional materials, controlled crisp object silhouette, soft upper-left illumination and self-shading. Cohesive with refined painted shrimp and silver-blue cut-fish inventory icons. Entire subject centered and fully visible, full silhouette occupying roughly 76 percent canvas width and height, at least 10 percent transparent exterior padding on all sides, strong recognition at 70 and 96 pixel UI sizes. Freestanding isolated object only. No background or paper rectangle, tile, button, container, decorative backplate, ground, shadow outside the object, vignette, halo, water, scenery, lettering, numbers, logo, watermark, or checkerboard. Preserve genuinely transparent background.",
+      "tool": "OpenAI built-in image_gen.imagegen",
+      "transparent_background": true,
+      "tool_output_hint": "Generated images are saved to /workspace/scratch/c16084497664/generated_images as /workspace/scratch/c16084497664/generated_images/exec-788af5a9-0ac6-4a60-8ee2-ef1ca368cf17.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/workspace/scratch/c16084497664/generated_images/exec-788af5a9-0ac6-4a60-8ee2-ef1ca368cf17.png",
+      "master_path": "art_masters/ocean_bait_icons/large_surface_lure.png",
+      "runtime_path": "game/assets/ui/icons/large_surface_lure.png",
+      "source_bytes": 1193682,
+      "sha256": "9e7fcaa26e6aa02adb320ae872399daa116e0d7a39aad38271be446f9cfe47d7",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "alpha_zero_pixels": 1129452,
+      "alpha_partial_pixels": 442530,
+      "alpha_opaque_pixels": 534,
+      "alpha_nonzero_bbox": [
+        63,
+        21,
+        1234,
+        1254
+      ],
+      "alpha_at_least_8_bbox": [
+        67,
+        272,
+        1225,
+        1106
+      ],
+      "outermost_edge_max_alpha": 1,
+      "runtime_identical_to_master": true
+    }
+  ],
+  "visual_audit": {
+    "native_size_review": "Passed: each generated image inspected visually at full output size. Four distinct recognizable subjects, intact silhouettes, no text, no frame or opaque background, no blood or gore. Naturalist painted material shading matches the existing cut-fish, lure and shrimp family.",
+    "small_size_review": "Audit HTML prepared at 70, 96 and 224 CSS pixels on teal and cream backgrounds. A browser screenshot was not captured because local Chromium could not create its process socket and the cloud browser blocks file:// URLs. Final in-game small-size review belongs with parent UI validation.",
+    "audit_html": "art_masters/ocean_bait_icons/readability_audit.html",
+    "alpha_note": "All images are genuine RGBA and retain original generated alpha. Three have invisible alpha-1 pixels touching the outer edge; no thresholding or cleanup was applied. The mackerel visible tail is intact with about 8 px right margin at native 1254 px."
+  }
+}

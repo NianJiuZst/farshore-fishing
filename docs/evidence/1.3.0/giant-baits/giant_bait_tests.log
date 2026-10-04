@@ -1,0 +1,7 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+GIANT BAIT SIZE: large_fish_chunk probability=0.15170945945946 samples=592000
+GIANT BAIT SIZE: whole_mackerel probability=0.15777702702703 samples=592000
+GIANT BAIT SIZE: large_squid probability=0.16398817567568 samples=592000
+GIANT BAIT SIZE: large_surface_lure probability=0.14636148648649 samples=592000
+GIANT_BAIT_TESTS: 7187621/7187621; failures=0; bait/species routes=888/888; size samples=2368000

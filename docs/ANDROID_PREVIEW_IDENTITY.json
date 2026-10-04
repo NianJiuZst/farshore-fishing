@@ -1,12 +1,14 @@
 {
   "schema_version": 1,
-  "android_package_name": "org.farshore.fishing.preview",
-  "launcher_name": "远岸钓记",
-  "certificate_sha256": "e0c20cecffb3dc5af682bd16b3ce8b9da2f142b1bee8d59cc2fe70da232dc284",
+  "android_package_name": "org.farshore.fishing.ocean",
+  "launcher_name": "远岸钓鱼·海洋",
+  "certificate_sha256": "a1996b606b1de5ec3ffd52edff64ec60b0434099d414c8893fa93b585c6ad716",
   "application_version": "1.3.0",
   "android_version_code": 7,
   "separate_installation": true,
-  "update_boundary": "Requires the exact existing org.farshore.fishing.preview certificate to update beta2/code4, beta3/code5 and1.2.0/code6. Same app-data namespace; do not uninstall. Signing remains blocked until original key is available.",
-  "signing_algorithm": "RSA-4096",
-  "created_utc": "2026-10-02T19:41:41.826914+00:00"
+  "signing_status": "owner_local_key_public_certificate_pinned",
+  "update_boundary": "Separate installation explicitly authorized on2026-10-04. Does not overwrite org.farshore.fishing.preview or access its saved data. Fresh profile receives1500 currency and six original regions through Yangtze; ocean unlock rules remain. Owner generated and separately backed up the signing key on their Mac; only this public certificate pin is shared.",
+  "signing_algorithm": "RSA-3072",
+  "authorized_utc": "2026-10-04T10:11:23Z",
+  "public_certificate_verified_utc": "2026-10-04T10:26:19Z"
 }

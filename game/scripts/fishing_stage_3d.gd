@@ -933,7 +933,7 @@ func _update_camera(delta: float) -> void:
 		fov_goal = 46.0
 		if _fish_length > 2.8:
 			target_goal = _fish_root.position + Vector3(0,0.15,0)
-			position_goal = target_goal + Vector3(0.15,2.35,maxf(7.2,_fish_length*2.45))
+			position_goal = target_goal + Vector3(0.15,2.35,maxf(7.2,_fish_length*2.72))
 		# Small individuals keep exact physical scale. A late optical push-in makes
 		# them legible without turning every catch into a physically identical fish.
 		var small_factor: float = clampf((0.45 - _fish_length) / 0.40, 0.0, 1.0)

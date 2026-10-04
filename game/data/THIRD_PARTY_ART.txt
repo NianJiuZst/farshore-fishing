@@ -1,4 +1,4 @@
-第三方美术素材 · 1.2.0
+素材来源与许可 · 1.3.0
 
 Cloud Layers HDRI
 作者：Greg Zaal / Poly Haven
@@ -41,3 +41,11 @@ MPFB 工具代码采用 GPLv3；本游戏不包含该工具代码。其基础数
 系统素材：https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html
 CC0：https://creativecommons.org/publicdomain/zero/1.0/
 完整逐文件来源、哈希和制作说明见源码 docs/ASSETS_3D_ANGLER_LICENSES.md、ASSETS_3D_ANGLER_PROVENANCE.json。
+
+1.3.0 海洋鱼类与新水域
+新增30种鱼的高清透明写实插画与缩略图由内置图像生成工具逐种制作、复核和修订，不是野生动物实拍照片。原44种插画保留，合计74种。
+新增30套鱼类网格、骨骼、材质和四类动画为本项目原创参数化Blender作品；太平洋、大西洋、印度洋的岛礁与陆架几何为本项目原创。新水域继续使用上方署名的既有CC0表面纹理与天空，没有另行引入未许可的照片或网格。
+新鱼图原图、完整提示词、修订、形态参考、量尺端点和校验记录见源码 art_masters/fish_photoreal_ocean；模型制作及240视图复核记录见 art_masters/reports/ocean_fish3d 和 tools/art3d/fish_profiles。
+自然资料的逐字段来源见每条图鉴的“资料来源”。生成图像的来源声明不构成独占权利或专业物种鉴定保证。
+
+海洋版追加鱼饵图标：大块鱼肉、整尾鲭鱼、大只鱿鱼、巨物波扒四幅1254×1254透明原创生成插画；提示词、原始文件、SHA256及来源记录见art_masters/ocean_bait_icons。没有使用第三方品牌或商品图片。

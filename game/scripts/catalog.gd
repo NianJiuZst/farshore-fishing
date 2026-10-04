@@ -7,6 +7,10 @@ var spots: Dictionary = {}
 var gear: Array = []
 var baits: Array = []
 var errors: Array[String] = []
+# One data-owned lookup also serves make_individual() callers without a catalog.
+# Catalog reloads refresh it; a cold direct call reads world.json once, not per fish.
+static var _bait_size_exponents: Dictionary = {}
+static var _bait_sizes_loaded: bool = false
 
 func load_all(check_art: bool = true) -> bool:
 	fish.clear()
@@ -56,6 +60,7 @@ func load_all(check_art: bool = true) -> bool:
 		if str(bait.get("legacy_category",id)) not in ["worm","grain","shrimp","lure"]: errors.append("鱼饵兼容分类无效：" + id)
 		var price: float = float(bait.get("price",-1.0))
 		if not is_finite(price) or price < 0.0: errors.append("鱼饵价格无效：" + id)
+		errors.append_array(bait_tuning_errors(bait))
 		var overrides: Variant = bait.get("species_weights",{})
 		if not overrides is Dictionary:
 			errors.append("鱼饵偏好映射无效：" + id)
@@ -99,6 +104,7 @@ func load_all(check_art: bool = true) -> bool:
 				count += 1
 		if count == 0:
 			errors.append("空钓点: " + id)
+	if errors.is_empty(): _cache_bait_sizes(baits)
 	return errors.is_empty()
 
 func _json(path: String) -> Variant:
@@ -145,4 +151,31 @@ func bait_weight(species: FishDefinition, id: String) -> float:
 	var bait: Dictionary = bait_definition(id)
 	var overrides: Dictionary = bait.get("species_weights",{})
 	if overrides.has(species.species_id): return maxf(0.0,float(overrides[species.species_id]))
-	return species.weight_for("bait_weights",bait_category(id))
+	return species.weight_for("bait_weights",bait_category(id)) * float(bait.get("fallback_weight_scale",1.0))
+
+static func bait_tuning_errors(bait: Dictionary) -> Array[String]:
+	var result: Array[String] = []
+	var id: String = str(bait.get("bait_id",""))
+	for key: String in ["fallback_weight_scale","size_exponent"]:
+		if not bait.has(key): continue
+		var value: Variant = bait[key]
+		var minimum: float = 0.0 if key == "fallback_weight_scale" else 0.75
+		var maximum: float = 1.0 if key == "fallback_weight_scale" else 2.0
+		if (not value is float and not value is int) or not is_finite(float(value)) or float(value) < minimum or float(value) > maximum:
+			result.append("鱼饵调校参数无效：" + id + "/" + key)
+	return result
+
+static func _cache_bait_sizes(definitions: Array) -> void:
+	_bait_size_exponents.clear()
+	for value: Variant in definitions:
+		if not value is Dictionary: continue
+		var bait: Dictionary = value
+		if bait.has("size_exponent") and bait_tuning_errors(bait).is_empty():
+			_bait_size_exponents[str(bait.get("bait_id",""))] = float(bait.size_exponent)
+	_bait_sizes_loaded = true
+
+static func bait_size_exponent(id: String, default_value: float) -> float:
+	if not _bait_sizes_loaded:
+		var world: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/world.json"))
+		_cache_bait_sizes(world.get("baits",[]) if world is Dictionary else [])
+	return float(_bait_size_exponents.get(id,default_value))

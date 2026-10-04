@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-04T10:25:13.126900+00:00",
+  "godot_version": "4.6.3.stable.official.7d41c59c4",
+  "command": "godot --headless --path game --script res://tests/giant_bait_tests.gd",
+  "isolation": "Fresh temporary HOME/XDG directories; explicit FARSHORE_GIANT_BAIT_REPORT output path",
+  "checks_passed": 7187621,
+  "failures": 0,
+  "files_sha256": {
+    "game/data/world.json": "ce34ace2550cc97c524cba8b717236ab0ec2468c83424e0f84eea4b2d2e3c2d0",
+    "game/scripts/catalog.gd": "8a0e7b4118789bf94cd4b060b5a27287e93bb4a7d0602011a00a4da6f102f07b",
+    "game/scripts/encounter.gd": "99dac158e228c8e55b6febff113b1cd32c65c0d656ec8f5288212b1c62eb8ab8",
+    "game/tests/giant_bait_tests.gd": "5524114b80c8c6159c549eaeca39d998dcf7b104be0825b977f1014154c797ea",
+    "game/tests/fixtures/giant_bait_legacy_baseline.json": "8566f34705819b301480d95b0319a7e6399da5b7a7ed462329a66c1995179c87"
+  },
+  "not_performed": [
+    "editor import",
+    "export",
+    "signing",
+    "installation",
+    "publication",
+    "native visual verification"
+  ]
+}

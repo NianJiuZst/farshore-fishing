@@ -7,7 +7,8 @@ const REQUIRED_ICONS: Array[String]=[
 	"rod","reel","hook","bag","compass","book","heart","coin","badge",
 	"pause","settings","sound","back","arrow","sort","search","release",
 	"worm","grain","shrimp","lure","sun","dusk","rain","ruler",
-	"sweetcorn","dough","cut_fish","spinner","rod_spinning","rod_heavy"
+	"sweetcorn","dough","cut_fish","spinner","rod_spinning","rod_heavy",
+	"large_fish_chunk","whole_mackerel","large_squid","large_surface_lure"
 ]
 static var _textures: Dictionary={}
 static var _reported: Dictionary={}

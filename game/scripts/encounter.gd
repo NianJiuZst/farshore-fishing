@@ -1,6 +1,7 @@
 class_name EncounterGenerator
 extends RefCounted
 const FloatModel = preload("res://scripts/float_encounter.gd")
+const Catalog = preload("res://scripts/catalog.gd")
 # Game-only length tuning. The 2% extended tail can exceed published natural
 # records; those records remain untouched in the independent encyclopedia.
 const SIZE_EXPONENT: float = 1.55
@@ -87,7 +88,7 @@ func apply_float_presentation(record: Dictionary, catalog: ContentCatalog, cast_
 	var deep: float = maxf(shallow, minf(float(spot.get("depth_max_m", 8.0)), float(gear.get("max_depth_m", 8.0))))
 	var water_depth: float = lerpf(shallow, deep, clampf(cast_power, 0.0, 1.0))
 	var bait: String = str(record.get("bait_id", "worm"))
-	var bottom_rig: bool = fish.species_id in FloatModel.BOTTOM_FEEDERS and water_depth <= 12.0 and bait not in ["spinner", "lure"]
+	var bottom_rig: bool = fish.species_id in FloatModel.BOTTOM_FEEDERS and water_depth <= 12.0 and bait not in ["spinner", "lure", "large_surface_lure"]
 	record["water_depth_m"] = water_depth
 	record["bait_depth_m"] = maxf(0.3, water_depth - 0.12) if bottom_rig else clampf(maxf(float(fish.raw.get("depth_min_m", 0.5)), water_depth * 0.6), 0.3, water_depth)
 	record["float_rig"] = "near_bottom" if bottom_rig else "suspended"
@@ -98,7 +99,9 @@ func make_individual(fish: FishDefinition, spot: String, region: String, bait: S
 	# tail uses the new fictional extreme, so a record does not become the mean.
 	var normal_max: float = clampf(float(fish.raw.get("normal_max_mm", fish.max_mm)), float(fish.min_mm), float(fish.max_mm))
 	var extended: bool = rng.randf() < EXTENDED_SIZE_CHANCE and normal_max < float(fish.max_mm)
-	var fraction: float = pow(rng.randf(), SIZE_EXPONENT)
+	# Larger baits only reshape this same species' ordinary size draw. They do
+	# not add RNG draws, extend its game cap, or enlarge the 2% fictional tail.
+	var fraction: float = pow(rng.randf(), Catalog.bait_size_exponent(bait, SIZE_EXPONENT))
 	var length_mm: int
 	if extended:
 		length_mm = roundi(lerpf(normal_max, float(fish.max_mm), pow(rng.randf(), EXTENDED_SIZE_EXPONENT)))
