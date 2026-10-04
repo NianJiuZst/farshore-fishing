@@ -336,7 +336,7 @@ class Fish:
         floor=bpy.data.objects['REVIEW_Backdrop'];floor.location.z=-.25 if not self.profile.get('flatfish') else -.10
         core.point_cam(self.camera,(.60,-1.8,.55) if not self.profile.get('flatfish') else (.58,-.8,1.8))
         master=ROOT/'art_masters/3d'/f'{self.species}.blend';master_candidate=staging/master.name
-        bpy.ops.wm.save_as_mainfile(filepath=str(master_candidate),copy=True)
+        bpy.ops.wm.save_as_mainfile(filepath=str(master_candidate),copy=True,compress=bool(self.profile.get('compress_master',False)))
         assert master_candidate.stat().st_size>10000,'Incomplete master candidate'
         os.replace(master_candidate,master);os.replace(candidate,glb)
         manifest={'species':self.species,'pipeline_sha256':PIPELINE_SHA256,'triangles':sum(len(o.data.loop_triangles) for o in core.MESHES),'vertices':sum(len(o.data.vertices) for o in core.MESHES),'bones':list(self.bones),'skinned_meshes':len(core.MESHES),'materials':len(set(o.data.materials[0].name for o in core.MESHES)),'forward':'+X','godot_up':'+Y','rest_length_m':1,'morphology':self.profile['morphology'],'sources':self.profile['sources'],'glb_bytes':glb.stat().st_size,'glb_sha256':hashlib.sha256(glb.read_bytes()).hexdigest(),'flatfish':bool(self.profile.get('flatfish')),'ocular_side':self.profile.get('ocular_side','bilateral')}

@@ -1,0 +1,41 @@
+"""Original indo pacific sailfish anatomy; source references retained below."""
+from fish_profiles._ocean_bony import anatomy, paint
+
+PROFILE = {'id': 'indo_pacific_sailfish',
+ 'sections': [(-0.398, 0.009, 0.015, 0.012, 0),
+              (-0.33, 0.015, 0.025, 0.019, 0),
+              (-0.23, 0.014280000000000003, 0.028399999999999998, 0.022719999999999997, 0.001),
+              (-0.1, 0.02562, 0.04615, 0.03763, 0.002),
+              (0.035, 0.0357, 0.06461, 0.051829999999999994, 0.004),
+              (0.16, 0.042, 0.071, 0.05892999999999999, 0.004),
+              (0.245, 0.03864, 0.06176999999999999, 0.04898999999999999, 0.003),
+              (0.307, 0.031920000000000004, 0.04473, 0.03266, 0.002),
+              (0.365, 0.02016, 0.020589999999999997, 0.015619999999999998, 0.001),
+              (0.406, 0.008, 0.01, 0.007, 0)],
+ 'skin': {'back': (0.045, 0.12, 0.27),
+          'side': (0.4, 0.54, 0.66),
+          'belly': (0.77, 0.81, 0.79),
+          'pattern': 'fine_scales',
+          'scale_columns': 120,
+          'scale_rows': 58,
+          'variation': 0.014},
+ 'fin_color': (0.105, 0.19, 0.29),
+ 'normal_strength': 0.055,
+ 'roughness': 0.36,
+ 'specular': 0.4,
+ 'coat': 0.08,
+ 'swim_amplitude': 0.63,
+ 'anatomy': {'family': 'billfish',
+             'bill_tip': 0.77,
+             'eye_radius': 0.0105,
+             'pigment': 'sailfish_dots'},
+ 'morphology': ['Enormous high continuous sail dorsal with dark scattered spots',
+                'Very slender laterally compressed trunk and long round bill',
+                'Light blue spots in vertical flank rows',
+                'Extremely long thin pelvic fins, paired keel ridges and deeply forked tail'],
+ 'sources': ['https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/sailfish/',
+             'https://www.fishbase.se/summary/Istiophorus-platypterus.html'],
+ 'fin_pattern': 'spots'}
+PROFILE["custom_skin"] = paint(PROFILE)
+PROFILE["compress_master"] = True
+PROFILE["mouth_anchor"] = (0.389, 0, -0.009)

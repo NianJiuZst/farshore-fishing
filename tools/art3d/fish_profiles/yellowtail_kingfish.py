@@ -1,0 +1,43 @@
+"""Original yellowtail kingfish anatomy; source references retained below."""
+from fish_profiles._ocean_bony import anatomy, paint
+
+PROFILE = {'id': 'yellowtail_kingfish',
+ 'sections': [(-0.398, 0.009, 0.016, 0.013, 0),
+              (-0.325, 0.017, 0.027, 0.021, 0),
+              (-0.213, 0.029, 0.046, 0.036, 0.001),
+              (-0.075, 0.043, 0.067, 0.054, 0.002),
+              (0.08, 0.054, 0.086, 0.073, 0.003),
+              (0.209, 0.058, 0.094, 0.074, 0.002),
+              (0.312, 0.05, 0.078, 0.055, 0.001),
+              (0.392, 0.037, 0.054, 0.035, 0),
+              (0.456, 0.021, 0.024, 0.018, -0.001),
+              (0.496, 0.008, 0.009, 0.006, -0.001),
+              (0.511, 0.002, 0.003, 0.003, -0.001)],
+ 'skin': {'back': (0.1, 0.28, 0.29),
+          'side': (0.59, 0.67, 0.61),
+          'belly': (0.84, 0.86, 0.77),
+          'pattern': 'fine_scales',
+          'scale_columns': 120,
+          'scale_rows': 58,
+          'variation': 0.014},
+ 'fin_color': (0.54, 0.51, 0.22),
+ 'normal_strength': 0.055,
+ 'roughness': 0.36,
+ 'specular': 0.4,
+ 'coat': 0.08,
+ 'swim_amplitude': 0.72,
+ 'anatomy': {'family': 'jack',
+             'pigment': 'kingfish_stripe',
+             'dorsal_height': 0.151,
+             'pectoral_length': 0.137,
+             'pectoral_span': 0.063,
+             'tail_height': 0.144,
+             'tail_color': (0.82, 0.64, 0.12)},
+ 'morphology': ['Long lean blue-green kingfish spindle with thin yellow eye-to-tail stripe',
+                'Bright yellow deeply forked caudal and short pointed pectorals',
+                'Low separated first dorsal and elongated second dorsal and anal',
+                'Lacks hard rear lateral-line scutes'],
+ 'sources': ['https://fishesofaustralia.net.au/home/species/1662']}
+PROFILE["custom_skin"] = paint(PROFILE)
+PROFILE["compress_master"] = True
+PROFILE["mouth_anchor"] = (0.506, 0, -0.002)

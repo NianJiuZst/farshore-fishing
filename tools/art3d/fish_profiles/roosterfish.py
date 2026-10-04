@@ -1,0 +1,42 @@
+"""Original roosterfish anatomy; source references retained below."""
+from fish_profiles._ocean_bony import anatomy, paint
+
+PROFILE = {'id': 'roosterfish',
+ 'sections': [(-0.399, 0.01, 0.017, 0.015, 0),
+              (-0.317, 0.017, 0.028, 0.022, 0),
+              (-0.202, 0.029, 0.054, 0.041, 0),
+              (-0.05, 0.047, 0.086, 0.068, 0.003),
+              (0.1, 0.057, 0.113, 0.087, 0.004),
+              (0.224, 0.057, 0.133, 0.093, 0.004),
+              (0.325, 0.047, 0.115, 0.065, 0.003),
+              (0.4, 0.033, 0.066, 0.04, 0),
+              (0.468, 0.02, 0.02, 0.017, -0.003),
+              (0.506, 0.003, 0.004, 0.004, -0.003)],
+ 'skin': {'back': (0.17, 0.27, 0.31),
+          'side': (0.62, 0.68, 0.69),
+          'belly': (0.85, 0.87, 0.82),
+          'pattern': 'fine_scales',
+          'scale_columns': 120,
+          'scale_rows': 58,
+          'variation': 0.014},
+ 'fin_color': (0.29, 0.37, 0.4),
+ 'normal_strength': 0.055,
+ 'roughness': 0.36,
+ 'specular': 0.4,
+ 'coat': 0.08,
+ 'swim_amplitude': 0.72,
+ 'anatomy': {'family': 'rooster',
+             'pigment': 'rooster_bands',
+             'dorsal_height': 0.144,
+             'pectoral_length': 0.26,
+             'pectoral_span': 0.094,
+             'tail_height': 0.162,
+             'tail_color': (0.29, 0.37, 0.39)},
+ 'morphology': ['Seven dramatically elongated dark anterior dorsal rays form a rooster comb',
+                'Compressed silver jack-like body with two broad oblique charcoal bands',
+                'Long curving pectorals and deeply forked caudal',
+                'Smooth lateral-line peduncle without trevally scutes'],
+ 'sources': ['https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1223']}
+PROFILE["custom_skin"] = paint(PROFILE)
+PROFILE["compress_master"] = True
+PROFILE["mouth_anchor"] = (0.501, 0, -0.004)

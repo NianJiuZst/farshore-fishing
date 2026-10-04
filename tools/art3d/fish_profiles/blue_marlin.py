@@ -1,0 +1,41 @@
+"""Original blue marlin anatomy; source references retained below."""
+from fish_profiles._ocean_bony import anatomy, paint
+
+PROFILE = {'id': 'blue_marlin',
+ 'sections': [(-0.398, 0.009, 0.015, 0.012, 0),
+              (-0.33, 0.015, 0.025, 0.019, 0),
+              (-0.23, 0.024139999999999998, 0.0424, 0.03392, 0.001),
+              (-0.1, 0.043309999999999994, 0.0689, 0.05618, 0.002),
+              (0.035, 0.060349999999999994, 0.09646, 0.07737999999999999, 0.004),
+              (0.16, 0.071, 0.106, 0.08797999999999999, 0.004),
+              (0.245, 0.06532, 0.09222, 0.07314, 0.003),
+              (0.307, 0.053959999999999994, 0.06677999999999999, 0.04876, 0.002),
+              (0.365, 0.03407999999999999, 0.030739999999999996, 0.02332, 0.001),
+              (0.406, 0.008, 0.01, 0.007, 0)],
+ 'skin': {'back': (0.025, 0.12, 0.24),
+          'side': (0.45, 0.58, 0.67),
+          'belly': (0.79, 0.82, 0.81),
+          'pattern': 'fine_scales',
+          'scale_columns': 120,
+          'scale_rows': 58,
+          'variation': 0.014},
+ 'fin_color': (0.105, 0.19, 0.29),
+ 'normal_strength': 0.055,
+ 'roughness': 0.36,
+ 'specular': 0.4,
+ 'coat': 0.08,
+ 'swim_amplitude': 0.63,
+ 'anatomy': {'family': 'billfish',
+             'bill_tip': 0.764,
+             'eye_radius': 0.0105,
+             'pigment': 'marlin_bars'},
+ 'morphology': ['Robust round trunk and cylindrical pointed bill',
+                'Low trailing dorsal ridge with high rounded anterior lobe',
+                'Paired slender pelvic fins and folded sickle pectorals',
+                'Cobalt back, restrained pale-blue flank bars and strong forked tail'],
+ 'sources': ['https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/blue-marlin/',
+             'https://www.fisheries.noaa.gov/species/pacific-blue-marlin'],
+ 'fin_pattern': ''}
+PROFILE["custom_skin"] = paint(PROFILE)
+PROFILE["compress_master"] = True
+PROFILE["mouth_anchor"] = (0.389, 0, -0.009)

@@ -1,0 +1,47 @@
+"""Original skipjack tuna anatomy; source references retained below."""
+from fish_profiles._ocean_bony import anatomy, paint
+
+PROFILE = {'id': 'skipjack_tuna',
+ 'sections': [(-0.398, 0.008, 0.012, 0.01, 0),
+              (-0.325, 0.016, 0.025, 0.02, 0),
+              (-0.23, 0.031, 0.046, 0.037, 0.001),
+              (-0.092, 0.053, 0.075, 0.061, 0.001),
+              (0.055, 0.072, 0.1, 0.086, 0.002),
+              (0.188, 0.079, 0.106, 0.093, 0),
+              (0.295, 0.066, 0.09, 0.074, 0.001),
+              (0.372, 0.046, 0.06, 0.04, 0),
+              (0.445, 0.028, 0.03, 0.021, 0),
+              (0.489, 0.01, 0.01, 0.007, 0),
+              (0.508, 0.002, 0.003, 0.003, 0)],
+ 'skin': {'back': (0.065, 0.15, 0.22),
+          'side': (0.57, 0.63, 0.65),
+          'belly': (0.85, 0.86, 0.79),
+          'pattern': 'fine_scales',
+          'scale_columns': 120,
+          'scale_rows': 58,
+          'variation': 0.014},
+ 'fin_color': (0.24, 0.3, 0.34),
+ 'normal_strength': 0.055,
+ 'roughness': 0.36,
+ 'specular': 0.4,
+ 'coat': 0.08,
+ 'swim_amplitude': 0.72,
+ 'anatomy': {'family': 'tuna',
+             'pectoral_length': 0.13,
+             'pectoral_span': 0.056,
+             'dorsal_height': 0.178,
+             'second_height': 0.134,
+             'second_color': (0.37, 0.37, 0.27),
+             'finlets': 8,
+             'eye_radius': 0.0115,
+             'tail_height': 0.157},
+ 'morphology': ['Compact robust spindle and short pectorals',
+                'Four-to-six dark lengthwise stripes on lower flanks and belly, never vertical '
+                'bars',
+                'Narrow peduncle with central keel and eight detached dorsal and ventral finlets',
+                'Dark back, clean upper flanks and forked crescent caudal'],
+ 'sources': ['https://www.fisheries.noaa.gov/species/atlantic-skipjack-tuna',
+             'https://www.fisheries.noaa.gov/resource/outreach-materials/atlantic-tunas-identification-guide']}
+PROFILE["custom_skin"] = paint(PROFILE)
+PROFILE["compress_master"] = True
+PROFILE["mouth_anchor"] = (0.503, 0, -0.001)

@@ -1,0 +1,48 @@
+"""Original bigeye tuna anatomy; source references retained below."""
+from fish_profiles._ocean_bony import anatomy, paint
+
+PROFILE = {'id': 'bigeye_tuna',
+ 'sections': [(-0.398, 0.01, 0.015, 0.013, 0),
+              (-0.328, 0.019, 0.027, 0.024, 0),
+              (-0.232, 0.037, 0.051, 0.045, 0),
+              (-0.098, 0.061, 0.081, 0.076, 0),
+              (0.05, 0.085, 0.111, 0.105, 0.001),
+              (0.18, 0.094, 0.123, 0.115, 0),
+              (0.29, 0.086, 0.112, 0.091, 0),
+              (0.375, 0.066, 0.081, 0.058, 0.001),
+              (0.445, 0.042, 0.04, 0.03, 0),
+              (0.493, 0.014, 0.014, 0.01, 0),
+              (0.512, 0.002, 0.003, 0.003, 0)],
+ 'skin': {'back': (0.05, 0.13, 0.2),
+          'side': (0.53, 0.63, 0.67),
+          'belly': (0.86, 0.86, 0.79),
+          'pattern': 'fine_scales',
+          'scale_columns': 120,
+          'scale_rows': 58,
+          'variation': 0.014},
+ 'fin_color': (0.24, 0.3, 0.34),
+ 'normal_strength': 0.055,
+ 'roughness': 0.36,
+ 'specular': 0.4,
+ 'coat': 0.08,
+ 'swim_amplitude': 0.72,
+ 'anatomy': {'family': 'tuna',
+             'pectoral_length': 0.274,
+             'pectoral_span': 0.091,
+             'dorsal_height': 0.188,
+             'second_height': 0.155,
+             'second_color': (0.69, 0.61, 0.29),
+             'finlets': 8,
+             'eye_radius': 0.0185,
+             'eye_x': 0.405,
+             'tail_height': 0.172},
+ 'morphology': ['Deep barrel-shaped trunk with conspicuously enlarged eyes',
+                'Midlong slender pectoral fins; second dorsal/anal short pale yellow, not '
+                'yellowfin sickles',
+                'Eight yellow finlets, smooth indigo back and pinkish-silver lower body',
+                'Broad caudal keels and deep lunate tail'],
+ 'sources': ['https://www.fisheries.noaa.gov/species/atlantic-bigeye-tuna',
+             'https://repository.library.noaa.gov/view/noaa/23154/noaa_23154_DS1.pdf']}
+PROFILE["custom_skin"] = paint(PROFILE)
+PROFILE["compress_master"] = True
+PROFILE["mouth_anchor"] = (0.507, 0, -0.001)

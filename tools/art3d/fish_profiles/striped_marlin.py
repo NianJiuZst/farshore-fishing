@@ -1,0 +1,41 @@
+"""Original striped marlin anatomy; source references retained below."""
+from fish_profiles._ocean_bony import anatomy, paint
+
+PROFILE = {'id': 'striped_marlin',
+ 'sections': [(-0.398, 0.009, 0.015, 0.012, 0),
+              (-0.33, 0.015, 0.025, 0.019, 0),
+              (-0.23, 0.01666, 0.0352, 0.028159999999999998, 0.001),
+              (-0.1, 0.02989, 0.0572, 0.04664, 0.002),
+              (0.035, 0.04165, 0.08008, 0.06423999999999999, 0.004),
+              (0.16, 0.049, 0.088, 0.07304, 0.004),
+              (0.245, 0.04508, 0.07655999999999999, 0.06071999999999999, 0.003),
+              (0.307, 0.03724, 0.055439999999999996, 0.04048, 0.002),
+              (0.365, 0.02352, 0.025519999999999998, 0.01936, 0.001),
+              (0.406, 0.008, 0.01, 0.007, 0)],
+ 'skin': {'back': (0.035, 0.12, 0.27),
+          'side': (0.5, 0.62, 0.72),
+          'belly': (0.82, 0.85, 0.84),
+          'pattern': 'fine_scales',
+          'scale_columns': 120,
+          'scale_rows': 58,
+          'variation': 0.014},
+ 'fin_color': (0.105, 0.19, 0.29),
+ 'normal_strength': 0.055,
+ 'roughness': 0.36,
+ 'specular': 0.4,
+ 'coat': 0.08,
+ 'swim_amplitude': 0.63,
+ 'anatomy': {'family': 'billfish',
+             'bill_tip': 0.795,
+             'eye_radius': 0.0105,
+             'pigment': 'marlin_bars'},
+ 'morphology': ['Slender laterally compressed billfish body and round spear rostrum',
+                'Tall pointed anterior first dorsal exceeds body depth',
+                'Distinct bright blue vertical flank bars and flexible falcate pectorals',
+                'Long threadlike pelvic fins and double caudal keels'],
+ 'sources': ['https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/striped-marlin/',
+             'https://www.fisheries.noaa.gov/species/striped-marlin'],
+ 'fin_pattern': ''}
+PROFILE["custom_skin"] = paint(PROFILE)
+PROFILE["compress_master"] = True
+PROFILE["mouth_anchor"] = (0.389, 0, -0.009)
