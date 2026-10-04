@@ -1,12 +1,15 @@
 """Pure guard regressions: no engine launch, signing, key generation or export."""
 from pathlib import Path
+import ast
 import copy
 import json
 import os
+import runpy
 import tempfile
 import subprocess
 import sys
 import unittest
+import zipfile
 from unittest import mock
 import android_identity
 import android_unsigned_handoff as handoff
@@ -160,6 +163,80 @@ class UnsignedHandoffTests(unittest.TestCase):
             self.assertIn(required, verifier)
         self.assertNotIn("'signature_v2': True", verifier)
         self.assertNotIn("'signature_v3': True", verifier)
+
+    def check_verifier_version_gates(self, version, code, *, apk_version=None, apk_code=None, frozen_code=None):
+        """Run the real verifier through identity/version checks with inert tools."""
+        class ReachedContentAudit(Exception):
+            pass
+
+        identity={**android_identity.OCEAN, 'separate_installation': True,
+                  'application_version': version, 'android_version_code': code}
+        content={'android_identity': identity, 'application_version': version,
+                 'android_version_code': code if frozen_code is None else frozen_code, 'photo_art': {'fixture': True}}
+        snapshot=self.base/'snapshot.json'; snapshot.write_text(json.dumps({'content':content}))
+        apk=self.base/'fixture-UNSIGNED-INTERNAL.apk'
+        with zipfile.ZipFile(apk,'w') as archive:
+            archive.writestr('assets/data/android_build_identity.json',json.dumps(identity))
+        out=self.base/'audit'; out.mkdir(exist_ok=True)
+        (out/'imported-fish-art.json').write_text('{}')
+        badge=(f"package: name='{identity['android_package_name']}' versionCode='{code if apk_code is None else apk_code}' "
+               f"versionName='{version if apk_version is None else apk_version}'\n"
+               f"application-label:'{identity['launcher_name']}'\nsdkVersion:'29'\ntargetSdkVersion:'36'\n")
+
+        def inert_run(args, **kwargs):
+            executable=Path(args[0]).name
+            if executable=='aapt':
+                output={'badging':badge, 'permissions':"uses-permission: name='android.permission.VIBRATE'\n",
+                        'xmltree':'android:allowBackup (type 0x12)0x0\nandroid:screenOrientation (type 0x10)0x1\n'}[args[2]]
+                return subprocess.CompletedProcess(args,0,output,'')
+            if executable=='apksigner' and args[1]=='verify':
+                return subprocess.CompletedProcess(args,1,'DOES NOT VERIFY\n','Missing META-INF/MANIFEST.MF\n')
+            if executable=='zipalign' and args[1]=='-c':
+                return subprocess.CompletedProcess(args,0,'Verification successful\n','')
+            self.fail('Unexpected executable/action in pure verifier test: '+str(args))
+
+        argv=['verify_unsigned_android_handoff.py',str(apk),'arm64-v8a',str(out),'/inert/build-tools',str(snapshot),self.pin]
+        with mock.patch.object(sys,'argv',argv), mock.patch.object(subprocess,'run',side_effect=inert_run), \
+                mock.patch('content_fish_art_contract.verify_exported_photo_art',side_effect=ReachedContentAudit):
+            try:
+                runpy.run_path(str(Path(__file__).with_name('verify_unsigned_android_handoff.py')),run_name='__main__')
+            except ReachedContentAudit:
+                return  # All real pre-content gates passed; no engine or Android tool ran.
+        self.fail('Verifier did not reach the expected content gate')
+
+    def test_unsigned_verifier_accepts_both_reviewed_release_pairs(self):
+        for version,code in [('1.3.0',7),('1.4.0',8)]:
+            with self.subTest(version=version): self.check_verifier_version_gates(version,code)
+
+    def test_unsigned_verifier_rejects_crossed_pairs_and_frozen_or_apk_drift(self):
+        for version,code in [('1.3.0',8),('1.4.0',7),('1.5.0',9)]:
+            with self.subTest(version=version,code=code), self.assertRaises(AssertionError):
+                self.check_verifier_version_gates(version,code)
+        for changes in [{'frozen_code':7},{'apk_code':7},{'apk_version':'1.3.0'}]:
+            with self.subTest(changes=changes), self.assertRaises(AssertionError):
+                self.check_verifier_version_gates('1.4.0',8,**changes)
+
+    def test_both_verifier_reports_distinguish_fish_mammals_and_challenges(self):
+        # Evaluate only the four emitted report expressions, never verifier I/O.
+        fields={'fish_species','catalog_species','mammal_species','challenge_species_ids'}
+        legacy=[{'species_id':f'fish_{index}'} for index in range(74)]
+        diversity=[{'species_id':f'fish_{index}'} for index in range(110)] + [
+            {'species_id':'blue_whale','animal_kind':'mammal','fishing_enabled':False,'encounter_type':'fantasy_challenge'}]
+        for filename in ['verify_android_apk.py','verify_unsigned_android_handoff.py']:
+            tree=ast.parse(Path(__file__).with_name(filename).read_text())
+            report=next(node.value for node in tree.body if isinstance(node,ast.Assign)
+                        and any(isinstance(target,ast.Name) and target.id=='result' for target in node.targets))
+            pairs=[(key,value) for key,value in zip(report.keys,report.values)
+                   if isinstance(key,ast.Constant) and key.value in fields]
+            expression=ast.Expression(body=ast.Dict(keys=[key for key,_ in pairs],values=[value for _,value in pairs]))
+            code=compile(ast.fix_missing_locations(expression),filename,'eval')
+            fixtures=[(legacy,{'fish_species':74,'catalog_species':74,'mammal_species':0,'challenge_species_ids':[]}),
+                      (diversity,{'fish_species':110,'catalog_species':111,'mammal_species':1,'challenge_species_ids':['blue_whale']}),
+                      (diversity+[{'species_id':'disabled_fish','fishing_enabled':False}],
+                       {'fish_species':110,'catalog_species':112,'mammal_species':1,'challenge_species_ids':['blue_whale']})]
+            for fish,expected in fixtures:
+                with self.subTest(filename=filename,catalog_species=len(fish)):
+                    self.assertEqual(eval(code,{'fish':fish}),expected)
 
 
 if __name__ == '__main__': unittest.main(verbosity=2)

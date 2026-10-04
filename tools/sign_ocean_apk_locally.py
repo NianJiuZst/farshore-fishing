@@ -17,8 +17,12 @@ import zipfile
 
 PACKAGE = 'org.farshore.fishing.ocean'
 LABEL = '远岸钓鱼·海洋'
-VERSION = '1.3.0'
-CODE = 7
+RELEASES = {
+    ('1.3.0', 7): {'catalog_parts': tuple('abcdef'), 'fish': 74, 'whale': False,
+                   'regions': 9, 'spots': 18, 'gear': 5},
+    ('1.4.0', 8): {'catalog_parts': tuple('abcdefgh') + ('whale',), 'fish': 110, 'whale': True,
+                   'regions': 10, 'spots': 21, 'gear': 6},
+}
 
 def sha256(path):
     with Path(path).open('rb') as stream:
@@ -32,7 +36,13 @@ def run(args, **kwargs):
 
 def inspect_apk(apk, bt):
     badge=run([bt/'aapt','dump','badging',apk])
-    for expected in [f"package: name='{PACKAGE}'", f"versionCode='{CODE}'", f"versionName='{VERSION}'", f"application-label:'{LABEL}'", "sdkVersion:'29'", "targetSdkVersion:'36'"]:
+    version_match=re.search(r"versionName='([^']+)'",badge)
+    code_match=re.search(r"versionCode='(\d+)'",badge)
+    if not version_match or not code_match: raise ValueError('Missing APK version/code')
+    version,code=version_match.group(1),int(code_match.group(1))
+    release=RELEASES.get((version,code))
+    if release is None: raise ValueError('Unreviewed ocean version/code pair')
+    for expected in [f"package: name='{PACKAGE}'", f"application-label:'{LABEL}'", "sdkVersion:'29'", "targetSdkVersion:'36'"]:
         if expected not in badge: raise ValueError('Unexpected APK identity: '+expected)
     if 'application-debuggable' in badge: raise ValueError('Debuggable APK rejected')
     permissions=run([bt/'aapt','dump','permissions',apk])
@@ -47,12 +57,24 @@ def inspect_apk(apk, bt):
         if any(n.endswith(('.p12','.jks','.keystore','.key','.pem')) or '.signing-private' in n for n in names):
             raise ValueError('Credential-like APK member rejected')
         identity=json.loads(archive.read('assets/data/android_build_identity.json'))
-        if identity['android_package_name']!=PACKAGE: raise ValueError('Bundled identity differs')
+        if (identity.get('android_package_name')!=PACKAGE or identity.get('application_version')!=version
+                or identity.get('android_version_code')!=code):
+            raise ValueError('Bundled identity differs')
         fish=[]
-        for letter in 'abcdef': fish+=json.loads(archive.read(f'assets/data/fish_{letter}.json'))
+        for part in release['catalog_parts']: fish+=json.loads(archive.read(f'assets/data/fish_{part}.json'))
         world=json.loads(archive.read('assets/data/world.json'))
-        if len(fish)!=74 or len({f['species_id'] for f in fish})!=74 or len(world['baits'])!=12 or len(world['regions'])!=9 or len(world['spots'])!=18:
+        total=release['fish'] + int(release['whale'])
+        ordinary=[f for f in fish if f.get('animal_kind','fish')=='fish' and f.get('fishing_enabled',True) is True]
+        if (len(fish)!=total or len({f['species_id'] for f in fish})!=total or len(ordinary)!=release['fish']
+                or len(world['baits'])!=12 or len(world['regions'])!=release['regions']
+                or len(world['spots'])!=release['spots'] or len(world['gear'])!=release['gear']):
             raise ValueError('Incomplete ocean catalog')
+        if release['whale']:
+            whales=[f for f in fish if f['species_id']=='blue_whale']
+            if (len(whales)!=1 or whales[0].get('animal_kind')!='mammal'
+                    or whales[0].get('fishing_enabled') is not False
+                    or whales[0].get('encounter_type')!='fantasy_challenge'):
+                raise ValueError('Independent blue whale challenge required')
     return identity
 
 def main():
@@ -88,7 +110,7 @@ def main():
         if expected not in proof: raise ValueError('Signed APK verification failed: '+expected)
     inspect_apk(a.output,a.build_tools)
     if sha256(a.input)!=a.expected_input_sha256: raise ValueError('Immutable unsigned input changed')
-    report={'package':PACKAGE,'version':VERSION,'version_code':CODE,'unsigned_sha256':a.expected_input_sha256,'signed_sha256':sha256(a.output),'bytes':a.output.stat().st_size,'certificate_sha256':a.expected_certificate_sha256,'v2_v3_verified':True,'zipalign_16k_verified':True,'private_material_uploaded':False}
+    report={'package':PACKAGE,'version':identity['application_version'],'version_code':identity['android_version_code'],'unsigned_sha256':a.expected_input_sha256,'signed_sha256':sha256(a.output),'bytes':a.output.stat().st_size,'certificate_sha256':a.expected_certificate_sha256,'v2_v3_verified':True,'zipalign_16k_verified':True,'private_material_uploaded':False}
     a.output.with_suffix('.signing-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False,indent=2))
     print('Keep the keystore and backup private. Only the signed APK and this public report may be returned.')

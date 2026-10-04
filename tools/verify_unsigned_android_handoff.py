@@ -65,8 +65,9 @@ assert re.search(r'android:allowBackup[^\n]*\(type 0x12\)0x0', manifest), 'Backu
 assert re.search(r'android:screenOrientation[^\n]*\(type 0x10\)0x1', manifest), 'Portrait orientation required'
 version_code = int(re.search(r"versionCode='(\d+)'", badging).group(1))
 version_name = re.search(r"versionName='([^']+)'", badging).group(1)
-assert expected_content['application_version'] == identity['application_version'] and identity['application_version'] in {'1.3.0', '1.4.0'}, 'Frozen version is not the pinned ocean version'
-assert expected_content['android_version_code'] == identity['android_version_code'] == 7, 'Frozen version code is not the pinned ocean code'
+assert (identity['application_version'], identity['android_version_code']) in {('1.3.0', 7), ('1.4.0', 8)}, 'Unreviewed ocean version/code pair'
+assert expected_content['application_version'] == identity['application_version'], 'Frozen version is not the pinned ocean version'
+assert expected_content['android_version_code'] == identity['android_version_code'], 'Frozen version code is not the pinned ocean code'
 assert version_name == identity['application_version'], 'APK version name differs from pinned source'
 assert version_code == identity['android_version_code'], 'APK version code differs from pinned source'
 libs = []
@@ -217,7 +218,11 @@ result = {
     'unsigned_rejected_by_apksigner': True, 'release_ready': False,
     'scope': 'UNSIGNED-INTERNAL handoff only; signing and signed verification remain required',
     'certificate_sha256': cert_sha256,
-    'native_libraries': libs, 'fish_species': len(fish),
+    'native_libraries': libs,
+    'fish_species': sum(f.get('animal_kind', 'fish') == 'fish' and f.get('fishing_enabled', True) is True for f in fish),
+    'catalog_species': len(fish),
+    'mammal_species': sum(f.get('animal_kind', 'fish') == 'mammal' for f in fish),
+    'challenge_species_ids': sorted(f['species_id'] for f in fish if f.get('encounter_type') == 'fantasy_challenge'),
     'fish_catalog_files':catalog_files, 'regions':len(world['regions']), 'fishing_spots':len(world['spots']),
     'gear_options':len(world['gear']), 'bait_options':len(world['baits']),
     'generated_ui_icons':len(ui_icons),
