@@ -1064,7 +1064,7 @@
     "art": "res://assets/fish/whitetip_reef_shark.png",
     "thumb": "res://assets/fish/whitetip_reef_shark_thumb.png",
     "description": "白天在礁洞休息，入夜后穿行珊瑚缝隙的灰三齿鲨。 本作相遇仅作虚拟保护观察，结束后放归，不可出售。",
-    "morphology": "小型细长、头宽扁吻钝圆；水平椭圆眼；第一背鳍靠后，第二背鳍较发达；第一背鳍及尾上叶白尖；窄胸鳍无大片桨状白端。",
+    "morphology": "小型细长、头宽扁吻钝圆；水平椭圆眼；第一背鳍靠后，第二背鳍较发达；第一背鳍及尾上叶白尖；相对短的三角形胸鳍，无远洋白鳍鲨那样的宽圆桨状白端无大片桨状白端。",
     "sources": [
       {
         "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/whitetip-reef-shark/",

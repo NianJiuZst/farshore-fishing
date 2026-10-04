@@ -150,7 +150,7 @@ def require_natural_history_archive_members(root, files, contract=None):
     root = Path(root)
     project = root/'game'
     settings = project/'project.godot'
-    formal = settings.is_file() and re.search(r'^config/version="1\.2\.0"\s*$', settings.read_text(), re.M)
+    formal = settings.is_file() and re.search(r'^config/version="1\.(?:2|3)\.0"\s*$', settings.read_text(), re.M)
     present = (project/MODULE).exists() or any((project/'data').glob('encyclopedia_*.json'))
     if contract is None and not formal and not present:
         return {}  # Generic regression projects and pre-encyclopedia releases.

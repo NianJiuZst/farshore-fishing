@@ -1,7 +1,6 @@
 """Inspect the complete runtime 3D registry, worlds, rigs and authoring sources."""
 from pathlib import Path
 import gzip
-import io
 import hashlib
 import json
 import re

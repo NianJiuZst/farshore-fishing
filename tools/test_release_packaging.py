@@ -641,6 +641,16 @@ class PackagingTests(unittest.TestCase):
             with self.assertRaises(AssertionError):
                 android_identity.project_identity(project, presets.replace('远岸钓记', '远岸钓记·试钓版'), '1.2.0', 6)
 
+    def test_ocean_identity_preserves_signer_and_increases_version(self):
+        ocean = {**android_identity.OCEAN, 'separate_installation': True}
+        self.assertEqual(android_identity.expected_identity({'android_identity': ocean}), ocean)
+        self.assertEqual(ocean['certificate_sha256'], android_identity.FORMAL['certificate_sha256'])
+        self.assertEqual(ocean['android_package_name'], android_identity.FORMAL['android_package_name'])
+        self.assertGreater(ocean['android_version_code'], android_identity.FORMAL['android_version_code'])
+        for field, value in [('certificate_sha256', '0'*64), ('android_version_code', 6), ('launcher_name', 'Other')]:
+            with self.subTest(field=field), self.assertRaises(AssertionError):
+                android_identity.validate_identity({**ocean, field: value})
+
     def test_exact_preview_identity_and_legacy_default(self):
         self.assertEqual(android_identity.expected_identity(),android_identity.LEGACY)
         preview={**android_identity.PREVIEW,'separate_installation':True,'application_version':'1.2.0-beta.3','android_version_code':5}

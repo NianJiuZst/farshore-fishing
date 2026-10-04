@@ -7,16 +7,19 @@ extends RefCounted
 const REQUIRE_PHOTOREAL: bool = true
 const MANIFEST_PATH: String = "res://data/fish_art.json"
 const EXPECTED_COUNT: int = 74
+const FULL_TEXTURE_CACHE_LIMIT: int = 4
 var errors: Array[String] = []
 var complete: bool = false
 var _entries: Dictionary = {}
 var _textures: Dictionary = {}
+var _full_texture_order: Array[String] = []
 var _blocked: bool = false
 
 func load_all(catalog: ContentCatalog, manifest_path: String = MANIFEST_PATH, require_complete: bool = REQUIRE_PHOTOREAL) -> bool:
 	errors.clear()
 	_entries.clear()
 	_textures.clear()
+	_full_texture_order.clear()
 	complete = false
 	_blocked = false
 	if not FileAccess.file_exists(manifest_path):
@@ -34,6 +37,7 @@ func load_manifest(data: Dictionary, catalog: ContentCatalog, require_complete: 
 	errors.clear()
 	_entries.clear()
 	_textures.clear()
+	_full_texture_order.clear()
 	complete = false
 	var strict: bool = require_complete or bool(data.get("complete",false))
 	if int(data.get("format_version",0)) != 1: errors.append("未知写实鱼图清单格式")
@@ -76,6 +80,13 @@ func texture_for(fish: FishDefinition, thumbnail: bool = false) -> Texture2D:
 	if not _textures.has(path):
 		if not ResourceLoader.exists(path,"Texture2D"): return null
 		_textures[path] = load(path) as Texture2D
+	if not thumbnail:
+		_full_texture_order.erase(path)
+		_full_texture_order.append(path)
+		while _full_texture_order.size() > FULL_TEXTURE_CACHE_LIMIT:
+			# Active views own their textures; removing this cache reference never
+			# lowers resolution or changes a displayed fish. Thumbnail cache stays.
+			_textures.erase(_full_texture_order.pop_front())
 	return _textures[path] as Texture2D
 
 func _validate_metadata(id: String, info: Dictionary) -> void:

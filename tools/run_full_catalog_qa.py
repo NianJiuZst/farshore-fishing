@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Strict full44 QA on isolated data, recording runtime-input hashes before/after.
+"""Strict full74 QA on isolated data, recording runtime-input hashes before/after.
 
 No export, signing, credentials, production saves or network access are involved.
 Run only once fish producers have declared their runtime assets stable. A source
@@ -20,6 +20,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SUITES = [
     ("camera_aspect", "camera_aspect_tests.gd", []),
     ("save", "save_tests.gd", []),
+    ("ocean_save", "ocean_save_tests.gd", []),
+    ("ocean_balance", "ocean_balance_tests.gd", []),
+    ("ocean_ui", "ocean_ui_tests.gd", []),
     ("core", "core_tests.gd", []),
     ("session_observation", "session_observation_tests.gd", []),
     ("float_encounter", "float_encounter_tests.gd", ["--regressions-only"]),
@@ -87,8 +90,15 @@ def execute(name: str, command: list[str], output: Path, timeout: float = 300) -
                 code = 124
     lines = log.read_text(errors="replace").splitlines()
     errors = [line for line in lines if "SCRIPT ERROR:" in line or line.startswith("ERROR:") or line.startswith("FAIL")]
+    expected_fault_errors = [line for line in errors if name == "ocean_save"
+                             and line.startswith("ERROR: Failed to open ")
+                             and "/tmp/farshore-ocean-save-" in line
+                             and "save.before-import.json.does-not-exist" in line]
+    # This exact production DirAccess.copy failure is injected and asserted by
+    # the rollback suite. Keep it visible as evidence; never mask other errors.
+    errors = [line for line in errors if line not in expected_fault_errors]
     warnings = [line for line in lines if line.startswith("WARNING:")]
-    result = {"name": name, "exit_code": code, "passed": code == 0 and not errors, "seconds": round(time.monotonic()-started, 2), "log": str(log.relative_to(ROOT)), "errors": errors, "warnings": warnings, "summary_lines": [line for line in lines if "TESTS:" in line or "SCOPE:" in line or "checked_models" in line]}
+    result = {"name": name, "exit_code": code, "passed": code == 0 and not errors, "seconds": round(time.monotonic()-started, 2), "log": str(log.relative_to(ROOT)), "errors": errors, "expected_fault_injection_errors": expected_fault_errors, "warnings": warnings, "summary_lines": [line for line in lines if "TESTS:" in line or "SCOPE:" in line or "checked_models" in line]}
     print(json.dumps(result, ensure_ascii=False), flush=True)
     return result
 
@@ -100,7 +110,7 @@ def main() -> int:
     parser.add_argument("--suites", help="Optional comma-separated suite names; summary explicitly records the narrowed scope")
     parser.add_argument("--skip-import", action="store_true", help="Use assets already imported by the coordinated producer")
     parser.add_argument("--render", action="store_true", help="Also run strict slice3d, UI style and touch through private Mobile/Vulkan software renderer")
-    parser.add_argument("--render-timeout", type=float, default=1200, help="Per-suite software renderer budget; full44,4x MSAA,tall frames and full license scrolling exceed the old180s budget")
+    parser.add_argument("--render-timeout", type=float, default=1200, help="Per-suite software renderer budget; full74,4x MSAA,tall frames and full license scrolling exceed the old180s budget")
     args = parser.parse_args()
     output = (ROOT / args.output).resolve()
     if ROOT / "build" not in output.parents:
@@ -130,7 +140,7 @@ def main() -> int:
     # GLBs, scripts, scenes and data must not change while this occurs.
     source_import_changes = [p for p in existing_import_changes if Path(p).suffix in {".glb", ".gd", ".gdshader", ".json", ".tscn", ".tres", ".godot"}]
     for name, script, original_extra in selected:
-        extra = original_extra + (["--tall"] if args.tall and name in ["slice3d","ui_style","touch","fish_art_ui","failure_modal","notebook_ui","natural_history","ui_iteration"] else [])
+        extra = original_extra + (["--tall"] if args.tall and name in ["slice3d","ui_style","touch","fish_art_ui","failure_modal","notebook_ui","natural_history","ui_iteration","ocean_ui"] else [])
         command = [godot, "--headless", "--audio-driver", "Dummy", "--path", "game", "--script", "res://tests/"+script]
         if extra:
             command += ["--", *extra]
@@ -147,7 +157,7 @@ def main() -> int:
     (output / "runtime_after_sha256.json").write_text(json.dumps(after, indent=2)+"\n")
     changed = sorted(p for p in before.keys() | after.keys() if before.get(p) != after.get(p))
     passed = not changed and not source_import_changes and all(r["passed"] for r in results)
-    summary = {"passed": passed, "selected_suites": [row[0] for row in selected], "representative_tall_layout": args.tall, "runtime_files": len(before), "runtime_unchanged": not changed, "runtime_changes": changed, "existing_files_changed_during_import": existing_import_changes, "source_changes_during_import": source_import_changes, "results": results, "scope": "Full44 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."}
+    summary = {"passed": passed, "selected_suites": [row[0] for row in selected], "representative_tall_layout": args.tall, "runtime_files": len(before), "runtime_unchanged": not changed, "runtime_changes": changed, "existing_files_changed_during_import": existing_import_changes, "source_changes_during_import": source_import_changes, "results": results, "scope": "Full74 production source/control integration plus optional desktop software-render checks. Not art signoff, Android export/device certification or release authorization."}
     (output / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2)+"\n")
     print(json.dumps({"passed": passed, "runtime_unchanged": not changed, "runtime_changes": changed, "source_changes_during_import": source_import_changes, "summary": str(output.relative_to(ROOT) / "summary.json")}), flush=True)
     return 0 if passed else 1

@@ -20,7 +20,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = [ROOT / "game/scripts" / f for f in
           ("float_encounter.gd", "fishing_session.gd", "encounter.gd", "catalog.gd", "fish_definition.gd")]
-INPUTS += sorted((ROOT / "game/data").glob("fish_[abcd].json"))
+INPUTS += sorted((ROOT / "game/data").glob("fish_[abcdef].json"))
 INPUTS += [ROOT / "game/data/world.json", ROOT / "game/tests/float_encounter_tests.gd",
            ROOT / "game/tests/fishing_test_controller.gd", Path(__file__)]
 

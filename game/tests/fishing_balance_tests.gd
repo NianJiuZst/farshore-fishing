@@ -14,6 +14,7 @@ var routes: Array[Dictionary] = []
 var runs: Array[Dictionary] = []
 var properties: Dictionary = {}
 var quick: bool = false
+var historical_float: bool = false
 var float_cases: Array[Dictionary] = []
 var wear_cases: Array[Dictionary] = []
 
@@ -29,6 +30,7 @@ func _check(ok: bool, message: String) -> void:
 func _run() -> void:
 	var args: PackedStringArray = OS.get_cmdline_user_args()
 	quick = "--quick" in args
+	historical_float = "--historical-float" in args
 	var output: String = ""
 	for arg: String in args:
 		if arg.begins_with("--output="): output = arg.trim_prefix("--output=")
@@ -228,7 +230,12 @@ func _regressions() -> void:
 	_check(absf(elapsed_values.max()-elapsed_values.min()) < 0.002 and absf(elapsed_values[0]-1.0) < 0.002, "16/30/60fps consume the same actual elapsed second")
 	_terminal_regressions(route, record)
 	_input_edge_regressions(route, record)
-	_float_regressions(route, record)
+	# The old beta2 detector assumed every large float movement guarantees a
+	# bite. 1.2 replaced that design with possession/rejection/revisits. Keep
+	# that diagnostic explicitly historical; the current multi-policy float
+	# contract and 16/30/60fps gates are in float_encounter_tests.gd.
+	if historical_float: _float_regressions(route, record)
+	else: print("FLOAT_SCOPE: current possession model is verified separately by float_encounter_tests.gd; --historical-float retains beta2 diagnostics")
 	_wear_regressions()
 	_fixed_step_regressions(route, record)
 

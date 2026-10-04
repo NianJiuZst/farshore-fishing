@@ -937,7 +937,7 @@
     "art": "res://assets/fish/great_barracuda.png",
     "thumb": "res://assets/fish/great_barracuda_thumb.png",
     "description": "礁缘水层里的长吻掠食者，黑色侧斑、前突下颌和两枚分离背鳍很有辨识度。",
-    "morphology": "细长近圆筒形身体；长吻、大口、下颌前突，牙尖；两枚背鳍相距很远。背部灰蓝，腹部银白，体侧下方不规则黑斑，尾深叉且鳍端浅色。",
+    "morphology": "细长近圆筒形身体；长吻、大口、下颌前突，牙尖；两枚背鳍相距很远。背部灰蓝，腹部银白，体侧下方不规则黑斑，尾鳍双凹形、鳍叶尖端浅色且鳍端浅色。",
     "sources": [
       {
         "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-barracuda/",

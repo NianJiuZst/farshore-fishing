@@ -796,10 +796,11 @@
         "family_zh": "双髻鲨科",
         "genus_scientific": "Sphyrna",
         "genus_zh": "双髻鲨属",
-        "note": "现行学名为Sphyrna lewini。宽阔头部前缘呈弧形，中部及两侧均有凹缺，是与无齿双髻鲨等近缘种区分的重要线索；中文双髻鲨、路氏双髻鲨等俗称不能代替学名。",
+        "note": "现行学名为Sphyrna lewini。宽阔头部前缘呈弧形，中部及两侧均有凹缺，是与无沟双髻鲨等近缘种区分的重要线索；中文双髻鲨、路氏双髻鲨等俗称不能代替学名。",
         "source_ids": [
           "s1",
-          "s2"
+          "s2",
+          "s4"
         ]
       },
       "typical_size": {
@@ -881,6 +882,13 @@
           "publisher": "University of Hawaiʻi at Mānoa / Royer et al. (2023)",
           "url": "https://www.hawaii.edu/news/article.php?aId=12607",
           "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Sphyrna mokarran — 无沟双髻鲨",
+          "publisher": "台湾鱼类数据库／中央研究院",
+          "url": "https://fishdb.sinica.edu.tw/chi/species.php?id=383089",
+          "accessed": "2026-10-04"
         }
       ],
       "gameplay_note": "普通抽样尺寸140—355厘米；低概率虚构巨物上端482厘米。真实自然史与极值见独立百科，游戏数值不进入真实纪录。"
@@ -893,10 +901,11 @@
         "family_zh": "双髻鲨科",
         "genus_scientific": "Sphyrna",
         "genus_zh": "双髻鲨属",
-        "note": "本种为无齿双髻鲨，俗称大锤头鲨；“无齿”这个中文名不表示没有牙齿。成鱼头前缘近乎平直，中央有浅凹缺，第一背鳍特别高而镰刀状，可与前缘明显弯曲的路氏双髻鲨区分。",
+        "note": "本种为无沟双髻鲨，俗称大锤头鲨。成鱼头前缘近乎平直，中央有浅凹缺，第一背鳍特别高而镰刀状，可与前缘明显弯曲的路氏双髻鲨区分。",
         "source_ids": [
           "s1",
-          "s2"
+          "s2",
+          "s4"
         ]
       },
       "typical_size": {
@@ -977,6 +986,13 @@
           "title": "Great hammerhead sharks swim on their side to reduce transport costs",
           "publisher": "Payne et al. / Nature Communications (2016), James Cook University repository",
           "url": "https://researchonline.jcu.edu.au/45487/",
+          "accessed": "2026-10-04"
+        },
+        {
+          "id": "s4",
+          "title": "Sphyrna mokarran — 无沟双髻鲨",
+          "publisher": "台湾鱼类数据库／中央研究院",
+          "url": "https://fishdb.sinica.edu.tw/chi/species.php?id=383089",
           "accessed": "2026-10-04"
         }
       ],
@@ -1180,7 +1196,7 @@
         {
           "id": "s3",
           "title": "Enhanced thermoregulation abilities of shortfin mako sharks as the key adaptive significance of regional endothermy in fishes",
-          "publisher": "Functional Ecology (2025), full text in PubMed Central",
+          "publisher": "Journal of Animal Ecology (2025), full text in PubMed Central",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12586780/",
           "accessed": "2026-10-04"
         }
@@ -1195,7 +1211,7 @@
         "family_zh": "鼬鲨科",
         "genus_scientific": "Galeocerdo",
         "genus_zh": "鼬鲨属",
-        "note": "现行鱼类目录把Galeocerdo cuvier置于独立的鼬鲨科Galeocerdonidae；较旧资料常放在真鲨科。中文正式名常用鼬鲨，“虎鲨”是本作沿用俗称，不指虎鲨科Heterodontidae的其他鲨类。",
+        "note": "现行鱼类目录把Galeocerdo cuvier置于独立的鼬鲨科Galeocerdonidae；较旧资料常放在真鲨科。中文正式名常用鼬鲨，“虎鲨”也是常见俗称，不指虎鲨科Heterodontidae的其他鲨类。",
         "source_ids": [
           "s2",
           "s5"

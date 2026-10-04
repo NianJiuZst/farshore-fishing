@@ -20,7 +20,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = [ROOT / "game/scripts" / f for f in ("fishing_session.gd", "encounter.gd", "fish_definition.gd", "catalog.gd")]
-INPUTS += sorted((ROOT / "game/data").glob("fish_[abcd].json")) + [ROOT / "game/data/world.json", ROOT / "game/tests/fishing_balance_tests.gd", ROOT / "game/tests/fishing_test_controller.gd"]
+INPUTS += sorted((ROOT / "game/data").glob("fish_[abcdef].json")) + [ROOT / "game/data/world.json", ROOT / "game/tests/fishing_balance_tests.gd", ROOT / "game/tests/fishing_test_controller.gd"]
 
 
 def hashes():

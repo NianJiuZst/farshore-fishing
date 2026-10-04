@@ -13,6 +13,7 @@ const MAX_CURRENCY: int = 1000000000000
 const PRIMARY_NAME: String = "save.json"
 const BACKUP_NAME: String = "save.backup.json"
 const PRE_IMPORT_NAME: String = "save.before-import.json"
+const IMPORT_ROLLBACK_PREFIX: String = "save.before-import.rollback-"
 const TRANSFER_FORMAT: String = "farshore-fishing-backup"
 const TRANSFER_VERSION: int = 1
 # JSON escaping can double an existing save; leave bounded space for the envelope.
@@ -73,6 +74,14 @@ func _initialize_locked(optional_root: String) -> bool:
 	if bool(primary.get("future", false)) or bool(backup.get("future", false)):
 		read_only = true
 		return _fail("发现更高版本的存档，已保护原文件。请使用较新版本游戏。")
+	# A failed rollback or interrupted import can leave its exact prior snapshot
+	# here. Never silently resume with a possibly replaced undo target.
+	for file_name: String in DirAccess.get_files_at(_root):
+		if file_name.begins_with(IMPORT_ROLLBACK_PREFIX) and file_name.ends_with(".json"):
+			if bool(primary.get("ok", false)):
+				_state = (primary["state"] as Dictionary).duplicate(true)
+			read_only = true
+			return _fail("发现尚未完成的恢复快照回滚（%s），已保护全部存档。请保留应用数据并寻求恢复。" % file_name)
 	if bool(primary.get("ok", false)):
 		_state = (primary["state"] as Dictionary).duplicate(true)
 		_initialized = true
@@ -393,10 +402,29 @@ func _import_decoded_locked(decoded: Dictionary, expected_revision: int) -> Dict
 	var candidate: Dictionary = (decoded["state"] as Dictionary).duplicate(true)
 	# Revisions belong to this installation, not to the source backup.
 	candidate["save_revision"] = int(_state["save_revision"])
+	# Undo reads PRE_IMPORT_NAME as its target. Replacing that target with the
+	# current state before a failed commit must not destroy the next retry.
+	# Preserve exact bytes (including legacy formatting) until the whole import
+	# succeeds. A unique path also keeps a failed rollback's recovery copy safe.
+	var rollback_path: String = ""
+	if FileAccess.file_exists(_path(PRE_IMPORT_NAME)):
+		rollback_path = _path("%s%s-%s.json" % [IMPORT_ROLLBACK_PREFIX, str(Time.get_unix_time_from_system()).replace(".", "_"), str(Time.get_ticks_usec())])
+		if not _copy_verified(_path(PRE_IMPORT_NAME), rollback_path):
+			# The original snapshot has not been changed, so a partial new copy
+			# may be removed. If removal fails, startup protects it conservatively.
+			if FileAccess.file_exists(rollback_path):
+				DirAccess.remove_absolute(rollback_path)
+			return {"ok": false, "error": error_message}
 	if not _preserve_before_import():
+		_restore_failed_import_snapshot(rollback_path)
 		return {"ok": false, "error": error_message}
 	if not _commit_locked(candidate):
+		_restore_failed_import_snapshot(rollback_path)
 		return {"ok": false, "error": error_message}
+	if not rollback_path.is_empty():
+		# Cleanup is best-effort after success; a leftover recovery copy is safer
+		# than reporting a completed import as a failed transaction.
+		DirAccess.remove_absolute(rollback_path)
 	_active_session = ""
 	_retry_record = {}
 	status_message = "备份已恢复；恢复前的进度已另存，可在设置中撤销。"
@@ -404,6 +432,18 @@ func _import_decoded_locked(decoded: Dictionary, expected_revision: int) -> Dict
 	result["save_revision"] = int(_state["save_revision"])
 	result["state"] = _state.duplicate(true)
 	return result
+
+func _restore_failed_import_snapshot(rollback_path: String) -> void:
+	if rollback_path.is_empty():
+		return
+	var original_error: String = error_message
+	if _replace_file(rollback_path, _path(PRE_IMPORT_NAME)):
+		error_message = original_error
+	else:
+		# Never overwrite or remove the verified copy when the filesystem cannot
+		# restore it. Stop writes rather than allowing a retry to use a wrong target.
+		read_only = true
+		error_message = original_error + " 恢复前快照回滚失败；原快照已保留为 %s。已停止继续写入，请保留应用数据并寻求恢复。" % rollback_path.get_file()
 
 func _preserve_before_import() -> bool:
 	var destination: String = _path(PRE_IMPORT_NAME)

@@ -107,9 +107,9 @@ func set_environment(spot_id: String, weather: String, time_key: String = "day")
 	_spot_id = spot_id
 	_weather = weather
 	_time_key = time_key
-	var sea: bool = spot_id.begins_with("japan") or spot_id.begins_with("norway") or spot_id.begins_with("med") or spot_id == "yangtze_estuary"
+	var sea: bool = spot_id.begins_with("japan") or spot_id.begins_with("norway") or spot_id.begins_with("med") or spot_id == "yangtze_estuary" or spot_id.begins_with("pacific_") or spot_id.begins_with("atlantic_") or spot_id.begins_with("indian_")
 	var river: bool = spot_id == "bayou_channel" or spot_id == "yangtze_river"
-	var exposed: bool = spot_id.ends_with("boat") or spot_id.ends_with("reef") or spot_id.ends_with("estuary")
+	var exposed: bool = spot_id.ends_with("boat") or spot_id.ends_with("reef") or spot_id.ends_with("estuary") or spot_id.ends_with("bluewater") or spot_id.ends_with("shelf")
 	_water_gain = 0.40 if sea else 0.30
 	_current_gain = 0.23 if river else 0.0
 	_wind_gain = 0.20 if exposed else 0.13 if sea else 0.07

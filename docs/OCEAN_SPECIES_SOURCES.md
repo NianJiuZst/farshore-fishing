@@ -320,7 +320,7 @@ Mass: 可靠最大值待核实 — 已查官方资料说大型个体可超过400
 
 ### 路氏双髻鲨 — scalloped_hammerhead
 
-Accepted name: *Sphyrna lewini*. Family: Sphyrnidae. 现行学名为Sphyrna lewini。宽阔头部前缘呈弧形，中部及两侧均有凹缺，是与无齿双髻鲨等近缘种区分的重要线索；中文双髻鲨、路氏双髻鲨等俗称不能代替学名。
+Accepted name: *Sphyrna lewini*. Family: Sphyrnidae. 现行学名为Sphyrna lewini。宽阔头部前缘呈弧形，中部及两侧均有凹缺，是与无沟双髻鲨等近缘种区分的重要线索；中文双髻鲨、路氏双髻鲨等俗称不能代替学名。
 
 Length: 资料收录上限 — FishBase收录最大报告全长430厘米，博物馆也提到这一较大个体报告；这是文献汇录极值，未在此重新认证为当前垂钓或科学测量世界纪录。
 Mass: 资料收录上限 — FishBase最大已发表体重字段为152.4千克，属于其文献收录范围；与430厘米长度来自不同引文，不表示同一尾鱼，更不能推算所有大型雌鱼的上限。
@@ -329,9 +329,11 @@ Mass: 资料收录上限 — FishBase最大已发表体重字段为152.4千克�
 - [s2] [Sphyrna lewini — species summary](https://www.fishbase.se/summary/Sphyrna_leweni.html) — FishBase; accessed 2026-10-04; fields: taxonomy, typical_size, max_length, max_weight, distribution
 - [s3] [Hammerhead sharks hold their breath on deep water hunts to stay warm](https://www.hawaii.edu/news/article.php?aId=12607) — University of Hawaiʻi at Mānoa / Royer et al. (2023); accessed 2026-10-04; fields: habitat, diet, story
 
+- [s4] [Sphyrna mokarran — 无沟双髻鲨](https://fishdb.sinica.edu.tw/chi/species.php?id=383089) — 台湾鱼类数据库／中央研究院; accessed 2026-10-04; fields: taxonomy
+
 ### 无沟双髻鲨 — great_hammerhead
 
-Accepted name: *Sphyrna mokarran*. Family: Sphyrnidae. 本种为无齿双髻鲨，俗称大锤头鲨；“无齿”这个中文名不表示没有牙齿。成鱼头前缘近乎平直，中央有浅凹缺，第一背鳍特别高而镰刀状，可与前缘明显弯曲的路氏双髻鲨区分。
+Accepted name: *Sphyrna mokarran*. Family: Sphyrnidae. 本种为无沟双髻鲨，俗称大锤头鲨。成鱼头前缘近乎平直，中央有浅凹缺，第一背鳍特别高而镰刀状，可与前缘明显弯曲的路氏双髻鲨区分。
 
 Length: 资料收录上限 — 最大全长610厘米为FishBase和博物馆引用的报告上限，是物种文献尺度；来源没有提供足以在这里复核的完整测量档案，不称为新认证世界纪录。
 Mass: 资料收录上限 — FishBase收录最大已发表体重449.5千克；这是该数据库引用资料中的历史极值，不能等同于截至今日的垂钓世界纪录。最大长度和重量不配成同一个体。
@@ -339,6 +341,8 @@ Mass: 资料收录上限 — FishBase收录最大已发表体重449.5千克；�
 - [s1] [Great Hammerhead — Discover Fishes](https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-hammerhead/) — Florida Museum of Natural History; accessed 2026-10-04; fields: taxonomy, max_length, habitat, distribution, behavior, diet
 - [s2] [Sphyrna mokarran — species summary](https://www.fishbase.se/summary/Sphyrna_mokarran.html) — FishBase; accessed 2026-10-04; fields: taxonomy, typical_size, max_length, max_weight, habitat, distribution
 - [s3] [Great hammerhead sharks swim on their side to reduce transport costs](https://researchonline.jcu.edu.au/45487/) — Payne et al. / Nature Communications (2016), James Cook University repository; accessed 2026-10-04; fields: behavior, story
+
+- [s4] [Sphyrna mokarran — 无沟双髻鲨](https://fishdb.sinica.edu.tw/chi/species.php?id=383089) — 台湾鱼类数据库／中央研究院; accessed 2026-10-04; fields: taxonomy
 
 ### 大青鲨 — blue_shark
 
@@ -361,11 +365,11 @@ Mass: 资料收录上限 — FishBase最大已发表体重为505.8千克，按�
 
 - [s1] [Shortfin Mako — Discover Fishes](https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/shortfin-mako/) — Florida Museum of Natural History; accessed 2026-10-04; fields: taxonomy, typical_size, max_length, habitat, distribution, diet
 - [s2] [Isurus oxyrinchus — species summary](https://fishbase.se/summary/752) — FishBase; accessed 2026-10-04; fields: taxonomy, typical_size, max_length, max_weight, distribution, diet
-- [s3] [Enhanced thermoregulation abilities of shortfin mako sharks as the key adaptive significance of regional endothermy in fishes](https://pmc.ncbi.nlm.nih.gov/articles/PMC12586780/) — Functional Ecology (2025), full text in PubMed Central; accessed 2026-10-04; fields: habitat, behavior, story
+- [s3] [Enhanced thermoregulation abilities of shortfin mako sharks as the key adaptive significance of regional endothermy in fishes](https://pmc.ncbi.nlm.nih.gov/articles/PMC12586780/) — Journal of Animal Ecology (2025), full text in PubMed Central; accessed 2026-10-04; fields: habitat, behavior, story
 
 ### 鼬鲨 — tiger_shark
 
-Accepted name: *Galeocerdo cuvier*. Family: Galeocerdonidae. 现行鱼类目录把Galeocerdo cuvier置于独立的鼬鲨科Galeocerdonidae；较旧资料常放在真鲨科。中文正式名常用鼬鲨，“虎鲨”是本作沿用俗称，不指虎鲨科Heterodontidae的其他鲨类。
+Accepted name: *Galeocerdo cuvier*. Family: Galeocerdonidae. 现行鱼类目录把Galeocerdo cuvier置于独立的鼬鲨科Galeocerdonidae；较旧资料常放在真鲨科。中文正式名常用鼬鲨，“虎鲨”也是常见俗称，不指虎鲨科Heterodontidae的其他鲨类。
 
 Length: 文献大型个体尺度 — 采用2014年研究综述明确提到的少数大型个体可达550厘米全长，范围为可靠文献中的大型尺度而非认证绝对上限。数据库所列750厘米历史报告缺乏本次可复核档案，未作确定纪录采用。
 Mass: 资料收录上限 — FishBase最大已发表体重字段为807.4千克，按其文献汇录值展示，不宣称为现今所有记录的绝对上限。流传的数吨级说法未在本条核实，且重量不能与550厘米拼成同一个体。
