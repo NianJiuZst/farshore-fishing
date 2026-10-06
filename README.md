@@ -1,4 +1,12 @@
-# 远岸钓记 1.3.0 · 远洋图鉴
+# 远岸钓鱼 1.4.1 · 透明图标与长江修复
+
+当前源码基于已发布 v1.4.0，保留 110 种普通鱼、独立蓝鲸挑战、10 地区、21 钓点、6 竿和 12 饵。所有交互按钮与信息页面移除背景色块；旅行、行囊、图鉴等入口使用透明图标。长江洲滩江湾修复收鱼末段的岩岸遮挡，江海观察站移至水道并按实际场景几何检查落点，浮漂随波面落水。
+
+版本为 1.4.1 / versionCode 9，沿用 `org.farshore.fishing.ocean` 与既有签名，保留 1.3.0/1.4.0 存档。完整修复、真实前后截图与本轮验证见 [1.4.1 验证报告](docs/UI_WATER_1_4_1.md)。可安装的已签名 APK 与最终校验材料以 [GitHub Releases](https://github.com/NianJiuZst/farshore-fishing/releases) 为准；源码验证不等于 Android 实机验收。
+
+以下保留历史版本的内容与验收背景，旧版本号、鱼种数量和截图不代表 1.4.1 的当前状态。
+
+# 1.3.0 历史说明 · 远洋图鉴
 
 > 1.3.0发行源码。已签名APK及最终签名/资源校验文件以[GitHub Releases](https://github.com/NianJiuZst/farshore-fishing/releases)为准；源码或标有UNSIGNED-INTERNAL的签名输入不是手机安装交付物。新应用与旧版并存，新档补齐原六地区及1500旅币。代码基于用户更新的`1afda37`，保留其[画面、交互与存档优化](docs/LOCAL_OPTIMIZATION.md)。[完整源码验收](docs/OCEAN_RELEASE_VALIDATION.md)。
 

@@ -1,0 +1,345 @@
+{
+  "version": "1.4.1",
+  "version_code": 9,
+  "base_commit": "f4a487851c39ff2134ed04a157a37c61314a8059",
+  "engine": "Godot 4.6.3.stable.official.7d41c59c4",
+  "android_identity": {
+    "schema_version": 1,
+    "android_package_name": "org.farshore.fishing.ocean",
+    "launcher_name": "远岸钓鱼·海洋",
+    "certificate_sha256": "a1996b606b1de5ec3ffd52edff64ec60b0434099d414c8893fa93b585c6ad716",
+    "application_version": "1.4.1",
+    "android_version_code": 9,
+    "separate_installation": true,
+    "signing_status": "owner_local_key_public_certificate_pinned",
+    "update_boundary": "Same org.farshore.fishing.ocean package and owner certificate as 1.3.0/versionCode7 and 1.4.0/versionCode8. Update preserves schema2 saves, all 110 fish IDs, the independent blue-whale record, original region/gear IDs, currency, unlocks, inventory and personal records. Fresh-profile bootstrap is not reapplied to an existing save. Signing uses only the owner existing key; password entry stays manual.",
+    "signing_algorithm": "RSA-3072",
+    "authorized_utc": "2026-10-04T10:11:23Z",
+    "public_certificate_verified_utc": "2026-10-04T10:26:19Z",
+    "compatible_ocean_versions": [
+      "1.3.0",
+      "1.4.0"
+    ]
+  },
+  "regression_batch": [
+    {
+      "suite": "save",
+      "exit_code": 0,
+      "seconds": 24.13,
+      "summary": [
+        "SAVE_TESTS: 314/314 passed; failures=0"
+      ]
+    },
+    {
+      "suite": "ocean_save",
+      "exit_code": 0,
+      "seconds": 28.77,
+      "summary": [
+        "OCEAN_SAVE_TESTS: 1157/1157 passed; failures=0"
+      ]
+    },
+    {
+      "suite": "ocean_fresh_profile",
+      "exit_code": 0,
+      "seconds": 0.6,
+      "summary": [
+        "OCEAN_FRESH_PROFILE_TESTS: 423/423 passed; failures=0"
+      ]
+    },
+    {
+      "suite": "ocean_float_save",
+      "exit_code": 0,
+      "seconds": 52.26,
+      "summary": [
+        "OCEAN_FLOAT_SAVE_TESTS: 62094/62094 passed; failures=0; generated records=3960; former false rejections=2"
+      ]
+    },
+    {
+      "suite": "main_travel",
+      "exit_code": 0,
+      "seconds": 13.35,
+      "summary": [
+        "MAIN_TRAVEL_TESTS: 24/24 passed; failures=0; boundary tests only, no readiness override"
+      ]
+    },
+    {
+      "suite": "float_observation",
+      "exit_code": 0,
+      "seconds": 2.37,
+      "summary": [
+        "FLOAT_OBSERVATION_TESTS: 90/90 passed; failures=0; presentation fixtures, not phone performance"
+      ]
+    },
+    {
+      "suite": "session_observation",
+      "exit_code": 0,
+      "seconds": 3.46,
+      "summary": [
+        "SESSION_OBSERVATION_TESTS: 258/258 passed; failures=0"
+      ]
+    },
+    {
+      "suite": "fast_recast_camera",
+      "exit_code": 0,
+      "seconds": 14.88,
+      "summary": [
+        "FAST_RECAST_CAMERA_TESTS: 12/12 passed; failures=0; actual Main flow, desktop geometry projection"
+      ]
+    },
+    {
+      "suite": "camera_aspect",
+      "exit_code": 0,
+      "seconds": 0.56,
+      "summary": [
+        "CAMERA_ASPECT_TESTS: 531/531 passed; failures=0; mathematical desktop projection, not device certification"
+      ]
+    },
+    {
+      "suite": "fishing_failure_modal",
+      "exit_code": 0,
+      "seconds": 3.86,
+      "summary": [
+        "FISHING_FAILURE_MODAL_TESTS: 75/75 passed; failures=0; Viewport ScreenTouch index0/index1, drag/cancel, emulated/native mouse, Back, pause, safe insets; physical=(720, 1280) logical=(720.0, 1280.0); not Android hardware testing"
+      ]
+    },
+    {
+      "suite": "fish_notebook_ui",
+      "exit_code": 0,
+      "seconds": 53.37,
+      "summary": [
+        "FISH_NOTEBOOK_UI_TESTS: 711/711 passed; (720, 1280); actual Main + Viewport touch, no Android claim"
+      ]
+    },
+    {
+      "suite": "blue_whale_main",
+      "exit_code": 0,
+      "seconds": 13.11,
+      "summary": [
+        "BLUE_WHALE_MAIN_TESTS: 53/53 passed; failures=0"
+      ]
+    },
+    {
+      "suite": "blue_whale_ui",
+      "exit_code": 0,
+      "seconds": 0.75,
+      "summary": [
+        "BLUE_WHALE_UI_TESTS: 50/50 passed; failures=0"
+      ],
+      "superseded_by": "blue-whale-ui-native.log"
+    },
+    {
+      "suite": "core",
+      "exit_code": 0,
+      "seconds": 96.62,
+      "summary": [
+        "CORE_TESTS: 583237/583237 passed; failures=0"
+      ]
+    },
+    {
+      "suite": "ocean_diversity",
+      "exit_code": 0,
+      "seconds": 12.32,
+      "summary": [
+        "OCEAN_DIVERSITY_TESTS: 85721/85721; failures=0; combos=70368; candidates=343440; ordinary witnesses=110"
+      ]
+    },
+    {
+      "suite": "ocean_ui",
+      "exit_code": 1,
+      "seconds": 58.77,
+      "summary": [
+        "FAIL OCEAN UI: giant-bait HUD caption fits its native touch surface large_fish_chunk",
+        "FAIL OCEAN UI: giant-bait HUD caption fits its native touch surface whole_mackerel",
+        "FAIL OCEAN UI: giant-bait HUD caption fits its native touch surface large_squid",
+        "FAIL OCEAN UI: giant-bait HUD caption fits its native touch surface large_surface_lure",
+        "FAIL OCEAN UI: production source manifests and UI scripts unchanged throughout run",
+        "OCEAN_UI_TESTS: 1117/1122 passed; failures=5; physical=(720, 1280); actual Main/headless or desktop only"
+      ],
+      "superseded_by": "ocean_ui-final.log",
+      "rerun_reason": "Update obsolete visible-caption assertion for requested icon-only control; rerun after version files frozen."
+    }
+  ],
+  "final_targeted_runs": [
+    {
+      "log_name": "ui-style.log",
+      "source_log_sha256": "96a57515b8d334999fa7d1861022b6fa55f8c5b30bd5c7e218e17893ae7cfd91",
+      "result_lines": [
+        "UI_STYLE_TESTS: 31303/31303 passed; failures=0; button visits=463; physical viewport=(720, 1280); logical viewport=(720.0, 1280.0)"
+      ]
+    },
+    {
+      "log_name": "ui-style-tall.log",
+      "source_log_sha256": "c73c74063a09db9ba36a7724cd6564a0c3c9fef778e373866424f344b76c9041",
+      "result_lines": [
+        "UI_STYLE_TESTS: 31303/31303 passed; failures=0; button visits=463; physical viewport=(720, 1584); logical viewport=(720.0, 1584.0)"
+      ]
+    },
+    {
+      "log_name": "water-domain-final.log",
+      "source_log_sha256": "d98716d09f2f81ca29df5fe8d617212ea5308a51f3f0381d49b98476db5bcd93",
+      "result_lines": [
+        "WATER_DOMAIN_TESTS 49368/49368 passed; cases=2268 failures=0"
+      ]
+    },
+    {
+      "log_name": "ocean_ui-final.log",
+      "source_log_sha256": "98ca40ed37f28ea01553bc6d1f2da8d1472d0eb09ee106670a0c88e7231653f3",
+      "result_lines": [
+        "OCEAN_UI_TESTS: 1126/1126 passed; failures=0; physical=(720, 1280); actual Main/headless or desktop only"
+      ]
+    },
+    {
+      "log_name": "blue-whale-ui-native.log",
+      "source_log_sha256": "59806053a698797f90de365e036f5a386d75c308d899f7cce64172a2217cc553",
+      "result_lines": [
+        "BLUE_WHALE_UI_TESTS: 341/341 passed; failures=0"
+      ]
+    },
+    {
+      "log_name": "python-handoff.log",
+      "source_log_sha256": "067462076911284b1a5c423ad83e0892d7ff82e65b8c207bb296c93550e4e359",
+      "result_lines": [
+        "Ran 14 tests in 0.212s",
+        "OK"
+      ]
+    },
+    {
+      "log_name": "python-signing-inspection.log",
+      "source_log_sha256": "665e447e397e1b88f2fe051cad4355c5c7652f977b4ec30707aceb123d102883",
+      "result_lines": [
+        "Ran 9 tests in 0.079s",
+        "OK"
+      ]
+    }
+  ],
+  "extra_native_captures": {
+    "all_spots_and_main_pages": 112,
+    "long_phone_and_popup": 13,
+    "blue_whale": 7,
+    "actual_yangtze_fight": 4,
+    "actual_fight_outcome": "CAUGHT via real session hook/control flow"
+  },
+  "verified_geometry": {
+    "casts": 2268,
+    "checks": 49368,
+    "failures": 0,
+    "milliseconds": 11521,
+    "scope": "CPU geometry/visibility and camera projection, not Android device or GPU performance",
+    "spots": [
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "lake_shore"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "lake_bay"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "japan_harbor"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "japan_reef"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "norway_harbor"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "norway_boat"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "med_pier"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "med_boat"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "bayou_backwater"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "bayou_channel"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "yangtze_river"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "yangtze_estuary"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "pacific_reef"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "pacific_bluewater"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "atlantic_shelf"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "atlantic_bluewater"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "indian_reef"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "indian_bluewater"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "red_sea_lagoon"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "red_sea_wall"
+      },
+      {
+        "adjusted": 0,
+        "casts": 108,
+        "spot": "red_sea_bluehole"
+      }
+    ]
+  },
+  "rerun_notes": [
+    "Water test projection normalized to actual logical viewport, not physical tablet dimensions. Production camera unchanged.",
+    "Python fixture resolves macOS /var temporary path; production symlink refusal unchanged."
+  ],
+  "limitations": [
+    "No Android APK export, signing, installation, on-device update, touch certification, FPS, thermal or battery result in this source report.",
+    "Baseline-existing MoltenVK pipeline-cache write and 7 Texture RID shutdown warnings were observed.",
+    "Logic and geometry counts include repeated assertions, not independent human scenarios."
+  ]
+}

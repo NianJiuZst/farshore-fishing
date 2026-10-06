@@ -1,0 +1,793 @@
+{
+  "scope": "Unedited native game-framebuffer PNGs; synthetic isolated QA profiles; no player saves. Full set in release QA ZIP; repository contains selected before/after examples.",
+  "baseline_commit": "f4a487851c39ff2134ed04a157a37c61314a8059",
+  "before_driver": "Main page/cast baseline: Mobile/Metal; actual fight: Mobile/Vulkan",
+  "after_driver": "Mobile/Vulkan",
+  "files": [
+    {
+      "path": "before/catalog.png",
+      "bytes": 129352,
+      "sha256": "0d518eb5dbe15793cb11e655db6691995fb058d82f81069c131d00e3a13f35e2"
+    },
+    {
+      "path": "before/confirmation.png",
+      "bytes": 239032,
+      "sha256": "14be0b103bcf1203a996a34c8fd11430e3f1d99f1b040de2e3d45dbd16527f1a"
+    },
+    {
+      "path": "before/gear.png",
+      "bytes": 105452,
+      "sha256": "9e0a9b4580800b50de810dae3ede14c335a6f9be64902c38e597ee9aebc1cdb4"
+    },
+    {
+      "path": "before/lobby.png",
+      "bytes": 947671,
+      "sha256": "ee0743ea0bf3c45c0cb39d78a4f28a19b7dd6ba8d18d35d23d8df3141b7d36b0"
+    },
+    {
+      "path": "before/settings.png",
+      "bytes": 109615,
+      "sha256": "dc84fc0c19266f371e0341adfde20f94f6f5cc9cdc0b859700538ef9d3089498"
+    },
+    {
+      "path": "before/species.png",
+      "bytes": 284297,
+      "sha256": "08729041407902e79a03d91d585b87b0b629f5bdb82bcd083bd6ad8a27cc8d7a"
+    },
+    {
+      "path": "before/travel.png",
+      "bytes": 727202,
+      "sha256": "106e30e869e57c6e8a0059ed9ad4b3182ffdc9ca5c5d47afc91c058806b0deaf"
+    },
+    {
+      "path": "before/yangtze_estuary_cast_0.png",
+      "bytes": 335401,
+      "sha256": "bdf5085d6b755d85bcab5dafd49305da1479d131c5e4e8ea9aaeab65513949ea"
+    },
+    {
+      "path": "before/yangtze_estuary_cast_100.png",
+      "bytes": 342442,
+      "sha256": "478fc11d03d93c70d4ab8ed9dfcbfc80437597309d1f4a45be3c25abfedf22fe"
+    },
+    {
+      "path": "before/yangtze_estuary_cast_50.png",
+      "bytes": 337400,
+      "sha256": "e114700472d7ad3d1d807bf3d1a8c0516479a4468dbe88364ffa0235dc95b279"
+    },
+    {
+      "path": "before/yangtze_estuary_ready.png",
+      "bytes": 987536,
+      "sha256": "38d87c2319c49b3fb30b38c895b0e2ecd8d9c624649fcdc337c4c79e440e2e43"
+    },
+    {
+      "path": "before/yangtze_estuary_tall.png",
+      "bytes": 454151,
+      "sha256": "b5b9adf10989144d597cc5443b6daa75cdbf5f916764a3cb73c6578746c4c667"
+    },
+    {
+      "path": "before/yangtze_river_cast_0.png",
+      "bytes": 320675,
+      "sha256": "3a3668b2acefa9201d2c4315b08f98565258b22988153fb1c395b9596f90b802"
+    },
+    {
+      "path": "before/yangtze_river_cast_100.png",
+      "bytes": 321281,
+      "sha256": "97abf35a864c416f1cf0677f01a338ea48fbee20be67a00296da926eb23603f0"
+    },
+    {
+      "path": "before/yangtze_river_cast_50.png",
+      "bytes": 319341,
+      "sha256": "62eda689dc60f4e77e2d9a519a1c23d62257fc02164c832de25cc13ec29f6271"
+    },
+    {
+      "path": "before/yangtze_river_fight_10.png",
+      "bytes": 727598,
+      "sha256": "8a0699083d5d8b89eba3f3550068458353e8a278998a7607e9d5c7ce8a584a99"
+    },
+    {
+      "path": "before/yangtze_river_fight_50.png",
+      "bytes": 921404,
+      "sha256": "b8a295e7d2244f486e5d5165c84d5cd2028ec99985cf22ed37adc60f96f1d98f"
+    },
+    {
+      "path": "before/yangtze_river_fight_85.png",
+      "bytes": 999195,
+      "sha256": "930c0e42dee1b0be8a48b091789a91c2b004787d5254e8a594dfd9a8b7b63a5d"
+    },
+    {
+      "path": "before/yangtze_river_fight_95.png",
+      "bytes": 1047511,
+      "sha256": "a92630e94f47259d0da897047aca73d38ff6ff8849dff78c9d5d45339fb8bcb7"
+    },
+    {
+      "path": "before/yangtze_river_ready.png",
+      "bytes": 1069435,
+      "sha256": "b50e8574b42d1885726eb4247f1acd2e4569d18f4dd01e6d3263a4faa5269acf"
+    },
+    {
+      "path": "before/yangtze_river_tall.png",
+      "bytes": 459084,
+      "sha256": "5115cc34df8a25d17d4b076f94d4b22c17d7a24a1ecbcc88dd205dab984c812f"
+    },
+    {
+      "path": "after/atlantic_bluewater_cast_0.png",
+      "bytes": 316899,
+      "sha256": "1079310ce074fcc76cef564fb2bca969effe2ac3d399aa6a275a0eace0a70de9"
+    },
+    {
+      "path": "after/atlantic_bluewater_cast_100.png",
+      "bytes": 318977,
+      "sha256": "6aeb8f523759b356dfd2bfff0a357d056801554c6ba363c0b2f19c4e8876eca0"
+    },
+    {
+      "path": "after/atlantic_bluewater_cast_50.png",
+      "bytes": 317456,
+      "sha256": "d4b9b47500cd9d8564d3b67c8ba724a3b63196cfedfe56702099a304d17268bb"
+    },
+    {
+      "path": "after/atlantic_bluewater_ready.png",
+      "bytes": 900417,
+      "sha256": "dc2a853dedc7dbbbf890c394211ea4134ac7f4504d4b84516e40e5272b8a23fa"
+    },
+    {
+      "path": "after/atlantic_bluewater_tall.png",
+      "bytes": 331112,
+      "sha256": "8e0ffd860ab5682f6e61f1a8790f6671cd526672c7060762404a19969be7e56d"
+    },
+    {
+      "path": "after/atlantic_shelf_cast_0.png",
+      "bytes": 341343,
+      "sha256": "43d20c715cbbcaba7757eca8e3305f1891a90ba14e7b7942181bedc4e619ce8a"
+    },
+    {
+      "path": "after/atlantic_shelf_cast_100.png",
+      "bytes": 319123,
+      "sha256": "3583bf8b0ae82d6b67fa906d26b96a69a188b7f24d385d5d93b2a81a31b2383a"
+    },
+    {
+      "path": "after/atlantic_shelf_cast_50.png",
+      "bytes": 329598,
+      "sha256": "4fbff7e9aa978c96d400084f5895e8c9328fee802b1466273e4377e924ff8470"
+    },
+    {
+      "path": "after/atlantic_shelf_ready.png",
+      "bytes": 998742,
+      "sha256": "bea2b3142b9142247a479d8c861eafba51c1da558e0d370a9be5838d1c261eca"
+    },
+    {
+      "path": "after/atlantic_shelf_tall.png",
+      "bytes": 335484,
+      "sha256": "047cf4f0d0593063d3f11e1bf430417842a92ab6599c61e85fb3fb1a393cae54"
+    },
+    {
+      "path": "after/backup_tall.png",
+      "bytes": 719242,
+      "sha256": "fb1a8a8ce3725ccbec1fdd3e6674a9a08ac0bc72b7b5e2df297869cf8096469c"
+    },
+    {
+      "path": "after/bayou_backwater_cast_0.png",
+      "bytes": 416909,
+      "sha256": "eefa31a8127fd4133937bf8e096e5bc75489ff14e343c405fed526a9fa3c4ec7"
+    },
+    {
+      "path": "after/bayou_backwater_cast_100.png",
+      "bytes": 417960,
+      "sha256": "f19364b92509a16c969efbe3e9451225a47219a6a22f249165bf4d85d7e8c521"
+    },
+    {
+      "path": "after/bayou_backwater_cast_50.png",
+      "bytes": 417843,
+      "sha256": "f7e22135cb0dce45931d1a34c34b14032f03ae01c3f602095f4598760031362d"
+    },
+    {
+      "path": "after/bayou_backwater_ready.png",
+      "bytes": 1221510,
+      "sha256": "587422654a2fede7498dd84d42b7b6e4231380b303542da2848fcc7dd7a21ffe"
+    },
+    {
+      "path": "after/bayou_backwater_tall.png",
+      "bytes": 587565,
+      "sha256": "4f1a5e20c697b4d8b2573c2da261b4da2d4539e852203927c7dbedad96283591"
+    },
+    {
+      "path": "after/bayou_channel_cast_0.png",
+      "bytes": 404231,
+      "sha256": "eeb48084767c8c7fd52258a432a1d3ab3f67dfc09657ada6684bb38e87f0cf2d"
+    },
+    {
+      "path": "after/bayou_channel_cast_100.png",
+      "bytes": 403982,
+      "sha256": "89a19bf8f3f11335e1afd2b6a21c6c07a594f1593ffbdb6276492c0e3d08f6d8"
+    },
+    {
+      "path": "after/bayou_channel_cast_50.png",
+      "bytes": 404044,
+      "sha256": "62eede43fbfd55d8d9244cd9f8e8af640a5ffbe9569ea8baff105bc6fccad883"
+    },
+    {
+      "path": "after/bayou_channel_ready.png",
+      "bytes": 1202257,
+      "sha256": "528e2eb2a67a512a3645ce73374250096b542d80a62a8dfd8f346aed052bca2f"
+    },
+    {
+      "path": "after/bayou_channel_tall.png",
+      "bytes": 578298,
+      "sha256": "500389eda4d705f219b18cf1a3225c452cbff64555f1dd41a41a52a7f9a34fb6"
+    },
+    {
+      "path": "after/blue-whale/01-link.png",
+      "bytes": 340390,
+      "sha256": "54c63de2f5d4fba5c51bd31d022a23836d3511084c3a372669fb21fd1db123a4"
+    },
+    {
+      "path": "after/blue-whale/02-current.png",
+      "bytes": 342439,
+      "sha256": "51257e7f2afe30cf96b84013108b6ab9addaf20d93952a801ec6e43d0c604920"
+    },
+    {
+      "path": "after/blue-whale/03-resonance.png",
+      "bytes": 347368,
+      "sha256": "42f533960e3bc7726d28fe04160686e169c0d4c2de6959bb45de12dbe1f93676"
+    },
+    {
+      "path": "after/blue-whale/04-success.png",
+      "bytes": 393298,
+      "sha256": "819ac4c9fc6fe7b67fc55e41bde301851a0c476f18a20136f86a66854c46fa16"
+    },
+    {
+      "path": "after/blue-whale/05-save-retry.png",
+      "bytes": 390196,
+      "sha256": "055eb8a881f43b1bf9cd271c2cadc123848d9740edeba81b5d8c882213b0d331"
+    },
+    {
+      "path": "after/blue-whale/06-paused.png",
+      "bytes": 356145,
+      "sha256": "c5e52448af31b3ad5e8f3bbf1e2683372c54e7be51f943c715512a294f2f11bf"
+    },
+    {
+      "path": "after/blue-whale/07-failed.png",
+      "bytes": 371549,
+      "sha256": "82c7591a06254aaae2d538ee08846597cf73b72c183e838463d957f1f3ccbbd5"
+    },
+    {
+      "path": "after/catalog.png",
+      "bytes": 589448,
+      "sha256": "3dc65d8b7acc1cf07495c9fe729cf24f4b76dc181050566034d4b8f3dd990f60"
+    },
+    {
+      "path": "after/catalog_discovery_popup.png",
+      "bytes": 597229,
+      "sha256": "2cfc4bffce24b4cdc0f1b9faab6036a86976ad89b3e310915e9bb95ef6936ec1"
+    },
+    {
+      "path": "after/catalog_region_popup.png",
+      "bytes": 639028,
+      "sha256": "90bd8b861f4d502a869a6c03fac6c46418c2d0215a7846cbc25d10f21616a125"
+    },
+    {
+      "path": "after/catalog_tall.png",
+      "bytes": 729509,
+      "sha256": "62fd2e13ec4ffbdec57442ce69431e836e2699d56430576a95cbd4c78e352f4b"
+    },
+    {
+      "path": "after/confirmation.png",
+      "bytes": 155155,
+      "sha256": "02795a2f57836b06675e24fc800f8f890087df5868f3f4b4981ef6314beccf2c"
+    },
+    {
+      "path": "after/confirmation_tall.png",
+      "bytes": 622841,
+      "sha256": "c06c11ce50794f22c63397604770805115cbd1d922a788cd7fc8906c6bbe60bf"
+    },
+    {
+      "path": "after/favorites_tall.png",
+      "bytes": 662346,
+      "sha256": "a80bfb2ab9abc596ea9cffbe2ab2238c190ff8e1b7ce797f016b7dd016419591"
+    },
+    {
+      "path": "after/gear.png",
+      "bytes": 609389,
+      "sha256": "3d6b00b298d71600b4c975b00429cefdeefa43585d5b7acad97b996a8d03468f"
+    },
+    {
+      "path": "after/gear_tall.png",
+      "bytes": 776997,
+      "sha256": "a2a5d74034ce5cdba5a3d755e713b46fc61001265758481e2fe2d0e9b2470b27"
+    },
+    {
+      "path": "after/home_tall.png",
+      "bytes": 1530478,
+      "sha256": "3a07f2760b2a3601113585673a3f8c397dea29d49aa231981751f6df03b1ab89"
+    },
+    {
+      "path": "after/indian_bluewater_cast_0.png",
+      "bytes": 399657,
+      "sha256": "0725e870a3b214729f064af3fd45ab512d741dac3b8f1ce67e1411ec534791d1"
+    },
+    {
+      "path": "after/indian_bluewater_cast_100.png",
+      "bytes": 402045,
+      "sha256": "d050beb111617f952ebef622d2b4706c23e1463f7c8ff9d3a635bad548dd594d"
+    },
+    {
+      "path": "after/indian_bluewater_cast_50.png",
+      "bytes": 400989,
+      "sha256": "629806dab29afd6809c819fc6dd45342d2ab0000831018f6331472f5ccd588f3"
+    },
+    {
+      "path": "after/indian_bluewater_ready.png",
+      "bytes": 949660,
+      "sha256": "61f5305a8048cbdc5af746ecade704c15525af86a0de8a1f6664f33cf7735f44"
+    },
+    {
+      "path": "after/indian_bluewater_tall.png",
+      "bytes": 420320,
+      "sha256": "e257e33a79ce219d8e16cb66c5d1307d1d89df84b85725e024d65b2d1991b6a8"
+    },
+    {
+      "path": "after/indian_reef_cast_0.png",
+      "bytes": 417549,
+      "sha256": "dee49d9e399e0ba14802d57cbe2021a3ed43ecfc05193db1c5f3410331402125"
+    },
+    {
+      "path": "after/indian_reef_cast_100.png",
+      "bytes": 420628,
+      "sha256": "ceed6aa4b2fbd010a12e620ff636f373285586c1694d821a125e4d5951e2c6d9"
+    },
+    {
+      "path": "after/indian_reef_cast_50.png",
+      "bytes": 416240,
+      "sha256": "aaad40e30cfd720accbf25836ed2f3a38af1945fba4511e1568894c4692dc641"
+    },
+    {
+      "path": "after/indian_reef_ready.png",
+      "bytes": 956560,
+      "sha256": "4767ef676d168cb22ff1c3be827e471705bb6b75e0bda6751084ca24f30f1d81"
+    },
+    {
+      "path": "after/indian_reef_tall.png",
+      "bytes": 439024,
+      "sha256": "931689dbba1c4600272d791ca3f06f1b8e3f00d81ecadba1b1beeba33fabbd26"
+    },
+    {
+      "path": "after/japan_harbor_cast_0.png",
+      "bytes": 420209,
+      "sha256": "1638417c2cd6611c73da0728ce732f0657481ca15084d16226f9cb86babaebf2"
+    },
+    {
+      "path": "after/japan_harbor_cast_100.png",
+      "bytes": 418236,
+      "sha256": "d95b0a0fbe9f14a4471c5c3c1aa4fdcdc1228737f1308ef9b88447f1841385b6"
+    },
+    {
+      "path": "after/japan_harbor_cast_50.png",
+      "bytes": 419580,
+      "sha256": "1a3c8a79267e0188be2d4221a18e755e5795c3656cdcea016235b44f4e589ffe"
+    },
+    {
+      "path": "after/japan_harbor_ready.png",
+      "bytes": 1126860,
+      "sha256": "230138c9a92aeca29db500a7b08c0b115ebbe470a6489994917d38bd4fae6efa"
+    },
+    {
+      "path": "after/japan_harbor_tall.png",
+      "bytes": 442239,
+      "sha256": "1b7f5f3c6367163500d3d4697ad988f1fcc15da36e4428738e50eb062fddb8e9"
+    },
+    {
+      "path": "after/japan_reef_cast_0.png",
+      "bytes": 503070,
+      "sha256": "8dcbb1024dc625bb95122b9f137d2f04e7deba704fe8200ad221a6a78b999c0f"
+    },
+    {
+      "path": "after/japan_reef_cast_100.png",
+      "bytes": 511926,
+      "sha256": "d71c87b85966b23ed014bf43628f70a4383bb6694cc9ca6818cbf01decf9b193"
+    },
+    {
+      "path": "after/japan_reef_cast_50.png",
+      "bytes": 506053,
+      "sha256": "a498c8874f18592f6077a7a221f713faf1db0c861656c722524140e3d0bd29b0"
+    },
+    {
+      "path": "after/japan_reef_ready.png",
+      "bytes": 1408621,
+      "sha256": "96b91c8b15f7799d349aa2f75758e73827fa7cad97f5a663cb7f596f268f8f88"
+    },
+    {
+      "path": "after/japan_reef_tall.png",
+      "bytes": 762821,
+      "sha256": "f118914982d901dedd6a21246622335489f7b9a99b25ec7e3df224cc9d78c9dd"
+    },
+    {
+      "path": "after/lake_bay_cast_0.png",
+      "bytes": 414702,
+      "sha256": "1a6714fa78e5edd1db574a5c15707b6ba54446d8642fef441181c12f2be4ffc0"
+    },
+    {
+      "path": "after/lake_bay_cast_100.png",
+      "bytes": 414565,
+      "sha256": "5f61e198362a3fee42f01a6a4347976b63427950ecbea5e03d97cf40ae1f2437"
+    },
+    {
+      "path": "after/lake_bay_cast_50.png",
+      "bytes": 416382,
+      "sha256": "2a6c26de0cd68d57b0bfbcca70cf67a345b613e2c9b54acb7acc81a63de3310b"
+    },
+    {
+      "path": "after/lake_bay_ready.png",
+      "bytes": 1207121,
+      "sha256": "f7dcee840ed95db8cfb8fdf0df04c0366d1492065543e03c0546b7a85579b548"
+    },
+    {
+      "path": "after/lake_bay_tall.png",
+      "bytes": 558682,
+      "sha256": "03487ea4f4fbaef794a312b9918614e4441dab01b8fc8aba39310b790bae7c99"
+    },
+    {
+      "path": "after/lake_shore_cast_0.png",
+      "bytes": 418675,
+      "sha256": "00a983a1ca8defcf74ce0452e119f81f46928ff1f300d723394e6b683619a65d"
+    },
+    {
+      "path": "after/lake_shore_cast_100.png",
+      "bytes": 418200,
+      "sha256": "b75bd69b91992ec5101dbc1834d61d697b554d353aa939099145c51e7c498ee8"
+    },
+    {
+      "path": "after/lake_shore_cast_50.png",
+      "bytes": 419137,
+      "sha256": "c063df63be5b3df708fda69e239bcf98cec70060d6129193c606afa0366853ba"
+    },
+    {
+      "path": "after/lake_shore_ready.png",
+      "bytes": 1194483,
+      "sha256": "9ffac11f1053a2b6d4be62be85830739e8fb58baa3a6ba6e12532832a9727252"
+    },
+    {
+      "path": "after/lake_shore_tall.png",
+      "bytes": 555834,
+      "sha256": "d65474d046e74644cb09bc1a2eda002bba044fda45364b68d39d33eb3ea2a87b"
+    },
+    {
+      "path": "after/lobby.png",
+      "bytes": 1301300,
+      "sha256": "5d75895f8126476e2ae8f211b7f27e37f6977d02e68e7771732502e201e4f05f"
+    },
+    {
+      "path": "after/med_boat_cast_0.png",
+      "bytes": 447848,
+      "sha256": "06fc62427538e351dfb31adb9c1e92c0a894eb1efc5142d83fcfb2075b8acb59"
+    },
+    {
+      "path": "after/med_boat_cast_100.png",
+      "bytes": 448459,
+      "sha256": "4f9e2f709cfcef9a937afa00c90da02b8ad403d0896d1d00d77989a60aa14417"
+    },
+    {
+      "path": "after/med_boat_cast_50.png",
+      "bytes": 448418,
+      "sha256": "1f3214b447c6c14f900f77620f1388cd47dd870b3c571f4fc28f7668234bdba1"
+    },
+    {
+      "path": "after/med_boat_ready.png",
+      "bytes": 1009955,
+      "sha256": "8a14c6c68d3e9a5acaf512cfff915322804d9f64e3ae7fa0ff0bcfd200d6037d"
+    },
+    {
+      "path": "after/med_boat_tall.png",
+      "bytes": 476310,
+      "sha256": "c60f8b2fcf8eadbe0b249d0e6f67b224da74ce04e3d8753a0adb974bdaa796b2"
+    },
+    {
+      "path": "after/med_pier_cast_0.png",
+      "bytes": 425773,
+      "sha256": "5615b6dacc37eca4bad08231b69d7ea90acafb8fa94fef57d432ebb94db10ab2"
+    },
+    {
+      "path": "after/med_pier_cast_100.png",
+      "bytes": 427299,
+      "sha256": "4d8c872ac642d6cdbd90e09005084e68709d0c948f5b785aefb4bb4f4a230c08"
+    },
+    {
+      "path": "after/med_pier_cast_50.png",
+      "bytes": 425426,
+      "sha256": "407f7094bf31b1ed17e263eea4a49e640524423c9897e1835903746867d2f45f"
+    },
+    {
+      "path": "after/med_pier_ready.png",
+      "bytes": 1154231,
+      "sha256": "5a8ef2414adb71d6e7971ab0ffbb546cbb35c55d8936f72a99e664396c9b9584"
+    },
+    {
+      "path": "after/med_pier_tall.png",
+      "bytes": 451921,
+      "sha256": "22235b3fb319ffec3f4127486fc6ade955a3d3c117f2ebbb6436d5f606990556"
+    },
+    {
+      "path": "after/norway_boat_cast_0.png",
+      "bytes": 419928,
+      "sha256": "a6a2b690bbc5b90388170b3a03a6f4d5a08dd16118536c2e3e4fe914dce82f1e"
+    },
+    {
+      "path": "after/norway_boat_cast_100.png",
+      "bytes": 421280,
+      "sha256": "c7fdcbca62ab937c0e8ec86bd900a94ec024f876c3daf72d83c5a2c503d63404"
+    },
+    {
+      "path": "after/norway_boat_cast_50.png",
+      "bytes": 421267,
+      "sha256": "fecb20517d307295adfe386677b0ef824531b505e546d08c120eb5103de4e461"
+    },
+    {
+      "path": "after/norway_boat_ready.png",
+      "bytes": 1144156,
+      "sha256": "3fceecd43d44a45271a6b6d36623734c2510075baffabf06f2e3ac171d12eeeb"
+    },
+    {
+      "path": "after/norway_boat_tall.png",
+      "bytes": 471329,
+      "sha256": "baa9298d4dd811837480b7252fb895c6a11b029755fcc6c3a0b25926bee41950"
+    },
+    {
+      "path": "after/norway_harbor_cast_0.png",
+      "bytes": 414819,
+      "sha256": "5cedda162613cbf293cda92f708674b19542dd60fa6bfc367ba8c5af2cc776a6"
+    },
+    {
+      "path": "after/norway_harbor_cast_100.png",
+      "bytes": 415027,
+      "sha256": "48e517c9a3d37b467204703ccdcf79982aa6beff6d6a2455611d513fe7fdf4b3"
+    },
+    {
+      "path": "after/norway_harbor_cast_50.png",
+      "bytes": 418097,
+      "sha256": "b3d7d802c0233b85e7fc9341f5b5310512cd28c4547dad318a87d63ecb4df63e"
+    },
+    {
+      "path": "after/norway_harbor_ready.png",
+      "bytes": 1242472,
+      "sha256": "e5479a25b242fc68e2ca38ac7a05fd986241a7e8567ea558249c8f8e1f962041"
+    },
+    {
+      "path": "after/norway_harbor_tall.png",
+      "bytes": 484697,
+      "sha256": "a5a8138a0f979f07112a23acf1f41bfac93a238cb72b0aa126dc8aebf32b49da"
+    },
+    {
+      "path": "after/pacific_bluewater_cast_0.png",
+      "bytes": 376169,
+      "sha256": "8681f6968c43fb54c018c274dfddd104c9c6d21bb464dfb9daeeeecdc63504c9"
+    },
+    {
+      "path": "after/pacific_bluewater_cast_100.png",
+      "bytes": 380867,
+      "sha256": "e607f13d2ae4d340c87e181978f0eb6872c2f8f7b24d199c1da471889975c324"
+    },
+    {
+      "path": "after/pacific_bluewater_cast_50.png",
+      "bytes": 375307,
+      "sha256": "758f5e75ab3835e980d3a5cd777e41dcabca090479ae05b5506c8bf6062763f4"
+    },
+    {
+      "path": "after/pacific_bluewater_ready.png",
+      "bytes": 1016803,
+      "sha256": "835f68cce6e3fad453a0e170b83502a1647f045eb5da4b122b93a9e2f2ad3179"
+    },
+    {
+      "path": "after/pacific_bluewater_tall.png",
+      "bytes": 394134,
+      "sha256": "4336a07e102c5f7c83736bde9ee51a4c5be3858f7ed9aec9fceb4c5b32b0c213"
+    },
+    {
+      "path": "after/pacific_reef_cast_0.png",
+      "bytes": 373195,
+      "sha256": "1c36a5e066e8ab7571662a926027d1428b31d9b2cbb0b055d51c5a3d50dc3212"
+    },
+    {
+      "path": "after/pacific_reef_cast_100.png",
+      "bytes": 377491,
+      "sha256": "959514d38dcd7337b27ddfba6621ba0ab9fe76c2b71e1948c6b5b2c95936d25e"
+    },
+    {
+      "path": "after/pacific_reef_cast_50.png",
+      "bytes": 376897,
+      "sha256": "5835ad7f9a1c0b6cb400f0a73b78d7f03797651ac0e9e6749f90e2428116bb0a"
+    },
+    {
+      "path": "after/pacific_reef_ready.png",
+      "bytes": 1061030,
+      "sha256": "213b6e6a3f91e8bf46de0cc49ee65439fb22e7719f34a88104a64350e40777d4"
+    },
+    {
+      "path": "after/pacific_reef_tall.png",
+      "bytes": 395029,
+      "sha256": "3290b3c6c06553a34f41c043ad4ccadbbbcbc6cc3e508c9abc759fb55f960e89"
+    },
+    {
+      "path": "after/pause_tall.png",
+      "bytes": 667059,
+      "sha256": "3d8cc20bbfd410e033fc959893c0c6246116381e89a4ba1c3b61d2f2e7521b6b"
+    },
+    {
+      "path": "after/prepare_tall.png",
+      "bytes": 889720,
+      "sha256": "59f450f8cd36f208690e235c8678aaa91d5aeb3d2198fd089903ecc676ca8a05"
+    },
+    {
+      "path": "after/protected_species_tall.png",
+      "bytes": 932092,
+      "sha256": "b714e1a473de61223121f0fc4e0e1a3fb837a0cf7772a6871f23e99b6f22b481"
+    },
+    {
+      "path": "after/red_sea_bluehole_cast_0.png",
+      "bytes": 381766,
+      "sha256": "b7fdb98a182b60055b447d42c80fa7540a01e8c61496b941425d20d65b9f58e6"
+    },
+    {
+      "path": "after/red_sea_bluehole_cast_100.png",
+      "bytes": 385629,
+      "sha256": "c9deb01c03a3d44011c0e5fa6b611b740e200f4b7d82862c101fa00ebe2c6a06"
+    },
+    {
+      "path": "after/red_sea_bluehole_cast_50.png",
+      "bytes": 379446,
+      "sha256": "34ce1548bdb316ee89a46580df3e8b22c1623428e9363150b1992b7a975aac20"
+    },
+    {
+      "path": "after/red_sea_bluehole_ready.png",
+      "bytes": 961267,
+      "sha256": "ec1475fe93892c40a9e90174f8a96a9b4764332ec77c76586d26d14a4ca6a36b"
+    },
+    {
+      "path": "after/red_sea_bluehole_tall.png",
+      "bytes": 406764,
+      "sha256": "2b90c562f9ecdf18a93b97202e6453ea7b4fc297b42d903075cf8f3194f83437"
+    },
+    {
+      "path": "after/red_sea_lagoon_cast_0.png",
+      "bytes": 409397,
+      "sha256": "32045b4aa18828d706dfd17571893f78904a4efe78ff7cfbe21571554d568a83"
+    },
+    {
+      "path": "after/red_sea_lagoon_cast_100.png",
+      "bytes": 410974,
+      "sha256": "11e8ca5cd9b9e7df140a008e65c056ef75ff0a86885156b43f1a068f8300b983"
+    },
+    {
+      "path": "after/red_sea_lagoon_cast_50.png",
+      "bytes": 408048,
+      "sha256": "3453d4cf9cb4b78600bb93370f9df2661a8f3f2ac0fafd052fb846848af72ed4"
+    },
+    {
+      "path": "after/red_sea_lagoon_ready.png",
+      "bytes": 1059586,
+      "sha256": "f17bc5d11cd8621e078ba8d1618bb6c4f7a3cd17d042bdb8e739e3ae9c9759da"
+    },
+    {
+      "path": "after/red_sea_lagoon_tall.png",
+      "bytes": 440817,
+      "sha256": "f73a81f0eaed7a0ab9cd13701708d05b2c9e979dbc71dbd3969323a690c5e812"
+    },
+    {
+      "path": "after/red_sea_wall_cast_0.png",
+      "bytes": 408930,
+      "sha256": "6ff58cdd69d5063fc2d228b5dca59b3bf2c5e81ec7e7a6078b6d842bd097614f"
+    },
+    {
+      "path": "after/red_sea_wall_cast_100.png",
+      "bytes": 411000,
+      "sha256": "ddd3c7cd9a4d695f2080f7d55a79e95510b14159688563ccd8c52c50634ec5ff"
+    },
+    {
+      "path": "after/red_sea_wall_cast_50.png",
+      "bytes": 409052,
+      "sha256": "854da17c2a13c2925497ac71e778023f31221e907c39f2431437e3b29e511f94"
+    },
+    {
+      "path": "after/red_sea_wall_ready.png",
+      "bytes": 962958,
+      "sha256": "3aa2f1a9d5b9fcb43b424338be602a8df916498a4cc695d1fe09b1992f6109d8"
+    },
+    {
+      "path": "after/red_sea_wall_tall.png",
+      "bytes": 439720,
+      "sha256": "0aa52cdb56e9bdc4a300e0a6611a5ea2248046bec76406d086bac66623ff1c89"
+    },
+    {
+      "path": "after/settings.png",
+      "bytes": 627667,
+      "sha256": "6f472a5f8bc24d0b7134b7a841eb469a7c5a2440388bf7c03a5f50fcdda817f4"
+    },
+    {
+      "path": "after/settings_tall.png",
+      "bytes": 760204,
+      "sha256": "81dbf7afd6a27f16e05440761a5a0fd4bf45bce0183045f8ffdab8f5fe74be70"
+    },
+    {
+      "path": "after/species.png",
+      "bytes": 760538,
+      "sha256": "26dcccdb276e76cac9a14a36686ded38baf2324386dd631ef8bc2cd97c0c7813"
+    },
+    {
+      "path": "after/travel.png",
+      "bytes": 1026878,
+      "sha256": "214f3bb61cc5c0e5343f1553904440c83fe7a9ec2eaba1e2bd692a7a3ee2d106"
+    },
+    {
+      "path": "after/travel_tall.png",
+      "bytes": 1276173,
+      "sha256": "8c4f943f4cee271f9d138829a198a228cf47cacd195968eae566d712236aa26a"
+    },
+    {
+      "path": "after/yangtze_estuary_cast_0.png",
+      "bytes": 360612,
+      "sha256": "6ad04164c490a783aab8505a5361488c349881c815a5c34882f922d6a9541014"
+    },
+    {
+      "path": "after/yangtze_estuary_cast_100.png",
+      "bytes": 361549,
+      "sha256": "3f10c9518332ae5d7067cf5230d80d364a6ffe5bc132a59c6bbf7a3744a562b8"
+    },
+    {
+      "path": "after/yangtze_estuary_cast_50.png",
+      "bytes": 360393,
+      "sha256": "e2636475257840b056647eb39ef6b56c77cf52c1aa2dd978b1d358ee54f33654"
+    },
+    {
+      "path": "after/yangtze_estuary_ready.png",
+      "bytes": 1068445,
+      "sha256": "12bb8703515fa50d2c1c3adc065ed69f081d643f7e52a1082582e27cef205fae"
+    },
+    {
+      "path": "after/yangtze_estuary_tall.png",
+      "bytes": 495773,
+      "sha256": "6e6b6c2de62a87f6cbb858aa415e90e18f8eae7cf6a21b3ef9a7db551ba9572b"
+    },
+    {
+      "path": "after/yangtze_river_cast_0.png",
+      "bytes": 368449,
+      "sha256": "45307179882c28eff39a0c18071e4dddaa5c062539ba6d188df64026400c4e37"
+    },
+    {
+      "path": "after/yangtze_river_cast_100.png",
+      "bytes": 370483,
+      "sha256": "6eaff7c2a745cd06d00a4e971ddfda387b331f1248d35ec1ce7e1b37d374fed2"
+    },
+    {
+      "path": "after/yangtze_river_cast_50.png",
+      "bytes": 370335,
+      "sha256": "1d75a90ac71dd34c8f1d273326693b2d9030dce42f49029db0aeef63565c2e6e"
+    },
+    {
+      "path": "after/yangtze_river_fight_10.png",
+      "bytes": 634879,
+      "sha256": "816cccf1ad21f76c3c647a3a65c50c907cdfc359d9d485287a83760cf6ac6723"
+    },
+    {
+      "path": "after/yangtze_river_fight_50.png",
+      "bytes": 858727,
+      "sha256": "4c045fa50e9dbb8faa7cdfddc98838885ee787a3c3df89bf0fd47be46f05db08"
+    },
+    {
+      "path": "after/yangtze_river_fight_85.png",
+      "bytes": 946072,
+      "sha256": "68a37bfe96c18e64e423ecf806927c5f545a9066bfd89c80516500179a7f41b6"
+    },
+    {
+      "path": "after/yangtze_river_fight_95.png",
+      "bytes": 992053,
+      "sha256": "70953c7705567b0f672f8dcda734bec4ad34b0ce31f373ab242c6f82222a7f45"
+    },
+    {
+      "path": "after/yangtze_river_ready.png",
+      "bytes": 1166830,
+      "sha256": "b57a685f8786345df423804072908e814a05e6e710d8b8d5e53fd996767d3b0f"
+    },
+    {
+      "path": "after/yangtze_river_tall.png",
+      "bytes": 518919,
+      "sha256": "59f2bce33988b80a87496739aa8009ba4cac79a96bf5a7564f94d390b9a2a98b"
+    }
+  ]
+}

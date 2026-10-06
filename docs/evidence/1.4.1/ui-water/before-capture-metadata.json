@@ -1,0 +1,162 @@
+{
+	"engine": "4.6.3-stable (official)",
+	"main_sha256": "95f93293e8f9652bb0102c629ac382472aa5d7d4ffa2abd4ba9cac7c9d7c027d",
+	"renderer": "mobile",
+	"rows": [
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "lobby.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "travel.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "gear.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "catalog.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "settings.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "species.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(1.095556, 3.686669, 6.182226)",
+			"image": "yangtze_river_ready.png",
+			"presentation": "ready",
+			"region_target": "(-15.85119, 0.0, -12.9)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "yangtze_river_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-17.85119, 0.0, -12.72)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_river_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-15.35119, 0.0, -12.47)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_river_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-15.35119, 0.0, -12.47)",
+			"size": "(720, 1584)",
+			"spot": "yangtze_river",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "yangtze_river_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-13.25119, 0.0, -12.26)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "yangtze_estuary_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -51.6)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "yangtze_estuary_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -47.0)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_estuary_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -49.5)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_estuary_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -49.5)",
+			"size": "(720, 1584)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "yangtze_estuary_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -51.6)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "confirmation.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -51.6)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.26, 0.0, -11.6)"
+		}
+	],
+	"scope": "macOS real game rendering; isolated synthetic QA save; not Android device acceptance",
+	"stage_sha256": "3fddd137d8d51701e702396977d8fb2c040435fd3aad2188852c99c5264a35f0"
+}

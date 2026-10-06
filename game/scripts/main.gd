@@ -17,15 +17,16 @@ const Audio = preload("res://scripts/audio_manager.gd")
 const WhaleChallenge = preload("res://scripts/blue_whale_challenge.gd")
 const WhaleUI = preload("res://scripts/whale_challenge_ui.gd")
 const WhaleStage = preload("res://scripts/whale_challenge_stage_3d.gd")
-const INK: Color = Color("213c41")
+const Clear = preload("res://scripts/clear_ui.gd")
+const INK: Color = Clear.INK
 const NAVY: Color = Color("102f3b")
-const GOLD: Color = Color("95601e")
+const GOLD: Color = Clear.GOLD
 const Art = preload("res://scripts/ui_art.gd")
 const IconButton=preload("res://scripts/icon_action.gd")
 const Ruler = preload("res://scripts/measure_ruler.gd")
-const MUTED: Color = Color("4d6965")
+const MUTED: Color = Clear.MUTED
 const PAPER: Color = Color("f5f2e9")
-const TEAL: Color = Color("256b63")
+const TEAL: Color = Clear.TEAL
 const CORAL: Color = Color("9d4931")
 var catalog: ContentCatalog = Catalog.new()
 var fish_art: FishArtCatalog = FishArt.new()
@@ -187,14 +188,23 @@ func _apply_theme() -> void:
 		style.set_color("font_pressed_color",type_name,GOLD)
 		style.set_color("font_disabled_color",type_name,Color("8c9e95"))
 	for type_name: String in ["LineEdit","TextEdit","OptionButton"]:
-		style.set_stylebox("normal",type_name,_box(Color("fbfcf6"),16,Color("c3d1c7"),1))
-		style.set_stylebox("focus",type_name,_box(Color(0,0,0,0),16,TEAL,2))
-		style.set_stylebox("hover",type_name,_box(Color("f1f6ee"),16,Color("b3cabe"),1))
+		for state: String in Clear.STATES:
+			style.set_stylebox(state,type_name,Clear.surface(state=="focus",12))
+		style.set_stylebox("read_only",type_name,Clear.surface(false,12))
+		style.set_color("font_outline_color",type_name,Clear.OUTLINE)
+		style.set_constant("outline_size",type_name,3)
 	style.set_color("font_placeholder_color","LineEdit",MUTED)
 	style.set_color("caret_color","LineEdit",TEAL)
 	style.set_constant("separation","VBoxContainer",14)
 	style.set_constant("separation","HBoxContainer",12)
-	style.set_stylebox("panel","PopupMenu",_box(Color("edf1e5"),0))
+	style.set_stylebox("panel","PopupMenu",Clear.surface(false,18))
+	style.set_stylebox("hover","PopupMenu",Clear.surface(true,6))
+	style.set_stylebox("panel","TooltipPanel",Clear.surface(false,10))
+	style.set_color("font_color","TooltipLabel",INK)
+	style.set_color("font_outline_color","TooltipLabel",Clear.OUTLINE)
+	style.set_constant("outline_size","TooltipLabel",3)
+	style.set_color("font_outline_color","PopupMenu",Clear.OUTLINE)
+	style.set_constant("outline_size","PopupMenu",3)
 	style.set_color("font_color","PopupMenu",INK)
 	style.set_constant("v_separation","PopupMenu",30)
 	var dropdown_arrow: Texture2D=Art.scaled_texture("arrow",24,true)
@@ -224,7 +234,7 @@ func _text(value: String, size_px: int = 24, color: Color = INK) -> Label:
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	label.add_theme_color_override("font_outline_color",Color("21454b") if color.get_luminance()>0.55 else Color(0.96,0.98,0.91,0.82))
-	label.add_theme_constant_override("outline_size",0)
+	Clear.style_text(label)
 	return label
 
 func _button(value: String, callback: Callable, primary: bool = false) -> Button:
@@ -234,7 +244,7 @@ func _button(value: String, callback: Callable, primary: bool = false) -> Button
 	button.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 	button.icon_kind=_action_symbol(value)
 	button.appearance="primary" if primary else "surface"
-	button.label_color=PAPER if primary else INK
+	button.label_color=GOLD if primary else INK
 	button.animate_press=not bool(store.state.get("settings",{}).get("reduce_motion",false))
 	button.add_theme_font_size_override("font_size",26 if primary else 24)
 	button.pressed.connect(callback)
@@ -260,9 +270,9 @@ func _icon(kind: String, extent: float = 72) -> Control:
 	icon.size_flags_horizontal=Control.SIZE_SHRINK_CENTER
 	return icon
 
-func _card(color: Color = Color.TRANSPARENT, margin_px: int = 18) -> PanelContainer:
+func _card(_color: Color = Color.TRANSPARENT, margin_px: int = 18) -> PanelContainer:
 	var card: PanelContainer=PanelContainer.new()
-	var style: StyleBoxFlat=_box(Color("fffcf4") if color.a==0 else color,22,Color(0.30,0.43,0.38,0.12),1)
+	var style: StyleBoxFlat=Clear.surface(false,margin_px)
 	style.content_margin_left=margin_px
 	style.content_margin_right=margin_px
 	style.content_margin_top=margin_px
@@ -285,6 +295,7 @@ func _navigation(label: String, kind: String, callback: Callable) -> Button:
 	button.custom_minimum_size=Vector2(110,120)
 	button.icon_kind=kind
 	button.stacked=true
+	button.icon_only=true
 	button.icon_extent=72
 	button.label_color=Color.WHITE
 	button.light_label=true
@@ -343,6 +354,7 @@ func _build_fishing_screen() -> void:
 	pause_button.text="暂停"
 	pause_button.icon_kind="pause"
 	pause_button.stacked=true
+	pause_button.icon_only=true
 	pause_button.icon_extent=53
 	pause_button.label_color=Color.WHITE
 	pause_button.light_label=true
@@ -354,11 +366,6 @@ func _build_fishing_screen() -> void:
 	_condition=_text("",22,Color("f7f6dd"))
 	_condition.add_theme_color_override("font_shadow_color",NAVY)
 	_condition.add_theme_constant_override("shadow_offset_y",2)
-	var fact_style: StyleBoxFlat=_box(Color(0.04,0.16,0.20,0.80),12)
-	fact_style.content_margin_left=10
-	fact_style.content_margin_right=10
-	fact_style.content_margin_top=4
-	fact_style.content_margin_bottom=4
 
 	facts.add_child(_condition)
 	_collection=_text("",20,Color("fff1bb"))
@@ -384,18 +391,18 @@ func _build_fishing_screen() -> void:
 	for item: Array in [["旅行","compass",_show_travel],["图鉴","book",_show_catalog],["收藏","heart",_show_favorites],["行囊","bag",_show_gear]]:
 		var navigation: Button=_navigation(str(item[0]),str(item[1]),item[2])
 		navigation.custom_minimum_size=Vector2(102,100)
-		navigation.icon_extent=52
+		navigation.icon_extent=64
 		navigation.add_theme_font_size_override("font_size",21)
 		edge.add_child(navigation)
 	_whale_navigation = _navigation("鲸影","compass",_show_whale_briefing)
 	_whale_navigation.name = "WhaleChallengeEntry"
 	_whale_navigation.custom_minimum_size = Vector2(102,100)
-	_whale_navigation.icon_extent = 52
+	_whale_navigation.icon_extent = 64
 	_whale_navigation.add_theme_font_size_override("font_size",21)
 	edge.add_child(_whale_navigation)
 	_toast=_text("",23,PAPER)
 	_toast.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	_toast.add_theme_stylebox_override("normal",_box(Color(0.025,0.09,0.12,0.92),16))
+	_toast.add_theme_stylebox_override("normal",StyleBoxEmpty.new())
 	_toast.visible=false
 	layout.add_child(_toast)
 	_status=_text("准备抛竿",30,PAPER)
@@ -405,7 +412,7 @@ func _build_fishing_screen() -> void:
 	layout.add_child(_status)
 	_hint=_text("长按蓄力，松手抛竿",21,Color("e4ede0"))
 	_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_hint.add_theme_stylebox_override("normal",_box(Color(0.025,0.09,0.12,0.84),16))
+	_hint.add_theme_stylebox_override("normal",StyleBoxEmpty.new())
 	layout.add_child(_hint)
 	_charge=_bar(GOLD)
 	_charge.visible=false
@@ -455,7 +462,8 @@ func _build_fishing_screen() -> void:
 	_action.appearance="primary"
 	_action.size_flags_horizontal=Control.SIZE_SHRINK_END
 	_action.stacked=true
-	_action.icon_extent=92
+	_action.icon_only=true
+	_action.icon_extent=110
 	_action.icon_kind="rod"
 	_action.label_color=Color.WHITE
 	_action.light_label=true
@@ -585,6 +593,10 @@ func _action_up() -> void:
 		var gear_id: int = _effective_gear_id()
 		var cast_power: float = clampf(session.charge,0.05,float(catalog.gear[gear_id].reach))
 		session.charge = cast_power
+		if not scenery.cast_target_for_charge(cast_power).is_finite():
+			session.reset()
+			_toast_message("这里暂时没有安全落点，请更换钓点")
+			return
 		var fish: Dictionary = encounter.generate(catalog,spot_id,bait_id,gear_id,cast_power,time_of_day,weather)
 		if not fish.is_empty(): fish["game_time"] = game_clock
 		if session.cast(fish,catalog.gear[gear_id]):
@@ -700,7 +712,7 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	_overlay=Control.new()
 	_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(_overlay)
-	_add_gradient(_overlay,[Color("f3f3e9"),Color("e7eee8")],[0.0,1.0])
+	_add_reading_backdrop(_overlay)
 	var margin: MarginContainer=MarginContainer.new()
 	margin.name = "OverlayMargin"
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -717,6 +729,7 @@ func _open_page(id: String, heading: String, back: Callable = Callable()) -> voi
 	var close: Button=_button("返回",_page_back)
 	close.custom_minimum_size=Vector2(124,96)
 	close.stacked=false
+	close.icon_only=true
 	close.icon_extent=34
 	close.add_theme_font_size_override("font_size",22)
 	close.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
@@ -800,7 +813,7 @@ func _show_home() -> void:
 	_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_overlay.mouse_filter = Control.MOUSE_FILTER_PASS
 	add_child(_overlay)
-	_add_gradient(_overlay,[Color(0.02,0.08,0.11,0.72),Color(0.02,0.08,0.11,0.04),Color(0.02,0.08,0.11,0.13),Color(0.015,0.065,0.085,0.97)],[0.0,0.29,0.52,1.0])
+
 	var margin: MarginContainer = MarginContainer.new()
 	margin.name = "OverlayMargin"
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -851,9 +864,10 @@ func _show_home() -> void:
 	_page.add_child(_text(str(catalog.spots.get(spot_id,{}).get("name",spot_id))+"   ·   累计钓获 %d 条" % store.total_count(),22,Color("c6d9cf")))
 	var start: Button = _button("开始钓鱼",_show_prepare,true)
 	start.name="StartFishing"
+	start.icon_only=true
 	start.custom_minimum_size.y=108
 	start.icon_kind="rod"
-	start.icon_extent=72
+	start.icon_extent=100
 	start.add_theme_font_size_override("font_size",30)
 	start.disabled=store.read_only or not _content_ok
 	_page.add_child(start)
@@ -866,7 +880,7 @@ func _show_home() -> void:
 	_page.add_child(actions)
 	for entry: Array in [["旅行","compass",_show_travel],["行囊","bag",_show_gear],["图鉴","book",_show_catalog],["设置","settings",_show_settings]]:
 		var action: Button=_navigation(str(entry[0]),str(entry[1]),entry[2])
-		action.icon_extent=50
+		action.icon_extent=64
 		action.custom_minimum_size=Vector2(96,104)
 		action.add_theme_font_size_override("font_size",21)
 		actions.add_child(action)
@@ -1196,7 +1210,7 @@ func _show_result() -> void:
 	if not flags.is_empty():
 		var ribbon: Label=_text("  ·  ".join(flags),22,GOLD)
 		ribbon.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-		ribbon.add_theme_stylebox_override("normal",_box(Color("eee2bd"),14))
+		ribbon.add_theme_stylebox_override("normal",StyleBoxEmpty.new())
 		_page.add_child(ribbon)
 	var fish_name: Label=_text(fish.name,43,INK)
 	fish_name.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
@@ -1484,6 +1498,31 @@ func _return_to_fish_list() -> void:
 			else: _show_catalog()
 		_: _show_catalog()
 
+func _add_reading_backdrop(parent: Control) -> void:
+	var scene: ColorRect=ColorRect.new()
+	scene.name="DefocusedLandscape"
+	scene.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	scene.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var material:=ShaderMaterial.new()
+	material.shader=preload("res://assets/shaders3d/menu_defocus.gdshader")
+	scene.material=material
+	parent.add_child(scene)
+
+func _style_choice_popup(choice: OptionButton) -> void:
+	var popup: PopupMenu=choice.get_popup()
+	popup.transparent_bg=true
+	popup.transparent=true
+	# The popup has its own viewport; suppress underlying page text while its
+	# clear choices are open so two lists cannot overlap visually.
+	popup.about_to_popup.connect(func() -> void:
+		if is_instance_valid(_overlay):
+			var content: Control=_overlay.find_child("OverlayMargin",true,false)
+			if content: content.modulate.a=0.0)
+	popup.popup_hide.connect(func() -> void:
+		if is_instance_valid(_overlay):
+			var content: Control=_overlay.find_child("OverlayMargin",true,false)
+			if content: content.modulate.a=1.0)
+
 func _add_gradient(parent: Control, colors: Array, offsets: Array) -> void:
 	var gradient: Gradient=Gradient.new()
 	gradient.colors=PackedColorArray(colors)
@@ -1584,7 +1623,7 @@ func _show_backup() -> void:
 	_backup_edit.placeholder_text="在此粘贴备份全文，或点击上方生成备份"
 	_backup_edit.wrap_mode=TextEdit.LINE_WRAPPING_BOUNDARY
 	_backup_edit.add_theme_font_size_override("font_size",19)
-	_backup_edit.add_theme_stylebox_override("normal",_box(Color("ffffff"),16,Color("b7c9be"),1))
+	_backup_edit.add_theme_stylebox_override("normal",Clear.surface(false,12))
 	_page.add_child(_backup_edit)
 	var actions: HBoxContainer=HBoxContainer.new()
 	_page.add_child(actions)

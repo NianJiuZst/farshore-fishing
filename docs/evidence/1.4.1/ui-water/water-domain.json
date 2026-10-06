@@ -1,0 +1,114 @@
+{
+	"casts": 2268,
+	"checks": 49368,
+	"failures": 0,
+	"milliseconds": 11521,
+	"scope": "CPU geometry/visibility and camera projection, not Android device or GPU performance",
+	"spots": [
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "lake_shore"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "lake_bay"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "japan_harbor"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "japan_reef"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "norway_harbor"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "norway_boat"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "med_pier"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "med_boat"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "bayou_backwater"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "bayou_channel"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "yangtze_river"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "yangtze_estuary"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "pacific_reef"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "pacific_bluewater"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "atlantic_shelf"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "atlantic_bluewater"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "indian_reef"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "indian_bluewater"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "red_sea_lagoon"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "red_sea_wall"
+		},
+		{
+			"adjusted": 0,
+			"casts": 108,
+			"spot": "red_sea_bluehole"
+		}
+	]
+}

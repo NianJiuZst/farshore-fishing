@@ -2,10 +2,11 @@ class_name FishNotebookUI
 extends RefCounted
 ## Native, read-only notebook presentation. Main owns navigation and writes.
 ## One BaseButton owns each whole specimen tile; its art and labels ignore input.
-const INK: Color = Color("213c41")
-const MUTED: Color = Color("4d6965")
-const TEAL: Color = Color("256b63")
-const GOLD: Color = Color("95601e")
+const Clear = preload("res://scripts/clear_ui.gd")
+const INK: Color = Clear.INK
+const MUTED: Color = Clear.MUTED
+const TEAL: Color = Clear.TEAL
+const GOLD: Color = Clear.GOLD
 const RULE: Color = Color(0.30, 0.47, 0.44, 0.24)
 const Trial = preload("res://scripts/trial_fishery.gd")
 
@@ -51,6 +52,7 @@ func populate_catalog(app: Control, page: VBoxContainer, refill: Callable) -> Gr
 		app._region_filter = "all" if index == 0 else str(app.catalog.regions[index - 1].region_id)
 		refill.call())
 	filters.add_child(regions)
+	app._style_choice_popup(regions)
 	var discovery: OptionButton = OptionButton.new()
 	discovery.name = "NotebookDiscoveryFilter"
 	discovery.custom_minimum_size = Vector2(166, 96)
@@ -61,6 +63,7 @@ func populate_catalog(app: Control, page: VBoxContainer, refill: Callable) -> Gr
 		app._discovery_filter = index
 		refill.call())
 	filters.add_child(discovery)
+	app._style_choice_popup(discovery)
 	var sort: Button = app._button("按数量" if app._sort_count else "按名称", func() -> void:
 		app._sort_count = not app._sort_count
 		refill.call())
@@ -338,16 +341,8 @@ func _species_tile(app: Control, fish: FishDefinition, state: Dictionary, open_s
 	tile.custom_minimum_size = Vector2(288, 324)
 	tile.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	tile.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	for style_name: String in ["normal", "disabled", "hover", "pressed", "hover_pressed", "focus"]:
-		var color: Color=Color("fafbf3") if count>0 else Color("e7ece5")
-		if style_name=="hover":color=color.lightened(0.04)
-		if style_name=="pressed":color=color.darkened(0.04)
-		var surface: StyleBoxFlat=app._box(color,20,Color("c6d5c9"),1)
-		if style_name=="focus":
-			surface.bg_color=Color.TRANSPARENT
-			surface.border_color=TEAL
-			surface.set_border_width_all(2)
-		tile.add_theme_stylebox_override(style_name,surface)
+	Clear.style_button(tile)
+	tile.accessibility_name=fish.name
 	tile.pressed.connect(open_species.bind(fish.species_id))
 	var margin: MarginContainer = MarginContainer.new()
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -430,7 +425,7 @@ func _grid() -> GridContainer:
 
 func _label(app: Control, value: String, font_size: int, color: Color) -> Label:
 	var label: Label = app._text(value, font_size, color)
-	label.add_theme_constant_override("outline_size", 0)
+	Clear.style_text(label)
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return label
 

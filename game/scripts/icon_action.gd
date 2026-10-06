@@ -1,11 +1,13 @@
 class_name IconAction
 extends Button
-# Consistent touch surfaces, visible focus and restrained press feedback.
+# Transparent touch targets, visible focus and restrained icon feedback.
+const Clear = preload("res://scripts/clear_ui.gd")
 const Art=preload("res://scripts/ui_art.gd")
 var icon_kind: String="arrow"
 var stacked: bool=false
+var icon_only: bool=false
 var icon_extent: float=58.0
-var label_color: Color=Color("244449")
+var label_color: Color=Clear.INK
 var light_label: bool=false
 var appearance: String="surface"
 var animate_press: bool=true
@@ -26,7 +28,7 @@ func _ready() -> void:
 	_caption.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 	_caption.vertical_alignment=VERTICAL_ALIGNMENT_CENTER
 	_caption.add_theme_color_override("font_outline_color",Color("173b42") if light_label else Color(0.96,0.98,0.91,0.90))
-	_caption.add_theme_constant_override("outline_size",0)
+	Clear.style_text(_caption)
 	add_child(_caption)
 	resized.connect(_layout)
 	button_down.connect(_press_feedback.bind(true))
@@ -34,24 +36,7 @@ func _ready() -> void:
 	mouse_exited.connect(_press_feedback.bind(false))
 	_layout()
 func _apply_surface() -> void:
-	var base: Color=Color("e8eeea")
-	if appearance=="primary": base=Color("28675e")
-	elif appearance=="glass" or light_label: base=Color(0.035,0.12,0.15,0.82)
-	elif appearance=="subtle": base=Color(0.85,0.90,0.86,0.35)
-	for state: String in ["normal","hover","pressed","hover_pressed","disabled","focus"]:
-		var box: StyleBoxFlat=StyleBoxFlat.new()
-		box.bg_color=base
-		if state=="hover": box.bg_color=base.lightened(0.06)
-		if state in ["pressed","hover_pressed"]: box.bg_color=base.darkened(0.12)
-		if state=="disabled": box.bg_color=Color(base,0.25)
-		box.set_corner_radius_all(22 if appearance=="primary" else 18)
-		box.border_color=Color(0.75,0.88,0.80,0.20) if light_label or appearance=="primary" else Color(0.17,0.34,0.31,0.12)
-		box.set_border_width_all(1)
-		if state=="focus":
-			box.bg_color=Color.TRANSPARENT
-			box.border_color=Color("d0ad64")
-			box.set_border_width_all(3)
-		add_theme_stylebox_override(state,box)
+	Clear.style_button(self)
 func _press_feedback(down: bool) -> void:
 	if _press_tween: _press_tween.kill()
 	if not animate_press or disabled:
@@ -65,9 +50,11 @@ func _process(_delta: float) -> void:
 	if _last_text!=text:
 		_last_text=text
 		_caption.text=text
+		accessibility_name=text
+		tooltip_text=text
 		_layout()
-	var active: bool=is_hovered() or button_pressed
-	var visual: String="%s:%s:%s:%s:%s:%s" % [active,disabled,icon_kind,label_color,light_label,appearance]
+	var active: bool=is_hovered() or button_pressed or has_focus()
+	var visual: String="%s:%s:%s:%s:%s:%s:%s" % [active,disabled,icon_kind,label_color,light_label,appearance,icon_only]
 	if visual==_last_visual:return
 	_last_visual=visual
 	_apply_surface()
@@ -75,12 +62,18 @@ func _process(_delta: float) -> void:
 	_caption.modulate.a=0.42 if disabled else 1.0
 	_art.modulate=Color(1.06,1.06,1.06,0.45 if disabled else 1.0) if active else Color(1,1,1,0.42 if disabled else 1.0)
 	_art.kind=icon_kind
+	_layout()
 func _layout() -> void:
 	if _caption==null:return
 	_caption.add_theme_font_size_override("font_size",get_theme_font_size("font_size"))
 	var extent: float=icon_extent
 	pivot_offset=size*0.5
-	if icon_extent<=0:
+	_caption.visible=not icon_only
+	if icon_only:
+		extent=minf(maxf(icon_extent,48.0),minf(size.x,size.y)-12.0)
+		_art.position=(size-Vector2.ONE*extent)*0.5
+		_art.size=Vector2.ONE*extent
+	elif icon_extent<=0:
 		_art.size=Vector2.ZERO
 		_caption.position=Vector2.ZERO
 		_caption.size=size

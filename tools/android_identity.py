@@ -14,7 +14,7 @@ FORMAL = {**PREVIEW, 'launcher_name': '远岸钓记',
 # Only the PUBLIC certificate digest is stored here; no private material.
 OCEAN = {'android_package_name': 'org.farshore.fishing.ocean',
          'launcher_name': '远岸钓鱼·海洋', 'certificate_sha256': 'a1996b606b1de5ec3ffd52edff64ec60b0434099d414c8893fa93b585c6ad716',
-         'application_version': '1.4.0', 'android_version_code': 8,
+         'application_version': '1.4.1', 'android_version_code': 9,
          'signing_status': 'owner_local_key_public_certificate_pinned'}
 
 
@@ -26,7 +26,7 @@ def validate_identity(identity, *, require_signer=True):
         if identity.get('application_version') == FORMAL['application_version']: pinned = FORMAL
     if pinned == OCEAN:
         release = (identity.get('application_version'), identity.get('android_version_code'))
-        assert release in {('1.3.0', 7), ('1.4.0', 8)}, 'Unreviewed ocean version/code pair'
+        assert release in {('1.3.0', 7), ('1.4.0', 8), ('1.4.1', 9)}, 'Unreviewed ocean version/code pair'
         pinned = {**pinned, 'application_version': release[0], 'android_version_code': release[1]}
     for field, expected in pinned.items():
         assert identity.get(field) == expected, 'Android identity mismatch: ' + field

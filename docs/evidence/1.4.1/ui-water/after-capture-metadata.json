@@ -1,0 +1,1018 @@
+{
+	"driver": "vulkan",
+	"engine": "4.6.3-stable (official)",
+	"main_sha256": "51912f67356d1c5406abb4b77cb7dd204005127fc82dcdef0a30b11527965b8e",
+	"renderer": "mobile",
+	"rows": [
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "lobby.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "travel.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "gear.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "catalog.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "settings.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(0.7, 2.5, 4.6)",
+			"image": "species.png",
+			"presentation": "lobby",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(1.095556, 3.686669, 6.182226)",
+			"image": "lake_shore_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.9, 0.0, -9.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.9, 0.0, -9.0)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "lake_shore_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -7.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "lake_shore_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "lake_shore_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1584)",
+			"spot": "lake_shore",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "lake_shore_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "lake_shore",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "lake_bay_ready.png",
+			"presentation": "ready",
+			"region_target": "(1.74, 0.0, -33.6)",
+			"size": "(720, 1280)",
+			"spot": "lake_bay",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "lake_bay_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(1.28, 0.0, -29.0)",
+			"size": "(720, 1280)",
+			"spot": "lake_bay",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "lake_bay_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(1.53, 0.0, -31.5)",
+			"size": "(720, 1280)",
+			"spot": "lake_bay",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "lake_bay_tall.png",
+			"presentation": "waiting",
+			"region_target": "(1.53, 0.0, -31.5)",
+			"size": "(720, 1584)",
+			"spot": "lake_bay",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "lake_bay_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(1.74, 0.0, -33.6)",
+			"size": "(720, 1280)",
+			"spot": "lake_bay",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "japan_harbor_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "japan_harbor",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "japan_harbor_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -7.0)",
+			"size": "(720, 1280)",
+			"spot": "japan_harbor",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "japan_harbor_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1280)",
+			"spot": "japan_harbor",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "japan_harbor_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1584)",
+			"spot": "japan_harbor",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "japan_harbor_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "japan_harbor",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "japan_reef_ready.png",
+			"presentation": "ready",
+			"region_target": "(-7.50761, 0.0, -42.26)",
+			"size": "(720, 1280)",
+			"spot": "japan_reef",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "japan_reef_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-12.10761, 0.0, -42.72)",
+			"size": "(720, 1280)",
+			"spot": "japan_reef",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "japan_reef_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-9.607611, 0.0, -42.47)",
+			"size": "(720, 1280)",
+			"spot": "japan_reef",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "japan_reef_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-9.607611, 0.0, -42.47)",
+			"size": "(720, 1584)",
+			"spot": "japan_reef",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "japan_reef_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-7.50761, 0.0, -42.26)",
+			"size": "(720, 1280)",
+			"spot": "japan_reef",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "norway_harbor_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "norway_harbor",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "norway_harbor_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -7.0)",
+			"size": "(720, 1280)",
+			"spot": "norway_harbor",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "norway_harbor_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1280)",
+			"spot": "norway_harbor",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "norway_harbor_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1584)",
+			"spot": "norway_harbor",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "norway_harbor_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "norway_harbor",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "norway_boat_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -44.6)",
+			"size": "(720, 1280)",
+			"spot": "norway_boat",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "norway_boat_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -40.0)",
+			"size": "(720, 1280)",
+			"spot": "norway_boat",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "norway_boat_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -42.5)",
+			"size": "(720, 1280)",
+			"spot": "norway_boat",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "norway_boat_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -42.5)",
+			"size": "(720, 1584)",
+			"spot": "norway_boat",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "norway_boat_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -44.6)",
+			"size": "(720, 1280)",
+			"spot": "norway_boat",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "med_pier_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "med_pier",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "med_pier_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -7.0)",
+			"size": "(720, 1280)",
+			"spot": "med_pier",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "med_pier_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1280)",
+			"spot": "med_pier",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "med_pier_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1584)",
+			"spot": "med_pier",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "med_pier_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "med_pier",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "med_boat_ready.png",
+			"presentation": "ready",
+			"region_target": "(2.74, 0.0, -42.6)",
+			"size": "(720, 1280)",
+			"spot": "med_boat",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "med_boat_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(2.28, 0.0, -38.0)",
+			"size": "(720, 1280)",
+			"spot": "med_boat",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "med_boat_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(2.53, 0.0, -40.5)",
+			"size": "(720, 1280)",
+			"spot": "med_boat",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "med_boat_tall.png",
+			"presentation": "waiting",
+			"region_target": "(2.53, 0.0, -40.5)",
+			"size": "(720, 1584)",
+			"spot": "med_boat",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "med_boat_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(2.74, 0.0, -42.6)",
+			"size": "(720, 1280)",
+			"spot": "med_boat",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "bayou_backwater_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "bayou_backwater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "bayou_backwater_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -7.0)",
+			"size": "(720, 1280)",
+			"spot": "bayou_backwater",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "bayou_backwater_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1280)",
+			"spot": "bayou_backwater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "bayou_backwater_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -9.5)",
+			"size": "(720, 1584)",
+			"spot": "bayou_backwater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "bayou_backwater_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -11.6)",
+			"size": "(720, 1280)",
+			"spot": "bayou_backwater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "bayou_channel_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -45.6)",
+			"size": "(720, 1280)",
+			"spot": "bayou_channel",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "bayou_channel_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -41.0)",
+			"size": "(720, 1280)",
+			"spot": "bayou_channel",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "bayou_channel_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -43.5)",
+			"size": "(720, 1280)",
+			"spot": "bayou_channel",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "bayou_channel_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -43.5)",
+			"size": "(720, 1584)",
+			"spot": "bayou_channel",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "bayou_channel_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -45.6)",
+			"size": "(720, 1280)",
+			"spot": "bayou_channel",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "yangtze_river_ready.png",
+			"presentation": "ready",
+			"region_target": "(-13.25119, 0.0, -12.26)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "yangtze_river_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-17.85119, 0.0, -12.72)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_river_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-15.35119, 0.0, -12.47)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_river_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-15.35119, 0.0, -12.47)",
+			"size": "(720, 1584)",
+			"spot": "yangtze_river",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "yangtze_river_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-13.25119, 0.0, -12.26)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_river",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "yangtze_estuary_ready.png",
+			"presentation": "ready",
+			"region_target": "(13.74, 0.0, -51.6)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "yangtze_estuary_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(13.28, 0.0, -47.0)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_estuary_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(13.53, 0.0, -49.5)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "yangtze_estuary_tall.png",
+			"presentation": "waiting",
+			"region_target": "(13.53, 0.0, -49.5)",
+			"size": "(720, 1584)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "yangtze_estuary_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(13.74, 0.0, -51.6)",
+			"size": "(720, 1280)",
+			"spot": "yangtze_estuary",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "pacific_reef_ready.png",
+			"presentation": "ready",
+			"region_target": "(-6.26, 0.0, -33.6)",
+			"size": "(720, 1280)",
+			"spot": "pacific_reef",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "pacific_reef_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-6.72, 0.0, -29.0)",
+			"size": "(720, 1280)",
+			"spot": "pacific_reef",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "pacific_reef_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-6.47, 0.0, -31.5)",
+			"size": "(720, 1280)",
+			"spot": "pacific_reef",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "pacific_reef_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-6.47, 0.0, -31.5)",
+			"size": "(720, 1584)",
+			"spot": "pacific_reef",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "pacific_reef_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-6.26, 0.0, -33.6)",
+			"size": "(720, 1280)",
+			"spot": "pacific_reef",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "pacific_bluewater_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -431.6)",
+			"size": "(720, 1280)",
+			"spot": "pacific_bluewater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "pacific_bluewater_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -427.0)",
+			"size": "(720, 1280)",
+			"spot": "pacific_bluewater",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "pacific_bluewater_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -429.5)",
+			"size": "(720, 1280)",
+			"spot": "pacific_bluewater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "pacific_bluewater_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -429.5)",
+			"size": "(720, 1584)",
+			"spot": "pacific_bluewater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "pacific_bluewater_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -431.6)",
+			"size": "(720, 1280)",
+			"spot": "pacific_bluewater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "atlantic_shelf_ready.png",
+			"presentation": "ready",
+			"region_target": "(6.74, 0.0, -26.6)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_shelf",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "atlantic_shelf_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(6.28, 0.0, -22.0)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_shelf",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "atlantic_shelf_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(6.53, 0.0, -24.5)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_shelf",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "atlantic_shelf_tall.png",
+			"presentation": "waiting",
+			"region_target": "(6.53, 0.0, -24.5)",
+			"size": "(720, 1584)",
+			"spot": "atlantic_shelf",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "atlantic_shelf_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(6.74, 0.0, -26.6)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_shelf",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "atlantic_bluewater_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -431.6)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_bluewater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "atlantic_bluewater_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -427.0)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_bluewater",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "atlantic_bluewater_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -429.5)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_bluewater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "atlantic_bluewater_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -429.5)",
+			"size": "(720, 1584)",
+			"spot": "atlantic_bluewater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "atlantic_bluewater_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -431.6)",
+			"size": "(720, 1280)",
+			"spot": "atlantic_bluewater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "indian_reef_ready.png",
+			"presentation": "ready",
+			"region_target": "(5.74, 0.0, -29.6)",
+			"size": "(720, 1280)",
+			"spot": "indian_reef",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "indian_reef_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(5.28, 0.0, -25.0)",
+			"size": "(720, 1280)",
+			"spot": "indian_reef",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "indian_reef_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(5.53, 0.0, -27.5)",
+			"size": "(720, 1280)",
+			"spot": "indian_reef",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "indian_reef_tall.png",
+			"presentation": "waiting",
+			"region_target": "(5.53, 0.0, -27.5)",
+			"size": "(720, 1584)",
+			"spot": "indian_reef",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "indian_reef_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(5.74, 0.0, -29.6)",
+			"size": "(720, 1280)",
+			"spot": "indian_reef",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "indian_bluewater_ready.png",
+			"presentation": "ready",
+			"region_target": "(-0.26, 0.0, -431.6)",
+			"size": "(720, 1280)",
+			"spot": "indian_bluewater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "indian_bluewater_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-0.72, 0.0, -427.0)",
+			"size": "(720, 1280)",
+			"spot": "indian_bluewater",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "indian_bluewater_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -429.5)",
+			"size": "(720, 1280)",
+			"spot": "indian_bluewater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "indian_bluewater_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-0.47, 0.0, -429.5)",
+			"size": "(720, 1584)",
+			"spot": "indian_bluewater",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "indian_bluewater_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-0.26, 0.0, -431.6)",
+			"size": "(720, 1280)",
+			"spot": "indian_bluewater",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "red_sea_lagoon_ready.png",
+			"presentation": "ready",
+			"region_target": "(-9.26, 0.0, -35.6)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_lagoon",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "red_sea_lagoon_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(-9.72, 0.0, -31.0)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_lagoon",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "red_sea_lagoon_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(-9.47, 0.0, -33.5)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_lagoon",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "red_sea_lagoon_tall.png",
+			"presentation": "waiting",
+			"region_target": "(-9.47, 0.0, -33.5)",
+			"size": "(720, 1584)",
+			"spot": "red_sea_lagoon",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "red_sea_lagoon_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(-9.26, 0.0, -35.6)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_lagoon",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "red_sea_wall_ready.png",
+			"presentation": "ready",
+			"region_target": "(3.74, 0.0, -103.6)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_wall",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "red_sea_wall_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(3.28, 0.0, -99.0)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_wall",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "red_sea_wall_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(3.53, 0.0, -101.5)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_wall",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "red_sea_wall_tall.png",
+			"presentation": "waiting",
+			"region_target": "(3.53, 0.0, -101.5)",
+			"size": "(720, 1584)",
+			"spot": "red_sea_wall",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "red_sea_wall_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(3.74, 0.0, -103.6)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_wall",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(1.088669, 3.671784, 6.036143)",
+			"image": "red_sea_bluehole_ready.png",
+			"presentation": "ready",
+			"region_target": "(5.74, 0.0, -296.6)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_bluehole",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(-0.38, 1.16, -3.95)",
+			"image": "red_sea_bluehole_cast_0.png",
+			"presentation": "waiting",
+			"region_target": "(5.28, 0.0, -292.0)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_bluehole",
+			"target": "(-0.72, 0.0, -7.0)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "red_sea_bluehole_cast_50.png",
+			"presentation": "waiting",
+			"region_target": "(5.53, 0.0, -294.5)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_bluehole",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(-0.13, 1.16, -6.45)",
+			"image": "red_sea_bluehole_tall.png",
+			"presentation": "waiting",
+			"region_target": "(5.53, 0.0, -294.5)",
+			"size": "(720, 1584)",
+			"spot": "red_sea_bluehole",
+			"target": "(-0.47, 0.0, -9.5)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "red_sea_bluehole_cast_100.png",
+			"presentation": "waiting",
+			"region_target": "(5.74, 0.0, -296.6)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_bluehole",
+			"target": "(-0.26, 0.0, -11.6)"
+		},
+		{
+			"camera": "(0.08, 1.16, -8.55)",
+			"image": "confirmation.png",
+			"presentation": "ready",
+			"region_target": "(5.74, 0.0, -296.6)",
+			"size": "(720, 1280)",
+			"spot": "red_sea_bluehole",
+			"target": "(-0.26, 0.0, -11.6)"
+		}
+	],
+	"scope": "macOS real game rendering; isolated synthetic QA save; not Android device acceptance",
+	"stage_sha256": "7fcc664b78d88540efba2c39a58b26b0c493c4090e24d372de4ea445cca40403"
+}

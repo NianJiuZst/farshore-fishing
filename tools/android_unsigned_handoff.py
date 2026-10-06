@@ -40,7 +40,7 @@ def require_public_signer(content, public_certificate):
     identity = expected_identity(content)  # Retains the strict provisioned-signer gate.
     assert identity['android_package_name'] == 'org.farshore.fishing.ocean', 'Only the authorized separate ocean package is allowed'
     assert identity['launcher_name'] == '远岸钓鱼·海洋'
-    assert (identity['application_version'], identity['android_version_code']) in {('1.3.0',7), ('1.4.0',8)}, 'Unreviewed unsigned ocean version/code pair'
+    assert (identity['application_version'], identity['android_version_code']) in {('1.3.0',7), ('1.4.0',8), ('1.4.1',9)}, 'Unreviewed unsigned ocean version/code pair'
     assert identity['certificate_sha256'] == public_certificate, 'Provided public certificate differs from pinned source'
     assert identity.get('separate_installation') is True
     return identity
@@ -209,7 +209,7 @@ def build(root, source_zip, source_manifest, template, output, audit, public_cer
     source = root/'game'
     content = content_contract(source)
     identity = require_public_signer(content, public_certificate)
-    expected_count = 111 if identity['application_version'] == '1.4.0' else 74
+    expected_count = 111 if identity['application_version'] in {'1.4.0', '1.4.1'} else 74
     assert content['species_count'] == expected_count and content['bait_count'] == 12 and len(content['ui_icon_files']) == 35, 'Final ocean content freeze is incomplete'
     content['natural_history'] = natural_history_contract(source, content['species_ids'])
     require_photo_archive_members(root, verified, content['photo_art'])

@@ -1,0 +1,494 @@
+[
+  {
+    "path": "game/assets/3d/environment/manifest.json",
+    "sha256": "9a7f2a792631996583cc5c120c0242e9e2ad0ef312c78df78b823a68e02739d2"
+  },
+  {
+    "path": "game/assets/3d/environment/region_atlantic_ocean.json",
+    "sha256": "3a3cacc657ed415bda10c5dd7445f45d281bb0323ce58dd3f829475a60afc339"
+  },
+  {
+    "path": "game/assets/3d/environment/region_bayou.json",
+    "sha256": "066335ab5a3b3a4d18e375ab45654ad0d38743b2d1e7838ec961373bf7ff8531"
+  },
+  {
+    "path": "game/assets/3d/environment/region_indian_ocean.json",
+    "sha256": "57b0395938fa3fe738050c5d141f583a0b0bcfc723766524fa033ff278afd977"
+  },
+  {
+    "path": "game/assets/3d/environment/region_japan.json",
+    "sha256": "40f281a9b0870be6bc31ae74c0f0bf27a63e16d8a25e4f7d16d28b0c658e4288"
+  },
+  {
+    "path": "game/assets/3d/environment/region_lake.json",
+    "sha256": "6383b65df998ba81e9f3b0f112a83c45591c284e184a8395a2d0dc4337236c94"
+  },
+  {
+    "path": "game/assets/3d/environment/region_med.json",
+    "sha256": "e9b57a615d487f048b265dc9f46ac8cd19478740fa2acf9a6df7764cedf5ba3a"
+  },
+  {
+    "path": "game/assets/3d/environment/region_norway.json",
+    "sha256": "a85762b9aedb107030b2eb7b70bb3c36ed103726e21d3cc436be169e13aab30d"
+  },
+  {
+    "path": "game/assets/3d/environment/region_pacific_ocean.json",
+    "sha256": "aa95bfff21747ec7e3559e430dbe374c1afeae201dff5870916714109113be17"
+  },
+  {
+    "path": "game/assets/3d/environment/region_yangtze.json",
+    "sha256": "346fa6aa08ecf83680344100e08d6aa84ca6f42de4c2a14da0631f88689671cc"
+  },
+  {
+    "path": "game/assets/3d/environment/station_boat.json",
+    "sha256": "ffb5417d393ae6a7321ad38260f4c16bd33de9741cef6ec4d4125a5564240f0f"
+  },
+  {
+    "path": "game/assets/3d/environment/station_dock.json",
+    "sha256": "4e422895c350c62fb5bf9240bdd554aa3ab46961efe43ee7858dd4d3aea67486"
+  },
+  {
+    "path": "game/assets/3d/environment/station_rock.json",
+    "sha256": "1a4880fc8811be584d0c52e2872c72120d72b1b987fbde4d8cb24333ac8c169c"
+  },
+  {
+    "path": "game/assets/fish_motion.gdshader",
+    "sha256": "d2f3a72ce00a34bf63ca11d1636adc4f06d198ce0be8248fed145c44ed9d5c56"
+  },
+  {
+    "path": "game/assets/fish_silhouette.gdshader",
+    "sha256": "79202140b5c7e8d04d96fc5b32f3468f513d3955f1ed142da93e73b8c64e712f"
+  },
+  {
+    "path": "game/assets/shaders3d/float_lacquer.gdshader",
+    "sha256": "6f4967ae346cfca3046231b280d57999b05e900ef15e3a500692b4a29bb67de7"
+  },
+  {
+    "path": "game/assets/shaders3d/foliage.gdshader",
+    "sha256": "341578745f0e87d47fc8be5fc680e09c7f8d0ddb589f6175b6559bf790ef8dc4"
+  },
+  {
+    "path": "game/assets/shaders3d/hdr_sky.gdshader",
+    "sha256": "9b264a13f94e6dd102292328ea7333a1a224d539d980a7e135f3b29f642d5f8a"
+  },
+  {
+    "path": "game/assets/shaders3d/menu_defocus.gdshader",
+    "sha256": "45db25bca580219a5793b7b68776a5a786493fd76e09789cf78db060d7b0a772"
+  },
+  {
+    "path": "game/assets/shaders3d/ripple.gdshader",
+    "sha256": "4a1b3d748bc1235385e365023601334c1daf6fef1f95d436cf35340c2dcbdb38"
+  },
+  {
+    "path": "game/assets/shaders3d/river_water.gdshader",
+    "sha256": "52c43cd436ef105fd9a72d66fbdb084e3fe271248a22c2d267f6444155a542a9"
+  },
+  {
+    "path": "game/assets/shaders3d/riverbank.gdshader",
+    "sha256": "b1daf2b367240e70c5f3d05b3cee9b9e73898fee6fdf8d9706d0ffe46911b54b"
+  },
+  {
+    "path": "game/assets/shaders3d/rock_surface.gdshader",
+    "sha256": "46523c823a4567c45e5a3e99cb843c4bf92d0d8e49fde6a850d5adfbb108add1"
+  },
+  {
+    "path": "game/assets/shaders3d/shore_reeds.gdshader",
+    "sha256": "701c44c231344d309fa2789bb1ccc473624e358accfec1baffd9ff79af78926d"
+  },
+  {
+    "path": "game/assets/shaders3d/weathered_wood.gdshader",
+    "sha256": "31fc991a31f9de9538922df39aaf65fcd3c90f6a3999c9aee3348802b9fb071b"
+  },
+  {
+    "path": "game/assets/shaders3d/whale_ocean.gdshader",
+    "sha256": "4a6d6deb20fd247e99ca1691ce31af87d189903f3d1ec75c5599f9c6c67ba6c7"
+  },
+  {
+    "path": "game/data/android_build_identity.json",
+    "sha256": "50d5871499a2e978af5396099a7e98a1754c7f8f33cb9e2ce1a5df6989e4034f"
+  },
+  {
+    "path": "game/data/encyclopedia_a.json",
+    "sha256": "bf982fc91eec83da1cc80102e8810c6767811ddfd539de20387e3a58f1d00705"
+  },
+  {
+    "path": "game/data/encyclopedia_b.json",
+    "sha256": "6d9838fbb6c626d9f8b8a2ab8e2e895fbb725b80b52d04a204b55e484527ce89"
+  },
+  {
+    "path": "game/data/encyclopedia_c.json",
+    "sha256": "a13d2e359e4d8a76306b3519b0e005e46d493458bb92b0c616bceef8c34a4004"
+  },
+  {
+    "path": "game/data/encyclopedia_d.json",
+    "sha256": "c82621e614f30353befc4e726dcf8795cd9bfdee1b6a3946df693a21276c38ad"
+  },
+  {
+    "path": "game/data/encyclopedia_e.json",
+    "sha256": "3aac98bb54bcbc208f686a1eb90e364ac95cba64471ccd38055ed3688293e3d4"
+  },
+  {
+    "path": "game/data/encyclopedia_f.json",
+    "sha256": "92c6d7472438749e162982edfe0ad9d3700c807c6a06abdd7878c1033e8c1740"
+  },
+  {
+    "path": "game/data/encyclopedia_g.json",
+    "sha256": "8f8580548832397dd893ff8a1e7080088684e178a60370f0b18b1e0b84d879ba"
+  },
+  {
+    "path": "game/data/encyclopedia_h.json",
+    "sha256": "8cb4332bdb9bb60b90a1114a207112e9f076f5a11ce33de14629544f6f70fec5"
+  },
+  {
+    "path": "game/data/encyclopedia_whale.json",
+    "sha256": "6652ebc7a2255eeebee5a428250042c888e16436ccb38ed044ea8e423a0cba62"
+  },
+  {
+    "path": "game/data/fish_3d.json",
+    "sha256": "0e6e69e192509ca524bb16b01a86f3b6b613ffa3d9111f56b2c73612320259a2"
+  },
+  {
+    "path": "game/data/fish_a.json",
+    "sha256": "9a825e8e31ab3670e0deb8a6d9cfc7f7447c51bb2ce96e69a60aee1ccdc8c266"
+  },
+  {
+    "path": "game/data/fish_art.json",
+    "sha256": "fcd43f1e301c7da610a1919acbb8b2c7d7477699c80e5790a6607cedf74a7895"
+  },
+  {
+    "path": "game/data/fish_b.json",
+    "sha256": "50be48a1a8c9f45faab89aa5b834b10f73b3ef48460a8611ea572841a04d821c"
+  },
+  {
+    "path": "game/data/fish_c.json",
+    "sha256": "b42fa7ece36d7b1cb1c83d3d70da6c0ddc75a5ead7dfa9960cb159fe31f44715"
+  },
+  {
+    "path": "game/data/fish_d.json",
+    "sha256": "19518b05cb1c6d3c0eca83867c50f52d2fa343331469f081bf8763702dacea6d"
+  },
+  {
+    "path": "game/data/fish_e.json",
+    "sha256": "aa22ccdf7ef4ae4f5dd29eb61be2950530e5bf9686353ff66897447d915133c5"
+  },
+  {
+    "path": "game/data/fish_f.json",
+    "sha256": "9fa4135d635382b9a0ff3a0a5ef7fb08990e179f7ccddaf4efc5c678ff32877b"
+  },
+  {
+    "path": "game/data/fish_g.json",
+    "sha256": "3acd57ed8f71ea95f6427c919f7fb416d64c354706c32abda0dd2679b0d89f8e"
+  },
+  {
+    "path": "game/data/fish_h.json",
+    "sha256": "dce42846f2e9060818b027906d54ddd5fb3c964a3c74fdfeb14ab6066cc1a27d"
+  },
+  {
+    "path": "game/data/fish_whale.json",
+    "sha256": "f5424867c4b35b61167974b68c0c5288e8f557f880ffa46878935380f17e9e09"
+  },
+  {
+    "path": "game/data/world.json",
+    "sha256": "d6a88c9050a38019b01dc78edc27bc2ce0fea715c50c8fe7b2e3e24182691093"
+  },
+  {
+    "path": "game/export_presets.cfg",
+    "sha256": "643304b5ea898a9abfe2439b49daf4b8a9af950adc27561b10411e194b6f85d3"
+  },
+  {
+    "path": "game/project.godot",
+    "sha256": "8caca34949ef34b1adbef81259ecbb7416ec271acc682adac341510458b9b1f1"
+  },
+  {
+    "path": "game/scripts/audio_manager.gd",
+    "sha256": "66ec25e1a74801cceb858244d16bfffdf050bde231eb8b70966f31fad44a2b2c"
+  },
+  {
+    "path": "game/scripts/blue_whale_challenge.gd",
+    "sha256": "a2cedb89e8b3b48f5b2cc510cbba1463eee0b4ff1d4a4d1f79e273767de6b4e3"
+  },
+  {
+    "path": "game/scripts/catalog.gd",
+    "sha256": "b44bc478847a683185317cc98823ce44d6c1e7691bd93695675e2d3d7977f5d8"
+  },
+  {
+    "path": "game/scripts/clear_ui.gd",
+    "sha256": "33ece0e005a7c8e84441dd6b798e12aa19e1813c4cc86c46e92e630005dc277a"
+  },
+  {
+    "path": "game/scripts/encounter.gd",
+    "sha256": "55c7fa10afa7f3dcf989d2adb3e5c7fd7935a90eaa648807e5038f9e8859e0c2"
+  },
+  {
+    "path": "game/scripts/fish_3d_registry.gd",
+    "sha256": "f24eddf6ad79eb44df463946e1db2d647f8396c5683f0a2a50a4f57cdc32a4e7"
+  },
+  {
+    "path": "game/scripts/fish_art_catalog.gd",
+    "sha256": "9bebefe12496219afe3516d8955c28e37ef71c9d5789c81c63a62f4d3cb5bb63"
+  },
+  {
+    "path": "game/scripts/fish_art_view.gd",
+    "sha256": "2787da62d8d7f008945261590a4885edf2ce34703c9d785846273d3254e224e5"
+  },
+  {
+    "path": "game/scripts/fish_definition.gd",
+    "sha256": "c609ebcc0e58a1d60e74ba70e2a955cb5a4efc04ffd4bfd90898c2f6349ed0ce"
+  },
+  {
+    "path": "game/scripts/fish_natural_history.gd",
+    "sha256": "ab718fa57c7b5e64f9c1b71704985e68e63bb4de01d9cfe4474e45a1c012811b"
+  },
+  {
+    "path": "game/scripts/fish_notebook_ui.gd",
+    "sha256": "58a04419db79a0fb0ba759ea9e259a4a7c7e1fa53e0c04c4f2e9c167c08fb584"
+  },
+  {
+    "path": "game/scripts/fish_preview_3d.gd",
+    "sha256": "c9f5400eb51954526fc2c757080114bb8218606d86b884c5d8be4630c16cd0a1"
+  },
+  {
+    "path": "game/scripts/fishing_failure_modal.gd",
+    "sha256": "0f6a4414559635c765fe09acad259452d2f60b3d1d7b1b2c0fe72881a34879a5"
+  },
+  {
+    "path": "game/scripts/fishing_menu_pages.gd",
+    "sha256": "d2363a2a227b2764a291999bb31a1b65803b326f4f60ada61b21b8982fec47d3"
+  },
+  {
+    "path": "game/scripts/fishing_session.gd",
+    "sha256": "a331e242ce362560d6532ad3d173d4abd6623a90e3722a6f4fa203150b09fcbe"
+  },
+  {
+    "path": "game/scripts/fishing_stage_3d.gd",
+    "sha256": "7fcc664b78d88540efba2c39a58b26b0c493c4090e24d372de4ea445cca40403"
+  },
+  {
+    "path": "game/scripts/fishing_water_domain.gd",
+    "sha256": "7b9a4ad8089916f0e133a542f75571065971cef13a781b71445eaa2d09f40643"
+  },
+  {
+    "path": "game/scripts/float_encounter.gd",
+    "sha256": "73c4fea41fe4a0c81024ba93ab1e59d7dadaeb4b3cb291afb0a16957fea9d9da"
+  },
+  {
+    "path": "game/scripts/icon_action.gd",
+    "sha256": "e5c9cf3e0b514e2e0789c0ed5d1505fcbe94d758eb45421a4f31128117db2179"
+  },
+  {
+    "path": "game/scripts/main.gd",
+    "sha256": "51912f67356d1c5406abb4b77cb7dd204005127fc82dcdef0a30b11527965b8e"
+  },
+  {
+    "path": "game/scripts/measure_ruler.gd",
+    "sha256": "5e3fd794eeb7f2790d58136294f058009411bc2c81292f4829de3aef9036deec"
+  },
+  {
+    "path": "game/scripts/save_store.gd",
+    "sha256": "df3750b7b62f38f9f60e2dc83b87c2d57ad2b2ca3c3f6533a297b6fcc486d9a9"
+  },
+  {
+    "path": "game/scripts/scenery_view.gd",
+    "sha256": "69196c47950c6b900e3016fe02f694fba06434d13970079aff17962789262546"
+  },
+  {
+    "path": "game/scripts/touch_scroll.gd",
+    "sha256": "4b2ebb26851627a45b51fd232caa527586d1ab664b111ae7c44337b18c15f2c2"
+  },
+  {
+    "path": "game/scripts/trial_fishery.gd",
+    "sha256": "ce66af6a5e7053ffd143fe62e0eb2c46a2b4a5d1f1ed7b6e909cbafafba61181"
+  },
+  {
+    "path": "game/scripts/ui_art.gd",
+    "sha256": "e7939a0fafcb9c42a4b202d01ab207296ec3c90ca432c43a9bcc3693dbfbe2d9"
+  },
+  {
+    "path": "game/scripts/whale_challenge_stage_3d.gd",
+    "sha256": "b81392c6f09a290f10e5864ce817677c40cc4124de952e6474c97eaeeabd88d7"
+  },
+  {
+    "path": "game/scripts/whale_challenge_ui.gd",
+    "sha256": "effebb26a73e1b9ad09fc55e1d6e8540a4b86371be6b63357d76418124663e60"
+  },
+  {
+    "path": "game/tests/angler_anatomy_tests.gd",
+    "sha256": "f275f70c35c326a9cbad2260785cf63a28c2a74ed490cafed3c4ae2a0feb1360"
+  },
+  {
+    "path": "game/tests/bait_balance_tests.gd",
+    "sha256": "322e93993ef7b2c50240a1ad03dd6f77c756b8bf6b3df758c0c19c9cc57be02d"
+  },
+  {
+    "path": "game/tests/blue_whale_challenge_tests.gd",
+    "sha256": "9270fce5bf564d7c1f8d2eeb437c01ac906f4d328afabbc3f4392aeb0027fa82"
+  },
+  {
+    "path": "game/tests/blue_whale_main_tests.gd",
+    "sha256": "ac8489264efc06a74838d4b68b5c7fb2391c80aed99cff036cc1486fd7eb115c"
+  },
+  {
+    "path": "game/tests/blue_whale_ui_tests.gd",
+    "sha256": "91d6881b61ec83cceeecac9ee7273b4bafbd57bc991a9d0d530026eb938bbeea"
+  },
+  {
+    "path": "game/tests/camera_aspect_tests.gd",
+    "sha256": "aef53bc56dfae83a1fccc2aca9d4fc8e4ecc70f8b6092716e6f1ba87fccfc9ce"
+  },
+  {
+    "path": "game/tests/core_tests.gd",
+    "sha256": "bf5a3c13bbeec05632e9607b5e8cf2d3fb53290ec096ea2c1be8e39f57c3cde0"
+  },
+  {
+    "path": "game/tests/dump_licenses.gd",
+    "sha256": "0623b6e647086222af6f4936f5146246874e157f13c37e0a9a34b384dabba25c"
+  },
+  {
+    "path": "game/tests/fast_recast_camera_tests.gd",
+    "sha256": "1fbf304e96396c66705b43febe7e43816c329564b6521e33136c85015463ed41"
+  },
+  {
+    "path": "game/tests/fish_3d_registry_tests.gd",
+    "sha256": "ff40573a11051ca7b8f77c68e8126c97396362cff73c5b5f67abd6d6a77a42ec"
+  },
+  {
+    "path": "game/tests/fish_art_import_audit.gd",
+    "sha256": "3f773aa6d54d820f16d04f718637136d6c8f653287e97dfba20b5dcd23cc850c"
+  },
+  {
+    "path": "game/tests/fish_art_tests.gd",
+    "sha256": "e7dfc7b015f98a194c99e1521c147803f63cc637d141598eceb36fc0ab40bda5"
+  },
+  {
+    "path": "game/tests/fish_art_ui_tests.gd",
+    "sha256": "c8d4de8664648beec1b7fac5323c429b4f488d53c57163131435c39180430582"
+  },
+  {
+    "path": "game/tests/fish_notebook_ui_tests.gd",
+    "sha256": "de7f3e2164347eff7464f721b5b0e52550eb34630b321e87e7133b5c38ad80ed"
+  },
+  {
+    "path": "game/tests/fish_preview_tests.gd",
+    "sha256": "2b3281ca4e99947641961518dc580c26254a2557eb707fd25fbb668aa64c65fb"
+  },
+  {
+    "path": "game/tests/fishing_balance_tests.gd",
+    "sha256": "d03f7e0a2d0086a0923259e307b15ae7725e82071262272a735b20d145673e20"
+  },
+  {
+    "path": "game/tests/fishing_failure_modal_preview.gd",
+    "sha256": "416f6347accb2d3e84f11806c7b0fe97e8fb7235a7832d5e95796c60e794fd6d"
+  },
+  {
+    "path": "game/tests/fishing_failure_modal_tests.gd",
+    "sha256": "7c8b337b9a958e6545694948fa62149252c3b49a61218cbdcb1983b45cc1ee21"
+  },
+  {
+    "path": "game/tests/fishing_guard_trace_tests.gd",
+    "sha256": "d782b7ce380afe2ac71ce1a11513204f78d7487f3a635be25cb495c19e01a9b6"
+  },
+  {
+    "path": "game/tests/fishing_hazard_boundary_tests.gd",
+    "sha256": "6cb5a6ac8845ec6d462f4efd0faedc17fb96d2e30cf79a260d0bac928a44423e"
+  },
+  {
+    "path": "game/tests/fishing_test_controller.gd",
+    "sha256": "1f24bb40dcd4343bd8fbd352d8d6bab66b4f2625d2cf85f9c69d824f475ff7cc"
+  },
+  {
+    "path": "game/tests/fixtures/giant_bait_legacy_baseline.json",
+    "sha256": "8566f34705819b301480d95b0319a7e6399da5b7a7ed462329a66c1995179c87"
+  },
+  {
+    "path": "game/tests/fixtures/ocean_diversity_legacy_1_3_0.json",
+    "sha256": "0d016363f025cfcb84373322863fec71ecf5977b0c7661f359fd2c1091776fc6"
+  },
+  {
+    "path": "game/tests/float_encounter_tests.gd",
+    "sha256": "293476757ec3723e614ec039f72acb3d0315ad5a71dabec3dc808dc808639454"
+  },
+  {
+    "path": "game/tests/float_observation_tests.gd",
+    "sha256": "fd423d41964696a6881aaa9f812d661b4300bfbf1399b2b6f0e05b527632a41c"
+  },
+  {
+    "path": "game/tests/giant_bait_tests.gd",
+    "sha256": "ac040437a49b2bdfe7b3aeb41651c3d8e845a09b5cf893395fce3bd3404f3c79"
+  },
+  {
+    "path": "game/tests/main_travel_tests.gd",
+    "sha256": "f81c9e7d2acba2e1a216714f592acdfb0fe033ad180dea6bcc82dd29d7bf6b17"
+  },
+  {
+    "path": "game/tests/natural_history_tests.gd",
+    "sha256": "bf4193eb8658582e0e9fa2aa04b024422c5c7e0c631b1c541391ab3c8a3df26f"
+  },
+  {
+    "path": "game/tests/ocean_balance_tests.gd",
+    "sha256": "024609ac7331270e1bd74d86f57149210421c7d2742a6d060e8b0cde5f1ada0a"
+  },
+  {
+    "path": "game/tests/ocean_diversity_tests.gd",
+    "sha256": "91fbbfcd1d60ad3513a57c967a47d7840364a7af7d7b6b7de0830c660ce3ef10"
+  },
+  {
+    "path": "game/tests/ocean_float_save_tests.gd",
+    "sha256": "cd3d27f0e19ddc6aa72ae140d0fb81c80cfa62e86db47d1165591e033f72209b"
+  },
+  {
+    "path": "game/tests/ocean_fresh_profile_tests.gd",
+    "sha256": "a89bd2de4e457312b0681da89312fd72f7754b93fb9421f0959fd55e15ecb61a"
+  },
+  {
+    "path": "game/tests/ocean_landing_tests.gd",
+    "sha256": "2a3f5d985211d5b7616af31a625590f606b613ad92a2c80ee89b721cc9247adb"
+  },
+  {
+    "path": "game/tests/ocean_save_tests.gd",
+    "sha256": "189afdc8019bb3c265332a2eb56ec3d7e696e3d48c6c04c0e47684a7aa17399f"
+  },
+  {
+    "path": "game/tests/ocean_ui_tests.gd",
+    "sha256": "31a3f1d1b6cdcd65752d334984a66fa6c2a99cb6c27241d49c982cfddc9b666a"
+  },
+  {
+    "path": "game/tests/save_tests.gd",
+    "sha256": "e6ae919fb83a95d1e56115d64bc33b1dd76693fa07f7b4b8281e939e6bbd4b99"
+  },
+  {
+    "path": "game/tests/session_observation_tests.gd",
+    "sha256": "af77c31991f5d598fa6ade0a190f783ca60e0a047d496b36b31c67e7f15bcc2a"
+  },
+  {
+    "path": "game/tests/slice3d_tests.gd",
+    "sha256": "6a6bb69ab581e247f5c763712e05ded03238ce91ea4f46e02d73c7be67bb8448"
+  },
+  {
+    "path": "game/tests/tackle_tests.gd",
+    "sha256": "b43d6acababfac01c59fd6784d5b500a37250364f8583522dfad3037d6fedaff"
+  },
+  {
+    "path": "game/tests/touch_scroll_tests.gd",
+    "sha256": "730389b31f63712d503e5ad8927d1a7074045e2933d716c251fc686906a49a7c"
+  },
+  {
+    "path": "game/tests/trial_fishery_tests.gd",
+    "sha256": "32291450649996d7e61c97ce16ac2a4d809abb5a3e9315c4c3581c053d5f7fa2"
+  },
+  {
+    "path": "game/tests/ui_iteration_tests.gd",
+    "sha256": "969e9e8427a95811208c43256c0a80ab0af9181f4f3f1e3e0d452bd78618caaa"
+  },
+  {
+    "path": "game/tests/ui_style_tests.gd",
+    "sha256": "2476e009f0f872e0f71d823016bc4f98b4196b363c275304717628987960daf8"
+  },
+  {
+    "path": "game/tests/visual_audit.gd",
+    "sha256": "e8de0a52d0244f65532fe87cd0afebcc29b99964ad7c6176532a492537feaca4"
+  },
+  {
+    "path": "game/tests/water_domain_tests.gd",
+    "sha256": "1936d434f5636ede9dd49b1b8f08bdca4d9e195f9a19151de019ea418fd3158d"
+  }
+]

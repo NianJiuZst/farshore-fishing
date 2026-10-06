@@ -160,7 +160,8 @@ func _test_bait_selection(store: SaveStore) -> void:
 			check(app._mode == "fishing" and not root.disable_3d, "selected giant bait can return to the real visible fishing world " + id)
 			var caption: Label = app._bait_control._caption
 			check(app._bait_control.text == str(bait.name) and caption.text == str(bait.name), "fishing HUD retains exact selected giant-bait name " + id)
-			check(app._bait_control.get_global_rect().encloses(caption.get_global_rect()), "giant-bait HUD caption fits its native touch surface " + id)
+			check(app._bait_control.icon_only and not caption.visible and app._bait_control.accessibility_name==str(bait.name), "giant-bait HUD uses a named icon without a visible caption " + id)
+			check(app._bait_control.size.x>=96 and app._bait_control.size.y>=96, "giant-bait HUD retains its native touch surface " + id)
 			await _capture("fishing_bait_" + id)
 			app._return_to_lobby()
 			app._show_gear()

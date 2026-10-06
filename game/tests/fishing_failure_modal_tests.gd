@@ -157,34 +157,18 @@ func _run() -> void:
 	await process_frame
 	quit(0 if failures == 0 else 1)
 
-# Exact 1afda37 IconAction surface contract. The modal deliberately inherits
-# these rounded actions; transparent-only assertions predate the upstream UI.
-func _audit_action_surface(button: Button, label: String) -> void:
-	_check(button.get_script() == IconActionScript and button.appearance == "surface" and not button.light_label, label + " uses the real upstream surface IconAction")
-	for state: String in ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]:
-		var style: StyleBox = button.get_theme_stylebox(state)
-		_check(style is StyleBoxFlat, label + " " + state + " uses StyleBoxFlat")
-		if not style is StyleBoxFlat: continue
-		var flat: StyleBoxFlat = style as StyleBoxFlat
-		var fill: Color = Color("e8eeea")
-		var border: Color = Color(0.17,0.34,0.31,0.12)
-		var width: int = 1
-		if state == "hover": fill = fill.lightened(0.06)
-		if state in ["pressed", "hover_pressed"]: fill = fill.darkened(0.12)
-		if state == "disabled": fill = Color(fill,0.25)
-		if state == "focus":
-			fill = Color.TRANSPARENT
-			border = Color("d0ad64")
-			width = 3
-		_check(flat.draw_center and flat.bg_color.is_equal_approx(fill), label + " " + state + " exact upstream fill")
-		_check(flat.border_color.is_equal_approx(border) and flat.border_width_top == width and flat.border_width_bottom == width and flat.border_width_left == width and flat.border_width_right == width, label + " " + state + " exact upstream border/focus ring")
-		_check(flat.corner_radius_top_left == 18 and flat.corner_radius_top_right == 18 and flat.corner_radius_bottom_left == 18 and flat.corner_radius_bottom_right == 18 and flat.shadow_size == 0, label + " " + state + " rounded corners without extra shadow")
-	var caption: Label = button.get("_caption") as Label
-	_check(caption != null and caption.text == button.text and caption.mouse_filter == Control.MOUSE_FILTER_IGNORE, label + " has the real readable nonblocking caption")
-	if caption != null:
-		var fg: float = caption.get_theme_color("font_color").srgb_to_linear().get_luminance()
-		var bg: float = Color("e8eeea").srgb_to_linear().get_luminance()
-		_check(caption.get_theme_font_size("font_size") >= 24 and (maxf(fg,bg)+0.05)/(minf(fg,bg)+0.05) >= 3.0, label + " large caption contrasts with its actual rounded surface")
+# The modal's real controls remain large and named, with no state backplate.
+func _audit_action_surface(button: Button,label: String) -> void:
+	_check(button.get_script()==IconActionScript,label+" uses the shared icon action")
+	for state: String in ["normal","hover","pressed","hover_pressed","disabled","focus"]:
+		var style: StyleBox=button.get_theme_stylebox(state)
+		_check(style is StyleBoxFlat,label+" explicit "+state)
+		if not style is StyleBoxFlat:continue
+		var flat: StyleBoxFlat=style
+		_check(not flat.draw_center and flat.bg_color.a==0 and flat.shadow_size==0,label+" no fill/shadow "+state)
+		_check(flat.border_width_left==(2 if state=="focus" else 0),label+" focus outline only "+state)
+	var caption: Label=button._caption
+	_check(caption!=null and caption.get_theme_constant("outline_size")>=2,label+" readable outlined caption")
 
 func _fresh(reason: String) -> void:
 	if is_instance_valid(modal):

@@ -132,6 +132,19 @@ func _check_layout(label: String) -> void:
 		if control.visible: _check(extent.encloses(control.get_global_rect()) and control.size.y >= 96.0,label + " visible controls fit with 96px touch targets")
 	if hud._terminal_controls.visible:
 		for control: Control in hud._terminal_controls.get_children(): _check(extent.encloses(control.get_global_rect()),label + " completion action fits")
+	_check_clear_controls(hud,label)
+	_check(hud._left.icon_kind=="back" and hud._right.icon_kind=="arrow",label+" direction icons match input")
+
+func _check_clear_controls(node: Node, label: String) -> void:
+	if node is Button:
+		_check(not node.accessibility_name.is_empty(),label+" icon action retains an accessible name")
+		for state: String in ["normal","hover","pressed","hover_pressed","focus","disabled"]:
+			var style: StyleBox=node.get_theme_stylebox(state)
+			_check(style is StyleBoxFlat and not style.draw_center and style.bg_color.a==0.0 and style.shadow_size==0,label+" transparent action "+state)
+	if node is PanelContainer:
+		var panel: StyleBox=node.get_theme_stylebox("panel")
+		_check(panel is StyleBoxFlat and not panel.draw_center and panel.bg_color.a==0.0,label+" transparent information layout")
+	for child: Node in node.get_children(): _check_clear_controls(child,label)
 
 func _capture(name: String) -> void:
 	if capture_dir.is_empty(): return

@@ -41,7 +41,7 @@ def main():
             data = base/'home/Library/Application Support'
             data.mkdir(parents=True,mode=0o700)
             env['XDG_DATA_HOME'] = str(data)
-            print('DESKTOP_NATIVE_RENDER: macOS Mobile/Vulkan; isolated data; not Android hardware',flush=True)
+            print('DESKTOP_NATIVE_RENDER: macOS; method/driver in engine log; isolated data; not Android hardware',flush=True)
             return subprocess.run([os.environ.get('GODOT','godot'),'--audio-driver','Dummy',*args],cwd=ROOT,env=env,timeout=options.timeout).returncode
     xvfb = PACKAGES / "usr/bin/Xvfb"
     driver = PACKAGES / "usr/share/vulkan/icd.d/lvp_icd.json"

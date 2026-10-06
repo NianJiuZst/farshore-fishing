@@ -9,6 +9,8 @@ signal notebook_requested
 signal pause_requested
 signal resume_requested
 
+const Clear=preload("res://scripts/clear_ui.gd")
+const IconButton=preload("res://scripts/icon_action.gd")
 const Challenge = preload("res://scripts/blue_whale_challenge.gd")
 const WhaleStage = preload("res://scripts/whale_challenge_stage_3d.gd")
 const INK: Color = Color("e8f9ed")
@@ -165,20 +167,19 @@ func _label(value: String, font_size: int, color: Color = INK) -> Label:
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	label.add_theme_font_size_override("font_size", font_size)
 	label.add_theme_color_override("font_color", color)
+	Clear.style_text(label)
 	return label
 
 func _button(value: String, callback: Callable, primary: bool = false) -> Button:
-	var button: Button = Button.new()
+	var button: Button = IconButton.new()
 	button.text = value
 	button.custom_minimum_size.y = 96.0
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	button.add_theme_font_size_override("font_size", 24)
-	button.add_theme_color_override("font_color", INK)
-	button.add_theme_color_override("font_hover_color", Color.WHITE)
-	button.add_theme_stylebox_override("normal", _box(Color("236d71") if primary else Color("204650"), 16))
-	button.add_theme_stylebox_override("pressed", _box(Color("439c88"), 16))
-	button.add_theme_stylebox_override("hover", _box(Color("2f7c7d"), 16))
-	button.add_theme_stylebox_override("focus", _box(Color(0, 0, 0, 0), 16))
+	button.label_color=INK
+	button.icon_kind="back" if value in ["退出","向左"] or "返回" in value else ("arrow" if value=="向右" else ("pause" if value=="暂停" else ("book" if "图鉴" in value else ("reel" if primary else "arrow"))))
+	button.icon_only=value in ["退出","暂停","向左","向右","按住调谐"]
+	button.icon_extent=56
 	if callback.is_valid(): button.pressed.connect(callback)
 	return button
 
@@ -194,7 +195,7 @@ func _box(color: Color, radius: int) -> StyleBoxFlat:
 
 func _panel() -> PanelContainer:
 	var panel: PanelContainer = PanelContainer.new()
-	panel.add_theme_stylebox_override("panel", _box(Color(0.02, 0.10, 0.14, 0.91), 22))
+	panel.add_theme_stylebox_override("panel", Clear.surface(false,16))
 	return panel
 
 func _update_direction() -> void:

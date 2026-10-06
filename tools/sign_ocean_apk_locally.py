@@ -22,6 +22,8 @@ RELEASES = {
                    'regions': 9, 'spots': 18, 'gear': 5},
     ('1.4.0', 8): {'catalog_parts': tuple('abcdefgh') + ('whale',), 'fish': 110, 'whale': True,
                    'regions': 10, 'spots': 21, 'gear': 6},
+    ('1.4.1', 9): {'catalog_parts': tuple('abcdefgh') + ('whale',), 'fish': 110, 'whale': True,
+                   'regions': 10, 'spots': 21, 'gear': 6},
 }
 
 def sha256(path):

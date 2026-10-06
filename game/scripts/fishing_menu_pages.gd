@@ -1,10 +1,11 @@
 class_name FishingMenuPages
 extends RefCounted
 ## Read-only page construction. Main retains navigation, transactions and input.
-const INK: Color = Color("213c41")
-const MUTED: Color = Color("4d6965")
-const GOLD: Color = Color("95601e")
-const TEAL: Color = Color("256b63")
+const Clear = preload("res://scripts/clear_ui.gd")
+const INK: Color = Clear.INK
+const MUTED: Color = Clear.MUTED
+const GOLD: Color = Clear.GOLD
+const TEAL: Color = Clear.TEAL
 
 func populate_prepare(app: Control, page: VBoxContainer) -> void:
 	var region: Dictionary = app.catalog.region(app.region_id)
@@ -195,7 +196,8 @@ func populate_settings(app: Control, page: VBoxContainer) -> void:
 	page.add_child(options)
 	for pair: Array in [["low","省电"],["balanced","均衡"],["high","精致"]]:
 		var choice: Button=app._button(("✓ " if quality==pair[0] else "")+str(pair[1]),app._set_quality.bind(str(pair[0])),quality==pair[0])
-		choice.icon_extent=0
+		choice.icon_extent=36
+		choice.icon_kind="sun" if pair[0]=="low" else ("compass" if pair[0]=="balanced" else "settings")
 		choice.add_theme_font_size_override("font_size",23)
 		options.add_child(choice)
 	page.add_child(app._text("省电限制为 30 帧并减少装饰效果；均衡与精致最高 60 帧。实际流畅度取决于设备。",21,MUTED))

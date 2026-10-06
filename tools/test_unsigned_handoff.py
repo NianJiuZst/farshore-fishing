@@ -19,7 +19,9 @@ class UnsignedHandoffTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix='farshore-unsigned-guard-test-')
         self.addCleanup(self.temp.cleanup)
-        self.base = Path(self.temp.name)
+        # macOS temporary paths may begin with the /var symlink. The fixture
+        # itself uses its real path; production still rejects supplied symlinks.
+        self.base = Path(self.temp.name).resolve()
         self.root = self.base/'repo'; self.root.mkdir()
         self.content = {'android_identity': {**android_identity.OCEAN, 'separate_installation': True}}
         self.pin = android_identity.OCEAN['certificate_sha256']
@@ -205,11 +207,11 @@ class UnsignedHandoffTests(unittest.TestCase):
         self.fail('Verifier did not reach the expected content gate')
 
     def test_unsigned_verifier_accepts_both_reviewed_release_pairs(self):
-        for version,code in [('1.3.0',7),('1.4.0',8)]:
+        for version,code in [('1.3.0',7),('1.4.0',8),('1.4.1',9)]:
             with self.subTest(version=version): self.check_verifier_version_gates(version,code)
 
     def test_unsigned_verifier_rejects_crossed_pairs_and_frozen_or_apk_drift(self):
-        for version,code in [('1.3.0',8),('1.4.0',7),('1.5.0',9)]:
+        for version,code in [('1.3.0',8),('1.4.0',7),('1.4.0',9),('1.4.1',8),('1.5.0',9)]:
             with self.subTest(version=version,code=code), self.assertRaises(AssertionError):
                 self.check_verifier_version_gates(version,code)
         for changes in [{'frozen_code':7},{'apk_code':7},{'apk_version':'1.3.0'}]:

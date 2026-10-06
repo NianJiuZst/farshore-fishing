@@ -7,9 +7,10 @@ signal dismiss_requested
 const IconButton = preload("res://scripts/icon_action.gd")
 const Art = preload("res://scripts/ui_art.gd")
 const PAPER: Color = Color("f5f2e9")
-const INK: Color = Color("213c41")
-const MUTED: Color = Color("4d6965")
-const GOLD: Color = Color("95601e")
+const Clear = preload("res://scripts/clear_ui.gd")
+const INK: Color = Clear.INK
+const MUTED: Color = Clear.MUTED
+const GOLD: Color = Clear.GOLD
 const INPUT_DRAIN_MSEC: int = 160
 const TAP_SLOP: float = 24.0
 
@@ -62,21 +63,17 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_scrim = ColorRect.new()
 	_scrim.name = "FailureScrim"
-	_scrim.color = Color(0.035,0.095,0.105,0.28)
+	_scrim.color = Color.TRANSPARENT
+	var blur:=ShaderMaterial.new()
+	blur.shader=preload("res://assets/shaders3d/menu_defocus.gdshader")
+	_scrim.material=blur
 	_scrim.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_scrim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(_scrim)
 	_panel = PanelContainer.new()
 	_panel.name = "FailurePanel"
 	_panel.mouse_filter = Control.MOUSE_FILTER_STOP
-	var paper: StyleBoxFlat = StyleBoxFlat.new()
-	paper.bg_color = PAPER
-	paper.set_corner_radius_all(24)
-	paper.set_border_width_all(1)
-	paper.border_color = Color(0.40,0.49,0.40,0.24)
-	paper.shadow_color = Color(0.02,0.07,0.08,0.20)
-	paper.shadow_size = 16
-	paper.shadow_offset = Vector2(0,8)
+	var paper: StyleBoxFlat = Clear.surface()
 	paper.content_margin_left = 30
 	paper.content_margin_right = 30
 	paper.content_margin_top = 28
@@ -162,10 +159,7 @@ func _label(value: String, pixels: int, color: Color) -> Label:
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	label.add_theme_font_size_override("font_size",pixels)
 	label.add_theme_color_override("font_color",color)
-	# The solid paper supplies contrast; avoid the HUD's heavy outdoor shadow.
-	label.add_theme_constant_override("outline_size",0)
-	label.add_theme_constant_override("shadow_offset_x",0)
-	label.add_theme_constant_override("shadow_offset_y",0)
+	Clear.style_text(label)
 	return label
 
 func _action(node_name: String, caption: String, icon: String, color: Color, pixels: int) -> Button:

@@ -19,8 +19,8 @@ class LocalSigningInspectionTests(unittest.TestCase):
         mock.patch.object(local.subprocess,'run',side_effect=AssertionError('External commands forbidden')).start()
         mock.patch.object(local.getpass,'getpass',side_effect=AssertionError('Password entry forbidden')).start()
 
-    def fixture(self, version='1.4.0', code=8):
-        diversity=version=='1.4.0'
+    def fixture(self, version='1.4.1', code=9):
+        diversity=version in {'1.4.0','1.4.1'}
         count=110 if diversity else 74
         parts='abcdefgh' if diversity else 'abcdef'
         ordinary=[{'species_id':f'ordinary_{index}'} for index in range(count)]
@@ -35,7 +35,7 @@ class LocalSigningInspectionTests(unittest.TestCase):
             'android_package_name':local.PACKAGE,'application_version':version,'android_version_code':code}
         return payload
 
-    def inspect(self, payload, version='1.4.0', code=8, *, extra_badging='', permission='android.permission.VIBRATE', extra_member=None):
+    def inspect(self, payload, version='1.4.1', code=9, *, extra_badging='', permission='android.permission.VIBRATE', extra_member=None):
         with zipfile.ZipFile(self.apk,'w') as archive:
             archive.writestr('lib/arm64-v8a/libfixture.so',b'INERT TEST BYTES; NEVER EXECUTED')
             for name,value in payload.items(): archive.writestr(name,json.dumps(value))
@@ -55,7 +55,7 @@ class LocalSigningInspectionTests(unittest.TestCase):
         return result
 
     def test_accepts_legacy_74_fish_and_diversity_110_fish_plus_whale(self):
-        for version,code in [('1.3.0',7),('1.4.0',8)]:
+        for version,code in [('1.3.0',7),('1.4.0',8),('1.4.1',9)]:
             with self.subTest(version=version):
                 result=self.inspect(self.fixture(version,code),version,code)
                 self.assertEqual((result['application_version'],result['android_version_code']),(version,code))
@@ -64,10 +64,10 @@ class LocalSigningInspectionTests(unittest.TestCase):
         root=Path(__file__).resolve().parent.parent/'game/data'
         payload=self.fixture()
         for name in payload: payload[name]=json.loads((root/Path(name).name).read_text())
-        self.assertEqual(self.inspect(payload)['android_version_code'],8)
+        self.assertEqual(self.inspect(payload)['android_version_code'],9)
 
     def test_rejects_crossed_or_unreviewed_version_pairs(self):
-        for version,code in [('1.3.0',8),('1.4.0',7),('1.5.0',9)]:
+        for version,code in [('1.3.0',8),('1.4.0',7),('1.4.0',9),('1.4.1',8),('1.5.0',9)]:
             with self.subTest(version=version,code=code), self.assertRaisesRegex(ValueError,'Unreviewed'):
                 self.inspect(self.fixture(),version,code)
 
@@ -97,7 +97,7 @@ class LocalSigningInspectionTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError): self.inspect(payload)
 
     def test_checks_exact_regions_spots_gear_and_baits(self):
-        for version,code in [('1.3.0',7),('1.4.0',8)]:
+        for version,code in [('1.3.0',7),('1.4.0',8),('1.4.1',9)]:
             for field in ['regions','spots','gear','baits']:
                 payload=self.fixture(version,code); payload['assets/data/world.json'][field].pop()
                 with self.subTest(version=version,field=field), self.assertRaisesRegex(ValueError,'Incomplete ocean catalog'):

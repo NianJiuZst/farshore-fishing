@@ -8,6 +8,7 @@ signal model_error(species_id: String, message: String)
 signal location_changed(region_id: String, spot_id: String)
 signal location_error(region_id: String, spot_id: String, message: String)
 
+const WaterDomain=preload("res://scripts/fishing_water_domain.gd")
 const WATER_SHADER = preload("res://assets/shaders3d/river_water.gdshader")
 const FOLIAGE_SHADER = preload("res://assets/shaders3d/foliage.gdshader")
 const RIPPLE_SHADER = preload("res://assets/shaders3d/ripple.gdshader")
@@ -99,6 +100,7 @@ var _world_locations: Dictionary = {}
 var _region_definition: Dictionary = {}
 var _spot_definition: Dictionary = {}
 var _station_root: Node3D
+var _water_domain=WaterDomain.new()
 var _riverbed: MeshInstance3D
 var _ocean_horizon_water: MeshInstance3D
 var _built: bool = false
@@ -282,7 +284,9 @@ func _station_frame() -> Transform3D:
 		"norway_boat": anchor = Vector3(0, 0, -33)
 		"med_boat": anchor = Vector3(3, 0, -31)
 		"bayou_channel": anchor = Vector3(0, 0, -34)
-		"yangtze_estuary": anchor = Vector3(0, 0, -40)
+		# The central alluvial island extends x=-11.34..7.34, z=-57.60..-24.88.
+		# Moor in the eastern channel; do not place the boat on that island.
+		"yangtze_estuary": anchor = Vector3(14, 0, -40)
 		"pacific_bluewater", "atlantic_bluewater", "indian_bluewater": anchor = Vector3(0, 0, -420)
 		"pacific_reef": anchor = Vector3(-6, 0, -22)
 		"atlantic_shelf": anchor = Vector3(7, 0, -15)
@@ -346,8 +350,12 @@ func _replace_location_geometry(region_value: String = "", spot_value: String = 
 	_build_distant_landscape()
 	_station_root = station_candidate as Node3D
 	_station_root.name = "ActiveStation_" + _station_kind(str(_spot_definition.get("foreground", "pier")))
+	# This bank's broad ledge used to cover the near end of the fight corridor.
+	# Shorten its water-facing apron while retaining the exact standing height.
+	if spot_id=="yangtze_river": _station_root.scale.z=0.60
 	add_child(_station_root)
 	_apply_foliage(_station_root)
+	_water_domain.rebuild(self,[_environment_root,_station_root])
 	_location_built_key = region_id + ":" + spot_id
 	location_rebuild_count += 1
 	return true
@@ -737,6 +745,11 @@ func _session_changed(value: int) -> void:
 			_fish_root.visible = false
 			_play_character("idle")
 
+func cast_target_for_charge(charge: float, heading: float = 0.0) -> Vector3:
+	var power: float=clampf(charge,0.0,_rod_visual_reach)
+	var requested:=Vector3(-0.72+power*0.5,0,-7.0-power*5.0).rotated(Vector3.UP,heading)
+	return _water_domain.resolve_cast(requested)
+
 func _begin_cast() -> void:
 	cancel_landing()
 	_landed_catch_id = ""
@@ -764,7 +777,11 @@ func _begin_cast() -> void:
 	_water_material.set_shader_parameter("impact_a", Vector4(0, 0, -100, 0))
 	_water_material.set_shader_parameter("impact_b", Vector4(0, 0, -100, 0))
 	var charge: float = clampf(session.charge, 0.0, _rod_visual_reach) if session else 0.5
-	_bobber_target = Vector3(-0.72 + charge * 0.5, 0.0, -7.0 - charge * 5.0)
+	_bobber_target = cast_target_for_charge(charge)
+	if not _bobber_target.is_finite():
+		cast_in_progress=false
+		_report_location_error("This location has no unobstructed casting water")
+		return
 	_bobber.visible = false
 	_float_meniscus.visible = false
 	_float_wake.visible = false
@@ -806,7 +823,10 @@ func _update_cast(delta: float) -> void:
 		_cast_origin = _rod_tip
 	if _cast_time >= RELEASE_TIME:
 		var p: float = clampf((_cast_time - RELEASE_TIME) / (CAST_DURATION - RELEASE_TIME - 0.17), 0.0, 1.0)
-		_bobber.position = _cast_origin.lerp(_bobber_target, p) + Vector3.UP * sin(p * PI) * 2.6
+		var contact: Vector3=_bobber_target
+		contact.y=_water_surface_height(Vector2(contact.x,contact.z),_time)
+		_bobber.position = _cast_origin.lerp(contact, p) + Vector3.UP * sin(p * PI) * 2.6
+		if p>=1.0: _set_float_water_material(true,contact.y)
 		_bobber.rotation.z = sin(p * PI) * -0.55
 		if p >= 1.0 and not _cast_impact_emitted:
 			# The narrow float makes a small surface ring, not fish-sized spray.
@@ -855,7 +875,10 @@ func _update_fishing(_delta: float) -> void:
 		var swing: float = sin(session.fight_time * 1.07) * (0.22 + stamina * sweep)
 		swing += sin(session.phase_progress * PI) * (warning * 0.28 + surge * 0.86)
 		var target: Vector3 = _bobber_target.lerp(Vector3(-0.1, 0.035, -2.7), p)
-		_bobber.position = target + Vector3(swing, sin(_time * 5.0) * 0.012 - 0.05, -warning * 0.18 - surge * 0.42)
+		_bobber.position = target + Vector3(swing, -0.05, -warning * 0.18 - surge * 0.42)
+		var surface_height: float=_water_surface_height(Vector2(_bobber.position.x,_bobber.position.z),_time)
+		_bobber.position.y+=surface_height
+		_set_float_water_material(true,surface_height)
 		_bobber.rotation.z = swing * 0.40 + warning * 0.28
 		_fish_root.position = _bobber.position + Vector3(0, -0.24 - warning * 0.07, 0.1)
 		_fish_root.rotation = Vector3(sin(_time * 3.0) * 0.04, PI * 0.5 + swing * 0.46 + warning * 0.55, -warning * 0.18)
